@@ -1,0 +1,187 @@
+═══════════════════════════════════════════════════════════════
+                   TERMS AND CONDITIONS
+═══════════════════════════════════════════════════════════════
+
+Last Updated: 13 January  2026
+
+App Name: Elevate Aura
+Developer: Ragul Sekar
+Contact Email: elevateauraofficial@gmail.com
+
+───────────────────────────────────────────────────────────────
+
+1. ACCEPTANCE OF TERMS
+
+By downloading, installing, or using Elevate Aura ("the App", 
+"we", "our"), you agree to these Terms and Conditions. If you 
+do not agree, please refrain from using the App.
+
+───────────────────────────────────────────────────────────────
+
+2. PURPOSE OF THE APP
+
+Elevate Aura is an Educational Skill-Based Platform providing 
+quiz-based learning for competitive exams such as SSC, RRB, Bank, 
+Police, and general aptitude examinations. The App is intended 
+solely for educational, practice, and skill-development purposes. 
+The outcome of all matches and quizzes depends entirely on the 
+user's knowledge, speed, and cognitive skill.
+
+───────────────────────────────────────────────────────────────
+
+3. USER ACCOUNTS AND AUTHENTICATION
+
+Users may sign in using Google Sign-In. By using this feature, 
+you agree:
+
+  • To use your own valid Google account
+  • Not to impersonate others
+  • Not to share or sell your login credentials
+  • Not to attempt unauthorized access to other users' data
+
+⚠️ We may suspend or terminate accounts involved in suspicious, 
+   abusive, or harmful activities.
+
+───────────────────────────────────────────────────────────────
+
+4. VIRTUAL COINS AND REWARDS
+
+The App offers a virtual economy (coins, badges, points).
+
+4.1 Nature of Virtual Items:
+  • These items have NO real monetary value.
+  • They cannot be withdrawn, exchanged for cash, or sold.
+
+4.2 Rivalry Matches (Skill-Based Challenges):
+  • Users may consume virtual coins as an "Entry Fee" to participate 
+    in competitive matches.
+  • This is a "Virtual Token Consumption" for access to premium 
+    competitive features.
+  • Rewards won in matches are virtual and for entertainment/status 
+    only.
+
+4.3 Abuse & Exploitation:
+  • We reserve the right to reset or remove virtual items if 
+    cheating, clock manipulation, or exploitation is detected.
+
+───────────────────────────────────────────────────────────────
+
+5. CONTENT OWNERSHIP AND INTELLECTUAL PROPERTY
+
+All content within the App—including quizzes, UI design, text, 
+graphics, branding, coin system, and features—is owned by Ragul 
+Sekar or licensed appropriately.
+
+You are NOT permitted to:
+
+  × Copy, reproduce, or distribute app content
+  × Modify or create derivative works
+  × Reverse engineer or decompile the App
+  × Use the App's assets outside the App without written 
+    permission
+
+───────────────────────────────────────────────────────────────
+
+6. ADVERTISEMENTS AND THIRD-PARTY SERVICES
+
+The App uses:
+
+  • Google AdMob
+  • Unity Ads
+  • Google Play Services
+  • Supabase logs / Analytics
+
+These services may collect device identifiers, approximate 
+location, and app interaction data. By using the App, you 
+consent to the display of advertisements and analytics.
+
+───────────────────────────────────────────────────────────────
+
+7. USER CONDUCT (FAIR PLAY POLICY)
+
+You agree NOT to:
+
+  × Cheat, exploit bugs, or use "Auto-Clickers" or scripts
+  × Manipulate device clocks (time-traveling) to bypass timers or 
+    daily rewards
+  × Attempt to reverse engineer, hack, or damage the App
+  × Interfere with servers or network operations
+
+⚠️ FAIR PLAY ENFORCEMENT: We use automated detection for clock 
+   manipulation and cheating. Violations will result in an 
+   immediate, permanent account ban and forfeiture of all virtual 
+   coins/progress without refund.
+
+───────────────────────────────────────────────────────────────
+
+8. DISCLAIMER OF WARRANTIES
+
+The App is provided "as is" and "as available".
+
+We do not guarantee:
+
+  • Error-free content
+  • Uninterrupted service
+  • Accuracy or completeness of quiz questions
+  • Compatibility with all devices
+
+⚠️ Users must verify exam-critical information from official 
+   sources.
+
+───────────────────────────────────────────────────────────────
+
+9. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by law:
+
+  • We are not responsible for exam performance or results
+  • We are not liable for data loss, device issues, or damages 
+    caused by third-party ads
+  • We are not liable for delays, failures, or errors arising 
+    from external services
+
+⚠️ Use of the App is at your own risk.
+
+───────────────────────────────────────────────────────────────
+
+10. DATA AND PRIVACY
+
+Your data is handled according to our Privacy Policy.
+
+Users may request:
+
+  • Data deletion
+  • Account deletion
+  • Data export
+
+⚠️ Once deleted, user data CANNOT be recovered.
+
+───────────────────────────────────────────────────────────────
+
+11. TERMINATION OF USE
+
+We may suspend or remove user accounts without notice if:
+
+  • Terms are violated
+  • Cheating or fraud is detected
+  • Abuse or harmful activities occur
+  • Required by law
+
+───────────────────────────────────────────────────────────────
+
+12. CHANGES TO TERMS
+
+We may modify these Terms at any time. Updated versions will be 
+available inside the App and/or on our website. Continued use of 
+the App constitutes acceptance of the modified Terms.
+
+───────────────────────────────────────────────────────────────
+
+13. CONTACT US
+
+For questions or support, contact:
+
+Email: elevateauraofficial@gmail.com
+Developer: Ragul Sekar
+
+═══════════════════════════════════════════════════════════════

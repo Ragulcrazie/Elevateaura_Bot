@@ -1,0 +1,8 @@
+# Google logo asset required for sign-in button
+# Download a Google logo PNG (transparent background, 48x48 or 64x64 recommended).
+# Example: https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg (convert to PNG)
+# Save as: assets/images/google_logo.png
+# Then run: flutter pub get
+# And ensure this path is in your pubspec.yaml under assets:
+#   assets:
+#     - assets/images/google_logo.png

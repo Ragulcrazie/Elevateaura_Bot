@@ -1,0 +1,188 @@
+═══════════════════════════════════════════════════════════════
+                        PRIVACY POLICY
+═══════════════════════════════════════════════════════════════
+
+Last Updated: 13 January 2026
+
+App Name: Elevate Aura
+Developer: Ragul Sekar
+Contact Email: elevateauraofficial@gmail.com
+
+───────────────────────────────────────────────────────────────
+
+INTRODUCTION
+
+Elevate Aura ("the App", "we", "our", "us") provides quiz-based 
+learning for competitive exams. This Privacy Policy explains how 
+we collect, use, and protect your information. By using the App, 
+you agree to this Policy.
+
+───────────────────────────────────────────────────────────────
+
+1. INFORMATION WE COLLECT
+
+1.1 Information Provided by You
+
+  • Name (Google Sign-In)
+  • Email address (Google Sign-In)
+  • Google profile picture (optional)
+
+  ⚠️ We do NOT access your Gmail inbox, contacts, files, or 
+     personal messages.
+
+1.2 Automatically Collected Information
+
+  Device Information:
+    • Device model
+    • Android version
+    • Operating system details
+    • App version
+
+  Usage Data:
+    • Quiz attempts, scores, correct/incorrect answers
+    • Streaks, coins, badges, app interactions
+    • Time spent in the app
+    • Button clicks (non-personal behavior logs)
+
+  Crash & Diagnostics:
+    • Crash logs
+    • Performance data
+    • Error reports
+
+  Approximate Location:
+    • Automatically collected by advertising partners 
+      (AdMob/Unity Ads)
+    • NOT precise GPS location
+
+1.3 Data Collected Through Third-Party Services
+
+  Google Sign-In:
+    • Name, email, profile image
+    • Authentication token
+
+  Google Play Billing (In-App Purchases):
+    • Transaction ID and purchase status (We do NOT collect credit card details)
+
+  Advertising Partners (AdMob / Unity Ads):
+    • Device identifiers (AAID)
+    • Approximate location
+    • Ad interaction data
+
+  Analytics & Backend (Supabase):
+    • Session events, quiz progress, and wallet balances
+    • User behavior summaries
+    • Error tracking and performance logs
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  WE DO NOT COLLECT:
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    × Passwords
+    × Contact lists
+    × Photos/media/files
+    × Financial/banking data
+    × Messages
+    × Precise location
+
+───────────────────────────────────────────────────────────────
+
+2. HOW WE USE YOUR INFORMATION
+
+2.1 App Functionality
+  • Create and manage your account
+  • Save and sync quiz progress
+  • Enable login with Google
+  • Maintain scoring, coins, and streaks
+
+2.2 Improvement of App
+  • Enhance quiz quality
+  • Improve user experience
+  • Fix bugs and crashes
+  • Optimize performance
+
+2.3 Personalization
+  • Recommend quizzes
+  • Provide a more relevant learning experience
+
+2.4 Advertising
+  • Deliver ads through AdMob / Unity Ads
+  • Show rewarded ads (optional)
+  • Prevent fraud or invalid clicks
+
+2.5 Security
+  • Detect cheating
+  • Prevent abuse or suspicious activity
+
+───────────────────────────────────────────────────────────────
+
+3. DATA SHARING
+
+We do not sell or rent your personal data.
+
+We share data with:
+  • Google Sign-In
+  • AdMob / Unity Ads
+  • Google Play Services / Supabase Analytics
+  • Supabase
+
+───────────────────────────────────────────────────────────────
+
+4. DATA RETENTION
+
+We store your data as long as your account is active. When you 
+delete your account, all personal data is permanently removed.
+
+───────────────────────────────────────────────────────────────
+
+5. DATA SECURITY
+
+We use encrypted communication (HTTPS), secure servers, and 
+token-based authentication. No system can guarantee 100% security.
+
+───────────────────────────────────────────────────────────────
+
+6. YOUR RIGHTS
+
+You may request:
+  • Account deletion: Permanent removal of your account and all 
+    associated records from our servers (Supabase, Analytics, etc.)
+  • Data removal
+  • Data export
+  • Correction of inaccurate data
+
+Contact: elevateauraofficial@gmail.com
+In-App Path: Settings > Account > Delete Account
+
+───────────────────────────────────────────────────────────────
+
+7. CHILDREN'S PRIVACY
+
+The app is intended for users aged 13 and above.
+
+───────────────────────────────────────────────────────────────
+
+8. THIRD-PARTY LINKS
+
+External links or ads are governed by their own privacy policies.
+
+───────────────────────────────────────────────────────────────
+
+9. INTERNATIONAL DATA TRANSFER
+
+Your data may be stored or processed on servers outside your 
+country.
+
+───────────────────────────────────────────────────────────────
+
+10. CHANGES TO THIS POLICY
+
+We may update this Privacy Policy at any time. Continued use 
+means you accept the updated Policy.
+
+───────────────────────────────────────────────────────────────
+
+11. CONTACT US
+
+Email: elevateauraofficial@gmail.com
+Developer: Ragul Sekar
+
+═══════════════════════════════════════════════════════════════
