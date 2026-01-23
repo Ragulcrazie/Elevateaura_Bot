@@ -96,6 +96,23 @@ async def cmd_start(message: types.Message):
         parse_mode="Markdown"
     )
 
+# --- Keep Alive Server for Render ---
+from aiohttp import web
+
+async def health_check(request):
+    return web.Response(text="Bot is alive!")
+
+async def start_web_server():
+    app = web.Application()
+    app.router.add_get("/", health_check)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    # Render provides PORT env var. Default to 8080 if missing.
+    port = int(os.getenv("PORT", 8080))
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    logger.info(f"Web server started on port {port}")
+
 # --- Main Entry Point ---
 async def main():
     logger.info("Starting Elevate Aura Bot...")
@@ -103,10 +120,11 @@ async def main():
     # Verify DB connection
     connected = await db.connect()
     if not connected:
-        logger.error("Failed to connect to Supabase. Please check .env file.")
-        # We continue for now to allow local testing even if DB fails, 
-        # but in production we might want to exit.
+        logger.error("Failed to connect to Supabase. Check credentials.")
     
+    # Start Dummy Web Server (For Render)
+    await start_web_server()
+
     logger.info("Bot is polling...")
     await dp.start_polling(bot)
 
