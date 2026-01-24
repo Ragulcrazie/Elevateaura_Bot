@@ -84,7 +84,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     await asyncio.sleep(1)
     await send_question(message, user_id)
 
-async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup):
+async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str):
     """
     Updates the message at intervals to show visual timer.
     """
@@ -92,7 +92,7 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         # Phase 1: 15s elapsed (30s left)
         await asyncio.sleep(15)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜",
+            f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}",
             reply_markup=markup,
             parse_mode="Markdown"
         )
@@ -100,7 +100,7 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         # Phase 2: 30s elapsed (15s left)
         await asyncio.sleep(15)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜",
+            f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}",
             reply_markup=markup,
             parse_mode="Markdown"
         )
@@ -108,7 +108,7 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         # Phase 3: 40s elapsed (5s left)
         await asyncio.sleep(10)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**",
+            f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**\n{options_str}",
             reply_markup=markup,
             parse_mode="Markdown"
         )
@@ -116,7 +116,7 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         # Phase 4: Time Up
         await asyncio.sleep(5)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛",
+            f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}",
             reply_markup=markup,
             parse_mode="Markdown"
         )
@@ -168,7 +168,7 @@ async def send_question(message: types.Message, user_id: int):
     if user_id in timer_tasks:
         timer_tasks[user_id].cancel()
         
-    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup()))
+    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str))
     timer_tasks[user_id] = task
 
 @router.callback_query(F.data.startswith("ans:"))
