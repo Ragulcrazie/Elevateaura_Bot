@@ -115,16 +115,52 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         
         # Phase 4: Time Up
         await asyncio.sleep(5)
+        # Remove buttons (None markup)
         await message.edit_text(
             f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}",
-            reply_markup=markup,
+            reply_markup=None,
             parse_mode="Markdown"
         )
+        
+        # Trigger Timeout Logic
+        await handle_timeout(message, user_id)
+
     except asyncio.CancelledError:
         # Task was cancelled (User Answered), do nothing
         pass
     except Exception as e:
         print(f"Timer Error: {e}")
+
+async def handle_timeout(message: types.Message, user_id: int):
+    """
+    Handles logic when user fails to answer in time.
+    """
+    # Clear task reference
+    if user_id in timer_tasks:
+        del timer_tasks[user_id]
+        
+    state = user_states.get(user_id)
+    if not state: return
+
+    # Update DB (Mark as wrong, 45s taken)
+    db = SupabaseClient()
+    await db.connect()
+    await db.update_user_stats(user_id, is_correct=False, time_taken=45.0)
+    
+    # Send Feedback
+    current_q = state["questions"][state["current_q_index"]]
+    correct_idx = current_q["answer_index"]
+    
+    await message.answer(
+        f"❌ **Time Up!**\nCorrect: {current_q['options'][correct_idx]}\n\n"
+        f"💡 **Explanation**: {current_q['explanation']}",
+        parse_mode="Markdown"
+    )
+    
+    # Next Question
+    state["current_q_index"] += 1
+    await asyncio.sleep(1.5)
+    await send_question(message, user_id)
 
 async def send_question(message: types.Message, user_id: int):
     state = user_states.get(user_id)
