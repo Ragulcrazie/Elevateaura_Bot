@@ -254,13 +254,30 @@ async def send_question(message: types.Message, user_id: int):
     # Sync start time to DB (Best Effort)
     # await db.save_quiz_state(user_id, state) # Optional reduction of DB calls for speed
 
-    msg = await message.answer(
-        f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}",
-        reply_markup=builder.as_markup(),
-        parse_mode="Markdown"
-    )
+    msg = None
+    try:
+        # Try sending with Markdown
+        msg = await message.answer(
+            f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}",
+            reply_markup=builder.as_markup(),
+            parse_mode="Markdown"
+        )
+    except Exception as e:
+        print(f"DEBUG: Markdown send failed: {e}. Retrying plain text.")
+        try:
+            # Fallback to Plain Text (removes ** bolding)
+            fallback_text = f"Q{idx+1}: {q['question']}\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}"
+            msg = await message.answer(
+                fallback_text,
+                reply_markup=builder.as_markup(),
+                parse_mode=None
+            )
+        except Exception as e2:
+             print(f"DEBUG: Plain text send failed: {e2}")
+             return
 
     # Allow msg to catch the new message object
+    if not msg: return
     
     # Start Background Timer Task
     # Cancel previous if exists (safety)
