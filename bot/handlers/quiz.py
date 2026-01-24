@@ -85,7 +85,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     }
     
     # Save State to Disk (Robust Persistence)
-    session_manager.save_session(user_id, state)
+    await session_manager.save_session(user_id, state)
     
     await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 5", parse_mode="Markdown")
     await asyncio.sleep(1)
@@ -148,7 +148,7 @@ async def handle_timeout(message: types.Message, user_id: int):
         del timer_tasks[user_id]
         
     # state = user_states.get(user_id)
-    state = session_manager.get_session(user_id)
+    state = await session_manager.get_session(user_id)
     
     if not state: return
 
@@ -175,15 +175,16 @@ async def handle_timeout(message: types.Message, user_id: int):
         print(f"DB Error in Timeout: {e}")
     
     # 5. Next Question (Always Proceed)
+    # 5. Next Question (Always Proceed)
     state["current_q_index"] += 1
-    session_manager.save_session(user_id, state)
+    await session_manager.save_session(user_id, state)
     
     await asyncio.sleep(1.5)
     await send_question(message, user_id)
 
 async def send_question(message: types.Message, user_id: int):
     # Retrieve State
-    state = session_manager.get_session(user_id)
+    state = await session_manager.get_session(user_id)
     
     if not state: 
         print(f"DEBUG: No session found for {user_id}")
@@ -214,7 +215,7 @@ async def send_question(message: types.Message, user_id: int):
 
     # Start Timer
     state["question_start_time"] = time.time()
-    session_manager.save_session(user_id, state)
+    await session_manager.save_session(user_id, state)
 
     msg = None
     used_mode = "Markdown"
@@ -260,10 +261,10 @@ async def handle_answer(callback: types.CallbackQuery):
         timer_tasks[user_id].cancel()
         del timer_tasks[user_id]
         
-    state = session_manager.get_session(user_id)
+    state = await session_manager.get_session(user_id)
     if not state:
         # Debugging Info for User
-        debug_info = f"ID: {user_id}\nKeys: {list(session_manager.sessions.keys())}"
+        debug_info = f"ID: {user_id}\nDB Check Failed"
         print(f"DEBUG: Session Lookup Failed. {debug_info}")
         await callback.answer(f"Session Error (Debug Mode):\n{debug_info}", show_alert=True)
         return
@@ -300,7 +301,7 @@ async def handle_answer(callback: types.CallbackQuery):
     await db.update_user_stats(user_id, is_correct, time_taken)
     
     # Update Session
-    session_manager.save_session(user_id, state)
+    await session_manager.save_session(user_id, state)
 
     # Edit message to show result (Instant Feedback)
     await callback.message.edit_text(
@@ -318,7 +319,7 @@ async def handle_answer(callback: types.CallbackQuery):
     await callback.answer()
 
 async def finish_quiz(message: types.Message, user_id: int):
-    state = session_manager.get_session(user_id)
+    state = await session_manager.get_session(user_id)
     if not state: return
 
     score = state["score"]
@@ -359,4 +360,4 @@ async def finish_quiz(message: types.Message, user_id: int):
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
     # Cleanup
-    session_manager.delete_session(user_id)
+    await session_manager.delete_session(user_id)
