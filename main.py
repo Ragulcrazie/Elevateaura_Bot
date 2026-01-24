@@ -154,12 +154,29 @@ async def start_web_server():
     logger.info(f"Web server started on port {port}")
     return site
 
+async def keep_alive():
+    """
+    Pings the web server every 10 minutes to prevent Render from sleeping.
+    """
+    url = "https://elevateaura-bot.onrender.com" 
+    async with aiohttp.ClientSession() as session:
+        while True:
+            await asyncio.sleep(600) # 10 minutes (Render sleeps after 15)
+            try:
+                async with session.get(url) as response:
+                    logger.info(f"Keep-alive ping status: {response.status}")
+            except Exception as e:
+                logger.error(f"Keep-alive ping failed: {e}")
+
 # --- Main Entry Point ---
 async def main():
     logger.info("Starting Elevate Aura Bot...")
     
     # Start Dummy Web Server (For Render) - Start this FIRST to satisfy port binding check
     web_site_ref = await start_web_server()
+    
+    # Start Keep-Alive Background Task
+    asyncio.create_task(keep_alive())
     
     # Verify DB connection
     connected = await db.connect()
