@@ -117,13 +117,13 @@ async def start_web_server():
 async def main():
     logger.info("Starting Elevate Aura Bot...")
     
+    # Start Dummy Web Server (For Render) - Start this FIRST to satisfy port binding check
+    await start_web_server()
+    
     # Verify DB connection
     connected = await db.connect()
     if not connected:
         logger.error("Failed to connect to Supabase. Check credentials.")
-    
-    # Start Dummy Web Server (For Render)
-    await start_web_server()
 
     logger.info("Bot is polling...")
     await dp.start_polling(bot)
