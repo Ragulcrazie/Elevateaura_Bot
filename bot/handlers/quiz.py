@@ -99,7 +99,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
 
-async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str):
+async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str, mode="Markdown"):
     """
     Updates the message at intervals to show visual timer.
     """
@@ -107,34 +107,34 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         # Phase 1: 15s elapsed (30s left)
         await asyncio.sleep(15)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}",
+            f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}",
             reply_markup=markup,
-            parse_mode="Markdown"
+            parse_mode=mode
         )
         
         # Phase 2: 30s elapsed (15s left)
         await asyncio.sleep(15)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}",
+            f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}",
             reply_markup=markup,
-            parse_mode="Markdown"
+            parse_mode=mode
         )
         
         # Phase 3: 40s elapsed (5s left)
         await asyncio.sleep(10)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**\n{options_str}",
+            f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡HURRY!\n{options_str}",
             reply_markup=markup,
-            parse_mode="Markdown"
+            parse_mode=mode
         )
         
         # Phase 4: Time Up
         await asyncio.sleep(5)
         # Remove buttons (None markup)
         await message.edit_text(
-            f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}",
+            f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}" if mode else f"Q: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}",
             reply_markup=None,
-            parse_mode="Markdown"
+            parse_mode=mode
         )
         
         # Trigger Timeout Logic
@@ -255,6 +255,7 @@ async def send_question(message: types.Message, user_id: int):
     # await db.save_quiz_state(user_id, state) # Optional reduction of DB calls for speed
 
     msg = None
+    used_mode = "Markdown"
     try:
         # Try sending with Markdown
         msg = await message.answer(
@@ -272,6 +273,7 @@ async def send_question(message: types.Message, user_id: int):
                 reply_markup=builder.as_markup(),
                 parse_mode=None
             )
+            used_mode = None
         except Exception as e2:
              print(f"DEBUG: Plain text send failed: {e2}")
              return
@@ -284,7 +286,7 @@ async def send_question(message: types.Message, user_id: int):
     if user_id in timer_tasks:
         timer_tasks[user_id].cancel()
         
-    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str))
+    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str, mode=used_mode))
     timer_tasks[user_id] = task
 
 @router.callback_query(F.data.startswith("ans:"))
