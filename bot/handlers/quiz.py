@@ -73,6 +73,8 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
         questions = loader.get_questions(count=5, lang="english", category="aptitude")
 
+    print(f"DEBUG: Initializing session for {user_id}")
+    
     # 1. Initialize Session (RAM First)
     state = {
         "score": 0,
@@ -81,13 +83,20 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         "question_start_time": 0
     }
     user_states[user_id] = state # Instant Access
+    print(f"DEBUG: RAM state set for {user_id}")
     
     # Save State to DB (Async backup)
     # We don't await this blocking the UI, but strict consistency isn't critical for start
-    await db.save_quiz_state(user_id, state)
+    try:
+        print(f"DEBUG: Attempting DB save for {user_id}")
+        await db.save_quiz_state(user_id, state)
+        print(f"DEBUG: DB save successful/attempted for {user_id}")
+    except Exception as e:
+        print(f"DEBUG: DB Save failed (ignored): {e}")
     
     await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 5", parse_mode="Markdown")
     await asyncio.sleep(1)
+    print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
 
 async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str):
@@ -194,20 +203,29 @@ async def handle_timeout(message: types.Message, user_id: int):
     await send_question(message, user_id)
 
 async def send_question(message: types.Message, user_id: int):
+    print(f"DEBUG: Entered send_question for {user_id}")
     # Try RAM first
     state = user_states.get(user_id)
     
     # If missing, try DB
     if not state:
-        db = SupabaseClient()
-        await db.connect()
-        state = await db.get_quiz_state(user_id)
-        if state:
-             user_states[user_id] = state
+        print(f"DEBUG: RAM miss for {user_id}, trying DB")
+        try:
+            db = SupabaseClient()
+            await db.connect()
+            state = await db.get_quiz_state(user_id)
+            if state:
+                 user_states[user_id] = state
+                 print(f"DEBUG: DB hit for {user_id}")
+        except Exception as e:
+            print(f"DEBUG: DB fetch failed: {e}")
     
-    if not state: return
+    if not state: 
+        print(f"DEBUG: State not found anywhere for {user_id}")
+        return
 
     idx = state["current_q_index"]
+    print(f"DEBUG: Current Index: {idx}")
     questions = state["questions"]
 
     # End of Quiz
