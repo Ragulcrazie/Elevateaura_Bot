@@ -112,13 +112,14 @@ async def start_web_server():
     site = web.TCPSite(runner, "0.0.0.0", port)
     await site.start()
     logger.info(f"Web server started on port {port}")
+    return site
 
 # --- Main Entry Point ---
 async def main():
     logger.info("Starting Elevate Aura Bot...")
     
     # Start Dummy Web Server (For Render) - Start this FIRST to satisfy port binding check
-    await start_web_server()
+    web_site_ref = await start_web_server()
     
     # Verify DB connection
     connected = await db.connect()
