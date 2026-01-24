@@ -98,13 +98,25 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
 
-async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str, mode="Markdown"):
+async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup, options_str: str, q_index: int, mode="Markdown"):
     """
-    Updates the message at intervals to show visual timer.
+    Updates the message at intervals. Checks DB/Session state to self-destruct if obsolete.
     """
     try:
+        # Helper to check if we should stop
+        async def should_stop():
+            state = await session_manager.get_session(user_id)
+            if not state: return True
+            # If user has moved to next question (index changed), we are obsolete
+            if state.get("current_q_index") != q_index:
+                print(f"DEBUG: Smart Timer for Q{q_index+1} self-destructing (Current: {state.get('current_q_index')})")
+                return True
+            return False
+
         # Phase 1: 15s elapsed (30s left)
         await asyncio.sleep(15)
+        if await should_stop(): return
+        
         await message.edit_text(
             f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜\n{options_str}",
             reply_markup=markup,
@@ -113,6 +125,8 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         
         # Phase 2: 30s elapsed (15s left)
         await asyncio.sleep(15)
+        if await should_stop(): return
+
         await message.edit_text(
             f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜\n{options_str}",
             reply_markup=markup,
@@ -121,6 +135,8 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         
         # Phase 3: 40s elapsed (5s left)
         await asyncio.sleep(10)
+        if await should_stop(): return
+
         await message.edit_text(
             f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**\n{options_str}" if mode else f"Q: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡HURRY!\n{options_str}",
             reply_markup=markup,
@@ -129,6 +145,8 @@ async def update_timer_loop(message: types.Message, user_id: int, q_text: str, m
         
         # Phase 4: Time Up
         await asyncio.sleep(5)
+        if await should_stop(): return
+
         # Remove buttons (None markup)
         await message.edit_text(
             f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}" if mode else f"Q: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛\n{options_str}",
@@ -255,12 +273,15 @@ async def send_question(message: types.Message, user_id: int):
     if user_id in timer_tasks:
         timer_tasks[user_id].cancel()
         
-    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str, mode=used_mode))
+    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str, q_index=idx, mode=used_mode))
     timer_tasks[user_id] = task
 
 @router.callback_query(F.data.startswith("ans:"))
 async def handle_answer(callback: types.CallbackQuery):
     try:
+        # 1. Stop Loading Spinner Immediately
+        await callback.answer()
+        
         print(f"DEBUG: Handling answer for {callback.from_user.id}")
         user_id = callback.from_user.id
         
