@@ -135,29 +135,36 @@ async def handle_timeout(message: types.Message, user_id: int):
     """
     Handles logic when user fails to answer in time.
     """
-    # Clear task reference
+    # 1. Clear task reference
     if user_id in timer_tasks:
         del timer_tasks[user_id]
         
     state = user_states.get(user_id)
     if not state: return
 
-    # Update DB (Mark as wrong, 45s taken)
-    db = SupabaseClient()
-    await db.connect()
-    await db.update_user_stats(user_id, is_correct=False, time_taken=45.0)
-    
-    # Send Feedback
+    # 2. Get Data for Feedback (Do this FIRST)
     current_q = state["questions"][state["current_q_index"]]
     correct_idx = current_q["answer_index"]
     
-    await message.answer(
-        f"❌ **Time Up!**\nCorrect: {current_q['options'][correct_idx]}\n\n"
-        f"💡 **Explanation**: {current_q['explanation']}",
-        parse_mode="Markdown"
-    )
+    # 3. Send Feedback (UI Priority)
+    try:
+        await message.answer(
+            f"❌ **Time Up!**\nCorrect: {current_q['options'][correct_idx]}\n\n"
+            f"💡 **Explanation**: {current_q['explanation']}",
+            parse_mode="Markdown"
+        )
+    except Exception as e:
+        print(f"Feedback Error: {e}")
+
+    # 4. Update DB (Backend - Try/Except to not block flow)
+    try:
+        db = SupabaseClient()
+        await db.connect()
+        await db.update_user_stats(user_id, is_correct=False, time_taken=45.0)
+    except Exception as e:
+        print(f"DB Error in Timeout: {e}")
     
-    # Next Question
+    # 5. Next Question (Always Proceed)
     state["current_q_index"] += 1
     await asyncio.sleep(1.5)
     await send_question(message, user_id)
