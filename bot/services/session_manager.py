@@ -15,15 +15,17 @@ class SessionManager:
 
     def load_from_disk(self):
         """Loads sessions from the JSON file."""
+        print(f"DEBUG: Loading sessions from {SESSION_FILE}")
         if os.path.exists(SESSION_FILE):
             try:
                 with open(SESSION_FILE, "r", encoding="utf-8") as f:
                     self.sessions = json.load(f)
-                logger.info(f"Loaded {len(self.sessions)} sessions from disk.")
+                print(f"DEBUG: Loaded {len(self.sessions)} sessions from disk.")
             except Exception as e:
-                logger.error(f"Failed to load sessions: {e}")
+                print(f"DEBUG: Failed to load sessions: {e}")
                 self.sessions = {}
         else:
+            print("DEBUG: Session file does not exist (yet).")
             self.sessions = {}
 
     def save_to_disk(self):
