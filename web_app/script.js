@@ -244,10 +244,20 @@ function updateTopHeader() {
     const dateStr = new Date().toLocaleDateString('en-GB', dateOptions);
     
     const dateEl = document.getElementById('headerDate');
-    const testCountEl = document.getElementById('testCountDisplay');
+    // Try both IDs to handle caching mismatches
+    const testCountEl = document.getElementById('testCountDisplay') || document.getElementById('testCount');
     
     if (dateEl) dateEl.textContent = dateStr;
-    if (testCountEl) testCountEl.textContent = "Test 1/4";
+    
+    if (testCountEl) {
+        testCountEl.textContent = "Test 1/4";
+        // Force styling to ensure visibility even if CSS is cached
+        testCountEl.style.color = "#000000"; // Force Black
+        testCountEl.style.fontWeight = "bold";
+        testCountEl.style.backgroundColor = "#fbbf24"; // Amber-400
+        testCountEl.style.padding = "2px 6px";
+        testCountEl.style.borderRadius = "4px";
+    }
 }
 
 // --- 4. LISTENERS ---
