@@ -29,8 +29,8 @@ SAMPLE_QUESTIONS = [
 ]
 
 # State management (Simple Dict for MVP - Use Redis/DB for Prod)
-# State management (Persistence via DB)
-# user_states = {} # DEPRECATED: Moved to DB
+# State management (Hybrid: RAM + DB persistence)
+user_states = {} 
 timer_tasks = {} # Stores asyncio tasks for timers
 
 @router.message(Command("quiz"))
@@ -73,20 +73,18 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
         questions = loader.get_questions(count=5, lang="english", category="aptitude")
 
-    # 1. Initialize Session
+    # 1. Initialize Session (RAM First)
     state = {
         "score": 0,
         "current_q_index": 0,
         "questions": questions,
         "question_start_time": 0
     }
+    user_states[user_id] = state # Instant Access
     
-    # Save State to DB
-    success = await db.save_quiz_state(user_id, state)
-    if not success:
-        # Fallback if DB write fails (e.g. column missing), stay memory-less or error
-        # For now, we proceed but log warning.
-        print(f"WARNING: Could not save quiz state for {user_id}")
+    # Save State to DB (Async backup)
+    # We don't await this blocking the UI, but strict consistency isn't critical for start
+    await db.save_quiz_state(user_id, state)
     
     await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 5", parse_mode="Markdown")
     await asyncio.sleep(1)
@@ -147,9 +145,15 @@ async def handle_timeout(message: types.Message, user_id: int):
     if user_id in timer_tasks:
         del timer_tasks[user_id]
         
-    db = SupabaseClient()
-    await db.connect()
-    state = await db.get_quiz_state(user_id)
+    state = user_states.get(user_id)
+    
+    # RAM Miss? Try DB (Resume Session)
+    if not state:
+        db = SupabaseClient()
+        await db.connect()
+        state = await db.get_quiz_state(user_id)
+        if state:
+            user_states[user_id] = state # Hydrate RAM
     
     if not state: return
 
@@ -177,16 +181,30 @@ async def handle_timeout(message: types.Message, user_id: int):
     
     # 5. Next Question (Always Proceed)
     state["current_q_index"] += 1
-    await db.save_quiz_state(user_id, state)
+    
+    # Update RAM
+    user_states[user_id] = state
+    
+    # Update DB (Best Effort)
+    try:
+        await db.save_quiz_state(user_id, state)
+    except: pass
     
     await asyncio.sleep(1.5)
     await send_question(message, user_id)
 
 async def send_question(message: types.Message, user_id: int):
-    db = SupabaseClient()
-    await db.connect()
+    # Try RAM first
+    state = user_states.get(user_id)
     
-    state = await db.get_quiz_state(user_id)
+    # If missing, try DB
+    if not state:
+        db = SupabaseClient()
+        await db.connect()
+        state = await db.get_quiz_state(user_id)
+        if state:
+             user_states[user_id] = state
+    
     if not state: return
 
     idx = state["current_q_index"]
@@ -213,7 +231,10 @@ async def send_question(message: types.Message, user_id: int):
 
     # Start Timer
     state["question_start_time"] = time.time()
-    await db.save_quiz_state(user_id, state) # Sync start time
+    user_states[user_id] = state # Update RAM with time
+    
+    # Sync start time to DB (Best Effort)
+    # await db.save_quiz_state(user_id, state) # Optional reduction of DB calls for speed
 
     msg = await message.answer(
         f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}",
@@ -240,12 +261,18 @@ async def handle_answer(callback: types.CallbackQuery):
         timer_tasks[user_id].cancel()
         del timer_tasks[user_id]
         
-    db = SupabaseClient()
-    await db.connect()
-    state = await db.get_quiz_state(user_id)
+    # Try RAM
+    state = user_states.get(user_id)
     
+    # Try DB
     if not state:
-        await callback.answer("Session expired (or DB error).", show_alert=True)
+        db = SupabaseClient()
+        await db.connect()
+        state = await db.get_quiz_state(user_id)
+        if state: user_states[user_id] = state
+
+    if not state:
+        await callback.answer("Session expired.", show_alert=True)
         return
 
     # Parse Answer
@@ -270,6 +297,11 @@ async def handle_answer(callback: types.CallbackQuery):
     
     # Update DB Stats & Save State
     await db.update_user_stats(user_id, is_correct, time_taken)
+    
+    # Update RAM
+    user_states[user_id] = state
+    
+    # Sync DB
     await db.save_quiz_state(user_id, state)
 
     # Edit message to show result (Instant Feedback)
@@ -288,11 +320,15 @@ async def handle_answer(callback: types.CallbackQuery):
     await callback.answer()
 
 async def finish_quiz(message: types.Message, user_id: int):
-    db = SupabaseClient()
-    await db.connect()
+    # Try RAM
+    state = user_states.get(user_id)
     
-    # Fetch state if passed from outside, else (unlikely for finish) get from DB
-    state = await db.get_quiz_state(user_id)
+    if not state:
+         # Try DB
+        db = SupabaseClient()
+        await db.connect()
+        state = await db.get_quiz_state(user_id)
+    
     if not state: return
 
     score = state["score"]
@@ -333,5 +369,9 @@ async def finish_quiz(message: types.Message, user_id: int):
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
     # Cleanup
+    db = SupabaseClient()
+    await db.connect()
     await db.clear_quiz_state(user_id)
-    # del user_states[user_id]
+    
+    if user_id in user_states:
+        del user_states[user_id]
