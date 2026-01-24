@@ -5,7 +5,8 @@ from typing import Dict, Any, Optional
 
 logger = logging.getLogger(__name__)
 
-SESSION_FILE = "quiz_sessions.json"
+SESSION_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../data/quiz_sessions.json"))
+os.makedirs(os.path.dirname(SESSION_FILE), exist_ok=True)
 
 class SessionManager:
     def __init__(self):
