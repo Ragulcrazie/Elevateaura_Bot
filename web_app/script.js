@@ -244,7 +244,7 @@ function updateTopHeader() {
     const dateStr = new Date().toLocaleDateString('en-GB', dateOptions);
     
     const dateEl = document.getElementById('headerDate');
-    const testCountEl = document.getElementById('testCount');
+    const testCountEl = document.getElementById('testCountDisplay');
     
     if (dateEl) dateEl.textContent = dateStr;
     if (testCountEl) testCountEl.textContent = "Test 1/4";
