@@ -226,7 +226,7 @@ function renderList(data) {
                 </div>
                 <div>
                     <p class="font-medium text-sm ${user.is_me ? 'text-yellow-400' : 'text-gray-200'}">${user.name}</p>
-                    ${user.is_me ? '<p class="text-[10px] text-indigo-300">That\'s You!</p>' : `<p class="text-[10px] opacity-60">Avg Pace: ${Math.floor(Math.random() * 20 + 20)}s</p>`}
+                    ${user.is_me ? '<p class="text-[10px] text-indigo-300">That\'s You!</p>' : `<p class="text-[10px] text-gray-400">Avg Pace: ${Math.floor(Math.random() * 20 + 20)}s</p>`}
                 </div>
             </div>
             <div class="font-bold text-yellow-400 text-sm">${user.score} pts</div>
