@@ -121,24 +121,32 @@ class GhostEngine {
 // --- 2. MAIN LOGIC ---
 
 async function initDashboard() {
-    const user = tg.initDataUnsafe?.user;
+    let user = tg.initDataUnsafe?.user;
+    
+    // Fallback for Desktop/Browser testing
     if (!user) {
-        renderError("Please open this app from Telegram.");
-        return;
+        console.warn("No Telegram User detected. Using Guest Mode.");
+        user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
+        // We do NOT return here anymore; we proceed as Guest.
     }
 
     // 1. Fetch Real User Data
     let userData = null;
     try {
-        const response = await fetch(`${API_BASE_URL}/api/user_data?user_id=${user.id}`, {
-            mode: 'cors'
-        });
-        if (response.ok) {
-            userData = await response.json();
+        // Skip API call for Guest (ID 0)
+        if (user.id === 0) {
+            userData = { full_name: "Guest User", total_score: 0, pack_id: 10 };
         } else {
-            console.warn("API Error", response.status);
-            // Fallback for dev/demo if API fails
-            userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+            const response = await fetch(`${API_BASE_URL}/api/user_data?user_id=${user.id}`, {
+                mode: 'cors'
+            });
+            if (response.ok) {
+                userData = await response.json();
+            } else {
+                console.warn("API Error", response.status);
+                // Fallback for dev/demo if API fails
+                userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+            }
         }
     } catch (e) {
         console.error("Network Error", e);
