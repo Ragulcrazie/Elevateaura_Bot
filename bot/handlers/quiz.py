@@ -76,6 +76,12 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
 
     print(f"DEBUG: Initializing session for {user_id}")
     
+    # 0. Kill Zombie Timers (Safety First)
+    if user_id in timer_tasks:
+        timer_tasks[user_id].cancel()
+        del timer_tasks[user_id]
+        print(f"DEBUG: Cancelled existing timer for {user_id}")
+    
     # 1. Initialize Session
     state = {
         "score": 0,
