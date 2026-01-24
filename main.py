@@ -102,9 +102,49 @@ from aiohttp import web
 async def health_check(request):
     return web.Response(text="Bot is alive!")
 
+    logger.info(f"Web server started on port {port}")
+    return site
+
+async def handle_options(request):
+    return web.Response(headers={
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+    })
+
+async def get_user_data(request):
+    user_id = request.query.get("user_id")
+    if not user_id:
+        return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+    
+    try:
+        user_data = await db.get_user(int(user_id))
+        if user_data:
+            # Simple Pack Logic: 1200 rating -> Pack 12
+            # Default to Pack 10 (Rating 1000) if no rating
+            rating = user_data.get("skill_rating", 1200) # Assuming default 1200
+            # If skill_rating is missing in DB (old schema), default to 1200
+            if rating is None: rating = 1200
+                
+            pack_id = int(rating / 100)
+            
+            return web.json_response({
+                "full_name": user_data.get("full_name", "Unknown Aspirant"),
+                "total_score": user_data.get("current_streak", 0) * 10, # Proxy score for MVP
+                "pack_id": pack_id
+            }, headers={"Access-Control-Allow-Origin": "*"})
+        else:
+            return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
+    except Exception as e:
+        logger.error(f"API Error: {e}")
+        return web.json_response({"error": "Internal Server Error"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
 async def start_web_server():
     app = web.Application()
     app.router.add_get("/", health_check)
+    app.router.add_get("/api/user_data", get_user_data)
+    app.router.add_options("/api/user_data", handle_options)
+    
     runner = web.AppRunner(app)
     await runner.setup()
     # Render provides PORT env var. Default to 8080 if missing.
