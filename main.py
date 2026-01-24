@@ -82,7 +82,7 @@ async def cmd_start(message: types.Message):
     # 2. Send Welcome Message
     # Create Layout
     builder = InlineKeyboardBuilder()
-    builder.button(text="🔥 Check Leaderboard (Web App)", web_app=WebAppInfo(url="https://telegram.org")) # TODO: Replace with your hosted URL
+    builder.button(text="🔥 Check Leaderboard (Web App)", web_app=WebAppInfo(url="https://ragulcrazie.github.io/Elevateaura_Bot/web_app/"))
     builder.button(text="📝 Start Quiz", callback_data="start_quiz_cmd") # Shortcuts
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
     builder.adjust(1)
