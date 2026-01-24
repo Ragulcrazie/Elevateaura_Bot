@@ -262,7 +262,10 @@ async def handle_answer(callback: types.CallbackQuery):
         
     state = session_manager.get_session(user_id)
     if not state:
-        await callback.answer("Session expired.", show_alert=True)
+        # Debugging Info for User
+        debug_info = f"ID: {user_id}\nKeys: {list(session_manager.sessions.keys())}"
+        print(f"DEBUG: Session Lookup Failed. {debug_info}")
+        await callback.answer(f"Session Error (Debug Mode):\n{debug_info}", show_alert=True)
         return
 
     # Check for TIMEOUT (Logical Check)

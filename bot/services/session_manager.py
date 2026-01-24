@@ -42,8 +42,24 @@ class SessionManager:
         self.save_to_disk()
 
     def get_session(self, user_id: int) -> Optional[Dict[str, Any]]:
-        """Retrieves a user session."""
-        return self.sessions.get(str(user_id))
+        """Retrieves a user session. Reloads from disk if missing in memory."""
+        print(f"DEBUG: Getting session for {user_id} (Type: {type(user_id)})")
+        
+        # Try Memory
+        if str(user_id) in self.sessions:
+            print("DEBUG: Found in memory cache")
+            return self.sessions.get(str(user_id))
+        
+        # Try Disk Reload (In case another process updated it or cold start)
+        print("DEBUG: Cache miss. Reloading from disk...")
+        self.load_from_disk()
+        
+        if str(user_id) in self.sessions:
+            print("DEBUG: Found after reload.")
+            return self.sessions.get(str(user_id))
+            
+        print(f"DEBUG: Session definitely not found. Keys: {list(self.sessions.keys())}")
+        return None
 
     def delete_session(self, user_id: int):
         """Deletes a user session."""
