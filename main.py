@@ -161,7 +161,7 @@ async def keep_alive():
     url = "https://elevateaura-bot.onrender.com" 
     async with aiohttp.ClientSession() as session:
         while True:
-            await asyncio.sleep(600) # 10 minutes (Render sleeps after 15)
+            await asyncio.sleep(300) # 5 minutes (Render sleeps after 15)
             try:
                 async with session.get(url) as response:
                     logger.info(f"Keep-alive ping status: {response.status}")
