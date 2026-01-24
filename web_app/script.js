@@ -164,7 +164,9 @@ async function initDashboard() {
         score: userData.total_score,
         is_bot: false,
         initials: "YOU",
-        is_me: true
+        is_me: true,
+        // Use real pace if available (non-zero), otherwise fallback to 0 (which RenderList will handle)
+        pace: userData.average_pace && userData.average_pace > 0 ? Math.round(userData.average_pace) : 0
     };
     leaderboard.push(realUserEntry);
 
@@ -229,7 +231,10 @@ function renderList(data) {
                 </div>
                 <div>
                     <p class="font-medium text-sm ${user.is_me ? 'text-yellow-400' : 'text-gray-200'}">${user.name}</p>
-                    ${user.is_me ? '<p class="text-[10px] text-indigo-300">That\'s You!</p>' : `<p class="text-[10px]" style="color: #a0aec0 !important;">Avg. Pace: ${Math.floor(Math.random() * 20 + 20)}s</p>`}
+                    ${user.is_me 
+                        ? `<p class="text-[10px] text-indigo-300">${user.pace ? 'Avg. Pace: ' + user.pace + 's' : 'Just Started'}</p>`
+                        : `<p class="text-[10px]" style="color: #a0aec0 !important;">Avg. Pace: ${user.score > 0 ? (50 - Math.floor(user.score/15) + Math.floor(Math.random()*5)) : Math.floor(Math.random()*20 + 30)}s</p>`
+                    }
                 </div>
             </div>
             <div class="font-bold text-yellow-400 text-sm">${user.score} pts</div>

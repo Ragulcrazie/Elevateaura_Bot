@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import os
+import aiohttp
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
@@ -131,7 +132,8 @@ async def get_user_data(request):
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
                 "total_score": user_data.get("current_streak", 0) * 10, # Proxy score for MVP
-                "pack_id": pack_id
+                "pack_id": pack_id,
+                "average_pace": user_data.get("average_pace", 0) # Format: 12.5
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})

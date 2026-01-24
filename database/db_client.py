@@ -59,3 +59,47 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Failed to get user: {e}")
             return None
+
+    async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float) -> bool:
+        """
+        Updates user stats: Total Score, Questions Answered, Average Pace.
+        Calculates a rolling average for pace.
+        """
+        if not self.client: return False
+        
+        try:
+            # 1. Get current stats
+            user = await self.get_user(user_id)
+            if not user: return False
+            
+            # 2. Calculate new values
+            current_inv = user.get("questions_answered", 0) or 0
+            current_pace = user.get("average_pace", 0.0) or 0.0
+            
+            # Avoid division by zero or weird initial states
+            if current_pace is None: current_pace = 0.0
+            if current_inv is None: current_inv = 0
+            
+            # New Pace Formula: ((OldAvg * OldCount) + NewTime) / (OldCount + 1)
+            new_inv = current_inv + 1
+            new_pace = ((current_pace * current_inv) + time_taken) / new_inv
+            
+            # Score Update (Assuming 10 points per correct answer for Leaderboard)
+            current_score = user.get("current_streak", 0) or 0 # Using streak as proxy for score in MVP
+            new_score = current_score + 10 if is_correct else current_score
+            
+            # 3. Update DB
+            data = {
+                "user_id": user_id,
+                "questions_answered": new_inv,
+                "average_pace": round(new_pace, 2),
+                "current_streak": new_score # Updating 'score'
+            }
+            
+            self.client.table('users').upsert(data).execute()
+            logger.info(f"Updated Stats for {user_id}: Pace={new_pace:.2f}s, Score={new_score}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Failed to update user stats: {e}")
+            return False

@@ -5,6 +5,8 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 import json
 import asyncio
 import random
+import time
+from database.db_client import SupabaseClient
 
 router = Router()
 
@@ -106,8 +108,11 @@ async def send_question(message: types.Message, user_id: int):
         builder.button(text=f"{i+1}", callback_data=f"ans:{i}")
     builder.adjust(4) # Equal width buttons
 
+    # Start Timer
+    state["question_start_time"] = time.time()
+
     await message.answer(
-        f"**Q{idx+1}: {q['question']}**\n{options_str}",
+        f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s)\n{options_str}",
         reply_markup=builder.as_markup(),
         parse_mode="Markdown"
     )
@@ -136,6 +141,16 @@ async def handle_answer(callback: types.CallbackQuery):
     # Update State
     state["current_q_index"] += 1
     
+    # Calculate Time Taken
+    start_time = state.get("question_start_time", time.time())
+    time_taken = time.time() - start_time
+    
+    # Update DB (Async)
+    db = SupabaseClient()
+    await db.connect()
+    # Ensure we don't block the UI response too much, but for now await is fine
+    await db.update_user_stats(user_id, is_correct, time_taken)
+
     # Edit message to show result (Instant Feedback)
     await callback.message.edit_text(
         f"**Q{state['current_q_index']}: {current_q['question']}**\n\n"
