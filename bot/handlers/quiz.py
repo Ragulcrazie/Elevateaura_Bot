@@ -254,69 +254,87 @@ async def send_question(message: types.Message, user_id: int):
 
 @router.callback_query(F.data.startswith("ans:"))
 async def handle_answer(callback: types.CallbackQuery):
-    user_id = callback.from_user.id
-    
-    # Cancel Timer Task immediately
-    if user_id in timer_tasks:
-        timer_tasks[user_id].cancel()
-        del timer_tasks[user_id]
+    try:
+        print(f"DEBUG: Handling answer for {callback.from_user.id}")
+        user_id = callback.from_user.id
         
-    state = await session_manager.get_session(user_id)
-    if not state:
-        # Debugging Info for User
-        debug_info = f"ID: {user_id}\nDB Check Failed"
-        print(f"DEBUG: Session Lookup Failed. {debug_info}")
-        await callback.answer(f"Session Error (Debug Mode):\n{debug_info}", show_alert=True)
-        return
+        # Cancel Timer Task immediately
+        if user_id in timer_tasks:
+            timer_tasks[user_id].cancel()
+            del timer_tasks[user_id]
+            print(f"DEBUG: Timer cancelled for {user_id}")
+            
+        # Retrieve State
+        print(f"DEBUG: Fetching session for {user_id}")
+        state = await session_manager.get_session(user_id)
+        if not state:
+            # Debugging Info for User
+            debug_info = f"ID: {user_id}\nDB Check Failed (Start a new quiz with /quiz)"
+            print(f"DEBUG: Session Lookup Failed. {debug_info}")
+            await callback.answer(f"Session Error:\n{debug_info}", show_alert=True)
+            return
+        
+        print(f"DEBUG: Session found for {user_id}")
 
-    # Check for TIMEOUT (Logical Check)
-    start_time = state.get("question_start_time", 0)
-    # Allow 2s grace for network latency
-    if time.time() - start_time > 47: 
-        await callback.answer("Time limit exceeded!", show_alert=True)
-        await handle_timeout(callback.message, user_id)
-        return
+        # Check for TIMEOUT (Logical Check)
+        start_time = state.get("question_start_time", 0)
+        # Allow 2s grace for network latency
+        if time.time() - start_time > 47: 
+            await callback.answer("Time limit exceeded!", show_alert=True)
+            await handle_timeout(callback.message, user_id)
+            return
 
-    # Parse Answer
-    selected_idx = int(callback.data.split(":")[1])
-    current_q = state["questions"][state["current_q_index"]]
-    correct_idx = current_q["answer_index"]
+        # Parse Answer
+        selected_idx = int(callback.data.split(":")[1])
+        current_q = state["questions"][state["current_q_index"]]
+        correct_idx = current_q["answer_index"]
 
-    # Logic
-    is_correct = (selected_idx == correct_idx)
-    if is_correct:
-        state["score"] += 1
-        feedback = "✅ **Correct!**"
-    else:
-        feedback = f"❌ **Wrong!**\nCorrect: {current_q['options'][correct_idx]}"
+        # Logic
+        is_correct = (selected_idx == correct_idx)
+        if is_correct:
+            state["score"] += 1
+            feedback = "✅ **Correct!**"
+        else:
+            feedback = f"❌ **Wrong!**\nCorrect: {current_q['options'][correct_idx]}"
 
-    # Update State in DB
-    state["current_q_index"] += 1
-    
-    # Calculate Time Taken
-    start_time = state.get("question_start_time", time.time())
-    time_taken = time.time() - start_time
-    
-    # Update DB Stats
-    await db.update_user_stats(user_id, is_correct, time_taken)
-    
-    # Update Session
-    await session_manager.save_session(user_id, state)
+        # Update State in DB
+        state["current_q_index"] += 1
+        
+        # Calculate Time Taken
+        start_time = state.get("question_start_time", time.time())
+        time_taken = time.time() - start_time
+        
+        # Update DB Stats
+        db = SupabaseClient()
+        await db.connect()
+        await db.update_user_stats(user_id, is_correct, time_taken)
+        
+        # Update Session
+        await session_manager.save_session(user_id, state)
 
-    # Edit message to show result (Instant Feedback)
-    await callback.message.edit_text(
-        f"**Q{state['current_q_index']}: {current_q['question']}**\n\n"
-        f"{feedback}\n\n"
-        f"💡 **Explanation**: {current_q['explanation']}",
-        parse_mode="Markdown"
-    )
+        # Edit message to show result (Instant Feedback)
+        await callback.message.edit_text(
+            f"**Q{state['current_q_index']}: {current_q['question']}**\n\n"
+            f"{feedback}\n\n"
+            f"💡 **Explanation**: {current_q['explanation']}",
+            parse_mode="Markdown"
+        )
 
-    # Next Question
-    await asyncio.sleep(1.5) # Pause to read explanation
-    # Note: We need the original 'message' object to send a new message.
-    # callback.message is the message we just edited.
-    await send_question(callback.message, user_id)
-    await callback.answer()
+        # Next Question
+        await asyncio.sleep(1.5) # Pause to read explanation
+        # Note: We need the original 'message' object to send a new message.
+        # callback.message is the message we just edited.
+        await send_question(callback.message, user_id)
+        await callback.answer()
+        
+    except Exception as e:
+        print(f"CRITICAL ERROR in handle_answer: {e}")
+        import traceback
+        traceback.print_exc()
+        try:
+            await callback.answer(f"Bot Error: {e}", show_alert=True)
+        except:
+             pass
 
 async def finish_quiz(message: types.Message, user_id: int):
     state = await session_manager.get_session(user_id)
