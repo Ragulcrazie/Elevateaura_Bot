@@ -103,3 +103,50 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Failed to update user stats: {e}")
             return False
+
+    async def save_quiz_state(self, user_id: int, state: dict) -> bool:
+        """
+        Saves the current quiz state (questions, index, score) to the DB.
+        """
+        if not self.client: return False
+        try:
+            # We explicitly update ONLY the quiz_state entry to avoid overwriting other fields if possible,
+            # but upsert works on the whole row if we provide the PK.
+            # State can be large, so ensure the column 'quiz_state' (JSONB) exists in Supabase.
+            data = {
+                "user_id": user_id,
+                "quiz_state": state
+            }
+            self.client.table('users').upsert(data).execute()
+            return True
+        except Exception as e:
+            logger.error(f"Failed to save quiz state: {e}")
+            return False
+
+    async def get_quiz_state(self, user_id: int) -> dict:
+        """
+        Retrieves the active quiz state from the DB.
+        """
+        if not self.client: return None
+        try:
+            user = await self.get_user(user_id)
+            if user and user.get("quiz_state"):
+                return user["quiz_state"]
+            return None
+        except Exception as e:
+            logger.error(f"Failed to get quiz state: {e}")
+            return None
+
+    async def clear_quiz_state(self, user_id: int):
+        """
+        Clears the quiz state (sets to Null).
+        """
+        if not self.client: return
+        try:
+            data = {
+                "user_id": user_id,
+                "quiz_state": None
+            }
+            self.client.table('users').upsert(data).execute()
+        except Exception as e:
+            logger.error(f"Failed to clear quiz state: {e}")

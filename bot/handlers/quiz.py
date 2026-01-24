@@ -29,8 +29,8 @@ SAMPLE_QUESTIONS = [
 ]
 
 # State management (Simple Dict for MVP - Use Redis/DB for Prod)
-# State management (Simple Dict for MVP - Use Redis/DB for Prod)
-user_states = {}
+# State management (Persistence via DB)
+# user_states = {} # DEPRECATED: Moved to DB
 timer_tasks = {} # Stores asyncio tasks for timers
 
 @router.message(Command("quiz"))
@@ -74,11 +74,19 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         questions = loader.get_questions(count=5, lang="english", category="aptitude")
 
     # 1. Initialize Session
-    user_states[user_id] = {
+    state = {
         "score": 0,
         "current_q_index": 0,
-        "questions": questions
+        "questions": questions,
+        "question_start_time": 0
     }
+    
+    # Save State to DB
+    success = await db.save_quiz_state(user_id, state)
+    if not success:
+        # Fallback if DB write fails (e.g. column missing), stay memory-less or error
+        # For now, we proceed but log warning.
+        print(f"WARNING: Could not save quiz state for {user_id}")
     
     await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 5", parse_mode="Markdown")
     await asyncio.sleep(1)
@@ -139,7 +147,10 @@ async def handle_timeout(message: types.Message, user_id: int):
     if user_id in timer_tasks:
         del timer_tasks[user_id]
         
-    state = user_states.get(user_id)
+    db = SupabaseClient()
+    await db.connect()
+    state = await db.get_quiz_state(user_id)
+    
     if not state: return
 
     # 2. Get Data for Feedback (Do this FIRST)
@@ -166,11 +177,16 @@ async def handle_timeout(message: types.Message, user_id: int):
     
     # 5. Next Question (Always Proceed)
     state["current_q_index"] += 1
+    await db.save_quiz_state(user_id, state)
+    
     await asyncio.sleep(1.5)
     await send_question(message, user_id)
 
 async def send_question(message: types.Message, user_id: int):
-    state = user_states.get(user_id)
+    db = SupabaseClient()
+    await db.connect()
+    
+    state = await db.get_quiz_state(user_id)
     if not state: return
 
     idx = state["current_q_index"]
@@ -197,6 +213,7 @@ async def send_question(message: types.Message, user_id: int):
 
     # Start Timer
     state["question_start_time"] = time.time()
+    await db.save_quiz_state(user_id, state) # Sync start time
 
     msg = await message.answer(
         f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}",
@@ -223,9 +240,12 @@ async def handle_answer(callback: types.CallbackQuery):
         timer_tasks[user_id].cancel()
         del timer_tasks[user_id]
         
-    state = user_states.get(user_id)
+    db = SupabaseClient()
+    await db.connect()
+    state = await db.get_quiz_state(user_id)
+    
     if not state:
-        await callback.answer("Session expired.", show_alert=True)
+        await callback.answer("Session expired (or DB error).", show_alert=True)
         return
 
     # Parse Answer
@@ -241,18 +261,16 @@ async def handle_answer(callback: types.CallbackQuery):
     else:
         feedback = f"❌ **Wrong!**\nCorrect: {current_q['options'][correct_idx]}"
 
-    # Update State
+    # Update State in DB
     state["current_q_index"] += 1
     
     # Calculate Time Taken
     start_time = state.get("question_start_time", time.time())
     time_taken = time.time() - start_time
     
-    # Update DB (Async)
-    db = SupabaseClient()
-    await db.connect()
-    # Ensure we don't block the UI response too much, but for now await is fine
+    # Update DB Stats & Save State
     await db.update_user_stats(user_id, is_correct, time_taken)
+    await db.save_quiz_state(user_id, state)
 
     # Edit message to show result (Instant Feedback)
     await callback.message.edit_text(
@@ -270,7 +288,13 @@ async def handle_answer(callback: types.CallbackQuery):
     await callback.answer()
 
 async def finish_quiz(message: types.Message, user_id: int):
-    state = user_states.get(user_id)
+    db = SupabaseClient()
+    await db.connect()
+    
+    # Fetch state if passed from outside, else (unlikely for finish) get from DB
+    state = await db.get_quiz_state(user_id)
+    if not state: return
+
     score = state["score"]
     total = len(state["questions"])
     
@@ -309,4 +333,5 @@ async def finish_quiz(message: types.Message, user_id: int):
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
     # Cleanup
-    del user_states[user_id]
+    await db.clear_quiz_state(user_id)
+    # del user_states[user_id]
