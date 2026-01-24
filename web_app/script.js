@@ -175,14 +175,28 @@ async function initDashboard() {
 
 // --- 3. UI RENDERING ---
 
+function renderError(msg) {
+    const container = document.getElementById('leaderboard');
+    container.innerHTML = `<div class="p-4 text-center text-red-400 bg-red-900/20 rounded-xl">${msg}</div>`;
+}
+
 function renderHeader(userEntry) {
     // Update "Your Rank" card
-    document.querySelector('.text-3xl.font-bold.text-yellow-500').textContent = `#${userEntry.rank}`;
-    document.querySelector('.text-2xl.font-bold').textContent = userEntry.score;
+    try {
+        const rankEl = document.querySelector('.text-3xl.font-bold.text-yellow-500');
+        const scoreEl = document.querySelector('.text-2xl.font-bold');
+        
+        if (rankEl) rankEl.textContent = `#${userEntry.rank}`;
+        if (scoreEl) scoreEl.textContent = userEntry.score;
+    } catch (e) {
+        console.warn("Header render failed:", e);
+    }
 }
 
 function renderList(data) {
     const container = document.getElementById('leaderboard');
+    if (!container) return;
+    
     container.innerHTML = '';
     
     // Show Top 100 only (though we generated ~51)
@@ -216,6 +230,16 @@ function renderList(data) {
 // --- 4. LISTENERS ---
 // document.getElementById('upgradeBtn').addEventListener('click', ...); // Keep existing logic
 
+// Global Error Handler
+window.onerror = function(msg, url, lineNo, columnNo, error) {
+    renderError(`Error: ${msg} (Line ${lineNo})`);
+    return false;
+};
+
 // Start
-initDashboard();
+try {
+    initDashboard();
+} catch (e) {
+    renderError("Init Failed: " + e.message);
+}
 
