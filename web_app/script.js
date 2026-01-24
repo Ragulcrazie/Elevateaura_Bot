@@ -156,7 +156,7 @@ async function initDashboard() {
     // 2. Generate Ghosts
     const today = new Date().toISOString().split('T')[0]; // "2024-01-24"
     const engine = new GhostEngine(today, 1, userData.packId || 10);
-    const leaderboard = engine.generateLeaderboard(50); // 50 Ghosts
+    const leaderboard = engine.generateLeaderboard(49); // 49 Ghosts + 1 User = 50 Total
 
     // 3. Insert Real User
     const realUserEntry = {
@@ -179,6 +179,9 @@ async function initDashboard() {
     // 5. Render
     renderHeader(realUserEntry);
     renderList(leaderboard);
+    
+    // 6. Update Top Header (Date & Test Count)
+    updateTopHeader();
 }
 
 // --- 3. UI RENDERING ---
@@ -233,6 +236,18 @@ function renderList(data) {
         `;
         container.appendChild(row);
     });
+}
+
+function updateTopHeader() {
+    // precise date format: "24 Jan 2026"
+    const dateOptions = { day: 'numeric', month: 'short', year: 'numeric' };
+    const dateStr = new Date().toLocaleDateString('en-GB', dateOptions);
+    
+    const dateEl = document.getElementById('headerDate');
+    const testCountEl = document.getElementById('testCount');
+    
+    if (dateEl) dateEl.textContent = dateStr;
+    if (testCountEl) testCountEl.textContent = "Test 1/4";
 }
 
 // --- 4. LISTENERS ---
