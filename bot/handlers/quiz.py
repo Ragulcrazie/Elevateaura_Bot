@@ -29,7 +29,9 @@ SAMPLE_QUESTIONS = [
 ]
 
 # State management (Simple Dict for MVP - Use Redis/DB for Prod)
+# State management (Simple Dict for MVP - Use Redis/DB for Prod)
 user_states = {}
+timer_tasks = {} # Stores asyncio tasks for timers
 
 @router.message(Command("quiz"))
 async def start_quiz_command(message: types.Message):
@@ -82,6 +84,48 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     await asyncio.sleep(1)
     await send_question(message, user_id)
 
+async def update_timer_loop(message: types.Message, user_id: int, q_text: str, markup):
+    """
+    Updates the message at intervals to show visual timer.
+    """
+    try:
+        # Phase 1: 15s elapsed (30s left)
+        await asyncio.sleep(15)
+        await message.edit_text(
+            f"**Q**: {q_text}\n\n(⏱️ 30s Left) 🟨🟨🟨⬜⬜",
+            reply_markup=markup,
+            parse_mode="Markdown"
+        )
+        
+        # Phase 2: 30s elapsed (15s left)
+        await asyncio.sleep(15)
+        await message.edit_text(
+            f"**Q**: {q_text}\n\n(⏱️ 15s Left) 🟧🟧⬜⬜⬜",
+            reply_markup=markup,
+            parse_mode="Markdown"
+        )
+        
+        # Phase 3: 40s elapsed (5s left)
+        await asyncio.sleep(10)
+        await message.edit_text(
+            f"**Q**: {q_text}\n\n(⏱️ 5s Left) 🟥⬜⬜⬜⬜\n⚡ **HURRY!**",
+            reply_markup=markup,
+            parse_mode="Markdown"
+        )
+        
+        # Phase 4: Time Up
+        await asyncio.sleep(5)
+        await message.edit_text(
+            f"**Q**: {q_text}\n\n(❌ TIME UP) ⬛⬛⬛⬛⬛",
+            reply_markup=markup,
+            parse_mode="Markdown"
+        )
+    except asyncio.CancelledError:
+        # Task was cancelled (User Answered), do nothing
+        pass
+    except Exception as e:
+        print(f"Timer Error: {e}")
+
 async def send_question(message: types.Message, user_id: int):
     state = user_states.get(user_id)
     if not state: return
@@ -111,15 +155,31 @@ async def send_question(message: types.Message, user_id: int):
     # Start Timer
     state["question_start_time"] = time.time()
 
-    await message.answer(
-        f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s)\n{options_str}",
+    msg = await message.answer(
+        f"**Q{idx+1}: {q['question']}**\n(⏱️ 45s) 🟩🟩🟩🟩🟩\n{options_str}",
         reply_markup=builder.as_markup(),
         parse_mode="Markdown"
     )
 
+    # Allow msg to catch the new message object
+    
+    # Start Background Timer Task
+    # Cancel previous if exists (safety)
+    if user_id in timer_tasks:
+        timer_tasks[user_id].cancel()
+        
+    task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup()))
+    timer_tasks[user_id] = task
+
 @router.callback_query(F.data.startswith("ans:"))
 async def handle_answer(callback: types.CallbackQuery):
     user_id = callback.from_user.id
+    
+    # Cancel Timer Task immediately
+    if user_id in timer_tasks:
+        timer_tasks[user_id].cancel()
+        del timer_tasks[user_id]
+        
     state = user_states.get(user_id)
     if not state:
         await callback.answer("Session expired.", show_alert=True)
