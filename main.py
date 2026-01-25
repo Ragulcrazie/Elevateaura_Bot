@@ -136,10 +136,7 @@ async def get_user_data(request):
                 
             pack_id = int(rating / 100)
             
-            return web.json_response({
-                "full_name": user_data.get("full_name", "Unknown Aspirant"),
             # Schema Fallback: Calculate questions_answered if missing
-            # If DB doesn't have the column, we estimate based on score (10 pts/question)
             db_q_answered = user_data.get("questions_answered")
             derived_q_answered = db_q_answered if db_q_answered is not None else int(user_data.get("current_streak", 0) / 10)
 
