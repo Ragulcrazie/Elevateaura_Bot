@@ -79,11 +79,17 @@ class SupabaseClient:
             quiz_state = user.get("quiz_state") or {}
             saved_stats = quiz_state.get("stats", {})
             
-            current_inv = saved_stats.get("questions_answered", 0)
-            current_pace = saved_stats.get("average_pace", 0.0)
-            
             # Score is still in the main column (verified working)
             current_score = user.get("current_streak", 0) or 0
+            
+            # MIGRATION LOGIC: Seed from Score if missing in JSONB
+            if saved_stats.get("questions_answered") is None and current_score > 0:
+                 current_inv = int(current_score / 10)
+                 logger.info(f"Seeding stats from score: {current_inv} questions")
+            else:
+                 current_inv = saved_stats.get("questions_answered", 0)
+
+            current_pace = saved_stats.get("average_pace", 0.0)
 
             # 2. Calculate New Values
             new_inv = current_inv + 1
