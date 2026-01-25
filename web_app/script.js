@@ -62,59 +62,85 @@ class NameFactory {
     }
 }
 
+// Helper: Get ISO Week Number
+function getWeekNumber(d) {
+    d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+    var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    var weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+    return weekNo;
+}
+
+// Helper: Get Roman Numeral for Week of Month (approx)
+function getRomanWeekOfMonth(date) {
+    const day = date.getDate();
+    const week = Math.ceil(day / 7);
+    const romans = ["I", "II", "III", "IV", "V"];
+    return romans[Math.min(week - 1, 4)];
+}
+
 class GhostEngine {
-    constructor(dateStr, testId, packId) {
-        // Create a unique numeric seed from inputs
-        // Simple hash: Sum of char codes
-        const seedString = `${dateStr}-${testId}-${packId}`;
-        let hash = 0;
-        for (let i = 0; i < seedString.length; i++) hash = hash + seedString.charCodeAt(i);
+    constructor(packId) {
+        // Weekly Seed: Year + WeekNumber
+        const now = new Date();
+        const year = now.getFullYear();
+        const week = getWeekNumber(now);
+        this.seedString = `${year}-W${week}-P${packId}`;
         
+        // Hash it
+        let hash = 0;
+        for (let i = 0; i < this.seedString.length; i++) hash = hash + this.seedString.charCodeAt(i);
         this.rng = new SeededRandom(hash);
+        
         this.packId = packId;
     }
 
-    generateLeaderboard(size = 50) {
+    // Generate ghosts that stay constant for the week
+    generateCohort(size = 50) {
         const ghosts = [];
-        
-        // Base score for this Pack (e.g., Pack 12 => ~1200 rating => ~120 score range?)
-        // Let's assume Pack ID = Rating / 100. So Pack 12 = 1200 Rating.
-        // In our new system, max score is 100 per test.
-        // We simulate that higher packs assume better performance.
-        // Pack 10 (Avg) -> Scores around 40-70
-        // Pack 20 (Pro) -> Scores around 80-100
-        
-        const baseScore = Math.min(this.packId * 5, 80); // Cap base at 80
-        
         for (let i = 0; i < size; i++) {
             const name = NameFactory.generate(this.rng);
-            
-            // Bell Curve Simulation
-            // Random variation between -20 and +15
-            const variance = this.rng.range(-20, 15);
-            let score = baseScore + variance;
-            
-            // Clamp score between 0 and 100 (Max for one test)
-            // Or if we are showing Daily Total (Max 600), we scale it.
-            // Let's assume this view is for "Daily Total" so max 600.
-            score = Math.floor(score * 6); // Scale to 600-point system roughly
-            if (score < 0) score = 0;
-            if (score > 600) score = 600;
-
-            ghosts.push({
-                rank: 0, // Assigned later
-                name: name,
-                score: score,
-                is_bot: true,
-                initials: name.slice(0, 2).toUpperCase()
-            });
+            // Assign a "Base Skill" to this ghost (0-100)
+            const skill = this.rng.range(30, 95); 
+            ghosts.push({ name, skill, initials: name.slice(0, 2).toUpperCase() });
         }
-        
-        // Top 3 Heroes (Always High Scorers for this pack)
-        ghosts[0].score = Math.min(600, ghosts[0].score + 50);
-        ghosts[1].score = Math.min(600, ghosts[1].score + 30);
-        
         return ghosts;
+    }
+
+    // Calculate current scores for the cohort based on Time of Day
+    // Ghosts accumulate points throughout the day (0-600 logic)
+    getDailyScores(cohort, userScore) {
+        const now = new Date();
+        // 8 AM to 10 PM activity window (14 hours)
+        // 0.0 to 1.0 progress
+        const hour = now.getHours();
+        const progress = Math.max(0, Math.min(1, (hour - 8) / 14));
+        
+        // Random daily variance seed (Year-Month-Day)
+        const dateStr = now.toISOString().split('T')[0];
+        let dailyHash = 0;
+        for (let i = 0; i < dateStr.length; i++) dailyHash = dailyHash + dateStr.charCodeAt(i);
+        const dailyRng = new SeededRandom(dailyHash);
+
+        return cohort.map(ghost => {
+            // Daily Performance Variance (+/- 10%)
+            const dailyLuck = (dailyRng.range(-10, 10) / 100);
+            const performance = Math.min(1, Math.max(0.1, (ghost.skill / 100) + dailyLuck));
+            
+            // Calculate score: Max 600 * Progress * Performance
+            // Some ghosts play fast, some slow.
+            let currentScore = Math.floor(600 * progress * performance);
+            
+            // Round to nearest 10 (as tests are 100 pts)
+            currentScore = Math.round(currentScore / 10) * 10;
+            
+            return {
+                ...ghost,
+                score: currentScore,
+                is_bot: true,
+                is_me: false
+            };
+        });
     }
 }
 
@@ -153,37 +179,58 @@ async function initDashboard() {
         userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
     }
 
-    // 2. Generate Ghosts
-    const today = new Date().toISOString().split('T')[0]; // "2024-01-24"
-    const engine = new GhostEngine(today, 1, userData.packId || 10);
-    const leaderboard = engine.generateLeaderboard(49); // 49 Ghosts + 1 User = 50 Total
+    // 2. Weekly Engine Setup
+    // Use PackID from DB or Generate Random sticky one for guest
+    const packId = userData.packId || 17; 
+    const engine = new GhostEngine(packId);
+    const cohort = engine.generateCohort(49); // 49 Ghosts
+    
+    // 3. Calculate Daily Scores
+    const leaderboard = engine.getDailyScores(cohort, userData.total_score);
 
-    // 3. Insert Real User
+    // 4. Insert Real User
     const realUserEntry = {
-        name: userData.full_name, // Use name from DB
-        score: userData.total_score,
+        name: userData.full_name, 
+        score: userData.total_score, // Daily Score from DB
         is_bot: false,
         initials: "YOU",
         is_me: true,
-        // Use real pace if available (non-zero), otherwise fallback to 0 (which RenderList will handle)
         pace: userData.average_pace && userData.average_pace > 0 ? Math.round(userData.average_pace) : 0
     };
     leaderboard.push(realUserEntry);
 
-    // 4. Sort & Rank
-    leaderboard.sort((a, b) => b.score - a.score);
+    // 5. Sort & Rank
+    leaderboard.sort((a, b) => b.score - a.score); // Descending
     
     // Assign Ranks
     leaderboard.forEach((item, index) => {
         item.rank = index + 1;
     });
 
-    // 5. Render
+    // 6. Render
     renderHeader(realUserEntry);
     renderList(leaderboard);
     
-    // 6. Update Top Header (Date & Test Count)
-    updateTopHeader();
+    // 7. Update Top Header (Date & Test Count)
+    // Calc Tests Taken: (Score / 100)? No, better use questions_answered/10
+    const testsTaken = userData.questions_answered ? Math.floor(userData.questions_answered / 10) : 0;
+    updateTopHeader(packId, testsTaken);
+    
+    // 8. Info Modal Listeners
+    setupHelpers();
+}
+
+function setupHelpers() {
+    const infoBtn = document.getElementById('infoBtn');
+    const modal = document.getElementById('infoModal');
+    const closeBtn = document.getElementById('closeModal');
+    
+    if (infoBtn && modal) {
+        infoBtn.onclick = () => modal.classList.remove('hidden');
+    }
+    if (closeBtn && modal) {
+        closeBtn.onclick = () => modal.classList.add('hidden');
+    }
 }
 
 // --- 3. UI RENDERING ---
@@ -243,25 +290,35 @@ function renderList(data) {
     });
 }
 
-function updateTopHeader() {
-    // precise date format: "24 Jan 2026"
-    const dateOptions = { day: 'numeric', month: 'short', year: 'numeric' };
-    const dateStr = new Date().toLocaleDateString('en-GB', dateOptions);
+function updateTopHeader(packId, testsTaken) {
+    const now = new Date();
+    const month = now.toLocaleString("default", { month: "long" });
+    const romanWeek = getRomanWeekOfMonth(now);
     
+    // Header Title: January II Week
     const dateEl = document.getElementById('headerDate');
-    // Try both IDs to handle caching mismatches
+    if (dateEl) {
+        dateEl.innerHTML = `<span class="text-white font-bold">${month} ${romanWeek} Week</span> <span class="text-xs opacity-50 ml-2">• PACK ${packId}</span>`;
+    }
+    
+    // Subtext: Reset Timer (Next Monday)
+    // ... we can add this if needed, for now Pack ID is enough context.
+
+    // Test Counter
     const testCountEl = document.getElementById('testCountDisplay') || document.getElementById('testCount');
     
-    if (dateEl) dateEl.textContent = dateStr;
-    
     if (testCountEl) {
-        testCountEl.textContent = "Test 1/4";
-        // Force styling to ensure visibility even if CSS is cached
-        testCountEl.style.color = "#000000"; // Force Black
+        // Enforce max 6
+        const displayCount = Math.min(testsTaken + 1, 6);
+        const isMax = testsTaken >= 6;
+        
+        testCountEl.textContent = isMax ? "Done (6/6)" : `Test ${displayCount}/6`;
+        
+        testCountEl.style.color = "#000000"; 
         testCountEl.style.fontWeight = "bold";
-        testCountEl.style.backgroundColor = "#fbbf24"; // Amber-400
-        testCountEl.style.padding = "2px 6px";
-        testCountEl.style.borderRadius = "4px";
+        testCountEl.style.backgroundColor = isMax ? "#10B981" : "#fbbf24"; // Green if Done, Amber if Pending
+        testCountEl.style.padding = "2px 8px";
+        testCountEl.style.borderRadius = "6px";
     }
 }
 

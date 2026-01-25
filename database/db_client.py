@@ -73,31 +73,60 @@ class SupabaseClient:
             if not user: return False
             
             # 2. Calculate new values
-            current_inv = user.get("questions_answered", 0) or 0
+            # 2. Check for Daily Reset
+            from datetime import datetime
+            import pytz
+            
+            tz = pytz.timezone('Asia/Kolkata') # Adjust as needed or use UTC
+            now = datetime.now(tz)
+            today_str = now.strftime("%Y-%m-%d")
+            
+            # Retrieve last active date from metadata or a dedicated field if available
+            # For this MVP, we will try to use 'last_active_date' field. If it doesn't exist, Supabase might ignore it or we should use metadata.
+            # Let's assume 'metadata' JSONB column exists for flexibility, or we repurpose a field.
+            # Checking 'quiz_state' is risky as it might be null.
+            
+            # We'll use 'metadata' column for 'last_active_date'
+            metadata = user.get("metadata", {}) or {}
+            last_active = metadata.get("last_active_date", "")
+            
+            if last_active != today_str:
+                logger.info(f"New Day Detected for {user_id}. Resetting (Last: {last_active}, Today: {today_str})")
+                current_inv = 0
+                current_score = 0
+                # Resetting pace is optional, but maybe keep it rolling? User said "daily stats", but pace is usually overall. 
+                # Let's keep pace rolling for now, or reset? Plan didn't specify. Keeping rolling pace seems fairer for "Average Pace".
+            else:
+                current_inv = user.get("questions_answered", 0) or 0
+                current_score = user.get("current_streak", 0) or 0
+                
             current_pace = user.get("average_pace", 0.0) or 0.0
             
-            # Avoid division by zero or weird initial states
+            # Avoid division by zero
             if current_pace is None: current_pace = 0.0
             if current_inv is None: current_inv = 0
             
-            # New Pace Formula: ((OldAvg * OldCount) + NewTime) / (OldCount + 1)
+            # New Pace Formula
             new_inv = current_inv + 1
             new_pace = ((current_pace * current_inv) + time_taken) / new_inv
             
-            # Score Update (Assuming 10 points per correct answer for Leaderboard)
-            current_score = user.get("current_streak", 0) or 0 # Using streak as proxy for score in MVP
+            # Score Update: 10 points per correct answer
             new_score = current_score + 10 if is_correct else current_score
+            
+            # Update metadata
+            metadata["last_active_date"] = today_str
             
             # 3. Update DB
             data = {
                 "user_id": user_id,
                 "questions_answered": new_inv,
                 "average_pace": round(new_pace, 2),
-                "current_streak": new_score # Updating 'score'
+                "current_streak": new_score,
+                "metadata": metadata
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Updated Stats for {user_id}: Pace={new_pace:.2f}s, Score={new_score}")
+            logger.info(f"Updated Stats for {user_id}: Day={today_str}, Score={new_score}, Tests~={new_inv//10}")
             return True
             
         except Exception as e:

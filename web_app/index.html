@@ -23,10 +23,19 @@
 <body class="p-4">
     
     <div class="flex justify-between items-center mb-4 px-2">
-        <h2 id="headerDate" class="text-gray-400 font-semibold text-sm">Loading...</h2>
-        <div class="flex items-center bg-gray-800 rounded-lg px-2 py-1 space-x-2 border border-gray-700">
-            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span id="testCountDisplay" class="text-yellow-400 font-bold text-sm">Test 1/4</span>
+        <div>
+            <h2 id="headerDate" class="text-gray-400 font-semibold text-sm">Loading...</h2>
+        </div>
+        <div class="flex items-center space-x-2">
+            <!-- Test Counter -->
+            <div class="flex items-center bg-gray-800 rounded-lg px-2 py-1 space-x-2 border border-gray-700">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span id="testCountDisplay" class="text-yellow-400 font-bold text-sm">Loading...</span>
+            </div>
+            <!-- Info Button -->
+            <button id="infoBtn" class="w-7 h-7 rounded-full bg-gray-700 text-gray-300 flex items-center justify-center font-serif italic font-bold border border-gray-600 active:scale-95 transition">
+                i
+            </button>
         </div>
     </div>
 
@@ -105,12 +114,44 @@
     </div>
 
     <!-- Premium Upgrade Call to Action -->
-    <div class="fixed bottom-4 left-4 right-4 z-50"> <!-- Added Z-index -->
+    <div class="fixed bottom-4 left-4 right-4 z-[40]"> <!-- Z-index 40 -->
         <button id="upgradeBtn" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition flex items-center justify-center">
             <span class="mr-2">🔓</span> Unlock Full Intelligence (₹99)
         </button>
     </div>
 
-    <script src="script.js?v=9"></script>
+    <!-- Info Modal -->
+    <div id="infoModal" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-2xl w-full max-w-sm border border-gray-700 shadow-2xl p-6 relative animate-fade-in-up">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-xl font-bold text-white mb-2">Weekly Cohorts</h3>
+            <div class="space-y-4 text-sm text-gray-300">
+                <p>
+                    You have been placed in <span class="text-yellow-400 font-bold">Pack <script>document.write(new Date().getDate() % 20 + 10)</script></span>.
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">📅</span>
+                        <p><strong>Weekly Refresh:</strong> Your competitors remain the same for 7 days (Mon-Sun) to build rivalry.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">🔥</span>
+                        <p><strong>Daily Scoring:</strong> Points reset every midnight. Max 600 points/day (6 Tests).</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">🤖</span>
+                        <p><strong>Fair Play:</strong> This leaderboard is curated to match your skill level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <button onclick="document.getElementById('infoModal').classList.add('hidden')" class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 rounded-lg transition">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=10"></script>
 </body>
 </html>

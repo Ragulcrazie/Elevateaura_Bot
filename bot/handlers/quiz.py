@@ -68,7 +68,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
             cat = "aptitude"
 
     # Fetch real questions
-    questions = loader.get_questions(count=5, lang=lang, category=cat)
+    questions = loader.get_questions(count=10, lang=lang, category=cat)
     
     if not questions:
         await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
@@ -76,7 +76,31 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
 
     print(f"DEBUG: Initializing session for {user_id}")
     
-    # 0. Kill Zombie Timers (Safety First)
+    # 0. Check Daily Limit (New)
+    # Estimate tests taken from questions_answered
+    q_answered = user.get("questions_answered", 0) or 0
+    # Assuming metadata tells us if it's a new day, but db_client handles reset on next update.
+    # However, we need to know NOW. 
+    # Let's check metadata date ourselves or trust the counter if date matches (or assuming reset happened).
+    # Since we can't easily trigger reset here without a write, let's just check raw logic:
+    
+    metadata = user.get("metadata", {}) or {}
+    last_active = metadata.get("last_active_date", "")
+    
+    today_str = time.strftime("%Y-%m-%d")
+    
+    tests_taken = 0
+    if last_active == today_str:
+        tests_taken = q_answered // 10
+    else:
+        # It's a new day (conceptually), so 0 tests.
+        tests_taken = 0
+        
+    if tests_taken >= 6:
+        await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 6 tests for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
+        return
+
+    # 0.5 Kill Zombie Timers (Safety First)
     if user_id in timer_tasks:
         timer_tasks[user_id].cancel()
         del timer_tasks[user_id]
@@ -93,7 +117,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     # Save State to Disk (Robust Persistence)
     await session_manager.save_session(user_id, state)
     
-    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 5", parse_mode="Markdown")
+    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 10 (Test {tests_taken + 1}/6)", parse_mode="Markdown")
     await asyncio.sleep(1)
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
@@ -319,7 +343,7 @@ async def handle_answer(callback: types.CallbackQuery):
         # Logic
         is_correct = (selected_idx == correct_idx)
         if is_correct:
-            state["score"] += 1
+            state["score"] += 10 # 10 Points per question
             feedback = "✅ **Correct!**"
         else:
             feedback = f"❌ **Wrong!**\nCorrect: {current_q['options'][correct_idx]}"
@@ -370,8 +394,10 @@ async def finish_quiz(message: types.Message, user_id: int):
     score = state["score"]
     total = len(state["questions"])
     
-    # Calculate Percentage
-    percent = (score/total) * 100
+    # Calculate Percentage (Score is now out of 100 for 10 Qs)
+    # Total Score Possible = 10 * 10 = 100
+    percent = (score/100) * 100 
+    if percent > 100: percent = 100 # Safety
     
     # Mock Competition Logic (The Illusion)
     # In real version, we query DB for specific ghost scores

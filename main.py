@@ -131,7 +131,8 @@ async def get_user_data(request):
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
-                "total_score": user_data.get("current_streak", 0) * 10, # Proxy score for MVP
+                "total_score": user_data.get("current_streak", 0), # Score is now stored accurately
+                "questions_answered": user_data.get("questions_answered", 0),
                 "pack_id": pack_id,
                 "average_pace": user_data.get("average_pace", 0) # Format: 12.5
             }, headers={"Access-Control-Allow-Origin": "*"})
@@ -172,6 +173,7 @@ async def keep_alive():
 
 # --- Main Entry Point ---
 async def main():
+    print("--- 🚀 BOT RELOADED! New Session Logic Active ---")
     logger.info("Starting Elevate Aura Bot...")
     
     # Start Dummy Web Server (For Render) - Start this FIRST to satisfy port binding check
