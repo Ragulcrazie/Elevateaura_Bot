@@ -353,8 +353,26 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 
 // Start
 try {
-    // Initialize with a small delay to ensure TDesktop environment is ready
-setTimeout(initDashboard, 500);
+    // Polling mechanism to wait for Telegram to inject data
+function waitForUser(attempts = 0) {
+    if (tg.initDataUnsafe?.user) {
+        initDashboard(); // Found it!
+    } else if (attempts < 20) {
+        // Try again in 100ms (Max 2 seconds wait)
+        setTimeout(() => waitForUser(attempts + 1), 100);
+    } else {
+        // Time out, proceed as Guest
+        console.warn("User detection timed out.");
+        initDashboard();
+    }
+}
+
+// Start with polling
+try {
+    waitForUser(); 
+} catch (e) {
+    renderError("Init Failed: " + e.message);
+}
 } catch (e) {
     renderError("Init Failed: " + e.message);
 }
