@@ -101,12 +101,12 @@ class SupabaseClient:
             data = {
                 "user_id": user_id,
                 "questions_answered": new_inv,
-                "average_pace": round(new_pace, 2),
+                # "average_pace": round(new_pace, 2), # DISABLED: Column missing in DB causing 400 Bad Request
                 "current_streak": new_score
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Updated Stats for {user_id}: Tests~={new_inv//10}, Score={new_score}")
+            logger.info(f"Updated Stats for {user_id}: Tests~={new_inv//10}, Score={new_score} (Pace Ignored)")
             return True
             
         except Exception as e:
