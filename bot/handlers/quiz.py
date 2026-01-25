@@ -76,16 +76,21 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
 
     print(f"DEBUG: Initializing session for {user_id}")
     
-    # 0. Check Daily Limit (New)
-    # Estimate tests taken from questions_answered
-    q_answered = user.get("questions_answered", 0) or 0
-    # Assuming metadata tells us if it's a new day, but db_client handles reset on next update.
-    # However, we need to know NOW. 
-    # Let's check metadata date ourselves or trust the counter if date matches (or assuming reset happened).
-    # Since we can't easily trigger reset here without a write, let's just check raw logic:
+    # 0. Check Daily Limit (Robust JSONB Logic)
+    # Estimate tests taken from questions_answered stored in quiz_state
     
+    quiz_state = user.get("quiz_state") or {}
+    saved_stats = quiz_state.get("stats", {})
+    
+    # Priority: JSONB > Schema > 0
+    q_answered = saved_stats.get("questions_answered") or user.get("questions_answered", 0) or 0
+    # Fallback to Score-based derivation if 0 (Migration path)
+    if q_answered == 0 and user.get("current_streak", 0) > 0:
+         q_answered = int(user.get("current_streak", 0) / 10)
+    
+    # Check Date from JSONB or Metadata
     metadata = user.get("metadata", {}) or {}
-    last_active = metadata.get("last_active_date", "")
+    last_active = saved_stats.get("last_active_date") or metadata.get("last_active_date", "")
     
     today_str = time.strftime("%Y-%m-%d")
     

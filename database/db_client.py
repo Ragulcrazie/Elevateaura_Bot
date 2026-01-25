@@ -99,9 +99,14 @@ class SupabaseClient:
             
             # 3. Update DB
             # Update the stats inside quiz_state
+            # Also store 'last_active_date' for daily reset logic (since metadata column is unreliable)
+            import time
+            today_str = time.strftime("%Y-%m-%d")
+            
             quiz_state["stats"] = {
                 "questions_answered": new_inv,
-                "average_pace": round(new_pace, 2)
+                "average_pace": round(new_pace, 2),
+                "last_active_date": today_str
             }
             
             data = {
@@ -111,7 +116,7 @@ class SupabaseClient:
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Updated Stats for {user_id}: Score={new_score}, Q={new_inv}, Pace={new_pace:.2f}")
+            logger.info(f"Updated Stats for {user_id}: Score={new_score}, Q={new_inv}, Pace={new_pace:.2f}, Date={today_str}")
             return True
             
         except Exception as e:
