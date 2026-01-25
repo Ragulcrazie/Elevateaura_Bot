@@ -147,8 +147,8 @@ class GhostEngine {
 
 // --- 2. MAIN LOGIC ---
 
-async function initDashboard() {
-    let user = tg.initDataUnsafe?.user;
+async function initDashboard(passedUser = null) {
+    let user = passedUser || tg.initDataUnsafe?.user;
     
     // Fallback for Desktop/Browser testing
     if (!user) {
@@ -355,15 +355,33 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 try {
     // Polling mechanism to wait for Telegram to inject data
 function waitForUser(attempts = 0) {
+    // 1. Priority: URL Parameters (Smart Solution)
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlUserId = urlParams.get('user_id');
+    const urlName = urlParams.get('name');
+    
+    if (urlUserId) {
+         // Instant Login!
+         const fakeUser = {
+             id: parseInt(urlUserId),
+             first_name: urlName || "Fighter",
+             last_name: "",
+             username: ""
+         };
+         initDashboard(fakeUser);
+         return;
+    }
+
+    // 2. Fallback: Telegram Object
     if (tg.initDataUnsafe?.user) {
-        initDashboard(); // Found it!
+        initDashboard(tg.initDataUnsafe.user);
     } else if (attempts < 20) {
-        // Try again in 100ms (Max 2 seconds wait)
+        // Try again in 100ms
         setTimeout(() => waitForUser(attempts + 1), 100);
     } else {
-        // Time out, proceed as Guest
+        // Time out
         console.warn("User detection timed out.");
-        initDashboard();
+        initDashboard(null);
     }
 }
 

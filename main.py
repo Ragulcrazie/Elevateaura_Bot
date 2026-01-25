@@ -89,8 +89,12 @@ async def cmd_start(message: types.Message):
     
     # 2. Send Welcome Message
     # Create Layout
+    from urllib.parse import quote
+    safe_name = quote(full_name)
+    web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={safe_name}"
+
     builder = InlineKeyboardBuilder()
-    builder.button(text="🔥 Check Leaderboard (Web App)", web_app=WebAppInfo(url="https://ragulcrazie.github.io/Elevateaura_Bot/web_app/"))
+    builder.button(text="🔥 Check Leaderboard (Web App)", web_app=WebAppInfo(url=web_app_url))
     builder.button(text="📝 Start Quiz", callback_data="start_quiz_cmd") # Shortcuts
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
     builder.adjust(1)

@@ -437,11 +437,16 @@ async def finish_quiz(message: types.Message, user_id: int):
     )
 
     # Post-Quiz Navigation
+    # Dynamic Web App URL
+    from urllib.parse import quote
+    full_name = message.from_user.full_name # Get full_name from the message object
+    name_param = quote(full_name) if full_name else "Fighter"
+    web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={name_param}"
+
     builder = InlineKeyboardBuilder()
     builder.button(text="🔄 Play Again", callback_data="start_quiz_cmd")
     builder.button(text="⚙️ Change Topic", callback_data="settings")
-    # GitHub Pages URL (Case sensitive matches Repo Name)
-    builder.button(text="🔥 Leaderboard", web_app=WebAppInfo(url="https://ragulcrazie.github.io/Elevateaura_Bot/"))
+    builder.button(text="🔥 Leaderboard", web_app=WebAppInfo(url=web_app_url))
     builder.adjust(1)
 
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
