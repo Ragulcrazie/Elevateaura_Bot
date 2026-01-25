@@ -138,10 +138,17 @@ async def get_user_data(request):
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
-                "total_score": user_data.get("current_streak", 0), # Score is now stored accurately
-                "questions_answered": user_data.get("questions_answered", 0),
+            # Schema Fallback: Calculate questions_answered if missing
+            # If DB doesn't have the column, we estimate based on score (10 pts/question)
+            db_q_answered = user_data.get("questions_answered")
+            derived_q_answered = db_q_answered if db_q_answered is not None else int(user_data.get("current_streak", 0) / 10)
+
+            return web.json_response({
+                "full_name": user_data.get("full_name", "Unknown Aspirant"),
+                "total_score": user_data.get("current_streak", 0), 
+                "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
-                "average_pace": user_data.get("average_pace", 0) # Format: 12.5
+                "average_pace": user_data.get("average_pace", 0)
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
