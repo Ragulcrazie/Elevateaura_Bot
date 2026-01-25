@@ -159,7 +159,7 @@ async function initDashboard() {
         
         // VISUAL DEBUG: Show error on screen for User to screenshot
         // Only if genuinely missing in a real env
-        if (location.search.indexOf("debug") !== -1 || true) { // Force debug for now
+        if (location.search.indexOf("debug") !== -1) { // Only if ?debug=true
              document.getElementById('headerDate').innerText += " (Guest Mode)";
         }
     }
@@ -189,7 +189,7 @@ async function initDashboard() {
 
     // 2. Weekly Engine Setup
     // Use PackID from DB or Generate Random sticky one for guest
-    const packId = userData.packId || 17; 
+    const packId = userData.pack_id || userData.packId || 17; 
     const engine = new GhostEngine(packId);
     const cohort = engine.generateCohort(49); // 49 Ghosts
     
