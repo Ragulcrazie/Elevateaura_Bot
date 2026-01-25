@@ -63,7 +63,7 @@ class SupabaseClient:
     async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float) -> bool:
         """
         Updates user stats: Total Score, Questions Answered, Average Pace.
-        Calculates a rolling average for pace.
+        STORES STATS IN 'quiz_state' JSONB COLUMN because 'questions_answered' column is missing.
         """
         if not self.client: return False
         
@@ -72,41 +72,46 @@ class SupabaseClient:
             user = await self.get_user(user_id)
             if not user: return False
             
-            # 2. Calculate new values
-            # 2. Daily Reset Logic (Temporarily Disabled - Requires Schema Update)
-            # We removed 'metadata' column usage because it likely caused the DB write to fail (Column does not exist).
-            # TODO: User needs to add 'last_active_date' or 'metadata' column to Supabase 'users' table.
+            # --- JSONB STORAGE LOGIC ---
+            # We use 'quiz_state' to store persistent stats since schema is locked.
+            # Structure: quiz_state = { ..., "stats": { "questions_answered": 10, "average_pace": 4.5 } }
             
-            # For now, we ACCUMULATE scores without reset to ensure points are saved.
-            # current_inv = user.get("questions_answered", 0) or 0
-            # current_score = user.get("current_streak", 0) or 0
-
-            current_inv = user.get("questions_answered", 0) or 0
+            quiz_state = user.get("quiz_state") or {}
+            saved_stats = quiz_state.get("stats", {})
+            
+            current_inv = saved_stats.get("questions_answered", 0)
+            current_pace = saved_stats.get("average_pace", 0.0)
+            
+            # Score is still in the main column (verified working)
             current_score = user.get("current_streak", 0) or 0
-                
-            current_pace = user.get("average_pace", 0.0) or 0.0
-            
-            # Avoid division by zero
-            if current_pace is None: current_pace = 0.0
-            if current_inv is None: current_inv = 0
-            
-            # New Pace Formula
+
+            # 2. Calculate New Values
             new_inv = current_inv + 1
-            new_pace = ((current_pace * current_inv) + time_taken) / new_inv
+            # Rolling Average Pace
+            if new_inv == 1:
+                new_pace = time_taken
+            else:
+                 # (OldAvg * OldCount + NewTime) / NewCount
+                new_pace = ((current_pace * current_inv) + time_taken) / new_inv
             
             # Score Update: 10 points per correct answer
             new_score = current_score + 10 if is_correct else current_score
             
             # 3. Update DB
+            # Update the stats inside quiz_state
+            quiz_state["stats"] = {
+                "questions_answered": new_inv,
+                "average_pace": round(new_pace, 2)
+            }
+            
             data = {
                 "user_id": user_id,
-                # "questions_answered": new_inv, # DISABLED: Column missing
-                # "average_pace": round(new_pace, 2), # DISABLED: Column missing
-                "current_streak": new_score
+                "current_streak": new_score,
+                "quiz_state": quiz_state # Save the JSONB blob
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Updated Stats for {user_id}: Score={new_score} (Inv/Pace Ignored due to Schema)")
+            logger.info(f"Updated Stats for {user_id}: Score={new_score}, Q={new_inv}, Pace={new_pace:.2f}")
             return True
             
         except Exception as e:

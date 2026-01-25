@@ -140,16 +140,22 @@ async def get_user_data(request):
                 
             pack_id = int(rating / 100)
             
-            # Schema Fallback: Calculate questions_answered if missing
-            db_q_answered = user_data.get("questions_answered")
+            # Stats via JSONB (quiz_state['stats'])
+            # Priority: JSONB > Schema Column > Fallback
+            quiz_state = user_data.get("quiz_state") or {}
+            saved_stats = quiz_state.get("stats", {})
+            
+            db_q_answered = saved_stats.get("questions_answered") or user_data.get("questions_answered")
             derived_q_answered = db_q_answered if db_q_answered is not None else int(user_data.get("current_streak", 0) / 10)
-
+            
+            db_pace = saved_stats.get("average_pace") or user_data.get("average_pace") or 0
+            
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
                 "total_score": user_data.get("current_streak", 0), 
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
-                "average_pace": user_data.get("average_pace", 0)
+                "average_pace": db_pace
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
