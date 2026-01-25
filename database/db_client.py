@@ -73,27 +73,29 @@ class SupabaseClient:
             if not user: return False
             
             # --- JSONB STORAGE LOGIC ---
-            # We use 'quiz_state' to store persistent stats since schema is locked.
-            # Structure: quiz_state = { ..., "stats": { "questions_answered": 10, "average_pace": 4.5 } }
+            import time
+            today_str = time.strftime("%Y-%m-%d")
             
             quiz_state = user.get("quiz_state") or {}
             saved_stats = quiz_state.get("stats", {})
+            last_active = saved_stats.get("last_active_date")
             
-            # Score is still in the main column (verified working)
-            current_score = user.get("current_streak", 0) or 0
-            
-            # MIGRATION LOGIC: Seed from Score if missing in JSONB
-            if saved_stats.get("questions_answered") is None and current_score > 0:
-                 current_inv = int(current_score / 10)
-                 logger.info(f"Seeding stats from score: {current_inv} questions")
+            # DAILY RESET CHECK
+            if last_active != today_str:
+                logger.info(f"Daily Reset for {user_id}: New Day ({today_str})")
+                current_inv = 0
+                current_pace = 0.0 # Reset pace daily too for fresh daily stats
             else:
-                 current_inv = saved_stats.get("questions_answered", 0)
-
-            current_pace = saved_stats.get("average_pace", 0.0)
+                current_inv = saved_stats.get("questions_answered", 0)
+                current_pace = saved_stats.get("average_pace", 0.0)
+            
+            # Score accumulates forever (Weekly/Lifetime)
+            current_score = user.get("current_streak", 0) or 0
 
             # 2. Calculate New Values
             new_inv = current_inv + 1
-            # Rolling Average Pace
+            
+            # Rolling Average Pace (Daily)
             if new_inv == 1:
                 new_pace = time_taken
             else:
@@ -104,11 +106,6 @@ class SupabaseClient:
             new_score = current_score + 10 if is_correct else current_score
             
             # 3. Update DB
-            # Update the stats inside quiz_state
-            # Also store 'last_active_date' for daily reset logic (since metadata column is unreliable)
-            import time
-            today_str = time.strftime("%Y-%m-%d")
-            
             quiz_state["stats"] = {
                 "questions_answered": new_inv,
                 "average_pace": round(new_pace, 2),
