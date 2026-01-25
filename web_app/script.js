@@ -353,7 +353,8 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 
 // Start
 try {
-    initDashboard();
+    // Initialize with a small delay to ensure TDesktop environment is ready
+setTimeout(initDashboard, 500);
 } catch (e) {
     renderError("Init Failed: " + e.message);
 }
