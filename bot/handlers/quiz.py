@@ -90,8 +90,24 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     today_str = time.strftime("%Y-%m-%d")
     
     tests_taken = 0
+    import math
     if last_active == today_str:
-        tests_taken = q_answered // 10
+        # Round up to account for potential partial updates (e.g. 9/10 answered)
+        # If 10 answered -> 1.0 -> 1 test. (Test 1 done. Starting Test 2)
+        # If 9 answered -> 0.9 -> 1 test. (Test 1 partially done/failed? Treat as done for counter)
+        # But we really want: If I *finished* Test 1 (10Qs), I am starting Test 2.
+        # tests_taken (completed) = floor(q / 10).
+        # Test N = tests_taken + 1.
+        # So 10 // 10 = 1. Test 1+1 = Test 2. Correct.
+        # But user reported 1/6. Implies q < 10.
+        # Let's use ceil logic: If I have answered 9, I am almost done with Test 1.
+        # Wait, if I start a NEW session, I am starting the NEXT test.
+        # If I played 9 questions, I "consumed" Test 1.
+        # So I am on Test 2.
+        if q_answered > 0:
+             tests_taken = math.ceil(q_answered / 10)
+        else:
+             tests_taken = 0
     else:
         # It's a new day (conceptually), so 0 tests.
         tests_taken = 0
@@ -414,7 +430,7 @@ async def finish_quiz(message: types.Message, user_id: int):
 
     msg = (
         f"🏁 **Quiz Finished!**\n\n"
-        f"🏆 **Your Score**: {score}/{total} ({int(percent)}%)\n"
+        f"🏆 **Your Score**: {score} pts ({int(percent)}%)\n"
         f"👥 **Community Average**: {competitor_avg}%\n\n"
         f"{verdict}\n\n"
         f"**What's Next?** 👇"

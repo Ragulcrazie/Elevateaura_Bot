@@ -69,12 +69,19 @@ async def cmd_start(message: types.Message):
     logger.info(f"User {user_id} started the bot.")
     
     # 1. Register User in DB
+    # 1. Register/Update User in DB
+    # Fetch existing to avoid overwriting stats (like questions_answered) with defaults
+    existing_user = await db.get_user(user_id)
+    
     user_data = {
         "user_id": user_id,
         "username": username,
         "full_name": full_name,
-        "subscription_status": "free",
-        "current_streak": 0
+        # Preserve existing fields if they exist
+        "subscription_status": existing_user.get("subscription_status", "free") if existing_user else "free",
+        "current_streak": existing_user.get("current_streak", 0) if existing_user else 0,
+        "questions_answered": existing_user.get("questions_answered", 0) if existing_user else 0,
+        "average_pace": existing_user.get("average_pace", 0) if existing_user else 0
     }
     
     # Run DB operation
