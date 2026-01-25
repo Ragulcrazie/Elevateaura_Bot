@@ -298,19 +298,24 @@ function updateTopHeader(packId, testsTaken) {
     // Header Title: January II Week
     const dateEl = document.getElementById('headerDate');
     if (dateEl) {
-        dateEl.innerHTML = `<span class="text-white font-bold">${month} ${romanWeek} Week</span> <span class="text-xs opacity-50 ml-2">• PACK ${packId}</span>`;
+        // Ensure Pack ID exists (default if 0 or null)
+        const safePackId = packId || Math.floor(now.getDate() % 20) + 10;
+        
+        // Force styling to ensure visibility
+        dateEl.className = "text-white font-bold text-sm flex items-center";
+        dateEl.innerHTML = `
+            <span>${month} ${romanWeek} Week</span> 
+            <span class="text-xs text-gray-400 ml-2 font-normal">• PACK ${safePackId}</span>
+        `;
     }
     
-    // Subtext: Reset Timer (Next Monday)
-    // ... we can add this if needed, for now Pack ID is enough context.
-
     // Test Counter
     const testCountEl = document.getElementById('testCountDisplay') || document.getElementById('testCount');
     
     if (testCountEl) {
         // Enforce max 6
-        const displayCount = Math.min(testsTaken + 1, 6);
-        const isMax = testsTaken >= 6;
+        const displayCount = Math.min((testsTaken || 0) + 1, 6);
+        const isMax = (testsTaken || 0) >= 6;
         
         testCountEl.textContent = isMax ? "Done (6/6)" : `Test ${displayCount}/6`;
         
