@@ -2,6 +2,7 @@ const tg = window.Telegram.WebApp;
 
 // Initialize
 tg.expand();
+tg.ready(); // Signal that we are initialized
 tg.MainButton.hide();
 
 // --- CONFIG ---
@@ -151,9 +152,16 @@ async function initDashboard() {
     
     // Fallback for Desktop/Browser testing
     if (!user) {
+        // Retry getting user from initData parsing? (Sometimes raw data is available)
+        // For now, warn.
         console.warn("No Telegram User detected. Using Guest Mode.");
         user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
-        // We do NOT return here anymore; we proceed as Guest.
+        
+        // VISUAL DEBUG: Show error on screen for User to screenshot
+        // Only if genuinely missing in a real env
+        if (location.search.indexOf("debug") !== -1 || true) { // Force debug for now
+             document.getElementById('headerDate').innerText += " (Guest Mode)";
+        }
     }
 
     // 1. Fetch Real User Data
@@ -226,7 +234,14 @@ function setupHelpers() {
     const closeBtn = document.getElementById('closeModal');
     
     if (infoBtn && modal) {
-        infoBtn.onclick = () => modal.classList.remove('hidden');
+        infoBtn.onclick = () => {
+             modal.classList.remove('hidden');
+             // Inject Debug Data on Open
+             const dId = document.getElementById('debugUserId');
+             const dPlat = document.getElementById('debugPlatform');
+             if(dId) dId.innerText = tg?.initDataUnsafe?.user?.id || "None";
+             if(dPlat) dPlat.innerText = tg?.platform || "Unknown";
+        };
     }
     if (closeBtn && modal) {
         closeBtn.onclick = () => modal.classList.add('hidden');
