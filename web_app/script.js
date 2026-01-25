@@ -301,8 +301,8 @@ function updateTopHeader(packId, testsTaken) {
         // Ensure Pack ID exists (default if 0 or null)
         const safePackId = packId || Math.floor(now.getDate() % 20) + 10;
         
-        // Force styling to ensure visibility
-        dateEl.className = "text-white font-bold text-sm flex items-center";
+        // Use theme text color instead of hardcoded white to support Light Mode
+        dateEl.className = "text-[var(--tg-theme-text-color)] font-bold text-sm flex items-center";
         dateEl.innerHTML = `
             <span>${month} ${romanWeek} Week</span> 
             <span class="text-xs text-gray-400 ml-2 font-normal">• PACK ${safePackId}</span>
