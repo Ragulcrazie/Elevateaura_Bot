@@ -192,6 +192,9 @@ class SupabaseClient:
                 "quiz_state": new_stats
             }
             self.client.table('users').upsert(data).execute()
+        except Exception as e:
+            logger.error(f"Failed to clear quiz state: {e}")
+
     async def reset_user_limit(self, user_id: int):
         """
         ADMIN TOOL: Resets a user's daily limit (sets questions_answered to 0).

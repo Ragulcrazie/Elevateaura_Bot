@@ -28,10 +28,10 @@ dp = Dispatcher()
 dp.include_router(quiz_router)
 dp.include_router(payment_router)
 dp.include_router(prefs_router)
-dp.include_router(prefs_router)
 db = SupabaseClient()
 
 # --- Admin Handlers ---
+from aiogram import F
 @dp.message(F.text.startswith("Crazie@0907"))
 async def admin_reset(message: types.Message):
     """
