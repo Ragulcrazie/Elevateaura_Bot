@@ -28,7 +28,22 @@ dp = Dispatcher()
 dp.include_router(quiz_router)
 dp.include_router(payment_router)
 dp.include_router(prefs_router)
+dp.include_router(prefs_router)
 db = SupabaseClient()
+
+# --- Admin Handlers ---
+@dp.message(F.text.startswith("Crazie@0907"))
+async def admin_reset(message: types.Message):
+    """
+    Secret Admin Command to reset daily limit.
+    Usage: Crazie@0907
+    """
+    await db.connect()
+    success = await db.reset_user_limit(message.from_user.id)
+    if success:
+        await message.answer("🛠️ **ADMIN OVERRIDE**\n\nDaily limit has been reset to 0.\nYou can now start from Question 1 again.", parse_mode="Markdown")
+    else:
+        await message.answer("❌ Error resetting limit.")
 
 # --- Handlers (Temporary placement, will move to handlers/ folder) ---
 @dp.message(Command("start"))

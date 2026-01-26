@@ -192,5 +192,27 @@ class SupabaseClient:
                 "quiz_state": new_stats
             }
             self.client.table('users').upsert(data).execute()
+    async def reset_user_limit(self, user_id: int):
+        """
+        ADMIN TOOL: Resets a user's daily limit (sets questions_answered to 0).
+        """
+        if not self.client: return False
+        try:
+            user = await self.get_user(user_id)
+            if not user: return False
+            
+            quiz_state = user.get("quiz_state") or {}
+            # Preserve existing stats but zero out the counter
+            if "stats" not in quiz_state: quiz_state["stats"] = {}
+            quiz_state["stats"]["questions_answered"] = 0
+            
+            data = {
+                "user_id": user_id,
+                "quiz_state": quiz_state
+            }
+            self.client.table('users').upsert(data).execute()
+            logger.info(f"ADMIN RESET for {user_id}: Limit cleared.")
+            return True
         except Exception as e:
-            logger.error(f"Failed to clear quiz state: {e}")
+            logger.error(f"Failed to reset user limit: {e}")
+            return False
