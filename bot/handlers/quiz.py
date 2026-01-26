@@ -67,6 +67,26 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         else:
             cat = "aptitude"
 
+    # 0. Check Daily Limit (Robust JSONB Logic)
+    quiz_state = user.get("quiz_state") or {}
+    saved_stats = quiz_state.get("stats", {})
+    
+    # Priority: JSONB > Schema > 0
+    q_answered = saved_stats.get("questions_answered") or user.get("questions_answered", 0) or 0
+    # Fallback to Score-based derivation if 0 (Migration path)
+    if q_answered == 0 and user.get("current_streak", 0) > 0:
+         q_answered = int(user.get("current_streak", 0) / 10)
+    
+    # Check Date from JSONB or Metadata
+    metadata = user.get("metadata", {}) or {}
+    last_active = saved_stats.get("last_active_date") or metadata.get("last_active_date", "")
+    
+    today_str = time.strftime("%Y-%m-%d")
+    
+    if last_active != today_str:
+        # It's a new day, so 0 questions answered today
+        q_answered = 0
+
     remaining = 60 - q_answered
     if remaining <= 0:
         await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 60 questions for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
