@@ -67,63 +67,23 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         else:
             cat = "aptitude"
 
-    # Fetch real questions
-    questions = loader.get_questions(count=10, lang=lang, category=cat)
-    
-    if not questions:
-        await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
-        questions = loader.get_questions(count=5, lang="english", category="aptitude")
-
-    print(f"DEBUG: Initializing session for {user_id}")
-    
-    # 0. Check Daily Limit (Robust JSONB Logic)
-    # Estimate tests taken from questions_answered stored in quiz_state
-    
-    quiz_state = user.get("quiz_state") or {}
-    saved_stats = quiz_state.get("stats", {})
-    
-    # Priority: JSONB > Schema > 0
-    q_answered = saved_stats.get("questions_answered") or user.get("questions_answered", 0) or 0
-    # Fallback to Score-based derivation if 0 (Migration path)
-    if q_answered == 0 and user.get("current_streak", 0) > 0:
-         q_answered = int(user.get("current_streak", 0) / 10)
-    
-    # Check Date from JSONB or Metadata
-    metadata = user.get("metadata", {}) or {}
-    last_active = saved_stats.get("last_active_date") or metadata.get("last_active_date", "")
-    
-    today_str = time.strftime("%Y-%m-%d")
-    
-    tests_taken = 0
-    import math
-    if last_active == today_str:
-        # Round up to account for potential partial updates (e.g. 9/10 answered)
-        # If 10 answered -> 1.0 -> 1 test. (Test 1 done. Starting Test 2)
-        # If 9 answered -> 0.9 -> 1 test. (Test 1 partially done/failed? Treat as done for counter)
-        # But we really want: If I *finished* Test 1 (10Qs), I am starting Test 2.
-        # tests_taken (completed) = floor(q / 10).
-        # Test N = tests_taken + 1.
-        # So 10 // 10 = 1. Test 1+1 = Test 2. Correct.
-        # But user reported 1/6. Implies q < 10.
-        # Let's use ceil logic: If I have answered 9, I am almost done with Test 1.
-        # Wait, if I start a NEW session, I am starting the NEXT test.
-        # If I played 9 questions, I "consumed" Test 1.
-        # So I am on Test 2.
-        # Use floor/integer division. 
-        # 0-9 answers = 0 tests done (Test 1). 
-        # 10-19 answers = 1 test done (Test 2).
-        if q_answered > 0:
-             tests_taken = q_answered // 10
-        else:
-             tests_taken = 0
-    else:
-        # It's a new day (conceptually), so 0 tests.
-        tests_taken = 0
-        
-    if q_answered >= 60:
+    remaining = 60 - q_answered
+    if remaining <= 0:
         await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 60 questions for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
         return
 
+    # Cap at 10 or remaining quota
+    questions_to_load = min(10, remaining)
+
+    # Fetch real questions
+    questions = loader.get_questions(count=questions_to_load, lang=lang, category=cat)
+    
+    if not questions:
+        await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
+        questions = loader.get_questions(count=min(5, remaining), lang="english", category="aptitude")
+
+    print(f"DEBUG: Initializing session for {user_id}")
+    
     # 0.5 Kill Zombie Timers (Safety First)
     if user_id in timer_tasks:
         timer_tasks[user_id].cancel()
@@ -143,8 +103,8 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     await session_manager.save_session(user_id, state)
     
     start_range = q_answered + 1
-    end_range = q_answered + 10
-    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 10 (Progress: {start_range}-{end_range} / 60)", parse_mode="Markdown")
+    end_range = min(q_answered + len(questions), 60)
+    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: {len(questions)} (Progress: {start_range}-{end_range} / 60)", parse_mode="Markdown")
     await asyncio.sleep(1)
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
