@@ -71,11 +71,20 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     quiz_state = user.get("quiz_state") or {}
     saved_stats = quiz_state.get("stats", {})
     
-    # Priority: JSONB > Schema > 0
-    q_answered = saved_stats.get("questions_answered") or user.get("questions_answered", 0) or 0
-    # Fallback to Score-based derivation if 0 (Migration path)
-    if q_answered == 0 and user.get("current_streak", 0) > 0:
-         q_answered = int(user.get("current_streak", 0) / 10)
+    # Priority: JSONB > Schema > Score-Derivation
+    q_answered_json = saved_stats.get("questions_answered")
+    
+    if q_answered_json is not None:
+        # Trust the JSON value (even if 0, trust it!)
+        q_answered = q_answered_json
+    else:
+        # Fallback: Check old columns or derive from score
+        db_val = user.get("questions_answered")
+        if db_val:
+            q_answered = db_val
+        else:
+             # Last Resort: Derive from Score (Migration for old users)
+             q_answered = int(user.get("current_streak", 0) / 10)
     
     # Check Date from JSONB or Metadata
     metadata = user.get("metadata", {}) or {}
