@@ -109,16 +109,19 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         # Wait, if I start a NEW session, I am starting the NEXT test.
         # If I played 9 questions, I "consumed" Test 1.
         # So I am on Test 2.
+        # Use floor/integer division. 
+        # 0-9 answers = 0 tests done (Test 1). 
+        # 10-19 answers = 1 test done (Test 2).
         if q_answered > 0:
-             tests_taken = math.ceil(q_answered / 10)
+             tests_taken = q_answered // 10
         else:
              tests_taken = 0
     else:
         # It's a new day (conceptually), so 0 tests.
         tests_taken = 0
         
-    if tests_taken >= 6:
-        await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 6 tests for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
+    if q_answered >= 60:
+        await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 60 questions for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
         return
 
     # 0.5 Kill Zombie Timers (Safety First)
@@ -132,13 +135,16 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         "score": 0,
         "current_q_index": 0,
         "questions": questions,
-        "question_start_time": 0
+        "question_start_time": 0,
+        "questions_answered_baseline": q_answered # Snapshot of DB at start
     }
     
     # Save State to Disk (Robust Persistence)
     await session_manager.save_session(user_id, state)
     
-    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 10 (Test {tests_taken + 1}/6)", parse_mode="Markdown")
+    start_range = q_answered + 1
+    end_range = q_answered + 10
+    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: 10 (Progress: {start_range}-{end_range} / 60)", parse_mode="Markdown")
     await asyncio.sleep(1)
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
@@ -236,24 +242,31 @@ async def handle_timeout(message: types.Message, user_id: int):
         print(f"Feedback Error: {e}")
 
     # 4. Update DB (Backend - Try/Except to not block flow)
+    # 4. Update DB (Backend - Try/Except to not block flow)
     try:
+        # Calculate Forced Count
+        baseline = state.get("questions_answered_baseline", 0)
+        forced_count = baseline + state["current_q_index"] + 1
+
         db = SupabaseClient()
         await db.connect()
-        await db.update_user_stats(user_id, is_correct=False, time_taken=45.0)
+        new_stats = await db.update_user_stats(user_id, is_correct=False, time_taken=45.0, forced_count=forced_count)
+        if new_stats:
+             state["stats"] = new_stats
     except Exception as e:
         print(f"DB Error in Timeout: {e}")
     
-    # 5. Next Question (Always Proceed)
     # 5. Next Question (Always Proceed)
     state["current_q_index"] += 1
     await session_manager.save_session(user_id, state)
     
     await asyncio.sleep(1.5)
-    await send_question(message, user_id)
+    await send_question(message, user_id, state=state)
 
-async def send_question(message: types.Message, user_id: int):
-    # Retrieve State
-    state = await session_manager.get_session(user_id)
+async def send_question(message: types.Message, user_id: int, state: dict = None):
+    # Retrieve State (if not provided)
+    if not state:
+        state = await session_manager.get_session(user_id)
     
     if not state: 
         print(f"DEBUG: No session found for {user_id}")
@@ -265,7 +278,7 @@ async def send_question(message: types.Message, user_id: int):
 
     # End of Quiz
     if idx >= len(questions):
-        await finish_quiz(message, user_id)
+        await finish_quiz(message, user_id, state=state)
         return
 
     q = questions[idx]
@@ -321,14 +334,22 @@ async def send_question(message: types.Message, user_id: int):
     task = asyncio.create_task(update_timer_loop(msg, user_id, f"Q{idx+1}: {q['question']}", builder.as_markup(), options_str, q_index=idx, mode=used_mode))
     timer_tasks[user_id] = task
 
+# Lock to prevent rapid double-clicks
+processing_lock = set()
+
 @router.callback_query(F.data.startswith("ans:"))
 async def handle_answer(callback: types.CallbackQuery):
+    user_id = callback.from_user.id
+    if user_id in processing_lock:
+        print(f"DEBUG: Ignoring double-click from {user_id}")
+        return
+
+    processing_lock.add(user_id)
     try:
         # 1. Stop Loading Spinner Immediately
         await callback.answer()
         
         print(f"DEBUG: Handling answer for {callback.from_user.id}")
-        user_id = callback.from_user.id
         
         # Cancel Timer Task immediately
         if user_id in timer_tasks:
@@ -376,10 +397,19 @@ async def handle_answer(callback: types.CallbackQuery):
         start_time = state.get("question_start_time", time.time())
         time_taken = time.time() - start_time
         
-        # Update DB Stats
+        # Calculate Forced Count (Session Truth)
+        baseline = state.get("questions_answered_baseline", 0)
+        # We are answering the question at 'current_q_index'. 
+        # Example: Baseline 10. Index 0 (Q1). Count = 10 + 0 + 1 = 11.
+        forced_count = baseline + state["current_q_index"] + 1
+
+        # Update DB Stats & Sync to Session
         db = SupabaseClient()
         await db.connect()
-        await db.update_user_stats(user_id, is_correct, time_taken)
+        new_stats = await db.update_user_stats(user_id, is_correct, time_taken, forced_count=forced_count)
+        
+        if new_stats:
+            state["stats"] = new_stats
         
         # Update Session
         await session_manager.save_session(user_id, state)
@@ -396,8 +426,8 @@ async def handle_answer(callback: types.CallbackQuery):
         await asyncio.sleep(1.5) # Pause to read explanation
         # Note: We need the original 'message' object to send a new message.
         # callback.message is the message we just edited.
-        await send_question(callback.message, user_id)
-        await callback.answer()
+        await send_question(callback.message, user_id, state=state)
+        # await callback.answer() # Moved to top
         
     except Exception as e:
         print(f"CRITICAL ERROR in handle_answer: {e}")
@@ -407,9 +437,12 @@ async def handle_answer(callback: types.CallbackQuery):
             await callback.answer(f"Bot Error: {e}", show_alert=True)
         except:
              pass
+    finally:
+        processing_lock.remove(user_id)
 
-async def finish_quiz(message: types.Message, user_id: int):
-    state = await session_manager.get_session(user_id)
+async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
+    if not state:
+        state = await session_manager.get_session(user_id)
     if not state: return
 
     score = state["score"]
@@ -448,13 +481,30 @@ async def finish_quiz(message: types.Message, user_id: int):
     name_param = quote(full_name) if full_name else "Fighter"
     web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={name_param}"
 
+    # Dynamic Button Label & Final Consistency Check
+    # We calculate true total locally to ignore any last-moment DB failures
+    baseline = state.get("questions_answered_baseline", 0)
+    final_q_answered = baseline + total
+    
+    # Force update the stats object to ensure next session picks up where we left off
+    if "stats" not in state: state["stats"] = {}
+    state["stats"]["questions_answered"] = final_q_answered
+    
+    # Calculate next range
+    next_start = final_q_answered + 1
+    next_end = final_q_answered + 10
+    
+    start_btn_text = f"🔄 Next: Q{next_start}-{next_end} / 60"
+    if final_q_answered >= 60:
+        start_btn_text = "✅ Daily Goal Completed"
+
     builder = InlineKeyboardBuilder()
-    builder.button(text="🔄 Play Again", callback_data="start_quiz_cmd")
+    builder.button(text=start_btn_text, callback_data="start_quiz_cmd")
     builder.button(text="⚙️ Change Topic", callback_data="settings")
     builder.button(text="🔥 Leaderboard", web_app=WebAppInfo(url=web_app_url))
     builder.adjust(1)
 
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
-    # Cleanup
-    await session_manager.delete_session(user_id)
+    # Cleanup - Pass the corrected stats
+    await session_manager.delete_session(user_id, keep_stats=state["stats"])

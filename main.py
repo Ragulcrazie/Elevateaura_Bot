@@ -141,14 +141,33 @@ async def get_user_data(request):
             pack_id = int(rating / 100)
             
             # Stats via JSONB (quiz_state['stats'])
-            # Priority: JSONB > Schema Column > Fallback
+            import time
+            today_str = time.strftime("%Y-%m-%d")
+            
             quiz_state = user_data.get("quiz_state") or {}
             saved_stats = quiz_state.get("stats", {})
+            last_active = saved_stats.get("last_active_date")
             
-            db_q_answered = saved_stats.get("questions_answered") or user_data.get("questions_answered")
-            derived_q_answered = db_q_answered if db_q_answered is not None else int(user_data.get("current_streak", 0) / 10)
-            
-            db_pace = saved_stats.get("average_pace") or user_data.get("average_pace") or 0
+            # --- DAILY RESET LOGIC (VIEW ONLY) ---
+            if last_active != today_str:
+                # New day, but user hasn't played yet. Return 0 stats.
+                derived_q_answered = 0
+                db_pace = 0
+            else:
+                # Same day, use saved stats
+                db_q_answered_json = saved_stats.get("questions_answered")
+                db_q_answered_col = user_data.get("questions_answered")
+                
+                # Check explicitly for None to allow 0
+                if db_q_answered_json is not None:
+                    derived_q_answered = db_q_answered_json
+                elif db_q_answered_col is not None:
+                    derived_q_answered = db_q_answered_col
+                else:
+                    # Fallback only if NO data exists (migration case)
+                    derived_q_answered = int(user_data.get("current_streak", 0) / 10)
+                
+                db_pace = saved_stats.get("average_pace") or user_data.get("average_pace") or 0
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
@@ -192,8 +211,31 @@ async def keep_alive():
             except Exception as e:
                 logger.error(f"Keep-alive ping failed: {e}")
 
+# --- Instance Lock ---
+import socket
+import sys
+
+def prevent_multiple_instances():
+    """
+    Ensures only one instance of the bot is running by binding to a specific port.
+    """
+    try:
+        # Create a socket that binds to localhost:12345
+        # This global variable prevents the socket from being garbage collected
+        global _lock_socket
+        _lock_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        _lock_socket.bind(('127.0.0.1', 12345))
+        logger.info("Instance Lock Acquired on Port 12345")
+    except socket.error:
+        print("\n\n❌ ERROR: Another instance of the bot is already running!")
+        print("Please kill the previous process before starting a new one.\n")
+        sys.exit(1)
+
 # --- Main Entry Point ---
 async def main():
+    # 0. Acquire Lock
+    prevent_multiple_instances()
+    
     print("--- 🚀 BOT RELOADED! New Session Logic Active ---")
     logger.info("Starting Elevate Aura Bot...")
     

@@ -60,10 +60,10 @@ class SupabaseClient:
             logger.error(f"Failed to get user: {e}")
             return None
 
-    async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float) -> bool:
+    async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float, forced_count: int = None) -> bool:
         """
-        Updates user stats: Total Score, Questions Answered, Average Pace.
-        STORES STATS IN 'quiz_state' JSONB COLUMN because 'questions_answered' column is missing.
+        Updates user stats.
+        If forced_count is provided, uses it directly (Atomic-like increment from session).
         """
         if not self.client: return False
         
@@ -84,16 +84,22 @@ class SupabaseClient:
             if last_active != today_str:
                 logger.info(f"Daily Reset for {user_id}: New Day ({today_str})")
                 current_inv = 0
-                current_pace = 0.0 # Reset pace daily too for fresh daily stats
+                current_pace = 0.0 
+                # If forced_count comes from an old session, we might have a conflict.
+                # But start_new_session checks date too.
+                # If we reset here, we should probably ignore forced_count OR forced_count should be 1.
             else:
                 current_inv = saved_stats.get("questions_answered", 0)
                 current_pace = saved_stats.get("average_pace", 0.0)
             
-            # Score accumulates forever (Weekly/Lifetime)
+            # Score accumulates forever
             current_score = user.get("current_streak", 0) or 0
 
             # 2. Calculate New Values
-            new_inv = current_inv + 1
+            if forced_count is not None:
+                new_inv = forced_count
+            else:
+                new_inv = current_inv + 1
             
             # Rolling Average Pace (Daily)
             if new_inv == 1:
@@ -120,11 +126,11 @@ class SupabaseClient:
             
             self.client.table('users').upsert(data).execute()
             logger.info(f"Updated Stats for {user_id}: Score={new_score}, Q={new_inv}, Pace={new_pace:.2f}, Date={today_str}")
-            return True
+            return quiz_state["stats"]
             
         except Exception as e:
             logger.error(f"Failed to update user stats: {e}")
-            return False
+            return None
 
     async def save_quiz_state(self, user_id: int, state: dict) -> bool:
         """
@@ -132,12 +138,16 @@ class SupabaseClient:
         """
         if not self.client: return False
         try:
-            # We explicitly update ONLY the quiz_state entry to avoid overwriting other fields if possible,
-            # but upsert works on the whole row if we provide the PK.
-            # State can be large, so ensure the column 'quiz_state' (JSONB) exists in Supabase.
+            # Fetch existing to preserve other keys (like 'stats')
+            user = await self.get_user(user_id)
+            current_data = user.get("quiz_state") or {} if user else {}
+            
+            # Merge new state into existing data
+            current_data.update(state)
+            
             data = {
                 "user_id": user_id,
-                "quiz_state": state
+                "quiz_state": current_data
             }
             self.client.table('users').upsert(data).execute()
             return True
@@ -159,15 +169,27 @@ class SupabaseClient:
             logger.error(f"Failed to get quiz state: {e}")
             return None
 
-    async def clear_quiz_state(self, user_id: int):
+    async def clear_quiz_state(self, user_id: int, keep_stats: dict = None):
         """
-        Clears the quiz state (sets to Null).
+        Clears the quiz state but PRESERVES stats.
+        If keep_stats is provided, uses that instead of DB read (prevent stale reads).
         """
         if not self.client: return
         try:
+            # 1. Use provided stats (Best for consistency)
+            new_stats = {}
+            if keep_stats:
+                 new_stats["stats"] = keep_stats
+            else:
+                # 2. Fallback to DB fetch (Only if we don't have local copy)
+                user = await self.get_user(user_id)
+                existing_state = user.get("quiz_state") or {} if user else {}
+                if "stats" in existing_state:
+                    new_stats["stats"] = existing_state["stats"]
+                
             data = {
                 "user_id": user_id,
-                "quiz_state": None
+                "quiz_state": new_stats
             }
             self.client.table('users').upsert(data).execute()
         except Exception as e:

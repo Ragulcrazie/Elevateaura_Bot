@@ -8,17 +8,20 @@ async def debug():
     db = SupabaseClient()
     await db.connect()
     
-    print("Attempting to insert 1 ghost...")
+    print("Fetching User Stats...")
     try:
-        res = db.client.table("ghost_profiles").insert({"name": "Test Ghost", "base_skill_level": 1000}).execute()
-        print("Success!", res)
+        res = db.client.table("users").select("user_id, questions_answered, quiz_state").execute()
+        for user in res.data:
+            print(f"User: {user['user_id']}")
+            print(f"  - Questions Answered (Col): {user.get('questions_answered')}")
+            state = user.get('quiz_state') or {}
+            import json
+            print(f"  - Quiz State (JSON):")
+            print(json.dumps(state, indent=2, default=str)) 
+            if state:
+                print(f"  - Stats in JSON: {state.get('stats')}")
     except Exception as e:
-        print("FULL ERROR DETAILS:")
-        print(e)
-        # Try to print specific attributes if they exist
-        if hasattr(e, 'code'): print(f"Code: {e.code}")
-        if hasattr(e, 'details'): print(f"Details: {e.details}")
-        if hasattr(e, 'message'): print(f"Message: {e.message}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     asyncio.run(debug())

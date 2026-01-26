@@ -219,10 +219,9 @@ async function initDashboard(passedUser = null) {
     renderHeader(realUserEntry);
     renderList(leaderboard);
     
-    // 7. Update Top Header (Date & Test Count)
-    // Calc Tests Taken: (Score / 100)? No, better use questions_answered/10
-    const testsTaken = userData.questions_answered ? Math.floor(userData.questions_answered / 10) : 0;
-    updateTopHeader(packId, testsTaken);
+    // 7. Update Top Header (Date & Progress)
+    const qAnswered = userData.questions_answered || 0;
+    updateTopHeader(packId, qAnswered);
     
     // 8. Info Modal Listeners
     setupHelpers();
@@ -305,7 +304,7 @@ function renderList(data) {
     });
 }
 
-function updateTopHeader(packId, testsTaken) {
+function updateTopHeader(packId, questionsAnswered) {
     const now = new Date();
     const month = now.toLocaleString("default", { month: "long" });
     const romanWeek = getRomanWeekOfMonth(now);
@@ -324,15 +323,15 @@ function updateTopHeader(packId, testsTaken) {
         `;
     }
     
-    // Test Counter
+    // Question Counter (Progress)
     const testCountEl = document.getElementById('testCountDisplay') || document.getElementById('testCount');
     
     if (testCountEl) {
-        // Enforce max 6
-        const displayCount = Math.min((testsTaken || 0) + 1, 6);
-        const isMax = (testsTaken || 0) >= 6;
+        // Enforce max 60
+        const displayCount = Math.min((questionsAnswered || 0), 60);
+        const isMax = displayCount >= 60;
         
-        testCountEl.textContent = isMax ? "Done (6/6)" : `Test ${displayCount}/6`;
+        testCountEl.textContent = isMax ? "Goal Reached" : `Progress: ${displayCount}/60`;
         
         testCountEl.style.color = "#000000"; 
         testCountEl.style.fontWeight = "bold";

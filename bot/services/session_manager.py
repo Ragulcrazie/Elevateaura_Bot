@@ -33,12 +33,12 @@ class SessionManager:
              logger.error(f"DB Get Error: {e}")
              return None
 
-    async def delete_session(self, user_id: int):
-        """Deletes session from Supabase."""
+    async def delete_session(self, user_id: int, keep_stats: Dict[str, Any] = None):
+        """Deletes session from Supabase, preserving stats if provided."""
         try:
             db = SupabaseClient()
             await db.connect()
-            await db.clear_quiz_state(user_id)
+            await db.clear_quiz_state(user_id, keep_stats)
         except Exception as e:
             logger.error(f"DB Delete Error: {e}")
 
