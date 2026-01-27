@@ -229,13 +229,44 @@ async def keep_alive():
                 logger.error(f"Keep-alive ping failed: {e}")
 
 # --- Instance Lock ---
+import os
+import psutil
 import socket
 import sys
 
 def prevent_multiple_instances():
     """
-    Ensures only one instance of the bot is running by binding to a specific port.
+    Ensures only one instance of the bot is running by killing any old instances.
     """
+    import psutil
+    import time
+    
+    current_pid = os.getpid()
+    killed_count = 0
+    
+    try:
+        # Find all Python processes
+        for proc in psutil.process_iter(['pid', 'name', 'cmdline']):
+            try:
+                # Check if it's a Python process running main.py
+                if proc.info['name'] and 'python' in proc.info['name'].lower():
+                    cmdline = proc.info.get('cmdline', [])
+                    if cmdline and any('main.py' in str(arg) for arg in cmdline):
+                        # Don't kill ourselves
+                        if proc.info['pid'] != current_pid:
+                            logger.info(f"Found old bot instance (PID: {proc.info['pid']}). Killing it...")
+                            proc.kill()
+                            killed_count += 1
+                            time.sleep(0.5)  # Give it time to die
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                pass
+    except Exception as e:
+        logger.warning(f"Error while checking for old instances: {e}")
+    
+    if killed_count > 0:
+        logger.info(f"✅ Killed {killed_count} old bot instance(s)")
+    
+    # Now acquire the lock
     try:
         # Create a socket that binds to localhost:12345
         # This global variable prevents the socket from being garbage collected
@@ -244,9 +275,16 @@ def prevent_multiple_instances():
         _lock_socket.bind(('127.0.0.1', 12345))
         logger.info("Instance Lock Acquired on Port 12345")
     except socket.error:
-        print("\n\n❌ ERROR: Another instance of the bot is already running!")
-        print("Please kill the previous process before starting a new one.\n")
-        sys.exit(1)
+        print("\n\n❌ ERROR: Could not acquire instance lock (port 12345 still in use)")
+        print("Waiting 2 seconds and retrying...\n")
+        time.sleep(2)
+        try:
+            _lock_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            _lock_socket.bind(('127.0.0.1', 12345))
+            logger.info("Instance Lock Acquired on Port 12345 (retry successful)")
+        except socket.error:
+            print("❌ ERROR: Still cannot acquire lock. Please manually kill old processes.\n")
+            sys.exit(1)
 
 # --- Main Entry Point ---
 async def main():

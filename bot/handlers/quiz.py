@@ -6,9 +6,32 @@ import json
 import asyncio
 import random
 import time
+import uuid
+import re
 from database.db_client import SupabaseClient
 
 router = Router()
+
+def format_explanation(text: str) -> str:
+    """
+    Formats the explanation by adding newlines and bolding 'Step X'.
+    """
+    if not text: return "No explanation available."
+    # Regex: Find 'Step <number>:' and replace with '\n\n**Step <number>:**'
+    # We use a lambda to process the match if needed, but simple substitution works here.
+    # The pattern (Step \d+:) captures the whole string.
+    formatted = re.sub(r'(Step \d+:)', r'\n\n**\1**', text)
+    
+    # Remove duplicate numbering pattern like "**Step 1:** 1:" -> "**Step 1:**"
+    formatted = re.sub(r'(\*\*Step \d+:\*\*) \d+:', r'\1', formatted)
+    
+    # If no steps were found (formatting didn't change length significantly), 
+    # try splitting by sentences for readability.
+    if len(formatted) == len(text):
+        # Replace ". " with ".\n\n" using regex to handle spacing
+        formatted = re.sub(r'\. +', '.\n\n', text)
+        
+    return formatted.strip()
 
 # MOCK DATA (Ideally loaded from DB or JSON file)
 SAMPLE_QUESTIONS = [
@@ -120,12 +143,14 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         print(f"DEBUG: Cancelled existing timer for {user_id}")
     
     # 1. Initialize Session
+    session_id = str(uuid.uuid4())[:8] # Short 8-char ID
     state = {
         "score": 0,
         "current_q_index": 0,
         "questions": questions,
         "question_start_time": 0,
-        "questions_answered_baseline": q_answered # Snapshot of DB at start
+        "questions_answered_baseline": q_answered, # Snapshot of DB at start
+        "session_id": session_id
     }
     
     # Save State to Disk (Robust Persistence)
@@ -222,11 +247,49 @@ async def handle_timeout(message: types.Message, user_id: int):
     
     # 3. Send Feedback (UI Priority)
     try:
-        await message.answer(
-            f"❌ **Time Up!**\nCorrect: {current_q['options'][correct_idx]}\n\n"
-            f"💡 **Explanation**: {current_q['explanation']}",
-            parse_mode="Markdown"
-        )
+        # ALWAYS use explanation_full, NEVER use short explanation
+        raw_expl = current_q.get("explanation_full", "")
+        if not raw_expl or len(raw_expl.strip()) == 0:
+            raw_expl = "[ERROR: Full explanation missing for this question. Please report this issue.]"
+        expl = format_explanation(raw_expl)
+        
+        # DEBUG: Log which field was used
+        with open('explanation_debug.log', 'a', encoding='utf-8') as f:
+            f.write(f"\n=== TIMEOUT - Q ID: {current_q.get('id')} ===\n")
+            f.write(f"  explanation_full length: {len(current_q.get('explanation_full', ''))}\n")
+            f.write(f"  explanation length: {len(current_q.get('explanation', ''))}\n")
+            f.write(f"  raw_expl length: {len(raw_expl)}\n")
+            f.write(f"  Formatted length: {len(expl)}\n")
+            f.write(f"  Full content (first 500 chars):\n{expl[:500]}\n")
+
+
+        try:
+            await message.answer(
+                f"❌ **Time Up!**\nCorrect: {current_q['options'][correct_idx]}\n\n"
+                f"💡 **Explanation**: {expl}",
+                parse_mode="Markdown"
+            )
+        except Exception as markdown_error:
+            # Markdown parsing failed, try plain text
+            print(f"Markdown error (timeout) for Q{current_q.get('id')}: {markdown_error}")
+            with open('explanation_debug.log', 'a', encoding='utf-8') as f:
+                f.write(f"  MARKDOWN ERROR (TIMEOUT): {str(markdown_error)}\n")
+            
+            try:
+                # Retry without Markdown
+                await message.answer(
+                    f"✗ Time Up!\nCorrect: {current_q['options'][correct_idx]}\n\n"
+                    f"Explanation: {expl.replace('**', '')}",
+                    parse_mode=None
+                )
+            except Exception as plain_error:
+                print(f"Plain text also failed (timeout): {plain_error}")
+                # Last resort
+                await message.answer(
+                    f"Time up! Correct answer: {current_q['options'][correct_idx]}\n"
+                    f"Explanation: {expl.replace('**', '')}",
+                    parse_mode=None
+                )
     except Exception as e:
         print(f"Feedback Error: {e}")
 
@@ -279,9 +342,10 @@ async def send_question(message: types.Message, user_id: int, state: dict = None
 
     # Build Keyboard (1, 2, 3, 4)
     builder = InlineKeyboardBuilder()
+    current_session_id = state.get("session_id", "nosession")
     for i in range(len(q["options"])):
-        # Callback data format: "ans:index"
-        builder.button(text=f"{i+1}", callback_data=f"ans:{i}")
+        # Callback data format: "ans:index:session_id"
+        builder.button(text=f"{i+1}", callback_data=f"ans:{i}:{current_session_id}")
     builder.adjust(4) # Equal width buttons
 
     # Start Timer
@@ -366,9 +430,25 @@ async def handle_answer(callback: types.CallbackQuery):
             await handle_timeout(callback.message, user_id)
             return
 
+        # Parse Call Data
+        parts = callback.data.split(":")
+        
+        # Session Validation (Zombie Check 🧟)
+        if len(parts) == 3:
+            incoming_sid = parts[2]
+            current_sid = state.get("session_id")
+            if current_sid and incoming_sid != current_sid:
+                print(f"DEBUG: Session mismatch for {user_id}. Incoming: {incoming_sid}, Current: {current_sid}")
+                await callback.answer("⚠️ Session Expired!\nYou have a newer quiz active.", show_alert=True)
+                return
+        
         # Parse Answer
-        selected_idx = int(callback.data.split(":")[1])
+        selected_idx = int(parts[1])
         current_q = state["questions"][state["current_q_index"]]
+        # DEBUG: Print keys to verify data availability
+        print(f"DEBUG ANSWER KEYS: {list(current_q.keys())}")
+        print(f"DEBUG EXPLANATION FULL: {current_q.get('explanation_full', 'MISSING')[:20]}...")
+        
         correct_idx = current_q["answer_index"]
 
         # Logic
@@ -404,12 +484,54 @@ async def handle_answer(callback: types.CallbackQuery):
         await session_manager.save_session(user_id, state)
 
         # Edit message to show result (Instant Feedback)
-        await callback.message.edit_text(
-            f"**Q{state['current_q_index']}: {current_q['question']}**\n\n"
-            f"{feedback}\n\n"
-            f"💡 **Explanation**: {current_q['explanation']}",
-            parse_mode="Markdown"
-        )
+        # ALWAYS use explanation_full, NEVER use short explanation
+        raw_expl = current_q.get("explanation_full", "")
+        if not raw_expl or len(raw_expl.strip()) == 0:
+            raw_expl = "[ERROR: Full explanation missing for this question. Please report this issue.]"
+        expl = format_explanation(raw_expl)
+        
+        # DEBUG: Log which field was used
+        with open('explanation_debug.log', 'a', encoding='utf-8') as f:
+            f.write(f"\n=== ANSWER - Q ID: {current_q.get('id')} ===\n")
+            f.write(f"  explanation_full length: {len(current_q.get('explanation_full', ''))}\n")
+            f.write(f"  explanation length: {len(current_q.get('explanation', ''))}\n")
+            f.write(f"  raw_expl length: {len(raw_expl)}\n")
+            f.write(f"  Formatted length: {len(expl)}\n")
+            f.write(f"  Full content (first 500 chars):\n{expl[:500]}\n")
+
+
+        try:
+            await callback.message.edit_text(
+                f"**Q{state['current_q_index']}: {current_q['question']}**\n\n"
+                f"{feedback}\n\n"
+                f"💡 **Explanation**: {expl}",
+                parse_mode="Markdown"
+            )
+        except Exception as markdown_error:
+            # Markdown parsing failed, try plain text
+            print(f"Markdown error for Q{current_q.get('id')}: {markdown_error}")
+            with open('explanation_debug.log', 'a', encoding='utf-8') as f:
+                f.write(f"  MARKDOWN ERROR: {str(markdown_error)}\n")
+            
+            try:
+                # Retry without Markdown
+                await callback.message.edit_text(
+                    f"Q{state['current_q_index']}: {current_q['question']}\n\n"
+                    f"{feedback.replace('**', '').replace('✅', '✓').replace('❌', '✗')}\n\n"
+                    f"Explanation: {expl.replace('**', '')}",
+                    parse_mode=None
+                )
+            except Exception as plain_error:
+                print(f"Plain text also failed: {plain_error}")
+                # Last resort: show minimal message
+                await callback.message.edit_text(
+                    f"Answer recorded. See explanation in next message."
+                )
+                # Send explanation as separate message
+                await callback.message.answer(
+                    f"Explanation for Q{state['current_q_index']}:\n{expl.replace('**', '')}",
+                    parse_mode=None
+                )
 
         # Next Question
         await asyncio.sleep(1.5) # Pause to read explanation
