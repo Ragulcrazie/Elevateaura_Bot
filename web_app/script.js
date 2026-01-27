@@ -473,9 +473,16 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
     return false;
 };
 
-// Start
-try {
-    // Polling mechanism to wait for Telegram to inject data
+// --- 4. LISTENERS ---
+// document.getElementById('upgradeBtn').addEventListener('click', ...); // Keep existing logic
+
+// Global Error Handler
+window.onerror = function(msg, url, lineNo, columnNo, error) {
+    renderError(`Error: ${msg} (Line ${lineNo})`);
+    return false;
+};
+
+// Polling mechanism to wait for Telegram to inject data
 function waitForUser(attempts = 0) {
     // 1. Priority: URL Parameters (Smart Solution)
     const urlParams = new URLSearchParams(window.location.search);
@@ -507,12 +514,13 @@ function waitForUser(attempts = 0) {
     }
 }
 
-// Start with polling
+// Start
 try {
+    // PROBE: Visual signal that new script is running
+    const probe = document.getElementById('testCountDisplay');
+    if(probe) probe.innerText = "v31 Init";
+
     waitForUser(); 
-} catch (e) {
-    renderError("Init Failed: " + e.message);
-}
 } catch (e) {
     renderError("Init Failed: " + e.message);
 }
