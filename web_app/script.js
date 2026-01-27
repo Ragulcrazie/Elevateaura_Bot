@@ -272,13 +272,19 @@ function renderAnalytics(userEntry, totalOnBoard, engine) {
     // Calculate Percentile based on rank in the visible leaderboard
     // Rank 1/50 = Top 2% (98th percentile)
     // Rank 25/50 = 50th percentile
-    const percentile = Math.max(0, (totalOnBoard - userEntry.rank) / totalOnBoard);
+    
+    // Guard against Divide by Zero
+    const total = totalOnBoard > 0 ? totalOnBoard : 1;
+    
+    // Percentile: 1.0 (Best) to 0.0 (Worst)
+    const percentile = Math.max(0, (total - userEntry.rank) / total);
     
     const fasterThan = Math.floor(simulatedPool * percentile);
     const fasterCountEl = document.getElementById('fasterThanCount');
     if (fasterCountEl) {
-        // Animate counting up? For now just set text
-        fasterCountEl.textContent = fasterThan.toLocaleString();
+        // Handle "0 aspirants" case gracefully (say 12 or something small if you just joined)
+        const displayCount = fasterThan > 0 ? fasterThan : (userEntry.score > 0 ? 12 : 0);
+        fasterCountEl.textContent = displayCount.toLocaleString();
     }
 
     // 2. Bar Chart Dynamic Rendering
