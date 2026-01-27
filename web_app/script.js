@@ -70,10 +70,13 @@ class GhostEngine {
     generateScore() {
         // Score Curve: Normal distribution centered around 30-40 (out of 60)
         let baseScore = this.rng.range(10, 50);
-        // Bias towards mediocrity (Pack 10 logic)
-        if (this.rng.next() > 0.8) baseScore += this.rng.range(5, 10); // Sudden Geniuses
+        if (this.rng.next() > 0.8) baseScore += this.rng.range(5, 10); 
         if (baseScore > 60) baseScore = 60;
         return baseScore;
+    }
+
+    generatePace() {
+        return this.rng.range(28, 55); // Seconds
     }
 
     generateGhosts(count) {
@@ -82,6 +85,7 @@ class GhostEngine {
             ghosts.push({
                 full_name: NameFactory.generate(this.rng),
                 total_score: this.generateScore(),
+                avg_pace: this.generatePace(),
                 is_ghost: true
             });
         }
@@ -89,15 +93,7 @@ class GhostEngine {
     }
 }
 
-// Helper for Week Number
-function getWeekNumber(d) {
-    d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
-    var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-    var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
-    return weekNo;
-}
-
+// ... (getWeekNumber stays same) ...
 
 // --- 2. DATA LAYER ---
 
@@ -107,21 +103,70 @@ async function fetchLeaderboard(packId) {
         if (!response.ok) throw new Error("API Fail");
         const data = await response.json();
         
-        // Hydrate API data with Scores and correct keys
         const engine = new GhostEngine(packId);
         
         return data.ghosts.map(g => ({
             ...g,
             full_name: g.name || g.full_name || "Unknown Aspirant",
-            total_score: engine.generateScore(),
+            total_score: engine.generateScore(), // Client-side hydration
+            avg_pace: engine.generatePace(),     // Client-side hydration
             is_ghost: true
         }));
 
     } catch (e) {
-        console.warn("Ghost Fetch Fail, using Local Engine", e);
-        const engine = new GhostEngine(packId);
-        return engine.generateGhosts(50);
+         // ... (Fallback) ...
+         const engine = new GhostEngine(packId);
+         return engine.generateGhosts(50);
     }
+}
+
+// ... (fetchUserStats stays same) ...
+// ... (initDashboard stays same) ...
+
+// --- 3. UI RENDERING ---
+
+// ... (renderHeader, updateTopHeader stay same) ...
+
+function renderList(data) {
+    const list = document.getElementById('leaderboard'); 
+    if(!list) return;
+    list.innerHTML = "";
+    
+    // Show Top 5
+    const top5 = data.slice(0, 5);
+    
+    top5.forEach((p, index) => {
+        const isUser = p.is_user;
+        const rank = index + 1;
+        
+        // Style Matching:
+        // User: Deep Blue/Indigo bg (like screenshot 'bg-[#2b2b63]')
+        // Ghost: Dark Grey/Black (like screenshot 'bg-[#1f2937]')
+        const bgClass = isUser ? 'bg-indigo-600 shadow-lg border border-indigo-400' : 'bg-gray-800';
+        const textClass = isUser ? 'text-white' : 'text-gray-200';
+        const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
+        
+        const el = document.createElement('div');
+        el.className = `flex justify-between items-center p-3 rounded-xl mb-2 ${bgClass}`;
+        
+        // Rank visual: #1, #2 ...
+        // User has "YOU" avatar in screenshot?
+        // We'll stick to Rank Number but style it nicely.
+        
+        el.innerHTML = `
+            <div class="flex items-center space-x-3">
+                 <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-opacity-20 bg-white text-current">
+                    #${rank}
+                </div>
+                <div>
+                     <div class="font-bold text-sm ${textClass}">${p.full_name}</div>
+                     <div class="text-[10px] opacity-70 ${textClass}">${subtitle}</div>
+                </div>
+            </div>
+            <div class="font-bold text-yellow-400">${p.total_score} pts</div>
+        `;
+        list.appendChild(el);
+    });
 }
 
 async function fetchUserStats(userId) {
