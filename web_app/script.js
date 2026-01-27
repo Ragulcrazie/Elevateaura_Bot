@@ -187,88 +187,98 @@ class GhostEngine {
 // --- 2. MAIN LOGIC ---
 
 async function initDashboard(passedUser = null) {
-    let user = passedUser || tg.initDataUnsafe?.user;
-    
-    // Fallback for Desktop/Browser testing
-    if (!user) {
-        // Retry getting user from initData parsing? (Sometimes raw data is available)
-        // For now, warn.
-        console.warn("No Telegram User detected. Using Guest Mode.");
-        user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
-        
-        // VISUAL DEBUG: Show error on screen for User to screenshot
-        // Only if genuinely missing in a real env
-        if (location.search.indexOf("debug") !== -1) { // Only if ?debug=true
-             document.getElementById('headerDate').innerText += " (Guest Mode)";
-        }
-    }
-
-    // 1. Fetch Real User Data
-    let userData = null;
     try {
-        // Skip API call for Guest (ID 0)
-        if (user.id === 0) {
-            userData = { full_name: "Guest User", total_score: 0, pack_id: 10 };
-        } else {
-            const response = await fetch(`${API_BASE_URL}/api/user_data?user_id=${user.id}`, {
-                mode: 'cors'
-            });
-            if (response.ok) {
-                userData = await response.json();
-            } else {
-                console.warn("API Error", response.status);
-                // Fallback for dev/demo if API fails
-                userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+        // DEFENSIVE: Remove legacy Red Card if old HTML is cached
+        const legacyCard = document.querySelector('.bg-red-900\\/30'); 
+        if(legacyCard) legacyCard.remove();
+
+        let user = passedUser || tg.initDataUnsafe?.user;
+        
+        // Fallback for Desktop/Browser testing
+        if (!user) {
+            // Retry getting user from initData parsing? (Sometimes raw data is available)
+            // For now, warn.
+            console.warn("No Telegram User detected. Using Guest Mode.");
+            user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
+            
+            // VISUAL DEBUG: Show error on screen for User to screenshot
+            // Only if genuinely missing in a real env
+            if (location.search.indexOf("debug") !== -1) { // Only if ?debug=true
+                 const hd = document.getElementById('headerDate');
+                 if(hd) hd.innerText += " (Guest Mode)";
             }
         }
-    } catch (e) {
-        console.error("Network Error", e);
-        userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+    
+        // 1. Fetch Real User Data
+        let userData = null;
+        try {
+            // Skip API call for Guest (ID 0)
+            if (user.id === 0) {
+                userData = { full_name: "Guest User", total_score: 0, pack_id: 10 };
+            } else {
+                const response = await fetch(`${API_BASE_URL}/api/user_data?user_id=${user.id}`, {
+                    mode: 'cors'
+                });
+                if (response.ok) {
+                    userData = await response.json();
+                } else {
+                    console.warn("API Error", response.status);
+                    // Fallback for dev/demo if API fails
+                    userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+                }
+            }
+        } catch (e) {
+            console.error("Network Error", e);
+            userData = { full_name: user ? (user.first_name + " " + (user.last_name || "")) : "You", total_score: 50, pack_id: 10 };
+        }
+    
+        // 2. Weekly Engine Setup
+        // Use PackID from DB or Generate Random sticky one for guest
+        const packId = userData.pack_id || userData.packId || 17; 
+        const engine = new GhostEngine(packId);
+        
+        // FETCH REAL GHOSTS NOW
+        const cohort = await engine.fetchCohort(); 
+        
+        // 3. Calculate Daily Scores
+        const leaderboard = engine.getDailyScores(cohort, userData.total_score);
+    
+        // 4. Insert Real User
+        const realUserEntry = {
+            name: userData.full_name, 
+            score: userData.total_score, // Daily Score from DB
+            is_bot: false,
+            initials: "YOU",
+            is_me: true,
+            pace: userData.average_pace && userData.average_pace > 0 ? Math.round(userData.average_pace) : 0
+        };
+        leaderboard.push(realUserEntry);
+    
+        // 5. Sort & Rank
+        leaderboard.sort((a, b) => b.score - a.score); // Descending
+        
+        // Assign Ranks
+        leaderboard.forEach((item, index) => {
+            item.rank = index + 1;
+        });
+    
+        // 6. Render
+        renderHeader(realUserEntry);
+        renderList(leaderboard);
+        
+        // 7. Update Top Header (Date & Progress)
+        const qAnswered = userData.questions_answered || 0;
+        updateTopHeader(packId, qAnswered);
+    
+        // 8. Render Analytics (Competitor Intelligence)
+        renderAnalytics(realUserEntry, leaderboard.length, engine, userData.subscription_status);
+        
+        // 9. Info Modal Listeners
+        setupHelpers();
+    } catch (criticalError) {
+        renderError("Crash: " + criticalError.message);
+        console.error(criticalError);
     }
-
-    // 2. Weekly Engine Setup
-    // Use PackID from DB or Generate Random sticky one for guest
-    const packId = userData.pack_id || userData.packId || 17; 
-    const engine = new GhostEngine(packId);
-    
-    // FETCH REAL GHOSTS NOW
-    const cohort = await engine.fetchCohort(); 
-    
-    // 3. Calculate Daily Scores
-    const leaderboard = engine.getDailyScores(cohort, userData.total_score);
-
-    // 4. Insert Real User
-    const realUserEntry = {
-        name: userData.full_name, 
-        score: userData.total_score, // Daily Score from DB
-        is_bot: false,
-        initials: "YOU",
-        is_me: true,
-        pace: userData.average_pace && userData.average_pace > 0 ? Math.round(userData.average_pace) : 0
-    };
-    leaderboard.push(realUserEntry);
-
-    // 5. Sort & Rank
-    leaderboard.sort((a, b) => b.score - a.score); // Descending
-    
-    // Assign Ranks
-    leaderboard.forEach((item, index) => {
-        item.rank = index + 1;
-    });
-
-    // 6. Render
-    renderHeader(realUserEntry);
-    renderList(leaderboard);
-    
-    // 7. Update Top Header (Date & Progress)
-    const qAnswered = userData.questions_answered || 0;
-    updateTopHeader(packId, qAnswered);
-
-    // 8. Render Analytics (Competitor Intelligence)
-    renderAnalytics(realUserEntry, leaderboard.length, engine, userData.subscription_status);
-    
-    // 9. Info Modal Listeners
-    setupHelpers();
 }
 
     // Treat "Itachi" as PRO (Case Insensitive, Trimmed)
