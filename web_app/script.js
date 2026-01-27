@@ -263,13 +263,14 @@ async function initDashboard(passedUser = null) {
     updateTopHeader(packId, qAnswered);
 
     // 8. Render Analytics (Competitor Intelligence)
-    renderAnalytics(realUserEntry, leaderboard.length, engine);
+    renderAnalytics(realUserEntry, leaderboard.length, engine, userData.subscription_status);
     
     // 9. Info Modal Listeners
     setupHelpers();
 }
 
-function renderAnalytics(userEntry, totalOnBoard, engine) {
+function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
+    const isPro = subStatus === "pro_99" || subStatus === "basic_49";
     // 1. "Faster Than" Logic
     // Simulate a larger pool than just the 50 shown
     const simulatedPool = 1500 + engine.rng.range(0, 500); 
@@ -346,6 +347,28 @@ function renderAnalytics(userEntry, totalOnBoard, engine) {
     if (blurRows.length >= 2) {
         blurRows[0].textContent = t1;
         blurRows[1].textContent = t2;
+    }
+
+    // --- PRO UNLOCK LOGIC ---
+    if (isPro) {
+        // 1. Hide the "Locked Content" overlay
+        const lockOverlay = document.querySelector('.absolute.inset-0.z-10');
+        if (lockOverlay) lockOverlay.style.display = 'none';
+
+        // 2. Remove Blur from rows
+        const blurryDivs = document.querySelectorAll('.filter.blur-\\[3px\\]');
+        blurryDivs.forEach(div => {
+             div.classList.remove('filter', 'blur-[3px]');
+             div.classList.remove('bg-gray-800/50');
+             div.classList.add('bg-red-900/40', 'border', 'border-red-800/50'); // Turn them into clear warnings
+        });
+
+        // 3. Change Header to "Unlocked"
+        const headerBadge = document.querySelector('.bg-red-800');
+        if (headerBadge) {
+             headerBadge.textContent = "UNLOCKED";
+             headerBadge.classList.replace('bg-red-800', 'bg-green-600');
+        }
     }
 }
 
