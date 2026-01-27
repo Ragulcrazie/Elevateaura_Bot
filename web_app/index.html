@@ -92,18 +92,18 @@
                 
                 <div class="space-y-2 relative">
                     <!-- Locked Content Overlay -->
-                    <div class="absolute inset-0 z-10 flex items-center justify-center bg-gray-900/10 backdrop-blur-[2px]">
+                    <div id="weaknessLock" class="absolute inset-0 z-10 flex items-center justify-center bg-gray-900/10 backdrop-blur-[2px]">
                          <div class="bg-gray-800/90 text-[10px] py-1 px-3 rounded-full border border-gray-600 flex items-center shadow-xl">
                              <span class="mr-1">🔒</span> Unlock to View
                          </div>
                     </div>
                 
                     <!-- The Blurred Content -->
-                    <div class="flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
+                    <div class="weakness-row flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
                         <span class="text-xs font-semibold text-gray-300">Advanced Algebra</span>
                         <span class="text-[10px] text-red-400 font-mono">-12 pts</span>
                     </div>
-                    <div class="flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
+                    <div class="weakness-row flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
                         <span class="text-xs font-semibold text-gray-300">Seating Arrangement</span>
                         <span class="text-[10px] text-red-400 font-mono">-8 pts</span>
                     </div>
@@ -189,6 +189,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=21"></script>
+    <script src="script.js?v=22"></script>
 </body>
 </html>

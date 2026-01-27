@@ -343,7 +343,7 @@ function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
     // Find the blurred elements (using text content is hard due to blur, so selects by structure)
     // We added them in HTML. We can just set their inner text even if blurred.
     // It adds to the realism if they inspect element.
-    const blurRows = document.querySelectorAll('.filter.blur-\\[3px\\] span:first-child');
+    const blurRows = document.querySelectorAll('.weakness-row span:first-child');
     if (blurRows.length >= 2) {
         blurRows[0].textContent = t1;
         blurRows[1].textContent = t2;
@@ -352,11 +352,11 @@ function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
     // --- PRO UNLOCK LOGIC ---
     if (isPro) {
         // 1. Hide the "Locked Content" overlay
-        const lockOverlay = document.querySelector('.absolute.inset-0.z-10');
+        const lockOverlay = document.getElementById('weaknessLock');
         if (lockOverlay) lockOverlay.style.display = 'none';
 
         // 2. Remove Blur from rows
-        const blurryDivs = document.querySelectorAll('.filter.blur-\\[3px\\]');
+        const blurryDivs = document.querySelectorAll('.weakness-row');
         blurryDivs.forEach(div => {
              div.classList.remove('filter', 'blur-[3px]');
              div.classList.remove('bg-gray-800/50');
