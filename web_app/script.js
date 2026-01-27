@@ -67,19 +67,21 @@ class GhostEngine {
         this.packId = packId;
     }
 
+    generateScore() {
+        // Score Curve: Normal distribution centered around 30-40 (out of 60)
+        let baseScore = this.rng.range(10, 50);
+        // Bias towards mediocrity (Pack 10 logic)
+        if (this.rng.next() > 0.8) baseScore += this.rng.range(5, 10); // Sudden Geniuses
+        if (baseScore > 60) baseScore = 60;
+        return baseScore;
+    }
+
     generateGhosts(count) {
         const ghosts = [];
         for (let i = 0; i < count; i++) {
-            // Score Curve: Normal distribution centered around 30-40 (out of 60)
-            let baseScore = this.rng.range(10, 50);
-            
-            // Bias towards mediocrity (Pack 10 logic)
-             if (this.rng.next() > 0.8) baseScore += this.rng.range(5, 10); // Sudden Geniuses
-             if (baseScore > 60) baseScore = 60;
-
             ghosts.push({
                 full_name: NameFactory.generate(this.rng),
-                total_score: baseScore,
+                total_score: this.generateScore(),
                 is_ghost: true
             });
         }
@@ -104,7 +106,17 @@ async function fetchLeaderboard(packId) {
         const response = await fetch(`${API_BASE_URL}/api/ghosts?pack_id=${packId}`);
         if (!response.ok) throw new Error("API Fail");
         const data = await response.json();
-        return data.ghosts;
+        
+        // Hydrate API data with Scores and correct keys
+        const engine = new GhostEngine(packId);
+        
+        return data.ghosts.map(g => ({
+            ...g,
+            full_name: g.name || g.full_name || "Unknown Aspirant",
+            total_score: engine.generateScore(),
+            is_ghost: true
+        }));
+
     } catch (e) {
         console.warn("Ghost Fetch Fail, using Local Engine", e);
         const engine = new GhostEngine(packId);
