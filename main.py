@@ -106,7 +106,9 @@ async def cmd_start(message: types.Message):
     # Create Layout
     from urllib.parse import quote
     safe_name = quote(full_name)
-    web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={safe_name}"
+    import time
+    timestamp = int(time.time())
+    web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={safe_name}&v={timestamp}"
 
     builder = InlineKeyboardBuilder()
     builder.button(text="🔥 Check Leaderboard (Web App)", web_app=WebAppInfo(url=web_app_url))
