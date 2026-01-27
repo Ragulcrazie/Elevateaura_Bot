@@ -256,9 +256,64 @@ async function initDashboard(passedUser = null) {
     // 7. Update Top Header (Date & Progress)
     const qAnswered = userData.questions_answered || 0;
     updateTopHeader(packId, qAnswered);
+
+    // 8. Render Analytics (Competitor Intelligence)
+    renderAnalytics(realUserEntry, leaderboard.length, engine);
     
-    // 8. Info Modal Listeners
+    // 9. Info Modal Listeners
     setupHelpers();
+}
+
+function renderAnalytics(userEntry, totalOnBoard, engine) {
+    // 1. "Faster Than" Logic
+    // Simulate a larger pool than just the 50 shown
+    const simulatedPool = 1500 + engine.rng.range(0, 500); 
+    
+    // Calculate Percentile based on rank in the visible leaderboard
+    // Rank 1/50 = Top 2% (98th percentile)
+    // Rank 25/50 = 50th percentile
+    const percentile = Math.max(0, (totalOnBoard - userEntry.rank) / totalOnBoard);
+    
+    const fasterThan = Math.floor(simulatedPool * percentile);
+    const fasterCountEl = document.getElementById('fasterThanCount');
+    if (fasterCountEl) {
+        // Animate counting up? For now just set text
+        fasterCountEl.textContent = fasterThan.toLocaleString();
+    }
+
+    // 2. Bar Chart Dynamic Rendering
+    const bars = document.querySelectorAll('.dist-bar');
+    if (bars.length === 5) {
+        // Reset all
+        bars.forEach(bar => {
+            bar.className = 'dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500';
+            bar.style.boxShadow = 'none';
+            // Randomize height slightly (bellcurve-ish)
+        });
+
+        // Heights: [Low, Med, High, Med, Low] base
+        const heights = [30, 50, 80, 60, 40];
+        // Add User's effect? No, just random distribution
+        bars.forEach((bar, i) => {
+             // +/- 10% random variance
+             const h = heights[i] + Math.floor(Math.random() * 20 - 10);
+             bar.style.height = `${h}%`;
+        });
+
+        // Highlight User's Bar
+        // 5 Bars = 20% chunks. 
+        // Percentile 0.9 (Top 10%) -> Index 4 (Rightmost)
+        // Percentile 0.1 (Bottom 10%) -> Index 0 (Leftmost)
+        let userIndex = Math.floor(percentile * 5); 
+        userIndex = Math.min(4, Math.max(0, userIndex)); // Clamp 0-4
+
+        const targetBar = bars[userIndex];
+        if (targetBar) {
+            targetBar.classList.remove('bg-gray-600');
+            targetBar.classList.add('bg-yellow-500');
+            targetBar.style.boxShadow = '0 0 10px rgba(234,179,8,0.5)';
+        }
+    }
 }
 
 function setupHelpers() {

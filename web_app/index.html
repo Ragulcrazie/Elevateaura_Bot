@@ -100,13 +100,13 @@
 
             <!-- Percentile -->
             <div class="pt-2 border-t border-gray-600">
-                <p class="text-xs mb-2" style="color: var(--tg-theme-hint-color);">You are faster than <span class="font-bold" style="color: var(--tg-theme-text-color);">1,204</span> aspirants today.</p>
-                <div class="flex items-end space-x-1 h-16">
-                     <div class="w-1/5 bg-gray-600 rounded-t" style="height: 30%"></div>
-                     <div class="w-1/5 bg-gray-600 rounded-t" style="height: 50%"></div>
-                     <div class="w-1/5 bg-yellow-500 rounded-t shadow-[0_0_10px_rgba(234,179,8,0.5)]" style="height: 70%"></div> <!-- User -->
-                     <div class="w-1/5 bg-gray-600 rounded-t" style="height: 90%"></div>
-                     <div class="w-1/5 bg-gray-600 rounded-t" style="height: 40%"></div>
+                <p class="text-xs mb-2" style="color: var(--tg-theme-hint-color);">You are faster than <span id="fasterThanCount" class="font-bold" style="color: var(--tg-theme-text-color);">--</span> aspirants today.</p>
+                <div id="percentileChart" class="flex items-end space-x-1 h-16">
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 30%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 50%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 70%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 90%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 40%"></div>
                 </div>
                 <div class="text-center text-[10px] text-gray-500 mt-1">Percentile Distribution</div>
             </div>
