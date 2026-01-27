@@ -88,6 +88,11 @@ class GhostEngine {
         const week = getWeekNumber(now);
         this.seedString = `${year}-W${week}-P${packId}`;
         
+        // Hash it
+        let hash = 0;
+        for (let i = 0; i < this.seedString.length; i++) hash = hash + this.seedString.charCodeAt(i);
+        this.rng = new SeededRandom(hash);
+        
         this.packId = packId;
     }
 
