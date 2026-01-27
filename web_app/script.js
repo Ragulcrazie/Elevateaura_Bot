@@ -191,7 +191,7 @@ function renderHeader(name) {
 }
 
 function renderList(data) {
-    const list = document.getElementById('leaderboardList');
+    const list = document.getElementById('leaderboard'); // Correct ID
     if(!list) return;
     list.innerHTML = "";
     
@@ -224,12 +224,10 @@ function renderList(data) {
 }
 
 function updateTopHeader(rank, score) {
-    const rankEl = document.querySelector('.text-3xl.font-bold.text-yellow-500');
-    const scoreEl = document.querySelectorAll('.text-3xl.font-bold')[1]; // Second one is Score?
+    const rankEl = document.getElementById('rankDisplay');
+    const scoreEl = document.getElementById('scoreDisplay');
     
     if (rankEl) rankEl.innerText = rank > 999 ? "999+" : rank;
-    // Check if second element is actually Points. 
-    // HTML structure: Your Rank (val), Points (val). Yes.
     if (scoreEl) scoreEl.innerText = score;
     
     // Update Date/Pack Info
