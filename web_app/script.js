@@ -18,7 +18,11 @@ try {
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 // const API_BASE_URL = "http://localhost:8080"; // For local testing
 
-console.log("ELEVATE AURA BOT: Script v29 Loaded");
+console.log("ELEVATE AURA BOT: Script v33 Loaded");
+
+// Visual Probe: Set background to Blue to prove script started
+const p = document.getElementById('testCountDisplay');
+if(p) { p.innerText = "v33 Start"; p.style.backgroundColor = "cyan"; }
 
 // --- 1. PROCEDURAL GENERATION ENGINE ---
 
@@ -482,15 +486,6 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
     return false;
 };
 
-// --- 4. LISTENERS ---
-// document.getElementById('upgradeBtn').addEventListener('click', ...); // Keep existing logic
-
-// Global Error Handler
-window.onerror = function(msg, url, lineNo, columnNo, error) {
-    renderError(`Error: ${msg} (Line ${lineNo})`);
-    return false;
-};
-
 // Polling mechanism to wait for Telegram to inject data
 function waitForUser(attempts = 0) {
     // 1. Priority: URL Parameters (Smart Solution)
@@ -506,20 +501,20 @@ function waitForUser(attempts = 0) {
              last_name: "",
              username: ""
          };
-         initDashboard(fakeUser);
+         initDashboard(fakeUser).catch(e => renderError("Login Error: " + e));
          return;
     }
 
     // 2. Fallback: Telegram Object
     if (tg.initDataUnsafe?.user) {
-        initDashboard(tg.initDataUnsafe.user);
+        initDashboard(tg.initDataUnsafe.user).catch(e => renderError("TG Init Error: " + e));
     } else if (attempts < 20) {
         // Try again in 100ms
         setTimeout(() => waitForUser(attempts + 1), 100);
     } else {
         // Time out
         console.warn("User detection timed out.");
-        initDashboard(null);
+        initDashboard(null).catch(e => renderError("Guest Init Error: " + e));
     }
 }
 
