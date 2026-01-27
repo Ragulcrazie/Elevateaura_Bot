@@ -186,8 +186,8 @@ async function initDashboard(passedUser = null) {
 }
 
 function renderHeader(name) {
-    // Just welcome text if needed? Already in HTML? 
-    // Actually HTML handles header. We update specific stats.
+    const el = document.getElementById('userNameDisplay');
+    if(el) el.innerText = `Hello, ${name}`;
 }
 
 function renderList(data) {
