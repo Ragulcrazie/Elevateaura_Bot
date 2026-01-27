@@ -336,50 +336,6 @@ async function initDashboard(passedUser = null) {
             targetBar.style.boxShadow = '0 0 10px rgba(234,179,8,0.5)';
         }
     }
-    
-    // 3. Populate "Weakness" Data (Randomize for realism)
-    // List of scary sounding topics
-    const TOPICS = [
-        "Time Speed Distance", "Data Interpretation", "Syllogism", "Trigonometry", 
-        "Seating Arrangement", "Probability", "Mensuration 3D", "Error Detection",
-        "Reading Comprehension", "Number Series", "Puzzle (Floor Based)", "Geometry"
-    ];
-    
-    // Pick 2 random topics based on User ID/Engine Seed so they stay consistent for the user
-    // We can use engine.rng
-    const t1 = TOPICS[engine.rng.range(0, 5)];
-    const t2 = TOPICS[engine.rng.range(6, 11)];
-    
-    // Find the blurred elements (using text content is hard due to blur, so selects by structure)
-    // We added them in HTML. We can just set their inner text even if blurred.
-    // It adds to the realism if they inspect element.
-    const blurRows = document.querySelectorAll('.weakness-row span:first-child');
-    if (blurRows.length >= 2) {
-        blurRows[0].textContent = t1;
-        blurRows[1].textContent = t2;
-    }
-
-    // --- PRO UNLOCK LOGIC ---
-    if (isPro) {
-        // 1. Hide the "Locked Content" overlay
-        const lockOverlay = document.getElementById('weaknessLock');
-        if (lockOverlay) lockOverlay.style.display = 'none';
-
-        // 2. Remove Blur from rows
-        const blurryDivs = document.querySelectorAll('.weakness-row');
-        blurryDivs.forEach(div => {
-             div.classList.remove('filter', 'blur-[3px]');
-             div.classList.remove('bg-gray-800/50');
-             div.classList.add('bg-red-900/40', 'border', 'border-red-800/50'); // Turn them into clear warnings
-        });
-
-        // 3. Change Header to "Unlocked"
-        const headerBadge = document.querySelector('.bg-red-800');
-        if (headerBadge) {
-             headerBadge.textContent = "UNLOCKED";
-             headerBadge.classList.replace('bg-red-800', 'bg-green-600');
-        }
-    }
 }
 
 function setupHelpers() {
