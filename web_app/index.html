@@ -77,6 +77,39 @@
         </div>
         
         <div class="card p-4 space-y-4">
+            
+            <!-- 1. The Hook: Weakness Detected (New) -->
+            <div class="bg-red-900/30 border border-red-800/50 rounded-lg p-3 relative overflow-hidden group cursor-pointer" onclick="document.getElementById('upgradeBtn').click()">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center space-x-2">
+                        <span class="animate-pulse">⚠️</span> 
+                        <span class="text-xs font-bold text-red-200 uppercase tracking-wide">Critical Weakness</span>
+                    </div>
+                    <span class="text-[10px] bg-red-800 text-white px-1.5 py-0.5 rounded">-20 pts/test</span>
+                </div>
+                
+                <p class="text-[11px] text-gray-400 mb-2">You regularly lose marks in these 2 high-weightage topics:</p>
+                
+                <div class="space-y-2 relative">
+                    <!-- Locked Content Overlay -->
+                    <div class="absolute inset-0 z-10 flex items-center justify-center bg-gray-900/10 backdrop-blur-[2px]">
+                         <div class="bg-gray-800/90 text-[10px] py-1 px-3 rounded-full border border-gray-600 flex items-center shadow-xl">
+                             <span class="mr-1">🔒</span> Unlock to View
+                         </div>
+                    </div>
+                
+                    <!-- The Blurred Content -->
+                    <div class="flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
+                        <span class="text-xs font-semibold text-gray-300">Advanced Algebra</span>
+                        <span class="text-[10px] text-red-400 font-mono">-12 pts</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-gray-800/50 p-2 rounded selectable-none filter blur-[3px]">
+                        <span class="text-xs font-semibold text-gray-300">Seating Arrangement</span>
+                        <span class="text-[10px] text-red-400 font-mono">-8 pts</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Subject Strength -->
             <div>
                 <div class="flex justify-between text-xs mb-1">
@@ -156,6 +189,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=18"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>

@@ -319,12 +319,33 @@ function renderAnalytics(userEntry, totalOnBoard, engine) {
         let userIndex = Math.floor(percentile * 5); 
         userIndex = Math.min(4, Math.max(0, userIndex)); // Clamp 0-4
 
-        const targetBar = bars[userIndex];
         if (targetBar) {
             targetBar.classList.remove('bg-gray-600');
             targetBar.classList.add('bg-yellow-500');
             targetBar.style.boxShadow = '0 0 10px rgba(234,179,8,0.5)';
         }
+    }
+    
+    // 3. Populate "Weakness" Data (Randomize for realism)
+    // List of scary sounding topics
+    const TOPICS = [
+        "Time Speed Distance", "Data Interpretation", "Syllogism", "Trigonometry", 
+        "Seating Arrangement", "Probability", "Mensuration 3D", "Error Detection",
+        "Reading Comprehension", "Number Series", "Puzzle (Floor Based)", "Geometry"
+    ];
+    
+    // Pick 2 random topics based on User ID/Engine Seed so they stay consistent for the user
+    // We can use engine.rng
+    const t1 = TOPICS[engine.rng.range(0, 5)];
+    const t2 = TOPICS[engine.rng.range(6, 11)];
+    
+    // Find the blurred elements (using text content is hard due to blur, so selects by structure)
+    // We added them in HTML. We can just set their inner text even if blurred.
+    // It adds to the realism if they inspect element.
+    const blurRows = document.querySelectorAll('.filter.blur-\\[3px\\] span:first-child');
+    if (blurRows.length >= 2) {
+        blurRows[0].textContent = t1;
+        blurRows[1].textContent = t2;
     }
 }
 
