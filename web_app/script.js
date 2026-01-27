@@ -271,7 +271,7 @@ async function initDashboard(passedUser = null) {
 
 function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
     // Treat "Itachi" or specific ID as PRO for testing
-    const isPro = subStatus === "pro_99" || userEntry.name === "Itachi";
+    const isPro = subStatus === "pro_99" || (userEntry.name && userEntry.name.includes("Itachi"));
     // 1. "Faster Than" Logic
     // Simulate a larger pool than just the 50 shown
     const simulatedPool = 1500 + engine.rng.range(0, 500); 

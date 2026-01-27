@@ -191,7 +191,8 @@ async def get_user_data(request):
                 "total_score": daily_score, 
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
-                "average_pace": db_pace
+                "average_pace": db_pace,
+                "subscription_status": user_data.get("subscription_status", "free")
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
