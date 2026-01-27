@@ -1,9 +1,18 @@
-const tg = window.Telegram.WebApp;
+// Mock Telegram WebApp for Browser Testing
+const tg = window.Telegram ? window.Telegram.WebApp : {
+    initDataUnsafe: { user: null },
+    ready: () => console.log("TG Ready (Mock)"),
+    expand: () => console.log("TG Expand (Mock)"),
+    MainButton: { hide: () => {} },
+    platform: "unknown"
+};
 
 // Initialize
-tg.expand();
-tg.ready(); // Signal that we are initialized
-tg.MainButton.hide();
+try {
+    tg.expand();
+    tg.ready(); 
+    tg.MainButton.hide();
+} catch(e) { console.warn("TG Init Error", e); }
 
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
