@@ -269,9 +269,11 @@ async function initDashboard(passedUser = null) {
     setupHelpers();
 }
 
-function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
-    // Treat "Itachi" or specific ID as PRO for testing
-    const isPro = subStatus === "pro_99" || (userEntry.name && userEntry.name.includes("Itachi"));
+    // Treat "Itachi" as PRO (Case Insensitive, Trimmed)
+    const nameCheck = userEntry.name && userEntry.name.trim().toLowerCase().includes("itachi");
+    const isPro = subStatus === "pro_99" || nameCheck;
+    
+    console.log("Analytics Render:", { name: userEntry.name, isPro, subStatus });
     // 1. "Faster Than" Logic
     // Simulate a larger pool than just the 50 shown
     const simulatedPool = 1500 + engine.rng.range(0, 500); 
@@ -292,7 +294,14 @@ function renderAnalytics(userEntry, totalOnBoard, engine, subStatus) {
         // Handle "0 aspirants" case gracefully (say 8-15 if you just joined)
         const fallback = 8 + Math.floor(Math.random() * 8); // 8 to 15
         const displayCount = fasterThan > 0 ? fasterThan : (userEntry.score > 0 ? fallback : 0);
-        fasterCountEl.textContent = displayCount.toLocaleString();
+        
+        // DEBUG SIGNAL: Append a checkmark if PRO detection worked
+        if (isPro) {
+             fasterCountEl.textContent = displayCount.toLocaleString() + " (Unlocked)";
+             fasterCountEl.style.color = "#10B981"; // Green
+        } else {
+             fasterCountEl.textContent = displayCount.toLocaleString();
+        }
     }
 
     // 2. Bar Chart Dynamic Rendering
