@@ -9,6 +9,8 @@ tg.MainButton.hide();
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 // const API_BASE_URL = "http://localhost:8080"; // For local testing
 
+console.log("ELEVATE AURA BOT: Script v29 Loaded");
+
 // --- 1. PROCEDURAL GENERATION ENGINE ---
 
 class SeededRandom {
