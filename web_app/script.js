@@ -282,8 +282,9 @@ function renderAnalytics(userEntry, totalOnBoard, engine) {
     const fasterThan = Math.floor(simulatedPool * percentile);
     const fasterCountEl = document.getElementById('fasterThanCount');
     if (fasterCountEl) {
-        // Handle "0 aspirants" case gracefully (say 12 or something small if you just joined)
-        const displayCount = fasterThan > 0 ? fasterThan : (userEntry.score > 0 ? 12 : 0);
+        // Handle "0 aspirants" case gracefully (say 8-15 if you just joined)
+        const fallback = 8 + Math.floor(Math.random() * 8); // 8 to 15
+        const displayCount = fasterThan > 0 ? fasterThan : (userEntry.score > 0 ? fallback : 0);
         fasterCountEl.textContent = displayCount.toLocaleString();
     }
 
