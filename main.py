@@ -168,6 +168,7 @@ async def get_user_data(request):
                 # New day, but user hasn't played yet. Return 0 stats.
                 derived_q_answered = 0
                 db_pace = 0
+                daily_score = 0
             else:
                 # Same day, use saved stats
                 db_q_answered_json = saved_stats.get("questions_answered")
@@ -183,10 +184,11 @@ async def get_user_data(request):
                     derived_q_answered = int(user_data.get("current_streak", 0) / 10)
                 
                 db_pace = saved_stats.get("average_pace") or user_data.get("average_pace") or 0
+                daily_score = saved_stats.get("daily_score", 0) 
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
-                "total_score": user_data.get("current_streak", 0), 
+                "total_score": daily_score, 
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
                 "average_pace": db_pace

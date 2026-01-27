@@ -85,12 +85,14 @@ class SupabaseClient:
                 logger.info(f"Daily Reset for {user_id}: New Day ({today_str})")
                 current_inv = 0
                 current_pace = 0.0 
+                current_daily_score = 0 # New: Reset daily score
                 # If forced_count comes from an old session, we might have a conflict.
                 # But start_new_session checks date too.
                 # If we reset here, we should probably ignore forced_count OR forced_count should be 1.
             else:
                 current_inv = saved_stats.get("questions_answered", 0)
                 current_pace = saved_stats.get("average_pace", 0.0)
+                current_daily_score = saved_stats.get("daily_score", 0)
             
             # Score accumulates forever
             current_score = user.get("current_streak", 0) or 0
@@ -110,12 +112,14 @@ class SupabaseClient:
             
             # Score Update: 10 points per correct answer
             new_score = current_score + 10 if is_correct else current_score
+            new_daily_score = current_daily_score + 10 if is_correct else current_daily_score
             
             # 3. Update DB
             quiz_state["stats"] = {
                 "questions_answered": new_inv,
                 "average_pace": round(new_pace, 2),
-                "last_active_date": today_str
+                "last_active_date": today_str,
+                "daily_score": new_daily_score
             }
             
             data = {
