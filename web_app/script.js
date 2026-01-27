@@ -88,22 +88,44 @@ class GhostEngine {
         const week = getWeekNumber(now);
         this.seedString = `${year}-W${week}-P${packId}`;
         
-        // Hash it
-        let hash = 0;
-        for (let i = 0; i < this.seedString.length; i++) hash = hash + this.seedString.charCodeAt(i);
-        this.rng = new SeededRandom(hash);
-        
         this.packId = packId;
     }
 
-    // Generate ghosts that stay constant for the week
-    generateCohort(size = 50) {
+    // Fetch ghosts from Backend API (Real DB Profiles)
+    async fetchCohort() {
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/ghosts?pack_id=${this.packId}`);
+            if (response.ok) {
+                const data = await response.json();
+                if (data.ghosts && data.ghosts.length > 0) {
+                    return data.ghosts.map(g => ({
+                        name: g.name,
+                        skill: g.base_skill_level || 1200, // Fallback if missing
+                        rating: g.base_skill_level,
+                        initials: g.name.slice(0, 2).toUpperCase()
+                    }));
+                }
+            }
+        } catch (e) {
+            console.error("Ghost Fetch Error:", e);
+        }
+        
+        console.warn("Falling back to local ghost generation");
+        return this.generateFallbackCohort(50);
+    }
+
+    // Fallback: Generate ghosts locally if API fails
+    generateFallbackCohort(size = 50) {
+        // ... (Original logic as fallback)
+        let hash = 0;
+        for (let i = 0; i < this.seedString.length; i++) hash = hash + this.seedString.charCodeAt(i);
+        const rng = new SeededRandom(hash);
+
         const ghosts = [];
         for (let i = 0; i < size; i++) {
-            const name = NameFactory.generate(this.rng);
-            // Assign a "Base Skill" to this ghost (0-100)
-            const skill = this.rng.range(30, 95); 
-            ghosts.push({ name, skill, initials: name.slice(0, 2).toUpperCase() });
+            const name = NameFactory.generate(rng);
+            const skill = rng.range(30, 95); 
+            ghosts.push({ name, skill: skill * 20, initials: name.slice(0, 2).toUpperCase() });
         }
         return ghosts;
     }
@@ -124,13 +146,23 @@ class GhostEngine {
         const dailyRng = new SeededRandom(dailyHash);
 
         return cohort.map(ghost => {
+            // Normalize skill (DB is 800-2000, App expects logic 0-100 or absolute)
+            // Let's us DB skill directly for 'luck' calculation
+            // Normalized 0.5 to 1.5 multiplier
+            
+            const basePerformance = (ghost.rating || ghost.skill || 1200) / 1200; 
+            
             // Daily Performance Variance (+/- 10%)
             const dailyLuck = (dailyRng.range(-10, 10) / 100);
-            const performance = Math.min(1, Math.max(0.1, (ghost.skill / 100) + dailyLuck));
+            
+            // Ghost Speed/Score Factor
+            const performance = Math.min(1.2, Math.max(0.5, basePerformance + dailyLuck));
             
             // Calculate score: Max 600 * Progress * Performance
-            // Some ghosts play fast, some slow.
             let currentScore = Math.floor(600 * progress * performance);
+            
+            // Cap at 600 strict
+            currentScore = Math.min(600, currentScore);
             
             // Round to nearest 10 (as tests are 100 pts)
             currentScore = Math.round(currentScore / 10) * 10;
@@ -191,7 +223,9 @@ async function initDashboard(passedUser = null) {
     // Use PackID from DB or Generate Random sticky one for guest
     const packId = userData.pack_id || userData.packId || 17; 
     const engine = new GhostEngine(packId);
-    const cohort = engine.generateCohort(49); // 49 Ghosts
+    
+    // FETCH REAL GHOSTS NOW
+    const cohort = await engine.fetchCohort(); 
     
     // 3. Calculate Daily Scores
     const leaderboard = engine.getDailyScores(cohort, userData.total_score);
