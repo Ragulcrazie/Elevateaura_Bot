@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v56 NAME"; p.style.backgroundColor = "#DB2777"; }
+if(p) { p.innerText = "v57 DB-NAME"; p.style.backgroundColor = "#7C3AED"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -141,14 +141,18 @@ async function initDashboard(passedUser = null) {
          user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
     }
     
-    // Explicitly update header with the best available name
-    // Use first_name as primary
-    renderHeader(user.first_name || "Fighter");
-    
     // 1. Determine Pack
     // Fetch User Stats to get rating/pack
     const userStats = await fetchUserStats(user.id);
     const packId = userStats ? userStats.pack_id : 10; // Default Pack 10
+    
+    // RE-VERIFY NAME from DB if available (most reliable)
+    // Sometimes Telegram initData is missing in simple web preview, but we have ID
+    if (userStats && userStats.full_name && userStats.full_name !== "Unknown Aspirant") {
+        user.first_name = userStats.full_name;
+    }
+
+    renderHeader(user.first_name || "Fighter");
     
     // 2. Fetch Leaderboard (Ghosts + Real)
     let leaderboard = await fetchLeaderboard(packId, user.id);
