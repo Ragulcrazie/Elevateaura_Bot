@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v55 GOLD"; p.style.backgroundColor = "#EAB308"; }
+if(p) { p.innerText = "v56 NAME"; p.style.backgroundColor = "#DB2777"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -131,14 +131,19 @@ async function initDashboard(passedUser = null) {
     
     // --- GUEST MODE LOGIC ---
     // If we passed null (timeout or simple browser open), we still want to show SOMETHING.
+    // Try to get name from Telegram object first if available even if initDashboard was called with null
+    if (!user && tg.initDataUnsafe?.user) {
+        user = tg.initDataUnsafe.user;
+    }
+
     if (!user) {
          // Create a Dummy "Guest" user for visual testing
          user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
-         renderHeader(user.first_name);
-         // Don't return, let it proceed to load ghosts!
-    } else {
-        renderHeader(user.first_name);
     }
+    
+    // Explicitly update header with the best available name
+    // Use first_name as primary
+    renderHeader(user.first_name || "Fighter");
     
     // 1. Determine Pack
     // Fetch User Stats to get rating/pack
