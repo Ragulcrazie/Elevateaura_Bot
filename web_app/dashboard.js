@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v50 LIVE"; p.style.backgroundColor = "#10B981"; }
+if(p) { p.innerText = "v51 REFRESHED"; p.style.backgroundColor = "#8B5CF6"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
