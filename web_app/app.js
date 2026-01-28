@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v54 FINAL"; p.style.backgroundColor = "#CA8A04"; }
+if(p) { p.innerText = "v55 GOLD"; p.style.backgroundColor = "#EAB308"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -67,16 +67,32 @@ function renderList(data) {
         const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
         
         const el = document.createElement('div');
-        el.className = `flex justify-between items-center p-3 rounded-xl mb-2 ${bgClass}`;
+        let rankHtml = '';
+        let rankBgClass = 'bg-gray-700 text-gray-300'; // Default
         
-        // Rank visual: #1, #2 ...
-        // User has "YOU" avatar in screenshot?
-        // We'll stick to Rank Number but style it nicely.
+        if (rank === 1) {
+            rankHtml = '🥇';
+            rankBgClass = 'bg-yellow-500 text-black shadow-lg shadow-yellow-500/50 scale-110 border-2 border-yellow-200';
+        } else if (rank === 2) {
+            rankHtml = '🥈';
+            rankBgClass = 'bg-gray-300 text-black shadow-lg shadow-gray-400/50 scale-105 border-2 border-gray-100';
+        } else if (rank === 3) {
+            rankHtml = '🥉';
+            rankBgClass = 'bg-amber-700 text-white shadow-lg shadow-amber-800/50 scale-105 border-2 border-amber-600';
+        } else {
+            rankHtml = `#${rank}`;
+            rankBgClass = 'bg-gray-700 text-gray-300';
+        }
+
+        // Apply visual distinction to the row itself for top 3
+        let rowClass = `flex justify-between items-center p-3 rounded-xl mb-2 ${bgClass}`;
+        
+        el.className = rowClass;
         
         el.innerHTML = `
             <div class="flex items-center space-x-3">
-                 <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-opacity-20 bg-white text-current">
-                    #${rank}
+                 <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${rankBgClass} transition-all duration-300">
+                    ${rankHtml}
                 </div>
                 <div>
                      <div class="font-bold text-sm ${textClass}">${p.full_name}</div>
