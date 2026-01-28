@@ -33,69 +33,91 @@ class RankEngine:
     def generate_ghost_data(self, ghosts, user_score):
         """
         Takes raw ghost rows and hydrates them with dynamic daily scores.
-        Applies psychological "rubber-banding" based on user_score.
+        Applies psychological "rubber-banding" based on user_score to create engagement.
+        Roles:
+        - The Alpha: Top ranker, high score.
+        - The Rabbit: Always 20-40 points ahead of user (Chase Motivation).
+        - The Hunter: Always 10-20 points behind user (Fear of Loss).
+        - The Safety Net: Bottom 20% are lazy (0-50 pts) so user isn't last.
         """
         processed_ghosts = []
         progress_cap = self.get_daily_slot_progress()
+        today_str = self.get_ist_time().strftime("%Y%m%d")
         
-        # 1. Generate Base Scores
-        for g in ghosts:
-            # Deterministic Seed based on Name + Date (so score increases consistently today)
-            # We want score to ONLY go up, never down during the day.
-            today_str = self.get_ist_time().strftime("%Y%m%d")
+        # --- 1. Generate Base Scores ---
+        for i, g in enumerate(ghosts):
+            # Deterministic Seed
             seed_str = f"{g['id']}_{today_str}"
             rng = random.Random(seed_str)
             
-            # Personal 'Activity' Multiplier (Some ghosts are faster)
-            # 0.8 to 1.2
-            activity_rate = 0.8 + (rng.random() * 0.4) 
+            # Personal 'Activity' Multiplier
+            # Normal Ghosts: 0.8 - 1.2
+            # Safety Net (Bottom 20% by index): Lazy
+            is_safety_net = (i >= len(ghosts) * 0.8)
             
-            # Calculate how many tests this ghost has finished
-            # Max 6.
+            if is_safety_net:
+                activity_rate = 0.1 # Very lazy
+            else:
+                activity_rate = 0.8 + (rng.random() * 0.4)
+            
+            # Calculate Tests Finished (Max 6)
             potential_tests = int(progress_cap * activity_rate)
             if potential_tests > 6: potential_tests = 6
             if potential_tests < 0: potential_tests = 0
             
-            # Each test is 0-100 points.
-            # Skill Check: Assume ghosts align with Pack skill roughly.
-            # But here we just use random for "realistic" variance.
             daily_score = 0
             for _ in range(potential_tests):
-                # Score per test: 3 to 10 questions correct (30 to 100 points)
-                # Weighted slightly towards 6-9 range for realism
+                # Score per test: 30-100 pts
                 correct_count = rng.choices(
                     population=[3, 4, 5, 6, 7, 8, 9, 10],
                     weights=[5, 10, 15, 20, 20, 15, 10, 5],
                     k=1
                 )[0]
-                test_score = correct_count * 10
-                daily_score += test_score
+                daily_score += (correct_count * 10)
                 
             ghost_entry = {
-                "user_id": g["id"], # Using uuid as ID
+                "user_id": g["id"], 
                 "full_name": g.get("full_name") or g.get("name") or "Aspirant",
                 "total_score": daily_score,
-                "questions_answered": (daily_score // 10), # Roughly
+                "questions_answered": (daily_score // 10),
                 "average_pace": rng.randint(35, 55),
                 "is_ghost": True
             }
             processed_ghosts.append(ghost_entry)
             
-        # 2. Psychological Adjustment (The "Trigger" Logic)
-        # Sort first
-        processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
-        
-        # If user is high (e.g. > 300), let them feel powerful but challenged.
-        # Ensure Top 3 are slightly above or just below user.
+        # --- 2. Psychological Adjustments (Mind Game) ---
+        # Only apply if user has played (score > 0) to avoid weirdness when user is new
         if user_score > 0:
-            target_rank_score = user_score + random.randint(-20, 40)
+            # Sort first by raw score
+            processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
             
-            # Make the #1 ghost competitive
-            if processed_ghosts[0]["total_score"] < user_score:
-                # Buff top ghost to beat user slightly (Trigger)
-                processed_ghosts[0]["total_score"] = user_score + 10
+            # Identify Roles based on current sorted positions
+            # We treat the list as mutable
             
-            # If user score is VERY high (Top tier), ensure broad distribution below
-            pass
+            # A. The Rabbit (Chase): Find someone just above user, or create one
+            # Target: User + 30 pts (approx)
+            rabbit_target = user_score + 30
+            # Find a ghost to be the rabbit (e.g., index 5 or 6, or someone close)
+            # We'll just pick index 3 (Rank 4) to be the "Standard Rabbit" if they aren't already huge
+            rabbit_idx = 3 
+            if rabbit_idx < len(processed_ghosts):
+                processed_ghosts[rabbit_idx]["total_score"] = rabbit_target
+                processed_ghosts[rabbit_idx]["questions_answered"] = rabbit_target // 10
+                
+            # B. The Hunter (Fear): Find someone just behind
+            # Target: User - 20 pts (approx)
+            hunter_target = max(0, user_score - 20)
+            hunter_idx = 8 # Rank 9 (Arbitrary "someone behind")
+            if hunter_idx < len(processed_ghosts):
+                 processed_ghosts[hunter_idx]["total_score"] = hunter_target
+                 processed_ghosts[hunter_idx]["questions_answered"] = hunter_target // 10
 
+            # C. The Alpha (Winner): Ensure #1 is impressive
+            if processed_ghosts[0]["total_score"] < user_score:
+                 # If user is #1, make the alpha fight back
+                 processed_ghosts[0]["total_score"] = user_score + 10
+                 processed_ghosts[0]["questions_answered"] = (user_score + 10) // 10
+                 
+        # Re-sort after adjustments
+        processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
         return processed_ghosts
