@@ -151,7 +151,7 @@ async function initDashboard(passedUser = null) {
     renderList(leaderboard);
     
     // 6. Update Top Header Stats
-    updateTopHeader(rank, userEntry.total_score);
+    updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
 
     // 7. Render Analytics
     // Calculate Percentile
@@ -169,7 +169,7 @@ function renderHeader(name) {
 
 
 
-function updateTopHeader(rank, score) {
+function updateTopHeader(rank, score, questionsAnswered) {
     const rankEl = document.getElementById('rankDisplay');
     const scoreEl = document.getElementById('scoreDisplay');
     
@@ -200,13 +200,23 @@ function updateTopHeader(rank, score) {
     // Question Counter (Progress)
     const testCountEl = document.getElementById('testCountDisplay');
     if (testCountEl) {
-         // Default to Done for visual polish
-         testCountEl.textContent = "Goal Reached";
-         testCountEl.style.color = "#000000"; 
+         // Cap at 60 for display safety
+         const displayVal = Math.min(questionsAnswered, 60);
+         testCountEl.textContent = `${displayVal}/60`; // e.g. "10/60"
+         
+         // Color Logic
+         testCountEl.style.color = "#FFFFFF"; // White text
          testCountEl.style.fontWeight = "bold";
-         testCountEl.style.backgroundColor = "#10B981";
          testCountEl.style.padding = "2px 8px";
          testCountEl.style.borderRadius = "6px";
+         
+         if (displayVal === 0) {
+             testCountEl.style.backgroundColor = "#6B7280"; // Gray for 0
+         } else if (displayVal < 60) {
+             testCountEl.style.backgroundColor = "#F59E0B"; // Amber/Orange for In Progress
+         } else {
+             testCountEl.style.backgroundColor = "#10B981"; // Green for Done (60/60)
+         }
     }
 }
 
