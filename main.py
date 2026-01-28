@@ -11,6 +11,9 @@ from database.db_client import SupabaseClient
 from bot.handlers.quiz import router as quiz_router
 from bot.handlers.payment import router as payment_router
 from bot.handlers.preferences import router as prefs_router
+from bot.services.rank_engine import RankEngine
+
+rank_engine = RankEngine()
 
 # Load environment variables
 load_dotenv()
@@ -158,8 +161,7 @@ async def get_user_data(request):
             pack_id = int(rating / 100)
             
             # Stats via JSONB (quiz_state['stats'])
-            import time
-            today_str = time.strftime("%Y-%m-%d")
+            today_str = db.get_ist_date()
             
             quiz_state = user_data.get("quiz_state") or {}
             saved_stats = quiz_state.get("stats", {})
@@ -205,37 +207,49 @@ async def get_user_data(request):
 async def get_ghosts_for_pack(request):
     try:
         pack_id = request.query.get("pack_id")
+        user_id_str = request.query.get("user_id")
+        
         if not pack_id:
             return web.json_response({"error": "Missing pack_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
         
-        # Deterministic Randomness based on Pack ID + Week
-        # This ensures the same pack gets the same ghosts for the whole week
+        # 1. Fetch User Score for "Psychological" Logic
+        user_score = 0
+        if user_id_str:
+            try:
+                user_data = await db.get_user(int(user_id_str))
+                if user_data:
+                    # Check if score is from today
+                    today_str = db.get_ist_date()
+                    quiz_state = user_data.get("quiz_state") or {}
+                    saved_stats = quiz_state.get("stats", {})
+                    if saved_stats.get("last_active_date") == today_str:
+                        user_score = saved_stats.get("daily_score", 0)
+            except:
+                pass # Fail silently, treat as 0
+
+        # 2. Fetch Raw Ghosts (Seed based)
         import datetime
-        now = datetime.datetime.now()
+        # Use IST day for seeding to keep ghosts consistent for the whole day
+        now = rank_engine.get_ist_time()
+        # Seed key: Year + DayOfYear + PackID
+        # We rotate ghosts daily now instead of weekly to ensure "fresh" feeling?
+        # User said "everyday midnight 00:00 the leader board should refresh".
+        # If we keep same ghosts for week, their scores reset daily. That's fine.
         week_num = now.isocalendar()[1]
         year = now.year
         
-        # Create a seed
         seed_val = int(f"{year}{week_num}{pack_id}")
-        
-        # We need 50 ghosts.
-        # Since Supabase functionality for random rows is limited, we can use the seed 
-        # to pick a "start index" in our 10,000 rows.
-        # efficient way: (seed % (total_ghosts - 50))
         
         TOTAL_GHOSTS = 10000 
         start_index = seed_val % (TOTAL_GHOSTS - 60)
         
-        # Fetch 50 ghosts starting from that index
-        # Assuming ID is sequential or we can use range. 
-        # A simple range query on ID is fastest.
-        
-        # We need to know the ID range. Assuming 1 to 10000+
         response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + 49).execute()
+        raw_ghosts = response.data if response.data else []
         
-        ghosts = response.data if response.data else []
+        # 3. Process Scores via RankEngine
+        processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
         
-        return web.json_response({"ghosts": ghosts}, headers={"Access-Control-Allow-Origin": "*"})
+        return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
     except Exception as e:
         logger.error(f"Failed to fetch ghosts: {e}")

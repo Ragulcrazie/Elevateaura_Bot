@@ -19,111 +19,24 @@ const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render UR
 
 console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
-// Visual Probe: Set background to Blue to prove script started
+// Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v34 Start"; p.style.backgroundColor = "cyan"; }
-
-// --- 1. PROCEDURAL GENERATION ENGINE ---
-
-class SeededRandom {
-    constructor(seed) {
-        this.seed = seed;
-    }
-    
-    // Lehmer RNG
-    next() {
-        this.seed = (this.seed * 48271) % 2147483647;
-        return (this.seed - 1) / 2147483646;
-    }
-
-    range(min, max) {
-        return Math.floor(this.next() * (max - min + 1)) + min;
-    }
-}
-
-class NameFactory {
-    static firstNames = ["Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Reyansh", "Ayaan", "Krishna", "Ishaan", "Shaurya", "Atharva", "Dhruv", "Rohan", "Kabir"];
-    static lastNames = ["Sharma", "Verma", "Gupta", "Malhotra", "Bhat", "Saxena", "Mehta", "Joshi", "Patel", "Singh", "Reddy", "Nair", "Iyer", "Rao", "Kumar"];
-    static generate(rng) {
-        const first = this.firstNames[rng.range(0, this.firstNames.length - 1)];
-        const last = this.lastNames[rng.range(0, this.lastNames.length - 1)];
-        return `${first} ${last}`;
-    }
-}
-
-class GhostEngine {
-    constructor(packId) {
-        // Weekly Seed: Year + WeekNumber
-        const now = new Date();
-        const year = now.getFullYear();
-        const week = getWeekNumber(now); // Helper needed
-        this.seedString = `${year}-W${week}-P${packId}`;
-        
-        // Hash it
-        let hash = 0;
-        for (let i = 0; i < this.seedString.length; i++) hash = hash + this.seedString.charCodeAt(i);
-        this.rng = new SeededRandom(hash);
-        
-        this.packId = packId;
-    }
-
-    generateScore() {
-        // Score Curve: Normal distribution centered around 30-40 (out of 60)
-        let baseScore = this.rng.range(10, 50);
-        if (this.rng.next() > 0.8) baseScore += this.rng.range(5, 10); 
-        if (baseScore > 60) baseScore = 60;
-        return baseScore;
-    }
-
-    generatePace() {
-        return this.rng.range(28, 55); // Seconds
-    }
-
-    generateGhosts(count) {
-        const ghosts = [];
-        for (let i = 0; i < count; i++) {
-            ghosts.push({
-                full_name: NameFactory.generate(this.rng),
-                total_score: this.generateScore(),
-                avg_pace: this.generatePace(),
-                is_ghost: true
-            });
-        }
-        return ghosts.sort((a, b) => b.total_score - a.total_score);
-    }
-}
-
-// Helper for Week Number
-function getWeekNumber(d) {
-    d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
-    var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-    var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
-    return weekNo;
-}
+if(p) { p.innerText = "v50 LIVE"; p.style.backgroundColor = "#10B981"; }
 
 // --- 2. DATA LAYER ---
-
-async function fetchLeaderboard(packId) {
+async function fetchLeaderboard(packId, userId) {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/ghosts?pack_id=${packId}`);
+        let url = `${API_BASE_URL}/api/ghosts?pack_id=${packId}`;
+        if (userId) url += `&user_id=${userId}`;
+
+        const response = await fetch(url);
         if (!response.ok) throw new Error("API Fail");
         const data = await response.json();
         
-        const engine = new GhostEngine(packId);
-        
-        return data.ghosts.map(g => ({
-            ...g,
-            full_name: g.name || g.full_name || "Unknown Aspirant",
-            total_score: engine.generateScore(), // Client-side hydration
-            avg_pace: engine.generatePace(),     // Client-side hydration
-            is_ghost: true
-        }));
-
+        return data.ghosts || [];
     } catch (e) {
-         // ... (Fallback) ...
-         const engine = new GhostEngine(packId);
-         return engine.generateGhosts(50);
+         console.error("Leaderboard Fetch Error", e);
+         return [];
     }
 }
 
@@ -217,7 +130,7 @@ async function initDashboard(passedUser = null) {
     const packId = userStats ? userStats.pack_id : 10; // Default Pack 10
     
     // 2. Fetch Leaderboard (Ghosts + Real)
-    let leaderboard = await fetchLeaderboard(packId);
+    let leaderboard = await fetchLeaderboard(packId, user.id);
     
     // 3. Inject User into Leaderboard
     const userEntry = {

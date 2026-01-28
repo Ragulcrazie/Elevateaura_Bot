@@ -27,6 +27,13 @@ class SupabaseClient:
             logger.error(f"Supabase connection failed: {e}")
             return False
 
+    def get_ist_date(self):
+        """Returns current date in IST as string YYYY-MM-DD"""
+        from datetime import datetime, timedelta, timezone
+        # Simple IST offset calculation (UTC+5:30) without external deps if possible
+        ist_offset = timezone(timedelta(hours=5, minutes=30))
+        return datetime.now(ist_offset).strftime("%Y-%m-%d")
+
     async def upsert_user(self, user_data: dict) -> bool:
         """
         Inserts or updates a user in the 'users' table.
@@ -73,8 +80,7 @@ class SupabaseClient:
             if not user: return False
             
             # --- JSONB STORAGE LOGIC ---
-            import time
-            today_str = time.strftime("%Y-%m-%d")
+            today_str = self.get_ist_date()
             
             quiz_state = user.get("quiz_state") or {}
             saved_stats = quiz_state.get("stats", {})

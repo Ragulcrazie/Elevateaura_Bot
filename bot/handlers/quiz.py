@@ -113,7 +113,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     metadata = user.get("metadata", {}) or {}
     last_active = saved_stats.get("last_active_date") or metadata.get("last_active_date", "")
     
-    today_str = time.strftime("%Y-%m-%d")
+    today_str = db.get_ist_date()
     
     if last_active != today_str:
         # It's a new day, so 0 questions answered today
