@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v52 FULL LIST"; p.style.backgroundColor = "#EC4899"; }
+if(p) { p.innerText = "v53 FIX"; p.style.backgroundColor = "#F59E0B"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -167,38 +167,7 @@ function renderHeader(name) {
     if(el) el.innerText = `Hello, ${name}`;
 }
 
-function renderList(data) {
-    const list = document.getElementById('leaderboard'); // Correct ID
-    if(!list) return;
-    list.innerHTML = "";
-    
-    // Show Top 10 + User Context
-    // Simplification: Show Top 5 + User
-    
-    const top5 = data.slice(0, 5);
-    
-    top5.forEach((p, index) => {
-        const isUser = p.is_user;
-        const rank = index + 1;
-        
-        const el = document.createElement('div');
-        el.className = `flex justify-between items-center p-3 rounded-lg ${isUser ? 'bg-indigo-900/50 border border-indigo-500' : 'bg-gray-800'}`;
-        
-        el.innerHTML = `
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${rank <= 3 ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-gray-300'}">
-                    ${rank}
-                </div>
-                <div>
-                     <div class="font-medium text-sm ${isUser ? 'text-indigo-300' : 'text-gray-200'}">${p.full_name}</div>
-                     ${p.is_ghost ? '<div class="text-[10px] text-gray-500">Aspirant</div>' : ''}
-                </div>
-            </div>
-            <div class="font-mono font-bold text-yellow-400">${p.total_score}</div>
-        `;
-        list.appendChild(el);
-    });
-}
+
 
 function updateTopHeader(rank, score) {
     const rankEl = document.getElementById('rankDisplay');
