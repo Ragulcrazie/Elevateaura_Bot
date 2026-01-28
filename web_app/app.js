@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v57 DB-NAME"; p.style.backgroundColor = "#7C3AED"; }
+if(p) { p.innerText = "v58 INFO"; p.style.backgroundColor = "#3B82F6"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -287,6 +287,22 @@ function renderError(msg) {
 
 
 // --- 4. LISTENERS ---
+// Info Button Modal Logic
+const infoBtn = document.getElementById('infoBtn');
+const infoModal = document.getElementById('infoModal');
+const closeModal = document.getElementById('closeModal');
+
+if (infoBtn && infoModal && closeModal) {
+    const toggleModal = () => infoModal.classList.toggle('hidden');
+    infoBtn.addEventListener('click', toggleModal);
+    closeModal.addEventListener('click', toggleModal);
+    
+    // Close on backdrop click
+    infoModal.addEventListener('click', (e) => {
+        if (e.target === infoModal) toggleModal();
+    });
+}
+
 // document.getElementById('upgradeBtn').addEventListener('click', ...); // Keep default
 
 // Global Error Handler
