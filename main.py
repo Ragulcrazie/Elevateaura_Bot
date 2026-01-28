@@ -243,7 +243,7 @@ async def get_ghosts_for_pack(request):
         TOTAL_GHOSTS = 10000 
         start_index = seed_val % (TOTAL_GHOSTS - 60)
         
-        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + 49).execute()
+        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + 48).execute()
         raw_ghosts = response.data if response.data else []
         
         # 3. Process Scores via RankEngine
