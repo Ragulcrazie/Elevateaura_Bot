@@ -21,7 +21,7 @@ console.log("ELEVATE AURA BOT: Script v34 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v51 REFRESHED"; p.style.backgroundColor = "#8B5CF6"; }
+if(p) { p.innerText = "v52 FULL LIST"; p.style.backgroundColor = "#EC4899"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -52,10 +52,10 @@ function renderList(data) {
     if(!list) return;
     list.innerHTML = "";
     
-    // Show Top 5
-    const top5 = data.slice(0, 5);
+    // Show All 50 (User + 49 Ghosts)
+    const listItems = data;
     
-    top5.forEach((p, index) => {
+    listItems.forEach((p, index) => {
         const isUser = p.is_user;
         const rank = index + 1;
         
