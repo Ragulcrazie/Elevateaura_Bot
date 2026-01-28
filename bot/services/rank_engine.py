@@ -86,37 +86,49 @@ class RankEngine:
             processed_ghosts.append(ghost_entry)
             
         # --- 2. Psychological Adjustments (Mind Game) ---
-        # Only apply if user has played (score > 0) to avoid weirdness when user is new
+        # Logic is now STRICT: No ghost can ever exceed 600 points or 60 questions.
+        # This keeps the simulation 100% realistic.
+        
         if user_score > 0:
             # Sort first by raw score
             processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
             
-            # Identify Roles based on current sorted positions
-            # We treat the list as mutable
+            # --- HELPER: Safe Setter ---
+            def set_safe_score(ghost, target_score):
+                # Clamp to [0, 600]
+                safe_score = max(0, min(600, target_score))
+                # Ensure multiple of 10
+                safe_score = (safe_score // 10) * 10 
+                ghost["total_score"] = safe_score
+                # Derive questions answered (Logic: Average 9 pts per question?)
+                # Actually, simpler: points / 10 is safest assumption for "questions correct".
+                # But questions_answered tracks attempts. 
+                # To be realistic: If score is 600, attempts MUST be 60.
+                # If score is 300, attempts is likely ~35-40.
+                # Let's cap attempts at 60.
+                attempts = min(60, int(safe_score / 8.5)) # Slight buffer for wrong answers
+                if attempts < (safe_score / 10): attempts = int(safe_score / 10) # Min possible
+                ghost["questions_answered"] = attempts
             
-            # A. The Rabbit (Chase): Find someone just above user, or create one
-            # Target: User + 30 pts (approx)
+            # A. The Rabbit (Chase)
             rabbit_target = user_score + 30
-            # Find a ghost to be the rabbit (e.g., index 5 or 6, or someone close)
-            # We'll just pick index 3 (Rank 4) to be the "Standard Rabbit" if they aren't already huge
             rabbit_idx = 3 
             if rabbit_idx < len(processed_ghosts):
-                processed_ghosts[rabbit_idx]["total_score"] = rabbit_target
-                processed_ghosts[rabbit_idx]["questions_answered"] = rabbit_target // 10
-                
-            # B. The Hunter (Fear): Find someone just behind
-            # Target: User - 20 pts (approx)
-            hunter_target = max(0, user_score - 20)
-            hunter_idx = 8 # Rank 9 (Arbitrary "someone behind")
-            if hunter_idx < len(processed_ghosts):
-                 processed_ghosts[hunter_idx]["total_score"] = hunter_target
-                 processed_ghosts[hunter_idx]["questions_answered"] = hunter_target // 10
+                # Only boost if within realistic limits of the day
+                current_max_possible = int(progress_cap * 100) + 50 # Allowance
+                if rabbit_target <= current_max_possible: 
+                     set_safe_score(processed_ghosts[rabbit_idx], rabbit_target)
 
-            # C. The Alpha (Winner): Ensure #1 is impressive
+            # B. The Hunter (Fear)
+            hunter_target = max(0, user_score - 20)
+            hunter_idx = 8 
+            if hunter_idx < len(processed_ghosts):
+                 set_safe_score(processed_ghosts[hunter_idx], hunter_target)
+
+            # C. The Alpha (Winner)
             if processed_ghosts[0]["total_score"] < user_score:
-                 # If user is #1, make the alpha fight back
-                 processed_ghosts[0]["total_score"] = user_score + 10
-                 processed_ghosts[0]["questions_answered"] = (user_score + 10) // 10
+                 alpha_target = user_score + 10
+                 set_safe_score(processed_ghosts[0], alpha_target)
                  
         # Re-sort after adjustments
         processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
