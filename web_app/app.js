@@ -383,7 +383,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                     tg.MainButton.showProgress(true); // Spinner
                     
                     // Call Simulate API
-                    fetch(`${API_BASE_URL}/api/simulate_payment`, {
+                    return fetch(`${API_BASE_URL}/api/simulate_payment`, {
                         method: 'POST',
                         body: JSON.stringify({ user_id: userEntry.id }),
                         headers: { 'Content-Type': 'application/json' }
