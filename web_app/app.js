@@ -424,7 +424,8 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                 try {
                     tg.MainButton.setText("PAY 500 STARS ⭐ (TEST MODE)");
                     tg.MainButton.show();
-                    tg.HapticFeedback.notificationOccurred('impactLight');
+                    // FIX: Use proper haptic method
+                    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
                     
                     // --- DUMMY PAYMENT HANDLER ---
                     const handlePayment = () => {
