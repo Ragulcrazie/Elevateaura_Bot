@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v40 Loaded");
+console.log("ELEVATE AURA BOT: Script v41 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -505,24 +505,137 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  // Executor
                  let delay = 500;
                  
-                 selectedScript.forEach((msg, i) => {
+                 // Initial Conversation Loop
+                 function playSequence(msgs) {
+                     let localDelay = 500;
+                     msgs.forEach((msg, i) => {
+                         setTimeout(() => {
+                             status.innerText = "typing...";
+                             const isLast = i === msgs.length - 1;
+                             
+                             setTimeout(() => {
+                                 appendMsg(msg, 'ai');
+                                 status.innerText = "Online";
+                                 tg.HapticFeedback.impactOccurred('light');
+                                 
+                                 // If it's the last message, show relevant chips
+                                 if (isLast) {
+                                     showChipsForTopic(topic);
+                                 }
+                             }, 1000 + (msg.length * 10)); 
+                             
+                         }, localDelay);
+                         localDelay += 2000 + (msg.length * 20);
+                     });
+                 }
+                 
+                 playSequence(selectedScript);
+                 
+                 // --- CHIP LOGIC ---
+                 function showChipsForTopic(t) {
+                     const chipsContainer = document.createElement('div');
+                     chipsContainer.className = "p-4 border-t border-gray-800 bg-gray-900 grid grid-cols-2 gap-2 animate-fade-in-up";
+                     chipsContainer.id = "activeChips";
+                     
+                     // Define potential doubts based on topic
+                     let chips = [
+                         { text: "💡 Give me a Shortcut", action: "shortcut" },
+                         { text: "📉 Common Mistakes?", action: "mistakes" },
+                         { text: "🧠 Psychology Hack", action: "psych" },
+                         { text: "👋 End Session", action: "end" }
+                     ];
+                     
+                     // Custom overrides
+                     if (t.toLowerCase().includes("seating")) {
+                         chips = [
+                             { text: "⚡ Speed Trick", action: "shortcut_seating" },
+                             { text: "❌ What to skip?", action: "skip_strategy" },
+                             { text: "🔍 Visual Probe", action: "visual_probe" }
+                         ];
+                     }
+                     
+                     chips.forEach(chip => {
+                         const btn = document.createElement('button');
+                         btn.className = "bg-gray-800 hover:bg-gray-700 text-green-400 text-xs font-bold py-3 px-2 rounded-lg border border-gray-700 transition-all active:scale-95";
+                         btn.innerText = chip.text;
+                         btn.onclick = () => handleUserResponse(chip.text, chip.action, t);
+                         chipsContainer.appendChild(btn);
+                     });
+                     
+                     // Replace the Input Area
+                     const modal = document.getElementById('chatModal');
+                     const existingFooter = modal.querySelector('.border-t');
+                     if(existingFooter) existingFooter.remove();
+                     modal.appendChild(chipsContainer);
+                 }
+                 
+                 function handleUserResponse(text, action, t) {
+                     // 1. Remove chips
+                     const chips = document.getElementById('activeChips');
+                     if(chips) chips.remove();
+                     
+                     // 2. Show User Message
+                     appendMsg(text, 'user');
+                     
+                     // 3. AI Reply after delay
                      setTimeout(() => {
                          status.innerText = "typing...";
-                         
                          setTimeout(() => {
-                             appendMsg(msg);
+                             const response = getAIResponse(action, t);
+                             appendMsg(response, 'ai');
                              status.innerText = "Online";
-                             tg.HapticFeedback.impactOccurred('light');
-                         }, 1000 + (msg.length * 10)); // Variable typing speed
-                         
-                     }, delay);
-                     
-                     delay += 2000 + (msg.length * 20); // Wait for reading time
-                 });
+                             tg.HapticFeedback.notificationOccurred('success');
+                             
+                             // 4. Show "Close" or "More" options? 
+                             // For one-time build, let's just end or show a "Back to Quiz" button
+                             if (action !== 'end') {
+                                 setTimeout(() => showFinalOptions(), 1000);
+                             }
+                         }, 1500);
+                     }, 500);
+                 }
                  
-                 function appendMsg(html) {
+                 function getAIResponse(action, t) {
+                     switch(action) {
+                         case "shortcut":
+                             return `The best shortcut is <b>Elimination</b>. Incorrect options often have extreme words like "Always" or "Never". Spot them and slash them.`;
+                         case "mistakes":
+                             return `You likely rush the reading part. 80% of errors happen because you misread "NOT following" as "Following". Slow down the reading, speed up the clicking.`;
+                         case "shortcut_seating":
+                             return `For ${t}: Always start with the person whose position is FIXED. Never start with "A is between B and C" - that creates 2 possibilities. Waste of time.`;
+                         case "skip_strategy":
+                             return `Skip any ${t} question that has more than 8 variables or 4+ parameters. It's a "Time Trap" designed to kill your rank.`;
+                         case "visual_probe":
+                             return `Close your eyes. Imagine the circle. Place your Left Hand on the paper. Your nails point to the Right (if facing center). Use your hand physically.`;
+                         case "end":
+                             return "Go crush it. I'm watching.";
+                         default:
+                             return "Focus on accuracy first. Speed follows.";
+                     }
+                 }
+                 
+                 function showFinalOptions() {
+                     const chipsContainer = document.createElement('div');
+                     chipsContainer.className = "p-4 border-t border-gray-800 bg-gray-900 flex justify-center animate-fade-in";
+                     
+                     const btn = document.createElement('button');
+                     btn.className = "w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-3 rounded-lg shadow-lg";
+                     btn.innerText = "😤 I'm Ready to Train";
+                     btn.onclick = () => {
+                         document.getElementById('chatModal').classList.add('hidden');
+                         // Trigger quiz start or close
+                     };
+                     chipsContainer.appendChild(btn);
+                     document.getElementById('chatModal').appendChild(chipsContainer);
+                 }
+
+                 function appendMsg(html, sender) {
                      const div = document.createElement('div');
-                     div.className = "bg-gray-800 p-3 rounded-xl rounded-tl-none border border-gray-700 text-sm max-w-[85%] animate-fade-in";
+                     if (sender === 'ai') {
+                        div.className = "bg-gray-800 p-3 rounded-xl rounded-tl-none border border-gray-700 text-sm max-w-[85%] self-start animate-fade-in text-gray-200";
+                     } else {
+                        div.className = "bg-green-600/20 p-3 rounded-xl rounded-tr-none border border-green-500/30 text-sm max-w-[85%] self-end text-right text-green-200 animate-fade-in";
+                     }
                      div.innerHTML = html;
                      container.appendChild(div);
                      container.scrollTop = container.scrollHeight;
