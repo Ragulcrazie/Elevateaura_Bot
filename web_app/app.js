@@ -17,11 +17,15 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v42 Loaded");
+// Global State for Notes
+let NOTES_MAPPING = null;
+const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
+
+console.log("ELEVATE AURA BOT: Script v60 Loaded (Dynamic Notes)");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v58 INFO"; p.style.backgroundColor = "#3B82F6"; }
+if(p) { p.innerText = "v60 AI"; p.style.backgroundColor = "#3B82F6"; }
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
@@ -140,6 +144,9 @@ async function initDashboard(passedUser = null) {
          // Create a Dummy "Guest" user for visual testing
          user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
     }
+    
+    // 0. Pre-load Notes Mapping (Background)
+    loadNotesMapping();
     
     // 1. Determine Pack
     // Fetch User Stats to get rating/pack
@@ -597,28 +604,124 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  
                  function getAIResponse(action, t) {
                      // 1. Resolve Topic Key
-                     const key = Object.keys(TopicKnowledgeBase).find(k => t.toLowerCase().includes(k)) || 'default';
-                     // 2. Resolve Language (default to English if undefined)
+                     const key = Object.keys(TopicKnowledgeBase).find(k => t.toLowerCase().includes(k));
                      const safeLang = (lang === 'hindi') ? 'hindi' : 'english';
-                     const data = TopicKnowledgeBase[key][safeLang];
-
-                     switch(action) {
-                         case "shortcut":
-                         case "shortcut_seating":
-                             return data.shortcut; // Returns the HTML string from KB
-                         case "mistakes":
-                         case "skip_strategy":
-                             return data.mistake;
-                         case "psych":
-                         case "visual_probe":
-                             return safeLang === 'hindi' ? 
+                     
+                     // If we have a hardcoded override (Seating/Syllogism), use it first
+                     if (key && TopicKnowledgeBase[key][safeLang]) {
+                        const data = TopicKnowledgeBase[key][safeLang];
+                        switch(action) {
+                            case "shortcut":
+                            case "shortcut_seating": return data.shortcut;
+                            case "mistakes":
+                            case "skip_strategy": return data.mistake;
+                            case "psych":
+                            case "visual_probe": return safeLang === 'hindi' ? 
                                  "🧠 <b>मनोवैज्ञानिक हैक:</b> टाइमर को मत देखो। जब आप टाइमर देखते हैं, तो आपका दिमाग 20% धीमा हो जाता है। बस प्रश्न पर ध्यान दें।" : 
-                                 "🧠 <b>Psych Hack:</b> Do not look at the timer. When you check the time, your IQ drops by 20% due to cortisol. Flow state requires ignorance of time.";
-                         case "end":
-                             return safeLang === 'hindi' ? "जाओ और फोड़ दो! मैं देख रहा हूँ। 😉" : "Go crush it. I'm watching. 😉";
-                         default:
-                             return "Focus on accuracy first. Speed follows.";
+                                 "🧠 <b>Psych Hack:</b> Do not look at the timer. When check the time, your IQ drops by 20% due to cortisol. Flow state requires ignorance of time.";
+                            case "end": return safeLang === 'hindi' ? "जाओ और फोड़ दो! मैं देख रहा हूँ। 😉" : "Go crush it. I'm watching. 😉";
+                        }
                      }
+
+                     // 2. DYNAMC FETCH from JSON Notes (The "Personal AI" growth engine)
+                     if (action === "shortcut" || action === "mistakes") {
+                         // We need to fetch async, but this is a sync function.
+                         // Hack: Return a "loading" message that triggers the fetch chain?
+                         // Better: Caller should handle async?
+                         // For now, consistent with UI, we return a placeholder 
+                         // and fire a background fetch to update the last message.
+                         
+                         fetchDynamicAdvice(t, action, safeLang);
+                         return "<i>🧠 Scanning my neural database for the best " + t + " strategies...</i>";
+                     }
+
+                     // Default Fallbacks
+                     if (action === "psych") return "🧠 <b>Focus Hack:</b> Close your eyes for 3 seconds before the next question. Reset your dopamine.";
+                     if (action === "end") return "Go win. I'm analyzing your next move.";
+                     
+                     return "Focus on accuracy first. Speed follows.";
+                 }
+
+                 // --- NEW: Dynamic Fetcher ---
+                 async function fetchDynamicAdvice(topicName, type, lang) {
+                     try {
+                         if (!NOTES_MAPPING) await loadNotesMapping();
+                         
+                         // Find mapping
+                         // Topic names might not match exactly. "Computers" vs "Computer Awareness"
+                         // We do a loose match.
+                         const mapKey = Object.keys(NOTES_MAPPING).find(k => 
+                             k.toLowerCase().includes(topicName.toLowerCase()) || 
+                             topicName.toLowerCase().includes(k.toLowerCase())
+                         );
+
+                         if (!mapKey) {
+                             setTimeout(() => replaceLastAiMsg("⚠️ I couldn't find a specific note for <b>" + topicName + "</b>, but remember: <i>Eliminate opposite options first.</i>"), 1500);
+                             return;
+                         }
+
+                         const fileRef = NOTES_MAPPING[mapKey][lang];
+                         // Clean path: assets/... -> replace with GITHUB_BASE or relative
+                         // e.g. "assets/notes/english notes/Computer Awareness_fixed.json"
+                         // We need the raw Github URL or Serve it via the bot?
+                         // Github Raw is easiest for this static architecture.
+                         const cleanPath = fileRef.replace("assets/", ""); 
+                         const url = GITHUB_ASSETS_BASE + "assets/" + cleanPath;
+
+                         const res = await fetch(url);
+                         const data = await res.json();
+                         
+                         // EXTRACT INTELLIGENCE
+                         let content = "";
+                         let prefix = "";
+                         
+                         if (type === "shortcut") {
+                             prefix = "⚡ <b>Quick Hack:</b> ";
+                             // Priority 1: 6_shortcuts
+                             if (data.sections["6_shortcuts"] && data.sections["6_shortcuts"].length > 0) {
+                                 content = getRandom(data.sections["6_shortcuts"]);
+                             } 
+                             // Priority 2: 4_micro_notes ( Fallback for Computers etc )
+                             else if (data.sections["4_micro_notes"] && data.sections["4_micro_notes"].length > 0) {
+                                 content = getRandom(data.sections["4_micro_notes"]);
+                             }
+                             // Priority 3: 3_key_facts (Last Resort)
+                             else if (data.sections["3_key_facts_data_points"]) {
+                                 content = getRandom(data.sections["3_key_facts_data_points"]);
+                             }
+                         } else if (type === "mistakes") {
+                             prefix = "📉 <b>Trap Alert:</b> ";
+                             if (data.sections["7_traps"] && data.sections["7_traps"].length > 0) {
+                                 content = getRandom(data.sections["7_traps"]);
+                             } else if (data.sections["7_traps_confusing_points"]) {
+                                 content = getRandom(data.sections["7_traps_confusing_points"]); // Computer note key
+                             }
+                         }
+
+                         if (content) {
+                             setTimeout(() => replaceLastAiMsg(prefix + content), 1200);
+                         } else {
+                             setTimeout(() => replaceLastAiMsg("⚠️ No specific data points found, but keep pushing!"), 1000);
+                         }
+
+                     } catch (e) {
+                         console.error("Advice Fetch Error", e);
+                         setTimeout(() => replaceLastAiMsg("📡 Connection fuzz. Use <b>Option Elimination</b> for now."), 1000);
+                     }
+                 }
+                 
+                 function replaceLastAiMsg(html) {
+                     const msgs = container.querySelectorAll('.bg-gray-800'); // AI bubbles
+                     if (msgs.length > 0) {
+                         const last = msgs[msgs.length - 1];
+                         last.innerHTML = html;
+                         // Haptic
+                         if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                     }
+                 }
+                 
+                 function getRandom(arr) {
+                     return arr[Math.floor(Math.random() * arr.length)];
                  }
                  
                  function showFinalOptions() {
