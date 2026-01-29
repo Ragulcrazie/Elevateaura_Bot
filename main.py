@@ -173,6 +173,8 @@ async def get_user_data(request):
                 derived_q_answered = 0
                 db_pace = 0
                 daily_score = 0
+                weak_spots = {}
+                potential_score = 0
             else:
                 # Same day, use saved stats
                 db_q_answered_json = saved_stats.get("questions_answered")
@@ -188,7 +190,25 @@ async def get_user_data(request):
                     derived_q_answered = int(user_data.get("current_streak", 0) / 10)
                 
                 db_pace = saved_stats.get("average_pace") or user_data.get("average_pace") or 0
-                daily_score = saved_stats.get("daily_score", 0) 
+                daily_score = saved_stats.get("daily_score", 0)
+                weak_spots = saved_stats.get("weak_spots", {})
+                
+                # Calculate Potential Score (Real)
+                # Potential = Current Score + (Mistakes * 10)
+                # But we don't store "mistakes count" explicitly, we store map.
+                total_mistakes = sum(weak_spots.values()) if weak_spots else 0
+                potential_score = daily_score + (total_mistakes * 10)
+                
+                # Cap at 600 just in case
+                if potential_score > 600: potential_score = 600
+                
+                # Process Weak Spots (Top 3)
+                # Convert {"Topic": 3, "Topic2": 1} -> [{"topic": "Topic", "count": 3}]
+                sorted_spots = sorted(weak_spots.items(), key=lambda x: x[1], reverse=True)[:3]
+                processed_weak_spots = [{"topic": k, "count": v} for k, v in sorted_spots]
+            
+            # Use 'processed_weak_spots' variable to assign to response, or empty list if new day
+            final_weak_spots = processed_weak_spots if (last_active == today_str) else []
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
@@ -196,7 +216,9 @@ async def get_user_data(request):
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
                 "average_pace": db_pace,
-                "subscription_status": user_data.get("subscription_status", "free")
+                "subscription_status": user_data.get("subscription_status", "free"),
+                "potential_score": potential_score,
+                "weak_spots": final_weak_spots
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})

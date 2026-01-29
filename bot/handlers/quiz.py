@@ -82,7 +82,14 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     cat = "aptitude"
     
     if user:
-        lang = user.get("language_pref", "english")
+        raw_lang = user.get("language_pref", "english")
+        # Normalize language codes (e.g. "en" -> "english")
+        if raw_lang.lower().startswith("en"):
+            lang = "english"
+        elif raw_lang.lower().startswith("hi"):
+            lang = "hindi"
+        else:
+            lang = "english"
         # Ensure exam_category maps to our file keys (aptitude/reasoning/gk)
         user_cat = user.get("exam_category", "aptitude")
         if user_cat and user_cat.lower() in ["reasoning", "gk", "aptitude"]:
@@ -132,7 +139,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     
     if not questions:
         await message.answer(f"⚠️ No questions found for {lang.title()} {cat.title()}. Switching to English Aptitude.")
-        questions = loader.get_questions(count=min(5, remaining), lang="english", category="aptitude")
+        questions = loader.get_questions(count=min(10, remaining), lang="english", category="aptitude")
 
     print(f"DEBUG: Initializing session for {user_id}")
     
@@ -299,10 +306,15 @@ async def handle_timeout(message: types.Message, user_id: int):
         # Calculate Forced Count
         baseline = state.get("questions_answered_baseline", 0)
         forced_count = baseline + state["current_q_index"] + 1
+        
+        # Timeout = Correct Index was correct_idx. But user didn't answer. 
+        # So it's a mistake.
+        current_q = state["questions"][state["current_q_index"]]
+        mistake_topic = current_q.get("topic") or current_q.get("domain") or "General"
 
         db = SupabaseClient()
         await db.connect()
-        new_stats = await db.update_user_stats(user_id, is_correct=False, time_taken=45.0, forced_count=forced_count)
+        new_stats = await db.update_user_stats(user_id, is_correct=False, time_taken=45.0, forced_count=forced_count, mistake_topic=mistake_topic)
         if new_stats:
              state["stats"] = new_stats
     except Exception as e:
@@ -472,10 +484,16 @@ async def handle_answer(callback: types.CallbackQuery):
         # Example: Baseline 10. Index 0 (Q1). Count = 10 + 0 + 1 = 11.
         forced_count = baseline + state["current_q_index"] + 1
 
+        # Determine Mistake Topic (if wrong)
+        mistake_topic = None
+        if not is_correct:
+            # Priority: Topic > Domain > "Unknown"
+            mistake_topic = current_q.get("topic") or current_q.get("domain") or "General"
+
         # Update DB Stats & Sync to Session
         db = SupabaseClient()
         await db.connect()
-        new_stats = await db.update_user_stats(user_id, is_correct, time_taken, forced_count=forced_count)
+        new_stats = await db.update_user_stats(user_id, is_correct, time_taken, forced_count=forced_count, mistake_topic=mistake_topic)
         
         if new_stats:
             state["stats"] = new_stats

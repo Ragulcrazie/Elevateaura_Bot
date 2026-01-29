@@ -184,7 +184,7 @@ async function initDashboard(passedUser = null) {
     const betterThan = total - rank;
     const percentile = betterThan / total;
     
-    renderAnalytics(userEntry, total, percentile, userStats ? userStats.subscription_status : 'free');
+    renderAnalytics(userEntry, total, percentile, userStats);
 }
 
 function renderHeader(name) {
@@ -245,7 +245,8 @@ function updateTopHeader(rank, score, questionsAnswered) {
     }
 }
 
-function renderAnalytics(userEntry, total, percentile, subStatus) {
+function renderAnalytics(userEntry, total, percentile, userStats) {
+    const subStatus = userStats ? userStats.subscription_status : 'free';
     const fasterCountEl = document.getElementById('fasterThanCount');
     if (fasterCountEl) {
         const fasterThan = Math.floor(percentile * 5683); // Fake "Total Aspirants" scaling
@@ -276,19 +277,27 @@ function renderAnalytics(userEntry, total, percentile, subStatus) {
         }
     }
 
-    // --- TRUE POTENTIAL LOGIC (Psychological Hook) ---
-    // Calculate simple heuristic for potential if we don't have deep data
+    // --- TRUE POTENTIAL LOGIC (REAL) ---
+    // Use API data if available, otherwise fallback to heuristic
     const currentScore = userEntry.total_score || 0;
     
-    // Formula: Close 40% of the gap to 600, but ensure at least +50 boost
-    // If score is very low (e.g. 0), potential is 120.
-    const gap = 600 - currentScore;
-    let potentialScore = Math.floor(currentScore + (gap * 0.45)); 
+    let potentialScore = 0;
+    let weakSpots = [];
+
+    if (userStats && userStats.potential_score) {
+        potentialScore = userStats.potential_score;
+        weakSpots = userStats.weak_spots || [];
+    } else {
+        // Fallback Heuristic
+        const gap = 600 - currentScore;
+        potentialScore = Math.floor(currentScore + (gap * 0.45)); 
+        if (potentialScore > 600) potentialScore = 600;
+        if (potentialScore < currentScore + 40) potentialScore = currentScore + 40;
+        if (potentialScore > 600) potentialScore = 600; 
+    }
     
-    // Safety caps
-    if (potentialScore > 600) potentialScore = 600;
-    if (potentialScore < currentScore + 40) potentialScore = currentScore + 40; // Ensure visible gap
-    if (potentialScore > 600) potentialScore = 600; // Cap again
+    // Ensure potential is never less than current (rare edge case)
+    if (potentialScore < currentScore) potentialScore = currentScore;
 
     const pointsLost = potentialScore - currentScore;
 
@@ -297,6 +306,9 @@ function renderAnalytics(userEntry, total, percentile, subStatus) {
     const potEl = document.getElementById('potential_max');
     const gapEl = document.getElementById('potential_gap');
     const unlockBtn = document.getElementById('unlockPotentialBtn');
+    
+    // New: Insight Text Element
+    const insightTextEl = document.querySelector('.border-l-2.border-red-500 p'); 
 
     if (currEl) currEl.innerText = currentScore;
     if (potEl) {
@@ -319,6 +331,26 @@ function renderAnalytics(userEntry, total, percentile, subStatus) {
         requestAnimationFrame(animate);
     }
     if (gapEl) gapEl.innerText = `${pointsLost} points`;
+
+    // Dynamic Insight Text
+    if (insightTextEl) {
+        if (weakSpots.length > 0) {
+            const topic1 = weakSpots[0].topic;
+            const topic2 = weakSpots.length > 1 ? weakSpots[1].topic : null;
+            
+            let msg = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in <span class="text-yellow-400 font-bold">${topic1}</span>`;
+            if (topic2) msg += ` and <span class="text-yellow-400 font-bold">${topic2}</span>`;
+            msg += `. Your accuracy in these high-value topics is dragging you down.`;
+            
+            insightTextEl.innerHTML = msg;
+        } else if (pointsLost > 0) {
+            // Generic but with correct points
+             insightTextEl.innerHTML = `You left <span class="text-white font-bold">${pointsLost} points</span> on the table due to fixable weak spots. Speed is key, but accuracy is Queen.`;
+        } else {
+             // Perfect Score?
+             insightTextEl.innerHTML = `You are playing at <span class="text-green-400 font-bold">Max Potential</span>! Keep maintaining this streak.`;
+        }
+    }
 
     // Button Action
     if (unlockBtn) {

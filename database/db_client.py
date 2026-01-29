@@ -67,10 +67,11 @@ class SupabaseClient:
             logger.error(f"Failed to get user: {e}")
             return None
 
-    async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float, forced_count: int = None) -> bool:
+    async def update_user_stats(self, user_id: int, is_correct: bool, time_taken: float, forced_count: int = None, mistake_topic: str = None) -> bool:
         """
         Updates user stats.
-        If forced_count is provided, uses it directly (Atomic-like increment from session).
+        If forced_count is provided, uses that directly.
+        If mistake_topic is provided (on wrong answer), updates weak_spots.
         """
         if not self.client: return False
         
@@ -91,14 +92,13 @@ class SupabaseClient:
                 logger.info(f"Daily Reset for {user_id}: New Day ({today_str})")
                 current_inv = 0
                 current_pace = 0.0 
-                current_daily_score = 0 # New: Reset daily score
-                # If forced_count comes from an old session, we might have a conflict.
-                # But start_new_session checks date too.
-                # If we reset here, we should probably ignore forced_count OR forced_count should be 1.
+                current_daily_score = 0
+                weak_spots = {} # Reset weak spots daily
             else:
                 current_inv = saved_stats.get("questions_answered", 0)
                 current_pace = saved_stats.get("average_pace", 0.0)
                 current_daily_score = saved_stats.get("daily_score", 0)
+                weak_spots = saved_stats.get("weak_spots", {})
             
             # Score accumulates forever
             current_score = user.get("current_streak", 0) or 0
@@ -109,33 +109,39 @@ class SupabaseClient:
             else:
                 new_inv = current_inv + 1
             
-            # Rolling Average Pace (Daily)
+            # Rolling Average Pace
             if new_inv == 1:
                 new_pace = time_taken
             else:
-                 # (OldAvg * OldCount + NewTime) / NewCount
                 new_pace = ((current_pace * current_inv) + time_taken) / new_inv
             
-            # Score Update: 10 points per correct answer
+            # Score Update
             new_score = current_score + 10 if is_correct else current_score
             new_daily_score = current_daily_score + 10 if is_correct else current_daily_score
             
+            # Weak Spot Tracking
+            if mistake_topic and not is_correct:
+                # Clean key (remove special chars if needed)
+                topic_key = mistake_topic.strip()
+                weak_spots[topic_key] = weak_spots.get(topic_key, 0) + 1
+
             # 3. Update DB
             quiz_state["stats"] = {
                 "questions_answered": new_inv,
                 "average_pace": round(new_pace, 2),
                 "last_active_date": today_str,
-                "daily_score": new_daily_score
+                "daily_score": new_daily_score,
+                "weak_spots": weak_spots
             }
             
             data = {
                 "user_id": user_id,
                 "current_streak": new_score,
-                "quiz_state": quiz_state # Save the JSONB blob
+                "quiz_state": quiz_state
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Updated Stats for {user_id}: Score={new_score}, Q={new_inv}, Pace={new_pace:.2f}, Date={today_str}")
+            logger.info(f"Stats Updated {user_id}: Score={new_score}, Mistake={mistake_topic}")
             return quiz_state["stats"]
             
         except Exception as e:
