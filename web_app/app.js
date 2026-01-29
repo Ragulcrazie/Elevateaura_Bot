@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v36 Loaded");
+console.log("ELEVATE AURA BOT: Script v37 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -422,7 +422,6 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              
              notesBtn.onclick = () => {
                  const lang = userStats.language || 'english';
-                 const topic = weakSpots.length > 0 ? weakSpots[0].topic : 'General Strategy';
                  
                  // Smart Note Content Generator (Mock)
                  const getNote = (t, l) => {
@@ -470,6 +469,23 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                               </ul>
                               <br><p><b>Golden Rule:</b> "Only a few A are B" means: Some A are B <b>AND</b> Some A are NOT B.</p>`;
                      }
+                     
+                     if (t.toLowerCase().includes('classification') || t.toLowerCase().includes('odd one out')) {
+                         return isHindi ?
+                             `<h4>🔢 वर्गीकरण (Classification/Odd One Out)</h4><br>
+                              <p><b>रणनीति:</b></p>
+                              <ul>
+                                <li><b>Numbers:</b> वर्ग (Squares), धन (Cubes), अभाज्य संख्याएं (Primes) चेक करें।</li>
+                                <li><b>Letters:</b> स्वरों (Vowels) और व्यंजन (Consonants) का अंतर देखें।</li>
+                              </ul>`
+                             :
+                             `<h4>🔢 Classification (Odd One Out)</h4><br>
+                              <p><b>Strategy:</b></p>
+                              <ul>
+                                <li><b>Numbers:</b> Check Squares, Cubes, and Prime numbers first.</li>
+                                <li><b>Letters:</b> Look for Vowel/Consonant patterns or position gaps (A=1, B=2).</li>
+                              </ul>`;
+                     }
 
                      // Default Generic Note
                      return isHindi ?
@@ -477,25 +493,33 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                           <p>इस टॉपिक में गति बढ़ाने के लिए:</p>
                           1. प्रश्नों को ध्यान से पढ़ें।<br>
                           2. <b>Option Elimination</b> का उपयोग करें।<br>
-                          3. आसान सवालों को पहले हल करें।<br>
-                          <br><p>Detailed notes for ${t} are being prepared for your stash.</p>`
+                          3. आसान सवालों को पहले हल करें।<br>`
                          :
                          `<h4>🚀 ${t} - Quick Review</h4><br>
                           <p>To improve speed in this topic:</p>
                           1. Read the constraints carefully.<br>
                           2. Use <b>Option Elimination</b> where possible.<br>
-                          3. Skip calculation heavy steps if estimation works.<br>
-                          <br><p>Detailed study cards for ${t} are available in the full library.</p>`;
+                          3. Skip calculation heavy steps if estimation works.<br>`;
                  };
 
-                 const noteContent = getNote(topic, lang);
+                 let finalContent = "";
+                 
+                 if (weakSpots.length > 0) {
+                     weakSpots.forEach((ws, index) => {
+                         if (index > 0) finalContent += "<div class='my-6 h-px bg-gray-700 w-full'></div>";
+                         finalContent += getNote(ws.topic, lang);
+                     });
+                 } else {
+                     finalContent = getNote("General Strategy", lang);
+                 }
+
                  const modal = document.getElementById('notesModal');
                  const titleEl = document.getElementById('noteTitle');
                  const bodyEl = document.getElementById('noteContent');
                  
                  if (modal && bodyEl) {
-                     titleEl.innerText = `${topic} (${lang === 'hindi' ? 'Hindi' : 'English'})`;
-                     bodyEl.innerHTML = noteContent;
+                     titleEl.innerText = `Revising ${weakSpots.length} Topics`;
+                     bodyEl.innerHTML = finalContent;
                      modal.classList.remove('hidden');
                      
                      // Add User Watermark for Security
