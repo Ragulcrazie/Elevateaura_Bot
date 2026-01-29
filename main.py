@@ -271,11 +271,34 @@ async def get_ghosts_for_pack(request):
         # 3. Process Scores via RankEngine
         processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
         
-        return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
+    return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
     except Exception as e:
         logger.error(f"Failed to fetch ghosts: {e}")
         return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+async def simulate_payment(request):
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        if not user_id:
+             return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+        
+        await db.upsert_user({
+            "user_id": int(user_id),
+            "subscription_status": "premium"
+        })
+        return web.json_response({"status": "success"}, headers={"Access-Control-Allow-Origin": "*"})
+    except Exception as e:
+        logger.error(f"Payment Sim Error: {e}")
+        return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+async def handle_options_post(request):
+     return web.Response(headers={
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+    })
 
 async def start_web_server():
     app = web.Application()
@@ -284,6 +307,10 @@ async def start_web_server():
     app.router.add_options("/api/user_data", handle_options)
     app.router.add_get("/api/ghosts", get_ghosts_for_pack)
     app.router.add_options("/api/ghosts", handle_options)
+    
+    # Dummy Payment Route
+    app.router.add_post("/api/simulate_payment", simulate_payment)
+    app.router.add_options("/api/simulate_payment", handle_options_post)
     
     runner = web.AppRunner(app)
     await runner.setup()

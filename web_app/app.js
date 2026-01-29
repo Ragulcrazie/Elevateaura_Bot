@@ -162,6 +162,7 @@ async function initDashboard(passedUser = null) {
         full_name: "You",
         total_score: userStats ? userStats.total_score : 0,
         is_user: true,
+        id: user.id, // Needed for payment
         rank: 0 // Will calc
     };
     
@@ -353,14 +354,68 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     }
 
     // Button Action
+    // Button Action
     if (unlockBtn) {
-        unlockBtn.onclick = () => {
-            // Trigger Telegram Payment or Info Modal
-            // data-product="potential_analysis"
-            tg.MainButton.setText("UNLOCK ANALYSIS (500 Stars)");
-            tg.MainButton.show();
-            // Just simulate click for now or open info modal
-            document.getElementById('upgradeBtn').click(); // Reuse existing flow
+        if (subStatus === 'premium') {
+             // PREMIUM VIEW
+             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎯</span> Train Weak Spots`;
+             // Change Gradient to Green
+             unlockBtn.className = "w-full bg-gradient-to-r from-green-600/90 to-emerald-700/90 hover:from-green-500 hover:to-emerald-600 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]";
+             
+             unlockBtn.onclick = () => {
+                 // Trigger Custom Quiz (Mock for now)
+                 // In future: tg.sendData(JSON.stringify({action: "start_training", topics: weakSpots.map(s=>s.topic)}));
+                 alert(`Starting Focused Training for: ${weakSpots.map(s => s.topic).join(', ')}... (Coming Soon)`);
+                 tg.HapticFeedback.notificationOccurred('success');
+             };
+             
+             // Hide Insight Warning Color if desired, or keep it as diagnosis
+        } else {
+            // FREE VIEW (Paywall)
+            unlockBtn.onclick = () => {
+                // Trigger Telegram Payment or Info Modal
+                tg.MainButton.setText("PAY 500 STARS ⭐ (TEST MODE)");
+                tg.MainButton.show();
+                tg.HapticFeedback.notificationOccurred('impactLight');
+                
+                // --- DUMMY PAYMENT HANDLER ---
+                const handlePayment = () => {
+                    tg.MainButton.showProgress(true); // Spinner
+                    
+                    // Call Simulate API
+                    fetch(`${API_BASE_URL}/api/simulate_payment`, {
+                        method: 'POST',
+                        body: JSON.stringify({ user_id: userEntry.id }),
+                        headers: { 'Content-Type': 'application/json' }
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                         tg.MainButton.hideProgress();
+                         if(data.status === 'success') {
+                             tg.MainButton.setText("SUCCESS! 🎉");
+                             tg.HapticFeedback.notificationOccurred('success');
+                             setTimeout(() => {
+                                 tg.MainButton.hide();
+                                 window.location.reload(); // Reload to see Premium View
+                             }, 1500);
+                         } else {
+                             tg.MainButton.setText("ERROR ❌");
+                             alert("Error: " + data.error);
+                         }
+                         // Cleanup
+                         tg.MainButton.offClick(handlePayment);
+                    })
+                    .catch(e => {
+                        tg.MainButton.hideProgress();
+                        tg.MainButton.setText("NET ERROR ❌");
+                        alert("Network Error: " + e.message);
+                    });
+                };
+                
+                // Cleanup old listeners just in case
+                tg.MainButton.offClick(handlePayment); 
+                tg.MainButton.onClick(handlePayment);
+            }
         }
     }
 }
