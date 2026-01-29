@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v38 Loaded");
+console.log("ELEVATE AURA BOT: Script v39 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -404,16 +404,130 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     if (unlockBtn) {
         if (subStatus === 'premium') {
              // PREMIUM VIEW
-             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎯</span> Train Weak Spots (Premium)`;
-             // Change Gradient to Green
-             unlockBtn.className = "w-full bg-gradient-to-r from-green-600/90 to-emerald-700/90 hover:from-green-500 hover:to-emerald-600 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]";
+             unlockBtn.innerHTML = `<span class="mr-2 text-lg">💬</span> Talk to AI Mentor (Premium)`;
+             // Change Gradient to Green/Teal
+             unlockBtn.className = "w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]";
              
              unlockBtn.onclick = () => {
-                 // Trigger Custom Quiz (Mock for now)
-                 // In future: tg.sendData(JSON.stringify({action: "start_training", topics: weakSpots.map(s=>s.topic)}));
-                 alert(`Starting Focused Training for: ${weakSpots.map(s => s.topic).join(', ')}... (Coming Soon)`);
-                 tg.HapticFeedback.notificationOccurred('success');
+                 openMentorChat(user.first_name || "Aspirant", weakSpots, pointsLost, userStats.language);
+                 tg.HapticFeedback.impactOccurred('medium');
              };
+             
+             // --- CHAT LOGIC ---
+             function openMentorChat(name, weakSpots, pointsLost, lang) {
+                 const modal = document.getElementById('chatModal');
+                 const container = document.getElementById('chatContainer');
+                 const status = document.getElementById('chatStatus');
+                 
+                 container.innerHTML = ""; // Clear old chat
+                 modal.classList.remove('hidden');
+                 
+                 const topic = weakSpots.length > 0 ? weakSpots[0].topic : 'Focus';
+                 const isHindi = lang === 'hindi';
+                 
+                 // --- SCRIPT ENGINE ---
+                 // A diverse set of scripts to feel "Infinite"
+                 const scripts = [
+                     {
+                         type: "strategy",
+                         condition: (p) => p > 50,
+                         msgs: [
+                             `Hey ${name}, I've been engaged in analyzing your score patterns. 🧐`,
+                             `You lost <b class="text-red-400">${pointsLost} points</b> today. That's not just a number; that's the difference between "Selected" and "Waitlisted".`,
+                             `Your main enemy right now is <b>${topic}</b>. You are spending too much time thinking instead of reacting.`,
+                             `💡 <b>Quick Fix:</b> For the next 24 hours, do not solve full problems. Just look at 50 questions of ${topic} and primarily identify the <i>First Step</i>. Speed comes from recognition, not calculation.`
+                         ]
+                     },
+                     {
+                         type: "tough_love",
+                         condition: (p) => true,
+                         msgs: [
+                             `Listen to me, ${name}.`,
+                             `I see you are consistently struggling with <b>${topic}</b>. Is it a lack of concept or lack of practice?`,
+                             `The Top 500 players solve ${topic} questions in under 45 seconds. You are averaging higher.`,
+                             `🔥 <b>My Challenge:</b> Solve 20 questions of ${topic} today anytime you get 5 minutes free. No excuses.`
+                         ]
+                     },
+                     {
+                         type: "technical_seating",
+                         condition: (p) => topic.includes('Seating'),
+                         msgs: [
+                             `I noticed you specifically froze on <b>Seating Arrangement</b>.`,
+                             `Most students rush to draw the circle. That's a rookie mistake.`,
+                             `🧠 <b>AI Tip:</b> Spend the first 15 seconds ONLY reading the 'Definite Information' (like "A is right of B"). Ignore "Possible" information until the end.`,
+                             `Try this technique in tomorrow's test. I'm tracking your improvement.`
+                         ]
+                     },
+                     {
+                         type: "technical_syllogism",
+                         condition: (p) => topic.includes('Syllogism'),
+                         msgs: [
+                             `Syllogisms are leaking your marks, ${name}.`,
+                             `Are you still confused by "Only a few"?`,
+                             `Remember: "Only a few A are B" = "Some A are B" + "Some A are NOT B".`,
+                             `Draw two separate lines in your Venn diagram for this. It stops 90% of negative marking.`
+                         ]
+                     },
+                     {
+                         type: "motivation_high",
+                         condition: (p) => pointsLost < 30, // Good score
+                         msgs: [
+                             `Impressive work today, ${name}! 🚀`,
+                             `You are very close to your Max Potential. Only <b class="text-yellow-400">${pointsLost} points</b> left on the table.`,
+                             `Don't get complacent. The ghosts in the top 10 are relentless.`,
+                             `Polish your <b>${topic}</b> just a little more, and you will be untouchable.`
+                         ]
+                     }
+                 ];
+                 
+                 // Fallback script
+                 const fallback = [
+                      `Hello ${name}. 👋`,
+                      `I analyzed your performance. You have high potential, but <b>${topic}</b> is dragging your rank down.`,
+                      `Make ${topic} your obsession for the next hour. Read the Concept Notes I unlocked for you.`,
+                      `See you on the leaderboard tomorrow.`
+                 ];
+                 
+                 // Select Script
+                 let selectedScript = scripts.find(s => s.condition(pointsLost))?.msgs || fallback;
+                 
+                 // If Hindi
+                 if (isHindi) {
+                     // Simple mock translation for demo (In real app, we'd have Hindi versions in array)
+                     selectedScript = [
+                         `नमस्ते ${name}। मैंने आपके स्कोर का विश्लेषण किया है।`,
+                         `आज आपने <b>${topic}</b> में अंक गंवाए।`,
+                         `💡 <b>सुझाव:</b> अगले एक घंटे तक केवल ${topic} के आसान सवालों का अभ्यास करें।`,
+                         `कल बेहतर प्रदर्शन करें!`
+                     ];
+                 }
+
+                 // Executor
+                 let delay = 500;
+                 
+                 selectedScript.forEach((msg, i) => {
+                     setTimeout(() => {
+                         status.innerText = "typing...";
+                         
+                         setTimeout(() => {
+                             appendMsg(msg);
+                             status.innerText = "Online";
+                             tg.HapticFeedback.impactOccurred('light');
+                         }, 1000 + (msg.length * 10)); // Variable typing speed
+                         
+                     }, delay);
+                     
+                     delay += 2000 + (msg.length * 20); // Wait for reading time
+                 });
+                 
+                 function appendMsg(html) {
+                     const div = document.createElement('div');
+                     div.className = "bg-gray-800 p-3 rounded-xl rounded-tl-none border border-gray-700 text-sm max-w-[85%] animate-fade-in";
+                     div.innerHTML = html;
+                     container.appendChild(div);
+                     container.scrollTop = container.scrollHeight;
+                 }
+             }
              
              // --- NEW: CONCEPT NOTES BUTTON ---
              const notesBtn = document.createElement('button');
