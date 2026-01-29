@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v35 Loaded");
+console.log("ELEVATE AURA BOT: Script v36 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -414,6 +414,103 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  alert(`Starting Focused Training for: ${weakSpots.map(s => s.topic).join(', ')}... (Coming Soon)`);
                  tg.HapticFeedback.notificationOccurred('success');
              };
+             
+             // --- NEW: CONCEPT NOTES BUTTON ---
+             const notesBtn = document.createElement('button');
+             notesBtn.className = "mt-3 w-full bg-gray-700/50 hover:bg-gray-700 text-yellow-500/90 text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all border border-yellow-500/20";
+             notesBtn.innerHTML = `<span class="mr-2">📚</span> Revise Concepts (Premium)`;
+             
+             notesBtn.onclick = () => {
+                 const lang = userStats.language || 'english';
+                 const topic = weakSpots.length > 0 ? weakSpots[0].topic : 'General Strategy';
+                 
+                 // Smart Note Content Generator (Mock)
+                 const getNote = (t, l) => {
+                     const isHindi = l === 'hindi';
+                     
+                     // Mock Logic for a few topics
+                     if (t.toLowerCase().includes('seating') || t.toLowerCase().includes('arrangement')) {
+                         return isHindi ? 
+                             `<h4>🌀 बैठकी व्यवस्था (Seating Arrangement)</h4><br>
+                              <p><b>मुख्य नियम:</b></p>
+                              <ul>
+                                <li>हमेशा <b>Circles</b> के लिए केंद्र की ओर (Facing Center) और बाहर की ओर (Facing Outside) का ध्यान रखें।</li>
+                                <li><b>Linear</b> में Left/Right का निर्धारण अपने हाथ के अनुसार करें।</li>
+                                <li>पहले उन वाक्यों को उठाएं जो <b>Fixed Position</b> बताते हैं (e.g. A, B के दाएं दूसरा है)।</li>
+                              </ul>
+                              <br><p class="text-xs text-gray-500">Pro Tip: कभी भी संभावित (Possibility) केस बनाने से न डरें। 2 डायग्राम एक साथ बनाएं।</p>` 
+                             :
+                             `<h4>🌀 Seating Arrangement Mastery</h4><br>
+                              <p><b>Core Rules:</b></p>
+                              <ul>
+                                <li>For <b>Circular</b>: Always note if facing Center (Left=Clockwise) or Outside (Left=Anti-Clockwise).</li>
+                                <li>For <b>Linear</b>: Your Left/Right is the person’s Left/Right if facing North.</li>
+                                <li>Start with <b>Definite Statements</b> (e.g. "A is 2nd to right of B"). Avoid ambiguous starts.</li>
+                              </ul>
+                              <br><p class="text-xs text-gray-500">Pro Tip: Don't hesitate to draw 2 parallel cases. It saves time on backtracking.</p>`;
+                     }
+                     
+                     if (t.toLowerCase().includes('syllogism')) {
+                         return isHindi ?
+                             `<h4>🟢 न्याय निगमन (Syllogism) - Venn Diagram Method</h4><br>
+                              <p><b>मूल बातें:</b></p>
+                              <ul>
+                                <li><b>All A are B:</b> A का गोला B के अंदर।</li>
+                                <li><b>Some A are B:</b> A और B का कुछ हिस्सा कॉमन।</li>
+                                <li><b>No A is B:</b> दोनों गोले अलग-अलग।</li>
+                              </ul>
+                              <br><p><b>Golden Rule:</b> "Only a few A are B" का मतलब है: Some A are B <b>AND</b> Some A are NOT B.</p>`
+                             :
+                             `<h4>🟢 Syllogism - Venn Diagram Method</h4><br>
+                              <p><b>Basics:</b></p>
+                              <ul>
+                                <li><b>All A are B:</b> A is inside B.</li>
+                                <li><b>Some A are B:</b> Common intersection.</li>
+                                <li><b>No A is B:</b> Disconnected circles.</li>
+                              </ul>
+                              <br><p><b>Golden Rule:</b> "Only a few A are B" means: Some A are B <b>AND</b> Some A are NOT B.</p>`;
+                     }
+
+                     // Default Generic Note
+                     return isHindi ?
+                         `<h4>🚀 ${t} - Quick Review</h4><br>
+                          <p>इस टॉपिक में गति बढ़ाने के लिए:</p>
+                          1. प्रश्नों को ध्यान से पढ़ें।<br>
+                          2. <b>Option Elimination</b> का उपयोग करें।<br>
+                          3. आसान सवालों को पहले हल करें।<br>
+                          <br><p>Detailed notes for ${t} are being prepared for your stash.</p>`
+                         :
+                         `<h4>🚀 ${t} - Quick Review</h4><br>
+                          <p>To improve speed in this topic:</p>
+                          1. Read the constraints carefully.<br>
+                          2. Use <b>Option Elimination</b> where possible.<br>
+                          3. Skip calculation heavy steps if estimation works.<br>
+                          <br><p>Detailed study cards for ${t} are available in the full library.</p>`;
+                 };
+
+                 const noteContent = getNote(topic, lang);
+                 const modal = document.getElementById('notesModal');
+                 const titleEl = document.getElementById('noteTitle');
+                 const bodyEl = document.getElementById('noteContent');
+                 
+                 if (modal && bodyEl) {
+                     titleEl.innerText = `${topic} (${lang === 'hindi' ? 'Hindi' : 'English'})`;
+                     bodyEl.innerHTML = noteContent;
+                     modal.classList.remove('hidden');
+                     
+                     // Add User Watermark for Security
+                     const wm = document.createElement('div');
+                     wm.innerText = `ID: ${userEntry.id}`;
+                     wm.className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-700/20 text-4xl font-black rotate-45 pointer-events-none select-none z-0";
+                     if(!bodyEl.querySelector('.watermark')) {
+                         wm.classList.add('watermark');
+                         bodyEl.appendChild(wm);
+                     }
+                 }
+                 tg.HapticFeedback.impactOccurred('light');
+             };
+             
+             unlockBtn.parentNode.appendChild(notesBtn);
              
              // Hide Insight Warning Color if desired, or keep it as diagnosis
         } else {

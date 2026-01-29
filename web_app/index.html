@@ -203,6 +203,29 @@
         </div>
     </div>
 
-    <script src="app.js?v=59"></script>
+    <!-- Notes Modal -->
+    <div id="notesModal" class="fixed inset-0 z-[70] bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl w-full max-w-lg border border-yellow-600/30 shadow-2xl h-[80vh] flex flex-col relative animate-fade-in-up">
+            <!-- Header -->
+            <div class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900/50 rounded-t-2xl">
+                <h3 class="text-lg font-bold text-yellow-500 flex items-center">
+                    <span class="mr-2">📚</span> <span id="noteTitle">Concept Notes</span>
+                </h3>
+                <button onclick="document.getElementById('notesModal').classList.add('hidden')" class="text-gray-400 hover:text-white p-2">✕</button>
+            </div>
+            
+            <!-- Content (Scrollable & Protected) -->
+            <div id="noteContent" class="flex-1 overflow-y-auto p-5 text-gray-300 leading-relaxed text-sm select-none font-serif" style="-webkit-user-select: none; user-select: none;">
+                <!-- Dynamic Content -->
+            </div>
+
+            <!-- Footer -->
+            <div class="p-3 border-t border-gray-800 bg-gray-900 text-center">
+                 <span class="text-[10px] text-gray-600 uppercase tracking-widest">Premium Content • Do Not Share</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=60"></script>
 </body>
 </html>

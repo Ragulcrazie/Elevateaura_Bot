@@ -217,6 +217,7 @@ async def get_user_data(request):
                 "pack_id": pack_id,
                 "average_pace": db_pace,
                 "subscription_status": user_data.get("subscription_status", "free"),
+                "language": user_data.get("language_pref", "english"),
                 "potential_score": potential_score,
                 "weak_spots": final_weak_spots
             }, headers={"Access-Control-Allow-Origin": "*"})
