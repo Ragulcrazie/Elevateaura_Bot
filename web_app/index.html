@@ -70,6 +70,53 @@
         </div>
     </div>
 
+    <!-- TRUE POTENTIAL ANALYSIS (Psychological Hook) -->
+    <div class="mt-8 mb-4">
+        <div class="card p-5 relative overflow-hidden group border border-yellow-500/20 shadow-[0_0_20px_rgba(234,179,8,0.1)]">
+            <!-- Background Glow -->
+            <div class="absolute top-[-50%] right-[-50%] w-full h-full bg-yellow-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+            
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 flex items-center">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></span>
+                Intelligence Gap Analysis
+            </h3>
+
+            <div class="flex items-center justify-between mb-4 relative z-10">
+                <!-- Current Reality -->
+                <div class="text-left">
+                    <div class="text-[10px] text-gray-500 uppercase font-bold mb-1">Current Reality</div>
+                    <div class="text-3xl font-black text-gray-400" id="potential_current">--</div>
+                    <div class="text-[10px] text-gray-500 font-mono">/600</div>
+                </div>
+
+                <!-- Visual Separator -->
+                 <div class="h-10 w-[1px] bg-gray-700 rotate-12"></div>
+
+                <!-- True Potential -->
+                <div class="text-right">
+                    <div class="text-[10px] text-yellow-500 uppercase font-bold mb-1 flex justify-end items-center">
+                        True Potential
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 drop-shadow-[0_0_15px_rgba(234,179,8,0.6)]" id="potential_max">--</div>
+                    <div class="text-[10px] text-yellow-600/80 font-mono">/600</div>
+                </div>
+            </div>
+
+            <!-- Analysis Text -->
+            <div class="bg-gray-800/50 rounded-lg p-3 mb-4 border-l-2 border-red-500">
+                <p class="text-xs leading-relaxed text-gray-300">
+                    You left <span class="text-white font-bold" id="potential_gap">-- points</span> on the table due to fixable weak spots. Your accuracy in high-value topics is dragging you down.
+                </p>
+            </div>
+
+            <!-- Paywall Button -->
+            <button id="unlockPotentialBtn" class="w-full bg-gradient-to-r from-yellow-600/90 to-amber-700/90 hover:from-yellow-500 hover:to-amber-600 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                <span class="mr-2 text-lg">🔓</span> Identify & Fix Weak Spots
+            </button>
+        </div>
+    </div>
+
     <!-- Performance Insights (Restored) -->
     <div class="mt-8 mb-24">
         <div class="flex justify-between items-center mb-3">

@@ -275,6 +275,62 @@ function renderAnalytics(userEntry, total, percentile, subStatus) {
             targetBar.style.boxShadow = '0 0 10px rgba(234,179,8,0.5)';
         }
     }
+
+    // --- TRUE POTENTIAL LOGIC (Psychological Hook) ---
+    // Calculate simple heuristic for potential if we don't have deep data
+    const currentScore = userEntry.total_score || 0;
+    
+    // Formula: Close 40% of the gap to 600, but ensure at least +50 boost
+    // If score is very low (e.g. 0), potential is 120.
+    const gap = 600 - currentScore;
+    let potentialScore = Math.floor(currentScore + (gap * 0.45)); 
+    
+    // Safety caps
+    if (potentialScore > 600) potentialScore = 600;
+    if (potentialScore < currentScore + 40) potentialScore = currentScore + 40; // Ensure visible gap
+    if (potentialScore > 600) potentialScore = 600; // Cap again
+
+    const pointsLost = potentialScore - currentScore;
+
+    // Render DOM
+    const currEl = document.getElementById('potential_current');
+    const potEl = document.getElementById('potential_max');
+    const gapEl = document.getElementById('potential_gap');
+    const unlockBtn = document.getElementById('unlockPotentialBtn');
+
+    if (currEl) currEl.innerText = currentScore;
+    if (potEl) {
+        // Count up animation for potential
+        let start = currentScore;
+        const duration = 1000;
+        const startTime = performance.now();
+        
+        function animate(time) {
+            const elapsed = time - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out quart
+            const ease = 1 - Math.pow(1 - progress, 4);
+            
+            const currentVal = Math.floor(start + (pointsLost * ease));
+            potEl.innerText = currentVal;
+            
+            if (progress < 1) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+    }
+    if (gapEl) gapEl.innerText = `${pointsLost} points`;
+
+    // Button Action
+    if (unlockBtn) {
+        unlockBtn.onclick = () => {
+            // Trigger Telegram Payment or Info Modal
+            // data-product="potential_analysis"
+            tg.MainButton.setText("UNLOCK ANALYSIS (500 Stars)");
+            tg.MainButton.show();
+            // Just simulate click for now or open info modal
+            document.getElementById('upgradeBtn').click(); // Reuse existing flow
+        }
+    }
 }
 
 
@@ -303,7 +359,25 @@ if (infoBtn && infoModal && closeModal) {
     });
 }
 
-// document.getElementById('upgradeBtn').addEventListener('click', ...); // Keep default
+// Button Handler for specific ID
+const upgradeBtnMain = document.getElementById('upgradeBtn');
+if (upgradeBtnMain) {
+    upgradeBtnMain.addEventListener('click', () => {
+        // In real app, this calls /create_invoice
+        console.log("Upgrade Clicked");
+        
+        // MVP: Show Telegram Main Button as "Pay"
+        tg.MainButton.setText("PAY 500 STARS ⭐");
+        tg.MainButton.show();
+        
+        // Optional: Shake effect or specific logic
+        tg.HapticFeedback.notificationOccurred('success');
+        
+        // Show Payment Modal or Alert
+        // For now, let's just use native confirm to simulate
+        // const confirmed = confirm("Upgrade to Premium for Deep Analytics?");
+    });
+}
 
 // Global Error Handler
 window.onerror = function(msg, url, lineNo, columnNo, error) {
