@@ -157,7 +157,8 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         "questions": questions,
         "question_start_time": 0,
         "questions_answered_baseline": q_answered, # Snapshot of DB at start
-        "session_id": session_id
+        "session_id": session_id,
+        "category": cat
     }
     
     # Save State to Disk (Robust Persistence)
@@ -255,7 +256,19 @@ async def handle_timeout(message: types.Message, user_id: int):
     # 3. Send Feedback (UI Priority)
     try:
         # ALWAYS use explanation_full, NEVER use short explanation
-        raw_expl = current_q.get("explanation_full", "")
+        # UPDATE: For GK, use short explanation. For others, use full.
+        current_cat = state.get("category", "aptitude")
+        
+        if current_cat == "gk":
+             # GK gets short explanation
+             raw_expl = current_q.get("explanation", "")
+             # Fallback to full if short is missing
+             if not raw_expl:
+                 raw_expl = current_q.get("explanation_full", "")
+        else:
+             # Others get full explanation
+             raw_expl = current_q.get("explanation_full", "")
+
         if not raw_expl or len(raw_expl.strip()) == 0:
             raw_expl = "[ERROR: Full explanation missing for this question. Please report this issue.]"
         expl = format_explanation(raw_expl)
@@ -503,7 +516,19 @@ async def handle_answer(callback: types.CallbackQuery):
 
         # Edit message to show result (Instant Feedback)
         # ALWAYS use explanation_full, NEVER use short explanation
-        raw_expl = current_q.get("explanation_full", "")
+        # UPDATE: For GK, use short explanation. For others, use full.
+        current_cat = state.get("category", "aptitude")
+        
+        if current_cat == "gk":
+             # GK gets short explanation
+             raw_expl = current_q.get("explanation", "")
+             # Fallback to full if short is missing
+             if not raw_expl:
+                 raw_expl = current_q.get("explanation_full", "")
+        else:
+             # Others get full explanation
+             raw_expl = current_q.get("explanation_full", "")
+
         if not raw_expl or len(raw_expl.strip()) == 0:
             raw_expl = "[ERROR: Full explanation missing for this question. Please report this issue.]"
         expl = format_explanation(raw_expl)
