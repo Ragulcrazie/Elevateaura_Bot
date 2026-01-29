@@ -1025,6 +1025,19 @@ function waitForUser(attempts = 0) {
     }
 }
 
+
+// --- NEW HELPER: Load Notes Mapping ---
+async function loadNotesMapping() {
+    if (NOTES_MAPPING) return; // Already loaded
+    try {
+        const res = await fetch(GITHUB_ASSETS_BASE + "assets/notes_topic_language_mapping.json");
+        NOTES_MAPPING = await res.json();
+        console.log("Notes Mapping Loaded:", Object.keys(NOTES_MAPPING).length);
+    } catch (e) {
+        console.error("Failed to load notes mapping:", e);
+    }
+}
+
 // Start
 try {
     const probe = document.getElementById('testCountDisplay');
