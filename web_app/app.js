@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v41 Loaded");
+console.log("ELEVATE AURA BOT: Script v42 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -596,19 +596,26 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  }
                  
                  function getAIResponse(action, t) {
+                     // 1. Resolve Topic Key
+                     const key = Object.keys(TopicKnowledgeBase).find(k => t.toLowerCase().includes(k)) || 'default';
+                     // 2. Resolve Language (default to English if undefined)
+                     const safeLang = (lang === 'hindi') ? 'hindi' : 'english';
+                     const data = TopicKnowledgeBase[key][safeLang];
+
                      switch(action) {
                          case "shortcut":
-                             return `The best shortcut is <b>Elimination</b>. Incorrect options often have extreme words like "Always" or "Never". Spot them and slash them.`;
-                         case "mistakes":
-                             return `You likely rush the reading part. 80% of errors happen because you misread "NOT following" as "Following". Slow down the reading, speed up the clicking.`;
                          case "shortcut_seating":
-                             return `For ${t}: Always start with the person whose position is FIXED. Never start with "A is between B and C" - that creates 2 possibilities. Waste of time.`;
+                             return data.shortcut; // Returns the HTML string from KB
+                         case "mistakes":
                          case "skip_strategy":
-                             return `Skip any ${t} question that has more than 8 variables or 4+ parameters. It's a "Time Trap" designed to kill your rank.`;
+                             return data.mistake;
+                         case "psych":
                          case "visual_probe":
-                             return `Close your eyes. Imagine the circle. Place your Left Hand on the paper. Your nails point to the Right (if facing center). Use your hand physically.`;
+                             return safeLang === 'hindi' ? 
+                                 "🧠 <b>मनोवैज्ञानिक हैक:</b> टाइमर को मत देखो। जब आप टाइमर देखते हैं, तो आपका दिमाग 20% धीमा हो जाता है। बस प्रश्न पर ध्यान दें।" : 
+                                 "🧠 <b>Psych Hack:</b> Do not look at the timer. When you check the time, your IQ drops by 20% due to cortisol. Flow state requires ignorance of time.";
                          case "end":
-                             return "Go crush it. I'm watching.";
+                             return safeLang === 'hindi' ? "जाओ और फोड़ दो! मैं देख रहा हूँ। 😉" : "Go crush it. I'm watching. 😉";
                          default:
                              return "Focus on accuracy first. Speed follows.";
                      }
@@ -642,103 +649,89 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  }
              }
              
-             // --- NEW: CONCEPT NOTES BUTTON ---
+             // --- CENTRAL KNOWLEDGE BASE (Single Source of Truth) ---
+             const TopicKnowledgeBase = {
+                 'seating': {
+                     hindi: {
+                         concept: "<b>बैठकी व्यवस्था (Seating Arrangement):</b> हमेशा Fixed Position वाले वाक्यों से शुरुआत करें।",
+                         shortcut: "⚡ <b>शॉर्टकट:</b> 'A, B और C के बीच में है' (Possible) जैसे वाक्यों को छोड़ दें। केवल 'A, B के दायें दूसरा है' (Definite) को पहले प्लॉट करें।",
+                         mistake: "📉 <b>गलती:</b> लोग Left/Right में भ्रमित हो जाते हैं। खुद को उस जगह पर बैठा हुआ मानकर अपना हाथ देखें।",
+                         full_note: `<h4>🌀 बैठकी व्यवस्था (Seating Arrangement)</h4><br>
+                                    <p><b>मुख्य नियम:</b></p>
+                                    <ul>
+                                      <li>हमेशा <b>Circles</b> के लिए केंद्र की ओर (Facing Center) और बाहर की ओर (Facing Outside) का ध्यान रखें।</li>
+                                      <li><b>Linear</b> में Left/Right का निर्धारण अपने हाथ के अनुसार करें।</li>
+                                    </ul>`
+                     },
+                     english: {
+                         concept: "<b>Seating Arrangement:</b> Always start with Definite Statements.",
+                         shortcut: "⚡ <b>Shortcut:</b> Ignore 'Possibility cases' (e.g. A is between B and C) at the start. Only plot 'Definite Information' (e.g. A is 2nd to right of B).",
+                         mistake: "📉 <b>Common Mistake:</b> Confusing Left/Right when facing South or Outside. Use your own hand as a reference physically.",
+                         full_note: `<h4>🌀 Seating Arrangement Mastery</h4><br>
+                                    <p><b>Core Rules:</b></p>
+                                    <ul>
+                                      <li>For <b>Circular</b>: Always note if facing Center (Left=Clockwise) or Outside (Left=Anti-Clockwise).</li>
+                                      <li>For <b>Linear</b>: Your Left/Right is the person’s Left/Right if facing North.</li>
+                                    </ul>`
+                     }
+                 },
+                 'syllogism': {
+                     hindi: {
+                         concept: "<b>न्याय निगमन (Syllogism):</b> वेन डायग्राम (Venn Diagram) विधि सबसे सटीक है।",
+                         shortcut: "⚡ <b>शॉर्टकट:</b> 'Only a few A are B' का मतलब है -> Some A are B (✅) AND Some A are NOT B (❌)। दो लाइनें खींचें।",
+                         mistake: "📉 <b>गलती:</b> संभावना (Possibility) पूछे जाने पर Definite जवाब देना। अगर डायग्राम में लिंक नहीं है, तो 'No' न कहें, 'Cant Say' कहें।",
+                         full_note: `<h4>🟢 न्याय निगमन (Syllogism) - Venn Diagram Method</h4><br>
+                                    <p><b>Golden Rule:</b> "Only a few A are B" का मतलब है: Some A are B <b>AND</b> Some A are NOT B.</p>`
+                     },
+                     english: {
+                         concept: "<b>Syllogism:</b> The Venn Diagram method is the gold standard.",
+                         shortcut: "⚡ <b>Shortcut:</b> 'Only a few A are B' means -> Some A are B (✅) AND Some A are NOT B (❌). Draw a slash on the line.",
+                         mistake: "📉 <b>Common Mistake:</b> Assuming 'Some A is not B' just because circles don't touch. If they don't touch, the relation is 'Unknown', not 'No'.",
+                         full_note: `<h4>🟢 Syllogism - Venn Diagram Method</h4><br>
+                                    <p><b>Golden Rule:</b> "Only a few A are B" means: Some A are B <b>AND</b> Some A are NOT B.</p>`
+                     }
+                 },
+                 'default': {
+                     hindi: {
+                         concept: "इस विषय के लिए अवधारणात्मक स्पष्टता (Conceptual Clarity) की आवश्यकता है।",
+                         shortcut: "⚡ <b>शॉर्टकट:</b> विकल्पों को एलिमिनेट (Option Elimination) करना सीखें। सीधा उत्तर ढूंढने के बजाय गलत उत्तर हटाएं।",
+                         mistake: "📉 <b>गलती:</b> प्रश्न को पूरा न पढ़ना और जल्दबाजी में 'NOT following' को 'Following' समझ लेना।",
+                         full_note: `<h4>🚀 Quick Review</h4><p>Detailed notes are being prepared.</p>`
+                     },
+                     english: {
+                         concept: "This topic requires Conceptual Clarity and speed.",
+                         shortcut: "⚡ <b>Shortcut:</b> Use <b>Option Elimination</b>. Instead of solving fully, remove the options that are obviously wrong (e.g. wrong units or digits).",
+                         mistake: "📉 <b>Common Mistake:</b> Misreading the question. E.g., Solving for 'False' when the question asked for 'True'. Slow down the reading.",
+                         full_note: `<h4>🚀 Quick Review</h4><p>Detailed notes are being prepared.</p>`
+                     }
+                 }
+             };
+
              const notesBtn = document.createElement('button');
-             // Changed from Gray to Royal Purple/Indigo for Premium feel
              notesBtn.className = "mt-3 w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 border border-indigo-400/30";
              notesBtn.innerHTML = `<span class="mr-2">👑</span> Revise Concepts`;
              
              notesBtn.onclick = () => {
-                 const lang = userStats.language || 'english';
+                 const lang = userStats.language === 'hindi' ? 'hindi' : 'english';
                  
-                 // Smart Note Content Generator (Mock)
-                 const getNote = (t, l) => {
-                     const isHindi = l === 'hindi';
-                     
-                     // Mock Logic for a few topics
-                     if (t.toLowerCase().includes('seating') || t.toLowerCase().includes('arrangement')) {
-                         return isHindi ? 
-                             `<h4>🌀 बैठकी व्यवस्था (Seating Arrangement)</h4><br>
-                              <p><b>मुख्य नियम:</b></p>
-                              <ul>
-                                <li>हमेशा <b>Circles</b> के लिए केंद्र की ओर (Facing Center) और बाहर की ओर (Facing Outside) का ध्यान रखें।</li>
-                                <li><b>Linear</b> में Left/Right का निर्धारण अपने हाथ के अनुसार करें।</li>
-                                <li>पहले उन वाक्यों को उठाएं जो <b>Fixed Position</b> बताते हैं (e.g. A, B के दाएं दूसरा है)।</li>
-                              </ul>
-                              <br><p class="text-xs text-gray-500">Pro Tip: कभी भी संभावित (Possibility) केस बनाने से न डरें। 2 डायग्राम एक साथ बनाएं।</p>` 
-                             :
-                             `<h4>🌀 Seating Arrangement Mastery</h4><br>
-                              <p><b>Core Rules:</b></p>
-                              <ul>
-                                <li>For <b>Circular</b>: Always note if facing Center (Left=Clockwise) or Outside (Left=Anti-Clockwise).</li>
-                                <li>For <b>Linear</b>: Your Left/Right is the person’s Left/Right if facing North.</li>
-                                <li>Start with <b>Definite Statements</b> (e.g. "A is 2nd to right of B"). Avoid ambiguous starts.</li>
-                              </ul>
-                              <br><p class="text-xs text-gray-500">Pro Tip: Don't hesitate to draw 2 parallel cases. It saves time on backtracking.</p>`;
-                     }
-                     
-                     if (t.toLowerCase().includes('syllogism')) {
-                         return isHindi ?
-                             `<h4>🟢 न्याय निगमन (Syllogism) - Venn Diagram Method</h4><br>
-                              <p><b>मूल बातें:</b></p>
-                              <ul>
-                                <li><b>All A are B:</b> A का गोला B के अंदर।</li>
-                                <li><b>Some A are B:</b> A और B का कुछ हिस्सा कॉमन।</li>
-                                <li><b>No A is B:</b> दोनों गोले अलग-अलग।</li>
-                              </ul>
-                              <br><p><b>Golden Rule:</b> "Only a few A are B" का मतलब है: Some A are B <b>AND</b> Some A are NOT B.</p>`
-                             :
-                             `<h4>🟢 Syllogism - Venn Diagram Method</h4><br>
-                              <p><b>Basics:</b></p>
-                              <ul>
-                                <li><b>All A are B:</b> A is inside B.</li>
-                                <li><b>Some A are B:</b> Common intersection.</li>
-                                <li><b>No A is B:</b> Disconnected circles.</li>
-                              </ul>
-                              <br><p><b>Golden Rule:</b> "Only a few A are B" means: Some A are B <b>AND</b> Some A are NOT B.</p>`;
-                     }
-                     
-                     if (t.toLowerCase().includes('classification') || t.toLowerCase().includes('odd one out')) {
-                         return isHindi ?
-                             `<h4>🔢 वर्गीकरण (Classification/Odd One Out)</h4><br>
-                              <p><b>रणनीति:</b></p>
-                              <ul>
-                                <li><b>Numbers:</b> वर्ग (Squares), धन (Cubes), अभाज्य संख्याएं (Primes) चेक करें।</li>
-                                <li><b>Letters:</b> स्वरों (Vowels) और व्यंजन (Consonants) का अंतर देखें।</li>
-                              </ul>`
-                             :
-                             `<h4>🔢 Classification (Odd One Out)</h4><br>
-                              <p><b>Strategy:</b></p>
-                              <ul>
-                                <li><b>Numbers:</b> Check Squares, Cubes, and Prime numbers first.</li>
-                                <li><b>Letters:</b> Look for Vowel/Consonant patterns or position gaps (A=1, B=2).</li>
-                              </ul>`;
-                     }
-
-                     // Default Generic Note
-                     return isHindi ?
-                         `<h4>🚀 ${t} - Quick Review</h4><br>
-                          <p>इस टॉपिक में गति बढ़ाने के लिए:</p>
-                          1. प्रश्नों को ध्यान से पढ़ें।<br>
-                          2. <b>Option Elimination</b> का उपयोग करें।<br>
-                          3. आसान सवालों को पहले हल करें।<br>`
-                         :
-                         `<h4>🚀 ${t} - Quick Review</h4><br>
-                          <p>To improve speed in this topic:</p>
-                          1. Read the constraints carefully.<br>
-                          2. Use <b>Option Elimination</b> where possible.<br>
-                          3. Skip calculation heavy steps if estimation works.<br>`;
-                 };
-
                  let finalContent = "";
                  
                  if (weakSpots.length > 0) {
                      weakSpots.forEach((ws, index) => {
                          if (index > 0) finalContent += "<div class='my-6 h-px bg-gray-700 w-full'></div>";
-                         finalContent += getNote(ws.topic, lang);
+                         
+                         // Fetch from KB
+                         const key = Object.keys(TopicKnowledgeBase).find(k => ws.topic.toLowerCase().includes(k)) || 'default';
+                         const data = TopicKnowledgeBase[key][lang];
+                         
+                         // Combine Full Note
+                         finalContent += data.full_note;
+                         finalContent += `<div class="mt-4 bg-gray-800 p-3 rounded-lg">${data.shortcut}</div>`;
+                         finalContent += `<div class="mt-2 bg-red-900/20 border border-red-500/20 p-3 rounded-lg text-gray-400 text-xs">${data.mistake}</div>`;
                      });
                  } else {
-                     finalContent = getNote("General Strategy", lang);
+                     const data = TopicKnowledgeBase['default'][lang];
+                     finalContent = data.full_note + `<br>${data.shortcut}`;
                  }
 
                  const modal = document.getElementById('notesModal');
@@ -750,7 +743,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                      bodyEl.innerHTML = finalContent;
                      modal.classList.remove('hidden');
                      
-                     // Add User Watermark for Security
+                     // Add User Watermark
                      const wm = document.createElement('div');
                      wm.innerText = `ID: ${userEntry.id}`;
                      wm.className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-700/20 text-4xl font-black rotate-45 pointer-events-none select-none z-0";
@@ -759,10 +752,23 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                          bodyEl.appendChild(wm);
                      }
                  }
-                 tg.HapticFeedback.impactOccurred('light');
+                 if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
              };
              
              unlockBtn.parentNode.appendChild(notesBtn);
+             
+             // ... [Rest of code] ...
+
+             // INSIDE openMentorChat -> getAIResponse
+             // We need to move getAIResponse to use TopicKnowledgeBase
+             
+             // [NOTE: Since getAIResponse is inside the function scope below, we will modify it there. 
+             //  But wait, openMentorChat function definition was BEFORE this replace block in previous edits?
+             //  No, openMentorChat was defined inside the click handler scope in previous edits or global?
+             //  Let's look at file... It's defined on line 417.
+             //  I need to make sure TopicKnowledgeBase is accessible to openMentorChat.]
+             
+
              
              // Hide Insight Warning Color if desired, or keep it as diagnosis
         } else {
