@@ -284,10 +284,22 @@ async def simulate_payment(request):
         if not user_id:
              return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
         
-        await db.upsert_user({
-            "user_id": int(user_id),
-            "subscription_status": "premium"
-        })
+        # Read-Modify-Write to ensure we don't wipe other fields if upsert is partial
+        user_id_int = int(user_id)
+        existing_user = await db.get_user(user_id_int)
+        
+        if existing_user:
+            existing_user["subscription_status"] = "premium"
+            # remove 'id' if present as it might conflict with auto-increment if Supabase is strictly typed, 
+            # though user_id is the key. Safer to just pass what we have.
+            await db.upsert_user(existing_user)
+        else:
+            # New user case (rare here)
+            await db.upsert_user({
+                "user_id": user_id_int,
+                "subscription_status": "premium"
+            })
+            
         return web.json_response({"status": "success"}, headers={"Access-Control-Allow-Origin": "*"})
     except Exception as e:
         logger.error(f"Payment Sim Error: {e}")

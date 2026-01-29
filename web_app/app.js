@@ -421,47 +421,55 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             // FREE VIEW (Paywall)
             unlockBtn.onclick = () => {
                 // Trigger Telegram Payment or Info Modal
-                tg.MainButton.setText("PAY 500 STARS ⭐ (TEST MODE)");
-                tg.MainButton.show();
-                tg.HapticFeedback.notificationOccurred('impactLight');
-                
-                // --- DUMMY PAYMENT HANDLER ---
-                const handlePayment = () => {
-                    tg.MainButton.showProgress(true); // Spinner
+                try {
+                    tg.MainButton.setText("PAY 500 STARS ⭐ (TEST MODE)");
+                    tg.MainButton.show();
+                    tg.HapticFeedback.notificationOccurred('impactLight');
                     
-                    // Call Simulate API
-                    return fetch(`${API_BASE_URL}/api/simulate_payment`, {
-                        method: 'POST',
-                        body: JSON.stringify({ user_id: userEntry.id }),
-                        headers: { 'Content-Type': 'application/json' }
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                         tg.MainButton.hideProgress();
-                         if(data.status === 'success') {
-                             tg.MainButton.setText("SUCCESS! 🎉");
-                             tg.HapticFeedback.notificationOccurred('success');
-                             setTimeout(() => {
-                                 tg.MainButton.hide();
-                                 window.location.reload(); // Reload to see Premium View
-                             }, 1500);
-                         } else {
-                             tg.MainButton.setText("ERROR ❌");
-                             alert("Error: " + data.error);
-                         }
-                         // Cleanup
-                         tg.MainButton.offClick(handlePayment);
-                    })
-                    .catch(e => {
-                        tg.MainButton.hideProgress();
-                        tg.MainButton.setText("NET ERROR ❌");
-                        alert("Network Error: " + e.message);
-                    });
-                };
-                
-                // Cleanup old listeners just in case
-                tg.MainButton.offClick(handlePayment); 
-                tg.MainButton.onClick(handlePayment);
+                    // --- DUMMY PAYMENT HANDLER ---
+                    const handlePayment = () => {
+                        const originalText = "PAY 500 STARS ⭐ (TEST MODE)";
+                        tg.MainButton.showProgress(true); // Spinner
+                        
+                        // Call Simulate API
+                        return fetch(`${API_BASE_URL}/api/simulate_payment`, {
+                            method: 'POST',
+                            body: JSON.stringify({ user_id: userEntry.id }),
+                            headers: { 'Content-Type': 'application/json' }
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                             tg.MainButton.hideProgress();
+                             if(data.status === 'success') {
+                                 tg.MainButton.setText("SUCCESS! 🎉");
+                                 tg.HapticFeedback.notificationOccurred('success');
+                                 setTimeout(() => {
+                                     tg.MainButton.hide();
+                                     window.location.reload(); // Reload to see Premium View
+                                 }, 1500);
+                             } else {
+                                 tg.MainButton.setText("ERROR ❌"); // Short error
+                                 alert("Error: " + data.error);
+                                 setTimeout(() => tg.MainButton.setText(originalText), 2000);
+                             }
+                             // Cleanup
+                             tg.MainButton.offClick(handlePayment);
+                        })
+                        .catch(e => {
+                            tg.MainButton.hideProgress();
+                            tg.MainButton.setText("NET ERROR ❌");
+                            alert("Network Error: " + e.message);
+                            setTimeout(() => tg.MainButton.setText(originalText), 2000);
+                        });
+                    };
+                    
+                    // Cleanup old listeners just in case
+                    tg.MainButton.offClick(handlePayment); 
+                    tg.MainButton.onClick(handlePayment);
+                } catch(e) {
+                    console.error("TG Button Error", e);
+                    alert("Payment Error: " + e.message + ". Try reloading.");
+                }
             }
         }
     }
