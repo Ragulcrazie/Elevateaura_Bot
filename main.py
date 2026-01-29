@@ -271,7 +271,7 @@ async def get_ghosts_for_pack(request):
         # 3. Process Scores via RankEngine
         processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
         
-    return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
+        return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
     except Exception as e:
         logger.error(f"Failed to fetch ghosts: {e}")
