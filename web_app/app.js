@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v37 Loaded");
+console.log("ELEVATE AURA BOT: Script v38 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -404,7 +404,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     if (unlockBtn) {
         if (subStatus === 'premium') {
              // PREMIUM VIEW
-             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎯</span> Train Weak Spots`;
+             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎯</span> Train Weak Spots (Premium)`;
              // Change Gradient to Green
              unlockBtn.className = "w-full bg-gradient-to-r from-green-600/90 to-emerald-700/90 hover:from-green-500 hover:to-emerald-600 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]";
              
@@ -417,8 +417,9 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              
              // --- NEW: CONCEPT NOTES BUTTON ---
              const notesBtn = document.createElement('button');
-             notesBtn.className = "mt-3 w-full bg-gray-700/50 hover:bg-gray-700 text-yellow-500/90 text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all border border-yellow-500/20";
-             notesBtn.innerHTML = `<span class="mr-2">📚</span> Revise Concepts (Premium)`;
+             // Changed from Gray to Royal Purple/Indigo for Premium feel
+             notesBtn.className = "mt-3 w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 border border-indigo-400/30";
+             notesBtn.innerHTML = `<span class="mr-2">👑</span> Revise Concepts`;
              
              notesBtn.onclick = () => {
                  const lang = userStats.language || 'english';
