@@ -17,7 +17,7 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-console.log("ELEVATE AURA BOT: Script v39 Loaded");
+console.log("ELEVATE AURA BOT: Script v40 Loaded");
 
 // Visual Probe: Set background to Green to prove script updated
 const p = document.getElementById('testCountDisplay');
@@ -409,8 +409,8 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              unlockBtn.className = "w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]";
              
              unlockBtn.onclick = () => {
-                 openMentorChat(user.first_name || "Aspirant", weakSpots, pointsLost, userStats.language);
-                 tg.HapticFeedback.impactOccurred('medium');
+                 openMentorChat(userEntry.full_name || "Aspirant", weakSpots, pointsLost, userStats.language);
+                 if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
              };
              
              // --- CHAT LOGIC ---
