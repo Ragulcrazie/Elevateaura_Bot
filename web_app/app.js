@@ -281,6 +281,30 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     // --- TRUE POTENTIAL LOGIC (REAL) ---
     // Use API data if available, otherwise fallback to heuristic
     const currentScore = userEntry.total_score || 0;
+    const questionsAnswered = userStats ? userStats.questions_answered : 0;
+    
+    // Dynamic Denominator Logic
+    // If they haven't finished 60 questions, showing /600 is confusing.
+    // Instead, show / (questionsAnswered * 10) OR project it.
+    // Let's settle on: If < 10 questions, assume 100 base. If < 60, use actual potential max so far.
+    // Actually, user wants to see "Potential" for the day. 
+    // BUT if they only played 1 test (10 Qs), their max possible was 100.
+    // So "Potential 100 / 600" is misleading. It should be "Potential 100 / 100" (for that test).
+    
+    let potentialBase = 600;
+    if (questionsAnswered > 0 && questionsAnswered < 60) {
+        // If they are mid-way, show potential relative to what they played + future?
+        // No, simplest: Show potential relative to what they played.
+        potentialBase = questionsAnswered * 10;
+        // Edge case: If they answered 0? Base 100.
+    } else if (questionsAnswered === 0) {
+        potentialBase = 100;
+    }
+    
+    // If we want to show True Daily Potential (600), we need to project.
+    // "You scored 40/100. Your daily potential is 400/600".
+    // Let's stick to the User Request: "user just complete 1 test (100 only)".
+    // So if they played 1 test, max is 100.
     
     let potentialScore = 0;
     let weakSpots = [];
@@ -300,37 +324,24 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     // Ensure potential is never less than current (rare edge case)
     if (potentialScore < currentScore) potentialScore = currentScore;
     
-    // Scale Denominator based on progress to avoid confusion
-    // If they only did 10 questions (score ~40), show /100, not /600.
-    const questionsDone = userStats ? userStats.questions_answered : 0;
-    // But if potential is already high (e.g. daily max), stick to 600.
-    // Logic: If they are mid-way, show their CURRENT potential for TODAY SO FAR.
-    let maxPotentialDenominator = 600;
-    
-    if (questionsDone < 60 && questionsDone > 0) {
-        // Example: did 1 test (10 q). Max score is 100.
-        // If they have potential 100, show /100.
-        // Round up to nearest 100
-        maxPotentialDenominator = Math.ceil(questionsDone / 10) * 100;
-        
-        // Fix: If potential score > denominator (e.g. from previous games), clamp it or expand denom.
-        if (potentialScore > maxPotentialDenominator) maxPotentialDenominator = 600;
-    }
+    // Cap potential at base
+    if (potentialScore > potentialBase) potentialScore = potentialBase;
 
     const pointsLost = potentialScore - currentScore;
 
     // Render DOM
     const currEl = document.getElementById('potential_current');
     const potEl = document.getElementById('potential_max');
-    const potMaxLabel = document.querySelector('#potential_max + div'); // The /600 label
-    const currMaxLabel = document.querySelector('#potential_current + div'); // The /600 label
     const gapEl = document.getElementById('potential_gap');
     const unlockBtn = document.getElementById('unlockPotentialBtn');
     
-    // Update Denominators
-    if(potMaxLabel) potMaxLabel.innerText = `/${maxPotentialDenominator}`;
-    if(currMaxLabel) currMaxLabel.innerText = `/${maxPotentialDenominator}`;
-
+    // UPDATE DENOMINATORS
+    const currBaseEl = currEl?.parentElement?.querySelector('.font-mono');
+    const potBaseEl = potEl?.parentElement?.querySelector('.font-mono');
+    
+    if(currBaseEl) currBaseEl.innerText = `/${potentialBase}`;
+    if(potBaseEl) potBaseEl.innerText = `/${potentialBase}`;
+    
     // New: Insight Text Element
     const insightTextEl = document.querySelector('.border-l-2.border-red-500 p'); 
 
@@ -359,25 +370,23 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     // Dynamic Insight Text
     if (insightTextEl) {
         if (weakSpots.length > 0) {
-            const topic1 = weakSpots[0].topic;
-            const topic2 = weakSpots.length > 1 ? weakSpots[1].topic : null;
-            
             let topic1 = weakSpots[0].topic;
             let topic2 = weakSpots.length > 1 ? weakSpots[1].topic : null;
             
-            // PAYWALL: Hide topics if not premium
+            // OBFUSCATE IF FREE
             if (subStatus !== 'premium') {
-                topic1 = `<span class="blur-sm select-none">HIDDEN</span>`;
-                if(topic2) topic2 = `<span class="blur-sm select-none">TOPIC</span>`;
-            } else {
-                 // Premium: Highlight them
-                 topic1 = `<span class="text-yellow-400 font-bold">${topic1}</span>`;
-                 if(topic2) topic2 = `<span class="text-yellow-400 font-bold">${topic2}</span>`;
+                topic1 = "🔒 Locked Topic";
+                if (topic2) topic2 = "🔒 Locked Topic";
             }
             
-            let msg = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in ${topic1}`;
-            if (topic2) msg += ` and ${topic2}`;
-            msg += `. Your accuracy in these high-value topics is dragging you down.`;
+            let msg = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in <span class="text-yellow-400 font-bold">${topic1}</span>`;
+            if (topic2) msg += ` and <span class="text-yellow-400 font-bold">${topic2}</span>`;
+            
+            if (subStatus !== 'premium') {
+                 msg += `. <span class="italic text-gray-400">Unlock Premium to reveal & fix them.</span>`;
+            } else {
+                 msg += `. Your accuracy in these high-value topics is dragging you down.`;
+            }
             
             insightTextEl.innerHTML = msg;
         } else if (pointsLost > 0) {
