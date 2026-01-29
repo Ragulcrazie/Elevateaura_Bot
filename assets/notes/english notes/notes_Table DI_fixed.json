@@ -1,1 +1,124 @@
-{"topic":"Table DI","language":"English","sections":{"1_story":"Imagine you are given a table showing the sales of different products over several months. You need to answer questions by analyzing the numbers in the table. This is Table Data Interpretation (Table DI).","2_definitions":["💡 Table DI: Data interpretation based on a table format.","💡 Table: A grid with rows and columns to display data.","💡 Row: A horizontal line of data in a table.","💡 Column: A vertical line of data in a table.","💡 Cell: The intersection of a row and a column.","💡 Header: The title of a row or column.","💡 Total: The sum of values in a row or column.","💡 Average: The mean value of a row or column.","💡 Maximum: The highest value in a row or column.","💡 Minimum: The lowest value in a row or column."],"3_formula_bank":["🧮 Average = (Sum of values) / (Number of values)","🧮 Total = Sum of all values in a row/column","🧮 Difference = Larger value - Smaller value","🧮 Percentage = (Part / Whole) × 100","🧮 Ratio = Value1 / Value2","🧮 To find max: Look for highest value in row/column.","🧮 To find min: Look for lowest value in row/column.","🧮 To compare: Subtract or divide values.","🧮 To find share: (Value / Total) × 100","🧮 To find sum: Add all values in row/column."],"4_micro_examples":["If row values are 10, 20, 30, total = 60.","If column values are 5, 15, 25, average = (5+15+25)/3 = 15.","If max in row is 40, min is 10, difference = 30.","If part = 20, whole = 100, % = (20/100)×100 = 20%.","If values are 12 and 24, ratio = 12/24 = 1:2.","If row: 8, 12, 16, sum = 36.","If column: 7, 14, 21, max = 21.","If row: 9, 18, 27, min = 9.","If total = 50, value = 10, share = (10/50)×100 = 20%.","If row: 4, 8, 12, average = 8."],"5_exam_examples":[{"question":"A table shows sales: Jan-100, Feb-150, Mar-200. What is the total sales?","solution_steps":["Total = 100+150+200 = 450"],"answer":"450"},{"question":"A table shows values: 15, 25, 35. What is the average?","solution_steps":["Average = (15+25+35)/3 = 25"],"answer":"25"},{"question":"A table shows row values: 10, 20, 30. What is the difference between max and min?","solution_steps":["Max = 30, Min = 10, Difference = 20"],"answer":"20"},{"question":"A table shows column values: 12, 18, 24. What is the ratio of 24 to 12?","solution_steps":["Ratio = 24/12 = 2:1"],"answer":"2:1"},{"question":"A table shows values: 8, 16, 24. What is the percentage share of 8 if total is 48?","solution_steps":["% share = (8/48)×100 = 16.67%"],"answer":"16.67%"},{"question":"A table shows row: 5, 10, 15. What is the sum?","solution_steps":["Sum = 5+10+15 = 30"],"answer":"30"},{"question":"A table shows column: 7, 14, 21. What is the maximum?","solution_steps":["Maximum = 21"],"answer":"21"},{"question":"A table shows row: 9, 18, 27. What is the minimum?","solution_steps":["Minimum = 9"],"answer":"9"},{"question":"A table shows values: 10, 20, 30. What is the percentage share of 20 if total is 60?","solution_steps":["% share = (20/60)×100 = 33.33%"],"answer":"33.33%"},{"question":"A table shows row: 4, 8, 12. What is the average?","solution_steps":["Average = (4+8+12)/3 = 8"],"answer":"8"}]}}
+{
+    "topic": "Table DI",
+    "language": "English",
+    "sections": {
+        "1_story": "Imagine you are given a table showing the sales of different products over several months. You need to answer questions by analyzing the numbers in the table. This is Table Data Interpretation (Table DI).",
+        "2_definitions": [
+            "💡 Table DI: Data interpretation based on a table format.",
+            "💡 Table: A grid with rows and columns to display data.",
+            "💡 Row: A horizontal line of data in a table.",
+            "💡 Column: A vertical line of data in a table.",
+            "💡 Cell: The intersection of a row and a column.",
+            "💡 Header: The title of a row or column.",
+            "💡 Total: The sum of values in a row or column.",
+            "💡 Average: The mean value of a row or column.",
+            "💡 Maximum: The highest value in a row or column.",
+            "💡 Minimum: The lowest value in a row or column."
+        ],
+        "3_formula_bank": [
+            "🧮 Average = (Sum of values) / (Number of values)",
+            "🧮 Total = Sum of all values in a row/column",
+            "🧮 Difference = Larger value - Smaller value",
+            "🧮 Percentage = (Part / Whole) × 100",
+            "🧮 Ratio = Value1 / Value2",
+            "🧮 To find max: Look for highest value in row/column.",
+            "🧮 To find min: Look for lowest value in row/column.",
+            "🧮 To compare: Subtract or divide values.",
+            "🧮 To find share: (Value / Total) × 100",
+            "🧮 To find sum: Add all values in row/column."
+        ],
+        "4_micro_examples": [
+            "If row values are 10, 20, 30, total = 60.",
+            "If column values are 5, 15, 25, average = (5+15+25)/3 = 15.",
+            "If max in row is 40, min is 10, difference = 30.",
+            "If part = 20, whole = 100, % = (20/100)×100 = 20%.",
+            "If values are 12 and 24, ratio = 12/24 = 1:2.",
+            "If row: 8, 12, 16, sum = 36.",
+            "If column: 7, 14, 21, max = 21.",
+            "If row: 9, 18, 27, min = 9.",
+            "If total = 50, value = 10, share = (10/50)×100 = 20%.",
+            "If row: 4, 8, 12, average = 8."
+        ],
+        "5_exam_examples": [
+            {
+                "question": "A table shows sales: Jan-100, Feb-150, Mar-200. What is the total sales?",
+                "solution_steps": [
+                    "Total = 100+150+200 = 450"
+                ],
+                "answer": "450"
+            },
+            {
+                "question": "A table shows values: 15, 25, 35. What is the average?",
+                "solution_steps": [
+                    "Average = (15+25+35)/3 = 25"
+                ],
+                "answer": "25"
+            },
+            {
+                "question": "A table shows row values: 10, 20, 30. What is the difference between max and min?",
+                "solution_steps": [
+                    "Max = 30, Min = 10, Difference = 20"
+                ],
+                "answer": "20"
+            },
+            {
+                "question": "A table shows column values: 12, 18, 24. What is the ratio of 24 to 12?",
+                "solution_steps": [
+                    "Ratio = 24/12 = 2:1"
+                ],
+                "answer": "2:1"
+            },
+            {
+                "question": "A table shows values: 8, 16, 24. What is the percentage share of 8 if total is 48?",
+                "solution_steps": [
+                    "% share = (8/48)×100 = 16.67%"
+                ],
+                "answer": "16.67%"
+            },
+            {
+                "question": "A table shows row: 5, 10, 15. What is the sum?",
+                "solution_steps": [
+                    "Sum = 5+10+15 = 30"
+                ],
+                "answer": "30"
+            },
+            {
+                "question": "A table shows column: 7, 14, 21. What is the maximum?",
+                "solution_steps": [
+                    "Maximum = 21"
+                ],
+                "answer": "21"
+            },
+            {
+                "question": "A table shows row: 9, 18, 27. What is the minimum?",
+                "solution_steps": [
+                    "Minimum = 9"
+                ],
+                "answer": "9"
+            },
+            {
+                "question": "A table shows values: 10, 20, 30. What is the percentage share of 20 if total is 60?",
+                "solution_steps": [
+                    "% share = (20/60)×100 = 33.33%"
+                ],
+                "answer": "33.33%"
+            },
+            {
+                "question": "A table shows row: 4, 8, 12. What is the average?",
+                "solution_steps": [
+                    "Average = (4+8+12)/3 = 8"
+                ],
+                "answer": "8"
+            }
+        ],
+        "6_shortcuts": [
+            "⚡ Look at the options first; if they are far apart, use approximation.",
+            "⚡ Use 1% and 10% method for percentage calculations.",
+            "⚡ Compare ratios by cross-multiplication instead of division."
+        ],
+        "7_traps": [
+            "⚠️ Miss-reading the chart Usage scales (e.g. 'in thousands').",
+            "⚠️ Calculating exact values for every question step needlessly."
+        ]
+    }
+}

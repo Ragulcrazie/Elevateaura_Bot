@@ -1,1 +1,126 @@
-{"topic":"Mixed DI","language":"English","sections":{"1_story":"Imagine you are given a set of questions where you need to use information from different types of charts—like a bar graph, a pie chart, and a table—together. You must combine data from all these sources to answer the questions. This is Mixed Data Interpretation (Mixed DI).","2_definitions":["💡 Mixed DI: Data interpretation involving multiple types of charts or tables.","💡 Bar Graph: A chart with rectangular bars representing data.","💡 Pie Chart: A circular chart divided into sectors.","💡 Table: A grid with rows and columns to display data.","💡 Line Graph: A chart showing data points connected by lines.","💡 Data Source: The origin of the data (table, graph, etc.).","💡 Integration: Combining information from different sources.","💡 Cross-reference: Checking data between sources.","💡 Calculation: Using math to find answers.","💡 Relevant Data: Information needed to answer."],"3_formula_bank":["🧮 Total = Sum of values from all sources","🧮 Average = (Sum of values) / (Number of values)","🧮 Percentage = (Part / Whole) × 100","🧮 Ratio = Value1 / Value2","🧮 Difference = Larger value - Smaller value","🧮 To find combined value: Add values from different sources.","🧮 To compare: Subtract or divide values from sources.","🧮 To check consistency: Compare same data across sources.","🧮 To find correlation: Look for patterns between sources.","🧮 To find share: (Value / Total) × 100"],"4_micro_examples":["If bar: 10, table: 20, pie: 30; total = 10+20+30=60.","If bar: 15, table: 25, pie: 35; average = (15+25+35)/3=25.","If bar: 20, pie: 30; % = (20/50)×100=40%.","If table: 12, pie: 24; ratio = 12/24=1:2.","If bar: 18, table: 22; difference = 22-18=4.","If bar: 8, pie: 12; combined = 8+12=20.","If table: 10, pie: 20; share = (10/30)×100=33.33%.","If bar: 25, table: 35; compare = 35-25=10.","If pie: 14, table: 28; ratio = 14/28=1:2.","If bar: 16, pie: 24; total = 16+24=40."],"5_exam_examples":[{"question":"A bar graph shows 10, a table shows 20, a pie chart shows 30. What is the total?","solution_steps":["Total = 10+20+30 = 60"],"answer":"60"},{"question":"A bar graph shows 15, a table shows 25, a pie chart shows 35. What is the average?","solution_steps":["Average = (15+25+35)/3 = 25"],"answer":"25"},{"question":"A bar graph shows 20, a pie chart shows 30. What is the percentage share of the bar value?","solution_steps":["Total = 20+30 = 50","% share = (20/50)×100 = 40%"],"answer":"40%"},{"question":"A table shows 12, a pie chart shows 24. What is the ratio of table to pie?","solution_steps":["Ratio = 12/24 = 1:2"],"answer":"1:2"},{"question":"A bar graph shows 18, a table shows 22. What is the difference?","solution_steps":["Difference = 22-18 = 4"],"answer":"4"},{"question":"A bar graph shows 8, a pie chart shows 12. What is the combined value?","solution_steps":["Combined = 8+12 = 20"],"answer":"20"},{"question":"A table shows 10, a pie chart shows 20. What is the share of the table value?","solution_steps":["Total = 10+20 = 30","Share = (10/30)×100 = 33.33%"],"answer":"33.33%"},{"question":"A bar graph shows 25, a table shows 35. What is the comparison?","solution_steps":["Comparison = 35-25 = 10"],"answer":"10"},{"question":"A pie chart shows 14, a table shows 28. What is the ratio?","solution_steps":["Ratio = 14/28 = 1:2"],"answer":"1:2"},{"question":"A bar graph shows 16, a pie chart shows 24. What is the total?","solution_steps":["Total = 16+24 = 40"],"answer":"40"}]}}
+{
+    "topic": "Mixed DI",
+    "language": "English",
+    "sections": {
+        "1_story": "Imagine you are given a set of questions where you need to use information from different types of charts—like a bar graph, a pie chart, and a table—together. You must combine data from all these sources to answer the questions. This is Mixed Data Interpretation (Mixed DI).",
+        "2_definitions": [
+            "💡 Mixed DI: Data interpretation involving multiple types of charts or tables.",
+            "💡 Bar Graph: A chart with rectangular bars representing data.",
+            "💡 Pie Chart: A circular chart divided into sectors.",
+            "💡 Table: A grid with rows and columns to display data.",
+            "💡 Line Graph: A chart showing data points connected by lines.",
+            "💡 Data Source: The origin of the data (table, graph, etc.).",
+            "💡 Integration: Combining information from different sources.",
+            "💡 Cross-reference: Checking data between sources.",
+            "💡 Calculation: Using math to find answers.",
+            "💡 Relevant Data: Information needed to answer."
+        ],
+        "3_formula_bank": [
+            "🧮 Total = Sum of values from all sources",
+            "🧮 Average = (Sum of values) / (Number of values)",
+            "🧮 Percentage = (Part / Whole) × 100",
+            "🧮 Ratio = Value1 / Value2",
+            "🧮 Difference = Larger value - Smaller value",
+            "🧮 To find combined value: Add values from different sources.",
+            "🧮 To compare: Subtract or divide values from sources.",
+            "🧮 To check consistency: Compare same data across sources.",
+            "🧮 To find correlation: Look for patterns between sources.",
+            "🧮 To find share: (Value / Total) × 100"
+        ],
+        "4_micro_examples": [
+            "If bar: 10, table: 20, pie: 30; total = 10+20+30=60.",
+            "If bar: 15, table: 25, pie: 35; average = (15+25+35)/3=25.",
+            "If bar: 20, pie: 30; % = (20/50)×100=40%.",
+            "If table: 12, pie: 24; ratio = 12/24=1:2.",
+            "If bar: 18, table: 22; difference = 22-18=4.",
+            "If bar: 8, pie: 12; combined = 8+12=20.",
+            "If table: 10, pie: 20; share = (10/30)×100=33.33%.",
+            "If bar: 25, table: 35; compare = 35-25=10.",
+            "If pie: 14, table: 28; ratio = 14/28=1:2.",
+            "If bar: 16, pie: 24; total = 16+24=40."
+        ],
+        "5_exam_examples": [
+            {
+                "question": "A bar graph shows 10, a table shows 20, a pie chart shows 30. What is the total?",
+                "solution_steps": [
+                    "Total = 10+20+30 = 60"
+                ],
+                "answer": "60"
+            },
+            {
+                "question": "A bar graph shows 15, a table shows 25, a pie chart shows 35. What is the average?",
+                "solution_steps": [
+                    "Average = (15+25+35)/3 = 25"
+                ],
+                "answer": "25"
+            },
+            {
+                "question": "A bar graph shows 20, a pie chart shows 30. What is the percentage share of the bar value?",
+                "solution_steps": [
+                    "Total = 20+30 = 50",
+                    "% share = (20/50)×100 = 40%"
+                ],
+                "answer": "40%"
+            },
+            {
+                "question": "A table shows 12, a pie chart shows 24. What is the ratio of table to pie?",
+                "solution_steps": [
+                    "Ratio = 12/24 = 1:2"
+                ],
+                "answer": "1:2"
+            },
+            {
+                "question": "A bar graph shows 18, a table shows 22. What is the difference?",
+                "solution_steps": [
+                    "Difference = 22-18 = 4"
+                ],
+                "answer": "4"
+            },
+            {
+                "question": "A bar graph shows 8, a pie chart shows 12. What is the combined value?",
+                "solution_steps": [
+                    "Combined = 8+12 = 20"
+                ],
+                "answer": "20"
+            },
+            {
+                "question": "A table shows 10, a pie chart shows 20. What is the share of the table value?",
+                "solution_steps": [
+                    "Total = 10+20 = 30",
+                    "Share = (10/30)×100 = 33.33%"
+                ],
+                "answer": "33.33%"
+            },
+            {
+                "question": "A bar graph shows 25, a table shows 35. What is the comparison?",
+                "solution_steps": [
+                    "Comparison = 35-25 = 10"
+                ],
+                "answer": "10"
+            },
+            {
+                "question": "A pie chart shows 14, a table shows 28. What is the ratio?",
+                "solution_steps": [
+                    "Ratio = 14/28 = 1:2"
+                ],
+                "answer": "1:2"
+            },
+            {
+                "question": "A bar graph shows 16, a pie chart shows 24. What is the total?",
+                "solution_steps": [
+                    "Total = 16+24 = 40"
+                ],
+                "answer": "40"
+            }
+        ],
+        "6_shortcuts": [
+            "⚡ Look at the options first; if they are far apart, use approximation.",
+            "⚡ Use 1% and 10% method for percentage calculations.",
+            "⚡ Compare ratios by cross-multiplication instead of division."
+        ],
+        "7_traps": [
+            "⚠️ Miss-reading the chart Usage scales (e.g. 'in thousands').",
+            "⚠️ Calculating exact values for every question step needlessly."
+        ]
+    }
+}

@@ -656,7 +656,8 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                          );
 
                          if (!mapKey) {
-                             setTimeout(() => replaceLastAiMsg("⚠️ I couldn't find a specific note for <b>" + topicName + "</b>, but remember: <i>Eliminate opposite options first.</i>"), 1500);
+                             // Elegant Fallback if note missing
+                             setTimeout(() => replaceLastAiMsg("💡 <b>General Strategy:</b> I don't have a specific card for <b>" + topicName + "</b> yet, but standard rules apply: <i>Option Elimination is your best friend here.</i>"), 1500);
                              return;
                          }
 
@@ -698,15 +699,25 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                              }
                          }
 
+                         // CLEANUP: Ensure no JSON artifacts leak
                          if (content) {
-                             setTimeout(() => replaceLastAiMsg(prefix + content), 1200);
+                             // Remove any accidental JSON chars if micro-notes are raw
+                             content = content.replace(/[{}"]/g, "").trim(); 
+                             setTimeout(() => replaceLastAiMsg(prefix + content), 1500); // Slightly longer delay for "thinking" feel
                          } else {
-                             setTimeout(() => replaceLastAiMsg("⚠️ No specific data points found, but keep pushing!"), 1000);
+                             // "No Data" but make it sound professional
+                             setTimeout(() => replaceLastAiMsg("🧠 <b>Coach's Note:</b> This topic relies on pure practice. My best tip? <i>Visualize the problem before writing anything.</i>"), 1200);
                          }
 
                      } catch (e) {
                          console.error("Advice Fetch Error", e);
-                         setTimeout(() => replaceLastAiMsg("📡 Connection fuzz. Use <b>Option Elimination</b> for now."), 1000);
+                         // Fallback that sounds like a Mentor, not a 404
+                         const fallbacks = [
+                             "📡 <b>Signal Fuzz:</b> I'm recalibrating. For now, remember: <i>Speed is a byproduct of accuracy. Slow down to speed up.</i>",
+                             "🧠 <b>Mental Model:</b> If you are stuck, skip. A skipped question costs 0 marks. A wrong one costs -0.25.",
+                             "⚡ <b>Quick Tip:</b> Read the <i>last line</i> of the question first to know exactly what is asked."
+                         ];
+                         setTimeout(() => replaceLastAiMsg(getRandom(fallbacks)), 1200);
                      }
                  }
                  

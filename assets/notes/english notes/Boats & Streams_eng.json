@@ -1,1 +1,133 @@
-{"topic":"Boats & Streams","language":"English","sections":{"1_story":"Imagine rowing a boat in a river. Sometimes the current helps you, sometimes it slows you down. Boats & Streams problems help us calculate effective speed, time, and distance when moving with or against the current.","2_definitions":["💡 Boat: A vessel that moves in water.","💡 Stream: The flow of water in a river.","💡 Speed of Boat in Still Water: Speed of boat when water is not flowing.","💡 Speed of Stream: Speed at which water flows.","💡 Downstream: Movement in the direction of the stream (with current).","💡 Upstream: Movement against the direction of the stream (against current).","💡 Effective Speed: Actual speed of boat considering stream.","💡 Time: Duration taken to cover a distance.","💡 Distance: Length covered by the boat.","💡 Relative Speed: Speed of boat with respect to water or ground."],"3_formula_bank":["🧮 Downstream speed = Speed in still water + Speed of stream","🧮 Upstream speed = Speed in still water - Speed of stream","🧮 Speed in still water = (Downstream + Upstream) / 2","🧮 Speed of stream = (Downstream - Upstream) / 2","🧮 Time = Distance / Speed","🧮 Distance = Speed × Time","🧮 If time for downstream = t1, upstream = t2, then speed in still water = (Distance × (t2 + t1)) / (2 × t1 × t2)","🧮 If boat covers d km downstream in t1 hr and upstream in t2 hr: Speed in still water = d × (t2 + t1) / (2 × t1 × t2)","🧮 If only downstream or upstream, use respective speed.","🧮 Convert units if needed: 1 km/hr = 5/18 m/s"],"4_micro_examples":["Boat speed in still water = 8 km/hr, stream = 2 km/hr. Downstream = 10 km/hr, Upstream = 6 km/hr","If downstream = 12 km/hr, upstream = 8 km/hr, speed in still water = 10 km/hr","If boat covers 24 km downstream in 2 hrs, speed = 12 km/hr","If time downstream = 3 hr, upstream = 4 hr, distance = 24 km, speed in still water = 24×(4+3)/(2×3×4) = 7 km/hr","If speed in still water = 15 km/hr, stream = 3 km/hr, upstream = 12 km/hr","If downstream = 18 km/hr, upstream = 6 km/hr, speed of stream = 6 km/hr","If boat covers 10 km downstream in 1 hr, speed = 10 km/hr","If boat covers 20 km upstream in 4 hr, speed = 5 km/hr","Convert 36 km/hr to m/s: 36×5/18 = 10 m/s","If only downstream, use downstream speed for time calculation"],"5_exam_examples":[{"question":"A boat's speed in still water is 10 km/hr, stream is 2 km/hr. Find downstream and upstream speeds.","solution_steps":["Downstream = 10 + 2 = 12 km/hr","Upstream = 10 - 2 = 8 km/hr"],"answer":"Downstream: 12 km/hr, Upstream: 8 km/hr"},{"question":"If downstream speed is 14 km/hr and upstream is 6 km/hr, find speed in still water and stream.","solution_steps":["Speed in still water = (14+6)/2 = 10 km/hr","Speed of stream = (14-6)/2 = 4 km/hr"],"answer":"Still water: 10 km/hr, Stream: 4 km/hr"},{"question":"A boat covers 30 km downstream in 2 hrs and upstream in 3 hrs. Find speed in still water.","solution_steps":["Downstream = 30/2 = 15 km/hr","Upstream = 30/3 = 10 km/hr","Speed in still water = (15+10)/2 = 12.5 km/hr"],"answer":"12.5 km/hr"},{"question":"If speed in still water is 8 km/hr, stream is 3 km/hr, how long to cover 22 km downstream?","solution_steps":["Downstream = 8+3 = 11 km/hr","Time = 22/11 = 2 hours"],"answer":"2 hours"},{"question":"A boat covers 40 km upstream in 8 hrs. Find upstream speed.","solution_steps":["Upstream = 40/8 = 5 km/hr"],"answer":"5 km/hr"},{"question":"If downstream = 18 km/hr, upstream = 6 km/hr, find speed of stream.","solution_steps":["Speed of stream = (18-6)/2 = 6 km/hr"],"answer":"6 km/hr"},{"question":"A boat covers 24 km downstream in 2 hrs, upstream in 3 hrs. Find average speed.","solution_steps":["Total distance = 24+24 = 48 km","Total time = 2+3 = 5 hrs","Average speed = 48/5 = 9.6 km/hr"],"answer":"9.6 km/hr"},{"question":"If speed in still water = 12 km/hr, stream = 4 km/hr, how long to cover 32 km upstream?","solution_steps":["Upstream = 12-4 = 8 km/hr","Time = 32/8 = 4 hours"],"answer":"4 hours"},{"question":"A boat covers 18 km downstream in 1.5 hrs. Find downstream speed.","solution_steps":["Downstream = 18/1.5 = 12 km/hr"],"answer":"12 km/hr"},{"question":"If downstream = 20 km/hr, upstream = 10 km/hr, find speed in still water.","solution_steps":["Speed in still water = (20+10)/2 = 15 km/hr"],"answer":"15 km/hr"}]}}
+{
+    "topic": "Boats & Streams",
+    "language": "English",
+    "sections": {
+        "1_story": "Imagine rowing a boat in a river. Sometimes the current helps you, sometimes it slows you down. Boats & Streams problems help us calculate effective speed, time, and distance when moving with or against the current.",
+        "2_definitions": [
+            "💡 Boat: A vessel that moves in water.",
+            "💡 Stream: The flow of water in a river.",
+            "💡 Speed of Boat in Still Water: Speed of boat when water is not flowing.",
+            "💡 Speed of Stream: Speed at which water flows.",
+            "💡 Downstream: Movement in the direction of the stream (with current).",
+            "💡 Upstream: Movement against the direction of the stream (against current).",
+            "💡 Effective Speed: Actual speed of boat considering stream.",
+            "💡 Time: Duration taken to cover a distance.",
+            "💡 Distance: Length covered by the boat.",
+            "💡 Relative Speed: Speed of boat with respect to water or ground."
+        ],
+        "3_formula_bank": [
+            "🧮 Downstream speed = Speed in still water + Speed of stream",
+            "🧮 Upstream speed = Speed in still water - Speed of stream",
+            "🧮 Speed in still water = (Downstream + Upstream) / 2",
+            "🧮 Speed of stream = (Downstream - Upstream) / 2",
+            "🧮 Time = Distance / Speed",
+            "🧮 Distance = Speed × Time",
+            "🧮 If time for downstream = t1, upstream = t2, then speed in still water = (Distance × (t2 + t1)) / (2 × t1 × t2)",
+            "🧮 If boat covers d km downstream in t1 hr and upstream in t2 hr: Speed in still water = d × (t2 + t1) / (2 × t1 × t2)",
+            "🧮 If only downstream or upstream, use respective speed.",
+            "🧮 Convert units if needed: 1 km/hr = 5/18 m/s"
+        ],
+        "4_micro_examples": [
+            "Boat speed in still water = 8 km/hr, stream = 2 km/hr. Downstream = 10 km/hr, Upstream = 6 km/hr",
+            "If downstream = 12 km/hr, upstream = 8 km/hr, speed in still water = 10 km/hr",
+            "If boat covers 24 km downstream in 2 hrs, speed = 12 km/hr",
+            "If time downstream = 3 hr, upstream = 4 hr, distance = 24 km, speed in still water = 24×(4+3)/(2×3×4) = 7 km/hr",
+            "If speed in still water = 15 km/hr, stream = 3 km/hr, upstream = 12 km/hr",
+            "If downstream = 18 km/hr, upstream = 6 km/hr, speed of stream = 6 km/hr",
+            "If boat covers 10 km downstream in 1 hr, speed = 10 km/hr",
+            "If boat covers 20 km upstream in 4 hr, speed = 5 km/hr",
+            "Convert 36 km/hr to m/s: 36×5/18 = 10 m/s",
+            "If only downstream, use downstream speed for time calculation"
+        ],
+        "5_exam_examples": [
+            {
+                "question": "A boat's speed in still water is 10 km/hr, stream is 2 km/hr. Find downstream and upstream speeds.",
+                "solution_steps": [
+                    "Downstream = 10 + 2 = 12 km/hr",
+                    "Upstream = 10 - 2 = 8 km/hr"
+                ],
+                "answer": "Downstream: 12 km/hr, Upstream: 8 km/hr"
+            },
+            {
+                "question": "If downstream speed is 14 km/hr and upstream is 6 km/hr, find speed in still water and stream.",
+                "solution_steps": [
+                    "Speed in still water = (14+6)/2 = 10 km/hr",
+                    "Speed of stream = (14-6)/2 = 4 km/hr"
+                ],
+                "answer": "Still water: 10 km/hr, Stream: 4 km/hr"
+            },
+            {
+                "question": "A boat covers 30 km downstream in 2 hrs and upstream in 3 hrs. Find speed in still water.",
+                "solution_steps": [
+                    "Downstream = 30/2 = 15 km/hr",
+                    "Upstream = 30/3 = 10 km/hr",
+                    "Speed in still water = (15+10)/2 = 12.5 km/hr"
+                ],
+                "answer": "12.5 km/hr"
+            },
+            {
+                "question": "If speed in still water is 8 km/hr, stream is 3 km/hr, how long to cover 22 km downstream?",
+                "solution_steps": [
+                    "Downstream = 8+3 = 11 km/hr",
+                    "Time = 22/11 = 2 hours"
+                ],
+                "answer": "2 hours"
+            },
+            {
+                "question": "A boat covers 40 km upstream in 8 hrs. Find upstream speed.",
+                "solution_steps": [
+                    "Upstream = 40/8 = 5 km/hr"
+                ],
+                "answer": "5 km/hr"
+            },
+            {
+                "question": "If downstream = 18 km/hr, upstream = 6 km/hr, find speed of stream.",
+                "solution_steps": [
+                    "Speed of stream = (18-6)/2 = 6 km/hr"
+                ],
+                "answer": "6 km/hr"
+            },
+            {
+                "question": "A boat covers 24 km downstream in 2 hrs, upstream in 3 hrs. Find average speed.",
+                "solution_steps": [
+                    "Total distance = 24+24 = 48 km",
+                    "Total time = 2+3 = 5 hrs",
+                    "Average speed = 48/5 = 9.6 km/hr"
+                ],
+                "answer": "9.6 km/hr"
+            },
+            {
+                "question": "If speed in still water = 12 km/hr, stream = 4 km/hr, how long to cover 32 km upstream?",
+                "solution_steps": [
+                    "Upstream = 12-4 = 8 km/hr",
+                    "Time = 32/8 = 4 hours"
+                ],
+                "answer": "4 hours"
+            },
+            {
+                "question": "A boat covers 18 km downstream in 1.5 hrs. Find downstream speed.",
+                "solution_steps": [
+                    "Downstream = 18/1.5 = 12 km/hr"
+                ],
+                "answer": "12 km/hr"
+            },
+            {
+                "question": "If downstream = 20 km/hr, upstream = 10 km/hr, find speed in still water.",
+                "solution_steps": [
+                    "Speed in still water = (20+10)/2 = 15 km/hr"
+                ],
+                "answer": "15 km/hr"
+            }
+        ],
+        "6_shortcuts": [
+            "⚡ Downstream Speed (D) = Boat(u) + Stream(v).",
+            "⚡ Upstream Speed (U) = Boat(u) - Stream(v).",
+            "⚡ Boat Speed = (D + U) / 2.",
+            "⚡ Stream Speed = (D - U) / 2."
+        ],
+        "7_traps": [
+            "⚠️ Mixing units: Ensure both speeds are in km/h or m/s.",
+            "⚠️ Forgetting that 'Along the stream' means Downstream."
+        ]
+    }
+}
