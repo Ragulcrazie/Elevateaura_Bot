@@ -142,7 +142,7 @@ async function initDashboard(passedUser = null) {
 
     if (!user) {
          // Create a Dummy "Guest" user for visual testing
-         user = { id: 0, first_name: "Guest", last_name: "", username: "guest" };
+         user = { id: 0, first_name: "Aspirant", last_name: "", username: "guest" };
     }
     
     // 0. Pre-load Notes Mapping (Background)
@@ -673,6 +673,7 @@ function waitForUser(attempts = 0) {
         setTimeout(() => waitForUser(attempts + 1), 100);
     } else {
         console.warn("User detection timed out.");
+        // FORCE INIT with NULL (which becomes Guest)
         initDashboard(null).catch(e => renderError("Guest Init Error: " + e));
     }
 }
