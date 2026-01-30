@@ -150,7 +150,13 @@ async function initDashboard(passedUser = null) {
     
     // 1. Determine Pack
     // Fetch User Stats to get rating/pack
-    const userStats = await fetchUserStats(user.id);
+    let userStats = null;
+    try {
+        userStats = await fetchUserStats(user.id);
+    } catch (e) {
+        console.warn("User stats fetch failed (Network/Offline?), loading Default View", e);
+    }
+    
     const packId = userStats ? userStats.pack_id : 10; // Default Pack 10
     
     // RE-VERIFY NAME from DB if available (most reliable)
@@ -162,7 +168,17 @@ async function initDashboard(passedUser = null) {
     renderHeader(user.first_name || "Fighter");
     
     // 2. Fetch Leaderboard (Ghosts + Real)
-    let leaderboard = await fetchLeaderboard(packId, user.id);
+    let leaderboard = [];
+    try {
+        leaderboard = await fetchLeaderboard(packId, user.id);
+    } catch (e) {
+         console.warn("Leaderboard fetch failed. Using fallback.", e);
+         // Fallback dummy leaderboard so UI doesn't look empty
+         leaderboard = [
+             { full_name: "Ghost Leader", total_score: 150, is_user: false },
+             { full_name: "Elite Player", total_score: 120, is_user: false }
+         ]; 
+    }
     
     // 3. Inject User into Leaderboard
     const userEntry = {
