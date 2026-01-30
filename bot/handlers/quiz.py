@@ -628,15 +628,13 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
         f"**What's Next?** 👇"
     )
 
-    # Post-Quiz Navigation
-    # Dynamic Web App URL
+    # Dynamic Web App URL for Leaderboard
     from urllib.parse import quote
-    full_name = message.from_user.full_name # Get full_name from the message object
+    full_name = message.from_user.full_name
     name_param = quote(full_name) if full_name else "Fighter"
     web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={name_param}"
 
     # Dynamic Button Label & Final Consistency Check
-    # We calculate true total locally to ignore any last-moment DB failures
     baseline = state.get("questions_answered_baseline", 0)
     final_q_answered = baseline + total
     
@@ -644,21 +642,31 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     if "stats" not in state: state["stats"] = {}
     state["stats"]["questions_answered"] = final_q_answered
     
-    # Calculate next range
-    next_start = final_q_answered + 1
-    next_end = final_q_answered + 10
-    
-    start_btn_text = f"🔄 Next: Q{next_start}-{next_end} / 60"
+    # Check Daily Limit
+    start_btn_text = f"🔄 Next: Q{final_q_answered + 1}-{final_q_answered + 10} / 60"
+    is_completed = False
     if final_q_answered >= 60:
         start_btn_text = "✅ Daily Goal Completed"
+        is_completed = True
 
     builder = InlineKeyboardBuilder()
-    builder.button(text=start_btn_text, callback_data="start_quiz_cmd")
-    builder.button(text="🧠 AI Coach Analysis", callback_data="ai_coach")
-    builder.button(text="⚙️ Change Topic", callback_data="settings")
-    builder.button(text="🔥 Leaderboard", web_app=WebAppInfo(url=web_app_url))
-    builder.adjust(1)
+    
+    if is_completed:
+        # If done, show leaderboards as primary
+        builder.button(text="🔥 Leaderboard", web_app=types.WebAppInfo(url=web_app_url))
+    else:
+        # If not done, show Next Set as primary
+        builder.button(text=start_btn_text, callback_data="start_quiz_cmd")
+        builder.button(text="🔥 Leaderboard", web_app=types.WebAppInfo(url=web_app_url))
 
+    # Add AI Coach (Unified Callback)
+    builder.button(text="🤖 AI Performance Coach", callback_data="ai_coach")
+    
+    if is_completed:
+        builder.adjust(1, 1) # Leaderboard, AI Coach
+    else:
+        builder.adjust(1, 2) # Next Set, [Leaderboard, AI Coach]
+    
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
     # Cleanup - Pass the corrected stats
