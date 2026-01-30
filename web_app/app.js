@@ -543,6 +543,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              // Hide Insight Warning Color if desired, or keep it as diagnosis
         } else {
             // FREE VIEW (Paywall)
+            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔒</span> Unlock Full Intelligence (v70)`;
             unlockBtn.onclick = () => {
                 // Trigger Telegram Payment or Info Modal
                 try {
