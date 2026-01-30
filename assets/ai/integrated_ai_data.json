@@ -1,0 +1,2328 @@
+[
+  {
+    "topic": "Average",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Deviation Method: Assume a mean and find how much each value deviates from it to save time on large sums.",
+        "Average of first 'n' odd numbers is always 'n'.",
+        "Average of first 'n' even numbers is 'n + 1'."
+      ],
+      "hi": [
+        "लगातार संख्याओं का औसत = (प्रथम संख्या + अंतिम संख्या) / 2.",
+        "विचलन विधि (Deviation): एक काल्पनिक औसत मानकर अंतर निकालें।",
+        "प्रथम 'n' विषम संख्याओं का औसत 'n' ही होता है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Calculating the average of speeds by simply adding and dividing by 2 (Must use Harmonic Mean).",
+        "Including the wrong number of terms (e.g., counting 1 to 10 as 9 terms instead of 10).",
+        "Forgetting to update the 'Total Number' after a person joins or leaves a group."
+      ],
+      "hi": [
+        "चाल के औसत के लिए $2ab/(a+b)$ के बजाय साधारण $(a+b)/2$ का प्रयोग करना।",
+        "समूह में किसी के आने-जाने पर कुल संख्या (n) अपडेट न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Balance Scale Method: Visualize the average as a fulcrum. If one side goes up by 10, the other must drop by 10. The brain solves 'equilibrium' problems faster than 'summation' problems.",
+        "Deviation Mapping: Assume a random middle number as the 'Home Base' and only calculate how far others 'stray' from it. Smaller numbers = fewer mistakes.",
+        "The Fair Distribution Story: Imagine you are distributing chocolates to children so everyone has the same amount. Relatable scenarios trigger social-logic centers in the brain.",
+        "Symmetry Principle: If a sequence is consecutive, the average is simply the middle. Stop calculating and start looking for the center point.",
+        "Weighted Average Shortcut: Instead of total values, use the ratio of the quantities. The brain handles 2:3 much better than 200:300."
+      ],
+      "hi": [
+        "तराजू पद्धति: औसत को एक तराजू के केंद्र के रूप में देखें; एक तरफ बढ़ा तो दूसरी तरफ घटना ही होगा।",
+        "होम-बेस विचलन: एक संख्या को 'घर' मानें और देखें कि बाकी संख्याएं उससे कितनी दूर हैं।",
+        "समान वितरण की कहानी: कल्पना करें कि आप बच्चों को चॉकलेट बांट रहे हैं ताकि सबके पास बराबर हो।",
+        "समरूपता का सिद्धांत: यदि संख्याएं लगातार हैं, तो बीच वाली संख्या ही औसत है; गणना बंद करें और केंद्र ढूंढें।",
+        "अनुपात आधारित औसत: बड़ी संख्याओं के बजाय उनके सरल अनुपात का उपयोग करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Boats & Streams",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Downstream Speed (D) = $u + v$; Upstream Speed (U) = $u - v$.",
+        "Speed of Boat in still water ($u$) = $(D + U) / 2$.",
+        "Speed of Stream ($v$) = $(D - U) / 2$."
+      ],
+      "hi": [
+        "अनुकूल चाल (Downstream) $D = u + v$, प्रतिकूल चाल (Upstream) $U = u - v$.",
+        "शांत जल में नाव की चाल $u = (D+U)/2$, धारा की चाल $v = (D-U)/2$."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Upstream' (against flow) with 'Downstream' (with flow).",
+        "Incorrectly assuming the speed of the boat in still water is the same as its speed downstream."
+      ],
+      "hi": [
+        "अनुकूल और प्रतिकूल दिशाओं के संकेतों में भ्रम।",
+        "नाव की चाल को धारा की चाल से कम मान लेना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Downstream as 'Helpful Wind': Imagine someone pushing you from behind. Speed is Boat + Stream. Upstream is 'Resistance'.",
+        "The Still Water Anchor: Still water speed is always the exact middle of Downstream and Upstream speeds. Use this 'Center Point' to check your math.",
+        "The Stream is the 'Shift': The stream speed is the 'distance from the center'. Downstream - Still Water = Stream.",
+        "The 'u' and 'v' Persona: Assign 'u' to the boat and 'v' to the water. Consistent labeling prevents 'variable-swap' errors under pressure.",
+        "Ratio of Speeds: If time taken is given, use the ratio $D:U$. Distance is same, so Speed ratio is Inverse of Time ratio. Use 'Ratio Flip' logic."
+      ],
+      "hi": [
+        "अनुकूल धारा = मदद: इसे पीछे से मिलने वाले धक्के की तरह देखें (नाव + धारा)।",
+        "शांत जल = केंद्र बिंदु: शांत जल की चाल हमेशा अनुकूल और प्रतिकूल चालों का सटीक मध्य होती है।",
+        "धारा = शिफ्ट: धारा की चाल 'केंद्र से दूरी' है; इसे प्लस/माइनस के रूप में देखें।",
+        "नामकरण की स्थिरता: नाव को 'u' और पानी को 'v' लेबल दें ताकि बीच में भ्रम न हो।",
+        "अनुपात का उलटा नियम: यदि दूरी समान है, तो समय का अनुपात चाल के अनुपात का उलटा होगा।",
+        "शांत जल = केंद्र बिंदु: शांत जल की चाल हमेशा अनुकूल और प्रतिकूल चालों का सटीक मध्य होती है।",
+        "अनुकूल धारा = 'पीछे से धक्का': इसे नाव की गति में धारा की गति के जुड़ाव के रूप में विजुअलाइज करें।",
+        "धारा = शिफ्ट: शांत जल से अनुकूल की ओर जाना 'पॉजिटिव शिफ्ट' है और प्रतिकूल 'नेगेटिव शिफ्ट'।"
+      ]
+    }
+  },
+  {
+    "topic": "Data Interpretation (DI)",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "To find % growth: $(Final - Initial) / Initial \\times 100$.",
+        "Pie Chart: $1% = 3.6\\ degrees$. To convert degrees to %, divide by 3.6.",
+        "Scanning: Use 'Visual Estimation' to eliminate options before doing heavy calculation."
+      ],
+      "hi": [
+        "प्रतिशत वृद्धि: $(अंतर / मूल\\ मान) \\times 100$.",
+        "पाई चार्ट: $1% = 3.6$ डिग्री।",
+        "विकल्पों को हटाने के लिए अनुमान (Estimation) का प्रयोग करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Misreading the units in the graph legend (e.g., 'Values in Lakhs').",
+        "Wasting time on one complex calculation when the rest of the set is easy.",
+        "Picking the value for the wrong year due to misaligned columns."
+      ],
+      "hi": [
+        "ग्राफ के स्केल या इकाइयों (जैसे 'हजार में' या 'लाख में') को न पढ़ना।",
+        "गणना में बहुत अधिक समय बर्बाद करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Eye-Balling' Technique: Scan the graph for the steepest slope or highest peak first without reading numbers. Get the 'vibe' of the data before the details.",
+        "Relative vs Absolute: Always check if the graph is in % or actual numbers. The brain often confuses 'highest growth' with 'highest value'.",
+        "Denominator Stability: In 'Percentage Growth' questions, the 'Previous Year' is always the base. Mentally lock the denominator before looking at the numerator.",
+        "Scanning for 'Except': Questions with 'All...except' or 'Which is false' are designed to trick the brain. Circle the word 'False' to keep the brain in 'Inverse Mode'.",
+        "Aggregation Hack: Instead of calculating exact sums, use 'Average Estimation'. If values are around 400, assume the sum is $400 \times n$ and adjust for the small differences."
+      ],
+      "hi": [
+        "आई-बॉलिंग तकनीक: डेटा को पढ़ने से पहले ग्राफ की 'चोटी' और 'ढलान' को देखें।",
+        "तुलनात्मक बनाम वास्तविक: प्रतिशत और वास्तविक संख्या के बीच अंतर को पहचानें; दिमाग अक्सर भ्रमित होता है।",
+        "स्थिर हर (Denominator): प्रतिशत वृद्धि में पिछला वर्ष हमेशा आधार होता है; उसे मन में लॉक कर लें।",
+        "इनवर्स मोड: 'नहीं' या 'गलत' शब्दों को गोला करें ताकि दिमाग विपरीत दिशा में सोचे।",
+        "औसत अनुमान: सटीक योग के बजाय अनुमानित औसत का उपयोग करें और छोटे अंतर को बाद में एडजस्ट करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Discount",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "The Relation: $MP / CP = (100 + P%) / (100 - D%)$. Extremely useful for SSC exams.",
+        "Single Equivalent Discount: For $d1$ and $d2$, it is $d1 + d2 - (d1 \\times d2 / 100)$."
+      ],
+      "hi": [
+        "संबंध: $MP / CP = (100 + P%) / (100 - D%)$.",
+        "एकल समतुल्य छूट: $d1 + d2 - (d1 \\times d2 / 100)$."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Applying discount on CP instead of MP (Marked Price).",
+        "Adding successive discounts directly (e.g., 10% + 10% is 19%, not 20%).",
+        "Confusing 'Discount' with 'Loss'."
+      ],
+      "hi": [
+        "छूट की गणना CP पर करना (छूट हमेशा MP पर दी जाती है)।",
+        "क्रमिक छूटों को सीधे जोड़ देना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "MP as the 'Inflated Ego': View Marked Price as an artificial hike. Discount is the 'reality check' that brings it back toward CP.",
+        "The 100-Discount Shortcut: If a discount is 20%, focus on the 80% you *pay*. Looking at the 'paid value' reduces a subtraction step in your head.",
+        "Successive Discount Illusion: $50% + 50%$ is not free. Visualize it as a 'discount on a discount'. The brain needs this visual reminder to avoid the 'addition trap'.",
+        "The CP-MP Bridge: Use the ratio $(100 - D) : (100 + P)$. Memorizing this specific ratio 'bridge' bypasses three steps of logic.",
+        "Free Item Conversion: 'Buy 3 Get 1 Free' means 1 free out of 4 total. Always focus on the 'Total in Hand' to avoid the 1/3 calculation error."
+      ],
+      "hi": [
+        "MP = बढ़ा हुआ अहंकार: अंकित मूल्य को 'दिखावा' मानें और छूट को 'वास्तविकता की जाँच' (Reality Check)।",
+        "भुगतान मूल्य पर ध्यान: यदि छूट 20% है, तो केवल उस 80% पर ध्यान दें जो आप चुका रहे हैं।",
+        "सफलता का भ्रम: 50%+50% कभी मुफ्त नहीं होता; इसे 'छूट पर छूट' के रूप में विजुअलाइज करें।",
+        "CP-MP ब्रिज: सीधे अनुपात $(100-D):(100+P)$ का उपयोग करें; यह तीन तार्किक चरणों को बाईपास करता है।",
+        "फ्री आइटम हैक: 'Buy 3 Get 1 Free' में 1 फ्री को कुल 4 वस्तुओं पर देखें, न कि 3 पर।"
+      ]
+    }
+  },
+  {
+    "topic": "HCF & LCM",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Product Rule: $HCF \\times LCM = Product\\ of\\ two\\ numbers$.",
+        "HCF of Fractions: $HCF\\ of\\ Numerators / LCM\\ of\\ Denominators$.",
+        "LCM of Fractions: $LCM\\ of\\ Numerators / HCF\\ of\\ Denominators$."
+      ],
+      "hi": [
+        "Product Rule: $HCF \\times LCM = First\\ Number \\times Second\\ Number$.",
+        "भिन्नों का LCM: (अंशों का LCM) / (हरों का HCF).",
+        "भिन्नों का HCF: (अंशों का HCF) / (हरों का LCM)."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Finding LCM when the question asks for the 'Greatest' number (HCF) that divides.",
+        "Forgetting to add/subtract the remainder at the final step in 'Remainder' type problems.",
+        "Not simplifying fractions to their lowest terms before finding HCF/LCM."
+      ],
+      "hi": [
+        "शेषफल वाले प्रश्नों में अंतिम चरण में शेषफल को जोड़ना या घटाना भूल जाना।",
+        "भिन्नों को सरलतम रूप में लाए बिना ल.स.प./म.स.प. निकालना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Meeting Point Visualization: Imagine LCM as two runners on a track. The LCM is simply the first time their footprints overlap. Visualizing motion improves logical retention.",
+        "HCF as 'Shared Strength': Think of HCF as the maximum common power between two different entities. It simplifies the concept of 'greatest common divisor'.",
+        "Ladder Visualization: Use the 'Ladder Method' to see factors physically stacked. Spatial organization reduces the risk of missing a small prime factor.",
+        "The Venn Diagram Hack: Place factors in overlapping circles. The intersection is HCF; the entire union is LCM. Geometric layouts are easier to recall than lists.",
+        "Scale Reduction: If numbers are large, divide both by a common factor mentally, find HCF/LCM, then multiply back. It keeps the brain in the 'Small Number Zone'."
+      ],
+      "hi": [
+        "मिलन बिंदु विजुअलाइजेशन: LCM को दो धावकों के रूप में सोचें; वह समय जब वे फिर से मिलेंगे, वही LCM है।",
+        "साझा शक्ति (Shared Strength): HCF को दो ताकतों के बीच की 'कॉमन स्ट्रेंथ' के रूप में देखें।",
+        "सीढ़ी विजुअलाइजेशन: गुणनखंडों को सीढ़ी की तरह ऊपर-नीचे व्यवस्थित देखें ताकि कोई छोटा अंक न छूटे।",
+        "वेन आरेख हैक: दो ओवरलैपिंग वृत्तों की कल्पना करें; बीच का हिस्सा HCF है और पूरा समूह LCM।",
+        "स्केल रिडक्शन: बड़ी संख्याओं को किसी कॉमन अंक से भाग देकर छोटा करें, फिर अंत में वापस गुणा कर दें।"
+      ]
+    }
+  },
+  {
+    "topic": "Mensuration (2D & 3D)",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "If sides of a 2D shape increase by $x%$, area increases by $[2x + x^2/100]%$.",
+        "Radius of Incircle of equilateral triangle = $a / (2\\sqrt{3})$.",
+        "Volume of any prism = Base Area $\\times$ Height."
+      ],
+      "hi": [
+        "बेलन का आयतन: $\\pi r^2 h$, शंकु का आयतन: $1/3 \\pi r^2 h$.",
+        "यदि भुजा 'x%' बढ़ती है, तो 2D क्षेत्रफल $[2x + x^2/100]%$ बढ़ेगा।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Curved Surface Area' with 'Total Surface Area' (which includes the base/top).",
+        "Forgetting to cube the units for Volume ($cm^3$) or square them for Area ($cm^2$)."
+      ],
+      "hi": [
+        "वक्र पृष्ठ (CSA) और कुल पृष्ठीय क्षेत्रफल (TSA) के बीच भ्रम।",
+        "इकाइयों का वर्ग (cm²) या घन (cm³) करना भूलना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Net Visualization: Imagine unfolding a box into a flat shape to find Surface Area. Flattening 3D to 2D reduces cognitive strain.",
+        "The 'Filling' Concept: Volume is just the base area 'stacked' to a certain height. Visualize a stack of coins to understand $Area \times Height$.",
+        "Radius is King: In circles/spheres, find 'r' first. Once you have 'r', you have the keys to the kingdom. Focus all energy on 'Finding R'.",
+        "Units Consistency Hack: Surface area is always Squared (2D), Volume is always Cubed (3D). Check your units to ensure your formula choice was correct.",
+        "The 11 Divisibility Test: Most formulas involve $\\pi$ (22/7). If your answer is not divisible by 11, it is likely wrong. Use 'Pi-Filtering'."
+      ],
+      "hi": [
+        "नेट विजुअलाइजेशन: डिब्बे को खोलकर चपटा देखें; 3D को 2D बनाना मानसिक तनाव कम करता है।",
+        "ढेर की अवधारणा: आयतन (Volume) आधार क्षेत्रफल के ऊपर रखे 'ढेर' की तरह है।",
+        "त्रिज्या ही राजा है: वृत्त/गोले में 'r' ढूंढने पर पूरी ताकत लगाएं; 'r' ही सफलता की चाबी है।",
+        "यूनिट चेक: क्षेत्रफल हमेशा स्क्वॉयर (2D) और आयतन क्यूब (3D) होता है; यूनिट से फॉर्मूले की जाँच करें।",
+        "11 का परीक्षण: $\\pi$ (22/7) वाले उत्तर आमतौर पर 11 से विभाज्य होते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Mixture & Alligation",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Alligation Rule: (Quantity of Cheaper) / (Quantity of Dearer) = (CP of Dearer - Mean Price) / (Mean Price - CP of Cheaper).",
+        "Replacement Formula: Final Concentration = $Initial\\ (1 - x/V)^n$, where x is replaced volume and V is total volume."
+      ],
+      "hi": [
+        "Alligation Rule: (सस्ती वस्तु की मात्रा) / (महंगी वस्तु की मात्रा) = (महंगी दर - औसत दर) / (औसत दर - सस्ती दर).",
+        "सभी दरें हमेशा CP (क्रय मूल्य) में होनी चाहिए।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Using Selling Price (SP) in the alligation cross instead of Cost Price (CP). All three values must be CP.",
+        "Mixing up the ratios (putting the Cheaper quantity under the Dearer side)."
+      ],
+      "hi": [
+        "औसत दर की जगह विक्रय मूल्य (SP) का उपयोग करना।",
+        "अनुपात को उल्टा लिख देना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Cross-Subtraction Visualization: Place the 'Mean' in the center and subtract diagonally. The 'X' shape is a visual anchor that guides the brain through the process.",
+        "The 'Pull' Principle: The average will always be 'pulled' closer to the quantity that is larger. Use this to guess the answer before solving.",
+        "Concentration Focus: Always solve for one thing (either milk or water). Mixing both in your head causes 'interference'—pick one and stick to it.",
+        "Replacement Formula Rhythm: $(1 - x/V)^n$. Think of it as 'The Remaining Part'. Every cycle reduces the original purity by a fixed fraction.",
+        "The Seesaw Hack: Imagine a seesaw. The further a value is from the center, the 'heavier' the weight on the other side must be to balance it."
+      ],
+      "hi": [
+        "क्रॉस-सब्सट्रैक्शन: तिरछा घटाने की 'X' आकृति एक विजुअल एंकर है जो दिमाग को सही दिशा देती है।",
+        "खिंचाव का सिद्धांत (Pull Principle): औसत हमेशा उस मात्रा के करीब होगा जो वजन में ज्यादा है।",
+        "एक पर ध्यान: केवल एक घटक (जैसे दूध) पर ध्यान केंद्रित करें; दोनों को मिलाने से मानसिक हस्तक्षेप होता है।",
+        "रिप्लेसमेंट रिदम: इसे 'बची हुई शुद्धता' के रूप में देखें जो हर चक्र के बाद कम होती जाती है।",
+        "सी-सॉ (Seesaw) हैक: औसत से दूरी जितनी ज्यादा, वजन उतना ही ज्यादा होना चाहिए।"
+      ]
+    }
+  },
+  {
+    "topic": "Number System",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Divisibility of 7, 11, 13: Difference between the last 3 digits and the remaining digits must be 0 or divisible by the number.",
+        "Sum of first 'n' natural numbers: $n(n+1)/2$.",
+        "Finding Unit Digit: Focus only on the last digit and use cyclicity of 4 for powers."
+      ],
+      "hi": [
+        "विभाज्यता नियम: 7, 11, 13 के लिए अंतिम 3 अंकों के समूह और शेष संख्या के बीच का अंतर 0 या उस संख्या से विभाज्य होना चाहिए।",
+        "इकाई अंक (Unit Digit): घात को 4 से भाग दें। यदि शेष 0 हो, तो $x^4$ का उपयोग करें।",
+        "प्रथम 'n' प्राकृत संख्याओं का योग: $n(n+1)/2$."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Prime Numbers' with 'Odd Numbers' (remember: 2 is the only even prime).",
+        "Ignoring the remainder 0 in cyclicity (if power is divisible by 4, use $x^4$ not $x^0$).",
+        "Treating 1 as a prime number (1 is neither prime nor composite)."
+      ],
+      "hi": [
+        "1 को अभाज्य संख्या मानना (2 सबसे छोटी अभाज्य संख्या है)।",
+        "स्थानीय मान और अंकित मान के बीच भ्रम।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Chunking Method: Break down large numbers into groups of 3 (e.g., 1,432,678 as 1...432...678). The brain processes 3 chunks faster than 7 individual digits.",
+        "Unit Digit Anchoring: Focus solely on the last digit for complex powers. This reduces cognitive load by ignoring 90% of the unnecessary data.",
+        "Priming with Prime Numbers: Memorize primes up to 50. It prevents the 'brain freeze' that occurs when trying to divide a number that is fundamentally indivisible.",
+        "Divisibility Rhythm: View divisibility rules as patterns rather than math (e.g., for 3, sum the digits like a musical beat). If the beat fits, it's divisible.",
+        "Zero-Complexity Bias: Always look for factors of 0 or 5 first. The brain is naturally wired to solve problems involving round numbers faster."
+      ],
+      "hi": [
+        "चंकिंग (Chunking): बड़ी संख्याओं को 3-3 के टुकड़ों में बांटें; मस्तिष्क 9 अंकों के बजाय 3 समूहों को तेजी से प्रोसेस करता है।",
+        "इकाई अंक एंकरिंग: जटिल गणनाओं में केवल अंतिम अंक पर ध्यान दें; यह 80% मानसिक भार कम करता है।",
+        "प्राइम नंबर विजुअलाइजेशन: अभाज्य संख्याओं को 'अकेले' खड़े पेड़ों के रूप में सोचें जिन्हें तोड़ा नहीं जा सकता।",
+        "विभाज्यता की लय: विभाज्यता के नियमों को गणित के बजाय एक संगीत पैटर्न की तरह याद करें (जैसे 3 का नियम: अंकों का योग 3 की ताल पर हो)।",
+        "जीरो-कॉम्प्लेक्सिटी बायस: हमेशा 0 या 5 के गुणनखंडों को पहले ढूंढें; मस्तिष्क गोल संख्याओं को जल्दी हल करता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Partnership",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "लाभ का अनुपात = (पूंजी $\times$ समय) का अनुपात।",
+        "यदि निवेश का समय समान है, तो लाभ का बंटवारा निवेश की गई पूंजी के अनुपात में होगा।",
+        "सक्रिय भागीदार (Active Partner) को लाभ का कुछ हिस्सा प्रबंधन के लिए पहले दिया जाता है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "पूंजी और समय के गुणनफल के बजाय केवल पूंजी के अनुपात में लाभ बांटना।",
+        "महीनों को वर्षों में या इसके विपरीत बदलते समय गलती करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Sweat Equity Concept: Differentiate between 'Money' and 'Time'. If someone works longer, they deserve more. This 'fairness' logic helps in setting up the $Capital \times Time$ ratio.",
+        "Month-Unit Conversion: Convert all years to months immediately. The brain hates mixing units; keep the 'currency' of time consistent.",
+        "The Profit Pie: Visualize a physical pie. Divide it based on the combined weight of $(Investment \times Months)$. Spatial division is more intuitive than algebraic division.",
+        "Active vs. Passive Roles: Treat the 'Salary' of an active partner as an expense to be removed *before* the pie is shared. Separate the 'Job' from the 'Investment'.",
+        "Zero-Cancellation: If everyone invests in thousands, mentally delete the '000'. The brain works 10x faster with 5 and 7 than with 5000 and 7000."
+      ],
+      "hi": [
+        "पूंजी x समय: लाभ को निवेश और समय के 'संयुक्त वजन' के रूप में देखें।",
+        "महीनों में बदलाव: समय की इकाइयों को तुरंत महीनों में बदलें ताकि गणना का आधार एक समान रहे।",
+        "प्रॉफिट पाई: लाभ को एक भौतिक पाई (Pie) की तरह देखें और उसे निवेश के अनुपात में काटें।",
+        "सक्रिय भागीदार: सक्रिय व्यक्ति के वेतन को पहले 'खर्च' के रूप में निकालें, फिर बाकी साझा करें।",
+        "शून्य हटाना: यदि निवेश हजारों में है, तो '000' को मन में ही हटा दें।"
+      ]
+    }
+  },
+  {
+    "topic": "Percentage",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Fraction to %: $1/8 = 12.5%$, $1/6 = 16.66%$, $1/7 = 14.28%$. Memorize up to $1/20$.",
+        "Successive % Change: $A + B + (AB/100)$. Use for area changes or consecutive discounts.",
+        "Product Consistency: If price increases by 25% (1/4), consumption must decrease by 20% (1/5) to keep expenditure same."
+      ],
+      "hi": [
+        "भिन्न को प्रतिशत में बदलना: $1/2=50%, 1/3=33.33%, 1/4=25%, 1/5=20%, 1/8=12.5%$।",
+        "मूल्य-खपत संबंध: यदि चीनी का मूल्य $x%$ बढ़ता है, तो खर्च समान रखने के लिए खपत में $[x/(100+x)] \times 100 %$ की कमी करनी होगी।",
+        "समतुल्य बदलाव (Successive Change): $x + y + (xy/100)$।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Applying % change on the new value instead of the original 'Base' value.",
+        "Confusing 'Percentage Points' with 'Percentage Change'.",
+        "Calculating 20% of 80 as 20 instead of 16."
+      ],
+      "hi": [
+        "वृद्धि/कमी की गणना आधार मूल्य (Base Value) के बजाय नए मूल्य पर करना।",
+        "100% से अधिक की वृद्धि को गलत समझना (जैसे 200% वृद्धि का मतलब 3 गुना होना है)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 10% & 1% Anchors: Treat 10% and 1% as your only tools. Any percentage (like 27%) is just (10% x 2) + (5%) + (1% x 2). This eliminates long multiplications.",
+        "Percentage Reversal: $x%$ of $y$ is the same as $y%$ of $x$. Calculating 16% of 50 is hard; calculating 50% of 16 (which is 8) is instant.",
+        "Base 100 Mental Image: Always visualize a $10 \times 10$ grid. Coloring in the percentage visually makes 'increase/decrease' questions intuitive rather than abstract.",
+        "Fraction Mapping: Don't see '25%'; see 'one-fourth'. The brain processes simple fractions in the parietal lobe faster than percentages.",
+        "The Consumption-Price Bridge: If price goes up by $1/4$, consumption must drop by $1/5$. Memorizing this 'n to n+1' shift saves minutes of calculation."
+      ],
+      "hi": [
+        "10% और 1% के हथियार: किसी भी प्रतिशत को 10% और 1% के जोड़-घटाव के रूप में देखें।",
+        "प्रतिशत का उलटा नियम: 50 का 18% वही है जो 18 का 50% है।",
+        "ग्रिड विजुअलाइजेशन: हमेशा 10x10 के ग्रिड की कल्पना करें; इससे 'वृद्धि/कमी' को देखना आसान हो जाता है।",
+        "भिन्न (Fraction) मैपिंग: '25%' न देखें, 'एक-चौथाई' देखें; मस्तिष्क भिन्न को तेजी से प्रोसेस करता है।",
+        "कीमत-खपत ब्रिज: यदि कीमत 1/4 बढ़ती है, तो खपत 1/5 कम होगी; इस 'n से n+1' शिफ्ट को याद रखें।"
+      ]
+    }
+  },
+  {
+    "topic": "Permutation & Combination",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Combination (Selection): Use $nCr$ when order doesn't matter (e.g., forming a committee).",
+        "Permutation (Arrangement): Use $nPr$ when order matters (e.g., arranging letters in a word).",
+        "Circular Permutation: $(n - 1)!$."
+      ],
+      "hi": [
+        "संचय (Combination - nCr): जब केवल चयन करना हो (जैसे टीम बनाना)।",
+        "क्रमचय (Permutation - nPr): जब चयन के साथ व्यवस्था (Arrangement) भी करनी हो।",
+        "वृत्ताकार व्यवस्था (Circular): $(n - 1)!$।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Using Permutation where only Selection (Combination) was needed.",
+        "Forgetting to divide by $r!$ for identical items (e.g., repeating letters in a word)."
+      ],
+      "hi": [
+        "उन स्थितियों में क्रमचय का उपयोग करना जहाँ केवल चयन की आवश्यकता थी।",
+        "दोहराए गए अक्षरों (जैसे APPLE में P दो बार है) के लिए भाग देना भूल जाना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Selection vs Arrangement: Ask yourself: 'Does the order matter?' If yes, it’s a line (P); if no, it’s a group (C). This 'Order Filter' is the only rule you need.",
+        "The Gap Method: To keep items apart, place others first and put the items in the 'gaps'. Visualizing 'Slots' makes complex logic simple.",
+        "The String Method: To keep items together, tie them with an imaginary string and treat them as one block. This 'Unit Consolidation' is a powerful visual hack.",
+        "The 'Total - None' Shortcut: To find 'At least one', calculate the total and subtract the case where 'None' happens. Subtracting from the whole is easier than adding parts.",
+        "Circular Permutation Hack: Fix one person at the top. Now it’s just a straight line. 'Fixing a point' eliminates the 'Rotation Confusion'."
+      ],
+      "hi": [
+        "क्रम vs समूह: खुद से पूछें: 'क्या क्रम मायने रखता है?' यदि हाँ तो P, नहीं तो C।",
+        "गैप मेथड: चीजों को अलग रखने के लिए पहले दूसरों को बैठाएं और उनके बीच के 'गैप' में उन्हें रखें।",
+        "धागा विधि (String Method): चीजों को साथ रखने के लिए उन्हें काल्पनिक धागे से बांधकर एक यूनिट मानें।",
+        "कुल - कोई नहीं: 'कम से कम एक' के लिए कुल में से 'एक भी नहीं' वाला केस घटा दें।",
+        "वृत्ताकार हैक: एक व्यक्ति को शीर्ष पर 'फिक्स' कर दें, अब यह एक सीधी रेखा बन गई है।",
+        "धागा विधि (String Method): चीजों को साथ रखने के लिए उन्हें एक काल्पनिक धागे से बांधकर एक यूनिट मानें।",
+        "गैप मेथड: चीजों को अलग रखने के लिए पहले दूसरों को बैठाएं और उनके बीच के 'गैप' का उपयोग करें।",
+        "वृत्ताकार हैक: एक व्यक्ति को शीर्ष पर 'फिक्स' (स्थिर) कर दें ताकि वह एक सीधी रेखा बन जाए।"
+      ]
+    }
+  },
+  {
+    "topic": "Pipes & Cisterns",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Inlet pipe = Positive efficiency (+); Outlet/Leak pipe = Negative efficiency (-).",
+        "If a pipe fills in 'x' hours and another empties in 'y' hours, net work = $(xy) / (y - x)$."
+      ],
+      "hi": [
+        "भरने वाला नल (Inlet) = धनात्मक कार्य (+), खाली करने वाला नल (Outlet) = ऋणात्मक कार्य (-)।",
+        "यदि नल A, 'x' घंटे में भरता है और नल B, 'y' घंटे में खाली करता है, तो कुल समय = $(xy) / (y - x)$।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Forgetting to treat the 'Leak' as a negative value in the total sum.",
+        "Miscalculating the time when pipes are opened alternately (Odd/Even hour logic)."
+      ],
+      "hi": [
+        "टंकी में रिसाव (Leakage) को ऋणात्मक कार्य के रूप में न जोड़ना।",
+        "अंतिम मिनट में टंकी भरने के बाद खाली करने वाले नल की गणना जारी रखना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Inlet-Outlet Color Code: Mentally color-code Inlets as 'Green' (+) and Outlets as 'Red' (-). Visual tagging prevents sign errors.",
+        "Emptying is Filling: If a pipe empties a full tank, it’s just 'Time & Work' in reverse. Don't learn a new formula; just change the sign.",
+        "The Leakage Persona: Treat a leak as a 'silent worker' who works 24/7. This helps in incorporating it into the total efficiency equation.",
+        "The Overflow Point: Always calculate work until the tank is almost full. The last minute often changes because a pipe might be closed. Focus on the 'Final Stretch'.",
+        "Capacity Assumption: Like Time & Work, assume the tank capacity is the LCM of the times. Working with 'Litres' is more concrete than 'Tanks'."
+      ],
+      "hi": [
+        "कलर कोडिंग: भरने वाले नल को 'हरा (+)' और खाली करने वाले को 'लाल (-)' मानकर टैग करें।",
+        "खाली करना = उल्टा भरना: इसे अलग सूत्र के बजाय केवल विपरीत दिशा वाला 'Time & Work' मानें।",
+        "रिसाव (Leakage) की भूमिका: इसे एक ऐसे 'चुपचाप काम करने वाले' के रूप में देखें जो 24/7 सक्रिय है।",
+        "अंतिम खिंचाव: टंकी भरने से ठीक पहले के मिनटों पर ध्यान दें, क्योंकि वहां नल बंद हो सकते हैं।",
+        "क्षमता कल्पना: टंकी को 'लीटर' में देखें (LCM मानकर), यह गणना को वास्तविक बनाता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Probability",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Probability = (Favorable Outcomes) / (Total Outcomes).",
+        "$P(Event) + P(Not\\ Event) = 1$.",
+        "In 'At least' problems, it is often easier to calculate '1 - Probability of None'."
+      ],
+      "hi": [
+        "प्रायिकता = (अनुकूल परिणाम) / (कुल परिणाम)।",
+        "किसी घटना के होने और न होने की प्रायिकता का योग हमेशा 1 होता है।",
+        "'कम से कम' (At least) वाले प्रश्नों में '1 - (एक भी नहीं होने की प्रायिकता)' का उपयोग करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Calculating a probability greater than 1 (Mathematically impossible).",
+        "Miscounting the sample space (e.g., 2 dice = 36 outcomes, not 12)."
+      ],
+      "hi": [
+        "प्रायिकता का मान 1 से अधिक या 0 से कम निकाल देना (जो असंभव है)।",
+        "ताश के पत्तों या पासे (Dice) के कुल परिणामों की गिनती में गलती।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'What I Want' Ratio: Always think: $Desired / Total$. This simple English phrase prevents formula-overload.",
+        "Complementary Event: $P(A) + P(Not A) = 1$. If finding the answer is hard, find the 'opposite' and subtract from 1.",
+        "Tree Diagram for Coin Toss: Draw branches. The brain recognizes visual 'paths' to an outcome better than calculating $1/2 \times 1/2$.",
+        "The 'And/Or' Logic: 'And' means multiply (both must happen); 'Or' means add (either can happen). Use 'And = Product' and 'Or = Sum'.",
+        "Sample Space Visualization: For two dice, visualize a $6 \times 6$ grid. Scanning a grid for a sum of 7 is 10x faster than listing pairs."
+      ],
+      "hi": [
+        "चाहत बनाम वास्तविकता: हमेशा 'जो मुझे चाहिए / कुल' के बारे में सोचें।",
+        "पूरक घटना: $P(A) + P(Not A) = 1$; यदि उत्तर सीधा न मिले तो 'उल्टा' ढूंढकर 1 से घटाएं।",
+        "सिक्का उछाल ट्री: रास्तों की कल्पना करें; विजुअल पाथ गणना से बेहतर काम करते हैं।",
+        "And/Or लॉजिक: 'And' मतलब गुणा (दोनों चाहिए), 'Or' मतलब जोड़ (कोई एक)।",
+        "पासा ग्रिड: दो पासों के लिए $6 \times 6$ ग्रिड की कल्पना करें; योग ढूंढना 10 गुना तेज होगा।"
+      ]
+    }
+  },
+  {
+    "topic": "Problems on Ages",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "The age difference between two people remains constant forever.",
+        "Ratio Method: If the ratio is $2:3$ now and $3:4$ in 5 years, the 1 unit difference = 5 years."
+      ],
+      "hi": [
+        "दो व्यक्तियों की आयु के बीच का अंतर हमेशा समान रहता है।",
+        "अनुपात विधि: यदि वर्तमान आयु $2:3$ है और 5 साल बाद $3:4$ है, तो 1 यूनिट = 5 वर्ष।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Applying the time gap to only one person instead of both.",
+        "Getting confused between 'x years ago' (Subtract) and 'x years hence' (Add)."
+      ],
+      "hi": [
+        "समय के अंतर (जैसे 5 वर्ष बाद) को केवल एक व्यक्ति की आयु में जोड़ना।",
+        "प्रश्न में 'x वर्ष पहले' और 'x वर्ष बाद' के संकेतों को समझने में गलती।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [],
+      "hi": [
+        "स्थिर अंतर: दो लोगों की आयु का अंतर कभी नहीं बदलता; इस 'कांस्टेंट' से विकल्पों को तुरंत छाँटें।",
+        "समय यात्रा: गणना करने से पहले सबको 'वर्तमान' (T=0) में ले आएं।",
+        "अनुपात मिलान: यदि अंतर समान है, तो यूनिट का अंतर सीधे वर्षों के बराबर होगा।",
+        "विकल्प प्रतिस्थापन: आयु आमतौर पर पूर्णांक होती है; भविष्य के अनुपात के साथ विकल्पों की जाँच करें।",
+        "ब्रैकेट सुरक्षा: 'x वर्ष पहले' के लिए $(x-5)$ लिखें; ब्रैकेट बीजगणितीय गलतियों को रोकता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Profit & Loss",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "CP is always 100%: If profit is 20%, SP = 120% of CP. If loss is 10%, SP = 90% of CP.",
+        "Dishonest Dealer: $Profit% = [Error / (True\\ Value - Error)] \\times 100$.",
+        "When CP of 'x' articles = SP of 'y' articles, $Profit/Loss% = [(x-y)/y] \\times 100$."
+      ],
+      "hi": [
+        "CP हमेशा 100% होता है: यदि 20% लाभ है, तो SP 120% होगा।",
+        "बेईमान दुकानदार: $% लाभ = (त्रुटि / (सत्य मान - त्रुटि)) \times 100$।",
+        "समान मूल्य पर बेचना: यदि दो वस्तुओं का SP समान है और एक पर $x%$ लाभ और दूसरे पर $x%$ हानि हो, तो हमेशा $x^2/100 %$ की हानि होगी।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Calculating Profit/Loss % on Selling Price (SP) instead of Cost Price (CP).",
+        "Applying the wrong base when multiple profits are involved (Chain rule).",
+        "Assuming SP is the same as MP (Marked Price) when no discount is mentioned."
+      ],
+      "hi": [
+        "लाभ/हानि प्रतिशत की गणना क्रय मूल्य (CP) के बजाय विक्रय मूल्य (SP) पर करना।",
+        "अंकित मूल्य (MP) और विक्रय मूल्य (SP) के बीच अंतर न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Shopkeeper Persona: Pretend you are the seller. Personal involvement in the narrative increases focus and 'survival' logic.",
+        "CP = 100% Fixed Anchor: Never let the Cost Price float. Keeping it at 100% creates a stable mental baseline for all variations.",
+        "Emotional Labeling: Label Profit as a 'Bonus' and Loss as a 'Penalty'. Positive/Negative emotional triggers improve recall during exam pressure.",
+        "Dishonest Dealer Visualization: Think of the 'Error' as the dealer's secret profit. Focus on what he *actually* gave out, not what he claimed. Focus on reality over claims.",
+        "Transaction Chains: Use the 'Successive Change' formula for A to B to C sales. Treating it as one continuous flow prevents the 're-starting' lag in the brain."
+      ],
+      "hi": [
+        "दुकानदार का अवतार: खुद को दुकानदार मानकर प्रश्न हल करें; व्यक्तिगत जुड़ाव से तर्क शक्ति बढ़ती है।",
+        "CP = 100% एंकर: क्रय मूल्य को कभी हिलने न दें; यह गणना के लिए एक स्थिर मानसिक आधार है।",
+        "भावनात्मक लेबलिंग: लाभ को 'बोनस' और हानि को 'दंड' की तरह देखें; यह रिकॉल वैल्यू बढ़ाता है।",
+        "बेईमान दुकानदार हैक: केवल उस वजन पर ध्यान दें जो वास्तव में दिया गया है, न कि जो दावा किया गया।",
+        "सक्सेसिव चेन: ट्रांजेक्शन को एक निरंतर प्रवाह (Flow) की तरह देखें, अलग-अलग टुकड़ों में नहीं।"
+      ]
+    }
+  },
+  {
+    "topic": "Ratio & Proportion",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "If $A:B = 2:3$ and $B:C = 4:5$, then $A:B:C = (2\\times4) : (3\\times4) : (3\\times5)$.",
+        "Mean Proportional of a and b is $\\sqrt{ab}$.",
+        "Third Proportional of a and b is $b^2/a$."
+      ],
+      "hi": [
+        "यदि $A:B = 2:3$ और $B:C = 4:5$, तो $A:B:C = (2\\times4):(3\\times4):(3\\times5)$.",
+        "मध्यानुपाती (Mean Proportional): $\\sqrt{ab}$."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Comparing ratios with different units (e.g., meters to kilometers).",
+        "Assuming the parts of a ratio are the actual values (always multiply by a constant 'x').",
+        "Mixing up the order (e.g., writing B:A when the question asks for A:B)."
+      ],
+      "hi": [
+        "अलग-अलग इकाइयों (जैसे मीटर और किमी) का अनुपात सीधे निकालना।",
+        "अनुपात के पदों को वास्तविक मान मान लेना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The Packet Method: Treat $2:3$ as 2 packets of X and 3 packets of X. Solving for 'one packet' is a more concrete task for the brain than solving for a variable.",
+        "Mirror Image Ratios: If $A:B$ and $B:C$ are given, align them vertically. The brain recognizes vertical patterns faster than horizontal equations.",
+        "The Unity Goal: Always try to make the common term (like B) the same number in both ratios. Once they match, the brain sees the 'whole picture'.",
+        "Mean Proportional Visualization: Think of it as the 'perfect middle' (Geometric Mean). It’s the square root of the product. Visualize it as the side of a square with the same area as the rectangle.",
+        "The Component-Dividendo Hack: Use it as a 'balancing act'. Whatever you do to the top, do to the bottom. This 'symmetry' is a powerful cognitive shortcut."
+      ],
+      "hi": [
+        "पैकेट विधि: 2:3 को '2 पैकेट' और '3 पैकेट' की तरह देखें; एक पैकेट की वैल्यू ढूंढना आसान है।",
+        "पैटर्न अलाइनमेंट: अनुपातों को लंबवत (Vertically) लिखें; मस्तिष्क लंबवत पैटर्न को जल्दी पहचानता है।",
+        "एकता का लक्ष्य: साझा पद (जैसे B) को समान बनाएं; जब वे मैच होते हैं, तो पूरी तस्वीर साफ हो जाती है।",
+        "मध्यानुपाती (Mean): इसे 'परफेक्ट मिडल' के रूप में देखें जो दो संख्याओं को संतुलित करता है।",
+        "संतुलन अधिनियम: जो ऊपर करें वही नीचे करें; समरूपता (Symmetry) एक शक्तिशाली शॉर्टकट है।"
+      ]
+    }
+  },
+  {
+    "topic": "Simple & Compound Interest",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "SI: Interest is same every year. $SI = (P \\times R \\times T) / 100$.",
+        "CI: Difference between CI and SI for 2 years = $P(R/100)^2$.",
+        "CI: Amount doubles in 'n' years? It will become 4 times in '2n' years."
+      ],
+      "hi": [
+        "SI: ब्याज हर साल समान रहता है। $SI = (P \\times R \\times T) / 100$.",
+        "CI: 2 साल के लिए CI और SI का अंतर = $P(R/100)^2$.",
+        "अर्धवार्षिक गणना: दर आधी (R/2) और समय दोगुना (2T) करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Forgetting to divide the Rate by 2 and multiply Time by 2 for 'Half-Yearly' CI.",
+        "Calculating CI on the Principal only (CI is interest on interest).",
+        "Confusing 'Amount' (P+I) with 'Interest' (I) in the final answer."
+      ],
+      "hi": [
+        "ब्याज और मिश्रधन (Amount) के बीच भ्रमित होना।",
+        "CI की गणना केवल मूलधन पर करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "SI as a Straight Line: Imagine a steady salary increase. It's predictable and boring. This 'linear' visualization prevents overthinking SI.",
+        "CI as the Snowball Effect: Imagine a snowball rolling down a hill, getting bigger with every rotation. This helps the brain accept that 'interest on interest' grows exponentially.",
+        "The Tree Method: Draw branches for CI. Visualizing interest 'growing' out of previous years' interest uses the brain's spatial memory to prevent missing values.",
+        "The Rule of 72: Divide 72 by the interest rate to find when money doubles. Using this 'rule of thumb' provides an instant mental check for your final answer.",
+        "Half-Yearly 'Double-Half' Rule: Mentally double the time and half the rate immediately. Do not wait for the formula; change the 'environment' of the problem first."
+      ],
+      "hi": [
+        "SI = सीधी रेखा: इसे एक समान वेतन वृद्धि की तरह देखें जो पूर्वानुमानित (Predictable) है।",
+        "CI = स्नोबॉल प्रभाव: इसे पहाड़ से गिरते बर्फ के गोले की तरह देखें जो हर चक्कर में बड़ा होता जाता है।",
+        "ट्री मेथड: ब्याज की शाखाएं बनाएं; विजुअल मैपिंग से गणना छूटने का डर खत्म होता है।",
+        "72 का नियम: पैसे दोगुने कब होंगे? 72 को ब्याज दर से भाग दें; यह उत्तर की तुरंत जाँच करने का शॉर्टकट है।",
+        "अर्धवार्षिक बदलाव: दर आधी और समय दोगुना पहले ही कर लें ताकि बीच में कन्फ्यूजन न हो।"
+      ]
+    }
+  },
+  {
+    "topic": "Simplification",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "V-BODMAS: Follow strictly: Vinculum, Bracket, Of, Division, Multiplication, Addition, Subtraction.",
+        "Digital Sum: Use the sum of digits to eliminate options in heavy multiplication/division.",
+        "Square root of perfect squares: Look at the unit digit (e.g., if it ends in 1, the root ends in 1 or 9)."
+      ],
+      "hi": [
+        "V-BODMAS नियम का कड़ाई से पालन करें: Vinculum, Bracket, Of, Division, Multiplication, Addition, Subtraction.",
+        "Digital Sum: गणना की जाँच के लिए अंकों के योग का उपयोग करें।",
+        "5 से समाप्त होने वाली संख्या का वर्ग: $(n \\times (n+1))25$."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Treating 'Of' as a simple multiplication and doing 'Division' before it.",
+        "Calculation errors due to lack of approximation when options are far apart.",
+        "Incorrectly applying $(a+b)^2$ formulas to cubical expressions."
+      ],
+      "hi": [
+        "'Of' (का) को साधारण गुणा मानकर भाग से पहले हल न करना।",
+        "दशमलव के स्थानों की गिनती में गलती करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "V-BODMAS Rhythm: Recite the order like a mantra. Under stress, the brain skips 'Of' or 'Division'; a rhythmic chant keeps the sequence locked in.",
+        "The 5-Ending Square Hack: To square numbers ending in 5, multiply the first digit by (itself + 1) and append 25. This 'magic' trick boosts confidence for harder steps.",
+        "Digital Sum Filtering: Instead of calculating, sum the digits. If the digital sum of your answer doesn't match the question, discard it instantly to save mental energy.",
+        "Rounding Strategy: Treat 99.8 as 100 for a split second to get a 'ballpark' figure. The brain feels less anxious when it already knows the approximate destination.",
+        "Left-to-Right Processing: Train your brain to add/subtract from left to right (hundreds first, then tens). This mimics how we read and reduces 'mental carry-over' errors."
+      ],
+      "hi": [
+        "V-BODMAS मंत्र: इसे लयबद्ध तरीके से दोहराएं ताकि तनाव में मस्तिष्क 'Of' या 'Division' को न भूले।",
+        "5-एंडिंग स्क्वायर ट्रिक: अंत में 5 वाली संख्या के वर्ग को एक जादुई ट्रिक की तरह देखें, यह आत्मविश्वास बढ़ाता है।",
+        "डिजिटल सम फ़िल्टरिंग: भारी गणना को 0-9 के अंकों में बदलें; यदि उत्तर मैच नहीं होता, तो उसे तुरंत छोड़ दें।",
+        "राउंडिंग ऑफ का सुकून: 99.7 को 100 मानें; मस्तिष्क को जब मंजिल का अंदाज़ा होता है तो वह कम घबराता है।",
+        "बाएं-से-दाएं गणना: जोड़-घटाव को बाएं से दाएं करें (जैसे हम पढ़ते हैं); यह 'कैरी-ओवर' की गलतियों को कम करता है।",
+        "विंकुलम (Vinculum) प्राथमिकता: बार वाले अंकों को सबसे पहले हल करें; यह समीकरण की नींव है।",
+        "लगभग मान: विकल्प दूर-दूर हों तो 'लगभग' मानकर गणना का बोझ 50% कम करें।",
+        "अंश-हर का जादू: जटिल भिन्नों को ऊपर और नीचे अलग-अलग हल करें।",
+        "पैटर्न पहचान: भारी सरलीकरण में अक्सर $(a^2-b^2)$ जैसे छिपे हुए पैटर्न होते हैं।",
+        "0 से सावधान: किसी भी संख्या का 0 से गुणा पूरे भाग को शून्य कर देता है, इसे पहले देखें।"
+      ]
+    }
+  },
+  {
+    "topic": "Time & Work",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "L.C.M Method: Assume Total Work = LCM of days. This converts days into 'Efficiency' (Units/day).",
+        "Man-Days Formula: $(M1 \\times D1 \\times H1) / W1 = (M2 \\times D2 \\times H2) / W2$.",
+        "Efficiency: If A is twice as good as B, he takes half the time."
+      ],
+      "hi": [
+        "LCM विधि: कुल कार्य को दिनों का LCM मानें, जिससे कार्यक्षमता (Efficiency) निकल सके।",
+        "कार्यक्षमता समय के व्युत्क्रमानुपाती होती है ($E_1/E_2 = T_2/T_1$)."
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Adding 'Days' directly instead of 'Efficiency'.",
+        "Not accounting for people leaving mid-work.",
+        "Forgetting that 'Work' is inversely proportional to 'Time'."
+      ],
+      "hi": [
+        "दिनों को सीधे जोड़ना (हमेशा कार्यक्षमता जोड़ी जाती है)।",
+        "बारी-बारी (Alternate days) वाले प्रश्नों में चक्र (Cycle) को गलत गिनना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The LCM-Work Assumption: Never work with fractions ($1/x$). Assume total work is the LCM. The brain is 5x more accurate with 'units of work' than with 'parts of work'.",
+        "Efficiency as Speed: Treat efficiency as 'units per day'. If A does 5 units and B does 3, together they do 8. Adding integers is a low-stress cognitive task.",
+        "Man-Day Equilibrium: $M_1D_1 = M_2D_2$. Think of it as a constant 'energy' required. If Men go down, Days must go up to keep the energy constant.",
+        "Negative Work Hack: Treat a 'Destroyer' (or a leak) as a negative worker. Adding a negative number is mentally easier than 'subtracting a fraction'.",
+        "The Alternating Day Cycle: Bundle two days into 'One Cycle'. Solve for the cycle first, then the remaining units. It prevents the 'off-by-one' error."
+      ],
+      "hi": [
+        "LCM-कार्य धारणा: कार्य को 'इकाइयों' के रूप में देखें; मस्तिष्क पूर्णांकों के साथ 5 गुना अधिक सटीक होता है।",
+        "कार्यक्षमता = गति: A की क्षमता 5 यूनिट और B की 3 है, तो साथ मिलकर 8 होगी। जोड़ना सरल है।",
+        "ऊर्जा संतुलन: $M1D1 = M2D2$; इसे कार्य के लिए आवश्यक कुल 'स्थिर ऊर्जा' के रूप में देखें।",
+        "नकारात्मक कार्य: रिसाव (Leak) या नष्ट करने वाले को 'ऋणात्मक कार्यकर्ता' मानें।",
+        "बारी-बारी का चक्र: दो दिनों को एक 'साइकिल' के रूप में बांधें ताकि गिनती में गलती न हो।"
+      ]
+    }
+  },
+  {
+    "topic": "Time, Speed & Distance",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Distance is Constant: Speed is inversely proportional to Time ($S_1/S_2 = T_2/T_1$).",
+        "Late/Early Concept: $Distance = [Product\\ of\\ Speeds / Diff\\ of\\ Speeds] \\times [Diff\\ in\\ Time / 60]$."
+      ],
+      "hi": [
+        "दूरी समान होने पर: $S_1/S_2 = T_2/T_1$.",
+        "सापेक्ष चाल: समान दिशा में (S1-S2), विपरीत दिशा में (S1+S2).",
+        "km/hr से m/s: $5/18$ से गुणा करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Mixing km/hr with seconds. Always check units first!",
+        "Average speed error: Do not use $(S_1 + S_2)/2$ unless time intervals are identical."
+      ],
+      "hi": [
+        "मीटर और किलोमीटर की इकाइयों को न बदलना।",
+        "औसत चाल के लिए गलत सूत्र का प्रयोग।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The D-S-T Triangle: Visualize a triangle with D at the top. To find one, cover it and see the relationship of the others. This 'Graphic Organizer' is a permanent mental cheat sheet.",
+        "Relative Speed (Same Direction): Imagine you are trying to catch a friend. You only gain on them by the *difference* in your speeds. This 'closing the gap' logic is intuitive.",
+        "Relative Speed (Opposite): Imagine a head-on collision. The impact is the *sum* of both speeds. Use 'Collision Logic' to add speeds.",
+        "The 5/18 Conversion Chant: Always convert to m/s for train/short distance problems immediately. Keeping units inconsistent is the #1 cause of 'exam-panic'.",
+        "Average Speed Harmonic Mean: If distance is same, don't use $(S1+S2)/2$. The brain wants to be lazy; remind it to use the 'Reciprocal Path' instead."
+      ],
+      "hi": [
+        "D-S-T त्रिभुज: एक त्रिभुज में ऊपर D रखें; जिसे ढूंढना है उसे ढक लें, बाकी सूत्र बन जाएगा।",
+        "सापेक्ष चाल (समान दिशा): कल्पना करें कि आप दोस्त को पकड़ रहे हैं; आप केवल 'चाल के अंतर' से करीब आते हैं।",
+        "सापेक्ष चाल (विपरीत): इसे 'आमने-सामने की टक्कर' की तरह देखें जहाँ प्रभाव दोनों की चाल का योग होता है।",
+        "5/18 मंत्र: ट्रेन के सवालों में तुरंत m/s में बदलें; इकाइयों में अंतर घबराहट पैदा करता है।",
+        "औसत चाल हैक: यदि दूरी समान है, तो औसत को 'प्रतिध्वनि' (Harmonic Mean) की तरह देखें।"
+      ]
+    }
+  },
+  {
+    "topic": "Trains",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [
+        "Crossing a point/pole: Distance = Length of Train.",
+        "Crossing a Bridge/Platform: Distance = (Length of Train + Length of Platform).",
+        "Relative Speed: Subtract speeds for same direction; Add for opposite."
+      ],
+      "hi": [
+        "खंभे या व्यक्ति को पार करना: दूरी = ट्रेन की लंबाई।",
+        "प्लेटफॉर्म या पुल को पार करना: दूरी = (ट्रेन की लंबाई + प्लेटफॉर्म की लंबाई)।",
+        "सापेक्ष चाल (Relative Speed): विपरीत दिशा में जुड़ती है ($S1 + S2$), समान दिशा में घटती है ($S1 - S2$)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Not converting speed to m/s when the train length is in meters.",
+        "Neglecting the length of the *second* train when they cross each other."
+      ],
+      "hi": [
+        "चाल को km/hr से m/s में बदलना भूल जाना (5/18 का उपयोग करें)।",
+        "दो ट्रेनों के एक-दूसरे को पार करने में केवल एक की लंबाई को दूरी मानना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Point Object' Concept: Visualize a pole as a thin line. The train only has to cross its own length. This 'Length = Distance' link is the key.",
+        "The 'Platform Bridge' Concept: Visualize the train and platform as one long line. The train must cross 'Self + Platform'. Use 'Additive Length' logic.",
+        "Overtaking Visualization: The faster train is 'eating' the length of the slower train. The distance to cover is the sum of both lengths.",
+        "Stationary Window Trick: If a man in a train is the observer, ignore the length of *his* train. He is just a 'moving point'.",
+        "The 18/5 Multiplier: If answer is in km/hr, use the 18/5 'Up-scaler'. It’s the 'Big Brother' of the conversion units."
+      ],
+      "hi": [
+        "बिंदु वस्तु: खंभे को एक पतली रेखा मानें; ट्रेन को केवल अपनी लंबाई पार करनी है।",
+        "प्लेटफॉर्म ब्रिज: ट्रेन और प्लेटफॉर्म को एक लंबी रेखा की तरह जोड़ दें; कुल लंबाई ही दूरी है।",
+        "ओवरटेकिंग विजुअलाइजेशन: तेज ट्रेन धीरे वाली की लंबाई को 'खा' रही है।",
+        "खिड़की वाला आदमी: यदि आदमी देख रहा है, तो उसकी अपनी ट्रेन की लंबाई को शून्य मानें।",
+        "18/5 का उपयोग: यदि उत्तर km/hr में चाहिए, तो इसे 'अप-स्केलर' (बड़ा भाई) की तरह इस्तेमाल करें।"
+      ]
+    }
+  },
+  {
+    "topic": "आंकड़ा निर्वचन (Data Interpretation)",
+    "category": "aptitude",
+    "shortcuts": {
+      "en": [],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [],
+      "hi": [
+        "आई-बॉलिंग: डेटा कैलकुलेट करने से पहले ग्राफ की 'चोटी' और 'ढलान' को देखकर रुझान समझें।",
+        "स्थिर हर (Denominator): प्रतिशत वृद्धि में पिछला वर्ष हमेशा 'आधार' होता है, उसे मन में लॉक कर लें।",
+        "अनुमान की शक्ति: सटीक योग के बजाय अनुमानित औसत का उपयोग करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Art & Culture",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Classical Dances (8): 'Kathak' (North), 'Sattriya' (Assam), 'Mohiniyattam' (Kerala), 'Kuchipudi' (Andhra).",
+        "Painting: Madhubani (Bihar), Pattachitra (Odisha), Warli (Maharashtra)."
+      ],
+      "hi": [
+        "शास्त्रीय नृत्य (8): 'कथक' (UP), 'सत्रिया' (असम), 'कुचिपुड़ी' (AP), 'मोहिनीअट्टम' (केरल)।",
+        "त्यौहार: 'हॉर्नबिल' (नागालैंड), 'लोसार' (लद्दाख), 'पोंगल' (तमिलनाडु)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Kathak' (UP) with 'Kathakali' (Kerala).",
+        "Thinking 'Bihu' is a classical dance (It is a folk dance)."
+      ],
+      "hi": [
+        "शास्त्रीय नृत्य और लोक नृत्य (Folk Dance) के बीच भ्रमित होना (जैसे बिहू एक लोक नृत्य है)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Dance-State Rhyming: Create short rhymes or alliterations (e.g., 'Bihu from Assam', 'Kathak from the North'). Sound patterns are the easiest to recall under pressure.",
+        "Visual Style Recognition: Focus on one unique feature of a painting or architecture (e.g., the 'Domes' of Mughal or the 'Gopurams' of South). One visual hook brings back the whole topic.",
+        "Festival-Season Link: Connect festivals to the harvesting cycle (e.g., Lohri/Pongal = Winter Harvest). Linking culture to nature makes it logically sound.",
+        "The 'Architect' Persona: Imagine you are the builder of the temple. Thinking about 'how' it was built helps remember the 'style' (Nagara/Dravida)."
+      ],
+      "hi": [
+        "नृत्य-राज्य तुकबंदी: छोटे लयबद्ध शब्द बनाएं जैसे 'असम की बिहू' या 'उत्तर का कथक'।",
+        "विजुअल स्टाइल हुक: मंदिर या चित्रकला की एक अनूठी विशेषता पर ध्यान दें (जैसे दक्षिण के 'गोपुरम')।",
+        "उत्सव-मौसम लिंक: त्योहारों को फसल चक्र से जोड़ें (जैसे पोंगल = सर्दियों की फसल)।"
+      ]
+    }
+  },
+  {
+    "topic": "Biology",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Vitamins: 'KEDA' are Fat soluble; 'B & C' are Water soluble.",
+        "Blood: 'O-' is Universal Donor; 'AB+' is Universal Recipient.",
+        "Diseases: 'Goiter' (Iodine), 'Scurvy' (Vit C), 'Night Blindness' (Vit A)."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing Xylem (Water transport) with Phloem (Food transport).",
+        "Thinking all bacteria are harmful (e.g., Lactobacillus is useful)."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Body Scan' Method: When studying organs or systems, touch that part of your own body. Physical anchoring creates a permanent link to the biological fact.",
+        "Mnemonic Nutrition: Use 'K-E-D-A' for Fat-Soluble vitamins. Turning a list into a name (Keda) moves it from short-term to long-term memory instantly.",
+        "Latin Root Breakdown: Most bio-terms have roots (e.g., 'Cardio' = Heart, 'Hepa' = Liver). Learning 10 roots lets you 'guess' the meaning of 100 words.",
+        "Classification by Habitat: Instead of just Phylum/Class, visualize the animal in its environment. Contextual learning is the brain's natural way of storing data."
+      ],
+      "hi": [
+        "OIL RIG हैक (Chemistry): 'Oxidation Is Loss, Reduction Is Gain' (इलेक्ट्रॉन का); इससे भ्रम दूर होता है।",
+        "बॉडी स्कैन (Biology): अंगों का अध्ययन करते समय अपने शरीर के उस हिस्से को स्पर्श करें; यह एक स्थायी शारीरिक लिंक बनाता है।",
+        "VIBGYOR फ्रीक्वेंसी हैक: आवृत्ति और तरंगदैर्ध्य के रुझान को याद रखने के लिए इंद्रधनुष के रंगों के विजुअल का उपयोग करें।",
+        "K-E-D-A नीमोनिक (Biology): वसा में घुलनशील विटामिन के लिए 'कीड़ा' (KEDA) शब्द का उपयोग करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Chemistry",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Redox: 'OIL RIG' (Oxidation Is Loss, Reduction Is Gain of electrons).",
+        "pH Scale: 0-7 (Acidic), 7 (Neutral), 7-14 (Basic/Alkaline).",
+        "Common names: Baking Soda ($NaHCO_3$), Washing Soda ($Na_2CO_3 \\cdot 10H_2O$), Bleaching Powder ($CaOCl_2$)."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Isotopes' (Same Atomic Number) with 'Isobars' (Same Mass Number).",
+        "Thinking Diamond is a compound (It's an element - pure Carbon)."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "Periodic Table 'Family' Logic: Instead of learning elements, learn 'Families' (Alkali, Halogens). The brain is a master at recognizing group behavior over individual data.",
+        "The 'OIL RIG' Hack: Oxidation Is Loss, Reduction Is Gain (of electrons). Use simple abbreviations for reversible processes to prevent confusion.",
+        "Reaction Visualization: Imagine atoms as people 'trading' or 'sharing' items. Viewing chemical bonds as social interactions makes them easier to remember.",
+        "pH Scale Color-Mapping: Associate Red with 'Angry/Acid' and Blue with 'Calm/Base'. Emotional color-coding is a high-speed recall trick."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Computer Knowledge",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "OSI Layers: 'All People Seem To Need Data Processing' (Application, Presentation, Session, Transport, Network, Data Link, Physical).",
+        "Memory: 1 byte = 8 bits; 1 KB = 1024 bytes.",
+        "Shortcuts: Ctrl+X (Cut), Ctrl+V (Paste), Ctrl+Z (Undo)."
+      ],
+      "hi": [
+        "मेमोरी: 1 Byte = 8 Bits, 1 KB = 1024 Bytes.",
+        "OSI लेयर्स: 'All People Seem To Need Data Processing' (7 परतें)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing RAM (Volatile) with ROM (Non-volatile).",
+        "Thinking HTML is a programming language (It is a markup language)."
+      ],
+      "hi": [
+        "RAM (Volatile) और ROM (Non-volatile) के बीच भ्रम।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Kitchen' Analogy for RAM/ROM: RAM is the kitchen counter (temporary work space), and ROM/Hard Drive is the pantry (permanent storage).",
+        "OSI Layer Sentence: 'All People Seem To Need Data Processing'. Using a sentence to remember layers is the gold standard for sequence retention.",
+        "Shortcut Visualization: Imagine the 'Ctrl' key as a physical 'Control' lever. Associating keys with physical actions reduces the lag in shortcut recall.",
+        "The 'Malware' Persona: Think of a Virus as a 'Thief' and a Trojan as a 'Trap'. Characterizing software types helps differentiate their complex behaviors."
+      ],
+      "hi": [
+        "रसोई का उदाहरण: RAM को 'किचन काउंटर' (अस्थायी काम) और ROM को 'पेंट्री' (स्थायी स्टोरेज) के रूप में देखें।",
+        "OSI लेयर वाक्य: 'All People Seem To Need Data Processing' - क्रम याद रखने का यह सबसे तार्किक तरीका है।",
+        "शॉर्टकट विजुअलाइजेशन: Ctrl बटन को एक भौतिक 'नियंत्रण' लीवर के रूप में सोचें ताकि शॉर्टकट याद रहे।"
+      ]
+    }
+  },
+  {
+    "topic": "Current Affairs",
+    "category": "gk",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "पिछले 6 महीने: परीक्षा से 6 महीने पहले की घटनाओं पर ध्यान केंद्रित करें (नियुक्तियां, पुरस्कार, खेल)।",
+        "सूचकांक (Indices): भारत की रैंक और शीर्ष देश को हमेशा याद रखें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "पुरानी योजनाओं के नए अपडेट (बजट आवंटन या नाम परिवर्तन) को नजरअंदाज करना।",
+        "मुख्य अतिथि (गणतंत्र दिवस) या थीम (Theme) को याद न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Daily 5' Rule: Never memorize a monthly PDF. The brain hates massive data dumps. Learning 5 news items daily uses the 'Spaced Repetition' effect.",
+        "The 'Contextual News' Hack: When you read about a country in news, quickly check its Capital/Currency. This 'Tag-along' learning saves time on Static GK.",
+        "The 'Impact Analysis' Hack: Ask 'How does this news affect me?' Personal relevance is the fastest way to move news from short-term to permanent memory.",
+        "News Category Folders: Mentally file news into 'Awards', 'Sports', or 'Schemes'. Organized input leads to organized output during the exam."
+      ],
+      "hi": [
+        "दैनिक 5 का नियम: मासिक PDF के बोझ से बचें; रोज़ाना 5 खबरें 'स्पैस्ड रिपीटिशन' प्रभाव पैदा करती हैं।",
+        "शहर आधारित HQ हैक: अधिकांश स्वास्थ्य/श्रम मुख्यालय जिनेवा में हैं; संगठनों को शहर के अनुसार समूहबद्ध करें।",
+        "लेखक-व्यक्तित्व संबंध: पुस्तक के शीर्षक को लेखक के व्यक्तित्व या उनके पेशे से जोड़ें।"
+      ]
+    }
+  },
+  {
+    "topic": "Current Affairs Strategy",
+    "category": "gk",
+    "shortcuts": {
+      "en": [],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Headline Summary' Hack: After reading an article, write a 3-word headline for it. Summarization forces the brain to identify the 'Core Fact'.",
+        "The 'Weekly Quiz' Challenge: Test yourself every Sunday. Active recall is 300% more effective than passive reading of current affairs.",
+        "The 'Map Tracking' Hack: Locate every 'news-making' country on a world map. Geographical location acts as a mental hook for the news itself.",
+        "The 'Scheme-Beneficiary' Link: For government schemes, focus only on 'Who gets what'. The brain stores 'Give/Take' relationships very efficiently."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Economics",
+    "category": "gk",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "रेपो रेट (Repo Rate): वह दर जिस पर RBI बैंकों को पैसा देता है (दर बढ़ेगी तो महंगाई घटेगी)।",
+        "बजट: राजस्व घाटा और राजकोषीय घाटा (Fiscal Deficit) के सूत्रों को रटें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "GDP और GNP के बीच के अंतर (विदेशी आय का जोड़/घटाव) को न समझना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Household Finance' Analogy: Understand Macro-economics (GDP, Inflation) by comparing it to your family budget. Scaling down complex systems makes them intuitive.",
+        "Supply-Demand Visualization: Imagine a seesaw. If the price goes up, the demand goes down. Using physical metaphors for abstract concepts speeds up processing.",
+        "The 'RBI as the Parent' Hack: Think of RBI as a parent and commercial banks as children. Repo rate is the 'interest on pocket money'. Simplification kills the fear of technical jargon.",
+        "Acronym Chaining: For organizations like WTO, IMF, and World Bank, chain their headquarters together based on 'Money vs. Peace'. Grouping by function creates a mental folder."
+      ],
+      "hi": [
+        "घरेलू वित्त सादृश्य: GDP और मुद्रास्फीति को अपने परिवार के बजट के बराबर मानकर समझें।",
+        "सी-सॉ (Seesaw) विजुअलाइजेशन: आपूर्ति और मांग के लिए एक तराजू की कल्पना करें; यदि कीमत ऊपर जाती है, तो मांग नीचे गिरती है।",
+        "RBI एक 'अभिभावक' के रूप में: RBI को माता-पिता और बैंकों को बच्चों की तरह देखें; रेपो रेट 'पॉकेट मनी पर ब्याज' है।"
+      ]
+    }
+  },
+  {
+    "topic": "Environment & Ecology",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "10% Law: Only 10% of energy is passed to the next trophic level.",
+        "Conferences: Kyoto Protocol (Global Warming), Montreal Protocol (Ozone Layer).",
+        "Greenhouse Gases: $CO_2$, $CH_4$ (Methane), $N_2O$, Water Vapor."
+      ],
+      "hi": [
+        "ओजोन परत: यह 'समताप मंडल' (Stratosphere) में पाई जाती है और पराबैंगनी किरणों को रोकती है।",
+        "प्रदूषण: 'इताई-इताई' रोग कैडमियम के कारण और 'मिनामाता' पारा (Mercury) के कारण होता है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Thinking the Ozone hole is over the Equator (It's over Antarctica).",
+        "Confusing 'Food Chain' (linear) with 'Food Web' (interconnected)."
+      ],
+      "hi": [
+        "ग्रीनहाउस गैसों में नाइट्रोजन को शामिल करना (नाइट्रोजन ग्रीनहाउस गैस नहीं है)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The '10% Energy Pyramid' Image: Visualize energy vanishing as you go up. A simple geometric image (Pyramid) replaces pages of text on food chains.",
+        "Pollution-Disease Linking: Create a 'Symptom Map' (e.g., Mercury-Minamata). Linking the chemical to a specific human story makes it 'sticky' in the brain.",
+        "The 'Ozone Shield' Metaphor: View the Ozone layer as a physical umbrella. It’s easier to remember 'Umbrella in the Stratosphere' than abstract gas layers.",
+        "Conference Chronology: Group environmental summits (Earth Summit, Kyoto, Paris) as a 'Global Meeting Timeline'. Seeing it as a movement helps recall dates."
+      ],
+      "hi": [
+        "10% ऊर्जा पिरामिड: ऊर्जा को ऊपर जाते समय कम होते हुए देखें; पिरामिड का चित्र टेक्स्ट की तुलना में बेहतर याद रहता है।",
+        "प्रदूषण-बीमारी मानचित्र: रसायनों को विशिष्ट कहानियों से जोड़ें (जैसे 'पारा और मिनामाता' की कहानी)।",
+        "ओजोन ढाल रूपक: ओजोन परत को पृथ्वी की रक्षा करने वाली एक भौतिक 'छतरी' के रूप में देखें।"
+      ]
+    }
+  },
+  {
+    "topic": "General Science",
+    "category": "gk",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "Physics: 'VIBGYOR' - बैंगनी की आवृत्ति सबसे अधिक और लाल की तरंगदैर्ध्य (Wavelength) सबसे अधिक।",
+        "Chemistry: 'OIL RIG' (ऑक्सीकरण - इलेक्ट्रान का नुकसान, अपचयन - इलेक्ट्रान का लाभ)।",
+        "Biology: जल में घुलनशील विटामिन 'B और C', वसा में 'K-E-D-A'।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "ध्वनि की गति निर्वात (Vacuum) में शून्य होती है, इसे नजरअंदाज करना।",
+        "जाइलम (जल परिवहन) और फ्लोएम (भोजन परिवहन) के कार्यों को उल्टा समझना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Geography (Indian & World)",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Tropic of Cancer States: 'G-R-M-C-J-W-T-M' (Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram).",
+        "Atmosphere Layers: 'Trust Me In The Exam' (Troposphere, Stratosphere, Mesosphere, Thermosphere, Exosphere).",
+        "Planets: 'MVEMJSUN' (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)."
+      ],
+      "hi": [
+        "भारत की मानक समय रेखा: 82.5° पूर्वी देशांतर (UP, MP, छत्तीसगढ़, ओडिशा, AP से गुजरती है)।",
+        "वायुमंडल की परतें: 'छोभ-सम-मध्य-ताप-बाह्य' (Troposphere से Exosphere)।",
+        "कर्क रेखा वाले राज्य: 'मगरमच्छ झपटा' (MP, Gujarat, Rajasthan, Mizoram, Chhattisgarh, Jharkhand, WB, Tripura)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Assuming the Sun is closest to Earth in Summer (It's actually January - Perihelion).",
+        "Confusing 'Standard Time' longitude (82.5° E) with the 'Equator'."
+      ],
+      "hi": [
+        "अंडमान और निकोबार के द्वीपों के क्रम (उत्तर से दक्षिण) में गलती करना।",
+        "ग्रहों के क्रम में शुक्र (Venus) और मंगल (Mars) की स्थिति को लेकर भ्रम।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Mental Mapping: Draw rough outlines of maps from memory. The hand-eye coordination involved in sketching improves spatial retention by 50%.",
+        "Color-Coding Climates: Associate specific colors with different soil types or climate zones (e.g., Red for Laterite, Black for Regur). Visual cues trigger faster recognition.",
+        "The 'Tropic' Mnemonic: Use funny phrases to remember states on the Tropic of Cancer (e.g., 'MGR-J-W-T' or similar local acronyms). Absurdity aids long-term retention.",
+        "Comparative Sizing: Compare the size of a country or state to something familiar (e.g., 'X is twice the size of my hometown'). Relating the unknown to the known is a core cognitive hack."
+      ],
+      "hi": [
+        "मानसिक मानचित्रण (Mental Mapping): बिना देखे नक्शे की रूपरेखा बनाएं; इससे स्थानिक याददाश्त 50% तक बढ़ जाती है।",
+        "रंग-कोडिंग जलवायु: विभिन्न मिट्टी या जलवायु क्षेत्रों के लिए विशेष रंगों का उपयोग करें (जैसे काली मिट्टी के लिए 'Regur' ब्लैक)।",
+        "कर्क रेखा नीमोनिक: भारत के 8 राज्यों को याद रखने के लिए मजेदार वाक्यों या स्थानीय नीमोनिक्स का प्रयोग करें।",
+        "तुलनात्मक आकार: किसी देश या राज्य के आकार की तुलना अपने गृह नगर से करें ताकि वह गणना दिमाग में बैठ जाए।"
+      ]
+    }
+  },
+  {
+    "topic": "History (Ancient, Medieval, Modern)",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Indus Valley: 'HAD-RA-LO' (Harappa - Ravi river, Lothal - Bhogwa river).",
+        "Buddhist Councils: 'R-V-P-K' (Rajgriha, Vaishali, Pataliputra, Kashmir).",
+        "Modern History Chronology: 'BK-C-A-K-N' (Champaran, Ahmedabad, Kheda, Khilafat, Non-Cooperation)."
+      ],
+      "hi": [
+        "प्राचीन: बौद्ध संगीतियां याद रखें - 'R-V-P-K' (राजगृह, वैशाली, पाटलिपुत्र, कश्मीर)।",
+        "मध्यकालीन: दिल्ली सल्तनत का क्रम - 'गु-खि-तु-स-लो' (गुलाम, खिलजी, तुगलक, सैयद, लोदी)।",
+        "आधुनिक: गांधीजी के आंदोलन - 'BK-C-A-K-N' (चंपारण, अहमदाबाद, खेड़ा, खिलाफत, असहयोग)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing the Battle of Plassey (1757) with Buxar (1764).",
+        "Mixing up the First Battle of Panipat (1526) with the Second (1556)."
+      ],
+      "hi": [
+        "पानीपत के प्रथम (1526) और द्वितीय (1556) युद्ध के शासकों के बीच भ्रमित होना।",
+        "हड़प्पा सभ्यता की नदियों के नाम गलत याद रखना (जैसे हड़प्पा-रावी, मोहनजोदड़ो-सिंधु)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Storytelling' Anchor: Instead of memorizing dates, link events as a cause-and-effect story. The brain remembers narratives 20x better than isolated facts.",
+        "The 'Loci Method' (Memory Palace): Mentally place major dynasties in different rooms of your house. Walking through the house helps recall the chronological order of rulers.",
+        "Mnemonic Pegging: Use acronyms like 'BHAJSA' for Mughal Emperors (Babur, Humayun, Akbar, Jahangir, Shah Jahan, Aurangzeb). Rhymes and acronyms bypass rote memory.",
+        "The 'First-Person' Perspective: Imagine yourself as a contemporary of the historical figure. Personal involvement in the scenario triggers the episodic memory center."
+      ],
+      "hi": [
+        "कहानी एंकरिंग: तारीखों को रटने के बजाय घटनाओं को 'कारण और प्रभाव' की कहानी के रूप में जोड़ें; मस्तिष्क कहानियों को 20 गुना बेहतर याद रखता है।",
+        "लोकी विधि (Memory Palace): राजवंशों को अपने घर के अलग-अलग कमरों में मानसिक रूप से रखें; घर में टहलने की कल्पना करने से क्रम याद रहता है।",
+        "नीमोनिक पेगिंग: मुगल सम्राटों के लिए 'BHAJSA' जैसे संक्षिप्त शब्दों का प्रयोग करें ताकि रटने की जरूरत न पड़े।",
+        "प्रथम-पुरुष परिप्रेक्ष्य: खुद को उस काल का नागरिक मानकर स्थिति की कल्पना करें; इससे घटना 'स्थायी स्मृति' में चली जाती है।"
+      ]
+    }
+  },
+  {
+    "topic": "Indian Polity & Constitution",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Sources of Constitution: 'USA' (Fundamental Rights), 'Ireland' (DPSP), 'USSR' (Fundamental Duties).",
+        "Schedules: 'TEARS OF OLD PM' (Territories, Emoluments, Affirmations, Rajya Sabha, Scheduled areas, Other areas, Federal, Official languages, Land reforms, Defection, Panchayats, Municipalities).",
+        "Age limits: President/Governor (35), Rajya Sabha (30), Lok Sabha (25)."
+      ],
+      "hi": [
+        "अनुसूचियां: 'TEARS OF OLD PM' ट्रिक का उपयोग करें।",
+        "मौलिक अधिकार: अनुच्छेद 14-18 (समानता), 19-22 (स्वतंत्रता), 23-24 (शोषण के विरुद्ध)।",
+        "संवैधानिक उम्र: राष्ट्रपति (35), राज्यसभा (30), लोकसभा (25)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Thinking the 'Preamble' can't be amended (It was amended once in 1976).",
+        "Confusing the retirement age of High Court (62) and Supreme Court (65) judges."
+      ],
+      "hi": [
+        "रिट (Writs) जारी करने की शक्ति में सुप्रीम कोर्ट (Art 32) और हाई कोर्ट (Art 226) के बीच भ्रम।",
+        "नीति निर्देशक तत्वों (DPSP) को न्यायालय द्वारा लागू करने योग्य मानना (ये केवल सलाहकारी हैं)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'TEARS OF OLD PM' Hack: Use this famous mnemonic to remember the 12 Schedules of the Constitution. It reduces a massive list into a single, catchy phrase.",
+        "Age-Group Categorization: Group all constitutional posts by age (25, 30, 35) rather than by post. Categorizing by a shared attribute reduces mental clutter.",
+        "The 'Fundamental' Personification: Treat the Fundamental Rights as your 'Personal Shield' and DPSP as the 'Government's To-Do List'. Personalizing abstract laws makes them concrete.",
+        "Article Number Rhymes: Create short rhymes for vital articles (e.g., 'Article 17 makes untouchability lean/clean'). Phonetic similarities help during high-stress recall."
+      ],
+      "hi": [
+        "TEARS OF OLD PM हैक: संविधान की 12 अनुसूचियों को तुरंत याद रखने के लिए इस प्रसिद्ध नीमोनिक का उपयोग करें।",
+        "आयु-समूह वर्गीकरण: संवैधानिक पदों को पद के बजाय न्यूनतम आयु (25, 30, 35) के आधार पर समूहबद्ध करें।",
+        "अधिकारों का वैयक्तिकरण: मौलिक अधिकारों को अपनी 'निजी ढाल' की तरह देखें, जिससे अमूर्त कानून ठोस महसूस होते हैं।",
+        "अनुच्छेद तुकबंदी: महत्वपूर्ण अनुच्छेदों के लिए छोटी कविताएँ या तुकबंदी बनाएं (जैसे 'Article 17 makes untouchability clean')।"
+      ]
+    }
+  },
+  {
+    "topic": "Inventions & Sports",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Sports Terms: 'Deuce' (Tennis/Badminton), 'Bully' (Hockey), 'Chinaman' (Cricket).",
+        "Inventions: X-Ray (Roentgen), Periodic Table (Mendeleev), Vaccination (Jenner)."
+      ],
+      "hi": [
+        "खेल शब्दावली: 'ड्यूस' (टेनिस/बैडमिंटन), 'बुली' (हॉकी), 'चाइनामैन' (क्रिकेट)।",
+        "आविष्कार: एक्स-रे (रॉन्टगन), आवर्त सारणी (मेंडलीव), टीकाकरण (जेनर)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Thinking the first Olympic Games were held in London (It was Athens, 1896).",
+        "Confusing the inventor of the Telephone (Bell) with the Radio (Marconi)."
+      ],
+      "hi": [
+        "पहले ओलंपिक खेलों का स्थान लंदन मानना (यह एथेंस, 1896 था)।",
+        "टेलीफोन के आविष्कारक (बेल) और रेडियो के (मार्कोनी) में भ्रम।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Name-Game' Mnemonic: Break the inventor's name to sound like the invention (e.g., 'Rontgen' sounds like 'Roentgen Ray' / X-Ray).",
+        "The 'Player Persona': Imagine yourself playing the sport to remember terms like 'Deuce' or 'Checkmate'. Embodied cognition improves recall.",
+        "The 'Venue Map': Visualize the world map for Olympic/Asian Games venues. Spatial memory is stronger than textual memory."
+      ],
+      "hi": [
+        "खिलाड़ी व्यक्तित्व: खेल के शब्दों को याद रखने के लिए खुद को वह खेल खेलते हुए कल्पना करें।",
+        "स्थान मानचित्र: ओलंपिक/एशियाई खेलों के स्थानों के लिए विश्व मानचित्र की कल्पना करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Physics",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Mirrors: Concave = 'Cave' (light converges); Convex = Bulge (light diverges).",
+        "Units: Work/Energy = Joule; Power = Watt; Resistance = Ohm.",
+        "Light: 'VIBGYOR' (Violet has min wavelength/max frequency; Red has max wavelength/min frequency)."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Thinking Mass changes on different planets (Only Weight changes).",
+        "Confusing Myopia (Concave lens) with Hypermetropia (Convex lens)."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'VIBGYOR' Frequency Hack: Use the rainbow spectrum to remember frequency and wavelength trends. Visualizing the colors is faster than memorizing numerical ranges.",
+        "Newtonian Physicalizing: When studying laws of motion, physically perform small gestures (like pushing a desk). Muscle memory reinforces theoretical concepts.",
+        "The 'Inertia' Metaphor: Relate inertia to laziness. The brain understands personality traits better than abstract physical properties.",
+        "Unit-Suffix Association: Attach units to everyday objects (e.g., 'A 60-Watt bulb'). Real-world association prevents 'unit-swapping' errors in exams."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Static GK",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Organizations: 'Hague' (Justice), 'Geneva' (Health/Labor), 'New York' (UNHQ), 'Vienna' (Atomic/Petroleum).",
+        "Inventions: Penicillin (Fleming), Telephone (Bell), Bulb (Edison).",
+        "Sports: Thomas Cup (Badminton), Santosh Trophy (Football), Ryder Cup (Golf)."
+      ],
+      "hi": [
+        "महत्वपूर्ण दिवस: पृथ्वी दिवस (22 April), जैव विविधता दिवस (22 May), जल दिवस (22 March)।",
+        "संगठन मुख्यालय: जिनेवा (स्वास्थ्य/श्रम), वाशिंगटन DC (पैसा - IMF/World Bank), पेरिस (UNESCO)।",
+        "पुस्तकें: 'विन्स ऑफ फायर' (APJ अब्दुल कलाम), 'माय एक्सपेरिमेंट विद ट्रुथ' (गांधीजी)।",
+        "आविष्कार: पेनिसिलिन (फ्लेमिंग), एक्स-रे (रॉन्टगन), चेचक का टीका (एडवर्ड जेनर)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Mixing up the dates of important days (e.g., Environment Day June 5 vs Earth Day April 22).",
+        "Confusing the Jnanpith Award (Literature) with the Dadasaheb Phalke (Cinema)."
+      ],
+      "hi": [
+        "नोबेल शांति पुरस्कार (ओस्लो) और बाकी नोबेल पुरस्कारों (स्टॉकहोम) के स्थान में गलती।",
+        "पुरस्कारों के क्षेत्र में भ्रम (जैसे एबल पुरस्कार गणित के लिए है, न कि शांति के लिए)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Award-Value' Link: Associate the award name with its prize or field (e.g., 'Abel = Able in Math'). Semantic links are the strongest memory anchors.",
+        "The 'Sporting Persona': Imagine you are playing the sport. Where is the trophy kept? What are the rules? First-person simulation beats reading lists.",
+        "Organization Headquarters 'City' Hack: Most Health/Labor/Trade HQ are in Geneva. Grouping by city is more efficient than grouping by organization.",
+        "Author-Subject Connection: Associate a book's title with the author's personality or profession. The brain remembers relationships better than individual names."
+      ],
+      "hi": [
+        "नाम-मैत्री: लेखक के नाम को पुस्तक के शीर्षक से जोड़कर एक मजाकिया छवि बनाएं।",
+        "आविष्कारक ध्वनि: आविष्कारक के नाम को आविष्कार की ध्वनि से जोड़ें (जैसे 'Bell' = 'Telephone की घंटी')।"
+      ]
+    }
+  },
+  {
+    "topic": "Static GK: Awards & Honors",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Order of Merit (India): Bharat Ratna > Padma Vibhushan > Padma Bhushan > Padma Shri.",
+        "Nobel Prize: Peace (Oslo), All others (Stockholm).",
+        "Gallantry: Param Vir Chakra is the highest wartime honor."
+      ],
+      "hi": [
+        "वरीयता क्रम (भारत): भारत रत्न > पद्म विभूषण > पद्म भूषण > पद्म श्री।",
+        "नोबेल पुरस्कार: शांति का पुरस्कार ओस्लो (नॉर्वे) में, बाकी सभी स्टॉकहोम (स्वीडन) में दिए जाते हैं।",
+        "वीरता पुरस्कार: परमवीर चक्र सर्वोच्च युद्धकालीन सम्मान है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing 'Pulitzer' (Journalism) with 'Pritzker' (Architecture).",
+        "Mistaking 'Bhartiya Jnanpith' as a government award (It's by a private trust)."
+      ],
+      "hi": [
+        "'पुलित्जर' (पत्रकारिता) और 'प्रित्जकर' (वास्तुकला) के बीच भ्रम।",
+        "'भारतीय ज्ञानपीठ' को सरकारी पुरस्कार मानना (यह एक निजी ट्रस्ट द्वारा दिया जाता है)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Hierarchy Visualization': Visualize awards like a ladder. Bharat Ratna at the top, followed by the three Padmas. Spatial ranking aids memory.",
+        "The 'Field Association' Link: Connect the award name to its field (e.g., 'Dronacharya' was a guru $\rightarrow$ Coach). Semantic linking is stronger than rote learning.",
+        "The 'Param Vir' Persona: Associate warlike qualities with wartime gallantry awards. Imagine the medal on a soldier's chest."
+      ],
+      "hi": [
+        "सीढ़ी विजुअलाइजेशन: पुरस्कारों को एक सीढ़ी की तरह देखें - भारत रत्न सबसे ऊपर।",
+        "क्षेत्र जुड़ाव: पुरस्कार के नाम को उसके क्षेत्र से जोड़ें (जैसे 'द्रोणाचार्य' = 'गुरु/कोच')।"
+      ]
+    }
+  },
+  {
+    "topic": "Static GK: Books & Authors",
+    "category": "gk",
+    "shortcuts": {
+      "en": [],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Name-Image' Link: Create a vivid, funny image connecting the Author's name to the Title. Humor is a strong memory adhesive.",
+        "The 'Title-Extension' Game: Add the author's name as a suffix to the title (e.g., 'Wings of Fire Kalam'). Merging them creates a single data unit."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Static GK: Important Days",
+    "category": "gk",
+    "shortcuts": {
+      "en": [
+        "Environment Trio: Earth Day (April 22), Biodiversity Day (May 22), Environment Day (June 5).",
+        "Health/Science: Science Day (Feb 28 - Raman Effect), Health Day (April 7)."
+      ],
+      "hi": [
+        "पर्यावरण तिकड़ी: पृथ्वी दिवस (22 अप्रैल), जैव विविधता दिवस (22 मई), पर्यावरण दिवस (5 जून)।",
+        "विज्ञान/स्वास्थ्य: विज्ञान दिवस (28 फरवरी - रमन प्रभाव), स्वास्थ्य दिवस (7 अप्रैल)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Mixing up 'National Youth Day' (Jan 12 - Vivekananda) with 'International Youth Day' (Aug 12)."
+      ],
+      "hi": [
+        "'राष्ट्रीय युवा दिवस' (12 जनवरी - विवेकानंद) और 'अंतर्राष्ट्रीय युवा दिवस' (12 अगस्त) में अंतर न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Cluster' Method: Group days by theme (e.g., Environment: Earth Day, Water Day, Bio-diversity Day). The brain recalls 'Themes' better than 'Dates'.",
+        "The 'Personal Date' Hook: Link important GK dates to birthdays or anniversaries of people you know. 'My friend's birthday is close to Science Day'.",
+        "The 'Story Chain': Create a story: 'The Youth (Jan 12) did Science (Feb 28) to save the Earth (Apr 22)'."
+      ],
+      "hi": [
+        "क्लस्टर विधि: दिनों को थीम के अनुसार समूहित करें (जैसे पर्यावरण दिवस, जल दिवस)।",
+        "निजी हुक: महत्वपूर्ण तारीखों को अपने दोस्तों/परिवार के जन्मदिन से जोड़ें।"
+      ]
+    }
+  },
+  {
+    "topic": "Analogy",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Priority Order: Prime Number > Square/Cube > Multiples > Addition/Subtraction.",
+        "Alphabet Analogy: Check the sum of positions; often the sum of opposite letters is 27."
+      ],
+      "hi": [
+        "प्राथमिकता क्रम (Priority): अभाज्य संख्या > वर्ग/घन > गुणा/भाग > जोड़/घटाव।",
+        "अक्षर सादृश्यता: हमेशा अक्षरों के स्थानीय मान (A=1, B=2) लिखें और उनके बीच के संबंध (+2, -3 आदि) को देखें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Choosing a weak logic (like addition) when a strong logic (like Prime numbers) is available.",
+        "Ignoring the relationship direction (e.g., Tool:Worker vs Worker:Tool)."
+      ],
+      "hi": [
+        "मजबूत तर्क (जैसे वर्ग) मौजूद होने पर भी कमजोर तर्क (जैसे जोड़) के आधार पर विकल्प चुनना।",
+        "संबंध की दिशा को उलट देना (जैसे प्रश्न 'देश:राजधानी' है तो उत्तर 'राजधानी:देश' नहीं होना चाहिए)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Priority Hierarchy' Hack: Always check for logic in this order: Prime Numbers > Squares/Cubes > Multiples > Addition. This prevents falling for simple but wrong distractors.",
+        "Relationship Labeling: Verbally name the relationship (e.g., 'Tool to Worker') before looking at options. This prevents 'option bias' where a tempting but unrelated word distracts you.",
+        "The Directionality Check: Ensure the link is $A \rightarrow B$ and not $B \rightarrow A$. The brain often overlooks the order of the relationship under time pressure.",
+        "Bridging Sentence: Create a simple sentence like 'A is the capital of B'. Apply it to options. If the sentence doesn't fit perfectly, discard the option immediately."
+      ],
+      "hi": [
+        "प्राथमिकता पदानुक्रम (Priority Hierarchy): तर्क की जांच हमेशा इस क्रम में करें: अभाज्य संख्या > वर्ग/घन > गुणज > जोड़। यह आपको सरल लेकिन गलत विकल्पों से बचाता है।",
+        "संबंध लेबलिंग (Relationship Labeling): विकल्पों को देखने से पहले संबंध का नाम मन में बोलें (जैसे 'उपकरण से कार्यकर्ता')। यह आपको भटकाने वाले शब्दों से बचाता है।",
+        "दिशात्मक जांच: सुनिश्चित करें कि संबंध $A \rightarrow B$ है न कि $B \rightarrow A$। तनाव में मस्तिष्क अक्सर क्रम को अनदेखा कर देता है।",
+        "ब्रिजिंग वाक्य: 'A, B की राजधानी है' जैसा एक सरल वाक्य बनाएं और उसे विकल्पों पर लागू करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Blood Relations",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Generation Gap: Use '+1' for parents, '0' for siblings, '-1' for children. Sum them up in coded relations.",
+        "Gender Filter: If the question asks for 'A is the uncle of B', immediately eliminate options where A is female."
+      ],
+      "hi": [
+        "फैमिली ट्री आरेख: पुरुष (+), महिला (-), भाई-बहन (---), विवाहित जोड़ा (=)।",
+        "कोडेड ब्लड रिलेशन: हमेशा समीकरण के अंत से शुरू करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Assuming gender based on a name (e.g., 'Sonu' could be male or female).",
+        "Confusing 'Only son' with 'Only child'."
+      ],
+      "hi": [
+        "नाम के आधार पर लिंग मान लेना (जैसे 'किरण' को पुरुष मानना जब तक बताया न गया हो)।",
+        "पीढ़ी के अंतर (Generation Gap) को आरेख में गलत दिखाना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Self-Reference' Method: Replace the person in the question with yourself. Thinking 'My father's sister' is faster than 'B's father's sister'.",
+        "Gender-Neutral Guardrail: Never assume gender based on a name (e.g., 'Kiran' or 'Sonu'). This 'Name Bias' is a trap; only trust explicit gender clues like 'he' or 'mother'.",
+        "The 'Family Tree' Symbols: Use $+/-$ for male/female and $=$ for marriage. A standardized visual shorthand prevents 'memory decay' during long questions.",
+        "Backward Solving: For coded relations ($A+B-C$), solve from right to left. It’s more intuitive to see who $C$ is to $B$ than vice versa."
+      ],
+      "hi": [
+        "स्व-संदर्भ विधि: प्रश्न के व्यक्ति को खुद से बदलें। 'मेरे पिता की बहन' सोचना 'B के पिता की बहन' से 40% तेज होता है।",
+        "लिंग-तटस्थ सुरक्षा: नाम (जैसे 'किरण' या 'सोनू') से कभी लिंग न मानें। केवल 'वह' या 'माता' जैसे स्पष्ट सुरागों पर भरोसा करें।",
+        "फैमिली ट्री चिन्ह: पुरुष के लिए (+), महिला के लिए (-) और शादी के लिए (=) का उपयोग करें। यह लंबे सवालों में भ्रम को रोकता है।",
+        "पीछे से समाधान: कोडेड संबंधों ($A+B-C$) के लिए दाएं से बाएं हल करें। यह अधिक सहज होता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Classification (Odd One Out)",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Group properties: 3 options will follow a strict rule (e.g., all are Capital cities or all are divisible by 7).",
+        "In Alphabet sets, check the gaps between letters (e.g., +2, +2, +2).",
+        "Prime Rule: Check if three numbers are Prime and one is Composite.",
+        "Semantic Mapping: In word sets, look for 'Part-to-Whole' relationships (e.g., Wheel, Engine, Steering are parts of a Car).",
+        "Digital Sum: If numbers are large, check if the sum of digits is the same for three options."
+      ],
+      "hi": [
+        "संख्या समूह: देखें कि क्या 3 विकल्प अभाज्य हैं या किसी विशेष संख्या के गुणज हैं।",
+        "शब्द वर्गीकरण: समान गुणों (जैसे 3 धातुएं हैं, 1 अधातु) की पहचान करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Picking an option because it 'feels' different without finding a common rule for the other three.",
+        "Missing properties like 'Vowels vs Consonants' in alphabet groups.",
+        "Choosing an answer based on a logic that only applies to one option (You must find a rule that applies to the other THREE)."
+      ],
+      "hi": [
+        "बिना किसी ठोस तर्क के केवल 'अलग दिखने' वाले विकल्प को चुनना।",
+        "बाकी 3 विकल्पों के बीच एक साझा नियम (Common Rule) न ढूँढ पाना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Three-Common' Rule: Focus on finding what makes 3 options identical rather than why 1 is different. It’s easier to build a group than to isolate a lone wolf.",
+        "Attribute Filtering: Scan for broad categories first (e.g., All are mammals, one is a bird) before diving into complex mathematical properties.",
+        "Number Property Check: For number sets, check for 'Sum of Digits' immediately. The brain often misses internal digit logic while looking for external multiples.",
+        "Visual Symmetry: For non-verbal classification, look for 'Rotation vs. Reflection'. The brain often confuses the two; verify the clockwise/anti-clockwise flow."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Classification (वर्गीकरण/विषम चुनें)",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [],
+      "hi": [
+        "तीन-समान नियम: इस पर ध्यान दें कि 3 विकल्प समान क्यों हैं, न कि इस पर कि 1 अलग क्यों है। समूह बनाना आसान होता है।",
+        "श्रेणी फ़िल्टरिंग: जटिल गणितीय गुणों से पहले व्यापक श्रेणियों (जैसे: सभी स्तनधारी हैं, एक पक्षी है) की जांच करें।",
+        "अंक गुण जांच: संख्याओं के लिए तुरंत 'अंकों के योग' की जांच करें। मस्तिष्क अक्सर बाहरी गुणजों को देखते समय आंतरिक तर्क भूल जाता है।",
+        "दृश्य समरूपता: गैर-मौखिक वर्गीकरण के लिए 'घूर्णन (Rotation) बनाम प्रतिबिंब' को देखें। मस्तिष्क अक्सर इनमें भ्रमित होता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Clock & Calendar",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Clock Angle: $\\theta = |30H - (11/2)M|$.",
+        "Mirror Time: Subtract given time from 11:60 to get the mirror image time.",
+        "Calendar: 100 years have 5 odd days; 400 years have 0 odd days."
+      ],
+      "hi": [
+        "घड़ी का कोण: $\\theta = |30H - (11/2)M|$।",
+        "अतिरिक्त दिन (Odd Days): कुल दिनों को 7 से भाग देने पर जो शेष बचे।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Counting 2100, 1900, or 1800 as leap years (they are not).",
+        "Ignoring the fact that the hour hand moves $0.5^\\circ$ per minute."
+      ],
+      "hi": [
+        "1900, 2100 को लीप वर्ष मानना (शताब्दी वर्ष 400 से विभाज्य होना चाहिए)।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The '11/2' Angle Formula: Use $\theta = |30H - (11/2)M|$. It’s a reliable 'math-shield' that prevents errors caused by trying to visualize hand positions.",
+        "Odd Days Method: For calendars, only care about the remainder when dividing by 7. Treating 'January' as '3 odd days' is easier than '31 days'.",
+        "The 'Leap Century' Trap: Remember that 1900, 2100 are *not* leap years, but 2000 is. The brain assumes all '00' years are leap; this is a common examiner trap.",
+        "Mirror Image Shortcut: For time in a mirror, subtract the given time from 11:60. It’s a faster 'Optical Correction' than mental rotation."
+      ],
+      "hi": [
+        "11/2 एंगल फॉर्मूला: $\theta = |30H - (11/2)M|$ का उपयोग करें। यह सुइयों की स्थिति विजुअलाइज करने की गलती से बचाता है।",
+        "विषम दिन विधि: कैलेंडर के लिए केवल 7 से भाग देने पर बचे शेषफल पर ध्यान दें। 'जनवरी' को '31 दिन' के बजाय '3 विषम दिन' मानना आसान है।",
+        "लीप सेंचुरी ट्रैप: याद रखें कि 1900, 2100 लीप वर्ष नहीं हैं, लेकिन 2000 है। मस्तिष्क सभी '00' वर्षों को लीप मान लेता है।",
+        "दर्पण छवि शॉर्टकट: घड़ी के समय को दर्पण में देखने के लिए उसे 11:60 से घटाएं। यह मानसिक रोटेशन से तेज है।"
+      ]
+    }
+  },
+  {
+    "topic": "Coding-Decoding",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Opposite Pairs: Use 'AZ-BY-CX' (A is opposite Z, B is opposite Y). Sum is always 27.",
+        "Chinese Coding (Message Coding): Compare two sentences. The word common in both sentences corresponds to the code common in both.",
+        "Matrix Coding: Always check options from the last digit to the first for faster elimination."
+      ],
+      "hi": [
+        "विपरीत अक्षर (Opposite Letters): याद रखने के लिए 'AZAD', 'BYE', 'CRUX', 'DEW' जैसी ट्रिक्स का उपयोग करें।",
+        "EJOTY: 5, 10, 15, 20, 25 के स्थान याद रखने के लिए सबसे तेज तरीका।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Mixing up +1/-1 shifts when moving from the end of the alphabet (Z to A).",
+        "Overlooking 'Vowel-only' coding rules."
+      ],
+      "hi": [
+        "केवल पहले अक्षर के आधार पर कोड चुन लेना; अक्सर बीच के अक्षरों में अलग नियम होता है।",
+        "स्वरों (Vowels) और व्यंजनों (Consonants) के लिए अलग कोडिंग नियमों को न पहचानना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "EJOTY Mental Priming: Recite 5-10-15-20-25 (E-J-O-T-Y) before starting. It reduces the cognitive lag of counting alphabet positions from the start.",
+        "The 'Reverse-27' Rule: To find an opposite letter, subtract its position from 27. It’s faster for the brain than visualizing the alphabet backwards.",
+        "Pattern Chunking: Don't decode the whole word. Check the first, last, and middle letters. Often, the brain recognizes the shift pattern ($+2, -1$) without needing to solve all letters.",
+        "Vowel vs. Consonant Audit: If the logic seems broken, look specifically for vowel changes. The brain naturally treats all letters the same, but examiners often code them differently."
+      ],
+      "hi": [
+        "EJOTY मेंटल प्राइमिंग: शुरू करने से पहले 5-10-15-20-25 (E-J-O-T-Y) दोहराएं। यह वर्णमाला के स्थान गिनने के समय को कम करता है।",
+        "रिवर्स-27 नियम: विपरीत अक्षर खोजने के लिए उसके स्थान को 27 से घटाएं। यह वर्णमाला को पीछे से देखने की तुलना में बहुत तेज है।",
+        "पैटर्न चंकिंग: पूरे शब्द को डिकोड न करें; केवल पहले, अंतिम और मध्य अक्षरों की जांच करें। अक्सर मस्तिष्क पूरे को हल किए बिना पैटर्न पहचान लेता है।",
+        "स्वर बनाम व्यंजन ऑडिट: यदि तर्क समझ न आए, तो विशेष रूप से स्वरों के बदलाव को देखें। परीक्षक अक्सर इन्हें अलग तरह से कोड करते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Data Sufficiency",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Don't Solve Fully: Just check if the data *can* lead to a unique answer. If you find two possible answers, the data is insufficient.",
+        "Check statements independently before combining them."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Combining both statements before checking if Statement 1 alone is enough."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'No-Solve' Rule: Don't calculate the final answer. Just check if a unique answer is *possible*. Solving wastes mental RAM.",
+        "The 'Individual Test': Always check Statement I alone, then Statement II alone, BEFORE checking them together. This prevents 'Confirmation Bias'.",
+        "The 'Unique Value' Trap: If Statement I gives two possible values (e.g., 5 or 7), it is NOT sufficient. Sufficiency demands uniqueness."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Dice & Cubes",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "निकटवर्ती फलक का नियम: जो सतह किसी संख्या के पास है, वह कभी उसके विपरीत नहीं हो सकती।",
+        "दो उभयनिष्ठ फलक (Common Face): यदि दो पासों में दो संख्याएं समान हैं, तो बची हुई तीसरी संख्याएं एक-दूसरे के विपरीत होंगी।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "सामान्य पासा और मानक पासा (Standard Dice) के बीच अंतर न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Adjacent is Never Opposite' Rule: If you see two numbers on the same view of a dice, they cannot be opposite. Use elimination to find the missing face.",
+        "The 'One Common Face' Rotation: If two dice have one common face, rotate both clockwise from that face. The numbers you see in order will be opposite each other.",
+        "The 'Z-Method' for Open Dice: On a flat dice layout, faces in a 'Z' pattern (skipping one box) are always opposite. It’s a spatial shortcut for the brain.",
+        "Color/Symbol Tagging: For cubes with symbols, focus on the 'unique' symbol. The brain tracks rare patterns better than common ones."
+      ],
+      "hi": [
+        "निकटवर्ती कभी विपरीत नहीं: यदि आप पासे के एक दृश्य में दो नंबर देखते हैं, तो वे विपरीत नहीं हो सकते। एलिमिनेशन का उपयोग करें।",
+        "एक सामान्य फलक घूर्णन: यदि दो पासों में एक फलक सामान्य है, तो वहां से घड़ी की दिशा में घूमें। जो नंबर क्रम में आएंगे वे एक-दूसरे के विपरीत होंगे।",
+        "खुले पासे के लिए Z-विधि: फ्लैट लेआउट पर, 'Z' पैटर्न में आने वाले फलक (एक बॉक्स छोड़कर) हमेशा विपरीत होते हैं।",
+        "प्रतीक टैगिंग: प्रतीकों वाले घन के लिए 'अद्वितीय' प्रतीक पर ध्यान दें। मस्तिष्क दुर्लभ पैटर्न को बेहतर ट्रैक करता है।",
+        "निकटवर्ती कभी विपरीत नहीं: यदि आप पासे के एक दृश्य में दो नंबर देखते हैं, तो वे कभी एक-दूसरे के विपरीत नहीं हो सकते।",
+        "एक सामान्य फलक घूर्णन: यदि दो पासों में एक फलक सामान्य है, तो वहां से घड़ी की दिशा में घूमें। आने वाले नंबर विपरीत होंगे।",
+        "खुले पासे के लिए Z-विधि: फ्लैट लेआउट पर, 'Z' पैटर्न में आने वाले फलक हमेशा विपरीत होते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Direction & Distance",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "The 'N-E-S-W' Clockwise Rule: Always map directions in this clockwise order to avoid confusion.",
+        "Shadow Trick: At 12:00 Noon, there is no shadow. At Morning, shadow is always to the West."
+      ],
+      "hi": [
+        "NESW नियम: उत्तर-पूर्व-दक्षिण-पश्चिम क्रम को घड़ी की दिशा में याद रखें।",
+        "न्यूनतम दूरी: हमेशा $\\sqrt{लंब^2 + आधार^2}$ (पाइथागोरस) का उपयोग करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Forgetting that a 'Left Turn' while facing South is actually a move toward the East.",
+        "Calculating displacement as $A+B$ instead of $\\sqrt{A^2 + B^2}$."
+      ],
+      "hi": [
+        "बाएं/दाएं मुड़ने में गलती करना, खासकर जब व्यक्ति दक्षिण या पश्चिम की ओर देख रहा हो।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'NESW' Clockwise Anchor: Visualize North, East, South, West in a clockwise circle. It prevents the 'Left/Right confusion' when facing South.",
+        "Pythagorean Triplets: Memorize (3,4,5), (5,12,13), and (8,15,17). Recognizing these prevents the mental fatigue of square-root calculations.",
+        "Shadow Logic: Remember 'Sunrise = Shadow West' and 'Sunset = Shadow East'. Use the sun as a fixed 'Anchor Point' for all direction questions.",
+        "Starting Point Focus: Always mark your starting point clearly. The most common error is giving the direction of the 'Start from End' instead of 'End from Start'."
+      ],
+      "hi": [
+        "NESW क्लॉकवाइज एंकर: उत्तर-पूर्व-दक्षिण-पश्चिम को घड़ी की दिशा में विजुअलाइज करें। यह दक्षिण की ओर देखते समय दाएं/बाएं के भ्रम को रोकता है।",
+        "पाइथागोरस ट्रिपलेट्स: (3,4,5), (5,12,13), और (8,15,17) याद रखें। यह वर्गमूल गणना की थकान को कम करता है।",
+        "छाया तर्क: याद रखें 'सूर्योदय = छाया पश्चिम' और 'सूर्यास्त = छाया पूर्व'। सूरज को एक स्थिर 'एंकर पॉइंट' की तरह उपयोग करें।",
+        "प्रारंभिक बिंदु फोकस: हमेशा शुरुआती बिंदु को स्पष्ट रूप से चिन्हित करें। सबसे आम गलती 'अंत से शुरुआत' की दिशा बताना है।"
+      ]
+    }
+  },
+  {
+    "topic": "Embedded Figures",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Focus on the 'Skeleton': Look for specific angles or unique intersections in the small figure.",
+        "Rotation: Unless the question says 'Rotation not allowed,' check for the figure in different orientations."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Picking a figure that 'looks similar' but has different proportions."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Feature Hunt': Pick a unique corner or 'T-junction' in the small figure and scan ONLY for that feature in the big figures.",
+        "Orientation Check: First look for the figure in the same orientation. Only rotate if no match is found (unless forbidden).",
+        "Negative Space: Sometimes looking at the empty space *around* the lines helps identify the shape faster than looking at the lines themselves."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Inequality",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Open Gate Rule: $A > B$ means the gate is open from A to B. You can only travel in the direction of the opening.",
+        "Common Sign: For a conclusion $A > C$ to be true, every sign between A and C must have at least one '$>$'."
+      ],
+      "hi": [
+        "गेट मेथड: यदि चिन्ह '>' है, तो आप बाएं से दाएं जा सकते हैं। यदि '<' है, तो रास्ता बंद है।",
+        "प्राथमिकता: '>' हमेशा '$\\geq$' से बड़ा होता है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Missing 'Either-Or' cases when the relationship is $\\geq$ but the conclusions are separate '$>$' and '$=$'."
+      ],
+      "hi": [
+        "विपरीत चिन्ह (जैसे $A > B < C$) होने पर भी संबंध निकालने की कोशिश करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Gate Method': Think of '>' as an open gate. You can move from left to right. If you hit a '<' (closed gate), the path is broken and the relationship is 'No Relation'.",
+        "Priority of Signs: $>$ is the King, $\\geq$ is the Soldier, $=$ is the Public. If a King is in the path, the result must be a King ($>$).",
+        "Common Element Bridge: To connect $A > B$ and $C < B$, find the common letter ($B$). Mentally join them at that bridge ($A > B > C$) to see the full path.",
+        "Either-Or Check: If a path is broken but the subject/predicate are the same and all three signs ($>, <, =$) are covered, it’s an 'Either-Or' case."
+      ],
+      "hi": [
+        "गेट मेथड: '>' को एक खुले गेट की तरह सोचें। आप बाएं से दाएं जा सकते हैं। यदि आप '<' (बंद गेट) से टकराते हैं, तो पथ टूट जाता है।",
+        "चिन्हों की प्राथमिकता: $>$ राजा है, $\\geq$ सैनिक है, $=$ जनता है। यदि पथ में राजा है, तो परिणाम राजा ($>$) ही होना चाहिए।",
+        "कॉमन एलिमेंट ब्रिज: $A > B$ और $C < B$ को जोड़ने के लिए कॉमन अक्षर ($B$) ढूंढें। उन्हें उस ब्रिज पर जोड़ें ($A > B > C$)।",
+        "Either-Or चेक: यदि पथ टूटा है लेकिन विषय/विधेय समान हैं और तीनों चिन्ह ($>, <, =$) कवर हैं, तो यह 'Either-Or' केस है।",
+        "गेट मेथड: '>' को एक खुले गेट की तरह सोचें। यदि आप '<' (बंद गेट) से टकराते हैं, तो पथ टूट जाता है।",
+        "चिन्हों की प्राथमिकता: '>' को 'राजा' और '>=' को 'सैनिक' मानें। यदि पथ में राजा है, तो परिणाम राजा ही होगा।",
+        "कॉमन एलिमेंट ब्रिज: दो अलग समीकरणों को जोड़ने के लिए उनके साझा अक्षर (Common Letter) को पुल की तरह इस्तेमाल करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Mathematical Operations",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "BODMAS: Always use the 'Division' sign as the primary filter to eliminate options (e.g., if 7 cannot be divided by 3, that option is likely wrong).",
+        "Substitute only the signs that change the result significantly."
+      ],
+      "hi": [
+        "BODMAS का नियम: हमेशा भाग (/) के चिन्ह को पहले देखें, यह अक्सर विकल्पों को जल्दी हटाने में मदद करता है।",
+        "चिन्ह प्रतिस्थापन: यदि '+' का अर्थ 'x' है, तो समीकरण को हल करने से पहले नए चिन्हों को रफ शीट पर लिखें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Calculation errors due to skipping the 'Bracket' or 'Of' step.",
+        "Forgetting to rewrite the new signs before solving."
+      ],
+      "hi": [
+        "BODMAS के क्रम को तोड़ना (जैसे भाग से पहले गुणा करना)।",
+        "कोष्ठक (Brackets) को हल करना भूल जाना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Division First' Strategy: When swapping signs, look at the 'Division' sign first. If the new division results in a decimal, that option is likely wrong.",
+        "BODMAS Rhythm: Recite the order like a chant. Under pressure, the brain skips 'Division' for 'Multiplication'; the rhythm keeps the sequence locked.",
+        "Substitution Table: Quickly write the new meanings (e.g., $+\rightarrow -$) in a small table. Relying on mental substitution is the #1 cause of 'Sign-Swap' errors.",
+        "Option Filtering: Start testing options from (D) to (A). Examiners often place the correct sign-swap at the end to waste the candidate's time."
+      ],
+      "hi": [
+        "विभाजन प्रथम रणनीति: चिन्ह बदलते समय 'भाग' के चिन्ह को पहले देखें। यदि नया भाग दशमलव देता है, तो वह विकल्प गलत होने की संभावना है।",
+        "BODMAS रिदम: क्रम को एक मंत्र की तरह दोहराएं। दबाव में मस्तिष्क भाग के ऊपर गुणा को चुन सकता है; लय इसे सुरक्षित रखती।",
+        "प्रतिस्थापन तालिका: नए अर्थों को तुरंत रफ शीट पर एक छोटी टेबल में लिखें। मानसिक प्रतिस्थापन 'चिन्ह-अदला-बदली' की गलतियों का प्रमुख कारण है।",
+        "विकल्प फ़िल्टरिंग: विकल्पों का परीक्षण (D) से (A) की ओर करें। परीक्षक अक्सर समय बर्बाद करने के लिए सही विकल्प अंत में रखते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Mirror & Water Images",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Mirror (Vertical): Lateral inversion (Left becomes Right).",
+        "Water (Horizontal): Vertical inversion (Top becomes Bottom).",
+        "Check the 'Non-Symmetrical' letters first (like P, Q, G, J) to eliminate options."
+      ],
+      "hi": [
+        "दर्पण (Mirror): बायां-दायां बदलता है, ऊपर-नीचे स्थिर रहता है।",
+        "जल (Water): ऊपर-नीचे बदलता है, बायां-दायां स्थिर रहता है।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Confusing water image with mirror image when the mirror is placed at the bottom."
+      ],
+      "hi": [
+        "दिए गए अक्षरों के केवल विन्यास को बदलना और उनकी आकृति को न पलटना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "Mirror: Left-Right Swap. Water: Top-Bottom Swap. Recite this 'Orientation Rule' before every question to prevent mixing them up.",
+        "Point-to-Point Mapping: Pick a unique corner or dot in the image and track its new position. Mapping one 'anchor point' is easier than rotating the whole image.",
+        "Alphabet Orientation: Memorize which letters look the same (e.g., H, I, O, X in mirror). Recognizing 'Invariants' lets you eliminate wrong options instantly.",
+        "The 'Closer is Closer' Rule: In a mirror, the part of the object closer to the mirror remains closer in the image. This 'Proximity Logic' beats mental rotation."
+      ],
+      "hi": [
+        "ओरिएंटेशन नियम: दर्पण = बाएं-दाएं अदला-बदली। जल = ऊपर-नीचे अदला-बदली। शुरू करने से पहले इसे दोहराएं।",
+        "पॉइंट-टू-पॉइंट मैपिंग: छवि में एक अद्वितीय कोने या बिंदु को चुनें और उसकी नई स्थिति को ट्रैक करें। एक 'एंकर पॉइंट' को मैप करना आसान है।",
+        "अक्षर स्थिरता: उन अक्षरों को याद रखें जो दर्पण में समान दिखते हैं (जैसे H, I, O, X)। ये विकल्पों को तुरंत हटाने में मदद करते हैं।",
+        "निकटता का तर्क: दर्पण में वस्तु का जो हिस्सा दर्पण के करीब है, वह छवि में भी करीब रहता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Missing Number",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Matrix Logic: Usually, the largest number in a row or column is the 'Result' of the smaller numbers.",
+        "Check common operations: $(A \\times B) + C$ or $A^2 + B^2$."
+      ],
+      "hi": [
+        "मैट्रिक्स लॉजिक: आमतौर पर सबसे बड़ी संख्या परिणाम (Result) होती है; उसे छोटे अंकों से बनाने की कोशिश करें।",
+        "विकर्ण (Diagonal) और आमने-सामने के संबंधों की जाँच करें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Applying a logic that works for the first row but fails for the second.",
+        "Spending more than 60 seconds on one puzzle. These are 'time-vampires'—skip if not solved instantly."
+      ],
+      "hi": [
+        "एक ही लॉजिक पर अटक जाना। यदि 60 सेकंड में हल न हो, तो उसे छोड़कर आगे बढ़ें।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Resultant Digit' Focus: In a matrix, the largest number is usually the result. Focus your cognitive energy on how the smaller numbers 'build' that large one.",
+        "Row vs. Column Scan: If a row doesn't work in 10 seconds, switch to column logic. The 'Sunk Cost Fallacy' makes us waste time on a row that was never meant to be solved.",
+        "Corner Logic: In circular or box puzzles, check opposite corners first. The brain prefers adjacent logic, so examiners hide the answer in cross-logic.",
+        "Arithmetic Balance: Check if the sum of all rows/columns is constant. It’s a common 'hidden in plain sight' trick that skips complex math."
+      ],
+      "hi": [
+        "परिणामी अंक फोकस: मैट्रिक्स में सबसे बड़ी संख्या आमतौर पर परिणाम होती है। अपनी ऊर्जा इस पर लगाएं कि छोटी संख्याएं मिलकर उसे कैसे बना रही हैं।",
+        "पंक्ति बनाम कॉलम स्कैन: यदि पंक्ति 10 सेकंड में हल न हो, तो तुरंत कॉलम पर स्विच करें। एक ही तर्क पर समय बर्बाद न करें।",
+        "कॉर्नर लॉजिक: गोलाकार या बॉक्स पहेली में आमने-सामने के कोनों को पहले देखें। मस्तिष्क आस-पास के तर्क को प्राथमिकता देता है, इसलिए परीक्षक क्रॉस-लॉजिक छिपाते हैं।",
+        "अंकगणितीय संतुलन: जांचें कि क्या सभी पंक्तियों/कॉलमों का योग स्थिर है। यह 'सादा और सरल' तर्क अक्सर कठिन गणनाओं के पीछे छिपा होता।"
+      ]
+    }
+  },
+  {
+    "topic": "Paper Cutting & Folding",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Mirror Image Logic: The fold line acts as a mirror. If you cut a shape on the left, it will appear reflected on the right.",
+        "Work Backwards: Start from the last fold and unfold it step-by-step.",
+        "Count the Layers: If paper is folded 3 times, a single hole becomes $2^3 = 8$ holes."
+      ],
+      "hi": [
+        "दर्पण नियम: कागज के हर मोड़ (Fold) को एक दर्पण मानें। जब आप कागज खोलेंगे, तो आकृति उस मोड़ के सापेक्ष प्रतिबिंबित होगी।",
+        "छेद (Holes) गिनें: यदि कागज 2 बार मोड़ा गया है, तो 1 कट खोलने पर 4 कट बन जाएगा।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Changing the orientation of the cut incorrectly during unfolding.",
+        "Ignoring the number of layers (if folded twice, one cut becomes four).",
+        "Misplacing the orientation of the cut (e.g., a triangle pointing up might point down when unfolded)."
+      ],
+      "hi": [
+        "आकृति के ओरिएंटेशन (दिशा) को गलत समझना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Mirror-Fold' Rule: Every fold is a mirror. When the paper is unfolded, the cut is reflected across that fold line. Visualize the 'Reflection', not the 'Paper'.",
+        "Hole Count Multiplier: If you fold a paper twice (4 layers) and make 1 cut, you must have 4 holes. Checking the 'Hole Count' first eliminates 70% of wrong options.",
+        "The 'Last-to-First' Strategy: Mentally unfold the paper in the exact reverse order of how it was folded. The 'Reverse Path' is the most logical one for the brain.",
+        "Corner Tracing: Focus only on what happens to the corners. The center of the paper rarely changes, but the corners move significantly."
+      ],
+      "hi": [
+        "मिरर-फोल्ड नियम: प्रत्येक मोड़ एक दर्पण है। जब कागज खोला जाता है, तो कट उस मोड़ रेखा के सापेक्ष प्रतिबिंबित होता है।",
+        "होल काउंट मल्टीप्लायर: यदि आप कागज को दो बार मोड़ते हैं (4 परतें) और 1 कट लगाते हैं, तो 4 छेद होने चाहिए। छेदों की गिनती 70% गलत विकल्प हटा देती है।",
+        "अंतिम-से-प्रथम रणनीति: कागज को मोड़ने के बिल्कुल उल्टे क्रम में खोलने की कल्पना करें। 'विपरीत पथ' सबसे तार्किक है।",
+        "कॉर्नर ट्रेसिंग: केवल यह देखें कि कोनों का क्या होता है। कागज का मध्य शायद ही कभी बदलता है, लेकिन कोने महत्वपूर्ण रूप से हिलते हैं।",
+        "मिरर-फोल्ड नियम: प्रत्येक मोड़ को एक दर्पण मानें। कागज खोलने पर कट उस मोड़ रेखा के सापेक्ष प्रतिबिंबित होता है।",
+        "होल काउंट मल्टीप्लायर: यदि कागज 2 बार मोड़ा गया है (4 परतें), तो 1 कट खोलने पर 4 छेद होने चाहिए।",
+        "विपरीत पथ रणनीति: कागज को मोड़ने के बिल्कुल उल्टे क्रम में खोलने की कल्पना करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Puzzles",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Elimination Table: Create a grid. Use 'X' for negative info and 'Check' for positive info.",
+        "Linkage: Find a person or object that is mentioned in multiple clues to start the chain."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Trying to solve everything mentally without a rough diagram.",
+        "Mixing up 'Not' conditions (e.g., 'A is not a Doctor' doesn't mean A is a Lawyer)."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Grid Elimination' Method: Use a Tick/Cross table. The brain handles 'Negative Evidence' (A is not B) better when it is visually crossed out.",
+        "The Certainty Filter: Scan the whole puzzle for words like 'Only', 'Exactly', or 'At the ends'. These are 'Anchor Clues' that reduce complexity immediately.",
+        "Chunking Information: Group related clues together (e.g., all clues about 'Time' or all clues about 'Color') before trying to place them in the puzzle.",
+        "The 'Placeholder' Technique: If a clue is 'A is older than B', draw $A > B$ on the side. Don't try to fit it in the final puzzle until you have more links."
+      ],
+      "hi": [
+        "ग्रिड एलिमिनेशन: टिक/क्रॉस टेबल का उपयोग करें। मस्तिष्क 'नकारात्मक सबूतों' (A, B नहीं है) को भौतिक रूप से काटने पर बेहतर प्रोसेस करता है।",
+        "निश्चितता फ़िल्टर: पूरी पहेली में 'केवल', 'बिल्कुल' या 'छोर पर' जैसे शब्दों को खोजें। ये जटिलता को तुरंत कम करने वाले 'एंकर सुराग' हैं।",
+        "सूचना चंकिंग: संबंधित सुरागों (जैसे समय या रंग वाले सभी सुराग) को एक साथ समूहबद्ध करें।",
+        "प्लेसहोल्डर तकनीक: यदि सुराग 'A, B से बड़ा है' है, तो किनारे पर $A > B$ लिखें। जब तक अधिक लिंक न मिलें, मुख्य पहेली में फिट न करें।"
+      ]
+    }
+  },
+  {
+    "topic": "Ranking & Order",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Total Person Formula: $Total = (Rank\\ from\\ Left + Rank\\ from\\ Right) - 1$.",
+        "Interchange position: If A and B swap, the increase in A's rank is equal to the increase in B's rank."
+      ],
+      "hi": [
+        "कुल व्यक्ति = (बाएं से स्थान + दाएं से स्थान) - 1।",
+        "स्थान परिवर्तन: यदि A और B स्थान बदलते हैं, तो उनके रैंक में बदलाव का अंतर समान होगा।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Forgetting to subtract 1 in the total formula (you counted the same person twice).",
+        "Confusing 'Rank from top' with 'Number of people ahead'."
+      ],
+      "hi": [
+        "कुल संख्या निकालते समय '- 1' करना भूल जाना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Plus-Minus One' Rule: Total = (Left + Right - 1). The brain tends to double-count the person; the '-1' is a necessary cognitive correction.",
+        "Middle-Man Logic: To find people between $X$ and $Y$, use $|Rank Difference| - 1$. The brain struggles with 'gaps'; this formula handles the boundary logic for you.",
+        "The 'Interchange' Shortcut: If two people swap places, the change in rank for person A is exactly equal to the change in rank for person B.",
+        "Extreme Point Visualization: Draw a line and place 'End' and 'Start' markers. Visualizing the 'ends' prevents the brain from losing track in relative ranking."
+      ],
+      "hi": [
+        "प्लस-माइनस वन नियम: कुल = (बाएं + दाएं - 1)। मस्तिष्क व्यक्ति को दो बार गिनने की प्रवृत्ति रखता है; '-1' उसे सही करता है।",
+        "मिडल-मैन लॉजिक: X और Y के बीच के लोग = |रैंक अंतर| - 1। मस्तिष्क 'अंतरालों' के साथ संघर्ष करता है; यह सूत्र सीमा तर्क को संभाल लेता है।",
+        "इंटरचेंज शॉर्टकट: यदि दो लोग स्थान बदलते हैं, तो व्यक्ति A की रैंक में बदलाव व्यक्ति B की रैंक में बदलाव के बिल्कुल बराबर होगा।",
+        "अंतिम बिंदु विजुअलाइजेशन: एक रेखा खींचें और 'शुरुआत' और 'अंत' को चिन्हित करें। यह सापेक्ष रैंकिंग में ट्रैक खोने से बचाता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Series (Number & Alphabet)",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Step Method: If the series grows slowly, find the difference between terms. If it grows fast, it's multiplication.",
+        "Check for 'Double Series' where two patterns run alternately (1st, 3rd, 5th term...).",
+        "Difference of Difference: If a series is $2, 5, 10, 17$, the first differences are $3, 5, 7$ (an AP), making the next difference 9.",
+        "Alternate Series: If the numbers go up and then down, check terms 1, 3, 5 and 2, 4, 6 separately."
+      ],
+      "hi": [
+        "अंतर विधि (Step Method): यदि संख्याएं धीरे बढ़ रही हैं, तो पदों के बीच का अंतर निकालें।",
+        "मिश्रित श्रृंखला: एक साथ चल रही दो अलग-अलग सीरीज (1st, 3rd, 5th पद...) को देखें।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Focusing only on the immediate next term instead of looking at the overall trend.",
+        "Missing 'Square - 1' or 'Cube + 1' patterns.",
+        "Missing 'Fibonacci' patterns where the next term is the sum of the previous two."
+      ],
+      "hi": [
+        "केवल अगली संख्या देखना; पूरी सीरीज के पैटर्न को न समझना।",
+        "वर्ग/घन के आस-पास की संख्याओं (जैसे $x^2-1$ या $x^3+1$) को न पहचानना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Step-Difference' Hack: If numbers increase slowly, subtract adjacent terms. If the second-level difference is constant, your brain will see the 'rhythm' of the growth.",
+        "Alternating Series Visualization: Color-code odd and even positions mentally. The brain struggles with two patterns in one line; separating them makes it two simple series.",
+        "Growth Rate Analysis: Rapid growth usually means multiplication or cubes. Slow growth is addition. Identifying the 'Speed of Growth' first narrows down the operations.",
+        "N-Squared +/- Constants: Always look for numbers near squares (e.g., 24, 26, 35, 37). The brain loves round squares; examiners love the numbers right next to them."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Series (श्रृंखला - संख्या और वर्णमाला)",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [],
+      "hi": [
+        "स्टेप-डिफरेंस हैक: यदि संख्याएं धीरे बढ़ती हैं, तो अंतर निकालें। दूसरे स्तर के अंतर में आपको श्रृंखला की 'लय' मिल जाएगी।",
+        "वैकल्पिक श्रृंखला विजुअलाइजेशन: विषम और सम स्थानों को अलग-अलग पैटर्न के रूप में देखें। दो अलग सीरीज को एक साथ देखना आसान होता है।",
+        "विकास दर विश्लेषण: तेज बढ़त का मतलब गुणा या घन है, धीमी बढ़त का मतलब जोड़ है। 'बढ़ने की गति' पहचानना ऑपरेशन को सीमित कर देता है।",
+        "N-वर्ग +/- स्थिरांक: हमेशा वर्ग के पास की संख्याओं (जैसे 24, 26, 35, 37) को देखें। परीक्षक इन्हें छिपाना पसंद करते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Sitting Arrangement",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "निश्चित जानकारी से शुरू करें।",
+        "वृत्ताकार (मुख केंद्र की ओर): दायां = घड़ी की विपरीत दिशा (Anti-clockwise)।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "मुख बाहर की ओर (Facing Outside) होने पर दाएं/बाएं को उल्टा न करना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Fixed-Point' Start: Never start with 'A is next to B' (too many possibilities). Start with 'A is 3rd from the left' (only one possibility).",
+        "The 'Anti-Clockwise' Right: For circular tables facing center, 'Right' is always anti-clockwise. Associating 'Right' with 'Counter' prevents direction swap errors.",
+        "Two-Diagram Strategy: If a piece of info has two possibilities, draw two small diagrams instantly. It’s faster to cross one out than to keep both in your working memory.",
+        "Neighbor Audit: Once finished, quickly check who is *not* mentioned. Examiners often place the answer on the 'quiet' person."
+      ],
+      "hi": [
+        "निश्चित बिंदु से शुरुआत: 'A, B के बगल में है' से कभी शुरू न करें। 'A बाएं से तीसरा है' जैसे निश्चित सुराग से शुरू करें।",
+        "एंटी-क्लॉकवाइज दायां: केंद्र की ओर मुख वाले वृत्ताकार मेज के लिए 'दायां' हमेशा घड़ी की विपरीत दिशा होती है।",
+        "दो-आरेख रणनीति: यदि एक जानकारी की दो संभावनाएं हैं, तो तुरंत दो चित्र बनाएं। यह मस्तिष्क की वर्किंग मेमोरी पर भार कम करता है।",
+        "पड़ोसी ऑडिट: समाप्त होने के बाद जांचें कि किसका उल्लेख नहीं हुआ है। परीक्षक अक्सर 'चुप' व्यक्ति पर ही प्रश्न पूछते हैं।"
+      ]
+    }
+  },
+  {
+    "topic": "Statement & Assumptions / Course of Action",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Assumption: It is something 'taken for granted' by the speaker. It must be positive and directly linked.",
+        "Course of Action: Must be a practical, feasible, and effective solution to the problem mentioned."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Using 'Outside Knowledge' not mentioned in the statement.",
+        "Choosing a 'Harsh' course of action (e.g., 'Fire all employees') instead of a corrective one."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Speaker's Mindset': An assumption is the 'unsaid premise'. Ask yourself, 'What must be true for the speaker to say this?'",
+        "Positive Expectation Rule: Assumptions are usually positive or corrective. The speaker assumes their advice/warning will have an effect.",
+        "The 'Feasibility' Check: For Course of Action, discard any solution that creates a bigger problem than the original one."
+      ],
+      "hi": []
+    }
+  },
+  {
+    "topic": "Statement & Conclusion",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Stick to the Statement: Don't use outside knowledge. If the statement says 'All cats are dogs,' then for this question, they are.",
+        "Keywords: Words like 'Only', 'All', 'Always', 'Definitely' usually make a conclusion invalid."
+      ],
+      "hi": [
+        "कथन ही सत्य है: अपनी बाहरी जानकारी का उपयोग न करें, केवल कथन में दी गई जानकारी पर ध्यान दें।",
+        "कीवर्ड्स: 'केवल', 'हमेशा', 'कभी नहीं' जैसे शब्द अक्सर निष्कर्ष को गलत बनाते हैं।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [
+        "Bringing in personal opinions or 'General Truths' that aren't in the text.",
+        "Confusing a 'Course of Action' with a 'Conclusion'."
+      ],
+      "hi": [
+        "अपनी व्यक्तिगत राय को निष्कर्ष मान लेना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Boundary of Truth': Only what is in the statement is true. Your 'General Knowledge' is your enemy here; ignore what you know to be true in the real world.",
+        "Keywords of Extremism: Words like 'All', 'Always', 'Only', and 'Never' usually make a conclusion wrong. Logic is rarely that absolute.",
+        "The 'Therefore' Test: Read the Statement, say 'Therefore', then read the Conclusion. If the flow feels broken or forced, the conclusion does not follow.",
+        "Universal vs. Particular: If a statement is about a 'specific' group, a 'universal' conclusion about everyone is always logically invalid."
+      ],
+      "hi": [
+        "सत्य की सीमा: केवल वही सत्य है जो कथन में है। आपका 'सामान्य ज्ञान' यहाँ आपका दुश्मन है; बाहरी दुनिया की सच्चाई को अनदेखा करें।",
+        "चरम सीमा के कीवर्ड: 'सभी', 'हमेशा', 'केवल' और 'कभी नहीं' जैसे शब्द आमतौर पर निष्कर्ष को गलत बनाते हैं। तर्क शायद ही इतना निरपेक्ष होता है।",
+        "इसलिए (Therefore) परीक्षण: कथन पढ़ें, 'इसलिए' बोलें, फिर निष्कर्ष पढ़ें। यदि प्रवाह टूटा हुआ लगता है, तो निष्कर्ष अनुसरण नहीं करता।",
+        "सार्वभौमिक बनाम विशिष्ट: यदि कथन एक 'विशिष्ट' समूह के बारे में है, तो सभी के बारे में एक 'सार्वभौमिक' निष्कर्ष हमेशा अमान्य होता है।"
+      ]
+    }
+  },
+  {
+    "topic": "Syllogism",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [],
+      "hi": [
+        "वेन आरेख विधि: कथनों के अनुसार 'न्यूनतम ओवरलैप' वाला आरेख बनाएं।",
+        "संभावना: यदि कोई भी संभावित आरेख निष्कर्ष का समर्थन करता है, तो संभावना सही होगी।"
+      ]
+    },
+    "common_mistakes": {
+      "en": [],
+      "hi": [
+        "सकारात्मक कथन से निश्चित नकारात्मक निष्कर्ष निकालना।",
+        "'कुछ' का अर्थ 'केवल कुछ' मान लेना।"
+      ]
+    },
+    "psych_hacks": {
+      "en": [
+        "The 'Minimum Overlap' Rule: When drawing Venn diagrams, only overlap circles as much as the statement requires. Extra overlap creates 'False Positives'.",
+        "Definite vs. Possible: If a conclusion has 'Is' or 'Are', it must be true in *every* diagram. If even one diagram fails, the conclusion is false.",
+        "The 'No-Negative' Rule: If all statements are positive (All/Some), a negative conclusion (No/Some Not) can never be definitely true.",
+        "Either-Or Identification: Look for 'Subject' and 'Predicate' to be the same in two conclusions where one is positive and one is negative. It’s a 50/50 logic split."
+      ],
+      "hi": [
+        "न्यूनतम ओवरलैप नियम: वेन आरेख बनाते समय वृत्तों को केवल उतना ही ओवरलैप करें जितना कथन में कहा गया है।",
+        "निश्चित बनाम संभावित: यदि निष्कर्ष में 'है' लिखा है, तो वह हर संभव चित्र में सही होना चाहिए। यदि एक भी फेल हुआ, तो निष्कर्ष गलत है।",
+        "नकारात्मक का नियम: यदि सभी कथन सकारात्मक हैं, तो एक नकारात्मक निष्कर्ष (कोई नहीं) कभी भी निश्चित रूप से सही नहीं हो सकता।",
+        "Either-Or पहचान: यदि दो निष्कर्षों में 'विषय' और 'विधेय' समान हैं और एक सकारात्मक व एक नकारात्मक है, तो वहां 50/50 लॉजिक स्प्लिट देखें।"
+      ]
+    }
+  },
+  {
+    "topic": "Venn Diagrams",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "The 'Subset' Rule: If All A are B, A is inside B. If no A is B, the circles are separate.",
+        "For 3-entity diagrams, identify if there is a 'Universal' category (e.g., Furniture: Table, Chair)."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Overlapping all circles when the categories are mutually exclusive.",
+        "Confusing 'Only' areas with 'Common' areas."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "Attribute Overlay: Think of each circle as a 'Filter'. The intersection isn't just a shape; it’s the only place where *all* conditions are met simultaneously.",
+        "Size Doesn't Matter: Don't let the size of the circles or shapes fool you. Examiners use large triangles for small groups to distract the visual cortex.",
+        "The 'Exclusion' Method: If a question asks for 'A but not B', physically cover the B circle with your finger. It prevents the brain from including the intersection.",
+        "Abstract Mapping: Replace abstract categories with real-world examples (e.g., Doctors, Humans, Dogs) to see if the overlapping logic actually makes sense."
+      ],
+      "hi": [
+        "विशेषता ओवरले: प्रत्येक वृत्त को एक 'फ़िल्टर' की तरह सोचें। प्रतिच्छेदन (Intersection) वह एकमात्र स्थान है जहाँ सभी शर्तें पूरी होती हैं।",
+        "आकार मायने नहीं रखता: आकृतियों के आकार से न भटकें। परीक्षक आपका ध्यान भटकाने के लिए छोटे समूहों के लिए बड़े त्रिकोण का उपयोग कर सकते हैं।",
+        "बहिष्करण विधि: यदि प्रश्न 'A लेकिन B नहीं' पूछता है, तो अपनी उंगली से B वृत्त को ढक लें। यह मस्तिष्क को प्रतिच्छेदन शामिल करने से रोकता है।",
+        "अमूर्त मैपिंग: अमूर्त श्रेणियों को वास्तविक उदाहरणों (जैसे डॉक्टर, इंसान, कुत्ते) से बदलें ताकि ओवरलैपिंग तर्क समझ आ सके।"
+      ]
+    }
+  },
+  {
+    "topic": "Word Formation",
+    "category": "reasoning",
+    "shortcuts": {
+      "en": [
+        "Check the frequency: If the original word has one 'E', you cannot form a word with two 'E's.",
+        "Scanning: Quickly look for letters that are 'Out of Bounds' (not in the original word).",
+        "Hidden Words: Quickly scan for vowels; if an option has a 'U' and the keyword doesn't, eliminate it immediately."
+      ],
+      "hi": []
+    },
+    "common_mistakes": {
+      "en": [
+        "Misreading the question (e.g., 'Which word CANNOT be formed' vs 'Which word CAN be formed')—this is the #1 time-waster."
+      ],
+      "hi": []
+    },
+    "psych_hacks": {
+      "en": [
+        "Letter Frequency Audit: Scan the source word for double letters. If the source has one 'E' but the option has two, it’s an instant fail.",
+        "The 'Missing Letter' Scan: Don't read the word; look at each letter. The brain 'auto-corrects' spelling, which makes it miss a missing letter in 'Formation'.",
+        "Vowel-Consonant Ratio: Quickly count vowels. If the option has more vowels than the source, don't waste time checking the consonants.",
+        "Bottom-Up Reading: Read the source word backwards to break its 'meaning' in your head. This forces your brain to see letters as symbols, not a word."
+      ],
+      "hi": [
+        "अक्षर आवृत्ति ऑडिट: मूल शब्द में 'डबल अक्षरों' को देखें। यदि मूल में एक 'E' है लेकिन विकल्प में दो, तो वह तुरंत बाहर हो जाएगा।",
+        "मिसिंग लेटर स्कैन: शब्द न पढ़ें; प्रत्येक अक्षर को अलग से देखें। मस्तिष्क वर्तनी को 'ऑटो-करेक्ट' कर देता है, जिससे गलती हो सकती है।",
+        "स्वर-व्यंजन अनुपात: स्वरों को जल्दी से गिनें। यदि विकल्प में मूल से अधिक स्वर हैं, तो व्यंजन जांचने में समय बर्बाद न करें।",
+        "नीचे से ऊपर पढ़ना: मूल शब्द को पीछे से पढ़ें ताकि उसका 'अर्थ' दिमाग में टूट जाए। यह अक्षरों को केवल 'प्रतीक' के रूप में देखने में मदद करता है।"
+      ]
+    }
+  }
+]

@@ -174,7 +174,7 @@
     "topic": "Inequality",
     "psychology_hacks": [
       "The 'Gate Method': Think of '>' as an open gate. You can move from left to right. If you hit a '<' (closed gate), the path is broken and the relationship is 'No Relation'.",
-      "Priority of Signs: $>$ is the King, $\geq$ is the Soldier, $=$ is the Public. If a King is in the path, the result must be a King ($>$).",
+      "Priority of Signs: $>$ is the King, $\\geq$ is the Soldier, $=$ is the Public. If a King is in the path, the result must be a King ($>$).",
       "Common Element Bridge: To connect $A > B$ and $C < B$, find the common letter ($B$). Mentally join them at that bridge ($A > B > C$) to see the full path.",
       "Either-Or Check: If a path is broken but the subject/predicate are the same and all three signs ($>, <, =$) are covered, it’s an 'Either-Or' case."
     ]

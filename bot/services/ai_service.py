@@ -5,70 +5,56 @@ import random
 
 class AIService:
     def __init__(self):
-        self.base_path = "assets/ai"
-        self.data = {}
+        self.data_path = "assets/ai/integrated_ai_data.json"
+        self.data = []
+        self.topic_map = {}
         self.load_data()
 
     def load_data(self):
-        """Loads all AI JSON files into memory."""
-        files = {
-            "english_aptitude": "aptitude_ai.json",
-            "english_reasoning": "reasoning_ai.json",
-            "english_gk": "gk_ai.json",
-            "hindi_aptitude": "hindiaptitude_ai.json",
-            "hindi_reasoning": "hindireasoning_ai.json",
-            "hindi_gk": "hindigk_ai.json",
-            "english_aptitude_psych": "pshacksaptitude_ai.json",
-            "english_reasoning_psych": "pshacksreasoning.json",
-            "english_gk_psych": "pshacksgk.json",
-            "hindi_aptitude_psych": "pshacksapthindi.json",
-            "hindi_reasoning_psych": "pshacksreasoninghindi.json",
-            "hindi_gk_psych": "pshacksgkhindi.json"
-        }
+        """Loads the integrated AI JSON file."""
+        try:
+            path = self.data_path
+            if not os.path.exists(path):
+                path = os.path.join(os.getcwd(), self.data_path)
 
-        for key, filename in files.items():
-            path = os.path.join(self.base_path, filename)
-            try:
-                # Use absolute path if relative fails
-                if not os.path.exists(path):
-                    path = os.path.join(os.getcwd(), self.base_path, filename)
+            with open(path, "r", encoding="utf-8") as f:
+                self.data = json.load(f)
+                
+            # Create a lookup map for faster access
+            self.topic_map = {item["topic"].lower(): item for item in self.data}
+            print(f"Loaded {len(self.data)} AI topics.")
+        except Exception as e:
+            print(f"Error loading AI data: {e}")
+            self.data = []
+            self.topic_map = {}
 
-                with open(path, "r", encoding="utf-8") as f:
-                    self.data[key] = json.load(f)
-            except Exception as e:
-                print(f"Error loading AI file {filename}: {e}")
-                self.data[key] = []
-
-    def get_context(self, lang="english", category="aptitude"):
-        """Returns the data list for a specific language and category."""
-        key = f"{lang.lower()}_{category.lower()}"
-        return self.data.get(key, [])
-
-    def _find_best_match(self, topic: str, data_list: list):
+    def _find_best_match(self, topic: str):
         """
         Finds the best matching item using:
-        1. Exact Match
-        2. Substring Match (Topic in JSON vs JSON in Topic)
-        3. Token Overlap (Best Keyword Match)
+        1. Exact Key Lookup
+        2. Bidirectional Substring Match
+        3. Token Overlap
         """
-        if not topic:
-            return None
-            
-        topic_lower = topic.lower()
+        if not topic: return None
+        topic_lower = topic.strip().lower()
+
+        # 1. Exact Map Lookup
+        if topic_lower in self.topic_map:
+            return self.topic_map[topic_lower]
+
+        # 2. Fuzzy Search
         topic_words = set(topic_lower.replace("&", " ").replace("(", " ").replace(")", " ").split())
-        
         best_match = None
         max_overlap = 0
 
-        for item in data_list:
+        for item in self.data:
             it_topic = item.get("topic", "").lower()
             
-            # 1. Exact or Substring (Bidirectional)
-            # "History" in "Ancient Indian History" -> True
+            # Bidirectional Substring
             if topic_lower == it_topic or topic_lower in it_topic or it_topic in topic_lower:
-                return item # Immediate return on strong match
+                return item 
             
-            # 2. Token Overlap
+            # Token Overlap
             it_words = set(it_topic.replace("&", " ").replace("(", " ").replace(")", " ").split())
             overlap = len(topic_words.intersection(it_words))
             
@@ -76,65 +62,56 @@ class AIService:
                 max_overlap = overlap
                 best_match = item
         
-        # Threshold: At least 1 significant word overlap
         if max_overlap >= 1: 
              return best_match
              
         return None
 
+    def _get_random_fallback(self, lang, category, type_key):
+        """Returns a random piece of advice from the same category."""
+        candidates = [item for item in self.data if item.get("category") == category]
+        if candidates:
+            random_item = random.choice(candidates)
+            content_list = random_item.get(type_key, {}).get(lang, [])
+            if content_list:
+                prefix = "🧠 " if type_key == "psych_hacks" else "Gen: "
+                return prefix + random.choice(content_list)
+        return None
+
     def get_shortcut(self, topic: str, lang="english", category="aptitude"):
-        data_list = self.get_context(lang, category)
-        match = self._find_best_match(topic, data_list)
+        lang_code = "hi" if "hind" in lang.lower() else "en"
+        match = self._find_best_match(topic)
         
         if match:
-            shortcuts = match.get("shortcuts", [])
-            if shortcuts:
-                return random.choice(shortcuts)
+            shortcuts = match.get("shortcuts", {}).get(lang_code, [])
+            if shortcuts: return random.choice(shortcuts)
 
         # Fallback
-        if data_list:
-            random_topic = random.choice(data_list)
-            shortcuts = random_topic.get("shortcuts", [])
-            if shortcuts:
-                return f"Gen: {random.choice(shortcuts)}"
-        
-        return "Focus on accuracy before speed. That is the ultimate shortcut."
+        fallback = self._get_random_fallback(lang_code, category, "shortcuts")
+        return fallback or "Focus on accuracy before speed."
 
     def get_common_mistake(self, topic: str, lang="english", category="aptitude"):
-        data_list = self.get_context(lang, category)
-        match = self._find_best_match(topic, data_list)
+        lang_code = "hi" if "hind" in lang.lower() else "en"
+        match = self._find_best_match(topic)
         
         if match:
-            mistakes = match.get("common_mistakes", [])
-            if mistakes:
-                return random.choice(mistakes)
-        
+            mistakes = match.get("common_mistakes", {}).get(lang_code, [])
+            if mistakes: return random.choice(mistakes)
+            
         # Fallback
-        if data_list:
-            random_topic = random.choice(data_list)
-            mistakes = random_topic.get("common_mistakes", [])
-            if mistakes:
-                return f"Gen: {random.choice(mistakes)}"
-
-        return "Don't guess randomly. Option elimination is your best friend."
+        fallback = self._get_random_fallback(lang_code, category, "common_mistakes")
+        return fallback or "Don't guess randomly."
 
     def get_psych_hack(self, topic: str, lang="english", category="aptitude"):
-        key = f"{lang.lower()}_{category.lower()}_psych"
-        data_list = self.data.get(key, [])
-        match = self._find_best_match(topic, data_list)
+        lang_code = "hi" if "hind" in lang.lower() else "en"
+        match = self._find_best_match(topic)
         
         if match:
-            hacks = match.get("psychology_hacks") or match.get("hacks") or []
-            if hacks:
-                return random.choice(hacks)
+            hacks = match.get("psych_hacks", {}).get(lang_code, [])
+            if hacks: return random.choice(hacks)
 
         # Fallback
-        if data_list:
-            random_topic = random.choice(data_list)
-            hacks = random_topic.get("psychology_hacks") or random_topic.get("hacks") or []
-            if hacks:
-                return f"🧠 {random.choice(hacks)}"
-
-        return "Visualize the problem before solving it. Your brain is a supercomputer; give it the right input."
+        fallback = self._get_random_fallback(lang_code, category, "psych_hacks")
+        return fallback or "Visualize the problem before solving it."
 
 ai_service = AIService()

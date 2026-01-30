@@ -43,7 +43,7 @@
     "topic": "Percentage",
     "psychology_hacks": [
       "The 10% & 1% Anchors: Treat 10% and 1% as your only tools. Any percentage (like 27%) is just (10% x 2) + (5%) + (1% x 2). This eliminates long multiplications.",
-      "Percentage Reversal: $x\%$ of $y$ is the same as $y\%$ of $x$. Calculating 16% of 50 is hard; calculating 50% of 16 (which is 8) is instant.",
+      "Percentage Reversal: $x%$ of $y$ is the same as $y%$ of $x$. Calculating 16% of 50 is hard; calculating 50% of 16 (which is 8) is instant.",
       "Base 100 Mental Image: Always visualize a $10 \times 10$ grid. Coloring in the percentage visually makes 'increase/decrease' questions intuitive rather than abstract.",
       "Fraction Mapping: Don't see '25%'; see 'one-fourth'. The brain processes simple fractions in the parietal lobe faster than percentages.",
       "The Consumption-Price Bridge: If price goes up by $1/4$, consumption must drop by $1/5$. Memorizing this 'n to n+1' shift saves minutes of calculation."
@@ -64,7 +64,7 @@
     "psychology_hacks": [
       "MP as the 'Inflated Ego': View Marked Price as an artificial hike. Discount is the 'reality check' that brings it back toward CP.",
       "The 100-Discount Shortcut: If a discount is 20%, focus on the 80% you *pay*. Looking at the 'paid value' reduces a subtraction step in your head.",
-      "Successive Discount Illusion: $50\% + 50\%$ is not free. Visualize it as a 'discount on a discount'. The brain needs this visual reminder to avoid the 'addition trap'.",
+      "Successive Discount Illusion: $50% + 50%$ is not free. Visualize it as a 'discount on a discount'. The brain needs this visual reminder to avoid the 'addition trap'.",
       "The CP-MP Bridge: Use the ratio $(100 - D) : (100 + P)$. Memorizing this specific ratio 'bridge' bypasses three steps of logic.",
       "Free Item Conversion: 'Buy 3 Get 1 Free' means 1 free out of 4 total. Always focus on the 'Total in Hand' to avoid the 1/3 calculation error."
     ]
@@ -196,7 +196,7 @@
       "The 'Filling' Concept: Volume is just the base area 'stacked' to a certain height. Visualize a stack of coins to understand $Area \times Height$.",
       "Radius is King: In circles/spheres, find 'r' first. Once you have 'r', you have the keys to the kingdom. Focus all energy on 'Finding R'.",
       "Units Consistency Hack: Surface area is always Squared (2D), Volume is always Cubed (3D). Check your units to ensure your formula choice was correct.",
-      "The 11 Divisibility Test: Most formulas involve $\pi$ (22/7). If your answer is not divisible by 11, it is likely wrong. Use 'Pi-Filtering'."
+      "The 11 Divisibility Test: Most formulas involve $\\pi$ (22/7). If your answer is not divisible by 11, it is likely wrong. Use 'Pi-Filtering'."
     ]
   },
   {
