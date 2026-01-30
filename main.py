@@ -414,7 +414,8 @@ async def main():
     prevent_multiple_instances()
     
     print("--- 🚀 BOT RELOADED! New Session Logic Active ---")
-    logger.info("Starting Elevate Aura Bot...")
+    logger.info("Starting Elevate Aura Bot v2.0 - With AI Coach...")
+    print("Starting Elevate Aura Bot v2.0 - With AI Coach...")
     
     # Start Dummy Web Server (For Render) - Start this FIRST to satisfy port binding check
     web_site_ref = await start_web_server()
