@@ -3,48 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Coach Moved</title>
+    <title>Elevate Aura Dashboard</title>
+    <!-- Telegram WebApp Script -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Tailwind CSS (CDN for MVP) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #0f172a;
-            color: white;
+            background-color: var(--tg-theme-bg-color, #1a202c);
+            color: var(--tg-theme-text-color, #ffffff);
             font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
         }
-        h1 { font-size: 24px; margin-bottom: 10px; }
-        p { color: #94a3b8; margin-bottom: 30px; }
-        .btn {
-            background: #22c55e;
-            color: black;
-            padding: 15px 30px;
+        .card {
+            background-color: var(--tg-theme-secondary-bg-color, #2d3748);
             border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            width: 100%;
-            max-width: 200px;
-            cursor: pointer;
-            border: none;
         }
     </style>
 </head>
-<body>
-    <h1>🚀 We've Upgraded!</h1>
-    <p>The AI Performance Coach is now built directly into your chat for a faster experience.</p>
+<body class="p-4">
     
-    <button onclick="Telegram.WebApp.close();" class="btn">Close & Use Chat</button>
+    <div class="flex justify-between items-center mb-4 px-2">
+        <div>
+            <h1 id="userNameDisplay" class="text-lg font-bold">Hello, Aspirant</h1>
+            <div id="dateDisplay" class="text-xs text-gray-400">Loading Date...</div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <!-- Test Counter -->
+            <div class="flex items-center bg-gray-800 rounded-lg px-2 py-1 space-x-2 border border-gray-700">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span id="testCountDisplay" class="text-yellow-400 font-bold text-sm">Loading...</span>
+            </div>
+            <!-- Info Button -->
+            <button id="infoBtn" class="w-7 h-7 rounded-full bg-gray-700 text-gray-300 flex items-center justify-center font-serif italic font-bold border border-gray-600 active:scale-95 transition">
+                i
+            </button>
+        </div>
+    </div>
 
-    <script>
-        Telegram.WebApp.ready();
-        Telegram.WebApp.expand();
-    </script>
+    <!-- User Stats Header -->
+    <div class="card p-4 mb-4 flex items-center justify-between shadow-lg">
+        <div>
+            <h2 class="text-sm opacity-70">Your Rank</h2>
+            <h1 id="rankDisplay" class="text-3xl font-bold text-yellow-500">--</h1>
+        </div>
+        <div class="text-right">
+            <h2 class="text-sm opacity-70">Points</h2>
+            <h1 id="scoreDisplay" class="text-2xl font-bold">--</h1>
+        </div>
+    </div>
+
+    <!-- The Illusion: Ghost Leaderboard -->
+    <div class="mb-2 flex justify-between items-center">
+        <h3 class="text-lg font-semibold">🏆 Top Aspirants</h3>
+        <span class="text-xs bg-green-900 text-green-300 px-2 py-1 rounded">Live</span>
+    </div>
+
+    <div class="space-y-3" id="leaderboard">
+        <!-- Loading Skeleton -->
+        <div class="card p-3 flex items-center animate-pulse">
+            <div class="w-8 h-8 bg-gray-600 rounded-full mr-3"></div>
+            <div class="h-4 bg-gray-600 rounded w-1/2"></div>
+        </div>
+        <div class="card p-3 flex items-center animate-pulse">
+            <div class="w-8 h-8 bg-gray-600 rounded-full mr-3"></div>
+            <div class="h-4 bg-gray-600 rounded w-3/4"></div>
+        </div>
+    </div>
+
+    <!-- TRUE POTENTIAL ANALYSIS (Psychological Hook) -->
+    <div class="mt-8 mb-4">
+        <div class="card p-5 relative overflow-hidden group border border-yellow-500/20 shadow-[0_0_20px_rgba(234,179,8,0.1)]">
+            <!-- Background Glow -->
+            <div class="absolute top-[-50%] right-[-50%] w-full h-full bg-yellow-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+            
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 flex items-center">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></span>
+                Intelligence Gap Analysis
+            </h3>
+
+            <div class="flex items-center justify-between mb-4 relative z-10">
+                <!-- Current Reality -->
+                <div class="text-left">
+                    <div class="text-[10px] text-gray-500 uppercase font-bold mb-1">Current Reality</div>
+                    <div class="text-3xl font-black text-gray-400" id="potential_current">--</div>
+                    <div class="text-[10px] text-gray-500 font-mono">/600</div>
+                </div>
+
+                <!-- Visual Separator -->
+                 <div class="h-10 w-[1px] bg-gray-700 rotate-12"></div>
+
+                <!-- True Potential -->
+                <div class="text-right">
+                    <div class="text-[10px] text-yellow-500 uppercase font-bold mb-1 flex justify-end items-center">
+                        True Potential
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 drop-shadow-[0_0_15px_rgba(234,179,8,0.6)]" id="potential_max">--</div>
+                    <div class="text-[10px] text-yellow-600/80 font-mono">/600</div>
+                </div>
+            </div>
+
+            <!-- Analysis Text -->
+            <div class="bg-gray-800/50 rounded-lg p-3 mb-4 border-l-2 border-red-500">
+                <p class="text-xs leading-relaxed text-gray-300">
+                    You left <span class="text-white font-bold" id="potential_gap">-- points</span> on the table due to fixable weak spots. Your accuracy in high-value topics is dragging you down.
+                </p>
+            </div>
+
+            <!-- Paywall Button Removed -->
+    </div>
+
+    <!-- Performance Insights (Restored) -->
+    <div class="mt-8 mb-24">
+        <div class="flex justify-between items-center mb-3">
+            <h3 class="text-lg font-semibold">📊 Performance Insights</h3>
+        </div>
+        
+        <div class="card p-4 space-y-4">
+            <!-- Subject Strength -->
+            <div>
+                <div class="flex justify-between text-xs mb-1">
+                    <span>Aptitude Mastery</span>
+                    <span class="font-bold text-green-400">Top 15%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between text-xs mb-1">
+                    <span>Reasoning Speed</span>
+                    <span class="font-bold text-yellow-400">Avg</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <!-- Percentile -->
+            <div class="pt-2 border-t border-gray-600">
+                <p class="text-xs mb-2" style="color: var(--tg-theme-hint-color);">You are faster than <span id="fasterThanCount" class="font-bold" style="color: var(--tg-theme-text-color);">--</span> aspirants today.</p>
+                <div id="percentileChart" class="flex items-end space-x-1 h-16">
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 30%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 50%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 70%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 90%"></div>
+                     <div class="dist-bar w-1/5 bg-gray-600 rounded-t transition-all duration-500" style="height: 40%"></div>
+                </div>
+                <div class="text-center text-[10px] text-gray-500 mt-1">Percentile Distribution</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Upgrade Call to Action -->
+    <div class="fixed bottom-4 left-4 right-4 z-[40]"> <!-- Z-index 40 -->
+        <button id="upgradeBtn" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition flex items-center justify-center">
+            <span class="mr-2">🔓</span> Unlock Full Intelligence (₹99)
+        </button>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-2xl w-full max-w-sm border border-gray-700 shadow-2xl p-6 relative animate-fade-in-up">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-xl font-bold text-white mb-2">Weekly Cohorts</h3>
+            <div class="space-y-4 text-sm text-gray-300">
+                <p>
+                    You have been placed in <span class="text-yellow-400 font-bold">Pack <script>document.write(new Date().getDate() % 20 + 10)</script></span>.
+                </p>
+                <div class="space-y-2">
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">📅</span>
+                        <p><strong>Weekly Refresh:</strong> Your competitors remain the same for 7 days (Mon-Sun) to build rivalry.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">🔥</span>
+                        <p><strong>Daily Scoring:</strong> Points reset every midnight. Max 600 points/day (6 Tests).</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-lg mr-2">🤖</span>
+                        <p><strong>Fair Play:</strong> This leaderboard is curated to match your skill level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <button onclick="document.getElementById('infoModal').classList.add('hidden')" class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 rounded-lg transition">Got it</button>
+                <div class="mt-2 text-[10px] text-gray-500 font-mono text-left">
+                    DEBUG ID: <span id="debugUserId">--</span><br>
+                    PLATFORM: <span id="debugPlatform">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mentor Chat Modal -->
+    <div id="chatModal" class="fixed inset-0 z-[80] bg-black/95 backdrop-blur-md hidden flex flex-col animate-fade-in-up">
+        <!-- Chat Header -->
+        <div class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900 shadow-lg">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-green-400 to-emerald-600 flex items-center justify-center font-bold text-white text-lg shadow-lg relative">
+                    AI
+                    <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-gray-900 rounded-full"></div>
+                </div>
+                <div class="ml-3">
+                    <h3 class="text-md font-bold text-white">AI Performance Coach</h3>
+                    <div id="chatStatus" class="text-xs text-green-400 font-mono">Online</div>
+                </div>
+            </div>
+            <button onclick="document.getElementById('chatModal').classList.add('hidden')" class="text-gray-400 hover:text-white p-2 bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center">✕</button>
+        </div>
+        
+        <!-- Chat Area -->
+        <div id="chatContainer" class="flex-1 overflow-y-auto p-4 space-y-4 bg-[#0f1115]">
+            <!-- Dynamic Messages will appear here -->
+        </div>
+
+        <!-- Fake Input Area (Visual only) -->
+        <div class="p-4 border-t border-gray-800 bg-gray-900">
+             <div class="bg-gray-800 h-10 rounded-full w-full opacity-50 flex items-center px-4 text-xs text-gray-500 select-none">
+                 AI is analyzing your profile...
+             </div>
+        </div>
+    </div>
+
+    <!-- Notes Modal -->
+    <div id="notesModal" class="fixed inset-0 z-[70] bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl w-full max-w-lg border border-yellow-600/30 shadow-2xl h-[80vh] flex flex-col relative animate-fade-in-up">
+            <!-- Header -->
+            <div class="p-4 border-b border-gray-800 flex justify-between items-center bg-gray-900/50 rounded-t-2xl">
+                <h3 class="text-lg font-bold text-yellow-500 flex items-center">
+                    <span class="mr-2">📚</span> <span id="noteTitle">Concept Notes</span>
+                </h3>
+                <button onclick="document.getElementById('notesModal').classList.add('hidden')" class="text-gray-400 hover:text-white p-2">✕</button>
+            </div>
+            
+            <!-- Content (Scrollable & Protected) -->
+            <div id="noteContent" class="flex-1 overflow-y-auto p-5 text-gray-300 leading-relaxed text-sm select-none font-serif" style="-webkit-user-select: none; user-select: none;">
+                <!-- Dynamic Content -->
+            </div>
+
+            <!-- Footer -->
+            <div class="p-3 border-t border-gray-800 bg-gray-900 text-center">
+                 <span class="text-[10px] text-gray-600 uppercase tracking-widest">Premium Content • Do Not Share</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=66"></script>
 </body>
 </html>
