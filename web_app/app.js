@@ -539,63 +539,46 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              // Hide Insight Warning Color if desired, or keep it as diagnosis
         } else {
             // FREE VIEW (Paywall)
-            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (₹99)`;
+            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
             unlockBtn.onclick = () => {
-                // Trigger Telegram Payment or Info Modal
-                try {
-                    tg.MainButton.setText("PAY 500 STARS ⭐ (TEST MODE)");
-                    tg.MainButton.show();
-                    // FIX: Use proper haptic method
-                    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
-                    
-                    // --- DUMMY PAYMENT HANDLER ---
-                    const handlePayment = () => {
-                        const originalText = "PAY 500 STARS ⭐ (TEST MODE)";
-                        tg.MainButton.showProgress(true); // Spinner
-                        
-                        // Call Simulate API
-                        return fetch(`${API_BASE_URL}/api/simulate_payment`, {
-                            method: 'POST',
-                            body: JSON.stringify({ user_id: userEntry.id }),
-                            headers: { 'Content-Type': 'application/json' }
-                        })
-                        .then(res => res.json())
-                        .then(data => {
-                             tg.MainButton.hideProgress();
-                             if(data.status === 'success') {
-                                 tg.MainButton.setText("SUCCESS! 🎉");
-                                 tg.HapticFeedback.notificationOccurred('success');
-                                 setTimeout(() => {
-                                     tg.MainButton.hide();
-                                     window.location.reload(); // Reload to see Premium View
-                                 }, 1500);
-                             } else {
-                                 tg.MainButton.setText("ERROR ❌"); // Short error
-                                 alert("Error: " + data.error);
-                                 setTimeout(() => tg.MainButton.setText(originalText), 2000);
-                             }
-                             // Cleanup
-                             tg.MainButton.offClick(handlePayment);
-                        })
-                        .catch(e => {
-                            tg.MainButton.hideProgress();
-                            tg.MainButton.setText("NET ERROR ❌");
-                            alert("Network Error: " + e.message);
-                            setTimeout(() => tg.MainButton.setText(originalText), 2000);
+                if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+                
+                // 1. Get Invoice Link from Bot API
+                unlockBtn.innerHTML = "Loading...";
+                
+                fetch(`${API_BASE_URL}/api/create_invoice`, {
+                    method: 'POST',
+                    body: JSON.stringify({ user_id: userEntry.id }),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.invoice_link) {
+                        // 2. Open Native Payment
+                        tg.openInvoice(data.invoice_link, (status) => {
+                            if (status === 'paid') {
+                                tg.MainButton.setText("PAID! RELOADING...");
+                                tg.MainButton.show();
+                                setTimeout(() => window.location.reload(), 2000);
+                            } else if (status === 'pending') {
+                                // Sometimes happens, just close
+                                alert("Payment processing...");
+                            } else {
+                                // Cancelled or failed
+                                unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
+                            }
                         });
-                    };
-                    
-                    // Cleanup old listeners just in case
-                    tg.MainButton.offClick(handlePayment); 
-                    tg.MainButton.onClick(handlePayment);
-                } catch(e) {
-                    console.error("TG Button Error", e);
-                    alert("Payment Error: " + e.message + ". Try reloading.");
-                }
-            }
-        }
-    }
-}
+                    } else {
+                        alert("Error creating invoice: " + (data.error || "Unknown"));
+                        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
+                    }
+                })
+                .catch(e => {
+                    console.error(e);
+                    alert("Network Error. Try again.");
+                    unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
+                });
+            };
 
 
 function renderError(msg) {

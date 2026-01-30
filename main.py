@@ -315,6 +315,22 @@ async def handle_options_post(request):
         "Access-Control-Allow-Headers": "Content-Type",
     })
 
+# 4. Payment API Route
+async def create_invoice_api(request):
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        if not user_id:
+            return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+        
+        from bot.handlers.payment import generate_invoice_link
+        link = await generate_invoice_link(bot, int(user_id))
+        
+        return web.json_response({"invoice_link": link}, headers={"Access-Control-Allow-Origin": "*"})
+    except Exception as e:
+        logger.error(f"Invoice Error: {e}")
+        return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
 async def start_web_server():
     app = web.Application()
     app.router.add_get("/", health_check)
@@ -326,6 +342,10 @@ async def start_web_server():
     # Dummy Payment Route
     app.router.add_post("/api/simulate_payment", simulate_payment)
     app.router.add_options("/api/simulate_payment", handle_options_post)
+    
+    # Invoice Generation Route
+    app.router.add_options('/api/create_invoice', handle_options)
+    app.router.add_post('/api/create_invoice', create_invoice_api)
     
     runner = web.AppRunner(app)
     await runner.setup()
