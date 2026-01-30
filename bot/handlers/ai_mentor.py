@@ -21,6 +21,20 @@ async def show_ai_coach(callback: types.CallbackQuery):
         await callback.message.answer("Error: User profile not found.")
         return
 
+    # Check Premium Status
+    sub_status = user.get("subscription_status", "free")
+    if sub_status != "premium":
+        await callback.message.answer(
+            "🔒 **Premium Feature Locked**\n\n"
+            "The **AI Performance Coach** is available only for Premium users.\n\n"
+            "Upgrade to unlock:\n"
+            "• Personalized Weakness Analysis\n"
+            "• Instant Shortcuts & Psych Hacks\n"
+            "• 24/7 Mentorship",
+            parse_mode="Markdown"
+        )
+        return
+
     # Determine Weakest Area
     # Priority: Saved Weak Spots > Random Guess
     quiz_state = user.get("quiz_state", {})
