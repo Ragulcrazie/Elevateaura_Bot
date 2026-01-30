@@ -1,0 +1,206 @@
+[
+  {
+    "topic": "Analogy",
+    "psychology_hacks": [
+      "The 'Priority Hierarchy' Hack: Always check for logic in this order: Prime Numbers > Squares/Cubes > Multiples > Addition. This prevents falling for simple but wrong distractors.",
+      "Relationship Labeling: Verbally name the relationship (e.g., 'Tool to Worker') before looking at options. This prevents 'option bias' where a tempting but unrelated word distracts you.",
+      "The Directionality Check: Ensure the link is $A \rightarrow B$ and not $B \rightarrow A$. The brain often overlooks the order of the relationship under time pressure.",
+      "Bridging Sentence: Create a simple sentence like 'A is the capital of B'. Apply it to options. If the sentence doesn't fit perfectly, discard the option immediately."
+    ]
+  },
+  {
+    "topic": "Coding-Decoding",
+    "psychology_hacks": [
+      "EJOTY Mental Priming: Recite 5-10-15-20-25 (E-J-O-T-Y) before starting. It reduces the cognitive lag of counting alphabet positions from the start.",
+      "The 'Reverse-27' Rule: To find an opposite letter, subtract its position from 27. It’s faster for the brain than visualizing the alphabet backwards.",
+      "Pattern Chunking: Don't decode the whole word. Check the first, last, and middle letters. Often, the brain recognizes the shift pattern ($+2, -1$) without needing to solve all letters.",
+      "Vowel vs. Consonant Audit: If the logic seems broken, look specifically for vowel changes. The brain naturally treats all letters the same, but examiners often code them differently."
+    ]
+  },
+  {
+    "topic": "Classification (Odd One Out)",
+    "psychology_hacks": [
+      "The 'Three-Common' Rule: Focus on finding what makes 3 options identical rather than why 1 is different. It’s easier to build a group than to isolate a lone wolf.",
+      "Attribute Filtering: Scan for broad categories first (e.g., All are mammals, one is a bird) before diving into complex mathematical properties.",
+      "Number Property Check: For number sets, check for 'Sum of Digits' immediately. The brain often misses internal digit logic while looking for external multiples.",
+      "Visual Symmetry: For non-verbal classification, look for 'Rotation vs. Reflection'. The brain often confuses the two; verify the clockwise/anti-clockwise flow."
+    ]
+  },
+  {
+    "topic": "Series (Number & Alphabet)",
+    "psychology_hacks": [
+      "The 'Step-Difference' Hack: If numbers increase slowly, subtract adjacent terms. If the second-level difference is constant, your brain will see the 'rhythm' of the growth.",
+      "Alternating Series Visualization: Color-code odd and even positions mentally. The brain struggles with two patterns in one line; separating them makes it two simple series.",
+      "Growth Rate Analysis: Rapid growth usually means multiplication or cubes. Slow growth is addition. Identifying the 'Speed of Growth' first narrows down the operations.",
+      "N-Squared +/- Constants: Always look for numbers near squares (e.g., 24, 26, 35, 37). The brain loves round squares; examiners love the numbers right next to them."
+    ]
+  },
+  {
+    "topic": "Missing Number",
+    "psychology_hacks": [
+      "The 'Resultant Digit' Focus: In a matrix, the largest number is usually the result. Focus your cognitive energy on how the smaller numbers 'build' that large one.",
+      "Row vs. Column Scan: If a row doesn't work in 10 seconds, switch to column logic. The 'Sunk Cost Fallacy' makes us waste time on a row that was never meant to be solved.",
+      "Corner Logic: In circular or box puzzles, check opposite corners first. The brain prefers adjacent logic, so examiners hide the answer in cross-logic.",
+      "Arithmetic Balance: Check if the sum of all rows/columns is constant. It’s a common 'hidden in plain sight' trick that skips complex math."
+    ]
+  },
+  {
+    "topic": "Blood Relations",
+    "psychology_hacks": [
+      "The 'Self-Reference' Method: Replace the person in the question with yourself. Thinking 'My father's sister' is faster than 'B's father's sister'.",
+      "Gender-Neutral Guardrail: Never assume gender based on a name (e.g., 'Kiran' or 'Sonu'). This 'Name Bias' is a trap; only trust explicit gender clues like 'he' or 'mother'.",
+      "The 'Family Tree' Symbols: Use $+/-$ for male/female and $=$ for marriage. A standardized visual shorthand prevents 'memory decay' during long questions.",
+      "Backward Solving: For coded relations ($A+B-C$), solve from right to left. It’s more intuitive to see who $C$ is to $B$ than vice versa."
+    ]
+  },
+  {
+    "topic": "Direction & Distance",
+    "psychology_hacks": [
+      "The 'NESW' Clockwise Anchor: Visualize North, East, South, West in a clockwise circle. It prevents the 'Left/Right confusion' when facing South.",
+      "Pythagorean Triplets: Memorize (3,4,5), (5,12,13), and (8,15,17). Recognizing these prevents the mental fatigue of square-root calculations.",
+      "Shadow Logic: Remember 'Sunrise = Shadow West' and 'Sunset = Shadow East'. Use the sun as a fixed 'Anchor Point' for all direction questions.",
+      "Starting Point Focus: Always mark your starting point clearly. The most common error is giving the direction of the 'Start from End' instead of 'End from Start'."
+    ]
+  },
+  {
+    "topic": "Ranking & Order",
+    "psychology_hacks": [
+      "The 'Plus-Minus One' Rule: Total = (Left + Right - 1). The brain tends to double-count the person; the '-1' is a necessary cognitive correction.",
+      "Middle-Man Logic: To find people between $X$ and $Y$, use $|Rank Difference| - 1$. The brain struggles with 'gaps'; this formula handles the boundary logic for you.",
+      "The 'Interchange' Shortcut: If two people swap places, the change in rank for person A is exactly equal to the change in rank for person B.",
+      "Extreme Point Visualization: Draw a line and place 'End' and 'Start' markers. Visualizing the 'ends' prevents the brain from losing track in relative ranking."
+    ]
+  },
+  {
+    "topic": "Sitting Arrangement",
+    "psychology_hacks": [
+      "The 'Fixed-Point' Start: Never start with 'A is next to B' (too many possibilities). Start with 'A is 3rd from the left' (only one possibility).",
+      "The 'Anti-Clockwise' Right: For circular tables facing center, 'Right' is always anti-clockwise. Associating 'Right' with 'Counter' prevents direction swap errors.",
+      "Two-Diagram Strategy: If a piece of info has two possibilities, draw two small diagrams instantly. It’s faster to cross one out than to keep both in your working memory.",
+      "Neighbor Audit: Once finished, quickly check who is *not* mentioned. Examiners often place the answer on the 'quiet' person."
+    ]
+  },
+  {
+    "topic": "Puzzles",
+    "psychology_hacks": [
+      "The 'Grid Elimination' Method: Use a Tick/Cross table. The brain handles 'Negative Evidence' (A is not B) better when it is visually crossed out.",
+      "The Certainty Filter: Scan the whole puzzle for words like 'Only', 'Exactly', or 'At the ends'. These are 'Anchor Clues' that reduce complexity immediately.",
+      "Chunking Information: Group related clues together (e.g., all clues about 'Time' or all clues about 'Color') before trying to place them in the puzzle.",
+      "The 'Placeholder' Technique: If a clue is 'A is older than B', draw $A > B$ on the side. Don't try to fit it in the final puzzle until you have more links."
+    ]
+  },
+  {
+    "topic": "Syllogism",
+    "psychology_hacks": [
+      "The 'Minimum Overlap' Rule: When drawing Venn diagrams, only overlap circles as much as the statement requires. Extra overlap creates 'False Positives'.",
+      "Definite vs. Possible: If a conclusion has 'Is' or 'Are', it must be true in *every* diagram. If even one diagram fails, the conclusion is false.",
+      "The 'No-Negative' Rule: If all statements are positive (All/Some), a negative conclusion (No/Some Not) can never be definitely true.",
+      "Either-Or Identification: Look for 'Subject' and 'Predicate' to be the same in two conclusions where one is positive and one is negative. It’s a 50/50 logic split."
+    ]
+  },
+  {
+    "topic": "Venn Diagrams",
+    "psychology_hacks": [
+      "Attribute Overlay: Think of each circle as a 'Filter'. The intersection isn't just a shape; it’s the only place where *all* conditions are met simultaneously.",
+      "Size Doesn't Matter: Don't let the size of the circles or shapes fool you. Examiners use large triangles for small groups to distract the visual cortex.",
+      "The 'Exclusion' Method: If a question asks for 'A but not B', physically cover the B circle with your finger. It prevents the brain from including the intersection.",
+      "Abstract Mapping: Replace abstract categories with real-world examples (e.g., Doctors, Humans, Dogs) to see if the overlapping logic actually makes sense."
+    ]
+  },
+  {
+    "topic": "Dice & Cubes",
+    "psychology_hacks": [
+      "The 'Adjacent is Never Opposite' Rule: If you see two numbers on the same view of a dice, they cannot be opposite. Use elimination to find the missing face.",
+      "The 'One Common Face' Rotation: If two dice have one common face, rotate both clockwise from that face. The numbers you see in order will be opposite each other.",
+      "The 'Z-Method' for Open Dice: On a flat dice layout, faces in a 'Z' pattern (skipping one box) are always opposite. It’s a spatial shortcut for the brain.",
+      "Color/Symbol Tagging: For cubes with symbols, focus on the 'unique' symbol. The brain tracks rare patterns better than common ones."
+    ]
+  },
+  {
+    "topic": "Clock & Calendar",
+    "psychology_hacks": [
+      "The '11/2' Angle Formula: Use $\theta = |30H - (11/2)M|$. It’s a reliable 'math-shield' that prevents errors caused by trying to visualize hand positions.",
+      "Odd Days Method: For calendars, only care about the remainder when dividing by 7. Treating 'January' as '3 odd days' is easier than '31 days'.",
+      "The 'Leap Century' Trap: Remember that 1900, 2100 are *not* leap years, but 2000 is. The brain assumes all '00' years are leap; this is a common examiner trap.",
+      "Mirror Image Shortcut: For time in a mirror, subtract the given time from 11:60. It’s a faster 'Optical Correction' than mental rotation."
+    ]
+  },
+  {
+    "topic": "Mathematical Operations",
+    "psychology_hacks": [
+      "The 'Division First' Strategy: When swapping signs, look at the 'Division' sign first. If the new division results in a decimal, that option is likely wrong.",
+      "BODMAS Rhythm: Recite the order like a chant. Under pressure, the brain skips 'Division' for 'Multiplication'; the rhythm keeps the sequence locked.",
+      "Substitution Table: Quickly write the new meanings (e.g., $+\rightarrow -$) in a small table. Relying on mental substitution is the #1 cause of 'Sign-Swap' errors.",
+      "Option Filtering: Start testing options from (D) to (A). Examiners often place the correct sign-swap at the end to waste the candidate's time."
+    ]
+  },
+  {
+    "topic": "Word Formation",
+    "psychology_hacks": [
+      "Letter Frequency Audit: Scan the source word for double letters. If the source has one 'E' but the option has two, it’s an instant fail.",
+      "The 'Missing Letter' Scan: Don't read the word; look at each letter. The brain 'auto-corrects' spelling, which makes it miss a missing letter in 'Formation'.",
+      "Vowel-Consonant Ratio: Quickly count vowels. If the option has more vowels than the source, don't waste time checking the consonants.",
+      "Bottom-Up Reading: Read the source word backwards to break its 'meaning' in your head. This forces your brain to see letters as symbols, not a word."
+    ]
+  },
+  {
+    "topic": "Mirror & Water Images",
+    "psychology_hacks": [
+      "Mirror: Left-Right Swap. Water: Top-Bottom Swap. Recite this 'Orientation Rule' before every question to prevent mixing them up.",
+      "Point-to-Point Mapping: Pick a unique corner or dot in the image and track its new position. Mapping one 'anchor point' is easier than rotating the whole image.",
+      "Alphabet Orientation: Memorize which letters look the same (e.g., H, I, O, X in mirror). Recognizing 'Invariants' lets you eliminate wrong options instantly.",
+      "The 'Closer is Closer' Rule: In a mirror, the part of the object closer to the mirror remains closer in the image. This 'Proximity Logic' beats mental rotation."
+    ]
+  },
+  {
+    "topic": "Paper Cutting & Folding",
+    "psychology_hacks": [
+      "The 'Mirror-Fold' Rule: Every fold is a mirror. When the paper is unfolded, the cut is reflected across that fold line. Visualize the 'Reflection', not the 'Paper'.",
+      "Hole Count Multiplier: If you fold a paper twice (4 layers) and make 1 cut, you must have 4 holes. Checking the 'Hole Count' first eliminates 70% of wrong options.",
+      "The 'Last-to-First' Strategy: Mentally unfold the paper in the exact reverse order of how it was folded. The 'Reverse Path' is the most logical one for the brain.",
+      "Corner Tracing: Focus only on what happens to the corners. The center of the paper rarely changes, but the corners move significantly."
+    ]
+  },
+  {
+    "topic": "Statement & Conclusion",
+    "psychology_hacks": [
+      "The 'Boundary of Truth': Only what is in the statement is true. Your 'General Knowledge' is your enemy here; ignore what you know to be true in the real world.",
+      "Keywords of Extremism: Words like 'All', 'Always', 'Only', and 'Never' usually make a conclusion wrong. Logic is rarely that absolute.",
+      "The 'Therefore' Test: Read the Statement, say 'Therefore', then read the Conclusion. If the flow feels broken or forced, the conclusion does not follow.",
+      "Universal vs. Particular: If a statement is about a 'specific' group, a 'universal' conclusion about everyone is always logically invalid."
+    ]
+  },
+  {
+    "topic": "Inequality",
+    "psychology_hacks": [
+      "The 'Gate Method': Think of '>' as an open gate. You can move from left to right. If you hit a '<' (closed gate), the path is broken and the relationship is 'No Relation'.",
+      "Priority of Signs: $>$ is the King, $\geq$ is the Soldier, $=$ is the Public. If a King is in the path, the result must be a King ($>$).",
+      "Common Element Bridge: To connect $A > B$ and $C < B$, find the common letter ($B$). Mentally join them at that bridge ($A > B > C$) to see the full path.",
+      "Either-Or Check: If a path is broken but the subject/predicate are the same and all three signs ($>, <, =$) are covered, it’s an 'Either-Or' case."
+    ]
+  },
+  {
+    "topic": "Statement & Assumptions / Course of Action",
+    "psychology_hacks": [
+      "The 'Speaker's Mindset': An assumption is the 'unsaid premise'. Ask yourself, 'What must be true for the speaker to say this?'",
+      "Positive Expectation Rule: Assumptions are usually positive or corrective. The speaker assumes their advice/warning will have an effect.",
+      "The 'Feasibility' Check: For Course of Action, discard any solution that creates a bigger problem than the original one."
+    ]
+  },
+  {
+    "topic": "Data Sufficiency",
+    "psychology_hacks": [
+      "The 'No-Solve' Rule: Don't calculate the final answer. Just check if a unique answer is *possible*. Solving wastes mental RAM.",
+      "The 'Individual Test': Always check Statement I alone, then Statement II alone, BEFORE checking them together. This prevents 'Confirmation Bias'.",
+      "The 'Unique Value' Trap: If Statement I gives two possible values (e.g., 5 or 7), it is NOT sufficient. Sufficiency demands uniqueness."
+    ]
+  },
+  {
+    "topic": "Embedded Figures",
+    "psychology_hacks": [
+      "The 'Feature Hunt': Pick a unique corner or 'T-junction' in the small figure and scan ONLY for that feature in the big figures.",
+      "Orientation Check: First look for the figure in the same orientation. Only rotate if no match is found (unless forbidden).",
+      "Negative Space: Sometimes looking at the empty space *around* the lines helps identify the shape faster than looking at the lines themselves."
+    ]
+  }
+]

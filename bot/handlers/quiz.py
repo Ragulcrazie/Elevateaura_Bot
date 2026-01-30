@@ -654,6 +654,7 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
 
     builder = InlineKeyboardBuilder()
     builder.button(text=start_btn_text, callback_data="start_quiz_cmd")
+    builder.button(text="🧠 AI Coach Analysis", callback_data="ai_coach")
     builder.button(text="⚙️ Change Topic", callback_data="settings")
     builder.button(text="🔥 Leaderboard", web_app=WebAppInfo(url=web_app_url))
     builder.adjust(1)

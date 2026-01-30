@@ -1,0 +1,155 @@
+[
+  {
+    "topic": "History (Ancient, Medieval, Modern)",
+    "shortcuts": [
+      "Indus Valley: 'HAD-RA-LO' (Harappa - Ravi river, Lothal - Bhogwa river).",
+      "Buddhist Councils: 'R-V-P-K' (Rajgriha, Vaishali, Pataliputra, Kashmir).",
+      "Modern History Chronology: 'BK-C-A-K-N' (Champaran, Ahmedabad, Kheda, Khilafat, Non-Cooperation)."
+    ],
+    "common_mistakes": [
+      "Confusing the Battle of Plassey (1757) with Buxar (1764).",
+      "Mixing up the First Battle of Panipat (1526) with the Second (1556)."
+    ]
+  },
+  {
+    "topic": "Geography (Indian & World)",
+    "shortcuts": [
+      "Tropic of Cancer States: 'G-R-M-C-J-W-T-M' (Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram).",
+      "Atmosphere Layers: 'Trust Me In The Exam' (Troposphere, Stratosphere, Mesosphere, Thermosphere, Exosphere).",
+      "Planets: 'MVEMJSUN' (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)."
+    ],
+    "common_mistakes": [
+      "Assuming the Sun is closest to Earth in Summer (It's actually January - Perihelion).",
+      "Confusing 'Standard Time' longitude (82.5° E) with the 'Equator'."
+    ]
+  },
+  {
+    "topic": "Indian Polity & Constitution",
+    "shortcuts": [
+      "Sources of Constitution: 'USA' (Fundamental Rights), 'Ireland' (DPSP), 'USSR' (Fundamental Duties).",
+      "Schedules: 'TEARS OF OLD PM' (Territories, Emoluments, Affirmations, Rajya Sabha, Scheduled areas, Other areas, Federal, Official languages, Land reforms, Defection, Panchayats, Municipalities).",
+      "Age limits: President/Governor (35), Rajya Sabha (30), Lok Sabha (25)."
+    ],
+    "common_mistakes": [
+      "Thinking the 'Preamble' can't be amended (It was amended once in 1976).",
+      "Confusing the retirement age of High Court (62) and Supreme Court (65) judges."
+    ]
+  },
+  {
+    "topic": "Physics",
+    "shortcuts": [
+      "Mirrors: Concave = 'Cave' (light converges); Convex = Bulge (light diverges).",
+      "Units: Work/Energy = Joule; Power = Watt; Resistance = Ohm.",
+      "Light: 'VIBGYOR' (Violet has min wavelength/max frequency; Red has max wavelength/min frequency)."
+    ],
+    "common_mistakes": [
+      "Thinking Mass changes on different planets (Only Weight changes).",
+      "Confusing Myopia (Concave lens) with Hypermetropia (Convex lens)."
+    ]
+  },
+  {
+    "topic": "Chemistry",
+    "shortcuts": [
+      "Redox: 'OIL RIG' (Oxidation Is Loss, Reduction Is Gain of electrons).",
+      "pH Scale: 0-7 (Acidic), 7 (Neutral), 7-14 (Basic/Alkaline).",
+      "Common names: Baking Soda ($NaHCO_3$), Washing Soda ($Na_2CO_3 \\cdot 10H_2O$), Bleaching Powder ($CaOCl_2$)."
+    ],
+    "common_mistakes": [
+      "Confusing 'Isotopes' (Same Atomic Number) with 'Isobars' (Same Mass Number).",
+      "Thinking Diamond is a compound (It's an element - pure Carbon)."
+    ]
+  },
+  {
+    "topic": "Biology",
+    "shortcuts": [
+      "Vitamins: 'KEDA' are Fat soluble; 'B & C' are Water soluble.",
+      "Blood: 'O-' is Universal Donor; 'AB+' is Universal Recipient.",
+      "Diseases: 'Goiter' (Iodine), 'Scurvy' (Vit C), 'Night Blindness' (Vit A)."
+    ],
+    "common_mistakes": [
+      "Confusing Xylem (Water transport) with Phloem (Food transport).",
+      "Thinking all bacteria are harmful (e.g., Lactobacillus is useful)."
+    ]
+  },
+  {
+    "topic": "Computer Knowledge",
+    "shortcuts": [
+      "OSI Layers: 'All People Seem To Need Data Processing' (Application, Presentation, Session, Transport, Network, Data Link, Physical).",
+      "Memory: 1 byte = 8 bits; 1 KB = 1024 bytes.",
+      "Shortcuts: Ctrl+X (Cut), Ctrl+V (Paste), Ctrl+Z (Undo)."
+    ],
+    "common_mistakes": [
+      "Confusing RAM (Volatile) with ROM (Non-volatile).",
+      "Thinking HTML is a programming language (It is a markup language)."
+    ]
+  },
+  {
+    "topic": "Environment & Ecology",
+    "shortcuts": [
+      "10% Law: Only 10% of energy is passed to the next trophic level.",
+      "Conferences: Kyoto Protocol (Global Warming), Montreal Protocol (Ozone Layer).",
+      "Greenhouse Gases: $CO_2$, $CH_4$ (Methane), $N_2O$, Water Vapor."
+    ],
+    "common_mistakes": [
+      "Thinking the Ozone hole is over the Equator (It's over Antarctica).",
+      "Confusing 'Food Chain' (linear) with 'Food Web' (interconnected)."
+    ]
+  },
+  {
+    "topic": "Static GK",
+    "shortcuts": [
+      "Organizations: 'Hague' (Justice), 'Geneva' (Health/Labor), 'New York' (UNHQ), 'Vienna' (Atomic/Petroleum).",
+      "Inventions: Penicillin (Fleming), Telephone (Bell), Bulb (Edison).",
+      "Sports: Thomas Cup (Badminton), Santosh Trophy (Football), Ryder Cup (Golf)."
+    ],
+    "common_mistakes": [
+      "Mixing up the dates of important days (e.g., Environment Day June 5 vs Earth Day April 22).",
+      "Confusing the Jnanpith Award (Literature) with the Dadasaheb Phalke (Cinema)."
+    ]
+  },
+
+  {
+    "topic": "Static GK: Awards & Honors",
+    "shortcuts": [
+      "Order of Merit (India): Bharat Ratna > Padma Vibhushan > Padma Bhushan > Padma Shri.",
+      "Nobel Prize: Peace (Oslo), All others (Stockholm).",
+      "Gallantry: Param Vir Chakra is the highest wartime honor."
+    ],
+    "common_mistakes": [
+      "Confusing 'Pulitzer' (Journalism) with 'Pritzker' (Architecture).",
+      "Mistaking 'Bhartiya Jnanpith' as a government award (It's by a private trust)."
+    ]
+  },
+  {
+    "topic": "Static GK: Important Days",
+    "shortcuts": [
+      "Environment Trio: Earth Day (April 22), Biodiversity Day (May 22), Environment Day (June 5).",
+      "Health/Science: Science Day (Feb 28 - Raman Effect), Health Day (April 7)."
+    ],
+    "common_mistakes": [
+      "Mixing up 'National Youth Day' (Jan 12 - Vivekananda) with 'International Youth Day' (Aug 12)."
+    ]
+  },
+  {
+    "topic": "Art & Culture",
+    "shortcuts": [
+      "Classical Dances (8): 'Kathak' (North), 'Sattriya' (Assam), 'Mohiniyattam' (Kerala), 'Kuchipudi' (Andhra).",
+      "Painting: Madhubani (Bihar), Pattachitra (Odisha), Warli (Maharashtra)."
+    ],
+    "common_mistakes": [
+      "Confusing 'Kathak' (UP) with 'Kathakali' (Kerala).",
+      "Thinking 'Bihu' is a classical dance (It is a folk dance)."
+    ]
+  },
+  {
+    "topic": "Inventions & Sports",
+    "shortcuts": [
+      "Sports Terms: 'Deuce' (Tennis/Badminton), 'Bully' (Hockey), 'Chinaman' (Cricket).",
+      "Inventions: X-Ray (Roentgen), Periodic Table (Mendeleev), Vaccination (Jenner)."
+    ],
+    "common_mistakes": [
+      "Thinking the first Olympic Games were held in London (It was Athens, 1896).",
+      "Confusing the inventor of the Telephone (Bell) with the Radio (Marconi)."
+    ]
+  }
+]

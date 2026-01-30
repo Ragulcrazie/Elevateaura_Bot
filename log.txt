@@ -1,8 +1,0 @@
-Verifying Question Loader Deduplication...
-[english][aptitude] Loaded: 1276
-[english][reasoning] Loaded: 1444
-[english][gk] Loaded: 3181
-[hindi][aptitude] Loaded: 1121
-[hindi][reasoning] Loaded: 1609
-[hindi][gk] Loaded: 3736
-Total Unique Questions in Memory: 12367

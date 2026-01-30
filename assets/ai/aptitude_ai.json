@@ -1,0 +1,249 @@
+[
+  {
+    "topic": "Number System",
+    "shortcuts": [
+      "Divisibility of 7, 11, 13: Difference between the last 3 digits and the remaining digits must be 0 or divisible by the number.",
+      "Sum of first 'n' natural numbers: $n(n+1)/2$.",
+      "Finding Unit Digit: Focus only on the last digit and use cyclicity of 4 for powers."
+    ],
+    "common_mistakes": [
+      "Confusing 'Prime Numbers' with 'Odd Numbers' (remember: 2 is the only even prime).",
+      "Ignoring the remainder 0 in cyclicity (if power is divisible by 4, use $x^4$ not $x^0$).",
+      "Treating 1 as a prime number (1 is neither prime nor composite)."
+    ]
+  },
+  {
+    "topic": "HCF & LCM",
+    "shortcuts": [
+      "Product Rule: $HCF \\times LCM = Product\\ of\\ two\\ numbers$.",
+      "HCF of Fractions: $HCF\\ of\\ Numerators / LCM\\ of\\ Denominators$.",
+      "LCM of Fractions: $LCM\\ of\\ Numerators / HCF\\ of\\ Denominators$."
+    ],
+    "common_mistakes": [
+      "Finding LCM when the question asks for the 'Greatest' number (HCF) that divides.",
+      "Forgetting to add/subtract the remainder at the final step in 'Remainder' type problems.",
+      "Not simplifying fractions to their lowest terms before finding HCF/LCM."
+    ]
+  },
+  {
+    "topic": "Simplification",
+    "shortcuts": [
+      "V-BODMAS: Follow strictly: Vinculum, Bracket, Of, Division, Multiplication, Addition, Subtraction.",
+      "Digital Sum: Use the sum of digits to eliminate options in heavy multiplication/division.",
+      "Square root of perfect squares: Look at the unit digit (e.g., if it ends in 1, the root ends in 1 or 9)."
+    ],
+    "common_mistakes": [
+      "Treating 'Of' as a simple multiplication and doing 'Division' before it.",
+      "Calculation errors due to lack of approximation when options are far apart.",
+      "Incorrectly applying $(a+b)^2$ formulas to cubical expressions."
+    ]
+  },
+  {
+    "topic": "Average",
+    "shortcuts": [
+      "Deviation Method: Assume a mean and find how much each value deviates from it to save time on large sums.",
+      "Average of first 'n' odd numbers is always 'n'.",
+      "Average of first 'n' even numbers is 'n + 1'."
+    ],
+    "common_mistakes": [
+      "Calculating the average of speeds by simply adding and dividing by 2 (Must use Harmonic Mean).",
+      "Including the wrong number of terms (e.g., counting 1 to 10 as 9 terms instead of 10).",
+      "Forgetting to update the 'Total Number' after a person joins or leaves a group."
+    ]
+  },
+  {
+    "topic": "Percentage",
+    "shortcuts": [
+      "Fraction to %: $1/8 = 12.5%$, $1/6 = 16.66%$, $1/7 = 14.28%$. Memorize up to $1/20$.",
+      "Successive % Change: $A + B + (AB/100)$. Use for area changes or consecutive discounts.",
+      "Product Consistency: If price increases by 25% (1/4), consumption must decrease by 20% (1/5) to keep expenditure same."
+    ],
+    "common_mistakes": [
+      "Applying % change on the new value instead of the original 'Base' value.",
+      "Confusing 'Percentage Points' with 'Percentage Change'.",
+      "Calculating 20% of 80 as 20 instead of 16."
+    ]
+  },
+  {
+    "topic": "Profit & Loss",
+    "shortcuts": [
+      "CP is always 100%: If profit is 20%, SP = 120% of CP. If loss is 10%, SP = 90% of CP.",
+      "Dishonest Dealer: $Profit\\% = [Error / (True\\ Value - Error)] \\times 100$.",
+      "When CP of 'x' articles = SP of 'y' articles, $Profit/Loss\\% = [(x-y)/y] \\times 100$."
+    ],
+    "common_mistakes": [
+      "Calculating Profit/Loss % on Selling Price (SP) instead of Cost Price (CP).",
+      "Applying the wrong base when multiple profits are involved (Chain rule).",
+      "Assuming SP is the same as MP (Marked Price) when no discount is mentioned."
+    ]
+  },
+  {
+    "topic": "Discount",
+    "shortcuts": [
+      "The Relation: $MP / CP = (100 + P\\%) / (100 - D\\%)$. Extremely useful for SSC exams.",
+      "Single Equivalent Discount: For $d1$ and $d2$, it is $d1 + d2 - (d1 \\times d2 / 100)$."
+    ],
+    "common_mistakes": [
+      "Applying discount on CP instead of MP (Marked Price).",
+      "Adding successive discounts directly (e.g., 10% + 10% is 19%, not 20%).",
+      "Confusing 'Discount' with 'Loss'."
+    ]
+  },
+  {
+    "topic": "Simple & Compound Interest",
+    "shortcuts": [
+      "SI: Interest is same every year. $SI = (P \\times R \\times T) / 100$.",
+      "CI: Difference between CI and SI for 2 years = $P(R/100)^2$.",
+      "CI: Amount doubles in 'n' years? It will become 4 times in '2n' years."
+    ],
+    "common_mistakes": [
+      "Forgetting to divide the Rate by 2 and multiply Time by 2 for 'Half-Yearly' CI.",
+      "Calculating CI on the Principal only (CI is interest on interest).",
+      "Confusing 'Amount' (P+I) with 'Interest' (I) in the final answer."
+    ]
+  },
+  {
+    "topic": "Ratio & Proportion",
+    "shortcuts": [
+      "If $A:B = 2:3$ and $B:C = 4:5$, then $A:B:C = (2\\times4) : (3\\times4) : (3\\times5)$.",
+      "Mean Proportional of a and b is $\\sqrt{ab}$.",
+      "Third Proportional of a and b is $b^2/a$."
+    ],
+    "common_mistakes": [
+      "Comparing ratios with different units (e.g., meters to kilometers).",
+      "Assuming the parts of a ratio are the actual values (always multiply by a constant 'x').",
+      "Mixing up the order (e.g., writing B:A when the question asks for A:B)."
+    ]
+  },
+  {
+    "topic": "Time & Work",
+    "shortcuts": [
+      "L.C.M Method: Assume Total Work = LCM of days. This converts days into 'Efficiency' (Units/day).",
+      "Man-Days Formula: $(M1 \\times D1 \\times H1) / W1 = (M2 \\times D2 \\times H2) / W2$.",
+      "Efficiency: If A is twice as good as B, he takes half the time."
+    ],
+    "common_mistakes": [
+      "Adding 'Days' directly instead of 'Efficiency'.",
+      "Not accounting for people leaving mid-work.",
+      "Forgetting that 'Work' is inversely proportional to 'Time'."
+    ]
+  },
+
+  {
+    "topic": "Mixture & Alligation",
+    "shortcuts": [
+      "Alligation Rule: (Quantity of Cheaper) / (Quantity of Dearer) = (CP of Dearer - Mean Price) / (Mean Price - CP of Cheaper).",
+      "Replacement Formula: Final Concentration = $Initial\\ (1 - x/V)^n$, where x is replaced volume and V is total volume."
+    ],
+    "common_mistakes": [
+      "Using Selling Price (SP) in the alligation cross instead of Cost Price (CP). All three values must be CP.",
+      "Mixing up the ratios (putting the Cheaper quantity under the Dearer side)."
+    ]
+  },
+  {
+    "topic": "Pipes & Cisterns",
+    "shortcuts": [
+      "Inlet pipe = Positive efficiency (+); Outlet/Leak pipe = Negative efficiency (-).",
+      "If a pipe fills in 'x' hours and another empties in 'y' hours, net work = $(xy) / (y - x)$."
+    ],
+    "common_mistakes": [
+      "Forgetting to treat the 'Leak' as a negative value in the total sum.",
+      "Miscalculating the time when pipes are opened alternately (Odd/Even hour logic)."
+    ]
+  },
+  {
+    "topic": "Time, Speed & Distance",
+    "shortcuts": [
+      "Distance is Constant: Speed is inversely proportional to Time ($S_1/S_2 = T_2/T_1$).",
+      "Late/Early Concept: $Distance = [Product\\ of\\ Speeds / Diff\\ of\\ Speeds] \\times [Diff\\ in\\ Time / 60]$."
+    ],
+    "common_mistakes": [
+      "Mixing km/hr with seconds. Always check units first!",
+      "Average speed error: Do not use $(S_1 + S_2)/2$ unless time intervals are identical."
+    ]
+  },
+  {
+    "topic": "Trains",
+    "shortcuts": [
+      "Crossing a point/pole: Distance = Length of Train.",
+      "Crossing a Bridge/Platform: Distance = (Length of Train + Length of Platform).",
+      "Relative Speed: Subtract speeds for same direction; Add for opposite."
+    ],
+    "common_mistakes": [
+      "Not converting speed to m/s when the train length is in meters.",
+      "Neglecting the length of the *second* train when they cross each other."
+    ]
+  },
+  {
+    "topic": "Boats & Streams",
+    "shortcuts": [
+      "Downstream Speed (D) = $u + v$; Upstream Speed (U) = $u - v$.",
+      "Speed of Boat in still water ($u$) = $(D + U) / 2$.",
+      "Speed of Stream ($v$) = $(D - U) / 2$."
+    ],
+    "common_mistakes": [
+      "Confusing 'Upstream' (against flow) with 'Downstream' (with flow).",
+      "Incorrectly assuming the speed of the boat in still water is the same as its speed downstream."
+    ]
+  },
+  {
+    "topic": "Problems on Ages",
+    "shortcuts": [
+      "The age difference between two people remains constant forever.",
+      "Ratio Method: If the ratio is $2:3$ now and $3:4$ in 5 years, the 1 unit difference = 5 years."
+    ],
+    "common_mistakes": [
+      "Applying the time gap to only one person instead of both.",
+      "Getting confused between 'x years ago' (Subtract) and 'x years hence' (Add)."
+    ]
+  },
+  {
+    "topic": "Permutation & Combination",
+    "shortcuts": [
+      "Combination (Selection): Use $nCr$ when order doesn't matter (e.g., forming a committee).",
+      "Permutation (Arrangement): Use $nPr$ when order matters (e.g., arranging letters in a word).",
+      "Circular Permutation: $(n - 1)!$."
+    ],
+    "common_mistakes": [
+      "Using Permutation where only Selection (Combination) was needed.",
+      "Forgetting to divide by $r!$ for identical items (e.g., repeating letters in a word)."
+    ]
+  },
+  {
+    "topic": "Probability",
+    "shortcuts": [
+      "Probability = (Favorable Outcomes) / (Total Outcomes).",
+      "$P(Event) + P(Not\\ Event) = 1$.",
+      "In 'At least' problems, it is often easier to calculate '1 - Probability of None'."
+    ],
+    "common_mistakes": [
+      "Calculating a probability greater than 1 (Mathematically impossible).",
+      "Miscounting the sample space (e.g., 2 dice = 36 outcomes, not 12)."
+    ]
+  },
+  {
+    "topic": "Mensuration (2D & 3D)",
+    "shortcuts": [
+      "If sides of a 2D shape increase by $x\\%$, area increases by $[2x + x^2/100]\\%$.",
+      "Radius of Incircle of equilateral triangle = $a / (2\\sqrt{3})$.",
+      "Volume of any prism = Base Area $\\times$ Height."
+    ],
+    "common_mistakes": [
+      "Confusing 'Curved Surface Area' with 'Total Surface Area' (which includes the base/top).",
+      "Forgetting to cube the units for Volume ($cm^3$) or square them for Area ($cm^2$)."
+    ]
+  },
+  {
+    "topic": "Data Interpretation (DI)",
+    "shortcuts": [
+      "To find % growth: $(Final - Initial) / Initial \\times 100$.",
+      "Pie Chart: $1\\% = 3.6\\ degrees$. To convert degrees to %, divide by 3.6.",
+      "Scanning: Use 'Visual Estimation' to eliminate options before doing heavy calculation."
+    ],
+    "common_mistakes": [
+      "Misreading the units in the graph legend (e.g., 'Values in Lakhs').",
+      "Wasting time on one complex calculation when the rest of the set is easy.",
+      "Picking the value for the wrong year due to misaligned columns."
+    ]
+  }
+]

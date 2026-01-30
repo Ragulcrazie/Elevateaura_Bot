@@ -1,0 +1,230 @@
+[
+  {
+    "topic": "Analogy",
+    "shortcuts": [
+      "Priority Order: Prime Number > Square/Cube > Multiples > Addition/Subtraction.",
+      "Alphabet Analogy: Check the sum of positions; often the sum of opposite letters is 27."
+    ],
+    "common_mistakes": [
+      "Choosing a weak logic (like addition) when a strong logic (like Prime numbers) is available.",
+      "Ignoring the relationship direction (e.g., Tool:Worker vs Worker:Tool)."
+    ]
+  },
+  {
+    "topic": "Classification (Odd One Out)",
+    "shortcuts": [
+      "Group properties: 3 options will follow a strict rule (e.g., all are Capital cities or all are divisible by 7).",
+      "In Alphabet sets, check the gaps between letters (e.g., +2, +2, +2).",
+      "Prime Rule: Check if three numbers are Prime and one is Composite.",
+      "Semantic Mapping: In word sets, look for 'Part-to-Whole' relationships (e.g., Wheel, Engine, Steering are parts of a Car).",
+      "Digital Sum: If numbers are large, check if the sum of digits is the same for three options."
+    ],
+    "common_mistakes": [
+      "Picking an option because it 'feels' different without finding a common rule for the other three.",
+      "Missing properties like 'Vowels vs Consonants' in alphabet groups.",
+      "Choosing an answer based on a logic that only applies to one option (You must find a rule that applies to the other THREE)."
+    ]
+  },
+  {
+    "topic": "Series (Number & Alphabet)",
+    "shortcuts": [
+      "Step Method: If the series grows slowly, find the difference between terms. If it grows fast, it's multiplication.",
+      "Check for 'Double Series' where two patterns run alternately (1st, 3rd, 5th term...).",
+      "Difference of Difference: If a series is $2, 5, 10, 17$, the first differences are $3, 5, 7$ (an AP), making the next difference 9.",
+      "Alternate Series: If the numbers go up and then down, check terms 1, 3, 5 and 2, 4, 6 separately."
+    ],
+    "common_mistakes": [
+      "Focusing only on the immediate next term instead of looking at the overall trend.",
+      "Missing 'Square - 1' or 'Cube + 1' patterns.",
+      "Missing 'Fibonacci' patterns where the next term is the sum of the previous two."
+    ]
+  },
+  {
+    "topic": "Missing Number",
+    "shortcuts": [
+      "Matrix Logic: Usually, the largest number in a row or column is the 'Result' of the smaller numbers.",
+      "Check common operations: $(A \\times B) + C$ or $A^2 + B^2$."
+    ],
+    "common_mistakes": [
+      "Applying a logic that works for the first row but fails for the second.",
+      "Spending more than 60 seconds on one puzzle. These are 'time-vampires'—skip if not solved instantly."
+    ]
+  },
+  {
+    "topic": "Ranking & Order",
+    "shortcuts": [
+      "Total Person Formula: $Total = (Rank\\ from\\ Left + Rank\\ from\\ Right) - 1$.",
+      "Interchange position: If A and B swap, the increase in A's rank is equal to the increase in B's rank."
+    ],
+    "common_mistakes": [
+      "Forgetting to subtract 1 in the total formula (you counted the same person twice).",
+      "Confusing 'Rank from top' with 'Number of people ahead'."
+    ]
+  },
+  {
+    "topic": "Puzzles",
+    "shortcuts": [
+      "Elimination Table: Create a grid. Use 'X' for negative info and 'Check' for positive info.",
+      "Linkage: Find a person or object that is mentioned in multiple clues to start the chain."
+    ],
+    "common_mistakes": [
+      "Trying to solve everything mentally without a rough diagram.",
+      "Mixing up 'Not' conditions (e.g., 'A is not a Doctor' doesn't mean A is a Lawyer)."
+    ]
+  },
+  {
+    "topic": "Venn Diagrams",
+    "shortcuts": [
+      "The 'Subset' Rule: If All A are B, A is inside B. If no A is B, the circles are separate.",
+      "For 3-entity diagrams, identify if there is a 'Universal' category (e.g., Furniture: Table, Chair)."
+    ],
+    "common_mistakes": [
+      "Overlapping all circles when the categories are mutually exclusive.",
+      "Confusing 'Only' areas with 'Common' areas."
+    ]
+  },
+  {
+    "topic": "Mathematical Operations",
+    "shortcuts": [
+      "BODMAS: Always use the 'Division' sign as the primary filter to eliminate options (e.g., if 7 cannot be divided by 3, that option is likely wrong).",
+      "Substitute only the signs that change the result significantly."
+    ],
+    "common_mistakes": [
+      "Calculation errors due to skipping the 'Bracket' or 'Of' step.",
+      "Forgetting to rewrite the new signs before solving."
+    ]
+  },
+  {
+    "topic": "Word Formation",
+    "shortcuts": [
+      "Check the frequency: If the original word has one 'E', you cannot form a word with two 'E's.",
+      "Scanning: Quickly look for letters that are 'Out of Bounds' (not in the original word).",
+      "Hidden Words: Quickly scan for vowels; if an option has a 'U' and the keyword doesn't, eliminate it immediately."
+    ],
+    "common_mistakes": [
+      "Misreading the question (e.g., 'Which word CANNOT be formed' vs 'Which word CAN be formed')—this is the #1 time-waster."
+    ]
+  },
+  {
+    "topic": "Paper Cutting & Folding",
+    "shortcuts": [
+      "Mirror Image Logic: The fold line acts as a mirror. If you cut a shape on the left, it will appear reflected on the right.",
+      "Work Backwards: Start from the last fold and unfold it step-by-step.",
+      "Count the Layers: If paper is folded 3 times, a single hole becomes $2^3 = 8$ holes."
+    ],
+    "common_mistakes": [
+      "Changing the orientation of the cut incorrectly during unfolding.",
+      "Ignoring the number of layers (if folded twice, one cut becomes four).",
+      "Misplacing the orientation of the cut (e.g., a triangle pointing up might point down when unfolded)."
+    ]
+  },
+  {
+    "topic": "Statement & Conclusion",
+    "shortcuts": [
+      "Stick to the Statement: Don't use outside knowledge. If the statement says 'All cats are dogs,' then for this question, they are.",
+      "Keywords: Words like 'Only', 'All', 'Always', 'Definitely' usually make a conclusion invalid."
+    ],
+    "common_mistakes": [
+      "Bringing in personal opinions or 'General Truths' that aren't in the text.",
+      "Confusing a 'Course of Action' with a 'Conclusion'."
+    ]
+  },
+  {
+    "topic": "Coding-Decoding",
+    "shortcuts": [
+      "Opposite Pairs: Use 'AZ-BY-CX' (A is opposite Z, B is opposite Y). Sum is always 27.",
+      "Chinese Coding (Message Coding): Compare two sentences. The word common in both sentences corresponds to the code common in both.",
+      "Matrix Coding: Always check options from the last digit to the first for faster elimination."
+    ],
+    "common_mistakes": [
+      "Mixing up +1/-1 shifts when moving from the end of the alphabet (Z to A).",
+      "Overlooking 'Vowel-only' coding rules."
+    ]
+  },
+  {
+    "topic": "Blood Relations",
+    "shortcuts": [
+      "Generation Gap: Use '+1' for parents, '0' for siblings, '-1' for children. Sum them up in coded relations.",
+      "Gender Filter: If the question asks for 'A is the uncle of B', immediately eliminate options where A is female."
+    ],
+    "common_mistakes": [
+      "Assuming gender based on a name (e.g., 'Sonu' could be male or female).",
+      "Confusing 'Only son' with 'Only child'."
+    ]
+  },
+  {
+    "topic": "Direction & Distance",
+    "shortcuts": [
+      "The 'N-E-S-W' Clockwise Rule: Always map directions in this clockwise order to avoid confusion.",
+      "Shadow Trick: At 12:00 Noon, there is no shadow. At Morning, shadow is always to the West."
+    ],
+    "common_mistakes": [
+      "Forgetting that a 'Left Turn' while facing South is actually a move toward the East.",
+      "Calculating displacement as $A+B$ instead of $\\sqrt{A^2 + B^2}$."
+    ]
+  },
+  {
+    "topic": "Clock & Calendar",
+    "shortcuts": [
+      "Clock Angle: $\\theta = |30H - (11/2)M|$.",
+      "Mirror Time: Subtract given time from 11:60 to get the mirror image time.",
+      "Calendar: 100 years have 5 odd days; 400 years have 0 odd days."
+    ],
+    "common_mistakes": [
+      "Counting 2100, 1900, or 1800 as leap years (they are not).",
+      "Ignoring the fact that the hour hand moves $0.5^\\circ$ per minute."
+    ]
+  },
+  {
+    "topic": "Mirror & Water Images",
+    "shortcuts": [
+      "Mirror (Vertical): Lateral inversion (Left becomes Right).",
+      "Water (Horizontal): Vertical inversion (Top becomes Bottom).",
+      "Check the 'Non-Symmetrical' letters first (like P, Q, G, J) to eliminate options."
+    ],
+    "common_mistakes": [
+      "Confusing water image with mirror image when the mirror is placed at the bottom."
+    ]
+  },
+  {
+    "topic": "Inequality",
+    "shortcuts": [
+      "Open Gate Rule: $A > B$ means the gate is open from A to B. You can only travel in the direction of the opening.",
+      "Common Sign: For a conclusion $A > C$ to be true, every sign between A and C must have at least one '$>$'."
+    ],
+    "common_mistakes": [
+      "Missing 'Either-Or' cases when the relationship is $\\geq$ but the conclusions are separate '$>$' and '$=$'."
+    ]
+  },
+  {
+    "topic": "Statement & Assumptions / Course of Action",
+    "shortcuts": [
+      "Assumption: It is something 'taken for granted' by the speaker. It must be positive and directly linked.",
+      "Course of Action: Must be a practical, feasible, and effective solution to the problem mentioned."
+    ],
+    "common_mistakes": [
+      "Using 'Outside Knowledge' not mentioned in the statement.",
+      "Choosing a 'Harsh' course of action (e.g., 'Fire all employees') instead of a corrective one."
+    ]
+  },
+  {
+    "topic": "Data Sufficiency",
+    "shortcuts": [
+      "Don't Solve Fully: Just check if the data *can* lead to a unique answer. If you find two possible answers, the data is insufficient.",
+      "Check statements independently before combining them."
+    ],
+    "common_mistakes": [
+      "Combining both statements before checking if Statement 1 alone is enough."
+    ]
+  },
+  {
+    "topic": "Embedded Figures",
+    "shortcuts": [
+      "Focus on the 'Skeleton': Look for specific angles or unique intersections in the small figure.",
+      "Rotation: Unless the question says 'Rotation not allowed,' check for the figure in different orientations."
+    ],
+    "common_mistakes": [
+      "Picking a figure that 'looks similar' but has different proportions."
+    ]
+  }
+]

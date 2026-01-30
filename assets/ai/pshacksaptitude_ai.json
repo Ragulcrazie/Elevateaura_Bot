@@ -1,0 +1,212 @@
+[
+  {
+    "topic": "Number System",
+    "psychology_hacks": [
+      "Chunking Method: Break down large numbers into groups of 3 (e.g., 1,432,678 as 1...432...678). The brain processes 3 chunks faster than 7 individual digits.",
+      "Unit Digit Anchoring: Focus solely on the last digit for complex powers. This reduces cognitive load by ignoring 90% of the unnecessary data.",
+      "Priming with Prime Numbers: Memorize primes up to 50. It prevents the 'brain freeze' that occurs when trying to divide a number that is fundamentally indivisible.",
+      "Divisibility Rhythm: View divisibility rules as patterns rather than math (e.g., for 3, sum the digits like a musical beat). If the beat fits, it's divisible.",
+      "Zero-Complexity Bias: Always look for factors of 0 or 5 first. The brain is naturally wired to solve problems involving round numbers faster."
+    ]
+  },
+  {
+    "topic": "HCF & LCM",
+    "psychology_hacks": [
+      "The Meeting Point Visualization: Imagine LCM as two runners on a track. The LCM is simply the first time their footprints overlap. Visualizing motion improves logical retention.",
+      "HCF as 'Shared Strength': Think of HCF as the maximum common power between two different entities. It simplifies the concept of 'greatest common divisor'.",
+      "Ladder Visualization: Use the 'Ladder Method' to see factors physically stacked. Spatial organization reduces the risk of missing a small prime factor.",
+      "The Venn Diagram Hack: Place factors in overlapping circles. The intersection is HCF; the entire union is LCM. Geometric layouts are easier to recall than lists.",
+      "Scale Reduction: If numbers are large, divide both by a common factor mentally, find HCF/LCM, then multiply back. It keeps the brain in the 'Small Number Zone'."
+    ]
+  },
+  {
+    "topic": "Simplification",
+    "psychology_hacks": [
+      "V-BODMAS Rhythm: Recite the order like a mantra. Under stress, the brain skips 'Of' or 'Division'; a rhythmic chant keeps the sequence locked in.",
+      "The 5-Ending Square Hack: To square numbers ending in 5, multiply the first digit by (itself + 1) and append 25. This 'magic' trick boosts confidence for harder steps.",
+      "Digital Sum Filtering: Instead of calculating, sum the digits. If the digital sum of your answer doesn't match the question, discard it instantly to save mental energy.",
+      "Rounding Strategy: Treat 99.8 as 100 for a split second to get a 'ballpark' figure. The brain feels less anxious when it already knows the approximate destination.",
+      "Left-to-Right Processing: Train your brain to add/subtract from left to right (hundreds first, then tens). This mimics how we read and reduces 'mental carry-over' errors."
+    ]
+  },
+  {
+    "topic": "Average",
+    "psychology_hacks": [
+      "The Balance Scale Method: Visualize the average as a fulcrum. If one side goes up by 10, the other must drop by 10. The brain solves 'equilibrium' problems faster than 'summation' problems.",
+      "Deviation Mapping: Assume a random middle number as the 'Home Base' and only calculate how far others 'stray' from it. Smaller numbers = fewer mistakes.",
+      "The Fair Distribution Story: Imagine you are distributing chocolates to children so everyone has the same amount. Relatable scenarios trigger social-logic centers in the brain.",
+      "Symmetry Principle: If a sequence is consecutive, the average is simply the middle. Stop calculating and start looking for the center point.",
+      "Weighted Average Shortcut: Instead of total values, use the ratio of the quantities. The brain handles 2:3 much better than 200:300."
+    ]
+  },
+  {
+    "topic": "Percentage",
+    "psychology_hacks": [
+      "The 10% & 1% Anchors: Treat 10% and 1% as your only tools. Any percentage (like 27%) is just (10% x 2) + (5%) + (1% x 2). This eliminates long multiplications.",
+      "Percentage Reversal: $x\%$ of $y$ is the same as $y\%$ of $x$. Calculating 16% of 50 is hard; calculating 50% of 16 (which is 8) is instant.",
+      "Base 100 Mental Image: Always visualize a $10 \times 10$ grid. Coloring in the percentage visually makes 'increase/decrease' questions intuitive rather than abstract.",
+      "Fraction Mapping: Don't see '25%'; see 'one-fourth'. The brain processes simple fractions in the parietal lobe faster than percentages.",
+      "The Consumption-Price Bridge: If price goes up by $1/4$, consumption must drop by $1/5$. Memorizing this 'n to n+1' shift saves minutes of calculation."
+    ]
+  },
+  {
+    "topic": "Profit & Loss",
+    "psychology_hacks": [
+      "The Shopkeeper Persona: Pretend you are the seller. Personal involvement in the narrative increases focus and 'survival' logic.",
+      "CP = 100% Fixed Anchor: Never let the Cost Price float. Keeping it at 100% creates a stable mental baseline for all variations.",
+      "Emotional Labeling: Label Profit as a 'Bonus' and Loss as a 'Penalty'. Positive/Negative emotional triggers improve recall during exam pressure.",
+      "Dishonest Dealer Visualization: Think of the 'Error' as the dealer's secret profit. Focus on what he *actually* gave out, not what he claimed. Focus on reality over claims.",
+      "Transaction Chains: Use the 'Successive Change' formula for A to B to C sales. Treating it as one continuous flow prevents the 're-starting' lag in the brain."
+    ]
+  },
+  {
+    "topic": "Discount",
+    "psychology_hacks": [
+      "MP as the 'Inflated Ego': View Marked Price as an artificial hike. Discount is the 'reality check' that brings it back toward CP.",
+      "The 100-Discount Shortcut: If a discount is 20%, focus on the 80% you *pay*. Looking at the 'paid value' reduces a subtraction step in your head.",
+      "Successive Discount Illusion: $50\% + 50\%$ is not free. Visualize it as a 'discount on a discount'. The brain needs this visual reminder to avoid the 'addition trap'.",
+      "The CP-MP Bridge: Use the ratio $(100 - D) : (100 + P)$. Memorizing this specific ratio 'bridge' bypasses three steps of logic.",
+      "Free Item Conversion: 'Buy 3 Get 1 Free' means 1 free out of 4 total. Always focus on the 'Total in Hand' to avoid the 1/3 calculation error."
+    ]
+  },
+  {
+    "topic": "Simple & Compound Interest",
+    "psychology_hacks": [
+      "SI as a Straight Line: Imagine a steady salary increase. It's predictable and boring. This 'linear' visualization prevents overthinking SI.",
+      "CI as the Snowball Effect: Imagine a snowball rolling down a hill, getting bigger with every rotation. This helps the brain accept that 'interest on interest' grows exponentially.",
+      "The Tree Method: Draw branches for CI. Visualizing interest 'growing' out of previous years' interest uses the brain's spatial memory to prevent missing values.",
+      "The Rule of 72: Divide 72 by the interest rate to find when money doubles. Using this 'rule of thumb' provides an instant mental check for your final answer.",
+      "Half-Yearly 'Double-Half' Rule: Mentally double the time and half the rate immediately. Do not wait for the formula; change the 'environment' of the problem first."
+    ]
+  },
+  {
+    "topic": "Ratio & Proportion",
+    "psychology_hacks": [
+      "The Packet Method: Treat $2:3$ as 2 packets of X and 3 packets of X. Solving for 'one packet' is a more concrete task for the brain than solving for a variable.",
+      "Mirror Image Ratios: If $A:B$ and $B:C$ are given, align them vertically. The brain recognizes vertical patterns faster than horizontal equations.",
+      "The Unity Goal: Always try to make the common term (like B) the same number in both ratios. Once they match, the brain sees the 'whole picture'.",
+      "Mean Proportional Visualization: Think of it as the 'perfect middle' (Geometric Mean). It’s the square root of the product. Visualize it as the side of a square with the same area as the rectangle.",
+      "The Component-Dividendo Hack: Use it as a 'balancing act'. Whatever you do to the top, do to the bottom. This 'symmetry' is a powerful cognitive shortcut."
+    ]
+  },
+  {
+    "topic": "Partnership",
+    "psychology_hacks": [
+      "The Sweat Equity Concept: Differentiate between 'Money' and 'Time'. If someone works longer, they deserve more. This 'fairness' logic helps in setting up the $Capital \times Time$ ratio.",
+      "Month-Unit Conversion: Convert all years to months immediately. The brain hates mixing units; keep the 'currency' of time consistent.",
+      "The Profit Pie: Visualize a physical pie. Divide it based on the combined weight of $(Investment \times Months)$. Spatial division is more intuitive than algebraic division.",
+      "Active vs. Passive Roles: Treat the 'Salary' of an active partner as an expense to be removed *before* the pie is shared. Separate the 'Job' from the 'Investment'.",
+      "Zero-Cancellation: If everyone invests in thousands, mentally delete the '000'. The brain works 10x faster with 5 and 7 than with 5000 and 7000."
+    ]
+  },
+  {
+    "topic": "Mixture & Alligation",
+    "psychology_hacks": [
+      "The Cross-Subtraction Visualization: Place the 'Mean' in the center and subtract diagonally. The 'X' shape is a visual anchor that guides the brain through the process.",
+      "The 'Pull' Principle: The average will always be 'pulled' closer to the quantity that is larger. Use this to guess the answer before solving.",
+      "Concentration Focus: Always solve for one thing (either milk or water). Mixing both in your head causes 'interference'—pick one and stick to it.",
+      "Replacement Formula Rhythm: $(1 - x/V)^n$. Think of it as 'The Remaining Part'. Every cycle reduces the original purity by a fixed fraction.",
+      "The Seesaw Hack: Imagine a seesaw. The further a value is from the center, the 'heavier' the weight on the other side must be to balance it."
+    ]
+  },
+  {
+    "topic": "Time & Work",
+    "psychology_hacks": [
+      "The LCM-Work Assumption: Never work with fractions ($1/x$). Assume total work is the LCM. The brain is 5x more accurate with 'units of work' than with 'parts of work'.",
+      "Efficiency as Speed: Treat efficiency as 'units per day'. If A does 5 units and B does 3, together they do 8. Adding integers is a low-stress cognitive task.",
+      "Man-Day Equilibrium: $M_1D_1 = M_2D_2$. Think of it as a constant 'energy' required. If Men go down, Days must go up to keep the energy constant.",
+      "Negative Work Hack: Treat a 'Destroyer' (or a leak) as a negative worker. Adding a negative number is mentally easier than 'subtracting a fraction'.",
+      "The Alternating Day Cycle: Bundle two days into 'One Cycle'. Solve for the cycle first, then the remaining units. It prevents the 'off-by-one' error."
+    ]
+  },
+  {
+    "topic": "Pipes & Cisterns",
+    "psychology_hacks": [
+      "The Inlet-Outlet Color Code: Mentally color-code Inlets as 'Green' (+) and Outlets as 'Red' (-). Visual tagging prevents sign errors.",
+      "Emptying is Filling: If a pipe empties a full tank, it’s just 'Time & Work' in reverse. Don't learn a new formula; just change the sign.",
+      "The Leakage Persona: Treat a leak as a 'silent worker' who works 24/7. This helps in incorporating it into the total efficiency equation.",
+      "The Overflow Point: Always calculate work until the tank is almost full. The last minute often changes because a pipe might be closed. Focus on the 'Final Stretch'.",
+      "Capacity Assumption: Like Time & Work, assume the tank capacity is the LCM of the times. Working with 'Litres' is more concrete than 'Tanks'."
+    ]
+  },
+  {
+    "topic": "Time, Speed & Distance",
+    "psychology_hacks": [
+      "The D-S-T Triangle: Visualize a triangle with D at the top. To find one, cover it and see the relationship of the others. This 'Graphic Organizer' is a permanent mental cheat sheet.",
+      "Relative Speed (Same Direction): Imagine you are trying to catch a friend. You only gain on them by the *difference* in your speeds. This 'closing the gap' logic is intuitive.",
+      "Relative Speed (Opposite): Imagine a head-on collision. The impact is the *sum* of both speeds. Use 'Collision Logic' to add speeds.",
+      "The 5/18 Conversion Chant: Always convert to m/s for train/short distance problems immediately. Keeping units inconsistent is the #1 cause of 'exam-panic'.",
+      "Average Speed Harmonic Mean: If distance is same, don't use $(S1+S2)/2$. The brain wants to be lazy; remind it to use the 'Reciprocal Path' instead."
+    ]
+  },
+  {
+    "topic": "Trains",
+    "psychology_hacks": [
+      "The 'Point Object' Concept: Visualize a pole as a thin line. The train only has to cross its own length. This 'Length = Distance' link is the key.",
+      "The 'Platform Bridge' Concept: Visualize the train and platform as one long line. The train must cross 'Self + Platform'. Use 'Additive Length' logic.",
+      "Overtaking Visualization: The faster train is 'eating' the length of the slower train. The distance to cover is the sum of both lengths.",
+      "Stationary Window Trick: If a man in a train is the observer, ignore the length of *his* train. He is just a 'moving point'.",
+      "The 18/5 Multiplier: If answer is in km/hr, use the 18/5 'Up-scaler'. It’s the 'Big Brother' of the conversion units."
+    ]
+  },
+  {
+    "topic": "Boats & Streams",
+    "psychology_hacks": [
+      "Downstream as 'Helpful Wind': Imagine someone pushing you from behind. Speed is Boat + Stream. Upstream is 'Resistance'.",
+      "The Still Water Anchor: Still water speed is always the exact middle of Downstream and Upstream speeds. Use this 'Center Point' to check your math.",
+      "The Stream is the 'Shift': The stream speed is the 'distance from the center'. Downstream - Still Water = Stream.",
+      "The 'u' and 'v' Persona: Assign 'u' to the boat and 'v' to the water. Consistent labeling prevents 'variable-swap' errors under pressure.",
+      "Ratio of Speeds: If time taken is given, use the ratio $D:U$. Distance is same, so Speed ratio is Inverse of Time ratio. Use 'Ratio Flip' logic."
+    ]
+  },
+  {
+    "topic": "Problems on Ages",
+    "shortcuts": [
+      "The 'Gap' Invariance: The age difference between two people never changes. Use this 'Constant Gap' to eliminate 50% of options instantly.",
+      "The Time-Travel Method: Mentally shift everyone to the 'Present' before applying ratios. The brain works best in 'T=0' (Now).",
+      "Ratio Multiplication: If the ratio was $2:3$ and becomes $3:4$ after 5 years, and the difference is same (1 unit), then 1 unit = 5 years. Use 'Parallel Ratios'.",
+      "Option Substitution: Ages are usually integers. Test the options against the future ratio first. It's often faster than solving the equation.",
+      "The 'x' years ago logic: Always use brackets when subtracting (e.g., $3(x-5)$). This 'Bracket Protection' prevents the most common algebraic error."
+    ]
+  },
+  {
+    "topic": "Permutation & Combination",
+    "psychology_hacks": [
+      "Selection vs Arrangement: Ask yourself: 'Does the order matter?' If yes, it’s a line (P); if no, it’s a group (C). This 'Order Filter' is the only rule you need.",
+      "The Gap Method: To keep items apart, place others first and put the items in the 'gaps'. Visualizing 'Slots' makes complex logic simple.",
+      "The String Method: To keep items together, tie them with an imaginary string and treat them as one block. This 'Unit Consolidation' is a powerful visual hack.",
+      "The 'Total - None' Shortcut: To find 'At least one', calculate the total and subtract the case where 'None' happens. Subtracting from the whole is easier than adding parts.",
+      "Circular Permutation Hack: Fix one person at the top. Now it’s just a straight line. 'Fixing a point' eliminates the 'Rotation Confusion'."
+    ]
+  },
+  {
+    "topic": "Probability",
+    "psychology_hacks": [
+      "The 'What I Want' Ratio: Always think: $Desired / Total$. This simple English phrase prevents formula-overload.",
+      "Complementary Event: $P(A) + P(Not A) = 1$. If finding the answer is hard, find the 'opposite' and subtract from 1.",
+      "Tree Diagram for Coin Toss: Draw branches. The brain recognizes visual 'paths' to an outcome better than calculating $1/2 \times 1/2$.",
+      "The 'And/Or' Logic: 'And' means multiply (both must happen); 'Or' means add (either can happen). Use 'And = Product' and 'Or = Sum'.",
+      "Sample Space Visualization: For two dice, visualize a $6 \times 6$ grid. Scanning a grid for a sum of 7 is 10x faster than listing pairs."
+    ]
+  },
+  {
+    "topic": "Mensuration (2D & 3D)",
+    "psychology_hacks": [
+      "The Net Visualization: Imagine unfolding a box into a flat shape to find Surface Area. Flattening 3D to 2D reduces cognitive strain.",
+      "The 'Filling' Concept: Volume is just the base area 'stacked' to a certain height. Visualize a stack of coins to understand $Area \times Height$.",
+      "Radius is King: In circles/spheres, find 'r' first. Once you have 'r', you have the keys to the kingdom. Focus all energy on 'Finding R'.",
+      "Units Consistency Hack: Surface area is always Squared (2D), Volume is always Cubed (3D). Check your units to ensure your formula choice was correct.",
+      "The 11 Divisibility Test: Most formulas involve $\pi$ (22/7). If your answer is not divisible by 11, it is likely wrong. Use 'Pi-Filtering'."
+    ]
+  },
+  {
+    "topic": "Data Interpretation (DI)",
+    "psychology_hacks": [
+      "The 'Eye-Balling' Technique: Scan the graph for the steepest slope or highest peak first without reading numbers. Get the 'vibe' of the data before the details.",
+      "Relative vs Absolute: Always check if the graph is in % or actual numbers. The brain often confuses 'highest growth' with 'highest value'.",
+      "Denominator Stability: In 'Percentage Growth' questions, the 'Previous Year' is always the base. Mentally lock the denominator before looking at the numerator.",
+      "Scanning for 'Except': Questions with 'All...except' or 'Which is false' are designed to trick the brain. Circle the word 'False' to keep the brain in 'Inverse Mode'.",
+      "Aggregation Hack: Instead of calculating exact sums, use 'Average Estimation'. If values are around 400, assume the sum is $400 \times n$ and adjust for the small differences."
+    ]
+  }
+]
