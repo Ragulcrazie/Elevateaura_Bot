@@ -345,7 +345,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     const currEl = document.getElementById('potential_current');
     const potEl = document.getElementById('potential_max');
     const gapEl = document.getElementById('potential_gap');
-    const unlockBtn = document.getElementById('unlockPotentialBtn');
+    const unlockBtn = document.getElementById('upgradeBtn');
     
     // UPDATE DENOMINATORS
     const currBaseEl = currEl?.parentElement?.querySelector('.font-mono');
