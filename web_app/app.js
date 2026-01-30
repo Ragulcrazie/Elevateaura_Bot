@@ -256,10 +256,6 @@ function updateTopHeader(rank, score, questionsAnswered) {
 function renderAnalytics(userEntry, total, percentile, userStats) {
     const subStatus = userStats ? userStats.subscription_status : 'free';
     
-    // VISUAL DEBUG: Force verify what the app sees
-    const debugEl = document.getElementById('debugUserId');
-    if(debugEl) debugEl.innerText = `${userEntry.id} (${subStatus})`;
-    
     const fasterCountEl = document.getElementById('fasterThanCount');
     if (fasterCountEl) {
         const fasterThan = Math.floor(percentile * 5683); // Fake "Total Aspirants" scaling
@@ -543,7 +539,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
              // Hide Insight Warning Color if desired, or keep it as diagnosis
         } else {
             // FREE VIEW (Paywall)
-            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔒</span> Unlock Full Intelligence (v70)`;
+            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (₹99)`;
             unlockBtn.onclick = () => {
                 // Trigger Telegram Payment or Info Modal
                 try {
