@@ -256,6 +256,10 @@ function updateTopHeader(rank, score, questionsAnswered) {
 function renderAnalytics(userEntry, total, percentile, userStats) {
     const subStatus = userStats ? userStats.subscription_status : 'free';
     
+    // VISUAL DEBUG: Force verify what the app sees
+    const debugEl = document.getElementById('debugUserId');
+    if(debugEl) debugEl.innerText = `${userEntry.id} (${subStatus})`;
+    
     const fasterCountEl = document.getElementById('fasterThanCount');
     if (fasterCountEl) {
         const fasterThan = Math.floor(percentile * 5683); // Fake "Total Aspirants" scaling
