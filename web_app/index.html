@@ -220,6 +220,595 @@
         </div>
     </div>
 
-    <script src="app_v2.js"></script>
+    <script>
+        // Mock Telegram WebApp for Browser Testing
+        const tg = window.Telegram ? window.Telegram.WebApp : {
+            initDataUnsafe: { user: null },
+            ready: () => console.log("TG Ready (Mock)"),
+            expand: () => console.log("TG Expand (Mock)"),
+            MainButton: { hide: () => {} },
+            platform: "unknown"
+        };
+
+        // Initialize
+        try {
+            tg.expand();
+            tg.ready(); 
+            tg.MainButton.hide();
+        } catch(e) { console.warn("TG Init Error", e); }
+
+        // --- CONFIG ---
+        const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
+
+        // Global State for Notes
+        let NOTES_MAPPING = null;
+        const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
+
+        console.log("ELEVATE AURA BOT: Script v80 INLINE Loaded");
+
+        // Visual Probe: Set background to Green to prove script updated
+        const p = document.getElementById('testCountDisplay');
+        if(p) { p.innerText = "v80 INLINE"; p.style.backgroundColor = "#3B82F6"; }
+
+        // --- 2. DATA LAYER ---
+        async function fetchLeaderboard(packId, userId) {
+            try {
+                let url = `${API_BASE_URL}/api/ghosts?pack_id=${packId}`;
+                if (userId) url += `&user_id=${userId}`;
+
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("API Fail");
+                const data = await response.json();
+                
+                return data.ghosts || [];
+            } catch (e) {
+                 console.error("Leaderboard Fetch Error", e);
+                 return [];
+            }
+        }
+
+        async function fetchUserStats(userId) {
+            // If Guest
+            if (!userId) return null;
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/user_data?user_id=${userId}`);
+                if (!response.ok) return null; // New user?
+                return await response.json();
+            } catch (e) {
+                console.error("User Fetch Error", e);
+                return null;
+            }
+        }
+
+        // --- 3. UI RENDERING ---
+
+        async function initDashboard(passedUser = null) {
+            // DEFENSIVE: Remove legacy visual artifacts if they exist (Cleanup)
+            const legacyCard = document.querySelector('.bg-red-900\\/30'); 
+            if(legacyCard) legacyCard.remove();
+
+            let user = passedUser;
+            
+            // --- GUEST MODE LOGIC ---
+            // If we passed null (timeout or simple browser open), we still want to show SOMETHING.
+            // Try to get name from Telegram object first if available even if initDashboard was called with null
+            if (!user && tg.initDataUnsafe?.user) {
+                user = tg.initDataUnsafe.user;
+            }
+
+            if (!user) {
+                 // Create a Dummy "Guest" user for visual testing
+                 user = { id: 0, first_name: "Aspirant", last_name: "", username: "guest" };
+            }
+            
+            // 0. Pre-load Notes Mapping (Background)
+            loadNotesMapping();
+            
+            // 1. Determine Pack
+            // Fetch User Stats to get rating/pack
+            let userStats = null;
+            try {
+                userStats = await fetchUserStats(user.id);
+            } catch (e) {
+                console.warn("User stats fetch failed (Network/Offline?), loading Default View", e);
+            }
+            
+            const packId = userStats ? userStats.pack_id : 10; // Default Pack 10
+            
+            // RE-VERIFY NAME from DB if available (most reliable)
+            // Sometimes Telegram initData is missing in simple web preview, but we have ID
+            if (userStats && userStats.full_name && userStats.full_name !== "Unknown Aspirant") {
+                user.first_name = userStats.full_name;
+            }
+
+            renderHeader(user.first_name || "Fighter");
+            
+            // 2. Fetch Leaderboard (Ghosts + Real)
+            let leaderboard = [];
+            try {
+                leaderboard = await fetchLeaderboard(packId, user.id);
+            } catch (e) {
+                 console.warn("Leaderboard fetch failed. Using fallback.", e);
+                 // Fallback dummy leaderboard so UI doesn't look empty
+                 leaderboard = [
+                     { full_name: "Ghost Leader", total_score: 150, is_user: false },
+                     { full_name: "Elite Player", total_score: 120, is_user: false }
+                 ]; 
+            }
+            
+            // 3. Inject User into Leaderboard
+            const userEntry = {
+                full_name: "You",
+                total_score: userStats ? userStats.total_score : 0,
+                is_user: true,
+                id: user.id, // Needed for payment
+                rank: 0 // Will calc
+            };
+            
+            leaderboard.push(userEntry);
+            leaderboard.sort((a,b) => b.total_score - a.total_score);
+            
+            // 4. Calculate Rank
+            const rank = leaderboard.findIndex(x => x.is_user) + 1;
+            userEntry.rank = rank;
+            
+            // 5. Render List
+            renderList(leaderboard);
+            
+            // 6. Update Top Header Stats
+            updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
+
+            // 7. Render Analytics
+            // Calculate Percentile
+            const total = leaderboard.length; // ~51
+            const betterThan = total - rank;
+            const percentile = betterThan / total;
+            
+            renderAnalytics(userEntry, total, percentile, userStats);
+        }
+
+        function renderHeader(name) {
+            const el = document.getElementById('userNameDisplay');
+            if(el) el.innerText = `Hello, ${name}`;
+        }
+
+        function updateTopHeader(rank, score, questionsAnswered) {
+            const rankEl = document.getElementById('rankDisplay');
+            const scoreEl = document.getElementById('scoreDisplay');
+            
+            if (rankEl) rankEl.innerText = rank > 999 ? "999+" : rank;
+            if (scoreEl) scoreEl.innerText = score;
+            
+            // Update Date/Pack Info
+            const dateEl = document.getElementById('dateDisplay');
+            if (dateEl) {
+                const now = new Date();
+                const options = { month: 'long', day: 'numeric' }; // "October 24"
+                const month = now.toLocaleString('default', { month: 'long' });
+                // Calculate Week of Month roughly
+                const week = Math.ceil(now.getDate() / 7);
+                const romanWeek = ["I", "II", "III", "IV", "V"][week-1] || "I";
+                
+                // Use theme text color instead of hardcoded white
+                dateEl.className = "text-[var(--tg-theme-text-color)] font-bold text-sm flex items-center";
+                dateEl.innerHTML = `
+                    <span>${month} ${romanWeek} Week</span> 
+                `;
+            }
+            
+            // Question Counter (Progress)
+            const testCountEl = document.getElementById('testCountDisplay');
+            if (testCountEl) {
+                 // Cap at 60 for display safety
+                 const displayVal = Math.min(questionsAnswered, 60);
+                 testCountEl.textContent = `${displayVal}/60`; // e.g. "10/60"
+                 
+                 // Color Logic
+                 testCountEl.style.color = "#FFFFFF"; // White text
+                 testCountEl.style.fontWeight = "bold";
+                 testCountEl.style.padding = "2px 8px";
+                 testCountEl.style.borderRadius = "6px";
+                 
+                 if (displayVal === 0) {
+                     testCountEl.style.backgroundColor = "#6B7280"; // Gray for 0
+                 } else if (displayVal < 60) {
+                     testCountEl.style.backgroundColor = "#F59E0B"; // Amber/Orange for In Progress
+                 } else {
+                     testCountEl.style.backgroundColor = "#10B981"; // Green for Done (60/60)
+                 }
+            }
+        }
+
+        function renderList(data) {
+            const list = document.getElementById('leaderboard'); 
+            if(!list) return;
+            list.innerHTML = "";
+            
+            // Show All 50 (User + 49 Ghosts)
+            const listItems = data;
+            
+            listItems.forEach((p, index) => {
+                const isUser = p.is_user;
+                const rank = index + 1;
+                
+                const bgClass = isUser ? 'bg-indigo-600 shadow-lg border border-indigo-400' : 'bg-gray-800';
+                const textClass = isUser ? 'text-white' : 'text-gray-200';
+                const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
+                
+                const el = document.createElement('div');
+                let rankHtml = '';
+                let rankBgClass = 'bg-gray-700 text-gray-300'; // Default
+                
+                if (rank === 1) {
+                    rankHtml = '🥇';
+                    rankBgClass = 'bg-yellow-500 text-black shadow-lg shadow-yellow-500/50 scale-110 border-2 border-yellow-200';
+                } else if (rank === 2) {
+                    rankHtml = '🥈';
+                    rankBgClass = 'bg-gray-300 text-black shadow-lg shadow-gray-400/50 scale-105 border-2 border-gray-100';
+                } else if (rank === 3) {
+                    rankHtml = '🥉';
+                    rankBgClass = 'bg-amber-700 text-white shadow-lg shadow-amber-800/50 scale-105 border-2 border-amber-600';
+                } else {
+                    rankHtml = `#${rank}`;
+                    rankBgClass = 'bg-gray-700 text-gray-300';
+                }
+        
+                let rowClass = `flex justify-between items-center p-3 rounded-xl mb-2 ${bgClass}`;
+                
+                el.className = rowClass;
+                
+                el.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                         <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${rankBgClass} transition-all duration-300">
+                            ${rankHtml}
+                        </div>
+                        <div>
+                             <div class="font-bold text-sm ${textClass}">${p.full_name}</div>
+                             <div class="text-[10px] opacity-70 ${textClass}">${subtitle}</div>
+                        </div>
+                    </div>
+                    <div class="font-bold text-yellow-400">${p.total_score} pts</div>
+                `;
+                list.appendChild(el);
+            });
+        }
+
+        function renderAnalytics(userEntry, total, percentile, userStats) {
+            const subStatus = userStats ? userStats.subscription_status : 'free';
+            
+            const fasterCountEl = document.getElementById('fasterThanCount');
+            if (fasterCountEl) {
+                const fasterThan = Math.floor(percentile * 5683); // Fake "Total Aspirants" scaling
+                fasterCountEl.innerText = fasterThan.toLocaleString();
+            }
+        
+            // Chart Bars
+            const bars = document.querySelectorAll('.dist-bar');
+            if (bars.length === 5) {
+                const heights = [30, 50, 80, 60, 40];
+                bars.forEach((bar, i) => {
+                     const h = heights[i] + Math.floor(Math.random() * 20 - 10);
+                     bar.style.height = `${h}%`;
+                });
+        
+                let userIndex = Math.floor(percentile * 5); 
+                userIndex = Math.min(4, Math.max(0, userIndex)); 
+                
+                const targetBar = bars[userIndex]; 
+                if (targetBar) {
+                    targetBar.classList.remove('bg-gray-600');
+                    targetBar.classList.add('bg-yellow-500');
+                    targetBar.style.boxShadow = '0 0 10px rgba(234,179,8,0.5)';
+                }
+            }
+        
+            // --- TRUE POTENTIAL LOGIC (REAL) ---
+            const currentScore = userEntry.total_score || 0;
+            const questionsAnswered = userStats ? userStats.questions_answered : 0;
+            
+            let potentialBase = 600;
+            if (questionsAnswered > 0 && questionsAnswered < 60) {
+                potentialBase = questionsAnswered * 10;
+            } else if (questionsAnswered === 0) {
+                potentialBase = 100;
+            }
+            
+            let potentialScore = 0;
+            let weakSpots = [];
+        
+            if (userStats && userStats.potential_score) {
+                potentialScore = userStats.potential_score;
+                weakSpots = userStats.weak_spots || [];
+            } else {
+                const gap = 600 - currentScore;
+                potentialScore = Math.floor(currentScore + (gap * 0.45)); 
+                if (potentialScore > 600) potentialScore = 600;
+                if (potentialScore < currentScore + 40) potentialScore = currentScore + 40;
+                if (potentialScore > 600) potentialScore = 600; 
+            }
+            
+            if (potentialScore < currentScore) potentialScore = currentScore;
+            if (potentialScore > potentialBase) potentialScore = potentialBase;
+        
+            const pointsLost = potentialScore - currentScore;
+        
+            // Render DOM
+            const currEl = document.getElementById('potential_current');
+            const potEl = document.getElementById('potential_max');
+            const gapEl = document.getElementById('potential_gap');
+            const unlockBtn = document.getElementById('upgradeBtn');
+            
+            const currBaseEl = currEl?.parentElement?.querySelector('.font-mono');
+            const potBaseEl = potEl?.parentElement?.querySelector('.font-mono');
+            
+            if(currBaseEl) currBaseEl.innerText = `/${potentialBase}`;
+            if(potBaseEl) potBaseEl.innerText = `/${potentialBase}`;
+            
+            const insightTextEl = document.querySelector('.border-l-2.border-red-500 p'); 
+        
+            if (currEl) currEl.innerText = currentScore;
+            if (potEl) {
+                let start = currentScore;
+                const duration = 1000;
+                const startTime = performance.now();
+                
+                function animate(time) {
+                    const elapsed = time - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const ease = 1 - Math.pow(1 - progress, 4);
+                    
+                    const currentVal = Math.floor(start + (pointsLost * ease));
+                    potEl.innerText = currentVal;
+                    
+                    if (progress < 1) requestAnimationFrame(animate);
+                }
+                requestAnimationFrame(animate);
+            }
+            if (gapEl) gapEl.innerText = `${pointsLost} points`;
+        
+            if (insightTextEl) {
+                if (weakSpots.length > 0) {
+                    let topic1 = weakSpots[0].topic;
+                    let topic2 = weakSpots.length > 1 ? weakSpots[1].topic : null;
+                    
+                    if (subStatus !== 'premium') {
+                        topic1 = "🔒 Locked Topic";
+                        if (topic2) topic2 = "🔒 Locked Topic";
+                    }
+                    
+                    let msg = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in <span class="text-yellow-400 font-bold">${topic1}</span>`;
+                    if (topic2) msg += ` and <span class="text-yellow-400 font-bold">${topic2}</span>`;
+                    
+                    if (subStatus !== 'premium') {
+                         msg += `. <span class="italic text-gray-400">Unlock Premium to reveal & fix them.</span>`;
+                    } else {
+                         msg += `. Your accuracy in these high-value topics is dragging you down.`;
+                    }
+                    
+                    insightTextEl.innerHTML = msg;
+                } else if (pointsLost > 0) {
+                     insightTextEl.innerHTML = `You left <span class="text-white font-bold">${pointsLost} points</span> on the table due to fixable weak spots. Speed is key, but accuracy is Queen.`;
+                } else {
+                     insightTextEl.innerHTML = `You are playing at <span class="text-green-400 font-bold">Max Potential</span>! Keep maintaining this streak.`;
+                }
+            }
+        
+            // Button Action
+            if (unlockBtn) {
+                if (subStatus === 'premium') {
+                     unlockBtn.style.display = 'none';
+        
+                     // Knowledge Base Copied Here
+                     const TopicKnowledgeBase = {
+                         'seating': {
+                             hindi: {
+                                 concept: "<b>बैठकी व्यवस्था (Seating Arrangement):</b> हमेशा Fixed Position वाले वाक्यों से शुरुआत करें।",
+                                 shortcut: "⚡ <b>शॉर्टकट:</b> 'A, B और C के बीच में है' (Possible) जैसे वाक्यों को छोड़ दें। केवल 'A, B के दायें दूसरा है' (Definite) को पहले प्लॉट करें।",
+                                 mistake: "📉 <b>गलती:</b> लोग Left/Right में भ्रमित हो जाते हैं। खुद को उस जगह पर बैठा हुआ मानकर अपना हाथ देखें।",
+                                 full_note: `<h4>🌀 बैठकी व्यवस्था (Seating Arrangement)</h4><br><p><b>मुख्य नियम:</b></p><ul><li>हमेशा <b>Circles</b> के लिए केंद्र की ओर (Facing Center) और बाहर की ओर (Facing Outside) का ध्यान रखें।</li><li><b>Linear</b> में Left/Right का निर्धारण अपने हाथ के अनुसार करें।</li></ul>`
+                             },
+                             english: {
+                                 concept: "<b>Seating Arrangement:</b> Always start with Definite Statements.",
+                                 shortcut: "⚡ <b>Shortcut:</b> Ignore 'Possibility cases' (e.g. A is between B and C) at the start. Only plot 'Definite Information' (e.g. A is 2nd to right of B).",
+                                 mistake: "📉 <b>Common Mistake:</b> Confusing Left/Right when facing South or Outside. Use your own hand as a reference physically.",
+                                 full_note: `<h4>🌀 Seating Arrangement Mastery</h4><br><p><b>Core Rules:</b></p><ul><li>For <b>Circular</b>: Always note if facing Center (Left=Clockwise) or Outside (Left=Anti-Clockwise).</li><li>For <b>Linear</b>: Your Left/Right is the person’s Left/Right if facing North.</li></ul>`
+                             }
+                         },
+                         'syllogism': {
+                             hindi: {
+                                 concept: "<b>न्याय निगमन (Syllogism):</b> वेन डायग्राम (Venn Diagram) विधि सबसे सटीक है।",
+                                 shortcut: "⚡ <b>शॉर्टकट:</b> 'Only a few A are B' का मतलब है -> Some A are B (✅) AND Some A are NOT B (❌)। दो लाइनें खींचें।",
+                                 mistake: "📉 <b>गलती:</b> संभावना (Possibility) पूछे जाने पर Definite जवाब देना। अगर डायग्राम में लिंक नहीं है, तो 'No' न कहें, 'Cant Say' कहें।",
+                                 full_note: `<h4>🟢 न्याय निगमन (Syllogism) - Venn Diagram Method</h4><br><p><b>Golden Rule:</b> "Only a few A are B" का मतलब है: Some A are B <b>AND</b> Some A are NOT B.</p>`
+                             },
+                             english: {
+                                 concept: "<b>Syllogism:</b> The Venn Diagram method is the gold standard.",
+                                 shortcut: "⚡ <b>Shortcut:</b> 'Only a few A are B' means -> Some A are B (✅) AND Some A are NOT B (❌). Draw a slash on the line.",
+                                 mistake: "📉 <b>Common Mistake:</b> Assuming 'Some A is not B' just because circles don't touch. If they don't touch, the relation is 'Unknown', not 'No'.",
+                                 full_note: `<h4>🟢 Syllogism - Venn Diagram Method</h4><br><p><b>Golden Rule:</b> "Only a few A are B" means: Some A are B <b>AND</b> Some A are NOT B.</p>`
+                             }
+                         },
+                         'default': {
+                             hindi: {
+                                 concept: "इस विषय के लिए अवधारणात्मक स्पष्टता (Conceptual Clarity) की आवश्यकता है।",
+                                 shortcut: "⚡ <b>शॉर्टकट:</b> विकल्पों को एलिमिनेट (Option Elimination) करना सीखें। सीधा उत्तर ढूंढने के बजाय गलत उत्तर हटाएं।",
+                                 mistake: "📉 <b>गलती:</b> प्रश्न को पूरा न पढ़ना और जल्दबाजी में 'NOT following' को 'Following' समझ लेना।",
+                                 full_note: `<h4>🚀 Quick Review</h4><p>Detailed notes are being prepared.</p>`
+                             },
+                             english: {
+                                 concept: "This topic requires Conceptual Clarity and speed.",
+                                 shortcut: "⚡ <b>Shortcut:</b> Use <b>Option Elimination</b>. Instead of solving fully, remove the options that are obviously wrong (e.g. wrong units or digits).",
+                                 mistake: "📉 <b>Common Mistake:</b> Misreading the question. E.g., Solving for 'False' when the question asked for 'True'. Slow down the reading.",
+                                 full_note: `<h4>🚀 Quick Review</h4><p>Detailed notes are being prepared.</p>`
+                             }
+                         }
+                     };
+        
+                     const notesBtn = document.createElement('button');
+                     notesBtn.className = "mt-3 w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold py-3 rounded-lg flex items-center justify-center transition-all shadow-lg active:scale-95 border border-indigo-400/30";
+                     notesBtn.innerHTML = `<span class="mr-2">👑</span> Revise Concepts`;
+                     
+                     notesBtn.onclick = () => {
+                         const lang = userStats.language === 'hindi' ? 'hindi' : 'english';
+                         
+                         let finalContent = "";
+                         
+                         if (weakSpots.length > 0) {
+                             weakSpots.forEach((ws, index) => {
+                                 if (index > 0) finalContent += "<div class='my-6 h-px bg-gray-700 w-full'></div>";
+                                 
+                                 const key = Object.keys(TopicKnowledgeBase).find(k => ws.topic.toLowerCase().includes(k)) || 'default';
+                                 const data = TopicKnowledgeBase[key][lang];
+                                 
+                                 finalContent += data.full_note;
+                                 finalContent += `<div class="mt-4 bg-gray-800 p-3 rounded-lg">${data.shortcut}</div>`;
+                                 finalContent += `<div class="mt-2 bg-red-900/20 border border-red-500/20 p-3 rounded-lg text-gray-400 text-xs">${data.mistake}</div>`;
+                             });
+                         } else {
+                             const data = TopicKnowledgeBase['default'][lang];
+                             finalContent = data.full_note + `<br>${data.shortcut}`;
+                         }
+        
+                         const modal = document.getElementById('notesModal');
+                         const titleEl = document.getElementById('noteTitle');
+                         const bodyEl = document.getElementById('noteContent');
+                         
+                         if (modal && bodyEl) {
+                             titleEl.innerText = `Revising ${weakSpots.length} Topics`;
+                             bodyEl.innerHTML = finalContent;
+                             modal.classList.remove('hidden');
+                             
+                             const wm = document.createElement('div');
+                             wm.innerText = `ID: ${userEntry.id}`;
+                             wm.className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-700/20 text-4xl font-black rotate-45 pointer-events-none select-none z-0";
+                             if(!bodyEl.querySelector('.watermark')) {
+                                 wm.classList.add('watermark');
+                                 bodyEl.appendChild(wm);
+                             }
+                         }
+                         if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+                     };
+                     
+                     if (!unlockBtn.parentNode.querySelector('button.bg-gradient-to-r')) {
+                         unlockBtn.parentNode.appendChild(notesBtn);
+                     }
+        
+                } else {
+                    // FREE VIEW (Paywall)
+                    unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
+                    unlockBtn.onclick = () => {
+                        if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+                        
+                        // 1. Get Invoice Link from Bot API
+                        unlockBtn.innerHTML = "Loading...";
+                        
+                        fetch(`${API_BASE_URL}/api/create_invoice`, {
+                            method: 'POST',
+                            body: JSON.stringify({ user_id: userEntry.id }),
+                            headers: { 'Content-Type': 'application/json' }
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            if(data.invoice_link) {
+                                // 2. Open Native Payment
+                                tg.openInvoice(data.invoice_link, (status) => {
+                                    if (status === 'paid') {
+                                        tg.MainButton.setText("PAID! RELOADING...");
+                                        tg.MainButton.show();
+                                        setTimeout(() => window.location.reload(), 2000);
+                                    } else if (status === 'pending') {
+                                        alert("Payment processing...");
+                                    } else {
+                                        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
+                                    }
+                                });
+                            } else {
+                                alert("Error creating invoice: " + (data.error || "Unknown"));
+                                unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
+                            }
+                        })
+                        .catch(e => {
+                            console.error(e);
+                            alert("Network Error. Try again.");
+                            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
+                        });
+                    };
+                }
+            }
+        }
+
+        function renderError(msg) {
+            const container = document.getElementById('leaderboard'); 
+            if(container) {
+                container.innerHTML = `<div class="p-4 text-red-500 font-bold bg-gray-900 rounded">${msg}</div>`;
+            }
+        }
+
+        // --- 4. LISTENERS ---
+        const infoBtn = document.getElementById('infoBtn');
+        const infoModal = document.getElementById('infoModal');
+        const closeModal = document.getElementById('closeModal');
+
+        if (infoBtn && infoModal && closeModal) {
+            const toggleModal = () => infoModal.classList.toggle('hidden');
+            infoBtn.addEventListener('click', toggleModal);
+            closeModal.addEventListener('click', toggleModal);
+            
+            infoModal.addEventListener('click', (e) => {
+                if (e.target === infoModal) toggleModal();
+            });
+        }
+
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            renderError(`Error: ${msg} (Line ${lineNo})`);
+            return false;
+        };
+
+        function waitForUser(attempts = 0) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlUserId = urlParams.get('user_id');
+            const urlName = urlParams.get('name');
+            
+            if (urlUserId) {
+                 const fakeUser = {
+                     id: parseInt(urlUserId),
+                     first_name: urlName || "Fighter",
+                     last_name: "",
+                     username: ""
+                 };
+                 initDashboard(fakeUser).catch(e => renderError("Login Error: " + e));
+                 return;
+            }
+
+            if (tg.initDataUnsafe?.user) {
+                initDashboard(tg.initDataUnsafe.user).catch(e => renderError("TG Init Error: " + e));
+            } else if (attempts < 20) {
+                setTimeout(() => waitForUser(attempts + 1), 100);
+            } else {
+                console.warn("User detection timed out.");
+                initDashboard(null).catch(e => renderError("Guest Init Error: " + e));
+            }
+        }
+
+        async function loadNotesMapping() {
+            if (NOTES_MAPPING) return; // Already loaded
+            try {
+                const res = await fetch(GITHUB_ASSETS_BASE + "assets/notes_topic_language_mapping.json");
+                NOTES_MAPPING = await res.json();
+                console.log("Notes Mapping Loaded:", Object.keys(NOTES_MAPPING).length);
+            } catch (e) {
+                console.error("Failed to load notes mapping:", e);
+            }
+        }
+
+        try {
+            const probe = document.getElementById('testCountDisplay');
+            if(probe) probe.innerText = "v80 Init";
+            waitForUser(); 
+        } catch (e) {
+            renderError("Init Failed: " + e.message);
+        }
+    </script>
 </body>
 </html>
