@@ -75,14 +75,39 @@ class RankEngine:
                 )[0]
                 daily_score += (correct_count * 10)
                 
+                
+            # Score Calculation Logic...
             ghost_entry = {
                 "user_id": g["id"], 
                 "full_name": g.get("full_name") or g.get("name") or "Aspirant",
                 "total_score": daily_score,
                 "questions_answered": (daily_score // 10),
-                "average_pace": rng.randint(35, 55),
                 "is_ghost": True
             }
+            
+            # --- PACE CALCULATION RELATIVE TO SCORE ---
+            # High Score (Elite) usually implies faster reading/solving.
+            # Low Score usually implies struggle (slow) OR guessing (super fast).
+            
+            # Base Pace by default
+            pace = rng.randint(32, 48)
+            
+            # If High Score (>300), they are "Sharp"
+            if daily_score > 300:
+                pace = rng.randint(22, 35) # Fast 20-35s
+            
+            # If Very High Score (>500), they are "Machines"
+            if daily_score > 500:
+                pace = rng.randint(18, 28) # Super Fast
+                
+            # If Low Score (<100) but played tests, determine if "Struggler" or "Guesser"
+            if daily_score < 100 and daily_score > 0:
+                if rng.random() > 0.5:
+                     pace = rng.randint(50, 80) # Struggler (Slow)
+                else:
+                     pace = rng.randint(12, 18) # Guesser (Rushing)
+                     
+            ghost_entry["average_pace"] = pace
             processed_ghosts.append(ghost_entry)
             
         # --- 2. Psychological Adjustments (Mind Game) ---

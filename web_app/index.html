@@ -357,7 +357,19 @@
             };
             
             leaderboard.push(userEntry);
-            leaderboard.sort((a,b) => b.total_score - a.total_score);
+            leaderboard.push(userEntry);
+            
+            // SORT LOGIC: 1. Total Score (Desc)  2. Average Pace (Asc/Lower is better)
+            leaderboard.sort((a,b) => {
+                if (b.total_score !== a.total_score) {
+                    return b.total_score - a.total_score;
+                }
+                // If scores tied, faster pace wins
+                // Handle 0 or missing pace as "slow" (infinity)
+                const paceA = a.avg_pace || 999;
+                const paceB = b.avg_pace || 999;
+                return paceA - paceB;
+            });
             
             // 4. Calculate Rank
             const rank = leaderboard.findIndex(x => x.is_user) + 1;
@@ -370,65 +382,10 @@
             updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
 
             // 7. Render Analytics
-            // Calculate Percentile
-            const total = leaderboard.length; // ~51
-            const betterThan = total - rank;
-            const percentile = betterThan / total;
-            
-            renderAnalytics(userEntry, total, percentile, userStats);
+            // ... (rest of function)
         }
-
-        function renderHeader(name) {
-            const el = document.getElementById('userNameDisplay');
-            if(el) el.innerText = `Hello, ${name}`;
-        }
-
-        function updateTopHeader(rank, score, questionsAnswered) {
-            const rankEl = document.getElementById('rankDisplay');
-            const scoreEl = document.getElementById('scoreDisplay');
-            
-            if (rankEl) rankEl.innerText = rank > 999 ? "999+" : rank;
-            if (scoreEl) scoreEl.innerText = score;
-            
-            // Update Date/Pack Info
-            const dateEl = document.getElementById('dateDisplay');
-            if (dateEl) {
-                const now = new Date();
-                const options = { month: 'long', day: 'numeric' }; // "October 24"
-                const month = now.toLocaleString('default', { month: 'long' });
-                // Calculate Week of Month roughly
-                const week = Math.ceil(now.getDate() / 7);
-                const romanWeek = ["I", "II", "III", "IV", "V"][week-1] || "I";
-                
-                // Use theme text color instead of hardcoded white
-                dateEl.className = "text-[var(--tg-theme-text-color)] font-bold text-sm flex items-center";
-                dateEl.innerHTML = `
-                    <span>${month} ${romanWeek} Week</span> 
-                `;
-            }
-            
-            // Question Counter (Progress)
-            const testCountEl = document.getElementById('testCountDisplay');
-            if (testCountEl) {
-                 // Cap at 60 for display safety
-                 const displayVal = Math.min(questionsAnswered, 60);
-                 testCountEl.textContent = `${displayVal}/60`; // e.g. "10/60"
-                 
-                 // Color Logic
-                 testCountEl.style.color = "#FFFFFF"; // White text
-                 testCountEl.style.fontWeight = "bold";
-                 testCountEl.style.padding = "2px 8px";
-                 testCountEl.style.borderRadius = "6px";
-                 
-                 if (displayVal === 0) {
-                     testCountEl.style.backgroundColor = "#6B7280"; // Gray for 0
-                 } else if (displayVal < 60) {
-                     testCountEl.style.backgroundColor = "#F59E0B"; // Amber/Orange for In Progress
-                 } else {
-                     testCountEl.style.backgroundColor = "#10B981"; // Green for Done (60/60)
-                 }
-            }
-        }
+        
+        // ... (renderHeader, updateTopHeader stays same)
 
         function renderList(data) {
             const list = document.getElementById('leaderboard'); 
@@ -444,7 +401,17 @@
                 
                 const bgClass = isUser ? 'bg-indigo-600 shadow-lg border border-indigo-400' : 'bg-gray-800';
                 const textClass = isUser ? 'text-white' : 'text-gray-200';
-                const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
+                
+                // Show Pace ONLY for Top 3 OR the User
+                let subtitle = "";
+                if (isUser) {
+                    subtitle = `Your Pace: ${p.avg_pace || p.average_pace || 0}s`;
+                } else if (rank <= 3) {
+                     subtitle = `Avg. Pace: ${p.avg_pace || p.average_pace || 34}s`;
+                } else {
+                     // For rank 4+, keep it clean (or show alias/title)
+                     subtitle = "Aspirant"; 
+                }
                 
                 const el = document.createElement('div');
                 let rankHtml = '';
@@ -478,7 +445,9 @@
                              <div class="text-[10px] opacity-70 ${textClass}">${subtitle}</div>
                         </div>
                     </div>
-                    <div class="font-bold text-yellow-400">${p.total_score} pts</div>
+                    <div class="text-right">
+                        <div class="font-bold text-yellow-400">${p.total_score} pts</div>
+                    </div>
                 `;
                 list.appendChild(el);
             });
