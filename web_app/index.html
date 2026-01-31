@@ -935,8 +935,22 @@
 
         try {
             const probe = document.getElementById('testCountDisplay');
-            if(probe) probe.innerText = "v80 Init";
-            waitForUser(); 
+            if(probe) {
+                probe.innerText = "v82 Final";
+                probe.style.backgroundColor = "#FBBF24"; // Yellow check
+                probe.style.color = "#000000";
+            }
+            waitForUser();
+            
+            // FAIL-SAFE: If waitForUser doesn't fire for some reason in 500ms, FORCE Init
+            setTimeout(() => {
+                const check = document.getElementById('userNameDisplay');
+                if(!check || check.innerText.includes("Loading")) {
+                   console.warn("Forcing Init via Timeout");
+                   initDashboard(null); 
+                }
+            }, 5000); 
+            
         } catch (e) {
             renderError("Init Failed: " + e.message);
         }
