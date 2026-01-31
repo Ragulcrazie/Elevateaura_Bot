@@ -169,8 +169,19 @@ async def get_user_data(request):
             saved_stats = quiz_state.get("stats", {})
             last_active = saved_stats.get("last_active_date")
             
+            # --- BUCKET DATA RETRIEVAL ---
+            # Try metadata first, then quiz_state fallback
+            ls_meta = user_data.get("metadata", {}).get("lifetime_stats", {})
+            ls_fallback = quiz_state.get("lifetime_stats", {})
+            
+            # Merge logic: If meta is empty but fallback has data, use fallback
+            final_lifetime_stats = ls_meta if ls_meta.get("global_total", 0) > 0 else ls_fallback
+
             # --- DAILY RESET LOGIC (VIEW ONLY) ---
-            if last_active != today_str:
+            # If score > 0, we trust it even if date is slightly off (timezone edge cases)
+            has_score_today = saved_stats.get("daily_score", 0) > 0
+            
+            if last_active != today_str and not has_score_today:
                 # New day, but user hasn't played yet. Return 0 stats.
                 derived_q_answered = 0
                 db_pace = 0
@@ -178,7 +189,7 @@ async def get_user_data(request):
                 weak_spots = {}
                 potential_score = 0
             else:
-                # Same day, use saved stats
+                # Same day OR user has played today despite date string mismatch
                 db_q_answered_json = saved_stats.get("questions_answered")
                 db_q_answered_col = user_data.get("questions_answered")
                 
@@ -210,7 +221,8 @@ async def get_user_data(request):
                 processed_weak_spots = [{"topic": k, "count": v} for k, v in sorted_spots]
             
             # Use 'processed_weak_spots' variable to assign to response, or empty list if new day
-            final_weak_spots = processed_weak_spots if (last_active == today_str) else []
+            # If we decided to show stats (has_score_today is true), show weak spots too
+            final_weak_spots = processed_weak_spots if (last_active == today_str or has_score_today) else []
             
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
@@ -222,7 +234,7 @@ async def get_user_data(request):
                 "language": user_data.get("language_pref", "english"),
                 "potential_score": potential_score,
                 "weak_spots": final_weak_spots,
-                "lifetime_stats": user_data.get("metadata", {}).get("lifetime_stats", {})
+                "lifetime_stats": final_lifetime_stats
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})

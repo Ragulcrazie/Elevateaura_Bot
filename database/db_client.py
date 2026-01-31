@@ -160,7 +160,9 @@ class SupabaseClient:
             # Also keep Global Total
             lifetime_stats["global_total"] = lifetime_stats.get("global_total", 0) + 1
             
+            # SAFE STORAGE: Store in BOTH metadata (ideal) AND quiz_state (fallback)
             metadata["lifetime_stats"] = lifetime_stats
+            quiz_state["lifetime_stats"] = lifetime_stats
 
             # 3. Update DB
             quiz_state["stats"] = {
@@ -171,14 +173,32 @@ class SupabaseClient:
                 "weak_spots": weak_spots
             }
             
+            # Try to save to metadata column, but if it fails, at least quiz_state has it
             data = {
                 "user_id": user_id,
                 "current_streak": new_score,
-                "quiz_state": quiz_state,
-                "metadata": metadata
+                "quiz_state": quiz_state
             }
             
-            self.client.table('users').upsert(data).execute()
+            # Optional: Try adding metadata if schema supports it, but don't break if not?
+            # Actually, Supabase upsert ignores extra keys if they aren't columns usually, 
+            # BUT if strict strict, it fails.
+            # Let's try adding it. If it fails, the previous try/except catches it. 
+            # WAIT. If it fails, NOTHING gets saved. That's the problem.
+            
+            # SOLUTION: Use a 2-step or check. 
+            # Better: Just include it. If it fails, we need to know. 
+            # Assuming 'metadata' column exists as per project spec.
+            data["metadata"] = metadata
+            
+            try:
+                self.client.table('users').upsert(data).execute()
+            except Exception as upsert_err:
+                # Fallback: Maybe metadata column doesn't exist? Try without it.
+                logger.warning(f"Upsert with metadata failed ({upsert_err}). Retrying without metadata.")
+                del data["metadata"] 
+                self.client.table('users').upsert(data).execute()
+
             logger.info(f"Stats Updated {user_id}: Score={new_score}, Bucket={main_bucket}")
             return quiz_state["stats"]
             
