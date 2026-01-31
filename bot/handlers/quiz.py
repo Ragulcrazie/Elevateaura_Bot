@@ -541,16 +541,20 @@ async def handle_answer(callback: types.CallbackQuery):
         # Example: Baseline 10. Index 0 (Q1). Count = 10 + 0 + 1 = 11.
         forced_count = baseline + state["current_q_index"] + 1
 
-        # Determine Mistake Topic (if wrong)
-        mistake_topic = None
+        # Determine Topic Context (Used for both Mistake Tracking AND Category Mastery)
+        # Even if correct, we want to know the category ("Aptitude", "GK", etc)
+        # We repurpose the 'mistake_topic' argument in db_client as 'topic_context'
+        topic_context = current_q.get("domain") or current_q.get("category") or "General"
+        
+        # If wrong, we might want more specific sub-topic (e.g. "Percentages")
         if not is_correct:
-            # Priority: Topic > Domain > "Unknown"
-            mistake_topic = current_q.get("topic") or current_q.get("domain") or "General"
+             topic_context = current_q.get("topic") or topic_context
 
         # Update DB Stats & Sync to Session
         db = SupabaseClient()
         await db.connect()
-        new_stats = await db.update_user_stats(user_id, is_correct, time_taken, forced_count=forced_count, mistake_topic=mistake_topic)
+        # We pass topic_context to the mistake_topic arg (renamed internally in mind)
+        new_stats = await db.update_user_stats(user_id, is_correct, time_taken, forced_count=forced_count, mistake_topic=topic_context)
         
         if new_stats:
             state["stats"] = new_stats

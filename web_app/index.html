@@ -517,23 +517,58 @@
                 }
             }
         
-            // --- DYNAMIC PERFORMANCE BARS ---
+            // --- DYNAMIC PERFORMANCE BARS (REAL DATA) ---
             try {
-                // Simulate realistic data based on user score/name hash if real data missing
-                const seed = (currentScore + (userEntry.id || 0)) % 100;
+                // Initialize default values ("Unrated")
+                // Using 5% as "Unrated" visible sliver
+                let aptVal = 5, reasVal = 5, gkVal = 5;
+                let aptLabel = "Unrated", reasLabel = "Unrated", gkLabel = "Unrated";
                 
-                // Aptitude (Base + variant)
-                const aptVal = Math.min(95, Math.max(40, 60 + (seed % 30)));
-                const aptLabel = aptVal > 80 ? "Top 10%" : (aptVal > 60 ? "Good" : "Avg");
+                const stats = userStats ? userStats.lifetime_stats : null;
                 
-                // Reasoning (Inverse correlate slightly to balance)
-                const reasVal = Math.min(95, Math.max(30, 90 - (seed % 40)));
-                const reasLabel = reasVal > 80 ? "Fast" : (reasVal > 60 ? "Avg" : "Slow");
+                if (stats) {
+                    // Helper to calc percentage
+                    const calcPct = (cat) => {
+                        const data = stats[cat];
+                        if (!data || data.total === 0) return { val: 5, label: "Unrated" }; // 5% min
+                        
+                        const accuracy = (data.correct / data.total) * 100;
+                        // Boost logic: Accuracy alone isn't enough (1/1 correct = 100%).
+                        // We weight by volume slightly: score = accuracy * log(total) factor?
+                        // For MVP: Simple Accuracy, but require > 5 tests to show "Master"
+                        
+                        let label = "Beginner";
+                        if (accuracy > 80) label = "Expert";
+                        else if (accuracy > 60) label = "Strong";
+                        else if (accuracy > 40) label = "Avg";
+                        else label = "Learner";
+                        
+                        // If very low total count, keep label modest
+                        if (data.total < 5) label = "Learner";
+                        
+                        // Visual Width: Map 0-100 acc to 20-95 width
+                        const width = Math.max(20, Math.min(95, accuracy));
+                        return { val: width, label: label };
+                    };
+                    
+                    const apt = calcPct('aptitude');
+                    const reas = calcPct('reasoning');
+                    const gk = calcPct('gk');
+                    
+                    aptVal = apt.val; aptLabel = apt.label;
+                    reasVal = reas.val; reasLabel = reas.label;
+                    gkVal = gk.val; gkLabel = gk.label;
+                } else if (currentScore > 0) {
+                     // Fallback: IF we have score but no lifetime stats (old user?), use the seed simulation temporarily
+                     // Only if stats object completely missing
+                }
                 
-                // GK (Randomish but tied to score)
-                const gkVal = Math.min(95, Math.max(20, (currentScore % 80) + 20));
-                const gkLabel = gkVal > 75 ? "Expert" : (gkVal > 50 ? "Learner" : "Beginner");
-                
+                // If Total Score is 0, FORCE Reset to Unrated (Clean Slate)
+                if (currentScore === 0) {
+                    aptVal = 5; reasVal = 5; gkVal = 5;
+                    aptLabel = "Unrated"; reasLabel = "Unrated"; gkLabel = "Unrated";
+                }
+
                 // Apply to DOM
                 setTimeout(() => {
                     const aptBar = document.getElementById('aptitude_bar');
@@ -551,6 +586,13 @@
                     if(aptLbl) aptLbl.innerText = aptLabel;
                     if(reasLbl) reasLbl.innerText = reasLabel;
                     if(gkLbl) gkLbl.innerText = gkLabel;
+                    
+                    // Color Logic for Unrated
+                    const setGray = (el, isGray) => { if(el) el.style.backgroundColor = isGray ? '#4B5563' : ''; };
+                    setGray(aptBar, aptLabel === "Unrated");
+                    setGray(reasBar, reasLabel === "Unrated");
+                    setGray(gkBar, gkLabel === "Unrated");
+                    
                 }, 100);
             } catch (chartError) {
                 console.warn("Chart Error:", chartError);

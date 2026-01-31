@@ -119,11 +119,46 @@ class SupabaseClient:
             new_score = current_score + 10 if is_correct else current_score
             new_daily_score = current_daily_score + 10 if is_correct else current_daily_score
             
-            # Weak Spot Tracking
-            if mistake_topic and not is_correct:
-                # Clean key (remove special chars if needed)
-                topic_key = mistake_topic.strip()
-                weak_spots[topic_key] = weak_spots.get(topic_key, 0) + 1
+            # Weak Spot Tracking (Legacy Logic - Only if Wrong)
+            # The calling code now passes 'topic_context' as mistake_topic.
+            # We need to differentiating: Is it a generic category (Correct) or specific topic (Wrong)?
+            # Actually, simply: If !is_correct, add to weak_spots.
+            
+            topic_key = (mistake_topic or "General").strip()
+            
+            if not is_correct:
+                 weak_spots[topic_key] = weak_spots.get(topic_key, 0) + 1
+
+            # --- LIFETIME STATS (Premium Categories) ---
+            metadata = user.get("metadata", {}) or {}
+            lifetime_stats = metadata.get("lifetime_stats", {})
+            
+            # Determine Main Category from topic_key for aggregation
+            # We map specific topics or domain strings to 3 Main Buckets
+            cat_lower = topic_key.lower()
+            main_bucket = "other"
+            
+            if "aptitude" in cat_lower or "math" in cat_lower:
+                main_bucket = "aptitude"
+            elif "reasoning" in cat_lower or "logic" in cat_lower:
+                main_bucket = "reasoning"
+            elif "gk" in cat_lower or "knowledge" in cat_lower or "science" in cat_lower:
+                main_bucket = "gk"
+            
+            # Update Total/Correct for this Bucket
+            # Structure: lifetime_stats = { "aptitude": {"total": 10, "correct": 8}, ... }
+            
+            if main_bucket not in lifetime_stats:
+                lifetime_stats[main_bucket] = {"total": 0, "correct": 0}
+            
+            lifetime_stats[main_bucket]["total"] += 1
+            if is_correct:
+                lifetime_stats[main_bucket]["correct"] += 1
+            
+            # Also keep Global Total
+            lifetime_stats["global_total"] = lifetime_stats.get("global_total", 0) + 1
+            
+            metadata["lifetime_stats"] = lifetime_stats
 
             # 3. Update DB
             quiz_state["stats"] = {
@@ -137,11 +172,12 @@ class SupabaseClient:
             data = {
                 "user_id": user_id,
                 "current_streak": new_score,
-                "quiz_state": quiz_state
+                "quiz_state": quiz_state,
+                "metadata": metadata
             }
             
             self.client.table('users').upsert(data).execute()
-            logger.info(f"Stats Updated {user_id}: Score={new_score}, Mistake={mistake_topic}")
+            logger.info(f"Stats Updated {user_id}: Score={new_score}, Bucket={main_bucket}")
             return quiz_state["stats"]
             
         except Exception as e:

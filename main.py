@@ -221,7 +221,8 @@ async def get_user_data(request):
                 "subscription_status": user_data.get("subscription_status", "free"),
                 "language": user_data.get("language_pref", "english"),
                 "potential_score": potential_score,
-                "weak_spots": final_weak_spots
+                "weak_spots": final_weak_spots,
+                "lifetime_stats": user_data.get("metadata", {}).get("lifetime_stats", {})
             }, headers={"Access-Control-Allow-Origin": "*"})
         else:
             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
