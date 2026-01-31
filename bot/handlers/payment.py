@@ -21,15 +21,24 @@ def get_product_description():
     current_members = base_members + growth
     
     return (
-        "⚡ Stop Guessing. Start Dominating.\n\n"
-        "🔓 UNSYMMETRIC ADVANTAGE:\n"
-        "• 🧠 Psychological Hacks: Solve in 5s\n"
-        "• 🎯 Sniper Analysis: Fix weak spots fast\n"
-        "• 🤖 24/7 AI Coach: Your personal mentor\n"
-        "• 📈 Elite Leaderboard: Compete with the best\n"
-        "• 🗣️ Bilingual: Hindi & English Power\n\n"
-        f"🔥 Join {current_members:,} elite aspirants today.\n"
-        "Don't get left behind."
+        "🔒 **WHAT PREMIUM USERS GET** (You Don't):\n\n"
+        "🎯 **Exact Weak Spots** (स्किल गैप एनालिसिस)\n"
+        "→ Know exactly which topics are killing your score.\n\n"
+        "⏱ **Speed vs Accuracy** (Speed Analysis)\n"
+        "→ Are you slow or just careless? See exact numbers.\n\n"
+        "📉 **Rank Drop Reason** (रैंक क्यों गिरी?)\n"
+        "→ Understand why your rank fell after every test.\n\n"
+        "🤖 **24/7 AI Coach** (आपका पर्सनल मेंटर)\n"
+        "→ Tells you what to revise TODAY, not someday.\n\n"
+        "-----------------------------\n\n"
+        "💸 **WHY 89 ⭐ IS NOTHING**:\n\n"
+        "Let’s be honest (सच मानिए):\n"
+        "❌ 1 Mock Test outside → ₹150+\n"
+        "❌ 1 Coaching PDF → ₹99\n"
+        "❌ Tea + Snack (चाय-नाश्ता) → ₹50\n\n"
+        "✅ **Elevate Aura Premium → Only 89 Stars**\n"
+        "👉 Less than a snack, but builds your career.\n\n"
+        f"🔥 Join {current_members:,} elite aspirants now."
     )
 
 # 1. Invoice Link Generator
