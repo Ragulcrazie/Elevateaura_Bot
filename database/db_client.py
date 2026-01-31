@@ -134,15 +134,17 @@ class SupabaseClient:
             lifetime_stats = metadata.get("lifetime_stats", {})
             
             # Determine Main Category from topic_key for aggregation
+            # Determine Main Category from topic_key for aggregation
             # We map specific topics or domain strings to 3 Main Buckets
             cat_lower = topic_key.lower()
             main_bucket = "other"
             
-            if "aptitude" in cat_lower or "math" in cat_lower:
+            # --- ROBUST BUCKETING LOGIC ---
+            if any(x in cat_lower for x in ["aptitude", "math", "quant", "data interpretation"]):
                 main_bucket = "aptitude"
-            elif "reasoning" in cat_lower or "logic" in cat_lower:
+            elif any(x in cat_lower for x in ["reasoning", "logic", "english", "verbal"]):
                 main_bucket = "reasoning"
-            elif "gk" in cat_lower or "knowledge" in cat_lower or "science" in cat_lower:
+            elif any(x in cat_lower for x in ["gk", "knowledge", "science", "history", "polity", "geography", "economy", "current affairs", "general"]):
                 main_bucket = "gk"
             
             # Update Total/Correct for this Bucket
