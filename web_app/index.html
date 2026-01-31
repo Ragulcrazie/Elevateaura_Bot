@@ -19,6 +19,17 @@
             border-radius: 12px;
         }
     </style>
+    <script>
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            const container = document.getElementById('leaderboard');
+            if(container) {
+                container.innerHTML = `<div class="p-4 text-red-500 font-bold bg-gray-900 rounded border border-red-500">
+                    CRITICAL ERROR: ${msg} <br> Line: ${lineNo}
+                    </div>`;
+            }
+            return false;
+        };
+    </script>
 </head>
 <body class="p-4">
     
@@ -512,16 +523,7 @@
             });
         }
         
-        function renderAnalytics(userEntry, total, percentile, userStats) {
-             // ...
-             // (Content of renderAnalytics is truncated here for brevity, 
-             // but assume same Logic as before)
-             // Re-declaring it global ensures safety.
-             
-             // ACTUAL CONTENT IS LOWER IN FILE (ALREADY GLOBAL), 
-             // So we just need to make sure we didn't duplicate it inside Init.
-        }
-
+        
         function renderAnalytics(userEntry, total, percentile, userStats) {
             const subStatus = userStats ? userStats.subscription_status : 'free';
             
