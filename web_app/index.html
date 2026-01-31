@@ -382,24 +382,11 @@
                 return paceA - paceB;
             });
             
-            // 4. Calculate Rank
-            const rank = leaderboard.findIndex(x => x.is_user) + 1;
-            userEntry.rank = rank;
-            
-            // 5. Render List
-            renderList(leaderboard);
-            
-            // 6. Update Top Header Stats
-            updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
-
             // 7. Render Analytics
-            // ... (rest of function)
-        }
-        
-                // (Rest of initDashboard logic...)
-            }
+            // Calculate Percentile
+            const percentile = (leaderboard.length - rank) / leaderboard.length;
+            renderAnalytics(userEntry,userEntry.total_score, percentile, userStats);
             
-            // ... (End of initDashboard)
         } // <--- CLOSE initDashboard HERE
         
         // --- HELPER FUNCTIONS (NOW GLOBAL) ---
