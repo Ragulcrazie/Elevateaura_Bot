@@ -545,6 +545,7 @@ async def handle_answer(callback: types.CallbackQuery):
         # Even if correct, we want to know the category ("Aptitude", "GK", etc)
         # We repurpose the 'mistake_topic' argument in db_client as 'topic_context'
         topic_context = current_q.get("domain") or current_q.get("category") or "General"
+        print(f"DEBUG: Topic Context sent to DB: {topic_context}")
         
         # If wrong, we might want more specific sub-topic (e.g. "Percentages")
         if not is_correct:
