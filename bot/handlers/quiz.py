@@ -105,27 +105,71 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     q_answered_json = saved_stats.get("questions_answered")
     
     if q_answered_json is not None:
-        # Trust the JSON value (even if 0, trust it!)
         q_answered = q_answered_json
     else:
-        # Fallback: Check old columns or derive from score
         db_val = user.get("questions_answered")
         if db_val:
             q_answered = db_val
         else:
-             # Last Resort: Derive from Score (Migration for old users)
              q_answered = int(user.get("current_streak", 0) / 10)
     
     # Check Date from JSONB or Metadata
     metadata = user.get("metadata", {}) or {}
     last_active = saved_stats.get("last_active_date") or metadata.get("last_active_date", "")
-    
     today_str = db.get_ist_date()
     
     if last_active != today_str:
-        # It's a new day, so 0 questions answered today
-        q_answered = 0
+        q_answered = 0 # Daily Reset
 
+    # --- NEW LIMIT LOGIC ---
+    sub_status = user.get("subscription_status", "free")
+    
+    if sub_status == "free":
+        # Free User Logic: Capped at 3 Tests LIFETIME (30 Questions)
+        # We need a LIFETIME counter. "questions_answered" is currently daily in our logic if last_active resets.
+        # BUT wait, the code above resets q_answered to 0 if new day.
+        # So q_answered is strictly DAILY.
+        
+        # We need a Lifetime Counter. Let's use 'current_streak' (Total Score) as proxy?
+        # 3 Tests = 30 Questions = ~300 max score. But score can vary.
+        # Better: Check a new field 'lifetime_tests' in metadata, OR derive from total score if metadata missing.
+        
+        total_score = user.get("current_streak", 0)
+        # Rough calc: Avg 50 pts per test. 3 tests = 150 pts.
+        # Let's be generous: Allow until 200 pts? No, unreliable.
+        
+        # Let's check 'lifetime_tests_completed' in metadata
+        lifetime_tests = metadata.get("lifetime_tests_completed", 0)
+        
+        if lifetime_tests >= 3:
+            # HARD PAYWALL Triggered
+             await message.answer(
+                "🔒 **FREE TRIAL EXHAUSTED**\n\n"
+                "You have completed your 3 free mock tests.\n"
+                "To continue practicing and access the AI Coach, you must upgrade.\n\n"
+                "👇 **Unlock Unlimited Access Now:**",
+                reply_markup=InlineKeyboardBuilder().button(text="🔓 Unlock Premium (89 ⭐)", callback_data="pay_sub").as_markup(),
+                parse_mode="Markdown"
+            )
+             # Manually trigger payment logic via callback handler if needed, 
+             # but here we just show button. Ideally button calls payment handler directly or we direct them.
+             # Let's add a button that triggers the payment invoice command flow?
+             # Or just tell them to click 'Unlock' in dashboard.
+             
+             # Better: Send the Sales Message immediately here too?
+             from bot.handlers.payment import get_product_description
+             await message.answer(get_product_description(), parse_mode="Markdown")
+             
+             # Send Invoice Link Button
+             from bot.handlers.payment import generate_invoice_link
+             link = await generate_invoice_link(message.bot, user_id)
+             
+             builder = InlineKeyboardBuilder()
+             builder.button(text="🔓 Pay 89 Stars Now", url=link)
+             await message.answer("Click below to upgrade:", reply_markup=builder.as_markup())
+             return
+
+    # Premium/Daily Limit Logic (Stays 6 tests per day for everyone else)
     remaining = 60 - q_answered
     if remaining <= 0:
         await message.answer("🛑 **Daily Limit Reached!**\n\nYou have completed your 60 questions for today. Come back tomorrow for a fresh leaderboard challenge!", parse_mode="Markdown")
@@ -638,9 +682,31 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     baseline = state.get("questions_answered_baseline", 0)
     final_q_answered = baseline + total
     
-    # Force update the stats object to ensure next session picks up where we left off
+    # Force update the stats object
     if "stats" not in state: state["stats"] = {}
     state["stats"]["questions_answered"] = final_q_answered
+    
+    # UPDATE LIFETIME COUNTER (For Free Limit)
+    # We need to fetch user, update metadata, and save back.
+    # Note: 'state' object doesn't have metadata. We must refetch or use simple DB update.
+    try:
+        db = SupabaseClient()
+        await db.connect()
+        # Fetch current metadata
+        user = await db.get_user(user_id)
+        if user:
+             meta = user.get("metadata", {}) or {}
+             current_lifetime = meta.get("lifetime_tests_completed", 0)
+             meta["lifetime_tests_completed"] = current_lifetime + 1
+             
+             # Save back
+             # We use simple update to avoid overwriting other things if possible, but upsert is safer with full obj
+             # Let's use specific update if Client allows, else upsert.
+             # Upserting user object is safe if we include ID.
+             await db.upsert_user({"user_id": user_id, "metadata": meta})
+             print(f"DEBUG: Incremented lifetime tests for {user_id} to {current_lifetime + 1}")
+    except Exception as e:
+        print(f"Failed to update lifetime counter: {e}")
     
     # Check Daily Limit
     start_btn_text = f"🔄 Next: Q{final_q_answered + 1}-{final_q_answered + 10} / 60"
