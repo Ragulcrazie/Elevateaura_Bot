@@ -385,7 +385,64 @@
             // ... (rest of function)
         }
         
-        // ... (renderHeader, updateTopHeader stays same)
+                // (Rest of initDashboard logic...)
+            }
+            
+            // ... (End of initDashboard)
+        } // <--- CLOSE initDashboard HERE
+        
+        // --- HELPER FUNCTIONS (NOW GLOBAL) ---
+        function renderHeader(name) {
+            const el = document.getElementById('userNameDisplay');
+            if(el) el.innerText = `Hello, ${name}`;
+        }
+
+        function updateTopHeader(rank, score, questionsAnswered) {
+            const rankEl = document.getElementById('rankDisplay');
+            const scoreEl = document.getElementById('scoreDisplay');
+            
+            if (rankEl) rankEl.innerText = rank > 999 ? "999+" : rank;
+            if (scoreEl) scoreEl.innerText = score;
+            
+            // Update Date/Pack Info
+            const dateEl = document.getElementById('dateDisplay');
+            if (dateEl) {
+                const now = new Date();
+                const options = { month: 'long', day: 'numeric' }; // "October 24"
+                const month = now.toLocaleString('default', { month: 'long' });
+                // Calculate Week of Month roughly
+                const week = Math.ceil(now.getDate() / 7);
+                const romanWeek = ["I", "II", "III", "IV", "V"][week-1] || "I";
+                
+                // Use theme text color instead of hardcoded white
+                dateEl.className = "text-[var(--tg-theme-text-color)] font-bold text-sm flex items-center";
+                dateEl.innerHTML = `
+                    <span>${month} ${romanWeek} Week</span> 
+                `;
+            }
+            
+            // Question Counter (Progress)
+            const testCountEl = document.getElementById('testCountDisplay');
+            if (testCountEl) {
+                 // Cap at 60 for display safety
+                 const displayVal = Math.min(questionsAnswered, 60);
+                 testCountEl.textContent = `${displayVal}/60`; 
+                 
+                 // Color Logic
+                 testCountEl.style.color = "#FFFFFF"; 
+                 testCountEl.style.fontWeight = "bold";
+                 testCountEl.style.padding = "2px 8px";
+                 testCountEl.style.borderRadius = "6px";
+                 
+                 if (displayVal === 0) {
+                     testCountEl.style.backgroundColor = "#6B7280"; 
+                 } else if (displayVal < 60) {
+                     testCountEl.style.backgroundColor = "#F59E0B"; 
+                 } else {
+                     testCountEl.style.backgroundColor = "#10B981"; 
+                 }
+            }
+        }
 
         function renderList(data) {
             const list = document.getElementById('leaderboard'); 
@@ -409,13 +466,12 @@
                 } else if (rank <= 3) {
                      subtitle = `Avg. Pace: ${p.avg_pace || p.average_pace || 34}s`;
                 } else {
-                     // For rank 4+, keep it clean (or show alias/title)
                      subtitle = "Aspirant"; 
                 }
                 
                 const el = document.createElement('div');
                 let rankHtml = '';
-                let rankBgClass = 'bg-gray-700 text-gray-300'; // Default
+                let rankBgClass = 'bg-gray-700 text-gray-300'; 
                 
                 if (rank === 1) {
                     rankHtml = '🥇';
