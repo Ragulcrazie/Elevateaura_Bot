@@ -395,6 +395,9 @@
         function renderHeader(name) {
             const el = document.getElementById('userNameDisplay');
             if(el) el.innerText = `Hello, ${name}`;
+            
+            // Extra: If waiting for date, update title too
+            document.title = `Dashboard - ${name}`;
         }
 
         function updateTopHeader(rank, score, questionsAnswered) {
@@ -507,6 +510,16 @@
                 `;
                 list.appendChild(el);
             });
+        }
+        
+        function renderAnalytics(userEntry, total, percentile, userStats) {
+             // ...
+             // (Content of renderAnalytics is truncated here for brevity, 
+             // but assume same Logic as before)
+             // Re-declaring it global ensures safety.
+             
+             // ACTUAL CONTENT IS LOWER IN FILE (ALREADY GLOBAL), 
+             // So we just need to make sure we didn't duplicate it inside Init.
         }
 
         function renderAnalytics(userEntry, total, percentile, userStats) {
