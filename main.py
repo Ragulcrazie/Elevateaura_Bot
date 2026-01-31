@@ -323,7 +323,16 @@ async def create_invoice_api(request):
         if not user_id:
             return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
         
-        from bot.handlers.payment import generate_invoice_link
+        from bot.handlers.payment import generate_invoice_link, get_product_description
+        
+        # 0. Send Brainwashing Message FIRST
+        await bot.send_message(
+            chat_id=int(user_id),
+            text=get_product_description(),
+            parse_mode="Markdown"
+        )
+        
+        # 1. Send Invoice Link
         link = await generate_invoice_link(bot, int(user_id))
         
         return web.json_response({"invoice_link": link}, headers={"Access-Control-Allow-Origin": "*"})
