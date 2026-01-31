@@ -113,10 +113,12 @@ async def cmd_start(message: types.Message):
     safe_name = quote(full_name)
     import time
     timestamp = int(time.time())
-    web_app_url = f"https://ragulcrazie.github.io/Elevateaura_Bot/web_app/?user_id={user_id}&name={safe_name}&v={timestamp}"
+    # USE RENDER URL for instant updates (serving from main.py)
+    render_base_url = "https://elevateaura-bot.onrender.com"
+    web_app_url = f"{render_base_url}/?user_id={user_id}&name={safe_name}&v={timestamp}"
 
     builder = InlineKeyboardBuilder()
-    builder.button(text="🔥 Check Leaderboard (v54)", web_app=WebAppInfo(url=web_app_url))
+    builder.button(text="🔥 Check Leaderboard (v82)", web_app=WebAppInfo(url=web_app_url))
     builder.button(text="📝 Start Quiz", callback_data="start_quiz_cmd") # Shortcuts
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
     builder.adjust(1)
@@ -355,7 +357,8 @@ async def create_invoice_api(request):
 
 async def start_web_server():
     app = web.Application()
-    app.router.add_get("/", health_check)
+    
+    # API Routes
     app.router.add_get("/api/user_data", get_user_data)
     app.router.add_options("/api/user_data", handle_options)
     app.router.add_get("/api/ghosts", get_ghosts_for_pack)
@@ -368,9 +371,19 @@ async def start_web_server():
     # Invoice Generation Route
     app.router.add_options('/api/create_invoice', handle_options)
     app.router.add_post('/api/create_invoice', create_invoice_api)
+
+    # --- SERVE STATIC WEB APP (New) ---
+    # Serve index.html at root "/"
+    async def serve_index(request):
+        return web.FileResponse('./web_app/index.html')
     
+    app.router.add_get("/", serve_index)
+    # Serve other assets if needed (e.g. css, js) - mapping /web_app/ folder
+    app.router.add_static('/web_app/', path='./web_app', name='web_app')
+
     runner = web.AppRunner(app)
     await runner.setup()
+    
     # Render provides PORT env var. Default to 8080 if missing.
     port = int(os.getenv("PORT", 8080))
     site = web.TCPSite(runner, "0.0.0.0", port)
