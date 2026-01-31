@@ -246,26 +246,47 @@ class SupabaseClient:
     async def clear_quiz_state(self, user_id: int, keep_stats: dict = None):
         """
         Clears the quiz state but PRESERVES stats.
-        If keep_stats is provided, uses that instead of DB read (prevent stale reads).
+        Robustly merges 'keep_stats' into the DB to prevent progress rollback.
         """
         if not self.client: return
         try:
-            # 1. Use provided stats (Best for consistency)
-            new_stats = {}
+            # 1. Fetch current DB state first to get the latest 'stats' if none provided
+            # Or to preserve other potential top-level keys in quiz_state
+            user = await self.get_user(user_id)
+            existing_quiz_state = user.get("quiz_state") or {} if user else {}
+            
+            final_stats = {}
             if keep_stats:
-                 new_stats["stats"] = keep_stats
+                final_stats = keep_stats
             else:
-                # 2. Fallback to DB fetch (Only if we don't have local copy)
-                user = await self.get_user(user_id)
-                existing_state = user.get("quiz_state") or {} if user else {}
-                if "stats" in existing_state:
-                    new_stats["stats"] = existing_state["stats"]
-                
+                # If we didn't pass stats, try to keep what's in DB
+                final_stats = existing_quiz_state.get("stats", {})
+            
+            # 2. Construct Clean State
+            # We remove 'questions', 'score', 'current_q_index' etc by creating fresh dict
+            new_quiz_state = {
+                "stats": final_stats
+            }
+            
+            # Preserve lifetime stats if they were stashed there
+            if "lifetime_stats" in existing_quiz_state:
+                new_quiz_state["lifetime_stats"] = existing_quiz_state["lifetime_stats"]
+
             data = {
                 "user_id": user_id,
-                "quiz_state": new_stats
+                "quiz_state": new_quiz_state
             }
+            
+            # 3. REDUNDANT BACKUP: If 'questions_answered' is in stats, try to save to main column too
+            if "questions_answered" in final_stats:
+                 data["questions_answered"] = final_stats["questions_answered"]
+
+            # 4. Execute Upsert
             self.client.table('users').upsert(data).execute()
+            logger.info(f"Cleared Quiz State for {user_id}. Preserved Stats: {final_stats.get('questions_answered')}")
+            
+        except Exception as e:
+            logger.error(f"Failed to clear quiz state: {e}")
         except Exception as e:
             logger.error(f"Failed to clear quiz state: {e}")
 
