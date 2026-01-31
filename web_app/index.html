@@ -368,7 +368,7 @@
             };
             
             leaderboard.push(userEntry);
-            leaderboard.push(userEntry);
+            // leaderboard.push(userEntry); // REMOVED DUPLICATE PUSH
             
             // SORT LOGIC: 1. Total Score (Desc)  2. Average Pace (Asc/Lower is better)
             leaderboard.sort((a,b) => {
@@ -382,7 +382,18 @@
                 return paceA - paceB;
             });
             
-            // 7. Render Analytics
+            // 4. Calculate Rank
+            // Remove duplicates first if any (sanity check)
+            // Sometimes duplicates happen if we push twice.
+            // Let's just find the FIRST instance of "is_user" after sorting
+            const rank = leaderboard.findIndex(x => x.is_user) + 1;
+            userEntry.rank = rank;
+            
+            // 5. Render List
+            renderList(leaderboard);
+            
+            // 6. Update Top Header Stats
+            updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
             // Calculate Percentile
             const percentile = (leaderboard.length - rank) / leaderboard.length;
             renderAnalytics(userEntry,userEntry.total_score, percentile, userStats);
