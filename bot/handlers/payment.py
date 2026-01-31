@@ -9,14 +9,34 @@ router = Router()
 
 # CONFIG
 PRICE_STARS = 89
-PRODUCT_TITLE = "Elevate Aura Premium (1 Month)"
-PRODUCT_DESCRIPTION = "30 Days Access: AI Coach, Deep Analyitcs & Notes"
+PRODUCT_TITLE = "Elevate Aura Premium"
+
+# Dynamic Description Logic
+def get_product_description():
+    import random
+    # Base count 5291, add randomness to simulate live activity
+    base_members = 5291
+    # Simple consistent pseudo-randomness based on hour to slow-grow it
+    growth = (datetime.now().day * 10) + datetime.now().hour
+    current_members = base_members + growth
+    
+    return (
+        "⚡ Stop Guessing. Start Dominating.\n\n"
+        "🔓 UNSYMMETRIC ADVANTAGE:\n"
+        "• 🧠 Psychological Hacks: Solve in 5s\n"
+        "• 🎯 Sniper Analysis: Fix weak spots fast\n"
+        "• 🤖 24/7 AI Coach: Your personal mentor\n"
+        "• 📈 Elite Leaderboard: Compete with the best\n"
+        "• 🗣️ Bilingual: Hindi & English Power\n\n"
+        f"🔥 Join {current_members:,} elite aspirants today.\n"
+        "Don't get left behind."
+    )
 
 # 1. Invoice Link Generator
 async def generate_invoice_link(bot: Bot, user_id: int):
     return await bot.create_invoice_link(
         title=PRODUCT_TITLE,
-        description=PRODUCT_DESCRIPTION,
+        description=get_product_description(),
         payload=f"sub_1m_{user_id}",
         provider_token="", # Empty for Stars
         currency="XTR",
