@@ -487,6 +487,10 @@
         function renderAnalytics(userEntry, total, percentile, userStats) {
             const subStatus = userStats ? userStats.subscription_status : 'free';
             
+            // --- MOVED UP: Safe Variable Declarations ---
+            const currentScore = userEntry.total_score || 0;
+            const questionsAnswered = userStats ? userStats.questions_answered : 0;
+
             const fasterCountEl = document.getElementById('fasterThanCount');
             if (fasterCountEl) {
                 const fasterThan = Math.floor(percentile * 5683); // Fake "Total Aspirants" scaling
@@ -514,39 +518,45 @@
             }
         
             // --- DYNAMIC PERFORMANCE BARS ---
-            // Simulate realistic data based on user score/name hash if real data missing
-            const seed = (currentScore + (userEntry.id || 0)) % 100;
-            
-            // Aptitude (Base + variant)
-            const aptVal = Math.min(95, Math.max(40, 60 + (seed % 30)));
-            const aptLabel = aptVal > 80 ? "Top 10%" : (aptVal > 60 ? "Good" : "Avg");
-            
-            // Reasoning (Inverse correlate slightly to balance)
-            const reasVal = Math.min(95, Math.max(30, 90 - (seed % 40)));
-            const reasLabel = reasVal > 80 ? "Fast" : (reasVal > 60 ? "Avg" : "Slow");
-            
-            // GK (Randomish but tied to score)
-            const gkVal = Math.min(95, Math.max(20, (currentScore % 80) + 20));
-            const gkLabel = gkVal > 75 ? "Expert" : (gkVal > 50 ? "Learner" : "Beginner");
-            
-            // Apply to DOM
-            setTimeout(() => {
-                const aptBar = document.getElementById('aptitude_bar');
-                const reasBar = document.getElementById('reasoning_bar');
-                const gkBar = document.getElementById('gk_bar');
+            try {
+                // Simulate realistic data based on user score/name hash if real data missing
+                const seed = (currentScore + (userEntry.id || 0)) % 100;
                 
-                if(aptBar) aptBar.style.width = `${aptVal}%`;
-                if(reasBar) reasBar.style.width = `${reasVal}%`;
-                if(gkBar) gkBar.style.width = `${gkVal}%`;
+                // Aptitude (Base + variant)
+                const aptVal = Math.min(95, Math.max(40, 60 + (seed % 30)));
+                const aptLabel = aptVal > 80 ? "Top 10%" : (aptVal > 60 ? "Good" : "Avg");
                 
-                document.getElementById('aptitude_label').innerText = aptLabel;
-                document.getElementById('reasoning_label').innerText = reasLabel;
-                document.getElementById('gk_label').innerText = gkLabel;
-            }, 100);
+                // Reasoning (Inverse correlate slightly to balance)
+                const reasVal = Math.min(95, Math.max(30, 90 - (seed % 40)));
+                const reasLabel = reasVal > 80 ? "Fast" : (reasVal > 60 ? "Avg" : "Slow");
+                
+                // GK (Randomish but tied to score)
+                const gkVal = Math.min(95, Math.max(20, (currentScore % 80) + 20));
+                const gkLabel = gkVal > 75 ? "Expert" : (gkVal > 50 ? "Learner" : "Beginner");
+                
+                // Apply to DOM
+                setTimeout(() => {
+                    const aptBar = document.getElementById('aptitude_bar');
+                    const reasBar = document.getElementById('reasoning_bar');
+                    const gkBar = document.getElementById('gk_bar');
+                    
+                    if(aptBar) aptBar.style.width = `${aptVal}%`;
+                    if(reasBar) reasBar.style.width = `${reasVal}%`;
+                    if(gkBar) gkBar.style.width = `${gkVal}%`;
+                    
+                    const aptLbl = document.getElementById('aptitude_label');
+                    const reasLbl = document.getElementById('reasoning_label');
+                    const gkLbl = document.getElementById('gk_label');
+
+                    if(aptLbl) aptLbl.innerText = aptLabel;
+                    if(reasLbl) reasLbl.innerText = reasLabel;
+                    if(gkLbl) gkLbl.innerText = gkLabel;
+                }, 100);
+            } catch (chartError) {
+                console.warn("Chart Error:", chartError);
+            }
 
             // --- TRUE POTENTIAL LOGIC (REAL) ---
-            const currentScore = userEntry.total_score || 0;
-            const questionsAnswered = userStats ? userStats.questions_answered : 0;
             
             let potentialBase = 600;
             if (questionsAnswered > 0 && questionsAnswered < 60) {
