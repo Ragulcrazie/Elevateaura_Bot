@@ -296,15 +296,23 @@ async def get_ghosts_for_pack(request):
             
         # Ensure we have enough buffer (need 50 ghosts)
         # Wrap around using modulo on ACTUAL count
-        if total_ghosts < 50:
+        if total_ghosts < 60:
             start_index = 0
-            limit = total_ghosts
+            limit = total_ghosts if total_ghosts > 0 else 48
         else:
-            start_index = seed_val % (total_ghosts - 50)
+            start_index = seed_val % (total_ghosts - 55)
             limit = 50
 
-        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
+        # DEFENSIVE: If calculated index is somehow invalid, reset to 0
+        if start_index < 0: start_index = 0
+
+        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit).execute()
         raw_ghosts = response.data if response.data else []
+        
+        # FINAL FALLBACK: If still empty (e.g. range error), fetch first 50
+        if not raw_ghosts:
+             response = db.client.table("ghost_profiles").select("*").limit(50).execute()
+             raw_ghosts = response.data if response.data else []
         
         # 3. Process Scores
         if mode == 'weekly':
