@@ -317,7 +317,7 @@ async def get_ghosts_for_pack(request):
         # DEFENSIVE: If calculated index is somehow invalid, reset to 0
         if start_index < 0: start_index = 0
 
-        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit).execute()
+        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
         raw_ghosts = response.data if response.data else []
         
         # FINAL FALLBACK: If still empty (e.g. range error), fetch first 50
