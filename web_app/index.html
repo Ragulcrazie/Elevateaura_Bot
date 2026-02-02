@@ -1019,7 +1019,12 @@
         }
     };
 
-    function waitForUser(attempts = 0) {
+    <script src="app_v2.js?v=1770068521"></script>
+    <script>
+    // Inline init logic... 
+    // (This part seems to call initDashboard, which is in app_v2.js)
+    // So app_v2.js MUST be included before this script block.
+    </script>
         const urlParams = new URLSearchParams(window.location.search);
         const urlUserId = urlParams.get('user_id');
         const urlName = urlParams.get('name');

@@ -75,11 +75,12 @@ function renderList(data) {
         // Requirement 7: Only show pace for Top 3 OR User
         let subtitle = "";
         if (isUser) {
-            subtitle = "Just Started"; // Or actual status
+            subtitle = `Avg. Pace: ${p.avg_pace || 34}s`; // User sees their own pace
         } else if (parseInt(rank) <= 3) {
             subtitle = `Avg. Pace: ${p.avg_pace || 34}s`;
         } else {
-            subtitle = "Aspirant"; 
+            // Rank > 3 and Not User -> Hide Pace
+            subtitle = `Aspirant`; 
         }
         
         const el = document.createElement('div');
