@@ -102,7 +102,7 @@ class RankEngine:
             
             processed_ghosts.append({
                 "user_id": g["id"],
-                "full_name": g.get("full_name") or "Aspirant",
+                "full_name": g["full_name"], # Use the definitely corrected name
                 "total_score": daily_score,
                 "questions_answered": (daily_score // 10),
                 "average_pace": pace,
