@@ -30,10 +30,11 @@ const p = document.getElementById('testCountDisplay');
 if(p) { p.innerText = "v60 AI"; p.style.backgroundColor = "#3B82F6"; }
 
 // --- 2. DATA LAYER ---
-async function fetchLeaderboard(packId, userId) {
+async function fetchLeaderboard(packId, userId, timestamp) {
     try {
         let url = `${API_BASE_URL}/api/ghosts?pack_id=${packId}&mode=${currentMode}`;
         if (userId) url += `&user_id=${userId}`;
+        if (timestamp) url += `&t=${timestamp}`;
 
         const response = await fetch(url);
         if (!response.ok) throw new Error("API Fail");
@@ -128,7 +129,7 @@ async function fetchUserStats(userId) {
 
 // --- 3. UI RENDERING ---
 
-async function initDashboard(passedUser = null) {
+async function initDashboard(passedUser = null, timestamp = null) {
     // DEFENSIVE: Remove legacy visual artifacts if they exist (Cleanup)
     const legacyCard = document.querySelector('.bg-red-900\\/30'); 
     if(legacyCard) legacyCard.remove();
@@ -172,7 +173,7 @@ async function initDashboard(passedUser = null) {
     // 2. Fetch Leaderboard (Ghosts + Real)
     let leaderboard = [];
     try {
-        leaderboard = await fetchLeaderboard(packId, user.id);
+        leaderboard = await fetchLeaderboard(packId, user.id, timestamp);
     } catch (e) {
          console.warn("Leaderboard fetch failed. Using fallback.", e);
          // Fallback dummy leaderboard so UI doesn't look empty
@@ -810,14 +811,16 @@ function switchTab(mode) {
         document.getElementById('lbTitle').innerText = "Grand Prix Leaders (Mon-Sun)";
     }
     
-    // Re-fetch
+    // Re-fetch with cache bust
+    const timestamp = new Date().getTime();
+    
     if (tg.initDataUnsafe?.user) {
-        initDashboard(tg.initDataUnsafe.user);
+        initDashboard(tg.initDataUnsafe.user, timestamp);
     } else if (currentUserEntry) {
          // Create dummy user obj from stored entry
-         initDashboard({ id: currentUserEntry.id, first_name: currentUserEntry.full_name });
+         initDashboard({ id: currentUserEntry.id, first_name: currentUserEntry.full_name }, timestamp);
     } else {
-        initDashboard(null);
+        initDashboard(null, timestamp);
     }
 }
 
