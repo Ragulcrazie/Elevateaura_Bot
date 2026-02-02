@@ -351,11 +351,11 @@ async def get_ghosts_for_pack(request):
         
     except Exception as e:
         logger.error(f"Failed to fetch ghosts: {e}")
-        # FINAL SAFETY NET: If everything crashes
+        error_msg = str(e)[:20] # Truncate to fit
         return web.json_response({
             "ghosts": [
-                {"full_name": "Ghost System", "total_score": 100, "is_ghost": True},
-                {"full_name": "Active Player", "total_score": 90, "is_ghost": True}
+                {"full_name": f"Err: {error_msg}", "total_score": 100, "is_ghost": True},
+                {"full_name": "Check Logs", "total_score": 90, "is_ghost": True}
             ]
         }, headers={"Access-Control-Allow-Origin": "*"})
 

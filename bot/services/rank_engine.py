@@ -203,7 +203,7 @@ class RankEngine:
             # No, 'total_days_progress' changes every hour, so score grows.
             # But randomness of 'skill' should be fixed per ghost per week.
             
-            ghost_seed = f"{g['id']}_{week_seed}"
+            ghost_seed = f"{g.get('id', i)}_{week_seed}"
             rng = random.Random(ghost_seed)
             
             # Skill Level (0.0 to 1.0) - Fixed for the week
