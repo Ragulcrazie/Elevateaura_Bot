@@ -199,38 +199,57 @@ class RankEngine:
 
         for i, g in enumerate(ghosts):
             # Seed based on ID + Week (Consistent for whole week)
-            # wait, if we use same seed, they stick to same score? 
-            # No, 'total_days_progress' changes every hour, so score grows.
-            # But randomness of 'skill' should be fixed per ghost per week.
-            
             ghost_seed = f"{g.get('id', i)}_{week_seed}"
             rng = random.Random(ghost_seed)
             
-            # Skill Level (0.0 to 1.0) - Fixed for the week
-            # Top 10 Ghosts are "Elites" (Skill > 0.9)
+            # Skill Level (0.0 to 1.0)
             if i < 10:
-                skill = 0.92 + (rng.random() * 0.08) # 92% - 100%
+                skill = 0.92 + (rng.random() * 0.08) # Elites (92-100%)
             else:
-                skill = rng.random() * 0.9 # The rest are normal
-                
-            # Current Score Calculation
-            # They achieve a % of the max possible score based on skill
-            raw_score = int(max_score_so_far * skill)
+                skill = rng.random() * 0.9 # Normals
+
+            # --- SPLIT LOGIC: Previous Days + Today ---
             
-            # Add some noise (+/- 50 pts) so it doesn't look robotic
-            noise = rng.randint(-50, 50)
-            final_score = max(0, raw_score + noise)
+            # 1. Previous Days Score (Fully Completed Days)
+            completed_days = day_of_week - 1
+            max_previous = completed_days * 600
+            previous_score = int(max_previous * skill)
             
-            # Cap at theoretical max
-            if final_score > max_score_so_far: final_score = max_score_so_far
+            # 2. Today's Score (In Progress)
+            # Use 'daily_progress' (0.0 to 1.0) to limit max
+            # Apply randomness for "Has this ghost played yet today?"
+            
+            # Chance to have played today: Based on daily_progress
+            # e.g. at 9AM (0.25), 25% chance they started.
+            # But high skill bots play early.
+            
+            has_played_fraction = daily_progress # Simple linear
+            current_day_max = 600
+            
+            # Calculate today's theoretical score for this ghost
+            today_potential = int(current_day_max * skill * daily_progress)
+            
+            # Add noise to Today ONLY
+            today_noise = rng.randint(-30, 30)
+            today_score = max(0, today_potential + today_noise)
+            
+            # Clamp Today
+            if today_score > current_day_max: today_score = current_day_max
+            
+            # Total
+            final_score = previous_score + today_score
+            
+            # Final Cap check
+            total_max_possible = int(day_of_week * 600) # e.g. Mon=600, Tue=1200
+            if final_score > total_max_possible: final_score = total_max_possible
             
             # Round to nearest 10
             final_score = (final_score // 10) * 10
             
             processed_ghosts.append({
-                "user_id": g["id"],
+                "user_id": g.get("id", i),
                 "full_name": g.get("full_name") or g.get("name") or "Aspirant",
-                "weekly_score": final_score, # V2 Key
+                "weekly_score": final_score, 
                 "is_ghost": True
             })
             
