@@ -520,12 +520,9 @@
         }
     };
 
-    <script src="app_v2.js?v=1770068521"></script>
+    <script src="app_v2.js?v=1770068522"></script>
     <script>
-    // Inline init logic... 
-    // (This part seems to call initDashboard, which is in app_v2.js)
-    // So app_v2.js MUST be included before this script block.
-    </script>
+    function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
         const urlUserId = urlParams.get('user_id');
         const urlName = urlParams.get('name');
@@ -537,25 +534,35 @@
                  last_name: "",
                  username: ""
              };
-             initDashboard(fakeUser).catch(e => renderError("Login Error: " + e));
+             initDashboard(fakeUser).catch(e => {
+                 console.error(e);
+                 document.getElementById('leaderboard').innerHTML = "Login Error";
+             });
              return;
         }
 
         if (tg.initDataUnsafe?.user) {
-            initDashboard(tg.initDataUnsafe.user).catch(e => renderError("TG Init Error: " + e));
+            initDashboard(tg.initDataUnsafe.user).catch(e => console.error(e));
         } else if (attempts < 20) {
             setTimeout(() => waitForUser(attempts + 1), 100);
         } else {
             console.warn("User detection timed out.");
-            initDashboard(null).catch(e => renderError("Guest Init Error: " + e));
+            initDashboard(null).catch(e => console.error(e));
         }
     }
 
     async function loadNotesMapping() {
-        if (NOTES_MAPPING) return; // Already loaded
+        if (typeof NOTES_MAPPING !== 'undefined' && NOTES_MAPPING) return; 
         try {
-            const res = await fetch(GITHUB_ASSETS_BASE + "assets/notes_topic_language_mapping.json");
-            NOTES_MAPPING = await res.json();
+            // GITHUB_ASSETS_BASE is in app_v2.js, hope it's global? 
+            // Better to hardcode or check scope. 
+            // app_v2.js defines const GITHUB_ASSETS = ...
+            // Valid JS: const in global scope is global.
+            const url = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/assets/notes_topic_language_mapping.json";
+            const res = await fetch(url);
+            // We need to set the global variable in app_v2.js?
+            // Global vars in JS share window scope.
+            window.NOTES_MAPPING = await res.json();
         } catch (e) {
             console.error("Failed to load notes mapping:", e);
         }
@@ -563,11 +570,10 @@
 
     try {
         const probe = document.getElementById('testCountDisplay');
-        // PROBE to visually verify new script
-        if(probe) probe.innerText = "v90 Init";
+        if(probe) probe.innerText = "v100 Final";
         waitForUser(); 
     } catch (e) {
-        renderError("Init Failed: " + e.message);
+        console.error("Init Failed", e);
     }
     </script>
 </body>
