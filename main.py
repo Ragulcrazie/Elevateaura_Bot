@@ -284,10 +284,25 @@ async def get_ghosts_for_pack(request):
         # Unique seed for weekly vs daily
         seed_val = int(f"{year}{week_num}{pack_id}{len(mode)}")
         
-        TOTAL_GHOSTS = 10000 
-        start_index = seed_val % (TOTAL_GHOSTS - 60)
-        
-        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + 48).execute()
+        # --- FIXED LOGIC: Dynamic Total Count ---
+        # Don't assume 10,000. Fetch actual count to be 100% safe.
+        try:
+            # Head=True gets count without data (fast)
+            count_res = db.client.table("ghost_profiles").select("*", count="exact", head=True).execute()
+            total_ghosts = count_res.count if count_res.count else 100
+        except:
+            total_ghosts = 100 # Fallback
+            
+        # Ensure we have enough buffer (need 50 ghosts)
+        # Wrap around using modulo on ACTUAL count
+        if total_ghosts < 50:
+            start_index = 0
+            limit = total_ghosts
+        else:
+            start_index = seed_val % (total_ghosts - 50)
+            limit = 50
+
+        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
         raw_ghosts = response.data if response.data else []
         
         # 3. Process Scores
