@@ -71,7 +71,16 @@ function renderList(data) {
         // Ghost: Dark Grey/Black (like screenshot 'bg-[#1f2937]')
         const bgClass = isUser ? 'bg-indigo-600 shadow-lg border border-indigo-400' : 'bg-gray-800';
         const textClass = isUser ? 'text-white' : 'text-gray-200';
-        const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
+        
+        // Requirement 7: Only show pace for Top 3 OR User
+        let subtitle = "";
+        if (isUser) {
+            subtitle = "Just Started"; // Or actual status
+        } else if (rank <= 3) {
+            subtitle = `Avg. Pace: ${p.avg_pace || 34}s`;
+        } else {
+            subtitle = "Aspirant"; // Or empty string, or "Top 10%"
+        }
         
         const el = document.createElement('div');
         let rankHtml = '';

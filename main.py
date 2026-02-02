@@ -294,14 +294,14 @@ async def get_ghosts_for_pack(request):
         except:
             total_ghosts = 100 # Fallback
             
-        # Ensure we have enough buffer (need 50 ghosts)
+        # Ensure we have enough buffer (need 49 ghosts + User = 50 total)
         # Wrap around using modulo on ACTUAL count
         if total_ghosts < 60:
             start_index = 0
-            limit = total_ghosts if total_ghosts > 0 else 48
+            limit = min(total_ghosts, 49)
         else:
             start_index = seed_val % (total_ghosts - 55)
-            limit = 50
+            limit = 49
 
         # DEFENSIVE: If calculated index is somehow invalid, reset to 0
         if start_index < 0: start_index = 0

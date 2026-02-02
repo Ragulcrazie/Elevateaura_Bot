@@ -83,6 +83,15 @@ class RankEngine:
             
         return daily_score
 
+    def _ensure_ghost_name(self, g):
+        """Helper to guarantee a name exists."""
+        if not g.get("full_name") or g.get("full_name") == "Aspirant":
+             names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
+             surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
+             rng_name = random.Random(g.get('id', 0))
+             g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+        return g["full_name"]
+
     def generate_ghost_data(self, ghosts, user_score):
         """
         Daily Leaderboard Generation.
@@ -91,37 +100,24 @@ class RankEngine:
         now = self.get_ist_time()
         
         for g in ghosts:
-            # Use Helper
             daily_score = self._calculate_single_day_score(g, now, is_completed_day=False)
             
-            # Name Fixing (CRITICAL FIX)
-            if not g.get("full_name") or g.get("full_name") == "Aspirant":
-                 names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
-                 surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
-                 rng_name = random.Random(g['id'])
-                 g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+            final_name = self._ensure_ghost_name(g)
             
             # --- Pace Logic (Visual only) ---
-            # (Simplified for brevity, same as before)
             rng = random.Random(f"{g['id']}_{now.strftime('%Y%m%d')}")
             pace = 34
             if daily_score > 300: pace = rng.randint(22, 35)
             
             processed_ghosts.append({
                 "user_id": g["id"],
-                "full_name": g["full_name"], # Use the definitely corrected name
+                "full_name": final_name,
                 "total_score": daily_score,
                 "questions_answered": (daily_score // 10),
                 "average_pace": pace,
                 "is_ghost": True
             })
             
-        # Mind Games implementation... (Rabbit/Hunter)
-        # [Preserved existing Mind Game logic would go here, simplified for this patch]
-        # For strict consistency requested by user, we apply purely math first.
-        # If we add mind games, we must ensure they don't break the "Week = Sum(Daily)" rule excessively.
-        # For now, let's return the Raw Deterministic Scores to prove the fix.
-        
         processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
         return processed_ghosts
 
@@ -142,13 +138,8 @@ class RankEngine:
         # FALLBACK: If DB returned no ghosts, generate procedural ones
         week_seed = f"{now.strftime('%Y_%W')}"
         if not ghosts:
-            ghosts = [{"id": 1000+i, "full_name": "" } for i in range(50)]
-            names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
-            surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
-            
-            for i, g in enumerate(ghosts):
-                rng_name = random.Random(i + int(week_seed.replace("_", "")))
-                g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+            ghosts = [{"id": 1000+i, "full_name": "" } for i in range(49)] # Match limit
+            # Note: We rely on the loop below to fill names via helper
 
         for g in ghosts:
             total_weekly_score = 0
@@ -166,17 +157,12 @@ class RankEngine:
                 
                 day_score = self._calculate_single_day_score(g, target_date, is_completed_day=is_full)
                 total_weekly_score += day_score
-                
-            # Ensure name exists (Fix for 'Aspirant' bug)
-            if not g.get("full_name") or g.get("full_name") == "Aspirant":
-                 names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
-                 surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
-                 rng_name = random.Random(g['id'])
-                 g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+            
+            final_name = self._ensure_ghost_name(g)
 
             processed_ghosts.append({
                 "user_id": g["id"],
-                "full_name": g.get("full_name"),
+                "full_name": final_name,
                 "weekly_score": total_weekly_score,
                 "is_ghost": True
             })
