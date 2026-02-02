@@ -94,6 +94,13 @@ class RankEngine:
             # Use Helper
             daily_score = self._calculate_single_day_score(g, now, is_completed_day=False)
             
+            # Name Fixing (CRITICAL FIX)
+            if not g.get("full_name") or g.get("full_name") == "Aspirant":
+                 names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
+                 surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
+                 rng_name = random.Random(g['id'])
+                 g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+            
             # --- Pace Logic (Visual only) ---
             # (Simplified for brevity, same as before)
             rng = random.Random(f"{g['id']}_{now.strftime('%Y%m%d')}")
