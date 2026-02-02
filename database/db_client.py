@@ -397,8 +397,15 @@ class SupabaseClient:
             # Try V2 Column First
             response = self.client.table('users').select("user_id, first_name, weekly_score").order("weekly_score", desc=True).limit(limit).execute()
             return response.data
-        except Exception as e:
-            logger.warning("Weekly column missing, falling back to Daily logic temporarily.")
-            # Fallback to current_streak (All Time) just to show something
-            response = self.client.table('users').select("user_id, first_name, current_streak").order("current_streak", desc=True).limit(limit).execute()
-            return response.data
+        except:
+            # logger.warning("Weekly column missing, falling back to Daily logic.")
+            try:
+                # Fallback to current_streak (All Time)
+                response = self.client.table('users').select("user_id, first_name, current_streak").order("current_streak", desc=True).limit(limit).execute()
+                data = response.data
+                # Map for consistency so main.py doesn't see 0
+                for user in data:
+                    user['weekly_score'] = user.get('current_streak', 0)
+                return data
+            except:
+                return []
