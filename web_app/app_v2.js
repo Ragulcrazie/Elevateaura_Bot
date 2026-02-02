@@ -17,8 +17,10 @@ try {
 // --- CONFIG ---
 const API_BASE_URL = "https://elevateaura-bot.onrender.com"; // User's Render URL
 
-// Global State for Notes
+// Global State
 let NOTES_MAPPING = null;
+let currentMode = 'daily'; // 'daily' or 'weekly'
+let currentUserEntry = null; // Store for global access
 const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
 
 console.log("ELEVATE AURA BOT: Script v60 Loaded (Dynamic Notes)");
@@ -30,7 +32,7 @@ if(p) { p.innerText = "v60 AI"; p.style.backgroundColor = "#3B82F6"; }
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId) {
     try {
-        let url = `${API_BASE_URL}/api/ghosts?pack_id=${packId}`;
+        let url = `${API_BASE_URL}/api/ghosts?pack_id=${packId}&mode=${currentMode}`;
         if (userId) url += `&user_id=${userId}`;
 
         const response = await fetch(url);
@@ -209,6 +211,29 @@ async function initDashboard(passedUser = null) {
     const percentile = betterThan / total;
     
     renderAnalytics(userEntry, total, percentile, userStats);
+
+    // 8. Update Wallet UI
+    const walletEl = document.getElementById('walletBalance');
+    if(walletEl && userStats) {
+        walletEl.innerText = userStats.wallet_stars || 0;
+    }
+
+    // 9. Update Red Dot (Lead Trap)
+    const dot = document.getElementById('pendingActionDot');
+    if(dot) {
+        // Condition: High Score (>200) AND No Lead Captured Yet
+        const hasScore = (userStats && userStats.total_score > 200);
+        const hasLead = (userStats && userStats.lead_data); // exists
+        
+        if (hasScore && !hasLead) {
+            dot.classList.remove('hidden');
+        } else {
+            dot.classList.add('hidden');
+        }
+    }
+    
+    // Store globally
+    currentUserEntry = userEntry;
 }
 
 function renderHeader(name) {
@@ -617,9 +642,126 @@ if (infoBtn && infoModal && closeModal) {
     closeModal.addEventListener('click', toggleModal);
     
     // Close on backdrop click
+    // Close on backdrop click
     infoModal.addEventListener('click', (e) => {
-        if (e.target === infoModal) toggleModal();
+        if (e.target === infoModal) toggleModal(); 
     });
+    
+    // --- RED DOT LOGIC for Info Button ---
+    // Remove old listener if any (implicit by re-binding logic here isn't enough, but assuming fresh load)
+    // We override the click.
+    infoBtn.onclick = (e) => {
+        e.preventDefault();
+        const dot = document.getElementById('pendingActionDot');
+        if (dot && !dot.classList.contains('hidden')) {
+             // Open CAPTURE Modal (The Trap)
+             openCaptureModal();
+        } else {
+             // Open INFO Modal
+             toggleModal();
+        }
+    };
+}
+
+// --- LEAD CAPTURE LOGIC ---
+let leadData = { exam: null, mode: null, phone: null };
+
+function openCaptureModal() {
+    document.getElementById('captureModal').classList.remove('hidden');
+    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('heavy');
+}
+
+function closeCaptureModal() {
+    document.getElementById('captureModal').classList.add('hidden');
+}
+
+function selectLeadOption(type, value) {
+    leadData[type] = value;
+    
+    // Visual Feedback
+    const step = type === 'exam' ? 'captureStep1' : 'captureStep2';
+    const nextStep = type === 'exam' ? 'captureStep2' : 'captureStep3';
+    const nextDot = type === 'exam' ? 'pdot2' : 'pdot3';
+    
+    // Highlight Selected
+    const sector = type === 'exam' ? '.lead-opt-exam' : '.lead-opt-mode';
+    document.querySelectorAll(sector).forEach(btn => {
+        if(btn.innerText.includes(value)) {
+            btn.classList.add('bg-indigo-600', 'border-indigo-400');
+            btn.classList.remove('bg-gray-700', 'border-gray-600');
+        } else {
+            btn.classList.remove('bg-indigo-600', 'border-indigo-400');
+            btn.classList.add('bg-gray-700', 'border-gray-600');
+        }
+    });
+
+    if(tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
+
+    // Auto Advance
+    setTimeout(() => {
+        document.getElementById(step).classList.add('hidden');
+        document.getElementById(nextStep).classList.remove('hidden');
+        document.getElementById(nextDot).classList.add('bg-yellow-500');
+        document.getElementById(nextDot).classList.remove('bg-gray-600');
+    }, 400);
+}
+
+function submitLead() {
+    const phoneEl = document.getElementById('leadPhone');
+    const phone = phoneEl.value.trim();
+    
+    if (phone.length < 10) {
+        alert("Please enter a valid 10-digit number.");
+        phoneEl.focus();
+        if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+        return;
+    }
+    
+    leadData.phone = phone;
+    
+    // Show Loading
+    const btn = document.querySelector('#captureStep3 button');
+    const originalText = btn.innerText;
+    btn.innerText = "Generating Report...";
+    
+    // API Call
+    if (currentUserEntry && currentUserEntry.id) {
+        fetch(`${API_BASE_URL}/api/save_lead`, {
+            method: 'POST',
+            body: JSON.stringify({ user_id: currentUserEntry.id, lead_data: leadData }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.status === 'success') {
+                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                alert("✅ Report queued! Check WhatsApp shortly.");
+                
+                // Close & reward visual
+                closeCaptureModal();
+                const dot = document.getElementById('pendingActionDot');
+                if(dot) dot.classList.add('hidden'); // Clear dot permanently
+                
+                // Maybe add some stars visually?
+                const balEl = document.getElementById('walletBalance');
+                if(balEl) {
+                     let bal = parseInt(balEl.innerText);
+                     balEl.innerText = bal + 20; 
+                     alert("🎁 You received 20 Bonus Stars for checking in!");
+                }
+            } else {
+                 alert("Error: " + (data.error || "Server Busy"));
+                 btn.innerText = originalText;
+            }
+        })
+        .catch(err => {
+             console.error(err);
+             alert("Network Error. Try again.");
+             btn.innerText = originalText;
+        });
+    } else {
+        alert("User ID missing. Reload.");
+    }
 }
 
 // Button Handler for specific ID
@@ -647,6 +789,63 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
     renderError(`Error: ${msg} (Line ${lineNo})`);
     return false;
 };
+
+// --- NEW LOGIC FOR V2 ---
+
+function switchTab(mode) {
+    if (currentMode === mode) return;
+    currentMode = mode;
+    
+    // Update UI btns
+    const btnDaily = document.getElementById('tabDaily');
+    const btnWeekly = document.getElementById('tabWeekly');
+    
+    if (mode === 'daily') {
+        btnDaily.className = "flex-1 py-1 text-xs font-bold rounded-md bg-gray-600 text-white shadow transition-all";
+        btnWeekly.className = "flex-1 py-1 text-xs font-bold rounded-md text-gray-400 hover:bg-gray-700 transition-all";
+        document.getElementById('lbTitle').innerText = "Today's Top Aspirants";
+    } else {
+        btnWeekly.className = "flex-1 py-1 text-xs font-bold rounded-md bg-yellow-600 text-white shadow transition-all";
+        btnDaily.className = "flex-1 py-1 text-xs font-bold rounded-md text-gray-400 hover:bg-gray-700 transition-all";
+        document.getElementById('lbTitle').innerText = "Grand Prix Leaders (Mon-Sun)";
+    }
+    
+    // Re-fetch
+    if (tg.initDataUnsafe?.user) {
+        initDashboard(tg.initDataUnsafe.user);
+    } else if (currentUserEntry) {
+         // Create dummy user obj from stored entry
+         initDashboard({ id: currentUserEntry.id, first_name: currentUserEntry.full_name });
+    } else {
+        initDashboard(null);
+    }
+}
+
+function triggerMaintenancePopup() {
+    if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+    alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
+}
+
+function triggerRedemption() {
+    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+    
+    const balance = parseInt(document.getElementById('walletBalance').innerText);
+    
+    if (balance < 75) {
+        alert(`Insufficient Balance!\n\nYou have ${balance} Stars.\nNeed 75 Stars for a 7-Day Pass.\n\nPlay more to earn.`);
+        return;
+    }
+    
+    const confirmRedeem = confirm(`💎 Redeem Reward?\n\nSpend 75 Stars to extend your Premium Validation by 7 Days?\n\nCurrent Balance: ${balance}`);
+    
+    if (confirmRedeem) {
+        // Call API
+        // For MVP, just alert success
+        alert("✅ Success! Subscription Extended.\n\n(This is a simulation. In prod, this deducts stars and updates DB).");
+        // Update UI locally
+        document.getElementById('walletBalance').innerText = balance - 75;
+    }
+}
 
 // Polling mechanism
 function waitForUser(attempts = 0) {

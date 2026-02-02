@@ -158,3 +158,74 @@ class RankEngine:
         # Re-sort after adjustments
         processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
         return processed_ghosts
+
+    def generate_weekly_ghosts(self, ghosts, user_weekly_score):
+        """
+        Generates accumulated scores for the Weekly Leaderboard (Mon-Sun).
+        Range: 0 to 4200 points (600 pts/day * 7 days).
+        
+        The Logic:
+        - The 'Invincible Alpha' (Rank 1) is nearly perfect.
+        - The 'Top 10' are elite.
+        - The User must fight for Rank 10.
+        """
+        processed_ghosts = []
+        now = self.get_ist_time()
+        
+        # 1. Calculate 'Week Progress' (1.0 = Mon, 7.0 = Sun)
+        # Weekday: Mon=0, Sun=6. So we want (weekday + 1).
+        day_of_week = now.weekday() + 1 
+        daily_progress = self.get_daily_slot_progress() / 6.0 # 0.0 to 1.0 progress within today
+        
+        # Effective days elapsed (e.g. Wed noon = 2.5 days)
+        total_days_progress = (day_of_week - 1) + daily_progress
+        
+        # Max theoretical score so far: 600 * days
+        max_score_so_far = int(total_days_progress * 600)
+        
+        week_seed = f"{now.strftime('%Y_%W')}"
+
+        for i, g in enumerate(ghosts):
+            # Seed based on ID + Week (Consistent for whole week)
+            # wait, if we use same seed, they stick to same score? 
+            # No, 'total_days_progress' changes every hour, so score grows.
+            # But randomness of 'skill' should be fixed per ghost per week.
+            
+            ghost_seed = f"{g['id']}_{week_seed}"
+            rng = random.Random(ghost_seed)
+            
+            # Skill Level (0.0 to 1.0) - Fixed for the week
+            # Top 10 Ghosts are "Elites" (Skill > 0.9)
+            if i < 10:
+                skill = 0.92 + (rng.random() * 0.08) # 92% - 100%
+            else:
+                skill = rng.random() * 0.9 # The rest are normal
+                
+            # Current Score Calculation
+            # They achieve a % of the max possible score based on skill
+            raw_score = int(max_score_so_far * skill)
+            
+            # Add some noise (+/- 50 pts) so it doesn't look robotic
+            noise = rng.randint(-50, 50)
+            final_score = max(0, raw_score + noise)
+            
+            # Cap at theoretical max
+            if final_score > max_score_so_far: final_score = max_score_so_far
+            
+            # Round to nearest 10
+            final_score = (final_score // 10) * 10
+            
+            processed_ghosts.append({
+                "user_id": g["id"],
+                "full_name": g.get("full_name") or g.get("name") or "Aspirant",
+                "weekly_score": final_score, # V2 Key
+                "is_ghost": True
+            })
+            
+        # --- RIGGING: The Invincible Alpha ---
+        # Ensure Rank 1 is always slightly ahead of "Perfect Human Pace" to be the benchmark.
+        # But user requested "9 Bots + 1 User". 
+        # So we ensure the top 9 are very strong.
+        
+        processed_ghosts.sort(key=lambda x: x["weekly_score"], reverse=True)
+        return processed_ghosts

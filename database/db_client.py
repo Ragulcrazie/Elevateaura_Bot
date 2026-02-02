@@ -118,6 +118,12 @@ class SupabaseClient:
             # Score Update
             new_score = current_score + 10 if is_correct else current_score
             new_daily_score = current_daily_score + 10 if is_correct else current_daily_score
+
+            # --- V2 WEEKLY SCORE ---
+            # Smart Logic: If column missing (None), treat as 0
+            current_weekly = user.get("weekly_score", 0)
+            if current_weekly is None: current_weekly = 0
+            new_weekly_score = current_weekly + 10 if is_correct else current_weekly
             
             # Weak Spot Tracking (Legacy Logic - Only if Wrong)
             # The calling code now passes 'topic_context' as mistake_topic.
@@ -177,27 +183,31 @@ class SupabaseClient:
             data = {
                 "user_id": user_id,
                 "current_streak": new_score,
-                "quiz_state": quiz_state
+                "quiz_state": quiz_state,
+                "weekly_score": new_weekly_score, # V2 Column
+                "metadata": metadata
             }
             
-            # Optional: Try adding metadata if schema supports it, but don't break if not?
-            # Actually, Supabase upsert ignores extra keys if they aren't columns usually, 
-            # BUT if strict strict, it fails.
-            # Let's try adding it. If it fails, the previous try/except catches it. 
-            # WAIT. If it fails, NOTHING gets saved. That's the problem.
-            
-            # SOLUTION: Use a 2-step or check. 
-            # Better: Just include it. If it fails, we need to know. 
-            # Assuming 'metadata' column exists as per project spec.
-            data["metadata"] = metadata
-            
+            # 4. CRASH-PROOF UPSERT STRATEGY
             try:
+                # Try inserting EVERYTHING (Ideal 99% case)
                 self.client.table('users').upsert(data).execute()
-            except Exception as upsert_err:
-                # Fallback: Maybe metadata column doesn't exist? Try without it.
-                logger.warning(f"Upsert with metadata failed ({upsert_err}). Retrying without metadata.")
-                del data["metadata"] 
-                self.client.table('users').upsert(data).execute()
+            except Exception as e:
+                logger.warning(f"Full upsert failed ({e}). Retrying with V1 fallback.")
+                # Fallback A: Maybe 'weekly_score' column is missing?
+                if "weekly_score" in data: del data["weekly_score"]
+                
+                # Store weekly in metadata as manual fallback
+                metadata["weekly_score_fallback"] = new_weekly_score
+                data["metadata"] = metadata
+                
+                try:
+                    self.client.table('users').upsert(data).execute()
+                except Exception as e2:
+                    # Fallback B: Maybe 'metadata' column is missing too?
+                    logger.warning(f"Metadata upsert failed ({e2}). Minimal save.")
+                    if "metadata" in data: del data["metadata"]
+                    self.client.table('users').upsert(data).execute()
 
             logger.info(f"Stats Updated {user_id}: Score={new_score}, Bucket={main_bucket}")
             return quiz_state["stats"]
@@ -314,3 +324,81 @@ class SupabaseClient:
         except Exception as e:
             logger.error(f"Failed to reset user limit: {e}")
             return False
+
+    async def update_wallet(self, user_id: int, amount: int, is_bonus: bool = True) -> int:
+        """
+        Updates the user's 'wallet_stars'.
+        Can accept negative amounts for spending.
+        Returns the new balance.
+        """
+        if not self.client: return 0
+        try:
+            user = await self.get_user(user_id)
+            if not user: return 0
+            
+            current_bal = user.get("wallet_stars", 0) or 0
+            # If column missing (None), treat as 0
+            if current_bal is None: current_bal = 0
+            
+            new_bal = int(current_bal) + int(amount)
+            if new_bal < 0: new_bal = 0 # Prevent negative balance
+            
+            data = {"user_id": user_id, "wallet_stars": new_bal}
+            
+            try:
+                self.client.table('users').upsert(data).execute()
+            except Exception as e:
+                # Fallback: Store in metadata if column missing
+                logger.warning(f"Wallet column missing, using metadata: {e}")
+                metadata = user.get("metadata", {}) or {}
+                metadata["wallet_stars_fallback"] = new_bal
+                self.client.table('users').upsert({"user_id": user_id, "metadata": metadata}).execute()
+                
+            return new_bal
+        except Exception as e:
+            logger.error(f"Wallet update failed: {e}")
+            return 0
+
+    async def save_lead(self, user_id: int, lead_info: dict) -> bool:
+        """
+        Saves captured lead data (Phone, Exam, Mode).
+        Triggers the 'Kill Switch' for the Red Dot.
+        """
+        if not self.client: return False
+        try:
+            # 1. Prepare Data
+            data = {
+                "user_id": user_id,
+                "lead_data": lead_info
+            }
+            
+            # 2. Try Save
+            try:
+                self.client.table('users').upsert(data).execute()
+            except Exception as e:
+                # Fallback
+                user = await self.get_user(user_id)
+                metadata = user.get("metadata", {}) or {}
+                metadata["lead_data_fallback"] = lead_info
+                self.client.table('users').upsert({"user_id": user_id, "metadata": metadata}).execute()
+                
+            logger.info(f"Lead Captured for {user_id}: {lead_info.get('exam_target')}")
+            return True
+        except Exception as e:
+            logger.error(f"Lead capture failed: {e}")
+            return False
+
+    async def get_weekly_leaderboard(self, limit=50):
+        """
+        Fetches top weekly scorers. 
+        """
+        if not self.client: return []
+        try:
+            # Try V2 Column First
+            response = self.client.table('users').select("user_id, first_name, weekly_score").order("weekly_score", desc=True).limit(limit).execute()
+            return response.data
+        except Exception as e:
+            logger.warning("Weekly column missing, falling back to Daily logic temporarily.")
+            # Fallback to current_streak (All Time) just to show something
+            response = self.client.table('users').select("user_id, first_name, current_streak").order("current_streak", desc=True).limit(limit).execute()
+            return response.data

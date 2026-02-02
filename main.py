@@ -229,6 +229,9 @@ async def get_user_data(request):
             return web.json_response({
                 "full_name": user_data.get("full_name", "Unknown Aspirant"),
                 "total_score": daily_score, 
+                "weekly_score": user_data.get("weekly_score", 0), # V2
+                "wallet_stars": user_data.get("wallet_stars", 0), # V2
+                "lead_data": user_data.get("lead_data", None),    # V2
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
                 "average_pace": db_pace,
@@ -248,37 +251,38 @@ async def get_ghosts_for_pack(request):
     try:
         pack_id = request.query.get("pack_id")
         user_id_str = request.query.get("user_id")
+        mode = request.query.get("mode", "daily") # 'daily' or 'weekly'
         
         if not pack_id:
             return web.json_response({"error": "Missing pack_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
         
-        # 1. Fetch User Score for "Psychological" Logic
+        # 1. Fetch User Score
         user_score = 0
         if user_id_str:
             try:
                 user_data = await db.get_user(int(user_id_str))
                 if user_data:
-                    # Check if score is from today
-                    today_str = db.get_ist_date()
-                    quiz_state = user_data.get("quiz_state") or {}
-                    saved_stats = quiz_state.get("stats", {})
-                    if saved_stats.get("last_active_date") == today_str:
-                        user_score = saved_stats.get("daily_score", 0)
+                    if mode == 'weekly':
+                        user_score = user_data.get("weekly_score", 0) or 0
+                    else:
+                        # Daily Logic
+                        today_str = db.get_ist_date()
+                        quiz_state = user_data.get("quiz_state") or {}
+                        saved_stats = quiz_state.get("stats", {})
+                        if saved_stats.get("last_active_date") == today_str:
+                            user_score = saved_stats.get("daily_score", 0)
             except:
-                pass # Fail silently, treat as 0
+                pass 
 
-        # 2. Fetch Raw Ghosts (Seed based)
+        # 2. Fetch Raw Ghosts
+        seed_multiplier = 1 if mode == 'daily' else 7 # Change seed for weekly
         import datetime
-        # Use IST day for seeding to keep ghosts consistent for the whole day
         now = rank_engine.get_ist_time()
-        # Seed key: Year + DayOfYear + PackID
-        # We rotate ghosts daily now instead of weekly to ensure "fresh" feeling?
-        # User said "everyday midnight 00:00 the leader board should refresh".
-        # If we keep same ghosts for week, their scores reset daily. That's fine.
         week_num = now.isocalendar()[1]
         year = now.year
         
-        seed_val = int(f"{year}{week_num}{pack_id}")
+        # Unique seed for weekly vs daily
+        seed_val = int(f"{year}{week_num}{pack_id}{len(mode)}")
         
         TOTAL_GHOSTS = 10000 
         start_index = seed_val % (TOTAL_GHOSTS - 60)
@@ -286,8 +290,38 @@ async def get_ghosts_for_pack(request):
         response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + 48).execute()
         raw_ghosts = response.data if response.data else []
         
-        # 3. Process Scores via RankEngine
-        processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
+        # 3. Process Scores
+        if mode == 'weekly':
+            # Generate Weekly Accumulated Scores
+            processed_ghosts = rank_engine.generate_weekly_ghosts(raw_ghosts, user_score)
+            
+            # Merge with Real Weekly Leaders (Top 5)
+            real_leaders = await db.get_weekly_leaderboard(limit=5)
+            for real in real_leaders:
+                # Avoid dupes if user is in top 5 (client handles user highlighting, but we need to ensure list is clean)
+                # Just transform real leaders to compatible format
+                if str(real.get('user_id')) == str(user_id_str): continue # Skip self, client adds self
+                
+                processed_ghosts.append({
+                    "user_id": real['user_id'],
+                    "full_name": real.get('first_name') or "Aspirant",
+                    "weekly_score": real.get('weekly_score', 0),
+                    "is_ghost": False,
+                    "is_user": False
+                })
+            
+            # Re-sort mixed list
+            processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
+            # Trim to 50
+            processed_ghosts = processed_ghosts[:50]
+            
+            # Map weekly_score to total_score for frontend compatibility
+            for p in processed_ghosts:
+                p["total_score"] = p.get("weekly_score", 0)
+                
+        else:
+            # Daily Logic
+            processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
         
         return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
@@ -371,6 +405,27 @@ async def start_web_server():
     # Invoice Generation Route
     app.router.add_options('/api/create_invoice', handle_options)
     app.router.add_post('/api/create_invoice', create_invoice_api)
+
+    # Lead Capture Route
+    async def save_lead_api(request):
+        try:
+            data = await request.json()
+            user_id = data.get("user_id")
+            lead_info = data.get("lead_data") # {phone, exam, mode}
+            
+            if not user_id or not lead_info:
+                return web.json_response({"error": "Missing Data"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+                
+            success = await db.save_lead(int(user_id), lead_info)
+            if success:
+                return web.json_response({"status": "success"}, headers={"Access-Control-Allow-Origin": "*"})
+            else:
+                return web.json_response({"error": "DB Error"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+        except Exception as e:
+            return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+    app.router.add_options('/api/save_lead', handle_options)
+    app.router.add_post('/api/save_lead', save_lead_api)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
