@@ -185,6 +185,18 @@ class RankEngine:
         
         week_seed = f"{now.strftime('%Y_%W')}"
 
+        week_seed = f"{now.strftime('%Y_%W')}"
+
+        # FALLBACK: If DB returned no ghosts, generate procedural ones
+        if not ghosts:
+            ghosts = [{"id": 1000+i, "full_name": f"Aspirant {i+1}"} for i in range(50)]
+            # Ideally use better names, but this prevents crash/empty list
+            names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha"]
+            surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta"]
+            for i, g in enumerate(ghosts):
+                rng_name = random.Random(i + int(week_seed.replace("_", "")))
+                g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+
         for i, g in enumerate(ghosts):
             # Seed based on ID + Week (Consistent for whole week)
             # wait, if we use same seed, they stick to same score? 
