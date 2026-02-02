@@ -132,14 +132,16 @@ class RankEngine:
         start_of_week = now - datetime.timedelta(days=days_to_subtract)
         
         # FALLBACK for empty ghosts
+        # FALLBACK: If DB returned no ghosts, generate procedural ones
         week_seed = f"{now.strftime('%Y_%W')}"
         if not ghosts:
-             ghosts = [{"id": 1000+i, "full_name": f"Aspirant {i+1}"} for i in range(50)]
-             names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha"]
-             surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta"]
-             for i, g in enumerate(ghosts):
-                 rng_name = random.Random(i + int(week_seed.replace("_", "")))
-                 g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+            ghosts = [{"id": 1000+i, "full_name": "" } for i in range(50)]
+            names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
+            surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
+            
+            for i, g in enumerate(ghosts):
+                rng_name = random.Random(i + int(week_seed.replace("_", "")))
+                g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
 
         for g in ghosts:
             total_weekly_score = 0
