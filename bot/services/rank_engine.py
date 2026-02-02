@@ -160,9 +160,16 @@ class RankEngine:
                 day_score = self._calculate_single_day_score(g, target_date, is_completed_day=is_full)
                 total_weekly_score += day_score
                 
+            # Ensure name exists (Fix for 'Aspirant' bug)
+            if not g.get("full_name") or g.get("full_name") == "Aspirant":
+                 names = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Pooja", "Karan", "Neha", "Sanjay", "Riya", "Nisha", "Arjun", "Kavita"]
+                 surnames = ["Sharma", "Verma", "Singh", "Patel", "Gupta", "Kumar", "Yadav", "Das", "Jha", "Mehta", "Malhotra", "Reddy", "Nair", "Chopra", "Khan"]
+                 rng_name = random.Random(g['id'])
+                 g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
+
             processed_ghosts.append({
                 "user_id": g["id"],
-                "full_name": g.get("full_name") or "Aspirant",
+                "full_name": g.get("full_name"),
                 "weekly_score": total_weekly_score,
                 "is_ghost": True
             })
