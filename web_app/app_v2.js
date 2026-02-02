@@ -76,10 +76,10 @@ function renderList(data) {
         let subtitle = "";
         if (isUser) {
             subtitle = "Just Started"; // Or actual status
-        } else if (rank <= 3) {
+        } else if (parseInt(rank) <= 3) {
             subtitle = `Avg. Pace: ${p.avg_pace || 34}s`;
         } else {
-            subtitle = "Aspirant"; // Or empty string, or "Top 10%"
+            subtitle = "Aspirant"; 
         }
         
         const el = document.createElement('div');
