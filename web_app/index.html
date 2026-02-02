@@ -564,7 +564,16 @@
             
             const bgClass = isUser ? 'bg-indigo-600 shadow-lg border border-indigo-400' : 'bg-gray-800';
             const textClass = isUser ? 'text-white' : 'text-gray-200';
-            const subtitle = isUser ? "Just Started" : `Avg. Pace: ${p.avg_pace || 34}s`;
+            
+            // Requirement 7: Only show pace for Top 3 OR User
+            let subtitle = "";
+            if (isUser) {
+                subtitle = `Avg. Pace: ${p.avg_pace || 34}s`; // User sees their own pace
+            } else if (parseInt(rank) <= 3) {
+                subtitle = `Avg. Pace: ${p.avg_pace || 34}s`;
+            } else {
+                subtitle = "Aspirant"; 
+            }
             
             const el = document.createElement('div');
             let rankHtml = '';
