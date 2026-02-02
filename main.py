@@ -265,13 +265,24 @@ async def get_ghosts_for_pack(request):
                     if mode == 'weekly':
                         user_score = user_data.get("weekly_score", 0) or 0
                     else:
-                        # Daily Logic
+                        # Daily Logic: STRICT RESET
                         today_str = db.get_ist_date()
                         quiz_state = user_data.get("quiz_state") or {}
                         saved_stats = quiz_state.get("stats", {})
-                        if saved_stats.get("last_active_date") == today_str:
+                        
+                        last_active = saved_stats.get("last_active_date")
+                        
+                        # We only trust the score if the date is EXACTLY today
+                        if last_active == today_str:
+                            # Trust the JSON bucket first
                             user_score = saved_stats.get("daily_score", 0)
-            except:
+                            # If JSON is 0 but DB column has value (migration edge case), check DB column
+                            # But strictly only if last_active matches. 
+                            # If last_active is stale, user_score stays 0.
+                        else:
+                            # Stale date -> Force 0
+                            user_score = 0
+             except:
                 pass 
 
         # 2. Fetch Raw Ghosts
