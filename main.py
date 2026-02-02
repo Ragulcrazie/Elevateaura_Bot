@@ -282,7 +282,7 @@ async def get_ghosts_for_pack(request):
                         else:
                             # Stale date -> Force 0
                             user_score = 0
-             except:
+            except:
                 pass 
 
         # 2. Fetch Raw Ghosts
