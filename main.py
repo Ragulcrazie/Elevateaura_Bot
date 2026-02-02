@@ -474,6 +474,12 @@ async def start_web_server():
         return web.FileResponse('./web_app/index.html')
     
     app.router.add_get("/", serve_index)
+    
+    # EXPLICITLY serve app_v2.js at root so <script src="app_v2.js"> works
+    async def serve_js(request):
+        return web.FileResponse('./web_app/app_v2.js')
+    app.router.add_get("/app_v2.js", serve_js)
+
     # Serve other assets if needed (e.g. css, js) - mapping /web_app/ folder
     app.router.add_static('/web_app/', path='./web_app', name='web_app')
 
