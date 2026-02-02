@@ -282,7 +282,8 @@ async def get_ghosts_for_pack(request):
         year = now.year
         
         # Unique seed for weekly vs daily
-        seed_val = int(f"{year}{week_num}{pack_id}{len(mode)}")
+        # SYNC: We want the SAME ghosts for both modes (Cohort feel)
+        seed_val = int(f"{year}{week_num}{pack_id}")
         
         # --- FIXED LOGIC: Dynamic Total Count ---
         # Don't assume 10,000. Fetch actual count to be 100% safe.
