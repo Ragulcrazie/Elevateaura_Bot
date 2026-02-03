@@ -20,7 +20,7 @@ When free users hit limit, they see:
 🔒 FREE TRIAL COMPLETE
 
 ✅ You've completed 3 practice tests
-📊 Your potential unlocked: 15%
+📊 Your potential unlocked: 12%
 
 💎 Premium Members This Week:
 ├─ 🏆 Top scorer earned ₹600 Bonus
@@ -35,16 +35,16 @@ While you're locked out, they're racing ahead.
 ```
 🎯 UNLOCK PREMIUM ACCESS
 
-✓ Unlimited Daily Tests (60 Qs/day)
+✓ No Ads Experience
+✓ Full Answer Explanations
 ✓ AI Performance Coach
+✓ Free Career Consultation (Worth ₹999)
 ✓ Weekly ₹600 Prize Pool
 ✓ Detailed Analytics & Insights
-✓ Competitor Intelligence
+✓ Competition Intelligence
 
-💰 Price: 89 Stars (₹99 only)
+💰 Price: 99 Stars/month (₹99)
 ⏰ Limited: First 100 users get bonus features
-
-🎁 Bonus: Get ₹50 welcome credits
 ```
 
 **Step 3: Payment CTA** 

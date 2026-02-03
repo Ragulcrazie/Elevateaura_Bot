@@ -150,7 +150,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
             await message.answer(
                 "🔒 **FREE TRIAL COMPLETE**\n\n"
                 "✅ You've completed 3 practice tests\n"
-                "📊 Your potential unlocked: 15%\n\n"
+                "📊 Your potential unlocked: 12%\n\n"
                 "💎 **Premium Members This Week:**\n"
                 "├─ 🏆 Top scorer earned ₹600 Bonus\n"
                 "├─ ⚡ Average: 42 tests completed\n"
@@ -168,14 +168,15 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
             
             await message.answer(
                 "🎯 **UNLOCK PREMIUM ACCESS**\n\n"
-                "✓ Unlimited Daily Tests (60 Qs/day)\n"
+                "✓ No Ads Experience\n"
+                "✓ Full Answer Explanations\n"
                 "✓ AI Performance Coach\n"
+                "✓ Free Career Consultation (Worth ₹999)\n"
                 "✓ Weekly ₹600 Prize Pool\n"
                 "✓ Detailed Analytics & Insights\n"
-                "✓ Competitor Intelligence\n\n"
-                "💰 **Price**: 89 Stars (₹99 only)\n"
-                "⏰ **Limited**: First 100 users get bonus features\n\n"
-                "🎁 **Bonus**: Get ₹50 welcome credits",
+                "✓ Competition Intelligence\n\n"
+                "💰 **Price**: 99 Stars/month (₹99)\n"
+                "⏰ **Limited**: First 100 users get bonus features",
                 parse_mode="Markdown"
             )
             
@@ -183,7 +184,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
             link = await generate_invoice_link(message.bot, user_id)
             
             builder = InlineKeyboardBuilder()
-            builder.button(text="🔓 Unlock Now (89 ⭐)", url=link)
+            builder.button(text="🔓 Unlock Now (99 ⭐)", url=link)
             builder.button(text="📊 See Leaderboard", callback_data="view_premium_leaders")
             builder.adjust(1)
             
