@@ -115,7 +115,9 @@ function renderList(data) {
                      <div class="text-[10px] opacity-70 ${textClass}">${subtitle}</div>
                 </div>
             </div>
-            <div class="font-bold text-yellow-400">${p.total_score} pts</div>
+            <div class="font-bold ${rank === 1 ? 'text-green-400' : 'text-yellow-400'}">
+                ${p.total_score} pts${rank === 1 ? ' <span class="text-[10px] text-green-300">💰₹600</span>' : ''}
+            </div>
         `;
         list.appendChild(el);
     });

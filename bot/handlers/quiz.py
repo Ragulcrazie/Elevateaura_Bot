@@ -796,7 +796,7 @@ async def show_premium_leaderboard(callback: types.CallbackQuery):
         score = player.get('weekly_score', 0)
         
         # Only #1 gets ₹600 prize
-        earning = "₹600" if idx == 1 else "₹0"
+        earning = "💰₹600" if idx == 1 else ""
         
         # Medals for top 3
         if idx == 1:
@@ -808,7 +808,8 @@ async def show_premium_leaderboard(callback: types.CallbackQuery):
         else:
             medal = f"{idx}."
         
-        msg += f"{medal} **{name}** - {score} pts ({earning})\n"
+        # Add prize label only for #1
+        msg += f"{medal} **{name}** - {score} pts {earning}\n"
     
     msg += (
         "\n⏰ Leaderboard resets: Monday 12 AM\n"
