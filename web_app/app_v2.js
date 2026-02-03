@@ -9,9 +9,9 @@ const TgApp = (typeof window.tg !== 'undefined') ? window.tg : (window.Telegram 
 
 // Initialize
 try {
-    tg.expand();
-    tg.ready(); 
-    tg.MainButton.hide();
+    TgApp.expand();
+    TgApp.ready(); 
+    TgApp.MainButton.hide();
 } catch(e) { console.warn("TG Init Error", e); }
 
 // --- CONFIG ---
@@ -148,8 +148,8 @@ async function initDashboard(passedUser = null, timestamp = null) {
     // --- GUEST MODE LOGIC ---
     // If we passed null (timeout or simple browser open), we still want to show SOMETHING.
     // Try to get name from Telegram object first if available even if initDashboard was called with null
-    if (!user && tg.initDataUnsafe?.user) {
-        user = tg.initDataUnsafe.user;
+    if (!user && TgApp.initDataUnsafe?.user) {
+        user = TgApp.initDataUnsafe.user;
     }
 
     if (!user) {
@@ -569,7 +569,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                          bodyEl.appendChild(wm);
                      }
                  }
-                 if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+                 if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
              };
              
              unlockBtn.parentNode.appendChild(notesBtn);
@@ -592,7 +592,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             // FREE VIEW (Paywall)
             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
             unlockBtn.onclick = () => {
-                if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+                if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
                 
                 // 1. Get Invoice Link from Bot API
                 unlockBtn.innerHTML = "Loading...";
@@ -606,10 +606,10 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                 .then(data => {
                     if(data.invoice_link) {
                         // 2. Open Native Payment
-                        tg.openInvoice(data.invoice_link, (status) => {
+                        TgApp.openInvoice(data.invoice_link, (status) => {
                             if (status === 'paid') {
-                                tg.MainButton.setText("PAID! RELOADING...");
-                                tg.MainButton.show();
+                                TgApp.MainButton.setText("PAID! RELOADING...");
+                                TgApp.MainButton.show();
                                 setTimeout(() => window.location.reload(), 2000);
                             } else if (status === 'pending') {
                                 // Sometimes happens, just close
@@ -680,7 +680,7 @@ let leadData = { exam: null, mode: null, phone: null };
 
 function openCaptureModal() {
     document.getElementById('captureModal').classList.remove('hidden');
-    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('heavy');
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('heavy');
 }
 
 function closeCaptureModal() {
@@ -707,7 +707,7 @@ function selectLeadOption(type, value) {
         }
     });
 
-    if(tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.selectionChanged();
 
     // Auto Advance
     setTimeout(() => {
@@ -725,7 +725,7 @@ function submitLead() {
     if (phone.length < 10) {
         alert("Please enter a valid 10-digit number.");
         phoneEl.focus();
-        if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+        if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('error');
         return;
     }
     
@@ -746,7 +746,7 @@ function submitLead() {
         .then(res => res.json())
         .then(data => {
             if(data.status === 'success') {
-                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
                 alert("✅ Report queued! Check WhatsApp shortly.");
                 
                 // Close & reward visual
@@ -784,11 +784,11 @@ if (upgradeBtnMain) {
         console.log("Upgrade Clicked");
         
         // MVP: Show Telegram Main Button as "Pay"
-        tg.MainButton.setText("PAY 500 STARS ⭐");
-        tg.MainButton.show();
+        TgApp.MainButton.setText("PAY 500 STARS ⭐");
+        TgApp.MainButton.show();
         
         // Optional: Shake effect or specific logic
-        tg.HapticFeedback.notificationOccurred('success');
+        TgApp.HapticFeedback.notificationOccurred('success');
         
         // Show Payment Modal or Alert
         // For now, let's just use native confirm to simulate
@@ -825,8 +825,8 @@ function switchTab(mode) {
     // Re-fetch with cache bust
     const timestamp = new Date().getTime();
     
-    if (tg.initDataUnsafe?.user) {
-        initDashboard(tg.initDataUnsafe.user, timestamp);
+    if (TgApp.initDataUnsafe?.user) {
+        initDashboard(TgApp.initDataUnsafe.user, timestamp);
     } else if (currentUserEntry) {
          // Create dummy user obj from stored entry
          initDashboard({ id: currentUserEntry.id, first_name: currentUserEntry.full_name }, timestamp);
@@ -836,12 +836,12 @@ function switchTab(mode) {
 }
 
 function triggerMaintenancePopup() {
-    if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('error');
     alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
 }
 
 function triggerRedemption() {
-    if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
     
     const balance = parseInt(document.getElementById('walletBalance').innerText);
     
@@ -880,8 +880,8 @@ function waitForUser(attempts = 0) {
     }
 
     // 2. Fallback: Telegram Object
-    if (tg.initDataUnsafe?.user) {
-        initDashboard(tg.initDataUnsafe.user).catch(e => renderError("TG Init Error: " + e));
+    if (TgApp.initDataUnsafe?.user) {
+        initDashboard(TgApp.initDataUnsafe.user).catch(e => renderError("TG Init Error: " + e));
     } else if (attempts < 20) {
         setTimeout(() => waitForUser(attempts + 1), 100);
     } else {
