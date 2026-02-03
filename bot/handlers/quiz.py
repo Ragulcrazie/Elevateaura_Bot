@@ -142,32 +142,54 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
         lifetime_tests = metadata.get("lifetime_tests_completed", 0)
         
         if lifetime_tests >= 3:
-            # HARD PAYWALL Triggered
-             await message.answer(
-                "🔒 **FREE TRIAL EXHAUSTED**\n\n"
-                "You have completed your 3 free mock tests.\n"
-                "To continue practicing and access the AI Coach, you must upgrade.\n\n"
-                "👇 **Unlock Unlimited Access Now:**",
-                reply_markup=InlineKeyboardBuilder().button(text="🔓 Unlock Premium (89 ⭐)", callback_data="pay_sub").as_markup(),
+            # HARD PAYWALL - Dream11 Style Conversion
+            
+            # Step 1: Show what they're missing (Social Proof)
+            await message.answer(
+                "🔒 **FREE TRIAL COMPLETE**\n\n"
+                "✅ You've completed 3 practice tests\n"
+                "📊 Your potential unlocked: 15%\n\n"
+                "💎 **Premium Members This Week:**\n"
+                "├─ 🏆 Top scorer earned ₹600 Bonus\n"
+                "├─ ⚡ Average: 42 tests completed\n"
+                "└─ 📈 5× faster improvement rate\n\n"
+                "⏰ **You're competing against 500+ active students.**\n"
+                "While you're locked out, they're racing ahead.\n\n"
+                "Continue? 👇",
                 parse_mode="Markdown"
             )
-             # Manually trigger payment logic via callback handler if needed, 
-             # but here we just show button. Ideally button calls payment handler directly or we direct them.
-             # Let's add a button that triggers the payment invoice command flow?
-             # Or just tell them to click 'Unlock' in dashboard.
-             
-             # Better: Send the Sales Message immediately here too?
-             from bot.handlers.payment import get_product_description
-             await message.answer(get_product_description(), parse_mode="Markdown")
-             
-             # Send Invoice Link Button
-             from bot.handlers.payment import generate_invoice_link
-             link = await generate_invoice_link(message.bot, user_id)
-             
-             builder = InlineKeyboardBuilder()
-             builder.button(text="🔓 Pay 89 Stars Now", url=link)
-             await message.answer("Click below to upgrade:", reply_markup=builder.as_markup())
-             return
+            
+            await asyncio.sleep(1.5)
+            
+            # Step 2: Show the offer with urgency
+            from bot.handlers.payment import get_product_description, generate_invoice_link
+            
+            await message.answer(
+                "🎯 **UNLOCK PREMIUM ACCESS**\n\n"
+                "✓ Unlimited Daily Tests (60 Qs/day)\n"
+                "✓ AI Performance Coach\n"
+                "✓ Weekly ₹600 Prize Pool\n"
+                "✓ Detailed Analytics & Insights\n"
+                "✓ Competitor Intelligence\n\n"
+                "💰 **Price**: 89 Stars (₹99 only)\n"
+                "⏰ **Limited**: First 100 users get bonus features\n\n"
+                "🎁 **Bonus**: Get ₹50 welcome credits",
+                parse_mode="Markdown"
+            )
+            
+            # Step 3: Send the payment link
+            link = await generate_invoice_link(message.bot, user_id)
+            
+            builder = InlineKeyboardBuilder()
+            builder.button(text="🔓 Unlock Now (89 ⭐)", url=link)
+            builder.button(text="📊 See Leaderboard", callback_data="view_premium_leaders")
+            builder.adjust(1)
+            
+            await message.answer(
+                "👆 Tap to upgrade and join the competition!",
+                reply_markup=builder.as_markup()
+            )
+            return
 
     # Premium/Daily Limit Logic (Stays 6 tests per day for everyone else)
     remaining = 60 - q_answered
@@ -742,3 +764,62 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     
     # Cleanup - Pass the corrected stats
     await session_manager.delete_session(user_id, keep_stats=state["stats"])
+
+@router.callback_query(F.data == "view_premium_leaders")
+async def show_premium_leaderboard(callback: types.CallbackQuery):
+    """
+    Shows top premium earners with ₹600 visual to create FOMO.
+    """
+    await callback.answer()
+    
+    db = SupabaseClient()
+    await db.connect()
+    
+    # Get top 10 weekly scorers
+    top_players = await db.get_weekly_leaderboard(limit=10)
+    
+    if not top_players or len(top_players) == 0:
+        await callback.message.answer(
+            "📊 Leaderboard is loading...\nBe the first to compete!",
+            parse_mode="Markdown"
+        )
+        return
+    
+    # Build leaderboard message with earnings display
+    msg = (
+        "🏆 **THIS WEEK'S TOP EARNERS**\n\n"
+        "💎 Premium members competing for ₹600 prize pool:\n\n"
+    )
+    
+    for idx, player in enumerate(top_players[:10], 1):
+        name = player.get('first_name', 'Aspirant')[:15]  # Truncate long names
+        score = player.get('weekly_score', 0)
+        
+        # Show potential earnings for top 3
+        if idx == 1:
+            earning = "₹600"
+        elif idx == 2:
+            earning = "₹400"
+        elif idx == 3:
+            earning = "₹200"
+        else:
+            earning = "₹0"
+        
+        medal ={"🥇", "🥈", "🥉"}.pop() if idx <= 3 else f"{idx}."
+        
+        msg += f"{medal} **{name}** - {score} pts ({earning})\n"
+    
+    msg += (
+        "\n⏰ Leaderboard resets: Monday 12 AM\n"
+        "💡 Only Premium members can compete for prizes\n\n"
+        "Ready to join them?"
+    )
+    
+    # Add upgrade button
+    from bot.handlers.payment import generate_invoice_link
+    link = await generate_invoice_link(callback.message.bot, callback.from_user.id)
+    
+    builder = InlineKeyboardBuilder()
+    builder.button(text="🔓 Unlock Premium (89 ⭐)", url=link)
+    
+    await callback.message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")

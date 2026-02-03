@@ -580,6 +580,11 @@ async def main():
     # Start Keep-Alive Background Task
     asyncio.create_task(keep_alive())
     
+    # Start Weekly Rewards Scheduler
+    from bot.handlers.weekly_rewards import start_weekly_scheduler
+    asyncio.create_task(start_weekly_scheduler(bot))
+    logger.info("Weekly rewards scheduler started")
+    
     # Verify DB connection
     connected = await db.connect()
     if not connected:
