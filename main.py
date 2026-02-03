@@ -553,27 +553,9 @@ async def create_invoice_api(request):
         return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
 
 async def start_web_server():
-    app = web.Application()
+    # Define all async functions FIRST, before route registration
     
-    # API Routes
-    app.router.add_get("/api/user_data", get_user_data)
-    app.router.add_options("/api/user_data", handle_options)
-    app.router.add_get("/api/ghosts", get_ghosts_for_pack)
-    app.router.add_options("/api/ghosts", handle_options)
-    
-    # Dummy Payment Route
-    app.router.add_post("/api/simulate_payment", simulate_payment)
-    app.router.add_options("/api/simulate_payment", handle_options_post)
-    
-    # Invoice Generation Route
-    app.router.add_options('/api/create_invoice', handle_options)
-    app.router.add_post('/api/create_invoice', create_invoice_api)
-    
-    # Ad Check Route
-    app.router.add_get('/api/check_ad', check_ad_eligibility)
-    app.router.add_options('/api/check_ad', handle_options)
-
-    # Lead Capture Route
+    # Lead Capture Route Handler
     async def save_lead_api(request):
         try:
             data = await request.json()
@@ -591,10 +573,7 @@ async def start_web_server():
         except Exception as e:
             return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
 
-    app.router.add_options('/api/save_lead', handle_options)
-    app.router.add_post('/api/save_lead', save_lead_api)
-
-    # Ad Eligibility Check Route
+    # Ad Eligibility Check Handler
     async def check_ad_eligibility(request):
         """Check if user should see ad before leaderboard."""
         try:
@@ -628,6 +607,31 @@ async def start_web_server():
                 {"show_ad": False, "reason": "error"},
                 headers={"Access-Control-Allow-Origin": "*"}
             )
+    
+    # NOW create the app and register routes
+    app = web.Application()
+    
+    # API Routes
+    app.router.add_get("/api/user_data", get_user_data)
+    app.router.add_options("/api/user_data", handle_options)
+    app.router.add_get("/api/ghosts", get_ghosts_for_pack)
+    app.router.add_options("/api/ghosts", handle_options)
+    
+    # Dummy Payment Route
+    app.router.add_post("/api/simulate_payment", simulate_payment)
+    app.router.add_options("/api/simulate_payment", handle_options_post)
+    
+    # Invoice Generation Route
+    app.router.add_options('/api/create_invoice', handle_options)
+    app.router.add_post('/api/create_invoice', create_invoice_api)
+    
+    # Ad Check Route
+    app.router.add_get('/api/check_ad', check_ad_eligibility)
+    app.router.add_options('/api/check_ad', handle_options)
+
+    # Lead Capture Route
+    app.router.add_options('/api/save_lead', handle_options)
+    app.router.add_post('/api/save_lead', save_lead_api)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
