@@ -123,6 +123,9 @@ async def cmd_start(message: types.Message):
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
     builder.adjust(1)
     
+    # Check if this is a new user (first time using bot)
+    is_new_user = (existing_user is None)
+    
     await message.answer(
         f"👋 **Hello {full_name}! Welcome to Elevate Aura.**\n\n"
         "🚀 **Your Goal**: Prove your worth in the Daily Quiz Arena.\n"
@@ -132,13 +135,15 @@ async def cmd_start(message: types.Message):
         parse_mode="Markdown"
     )
     
-    # Send legal disclaimer
-    await message.answer(
-        "📋 By using this bot, you agree to our:\n"
-        "• /terms - Terms & Conditions\n"
-        "• /privacy - Privacy Policy",
-        parse_mode="Markdown"
-    )
+    # Send legal disclaimer ONLY for new users (first time)
+    if is_new_user:
+        await message.answer(
+            "📋 **IMPORTANT**: By using this bot, you agree to our:\n"
+            "• /terms - Terms & Conditions\n"
+            "• /privacy - Privacy Policy\n\n"
+            "Commands are available anytime if you need to review them.",
+            parse_mode="Markdown"
+        )
 
 @dp.message(Command("terms"))
 async def cmd_terms(message: types.Message):
