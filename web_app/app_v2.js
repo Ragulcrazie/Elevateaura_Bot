@@ -23,11 +23,11 @@ let currentMode = 'daily'; // 'daily' or 'weekly'
 let currentUserEntry = null; // Store for global access
 const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
 
-console.log("ELEVATE AURA BOT: Script v60 Loaded (Dynamic Notes)");
+console.log("ELEVATE AURA BOT: Script v61 PACE FIX Loaded");
 
-// Visual Probe: Set background to Green to prove script updated
-const p = document.getElementById('testCountDisplay');
-if(p) { p.innerText = "v60 AI"; p.style.backgroundColor = "#3B82F6"; }
+ // Visual Probe: Set background to unique color to prove script updated
+ const p = document.getElementById('testCountDisplay');
+ if(p) { p.innerText = "v61 PACE"; p.style.backgroundColor = "#8B5CF6"; } // Purple
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId, timestamp) {
@@ -73,14 +73,13 @@ function renderList(data) {
         const textClass = isUser ? 'text-white' : 'text-gray-200';
         
         // Requirement 7: Only show pace for Top 3 OR User
-        let subtitle = "";
+        // Requirement 7: Only show pace for Top 3 OR User
+        let subtitle = "Aspirant"; 
+        
         if (isUser) {
-            subtitle = `Avg. Pace: ${p.avg_pace || 34}s`; // User sees their own pace
-        } else if (parseInt(rank) <= 3) {
-            subtitle = `Avg. Pace: ${p.avg_pace || 34}s`;
-        } else {
-            // Rank > 3 and Not User -> Hide Pace
-            subtitle = `Aspirant`; 
+            subtitle = `⚡ Pace: ${p.avg_pace || 34}s`;
+        } else if (rank <= 3) {
+            subtitle = `⚡ Pace: ${p.avg_pace || 34}s`; 
         }
         
         const el = document.createElement('div');
