@@ -621,6 +621,13 @@ async def start_web_server():
             result = await check_leaderboard_ad_eligibility(user_id, user_data, db)
             
             return web.json_response(result, headers={"Access-Control-Allow-Origin": "*"})
+        
+        except Exception as e:
+            logger.error(f"Ad eligibility check error: {e}")
+            return web.json_response(
+                {"show_ad": False, "reason": "error"},
+                headers={"Access-Control-Allow-Origin": "*"}
+            )
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
