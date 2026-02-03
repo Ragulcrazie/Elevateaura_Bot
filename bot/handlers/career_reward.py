@@ -118,28 +118,39 @@ async def start_reward_claim(callback: CallbackQuery):
 
 
 @router.callback_query(F.data.startswith("exam:"))
-async def collect_exam(callback: CallbackQuery):
+async def collect_exam_category(callback: CallbackQuery):
     """
-    Step 2: Collect target exam, ask for coaching preference
+Step 2: Collect exam category, ask for SPECIFIC exam details (text input)
     """
     await callback.answer()
     
-    exam_type = callback.data.split(":")[1]
+    exam_category = callback.data.split(":")[1]
     user_id = callback.from_user.id
     
-    # Store in temporary state (you can use a dict or database)
-    # For now, we'll pass it forward in callback data
+    # Store category in database
+    db = SupabaseClient()
+    await db.connect()
+    metadata = {"career_form_state": {"exam_category": exam_category, "step": "awaiting_exam_details"}}
+    await db.upsert_user({"user_id": user_id, "metadata": metadata})
     
-    builder = InlineKeyboardBuilder()
-    builder.button(text="💻 Online Classes", callback_data=f"pref:ONLINE:{exam_type}")
-    builder.button(text="🏫 Offline Classes", callback_data=f"pref:OFFLINE:{exam_type}")
-    builder.button(text="🔄 Hybrid (Both)", callback_data=f"pref:HYBRID:{exam_type}")
-    builder.adjust(1)
+    # Show examples based on category
+    examples = {
+        "SSC": "• SSC CGL Tier 1 2026\n• SSC CHSL 2026\n• SSC MTS Group C\n• SSC GD Constable",
+        "RRB": "• RRB NTPC 2026\n• RRB Group D\n• RRB JE (Junior Engineer)\n• RRB ALP Technician",
+        "BANK": "• IBPS PO Prelims 2026\n• SBI Clerk Mains\n• RBI Grade B Phase 1\n• IBPS RRB Officer",
+        "POLICE": "• UP Police Constable 2026\n• SSC CPO SI 2026\n• Delhi Police Head Constable\n• CAPF Assistant Commandant",
+        "OTHER": "• UPSC Prelims 2026\n• State PSC Exam\n• Teaching Exam (CTET/TET)\n• Any other competitive exam"
+    }
+    
+    example_text = examples.get(exam_category, "• Specify your target exam")
     
     await callback.message.answer(
-        "👨‍🏫 **Step 2/4: Coaching Preference**\n\n"
-        "What type of coaching do you prefer?",
-        reply_markup=builder.as_markup(),
+        f"📝 **Step 2/6: Specific Exam Details**\n\n"
+        f"You selected: **{exam_category}**\n\n"
+        f"Please type the **exact exam** you're preparing for:\n\n"
+        f"**Examples:**\n{example_text}\n\n"
+        f"💡 Include year and tier/stage if applicable\n"
+        f"💡 Mention if it's your 1st or repeat attempt",
         parse_mode="Markdown"
     )
 
@@ -147,38 +158,42 @@ async def collect_exam(callback: CallbackQuery):
 @router.callback_query(F.data.startswith("pref:"))
 async def collect_preference(callback: CallbackQuery):
     """
-    Step 3: Collect coaching preference, ask for city
+    Step 4: Collect coaching preference, ask for city
     """
     await callback.answer()
     
     parts = callback.data.split(":")
     preference = parts[1]
-    exam_type = parts[2]
     
-    # Ask for city via text input
-    builder = InlineKeyboardBuilder()
-    builder.button(text="📍 Enter City", callback_data=f"ask_city:{preference}:{exam_type}")
-    
-    await callback.message.answer(
-        "📍 **Step 3/4: Your Location**\n\n"
-        "Please type your **city name** in the chat.\n\n"
-        "Example: Mumbai, Delhi, Bangalore, etc.",
-        reply_markup=builder.as_markup(),
-        parse_mode="Markdown"
-    )
-    
-    # Store state to expect city input next
+    # Get existing form state
     db = SupabaseClient()
     await db.connect()
     user_id = callback.from_user.id
-    metadata = {"career_form_state": {"exam": exam_type, "preference": preference, "step": "awaiting_city"}}
+    user = await db.get_user(user_id)
+    
+    if not user:
+        await callback.message.answer("❌ Error: User not found.")
+        return
+    
+    metadata = user.get("metadata", {}) or {}
+    form_state = metadata.get("career_form_state", {})
+    form_state["preference"] = preference
+    form_state["step"] = "awaiting_city"
+    metadata["career_form_state"] = form_state
     await db.upsert_user({"user_id": user_id, "metadata": metadata})
+    
+    await callback.message.answer(
+        "📍 **Step 5/6: Your Location**\n\n"
+        "Please type your **city name** in the chat.\n\n"
+        "Example: Mumbai, Delhi, Bangalore, etc.",
+        parse_mode="Markdown"
+    )
 
 
 @router.message(F.text)
-async def collect_city_and_phone(message: types.Message):
+async def collect_text_inputs(message: types.Message):
     """
-    Step 4: Collect city (text input), then ask for phone
+    Handle all text inputs: exam details, city, and phone number
     """
     user_id = message.from_user.id
     
@@ -191,10 +206,51 @@ async def collect_city_and_phone(message: types.Message):
     
     metadata = user.get("metadata", {}) or {}
     form_state = metadata.get("career_form_state", {})
+    current_step = form_state.get("step")
     
-    # Check if we're expecting city input
-    if form_state.get("step") == "awaiting_city":
+    # Step 1: Collect specific exam details (after category selection)
+    if current_step == "awaiting_exam_details":
+        exam_details = message.text.strip()
+        
+        # Validate minimum length
+        if len(exam_details) < 5:
+            await message.answer(
+                "❌ Please provide more details about your exam.\n\n"
+                "Example: SSC CGL Tier 1 2026"
+            )
+            return
+        
+        # Save exam details
+        form_state["exam_details"] = exam_details
+        form_state["step"] = "exam_details_saved"
+        metadata["career_form_state"] = form_state
+        await db.upsert_user({"user_id": user_id, "metadata": metadata})
+        
+        # Ask for coaching preference
+        builder = InlineKeyboardBuilder()
+        builder.button(text="💻 Online Classes", callback_data="pref:ONLINE")
+        builder.button(text="🏫 Offline Classes", callback_data="pref:OFFLINE")
+        builder.button(text="🔄 Hybrid (Both)", callback_data="pref:HYBRID")
+        builder.adjust(1)
+        
+        await message.answer(
+            "👨‍🏫 **Step 3/6: Coaching Preference**\n\n"
+            "What type of coaching do you prefer?",
+            reply_markup=builder.as_markup(),
+            parse_mode="Markdown"
+        )
+    
+    # Step 2: Collect city
+    elif current_step == "awaiting_city":
         city = message.text.strip()
+        
+        # Validate city name
+        if len(city) < 2:
+            await message.answer(
+                "❌ Please enter a valid city name.\n\n"
+                "Example: Mumbai, Delhi, Bangalore"
+            )
+            return
         
         # Update state
         form_state["city"] = city
@@ -203,15 +259,15 @@ async def collect_city_and_phone(message: types.Message):
         await db.upsert_user({"user_id": user_id, "metadata": metadata})
         
         await message.answer(
-            "📞 **Step 4/4: Contact Number**\n\n"
+            "📞 **Step 6/6: Contact Number**\n\n"
             "Please enter your **10-digit mobile number**.\n\n"
             "This will be used ONLY for career consultation callback.\n\n"
             "Example: 9876543210",
             parse_mode="Markdown"
         )
     
-    # Check if we're expecting phone input
-    elif form_state.get("step") == "awaiting_phone":
+    # Step 3: Collect phone number
+    elif current_step == "awaiting_phone":
         phone = message.text.strip()
         
         # Validate phone number (basic check)
@@ -222,35 +278,41 @@ async def collect_city_and_phone(message: types.Message):
             )
             return
         
-        # Show consent checkbox
+        # Show consent with all collected data
         builder = InlineKeyboardBuilder()
         builder.button(
             text="✅ I Agree - Submit Details",
-            callback_data=f"consent:{form_state['exam']}:{form_state['preference']}:{form_state['city']}:{phone}"
+            callback_data=f"consent_submit"  # We'll get data from database
         )
         builder.button(text="❌ Cancel", callback_data="cancel_reward")
         builder.adjust(1)
         
+        # Store phone temporarily
+        form_state["phone"] = phone
+        metadata["career_form_state"] = form_state
+        await db.upsert_user({"user_id": user_id, "metadata": metadata})
+        
         await message.answer(
             "📋 **Final Step: Your Consent**\n\n"
             "**Summary of Details:**\n"
-            f"• Exam: {form_state.get('exam', 'N/A')}\n"
+            f"• Exam Category: {form_state.get('exam_category', 'N/A')}\n"
+            f"• Specific Exam: {form_state.get('exam_details', 'N/A')}\n"
             f"• Preference: {form_state.get('preference', 'N/A')}\n"
-            f"• City: {form_state.get('city', 'N/A')}\n"
+            f"• City: {city}\n"
             f"• Phone: {phone}\n\n"
             "─────────────────────────────\n\n"
             "☐ **I agree to:**\n"
             "• Share my details with ElevateAura's coaching partners\n"
             "• Receive calls/messages for career guidance\n"
             "• Receive exclusive coaching offers and discounts\n\n"
-            "✅ By clicking \"I Agree\", you consent to our [Privacy Policy](/privacy).\n\n"
+            "✅ By clicking \"I Agree\", you consent to our Privacy Policy.\n\n"
             "Your data will be shared ONLY with verified educational institutes.",
             reply_markup=builder.as_markup(),
             parse_mode="Markdown"
         )
 
 
-@router.callback_query(F.data.startswith("consent:"))
+@router.callback_query(F.data == "consent_submit")
 async def save_lead_data(callback: CallbackQuery):
     """
     Final step: Save lead data to database with consent
@@ -258,18 +320,8 @@ async def save_lead_data(callback: CallbackQuery):
     await callback.answer()
     
     user_id = callback.from_user.id
-    parts = callback.data.split(":")
     
-    if len(parts) < 5:
-        await callback.message.answer("❌ Error: Invalid data. Please try again.")
-        return
-    
-    exam = parts[1]
-    preference = parts[2]
-    city = parts[3]
-    phone = parts[4]
-    
-    # Save to database
+    # Get all data from database
     db = SupabaseClient()
     await db.connect()
     
@@ -278,11 +330,26 @@ async def save_lead_data(callback: CallbackQuery):
         await callback.message.answer("❌ Error: User not found.")
         return
     
-    # Update metadata with lead submission
     metadata = user.get("metadata", {}) or {}
+    form_state = metadata.get("career_form_state", {})
+    
+    # Extract all collected data
+    exam_category = form_state.get("exam_category", "")
+    exam_details = form_state.get("exam_details", "")
+    preference = form_state.get("preference", "")
+    city = form_state.get("city", "")
+    phone = form_state.get("phone", "")
+    
+    # Validate all fields are present
+    if not all([exam_category, exam_details, preference, city, phone]):
+        await callback.message.answer("❌ Error: Missing data. Please try again from the start.")
+        return
+    
+    # Update metadata with lead submission
     metadata["lead_submitted"] = True
     metadata["lead_data"] = {
-        "exam": exam,
+        "exam_category": exam_category,  # For categorization (SSC/Banking/etc)
+        "exam_details": exam_details,     # Detailed exam info (SSC CGL Tier 1 2026)
         "preference": preference,
         "city": city,
         "phone": phone,
@@ -293,7 +360,7 @@ async def save_lead_data(callback: CallbackQuery):
     
     await db.upsert_user({"user_id": user_id, "metadata": metadata})
     
-    logger.info(f"✅ Lead submitted by user {user_id}: {exam}, {preference}, {city}, {phone}")
+    logger.info(f"✅ Lead submitted by user {user_id}: {exam_category} -> {exam_details}, {preference}, {city}, {phone}")
     
     # Success message
     await callback.message.answer(
