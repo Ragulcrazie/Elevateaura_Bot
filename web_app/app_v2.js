@@ -23,11 +23,11 @@ let currentMode = 'daily'; // 'daily' or 'weekly'
 let currentUserEntry = null; // Store for global access
 const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
 
-console.log("ELEVATE AURA BOT: Script v61 PACE FIX Loaded");
-
+console.log("ELEVATE AURA BOT: Script v102 FIXED Loaded");
+ 
  // Visual Probe: Set background to unique color to prove script updated
  const p = document.getElementById('testCountDisplay');
- if(p) { p.innerText = "v61 PACE"; p.style.backgroundColor = "#8B5CF6"; } // Purple
+ if(p) { p.innerText = "v102 OK"; p.style.backgroundColor = "#059669"; } // Emerald Green
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId, timestamp) {
@@ -630,7 +630,9 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                     unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
                 });
             };
-
+        }
+    }
+}
 
 function renderError(msg) {
     const container = document.getElementById('leaderboard'); 
