@@ -18,56 +18,46 @@ async def announce_weekly_winners(bot: Bot):
     db = SupabaseClient()
     await db.connect()
     
-    # Get top 3 weekly scorers
-    top_winners = await db.get_weekly_leaderboard(limit=3)
+    # Get top 1 weekly scorer (winner-takes-all)
+    top_winners = await db.get_weekly_leaderboard(limit=1)
     
     if not top_winners or len(top_winners) == 0:
-        logger.info("No weekly winners to announce")
+        logger.info("No weekly winner to announce")
         return
     
-    # Prepare winner announcement
+    # Single winner announcement
+    winner = top_winners[0]
+    winner_name = winner.get('first_name', 'Champion')
+    score = winner.get('weekly_score', 0)
+    user_id = winner.get('user_id')
+    
     winner_msg = (
-        "🏆 **WEEKLY LEADERBOARD - FINAL RESULTS!**\n\n"
-        "The competition ends in 2 hours. Here are your champions:\n\n"
+        "🏆 **WEEKLY WINNER ANNOUNCEMENT!**\n\n"
+        "⏰ Competition ends in 2 hours\n\n"
+        f"🥇 **CHAMPION: {winner_name}**\n"
+        f"├─ Final Score: {score} pts\n"
+        f"├─ Prize: ₹600 Bonus Credits\n"
+        f"└─ Bonus: 90 Days Premium FREE\n\n"
+        "Next week's race starts Monday 12 AM!"
     )
     
-    # Prize structure (virtual credits)
-    prizes = [
-        {"rank": "🥇 1st Place", "bonus": 600, "premium_days": 90},
-        {"rank": "🥈 2nd Place", "bonus": 400, "premium_days": 60},
-        {"rank": "🥉 3rd Place", "bonus": 200, "premium_days": 30}
-    ]
-    
-    for idx, winner in enumerate(top_winners[:3]):
-        prize = prizes[idx]
-        winner_name = winner.get('first_name', 'Champion')
-        score = winner.get('weekly_score', 0)
-        user_id = winner.get('user_id')
-        
-        winner_msg += (
-            f"{prize['rank']}: **{winner_name}**\n"
-            f"├─ Score: {score} pts\n"
-            f"├─ Bonus: ₹{prize['bonus']} Credits\n"
-            f"└─ Premium: {prize['premium_days']} days FREE\n\n"
+    # Send personal congratulations to winner
+    try:
+        await bot.send_message(
+            chat_id=user_id,
+            text=(
+                "🎉 **CONGRATULATIONS - YOU WON!**\n\n"
+                "You are this week's #1 Champion!\n\n"
+                "💎 **Your Rewards:**\n"
+                "├─ ₹600 Bonus Credits\n"
+                "└─ 90 Days Premium Access\n\n"
+                "Rewards will be credited to your account after weekly reset (tonight 12 AM).\n\n"
+                "*Bonus credits can be redeemed for Premium subscription only. No cash withdrawal.*"
+            ),
+            parse_mode="Markdown"
         )
-        
-        # Send personal congratulations to winner
-        try:
-            await bot.send_message(
-                chat_id=user_id,
-                text=(
-                    f"🎉 **CONGRATULATIONS!**\n\n"
-                    f"You finished {prize['rank']} in this week's competition!\n\n"
-                    f"💎 **Your Rewards:**\n"
-                    f"├─ ₹{prize['bonus']} Bonus Credits\n"
-                    f"└─ {prize['premium_days']} Days Premium Access\n\n"
-                    f"These will be credited to your account after weekly reset (tonight 12 AM).\n\n"
-                    f"*Bonus credits can be redeemed for Premium subscription only. No cash withdrawal.*"
-                ),
-                parse_mode="Markdown"
-            )
-        except Exception as e:
-            logger.error(f"Failed to send winner message to {user_id}: {e}")
+    except Exception as e:
+        logger.error(f"Failed to send winner message to {user_id}: {e}")
     
     # Broadcast to all active users (optional - for FOMO effect)
     # For now, just log it
@@ -79,61 +69,54 @@ async def announce_weekly_winners(bot: Bot):
 async def credit_weekly_rewards(bot: Bot):
     """
     Called at weekly reset (Monday 12 AM IST).
-    Credits the virtual bonus to winners' wallets.
+    Credits the virtual bonus to winner's wallet.
     """
     db = SupabaseClient()
     await db.connect()
     
-    # Get top 3 weekly scorers
-    top_winners = await db.get_weekly_leaderboard(limit=3)
+    # Get #1 winner only
+    top_winners = await db.get_weekly_leaderboard(limit=1)
     
-    # Prize structure
-    prizes = [600, 400, 200]  # ₹ Bonus credits
-    premium_days = [90, 60, 30]  # Days of premium
+    if not top_winners or len(top_winners) == 0:
+        logger.info("No winner to credit")
+        return
     
-    for idx, winner in enumerate(top_winners[:3]):
-        user_id = winner.get('user_id')
-        bonus = prizes[idx]
-        days = premium_days[idx]
+    winner = top_winners[0]
+    user_id = winner.get('user_id')
+    bonus = 600  # ₹600 Bonus credits for #1
+    days = 90    # 90 days of premium
+    
+    try:
+        # Get current wallet
+        user = await db.get_user(user_id)
+        if not user:
+            return
         
-        try:
-            # Get current wallet
-            user = await db.get_user(user_id)
-            if not user:
-                continue
-            
-            current_wallet = user.get('wallet_stars', 0) or 0
-            new_wallet = current_wallet + bonus
-            
-            # Update wallet and extend premium
-            # Note: We add days to their existing premium expiry
-            await db.upsert_user({
-                "user_id": user_id,
-                "wallet_stars": new_wallet
-            })
-            
-            # If they're free, upgrade them to premium
-            if user.get('subscription_status') == 'free':
-                await db.upsert_user({
-                    "user_id": user_id,
-                    "subscription_status": "premium"
-                })
-            
-            logger.info(f"Credited ₹{bonus} to user {user_id}")
-            
-            # Send confirmation
-            await bot.send_message(
-                chat_id=user_id,
-                text=(
-                    f"✅ **REWARDS CREDITED!**\n\n"
-                    f"💰 Wallet Balance: ₹{new_wallet}\n"
-                    f"👑 Premium Status: Active ({days} days)\n\n"
-                    f"Ready to dominate this week's leaderboard?"
-                ),
-                parse_mode="Markdown"
-            )
-        except Exception as e:
-            logger.error(f"Failed to credit rewards to {user_id}: {e}")
+        current_wallet = user.get('wallet_stars', 0) or 0
+        new_wallet = current_wallet + bonus
+        
+        # Update wallet and upgrade to premium
+        await db.upsert_user({
+            "user_id": user_id,
+            "wallet_stars": new_wallet,
+            "subscription_status": "premium"  # Always upgrade winner
+        })
+        
+        logger.info(f"Credited ₹{bonus} to winner {user_id}")
+        
+        # Send confirmation
+        await bot.send_message(
+            chat_id=user_id,
+            text=(
+                "✅ **REWARDS CREDITED!**\n\n"
+                f"💰 Wallet Balance: ₹{new_wallet}\n"
+                f"👑 Premium Status: Active ({days} days)\n\n"
+                "Ready to defend your title this week?"
+            ),
+            parse_mode="Markdown"
+        )
+    except Exception as e:
+        logger.error(f"Failed to credit rewards to {user_id}: {e}")
 
 async def start_weekly_scheduler(bot: Bot):
     """

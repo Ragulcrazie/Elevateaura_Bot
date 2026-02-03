@@ -795,17 +795,18 @@ async def show_premium_leaderboard(callback: types.CallbackQuery):
         name = player.get('first_name', 'Aspirant')[:15]  # Truncate long names
         score = player.get('weekly_score', 0)
         
-        # Show potential earnings for top 3
-        if idx == 1:
-            earning = "₹600"
-        elif idx == 2:
-            earning = "₹400"
-        elif idx == 3:
-            earning = "₹200"
-        else:
-            earning = "₹0"
+        # Only #1 gets ₹600 prize
+        earning = "₹600" if idx == 1 else "₹0"
         
-        medal ={"🥇", "🥈", "🥉"}.pop() if idx <= 3 else f"{idx}."
+        # Medals for top 3
+        if idx == 1:
+            medal = "🥇"
+        elif idx == 2:
+            medal = "🥈"
+        elif idx == 3:
+            medal = "🥉"
+        else:
+            medal = f"{idx}."
         
         msg += f"{medal} **{name}** - {score} pts ({earning})\n"
     
