@@ -676,7 +676,7 @@ if (infoBtn && infoModal && closeModal) {
 }
 
 // --- LEAD CAPTURE LOGIC ---
-let leadData = { exam: null, mode: null, phone: null };
+let appLeadData = { exam: null, mode: null, phone: null };
 
 function openCaptureModal() {
     document.getElementById('captureModal').classList.remove('hidden');
@@ -688,7 +688,7 @@ function closeCaptureModal() {
 }
 
 function selectLeadOption(type, value) {
-    leadData[type] = value;
+    appLeadData[type] = value;
     
     // Visual Feedback
     const step = type === 'exam' ? 'captureStep1' : 'captureStep2';
@@ -729,7 +729,7 @@ function submitLead() {
         return;
     }
     
-    leadData.phone = phone;
+    appLeadData.phone = phone;
     
     // Show Loading
     const btn = document.querySelector('#captureStep3 button');
@@ -740,7 +740,7 @@ function submitLead() {
     if (currentUserEntry && currentUserEntry.id) {
         fetch(`${API_BASE_URL}/api/save_lead`, {
             method: 'POST',
-            body: JSON.stringify({ user_id: currentUserEntry.id, lead_data: leadData }),
+            body: JSON.stringify({ user_id: currentUserEntry.id, lead_data: appLeadData }),
             headers: { 'Content-Type': 'application/json' }
         })
         .then(res => res.json())
