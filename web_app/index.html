@@ -376,8 +376,7 @@
         };
     }
 
-    // Capture Modal Logic
-    let leadData = { exam: null, mode: null, phone: null };
+    // Capture Modal Logic (handled in app_v2.js)
 
     function openCaptureModal() {
         document.getElementById('captureModal').classList.remove('hidden');
@@ -391,7 +390,9 @@
     window.closeCaptureModal = closeCaptureModal; // Expose global
 
     window.selectLeadOption = function(type, value) {
-        leadData[type] = value;
+        if (typeof appLeadData !== 'undefined') {
+            appLeadData[type] = value;
+        }
         const step = type === 'exam' ? 'captureStep1' : 'captureStep2';
         const nextStep = type === 'exam' ? 'captureStep2' : 'captureStep3';
         const nextDot = type === 'exam' ? 'pdot2' : 'pdot3';
@@ -428,15 +429,18 @@
             return;
         }
         
-        leadData.phone = phone;
+        if (typeof appLeadData !== 'undefined') {
+            appLeadData.phone = phone;
+        }
         const btn = document.querySelector('#captureStep3 button');
         const originalText = btn.innerText;
         btn.innerText = "Generating Report...";
         
         if (currentUserEntry && currentUserEntry.id) {
+            const dataToSend = (typeof appLeadData !== 'undefined') ? appLeadData : { exam: null, mode: null, phone: phone };
             fetch(`${API_BASE_URL}/api/save_lead`, {
                 method: 'POST',
-                body: JSON.stringify({ user_id: currentUserEntry.id, lead_data: leadData }),
+                body: JSON.stringify({ user_id: currentUserEntry.id, lead_data: dataToSend }),
                 headers: { 'Content-Type': 'application/json' }
             })
             .then(res => res.json())
@@ -521,7 +525,7 @@
     };
     </script>
 
-    <script src="app_v2.js?v=1770104100"></script>
+    <script src="app_v2.js?v=1770108500"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
