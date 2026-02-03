@@ -131,6 +131,88 @@ async def cmd_start(message: types.Message):
         reply_markup=builder.as_markup(),
         parse_mode="Markdown"
     )
+    
+    # Send legal disclaimer
+    await message.answer(
+        "📋 By using this bot, you agree to our:\n"
+        "• /terms - Terms & Conditions\n"
+        "• /privacy - Privacy Policy",
+        parse_mode="Markdown"
+    )
+
+@dp.message(Command("terms"))
+async def cmd_terms(message: types.Message):
+    """
+    Display Terms and Conditions.
+    Splits into multiple messages if exceeds Telegram's 4096 character limit.
+    """
+    try:
+        # Read the terms file
+        terms_path = os.path.join(os.path.dirname(__file__), "assets", "terms_and_conditions.txt")
+        with open(terms_path, "r", encoding="utf-8") as f:
+            terms_content = f.read()
+        
+        # Split into chunks (Telegram limit: 4096 chars)
+        max_length = 4000  # Leave some buffer
+        chunks = [terms_content[i:i+max_length] for i in range(0, len(terms_content), max_length)]
+        
+        await message.answer("📜 **TERMS AND CONDITIONS**\n\nReading document...", parse_mode="Markdown")
+        
+        for idx, chunk in enumerate(chunks, 1):
+            if len(chunks) > 1:
+                await message.answer(f"📄 **Part {idx}/{len(chunks)}**\n\n{chunk}")
+            else:
+                await message.answer(chunk)
+            await asyncio.sleep(0.5)  # Avoid rate limiting
+        
+        await message.answer(
+            "✅ End of Terms and Conditions\n\n"
+            "By using ElevateAura, you agree to these terms.",
+            parse_mode="Markdown"
+        )
+        
+    except FileNotFoundError:
+        await message.answer("⚠️ Terms and Conditions file not found. Please contact support.")
+    except Exception as e:
+        logger.error(f"Error reading terms: {e}")
+        await message.answer("❌ Error loading Terms and Conditions. Please try again later.")
+
+@dp.message(Command("privacy"))
+async def cmd_privacy(message: types.Message):
+    """
+    Display Privacy Policy.
+    Splits into multiple messages if exceeds Telegram's 4096 character limit.
+    """
+    try:
+        # Read the privacy policy file
+        privacy_path = os.path.join(os.path.dirname(__file__), "assets", "privacy_policy.txt")
+        with open(privacy_path, "r", encoding="utf-8") as f:
+            privacy_content = f.read()
+        
+        # Split into chunks (Telegram limit: 4096 chars)
+        max_length = 4000  # Leave some buffer
+        chunks = [privacy_content[i:i+max_length] for i in range(0, len(privacy_content), max_length)]
+        
+        await message.answer("🔒 **PRIVACY POLICY**\n\nReading document...", parse_mode="Markdown")
+        
+        for idx, chunk in enumerate(chunks, 1):
+            if len(chunks) > 1:
+                await message.answer(f"📄 **Part {idx}/{len(chunks)}**\n\n{chunk}")
+            else:
+                await message.answer(chunk)
+            await asyncio.sleep(0.5)  # Avoid rate limiting
+        
+        await message.answer(
+            "✅ End of Privacy Policy\n\n"
+            "Your data is handled according to this policy.",
+            parse_mode="Markdown"
+        )
+        
+    except FileNotFoundError:
+        await message.answer("⚠️ Privacy Policy file not found. Please contact support.")
+    except Exception as e:
+        logger.error(f"Error reading privacy policy: {e}")
+        await message.answer("❌ Error loading Privacy Policy. Please try again later.")
 
 # --- Keep Alive Server for Render ---
 from aiohttp import web
