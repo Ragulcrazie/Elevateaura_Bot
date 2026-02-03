@@ -568,6 +568,10 @@ async def start_web_server():
     # Invoice Generation Route
     app.router.add_options('/api/create_invoice', handle_options)
     app.router.add_post('/api/create_invoice', create_invoice_api)
+    
+    # Ad Check Route
+    app.router.add_get('/api/check_ad', check_ad_eligibility)
+    app.router.add_options('/api/check_ad', handle_options)
 
     # Lead Capture Route
     async def save_lead_api(request):
@@ -589,6 +593,34 @@ async def start_web_server():
 
     app.router.add_options('/api/save_lead', handle_options)
     app.router.add_post('/api/save_lead', save_lead_api)
+
+    # Ad Eligibility Check Route
+    async def check_ad_eligibility(request):
+        """Check if user should see ad before leaderboard."""
+        try:
+            user_id_str = request.query.get("user_id")
+            placement = request.query.get("placement", "leaderboard")
+            
+            if not user_id_str:
+                return web.json_response(
+                    {"show_ad": False, "reason": "no_user_id"},
+                    headers={"Access-Control-Allow-Origin": "*"}
+                )
+            
+            from bot.handlers.ads import check_leaderboard_ad_eligibility
+            
+            user_id = int(user_id_str)
+            user_data = await db.get_user(user_id)
+            
+            if not user_data:
+                return web.json_response(
+                    {"show_ad": False, "reason": "user_not_found"},
+                    headers={"Access-Control-Allow-Origin": "*"}
+                )
+            
+            result = await check_leaderboard_ad_eligibility(user_id, user_data, db)
+            
+            return web.json_response(result, headers={"Access-Control-Allow-Origin": "*"})
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"

@@ -1,0 +1,45 @@
+{
+  "monetag_publisher_id": "10557666",
+  "enabled": true,
+  "test_mode": true,
+  "test_user_ids": [996261168],
+  
+  "premium_skip_ads": true,
+  
+  "placements": {
+    "post_quiz": {
+      "enabled": true,
+      "cooldown_minutes": 10,
+      "priority": 1
+    },
+    "leaderboard": {
+      "enabled": true,
+      "show_every_nth_visit": 3,
+      "cooldown_minutes": 5,
+      "priority": 2
+    },
+    "ai_coach": {
+      "enabled": false,
+      "show_every_nth_query": 2,
+      "cooldown_minutes": 3,
+      "priority": 3
+    }
+  },
+  
+  "frequency_limits": {
+    "max_ads_per_day": 6,
+    "min_seconds_between_ads": 120
+  },
+  
+  "monetag_settings": {
+    "type": "inApp",
+    "frequency": 1,
+    "capping": 1,
+    "interval": 0,
+    "timeout": 0,
+    "everyPage": false
+  },
+  
+  "remote_config_url": "",
+  "analytics_enabled": true
+}

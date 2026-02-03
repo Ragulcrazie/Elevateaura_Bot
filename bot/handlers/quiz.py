@@ -8,8 +8,10 @@ import random
 import time
 import uuid
 import re
+import logging
 from database.db_client import SupabaseClient
 
+logger = logging.getLogger(__name__)
 router = Router()
 
 def format_explanation(text: str) -> str:
@@ -672,6 +674,26 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
 
     score = state["score"]
     total = len(state["questions"])
+    
+    # --- AD INTEGRATION: Show Post-Quiz Ad ---
+    try:
+        from bot.handlers.ads import show_post_quiz_ad
+        
+        # Fetch user data to check premium status
+        db = SupabaseClient()
+        await db.connect()
+        user = await db.get_user(user_id)
+        
+        if user:
+            # Show ad (handles all eligibility checks internally)
+            ad_shown = await show_post_quiz_ad(message, user_id, user, db)
+            
+            if ad_shown:
+                # Brief pause for ad viewing
+                await asyncio.sleep(2)
+    except Exception as e:
+        # Never let ads break the quiz flow
+        logger.error(f"Ad display error (non-critical): {e}")
     
     # Calculate Percentage (Score is now out of 100 for 10 Qs)
     # Total Score Possible = 10 * 10 = 100

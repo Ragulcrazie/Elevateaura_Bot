@@ -37,3 +37,30 @@ WHERE metadata->>'lead_submitted' = 'true'
 ORDER BY metadata->'lead_data'->>'submitted_at' DESC;
 
 -------------------------------------------------------------------------
+
+sell by date 
+
+... (same query)
+WHERE metadata->>'lead_submitted' = 'true'
+  AND metadata->'lead_data'->>'submitted_at' >= CURRENT_DATE::text
+ORDER BY metadata->'lead_data'->>'submitted_at' DESC;
+
+___________
+
+last 7 days 
+
+... (same query)
+WHERE metadata->>'lead_submitted' = 'true'
+  AND metadata->'lead_data'->>'submitted_at' >= (CURRENT_DATE - INTERVAL '7 days')::text
+ORDER BY metadata->'lead_data'->>'submitted_at' DESC;
+
+_______________
+
+exam wise leads eg : ssc
+
+... (same query)
+WHERE metadata->>'lead_submitted' = 'true'
+  AND metadata->'lead_data'->>'exam_category' = 'SSC'
+ORDER BY metadata->'lead_data'->>'submitted_at' DESC;
+
+
