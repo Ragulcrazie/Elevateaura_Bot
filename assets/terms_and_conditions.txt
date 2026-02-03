@@ -2,9 +2,9 @@
                    TERMS AND CONDITIONS
 ═══════════════════════════════════════════════════════════════
 
-Last Updated: 13 January  2026
+Last Updated: 3 February 2026
 
-App Name: Elevate Aura
+Platform: ElevateAura Bot (Telegram)
 Developer: Ragul Sekar
 Contact Email: elevateauraofficial@gmail.com
 
@@ -12,176 +12,320 @@ Contact Email: elevateauraofficial@gmail.com
 
 1. ACCEPTANCE OF TERMS
 
-By downloading, installing, or using Elevate Aura ("the App", 
-"we", "our"), you agree to these Terms and Conditions. If you 
-do not agree, please refrain from using the App.
+By using ElevateAura Bot via Telegram ("the Bot", "we", "our"), you 
+agree to these Terms and Conditions. If you do not agree, please 
+stop using the Bot immediately.
 
 ───────────────────────────────────────────────────────────────
 
-2. PURPOSE OF THE APP
+2. PURPOSE OF THE BOT
 
-Elevate Aura is an Educational Skill-Based Platform providing 
+ElevateAura is an Educational Skill-Based Platform providing 
 quiz-based learning for competitive exams such as SSC, RRB, Bank, 
-Police, and general aptitude examinations. The App is intended 
+Police, and general aptitude examinations. The Bot is intended 
 solely for educational, practice, and skill-development purposes. 
-The outcome of all matches and quizzes depends entirely on the 
-user's knowledge, speed, and cognitive skill.
+All quiz results depend entirely on the user's knowledge, speed, 
+and cognitive skill.
 
 ───────────────────────────────────────────────────────────────
 
 3. USER ACCOUNTS AND AUTHENTICATION
 
-Users may sign in using Google Sign-In. By using this feature, 
-you agree:
+Users access the Bot via their Telegram account. By using this 
+service, you agree:
 
-  • To use your own valid Google account
+  • To use your own valid Telegram account
   • Not to impersonate others
-  • Not to share or sell your login credentials
+  • Not to share or sell your account access
   • Not to attempt unauthorized access to other users' data
 
 ⚠️ We may suspend or terminate accounts involved in suspicious, 
-   abusive, or harmful activities.
+   abusive, cheating, or harmful activities.
 
 ───────────────────────────────────────────────────────────────
 
-4. VIRTUAL COINS AND REWARDS
+4. FREE TRIAL LIMITATIONS
 
-The App offers a virtual economy (coins, badges, points).
+4.1 Free User Access:
+  • Free users receive 3 (three) lifetime mock tests
+  • Each test contains 10 questions
+  • After completing 3 tests (30 questions total), users must 
+    upgrade to Premium to continue
 
-4.1 Nature of Virtual Items:
-  • These items have NO real monetary value.
-  • They cannot be withdrawn, exchanged for cash, or sold.
+4.2 Important Restrictions:
+  • The 3-test limit is LIFETIME, not daily
+  • Limit is per Telegram account (cannot be reset)
+  • Creating multiple accounts to bypass limits is prohibited
+  • Violators will be permanently banned
 
-4.2 Rivalry Matches (Skill-Based Challenges):
-  • Users may consume virtual coins as an "Entry Fee" to participate 
-    in competitive matches.
-  • This is a "Virtual Token Consumption" for access to premium 
-    competitive features.
-  • Rewards won in matches are virtual and for entertainment/status 
-    only.
-
-4.3 Abuse & Exploitation:
-  • We reserve the right to reset or remove virtual items if 
-    cheating, clock manipulation, or exploitation is detected.
+⚠️ NO REFUNDS: Free trial is clearly communicated before use. 
+   Users acknowledge and accept the 3-test limit.
 
 ───────────────────────────────────────────────────────────────
 
-5. CONTENT OWNERSHIP AND INTELLECTUAL PROPERTY
+5. VIRTUAL CURRENCY DISCLAIMER ⚠️ CRITICAL ⚠️
 
-All content within the App—including quizzes, UI design, text, 
-graphics, branding, coin system, and features—is owned by Ragul 
-Sekar or licensed appropriately.
+All prizes, bonuses, credits, and virtual currency awarded through 
+ElevateAura ("Aura Credits" or "Bonus Credits") are VIRTUAL and 
+have NO MONETARY VALUE.
+
+5.1 Nature of Virtual Currency:
+  • Aura Credits are NOT real money
+  • Aura Credits CANNOT be withdrawn as cash
+  • Aura Credits CANNOT be transferred to other users
+  • Aura Credits CANNOT be converted to any real-world currency
+  • Aura Credits CANNOT be sold or exchanged
+
+5.2 Permitted Use:
+  • Aura Credits may ONLY be redeemed for Premium subscription 
+    extensions within ElevateAura Bot
+  • Redemption rate: As displayed in-app (subject to change)
+
+5.3 Expiration and Termination:
+  • Aura Credits expire after 365 days if unused
+  • We reserve the right to modify, reduce, or terminate Aura 
+    Credits at any time without notice or compensation
+  • In case of account termination for ToS violation, all Aura 
+    Credits are forfeited immediately
+
+⚠️ LEGAL ACKNOWLEDGMENT: By participating in competitions, 
+   receiving credits, or winning prizes, you explicitly 
+   acknowledge and agree that Aura Credits have no cash value 
+   and are for entertainment and Premium subscription purposes 
+   only.
+
+───────────────────────────────────────────────────────────────
+
+6. WEEKLY LEADERBOARD AND PRIZES
+
+6.1 Competition Structure:
+  • Weekly leaderboard runs from Monday 12:00 AM IST to Sunday 
+    11:59 PM IST
+  • Leaderboard resets every Monday at 12:00 AM IST
+  • Only Premium members are eligible to compete for prizes
+
+6.2 Prize Eligibility:
+  • FREE USERS CANNOT WIN PRIZES
+  • Only users with active Premium subscription can win
+  • Winner must not have violated any Terms of Service
+  • Winner must be a real human user (not bot/script)
+
+6.3 Prize Structure:
+  • 1st Place: ₹600 Aura Bonus Credits
+  • 2nd Place and below: No prize
+
+6.4 Prize Distribution:
+  • Winner announced: Sunday 10:00 PM IST
+  • Credits deposited: Monday 12:00 AM IST (within 24 hours)
+  • In case of tie: First user to reach the score wins
+  • Decision is final and cannot be appealed
+
+6.5 Fraud Prevention:
+  • ElevateAura reserves the right to withhold or void prizes if:
+    - Cheating, scripting, or automation is detected
+    - Multiple accounts are used by same person
+    - Collusion or manipulation is suspected
+    - Account created solely to win prizes
+  • Investigation may take up to 48 hours
+  • Decision on fraud is final and binding
+
+⚠️ VIRTUAL CURRENCY REMINDER: Weekly prizes are Aura Credits 
+   (not cash). See Section 5 for full disclaimer.
+
+───────────────────────────────────────────────────────────────
+
+7. PAYMENT AND SUBSCRIPTION TERMS
+
+7.1 Premium Subscription:
+  • Cost: 89 Telegram Stars (approximately ₹99 INR)
+  • Payment processed through Telegram's payment system
+  • Access is indefinite (no expiration)
+  • NO AUTO-RENEWAL (one-time purchase)
+
+7.2 Refund Policy:
+  • ALL SALES ARE FINAL
+  • NO REFUNDS under any circumstances once payment is processed
+  • This includes:
+    - Changed mind after purchase
+    - Accidental purchase
+    - Dissatisfaction with service
+    - Device compatibility issues
+
+7.3 Payment Processing:
+  • Payments are handled by Telegram
+  • We do NOT store credit card or banking information
+  • Telegram Stars are purchased through Telegram's system
+  • Contact Telegram support for payment issues
+
+7.4 Premium Benefits:
+  • Unlimited daily quizzes (up to 60 questions/day limit)
+  • Access to AI Performance Coach
+  • Eligibility for weekly ₹600 prize competition
+  • Detailed analytics and insights
+  • No advertisements (if applicable)
+
+───────────────────────────────────────────────────────────────
+
+8. CONTENT OWNERSHIP AND INTELLECTUAL PROPERTY
+
+All content within the Bot—including quizzes, questions, 
+explanations, UI design, graphics, branding, leaderboard system, 
+and features—is owned by Ragul Sekar or licensed appropriately.
 
 You are NOT permitted to:
 
-  × Copy, reproduce, or distribute app content
+  × Copy, reproduce, or distribute quiz content
+  × Screenshot or share quiz questions publicly
   × Modify or create derivative works
-  × Reverse engineer or decompile the App
-  × Use the App's assets outside the App without written 
-    permission
+  × Reverse engineer or decompile the Bot
+  × Use the Bot's assets outside the Bot without written permission
+  × Scrape or download quiz databases
+
+⚠️ Violation will result in immediate account termination and 
+   potential legal action.
 
 ───────────────────────────────────────────────────────────────
 
-6. ADVERTISEMENTS AND THIRD-PARTY SERVICES
-
-The App uses:
-
-  • Google AdMob
-  • Unity Ads
-  • Google Play Services
-  • Supabase logs / Analytics
-
-These services may collect device identifiers, approximate 
-location, and app interaction data. By using the App, you 
-consent to the display of advertisements and analytics.
-
-───────────────────────────────────────────────────────────────
-
-7. USER CONDUCT (FAIR PLAY POLICY)
+9. USER CONDUCT (FAIR PLAY POLICY)
 
 You agree NOT to:
 
-  × Cheat, exploit bugs, or use "Auto-Clickers" or scripts
-  × Manipulate device clocks (time-traveling) to bypass timers or 
-    daily rewards
-  × Attempt to reverse engineer, hack, or damage the App
+  × Cheat, exploit bugs, or use automation tools/scripts
+  × Use multiple Telegram accounts to bypass free trial limits
+  × Manipulate scores or leaderboard rankings
+  × Share answers with other users during quizzes
+  × Attempt to reverse engineer, hack, or damage the Bot
   × Interfere with servers or network operations
+  × Abuse AI Coach or spam the system
+  × Create fake accounts to win prizes
 
-⚠️ FAIR PLAY ENFORCEMENT: We use automated detection for clock 
-   manipulation and cheating. Violations will result in an 
-   immediate, permanent account ban and forfeiture of all virtual 
-   coins/progress without refund.
-
-───────────────────────────────────────────────────────────────
-
-8. DISCLAIMER OF WARRANTIES
-
-The App is provided "as is" and "as available".
-
-We do not guarantee:
-
-  • Error-free content
-  • Uninterrupted service
-  • Accuracy or completeness of quiz questions
-  • Compatibility with all devices
-
-⚠️ Users must verify exam-critical information from official 
-   sources.
+⚠️ FAIR PLAY ENFORCEMENT: We use automated detection for 
+   cheating. Violations will result in immediate, permanent 
+   account ban and forfeiture of all Aura Credits/progress 
+   without refund.
 
 ───────────────────────────────────────────────────────────────
 
-9. LIMITATION OF LIABILITY
+10. DISCLAIMER OF WARRANTIES AND LIABILITY
 
-To the maximum extent permitted by law:
+10.1 Service Provided "As Is":
+  • The Bot is provided "as is" and "as available"
+  • We do NOT guarantee error-free content
+  • We do NOT guarantee uninterrupted service
+  • We do NOT guarantee accuracy of all quiz questions
+  • We do NOT guarantee exam success
 
-  • We are not responsible for exam performance or results
-  • We are not liable for data loss, device issues, or damages 
-    caused by third-party ads
-  • We are not liable for delays, failures, or errors arising 
-    from external services
+10.2 Educational Tool Disclaimer:
+  • ElevateAura is a supplementary learning tool
+  • NOT a guarantee of passing competitive exams
+  • Users must verify critical information from official sources
+  • We are NOT responsible for exam failures or poor results
 
-⚠️ Use of the App is at your own risk.
+10.3 Limitation of Liability:
+  To the maximum extent permitted by law:
+
+  • We are NOT responsible for exam performance or results
+  • We are NOT liable for data loss or device issues
+  • We are NOT liable for delays, failures, or errors arising 
+    from Telegram, Supabase, or other external services
+  • We are NOT liable for loss of Aura Credits due to service 
+    interruption or termination
+
+⚠️ Use of the Bot is at your own risk.
 
 ───────────────────────────────────────────────────────────────
 
-10. DATA AND PRIVACY
+11. DATA AND PRIVACY
 
-Your data is handled according to our Privacy Policy.
+Your data is handled according to our Privacy Policy (separate 
+document).
 
 Users may request:
-
   • Data deletion
-  • Account deletion
+  • Account deletion  
   • Data export
 
-⚠️ Once deleted, user data CANNOT be recovered.
+⚠️ Once deleted, user data CANNOT be recovered. All Aura Credits 
+   and progress will be permanently lost.
 
 ───────────────────────────────────────────────────────────────
 
-11. TERMINATION OF USE
+12. AGE RESTRICTION
 
-We may suspend or remove user accounts without notice if:
+  • Users must be 13 years or older to use ElevateAura Bot
+  • Users under 18 years must have parental consent for payments
+  • By using the Bot and making payments, you confirm you meet 
+    these age requirements
+
+⚠️ Accounts found to be under 13 will be immediately terminated.
+
+───────────────────────────────────────────────────────────────
+
+13. TERMINATION OF USE
+
+We may suspend or permanently remove user accounts without notice 
+and without refund if:
 
   • Terms are violated
-  • Cheating or fraud is detected
-  • Abuse or harmful activities occur
-  • Required by law
+  • Cheating, fraud, or abuse is detected
+  • Multiple accounts are created
+  • Required by law or legal authorities
+  • Account is inactive for over 2 years
+
+Upon termination:
+  • All Aura Credits are forfeited
+  • Premium access may be revoked
+  • No refunds will be issued
 
 ───────────────────────────────────────────────────────────────
 
-12. CHANGES TO TERMS
+14. CHANGES TO TERMS
 
 We may modify these Terms at any time. Updated versions will be 
-available inside the App and/or on our website. Continued use of 
-the App constitutes acceptance of the modified Terms.
+available via /terms command in the Bot. Continued use after 
+changes constitutes acceptance of the modified Terms.
+
+Users will be notified of significant changes via Bot message.
 
 ───────────────────────────────────────────────────────────────
 
-13. CONTACT US
+15. GOVERNING LAW AND JURISDICTION
 
-For questions or support, contact:
+These Terms are governed by the laws of India. Any disputes shall 
+be subject to the exclusive jurisdiction of courts in Tamil Nadu, 
+India.
+
+───────────────────────────────────────────────────────────────
+
+16. SEVERABILITY
+
+If any provision of these Terms is found to be unenforceable or 
+invalid, that provision will be limited or eliminated to the 
+minimum extent necessary, and the remaining provisions will remain 
+in full force.
+
+───────────────────────────────────────────────────────────────
+
+17. ENTIRE AGREEMENT
+
+These Terms, along with our Privacy Policy, constitute the entire 
+agreement between you and ElevateAura regarding use of the Bot.
+
+───────────────────────────────────────────────────────────────
+
+18. CONTACT US
+
+For questions, support, or Terms-related inquiries:
 
 Email: elevateauraofficial@gmail.com
+Telegram: @ElevateAura_bot
 Developer: Ragul Sekar
+
+Response Time: Within 48-72 hours
+
+═══════════════════════════════════════════════════════════════
+
+BY USING ELEVATEAURA BOT, YOU ACKNOWLEDGE THAT YOU HAVE READ, 
+UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS AND CONDITIONS.
 
 ═══════════════════════════════════════════════════════════════

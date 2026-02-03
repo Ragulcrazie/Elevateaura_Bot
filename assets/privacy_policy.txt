@@ -2,9 +2,9 @@
                         PRIVACY POLICY
 ═══════════════════════════════════════════════════════════════
 
-Last Updated: 13 January 2026
+Last Updated: 3 February 2026
 
-App Name: Elevate Aura
+Platform: ElevateAura Bot (Telegram)
 Developer: Ragul Sekar
 Contact Email: elevateauraofficial@gmail.com
 
@@ -12,177 +12,403 @@ Contact Email: elevateauraofficial@gmail.com
 
 INTRODUCTION
 
-Elevate Aura ("the App", "we", "our", "us") provides quiz-based 
-learning for competitive exams. This Privacy Policy explains how 
-we collect, use, and protect your information. By using the App, 
-you agree to this Policy.
+ElevateAura Bot (\"the Bot\", \"we\", \"our\", \"us\") provides quiz-based 
+learning for competitive exams via Telegram. This Privacy Policy 
+explains how we collect, use, store, and protect your information. 
+
+By using the Bot, you agree to this Privacy Policy.
 
 ───────────────────────────────────────────────────────────────
 
 1. INFORMATION WE COLLECT
 
-1.1 Information Provided by You
+1.1 Information from Telegram
 
-  • Name (Google Sign-In)
-  • Email address (Google Sign-In)
-  • Google profile picture (optional)
+When you use ElevateAura Bot, we automatically collect:
 
-  ⚠️ We do NOT access your Gmail inbox, contacts, files, or 
-     personal messages.
+  • Telegram User ID (unique identifier)
+  • First Name (as registered on Telegram)
+  • Username (if public)
+  • Language preference (if set)
 
-1.2 Automatically Collected Information
+  ⚠️ We do NOT collect:
+    × Your phone number
+    × Your Telegram messages/chats
+    × Your contacts
+    × Your media files
 
-  Device Information:
-    • Device model
-    • Android version
-    • Operating system details
-    • App version
+1.2 Quiz and Performance Data
 
-  Usage Data:
-    • Quiz attempts, scores, correct/incorrect answers
-    • Streaks, coins, badges, app interactions
-    • Time spent in the app
-    • Button clicks (non-personal behavior logs)
+We collect and store:
 
-  Crash & Diagnostics:
-    • Crash logs
-    • Performance data
-    • Error reports
+  • Quiz attempts and scores
+  • Correct and incorrect answers
+  • Time taken per question
+  • Daily and weekly progress
+  • Leaderboard rankings
+  • Streak counters
+  • Aura Credits balance
+  • Mistake topics (for AI recommendations)
 
-  Approximate Location:
-    • Automatically collected by advertising partners 
-      (AdMob/Unity Ads)
-    • NOT precise GPS location
+1.3 Payment Information
 
-1.3 Data Collected Through Third-Party Services
+For Premium purchases:
 
-  Google Sign-In:
-    • Name, email, profile image
-    • Authentication token
+  • Telegram Stars transaction ID
+  • Payment status (successful/failed)
+  • Subscription status (free/premium)
+  • Purchase timestamp
 
-  Google Play Billing (In-App Purchases):
-    • Transaction ID and purchase status (We do NOT collect credit card details)
+  ⚠️ We do NOT collect or store:
+    × Credit card numbers
+    × Banking details
+    × Billing addresses
+  
+  All payment processing is handled securely by Telegram.
 
-  Advertising Partners (AdMob / Unity Ads):
-    • Device identifiers (AAID)
-    • Approximate location
-    • Ad interaction data
+1.4 Device and Usage Data
 
-  Analytics & Backend (Supabase):
-    • Session events, quiz progress, and wallet balances
-    • User behavior summaries
-    • Error tracking and performance logs
+  • Device type (mobile/desktop)
+  • Operating system (Android/iOS/Windows/Mac)
+  • Access timestamps
+  • Feature usage (AI Coach, Leaderboard, Quiz)
+  • Bot command interactions
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  WE DO NOT COLLECT:
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    × Passwords
-    × Contact lists
-    × Photos/media/files
-    × Financial/banking data
-    × Messages
-    × Precise location
+1.5 Analytics and Diagnostics
+
+  • Session duration
+  • Feature engagement
+  • Error logs and crash reports
+  • Performance metrics
 
 ───────────────────────────────────────────────────────────────
 
 2. HOW WE USE YOUR INFORMATION
 
-2.1 App Functionality
+2.1 Service Delivery
   • Create and manage your account
-  • Save and sync quiz progress
-  • Enable login with Google
-  • Maintain scoring, coins, and streaks
+  • Save and sync quiz progress across devices
+  • Maintain scoring, Aura Credits, and streaks
+  • Enable leaderboard participation
+  • Provide AI Performance Coach insights
+  • Process Premium subscription purchases
 
-2.2 Improvement of App
+2.2 Personalization
+  • Recommend quizzes based on performance
+  • Identify weak topics for improvement
+  • Customize difficulty levels
+  • Provide relevant AI coaching
+
+2.3 Competition and Prizes
+  • Manage daily and weekly leaderboards
+  • Determine prize winners
+  • Distribute Aura Credits to winners
+  • Prevent fraud and cheating in competitions
+
+2.4 Improvement of Bot
   • Enhance quiz quality
-  • Improve user experience
-  • Fix bugs and crashes
+  • Improve AI Coach accuracy
+  • Fix bugs and errors
   • Optimize performance
+  • Add new features
 
-2.3 Personalization
-  • Recommend quizzes
-  • Provide a more relevant learning experience
+2.5 Security and Anti-Fraud
+  • Detect cheating and automation
+  • Prevent abuse or exploitation
+  • Identify multiple accounts by same user
+  • Protect against score manipulation
 
-2.4 Advertising
-  • Deliver ads through AdMob / Unity Ads
-  • Show rewarded ads (optional)
-  • Prevent fraud or invalid clicks
-
-2.5 Security
-  • Detect cheating
-  • Prevent abuse or suspicious activity
+2.6 Communication
+  • Send quiz notifications
+  • Announce weekly winners
+  • Deliver important updates
+  • Respond to support requests
 
 ───────────────────────────────────────────────────────────────
 
-3. DATA SHARING
+3. DATA STORAGE AND SECURITY
 
-We do not sell or rent your personal data.
+3.1 Where Your Data is Stored
+
+Your data is stored on:
+  • Supabase (Cloud database, USA servers)
+  • Telegram's servers (for bot interactions)
+  • Render (Bot hosting, USA/Europe servers)
+
+3.2 Security Measures
+
+We implement:
+  • Encrypted HTTPS connections
+  • Secure API authentication
+  • Regular security audits
+  • Limited access to data (developer only)
+  • No public exposure of user data
+
+⚠️ While we strive for maximum security, no system can guarantee 
+   100% protection. Use the Bot at your own risk.
+
+3.3 Data Retention
+
+  • Active accounts: Data retained as long as account exists
+  • Deleted accounts: Data permanently removed within 30 days
+  • Inactive accounts (2+ years): May be deleted automatically
+
+───────────────────────────────────────────────────────────────
+
+4. DATA SHARING AND THIRD PARTIES
+
+We do NOT sell, rent, or trade your personal data.
 
 We share data with:
-  • Google Sign-In
-  • AdMob / Unity Ads
-  • Google Play Services / Supabase Analytics
-  • Supabase
+
+4.1 Essential Service Providers
+  • Telegram (user authentication, payment processing)
+  • Supabase (database hosting)
+  • Render (bot hosting)
+
+4.2 Legal Compliance
+  We may disclose data if required by:
+  • Law enforcement or government authorities
+  • Court orders or legal processes
+  • Protection of our legal rights
+
+4.3 Third-Party Services We Use
+
+  Telegram Bot API:
+    • User authentication
+    • Message delivery
+    • Payment processing (Telegram Stars)
+    • Privacy Policy: https://telegram.org/privacy
+
+  Supabase:
+    • Database storage
+    • Real-time leaderboard updates
+    • Privacy Policy: https://supabase.com/privacy
+
+  Render:
+    • Bot hosting and uptime
+    • Privacy Policy: https://render.com/privacy
 
 ───────────────────────────────────────────────────────────────
 
-4. DATA RETENTION
+5. YOUR PRIVACY RIGHTS
 
-We store your data as long as your account is active. When you 
-delete your account, all personal data is permanently removed.
+You have the right to:
 
-───────────────────────────────────────────────────────────────
+5.1 Access Your Data
+  • Request a copy of all data we store about you
+  • Contact: elevateauraofficial@gmail.com
+  • Response time: Within 7-14 days
 
-5. DATA SECURITY
+5.2 Delete Your Account
+  • Use /delete command in the Bot (if implemented)
+  • Email us at elevateauraofficial@gmail.com
+  • All data will be permanently deleted within 30 days
 
-We use encrypted communication (HTTPS), secure servers, and 
-token-based authentication. No system can guarantee 100% security.
+  ⚠️ IMPORTANT: Account deletion is IRREVERSIBLE
+    - All quiz progress lost
+    - All Aura Credits forfeited
+    - Premium access terminated (no refund)
+    - Leaderboard history removed
 
-───────────────────────────────────────────────────────────────
+5.3 Correct Inaccurate Data
+  • Request corrections via email
+  • We will update within 7 days
 
-6. YOUR RIGHTS
-
-You may request:
-  • Account deletion: Permanent removal of your account and all 
-    associated records from our servers (Supabase, Analytics, etc.)
-  • Data removal
-  • Data export
-  • Correction of inaccurate data
-
-Contact: elevateauraofficial@gmail.com
-In-App Path: Settings > Account > Delete Account
-
-───────────────────────────────────────────────────────────────
-
-7. CHILDREN'S PRIVACY
-
-The app is intended for users aged 13 and above.
+5.4 Opt-Out of Communications
+  • Block or stop the Bot on Telegram
+  • We will no longer send you messages
 
 ───────────────────────────────────────────────────────────────
 
-8. THIRD-PARTY LINKS
+6. CHILDREN'S PRIVACY
 
-External links or ads are governed by their own privacy policies.
+  • ElevateAura Bot is intended for users aged 13 and above
+  • We do NOT knowingly collect data from children under 13
+  • If we discover a user is under 13, their account will be 
+    immediately deleted
 
-───────────────────────────────────────────────────────────────
-
-9. INTERNATIONAL DATA TRANSFER
-
-Your data may be stored or processed on servers outside your 
-country.
-
-───────────────────────────────────────────────────────────────
-
-10. CHANGES TO THIS POLICY
-
-We may update this Privacy Policy at any time. Continued use 
-means you accept the updated Policy.
+  • Users aged 13-17 should have parental consent to use the Bot
+  • Payment features require users to be 18+ or have parental 
+    approval
 
 ───────────────────────────────────────────────────────────────
 
-11. CONTACT US
+7. LEADERBOARD AND PUBLIC DATA
+
+7.1 What is Public
+  • Your First Name (as on Telegram)
+  • Your leaderboard rank
+  • Your total score
+  • Your average pace (for top 3 only)
+
+7.2 What is Private
+  • Individual quiz answers
+  • Mistake topics
+  • AI Coach insights
+  • Aura Credits balance
+  • Payment history
+
+⚠️ By participating in leaderboards, you consent to public 
+   display of your First Name and scores.
+
+───────────────────────────────────────────────────────────────
+
+8. VIRTUAL CURRENCY DATA
+
+We track:
+  • Aura Credits earned from prizes
+  • Aura Credits spent on subscriptions
+  • Transaction history (credits in/out)
+  • Wallet balance
+
+⚠️ REMINDER: Aura Credits have no monetary value and cannot be 
+   withdrawn. See our Terms and Conditions for full disclaimer.
+
+───────────────────────────────────────────────────────────────
+
+9. COOKIES AND TRACKING
+
+  • ElevateAura Bot does NOT use cookies (it's a Telegram bot)
+  • Web app (if used) may use session storage for login state
+  • No third-party tracking pixels or analytics cookies
+
+───────────────────────────────────────────────────────────────
+
+10. INTERNATIONAL DATA TRANSFER
+
+Your data may be stored, processed, or accessed from servers 
+located outside your country (primarily USA via Supabase and 
+Render).
+
+By using the Bot, you consent to this international transfer.
+
+───────────────────────────────────────────────────────────────
+
+11. DATA BREACH NOTIFICATION
+
+In the unlikely event of a data breach:
+  • We will notify affected users within 72 hours
+  • Notification via Bot message and/or email
+  • Explanation of what data was affected
+  • Steps we're taking to resolve the issue
+
+───────────────────────────────────────────────────────────────
+
+12. CHANGES TO THIS PRIVACY POLICY
+
+We may update this Privacy Policy at any time to reflect:
+  • New features or services
+  • Legal or regulatory changes
+  • Improved security practices
+
+Changes will be communicated via:
+  • Bot announcement message
+  • Updated /privacy command
+  • Email (for significant changes)
+
+Continued use of the Bot after changes constitutes acceptance 
+of the updated Privacy Policy.
+
+───────────────────────────────────────────────────────────────
+
+13. THIRD-PARTY LINKS
+
+The Bot may contain links to external websites or services 
+(e.g., official exam websites). These sites have their own 
+privacy policies, and we are NOT responsible for their practices.
+
+───────────────────────────────────────────────────────────────
+
+14. DO NOT TRACK (DNT)
+
+We do not currently respond to "Do Not Track" browser signals, 
+as ElevateAura is a Telegram bot (not a website).
+
+───────────────────────────────────────────────────────────────
+
+15. EUROPEAN USERS (GDPR COMPLIANCE)
+
+If you are located in the European Union:
+
+  • You have the right to data portability
+  • You have the right to be forgotten (deletion)
+  • You can object to data processing
+  • You can lodge a complaint with your local data protection 
+    authority
+
+Contact us to exercise these rights.
+
+───────────────────────────────────────────────────────────────
+
+16. CALIFORNIA USERS (CCPA COMPLIANCE)
+
+If you are a California resident:
+
+  • You have the right to know what data we collect
+  • You have the right to delete your data
+  • You have the right to opt-out of "sale" (we don't sell data)
+  • We do NOT discriminate based on privacy rights exercised
+
+Contact us to exercise these rights.
+
+───────────────────────────────────────────────────────────────
+
+17. CONTACT US FOR PRIVACY CONCERNS
+
+If you have questions, complaints, or requests regarding your 
+privacy:
 
 Email: elevateauraofficial@gmail.com
-Developer: Ragul Sekar
+Subject Line: "Privacy Request - [Your Telegram ID]"
+Response Time: Within 7-14 days
+
+You can also reach us via:
+  • Telegram: @ElevateAura_bot (send /support)
+  • Developer: Ragul Sekar
+
+───────────────────────────────────────────────────────────────
+
+18. LEGAL BASIS FOR PROCESSING (GDPR)
+
+We process your data based on:
+  • Consent: You voluntarily use the Bot
+  • Contract: To provide quiz services and Premium subscriptions
+  • Legitimate Interest: To improve the Bot and prevent fraud
+
+───────────────────────────────────────────────────────────────
+
+19. AUTOMATED DECISION-MAKING
+
+We use automated systems to:
+  • Detect cheating and fraud
+  • Determine leaderboard rankings
+  • Recommend quizzes based on performance
+  • Generate AI Coach insights
+
+You have the right to contest automated decisions by contacting 
+us at elevateauraofficial@gmail.com.
+
+───────────────────────────────────────────────────────────────
+
+20. SUMMARY OF KEY POINTS
+
+  ✓ We collect: Telegram ID, name, quiz scores, payment status
+  ✓ We use it for: Account management, leaderboards, AI coaching
+  ✓ We store it on: Supabase (USA), Render (USA/Europe)
+  ✓ We do NOT sell your data
+  ✓ You can delete your account anytime
+  ✓ Payment processed securely by Telegram
+  ✓ Users must be 13+ years old
+
+═══════════════════════════════════════════════════════════════
+
+BY USING ELEVATEAURA BOT, YOU ACKNOWLEDGE THAT YOU HAVE READ, 
+UNDERSTOOD, AND AGREE TO THIS PRIVACY POLICY.
+
+═══════════════════════════════════════════════════════════════
+
+Last Reviewed: 3 February 2026
+Next Review: 3 August 2026
 
 ═══════════════════════════════════════════════════════════════
