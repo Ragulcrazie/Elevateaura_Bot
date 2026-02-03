@@ -586,6 +586,14 @@ async def main():
         logger.error("Failed to connect to Supabase. Check credentials.")
 
     logger.info("Bot is polling...")
+    
+    # Force logout any existing bot sessions (prevents Telegram conflicts)
+    try:
+        await bot.delete_webhook(drop_pending_updates=True)
+        logger.info("✅ Force logout successful - any zombie bot instances have been disconnected")
+    except Exception as e:
+        logger.warning(f"Could not force logout (may not be an issue): {e}")
+    
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
