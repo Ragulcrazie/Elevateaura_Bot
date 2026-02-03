@@ -767,7 +767,32 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     from bot.handlers.career_reward import check_reward_eligibility, show_reward_notification
     
     is_eligible = await check_reward_eligibility(user_id, score, len(state["questions"]))
+    
+    # ALSO check if they qualified BEFORE but haven't claimed (persistent reminder)
+    if not is_eligible:
+        db = SupabaseClient()
+        await db.connect()
+        user = await db.get_user(user_id)
+        if user:
+            metadata = user.get("metadata", {}) or {}
+            already_claimed = metadata.get("lead_submitted", False)
+            qualified_before = metadata.get("reward_qualified", False)
+            
+            # If they qualified before and haven't claimed, show reminder
+            if qualified_before and not already_claimed:
+                is_eligible = True
+    
+    # Mark user as qualified (for persistent reminders)
     if is_eligible:
+        # Save that they've qualified at least once
+        db = SupabaseClient()
+        await db.connect()
+        user = await db.get_user(user_id)
+        if user:
+            metadata = user.get("metadata", {}) or {}
+            metadata["reward_qualified"] = True
+            await db.upsert_user({"user_id": user_id, "metadata": metadata})
+        
         await show_reward_notification(message, user_id)
     
     # Cleanup - Pass the corrected stats

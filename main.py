@@ -146,6 +146,39 @@ async def cmd_start(message: types.Message):
             "Commands are available anytime if you need to review them.",
             parse_mode="Markdown"
         )
+    
+    # --- PERSISTENT REWARD REMINDER ---
+    # Check if user is eligible for career consultation reward
+    if existing_user:
+        metadata = existing_user.get("metadata", {}) or {}
+        already_claimed = metadata.get("lead_submitted", False)
+        
+        # Show reminder if they qualified (scored 8/10 at any time) but haven't claimed
+        if not already_claimed:
+            # Check if they've ever scored 8+ in a single quiz
+            quiz_state = existing_user.get("quiz_state", {}) or {}
+            lifetime_stats = metadata.get("lifetime_stats", {}) or {}
+            
+            # Simple check: if they have stats, they've taken quizzes
+            # We'll show reminder to anyone who hasn't claimed yet (they might have qualified)
+            # More precise: check if current_streak >= 8 (though this might be from multiple quizzes)
+            current_streak = existing_user.get("current_streak", 0) or 0
+            
+            if current_streak >= 8 or lifetime_stats.get("global_total", 0) >= 8:
+                reward_builder = InlineKeyboardBuilder()
+                reward_builder.button(text="🎁 Claim Your Reward", callback_data=f"claim_reward:{user_id}")
+                
+                await message.answer(
+                    "🏆 **REWARD AVAILABLE!**\n\n"
+                    "You've unlocked a **Career Consultation Reward** for being a top performer!\n\n"
+                    "**Benefits:**\n"
+                    "✅ FREE Career Guidance\n"
+                    "✅ Exclusive Coaching Discounts\n"
+                    "✅ Study Material Access\n\n"
+                    "👇 **Claim it now before it expires!**",
+                    reply_markup=reward_builder.as_markup(),
+                    parse_mode="Markdown"
+                )
 
 @dp.message(Command("terms"))
 async def cmd_terms(message: types.Message):

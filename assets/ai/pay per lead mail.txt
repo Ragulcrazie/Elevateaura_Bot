@@ -1,0 +1,39 @@
+Subject: Qualified Student Leads - SSC/Banking/RRB
+
+Hi [Name],
+
+I run ElevateAura, a quiz platform with 1000+ active 
+competitive exam aspirants.
+
+I can provide you with:
+- High-intent leads (students actively preparing)
+- Verified phone numbers
+- Segmented by exam type (SSC/Bank/RRB)
+- Location-based targeting
+
+Pricing: ₹150 per qualified lead
+
+Would you like a sample batch of 10 leads (free) to test quality?
+
+Best regards,
+
+Ragul Sekar
+
+---------------------------------------------------------------
+
+SELECT 
+  full_name AS "Student Name",
+  metadata->'lead_data'->>'exam_category' AS "Category",
+  metadata->'lead_data'->>'exam_details' AS "Exam Details",
+  metadata->'lead_data'->>'preference' AS "Coaching Preference",
+  metadata->'lead_data'->>'city' AS "City",
+  metadata->'lead_data'->>'phone' AS "Phone Number",
+  TO_CHAR(
+    TO_TIMESTAMP(metadata->'lead_data'->>'submitted_at', 'YYYY-MM-DD"T"HH24:MI:SS'),
+    'DD-Mon-YYYY HH:MI AM'
+  ) AS "Submitted On"
+FROM users
+WHERE metadata->>'lead_submitted' = 'true'
+ORDER BY metadata->'lead_data'->>'submitted_at' DESC;
+
+-------------------------------------------------------------------------
