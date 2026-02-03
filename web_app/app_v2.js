@@ -1,11 +1,11 @@
 // Mock Telegram WebApp for Browser Testing
-const tg = window.Telegram ? window.Telegram.WebApp : {
+const TgApp = (typeof window.tg !== 'undefined') ? window.tg : (window.Telegram ? window.Telegram.WebApp : {
     initDataUnsafe: { user: null },
     ready: () => console.log("TG Ready (Mock)"),
     expand: () => console.log("TG Expand (Mock)"),
     MainButton: { hide: () => {} },
     platform: "unknown"
-};
+});
 
 // Initialize
 try {
