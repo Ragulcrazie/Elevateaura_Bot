@@ -298,7 +298,7 @@ async def collect_text_inputs(message: types.Message):
             f"• Exam Category: {form_state.get('exam_category', 'N/A')}\n"
             f"• Specific Exam: {form_state.get('exam_details', 'N/A')}\n"
             f"• Preference: {form_state.get('preference', 'N/A')}\n"
-            f"• City: {city}\n"
+            f"• City: {form_state.get('city', 'N/A')}\n"
             f"• Phone: {phone}\n\n"
             "─────────────────────────────\n\n"
             "☐ **I agree to:**\n"
