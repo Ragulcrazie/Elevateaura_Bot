@@ -29,10 +29,12 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 from bot.handlers.ai_mentor import router as ai_router
+from bot.handlers.career_reward import router as career_router
 dp.include_router(quiz_router)
 dp.include_router(payment_router)
 dp.include_router(prefs_router)
 dp.include_router(ai_router)
+dp.include_router(career_router)
 db = SupabaseClient()
 
 # --- Admin Handlers ---

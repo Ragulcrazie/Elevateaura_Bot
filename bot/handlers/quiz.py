@@ -762,6 +762,14 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     
     await message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")
     
+    # --- CAREER CONSULTATION REWARD TRIGGER ---
+    # Check if user qualifies for lead generation reward (8/10 or 80%)
+    from bot.handlers.career_reward import check_reward_eligibility, show_reward_notification
+    
+    is_eligible = await check_reward_eligibility(user_id, score, len(state["questions"]))
+    if is_eligible:
+        await show_reward_notification(message, user_id)
+    
     # Cleanup - Pass the corrected stats
     await session_manager.delete_session(user_id, keep_stats=state["stats"])
 

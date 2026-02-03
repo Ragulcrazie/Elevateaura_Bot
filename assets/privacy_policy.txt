@@ -124,6 +124,43 @@ For Premium purchases:
   • Deliver important updates
   • Respond to support requests
 
+2.7 Career Consultation Reward Program (OPTIONAL)
+
+  ElevateAura offers a voluntary "Career Consultation Reward" 
+  program for high-performing users.
+
+  If you choose to participate:
+
+  We collect additional information:
+    • Target exam (SSC, RRB, Bank, Police, etc.)
+    • Coaching preference (Online, Offline, Hybrid)
+    • City/Location
+    • Phone number (for consultation callback)
+
+  We share this information with:
+    • Verified coaching institutes and educational partners
+    • Career counseling services
+    • Exam preparation platforms
+
+  Purpose of sharing:
+    • Provide personalized coaching recommendations
+    • Connect you with suitable educational partners
+    • Offer exclusive discounts and free demo classes
+
+  ⚠️ IMPORTANT CONSENT REQUIREMENTS:
+    • Participation is 100% OPTIONAL
+    • You must explicitly consent via checkbox
+    • You can opt-out at any time
+    • You will receive marketing calls/messages from partners
+    • We do NOT sell data to spam callers
+
+  Your rights:
+    • Request to stop receiving calls (contact us)
+    • Request deletion of submitted data
+    • Withdraw consent at any time
+
+  Legal basis: Your explicit consent (opt-in only)
+
 ───────────────────────────────────────────────────────────────
 
 3. DATA STORAGE AND SECURITY
