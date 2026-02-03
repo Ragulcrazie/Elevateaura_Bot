@@ -5,7 +5,7 @@ Pay-per-lead generation through voluntary user data collection
 
 import logging
 from aiogram import Router, types, F
-from aiogram.filters.callback_query import CallbackQuery
+from aiogram.types import CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from database.db_client import SupabaseClient
 from datetime import datetime
