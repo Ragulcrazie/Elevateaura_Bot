@@ -197,17 +197,29 @@ class AdService:
             return None
         
         publisher_id = self.config.get("monetag_publisher_id", "10557666")
-        settings = self.config.get("monetag_settings", {})
         
-        # Generate JavaScript code
+        # Prepare In-App Interstitial settings (correct format per Monetag docs)
+        in_app_settings = {
+            "frequency": 1,      # Show 1 ad
+            "capping": 0.016,    # Within ~1 minute window
+            "interval": 0,       # No interval between ads
+            "timeout": 1,        # 1 second delay before showing
+            "everyPage": False   # Session persists
+        }
+        
+        # Generate JavaScript code with CORRECT format
         js_code = f"""
 <script>
 (function() {{
     try {{
         if (typeof show_{publisher_id} === 'function') {{
-            show_{publisher_id}({json.dumps(settings)});
+            show_{publisher_id}({{
+                type: 'inApp',
+                inAppSettings: {json.dumps(in_app_settings)}
+            }});
+            console.log('✅ Monetag In-App ad triggered from backend code');
         }} else {{
-            console.warn('Monetag SDK not loaded');
+            console.warn('❌ Monetag SDK not loaded');
         }}
     }} catch(e) {{
         console.error('Ad display error:', e);
