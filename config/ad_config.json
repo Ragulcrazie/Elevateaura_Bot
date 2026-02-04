@@ -1,16 +1,17 @@
 {
   "monetag_publisher_id": "10557666",
   "enabled": true,
-  "test_mode": true,
-  "test_user_ids": [996261168],
+  "test_mode": false,
+  "test_user_ids": [],
   
   "premium_skip_ads": true,
   
   "placements": {
     "post_quiz": {
-      "enabled": true,
+      "enabled": false,
       "cooldown_minutes": 10,
-      "priority": 1
+      "priority": 1,
+      "disabled_reason": "Telegram chat cannot display real ads - text-only messages provide no revenue and annoy users"
     },
     "leaderboard": {
       "enabled": true,

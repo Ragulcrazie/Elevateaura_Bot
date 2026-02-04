@@ -74,20 +74,25 @@ class AdService:
             if user_id not in test_users:
                 return False, "test_mode_user_not_whitelisted"
         
-        # --- CHECK 3: Premium Users ---
+        # --- CHECK 3: Premium Users (CRITICAL - NO ADS FOR PREMIUM) ---
         if self.config.get("premium_skip_ads", True):
             if user_data:
                 subscription_status = user_data.get("subscription_status")
+                # IMMEDIATE BLOCK: Any premium user gets NO ads, period
                 if subscription_status == "premium":
-                    # Check if subscription is still valid
-                    expiry_str = user_data.get("subscription_expiry")
-                    if expiry_str:
-                        try:
-                            expiry_date = datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
-                            if expiry_date > datetime.utcnow():
-                                return False, "premium_user_active"
-                        except:
-                            pass
+                    logger.info(f"🚫 Premium user {user_id} - ads blocked")
+                    return False, "premium_user_no_ads"
+                
+                # Double-check expiry if status isn't explicitly premium
+                expiry_str = user_data.get("subscription_expiry")
+                if expiry_str:
+                    try:
+                        expiry_date = datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
+                        if expiry_date > self._get_ist_now().replace(tzinfo=None):
+                            logger.info(f"🚫 Active subscription for {user_id} - ads blocked")
+                            return False, "active_subscription_no_ads"
+                    except Exception as e:
+                        logger.warning(f"Expiry parse failed for {user_id}: {e}")
         
         # --- CHECK 4: Placement Enabled ---
         placements = self.config.get("placements", {})
