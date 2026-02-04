@@ -465,8 +465,11 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     }
 
     // Button Action
-    // Button Action
     if (unlockBtn) {
+        if (subStatus === 'premium') {
+            // Premium users: Hide the button entirely for clean UI
+            // They use AI Coach in Telegram chat instead
+            unlockBtn.style.display = 'none';
         } else {
             // FREE VIEW (Paywall)
             unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
