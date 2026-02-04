@@ -229,6 +229,13 @@ async function initDashboard(passedUser = null, timestamp = null) {
     
     renderAnalytics(userEntry, total, percentile, userStats);
 
+    // 7.5 Check and Display Ads (Free Users Only)
+    try {
+        await checkAndShowAd(user.id, userStats);
+    } catch (e) {
+        console.warn('Ad check failed (non-critical):', e);
+    }
+
     // 8. Update Wallet UI
     const walletEl = document.getElementById('walletBalance');
     if(walletEl && userStats) {
@@ -783,6 +790,74 @@ async function loadNotesMapping() {
         console.log("Notes Mapping Loaded:", Object.keys(NOTES_MAPPING).length);
     } catch (e) {
         console.error("Failed to load notes mapping:", e);
+    }
+}
+
+// --- AD INTEGRATION: Check and Display Monetag Ads ---
+async function checkAndShowAd(userId, userStats) {
+    // Only proceed if user data exists
+    if (!userId || userId === 0) {
+        console.log('❌ Ad skip: Guest user');
+        return;
+    }
+
+    // Quick client-side check: Skip premium users
+    if (userStats && userStats.subscription_status === 'premium') {
+        console.log('🚫 Ad skip: Premium user');
+        return;
+    }
+
+    try {
+        // Call backend API to check ad eligibility
+        const response = await fetch(`${API_BASE_URL}/api/check_ad?user_id=${userId}&placement=leaderboard`, {
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) {
+            console.warn('Ad API failed:', response.status);
+            return;
+        }
+
+        const data = await response.json();
+        
+        console.log('Ad check result:', data);
+
+        if (data.show_ad) {
+            // Display Monetag ad
+            displayMonetagAd(data.monetag_code);
+            console.log('✅ Ad displayed for user', userId);
+        } else {
+            console.log('❌ Ad skipped:', data.reason);
+        }
+    } catch (e) {
+        console.error('Ad check error:', e);
+    }
+}
+
+function displayMonetagAd(monetagCode) {
+    // If Monetag code is provided, inject it
+    if (monetagCode) {
+        // Create a container for the ad
+        const adContainer = document.createElement('div');
+        adContainer.id = 'monetag-ad-container';
+        adContainer.innerHTML = monetagCode;
+        
+        // Append to body (Monetag will handle positioning)
+        document.body.appendChild(adContainer);
+        
+        console.log('Monetag code injected');
+    } else {
+        // Fallback: Just trigger the global Monetag SDK if it exists
+        if (typeof window.show_10557666 === 'function') {
+            window.show_10557666({
+                type: 'inApp',
+                frequency: 1,
+                capping: 1
+            });
+            console.log('Monetag SDK triggered');
+        } else {
+            console.warn('Monetag SDK not loaded');
+        }
     }
 }
 
