@@ -845,18 +845,23 @@ function displayMonetagAd(monetagCode) {
         // Append to body (Monetag will handle positioning)
         document.body.appendChild(adContainer);
         
-        console.log('Monetag code injected');
+        console.log('✅ Monetag code injected');
     } else {
-        // Fallback: Just trigger the global Monetag SDK if it exists
+        // Fallback: Trigger the global Monetag SDK with CORRECT format
         if (typeof window.show_10557666 === 'function') {
             window.show_10557666({
                 type: 'inApp',
-                frequency: 1,
-                capping: 1
+                inAppSettings: {
+                    frequency: 1,      // Show 1 ad
+                    capping: 0.016,    // Within ~1 minute window
+                    interval: 0,       // No interval (immediate)
+                    timeout: 1,        // 1 second delay before showing
+                    everyPage: false   // Don't reset on navigation
+                }
             });
-            console.log('Monetag SDK triggered');
+            console.log('✅ Monetag In-App Interstitial triggered');
         } else {
-            console.warn('Monetag SDK not loaded');
+            console.warn('❌ Monetag SDK not loaded (check index.html script tag)');
         }
     }
 }
