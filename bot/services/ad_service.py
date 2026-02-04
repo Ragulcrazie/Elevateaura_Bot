@@ -189,46 +189,16 @@ class AdService:
     
     def get_monetag_code(self, placement: str) -> Optional[str]:
         """
-        Generate the Monetag ad display code for a specific placement.
-        Returns JavaScript code to inject.
+        SIMPLIFIED: Return None to let frontend handle ad display directly.
+        
+        Why this is smarter:
+        - Avoids script injection security issues (innerHTML doesn't execute <script>)
+        - Frontend already has correct Monetag SDK call in fallback
+        - Cleaner separation: Backend = eligibility, Frontend = display
+        - Faster (no backend processing, no large string transfer)
+        - Easier to maintain (one place for ad settings)
         """
-        
-        if not self.config.get("enabled", False):
-            return None
-        
-        publisher_id = self.config.get("monetag_publisher_id", "10557666")
-        
-        # Prepare In-App Interstitial settings (correct format per Monetag docs)
-        in_app_settings = {
-            "frequency": 1,      # Show 1 ad
-            "capping": 0.016,    # Within ~1 minute window
-            "interval": 0,       # No interval between ads
-            "timeout": 1,        # 1 second delay before showing
-            "everyPage": False   # Session persists
-        }
-        
-        # Generate JavaScript code with CORRECT format
-        js_code = f"""
-<script>
-(function() {{
-    try {{
-        if (typeof show_{publisher_id} === 'function') {{
-            show_{publisher_id}({{
-                type: 'inApp',
-                inAppSettings: {json.dumps(in_app_settings)}
-            }});
-            console.log('✅ Monetag In-App ad triggered from backend code');
-        }} else {{
-            console.warn('❌ Monetag SDK not loaded');
-        }}
-    }} catch(e) {{
-        console.error('Ad display error:', e);
-    }}
-}})();
-</script>
-        """.strip()
-        
-        return js_code
+        return None
     
     async def get_ad_stats(self, user_id: int, days: int = 7) -> Dict:
         """
