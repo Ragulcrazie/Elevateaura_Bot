@@ -92,80 +92,107 @@ class RankEngine:
              g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
         return g["full_name"]
 
-    def generate_ghost_data(self, ghosts, user_score):
-        """
-        Daily Leaderboard Generation.
-        """
+    def _calculate_dynamic_pace(self, base_score, user_pace, is_winning_ghost):
+        """Adjusts ghost pace to be competitive with the user."""
+        rng = random.Random(base_score)
+        if not user_pace or user_pace < 5: return rng.randint(25, 45)
+        if is_winning_ghost:
+            target = user_pace - rng.randint(1, 3)
+            return max(12, target) # Cap at human limit 12s
+        else:
+            return user_pace + rng.randint(4, 10)
+
+    def generate_ghost_data(self, ghosts, user_score, user_pace=None, god_mode=False):
+        """Daily Leaderboard Generation with PsyOps."""
         processed_ghosts = []
         now = self.get_ist_time()
         
         for g in ghosts:
             daily_score = self._calculate_single_day_score(g, now, is_completed_day=False)
-            
             final_name = self._ensure_ghost_name(g)
-            
-            # --- Pace Logic (Visual only) ---
-            rng = random.Random(f"{g['id']}_{now.strftime('%Y%m%d')}")
-            pace = 34
-            if daily_score > 300: pace = rng.randint(22, 35)
-            
             processed_ghosts.append({
-                "user_id": g["id"],
-                "full_name": final_name,
-                "total_score": daily_score,
-                "questions_answered": (daily_score // 10),
-                "average_pace": pace,
-                "is_ghost": True
+                "user_id": g["id"], "full_name": final_name,
+                "total_score": daily_score, "questions_answered": (daily_score // 10),
+                "temp_pace": 0, "is_ghost": True
             })
-            
+
+        # --- PSYCHOLOGICAL MANIPULATION ---
         processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
+        
+        # 1. God Mode (Force Loss)
+        if god_mode:
+            for i in range(3):
+                processed_ghosts[i]["total_score"] = 600
+                processed_ghosts[i]["questions_answered"] = 60
+
+        # 2. Rivalry (Boost to beat user)
+        if not god_mode and user_score > 400:
+            top = processed_ghosts[0]
+            if top["total_score"] < user_score:
+                boost = 10 if user_score < 600 else 0
+                top["total_score"] = min(600, user_score + boost)
+                top["questions_answered"] = top["total_score"] // 10
+
+        # 3. Hope Spot (Lower scores if user is losing)
+        if user_score < 200 and not god_mode:
+            for p in processed_ghosts[:5]:
+                if p["total_score"] > 450:
+                    p["total_score"] = random.randint(380, 440)
+                    p["questions_answered"] = p["total_score"] // 10
+
+        processed_ghosts.sort(key=lambda x: x["total_score"], reverse=True)
+        
+        # 4. Assign Dynamic Pace
+        for idx, p in enumerate(processed_ghosts):
+            is_top = (idx < 3)
+            p["average_pace"] = self._calculate_dynamic_pace(p["total_score"], user_pace, is_top)
+            
         return processed_ghosts
 
-    def generate_weekly_ghosts(self, ghosts, user_weekly_score):
-        """
-        Weekly Leaderboard: STRICT SUMMATION.
-        Weekly Score = Sum(Previous Days Daily Scores) + Today's Daily Score
-        """
+    def generate_weekly_ghosts(self, ghosts, user_weekly_score, user_pace=None, god_mode=False):
+        """Weekly Leaderboard with strict summation + PsyOps."""
         processed_ghosts = []
         now = self.get_ist_time()
         
-        # 1. Identify Start of Week (Monday)
-        # weekday(): Mon=0, Tue=1...
         days_to_subtract = now.weekday() 
         start_of_week = now - datetime.timedelta(days=days_to_subtract)
         
-        # FALLBACK for empty ghosts
-        # FALLBACK: If DB returned no ghosts, generate procedural ones
-        week_seed = f"{now.strftime('%Y_%W')}"
         if not ghosts:
-            ghosts = [{"id": 1000+i, "full_name": "" } for i in range(49)] # Match limit
-            # Note: We rely on the loop below to fill names via helper
+            ghosts = [{"id": 1000+i, "full_name": "" } for i in range(49)]
 
         for g in ghosts:
             total_weekly_score = 0
-            
-            # 2. Iterate from Monday up to Today
             for day_offset in range(days_to_subtract + 1):
                 target_date = start_of_week + datetime.timedelta(days=day_offset)
-                
-                # Is this today?
                 is_today = (target_date.date() == now.date())
-                
-                # If it's a past day, they completed it (True). 
-                # If it's today, they are in progress (False).
                 is_full = not is_today
-                
                 day_score = self._calculate_single_day_score(g, target_date, is_completed_day=is_full)
                 total_weekly_score += day_score
             
             final_name = self._ensure_ghost_name(g)
-
             processed_ghosts.append({
-                "user_id": g["id"],
-                "full_name": final_name,
-                "weekly_score": total_weekly_score,
-                "is_ghost": True
+                "user_id": g["id"], "full_name": final_name,
+                "weekly_score": total_weekly_score, "is_ghost": True
             })
             
         processed_ghosts.sort(key=lambda x: x["weekly_score"], reverse=True)
+
+        # --- PSYCHOLOGICAL MANIPULATION (Weekly) ---
+        if god_mode:
+            days_passed = days_to_subtract + 1
+            max_possible = days_passed * 600
+            for i in range(3):
+                processed_ghosts[i]["weekly_score"] = max_possible
+        
+        if not god_mode and user_weekly_score > 0:
+            top_score = processed_ghosts[0]["weekly_score"]
+            if top_score < user_weekly_score:
+                 processed_ghosts[0]["weekly_score"] = user_weekly_score + 20 # Rivalry
+        
+        processed_ghosts.sort(key=lambda x: x["weekly_score"], reverse=True)
+
+        for idx, p in enumerate(processed_ghosts):
+             is_top = (idx < 3)
+             p["average_pace"] = self._calculate_dynamic_pace(p["weekly_score"], user_pace, is_top)
+
         return processed_ghosts

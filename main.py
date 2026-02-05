@@ -638,12 +638,29 @@ async def get_ghosts_for_pack(request):
         if not pack_id:
             return web.json_response({"error": "Missing pack_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
         
-        # 1. Fetch User Score
+        # 1. Fetch User Score & Pace
         user_score = 0
+        user_pace = None
+        god_mode = False # TODO: Fetch from metadata (last_win_date)
+
         if user_id_str:
             try:
                 user_data = await db.get_user(int(user_id_str))
                 if user_data:
+                    # Fetch Pace (Stored in 'average_pace' column or metadata)
+                    # Assuming column exists or stored in metadata
+                    user_pace = user_data.get("average_pace")
+                    if not user_pace:
+                        # Fallback to metadata
+                        meta = user_data.get("metadata", {})
+                        user_pace = meta.get("average_pace", 30) # Default 30s
+                        
+                        # Check God Mode (Win Lockout)
+                        last_win = meta.get("last_win_epoch", 0)
+                        import time
+                        if time.time() - last_win < (7 * 24 * 3600): # Won in last 7 days
+                            god_mode = True
+
                     if mode == 'weekly':
                         user_score = user_data.get("weekly_score", 0) or 0
                     else:
@@ -654,15 +671,9 @@ async def get_ghosts_for_pack(request):
                         
                         last_active = saved_stats.get("last_active_date")
                         
-                        # We only trust the score if the date is EXACTLY today
                         if last_active == today_str:
-                            # Trust the JSON bucket first
                             user_score = saved_stats.get("daily_score", 0)
-                            # If JSON is 0 but DB column has value (migration edge case), check DB column
-                            # But strictly only if last_active matches. 
-                            # If last_active is stale, user_score stays 0.
                         else:
-                            # Stale date -> Force 0
                             user_score = 0
             except:
                 pass 
@@ -679,16 +690,12 @@ async def get_ghosts_for_pack(request):
         seed_val = int(f"{year}{week_num}{pack_id}")
         
         # --- FIXED LOGIC: Dynamic Total Count ---
-        # Don't assume 10,000. Fetch actual count to be 100% safe.
         try:
-            # Head=True gets count without data (fast)
             count_res = db.client.table("ghost_profiles").select("*", count="exact", head=True).execute()
             total_ghosts = count_res.count if count_res.count else 100
         except:
-            total_ghosts = 100 # Fallback
+            total_ghosts = 100 
             
-        # Ensure we have enough buffer (need 49 ghosts + User = 50 total)
-        # Wrap around using modulo on ACTUAL count
         if total_ghosts < 60:
             start_index = 0
             limit = min(total_ghosts, 49)
@@ -696,49 +703,46 @@ async def get_ghosts_for_pack(request):
             start_index = seed_val % (total_ghosts - 55)
             limit = 49
 
-        # DEFENSIVE: If calculated index is somehow invalid, reset to 0
         if start_index < 0: start_index = 0
 
         response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
         raw_ghosts = response.data if response.data else []
         
-        # FINAL FALLBACK: If still empty (e.g. range error), fetch first 50
         if not raw_ghosts:
              response = db.client.table("ghost_profiles").select("*").limit(50).execute()
              raw_ghosts = response.data if response.data else []
         
         # 3. Process Scores
         if mode == 'weekly':
-            # Generate Weekly Accumulated Scores
-            processed_ghosts = rank_engine.generate_weekly_ghosts(raw_ghosts, user_score)
+            # Generate Weekly Accumulated Scores with SMART RIVALRY
+            processed_ghosts = rank_engine.generate_weekly_ghosts(raw_ghosts, user_score, user_pace, god_mode)
             
             # Merge with Real Weekly Leaders (Top 5)
             real_leaders = await db.get_weekly_leaderboard(limit=5)
             for real in real_leaders:
-                # Avoid dupes if user is in top 5 (client handles user highlighting, but we need to ensure list is clean)
-                # Just transform real leaders to compatible format
-                if str(real.get('user_id')) == str(user_id_str): continue # Skip self, client adds self
+                if str(real.get('user_id')) == str(user_id_str): continue 
+                
+                # Check real user pace too?
+                real_pace = real.get("average_pace", 30)
                 
                 processed_ghosts.append({
                     "user_id": real['user_id'],
                     "full_name": real.get('first_name') or "Aspirant",
                     "weekly_score": real.get('weekly_score', 0),
+                    "average_pace": real_pace,
                     "is_ghost": False,
                     "is_user": False
                 })
             
-            # Re-sort mixed list
             processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
-            # Trim to 50
             processed_ghosts = processed_ghosts[:50]
             
-            # Map weekly_score to total_score for frontend compatibility
             for p in processed_ghosts:
                 p["total_score"] = p.get("weekly_score", 0)
                 
         else:
-            # Daily Logic
-            processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score)
+            # Daily Logic with SMART RIVALRY
+            processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score, user_pace, god_mode)
         
         return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
