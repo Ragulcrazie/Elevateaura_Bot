@@ -689,28 +689,35 @@ async def get_ghosts_for_pack(request):
         # SYNC: We want the SAME ghosts for both modes (Cohort feel)
         seed_val = int(f"{year}{week_num}{pack_id}")
         
-        # --- FIXED LOGIC: Dynamic Total Count ---
+        # --- FIXED LOGIC: Ensure 49 Ghosts for Total 50 items ---
         try:
             count_res = db.client.table("ghost_profiles").select("*", count="exact", head=True).execute()
             total_ghosts = count_res.count if count_res.count else 100
         except:
             total_ghosts = 100 
             
-        if total_ghosts < 60:
+        target_ghost_count = 49
+        
+        if total_ghosts < target_ghost_count + 10:
             start_index = 0
-            limit = min(total_ghosts, 49)
+            limit = min(total_ghosts, target_ghost_count)
         else:
-            start_index = seed_val % (total_ghosts - 55)
-            limit = 49
+            start_index = seed_val % (max(1, total_ghosts - target_ghost_count - 5))
+            limit = target_ghost_count
 
         if start_index < 0: start_index = 0
 
         response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
         raw_ghosts = response.data if response.data else []
         
-        if not raw_ghosts:
-             response = db.client.table("ghost_profiles").select("*").limit(50).execute()
-             raw_ghosts = response.data if response.data else []
+        # Padding if pool is empty or short
+        if len(raw_ghosts) < target_ghost_count:
+            needed = target_ghost_count - len(raw_ghosts)
+            for i in range(needed):
+                raw_ghosts.append({
+                    "id": 999000 + i, # Synthetic Range
+                    "full_name": ""   # Engine auto-names
+                })
         
         # 3. Process Scores
         if mode == 'weekly':
@@ -735,7 +742,7 @@ async def get_ghosts_for_pack(request):
                 })
             
             processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
-            processed_ghosts = processed_ghosts[:50]
+            processed_ghosts = processed_ghosts[:target_ghost_count] # Cap at 49 ghosts
             
             for p in processed_ghosts:
                 p["total_score"] = p.get("weekly_score", 0)
