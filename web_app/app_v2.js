@@ -671,19 +671,19 @@ function submitLead() {
 const upgradeBtnMain = document.getElementById('upgradeBtn');
 if (upgradeBtnMain) {
     upgradeBtnMain.addEventListener('click', () => {
-        // In real app, this calls /create_invoice
-        console.log("Upgrade Clicked");
-        
-        // MVP: Show Telegram Main Button as "Pay"
-        TgApp.MainButton.setText("PAY 500 STARS ⭐");
+        // Use the Telegram Main Button as a 'Confirm' for redemption
+        TgApp.MainButton.setText("REDEEM PREMIUM (99 ⭐)");
         TgApp.MainButton.show();
         
-        // Optional: Shake effect or specific logic
-        TgApp.HapticFeedback.notificationOccurred('success');
-        
-        // Show Payment Modal or Alert
-        // For now, let's just use native confirm to simulate
-        // const confirmed = confirm("Upgrade to Premium for Deep Analytics?");
+        TgApp.MainButton.onClick(() => {
+            TgApp.MainButton.hide();
+            // Trigger the existing logic from index.html
+            if (window.triggerPremiumRedemption) {
+                window.triggerPremiumRedemption();
+            } else {
+                alert("Please reload the app.");
+            }
+        });
     });
 }
 
