@@ -81,6 +81,13 @@ For Premium purchases:
   • Error logs and crash reports
   • Performance metrics
 
+1.6 Referral Data
+  
+  • If you join via a referral link, we store the ID of the person
+    who referred you.
+  • The referrer may be notified when you join or subscribe.
+  • No other private data (chats, phone) is shared with the referrer.
+
 ───────────────────────────────────────────────────────────────
 
 2. HOW WE USE YOUR INFORMATION
