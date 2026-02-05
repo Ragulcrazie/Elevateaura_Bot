@@ -94,13 +94,14 @@ class RankEngine:
 
     def _calculate_dynamic_pace(self, base_score, user_pace, is_winning_ghost):
         """Adjusts ghost pace to be competitive with the user."""
-        rng = random.Random(base_score)
-        if not user_pace or user_pace < 5: return rng.randint(25, 45)
+        # Removed seeding by score to prevent identical paces for identical scores
+        
+        if not user_pace or user_pace < 5: return random.randint(25, 45)
         if is_winning_ghost:
-            target = user_pace - rng.randint(1, 3)
+            target = user_pace - random.randint(1, 3)
             return max(12, target) # Cap at human limit 12s
         else:
-            return user_pace + rng.randint(4, 10)
+            return user_pace + random.randint(4, 10)
 
     def generate_ghost_data(self, ghosts, user_score, user_pace=None, god_mode=False):
         """Daily Leaderboard Generation with PsyOps."""
