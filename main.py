@@ -107,7 +107,26 @@ async def cmd_start(message: types.Message):
     }
     
     # Run DB operation
-    await db.upsert_user(user_data)
+    # Check for Referral Code
+    referrer_id = None
+    if args and args.startswith("ref_"):
+        try:
+            referrer_id = int(args.split("_")[1])
+            # Prevent self-referral
+            if referrer_id == user_id: 
+                referrer_id = None
+        except:
+            pass
+
+    # Update User Data
+    user_update = user_data.copy()
+    
+    # Only set referred_by if it's a NEW user and they don't have one
+    if is_new_user and referrer_id:
+        user_update["referred_by"] = referrer_id
+        logger.info(f"User {user_id} referred by {referrer_id}")
+
+    await db.upsert_user(user_update)
     
     # 2. Send Welcome Message
     # Create Layout
@@ -455,6 +474,16 @@ async def redeem_stars(request):
         }).eq("user_id", user_id).execute()
         
         if update_res.data:
+            # --- REFERRAL HOOK ---
+            # Trigger background task for referral reward
+            try:
+                 from bot.services.referral_service import process_referral_reward
+                 # Since this is aiohttp, we need to schedule it on the loop or run it
+                 # 'bot' variable is global in main.py
+                 asyncio.create_task(process_referral_reward(bot, int(user_id)))
+            except Exception as e:
+                 logger.error(f"Referral trigger failed: {e}")
+
             return web.json_response({
                 "success": True, 
                 "new_balance": current_balance - cost,

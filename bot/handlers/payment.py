@@ -139,6 +139,10 @@ async def process_successful_payment(message: Message):
             )
             
             logging.info(f"✅ Premium activated for {user_id} until {expiry_date}")
+
+            # --- REFERRAL HOOK ---
+            from bot.services.referral_service import process_referral_reward
+            await process_referral_reward(message.bot, user_id)
             
         except Exception as e:
             logging.error(f"DB Update Failed: {e}")
