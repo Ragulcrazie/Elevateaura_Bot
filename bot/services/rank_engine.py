@@ -92,16 +92,26 @@ class RankEngine:
              g["full_name"] = f"{rng_name.choice(names)} {rng_name.choice(surnames)}"
         return g["full_name"]
 
-    def _calculate_dynamic_pace(self, base_score, user_pace, is_winning_ghost):
+    def _calculate_dynamic_pace(self, ghost_id, base_score, user_pace, is_winning_ghost):
         """Adjusts ghost pace to be competitive with the user."""
-        # Removed seeding by score to prevent identical paces for identical scores
+        # V3: Deterministic Consistency based on Ghost ID + Date
+        # ensures same ghost has same pace in Daily vs Weekly for that day
+        today_ord = self.get_ist_time().toordinal()
+        seed_val = int(ghost_id) + today_ord
+        rng = random.Random(seed_val)
         
-        if not user_pace or user_pace < 5: return random.randint(25, 45)
+        if not user_pace or user_pace < 5: return rng.randint(25, 45)
+        
         if is_winning_ghost:
-            target = user_pace - random.randint(1, 3)
-            return max(12, target) # Cap at human limit 12s
+            # If user is fast, ensure variance so ghosts don't all clamp to 12s
+            offset = rng.randint(1, 4)
+            target = user_pace - offset
+            if target < 12:
+                # Spread out the elites (12, 13, 14, 15)
+                return 12 + rng.randint(0, 3)
+            return target
         else:
-            return user_pace + random.randint(4, 10)
+            return user_pace + rng.randint(4, 10)
 
     def generate_ghost_data(self, ghosts, user_score, user_pace=None, god_mode=False):
         """Daily Leaderboard Generation with PsyOps."""
@@ -146,7 +156,7 @@ class RankEngine:
         # 4. Assign Dynamic Pace
         for idx, p in enumerate(processed_ghosts):
             is_top = (idx < 3)
-            p["average_pace"] = self._calculate_dynamic_pace(p["total_score"], user_pace, is_top)
+            p["average_pace"] = self._calculate_dynamic_pace(p["user_id"], p["total_score"], user_pace, is_top)
             
         return processed_ghosts
 
@@ -194,6 +204,6 @@ class RankEngine:
 
         for idx, p in enumerate(processed_ghosts):
              is_top = (idx < 3)
-             p["average_pace"] = self._calculate_dynamic_pace(p["weekly_score"], user_pace, is_top)
+             p["average_pace"] = self._calculate_dynamic_pace(p["user_id"], p["weekly_score"], user_pace, is_top)
 
         return processed_ghosts
