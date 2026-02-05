@@ -149,7 +149,7 @@ async def cmd_start(message: types.Message):
             f"👋 **Hello {full_name}!**\n\n"
             "To use **Elevate Aura**, you must accept our updated Terms & Privacy Policy.\n\n"
             "🛡️ **Your Data is Safe:** We only store your scores and generic profile info as per GDPR/CCPA standards.\n\n"
-            "⚠️ **Virtual Currency:** Aura Credits have no cash value.\n\n"
+            "⚠️ **Virtual Currency:** Credits are digital assets subject to platform terms.\n\n"
             "Please confirm you agree to continue:",
             reply_markup=terms_kb.as_markup(),
             parse_mode="Markdown"
