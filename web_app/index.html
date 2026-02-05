@@ -95,6 +95,11 @@
             </button>
         </div>
         
+        <button onclick="triggerShareInvite()" class="w-full mt-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs font-bold py-2 rounded-lg flex items-center justify-center transition active:scale-95">
+            <span class="mr-2">🎁</span> Invite Friends & Earn 50 ⭐
+        </button>
+
+        
         <!-- Background Decor -->
         <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-yellow-500/5 rounded-full blur-2xl pointer-events-none"></div>
     </div>
@@ -634,6 +639,31 @@
         } catch (e) {
             document.body.style.cursor = 'default';
             alert(`Network Error: ${e.message}`);
+        }
+    };
+
+    window.triggerShareInvite = function() {
+        if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+        
+        // Get user ID safely
+        let userId = null;
+        if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
+        else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
+        
+        if (!userId) {
+            alert("⚠️ Please open inside Telegram to invite friends.");
+            return;
+        }
+
+        const inviteLink = `https://t.me/ElevateAura_Bot?start=ref_${userId}`;
+        const msg = encodeURIComponent(`🔥 Join Elevate Aura to master your exams!\n\nUse my link to get a head start.\n\n👇 Join Now:\n${inviteLink}`);
+        const url = `https://t.me/share/url?url=${inviteLink}&text=${msg}`;
+        
+        // Use Telegram Web App native way if possible, or open link
+        if (tg && tg.openTelegramLink) {
+            tg.openTelegramLink(url);
+        } else {
+            window.open(url, '_blank');
         }
     };
     </script>
