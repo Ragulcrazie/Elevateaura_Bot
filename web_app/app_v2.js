@@ -262,7 +262,9 @@ async function initDashboard(passedUser = null, timestamp = null) {
 
 function renderHeader(name) {
     const el = document.getElementById('userNameDisplay');
-    if(el) el.innerText = `Hello, ${name}`;
+    if(el) {
+        el.innerHTML = `Hello, ${name} <button onclick="editProfileName()" class="opacity-50 hover:opacity-100 text-xs bg-gray-700 px-1 rounded animate-pulse">✏️</button>`;
+    }
 }
 
 
