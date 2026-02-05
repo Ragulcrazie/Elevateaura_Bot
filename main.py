@@ -179,9 +179,11 @@ async def cmd_start(message: types.Message):
     
     await message.answer(
         f"👋 **Welcome Back, {full_name}!**\n\n"
-        "🚀 **Your Goal**: Prove your worth in the Daily Quiz Arena.\n"
-        "⚔️ **Your Competition**: 500+ Active Aspirants are competing right now.\n\n"
-        "👇 **Open your Dashboard to see Ranks & Stats:**",
+        "🇬🇧 **ENGLISH:**\n"
+        "Ready to perform? Open your Dashboard to check Ranks & Start Quizzes.\n\n"
+        "🇮🇳 **HINDI:**\n"
+        "तैयार हैं? रैंक देखने और क्विज़ शुरू करने के लिए डैशबोर्ड खोलें।\n\n"
+        "👇 **Action Center / एक्शन सेंटर:**",
         reply_markup=builder.as_markup(),
         parse_mode="Markdown"
     )
@@ -260,9 +262,18 @@ async def cb_agree_terms(callback: types.CallbackQuery):
     builder.adjust(1)
     
     await callback.message.edit_text(
-        f"✅ **You're In! Welcome, {full_name}.**\n\n"
-        "🚀 **Your Goal**: Prove your worth in the Daily Quiz Arena.\n"
-        "👇 **Get Started:**",
+        f"👋 **Welcome to Elevate Aura, {full_name}!**\n"
+        "*(The Ultimate Daily Quiz Arena)*\n\n"
+        "🇬🇧 **ENGLISH:**\n"
+        "1. **Play Daily Quizzes:** Sharpen your skills in GK, Math & English.\n"
+        "2. **Climb the Leaderboard:** Compete with 500+ active aspirants.\n"
+        "3. **Unlock Premium:** Earn 'Aura Credits' to get exclusive Notes & Mentorship.\n\n"
+        "───────────────\n\n"
+        "🇮🇳 **HINDI / हिंदी:**\n"
+        "1. **रोज़ाना क्विज़ खेलें:** सामान्य ज्ञान, गणित और अंग्रेजी में पकड़ मजबूत करें।\n"
+        "2. **लीडरबोर्ड पर छा जाएं:** हज़ारों छात्रों के साथ मुकाबला करें।\n"
+        "3. **प्रीमियम अनलॉक करें:** 'औरा क्रेडिट्स' से खास नोट्स और गाइडेंस पाएं।\n\n"
+        "👇 **Start Your Journey / अपनी यात्रा शुरू करें:**",
         reply_markup=builder.as_markup(),
         parse_mode="Markdown"
     )
