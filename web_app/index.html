@@ -37,7 +37,10 @@
     
     <div class="flex justify-between items-center mb-4 px-2">
         <div>
-            <h1 id="userNameDisplay" class="text-lg font-bold">Hello, Aspirant</h1>
+            <h1 id="userNameDisplay" class="text-lg font-bold inline-flex items-center gap-2">
+                Hello, Aspirant 
+                <button onclick="editProfileName()" class="opacity-50 hover:opacity-100 text-xs bg-gray-700 px-1 rounded animate-pulse">✏️</button>
+            </h1>
             <div id="dateDisplay" class="text-xs text-gray-400">Loading Date...</div>
         </div>
         <div class="flex items-center space-x-2">
@@ -500,6 +503,38 @@
              initDashboard({ id: currentUserEntry.id, first_name: currentUserEntry.full_name });
         } else {
             initDashboard(null);
+        }
+    };
+
+    window.editProfileName = async function() {
+        if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+        
+        let currentName = document.getElementById('userNameDisplay').innerText.replace("Hello, ", "").replace("✏️", "").trim();
+        let newName = prompt("📝 Create your 'Secret Identity':\n\nEnter a display name for the Leaderboard:", currentName);
+        
+        if (newName && newName.trim() !== "" && newName !== currentName) {
+            // Optimistic update
+            document.getElementById('userNameDisplay').innerHTML = `Hello, ${newName} <button onclick="editProfileName()" class="opacity-50 hover:opacity-100 text-xs bg-gray-700 px-1 rounded">✏️</button>`;
+            
+            try {
+                // Safe User ID Retrieval (same as redemption)
+                let userId = null;
+                if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
+                else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
+                else {
+                     const urlParams = new URLSearchParams(window.location.search);
+                     userId = urlParams.get('user_id');
+                }
+
+                if(userId) {
+                    await fetch(`${API_BASE_URL}/api/update_name`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ user_id: userId, new_name: newName })
+                    });
+                    if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                }
+            } catch(e) { console.error(e); }
         }
     };
 

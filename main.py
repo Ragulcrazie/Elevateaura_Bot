@@ -468,6 +468,34 @@ async def redeem_stars(request):
         logger.error(f"Redeem Error: {e}")
         return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
 
+async def update_name(request):
+    """
+    Update User Display Name.
+    Body: { user_id: 123, new_name: "Warrior_007" }
+    """
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        new_name = data.get("new_name")
+        
+        if not user_id or not new_name:
+            return web.json_response({"error": "Invalid request"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+            
+        # Sanitize: Max 20 chars, no crazy symbols
+        new_name = new_name.strip()[:20]
+        
+        # Update DB
+        res = db.client.from_("users").update({"first_name": new_name}).eq("user_id", user_id).execute()
+        
+        if res.data:
+            return web.json_response({"success": True, "name": new_name}, headers={"Access-Control-Allow-Origin": "*"})
+        else:
+            return web.json_response({"error": "Update failed"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+    except Exception as e:
+        logger.error(f"Name Update Error: {e}")
+        return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
 async def get_ghosts_for_pack(request):
     try:
         pack_id = request.query.get("pack_id")
@@ -735,6 +763,10 @@ async def start_web_server():
     # Redemption Route
     app.router.add_options('/api/redeem_stars', handle_options)
     app.router.add_post('/api/redeem_stars', redeem_stars)
+
+    # Name Update Route
+    app.router.add_options('/api/update_name', handle_options)
+    app.router.add_post('/api/update_name', update_name)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
