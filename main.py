@@ -94,6 +94,7 @@ async def cmd_start(message: types.Message):
     # 1. Register/Update User in DB
     # Fetch existing to avoid overwriting stats (like questions_answered) with defaults
     existing_user = await db.get_user(user_id)
+    is_new_user = (existing_user is None)
     
     user_data = {
         "user_id": user_id,
@@ -126,7 +127,12 @@ async def cmd_start(message: types.Message):
         user_update["referred_by"] = referrer_id
         logger.info(f"User {user_id} referred by {referrer_id}")
 
-    await db.upsert_user(user_update)
+    try:
+        await db.upsert_user(user_update)
+    except Exception as e:
+        logger.error(f"Failed to register user: {e}")
+        # Proceed anyway so the user gets the welcome message
+
     
     # 2. Send Welcome Message
     # Create Layout
@@ -144,8 +150,10 @@ async def cmd_start(message: types.Message):
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
     builder.adjust(1)
     
+    
     # Check if this is a new user (first time using bot)
-    is_new_user = (existing_user is None)
+    # is_new_user variable is defined at top of function
+
     
     await message.answer(
         f"👋 **Hello {full_name}! Welcome to Elevate Aura.**\n\n"
