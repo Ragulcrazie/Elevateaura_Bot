@@ -205,7 +205,8 @@ async function initDashboard(passedUser = null, timestamp = null) {
         total_score: userStats ? userStats.total_score : 0,
         is_user: true,
         id: user.id, // Needed for payment
-        rank: 0 // Will calc
+        rank: 0, // Will calc
+        average_pace: userStats ? userStats.average_pace : 34
     };
     
     leaderboard.push(userEntry);
