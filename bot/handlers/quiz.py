@@ -878,6 +878,6 @@ async def show_premium_leaderboard(callback: types.CallbackQuery):
     link = await generate_invoice_link(callback.message.bot, callback.from_user.id)
     
     builder = InlineKeyboardBuilder()
-    builder.button(text="🔓 Unlock Premium (89 ⭐)", url=link)
+    builder.button(text="🔓 Unlock Premium (99 ⭐)", url=link)
     
     await callback.message.answer(msg, reply_markup=builder.as_markup(), parse_mode="Markdown")

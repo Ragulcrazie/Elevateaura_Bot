@@ -479,7 +479,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             unlockBtn.style.display = 'none';
         } else {
             // FREE VIEW (Paywall)
-            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
+            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (99 ⭐)`;
             unlockBtn.onclick = () => {
                 if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
                 
@@ -505,7 +505,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                                 alert("Payment processing...");
                             } else {
                                 // Cancelled or failed
-                                unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (89 ⭐)`;
+                                unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (99 ⭐)`;
                             }
                         });
                     } else {
