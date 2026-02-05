@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 router = Router()
 
 # CONFIG
-PRICE_STARS = 89
+PRICE_STARS = 99
 PRODUCT_TITLE = "Elevate Aura Premium"
 
 # Dynamic Description Logic
@@ -30,10 +30,10 @@ def get_product_description():
         "Know why your rank falls after each test.\n\n"
         "🤖 **AI Coach**\n"
         "Stops wasted study. Tells you what to revise today.\n\n"
-        "💸 **WHY 89 ⭐ IS NOTHING**\n"
+        "💸 **WHY 99 ⭐ IS NOTHING**\n"
         "❌ Outside mock → ₹150+\n"
         "❌ Coaching PDF → ₹99\n"
-        "✅ **Premium → 89 Stars**\n"
+        "✅ **Premium → 99 Stars**\n"
         "Cheaper than a snack. Smarter than free practice.\n\n"
         "-----------------------------\n"
         "🇮🇳 **हिंदी** (CLEAN & MATCHED)\n\n"
@@ -46,13 +46,13 @@ def get_product_description():
         "हर टेस्ट के बाद रैंक क्यों गिरी।\n\n"
         "🤖 **AI Coach**\n"
         "बेकार पढ़ाई बंद। आज क्या पढ़ना है बताए।\n\n"
-        "💸 89 ⭐ महँगा नहीं है\n"
+        "💸 99 ⭐ महँगा नहीं है\n"
         "❌ बाहर का mock → ₹150+\n"
         "❌ Coaching PDF → ₹99\n"
-        "✅ **Premium → 89 Stars**\n"
+        "✅ **Premium → 99 Stars**\n"
         "नाश्ते से सस्ता। गलत practice से बेहतर।\n\n"
         f"🔥 Join {current_members:,} elite aspirants today.\n"
-        "👉 **Unlock Premium – 89 ⭐**"
+        "👉 **Unlock Premium – 99 ⭐**"
     )
 
 # 1. Invoice Link Generator
@@ -83,25 +83,63 @@ async def process_successful_payment(message: Message):
     connected = await db.connect()
     
     if connected:
-        # Calculate Expiry (Now + 30 Days)
-        # In a real app, strict timezone handling is needed. simplified here.
-        new_expiry = (datetime.utcnow() + timedelta(days=30)).isoformat()
-        
-        # Update DB
-        # We save 'premium' status AND the expiry date
-        # If column doesn't exist yet, this might error, but we asked user to run SQL.
+        # Get current user data to check existing subscription
         try:
+            user_data = db.client.from_("users").select("*").eq("user_id", user_id).execute()
+            current_expiry = None
+            total_payments = 0
+            started_at = None
+            
+            if user_data.data and len(user_data.data) > 0:
+                user = user_data.data[0]
+                current_expiry_str = user.get('subscription_expires_at')
+                total_payments = user.get('total_payments', 0)
+                started_at = user.get('subscription_started_at')
+                
+                # Parse existing expiry if it exists and is in future
+                if current_expiry_str:
+                    try:
+                        current_expiry = datetime.fromisoformat(current_expiry_str.replace('Z', '+00:00'))
+                    except:
+                        current_expiry = None
+            
+            # Calculate new expiry (extend from original expiry if still valid)
+            now = datetime.utcnow()
+            if current_expiry and current_expiry > now:
+                # Extend from existing expiry
+                new_expiry = current_expiry + timedelta(days=30)
+            else:
+                # New subscription or expired - start from now
+                new_expiry = now + timedelta(days=30)
+                if not started_at:
+                    started_at = now.isoformat()
+            
+            # Update DB with all tracking fields
             db.client.from_("users").update({
                 "subscription_status": "premium",
-                "subscription_expiry": new_expiry
+                "subscription_expires_at": new_expiry.isoformat(),
+                "subscription_started_at": started_at,
+                "last_payment_date": now.isoformat(),
+                "total_payments": total_payments + 1,
+                "expiration_warning_sent": False  # Reset warning flag
             }).eq("user_id", user_id).execute()
+            
+            expiry_date = new_expiry.strftime("%d %b %Y")
             
             await message.answer(
                 "🎉 **PAYMENT SUCCESSFUL!**\n\n"
-                "✅ **Premium Activated for 30 Days**\n"
-                "Your access is valid until next month.\n\n"
+                f"✅ **Premium Activated Until {expiry_date}**\n"
+                "Your access is valid for 30 days.\n\n"
+                "🚀 **What's Unlocked:**\n"
+                "• Zero Ads\n"
+                "• Full Weak Topic Names\n"
+                "• AI Coach Access\n"
+                "• Premium Analytics\n\n"
                 "Launch the Dashboard to see your new powers! 🚀"
             )
+            
+            logging.info(f"✅ Premium activated for {user_id} until {expiry_date}")
+            
         except Exception as e:
             logging.error(f"DB Update Failed: {e}")
             await message.answer("⚠️ Payment received, but we couldn't update your status instantly. Contact Admin.")

@@ -276,8 +276,18 @@ async def get_user_data(request):
         return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
     
     try:
+        from bot.services.subscription_service import SubscriptionService
+        
         user_data = await db.get_user(int(user_id))
         if user_data:
+            # Check subscription expiration first
+            sub_service = SubscriptionService()
+            sub_status = await sub_service.check_and_update_expiration(int(user_id))
+            
+            # Refresh user_data if subscription was just expired
+            if sub_status.get("expired"):
+                user_data = await db.get_user(int(user_id))
+            
             # Simple Pack Logic: 1200 rating -> Pack 12
             # Default to Pack 10 (Rating 1000) if no rating
             rating = user_data.get("skill_rating", 1200) # Assuming default 1200
@@ -749,6 +759,11 @@ async def main():
     from bot.handlers.weekly_rewards import start_weekly_scheduler
     asyncio.create_task(start_weekly_scheduler(bot))
     logger.info("Weekly rewards scheduler started")
+    
+    # Start Subscription Notification Scheduler
+    from bot.handlers.subscription_scheduler import start_subscription_notification_scheduler
+    asyncio.create_task(start_subscription_notification_scheduler(bot))
+    logger.info("Subscription notification scheduler started")
     
     # Verify DB connection
     connected = await db.connect()
