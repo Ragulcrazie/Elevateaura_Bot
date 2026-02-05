@@ -262,8 +262,8 @@ async def cmd_support(message: types.Message):
     await message.answer(
         "🛠 **Elevate Aura Support**\n\n"
         "Need help with Premium, Payments, or Bugs?\n\n"
-        "👉 Contact Admin: @RagulCrazie\n"
-        "📧 Email: support@elevateaura.com (Optional)\n\n"
+        "📧 Email: reviewerelevateaura@gmail.com\n"
+        "⏳ Response Time: Within 24 hrs\n\n"
         "Please provide your User ID when contacting us."
     )
 
