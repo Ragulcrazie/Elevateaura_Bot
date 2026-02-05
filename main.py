@@ -379,6 +379,82 @@ async def get_user_data(request):
         logger.error(f"API Error: {e}")
         return web.json_response({"error": "Internal Server Error"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
 
+async def redeem_stars(request):
+    """
+    Handle Star Redemption for Premium.
+    Body: { user_id: 123, plan: 'monthly' | 'yearly' }
+    """
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        plan = data.get("plan") # 'monthly' or 'yearly'
+        
+        if not user_id or plan not in ['monthly', 'yearly']:
+            return web.json_response({"error": "Invalid request"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+            
+        # Pricing
+        cost = 99 if plan == 'monthly' else 999
+        days_to_add = 30 if plan == 'monthly' else 365
+        
+        # 1. Get User Data
+        user_res = db.client.from_("users").select("wallet_stars, subscription_status, subscription_expires_at").eq("user_id", user_id).execute()
+        
+        if not user_res.data:
+            return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
+            
+        user = user_res.data[0]
+        current_balance = user.get("wallet_stars", 0) or 0
+        
+        # 2. Check Balance
+        if current_balance < cost:
+            return web.json_response({"error": "Insufficient balance"}, status=402, headers={"Access-Control-Allow-Origin": "*"})
+            
+        # 3. Calculate New Expiry
+        from datetime import datetime, timedelta
+        
+        expiry_str = user.get("subscription_expires_at")
+        now = datetime.utcnow()
+        
+        if expiry_str:
+            try:
+                current_expiry = datetime.fromisoformat(expiry_str.replace('Z', '+00:00'))
+                # If active, extend from expiry. If expired, start from now.
+                # Use replace(tzinfo=None) to ensure comparison works if one is offset-naive
+                if current_expiry > now:
+                     start_date = current_expiry
+                else:
+                     start_date = now
+            except:
+                start_date = now
+        else:
+            start_date = now
+            
+        new_expiry = start_date + timedelta(days=days_to_add)
+        
+        # 4. Execute Transaction (Deduct Stars + Grant Premium)
+        update_res = db.client.from_("users").update({
+            "wallet_stars": current_balance - cost,
+            "subscription_status": "premium",
+            "subscription_expires_at": new_expiry.isoformat(),
+            "last_payment_date": now.isoformat(), # Track as payment
+            "total_payments": (user.get("total_payments", 0) or 0) + 1,
+            "expiration_warning_sent": False # Reset warning
+        }).eq("user_id", user_id).execute()
+        
+        if update_res.data:
+            return web.json_response({
+                "success": True, 
+                "new_balance": current_balance - cost,
+                "new_expiry": new_expiry.isoformat(),
+                "days_added": days_to_add
+            }, headers={"Access-Control-Allow-Origin": "*"})
+        else:
+            return web.json_response({"error": "Update failed"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+    except Exception as e:
+        logger.error(f"Redeem Error: {e}")
+        return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
 async def get_ghosts_for_pack(request):
     try:
         pack_id = request.query.get("pack_id")
@@ -642,6 +718,10 @@ async def start_web_server():
     # Lead Capture Route
     app.router.add_options('/api/save_lead', handle_options)
     app.router.add_post('/api/save_lead', save_lead_api)
+
+    # Redemption Route
+    app.router.add_options('/api/redeem_stars', handle_options)
+    app.router.add_post('/api/redeem_stars', redeem_stars)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"

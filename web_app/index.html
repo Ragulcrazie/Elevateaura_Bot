@@ -508,21 +508,86 @@
         alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
     };
 
-    window.triggerRedemption = function() {
+    window.triggerRedemption = async function() {
         if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
         
         const balance = parseInt(document.getElementById('walletBalance').innerText);
         
-        if (balance < 75) {
-            alert(`Insufficient Balance!\n\nYou have ${balance} Stars.\nNeed 75 Stars for a 7-Day Pass.\n\nPlay more to earn.`);
+        // 1. Check Minimum
+        if (balance < 99) {
+            alert(`Insufficient Balance!\n\nYou have ${balance} Stars.\n\nNeed:\n• 99 Stars for Monthly Premium\n• 999 Stars for Yearly Premium\n\nPlay and Win Leaderboards to earn.`);
             return;
         }
         
-        const confirmRedeem = confirm(`💎 Redeem Reward?\n\nSpend 75 Stars to extend your Premium Validation by 7 Days?\n\nCurrent Balance: ${balance}`);
+        // 2. Determine Plan via Prompt (Simple UI)
+        let plan = 'monthly';
+        let cost = 99;
         
-        if (confirmRedeem) {
-            alert("✅ Success! Subscription Extended.\n\n(This is a simulation. In prod, this deducts stars and updates DB).");
-            document.getElementById('walletBalance').innerText = balance - 75;
+        if (balance >= 999) {
+            const choice = prompt(`💎 Choose Redemption Plan:\n\nType '1' for Monthly (99 Stars)\nType '2' for Yearly (999 Stars)\n\nCurrent Balance: ${balance}`);
+            if (choice === '2') {
+                plan = 'yearly';
+                cost = 999;
+            } else if (choice !== '1') {
+                return; // Cancelled
+            }
+        } else {
+             const confirmMonthly = confirm(`💎 Redeem Monthly Premium?\n\nSpend 99 Stars for 30 Days of Premium?\n\nCurrent Balance: ${balance}`);
+             if (!confirmMonthly) return;
+        }
+        
+        // 3. Final Confirm
+        if (plan === 'yearly') {
+            const really = confirm(`💎 Confirm Yearly Redemption?\n\nSpend 999 Stars for 365 Days?\n\nThis will deduct from your balance.`);
+            if (!really) return;
+        }
+
+        // 4. API Call
+        try {
+            // Show loading state?
+            document.body.style.cursor = 'wait';
+            
+            // Safe User ID Retrieval (Avoid ReferenceError)
+            let userId = null;
+            if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) {
+                userId = tg.initDataUnsafe.user.id;
+            } else if (typeof currentUserEntry !== 'undefined' && currentUserEntry && currentUserEntry.id) {
+                userId = currentUserEntry.id;
+            } else {
+                // Try URL params as last resort (Test Mode)
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('user_id')) userId = urlParams.get('user_id');
+            }
+
+            if (!userId) {
+                alert("Login Error: User ID missing. Open in Telegram.");
+                document.body.style.cursor = 'default';
+                return;
+            }
+
+            const response = await fetch(`${API_BASE_URL}/api/redeem_stars`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId, plan: plan })
+            });
+            
+            const result = await response.json();
+            
+            document.body.style.cursor = 'default';
+            
+            if (result.success) {
+                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                alert(`✅ REDEMPTION SUCCESSFUL!\n\nAdded ${result.days_added} Days of Premium.\nNew Balance: ${result.new_balance}`);
+                 document.getElementById('walletBalance').innerText = result.new_balance;
+                 // Ideally reload to update premium UI, but just balance is fine for now
+            } else {
+                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+                alert(`❌ Redemption Failed: ${result.error}`);
+            }
+            
+        } catch (e) {
+            document.body.style.cursor = 'default';
+            alert(`Network Error: ${e.message}`);
         }
     };
     </script>
