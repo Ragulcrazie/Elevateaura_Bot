@@ -87,7 +87,7 @@
             <button onclick="triggerMaintenancePopup()" class="flex-1 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-bold py-2 rounded-lg border border-gray-600 transition flex items-center justify-center group">
                 <span class="mr-1 group-hover:scale-110 transition">🏦</span> Withdraw
             </button>
-            <button onclick="triggerRedemption()" class="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-xs font-bold py-2 rounded-lg shadow-lg flex items-center justify-center active:scale-95 transition">
+            <button onclick="triggerPremiumRedemption()" class="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-xs font-bold py-2 rounded-lg shadow-lg flex items-center justify-center active:scale-95 transition">
                 <span class="mr-1">✨</span> Redeem Premium
             </button>
         </div>
@@ -508,7 +508,7 @@
         alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
     };
 
-    window.triggerRedemption = async function() {
+    window.triggerPremiumRedemption = async function() {
         console.log("Redemption V2 Function Called");
         if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
         
@@ -525,7 +525,7 @@
         let cost = 99;
         
         if (balance >= 999) {
-            const choice = prompt(`💎 Choose Redemption Plan:\n\nType '1' for Monthly (99 Stars)\nType '2' for Yearly (999 Stars)\n\nCurrent Balance: ${balance}`);
+            const choice = prompt(`💎 Choose Redemption Plan (V2):\n\nType '1' for Monthly (99 Stars)\nType '2' for Yearly (999 Stars)\n\nCurrent Balance: ${balance}`);
             if (choice === '2') {
                 plan = 'yearly';
                 cost = 999;
@@ -533,7 +533,7 @@
                 return; // Cancelled
             }
         } else {
-             const confirmMonthly = confirm(`💎 Redeem Monthly Premium?\n\nSpend 99 Stars for 30 Days of Premium?\n\nCurrent Balance: ${balance}`);
+             const confirmMonthly = confirm(`💎 Redeem Monthly Premium (V2)?\n\nSpend 99 Stars for 30 Days of Premium?\n\nCurrent Balance: ${balance}`);
              if (!confirmMonthly) return;
         }
         
