@@ -185,7 +185,8 @@ class SupabaseClient:
                 "current_streak": new_score,
                 "quiz_state": quiz_state,
                 "weekly_score": new_weekly_score, # V2 Column
-                "metadata": metadata
+                "metadata": metadata,
+                "average_pace": round(new_pace, 2) # UPDATE MAIN COLUMN
             }
             
             # 4. CRASH-PROOF UPSERT STRATEGY

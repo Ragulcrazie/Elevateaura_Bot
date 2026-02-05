@@ -454,7 +454,7 @@ async def get_user_data(request):
             if last_active != today_str and not has_score_today:
                 # New day, but user hasn't played yet. Return 0 stats.
                 derived_q_answered = 0
-                db_pace = 0
+                db_pace = user_data.get("average_pace") or saved_stats.get("average_pace") or 0
                 daily_score = 0
                 weak_spots = {}
                 potential_score = 0
