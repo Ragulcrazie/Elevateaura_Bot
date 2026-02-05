@@ -95,11 +95,16 @@ async def credit_weekly_rewards(bot: Bot):
         current_wallet = user.get('wallet_stars', 0) or 0
         new_wallet = current_wallet + bonus
         
-        # Update wallet and upgrade to premium
+        from datetime import datetime, timedelta
+        expiry_date = (datetime.utcnow() + timedelta(days=days)).isoformat()
+
+        # Update wallet and upgrade to premium with expiration
         await db.upsert_user({
             "user_id": user_id,
             "wallet_stars": new_wallet,
-            "subscription_status": "premium"  # Always upgrade winner
+            "subscription_status": "premium",
+            "subscription_expires_at": expiry_date,
+            "last_payment_date": datetime.utcnow().isoformat()
         })
         
         logger.info(f"Credited ₹{bonus} to winner {user_id}")

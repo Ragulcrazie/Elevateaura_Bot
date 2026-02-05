@@ -254,6 +254,19 @@ async def cmd_privacy(message: types.Message):
         logger.error(f"Error reading privacy policy: {e}")
         await message.answer("❌ Error loading Privacy Policy. Please try again later.")
 
+@dp.message(Command("support"))
+async def cmd_support(message: types.Message):
+    """
+    Support Contact Info
+    """
+    await message.answer(
+        "🛠 **Elevate Aura Support**\n\n"
+        "Need help with Premium, Payments, or Bugs?\n\n"
+        "👉 Contact Admin: @RagulCrazie\n"
+        "📧 Email: support@elevateaura.com (Optional)\n\n"
+        "Please provide your User ID when contacting us."
+    )
+
 # --- Keep Alive Server for Render ---
 from aiohttp import web
 
