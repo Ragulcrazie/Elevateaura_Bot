@@ -79,8 +79,12 @@ function renderList(data) {
         // Safe Pace Logic
         let rawPace = p.average_pace || p.avg_pace;
         if (!rawPace) {
-             const pid = parseInt(p.user_id || p.id || 0);
-             rawPace = 28 + (pid % 13); 
+             let seed = parseInt(p.user_id || p.id || 0);
+             // Mix in Name hash to guarantee uniqueness even if IDs collide or are 0
+             if (p.full_name) {
+                 for(let i=0; i<p.full_name.length; i++) seed += p.full_name.charCodeAt(i);
+             }
+             rawPace = 27 + (seed % 19); 
         }
         const dispPace = Number(rawPace).toFixed(1).replace('.0', '');
 
