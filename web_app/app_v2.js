@@ -77,9 +77,9 @@ function renderList(data) {
         let subtitle = "Aspirant"; 
         
         if (isUser) {
-            subtitle = `⚡ Pace: ${p.avg_pace || 34}s`;
+            subtitle = `⚡ Pace: ${p.average_pace || p.avg_pace || 34}s`;
         } else if (rank <= 3) {
-            subtitle = `⚡ Pace: ${p.avg_pace || 34}s`; 
+            subtitle = `⚡ Pace: ${p.average_pace || p.avg_pace || 34}s`; 
         }
         
         const el = document.createElement('div');
