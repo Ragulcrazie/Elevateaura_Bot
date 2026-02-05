@@ -134,7 +134,29 @@ async def cmd_start(message: types.Message):
         # Proceed anyway so the user gets the welcome message
 
     
-    # 2. Send Welcome Message
+    # 2. Terms Check
+    terms_accepted = existing_user.get("terms_accepted", False) if existing_user else False
+    
+    if not terms_accepted:
+        # Show Terms Agreement Screen INSTEAD of Main Menu
+        terms_kb = InlineKeyboardBuilder()
+        terms_kb.button(text="📄 Read Terms", callback_data="read_terms_summary")
+        terms_kb.button(text="🔒 Privacy Policy", callback_data="read_privacy_summary")
+        terms_kb.button(text="✅ I AGREE & CONTINUE", callback_data="agree_terms_action")
+        terms_kb.adjust(2, 1) # 2 buttons top, 1 big button bottom
+        
+        await message.answer(
+            f"👋 **Hello {full_name}!**\n\n"
+            "To use **Elevate Aura**, you must accept our updated Terms & Privacy Policy.\n\n"
+            "🛡️ **Your Data is Safe:** We only store your scores and generic profile info as per GDPR/CCPA standards.\n\n"
+            "⚠️ **Virtual Currency:** Aura Credits have no cash value.\n\n"
+            "Please confirm you agree to continue:",
+            reply_markup=terms_kb.as_markup(),
+            parse_mode="Markdown"
+        )
+        return
+
+    # 3. Send Main Menu (Only if Terms Accepted)
     # Create Layout
     from urllib.parse import quote
     safe_name = quote(full_name)
@@ -156,7 +178,7 @@ async def cmd_start(message: types.Message):
 
     
     await message.answer(
-        f"👋 **Hello {full_name}! Welcome to Elevate Aura.**\n\n"
+        f"👋 **Welcome Back, {full_name}!**\n\n"
         "🚀 **Your Goal**: Prove your worth in the Daily Quiz Arena.\n"
         "⚔️ **Your Competition**: 500+ Active Aspirants are competing right now.\n\n"
         "👇 **Open your Dashboard to see Ranks & Stats:**",
@@ -206,6 +228,69 @@ async def cmd_start(message: types.Message):
                     reply_markup=reward_builder.as_markup(),
                     parse_mode="Markdown"
                 )
+
+# --- Terms Callback Handlers ---
+from datetime import datetime
+
+@dp.callback_query(F.data == "agree_terms_action")
+async def cb_agree_terms(callback: types.CallbackQuery):
+    await callback.answer("✅ Terms Accepted!")
+    user_id = callback.from_user.id
+    
+    # Update DB
+    await db.client.from_("users").update({
+        "terms_accepted": True,
+        "terms_accepted_at": datetime.utcnow().isoformat()
+    }).eq("user_id", user_id).execute()
+    
+    # Re-trigger start to show menu
+    # Fetch user details for the URL
+    full_name = callback.from_user.full_name
+    from urllib.parse import quote
+    import time
+    safe_name = quote(full_name)
+    timestamp = int(time.time())
+    render_base_url = "https://elevateaura-bot.onrender.com"
+    web_app_url = f"{render_base_url}/?user_id={user_id}&name={safe_name}&v={timestamp}"
+
+    builder = InlineKeyboardBuilder()
+    builder.button(text="🔥 Check Leaderboard (v82)", web_app=WebAppInfo(url=web_app_url))
+    builder.button(text="📝 Start Quiz", callback_data="start_quiz_cmd")
+    builder.button(text="⚙️ Language & Topic", callback_data="settings")
+    builder.adjust(1)
+    
+    await callback.message.edit_text(
+        f"✅ **You're In! Welcome, {full_name}.**\n\n"
+        "🚀 **Your Goal**: Prove your worth in the Daily Quiz Arena.\n"
+        "👇 **Get Started:**",
+        reply_markup=builder.as_markup(),
+        parse_mode="Markdown"
+    )
+
+@dp.callback_query(F.data == "read_terms_summary")
+async def cb_read_terms(callback: types.CallbackQuery):
+    await callback.message.answer(
+        "📜 **TERMS SUMMARY**\n\n"
+        "1. **Fair Play**: No cheating or multiple accounts.\n"
+        "2. **Virtual Currency**: 'Aura Credits' are not real money.\n"
+        "3. **Age**: You must be 13+.\n"
+        "4. **Refunds**: No refunds on subscriptions.\n\n"
+        "Full text: /terms",
+        parse_mode="Markdown"
+    )
+    await callback.answer()
+
+@dp.callback_query(F.data == "read_privacy_summary")
+async def cb_read_privacy(callback: types.CallbackQuery):
+    await callback.message.answer(
+        "🔒 **PRIVACY SUMMARY**\n\n"
+        "1. **We Collect**: Name, ID, Quiz Scores.\n"
+        "2. **We Don't Collect**: Phone number, Chat history.\n"
+        "3. **Usage**: Leaderboards & Stats.\n\n"
+        "Full text: /privacy",
+        parse_mode="Markdown"
+    )
+    await callback.answer()
 
 @dp.message(Command("terms"))
 async def cmd_terms(message: types.Message):
