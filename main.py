@@ -678,45 +678,31 @@ async def get_ghosts_for_pack(request):
             except:
                 pass 
 
-        # 2. Fetch Raw Ghosts
-        seed_multiplier = 1 if mode == 'daily' else 7 # Change seed for weekly
-        import datetime
-        now = rank_engine.get_ist_time()
-        week_num = now.isocalendar()[1]
-        year = now.year
+        # 2. Fetch Raw Ghosts (SIMPLIFIED & ROBUST)
+        # We need exactly 49 ghosts to make a Top 50 (including user)
+        target_count = 49
+        raw_ghosts = []
         
-        # Unique seed for weekly vs daily
-        # SYNC: We want the SAME ghosts for both modes (Cohort feel)
-        seed_val = int(f"{year}{week_num}{pack_id}")
-        
-        # --- FIXED LOGIC: Ensure 49 Ghosts for Total 50 items ---
         try:
-            count_res = db.client.table("ghost_profiles").select("*", count="exact", head=True).execute()
-            total_ghosts = count_res.count if count_res.count else 100
-        except:
-            total_ghosts = 100 
-            
-        target_ghost_count = 49
-        
-        if total_ghosts < target_ghost_count + 10:
-            start_index = 0
-            limit = min(total_ghosts, target_ghost_count)
-        else:
-            start_index = seed_val % (max(1, total_ghosts - target_ghost_count - 5))
-            limit = target_ghost_count
+            # Simple Fetch: Just get the first 50. 
+            # We skip the complex seed/paging for now to ensure stability.
+            response = db.client.table("ghost_profiles").select("*").limit(50).execute()
+            raw_ghosts = response.data if response.data else []
+        except Exception as e:
+            logger.error(f"Ghost DB Error: {e}")
+            raw_ghosts = []
 
-        if start_index < 0: start_index = 0
-
-        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
-        raw_ghosts = response.data if response.data else []
-        
-        # Padding if pool is empty or short
-        if len(raw_ghosts) < target_ghost_count:
-            needed = target_ghost_count - len(raw_ghosts)
+        # PADDING LOGIC - ABSOLUTE GUARANTEE
+        # If DB returns 0, 2, or 10 ghosts, we fill the rest up to 49.
+        current_count = len(raw_ghosts)
+        if current_count < target_count:
+            needed = target_count - current_count
             for i in range(needed):
+                # Use a specific ID range for synthetic ghosts to ensure deterministic seeding in RankEngine
+                syn_id = 990000 + i + (pack_id * 100) 
                 raw_ghosts.append({
-                    "id": 999000 + i, # Synthetic Range
-                    "full_name": ""   # Engine auto-names
+                    "id": syn_id, 
+                    "full_name": "" # RankEngine will assign names like "Rahul Sharma"
                 })
         
         # 3. Process Scores
@@ -742,7 +728,7 @@ async def get_ghosts_for_pack(request):
                 })
             
             processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
-            processed_ghosts = processed_ghosts[:target_ghost_count] # Cap at 49 ghosts
+            processed_ghosts = processed_ghosts[:target_count] # Cap at 49 ghosts
             
             for p in processed_ghosts:
                 p["total_score"] = p.get("weekly_score", 0)
