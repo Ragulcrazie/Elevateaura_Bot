@@ -678,108 +678,80 @@ async def get_ghosts_for_pack(request):
             except:
                 pass 
 
-        # --- ROBUST GHOST FETCHING ---
+        # 2. Fetch Raw Ghosts
+        seed_multiplier = 1 if mode == 'daily' else 7 # Change seed for weekly
+        import datetime
+        now = rank_engine.get_ist_time()
+        week_num = now.isocalendar()[1]
+        year = now.year
+        
+        # Unique seed for weekly vs daily
+        # SYNC: We want the SAME ghosts for both modes (Cohort feel)
+        seed_val = int(f"{year}{week_num}{pack_id}")
+        
+        # --- FIXED LOGIC: Ensure 49 Ghosts for Total 50 items ---
         try:
-            # 2. Fetch Raw Ghosts
-            import datetime
-            now = rank_engine.get_ist_time()
-            week_num = now.isocalendar()[1]
-            year = now.year
+            count_res = db.client.table("ghost_profiles").select("*", count="exact", head=True).execute()
+            total_ghosts = count_res.count if count_res.count else 100
+        except:
+            total_ghosts = 100 
             
-            # Deterministic seed for cohort consistency
-            try:
-                seed_val = int(f"{year}{week_num}{pack_id}")
-            except:
-                seed_val = 12345
-            
-            # Get total count for safe range selection
-            try:
-                count_res = db.client.table("ghost_profiles").select("id", count="exact").limit(1).execute()
-                total_ghosts = count_res.count if count_res.count else 100
-            except:
-                total_ghosts = 100 
-                
-            target_ghost_count = 49
-            
-            if total_ghosts < target_ghost_count + 10:
-                start_index = 0
-                limit = target_ghost_count
-            else:
-                # Modulo safety: ensure max(1, ...)
-                safe_range = max(1, total_ghosts - target_ghost_count - 5)
-                start_index = seed_val % safe_range
-                limit = target_ghost_count
+        target_ghost_count = 49
+        
+        if total_ghosts < target_ghost_count + 10:
+            start_index = 0
+            limit = min(total_ghosts, target_ghost_count)
+        else:
+            start_index = seed_val % (max(1, total_ghosts - target_ghost_count - 5))
+            limit = target_ghost_count
 
-            if start_index < 0: start_index = 0
+        if start_index < 0: start_index = 0
 
-            # Execute Query
-            raw_ghosts = []
-            try:
-                response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
-                raw_ghosts = response.data if response.data else []
-            except Exception as e:
-                logger.warning(f"Ghost query failed, using padding: {e}")
-                raw_ghosts = []
+        response = db.client.table("ghost_profiles").select("*").range(start_index, start_index + limit - 1).execute()
+        raw_ghosts = response.data if response.data else []
+        
+        # Padding if pool is empty or short
+        if len(raw_ghosts) < target_ghost_count:
+            needed = target_ghost_count - len(raw_ghosts)
+            for i in range(needed):
+                raw_ghosts.append({
+                    "id": 999000 + i, # Synthetic Range
+                    "full_name": ""   # Engine auto-names
+                })
+        
+        # 3. Process Scores
+        if mode == 'weekly':
+            # Generate Weekly Accumulated Scores with SMART RIVALRY
+            processed_ghosts = rank_engine.generate_weekly_ghosts(raw_ghosts, user_score, user_pace, god_mode)
             
-            # Padding: Ensure we ALWAYS have target_ghost_count
-            if len(raw_ghosts) < target_ghost_count:
-                needed = target_ghost_count - len(raw_ghosts)
-                for i in range(needed):
-                    raw_ghosts.append({
-                        "id": 999000 + i, # Synthetic Range
-                        "full_name": ""   # Engine auto-names
-                    })
+            # Merge with Real Weekly Leaders (Top 5)
+            real_leaders = await db.get_weekly_leaderboard(limit=5)
+            for real in real_leaders:
+                if str(real.get('user_id')) == str(user_id_str): continue 
+                
+                # Check real user pace too?
+                real_pace = real.get("average_pace", 30)
+                
+                processed_ghosts.append({
+                    "user_id": real['user_id'],
+                    "full_name": real.get('first_name') or "Aspirant",
+                    "weekly_score": real.get('weekly_score', 0),
+                    "average_pace": real_pace,
+                    "is_ghost": False,
+                    "is_user": False
+                })
             
-            # 3. Process Scores via Rank Engine
-            if mode == 'weekly':
-                # Generate Weekly accumulated scores
-                processed_ghosts = rank_engine.generate_weekly_ghosts(raw_ghosts, user_score, user_pace, god_mode)
-                
-                # Merge with Real Weekly Leaders (Top 5)
-                try:
-                    real_leaders = await db.get_weekly_leaderboard(limit=5)
-                    for real in real_leaders:
-                        if str(real.get('user_id')) == str(user_id_str): continue 
-                        processed_ghosts.append({
-                            "user_id": real['user_id'],
-                            "full_name": real.get('first_name') or "Aspirant",
-                            "weekly_score": real.get('weekly_score', 0),
-                            "average_pace": real.get("average_pace", 30),
-                            "is_ghost": False,
-                            "is_user": False
-                        })
-                except: pass
-                
-                processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
-                processed_ghosts = processed_ghosts[:target_ghost_count] # Cap
-                
-                for p in processed_ghosts:
-                    p["total_score"] = p.get("weekly_score", 0)
-                    
-            else:
-                # Daily Logic
-                processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score, user_pace, god_mode)
+            processed_ghosts.sort(key=lambda x: x.get("weekly_score", 0), reverse=True)
+            processed_ghosts = processed_ghosts[:target_ghost_count] # Cap at 49 ghosts
             
-            # FINAL CHECK: Ensure return count is robust
-            if len(processed_ghosts) < 2:
-                 raise Exception("Rank engine returned insufficient ghosts")
-
-            return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
-
-        except Exception as e:
-            logger.error(f"Critical Ghost Fetch Error: {e}")
-            # HARD FALLBACK: Ensure the user sees SOMETHING competitive if all else fails
-            fallback_ghosts = []
-            for i in range(49):
-                 score = 100 - (i * 2) if i < 10 else random.randint(10, 80)
-                 fallback_ghosts.append({
-                     "user_id": 999500 + i,
-                     "full_name": f"Aspirant {i+1}",
-                     "total_score": max(0, score),
-                     "average_pace": 30 + (i % 5),
-                     "is_ghost": True
-                 })
-            return web.json_response({"ghosts": fallback_ghosts, "debug": str(e)}, headers={"Access-Control-Allow-Origin": "*"})
+            for p in processed_ghosts:
+                p["total_score"] = p.get("weekly_score", 0)
+                
+        else:
+            # Daily Logic with SMART RIVALRY
+            processed_ghosts = rank_engine.generate_ghost_data(raw_ghosts, user_score, user_pace, god_mode)
+        
+        return web.json_response({"ghosts": processed_ghosts}, headers={"Access-Control-Allow-Origin": "*"})
         
     except Exception as e:
         logger.error(f"Failed to fetch ghosts: {e}")

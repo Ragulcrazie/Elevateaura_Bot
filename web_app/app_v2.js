@@ -23,11 +23,11 @@ let currentMode = 'daily'; // 'daily' or 'weekly'
 let currentUserEntry = null; // Store for global access
 const GITHUB_ASSETS_BASE = "https://raw.githubusercontent.com/Ragulcrazie/Elevateaura_Bot/main/";
 
-console.log("ELEVATE AURA BOT: Script v103 Leaderboard-50 Loaded");
+console.log("ELEVATE AURA BOT: Script v104 FORCE-PAD Loaded");
  
  // Visual Probe: Set background to unique color to prove script updated
  const p = document.getElementById('testCountDisplay');
- if(p) { p.innerText = "v103 OK"; p.style.backgroundColor = "#10b981"; } // Brighter Emerald
+ if(p) { p.innerText = "v104 OK"; p.style.backgroundColor = "#3b82f6"; } // Blue
 
 // --- 2. DATA LAYER ---
 async function fetchLeaderboard(packId, userId, timestamp) {
@@ -204,11 +204,31 @@ async function initDashboard(passedUser = null, timestamp = null) {
         leaderboard = await fetchLeaderboard(packId, user.id, timestamp);
     } catch (e) {
          console.warn("Leaderboard fetch failed. Using fallback.", e);
-         // Fallback dummy leaderboard so UI doesn't look empty
-         leaderboard = [
-             { full_name: "Ghost Leader", total_score: 150, is_user: false },
-             { full_name: "Elite Player", total_score: 120, is_user: false }
-         ]; 
+         // Fallback dummy leaderboard so UI doesn't look empty - GENERATE 49 ITEMS
+         leaderboard = [];
+         for(let i=0; i<49; i++) {
+             leaderboard.push({
+                 full_name: i===0 ? "Ghost Leader" : (i===1 ? "Elite Player" : `Aspirant ${i+1}`),
+                 total_score: i===0 ? 150 : (i===1 ? 140 : Math.max(10, 100 - i*2)),
+                 is_user: false,
+                 user_id: 999000 + i,
+                 average_pace: 30 + (i%10)
+             });
+         }
+    }
+    
+    // SAFETY NET: Ensure we have at least 49 ghosts/rivals even if API returned partial data
+    if (leaderboard.length < 49) {
+        const needed = 49 - leaderboard.length;
+        for(let i=0; i<needed; i++) {
+             leaderboard.push({
+                 full_name: `Aspirant ${800+i}`,
+                 total_score: Math.max(5, 50 - i), // Low scores for padding
+                 is_user: false,
+                 user_id: 888000 + i,
+                 average_pace: 34 + (i%5)
+             });
+        }
     }
     
     // 3. Inject User into Leaderboard
