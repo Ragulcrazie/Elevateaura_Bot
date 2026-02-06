@@ -97,7 +97,15 @@ class RankEngine:
         # V3: Deterministic Consistency based on Ghost ID + Date
         # ensures same ghost has same pace in Daily vs Weekly for that day
         today_ord = self.get_ist_time().toordinal()
-        seed_val = int(ghost_id) + today_ord
+        
+        # FIX: Handle UUIDs by hashing if not integer
+        try:
+            gid_int = int(ghost_id)
+        except:
+            # Simple hash for UUID string to integer
+            gid_int = sum(ord(c) for c in str(ghost_id))
+            
+        seed_val = gid_int + today_ord
         rng = random.Random(seed_val)
         
         if not user_pace or user_pace < 5: return rng.randint(25, 45)
