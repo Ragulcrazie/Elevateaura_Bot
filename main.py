@@ -684,13 +684,15 @@ async def get_ghosts_for_pack(request):
         raw_ghosts = []
         
         try:
-            # Simple Fetch: Just get the first 50. 
-            # We skip the complex seed/paging for now to ensure stability.
-            response = db.client.table("ghost_profiles").select("*").limit(50).execute()
+            # Simple Fetch: Get 49 items.
+            response = db.client.table("ghost_profiles").select("*").limit(49).execute()
             raw_ghosts = response.data if response.data else []
         except Exception as e:
             logger.error(f"Ghost DB Error: {e}")
             raw_ghosts = []
+            
+        # Ensure we never exceed 49 (in case limit didn't work or logic changed)
+        raw_ghosts = raw_ghosts[:49]
 
         # PADDING LOGIC - ABSOLUTE GUARANTEE
         # If DB returns 0, 2, or 10 ghosts, we fill the rest up to 49.
