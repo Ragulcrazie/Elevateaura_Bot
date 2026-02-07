@@ -819,6 +819,17 @@ async function loadNotesMapping() {
 async function launchSmartAd(onReward) {
     if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
     
+    // 0. Emergency Fix: Force Load Adsgram if missing
+    if (!window.Adsgram) {
+        console.warn("⚠️ Adsgram object missing. Attempting dynamic injection...");
+        try {
+            await ensureAdsgramLoaded();
+        } catch (e) {
+            console.error("❌ Dynamic Injection Failed:", e);
+             // Fallthrough to fallback below will handle the alert
+        }
+    }
+
     // 1. Try ADSGRAM (High CPM Video)
     if (window.Adsgram) {
         try {
@@ -830,6 +841,16 @@ async function launchSmartAd(onReward) {
             // Success!
             console.log("✅ Adsgram Reward Earned");
             onReward();
+            // Call API to persist reward
+            fetch(`${API_BASE_URL}/api/reward_ad`, {
+                 method: 'POST',
+                 body: JSON.stringify({ user_id: currentUserEntry.id }),
+                 headers: { 'Content-Type': 'application/json' }
+            }).catch(e => console.error(e));
+
+            // Reset Button
+            const unlockBtn = document.getElementById('unlockBtn'); // Ensure scope
+            if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
             return;
             
         } catch (e) {
@@ -837,7 +858,7 @@ async function launchSmartAd(onReward) {
             triggerMonetagFallback(e.message || 'No Fill');
         }
     } else {
-        triggerMonetagFallback("Video SDK Missing");
+        triggerMonetagFallback("Video SDK Blocked/Failed");
     }
 
     // 2. Fallback Logic
@@ -855,6 +876,12 @@ async function launchSmartAd(onReward) {
             window.show_10557666().then(() => {
                 console.log("✅ Monetag Reward Earned");
                 onReward();
+                // Call API
+                fetch(`${API_BASE_URL}/api/reward_ad`, {
+                     method: 'POST',
+                     body: JSON.stringify({ user_id: currentUserEntry.id }),
+                     headers: { 'Content-Type': 'application/json' }
+                }).catch(e => console.error(e));
             }, (e) => {
                 // Ignore close
             });
@@ -862,6 +889,26 @@ async function launchSmartAd(onReward) {
             alert("Ad System Offline. Try reloading.");
         }
     }
+}
+
+// Helper for Dynamic Loading
+function ensureAdsgramLoaded() {
+    return new Promise((resolve, reject) => {
+        if (window.Adsgram) return resolve();
+        console.log("🔄 Fetching Adsgram SDK...");
+        const script = document.createElement('script');
+        script.src = "https://adsgram.ai/js/adsgram.js?v=" + new Date().getTime(); // Anti-cache
+        script.async = true;
+        script.onload = () => {
+            console.log("✅ Adsgram SDK Loaded Dynamically");
+            resolve();
+        };
+        script.onerror = (e) => {
+            console.error("❌ Failed to load Adsgram SDK", e);
+            reject(e);
+        };
+        document.body.appendChild(script);
+    });
 }
 
 // Old functions deprecated
