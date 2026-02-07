@@ -845,17 +845,20 @@ async function launchSmartAd(onReward) {
     
     if (typeof window.show_10557666 === 'function') {
         try {
-            // New Promise-based API for Rewarded
-            await window.show_10557666();
-            
-            // Success!
-            console.log("✅ Monetag Reward Earned");
-            onReward();
+            // EXPLICIT REWARDED CALL
+            // We use the Promise-based return which typically indicates Rewarded completion
+            window.show_10557666().then(() => {
+                console.log("✅ Monetag Reward Earned");
+                onReward();
+            }, (e) => {
+                console.warn("❌ Monetag Ad Closed/Failed", e);
+                // Optional: Still reward if it was a close? No, strict.
+                alert("Ad was closed or failed to load. No reward.");
+            });
             
         } catch (e) {
             console.error("❌ All Ads Failed:", e);
-            alert("No ads available right now. Creating report anyway...");
-            onReward(); // Benevolent fallback (don't block user if ads fail completely)
+            alert("No ads available right now. Please try again later.");
         }
     } else {
         console.error("❌ Monetag SDK missing");
