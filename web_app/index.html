@@ -172,7 +172,7 @@
     </div>
 
     <!-- Performance Insights (Restored) -->
-    <div class="mt-8 mb-24">
+    <div class="mt-8 mb-32">
         <div class="flex justify-between items-center mb-3">
             <h3 class="text-lg font-semibold">📊 Performance Insights</h3>
         </div>
@@ -225,9 +225,16 @@
     </div>
 
     <!-- Premium Upgrade Call to Action -->
-    <div class="fixed bottom-4 left-4 right-4 z-[40]"> <!-- Z-index 40 -->
+    <!-- Premium Upgrade Call to Action -->
+    <div class="fixed bottom-4 left-4 right-4 z-[40] flex flex-col gap-3"> <!-- Z-index 40 -->
+        <!-- Ad Button (For Free Pointss) -->
+        <button id="unlockBtn" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition flex items-center justify-center animate-pulse">
+            <span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +1 ⭐
+        </button>
+        
+        <!-- Premium Button (For Full Unlock) -->
         <button id="upgradeBtn" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition flex items-center justify-center">
-            <span class="mr-2">🔓</span> Unlock Full Intelligence (99 ⭐)
+             <span class="mr-2">🔓</span> REDEEM PREMIUM (99 ⭐)
         </button>
     </div>
 
@@ -710,8 +717,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.0 cache bust) -->
-    <script src="app_v2.js?v=3.0"></script>
+    <!-- App Logic (v3.1 cache bust) -->
+    <script src="app_v2.js?v=3.1"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);

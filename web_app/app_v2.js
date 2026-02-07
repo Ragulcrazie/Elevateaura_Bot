@@ -424,8 +424,11 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
     const currEl = document.getElementById('potential_current');
     const potEl = document.getElementById('potential_max');
     const gapEl = document.getElementById('potential_gap');
-    const unlockBtn = document.getElementById('upgradeBtn');
     
+    // Independent Button Selectors (Now separate in HTML)
+    const unlockBtn = document.getElementById('unlockBtn'); 
+    const premiumBtn = document.getElementById('upgradeBtn');
+
     // UPDATE DENOMINATORS
     const currBaseEl = currEl?.parentElement?.querySelector('.font-mono');
     const potBaseEl = potEl?.parentElement?.querySelector('.font-mono');
@@ -448,94 +451,81 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             const progress = Math.min(elapsed / duration, 1);
             // Ease out quart
             const ease = 1 - Math.pow(1 - progress, 4);
-            
-            const currentVal = Math.floor(start + (pointsLost * ease));
-            potEl.innerText = currentVal;
+            const val = Math.floor(start + (potentialScore - start) * ease);
+            potEl.innerText = val;
             
             if (progress < 1) requestAnimationFrame(animate);
         }
         requestAnimationFrame(animate);
     }
-    if (gapEl) gapEl.innerText = `${pointsLost} points`;
-
-    // Dynamic Insight Text
-    if (insightTextEl) {
-        if (weakSpots.length > 0) {
-            let topic1 = weakSpots[0].topic;
-            let topic2 = weakSpots.length > 1 ? weakSpots[1].topic : null;
-            
-            // OBFUSCATE IF FREE
-            if (subStatus !== 'premium') {
-                topic1 = "🔒 Locked Topic";
-                if (topic2) topic2 = "🔒 Locked Topic";
-            }
-            
-            let msg = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in <span class="text-yellow-400 font-bold">${topic1}</span>`;
-            if (topic2) msg += ` and <span class="text-yellow-400 font-bold">${topic2}</span>`;
-            
-            if (subStatus !== 'premium') {
-                 msg += `. <span class="italic text-gray-400">Unlock Premium to reveal & fix them.</span>`;
+    
+    // GAP Logic
+    if (gapEl) {
+        if (pointsLost > 0) {
+            gapEl.innerText = `${pointsLost} points`;
+            // Dynamic advice based on weak spots
+            if (weakSpots.length > 0) {
+                 const topic = weakSpots[0].replace('Test', '').trim(); // Clean 'Aptitude Test' -> 'Aptitude'
+                 if (insightTextEl) insightTextEl.innerHTML = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in 🔒 <span class="text-yellow-400">Locked Topic</span>. Unlock Premium to reveal & fix them.`;
             } else {
-                 msg += `. Your accuracy in these high-value topics is dragging you down.`;
+                 if (insightTextEl) insightTextEl.innerHTML = `You are running at <span class="text-green-400 font-bold">${Math.round((currentScore/potentialScore)*100)}% efficiency</span>. Unlock Analytics to see where you can improve.`;
             }
-            
-            insightTextEl.innerHTML = msg;
-        } else if (pointsLost > 0) {
-            // Generic but with correct points
-             insightTextEl.innerHTML = `You left <span class="text-white font-bold">${pointsLost} points</span> on the table due to fixable weak spots. Speed is key, but accuracy is Queen.`;
         } else {
-             // Perfect Score?
-             insightTextEl.innerHTML = `You are playing at <span class="text-green-400 font-bold">Max Potential</span>! Keep maintaining this streak.`;
+            gapEl.innerText = "0 points";
+            if (insightTextEl) insightTextEl.innerHTML = `🔥 Perfect Execution! You are reaching your full potential today. Keep it up!`;
         }
     }
 
-    // Button Action
-    if (unlockBtn) {
-        if (subStatus === 'premium') {
-            // Premium users: Hide the button entirely for clean UI
-            // They use AI Coach in Telegram chat instead
-            unlockBtn.style.display = 'none';
+    // --- BUTTON LOGIC ---
+    
+    // 1. PREMIUM BUTTON (Redeem Stars)
+    if (premiumBtn) {
+        if (userEntry.is_premium) {
+            premiumBtn.style.display = 'none'; // Hide if already Premium
         } else {
-            // FREE VIEW (Ad-Supported Unlock)
-            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +1 ⭐`;
-            unlockBtn.classList.remove('bg-indigo-600');
-            unlockBtn.classList.add('bg-green-600', 'animate-pulse'); // Make it pop
-
-            unlockBtn.onclick = () => {
-                if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
-                
-                unlockBtn.innerHTML = "Loading Ad...";
-                
-                launchSmartAd(() => {
-                     // Ad Success Callback - Call API to persist reward
-                     fetch(`${API_BASE_URL}/api/reward_ad`, {
-                         method: 'POST',
-                         body: JSON.stringify({ user_id: userEntry.id }),
-                         headers: { 'Content-Type': 'application/json' }
-                     })
-                     .then(res => res.json())
-                     .then(data => {
-                         if (data.success) {
-                             const balEl = document.getElementById('walletBalance');
-                             if(balEl) {
-                                  balEl.innerText = data.new_balance; 
-                                  alert("🎁 Reward: +1 Star Added! Insights Unlocked.");
-                             }
-                         } else {
-                             alert("Reward Error: " + (data.error || "Please try again"));
-                         }
-                     })
-                     .catch(e => {
-                         console.error("Ad Reward API failed", e);
-                         // Optimistic update if network fails? No, better warn.
-                         alert("⚠️ Network Error saving reward. Check connection.");
-                     });
-
-                     // Reset Button
-                     unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
-                });
+            premiumBtn.style.display = 'flex';
+            // Bind click if not already bound (or overwrite)
+            premiumBtn.onclick = () => {
+                if(window.triggerPremiumRedemption) window.triggerPremiumRedemption();
+                else alert("Redemption module loading...");
             };
         }
+    }
+
+    // 2. AD BUTTON (Unlock +1 Star)
+    if (unlockBtn) {
+        // Always show Ad button for extra stars (even for premium users? Maybe.)
+        // User request: "watch ad again (+1 star)". Yes, keep it.
+        
+        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +1 ⭐`;
+        unlockBtn.onclick = () => {
+            if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
+            unlockBtn.innerText = "Loading Ad...";
+            
+            launchSmartAd(() => {
+                // Success Callback
+                 fetch(`${API_BASE_URL}/api/reward_ad`, {
+                     method: 'POST',
+                     body: JSON.stringify({ user_id: userEntry.id }),
+                     headers: { 'Content-Type': 'application/json' }
+                 })
+                 .then(res => res.json())
+                 .then(data => {
+                     if (data.success) {
+                         const balEl = document.getElementById('walletBalance');
+                         if(balEl) {
+                              balEl.innerText = data.new_balance; 
+                              alert("🎁 Reward: +1 Star Added!");
+                         }
+                     } else {
+                         alert("Reward Error: " + (data.error));
+                     }
+                 })
+                 .catch(e => console.error("Ad Reward API failed", e));
+
+                 unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
+            });
+        };
     }
 }
 
