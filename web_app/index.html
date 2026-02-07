@@ -247,24 +247,25 @@
             <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <h3 class="text-xl font-bold text-white mb-2">Weekly Cohorts</h3>
+            <h3 class="text-xl font-bold text-white mb-2">⚡ Game Rules & Premium</h3>
             <div class="space-y-4 text-sm text-gray-300">
-                <p>
-                    You have been placed in <span class="text-yellow-400 font-bold">Pack <script>document.write(new Date().getDate() % 20 + 10)</script></span>.
-                </p>
-                <div class="space-y-2">
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">📅</span>
-                        <p><strong>Weekly Refresh:</strong> Your competitors remain the same for 7 days (Mon-Sun) to build rivalry.</p>
+                <div class="flex items-start">
+                    <span class="text-lg mr-2">📅</span>
+                    <p><strong>7-Day League:</strong> Compete with your assigned cohort from Mon-Sun.</p>
+                </div>
+                <div class="p-2 bg-yellow-500/10 rounded border border-yellow-500/20">
+                    <div class="flex items-start mb-1">
+                        <span class="text-lg mr-2">💎</span>
+                        <p class="font-bold text-yellow-400">Premium Loyalty Club</p>
                     </div>
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">🔥</span>
-                        <p><strong>Daily Scoring:</strong> Points reset every midnight. Max 600 points/day (6 Tests).</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-lg mr-2">🤖</span>
-                        <p><strong>Fair Play:</strong> This leaderboard is curated to match your skill level.</p>
-                    </div>
+                    <ul class="list-disc ml-8 text-xs space-y-1">
+                        <li><b>New Users:</b> Full access starts at 99 Stars.</li>
+                        <li><b>Returning:</b> Use Wallet Stars for <b class="text-white">50% OFF</b> on all renewals!</li>
+                    </ul>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-lg mr-2">🤖</span>
+                    <p><strong>Fair Play:</strong> Max 600 points/day (6 Tests). Scores reset daily at midnight.</p>
                 </div>
             </div>
             <div class="mt-6 text-center">
@@ -391,24 +392,9 @@
     // Global State needed? No, app_v2.js has it.
     
     // We only need the bootstrap logic below.
-    if (infoBtn && infoModal && closeModal) {
-        const toggleModal = () => infoModal.classList.toggle('hidden');
-        closeModal.addEventListener('click', toggleModal);
-        infoModal.addEventListener('click', (e) => {
-            if (e.target === infoModal) toggleModal(); 
-        });
-        
-        // RED DOT LOGIC
-        infoBtn.onclick = (e) => {
-            e.preventDefault();
-            const dot = document.getElementById('pendingActionDot');
-            if (dot && !dot.classList.contains('hidden')) {
-                 openCaptureModal();
-            } else {
-                 toggleModal();
-            }
-        };
-    }
+    // Inline logic specific to infoBtn removed to prevent conflict with app_v2.js
+    // Red Dot Logic handled in app_v2.js
+
 
     // Capture Modal Logic (handled in app_v2.js)
 
@@ -811,8 +797,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.9 cache bust) -->
-    <script src="app_v2.js?v=3.9"></script>
+    <!-- App Logic (v3.10 cache bust) -->
+    <script src="app_v2.js?v=3.10"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
