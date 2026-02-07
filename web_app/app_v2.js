@@ -813,112 +813,52 @@ async function loadNotesMapping() {
     }
 }
 
-// --- AD INTEGRATION: Check and Display Monetag Ads ---
-// --- SMART AD MEDIATION (Adsgram First -> Monetag Backup) ---
-
-function logAdStatus(msg) {
-    const el = document.getElementById('dateDisplay');
-    if(el) {
-        el.innerText = msg;
-        el.style.color = '#fbbf24'; // Amber for visibility
-    }
-    console.log(msg);
-}
+// --- AD INTEGRATION: MONETAG ONLY ---
 
 async function launchSmartAd(onReward) {
     if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
-    logAdStatus("⏳ Checking Adsgram...");
     
-    // 0. Emergency Fix: Force Load Adsgram if missing
-    if (!window.Adsgram) {
-        logAdStatus("⚠️ Injecting SDK...");
-        try {
-            await ensureAdsgramLoaded();
-            logAdStatus("✅ SDK Ready");
-        } catch (e) {
-            logAdStatus("❌ SDK Failed");
-        }
-    }
+    console.log("🎬 Requesting Monetag Ad...");
+    const statusEl = document.getElementById('dateDisplay');
+    if(statusEl) statusEl.innerText = "Loading Ad...";
 
-    // 1. Try ADSGRAM
-    if (window.Adsgram) {
-        try {
-            const AdController = window.Adsgram.init({ blockId: "22529" });
+    if (typeof window.show_10557666 === 'function') {
+        // We use the Promise-based return which IS the Rewarded Logic.
+        // If the Zone is configured as Interstitial in Dashboard, it will look like one,
+        // but it will function as a Rewarded Ad (callback only fires on completion).
+        window.show_10557666().then(() => {
+            console.log("✅ Monetag Reward Earned");
+            if(statusEl) statusEl.innerText = "Reward Earned!";
             
-            logAdStatus("🎬 Requesting Video...");
-            await AdController.show();
-            
-            // Success!
-            logAdStatus("✅ Reward Earned!");
             onReward();
-            // Call API
+            
+            // Persist Reward
             fetch(`${API_BASE_URL}/api/reward_ad`, {
                  method: 'POST',
                  body: JSON.stringify({ user_id: currentUserEntry.id }),
                  headers: { 'Content-Type': 'application/json' }
             }).catch(e => console.error(e));
-
-            const unlockBtn = document.getElementById('unlockBtn'); 
-            if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
-            return;
             
-        } catch (e) {
-            // Log the specific error to UI
-            logAdStatus(`❌ Video: ${e.message || 'No Fill'}`);
-            // Wait 1s so user can see the error
-            await new Promise(r => setTimeout(r, 1000));
-            triggerMonetagFallback(e.message || 'No Fill');
-        }
+            // Allow watching again
+            setTimeout(() => {
+                 if(statusEl) statusEl.innerText = new Date().toDateString(); // Reset status
+            }, 2000);
+            
+            const unlockBtn = document.getElementById('unlockBtn');
+            if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
+
+        }, (e) => {
+            console.warn("❌ Ad Closed/Failed", e);
+            if(statusEl) statusEl.innerText = "Ad Closed";
+            // alert("Ad was closed. No reward.");
+        });
+        
     } else {
-        triggerMonetagFallback("SDK Failed");
-    }
-
-    // 2. Fallback Logic
-    function triggerMonetagFallback(reason) {
-        logAdStatus("⚠️ Switching to Backup...");
-        // Ask user permission
-        if (confirm(`Adsgram Video not available (${reason}).\n\nShow standard ad for reward?`)) {
-             launchMonetag();
-        } else {
-             logAdStatus("❌ Ad Cancelled");
-        }
-    }
-
-    // 3. Monetag Launcher
-    function launchMonetag() {
-        logAdStatus("🎬 Loading Monetag...");
-        if (typeof window.show_10557666 === 'function') {
-            window.show_10557666().then(() => {
-                logAdStatus("✅ Reward Earned!");
-                onReward();
-                // Call API
-                fetch(`${API_BASE_URL}/api/reward_ad`, {
-                     method: 'POST',
-                     body: JSON.stringify({ user_id: currentUserEntry.id }),
-                     headers: { 'Content-Type': 'application/json' }
-                }).catch(e => console.error(e));
-            }, (e) => {
-                // Ignore close
-            });
-        } else {
-            alert("Backup System Offline.");
-        }
+        alert("Ad SDK not ready. Please reload.");
     }
 }
 
-// Helper for Dynamic Loading
-function ensureAdsgramLoaded() {
-    return new Promise((resolve, reject) => {
-        if (window.Adsgram) return resolve();
-        // ... (rest is same)
-        const script = document.createElement('script');
-        script.src = "https://adsgram.ai/js/adsgram.js?v=" + new Date().getTime(); 
-        script.async = true;
-        script.onload = resolve;
-        script.onerror = reject;
-        document.body.appendChild(script);
-    });
-}
+// Removed: ensureAdsgramLoaded, logAdStatus (Simplified)
 
 // Old functions deprecated
 function checkAndShowAd() {}
