@@ -596,10 +596,10 @@
         const balance = parseInt(document.getElementById('walletBalance').innerText) || 0;
 
         // 1. Minimum Balance Check
-        if (balance < 600) {
+        if (balance < 1000) {
             if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('warning');
-            if(window.showAlert) await window.showAlert("🚫 Minimum Withdrawal Limit: 600 Stars", `You only have <b class="text-white">${balance} Stars</b>.\n\nKeep ranking up to unlock withdrawals!`);
-            else alert(`🚫 Minimum Withdrawal Limit: 600 Stars\n\nYou only have ${balance} Stars.\n\nKeep ranking up to unlock withdrawals!`);
+            if(window.showAlert) await window.showAlert("🚫 Minimum Withdrawal Limit: 1000 Stars", `You only have <b class="text-white">${balance} Stars</b>.\n\nKeep ranking up to unlock withdrawals!`);
+            else alert(`🚫 Minimum Withdrawal Limit: 1000 Stars\n\nYou only have ${balance} Stars.\n\nKeep ranking up to unlock withdrawals!`);
             return;
         }
 
@@ -789,8 +789,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.5 cache bust) -->
-    <script src="app_v2.js?v=3.5"></script>
+    <!-- App Logic (v3.6 cache bust) -->
+    <script src="app_v2.js?v=3.6"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
