@@ -939,13 +939,17 @@ async def start_web_server():
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
     async def serve_index(request):
-        return web.FileResponse('./web_app/index.html')
+        return web.FileResponse('./web_app/index.html', headers={
+            "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
+        })
     
     app.router.add_get("/", serve_index)
     
     # EXPLICITLY serve app_v2.js at root so <script src="app_v2.js"> works
     async def serve_js(request):
-        return web.FileResponse('./web_app/app_v2.js')
+        return web.FileResponse('./web_app/app_v2.js', headers={
+            "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
+        })
     app.router.add_get("/app_v2.js", serve_js)
 
     # Serve other assets if needed (e.g. css, js) - mapping /web_app/ folder
