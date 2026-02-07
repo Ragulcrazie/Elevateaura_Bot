@@ -500,6 +500,7 @@ async def get_user_data(request):
                 "weekly_score": user_data.get("weekly_score", 0), # V2
                 "wallet_stars": user_data.get("wallet_stars", 0), # V2
                 "lead_data": user_data.get("lead_data", None),    # V2
+                "total_payments": user_data.get("total_payments", 0), # V3.8 for Loyalty Check
                 "questions_answered": derived_q_answered,
                 "pack_id": pack_id,
                 "average_pace": db_pace,

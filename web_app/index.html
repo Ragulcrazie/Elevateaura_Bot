@@ -669,45 +669,9 @@
     // --- UPDATED LOGIC USING CUSTOM MODALS ---
 
     window.triggerPremiumRedemption = async function() {
-        console.log("Redemption V4 (Split Payment) Called");
+        console.log("Redemption V5 (Loyalty Logic) Called");
         if(typeof tg !== 'undefined' && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
         
-        const balance = parseInt(document.getElementById('walletBalance').innerText) || 0;
-        
-        // 1. Check Minimum for Split (Needs 50 for Monthly)
-        if (balance < 50) {
-            await window.showAlert("Insufficient Wallet Balance!", `You need at least <b>50 Stars</b> to get the 50% discount on Monthly Premium.\n\nCurrent: ${balance}`);
-            return;
-        }
-        
-        // 2. Select Plan
-        let plan = 'monthly';
-        let walletCost = 50;
-        let moneyCost = 49;
-        
-        if (balance >= 500) {
-             const choice = await window.showUniversalModal(
-                "💎 Select Premium Plan",
-                `You qualify for the <b>50% Wallet Discount!</b>\n\nChoose your savings:`,
-                [
-                    { text: "Cancel", value: null, class: "text-gray-400" },
-                    { text: "Monthly (Pay 49 XTR + 50 Stars)", value: 'monthly', class: "bg-gray-700 text-white border border-gray-600 block w-full mb-2" },
-                    { text: "Yearly (Pay 499 XTR + 500 Stars)", value: 'yearly', class: "bg-yellow-500 text-black font-bold block w-full" }
-                ]
-            );
-            if (!choice) return;
-            plan = choice;
-            walletCost = (plan === 'yearly') ? 500 : 50;
-            moneyCost = (plan === 'yearly') ? 499 : 49;
-        } else {
-             const confirm = await showConfirm(
-                 "💎 Monthly Premium Offer",
-                 `Use <b>50 Wallet Stars</b> to get 50% OFF?\n\nYou pay only <b>49 Telegram Stars</b> (approx ₹150) instead of full price.`
-             );
-             if (!confirm) return;
-        }
-
-        // 3. User ID Logic
         let userId = null;
         if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
         else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
@@ -717,15 +681,72 @@
         }
 
         if (!userId) {
-            await window.showAlert("Login Error", "User ID missing.");
+            await window.showAlert("Login Error", "User ID missing. Open in Telegram.");
             return;
+        }
+
+        document.body.style.cursor = 'wait';
+        
+        // 0. Check Eligibility (First Time vs Returning)
+        let isFirstTime = true;
+        try {
+            const stats = await fetchUserStats(userId);
+            if (stats && stats.total_payments > 0) isFirstTime = false;
+        } catch(e) { console.warn("Stats fetch failed", e); }
+
+        const balance = parseInt(document.getElementById('walletBalance').innerText) || 0;
+        let plan = '';
+        
+        // --- LOGIC BRANCH ---
+        if (isFirstTime) {
+            // CASE 1: First Time User (FULL PRICE)
+             const confirm = await window.showUniversalModal(
+                "🌟 Unlock Premium",
+                "<b>First Month Requirement:</b>\n" +
+                "Pay full price (99 Stars) to unlock future discounts.\n\n" +
+                "✅ <b>Next Month:</b> You get 50% OFF using Wallet Stars!\n\n" +
+                "👉 Join now to start your streak.",
+                [
+                    { text: "Cancel", value: null, class: "text-gray-400" },
+                    { text: "Pay 99 Stars (Full Access)", value: 'full_monthly', class: "bg-indigo-600 text-white font-bold w-full" }
+                ]
+            );
+            if (!confirm) { document.body.style.cursor = 'default'; return; }
+            plan = 'monthly_full';
+
+        } else {
+            // CASE 2: Returning User (SPLIT DISCOUNT)
+            if (balance < 50) {
+                document.body.style.cursor = 'default';
+                await window.showAlert("Insufficient Wallet Balance", `Loyalty Discount Active!\n\nBut you need <b>50 Wallet Stars</b> to use it.\nCurrent: ${balance}`);
+                return;
+            }
+            
+            if (balance >= 500) {
+                 const choice = await window.showUniversalModal(
+                    "💎 Loyalty Discount Unlocked",
+                    `Welcome back! Use your Wallet Balance for <b>50% OFF</b>.\n\nChoose your plan:`,
+                    [
+                        { text: "Cancel", value: null, class: "text-gray-400" },
+                        { text: "Monthly (49 XTR + 50 Stars)", value: 'monthly_split', class: "bg-gray-700 text-white border border-gray-600 block w-full mb-2" },
+                        { text: "Yearly (499 XTR + 500 Stars)", value: 'yearly_split', class: "bg-yellow-500 text-black font-bold block w-full" }
+                    ]
+                );
+                if (!choice) { document.body.style.cursor = 'default'; return; }
+                plan = choice;
+            } else {
+                 const confirm = await showConfirm(
+                     "💎 Monthly Renewal Offer",
+                     `Use <b>50 Wallet Stars</b> to get 50% OFF?\n\nYou pay only <b>49 Telegram Stars</b>.`
+                 );
+                 if (!confirm) { document.body.style.cursor = 'default'; return; }
+                 plan = 'monthly_split';
+            }
         }
 
         // 4. Generate Invoice
         try {
-            document.body.style.cursor = 'wait';
-            
-            // Using existing create_invoice API which now accepts 'plan'
+            // Using existing create_invoice API
             const response = await fetch(`${API_BASE_URL}/api/create_invoice`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -741,17 +762,15 @@
                      tg.openInvoice(result.invoice_link, async (status) => {
                          if (status === 'paid') {
                              if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
-                             await window.showAlert("🎉 Payment Successful!", "Premium Activated! Your wallet stars have been deducted.");
-                             // Optional: Reload to update UI?
+                             await window.showAlert("🎉 Payment Successful!", "Premium Activated! Welcome to the Elite.");
                              location.reload(); 
                          } else if (status === 'cancelled') {
-                             // Do nothing or show toast
+                             // Pass
                          } else {
                              await window.showAlert("Payment Status", `Status: ${status}`);
                          }
                      });
                 } else {
-                     // Fallback for browser testing
                      window.open(result.invoice_link, '_blank');
                      await window.showAlert("Invoice Generated", "Please pay via the Bot chat.");
                 }
@@ -792,8 +811,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.7 cache bust) -->
-    <script src="app_v2.js?v=3.7"></script>
+    <!-- App Logic (v3.8 cache bust) -->
+    <script src="app_v2.js?v=3.8"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);

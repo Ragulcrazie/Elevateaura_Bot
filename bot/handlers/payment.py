@@ -55,16 +55,24 @@ def get_product_description():
         "👉 **Unlock Premium – 99 ⭐**"
     )
 
-# 1. Invoice Link Generator (Split Payment)
+# 1. Invoice Link Generator (Hybrid Model)
 async def generate_invoice_link(bot: Bot, user_id: int, plan: str):
-    if plan == 'yearly':
-        amount = 499 # 499 XTR
-        label = "1 Year Access (50% Off)"
+    if plan == 'yearly_split':
+        amount = 499 # Renew for Returning Users
+        label = "1 Year Renewal (50% Off)"
         payload = f"split_yearly_{user_id}"
-    else:
-        amount = 49 # 49 XTR (Monthly)
-        label = "1 Month Access (50% Off)"
+    elif plan == 'monthly_split':
+        amount = 49 # Renew for Returning Users
+        label = "1 Month Renewal (50% Off)"
         payload = f"split_monthly_{user_id}"
+    elif plan == 'yearly_full':
+        amount = 999 # First Time
+        label = "1 Year Access (First Time)"
+        payload = f"full_yearly_{user_id}"
+    else: # Default to Monthly Full if vague
+        amount = 99 # First Time
+        label = "1 Month Access (First Time)"
+        payload = f"full_monthly_{user_id}"
 
     return await bot.create_invoice_link(
         title=PRODUCT_TITLE,
@@ -114,12 +122,12 @@ async def process_successful_payment(message: Message):
     days_to_add = 30
     deduct_wallet = 0
     
-    if 'split_yearly' in payload:
+    if 'yearly' in payload: # Catch split_yearly and full_yearly
         days_to_add = 365
-        deduct_wallet = 500
-    elif 'split_monthly' in payload:
+        if 'split' in payload: deduct_wallet = 500
+    elif 'monthly' in payload: # Catch split_monthly and full_monthly
         days_to_add = 30
-        deduct_wallet = 50
+        if 'split' in payload: deduct_wallet = 50
 
     db = SupabaseClient()
     connected = await db.connect()
