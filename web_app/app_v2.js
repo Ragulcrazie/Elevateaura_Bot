@@ -654,20 +654,24 @@ function submitLead() {
         .then(data => {
             if(data.status === 'success') {
                 if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
-                alert("✅ Report queued! Check WhatsApp shortly.");
                 
-                // Close & reward visual
+                // --- SMART REWARD TRIGGER ---
                 closeCaptureModal();
                 const dot = document.getElementById('pendingActionDot');
-                if(dot) dot.classList.add('hidden'); // Clear dot permanently
+                if(dot) dot.classList.add('hidden'); 
                 
-                // Maybe add some stars visually?
-                const balEl = document.getElementById('walletBalance');
-                if(balEl) {
-                     let bal = parseInt(balEl.innerText);
-                     balEl.innerText = bal + 20; 
-                     alert("🎁 You received 20 Bonus Stars for checking in!");
-                }
+                // Launch Ad sequence immediately after phone number submission
+                alert("✅ Report Ready! Watch a short ad to unlock your detailed analysis.");
+                
+                launchSmartAd(() => {
+                     const balEl = document.getElementById('walletBalance');
+                     if(balEl) {
+                          let bal = parseInt(balEl.innerText);
+                          if(isNaN(bal)) bal = 0;
+                          balEl.innerText = bal + 1; 
+                          alert("🎁 Ad Watched! +1 Star Added to Wallet.");
+                     }
+                });
             } else {
                  alert("Error: " + (data.error || "Server Busy"));
                  btn.innerText = originalText;
@@ -812,76 +816,64 @@ async function loadNotesMapping() {
 }
 
 // --- AD INTEGRATION: Check and Display Monetag Ads ---
-async function checkAndShowAd(userId, userStats) {
-    // Only proceed if user data exists
-    if (!userId || userId === 0) {
-        console.log('❌ Ad skip: Guest user');
-        return;
-    }
+// --- SMART AD MEDIATION (Adsgram First -> Monetag Backup) ---
 
-    // Quick client-side check: Skip premium users
-    if (userStats && userStats.subscription_status === 'premium') {
-        console.log('🚫 Ad skip: Premium user');
-        return;
-    }
-
-    try {
-        // Call backend API to check ad eligibility
-        const response = await fetch(`${API_BASE_URL}/api/check_ad?user_id=${userId}&placement=leaderboard`, {
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if (!response.ok) {
-            console.warn('Ad API failed:', response.status);
+async function launchSmartAd(onReward) {
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
+    
+    // 1. Try ADSGRAM (High CPM Video)
+    if (window.Adsgram) {
+        try {
+            const AdController = window.Adsgram.init({ blockId: "22529" });
+            
+            console.log("🎬 Launching Adsgram...");
+            await AdController.show();
+            
+            // Success!
+            console.log("✅ Adsgram Reward Earned");
+            onReward();
             return;
+            
+        } catch (e) {
+            console.warn("⚠️ Adsgram Failed/Skipped:", e);
+            // Fallthrough to Monetag
         }
+    } else {
+        console.warn("⚠️ Adsgram SDK missing");
+    }
 
-        const data = await response.json();
-        
-        console.log('Ad check result:', data);
-
-        if (data.show_ad) {
-            // Display Monetag ad
-            displayMonetagAd(data.monetag_code);
-            console.log('✅ Ad displayed for user', userId);
-        } else {
-            console.log('❌ Ad skipped:', data.reason);
+    // 2. Fallback: MONETAG REWARDED (High Fill Rate)
+    console.log("🎬 Launching Monetag Fallback...");
+    
+    if (typeof window.show_10557666 === 'function') {
+        try {
+            // New Promise-based API for Rewarded
+            await window.show_10557666();
+            
+            // Success!
+            console.log("✅ Monetag Reward Earned");
+            onReward();
+            
+        } catch (e) {
+            console.error("❌ All Ads Failed:", e);
+            alert("No ads available right now. Creating report anyway...");
+            onReward(); // Benevolent fallback (don't block user if ads fail completely)
         }
-    } catch (e) {
-        console.error('Ad check error:', e);
+    } else {
+        console.error("❌ Monetag SDK missing");
+        onReward(); // Emergency Access
     }
 }
 
-function displayMonetagAd(monetagCode) {
-    // If Monetag code is provided, inject it
-    if (monetagCode) {
-        // Create a container for the ad
-        const adContainer = document.createElement('div');
-        adContainer.id = 'monetag-ad-container';
-        adContainer.innerHTML = monetagCode;
-        
-        // Append to body (Monetag will handle positioning)
-        document.body.appendChild(adContainer);
-        
-        console.log('✅ Monetag code injected');
-    } else {
-        // Fallback: Trigger the global Monetag SDK with CORRECT format
-        if (typeof window.show_10557666 === 'function') {
-            window.show_10557666({
-                type: 'inApp',
-                inAppSettings: {
-                    frequency: 1,      // Show 1 ad
-                    capping: 0.016,    // Within ~1 minute window
-                    interval: 0,       // No interval (immediate)
-                    timeout: 1,        // 1 second delay before showing
-                    everyPage: false   // Don't reset on navigation
-                }
-            });
-            console.log('✅ Monetag In-App Interstitial triggered');
-        } else {
-            console.warn('❌ Monetag SDK not loaded (check index.html script tag)');
-        }
-    }
+// Replaces old checkAndShowAd (Auto-show logic removed in favor of User-Initiated)
+// We now only use this to potentially pre-load or check status, but mostly we rely on the button click.
+async function checkAndShowAd(userId, userStats) {
+    // Legacy function kept for API compatibility, but logic moved to 'Unlock' button
+    console.log("Ad System Ready. Waiting for user trigger.");
+}
+
+function displayMonetagAd(code) {
+    // Deprecated in V3 Smart System
 }
 
 // Start
