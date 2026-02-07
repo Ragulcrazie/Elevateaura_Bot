@@ -496,45 +496,27 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             // They use AI Coach in Telegram chat instead
             unlockBtn.style.display = 'none';
         } else {
-            // FREE VIEW (Paywall)
-            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (99 ⭐)`;
+            // FREE VIEW (Ad-Supported Unlock)
+            unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +1 ⭐`;
+            unlockBtn.classList.remove('bg-indigo-600');
+            unlockBtn.classList.add('bg-green-600', 'animate-pulse'); // Make it pop
+
             unlockBtn.onclick = () => {
                 if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
                 
-                // 1. Get Invoice Link from Bot API
-                unlockBtn.innerHTML = "Loading...";
+                unlockBtn.innerHTML = "Loading Ad...";
                 
-                fetch(`${API_BASE_URL}/api/create_invoice`, {
-                    method: 'POST',
-                    body: JSON.stringify({ user_id: userEntry.id }),
-                    headers: { 'Content-Type': 'application/json' }
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if(data.invoice_link) {
-                        // 2. Open Native Payment
-                        TgApp.openInvoice(data.invoice_link, (status) => {
-                            if (status === 'paid') {
-                                TgApp.MainButton.setText("PAID! RELOADING...");
-                                TgApp.MainButton.show();
-                                setTimeout(() => window.location.reload(), 2000);
-                            } else if (status === 'pending') {
-                                // Sometimes happens, just close
-                                alert("Payment processing...");
-                            } else {
-                                // Cancelled or failed
-                                unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Unlock Full Intelligence (99 ⭐)`;
-                            }
-                        });
-                    } else {
-                        alert("Error creating invoice: " + (data.error || "Unknown"));
-                        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
-                    }
-                })
-                .catch(e => {
-                    console.error(e);
-                    alert("Network Error. Try again.");
-                    unlockBtn.innerHTML = `<span class="mr-2 text-lg">🔓</span> Retry Unlock`;
+                launchSmartAd(() => {
+                     // Ad Success Callback
+                     const balEl = document.getElementById('walletBalance');
+                     if(balEl) {
+                          let bal = parseInt(balEl.innerText);
+                          if(isNaN(bal)) bal = 0;
+                          balEl.innerText = bal + 1; 
+                          alert("🎁 Reward: +1 Star Added! Insights Unlocked.");
+                     }
+                     // Reset Button
+                     unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
                 });
             };
         }
