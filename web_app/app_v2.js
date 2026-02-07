@@ -816,65 +816,80 @@ async function loadNotesMapping() {
 // --- AD INTEGRATION: Check and Display Monetag Ads ---
 // --- SMART AD MEDIATION (Adsgram First -> Monetag Backup) ---
 
+function logAdStatus(msg) {
+    const el = document.getElementById('dateDisplay');
+    if(el) {
+        el.innerText = msg;
+        el.style.color = '#fbbf24'; // Amber for visibility
+    }
+    console.log(msg);
+}
+
 async function launchSmartAd(onReward) {
     if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
+    logAdStatus("⏳ Checking Adsgram...");
     
     // 0. Emergency Fix: Force Load Adsgram if missing
     if (!window.Adsgram) {
-        console.warn("⚠️ Adsgram object missing. Attempting dynamic injection...");
+        logAdStatus("⚠️ Injecting SDK...");
         try {
             await ensureAdsgramLoaded();
+            logAdStatus("✅ SDK Ready");
         } catch (e) {
-            console.error("❌ Dynamic Injection Failed:", e);
-             // Fallthrough to fallback below will handle the alert
+            logAdStatus("❌ SDK Failed");
         }
     }
 
-    // 1. Try ADSGRAM (High CPM Video)
+    // 1. Try ADSGRAM
     if (window.Adsgram) {
         try {
             const AdController = window.Adsgram.init({ blockId: "22529" });
             
-            console.log("🎬 Launching Adsgram...");
+            logAdStatus("🎬 Requesting Video...");
             await AdController.show();
             
             // Success!
-            console.log("✅ Adsgram Reward Earned");
+            logAdStatus("✅ Reward Earned!");
             onReward();
-            // Call API to persist reward
+            // Call API
             fetch(`${API_BASE_URL}/api/reward_ad`, {
                  method: 'POST',
                  body: JSON.stringify({ user_id: currentUserEntry.id }),
                  headers: { 'Content-Type': 'application/json' }
             }).catch(e => console.error(e));
 
-            // Reset Button
-            const unlockBtn = document.getElementById('unlockBtn'); // Ensure scope
+            const unlockBtn = document.getElementById('unlockBtn'); 
             if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
             return;
             
         } catch (e) {
-            console.warn("⚠️ Adsgram Failed:", e);
+            // Log the specific error to UI
+            logAdStatus(`❌ Video: ${e.message || 'No Fill'}`);
+            // Wait 1s so user can see the error
+            await new Promise(r => setTimeout(r, 1000));
             triggerMonetagFallback(e.message || 'No Fill');
         }
     } else {
-        triggerMonetagFallback("Video SDK Blocked/Failed");
+        triggerMonetagFallback("SDK Failed");
     }
 
     // 2. Fallback Logic
     function triggerMonetagFallback(reason) {
-        // Ask user permission before showing the "Standard" ad they might dislike
-        if (confirm(`Premium Video Ad not available (${reason}).\n\nWatch standard ad for +1 Star Reward?`)) {
+        logAdStatus("⚠️ Switching to Backup...");
+        // Ask user permission
+        if (confirm(`Adsgram Video not available (${reason}).\n\nShow standard ad for reward?`)) {
              launchMonetag();
+        } else {
+             logAdStatus("❌ Ad Cancelled");
         }
     }
 
     // 3. Monetag Launcher
     function launchMonetag() {
-        console.log("🎬 Launching Monetag...");
+        logAdStatus("🎬 Loading Monetag...");
         if (typeof window.show_10557666 === 'function') {
             window.show_10557666().then(() => {
-                console.log("✅ Monetag Reward Earned");
+                logAdStatus("✅ Reward Earned!");
                 onReward();
                 // Call API
                 fetch(`${API_BASE_URL}/api/reward_ad`, {
@@ -886,7 +901,7 @@ async function launchSmartAd(onReward) {
                 // Ignore close
             });
         } else {
-            alert("Ad System Offline. Try reloading.");
+            alert("Backup System Offline.");
         }
     }
 }
@@ -895,18 +910,12 @@ async function launchSmartAd(onReward) {
 function ensureAdsgramLoaded() {
     return new Promise((resolve, reject) => {
         if (window.Adsgram) return resolve();
-        console.log("🔄 Fetching Adsgram SDK...");
+        // ... (rest is same)
         const script = document.createElement('script');
-        script.src = "https://adsgram.ai/js/adsgram.js?v=" + new Date().getTime(); // Anti-cache
+        script.src = "https://adsgram.ai/js/adsgram.js?v=" + new Date().getTime(); 
         script.async = true;
-        script.onload = () => {
-            console.log("✅ Adsgram SDK Loaded Dynamically");
-            resolve();
-        };
-        script.onerror = (e) => {
-            console.error("❌ Failed to load Adsgram SDK", e);
-            reject(e);
-        };
+        script.onload = resolve;
+        script.onerror = reject;
         document.body.appendChild(script);
     });
 }
