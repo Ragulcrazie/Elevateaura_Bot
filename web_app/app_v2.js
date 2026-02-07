@@ -516,10 +516,12 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                          const balEl = document.getElementById('walletBalance');
                          if(balEl) {
                               balEl.innerText = data.new_balance; 
-                              alert("🎁 Reward: +1 Star Added!");
+                              if(window.showAlert) window.showAlert("🎁 Reward Earned!", "+1 Star Added!");
+                              else alert("🎁 Reward: +1 Star Added!");
                          }
                      } else {
-                         alert("Reward Error: " + (data.error));
+                         if(window.showAlert) window.showAlert("Reward Error", data.error);
+                         else alert("Reward Error: " + (data.error));
                      }
                  })
                  .catch(e => console.error("Ad Reward API failed", e));
@@ -845,7 +847,8 @@ async function launchSmartAd(onReward) {
         });
         
     } else {
-        alert("Ad SDK not ready. Please reload.");
+        if(window.showAlert) window.showAlert("Ad System", "Ad SDK not ready. Please reload.");
+        else alert("Ad SDK not ready. Please reload.");
     }
 }
 

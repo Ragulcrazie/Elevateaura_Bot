@@ -604,60 +604,131 @@
         alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
     };
 
+    </script>
+    <!-- UNIVERSAL CUSTOM MODAL -->
+    <div id="universalModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-gray-800 rounded-2xl w-full max-w-sm border border-yellow-500/30 shadow-2xl p-6 transform scale-100 transition-transform duration-300 relative">
+            <h3 id="uModalTitle" class="text-xl font-bold text-white mb-2">Notice</h3>
+            <div id="uModalBody" class="text-sm text-gray-300 mb-6 whitespace-pre-wrap leading-relaxed"></div>
+            <div id="uModalButtons" class="flex gap-3 justify-end">
+                <!-- Dynamic Buttons -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // --- CUSTOM MODAL SYSTEM (Removes "github.io" text) ---
+    window.showUniversalModal = function(title, body, buttons) {
+        return new Promise((resolve) => {
+            const modal = document.getElementById('universalModal');
+            const titleEl = document.getElementById('uModalTitle');
+            const bodyEl = document.getElementById('uModalBody');
+            const btnContainer = document.getElementById('uModalButtons');
+            
+            if(!modal) return resolve(null); // Safety
+            
+            titleEl.innerText = title;
+            bodyEl.innerHTML = body; // Allow HTML for bolding
+            btnContainer.innerHTML = '';
+            
+            buttons.forEach(btn => {
+                const b = document.createElement('button');
+                b.className = `px-4 py-2 rounded-lg font-bold text-sm transition ${btn.class || 'bg-gray-700 text-white hover:bg-gray-600'}`;
+                b.innerText = btn.text;
+                b.onclick = () => {
+                    modal.classList.add('hidden');
+                    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
+                    resolve(btn.value);
+                };
+                btnContainer.appendChild(b);
+            });
+            
+            modal.classList.remove('hidden');
+            // Animate entrance? (CSS handles transition if classes set right, but simple hidden works safely)
+        });
+    };
+
+    window.showAlert = async function(title, msg) {
+        return window.showUniversalModal(title, msg, [
+            { text: "OK", value: true, class: "bg-indigo-600 hover:bg-indigo-500 text-white" }
+        ]);
+    };
+
+    window.showConfirm = async function(title, msg) {
+        return window.showUniversalModal(title, msg, [
+            { text: "Cancel", value: false, class: "text-gray-400 hover:text-white" },
+            { text: "Confirm", value: true, class: "bg-yellow-500 hover:bg-yellow-400 text-black" }
+        ]);
+    };
+    
+    // --- UPDATED LOGIC USING CUSTOM MODALS ---
+
     window.triggerPremiumRedemption = async function() {
-        console.log("Redemption V2 Function Called");
-        if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+        console.log("Redemption V3 (Custom Modal) Called");
+        if(tg.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
         
         const balance = parseInt(document.getElementById('walletBalance').innerText);
         
         // 1. Check Minimum
         if (balance < 99) {
-            alert(`Insufficient Balance!\n\nYou have ${balance} Stars.\n\nNeed:\n• 99 Stars for Monthly Premium\n• 999 Stars for Yearly Premium\n\nPlay and Win Leaderboards to earn.`);
+            await window.showAlert("Insufficient Balance!", `You have <b class="text-white">${balance} Stars</b>.\n\nNeed:\n• 99 Stars for Monthly Premium\n• 999 Stars for Yearly Premium\n\nPlay and Win Leaderboards to earn.`);
             return;
         }
         
-        // 2. Determine Plan via Prompt (Simple UI)
+        // 2. Determine Plan (Custom Selection)
         let plan = 'monthly';
         let cost = 99;
         
         if (balance >= 999) {
-            const choice = prompt(`💎 Choose Redemption Plan (V2):\n\nType '1' for Monthly (99 Stars)\nType '2' for Yearly (999 Stars)\n\nCurrent Balance: ${balance}`);
-            if (choice === '2') {
-                plan = 'yearly';
-                cost = 999;
-            } else if (choice !== '1') {
-                return; // Cancelled
-            }
+            // Choice Modal
+            const choice = await window.showUniversalModal(
+                "💎 Choose Redemption Plan",
+                `Current Balance: <b class="text-white">${balance} Stars</b>`,
+                [
+                    { text: "Cancel", value: null, class: "text-gray-400" },
+                    { text: "Monthly (99)", value: 'monthly', class: "bg-gray-700 text-white" },
+                    { text: "Yearly (999)", value: 'yearly', class: "bg-yellow-500 text-black" }
+                ]
+            );
+            
+            if (!choice) return;
+            plan = choice;
+            cost = plan === 'yearly' ? 999 : 99;
         } else {
-             const confirmMonthly = confirm(`💎 Redeem Monthly Premium (V2)?\n\nSpend 99 Stars for 30 Days of Premium?\n\nCurrent Balance: ${balance}`);
-             if (!confirmMonthly) return;
+            // Confirm Monthly
+            const confirm = await window.showConfirm(
+                "💎 Redeem Monthly Premium?",
+                `Spend <b>99 Stars</b> for 30 Days of Premium?\n\nCurrent Balance: ${balance}`
+            );
+            if (!confirm) return;
         }
         
         // 3. Final Confirm
+        // (Actually, step 2 covered it, but double check for safety if Yearly)
         if (plan === 'yearly') {
-            const really = confirm(`💎 Confirm Yearly Redemption?\n\nSpend 999 Stars for 365 Days?\n\nThis will deduct from your balance.`);
-            if (!really) return;
+             const really = await window.showConfirm(
+                 "💎 Confirm Yearly?",
+                 `This will deduct <b>999 Stars</b> from your balance.`
+             );
+             if(!really) return;
         }
 
         // 4. API Call
         try {
-            // Show loading state?
             document.body.style.cursor = 'wait';
-            
-            // Safe User ID Retrieval (Avoid ReferenceError)
+             // ... (User ID Logic Same as before) ...
             let userId = null;
-            if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) {
-                userId = tg.initDataUnsafe.user.id;
-            } else if (typeof currentUserEntry !== 'undefined' && currentUserEntry && currentUserEntry.id) {
-                userId = currentUserEntry.id;
-            } else {
-                // Try URL params as last resort (Test Mode)
+            if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
+            else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
+            
+             // Fallback for ID
+             if (!userId) {
                 const urlParams = new URLSearchParams(window.location.search);
                 if (urlParams.get('user_id')) userId = urlParams.get('user_id');
-            }
+             }
 
             if (!userId) {
-                alert("Login Error: User ID missing. Open in Telegram.");
+                await window.showAlert("Login Error", "User ID missing. Open in Telegram.");
                 document.body.style.cursor = 'default';
                 return;
             }
@@ -669,43 +740,39 @@
             });
             
             const result = await response.json();
-            
             document.body.style.cursor = 'default';
             
             if (result.success) {
-                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
-                alert(`✅ REDEMPTION SUCCESSFUL!\n\nAdded ${result.days_added} Days of Premium.\nNew Balance: ${result.new_balance}`);
+                if(tg.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
+                await window.showAlert("✅ REDEMPTION SUCCESSFUL!", `Added ${result.days_added} Days of Premium.\nNew Balance: ${result.new_balance}`);
                  document.getElementById('walletBalance').innerText = result.new_balance;
-                 // Ideally reload to update premium UI, but just balance is fine for now
             } else {
-                if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
-                alert(`❌ Redemption Failed: ${result.error}`);
+                if(tg.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('error');
+                await window.showAlert("❌ Redemption Failed", result.error);
             }
-            
         } catch (e) {
             document.body.style.cursor = 'default';
-            alert(`Network Error: ${e.message}`);
+            await window.showAlert("Network Error", e.message);
         }
     };
 
     window.triggerShareInvite = function() {
-        if(tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
-        
-        // Get user ID safely
+        if(tg.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
         let userId = null;
         if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
         else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
         
         if (!userId) {
-            alert("⚠️ Please open inside Telegram to invite friends.");
-            return;
+             // Use generic
+             const url = "https://t.me/ElevateAura_Bot";
+             window.open(url, '_blank');
+             return;
         }
 
         const inviteLink = `https://t.me/ElevateAura_Bot?start=ref_${userId}`;
         const msg = encodeURIComponent(`🔥 Join Elevate Aura to master your exams!\n\nUse my link to get a head start.\n\n👇 Join Now:\n${inviteLink}`);
         const url = `https://t.me/share/url?url=${inviteLink}&text=${msg}`;
         
-        // Use Telegram Web App native way if possible, or open link
         if (tg && tg.openTelegramLink) {
             tg.openTelegramLink(url);
         } else {
@@ -717,8 +784,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.3 cache bust) -->
-    <script src="app_v2.js?v=3.3"></script>
+    <!-- App Logic (v3.4 cache bust) -->
+    <script src="app_v2.js?v=3.4"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
