@@ -825,13 +825,6 @@ async function launchSmartAd(onReward) {
             
             onReward();
             
-            // Persist Reward
-            fetch(`${API_BASE_URL}/api/reward_ad`, {
-                 method: 'POST',
-                 body: JSON.stringify({ user_id: currentUserEntry.id }),
-                 headers: { 'Content-Type': 'application/json' }
-            }).catch(e => console.error(e));
-            
             // Allow watching again
             setTimeout(() => {
                  if(statusEl) statusEl.innerText = new Date().toDateString(); // Reset status
