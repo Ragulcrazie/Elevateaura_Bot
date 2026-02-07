@@ -779,6 +779,38 @@ async def simulate_payment(request):
         logger.error(f"Payment Sim Error: {e}")
         return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
 
+async def reward_ad_api(request):
+    """
+    Reward user for watching an ad (Adds +1 Star).
+    Body: { user_id: 123 }
+    """
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        
+        if not user_id:
+            return web.json_response({"error": "Missing user_id"}, status=400, headers={"Access-Control-Allow-Origin": "*"})
+            
+        # 1. Fetch current balance
+        user_data = await db.get_user(int(user_id))
+        if not user_data:
+             return web.json_response({"error": "User not found"}, status=404, headers={"Access-Control-Allow-Origin": "*"})
+             
+        current_balance = user_data.get("wallet_stars", 0) or 0
+        new_balance = current_balance + 1
+        
+        # 2. Update DB
+        res = db.client.from_("users").update({"wallet_stars": new_balance}).eq("user_id", int(user_id)).execute()
+        
+        if res.data:
+            return web.json_response({"success": True, "new_balance": new_balance}, headers={"Access-Control-Allow-Origin": "*"})
+        else:
+            return web.json_response({"error": "Update failed"}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
+    except Exception as e:
+        logger.error(f"Ad Reward Error: {e}")
+        return web.json_response({"error": str(e)}, status=500, headers={"Access-Control-Allow-Origin": "*"})
+
 async def handle_options_post(request):
      return web.Response(headers={
         "Access-Control-Allow-Origin": "*",
@@ -899,6 +931,10 @@ async def start_web_server():
     # Name Update Route
     app.router.add_options('/api/update_name', handle_options)
     app.router.add_post('/api/update_name', update_name)
+
+    # Ad Reward Route (New)
+    app.router.add_options('/api/reward_ad', handle_options)
+    app.router.add_post('/api/reward_ad', reward_ad_api)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"

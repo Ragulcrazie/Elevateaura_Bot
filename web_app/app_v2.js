@@ -507,14 +507,30 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                 unlockBtn.innerHTML = "Loading Ad...";
                 
                 launchSmartAd(() => {
-                     // Ad Success Callback
-                     const balEl = document.getElementById('walletBalance');
-                     if(balEl) {
-                          let bal = parseInt(balEl.innerText);
-                          if(isNaN(bal)) bal = 0;
-                          balEl.innerText = bal + 1; 
-                          alert("🎁 Reward: +1 Star Added! Insights Unlocked.");
-                     }
+                     // Ad Success Callback - Call API to persist reward
+                     fetch(`${API_BASE_URL}/api/reward_ad`, {
+                         method: 'POST',
+                         body: JSON.stringify({ user_id: userEntry.id }),
+                         headers: { 'Content-Type': 'application/json' }
+                     })
+                     .then(res => res.json())
+                     .then(data => {
+                         if (data.success) {
+                             const balEl = document.getElementById('walletBalance');
+                             if(balEl) {
+                                  balEl.innerText = data.new_balance; 
+                                  alert("🎁 Reward: +1 Star Added! Insights Unlocked.");
+                             }
+                         } else {
+                             alert("Reward Error: " + (data.error || "Please try again"));
+                         }
+                     })
+                     .catch(e => {
+                         console.error("Ad Reward API failed", e);
+                         // Optimistic update if network fails? No, better warn.
+                         alert("⚠️ Network Error saving reward. Check connection.");
+                     });
+
                      // Reset Button
                      unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
                 });
