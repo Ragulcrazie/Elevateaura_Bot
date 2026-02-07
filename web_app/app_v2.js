@@ -833,52 +833,40 @@ async function launchSmartAd(onReward) {
             return;
             
         } catch (e) {
-            console.warn("⚠️ Adsgram Failed/Skipped:", e);
-            // Inform user why we are switching
-            alert(`Video Ad Unavailable (${e.message || 'No Fill'}). Loading Standard Ad...`);
-            // Fallthrough to Monetag
+            console.warn("⚠️ Adsgram Failed:", e);
+            triggerMonetagFallback(e.message || 'No Fill');
         }
     } else {
-        console.warn("⚠️ Adsgram SDK missing");
-        alert("Video Ad SDK missing. Loading Standard Ad...");
+        triggerMonetagFallback("Video SDK Missing");
     }
 
-    // 2. Fallback: MONETAG REWARDED (High Fill Rate)
-    // console.log("🎬 Launching Monetag Fallback...");
-    
-    if (typeof window.show_10557666 === 'function') {
-        try {
-            // EXPLICIT REWARDED CALL
-            // We use the Promise-based return which typically indicates Rewarded completion
+    // 2. Fallback Logic
+    function triggerMonetagFallback(reason) {
+        // Ask user permission before showing the "Standard" ad they might dislike
+        if (confirm(`Premium Video Ad not available (${reason}).\n\nWatch standard ad for +1 Star Reward?`)) {
+             launchMonetag();
+        }
+    }
+
+    // 3. Monetag Launcher
+    function launchMonetag() {
+        console.log("🎬 Launching Monetag...");
+        if (typeof window.show_10557666 === 'function') {
             window.show_10557666().then(() => {
                 console.log("✅ Monetag Reward Earned");
                 onReward();
             }, (e) => {
-                console.warn("❌ Monetag Ad Closed/Failed", e);
-                // Optional: Still reward if it was a close? No, strict.
-                alert("Ad was closed or failed to load. No reward.");
+                // Ignore close
             });
-            
-        } catch (e) {
-            console.error("❌ All Ads Failed:", e);
-            alert("No ads available right now. Please try again later.");
+        } else {
+            alert("Ad System Offline. Try reloading.");
         }
-    } else {
-        console.error("❌ Monetag SDK missing");
-        onReward(); // Emergency Access
     }
 }
 
-// Replaces old checkAndShowAd (Auto-show logic removed in favor of User-Initiated)
-// We now only use this to potentially pre-load or check status, but mostly we rely on the button click.
-async function checkAndShowAd(userId, userStats) {
-    // Legacy function kept for API compatibility, but logic moved to 'Unlock' button
-    console.log("Ad System Ready. Waiting for user trigger.");
-}
-
-function displayMonetagAd(code) {
-    // Deprecated in V3 Smart System
-}
+// Old functions deprecated
+function checkAndShowAd() {}
+function displayMonetagAd() {}
 
 // Start
 try {
