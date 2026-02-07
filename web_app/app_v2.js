@@ -465,7 +465,8 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             gapEl.innerText = `${pointsLost} points`;
             // Dynamic advice based on weak spots
             if (weakSpots.length > 0) {
-                 const topic = weakSpots[0].replace('Test', '').trim(); // Clean 'Aptitude Test' -> 'Aptitude'
+                 const rawTopic = weakSpots[0].topic || weakSpots[0]; // Handle both obj and string just in case
+                 const topic = (typeof rawTopic === 'string' ? rawTopic : 'General').replace('Test', '').trim(); 
                  if (insightTextEl) insightTextEl.innerHTML = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in 🔒 <span class="text-yellow-400">Locked Topic</span>. Unlock Premium to reveal & fix them.`;
             } else {
                  if (insightTextEl) insightTextEl.innerHTML = `You are running at <span class="text-green-400 font-bold">${Math.round((currentScore/potentialScore)*100)}% efficiency</span>. Unlock Analytics to see where you can improve.`;
