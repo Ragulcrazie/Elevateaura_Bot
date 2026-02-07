@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Elevate Aura Dashboard</title>
     <!-- Telegram WebApp Script -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -589,19 +592,21 @@
         }
     };
 
-    window.triggerWithdrawalAction = function() {
+    window.triggerWithdrawalAction = async function() {
         const balance = parseInt(document.getElementById('walletBalance').innerText) || 0;
 
         // 1. Minimum Balance Check
         if (balance < 600) {
             if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('warning');
-            alert(`🚫 Minimum Withdrawal Limit: 600 Stars\n\nYou only have ${balance} Stars.\n\nKeep ranking up to unlock withdrawals!`);
+            if(window.showAlert) await window.showAlert("🚫 Minimum Withdrawal Limit: 600 Stars", `You only have <b class="text-white">${balance} Stars</b>.\n\nKeep ranking up to unlock withdrawals!`);
+            else alert(`🚫 Minimum Withdrawal Limit: 600 Stars\n\nYou only have ${balance} Stars.\n\nKeep ranking up to unlock withdrawals!`);
             return;
         }
 
         // 2. Compliance Limit (For balances >= 600)
         if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
-        alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
+        if(window.showAlert) await window.showAlert("⚠️ Withdrawal Paused", "Due to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back within 48 hours.");
+        else alert("⚠️ Withdrawal Paused for Compliance Upgrade.\n\nDue to new RBI Digital Wallet guidelines, cash withdrawals are temporarily suspended. Your balance is safe.\n\nCheck back in 48 hours.");
     };
 
     </script>
@@ -637,7 +642,7 @@
                 b.innerText = btn.text;
                 b.onclick = () => {
                     modal.classList.add('hidden');
-                    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
+                    if(typeof tg !== 'undefined' && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
                     resolve(btn.value);
                 };
                 btnContainer.appendChild(b);
@@ -784,8 +789,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.4 cache bust) -->
-    <script src="app_v2.js?v=3.4"></script>
+    <!-- App Logic (v3.5 cache bust) -->
+    <script src="app_v2.js?v=3.5"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
