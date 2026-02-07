@@ -542,35 +542,27 @@ function renderError(msg) {
 
 // --- 4. LISTENERS ---
 // Info Button Modal Logic
-const infoBtn = document.getElementById('infoBtn');
-const infoModal = document.getElementById('infoModal');
-const closeModal = document.getElementById('closeModal');
+// --- 4. GLOBAL LISTENERS ---
 
-if (infoBtn && infoModal && closeModal) {
-    const toggleModal = () => infoModal.classList.toggle('hidden');
-    infoBtn.addEventListener('click', toggleModal);
-    closeModal.addEventListener('click', toggleModal);
+window.toggleInfoModal = function() {
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
     
-    // Close on backdrop click
-    // Close on backdrop click
+    // Red Dot Logic
+    const dot = document.getElementById('pendingActionDot');
+    if (dot && !dot.classList.contains('hidden')) {
+         openCaptureModal();
+    } else {
+         const modal = document.getElementById('infoModal');
+         if(modal) modal.classList.toggle('hidden');
+    }
+};
+
+// Bind Backdrop Close
+const infoModal = document.getElementById('infoModal');
+if(infoModal) {
     infoModal.addEventListener('click', (e) => {
-        if (e.target === infoModal) toggleModal(); 
+        if (e.target === infoModal) infoModal.classList.add('hidden');
     });
-    
-    // --- RED DOT LOGIC for Info Button ---
-    // Remove old listener if any (implicit by re-binding logic here isn't enough, but assuming fresh load)
-    // We override the click.
-    infoBtn.onclick = (e) => {
-        e.preventDefault();
-        const dot = document.getElementById('pendingActionDot');
-        if (dot && !dot.classList.contains('hidden')) {
-             // Open CAPTURE Modal (The Trap)
-             openCaptureModal();
-        } else {
-             // Open INFO Modal
-             toggleModal();
-        }
-    };
 }
 
 // --- LEAD CAPTURE LOGIC ---
