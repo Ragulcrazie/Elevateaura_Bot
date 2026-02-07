@@ -717,8 +717,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.1 cache bust) -->
-    <script src="app_v2.js?v=3.1"></script>
+    <!-- App Logic (v3.2 cache bust) -->
+    <script src="app_v2.js?v=3.2"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -734,13 +734,16 @@
              };
              initDashboard(fakeUser).catch(e => {
                  console.error(e);
-                 document.getElementById('leaderboard').innerHTML = "Login Error";
+                 document.getElementById('leaderboard').innerHTML = "Login Error: " + e.message;
              });
              return;
         }
 
         if (tg.initDataUnsafe?.user) {
-            initDashboard(tg.initDataUnsafe.user).catch(e => console.error(e));
+            initDashboard(tg.initDataUnsafe.user).catch(e => {
+                 console.error(e);
+                 document.getElementById('leaderboard').innerHTML = "Login Error: " + e.message;
+            });
         } else if (attempts < 20) {
             setTimeout(() => waitForUser(attempts + 1), 100);
         } else {
