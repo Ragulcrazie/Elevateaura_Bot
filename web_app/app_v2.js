@@ -834,14 +834,17 @@ async function launchSmartAd(onReward) {
             
         } catch (e) {
             console.warn("⚠️ Adsgram Failed/Skipped:", e);
+            // Inform user why we are switching
+            alert(`Video Ad Unavailable (${e.message || 'No Fill'}). Loading Standard Ad...`);
             // Fallthrough to Monetag
         }
     } else {
         console.warn("⚠️ Adsgram SDK missing");
+        alert("Video Ad SDK missing. Loading Standard Ad...");
     }
 
     // 2. Fallback: MONETAG REWARDED (High Fill Rate)
-    console.log("🎬 Launching Monetag Fallback...");
+    // console.log("🎬 Launching Monetag Fallback...");
     
     if (typeof window.show_10557666 === 'function') {
         try {
