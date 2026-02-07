@@ -37,11 +37,11 @@
 </head>
 <body class="p-4">
     
-    <div class="flex justify-between items-center mb-4 px-2">
+    <div class="flex justify-between items-center mb-4 px-2 relative z-50">
         <div>
             <h1 id="userNameDisplay" class="text-lg font-bold inline-flex items-center gap-2">
                 Hello, Aspirant 
-                <button onclick="editProfileName()" class="opacity-50 hover:opacity-100 text-xs bg-gray-700 px-1 rounded animate-pulse">✏️</button>
+                <button onclick="editProfileName()" class="opacity-50 hover:opacity-100 text-xs bg-gray-700 px-1 rounded animate-pulse cursor-pointer">✏️</button>
             </h1>
             <div id="dateDisplay" class="text-xs text-gray-400">Loading Date...</div>
         </div>
@@ -52,7 +52,7 @@
                 <span id="testCountDisplay" class="text-yellow-400 font-bold text-sm">Loading...</span>
             </div>
             <!-- Info Button -->
-            <button id="infoBtn" onclick="toggleInfoModal()" class="w-7 h-7 rounded-full bg-gray-700 text-gray-300 flex items-center justify-center font-serif italic font-bold border border-gray-600 active:scale-95 transition relative">
+            <button id="infoBtn" onclick="toggleInfoModal()" class="w-7 h-7 rounded-full bg-gray-700 text-gray-300 flex items-center justify-center font-serif italic font-bold border border-gray-600 active:scale-95 transition relative cursor-pointer hover:bg-gray-600">
                 i
                 <!-- Red Dot (Lead Pending) -->
                 <span id="pendingActionDot" class="hidden absolute -top-1 -right-1 w-3 h-3 bg-red-600 rounded-full border-2 border-gray-800 animate-bounce"></span>
@@ -796,8 +796,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.12 cache bust) -->
-    <script src="app_v2.js?v=3.12"></script>
+    <!-- App Logic (v3.13 cache bust) -->
+    <script src="app_v2.js?v=3.13"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
