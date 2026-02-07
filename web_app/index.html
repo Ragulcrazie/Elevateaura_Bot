@@ -669,76 +669,64 @@
     // --- UPDATED LOGIC USING CUSTOM MODALS ---
 
     window.triggerPremiumRedemption = async function() {
-        console.log("Redemption V3 (Custom Modal) Called");
-        if(tg.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
+        console.log("Redemption V4 (Split Payment) Called");
+        if(typeof tg !== 'undefined' && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
         
-        const balance = parseInt(document.getElementById('walletBalance').innerText);
+        const balance = parseInt(document.getElementById('walletBalance').innerText) || 0;
         
-        // 1. Check Minimum
-        if (balance < 99) {
-            await window.showAlert("Insufficient Balance!", `You have <b class="text-white">${balance} Stars</b>.\n\nNeed:\n• 99 Stars for Monthly Premium\n• 999 Stars for Yearly Premium\n\nPlay and Win Leaderboards to earn.`);
+        // 1. Check Minimum for Split (Needs 50 for Monthly)
+        if (balance < 50) {
+            await window.showAlert("Insufficient Wallet Balance!", `You need at least <b>50 Stars</b> to get the 50% discount on Monthly Premium.\n\nCurrent: ${balance}`);
             return;
         }
         
-        // 2. Determine Plan (Custom Selection)
+        // 2. Select Plan
         let plan = 'monthly';
-        let cost = 99;
+        let walletCost = 50;
+        let moneyCost = 49;
         
-        if (balance >= 999) {
-            // Choice Modal
-            const choice = await window.showUniversalModal(
-                "💎 Choose Redemption Plan",
-                `Current Balance: <b class="text-white">${balance} Stars</b>`,
+        if (balance >= 500) {
+             const choice = await window.showUniversalModal(
+                "💎 Select Premium Plan",
+                `You qualify for the <b>50% Wallet Discount!</b>\n\nChoose your savings:`,
                 [
                     { text: "Cancel", value: null, class: "text-gray-400" },
-                    { text: "Monthly (99)", value: 'monthly', class: "bg-gray-700 text-white" },
-                    { text: "Yearly (999)", value: 'yearly', class: "bg-yellow-500 text-black" }
+                    { text: "Monthly (Pay 49 XTR + 50 Stars)", value: 'monthly', class: "bg-gray-700 text-white border border-gray-600 block w-full mb-2" },
+                    { text: "Yearly (Pay 499 XTR + 500 Stars)", value: 'yearly', class: "bg-yellow-500 text-black font-bold block w-full" }
                 ]
             );
-            
             if (!choice) return;
             plan = choice;
-            cost = plan === 'yearly' ? 999 : 99;
+            walletCost = (plan === 'yearly') ? 500 : 50;
+            moneyCost = (plan === 'yearly') ? 499 : 49;
         } else {
-            // Confirm Monthly
-            const confirm = await window.showConfirm(
-                "💎 Redeem Monthly Premium?",
-                `Spend <b>99 Stars</b> for 30 Days of Premium?\n\nCurrent Balance: ${balance}`
-            );
-            if (!confirm) return;
-        }
-        
-        // 3. Final Confirm
-        // (Actually, step 2 covered it, but double check for safety if Yearly)
-        if (plan === 'yearly') {
-             const really = await window.showConfirm(
-                 "💎 Confirm Yearly?",
-                 `This will deduct <b>999 Stars</b> from your balance.`
+             const confirm = await showConfirm(
+                 "💎 Monthly Premium Offer",
+                 `Use <b>50 Wallet Stars</b> to get 50% OFF?\n\nYou pay only <b>49 Telegram Stars</b> (approx ₹150) instead of full price.`
              );
-             if(!really) return;
+             if (!confirm) return;
         }
 
-        // 4. API Call
+        // 3. User ID Logic
+        let userId = null;
+        if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
+        else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
+        else {
+             const urlParams = new URLSearchParams(window.location.search);
+             if (urlParams.get('user_id')) userId = urlParams.get('user_id');
+        }
+
+        if (!userId) {
+            await window.showAlert("Login Error", "User ID missing.");
+            return;
+        }
+
+        // 4. Generate Invoice
         try {
             document.body.style.cursor = 'wait';
-             // ... (User ID Logic Same as before) ...
-            let userId = null;
-            if (typeof tg !== 'undefined' && tg.initDataUnsafe?.user?.id) userId = tg.initDataUnsafe.user.id;
-            else if (typeof currentUserEntry !== 'undefined' && currentUserEntry?.id) userId = currentUserEntry.id;
             
-             // Fallback for ID
-             if (!userId) {
-                const urlParams = new URLSearchParams(window.location.search);
-                if (urlParams.get('user_id')) userId = urlParams.get('user_id');
-             }
-
-            if (!userId) {
-                await window.showAlert("Login Error", "User ID missing. Open in Telegram.");
-                document.body.style.cursor = 'default';
-                return;
-            }
-
-            const response = await fetch(`${API_BASE_URL}/api/redeem_stars`, {
+            // Using existing create_invoice API which now accepts 'plan'
+            const response = await fetch(`${API_BASE_URL}/api/create_invoice`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ user_id: userId, plan: plan })
@@ -747,13 +735,28 @@
             const result = await response.json();
             document.body.style.cursor = 'default';
             
-            if (result.success) {
-                if(tg.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
-                await window.showAlert("✅ REDEMPTION SUCCESSFUL!", `Added ${result.days_added} Days of Premium.\nNew Balance: ${result.new_balance}`);
-                 document.getElementById('walletBalance').innerText = result.new_balance;
+            if (result.invoice_link) {
+                // 5. Open Telegram Invoice
+                if(typeof tg !== 'undefined' && tg.openInvoice) {
+                     tg.openInvoice(result.invoice_link, async (status) => {
+                         if (status === 'paid') {
+                             if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                             await window.showAlert("🎉 Payment Successful!", "Premium Activated! Your wallet stars have been deducted.");
+                             // Optional: Reload to update UI?
+                             location.reload(); 
+                         } else if (status === 'cancelled') {
+                             // Do nothing or show toast
+                         } else {
+                             await window.showAlert("Payment Status", `Status: ${status}`);
+                         }
+                     });
+                } else {
+                     // Fallback for browser testing
+                     window.open(result.invoice_link, '_blank');
+                     await window.showAlert("Invoice Generated", "Please pay via the Bot chat.");
+                }
             } else {
-                if(tg.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('error');
-                await window.showAlert("❌ Redemption Failed", result.error);
+                await window.showAlert("Error", result.error || "Could not generate invoice.");
             }
         } catch (e) {
             document.body.style.cursor = 'default';
@@ -789,8 +792,8 @@
     <!-- Monetag SDK -->
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
-    <!-- App Logic (v3.6 cache bust) -->
-    <script src="app_v2.js?v=3.6"></script>
+    <!-- App Logic (v3.7 cache bust) -->
+    <script src="app_v2.js?v=3.7"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);
