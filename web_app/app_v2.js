@@ -698,99 +698,149 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 
 // --- NEW LOGIC FOR V2 ---
 
+// --- NEW ROBUST RENAMING LOGIC ---
+
+// 1. Inject Modal HTML if missing (Smart Developer Move)
+function ensureIdentityModal() {
+    if (document.getElementById('identityModal')) return;
+
+    const modalHTML = `
+    <div id="identityModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden transition-opacity duration-300">
+        <div class="bg-gray-800 border border-gray-700 w-[90%] max-w-sm p-6 rounded-2xl shadow-2xl transform scale-100 transition-transform duration-300">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="text-2xl">🕵️‍♂️</span>
+                <h3 class="text-xl font-bold text-white">Secret Identity</h3>
+            </div>
+            
+            <p class="text-gray-400 text-sm mb-4">Choose a display name for the Leaderboard.</p>
+            
+            <input type="text" id="identityInput" maxlength="15" 
+                class="w-full bg-gray-900 border border-gray-600 text-white text-lg p-3 rounded-xl focus:outline-none focus:border-indigo-500 placeholder-gray-600 mb-6"
+                placeholder="Enter Name..." />
+                
+            <div class="flex space-x-3">
+                <button onclick="document.getElementById('identityModal').classList.add('hidden')" 
+                    class="flex-1 py-3 rounded-xl font-bold text-gray-400 bg-gray-700 hover:bg-gray-600 transition-all">
+                    Cancel
+                </button>
+                <button onclick="window.saveIdentityAction()" 
+                    class="flex-1 py-3 rounded-xl font-bold text-black bg-yellow-400 hover:bg-yellow-300 shadow-lg shadow-yellow-500/20 transition-all">
+                    Save Identity
+                </button>
+            </div>
+        </div>
+    </div>`;
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// 2. Trigger Rename (No more Prompt!)
 window.editProfileName = function() {
     if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
+    
+    // Auto-inject modal if needed
+    ensureIdentityModal();
 
-    // 1. Try Custom Modal (Preferred)
     const modal = document.getElementById('identityModal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        const input = document.getElementById('identityInput');
-        
-        // Pre-fill current name
-        if(input && currentUserEntry) {
-            input.value = currentUserEntry.full_name === "You" ? "" : currentUserEntry.full_name;
-            input.focus();
-        }
-        
-        // Bind Save Button dynamically if needed, or rely on HTML onclick="saveIdentityAction()"
-        return;
-    }
-
-    // 2. Fallback to Browser Prompt
-    const newName = prompt("Enter your Secret Identity Name:", currentUserEntry ? currentUserEntry.full_name : "");
-    if (newName && newName.trim().length > 0) {
-        performNameUpdate(newName.trim());
+    const input = document.getElementById('identityInput');
+    
+    // Show Modal
+    modal.classList.remove('hidden');
+    
+    // Pre-fill
+    if(input && currentUserEntry) {
+        input.value = (currentUserEntry.full_name === "You" || currentUserEntry.full_name === "Fighter") ? "" : currentUserEntry.full_name;
+        // Focus with slight delay for mobile keyboard
+        setTimeout(() => input.focus(), 100);
     }
 };
 
-// Function called by the Modal's "Save Identity" button
+// 3. Save Action
 window.saveIdentityAction = function() {
     const input = document.getElementById('identityInput');
     if (!input) return;
     
     const name = input.value.trim();
     if (name.length < 2) {
-        alert("Name is too short!");
+        // Use custom toast/alert instead of native alert
+        showCustomToast("⚠️ Name too short (min 2 chars)", "error");
         return;
     }
     
     performNameUpdate(name);
     
-    // Close Modal
-    const modal = document.getElementById('identityModal');
-    if(modal) modal.classList.add('hidden');
+    // Close Modal immediately for better UX
+    document.getElementById('identityModal').classList.add('hidden');
 };
 
-// Core API Logic
+// 4. API Logic with Custom Feedback (No URL Showing)
 async function performNameUpdate(name) {
     if (!currentUserEntry || !currentUserEntry.id) {
-        alert("Error: User ID missing. Reload.");
+        showCustomToast("❌ User ID missing. Reload App.", "error");
         return;
     }
 
     // Optimistic UI Update
+    const oldName = currentUserEntry.full_name;
     renderHeader(name);
     
-    // Show saving status...
-    if(TgApp.MainButton) {
-        TgApp.MainButton.showProgress();
-    }
+    if(TgApp.MainButton) TgApp.MainButton.showProgress();
 
     try {
-        // CALL BACKEND API
-        // We'll use a specific endpoint for updating profile
         const response = await fetch(`${API_BASE_URL}/api/update_name`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                user_id: currentUserEntry.id, 
-                full_name: name 
-            })
+            body: JSON.stringify({ user_id: currentUserEntry.id, full_name: name })
         });
         
         const result = await response.json();
-        
         if(TgApp.MainButton) TgApp.MainButton.hideProgress();
 
         if (result.success) {
             if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
-            
-            // Success! Update global object
             currentUserEntry.full_name = name;
             
-            // Also update the list item if visible
+            // Update List Row
             const myRow = document.querySelector('.bg-indigo-600 .font-bold');
             if(myRow) myRow.innerText = name;
             
+            showCustomToast("✅ Identity Saved Successfully!");
         } else {
-            alert("Save Failed: " + (result.error || "Unknown Error"));
+            throw new Error(result.error || "Server Reject");
         }
     } catch (e) {
-        console.error("Name Update Error:", e);
+        console.error("Rename Error:", e);
         if(TgApp.MainButton) TgApp.MainButton.hideProgress();
-        alert("Network Error. Could not save name.");
+        
+        // Revert UI on error
+        renderHeader(oldName);
+        showCustomToast("❌ Save Failed: Network Error", "error");
     }
+}
+
+// 5. Custom Toast Helper (Replaces alert)
+function showCustomToast(msg, type='success') {
+    // Remove existing
+    const existing = document.getElementById('customToast');
+    if(existing) existing.remove();
+    
+    const color = type === 'error' ? 'bg-red-500' : 'bg-green-500';
+    
+    const toastHTML = `
+    <div id="customToast" class="fixed top-5 left-1/2 transform -translate-x-1/2 ${color} text-white px-6 py-3 rounded-full shadow-xl z-[60] flex items-center space-x-2 animate-bounce">
+        <span>${msg}</span>
+    </div>`;
+    
+    document.body.insertAdjacentHTML('beforeend', toastHTML);
+    
+    // Auto hide
+    setTimeout(() => {
+        const el = document.getElementById('customToast');
+        if(el) {
+            el.style.opacity = '0';
+            setTimeout(() => el.remove(), 300);
+        }
+    }, 3000);
 }
 
 function switchTab(mode) {
