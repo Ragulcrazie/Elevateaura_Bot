@@ -1045,7 +1045,7 @@ async def update_name_handler(request):
         new_name = data.get("full_name")
         
         if not user_id or not new_name:
-             return web.json_response({"success": False, "error": "Missing Data"})
+             return web.json_response({"success": False, "error": "Missing Data"}, headers={"Access-Control-Allow-Origin": "*"})
              
         # Sanitize Name
         new_name = new_name.strip()[:50] # Cap at 50 chars
@@ -1057,7 +1057,7 @@ async def update_name_handler(request):
         # We can use the existing upsert logic, fetching current data first
         user_data = await db.get_user(user_id)
         if not user_data:
-             return web.json_response({"success": False, "error": "User not found"})
+             return web.json_response({"success": False, "error": "User not found"}, headers={"Access-Control-Allow-Origin": "*"})
              
         # Preserve existing fields, update name
         user_data["full_name"] = new_name
@@ -1065,11 +1065,11 @@ async def update_name_handler(request):
         # Save back
         await db.upsert_user(user_data)
         
-        return web.json_response({"success": True})
+        return web.json_response({"success": True}, headers={"Access-Control-Allow-Origin": "*"})
         
     except Exception as e:
         print(f"Update Name API Error: {e}")
-        return web.json_response({"success": False, "error": str(e)})
+        return web.json_response({"success": False, "error": str(e)}, headers={"Access-Control-Allow-Origin": "*"})
 
 # --- API: Get Rewarded Ad Status (Mock) ---
 # --- Instance Lock ---
