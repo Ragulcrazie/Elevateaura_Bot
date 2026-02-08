@@ -248,6 +248,42 @@ async def cb_agree_terms(callback: types.CallbackQuery):
     # Re-trigger start to show menu
     # Fetch user details for the URL
     full_name = callback.from_user.full_name
+    
+    # --- NEW WELCOME BONUS TRIGGER (High Conversion) ---
+    builder = InlineKeyboardBuilder()
+    builder.button(text="🎟️ Activate Ticket / टिकट सक्रिय करें", callback_data=f"claim_reward:{user_id}")
+    
+    await callback.message.answer(
+        "🎉 **WELCOME BONUS UNLOCKED!**\n\n"
+        "You've been entered into our **Weekly Career Scholarship Lucky Draw** (Worth ₹25,000)! 💰\n\n"
+        "👇 **Complete your profile to activate your ticket:**\n\n"
+        "━━━━━━━━━━━━━━━━━━━━\n\n"
+        "🎉 **स्वागत बोनस अनलॉक!**\n\n"
+        "आपको हमारी **साप्ताहिक करियर स्कॉलरशिप लकी ड्रा** (₹25,000 मूल्य) में शामिल किया गया है! 💰\n\n"
+        "👇 **अपना टिकट सक्रिय करने के लिए प्रोफाइल पूरा करें:**",
+        reply_markup=builder.as_markup(),
+        parse_mode="Markdown"
+    )
+    
+    # Also show the main menu below so they aren't stuck, but the Bonus is the focus
+    from urllib.parse import quote
+    safe_name = quote(full_name)
+    import time
+    timestamp = int(time.time())
+    render_base_url = "https://elevateaura-bot.onrender.com"
+    web_app_url = f"{render_base_url}/?user_id={user_id}&name={safe_name}&v={timestamp}"
+
+    menu_kb = InlineKeyboardBuilder()
+    menu_kb.button(text="🔥 Check Leaderboard (v82)", web_app=WebAppInfo(url=web_app_url))
+    menu_kb.button(text="📝 Start Quiz", callback_data="start_quiz_cmd")
+    menu_kb.adjust(1)
+    
+    await callback.message.answer(
+        f"✅ **Account Created for {full_name}**\n\n"
+        "You can find your main menu below:",
+        reply_markup=menu_kb.as_markup(),
+        parse_mode="Markdown"
+    )
     from urllib.parse import quote
     import time
     safe_name = quote(full_name)
