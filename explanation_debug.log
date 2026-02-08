@@ -1,0 +1,32 @@
+
+=== ANSWER - Q ID: num_sys_192 ===
+  explanation_full length: 591
+  explanation length: 85
+  raw_expl length: 591
+  Formatted length: 619
+  Full content (first 500 chars):
+**Step 1:** State the exact rule: Prime number definition - A prime number has exactly two distinct positive divisors: 1 and itself. 
+
+**Step 2:** Substitute given values: Check if option 1 (number 1) is prime by finding all its divisors. 
+
+**Step 3:** Perform calculation: List all divisors of 1: 1. Total number of divisors = 1. 
+
+**Step 4:** Verify the result: Since 1 has exactly 1 divisors, it is not a prime number. Verification: 1 is  divisible by any number between 2 and 1 except itself. 
+
+*
+
+=== ANSWER - Q ID: approx_028 ===
+  explanation_full length: 486
+  explanation length: 90
+  raw_expl length: 486
+  Formatted length: 514
+  Full content (first 500 chars):
+**Step 1:** For approximate multiplication, round numbers to nearby convenient values and multiply mentally. 
+
+**Step 2:** Substitute or round the given numbers according to the chosen approximation/simplification rule. 
+
+**Step 3:** Round 197 to 200 and 49 to 50 to make multiplication easier: 200×50 = 10000. 
+
+**Step 4:** Checking the exact product would be close to 10000, so 10000 is the nearest approximate value and matches the correct option. 
+
+**Step 5:** Conclude: Therefore, the correct an

@@ -236,14 +236,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     start_range = q_answered + 1
     end_range = min(q_answered + len(questions), 60)
     
-    # Check for Reward Challenge (Gamification)
-    # Only show if they haven't claimed the lead reward yet
-    challenge_msg = ""
-    is_lead_submitted = metadata.get("lead_submitted", False)
-    if not is_lead_submitted:
-        challenge_msg = "\n\n🎯 **CHALLENGE: Score 8/10+ in this quiz to unlock a Free Career Consultation & Coaching Scholarship!**"
-    
-    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: {len(questions)} (Progress: {start_range}-{end_range} / 60){challenge_msg}", parse_mode="Markdown")
+    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: {len(questions)} (Progress: {start_range}-{end_range} / 60)", parse_mode="Markdown")
     await asyncio.sleep(1)
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
