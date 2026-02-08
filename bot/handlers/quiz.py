@@ -816,15 +816,39 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     
     # FIX: Convert score (points) to correct count. 
     # Current score is points (e.g. 80). Total questions is count (e.g. 10).
-    # check_reward_eligibility expects compatible units for percentage calc.
     questions_count = len(state["questions"])
     correct_answers = int(score / 10) # score is points (10 per Q)
     
-    is_eligible = await check_reward_eligibility(user_id, correct_answers, questions_count)
+    is_high_score = await check_reward_eligibility(user_id, correct_answers, questions_count)
     
-    # Trigger reward if eligible (High Score + Not Claimed Yet)
-    # matches user requirement: "while he is getting 8 and above ... till he submits"
-    if is_eligible:
+    # Check for FIRST QUIZ COMPLETION (Generic Reward Trigger)
+    is_first_quiz = False
+    try:
+        db_check = SupabaseClient()
+        await db_check.connect()
+        u_data = await db_check.get_user(user_id)
+        if u_data:
+            meta = u_data.get("metadata", {}) or {}
+            # If lifetime tests is 1 (just finished first one) AND lead not submitted
+            if meta.get("lifetime_tests_completed", 0) == 1 and not meta.get("lead_submitted", False):
+                is_first_quiz = True
+    except:
+        pass
+
+    if is_first_quiz:
+        # Special "First Quiz" Welcome Reward
+        first_reward_kb = InlineKeyboardBuilder()
+        first_reward_kb.button(text="🎟️ Activate Reward Ticket", callback_data=f"claim_reward:{user_id}")
+        
+        await message.answer(
+            "🎉 **FIRST QUIZ COMPLETED!**\n\n"
+            "You've unlocked your **Welcome Scholarship Ticket** by completing your first test! 🎓\n\n"
+            "👇 **Complete your profile to activate it:**",
+            reply_markup=first_reward_kb.as_markup(),
+            parse_mode="Markdown"
+        )
+    elif is_high_score:
+        # Standard High Score Reward
         await show_reward_notification(message, user_id)
     
     # Cleanup - Pass the corrected stats
