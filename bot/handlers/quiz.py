@@ -235,7 +235,15 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
     
     start_range = q_answered + 1
     end_range = min(q_answered + len(questions), 60)
-    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: {len(questions)} (Progress: {start_range}-{end_range} / 60)", parse_mode="Markdown")
+    
+    # Check for Reward Challenge (Gamification)
+    # Only show if they haven't claimed the lead reward yet
+    challenge_msg = ""
+    is_lead_submitted = metadata.get("lead_submitted", False)
+    if not is_lead_submitted:
+        challenge_msg = "\n\n🎯 **CHALLENGE: Score 8/10+ in this quiz to unlock a Free Career Consultation & Coaching Scholarship!**"
+    
+    await message.answer(f"🚀 **Starting Daily Quiz!**\n\n📝 **Topic**: {cat.title()} ({lang.title()})\n⏱️ **Questions**: {len(questions)} (Progress: {start_range}-{end_range} / 60){challenge_msg}", parse_mode="Markdown")
     await asyncio.sleep(1)
     print(f"DEBUG: Calling send_question for {user_id}")
     await send_question(message, user_id)
@@ -714,11 +722,28 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     else:
         verdict = "📉 **Below Average. The competition is tough today.**"
 
+    # Check for Near Miss Nudge (Gamification)
+    nudge_msg = ""
+    try:
+        # Quick DB check for lead status
+        db_check = SupabaseClient()
+        await db_check.connect()
+        user_data = await db_check.get_user(user_id)
+        if user_data:
+            meta = user_data.get("metadata", {}) or {}
+            if not meta.get("lead_submitted", False):
+                correct_count = int(score / 10)
+                if correct_count in [6, 7]:
+                    nudge_msg = "\n\n💡 **So close! Score 8/10+ to unlock a Career Consultation Reward. You can do it!**"
+    except Exception as e:
+        print(f"Nudge check failed: {e}")
+
     msg = (
         f"🏁 **Quiz Finished!**\n\n"
         f"🏆 **Your Score**: {score} pts ({int(percent)}%)\n"
         f"👥 **Community Average**: {competitor_avg}%\n\n"
-        f"{verdict}\n\n"
+        f"{verdict}"
+        f"{nudge_msg}\n\n"
         f"**What's Next?** 👇"
     )
 
@@ -789,33 +814,17 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
     # Check if user qualifies for lead generation reward (8/10 or 80%)
     from bot.handlers.career_reward import check_reward_eligibility, show_reward_notification
     
-    is_eligible = await check_reward_eligibility(user_id, score, len(state["questions"]))
+    # FIX: Convert score (points) to correct count. 
+    # Current score is points (e.g. 80). Total questions is count (e.g. 10).
+    # check_reward_eligibility expects compatible units for percentage calc.
+    questions_count = len(state["questions"])
+    correct_answers = int(score / 10) # score is points (10 per Q)
     
-    # ALSO check if they qualified BEFORE but haven't claimed (persistent reminder)
-    if not is_eligible:
-        db = SupabaseClient()
-        await db.connect()
-        user = await db.get_user(user_id)
-        if user:
-            metadata = user.get("metadata", {}) or {}
-            already_claimed = metadata.get("lead_submitted", False)
-            qualified_before = metadata.get("reward_qualified", False)
-            
-            # If they qualified before and haven't claimed, show reminder
-            if qualified_before and not already_claimed:
-                is_eligible = True
+    is_eligible = await check_reward_eligibility(user_id, correct_answers, questions_count)
     
-    # Mark user as qualified (for persistent reminders)
+    # Trigger reward if eligible (High Score + Not Claimed Yet)
+    # matches user requirement: "while he is getting 8 and above ... till he submits"
     if is_eligible:
-        # Save that they've qualified at least once
-        db = SupabaseClient()
-        await db.connect()
-        user = await db.get_user(user_id)
-        if user:
-            metadata = user.get("metadata", {}) or {}
-            metadata["reward_qualified"] = True
-            await db.upsert_user({"user_id": user_id, "metadata": metadata})
-        
         await show_reward_notification(message, user_id)
     
     # Cleanup - Pass the corrected stats
