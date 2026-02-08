@@ -698,6 +698,101 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 
 // --- NEW LOGIC FOR V2 ---
 
+window.editProfileName = function() {
+    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('light');
+
+    // 1. Try Custom Modal (Preferred)
+    const modal = document.getElementById('identityModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        const input = document.getElementById('identityInput');
+        
+        // Pre-fill current name
+        if(input && currentUserEntry) {
+            input.value = currentUserEntry.full_name === "You" ? "" : currentUserEntry.full_name;
+            input.focus();
+        }
+        
+        // Bind Save Button dynamically if needed, or rely on HTML onclick="saveIdentityAction()"
+        return;
+    }
+
+    // 2. Fallback to Browser Prompt
+    const newName = prompt("Enter your Secret Identity Name:", currentUserEntry ? currentUserEntry.full_name : "");
+    if (newName && newName.trim().length > 0) {
+        performNameUpdate(newName.trim());
+    }
+};
+
+// Function called by the Modal's "Save Identity" button
+window.saveIdentityAction = function() {
+    const input = document.getElementById('identityInput');
+    if (!input) return;
+    
+    const name = input.value.trim();
+    if (name.length < 2) {
+        alert("Name is too short!");
+        return;
+    }
+    
+    performNameUpdate(name);
+    
+    // Close Modal
+    const modal = document.getElementById('identityModal');
+    if(modal) modal.classList.add('hidden');
+};
+
+// Core API Logic
+async function performNameUpdate(name) {
+    if (!currentUserEntry || !currentUserEntry.id) {
+        alert("Error: User ID missing. Reload.");
+        return;
+    }
+
+    // Optimistic UI Update
+    renderHeader(name);
+    
+    // Show saving status...
+    if(TgApp.MainButton) {
+        TgApp.MainButton.showProgress();
+    }
+
+    try {
+        // CALL BACKEND API
+        // We'll use a specific endpoint for updating profile
+        const response = await fetch(`${API_BASE_URL}/api/update_name`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                user_id: currentUserEntry.id, 
+                full_name: name 
+            })
+        });
+        
+        const result = await response.json();
+        
+        if(TgApp.MainButton) TgApp.MainButton.hideProgress();
+
+        if (result.success) {
+            if(TgApp.HapticFeedback) TgApp.HapticFeedback.notificationOccurred('success');
+            
+            // Success! Update global object
+            currentUserEntry.full_name = name;
+            
+            // Also update the list item if visible
+            const myRow = document.querySelector('.bg-indigo-600 .font-bold');
+            if(myRow) myRow.innerText = name;
+            
+        } else {
+            alert("Save Failed: " + (result.error || "Unknown Error"));
+        }
+    } catch (e) {
+        console.error("Name Update Error:", e);
+        if(TgApp.MainButton) TgApp.MainButton.hideProgress();
+        alert("Network Error. Could not save name.");
+    }
+}
+
 function switchTab(mode) {
     if (currentMode === mode) return;
     currentMode = mode;

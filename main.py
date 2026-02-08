@@ -965,8 +965,8 @@ async def start_web_server():
     app.router.add_post('/api/redeem_stars', redeem_stars)
 
     # Name Update Route
-    app.router.add_options('/api/update_name', handle_options)
-    app.router.add_post('/api/update_name', update_name)
+    app.router.add_options('/api/update_name', handle_options_post)
+    app.router.add_post('/api/update_name', update_name_handler)
 
     # Ad Reward Route (New)
     app.router.add_options('/api/reward_ad', handle_options)
@@ -1015,6 +1015,63 @@ async def keep_alive():
             except Exception as e:
                 logger.error(f"Keep-alive ping failed: {e}")
 
+# --- NEW API: Unlock Premium with Code ---
+async def unlock_premium_handler(request):
+    try:
+        data = await request.json()
+        user_id = int(data.get("user_id"))
+        secret_code = data.get("code")
+        
+        # Simple hardcoded check for MVP (or DB lookup)
+        VALID_CODES = ["ELEVATE2025", "OFFICER", "PREMIUM7", "AURA100"]
+        
+        if secret_code in VALID_CODES:
+            # Grant Premium
+            success = await db.update_user_field(user_id, "is_premium", True)
+            if success:
+                 # Add 7 days to subscription
+                 await db.update_subscription(user_id, 7) # hypothetical helper
+                 return web.json_response({"success": True, "message": "Premium Unlocked for 7 Days!"})
+        
+        return web.json_response({"success": False, "error": "Invalid Code"})
+    except Exception as e:
+        return web.json_response({"success": False, "error": str(e)})
+
+# --- NEW API: Update User Name ---
+async def update_name_handler(request):
+    try:
+        data = await request.json()
+        user_id = data.get("user_id")
+        new_name = data.get("full_name")
+        
+        if not user_id or not new_name:
+             return web.json_response({"success": False, "error": "Missing Data"})
+             
+        # Sanitize Name
+        new_name = new_name.strip()[:50] # Cap at 50 chars
+        
+        # Update DB
+        # We need to update 'full_name' in the users table
+        # Using SupabaseClient's update method if available, or direct upsert
+        
+        # We can use the existing upsert logic, fetching current data first
+        user_data = await db.get_user(user_id)
+        if not user_data:
+             return web.json_response({"success": False, "error": "User not found"})
+             
+        # Preserve existing fields, update name
+        user_data["full_name"] = new_name
+        
+        # Save back
+        await db.upsert_user(user_data)
+        
+        return web.json_response({"success": True})
+        
+    except Exception as e:
+        print(f"Update Name API Error: {e}")
+        return web.json_response({"success": False, "error": str(e)})
+
+# --- API: Get Rewarded Ad Status (Mock) ---
 # --- Instance Lock ---
 import os
 import psutil

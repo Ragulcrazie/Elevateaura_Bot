@@ -30,3 +30,189 @@
 **Step 4:** Checking the exact product would be close to 10000, so 10000 is the nearest approximate value and matches the correct option. 
 
 **Step 5:** Conclude: Therefore, the correct an
+
+=== ANSWER - Q ID: pc_080 ===
+  explanation_full length: 467
+  explanation length: 70
+  raw_expl length: 467
+  Formatted length: 495
+  Full content (first 500 chars):
+**Step 1:** Figure pattern completion: identify the visual transformation, rotation, or progression rule in the figure sequence and apply it to find the missing figure. 
+
+**Step 2:** Analyze the given sequence to identify the pattern or rule. 
+
+**Step 3:** Sequence: Solid, Striped, ?, Solid, Striped. Pattern: pattern type cycle. 
+
+**Step 4:** Missing type = Dotted (completes cycle). Verification: pattern repeats correctly ✓. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 'Dotted'.
+
+=== ANSWER - Q ID: pc_351 ===
+  explanation_full length: 403
+  explanation length: 70
+  raw_expl length: 403
+  Formatted length: 431
+  Full content (first 500 chars):
+**Step 1:** Number pattern completion: identify the mathematical rule or sequence pattern in the given numbers and apply it to find the missing number. 
+
+**Step 2:** Analyze the given sequence to identify the pattern or rule. 
+
+**Step 3:** Sequence: 12, 14, 16, 18, ?, 22. Common difference = 2. 
+
+**Step 4:** Missing number = 18 + 2 = 20. Verification: 22 - 20 = 2 ✓. 
+
+**Step 5:** Conclude: Therefore, the correct answer is '20'.
+
+=== ANSWER - Q ID: tw_095 ===
+  explanation_full length: 448
+  explanation length: 117
+  raw_expl length: 448
+  Formatted length: 476
+  Full content (first 500 chars):
+**Step 1:** If efficiencies are in ratio a:b, times taken are in ratio 1/a : 1/b. Work done ∝ efficiency × time. 
+
+**Step 2:** Substitute the given values from the question into the formula. 
+
+**Step 3:** Efficiency ratio A:B = 3:3. For same work, Time ∝ 1/Efficiency, so Time ratio B:A = 3:3. 
+
+**Step 4:** If A takes 10 days, B's time = 10 × 3/3 = 10.0 ≈ 10 days. Verification: B's rate = 1/10 relative to A. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 10 days.
+
+=== ANSWER - Q ID: tsd_020 ===
+  explanation_full length: 449
+  explanation length: 86
+  raw_expl length: 449
+  Formatted length: 477
+  Full content (first 500 chars):
+**Step 1:** Average speed = Total distance / Total time for the whole journey. 
+
+**Step 2:** Substitute the given values from the question into the appropriate speed–time–distance formula. 
+
+**Step 3:** Total distance = 60 + 60 = 120 km. Times: 60/50 = 1.20 h, 60/50 = 1.20 h. Total time = 2.40 h. 
+
+**Step 4:** Average speed = Total distance/Total time = 120/2.40 ≈ 50.0 km/h, so option 50.0 km/h is correct. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 50.0 km/h.
+
+=== ANSWER - Q ID: mix_035 ===
+  explanation_full length: 348
+  explanation length: 109
+  raw_expl length: 348
+  Formatted length: 376
+  Full content (first 500 chars):
+**Step 1:** Use percentage or ratio of milk to water; total volume fixed unless there is replacement. 
+
+**Step 2:** Substitute the given values from the question into the relevant mixture/alligation formula. 
+
+**Step 3:** Milk = 40% of 30 = (40/100)×30 = 12.0 L. 
+
+**Step 4:** Verification: 12.0/30 × 100 = 40%. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 12.0 L.
+
+=== ANSWER - Q ID: profit_081 ===
+  explanation_full length: 367
+  explanation length: 120
+  raw_expl length: 367
+  Formatted length: 386
+  Full content (first 500 chars):
+**Step 1:** Loss% = (Loss/CP) × 100. Loss occurs when SP < CP. 
+
+**Step 2:** Substitute the given values from the question into the formula. 
+
+**Step 3:** Loss = CP - SP = 553 - 471 = ₹82 
+
+**Step 4:** Verify the result numerically: Loss% = (CP - SP)/CP × 100 = (553.0 - 471.0)/553.0 × 100 = 15.0%. So option 15% is correct. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 15%.
+
+=== TIMEOUT - Q ID: ds_045 ===
+  explanation_full length: 850
+  explanation length: 111
+  raw_expl length: 850
+  Formatted length: 878
+  Full content (first 500 chars):
+**Step 1:** Arithmetic data sufficiency: treat each statement as giving equations or inequalities and see if they fix the numeric value. 
+
+**Step 2:** Test the sufficiency of each statement separately, and then together, against the requirement of a unique answer. 
+
+**Step 3:** Even after using both statements, the information is still insufficient to pin down a unique value or answer for the question as described: Together the statements only bound x to several possible even integers greater th
+
+=== TIMEOUT - Q ID: approx_045 ===
+  explanation_full length: 419
+  explanation length: 104
+  raw_expl length: 419
+  Formatted length: 447
+  Full content (first 500 chars):
+**Step 1:** For fraction-based approximation, convert between fractions, decimals, and percentages as appropriate. 
+
+**Step 2:** Substitute or round the given numbers according to the chosen approximation/simplification rule. 
+
+**Step 3:** Divide 7 by 11 to get decimal ≈ 0.6364, which rounds to 0.64. 
+
+**Step 4:** Verification: 7/11 ≈ 0.64, so option 0.64 is the best approximation. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 0.64.
+
+=== TIMEOUT - Q ID: ratio_033 ===
+  explanation_full length: 363
+  explanation length: 99
+  raw_expl length: 363
+  Formatted length: 391
+  Full content (first 500 chars):
+**Step 1:** Compound ratio of a:b and c:d is (a×c):(b×d). For three ratios a:b, c:d, e:f, compound ratio = (a×c×e):(b×d×f). 
+
+**Step 2:** Substitute the given values from the question into the formula. 
+
+**Step 3:** Find GCD of 15 and 14: GCD = 1 
+
+**Step 4:** Divide both terms by 1: 15÷1 = 15, 14÷1 = 14. Simplest form: 15:14 
+
+**Step 5:** Conclude: Therefore, the correct answer is 15:14.
+
+=== TIMEOUT - Q ID: tw_079 ===
+  explanation_full length: 407
+  explanation length: 116
+  raw_expl length: 407
+  Formatted length: 435
+  Full content (first 500 chars):
+**Step 1:** Total work is constant: Men₁ × Days₁ = Men₂ × Days₂ (assuming equal daily hours and same efficiency). 
+
+**Step 2:** Substitute the given values from the question into the formula. 
+
+**Step 3:** Total work in man-days = 12 × 18 = 216. For 15 men: 15 × Days₂ = 216. 
+
+**Step 4:** So Days₂ = 216/15 = 14.4 ≈ 14.4 days. Verification: 15 × 14.4 ≈ 216 man-days. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 14.4 days.
+
+=== TIMEOUT - Q ID: num_sys_125 ===
+  explanation_full length: 661
+  explanation length: 99
+  raw_expl length: 661
+  Formatted length: 689
+  Full content (first 500 chars):
+**Step 1:** State the exact rule: Divisibility rule for 3: A number is divisible by 3 if the sum of all its digits is divisible by 3. 
+
+**Step 2:** Substitute given values: Check which option from 3599, 3600, 3660, 3601 is divisible by 3. 
+
+**Step 3:** Perform calculation: For option 3600, number 3600 has digits 3, 6, 0, 0. Sum = 3 + 6 + 0 + 0 = 9. Check if 9 is divisible by 3: 9 ÷ 3 = 3. 
+
+**Step 4:** Verify the result: Since 9 is divisible by 3, 3600 is divisible by 3. Verification: 3600 ÷ 3 =
+
+=== TIMEOUT - Q ID: percent_079 ===
+  explanation_full length: 465
+  explanation length: 117
+  raw_expl length: 465
+  Formatted length: 481
+  Full content (first 500 chars):
+**Step 1:** Discount amount = (Discount%/100) × Marked Price, SP = MP - Discount 
+
+**Step 2:** Substitute the given values from the question into the formula. 
+
+**Step 3:** Discount amount = 20% of 1100 = (20/100) × 1100 = 220 
+
+**Step 4:** Verify the result numerically: The calculated value is 20. Using this value in the original relation makes the left-hand side equal the right-hand side, so option 880 is correct. 
+
+**Step 5:** Conclude: Therefore, the correct answer is 880.
