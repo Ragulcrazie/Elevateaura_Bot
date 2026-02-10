@@ -674,19 +674,20 @@ function submitLead() {
 const upgradeBtnMain = document.getElementById('upgradeBtn');
 if (upgradeBtnMain) {
     upgradeBtnMain.addEventListener('click', () => {
-        // Use the Telegram Main Button as a 'Confirm' for redemption
-        TgApp.MainButton.setText("UPGRADE TO PREMIUM (₹99)");
-        TgApp.MainButton.show();
+        if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
         
-        TgApp.MainButton.onClick(() => {
-            TgApp.MainButton.hide();
-            // Trigger the existing logic from index.html
-            if (window.triggerPremiumRedemption) {
-                window.triggerPremiumRedemption();
-            } else {
-                alert("Please reload the app.");
-            }
-        });
+        // Show message and close web app
+        if (window.showAlert) {
+            window.showAlert(
+                "Upgrade to Premium", 
+                "Close this window and type /upgrade in the bot to continue!"
+            ).then(() => {
+                if (TgApp.close) TgApp.close();
+            });
+        } else {
+            alert("Type /upgrade in the bot to upgrade to premium!");
+            if (TgApp.close) TgApp.close();
+        }
     });
 }
 
