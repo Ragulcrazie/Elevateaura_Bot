@@ -675,7 +675,7 @@ const upgradeBtnMain = document.getElementById('upgradeBtn');
 if (upgradeBtnMain) {
     upgradeBtnMain.addEventListener('click', () => {
         // Use the Telegram Main Button as a 'Confirm' for redemption
-        TgApp.MainButton.setText("REDEEM PREMIUM (99 ⭐)");
+        TgApp.MainButton.setText("UPGRADE TO PREMIUM (₹99)");
         TgApp.MainButton.show();
         
         TgApp.MainButton.onClick(() => {
