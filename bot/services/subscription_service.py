@@ -43,9 +43,13 @@ class SubscriptionService:
             current_status = user.get('subscription_status', 'free')
             expires_at_str = user.get('subscription_expires_at')
             
-            # If already free or no expiry date, return as-is
-            if current_status == 'free' or not expires_at_str:
+            # If status is free, return free
+            if current_status == 'free':
                 return {"status": "free", "expired": False}
+                
+            # If premium but NO expiry date, treat as Lifetime/Manual Premium
+            if not expires_at_str:
+                return {"status": "premium", "expired": False, "days_remaining": 999}
             
             # Parse expiry date
             try:
