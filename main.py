@@ -35,8 +35,6 @@ dp.include_router(payment_router)
 dp.include_router(prefs_router)
 dp.include_router(ai_router)
 dp.include_router(career_router)
-from bot.handlers.razorpay_payment import router as razorpay_router
-dp.include_router(razorpay_router)
 db = SupabaseClient()
 
 # --- Admin Handlers ---
@@ -973,80 +971,6 @@ async def start_web_server():
     # Ad Reward Route (New)
     app.router.add_options('/api/reward_ad', handle_options)
     app.router.add_post('/api/reward_ad', reward_ad_api)
-
-    # --- RAZORPAY WEBHOOK ---
-    async def handle_razorpay_webhook(request):
-        try:
-            # 1. Verify Signature
-            from bot.services.razorpay_service import RazorpayService
-            service = RazorpayService()
-            
-            body_bytes = await request.read()
-            body_str = body_bytes.decode('utf-8')
-            signature = request.headers.get('X-Razorpay-Signature')
-            
-            if not service.verify_webhook_signature(body_str, signature):
-                logger.warning("❌ Invalid Razorpay Signature")
-                return web.Response(status=400)
-            
-            # 2. Process Event
-            event = await request.json()
-            if event.get('event') == 'payment.captured':
-                payment = event['payload']['payment']['entity']
-                notes = payment.get('notes', {})
-                user_id = notes.get('user_id')
-                order_id = payment.get('order_id') # Razorpay Order ID
-                amount = payment.get('amount')
-                
-                if user_id:
-                    user_id = int(user_id)
-                    logger.info(f"💰 Webhook: Payment Captured for {user_id}")
-                    
-                    # A. Update Payment Order
-                    await db.update_payment_order(order_id, {
-                        "status": "paid",
-                        "payment_id": payment.get('id'),
-                        "updated_at": db.get_ist_date() # Approximation
-                    })
-                    
-                    # B. Activate Subscription
-                    # Logic similar to 'redeem_stars' or 'process_successful_payment'
-                    # Determine duration based on amount
-                    days = 365 if amount >= 50000 else 30 # Simple heuristic: >500 is yearly
-                    
-                    from datetime import datetime, timedelta
-                    now = datetime.utcnow()
-                    new_expiry = now + timedelta(days=days)
-                    
-                    # Update User
-                    await db.client.table("users").update({
-                        "subscription_status": "premium",
-                        "subscription_expires_at": new_expiry.isoformat(),
-                        "last_payment_date": now.isoformat(),
-                        "total_payments": 1, # Increment logic needed really, but kept simple
-                        "expiration_warning_sent": False
-                    }).eq("user_id", user_id).execute()
-                    
-                    # C. Notify User
-                    try:
-                        await bot.send_message(
-                            user_id,
-                            "🎉 **PAYMENT RECEIVED!**\n\n"
-                            "✅ **Premium Activated Successfully.**\n"
-                            "🚀 **Enjoy detailed analytics, AI Coach, and Ad-Free experience!**\n\n"
-                            "Type /dashboard to verify.",
-                            parse_mode="Markdown"
-                        )
-                    except Exception as e:
-                        logger.error(f"Failed to notify user: {e}")
-
-            return web.Response(status=200)
-            
-        except Exception as e:
-            logger.error(f"Webhook Error: {e}")
-            return web.Response(status=500)
-
-    app.router.add_post('/razorpay_webhook', handle_razorpay_webhook)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
