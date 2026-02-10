@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import aiohttp
+from aiohttp import web
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
@@ -9,7 +10,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import WebAppInfo
 from database.db_client import SupabaseClient
 from bot.handlers.quiz import router as quiz_router
-from bot.handlers.payment import router as payment_router
+from bot.handlers.razorpay_payment import router as payment_router
 from bot.handlers.preferences import router as prefs_router
 from bot.services.rank_engine import RankEngine
 
@@ -971,6 +972,87 @@ async def start_web_server():
     # Ad Reward Route (New)
     app.router.add_options('/api/reward_ad', handle_options)
     app.router.add_post('/api/reward_ad', reward_ad_api)
+
+    # --- RAZORPAY WEBHOOK ---
+    async def handle_razorpay_webhook(request):
+        """Handles Razorpay webhook events for payment confirmation"""
+        try:
+            from bot.services.razorpay_service import RazorpayService
+            from datetime import datetime, timedelta
+            
+            service = RazorpayService()
+            
+            # 1. Verify Signature
+            body_bytes = await request.read()
+            body_str = body_bytes.decode('utf-8')
+            signature = request.headers.get('X-Razorpay-Signature', '')
+            
+            if not service.verify_webhook_signature(body_str, signature):
+                logger.warning("❌ Invalid Razorpay webhook signature")
+                return web.Response(status=400, text="Invalid signature")
+            
+            # 2. Parse event
+            import json
+            event = json.loads(body_str)
+            
+            if event.get('event') == 'payment_link.paid':
+                payload = event.get('payload', {})
+                payment_link = payload.get('payment_link', {}).get('entity', {})
+                payment = payload.get('payment', {}).get('entity', {})
+                
+                notes = payment_link.get('notes', {})
+                user_id = notes.get('user_id')
+                order_id = payment_link.get('id')
+                amount = payment.get('amount', 0)
+                
+                if user_id:
+                    user_id = int(user_id)
+                    logger.info(f"💰 Webhook: Payment confirmed for user {user_id} (₹{amount/100})")
+                    
+                    # A. Update payment order in database
+                    await db.update_payment_order(order_id, {
+                        "status": "paid",
+                        "payment_id": payment.get('id')
+                    })
+                    
+                    # B. Determine subscription duration
+                    days = 365 if amount >= 50000 else 30  # ₹500+ = yearly, else monthly
+                    
+                    # C. Activate subscription
+                    now = datetime.utcnow()
+                    new_expiry = now + timedelta(days=days)
+                    
+                    await db.client.table("users").update({
+                        "subscription_status": "premium",
+                        "subscription_expires_at": new_expiry.isoformat(),
+                        "last_payment_date": now.isoformat(),
+                        "expiration_warning_sent": False
+                    }).eq("user_id", user_id).execute()
+                    
+                    # D. Notify user
+                    try:
+                        duration_text = "1 Year" if days == 365 else "1 Month"
+                        await bot.send_message(
+                            user_id,
+                            f"🎉 **PAYMENT SUCCESSFUL!**\n\n"
+                            f"✅ Premium activated for **{duration_text}**\n"
+                            f"🚀 Enjoy:\n"
+                            f"  • Ad-Free Experience\n"
+                            f"  • AI Performance Coach\n"
+                            f"  • Detailed Analytics\n\n"
+                            f"Type /dashboard to explore!",
+                            parse_mode="Markdown"
+                        )
+                    except Exception as e:
+                        logger.error(f"Failed to notify user {user_id}: {e}")
+            
+            return web.Response(status=200, text="OK")
+            
+        except Exception as e:
+            logger.error(f"❌ Razorpay webhook error: {e}")
+            return web.Response(status=500, text="Internal error")
+    
+    app.router.add_post('/razorpay/webhook', handle_razorpay_webhook)
 
     # --- SERVE STATIC WEB APP (New) ---
     # Serve index.html at root "/"
