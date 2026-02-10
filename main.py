@@ -1022,7 +1022,7 @@ async def start_web_server():
                     now = datetime.utcnow()
                     new_expiry = now + timedelta(days=days)
                     
-                    await db.client.table("users").update({
+                    db.client.table("users").update({
                         "subscription_status": "premium",
                         "subscription_expires_at": new_expiry.isoformat(),
                         "last_payment_date": now.isoformat(),
