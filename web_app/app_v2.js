@@ -676,15 +676,16 @@ if (upgradeBtnMain) {
     upgradeBtnMain.addEventListener('click', () => {
         if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
         
-        // Show message and close web app
-        if (window.showAlert) {
-            window.showAlert(
-                "Upgrade to Premium", 
-                "Close this window and type /upgrade in the bot to continue!"
-            ).then(() => {
-                if (TgApp.close) TgApp.close();
-            });
+        // Auto-trigger upgrade in bot
+        if (TgApp.sendData) {
+            // Send data to bot to trigger upgrade automatically
+            TgApp.sendData(JSON.stringify({
+                action: "upgrade",
+                source: "unlock_button"
+            }));
+            // Web app will close automatically after sendData
         } else {
+            // Fallback
             alert("Type /upgrade in the bot to upgrade to premium!");
             if (TgApp.close) TgApp.close();
         }

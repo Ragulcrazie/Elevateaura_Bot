@@ -662,28 +662,17 @@
         
         // Check if user qualifies for 50% discount
         if (balance >= 50) {
-            // User qualifies for discount!
-            const choice = await window.showUniversalModal(
-                "🎉 50% Discount Available!",
-                `<b>You qualify for premium discount!</b>\n\n` +
-                `💰 Your Wallet: ₹${balance}\n\n` +
-                `<b>Monthly Premium:</b> Pay ₹49 + Use ₹50 from wallet\n` +
-                `<b>Yearly Premium:</b> Pay ₹499 + Use ₹500 from wallet (if balance ≥₹500)\n\n` +
-                `Click below to open /upgrade in bot:`,
-                [
-                    { text: "Cancel", value: null, class: "text-gray-400" },
-                    { text: "✅ Use /upgrade Command", value: 'upgrade', class: "bg-green-600 text-white font-bold w-full" }
-                ]
-            );
-            
-            if (choice === 'upgrade') {
-                // Close web app and user goes to bot
-                if (typeof tg !== 'undefined' && tg.close) {
-                    await window.showAlert("Go to Bot", "Type /upgrade in the bot to continue!");
-                    tg.close();
-                } else {
-                    await window.showAlert("Next Step", "Open the bot and type:\n\n/upgrade\n\nTo complete your premium purchase!");
-                }
+            // User qualifies! Auto-trigger upgrade
+            if (typeof tg !== 'undefined' && tg.sendData) {
+                // Send data to bot to trigger upgrade automatically
+                tg.sendData(JSON.stringify({
+                    action: "upgrade",
+                    wallet_balance: balance
+                }));
+                // Web app will close automatically after sendData
+            } else {
+                // Fallback
+                await window.showAlert("Next Step", "Type /upgrade in bot to continue!");
             }
         } else {
             // Not enough wallet balance
