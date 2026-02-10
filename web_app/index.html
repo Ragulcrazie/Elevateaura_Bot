@@ -662,17 +662,15 @@
         
         // Check if user qualifies for 50% discount
         if (balance >= 50) {
-            // User qualifies! Auto-trigger upgrade
-            if (typeof tg !== 'undefined' && tg.sendData) {
-                // Send data to bot to trigger upgrade automatically
-                tg.sendData(JSON.stringify({
-                    action: "upgrade",
-                    wallet_balance: balance
-                }));
-                // Web app will close automatically after sendData
+            // User qualifies! Redirect to bot with deep link
+            const deepLink = "https://t.me/ElevateAura_Bot?start=upgrade_auto";
+            
+            if (typeof tg !== 'undefined' && tg.openTelegramLink) {
+                tg.openTelegramLink(deepLink);
+                tg.close();
             } else {
-                // Fallback
-                await window.showAlert("Next Step", "Type /upgrade in bot to continue!");
+                // Fallback: direct redirect
+                window.location.href = deepLink;
             }
         } else {
             // Not enough wallet balance

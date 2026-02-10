@@ -70,6 +70,14 @@ async def cmd_start(message: types.Message):
     if len(message.text.split()) > 1:
         args = message.text.split()[1]
     
+    # Handle upgrade auto-trigger from Web App
+    if args == "upgrade_auto":
+        logger.info(f"User {user_id} triggered auto-upgrade via deep link from Web App.")
+        # Import and call upgrade handler
+        from bot.handlers.razorpay_payment import cmd_upgrade
+        await cmd_upgrade(message)
+        return
+    
     if args == "subscribe_pro":
         logger.info(f"User {user_id} triggered PRO subscription via Deep Link.")
         # Update DB to PRO

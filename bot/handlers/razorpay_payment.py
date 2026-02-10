@@ -14,23 +14,6 @@ logger = logging.getLogger(__name__)
 router = Router()
 razorpay_service = RazorpayService()
 
-@router.message(F.web_app_data)
-async def handle_webapp_upgrade(message: Message):
-    """
-    Handles web app data from Redeem/Unlock buttons.
-    Automatically triggers upgrade flow.
-    """
-    try:
-        data = json.loads(message.web_app_data.data)
-        
-        if data.get("action") == "upgrade":
-            # Automatically show upgrade options
-            await cmd_upgrade(message)
-            
-    except Exception as e:
-        logger.error(f"WebApp data error: {e}")
-        await message.answer("⚠️ Something went wrong. Please use /upgrade command.")
-
 @router.message(F.text == "/upgrade")
 async def cmd_upgrade(message: Message):
     """

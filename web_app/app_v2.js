@@ -676,18 +676,15 @@ if (upgradeBtnMain) {
     upgradeBtnMain.addEventListener('click', () => {
         if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
         
-        // Auto-trigger upgrade in bot
-        if (TgApp.sendData) {
-            // Send data to bot to trigger upgrade automatically
-            TgApp.sendData(JSON.stringify({
-                action: "upgrade",
-                source: "unlock_button"
-            }));
-            // Web app will close automatically after sendData
+        // Auto-trigger upgrade via deep link
+        const deepLink = "https://t.me/ElevateAura_Bot?start=upgrade_auto";
+        
+        if (TgApp.openTelegramLink) {
+            TgApp.openTelegramLink(deepLink);
+            TgApp.close();
         } else {
-            // Fallback
-            alert("Type /upgrade in the bot to upgrade to premium!");
-            if (TgApp.close) TgApp.close();
+            // Fallback: direct redirect
+            window.location.href = deepLink;
         }
     });
 }
