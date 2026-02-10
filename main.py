@@ -1015,10 +1015,26 @@ async def start_web_server():
                         "payment_id": payment.get('id')
                     })
                     
-                    # B. Determine subscription duration
+                    # B. Get order details to check wallet bonus
+                    order = await db.get_payment_order(order_id)
+                    wallet_bonus_used = order.get("wallet_bonus_used", 0) if order else 0
+                    
+                    # C. Deduct wallet if bonus was used
+                    if wallet_bonus_used > 0:
+                        user_data = await db.get_user(user_id)
+                        current_wallet = user_data.get("wallet_stars", 0) or 0
+                        new_wallet = max(0, current_wallet - wallet_bonus_used)
+                        
+                        db.client.table("users").update({
+                            "wallet_stars": new_wallet
+                        }).eq("user_id", user_id).execute()
+                        
+                        logger.info(f"💳 Wallet deducted: ₹{wallet_bonus_used} (balance: ₹{new_wallet})")
+                    
+                    # D. Determine subscription duration
                     days = 365 if amount >= 50000 else 30  # ₹500+ = yearly, else monthly
                     
-                    # C. Activate subscription
+                    # E. Activate subscription
                     now = datetime.utcnow()
                     new_expiry = now + timedelta(days=days)
                     
@@ -1029,20 +1045,39 @@ async def start_web_server():
                         "expiration_warning_sent": False
                     }).eq("user_id", user_id).execute()
                     
-                    # D. Notify user
+                    # F. Notify user
                     try:
                         duration_text = "1 Year" if days == 365 else "1 Month"
-                        await bot.send_message(
-                            user_id,
-                            f"🎉 **PAYMENT SUCCESSFUL!**\n\n"
-                            f"✅ Premium activated for **{duration_text}**\n"
-                            f"🚀 Enjoy:\n"
-                            f"  • Ad-Free Experience\n"
-                            f"  • AI Performance Coach\n"
-                            f"  • Detailed Analytics\n\n"
-                            f"Type /dashboard to explore!",
-                            parse_mode="Markdown"
-                        )
+                        
+                        # Build message based on wallet usage
+                        if wallet_bonus_used > 0:
+                            message = (
+                                f"🎉 **PAYMENT SUCCESSFUL!**\n\n"
+                                f"💰 **Payment Breakdown:**\n"
+                                f"  • Razorpay: ₹{amount/100:.0f}\n"
+                                f"  • Wallet Used: ₹{wallet_bonus_used}\n"
+                                f"  • Total: ₹{(amount/100) + wallet_bonus_used:.0f}\n"
+                                f"  • You Saved: ₹{wallet_bonus_used} (50% OFF!)\n\n"
+                                f"✅ Premium activated for **{duration_text}**\n"
+                                f"🚀 Enjoy:\n"
+                                f"  • Ad-Free Experience\n"
+                                f"  • AI Performance Coach\n"
+                                f"  • Detailed Analytics\n\n"
+                                f"Type /dashboard to explore!"
+                            )
+                        else:
+                            message = (
+                                f"🎉 **PAYMENT SUCCESSFUL!**\n\n"
+                                f"✅ Premium activated for **{duration_text}**\n"
+                                f"🚀 Enjoy:\n"
+                                f"  • Ad-Free Experience\n"
+                                f"  • AI Performance Coach\n"
+                                f"  • Detailed Analytics\n\n"
+                                f"💡 **Next time:** Earn wallet balance for 50% OFF!\n\n"
+                                f"Type /dashboard to explore!"
+                            )
+                        
+                        await bot.send_message(user_id, message, parse_mode="Markdown")
                     except Exception as e:
                         logger.error(f"Failed to notify user {user_id}: {e}")
             
