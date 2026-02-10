@@ -2,7 +2,7 @@
                         PRIVACY POLICY
 ═══════════════════════════════════════════════════════════════
 
-Last Updated: 3 February 2026
+Last Updated: 11 February 2026
 
 Platform: ElevateAura Bot (Telegram)
 Developer: Ragul Sekar
@@ -54,17 +54,22 @@ We collect and store:
 
 For Premium purchases:
 
-  • Telegram Stars transaction ID
-  • Payment status (successful/failed)
+  • Razorpay order ID and payment ID
+  • Payment status (successful/failed/pending)
   • Subscription status (free/premium)
   • Purchase timestamp
+  • Plan type (monthly/yearly)
+  • Amount paid (in INR)
+  • Wallet balance usage (if applicable)
 
   ⚠️ We do NOT collect or store:
     × Credit card numbers
+    × CVV codes
     × Banking details
     × Billing addresses
   
-  All payment processing is handled securely by Telegram.
+  All payment processing is handled securely by Razorpay, 
+  India's leading payment gateway.
 
 1.4 Device and Usage Data
 
@@ -221,8 +226,12 @@ We share data with:
   Telegram Bot API:
     • User authentication
     • Message delivery
-    • Payment processing (Telegram Stars)
     • Privacy Policy: https://telegram.org/privacy
+
+  Razorpay:
+    • Payment processing (Premium subscriptions)
+    • Secure payment gateway (PCI-DSS compliant)
+    • Privacy Policy: https://razorpay.com/privacy
 
   Supabase:
     • Database storage
@@ -301,13 +310,18 @@ You have the right to:
 8. VIRTUAL CURRENCY DATA
 
 We track:
-  • Aura Credits earned from prizes
-  • Aura Credits spent on subscriptions
+  • Wallet balance (in Rupees ₹)
+  • Rupees earned from:
+    - Ad rewards (+₹1 per ad viewed)
+    - Referrals (+₹50 per successful referral)
+    - Weekly leaderboard prizes
+  • Rupees spent on premium discounts
   • Transaction history (credits in/out)
-  • Wallet balance
 
-⚠️ REMINDER: Aura Credits have no monetary value and cannot be 
-   withdrawn. See our Terms and Conditions for full disclaimer.
+⚠️ REMINDER: Wallet balance can ONLY be used for premium subscription 
+   discounts. It has no cash value and cannot be withdrawn, transferred, 
+   or redeemed for real money. See our Terms and Conditions for full 
+   disclaimer.
 
 ───────────────────────────────────────────────────────────────
 

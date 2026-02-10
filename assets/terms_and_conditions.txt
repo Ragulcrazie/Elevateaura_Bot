@@ -2,7 +2,7 @@
                    TERMS AND CONDITIONS
 ═══════════════════════════════════════════════════════════════
 
-Last Updated: 3 February 2026
+Last Updated: 11 February 2026
 
 Platform: ElevateAura Bot (Telegram)
 Developer: Ragul Sekar
@@ -143,13 +143,21 @@ have NO MONETARY VALUE.
 
 7. PAYMENT AND SUBSCRIPTION TERMS
 
-7.1 Premium Subscription:
-  • Cost: 89 Telegram Stars (approximately ₹99 INR)
-  • Payment processed through Telegram's payment system
-  • Access is indefinite (no expiration)
-  • NO AUTO-RENEWAL (one-time purchase)
+7.1 Premium Subscription Plans:
+  • Monthly Premium: ₹99 INR (first-time) / ₹49 + ₹50 wallet (renewal)
+  • Yearly Premium: ₹999 INR (first-time) / ₹499 + ₹500 wallet (renewal)
+  • Payment processed through Razorpay (India​'s leading payment gateway)
+  • Duration: 30 days (monthly) / 365 days (yearly)
+  • NO AUTO-RENEWAL (subscription expires after period ends)
 
-7.2 Refund Policy:
+7.2 Hybrid Payment System:
+  • First Purchase: Must pay full price (₹99 or ₹999)
+  • Renewals: Can use wallet balance for 50% discount
+  • Wallet discount requires minimum balance (₹50 or ₹500)
+  • Payment link via Razorpay payment gateway
+  • Supports UPI, cards, net banking, wallets
+
+7.3 Refund Policy:
   • ALL SALES ARE FINAL
   • NO REFUNDS under any circumstances once payment is processed
   • This includes:
@@ -158,18 +166,18 @@ have NO MONETARY VALUE.
     - Dissatisfaction with service
     - Device compatibility issues
 
-7.3 Payment Processing:
-  • Payments are handled by Telegram
+7.4 Payment Processing:
+  • Payments are handled by Razorpay (PCI-DSS compliant)
   • We do NOT store credit card or banking information
-  • Telegram Stars are purchased through Telegram's system
-  • Contact Telegram support for payment issues
+  • Payment confirmation automated via webhook
+  • Contact elevateauraofficial@gmail.com for payment issues
 
-7.4 Premium Benefits:
+7.5 Premium Benefits:
   • Unlimited daily quizzes (up to 60 questions/day limit)
   • Access to AI Performance Coach
-  • Eligibility for weekly ₹600 prize competition
+  • Eligibility for weekly prize competition
   • Detailed analytics and insights
-  • No advertisements (if applicable)
+  • Ad-free experience
 
 ───────────────────────────────────────────────────────────────
 
