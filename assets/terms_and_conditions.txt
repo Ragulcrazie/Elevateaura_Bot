@@ -63,36 +63,68 @@ service, you agree:
 
 ───────────────────────────────────────────────────────────────
 
-5. VIRTUAL CURRENCY DISCLAIMER ⚠️ CRITICAL ⚠️
+5. WALLET BALANCE & VIRTUAL CURRENCY DISCLAIMER ⚠️ CRITICAL ⚠️
 
-All prizes, bonuses, credits, and virtual currency awarded through 
-ElevateAura ("Aura Credits" or "Bonus Credits") are VIRTUAL and 
-have NO MONETARY VALUE.
+ElevateAura displays wallet balance in Indian Rupees (₹) to represent 
+its discount value in a 1:1 ratio. However, wallet balance is VIRTUAL 
+CURRENCY and has NO MONETARY VALUE OR CASH EQUIVALENT.
 
-5.1 Nature of Virtual Currency:
-  • Aura Credits are NOT real money
-  • Aura Credits CANNOT be withdrawn as cash
-  • Aura Credits CANNOT be transferred to other users
-  • Aura Credits CANNOT be converted to any real-world currency
-  • Aura Credits CANNOT be sold or exchanged
+5.1 Nature of Wallet Balance:
+  • Wallet balance is displayed as ₹ (Rupees) for convenience only
+  • Wallet balance is NOT real money or legal tender
+  • Wallet balance has ZERO cash value
+  • Wallet balance CANNOT be withdrawn, transferred, or redeemed for cash
+  • Wallet balance is VIRTUAL CURRENCY for discount purposes only
 
-5.2 Permitted Use:
-  • Aura Credits may ONLY be redeemed for Premium subscription 
-    extensions within ElevateAura Bot
-  • Redemption rate: As displayed in-app (subject to change)
+5.2 Earning Wallet Balance:
+  Users may earn wallet balance (₹) through:
+  • Watching advertisements (+₹1 per ad, subject to daily limits)
+  • Successful user referrals (+₹50 per valid referral)
+  • Weekly leaderboard prizes (variable amounts)
+  • Promotional bonuses (at our sole discretion)
 
-5.3 Expiration and Termination:
-  • Aura Credits expire after 365 days if unused
-  • We reserve the right to modify, reduce, or terminate Aura 
-    Credits at any time without notice or compensation
-  • In case of account termination for ToS violation, all Aura 
-    Credits are forfeited immediately
+5.3 Use of Wallet Balance:
+  Wallet balance may ONLY be used for:
+  • Premium subscription discounts (50% off on renewals only)
+  • Monthly Premium: ₹50 wallet balance + ₹49 payment = ₹99 value
+  • Yearly Premium: ₹500 wallet balance + ₹499 payment = ₹999 value
+  • First-time purchases require full payment (no wallet discount)
 
-⚠️ LEGAL ACKNOWLEDGMENT: By participating in competitions, 
-   receiving credits, or winning prizes, you explicitly 
-   acknowledge and agree that Aura Credits have no cash value 
-   and are for entertainment and Premium subscription purposes 
-   only.
+5.4 Restrictions Due to RBI Regulations:
+  In compliance with Reserve Bank of India (RBI) regulations on prepaid 
+  payment instruments, e-wallets, and virtual currencies, wallet balance:
+  
+  ✗ CANNOT be withdrawn as cash to bank accounts
+  ✗ CANNOT be transferred via UPI, NEFT, RTGS, or any payment method
+  ✗ CANNOT be transferred to other ElevateAura users
+  ✗ CANNOT be converted to any real-world currency
+  ✗ CANNOT be sold, exchanged, or traded
+  ✗ CANNOT be redeemed for cash or cash equivalents
+  
+  These restrictions are MANDATORY and NON-NEGOTIABLE due to Indian 
+  financial regulations.
+
+5.5 Expiration and Termination:
+  • Wallet balance expires 365 days after earning date
+  • Expired balance is automatically forfeited without compensation
+  • We reserve the right to modify, reduce, suspend, or terminate the 
+    wallet balance program at any time without prior notice
+  • Upon account termination for Terms violation, all wallet balance 
+    is immediately forfeited
+  • Fraudulent or manipulated earnings will be reversed and may result 
+    in permanent account suspension
+
+⚠️ BINDING LEGAL ACKNOWLEDGMENT: 
+   By earning, accumulating, or using wallet balance displayed in 
+   Rupees (₹), you explicitly acknowledge and irrevocably agree that:
+   
+   1. Wallet balance has ZERO cash value or monetary worth
+   2. The ₹ symbol is used ONLY to represent discount value
+   3. You have NO RIGHT to withdraw, transfer, or cash out wallet balance
+   4. These restrictions exist due to RBI regulations and are legally binding
+   5. You WAIVE any claims for cash redemption or monetary compensation
+   
+   By continuing to use ElevateAura, you accept these terms in full.
 
 ───────────────────────────────────────────────────────────────
 
