@@ -583,8 +583,8 @@
         // 1. Minimum Balance Check
         if (balance < 1000) {
             if(tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('warning');
-            if(window.showAlert) await window.showAlert("🚫 Minimum Withdrawal Limit: 1000 Stars", `You only have <b class="text-white">${balance} Stars</b>.\n\nKeep ranking up to unlock withdrawals!`);
-            else alert(`🚫 Minimum Withdrawal Limit: 1000 Stars\n\nYou only have ${balance} Stars.\n\nKeep ranking up to unlock withdrawals!`);
+            if(window.showAlert) await window.showAlert("🚫 Minimum Withdrawal Limit: ₹1000", `You only have <b class="text-white">₹${balance}</b>.\n\nKeep ranking up to unlock withdrawals!`);
+            else alert(`🚫 Minimum Withdrawal Limit: ₹1000\n\nYou only have ₹${balance}.\n\nKeep ranking up to unlock withdrawals!`);
             return;
         }
 
