@@ -15,16 +15,19 @@ async def show_ai_coach(callback: types.CallbackQuery):
     user_id = callback.from_user.id
     db = SupabaseClient()
     await db.connect()
-    
     user = await db.get_user(user_id)
+    
+    await show_ai_coach_trigger(callback.message, user)
+
+async def show_ai_coach_trigger(message: types.Message, user: dict):
     if not user:
-        await callback.message.answer("Error: User profile not found.")
+        await message.answer("Error: User profile not found.")
         return
 
-    # Check Premium Status
+    # Check Premium Status (Redundant check if called from main, but safe)
     sub_status = user.get("subscription_status", "free")
     if sub_status != "premium":
-        await callback.message.answer(
+        await message.answer(
             "🔒 **Premium Feature Locked**\n\n"
             "The **AI Performance Coach** is available only for Premium users.\n\n"
             "Upgrade to unlock:\n"
@@ -66,8 +69,6 @@ async def show_ai_coach(callback: types.CallbackQuery):
     
     # Store the topic in callback data for the shortcut button
     # Callback limit is 64 chars. "shortcut:TopicName" might exceed if topic is long.
-    # We'll truncate topic or store in a temp map if needed. 
-    # For now, let's assume standard topics fit.
     
     safe_topic = weak_topic[:20] 
     
@@ -86,7 +87,7 @@ async def show_ai_coach(callback: types.CallbackQuery):
     builder.button(text="😤 I'm Ready to Train", callback_data="start_quiz_cmd")
     builder.adjust(1)
     
-    await callback.message.answer(text, reply_markup=builder.as_markup(), parse_mode="Markdown")
+    await message.answer(text, reply_markup=builder.as_markup(), parse_mode="Markdown")
 
 @router.callback_query(F.data.startswith("get_short:"))
 async def give_shortcut(callback: types.CallbackQuery):

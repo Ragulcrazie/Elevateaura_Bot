@@ -78,6 +78,28 @@ async def cmd_start(message: types.Message):
         await cmd_upgrade(message)
         return
     
+    # Handle AI Coach Deep Link
+    if args == "ai_coach":
+        logger.info(f"User {user_id} triggered AI Coach via Deep Link.")
+        # We need to manually trigger the AI Coach "Menu"
+        # Since ai_mentor.py usually expects a CallbackQuery, we'll create a dummy message trigger
+        # OR better, we just implement the logic here or call a shared service function.
+        
+        # Determine Weakest Area (Logic duplicated from ai_mentor.py for robustness)
+        # Priority: Saved Weak Spots > Random Guess
+        existing_user = await db.get_user(user_id) # Refresh
+        
+        # Check Premium again (Double Validation)
+        sub_status = existing_user.get("subscription_status", "free")
+        if sub_status != "premium":
+             await message.answer("🔒 **Premium Feature Locked**\nTo access AI Coach, please upgrade.")
+             return
+
+        # Prepare dummy callback to reuse handler? No, cleaner to direct message.
+        from bot.handlers.ai_mentor import show_ai_coach_trigger
+        await show_ai_coach_trigger(message, existing_user)
+        return
+    
     if args == "subscribe_pro":
         logger.info(f"User {user_id} triggered PRO subscription via Deep Link.")
         # Update DB to PRO
