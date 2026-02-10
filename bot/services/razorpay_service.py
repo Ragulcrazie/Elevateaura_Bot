@@ -3,9 +3,11 @@ Razorpay Service for Payment Processing
 """
 import os
 import razorpay
-from bot.utils.logger import logger
+import logging
 import hmac
 import hashlib
+
+logger = logging.getLogger(__name__)
 
 class RazorpayService:
     def __init__(self):

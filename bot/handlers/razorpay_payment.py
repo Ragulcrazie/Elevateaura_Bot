@@ -5,8 +5,10 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from bot.services.razorpay_service import RazorpayService
 from database.db_client import SupabaseClient
-from bot.utils.logger import logger
+import logging
 import time
+
+logger = logging.getLogger(__name__)
 
 router = Router()
 razorpay_service = RazorpayService()
