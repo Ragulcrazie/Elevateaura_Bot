@@ -13,6 +13,7 @@ class RazorpayService:
     def __init__(self):
         self.key_id = os.getenv("RAZORPAY_KEY_ID")
         self.key_secret = os.getenv("RAZORPAY_KEY_SECRET")
+        self.webhook_secret = os.getenv("RAZORPAY_WEBHOOK_SECRET")
         
         if not self.key_id or not self.key_secret:
             logger.warning("⚠️ Razorpay keys not found in .env. Payment features will be disabled.")
@@ -20,6 +21,9 @@ class RazorpayService:
         else:
             self.client = razorpay.Client(auth=(self.key_id, self.key_secret))
             logger.info("✅ Razorpay Client Initialized")
+            
+        if not self.webhook_secret:
+            logger.warning("⚠️ RAZORPAY_WEBHOOK_SECRET not set. Webhook verification will be disabled!")
     
     def create_payment_link(self, user_id: int, amount: int, description: str, reference_id: str):
         """
@@ -80,17 +84,23 @@ class RazorpayService:
         Returns:
             True if signature is valid, False otherwise
         """
-        if not self.key_secret:
+        if not self.webhook_secret:
+            logger.warning("⚠️ Webhook secret not configured, skipping verification")
             return False
             
         try:
             expected_signature = hmac.new(
-                self.key_secret.encode('utf-8'),
+                self.webhook_secret.encode('utf-8'),
                 payload.encode('utf-8'),
                 hashlib.sha256
             ).hexdigest()
             
-            return hmac.compare_digest(expected_signature, signature)
+            is_valid = hmac.compare_digest(expected_signature, signature)
+            if is_valid:
+                logger.info("✅ Webhook signature verified successfully")
+            else:
+                logger.warning("❌ Webhook signature mismatch")
+            return is_valid
         except Exception as e:
             logger.error(f"Signature verification failed: {e}")
             return False
