@@ -410,3 +410,40 @@ class SupabaseClient:
                 return data
             except:
                 return []
+
+    async def create_payment_order(self, order_data: dict) -> bool:
+        """
+        Creates a new payment order record.
+        """
+        if not self.client: return False
+        try:
+            self.client.table('payment_orders').insert(order_data).execute()
+            logger.info(f"Payment Order Created: {order_data.get('order_id')}")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to create payment order: {e}")
+            return False
+
+    async def update_payment_order(self, order_id: str, update_data: dict) -> bool:
+        """
+        Updates a payment order status.
+        """
+        if not self.client: return False
+        try:
+            self.client.table('payment_orders').update(update_data).eq('order_id', order_id).execute()
+            logger.info(f"Payment Order Updated: {order_id} -> {update_data.get('status')}")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to update payment order: {e}")
+            return False
+
+    async def get_payment_order(self, order_id: str):
+        if not self.client: return None
+        try:
+            res = self.client.table('payment_orders').select("*").eq('order_id', order_id).execute()
+            if res.data: return res.data[0]
+            return None
+        except Exception as e:
+            logger.error(f"Failed to get order: {e}")
+            return None
+
