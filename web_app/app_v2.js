@@ -498,7 +498,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
         // Always show Ad button for extra stars (even for premium users? Maybe.)
         // User request: "watch ad again (+1 star)". Yes, keep it.
         
-        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +1 ⭐`;
+        unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad & Earn +₹1`;
         unlockBtn.onclick = () => {
             if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
             unlockBtn.innerText = "Loading Ad...";
@@ -526,7 +526,7 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                  })
                  .catch(e => console.error("Ad Reward API failed", e));
 
-                 unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
+                 unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+₹1)`;
             });
         };
     }
@@ -968,7 +968,7 @@ async function launchSmartAd(onReward) {
             }, 2000);
             
             const unlockBtn = document.getElementById('unlockBtn');
-            if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+1 ⭐)`;
+            if(unlockBtn) unlockBtn.innerHTML = `<span class="mr-2 text-lg">🎥</span> Watch Ad Again (+₹1)`;
 
         }, (e) => {
             console.warn("❌ Ad Closed/Failed", e);
