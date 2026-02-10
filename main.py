@@ -1063,7 +1063,7 @@ async def start_web_server():
                                 f"  • Ad-Free Experience\n"
                                 f"  • AI Performance Coach\n"
                                 f"  • Detailed Analytics\n\n"
-                                f"Type /dashboard to explore!"
+                                f"Type /leaderboard to view stats!"
                             )
                         else:
                             message = (
@@ -1074,7 +1074,7 @@ async def start_web_server():
                                 f"  • AI Performance Coach\n"
                                 f"  • Detailed Analytics\n\n"
                                 f"💡 **Next time:** Earn wallet balance for 50% OFF!\n\n"
-                                f"Type /dashboard to explore!"
+                                f"Type /leaderboard to view stats!"
                             )
                         
                         await bot.send_message(user_id, message, parse_mode="Markdown")
