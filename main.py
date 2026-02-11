@@ -1038,7 +1038,7 @@ async def start_web_server():
                         current_wallet = user_data.get("wallet_stars", 0) or 0
                         new_wallet = max(0, current_wallet - wallet_bonus_used)
                         
-                        await db.client.table("users").update({
+                        db.client.table("users").update({
                             "wallet_stars": new_wallet
                         }).eq("user_id", user_id).execute()
                         
@@ -1084,8 +1084,8 @@ async def start_web_server():
                         subscription_update["subscription_started_at"] = now.isoformat()
                         logger.info(f"🆕 First payment detected, setting subscription_started_at")
                     
-                    # H. Activate subscription (CRITICAL: Added await for immediate effect)
-                    await db.client.table("users").update(subscription_update).eq("user_id", user_id).execute()
+                    # H. Activate subscription
+                    db.client.table("users").update(subscription_update).eq("user_id", user_id).execute()
                     
                     # F. Notify user
                     try:
