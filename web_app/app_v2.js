@@ -523,8 +523,8 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
                          const balEl = document.getElementById('walletBalance');
                          if(balEl) {
                               balEl.innerText = data.new_balance; 
-                              if(window.showAlert) window.showAlert("🎁 Reward Earned!", "+1 Star Added!");
-                              else alert("🎁 Reward: +1 Star Added!");
+                              if(window.showAlert) window.showAlert("🎁 Reward Earned!", "+₹1 Added to Wallet!");
+                              else alert("🎁 Reward: +₹1 Added to Wallet!");
                          }
                      } else {
                          if(window.showAlert) window.showAlert("Reward Error", data.error);
@@ -659,7 +659,7 @@ function submitLead() {
                           let bal = parseInt(balEl.innerText);
                           if(isNaN(bal)) bal = 0;
                           balEl.innerText = bal + 1; 
-                          alert("🎁 Ad Watched! +1 Star Added to Wallet.");
+                          alert("🎁 Ad Watched! +₹1 Added to Wallet.");
                      }
                 });
             } else {
