@@ -221,8 +221,7 @@ async function initDashboard(passedUser = null, timestamp = null) {
         is_user: true,
         id: user.id, // Needed for payment
         rank: 0, // Will calc
-        average_pace: userStats ? userStats.average_pace : 34,
-        weak_spot_topic: (userStats && userStats.weak_spots && userStats.weak_spots.length > 0) ? userStats.weak_spots[0].topic : "General"
+        average_pace: userStats ? userStats.average_pace : 34
     };
     
     leaderboard.push(userEntry);
@@ -237,11 +236,6 @@ async function initDashboard(passedUser = null, timestamp = null) {
     
     // 6. Update Top Header Stats
     updateTopHeader(rank, userEntry.total_score, userStats ? userStats.questions_answered : 0);
-
-    // --- CRITICAL FIX: Set Premium Status ---
-    userEntry.is_premium = (userStats && userStats.subscription_status === 'premium');
-    console.log("User Premium Status:", userEntry.is_premium); // Debug log
-
 
     // 7. Render Analytics
     // Calculate Percentile
@@ -544,65 +538,6 @@ function renderError(msg) {
         container.innerHTML = `<div class="p-4 text-red-500 font-bold bg-gray-900 rounded">${msg}</div>`;
     }
 }
-
-// --- 3.5 AI COACH LOGIC (The Smartest Way) ---
-window.triggerAICoach = async function() {
-    if(TgApp.HapticFeedback) TgApp.HapticFeedback.impactOccurred('medium');
-    
-    // 1. Check Login
-    if (!currentUserEntry) return;
-
-    // 2. Check Premium
-    if (!currentUserEntry.is_premium) {
-        // Not Premium? Sell it.
-        await window.showAlert(
-            "🔒 AI Coach Locked", 
-            "The <b>Intelligence Gap Analysis</b> is a Premium Feature.\n\n" +
-            "Upgrade to unlock:\n" +
-            "• Detailed Weakness Breakdown\n" +
-            "• Personalized Shortcuts\n" +
-            "• 24/7 AI Mentorship"
-        );
-        // Trigger the upgrade flow
-        if(window.triggerPremiumRedemption) window.triggerPremiumRedemption();
-        return;
-    }
-
-    // 3. Premium User - Show Insight
-    // We already have the data in currentUserEntry (mostly) or we fetch it.
-    // Ideally userStats (local scope in initDashboard) has it. 
-    // We should attach stats to currentUserEntry for global access.
-    
-    // Fetch fresh stats if needed or use what we have? 
-    // Let's rely on api/user_data which we likely cached or can re-fetch transparently.
-    // For speed, we'll assume the dashboard loaded it.
-    
-    // Construct the Deep Link to the Bot's AI Handler
-    // This is "Smart" because the Web App is for *Viewing*, the Bot is for *Chatting*.
-    // We don't want to rebuild a chat interface in the Web App right now.
-    
-    const deepLink = "https://t.me/ElevateAura_Bot?start=ai_coach";
-    
-    // Show a "Bridge" Modal to confirm context
-    await window.showUniversalModal(
-        "🤖 AI Performance Coach",
-        "Your analysis is ready. transferring you to the Neural Interface...\n\n" +
-        "<b>Focus Area:</b> " + (currentUserEntry.weak_spot_topic || "General Optimization"),
-        [
-            { text: "Cancel", value: false, class: "text-gray-400" },
-            { text: "Start Session 🚀", value: true, class: "bg-green-500 text-white shadow-lg shadow-green-500/30" }
-        ]
-    ).then(shouldGo => {
-        if(shouldGo) {
-            if (TgApp.openTelegramLink) {
-                TgApp.openTelegramLink(deepLink);
-                TgApp.close(); // Close web app to go to chat
-            } else {
-                window.location.href = deepLink;
-            }
-        }
-    });
-};
 
 
 // --- 4. LISTENERS ---

@@ -78,28 +78,6 @@ async def cmd_start(message: types.Message):
         await cmd_upgrade(message)
         return
     
-    # Handle AI Coach Deep Link
-    if args == "ai_coach":
-        logger.info(f"User {user_id} triggered AI Coach via Deep Link.")
-        # We need to manually trigger the AI Coach "Menu"
-        # Since ai_mentor.py usually expects a CallbackQuery, we'll create a dummy message trigger
-        # OR better, we just implement the logic here or call a shared service function.
-        
-        # Determine Weakest Area (Logic duplicated from ai_mentor.py for robustness)
-        # Priority: Saved Weak Spots > Random Guess
-        existing_user = await db.get_user(user_id) # Refresh
-        
-        # Check Premium again (Double Validation)
-        sub_status = existing_user.get("subscription_status", "free")
-        if sub_status != "premium":
-             await message.answer("🔒 **Premium Feature Locked**\nTo access AI Coach, please upgrade.")
-             return
-
-        # Prepare dummy callback to reuse handler? No, cleaner to direct message.
-        from bot.handlers.ai_mentor import show_ai_coach_trigger
-        await show_ai_coach_trigger(message, existing_user)
-        return
-    
     if args == "subscribe_pro":
         logger.info(f"User {user_id} triggered PRO subscription via Deep Link.")
         # Update DB to PRO
@@ -1049,31 +1027,65 @@ async def start_web_server():
                     order = await db.get_payment_order(order_id)
                     wallet_bonus_used = order.get("wallet_bonus_used", 0) if order else 0
                     
-                    # C. Deduct wallet if bonus was used
+                    # C. Get user data FIRST (needed for wallet + renewal logic)
+                    user_data = await db.get_user(user_id)
+                    if not user_data:
+                        logger.error(f"❌ User {user_id} not found, cannot process payment")
+                        return web.Response(status=200, text="OK")  # Still return 200 to Razorpay
+                    
+                    # D. Deduct wallet if bonus was used (CRITICAL: Added await)
                     if wallet_bonus_used > 0:
-                        user_data = await db.get_user(user_id)
                         current_wallet = user_data.get("wallet_stars", 0) or 0
                         new_wallet = max(0, current_wallet - wallet_bonus_used)
                         
-                        db.client.table("users").update({
+                        await db.client.table("users").update({
                             "wallet_stars": new_wallet
                         }).eq("user_id", user_id).execute()
                         
                         logger.info(f"💳 Wallet deducted: ₹{wallet_bonus_used} (balance: ₹{new_wallet})")
                     
-                    # D. Determine subscription duration
+                    # E. Determine subscription duration
                     days = 365 if amount >= 50000 else 30  # ₹500+ = yearly, else monthly
                     
-                    # E. Activate subscription
+                    # F. Calculate new expiry with SMART RENEWAL LOGIC (Option B from SUBSCRIPTION_SYSTEM.md)
                     now = datetime.utcnow()
-                    new_expiry = now + timedelta(days=days)
+                    current_expiry_str = user_data.get("subscription_expires_at")
                     
-                    db.client.table("users").update({
+                    if current_expiry_str:
+                        try:
+                            current_expiry = datetime.fromisoformat(current_expiry_str.replace('Z', '+00:00'))
+                            # If subscription is still active, extend from current expiry (no time lost)
+                            if current_expiry > now:
+                                new_expiry = current_expiry + timedelta(days=days)
+                                logger.info(f"📅 Extending active subscription: {current_expiry} + {days} days")
+                            else:
+                                # Expired, start fresh from now
+                                new_expiry = now + timedelta(days=days)
+                                logger.info(f"📅 Renewing expired subscription: {days} days from now")
+                        except Exception as e:
+                            logger.warning(f"Failed to parse expiry date: {e}. Starting fresh.")
+                            new_expiry = now + timedelta(days=days)
+                    else:
+                        # First-time subscriber
+                        new_expiry = now + timedelta(days=days)
+                        logger.info(f"🎉 First-time subscription: {days} days from now")
+                    
+                    # G. Prepare subscription activation data with ALL required fields
+                    subscription_update = {
                         "subscription_status": "premium",
                         "subscription_expires_at": new_expiry.isoformat(),
                         "last_payment_date": now.isoformat(),
-                        "expiration_warning_sent": False
-                    }).eq("user_id", user_id).execute()
+                        "expiration_warning_sent": False,
+                        "total_payments": (user_data.get("total_payments", 0) or 0) + 1
+                    }
+                    
+                    # Set subscription_started_at ONLY for first-time subscribers
+                    if not user_data.get("subscription_started_at"):
+                        subscription_update["subscription_started_at"] = now.isoformat()
+                        logger.info(f"🆕 First payment detected, setting subscription_started_at")
+                    
+                    # H. Activate subscription (CRITICAL: Added await for immediate effect)
+                    await db.client.table("users").update(subscription_update).eq("user_id", user_id).execute()
                     
                     # F. Notify user
                     try:

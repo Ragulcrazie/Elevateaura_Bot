@@ -15,25 +15,34 @@ async def show_ai_coach(callback: types.CallbackQuery):
     user_id = callback.from_user.id
     db = SupabaseClient()
     await db.connect()
-    user = await db.get_user(user_id)
     
-    await show_ai_coach_trigger(callback.message, user)
-
-async def show_ai_coach_trigger(message: types.Message, user: dict):
+    user = await db.get_user(user_id)
     if not user:
-        await message.answer("Error: User profile not found.")
+        await callback.message.answer("Error: User profile not found.")
         return
 
-    # Check Premium Status (Redundant check if called from main, but safe)
+    # Check Premium Status
     sub_status = user.get("subscription_status", "free")
     if sub_status != "premium":
-        await message.answer(
+        # Dismiss the loading state on button
+        await callback.answer("Premium feature locked 🔒", show_alert=False)
+        
+        # Create upgrade button
+        builder = InlineKeyboardBuilder()
+        builder.button(text="🚀 Upgrade to Premium (₹99/month)", callback_data="razorpay_monthly")
+        builder.button(text="❌ Close", callback_data="close_message")
+        builder.adjust(1)
+        
+        # Edit the message inline (not creating a new message)
+        await callback.message.edit_text(
             "🔒 **Premium Feature Locked**\n\n"
             "The **AI Performance Coach** is available only for Premium users.\n\n"
             "Upgrade to unlock:\n"
             "• Personalized Weakness Analysis\n"
             "• Instant Shortcuts & Psych Hacks\n"
-            "• 24/7 Mentorship",
+            "• 24/7 Mentorship\n\n"
+            "💰 Just ₹99/month for unlimited access!",
+            reply_markup=builder.as_markup(),
             parse_mode="Markdown"
         )
         return
@@ -69,6 +78,8 @@ async def show_ai_coach_trigger(message: types.Message, user: dict):
     
     # Store the topic in callback data for the shortcut button
     # Callback limit is 64 chars. "shortcut:TopicName" might exceed if topic is long.
+    # We'll truncate topic or store in a temp map if needed. 
+    # For now, let's assume standard topics fit.
     
     safe_topic = weak_topic[:20] 
     
@@ -87,7 +98,7 @@ async def show_ai_coach_trigger(message: types.Message, user: dict):
     builder.button(text="😤 I'm Ready to Train", callback_data="start_quiz_cmd")
     builder.adjust(1)
     
-    await message.answer(text, reply_markup=builder.as_markup(), parse_mode="Markdown")
+    await callback.message.answer(text, reply_markup=builder.as_markup(), parse_mode="Markdown")
 
 @router.callback_query(F.data.startswith("get_short:"))
 async def give_shortcut(callback: types.CallbackQuery):
@@ -137,3 +148,12 @@ async def give_psych_hack(callback: types.CallbackQuery):
         parse_mode="Markdown"
     )
 
+@router.callback_query(F.data == "close_message")
+async def close_message_handler(callback: types.CallbackQuery):
+    """Closes/deletes the message cleanly"""
+    await callback.answer()
+    try:
+        await callback.message.delete()
+    except:
+        # If deletion fails, just edit to a minimal message
+        await callback.message.edit_text("✅ Message closed")
