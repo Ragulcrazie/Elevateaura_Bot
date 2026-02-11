@@ -24,8 +24,6 @@ async def show_ai_coach(callback: types.CallbackQuery):
     # Check Premium Status
     sub_status = user.get("subscription_status", "free")
     if sub_status != "premium":
-        # Dismiss the loading state on button
-        await callback.answer("Premium feature locked 🔒", show_alert=False)
         
         # Create upgrade button
         builder = InlineKeyboardBuilder()

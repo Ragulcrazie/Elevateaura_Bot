@@ -219,6 +219,7 @@ async function initDashboard(passedUser = null, timestamp = null) {
         full_name: "You",
         total_score: userStats ? userStats.total_score : 0,
         is_user: true,
+        is_premium: userStats ? (userStats.subscription_status === "premium") : false,
         id: user.id, // Needed for payment
         rank: 0, // Will calc
         average_pace: userStats ? userStats.average_pace : 34
@@ -465,11 +466,17 @@ function renderAnalytics(userEntry, total, percentile, userStats) {
             gapEl.innerText = `${pointsLost} points`;
             // Dynamic advice based on weak spots
             if (weakSpots.length > 0) {
-                 const rawTopic = weakSpots[0].topic || weakSpots[0]; // Handle both obj and string just in case
+                 const rawTopic = weakSpots[0].topic || weakSpots[0];
                  const topic = (typeof rawTopic === 'string' ? rawTopic : 'General').replace('Test', '').trim(); 
-                 if (insightTextEl) insightTextEl.innerHTML = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in 🔒 <span class="text-yellow-400">Locked Topic</span>. Unlock Premium to reveal & fix them.`;
+                 if (subStatus === 'premium') {
+                     // Premium: Show actual topic name
+                     if (insightTextEl) insightTextEl.innerHTML = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in 📊 <span class="text-yellow-400">${topic}</span>. Focus here to improve!`;
+                 } else {
+                     // Free: Show locked
+                     if (insightTextEl) insightTextEl.innerHTML = `You lost <span class="text-white font-bold">${pointsLost} points</span> mainly in 🔒 <span class="text-yellow-400">Locked Topic</span>. Unlock Premium to reveal & fix them.`;
+                 }
             } else {
-                 if (insightTextEl) insightTextEl.innerHTML = `You are running at <span class="text-green-400 font-bold">${Math.round((currentScore/potentialScore)*100)}% efficiency</span>. Unlock Analytics to see where you can improve.`;
+                 if (insightTextEl) insightTextEl.innerHTML = `You are running at <span class="text-green-400 font-bold">${Math.round((currentScore/potentialScore)*100)}% efficiency</span>. ${subStatus === 'premium' ? 'Keep pushing for your full potential!' : 'Unlock Analytics to see where you can improve.'}`;
             }
         } else {
             gapEl.innerText = "0 points";
