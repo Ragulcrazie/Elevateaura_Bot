@@ -65,7 +65,9 @@ async def show_ai_coach(callback: types.CallbackQuery):
     else:
         # If no data, pick a random topic from the relevant category
         # This prevents "Unknown" errors
-        context_data = ai_service.get_context(lang, category)
+        context_data = [item for item in ai_service.data if item.get("category") == category]
+        if not context_data:
+            context_data = ai_service.data  # Fallback to all topics
         if context_data:
             weak_topic = random.choice(context_data).get("topic", "General")
         else:
