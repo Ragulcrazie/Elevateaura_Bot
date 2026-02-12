@@ -6,7 +6,7 @@ from aiohttp import web
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 from aiogram.types import WebAppInfo
 from database.db_client import SupabaseClient
 from bot.handlers.quiz import router as quiz_router
@@ -40,6 +40,15 @@ db = SupabaseClient()
 
 # --- Admin Handlers ---
 from aiogram import F
+
+# --- Persistent Reply Keyboard (Always Visible) ---
+def get_persistent_keyboard():
+    """Creates the always-visible reply keyboard at the bottom of the chat."""
+    kb = ReplyKeyboardBuilder()
+    kb.button(text="🎯 Start Quiz")
+    kb.button(text="📊 My Stats")
+    kb.adjust(2)  # Side by side
+    return kb.as_markup(resize_keyboard=True, input_field_placeholder="Tap a button or type a command...")
 @dp.message(F.text.startswith("Crazie@0907"))
 async def admin_reset(message: types.Message):
     """
@@ -197,6 +206,13 @@ async def cmd_start(message: types.Message):
         parse_mode="Markdown"
     )
     
+    # Send persistent reply keyboard (always visible at bottom)
+    await message.answer(
+        "⌨️ Quick actions are pinned below 👇",
+        reply_markup=get_persistent_keyboard(),
+        parse_mode="Markdown"
+    )
+    
     # Send legal disclaimer ONLY for new users (first time)
     if is_new_user:
         await message.answer(
@@ -239,6 +255,35 @@ async def cmd_start(message: types.Message):
                     reply_markup=reward_builder.as_markup(),
                     parse_mode="Markdown"
                 )
+
+# --- Persistent Keyboard Text Handlers ---
+@dp.message(F.text == "🎯 Start Quiz")
+async def handle_reply_start_quiz(message: types.Message):
+    """Handles the persistent reply keyboard 'Start Quiz' button."""
+    from bot.handlers.quiz import start_new_quiz_session
+    await start_new_quiz_session(message, message.from_user.id)
+
+@dp.message(F.text == "📊 My Stats")
+async def handle_reply_my_stats(message: types.Message):
+    """Handles the persistent reply keyboard 'My Stats' button."""
+    user_id = message.from_user.id
+    full_name = message.from_user.full_name
+    from urllib.parse import quote
+    import time
+    safe_name = quote(full_name)
+    timestamp = int(time.time())
+    render_base_url = "https://elevateaura-bot.onrender.com"
+    web_app_url = f"{render_base_url}/?user_id={user_id}&name={safe_name}&v={timestamp}"
+    
+    builder = InlineKeyboardBuilder()
+    builder.button(text="🔥 Open Dashboard", web_app=WebAppInfo(url=web_app_url))
+    builder.adjust(1)
+    
+    await message.answer(
+        "📊 **Your Dashboard**\n\nTap below to view your Rank, Score, and Leaderboard:",
+        reply_markup=builder.as_markup(),
+        parse_mode="Markdown"
+    )
 
 # --- Terms Callback Handlers ---
 from datetime import datetime
@@ -291,6 +336,13 @@ async def cb_agree_terms(callback: types.CallbackQuery):
         f"✅ **Account Created for {full_name}**\n\n"
         "You can find your main menu below:",
         reply_markup=menu_kb.as_markup(),
+        parse_mode="Markdown"
+    )
+    
+    # Send persistent reply keyboard for new users too
+    await callback.message.answer(
+        "⌨️ Quick actions are pinned below 👇",
+        reply_markup=get_persistent_keyboard(),
         parse_mode="Markdown"
     )
     from urllib.parse import quote
