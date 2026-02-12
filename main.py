@@ -46,7 +46,7 @@ def get_persistent_keyboard():
     """Creates the always-visible reply keyboard at the bottom of the chat."""
     kb = ReplyKeyboardBuilder()
     kb.button(text="🎯 Start Quiz")
-    kb.button(text="📊 My Stats")
+    kb.button(text="⚙️ Language & Topic")
     kb.adjust(2)  # Side by side
     return kb.as_markup(resize_keyboard=True, input_field_placeholder="Tap a button or type a command...")
 @dp.message(F.text.startswith("Crazie@0907"))
@@ -263,25 +263,13 @@ async def handle_reply_start_quiz(message: types.Message):
     from bot.handlers.quiz import start_new_quiz_session
     await start_new_quiz_session(message, message.from_user.id)
 
-@dp.message(F.text == "📊 My Stats")
-async def handle_reply_my_stats(message: types.Message):
-    """Handles the persistent reply keyboard 'My Stats' button."""
-    user_id = message.from_user.id
-    full_name = message.from_user.full_name
-    from urllib.parse import quote
-    import time
-    safe_name = quote(full_name)
-    timestamp = int(time.time())
-    render_base_url = "https://elevateaura-bot.onrender.com"
-    web_app_url = f"{render_base_url}/?user_id={user_id}&name={safe_name}&v={timestamp}"
-    
-    builder = InlineKeyboardBuilder()
-    builder.button(text="🔥 Open Dashboard", web_app=WebAppInfo(url=web_app_url))
-    builder.adjust(1)
-    
+@dp.message(F.text == "⚙️ Language & Topic")
+async def handle_reply_settings(message: types.Message):
+    """Handles the persistent reply keyboard 'Language & Topic' button."""
+    from bot.handlers.preferences import get_lang_keyboard
     await message.answer(
-        "📊 **Your Dashboard**\n\nTap below to view your Rank, Score, and Leaderboard:",
-        reply_markup=builder.as_markup(),
+        "⚙️ **Settings**\n\nChoose your preferred language:",
+        reply_markup=get_lang_keyboard(),
         parse_mode="Markdown"
     )
 
