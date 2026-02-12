@@ -110,7 +110,7 @@
     <div class="mb-3 flex justify-between items-center bg-gray-800 p-1 rounded-lg border border-gray-700">
         <button id="tabDaily" onclick="switchTab('daily')" class="flex-1 py-1 text-xs font-bold rounded-md bg-gray-600 text-white shadow transition-all">Daily Rush</button>
         <button id="tabWeekly" onclick="switchTab('weekly')" class="flex-1 py-1 text-xs font-bold rounded-md text-gray-400 hover:bg-gray-700 transition-all">
-            Weekly Grand Prix <span class="text-[9px] text-yellow-500 ml-1">₹589</span>
+            Weekly Grand Prix <span class="text-[9px] text-yellow-500 ml-1">₹600 Pool</span>
         </button>
     </div>
     
@@ -246,16 +246,32 @@
             <button id="closeModal" onclick="toggleInfoModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <h3 class="text-xl font-bold text-white mb-2">⚡ Game Rules & Premium</h3>
+            <h3 class="text-xl font-bold text-white mb-2">⚡ Game Rules & Prizes</h3>
             <div class="space-y-4 text-sm text-gray-300">
                 <div class="flex items-start">
                     <span class="text-lg mr-2">🏆</span>
-                    <p><strong>Weekly Grand Prix:</strong> Compete Mon-Sun to win the <b class="text-yellow-400">Exclusive Prize Pool</b>!</p>
+                    <p><strong>Weekly Grand Prix:</strong> Compete Mon-Sun to win from the <b class="text-yellow-400">₹600 Prize Pool</b>!</p>
                 </div>
-                <div class="p-2 bg-yellow-500/10 rounded border border-yellow-500/20">
+                <div class="p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/20">
+                    <p class="font-bold text-yellow-400 text-xs uppercase tracking-wider mb-2">🏅 Top 10 Weekly Prizes</p>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                        <div class="flex justify-between"><span>🥇 Rank 1</span><span class="font-bold text-green-400">₹200</span></div>
+                        <div class="flex justify-between"><span>🥈 Rank 2</span><span class="font-bold text-green-400">₹120</span></div>
+                        <div class="flex justify-between"><span>🥉 Rank 3</span><span class="font-bold text-green-400">₹80</span></div>
+                        <div class="flex justify-between"><span>4️⃣ Rank 4</span><span class="font-bold text-yellow-400">₹50</span></div>
+                        <div class="flex justify-between"><span>5️⃣ Rank 5</span><span class="font-bold text-yellow-400">₹40</span></div>
+                        <div class="flex justify-between"><span>6️⃣ Rank 6</span><span class="font-bold text-yellow-400">₹30</span></div>
+                        <div class="flex justify-between"><span>7️⃣ Rank 7</span><span class="font-bold text-yellow-400">₹30</span></div>
+                        <div class="flex justify-between"><span>8️⃣ Rank 8</span><span class="font-bold text-gray-300">₹20</span></div>
+                        <div class="flex justify-between"><span>9️⃣ Rank 9</span><span class="font-bold text-gray-300">₹15</span></div>
+                        <div class="flex justify-between"><span>🔟 Rank 10</span><span class="font-bold text-gray-300">₹15</span></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 mt-2">🏆 Rank 1 also gets 90 Days Premium FREE!</p>
+                </div>
+                <div class="p-2 bg-purple-500/10 rounded border border-purple-500/20">
                     <div class="flex items-start mb-1">
                         <span class="text-lg mr-2">💎</span>
-                        <p class="font-bold text-yellow-400">Premium Loyalty Club</p>
+                        <p class="font-bold text-purple-400">Premium Loyalty Club</p>
                     </div>
                     <ul class="list-disc ml-8 text-xs space-y-1">
                         <li><b>New Users:</b> Full access starts at 99 Stars.</li>
@@ -266,6 +282,18 @@
                     <span class="text-lg mr-2">🤖</span>
                     <p><strong>Fair Play:</strong> Max 600 points/day (6 Tests). Scores reset daily at midnight.</p>
                 </div>
+            </div>
+            <div class="mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/20">
+                <div class="flex items-start mb-1">
+                    <span class="text-lg mr-2">💛</span>
+                    <p class="font-bold text-green-400 text-sm">Why Cash Prizes?</p>
+                </div>
+                <p class="text-xs text-gray-400 ml-7 leading-relaxed">
+                    We know education can be expensive. The ₹600 weekly prize pool rewards your hard work — earn money just by studying and topping the leaderboard. Use it for books, coaching, or exam fees. <b class="text-white">Your effort pays you back.</b>
+                </p>
+                <p class="text-[10px] text-gray-500 ml-7 mt-1">
+                    Ads help us keep this platform free and the prize pool running for everyone. 🙏
+                </p>
             </div>
             <div class="mt-6 text-center">
                 <button onclick="document.getElementById('infoModal').classList.add('hidden')" class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 rounded-lg transition">Got it</button>
@@ -719,7 +747,7 @@
     <script src='//libtl.com/sdk.js' data-zone='10557666' data-sdk='show_10557666'></script>
     
     <!-- App Logic (v3.13 cache bust) -->
-    <script src="app_v2.js?v=3.13"></script>
+    <script src="app_v2.js?v=3.14"></script>
     <script>
     function waitForUser(attempts = 0) {
         const urlParams = new URLSearchParams(window.location.search);

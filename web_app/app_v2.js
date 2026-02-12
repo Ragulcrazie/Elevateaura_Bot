@@ -117,10 +117,10 @@ function renderList(data) {
         
         el.className = rowClass;
         
-        // Only show ₹600 prize on Weekly Grand Prix (not Daily Rush)
-        // currentMode is set by switchTab() in index.html
+        // Weekly Grand Prix Prize Display (Top 10)
         const isWeeklyMode = (typeof currentMode !== 'undefined' && currentMode === 'weekly');
-        const showPrize = (rank === 1 && isWeeklyMode);
+        const weeklyPrizes = {1: 200, 2: 120, 3: 80, 4: 50, 5: 40, 6: 30, 7: 30, 8: 20, 9: 15, 10: 15};
+        const prizeAmount = (isWeeklyMode && rank <= 10) ? weeklyPrizes[rank] : 0;
         
         el.innerHTML = `
             <div class="flex items-center space-x-3">
@@ -132,8 +132,8 @@ function renderList(data) {
                      <div class="text-[10px] opacity-70 ${textClass}">${subtitle}</div>
                 </div>
             </div>
-            <div class="font-bold ${rank === 1 ? 'text-green-400' : 'text-yellow-400'}">
-                ${p.total_score} pts${showPrize ? ' <span class="text-[10px] text-green-300">💰₹600</span>' : ''}
+            <div class="font-bold ${rank <= 3 ? 'text-green-400' : 'text-yellow-400'}">
+                ${p.total_score} pts${prizeAmount > 0 ? ` <span class="text-[10px] ${rank <= 3 ? 'text-green-300' : 'text-yellow-300'}">💰₹${prizeAmount}</span>` : ''}
             </div>
         `;
         list.appendChild(el);

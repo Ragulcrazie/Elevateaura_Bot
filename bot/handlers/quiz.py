@@ -152,7 +152,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
                 "✅ You've completed 3 practice tests\n"
                 "📊 Your potential unlocked: 12%\n\n"
                 "💎 **Premium Members This Week:**\n"
-                "├─ 🏆 Top scorer earned ₹600 Bonus\n"
+                "├─ 🏆 Top 10 sharing ₹600 Prize Pool\n"
                 "├─ ⚡ Average: 42 tests completed\n"
                 "└─ 📈 5× faster improvement rate\n\n"
                 "⏰ **You're competing against 500+ active students.**\n"
@@ -172,7 +172,7 @@ async def start_new_quiz_session(message: types.Message, user_id: int):
                 "✓ Full Answer Explanations\n"
                 "✓ AI Performance Coach\n"
                 "✓ Free Career Consultation (Worth ₹999)\n"
-                "✓ Weekly ₹600 Prize Pool\n"
+                "✓ Weekly ₹600 Prize Pool (Top 10 Win!)\n"
                 "✓ Detailed Analytics & Insights\n"
                 "✓ Competition Intelligence\n\n"
                 "💰 **Price**: 99 Stars/month (₹99)\n"
@@ -850,7 +850,7 @@ async def finish_quiz(message: types.Message, user_id: int, state: dict = None):
 @router.callback_query(F.data == "view_premium_leaders")
 async def show_premium_leaderboard(callback: types.CallbackQuery):
     """
-    Shows top premium earners with ₹600 visual to create FOMO.
+    Shows top 10 earners with prize pool to create FOMO.
     """
     await callback.answer()
     
@@ -867,30 +867,24 @@ async def show_premium_leaderboard(callback: types.CallbackQuery):
         )
         return
     
+    # Prize structure for Top 10
+    prize_map = {1: 200, 2: 120, 3: 80, 4: 50, 5: 40, 6: 30, 7: 30, 8: 20, 9: 15, 10: 15}
+    medal_map = {1: "🥇", 2: "🥈", 3: "🥉"}
+    
     # Build leaderboard message with earnings display
     msg = (
         "🏆 **THIS WEEK'S TOP EARNERS**\n\n"
-        "💎 Premium members competing for ₹600 prize pool:\n\n"
+        "💎 Competing for ₹600 Prize Pool (Top 10 Win!):\n\n"
     )
     
     for idx, player in enumerate(top_players[:10], 1):
         name = player.get('first_name', 'Aspirant')[:15]  # Truncate long names
         score = player.get('weekly_score', 0)
         
-        # Only #1 gets ₹600 prize
-        earning = "💰₹600" if idx == 1 else ""
+        prize = prize_map.get(idx, 0)
+        medal = medal_map.get(idx, f"{idx}.")
+        earning = f"💰₹{prize}" if prize > 0 else ""
         
-        # Medals for top 3
-        if idx == 1:
-            medal = "🥇"
-        elif idx == 2:
-            medal = "🥈"
-        elif idx == 3:
-            medal = "🥉"
-        else:
-            medal = f"{idx}."
-        
-        # Add prize label only for #1
         msg += f"{medal} **{name}** - {score} pts {earning}\n"
     
     msg += (

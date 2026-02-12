@@ -168,17 +168,80 @@ class RankEngine:
             
         return processed_ghosts
 
+    def _calculate_weekly_pace(self, ghost_id, rank, user_pace, total_ghosts):
+        """
+        Weekly pace psychology — always relative to user's pace.
+        Returns clean rounded integer pace (no decimals).
+        
+        Zones:
+          Rank 1-3  (Throne):  Slightly faster than user (pressure)
+          Rank 4-7  (Battle):  Neck-and-neck with user
+          Rank 8-10 (Hope):    Slower than user (feel superior)
+          Rank 11+  (FOMO):    Noticeably slower
+        """
+        # Deterministic seed for consistency
+        today_ord = self.get_ist_time().toordinal()
+        try:
+            gid_int = int(ghost_id)
+        except:
+            gid_int = sum(ord(c) for c in str(ghost_id))
+        rng = random.Random(gid_int + today_ord + rank)
+        
+        # Default if no user pace available
+        if not user_pace or user_pace < 5:
+            return rng.randint(25, 40)
+        
+        user_pace = int(round(user_pace))  # Clean integer
+        
+        if rank <= 3:
+            # THRONE ZONE: 2-5s faster than user (scary but not impossible)
+            offset = rng.randint(2, 5)
+            pace = user_pace - offset
+            # Floor: never below 12s (unrealistic)
+            if pace < 12:
+                pace = 12 + rng.randint(0, 2)
+        elif rank <= 7:
+            # BATTLE ZONE: ±2s of user (neck and neck)
+            offset = rng.randint(-2, 2)
+            pace = user_pace + offset
+        elif rank <= 10:
+            # HOPE ZONE: 3-8s slower (user feels faster)
+            offset = rng.randint(3, 8)
+            pace = user_pace + offset
+        else:
+            # FOMO ZONE: clearly slower
+            offset = rng.randint(6, 15)
+            pace = user_pace + offset
+        
+        # Clamp to realistic range
+        if pace < 12: pace = 12
+        if pace > 55: pace = 55
+        
+        return pace
+
     def generate_weekly_ghosts(self, ghosts, user_weekly_score, user_pace=None, god_mode=False):
-        """Weekly Leaderboard with strict summation + PsyOps."""
+        """
+        Weekly Leaderboard with DEEP psychological pressure.
+        
+        Prize-aware zones:
+          Rank 1-3:  ₹200/₹120/₹80  → Throne Zone (hardest competition)
+          Rank 4-7:  ₹50-₹30         → Battle Zone (tight clustering)
+          Rank 8-10: ₹20-₹15         → Hope Zone (always within reach)
+          Rank 11+:  No prize         → FOMO Zone (just outside prizes)
+        """
         processed_ghosts = []
         now = self.get_ist_time()
         
-        days_to_subtract = now.weekday() 
+        # Calculate week progress
+        days_to_subtract = now.weekday()  # 0=Mon, 6=Sun
         start_of_week = now - datetime.timedelta(days=days_to_subtract)
+        days_passed = days_to_subtract + 1  # How many days of the week so far
+        max_possible_score = days_passed * 600  # Theoretical ceiling
         
         if not ghosts:
             ghosts = [{"id": 1000+i, "full_name": "" } for i in range(49)]
 
+        # --- STEP 1: Calculate base weekly scores for all ghosts ---
         for g in ghosts:
             total_weekly_score = 0
             for day_offset in range(days_to_subtract + 1):
@@ -196,22 +259,113 @@ class RankEngine:
             
         processed_ghosts.sort(key=lambda x: x["weekly_score"], reverse=True)
 
-        # --- PSYCHOLOGICAL MANIPULATION (Weekly) ---
+        # --- STEP 2: GOD MODE (Unbeatable - for users who won last week) ---
         if god_mode:
-            days_passed = days_to_subtract + 1
-            max_possible = days_passed * 600
-            for i in range(3):
-                processed_ghosts[i]["weekly_score"] = max_possible
-        
+            for i in range(min(3, len(processed_ghosts))):
+                processed_ghosts[i]["weekly_score"] = max_possible_score
+
+        # --- STEP 3: PSYCHOLOGICAL ZONE MANIPULATION ---
         if not god_mode and user_weekly_score > 0:
-            top_score = processed_ghosts[0]["weekly_score"]
-            if top_score < user_weekly_score:
-                 processed_ghosts[0]["weekly_score"] = user_weekly_score + 20 # Rivalry
-        
+            
+            # Find where user WOULD rank naturally
+            user_natural_rank = 1
+            for p in processed_ghosts:
+                if p["weekly_score"] > user_weekly_score:
+                    user_natural_rank += 1
+            
+            # === THRONE ZONE (Rank 1-3): Make Top 3 TOUGH but reachable ===
+            # Always ensure 2-3 ghosts are slightly above user when they're near top
+            if user_natural_rank <= 5:
+                # User is close to podium — make it a FIGHT
+                # Rank 1 ghost: user's score + 20-50 pts
+                boost_1 = random.Random(now.toordinal() + 1).randint(20, 50)
+                target_score_1 = min(user_weekly_score + boost_1, max_possible_score)
+                if processed_ghosts[0]["weekly_score"] < target_score_1:
+                    processed_ghosts[0]["weekly_score"] = target_score_1
+                
+                # Rank 2 ghost: user's score + 10-30 pts
+                if len(processed_ghosts) > 1:
+                    boost_2 = random.Random(now.toordinal() + 2).randint(10, 30)
+                    target_score_2 = min(user_weekly_score + boost_2, max_possible_score)
+                    if processed_ghosts[1]["weekly_score"] < target_score_2:
+                        processed_ghosts[1]["weekly_score"] = target_score_2
+                
+                # Rank 3 ghost: user's score + 5-20 pts (closest rival)
+                if len(processed_ghosts) > 2:
+                    boost_3 = random.Random(now.toordinal() + 3).randint(5, 20)
+                    target_score_3 = min(user_weekly_score + boost_3, max_possible_score)
+                    if processed_ghosts[2]["weekly_score"] < target_score_3:
+                        processed_ghosts[2]["weekly_score"] = target_score_3
+            
+            elif user_natural_rank <= 10:
+                # User is in prize zone but NOT podium
+                # Make Rank 1 strong but don't crush
+                top_score = processed_ghosts[0]["weekly_score"]
+                if top_score < user_weekly_score:
+                    processed_ghosts[0]["weekly_score"] = user_weekly_score + random.Random(now.toordinal()).randint(30, 80)
+                    processed_ghosts[0]["weekly_score"] = min(processed_ghosts[0]["weekly_score"], max_possible_score)
+            
+            else:
+                # User is outside top 10 — RIVALRY to pull them back in
+                # Top ghost always ahead
+                if processed_ghosts[0]["weekly_score"] < user_weekly_score:
+                    processed_ghosts[0]["weekly_score"] = user_weekly_score + 20
+
+            # === BATTLE ZONE (Rank 4-7): Tight clustering ===
+            # Make ranks 4-7 very close to each other (anxiety-inducing)
+            if len(processed_ghosts) >= 7:
+                # Determine the score anchor for battle zone
+                # Anchor should be around user's score ± 30 when user is in this range
+                if 4 <= user_natural_rank <= 7:
+                    battle_anchor = user_weekly_score
+                else:
+                    # Use natural score of rank 4 as anchor
+                    battle_anchor = processed_ghosts[3]["weekly_score"]
+                
+                for i in range(3, min(7, len(processed_ghosts))):
+                    rng_battle = random.Random(now.toordinal() + i + 100)
+                    spread = rng_battle.randint(-15, 15)
+                    decay = (i - 3) * rng_battle.randint(5, 15)  # Slight decrease per rank
+                    new_score = battle_anchor + spread - decay
+                    new_score = max(new_score, 0)
+                    new_score = min(new_score, max_possible_score)
+                    # Only adjust if it makes the zone tighter
+                    processed_ghosts[i]["weekly_score"] = new_score
+
+            # === HOPE ZONE (Rank 8-10): Just barely ahead of user ===
+            # If user is outside top 10, make rank 8-10 tantalizingly close
+            if user_natural_rank > 10 and len(processed_ghosts) >= 10:
+                for i in range(7, 10):
+                    rng_hope = random.Random(now.toordinal() + i + 200)
+                    # Place them just 10-40 pts above user
+                    offset = rng_hope.randint(10, 40)
+                    hope_score = user_weekly_score + offset
+                    hope_score = min(hope_score, max_possible_score)
+                    processed_ghosts[i]["weekly_score"] = hope_score
+
+            # === FOMO ZONE (Rank 11): Close to Rank 10 ===
+            if len(processed_ghosts) > 10:
+                rank_10_score = processed_ghosts[9]["weekly_score"]
+                rng_fomo = random.Random(now.toordinal() + 300)
+                fomo_gap = rng_fomo.randint(5, 25)
+                processed_ghosts[10]["weekly_score"] = max(rank_10_score - fomo_gap, 0)
+
+        # --- STEP 4: HOPE SPOT for low scorers (don't make it hopeless) ---
+        if user_weekly_score < 200 and not god_mode:
+            for p in processed_ghosts[:5]:
+                if p["weekly_score"] > max_possible_score * 0.7:
+                    rng_lower = random.Random(p["user_id"])
+                    p["weekly_score"] = int(max_possible_score * rng_lower.uniform(0.4, 0.65))
+
+        # --- STEP 5: Final sort + ensure descending order ---
         processed_ghosts.sort(key=lambda x: x["weekly_score"], reverse=True)
 
+        # --- STEP 6: Assign PACE (relative to user, clean integers) ---
         for idx, p in enumerate(processed_ghosts):
-             is_top = (idx < 3)
-             p["average_pace"] = self._calculate_dynamic_pace(p["user_id"], p["weekly_score"], user_pace, is_top)
+            rank = idx + 1
+            p["average_pace"] = self._calculate_weekly_pace(
+                p["user_id"], rank, user_pace, len(processed_ghosts)
+            )
 
         return processed_ghosts
+
