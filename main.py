@@ -188,6 +188,7 @@ async def cmd_start(message: types.Message):
     builder.button(text="🔥 Check Leaderboard (v82)", web_app=WebAppInfo(url=web_app_url))
     builder.button(text="📝 Start Quiz", callback_data="start_quiz_cmd") # Shortcuts
     builder.button(text="⚙️ Language & Topic", callback_data="settings")
+    builder.button(text="🌐 Official Website", url="https://elevateaura.co.in")
     builder.adjust(1)
     
     
