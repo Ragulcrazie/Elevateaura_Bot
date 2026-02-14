@@ -362,49 +362,38 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="section" style="background: rgba(255,255,255,0.02);">
-        <div class="container">
-            <div class="text-center">
-                <span class="badge" style="background: rgba(236, 72, 153, 0.1); color: #f472b6; border-color: rgba(236, 72, 153, 0.2);">Student Success Stories</span>
-                <h2>Trusted by 5,000+ Apirants</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"The AI explanations are a game changer. I cleared my SSC CGL Tier 1 thanks to the daily practice. It feels like having a personal tutor."</p>
-                        <div class="student-meta">
-                            <div class="student-avatar">R</div>
-                            <div>
-                                <h4 style="margin: 0; font-size: 1rem;">Rahul Sharma</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">SSC Aspirant</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"I won ₹600 last week just by practicing! The cash reward system keeps me motivated to study every single day. Highly recommended."</p>
-                        <div class="student-meta">
-                            <div class="student-avatar" style="background: var(--secondary);">P</div>
-                            <div>
-                                <h4 style="margin: 0; font-size: 1rem;">Priya Singh</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">Bank PO Aspirant</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"No app installing is the best part. I practice while traveling on the bus. The questions are exactly like the real exam pattern."</p>
-                        <div class="student-meta">
-                            <div class="student-avatar" style="background: var(--accent);">A</div>
-                            <div>
-                                <h4 style="margin: 0; font-size: 1rem;">Amit Kumar</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">RRB NTPC Aspirant</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Testimonials (Infinite Wall) -->
+    <section class="section" style="background: rgba(255,255,255,0.02); overflow: hidden;">
+        <div class="container text-center">
+            <span class="badge" style="background: rgba(236, 72, 153, 0.1); color: #f472b6;">Wall of Love</span>
+            <h2>What Students Are Saying</h2>
+            
+            <div class="review-marquee-container">
+                <div class="review-track" id="reviewTrack">
+                    <!-- Reviews Injected via JS -->
                 </div>
             </div>
+            
+            <button onclick="openReviewModal()" class="btn btn-secondary" style="margin-top: 30px;">✍️ Write a Review</button>
         </div>
     </section>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="review-modal">
+        <div class="modal-content animate-in">
+            <button onclick="closeReviewModal()" class="modal-close">&times;</button>
+            <h3>Write a Review</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Share your experience with Elevate Aura.</p>
+            
+            <input type="text" id="reviewName" placeholder="Your Name" />
+            <div style="margin-bottom: 12px; font-size: 1.5rem;">
+                ⭐⭐⭐⭐⭐
+            </div>
+            <textarea id="reviewText" rows="4" placeholder="How has the bot helped you?"></textarea>
+            
+            <button onclick="submitReview()" class="btn btn-primary" style="width: 100%;">Submit Review</button>
+        </div>
+    </div>
 
     <!-- FAQ Section -->
     <section class="section">
@@ -447,36 +436,45 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="logo" style="margin-bottom: 20px;">Elevate Aura</div>
-                    <p>Democratizing high-quality exam preparation with AI and gamification. Built for the ambitious.</p>
+                <div class="footer-col" style="max-width: 300px;">
+                    <a href="/" style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <img src="/assets/img/logo.png" width="32" alt="Logo">
+                        <span style="font-weight: 700; color: white; font-size: 1.2rem;">Elevate Aura</span>
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        The smartest way to prepare for government exams. AI-driven, gamified, and results-oriented.
+                    </p>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Product</h4>
-                    <div class="footer-links">
-                        <a href="pages/ssc-daily-practice.html">SSC Practice</a>
-                        <a href="pages/rrb-daily-practice.html">RRB Practice</a>
-                        <a href="https://t.me/ElevateAura_Bot">Telegram Bot</a>
-                    </div>
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="pages/about.html">About Us</a>
+                    <a href="pages/careers.html">Careers</a>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Company</h4>
-                    <div class="footer-links">
-                        <a href="pages/about.html">About Us</a>
-                        <a href="pages/careers.html">Careers <span class="badge" style="font-size: 0.7rem;">Hiring</span></a>
-                        <a href="pages/contact.html">Contact</a>
-                    </div>
+                    <h4>Exams</h4>
+                    <a href="pages/ssc-daily-practice.html">SSC CGL/CHSL</a>
+                    <a href="pages/rrb-daily-practice.html">RRB NTPC</a>
+                    <a href="pages/bank-daily-practice.html">Bank PO</a>
+                    <a href="pages/police-daily-practice.html">Police Exams</a>
                 </div>
+                
                 <div class="footer-col">
-                    <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="pages/privacy.html">Privacy Policy</a>
-                        <a href="pages/terms.html">Terms of Service</a>
+                    <h4>Legal & Contact</h4>
+                    <a href="pages/privacy.html">Privacy Policy</a>
+                    <a href="pages/terms.html">Terms & Conditions</a>
+                    <a href="mailto:elevateauraofficial@gmail.com">Contact Support</a>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="https://t.me/ElevateAura_Bot">🔵 Telegram</a>
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--glass-border); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-                © 2026 Elevate Aura Technologies Pvt Ltd. All rights reserved. Chengalpattu, Tamil Nadu, India.
+            
+            <div class="copyright">
+                &copy; 2026 Elevate Aura. All rights reserved. Made with ❤️ for Aspirants.
             </div>
         </div>
     </footer>

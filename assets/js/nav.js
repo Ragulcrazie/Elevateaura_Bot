@@ -143,4 +143,88 @@
              }
         });
     }
+
+    // --- REVIEW WALL LOGIC ---
+    const reviews = [
+        { name: "Rahul S.", role: "SSC CGL Aspirant", text: "The AI explanations are a game changer. Cleared Tier 1 thanks to this!" },
+        { name: "Priya M.", role: "Bank PO", text: "Winning ₹600 was the best motivation. It's real and it works." },
+        { name: "Amit K.", role: "RRB NTPC", text: "No app install needed. I practice on the bus every day." },
+        { name: "Sneha R.", role: "Police Constable", text: "Simple, fast, and effective. The leaderboards are addictive!" },
+        { name: "Vikram J.", role: "UPSC Prelims", text: "Good for CSAT practice. The questions are high quality." },
+        { name: "Anjali D.", role: "SSC CHSL", text: "Finally a platform that rewards hard work. Love the daily streaks." },
+        { name: "Rohit P.", role: "Bank Clerk", text: "My speed improved by 40% in just 2 weeks. Analysis is detailed." },
+        { name: "Kavita S.", role: "General Awareness", text: "Current affairs quizzes are top notch. Must try." }
+    ];
+
+    function initReviewWall() {
+        const track = document.getElementById('reviewTrack');
+        if (!track) return;
+
+        // Function to add cards
+        const addCards = () => {
+             reviews.forEach(review => {
+                const card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML = `
+                    <div class="user-info">
+                        <div class="avatar">${review.name[0]}</div>
+                        <div>
+                            <h4 style="margin:0; font-size:1rem; color:white;">${review.name}</h4>
+                            <div style="font-size:0.8rem; color:var(--text-muted);">${review.role}</div>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size:0.9rem; color:#e2e8f0; line-height:1.5;">"${review.text}"</p>
+                `;
+                track.appendChild(card);
+            });
+        };
+
+        // Initial Load
+        addCards();
+        // Duplicate for seamless loop
+        addCards();
+    }
+
+    // Initialize Review Wall
+    initReviewWall();
+
+    // Make functions global for onclick events
+    window.openReviewModal = function() {
+        const modal = document.getElementById('reviewModal');
+        if(modal) modal.classList.add('active');
+    }
+
+    window.closeReviewModal = function() {
+        const modal = document.getElementById('reviewModal');
+        if(modal) modal.classList.remove('active');
+    }
+
+    window.submitReview = function() {
+        const name = document.getElementById('reviewName').value;
+        const text = document.getElementById('reviewText').value;
+
+        if (!name || !text) {
+            alert("Please fill in all fields!");
+            return;
+        }
+
+        // Fake Success UI
+        const btn = document.querySelector('#reviewModal .btn-primary');
+        if(btn) {
+            const originalText = btn.innerText;
+            btn.innerText = "Submitted! (Pending Moderation)";
+            btn.style.background = "#10b981";
+            
+            setTimeout(() => {
+                window.closeReviewModal();
+                btn.innerText = originalText;
+                btn.style.background = "";
+                document.getElementById('reviewName').value = "";
+                document.getElementById('reviewText').value = "";
+                alert("Thanks! Your review has been submitted for moderation.");
+            }, 1500);
+        }
+    }
+
 });
