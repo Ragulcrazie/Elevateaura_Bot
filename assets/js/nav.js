@@ -5,6 +5,7 @@
         <div class="container nav-inner">
             <a href="/" class="logo">
                 <img src="/assets/img/logo.png" alt="Elevate Aura" style="height: 100%; width: auto;">
+                <span>Elevate Aura</span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="/" class="nav-link">Home</a>

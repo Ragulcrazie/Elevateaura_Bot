@@ -116,7 +116,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .job-meta { display: flex; gap: 16px; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; }
 
 /* Logo */
-.logo { display: block; height: 40px; }
+.logo { display: flex; align-items: center; gap: 12px; height: 40px; font-weight: 800; font-size: 1.5rem; color: #fff; }
 .logo img { height: 100%; width: auto; object-fit: contain; }
 
 /* FAQ Section */
