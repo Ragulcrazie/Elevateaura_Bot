@@ -1,6 +1,14 @@
 ﻿document.addEventListener("DOMContentLoaded", function() {
     // 1. Inject Navigation
     const navHTML = `
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="mailto:elevateauraofficial@gmail.com" style="text-decoration: none;">📧 elevateauraofficial@gmail.com</a>
+            <a href="https://t.me/ElevateAura_Bot" style="text-decoration: none;">✈️ @ElevateAura_Bot</a>
+        </div>
+    </div>
+
     <nav class="nav">
         <div class="container nav-inner">
             <a href="/" class="logo">
@@ -9,9 +17,18 @@
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="/" class="nav-link">Home</a>
-                <a href="/pages/ssc-daily-practice.html" class="nav-link">SSC</a>
-                <a href="/pages/rrb-daily-practice.html" class="nav-link">RRB</a>
-                <a href="/pages/bank-daily-practice.html" class="nav-link">Bank</a>
+                
+                <!-- Exams Dropdown -->
+                <div class="nav-item-dropdown">
+                    <span class="nav-link" style="cursor: pointer; display: flex; align-items: center; gap: 4px;">Exams ▾</span>
+                    <div class="dropdown-menu">
+                        <a href="/pages/ssc-daily-practice.html" class="dropdown-link">SSC Exams</a>
+                        <a href="/pages/rrb-daily-practice.html" class="dropdown-link">RRB Railways</a>
+                        <a href="/pages/bank-daily-practice.html" class="dropdown-link">Banking</a>
+                        <a href="/pages/police-daily-practice.html" class="dropdown-link">Police Exams</a>
+                    </div>
+                </div>
+
                 <a href="/pages/about.html" class="nav-link">About</a>
                 <a href="/pages/careers.html" class="nav-link">Careers</a>
                 <a href="https://t.me/ElevateAura_Bot" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Start Practice</a>
@@ -28,9 +45,12 @@
         <!-- Mobile Dropdown Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <a href="/" class="mobile-link">Home</a>
-            <a href="/pages/ssc-daily-practice.html" class="mobile-link">SSC Practice</a>
-            <a href="/pages/rrb-daily-practice.html" class="mobile-link">RRB Practice</a>
-            <a href="/pages/bank-daily-practice.html" class="mobile-link">Bank Practice</a>
+            <div style="padding: 10px 20px; font-weight: 600; color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Exams</div>
+            <a href="/pages/ssc-daily-practice.html" class="mobile-link" style="padding-left: 30px;">SSC Practice</a>
+            <a href="/pages/rrb-daily-practice.html" class="mobile-link" style="padding-left: 30px;">RRB Practice</a>
+            <a href="/pages/bank-daily-practice.html" class="mobile-link" style="padding-left: 30px;">Bank Practice</a>
+            <a href="/pages/police-daily-practice.html" class="mobile-link" style="padding-left: 30px;">Police Practice</a>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 10px 0;"></div>
             <a href="/pages/about.html" class="mobile-link">About Us</a>
             <a href="/pages/careers.html" class="mobile-link">Careers</a>
             <a href="https://t.me/ElevateAura_Bot" class="mobile-link btn-primary" style="color: white !important; margin-top: 10px;">Start Practice</a>

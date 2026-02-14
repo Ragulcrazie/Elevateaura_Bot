@@ -119,6 +119,40 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .logo { display: flex; align-items: center; gap: 12px; height: 40px; font-weight: 800; font-size: 1.5rem; color: #fff; }
 .logo img { height: 100%; width: auto; object-fit: contain; }
 
+/* Top Bar */
+.top-bar {
+    background: #05060a; /* Darker than body */
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: var(--text-muted); display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+.top-bar a:hover { color: var(--primary); }
+
+/* Dropdown */
+.nav-item-dropdown { position: relative; height: 100%; display: flex; align-items: center; }
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(15, 17, 26, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.nav-item-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(10px); }
+.dropdown-link { display: block; padding: 12px 16px; color: var(--text-muted); border-radius: 8px; text-align: left; font-size: 0.95rem; }
+.dropdown-link:hover { background: rgba(255,255,255,0.05); color: #fff; transform: translateX(5px); }
+
 /* FAQ Section */
 .faq-container { max-width: 800px; margin: 0 auto; }
 .faq-item {
