@@ -122,10 +122,45 @@
              <!-- Feature 2: Weekly Cash Rewards (Right Image, Left Text) -->
              <div class="grid grid-2" style="align-items: center; direction: rtl; text-align: left; margin-bottom: 80px;">
                 <div class="card animate-in delay-2" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
-                    <div style="background: var(--glass-bg); padding: 10px; border-radius: 20px; border: 1px solid var(--glass-border);">
-                         <!-- Placeholder for Cash Prize Image - using leaderboard for now as it shows money -->
-                         <img src="assets/img/latest_leaderboard.jpeg" alt="Cash Prizes" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    
+                    <!-- New Wallet Demo -->
+                    <div class="wallet-demo">
+                        <div class="wallet-header">
+                            <h5 style="margin:0; text-transform:uppercase; letter-spacing:1px; color:#94a3b8; font-size:0.8rem;">My Wallet</h5>
+                            <span style="font-size:1.2rem;">💎</span>
+                        </div>
+                        
+                        <div class="balance-card">
+                            <div class="balance-label">Total Balance</div>
+                            <div class="balance-amount">₹650.00</div>
+                            <div style="font-size: 0.8rem; margin-top: 5px; opacity: 0.8;">Verified User • UPI Linked</div>
+                        </div>
+                        
+                        <div class="txn-list">
+                            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;">Recent Activity</p>
+                            <div class="txn-item">
+                                <div style="display:flex; gap:10px; align-items:center;">
+                                    <div class="txn-icon">🏆</div>
+                                    <div class="txn-details">
+                                        <h5>Rank #1 Bonus</h5>
+                                        <span>Today, 10:30 AM</span>
+                                    </div>
+                                </div>
+                                <div class="txn-amount">+ ₹100</div>
+                            </div>
+                            <div class="txn-item">
+                                <div style="display:flex; gap:10px; align-items:center;">
+                                    <div class="txn-icon">✅</div>
+                                    <div class="txn-details">
+                                        <h5>Daily Streak</h5>
+                                        <span>Yesterday</span>
+                                    </div>
+                                </div>
+                                <div class="txn-amount">+ ₹50</div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="animate-in delay-3" style="direction: ltr;">
                     <span class="badge" style="margin-bottom: 16px; display: inline-block;">Weekly Cash Pool</span>
