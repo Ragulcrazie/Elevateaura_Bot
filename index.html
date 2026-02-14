@@ -25,9 +25,9 @@
             </div>
             
             <!-- Dashboard Image Placeholder -->
-            <div class="animate-in delay-3" style="margin-top: 60px; width: 100%; max-width: 900px; height: 400px; background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent); border: 1px solid var(--glass-border); border-radius: 20px 20px 0 0; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted);">
-                    [Interactive Dashboard Preview]
+            <div class="animate-in delay-3" style="margin-top: 60px; width: 100%; max-width: 900px; display: flex; justify-content: center;">
+                <div style="background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent); border: 1px solid var(--glass-border); border-radius: 20px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                    <img src="assets/img/leaderboard_full.jpeg" alt="Elevate Aura Leaderboard" style="width: 100%; border-radius: 12px; display: block; max-height: 500px; object-fit: contain;">
                 </div>
             </div>
         </div>
@@ -57,27 +57,54 @@
         </div>
     </section>
 
-    <!-- Features (Bento Grid) -->
-    <section class="section">
+    <!-- Features Overview -->
+    <section class="section" id="features">
         <div class="container">
             <div class="text-center" style="margin-bottom: 60px;">
                 <h2>Why Top Rankers Choose Us</h2>
                 <p>We replaced outdated books with a smart engine that learns with you.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="card animate-in">
-                    <h3>&#129302; AI Coach</h3>
-                    <p>It doesn't just check answers. It explains *why* you were wrong and suggests shorter methods.</p>
+            
+            <!-- Feature 1: AI Coach (Left Image, Right Text) -->
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 80px;">
+                <div class="card animate-in" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
+                    <div style="background: var(--glass-bg); padding: 10px; border-radius: 20px; border: 1px solid var(--glass-border);">
+                         <img src="assets/img/aicoach.jpeg" alt="AI Coach Explanation" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    </div>
                 </div>
-                <div class="card animate-in delay-1">
-                    <h3>&#9876; Smart Rivalry</h3>
-                    <p>Compete on a live leaderboard. See your percentile against 500+ serious aspirants in real-time.</p>
-                </div>
-                <div class="card animate-in delay-2">
-                    <h3>&#127942; Earn While You Learn</h3>
-                    <p>Top the weekly leaderboard and win real cash prizes. Education should pay you back.</p>
+                <div class="animate-in delay-1">
+                    <span class="badge" style="margin-bottom: 16px; display: inline-block;">AI Coach</span>
+                    <h3>It's Not Just a Quiz. <br> It's a Personal Tutor.</h3>
+                    <p>Wrong answer? No problem. Our AI explains the concept step-by-step, just like a human teacher. It identifies your weak spots and helps you fix them instantly.</p>
+                    <ul style="list-style: none; color: var(--text-muted); margin-bottom: 24px;">
+                        <li style="margin-bottom: 10px;">✅ Detailed Step-by-Step Solutions</li>
+                        <li style="margin-bottom: 10px;">✅ Math & Reasoning Shortcuts</li>
+                        <li>✅ Concept Clarity in Seconds</li>
+                    </ul>
+                    <a href="https://t.me/ElevateAura_Bot?start=feature_ai" class="btn btn-secondary">Try AI Coach</a>
                 </div>
             </div>
+
+             <!-- Feature 2: Smart Rivalry (Right Image, Left Text) -->
+             <div class="grid grid-2" style="align-items: center; direction: rtl; text-align: left;">
+                <div class="card animate-in delay-2" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
+                    <div style="background: var(--glass-bg); padding: 10px; border-radius: 20px; border: 1px solid var(--glass-border);">
+                         <img src="assets/img/leaderboard_prizes.jpeg" alt="Leaderboard Prizes" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    </div>
+                </div>
+                <div class="animate-in delay-3" style="direction: ltr;">
+                    <span class="badge" style="margin-bottom: 16px; display: inline-block;">Weekly Rewards</span>
+                    <h3>Earn While You Learn.</h3>
+                    <p>Education should pay you back. Consistent practice leads to mastery, and mastery leads to rewards. Top the weekly leaderboard and win real cash prizes directly to your wallet.</p>
+                     <ul style="list-style: none; color: var(--text-muted); margin-bottom: 24px;">
+                        <li style="margin-bottom: 10px;">🏆 ₹600 Weekly Prize Pool</li>
+                        <li style="margin-bottom: 10px;">🔥 Compete with 500+ Serious Aspirants</li>
+                        <li>💰 Instant Withdrawals</li>
+                    </ul>
+                    <a href="https://t.me/ElevateAura_Bot?start=feature_rewards" class="btn btn-secondary">View Leaderboard</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
