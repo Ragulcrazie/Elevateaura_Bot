@@ -15,8 +15,17 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Fixed Header Logic */
+.fixed-header {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+}
+/* Force children to behave statically inside fixed header */
+.fixed-header .top-bar { position: relative !important; z-index: 2; }
+.fixed-header .nav { position: relative !important; top: 0 !important; z-index: 1; }
+
 body {
     background-color: var(--bg-dark);
+    padding-top: 100px; /* Offset for fixed header */
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 25%);
