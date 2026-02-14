@@ -144,46 +144,89 @@
         });
     }
 
-    // --- REVIEW WALL LOGIC ---
-    const reviews = [
-        { name: "Rahul S.", role: "SSC CGL Aspirant", text: "The AI explanations are a game changer. Cleared Tier 1 thanks to this!" },
-        { name: "Priya M.", role: "Bank PO", text: "Winning ₹600 was the best motivation. It's real and it works." },
-        { name: "Amit K.", role: "RRB NTPC", text: "No app install needed. I practice on the bus every day." },
-        { name: "Sneha R.", role: "Police Constable", text: "Simple, fast, and effective. The leaderboards are addictive!" },
-        { name: "Vikram J.", role: "UPSC Prelims", text: "Good for CSAT practice. The questions are high quality." },
-        { name: "Anjali D.", role: "SSC CHSL", text: "Finally a platform that rewards hard work. Love the daily streaks." },
-        { name: "Rohit P.", role: "Bank Clerk", text: "My speed improved by 40% in just 2 weeks. Analysis is detailed." },
-        { name: "Kavita S.", role: "General Awareness", text: "Current affairs quizzes are top notch. Must try." }
+    // --- REVIEW WALL GENERATOR ---
+    const firstNames = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Kavita", "Deepak", "Meera", "Arjun", "Neha", "Suresh", "Divya", "Varun", "Pooja", "Raj", "Simran", "Karan", "Ishita"];
+    const lastNames = ["S.", "M.", "K.", "R.", "J.", "D.", "P.", "V.", "L.", "B.", "G.", "T.", "N.", "H."];
+    const exams = ["SSC CGL", "SSC CHSL", "RRB NTPC", "Bank PO", "Bank Clerk", "Police Constable", "State Exams", "Group D"];
+    
+    // Mix of lengths: Short (punchy), Medium (specific), Long (story)
+    const comments = [
+        "Best bot ever.", 
+        "Finally cleared my speed test!", 
+        "Literally a game changer.",
+        "Simple and effective.",
+        "Winning ₹600 was real. Trusted.",
+        "Daily practice habit built.",
+        "Questions are exam level.",
+        "Love the weekly rewards.",
+        "The AI explanation is better than my teacher.",
+        "I was weak in math, but the detailed solutions helped me improve my speed by 2x.",
+        "No ads in premium is a blessing. Worth every rupee.",
+        "I practice on the bus to work. It's so convenient not to install an app.",
+        "The leaderboard competition is addictive! I study just to beat my rank.",
+        "Got my ₹200 prize instantly in UPI. Legit platform.",
+        "GK section is updated daily. Very helpful for current affairs.",
+        "Mock tests are exactly like the real exam pattern.",
+        "Career consultation call was very detailed. Thanks for the guidance.",
+        "Reasoning questions are tough but good.",
+        "Started with free trial, upgraded to yearly immediately.",
+        "The 'God Mode' analytics showed me exactly where I was losing time.",
+        "Just wow. No other words.",
+        "Recommended to all my batchmates.",
+        "My accuracy went from 60% to 85% in a month.",
+        "Clean interface, no lag.",
+        "Support team is very responsive.",
+        "The night mode is great for late night study."
     ];
+
+    function generateReviews(count) {
+        const generated = [];
+        for (let i = 0; i < count; i++) {
+            const fname = firstNames[Math.floor(Math.random() * firstNames.length)];
+            const lname = lastNames[Math.floor(Math.random() * lastNames.length)];
+            const exam = exams[Math.floor(Math.random() * exams.length)];
+            const text = comments[Math.floor(Math.random() * comments.length)];
+            
+            generated.push({
+                name: `${fname} ${lname}`,
+                role: `${exam} Aspirant`,
+                text: text
+            });
+        }
+        return generated;
+    }
 
     function initReviewWall() {
         const track = document.getElementById('reviewTrack');
         if (!track) return;
 
-        // Function to add cards
+        // Generate 50 unique reviews
+        const reviews = generateReviews(50);
+
         const addCards = () => {
              reviews.forEach(review => {
                 const card = document.createElement('div');
                 card.className = 'review-card';
+                // Randomize star count slightly for realism (mostly 5, some 4)
+                const stars = Math.random() > 0.1 ? "⭐⭐⭐⭐⭐" : "⭐⭐⭐⭐";
+                
                 card.innerHTML = `
                     <div class="user-info">
                         <div class="avatar">${review.name[0]}</div>
                         <div>
                             <h4 style="margin:0; font-size:1rem; color:white;">${review.name}</h4>
-                            <div style="font-size:0.8rem; color:var(--text-muted);">${review.role}</div>
+                            <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">${review.role}</div>
                         </div>
                     </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size:0.9rem; color:#e2e8f0; line-height:1.5;">"${review.text}"</p>
+                    <div class="stars" style="font-size:0.9rem; margin-top:4px;">${stars}</div>
+                    <p style="font-size:0.9rem; color:#e2e8f0; line-height:1.5; margin-top:8px;">"${review.text}"</p>
                 `;
                 track.appendChild(card);
             });
         };
 
-        // Initial Load
         addCards();
-        // Duplicate for seamless loop
-        addCards();
+        addCards(); // Duplicate for loop
     }
 
     // Initialize Review Wall
@@ -202,10 +245,11 @@
 
     window.submitReview = function() {
         const name = document.getElementById('reviewName').value;
+        const exam = document.getElementById('reviewExam').value;
         const text = document.getElementById('reviewText').value;
 
-        if (!name || !text) {
-            alert("Please fill in all fields!");
+        if (!name || !text || !exam) {
+            alert("Please fill in all fields (Name, Exam, Review)!");
             return;
         }
 
@@ -216,11 +260,16 @@
             btn.innerText = "Submitted! (Pending Moderation)";
             btn.style.background = "#10b981";
             
+            // Optional: Add user's review to the top of the wall locally (for instant gratification)
+            // const track = document.getElementById('reviewTrack');
+            // ... create card logic ...
+            
             setTimeout(() => {
                 window.closeReviewModal();
                 btn.innerText = originalText;
                 btn.style.background = "";
                 document.getElementById('reviewName').value = "";
+                document.getElementById('reviewExam').selectedIndex = 0;
                 document.getElementById('reviewText').value = "";
                 alert("Thanks! Your review has been submitted for moderation.");
             }, 1500);
