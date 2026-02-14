@@ -31,7 +31,6 @@
 
                 <a href="/pages/about.html" class="nav-link">About</a>
                 <a href="/pages/careers.html" class="nav-link">Careers</a>
-                <a href="https://t.me/ElevateAura_Bot" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Start Practice</a>
             </div>
             
             <!-- Mobile Menu Button (Pure CSS) -->
