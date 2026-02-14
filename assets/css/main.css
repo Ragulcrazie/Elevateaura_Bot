@@ -425,6 +425,8 @@ footer { border-top: 1px solid var(--glass-border); padding: 80px 0 40px; margin
 }
 .features-toggle-btn:hover {
     background: var(--primary);
+}
+
 /* --- REVIEW WALL (Infinite Marquee) --- */
 .review-marquee-container {
     position: relative;
@@ -523,4 +525,4 @@ footer {
 .footer-col a:hover { color: var(--primary); }
 .social-links { display: flex; gap: 15px; }
 .copyright { text-align: center; color: #475569; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
-}
+
