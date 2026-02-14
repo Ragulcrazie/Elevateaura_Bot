@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap');
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap");
 
 :root {
     --bg-dark: #0f111a;
@@ -9,8 +9,8 @@
     --glass-border: rgba(255, 255, 255, 0.08);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: "Outfit", sans-serif;
+    --font-body: "Inter", sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,15 +26,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: #fff; letter-spacing: -0.02em; }
-h1 { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 24px; background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 24px; background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 16px; }
 p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; max-width: 600px; }
-
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-/* Layout Utilities */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 80px 0; }
 .text-center { text-align: center; display: flex; flex-direction: column; align-items: center; }
@@ -43,7 +40,6 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
-/* Glassmorphism Cards */
 .card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -54,21 +50,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     position: relative;
     overflow: hidden;
 }
-.card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%; width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
-    transition: 0.5s;
-}
-.card:hover::before { left: 100%; }
+.card:hover { transform: translateY(-5px); border-color: rgba(99, 102, 241, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 
-/* Buttons */
 .btn {
     display: inline-flex; align-items: center; justify-content: center;
     padding: 16px 32px;
@@ -78,74 +61,75 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-}
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
-}
-.btn-secondary {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--glass-border);
-    color: white;
-}
-.btn-secondary:hover {
-    background: rgba(255,255,255,0.1);
-}
+.btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4); }
+.btn-secondary { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white; }
+.btn-secondary:hover { background: rgba(255,255,255,0.1); }
 
-/* Navbar */
+/* Updated Mobile Navigation */
 .nav {
     position: sticky; top: 0; z-index: 1000;
     padding: 16px 0;
-    background: rgba(15, 17, 26, 0.8);
+    background: rgba(15, 17, 26, 0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
 }
 .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: #fff; }
 .nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-link { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); position: relative; }
+.nav-link { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); }
 .nav-link:hover { color: #fff; }
-.nav-link.active { color: #fff; }
-.mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
 
-/* Hero */
+.mobile-toggle { display: none; cursor: pointer; width: 30px; height: 20px; position: relative; z-index: 1002; }
+.mobile-toggle span {
+    display: block; width: 100%; height: 2px;
+    background-color: #fff; border-radius: 2px;
+    position: absolute; transition: .3s;
+}
+.mobile-toggle span:nth-child(1) { top: 0; }
+.mobile-toggle span:nth-child(2) { top: 9px; }
+.mobile-toggle span:nth-child(3) { top: 18px; }
+
+/* Hamburger Animation classes handled by JS logic but base styles here */
+
+.mobile-menu {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: var(--bg-dark);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 30px;
+    z-index: 1001;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+}
+.mobile-menu.active { transform: translateY(0); }
+.mobile-link { font-size: 1.5rem; font-weight: 600; color: #fff; }
+
 .hero { padding-top: 80px; padding-bottom: 60px; min-height: 90vh; display: flex; align-items: center; }
-.hero-badges { display: flex; gap: 12px; margin-bottom: 24px; }
+.hero-badges { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; justify-content: center; }
 .badge { padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); }
 
-/* Stats */
 .stat-number { font-size: 2.5rem; font-weight: 700; color: #fff; }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
-/* Job Listings */
 .job-card { display: flex; justify-content: space-between; align-items: center; padding: 24px; }
 .job-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 4px; }
-.job-meta { display: flex; gap: 16px; font-size: 0.9rem; color: var(--text-muted); }
+.job-meta { display: flex; gap: 16px; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; }
 
-/* Footer */
 footer { border-top: 1px solid var(--glass-border); padding: 80px 0 40px; margin-top: 80px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
-.footer-col h4 { font-size: 1.1rem; color: #fff; margin-bottom: 20px; }
 .footer-links a { display: block; margin-bottom: 12px; color: var(--text-muted); }
-.footer-links a:hover { color: var(--primary); }
 
-/* Mobile */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    .nav-links { display: none; } /* Simplified mobile handling */
+    .nav-links { display: none; }
     .mobile-toggle { display: block; }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-    .hero { text-align: center; } 
-    .text-center { align-items: center; }
+    .hero { text-align: center; padding-top: 40px; }
+    .job-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .job-meta { flex-direction: column; gap: 8px; }
+    h1 { font-size: 2.5rem; }
 }
 
-/* Animations */
-.animate-in { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
+.animate-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
