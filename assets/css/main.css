@@ -201,6 +201,7 @@ body { padding-top: 100px; } /* Prevent value overlap */
 
 /* Top Bar */
 .top-bar {
+    position: fixed; top: 0; width: 100%; z-index: 1001;
     background: #05060a; /* Darker than body */
     color: var(--text-muted);
     font-size: 0.85rem;
