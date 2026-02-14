@@ -33,13 +33,27 @@ p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; max-width:
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section { padding: 80px 0; }
+.section { padding: 100px 0; } /* Increased whitespace */
 .text-center { text-align: center; display: flex; flex-direction: column; align-items: center; }
-.grid { display: grid; gap: 24px; }
+.grid { display: grid; gap: 40px; } /* Increased gap */
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
+/* How It Works Steps */
+.step-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+    margin-bottom: -20px;
+    z-index: 0;
+    position: relative;
+    line-height: 1;
+}
+.step-card {
+    text-align: center;
+    padding: 30px;
+}
 .card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
