@@ -1,0 +1,18 @@
+﻿*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
+body{background:radial-gradient(circle at top,#1b1f3b,#070a16);color:#eaeaf0;line-height:1.6}
+.container{max-width:1100px;margin:auto;padding:20px}
+.hero{padding:80px 20px;background:linear-gradient(135deg,#6c63ff,#3b82f6);color:#fff}
+h1{font-size:clamp(28px,5vw,44px);margin-bottom:12px}
+h2{margin:20px 0 10px}
+.cta{display:inline-block;padding:14px 22px;background:#000;color:#fff;border-radius:12px;text-decoration:none;font-weight:700;transition:.2s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.4)}
+.grid{display:grid;gap:16px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:rgba(255,255,255,.08);padding:20px;border-radius:16px;color:#fff;text-decoration:none;transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.nav{position:sticky;top:0;backdrop-filter:blur(10px);background:rgba(10,12,25,.7);z-index:1000}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none}
+.nav-links a{margin-left:14px;color:#cfd3ff;text-decoration:none;font-weight:600}
+.nav-links a:hover{color:#fff}
+footer{padding:20px 0;opacity:.7}
