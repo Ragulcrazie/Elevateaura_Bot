@@ -79,9 +79,32 @@
             <!-- Feature 1: AI Coach (Left Image, Right Text) -->
             <div class="grid grid-2" style="align-items: center; margin-bottom: 80px;">
                 <div class="card animate-in" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
-                    <div style="background: var(--glass-bg); padding: 10px; border-radius: 20px; border: 1px solid var(--glass-border);">
-                         <img src="assets/img/aicoach.jpeg" alt="AI Coach Explanation" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    
+                    <!-- New Live Chat Demo -->
+                    <div class="chat-demo">
+                        <div class="chat-header">
+                            <div class="bot-avatar">A</div>
+                            <div>
+                                <h5 style="margin: 0;">AI Coach</h5>
+                                <span style="font-size: 0.7rem; color: #10b981;">● Online</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Question -->
+                        <div class="msg msg-bot delay-msg-1">
+                            Q: What is the Cube Root of 343?
+                            <div class="option-btn">A) 6</div>
+                            <div class="option-btn selected">B) 7 <span style="float: right;">✅</span></div>
+                            <div class="option-btn">C) 8</div>
+                        </div>
+                        
+                        <!-- Explanation -->
+                        <div class="msg msg-bot delay-msg-2" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #d1fae5;">
+                            <strong>Correct! +10 Pts</strong><br>
+                            <span style="font-size: 0.8rem; opacity: 0.9;">Explanation: 7 × 7 × 7 = 343. This is a perfect cube.</span>
+                        </div>
                     </div>
+
                 </div>
                 <div class="animate-in delay-1">
                     <span class="badge" style="margin-bottom: 16px; display: inline-block;">AI Coach</span>
