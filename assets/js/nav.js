@@ -114,4 +114,27 @@
         el.style.opacity = "0"; // Initial state
         observer.observe(el);
     });
+
+    // 6. Features Toggle Logic
+    const featuresBtn = document.getElementById('featuresBtn');
+    const featuresContent = document.getElementById('features-content');
+    
+    if(featuresBtn && featuresContent) {
+        featuresBtn.addEventListener('click', () => {
+             // Check if it's currently visible
+             const isVisible = featuresContent.style.display !== 'none';
+             
+             if(isVisible) {
+                 featuresContent.style.display = 'none';
+                 featuresContent.style.opacity = '0';
+                 featuresBtn.innerText = 'View Features ▾';
+             } else {
+                 featuresContent.style.display = 'block';
+                 // Trigger reflow
+                 void featuresContent.offsetWidth;
+                 featuresContent.style.opacity = '1';
+                 featuresBtn.innerText = 'Hide Features ▴';
+             }
+        });
+    }
 });
