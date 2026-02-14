@@ -180,7 +180,15 @@ body { padding-top: 100px; } /* Prevent value overlap */
     gap: 10px;
 }
 
-.stat-number { font-size: 2.5rem; font-weight: 700; color: #fff; }
+/* Authority Logos */
+.logo-strip {
+    display: flex; gap: 40px; justify-content: center; align-items: center; 
+    margin-top: 40px; padding: 20px 0;
+    opacity: 0.5; filter: grayscale(100%); transition: 0.3s;
+}
+.logo-strip:hover { opacity: 0.8; filter: grayscale(0%); }
+.auth-logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; color: white; display: flex; align-items: center; gap: 8px; }
+.auth-logo span { font-size: 0.8rem; font-weight: 400; letter-spacing: 0; text-transform: uppercase; background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
 .job-card { display: flex; justify-content: space-between; align-items: center; padding: 24px; }
