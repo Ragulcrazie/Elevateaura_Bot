@@ -132,6 +132,26 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .hero-badges { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; justify-content: center; }
 .badge { padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); }
 
+/* Trust Badges */
+.trust-labels {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0.6;
+}
+.trust-labels span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .stat-number { font-size: 2.5rem; font-weight: 700; color: #fff; }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
