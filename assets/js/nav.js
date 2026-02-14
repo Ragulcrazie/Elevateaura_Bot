@@ -5,6 +5,7 @@
         <div class="container nav-inner">
             <a href="/" class="logo">Elevate Aura</a>
             <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
                 <a href="/pages/ssc-daily-practice.html" class="nav-link">SSC</a>
                 <a href="/pages/rrb-daily-practice.html" class="nav-link">RRB</a>
                 <a href="/pages/bank-daily-practice.html" class="nav-link">Bank</a>
@@ -23,6 +24,7 @@
         
         <!-- Mobile Dropdown Menu -->
         <div class="mobile-menu" id="mobileMenu">
+            <a href="/" class="mobile-link">Home</a>
             <a href="/pages/ssc-daily-practice.html" class="mobile-link">SSC Practice</a>
             <a href="/pages/rrb-daily-practice.html" class="mobile-link">RRB Practice</a>
             <a href="/pages/bank-daily-practice.html" class="mobile-link">Bank Practice</a>
