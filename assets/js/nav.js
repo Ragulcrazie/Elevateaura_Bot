@@ -33,6 +33,7 @@
                         </div>
                     </div>
 
+                    <a href="#pricing" class="nav-link">Pricing</a>
                     <a href="/pages/about.html" class="nav-link">About</a>
                     <a href="/pages/careers.html" class="nav-link">Careers</a>
                 </div>
