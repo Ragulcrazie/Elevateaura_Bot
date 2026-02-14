@@ -3,7 +3,9 @@
     const navHTML = `
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="/" class="logo">Elevate Aura</a>
+            <a href="/" class="logo">
+                <img src="/assets/img/logo.png" alt="Elevate Aura" style="height: 100%; width: auto;">
+            </a>
             <div class="nav-links" id="navLinks">
                 <a href="/" class="nav-link">Home</a>
                 <a href="/pages/ssc-daily-practice.html" class="nav-link">SSC</a>
@@ -62,7 +64,23 @@
         });
     }
 
-    // 3. Scroll Animations
+    // 4. FAQ Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.paddingBottom = "24px";
+            } else {
+                answer.style.maxHeight = null;
+                answer.style.paddingBottom = "0";
+            }
+        });
+    });
+
+    // 5. Scroll Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
