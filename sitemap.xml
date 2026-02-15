@@ -1,7 +1,55 @@
-﻿<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.elevateaura.co.in/</loc></url>
-  <url><loc>https://www.elevateaura.co.in/pages/ssc-daily-practice.html</loc></url>
-  <url><loc>https://www.elevateaura.co.in/pages/rrb-daily-practice.html</loc></url>
-  <url><loc>https://www.elevateaura.co.in/pages/bank-daily-practice.html</loc></url>
-  <url><loc>https://www.elevateaura.co.in/pages/police-daily-practice.html</loc></url>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://www.elevateaura.co.in/</loc><priority>1.0</priority></url>
+    <url><loc>https://www.elevateaura.co.in/pages/ssc-daily-practice.html</loc><priority>0.9</priority></url>
+    <url><loc>https://www.elevateaura.co.in/blog/free-ssc-questions.html</loc><priority>0.9</priority></url><url><loc>https://www.elevateaura.co.in/blog/free-ssc-active-and-passive-voice-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-algebra-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-analogy-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-average-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-blood-relations-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-boats-and-streams-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-classification-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-cloze-test-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-coding-decoding-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-compound-interest-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-data-interpretation-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-direct-and-indirect-speech-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-direction-sense-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-general-science-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-geography-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-geometry-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-idioms-and-phrases-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-indian-economy-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-indian-history-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-indian-polity-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-indices-and-surds-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-lcm-and-hcf-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-matrix-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-mensuration-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-mirror-images-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-mixture-and-alligation-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-number-system-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-one-word-substitution-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-order-and-ranking-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-paper-cutting-and-folding-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-para-jumbles-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-partnership-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-percentage-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-pipes-and-cistern-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-profit-and-loss-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-ratio-and-proportion-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-reading-comprehension-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-sentence-improvement-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-simple-interest-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-simplification-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-spelling-correction-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-spotting-errors-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-static-gk-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-syllogism-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-synonyms-and-antonyms-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-time-and-work-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-time-speed-and-distance-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-trigonometry-questions.html</loc><priority>0.8</priority></url>
+<url><loc>https://www.elevateaura.co.in/blog/free-ssc-venn-diagrams-questions.html</loc><priority>0.8</priority></url>
 </urlset>
