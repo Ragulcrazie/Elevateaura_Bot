@@ -217,7 +217,7 @@
     // Re-declaring for safety in this block insertion
     const firstNames = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Kavita", "Deepak", "Meera", "Arjun", "Neha", "Suresh", "Divya", "Varun", "Pooja", "Raj", "Simran", "Karan", "Ishita", "Aarav", "Vihaan", "Aditya", "Sai", "Aryan", "Krishna", "Ishaan", "Shaurya", "Atharv", "Advik", "Pranav", "Dhruv", "Kabir", "Rudra", "Vivaan", "Manoj", "Sanjay", "Karthik", "Ramesh", "Suresh", "Ananya", "Diya", "Saanvi", "Pari", "Kiara", "Myra", "Anvi", "Riya", "Nisha", "Roshni", "Kiran", "Sangeeta", "Sunita", "Anita", "Deepa", "Rekha", "Siddharth", "Gautam", "Abhishek", "Manish", "Vivek", "Vishal", "Ashish", "Alok", "Pankaj", "Tarun", "Chetan", "Naveen", "Yash", "Rohan", "Kunal", "Hardik", "Mayank"];
     const surnames = ["Sharma", "Verma", "Gupta", "Malhotra", "Bhatia", "Saxena", "Mehta", "Chopra", "Singh", "Kumar", "Patel", "Reddy", "Nair", "Iyer", "Rao", "Gowda", "Pillai", "Menon", "Das", "Banerjee", "Dutta", "Ghosh", "Chatterjee", "Mishra", "Dubey", "Tiwari", "Pandey", "Yadav", "Jha", "Thakur", "Jain", "Agarwal", "Bansal", "Garg", "Mittal", "Joshi", "Kulkarni", "Patil", "Deshmukh"];
-    const exams = ["SSC CGL", "SSC CHSL", "RRB NTPC", "Bank PO", "Bank Clerk", "Police Constable", "State Exams", "Group D"];
+    const exams = ["SSC CGL", "SSC CHSL", "RRB NTPC", "Bank PO", "Bank Clerk", "Police Constable", "State Exams"];
 
     // Utility: Shuffle Array
     function shuffle(array) {
