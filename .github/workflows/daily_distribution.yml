@@ -14,8 +14,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Make script executable
-      run: chmod +x ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
+    - name: Fix Windows line endings
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dos2unix
+        dos2unix ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
+        chmod +x ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
 
     - name: Run Global Distribution Engine
       env:
