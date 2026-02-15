@@ -144,6 +144,52 @@
         });
     }
 
+    // --- COUNTDOWN TIMER (IST Midnight) ---
+    function initCountdown() {
+        const timerElement = document.getElementById('countdown-timer');
+        if (!timerElement) {
+            console.log("Countdown timer element not found!");
+            return;
+        }
+
+        function updateTimer() {
+            const now = new Date();
+            // Convert current time to IST
+            // IST is UTC + 5:30. 
+            // We need to calculate the difference to the NEXT midnight in IST.
+            
+            // Get current UTC time in ms
+            const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+            
+            // IST Offset: +5.5 hours
+            const istOffset = 5.5 * 60 * 60 * 1000;
+            const istNow = new Date(utcTime + istOffset);
+
+            // Create a date object for the NEXT midnight IST
+            const istMidnight = new Date(istNow);
+            istMidnight.setHours(24, 0, 0, 0); // Jump to next midnight
+
+            const diff = istMidnight - istNow;
+
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Format: HH:MM:SS
+            const h = String(hours).padStart(2, '0');
+            const m = String(minutes).padStart(2, '0');
+            const s = String(seconds).padStart(2, '0');
+
+            timerElement.innerHTML = `LIVE: Today's Challenge Ends in ${h}:${m}:${s}`;
+        }
+
+        updateTimer(); // Initial run to avoid 1s delay
+        setInterval(updateTimer, 1000);
+    }
+    
+    // Start Timer
+    initCountdown();
+
     // --- ULTIMATE REVIEW GENERATOR ---
     
     // 200+ Unique Comments Database (categorized for distribution and language)
