@@ -1,0 +1,38 @@
+name: Auto Daily Global Distribution
+
+on:
+  schedule:
+    # Runs at 08:00 IST (02:30 UTC) every day
+    - cron: '30 2 * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  run-daily-distribution:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Make script executable
+      run: chmod +x ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
+
+    - name: Run Global Distribution Engine
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        OWNER_CHAT_ID: ${{ secrets.OWNER_CHAT_ID }}
+        OWNER_EMAIL: ${{ secrets.OWNER_EMAIL }}
+      run: |
+        if [ -z "$BOT_TOKEN" ]; then
+          echo "::warning::BOT_TOKEN secret is missing. Skipping execution."
+          exit 0
+        fi
+        ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
+
+    - name: Upload Distribution Pack as Artifact
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: daily-distribution-pack
+        path: distribution-packs/
+        retention-days: 7
