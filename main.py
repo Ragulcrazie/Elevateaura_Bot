@@ -137,6 +137,23 @@ async def cmd_start(message: types.Message):
         except:
             pass
 
+    # --- GOOGLE ADS TRACKING ---
+    if args == "google_ads":
+        logger.info(f"TRACKING: User {user_id} came from Google Ads.")
+        
+        # Get existing metadata safely (or init empty)
+        current_meta = existing_user.get("metadata") if existing_user else {}
+        if current_meta is None: current_meta = {} # Handle None from DB
+        
+        # Only set if not already set (preserve original source)
+        if "acquisition_source" not in current_meta:
+            current_meta["acquisition_source"] = "google_ads"
+            current_meta["acquisition_campaign"] = "ongoing" # Generic for daily ads
+            current_meta["acquisition_date"] = db.get_ist_date() 
+            
+            # Add to user_data for valid upsert
+            user_data["metadata"] = current_meta
+
     # Update User Data
     user_update = user_data.copy()
     
