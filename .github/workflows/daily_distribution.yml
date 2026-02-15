@@ -14,6 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Get Date
+      id: date
+      run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
     - name: Fix Windows line endings
       run: |
         sudo apt-get update
@@ -33,10 +37,19 @@ jobs:
         fi
         ./blog/AUTO_DAILY_GLOBAL_DISTRIBUTION_ENGINE.sh
 
-    - name: Upload Distribution Pack as Artifact
-      if: success()
-      uses: actions/upload-artifact@v4
+    - name: Send Email Notification
+      uses: dawidd6/action-send-mail@v3
       with:
-        name: daily-distribution-pack
-        path: distribution-packs/
-        retention-days: 7
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.OWNER_EMAIL }}
+        password: ${{ secrets.GMAIL_APP_PASSWORD }}
+        subject: "Daily SEO Distribution Pack - ${{ steps.date.outputs.date }}"
+        body: |
+          Your daily SEO distribution pack for SSC content is ready.
+          
+          Please find the attached guide for posting to Quora, Reddit, and Social Media.
+        to: ${{ secrets.OWNER_EMAIL }}
+        from: Elevate Aura Automation <${{ secrets.OWNER_EMAIL }}>
+        secure: true
+        attachments: distribution-packs/*.txt
