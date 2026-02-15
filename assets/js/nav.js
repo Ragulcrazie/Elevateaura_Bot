@@ -144,52 +144,127 @@
         });
     }
 
-    // --- REVIEW WALL GENERATOR ---
-    const firstNames = ["Rahul", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Rohit", "Kavita", "Deepak", "Meera", "Arjun", "Neha", "Suresh", "Divya", "Varun", "Pooja", "Raj", "Simran", "Karan", "Ishita"];
-    const lastNames = ["S.", "M.", "K.", "R.", "J.", "D.", "P.", "V.", "L.", "B.", "G.", "T.", "N.", "H."];
-    const exams = ["SSC CGL", "SSC CHSL", "RRB NTPC", "Bank PO", "Bank Clerk", "Police Constable", "State Exams", "Group D"];
+    // --- ADVANCED REVIEW GENERATOR ---
     
-    // Mix of lengths: Short (punchy), Medium (specific), Long (story)
-    const comments = [
-        "Best bot ever.", 
-        "Finally cleared my speed test!", 
-        "Literally a game changer.",
-        "Simple and effective.",
-        "Winning ₹600 was real. Trusted.",
-        "Daily practice habit built.",
-        "Questions are exam level.",
-        "Love the weekly rewards.",
-        "The AI explanation is better than my teacher.",
-        "I was weak in math, but the detailed solutions helped me improve my speed by 2x.",
-        "No ads in premium is a blessing. Worth every rupee.",
-        "I practice on the bus to work. It's so convenient not to install an app.",
-        "The leaderboard competition is addictive! I study just to beat my rank.",
-        "Got my ₹200 prize instantly in UPI. Legit platform.",
-        "GK section is updated daily. Very helpful for current affairs.",
-        "Mock tests are exactly like the real exam pattern.",
-        "Career consultation call was very detailed. Thanks for the guidance.",
-        "Reasoning questions are tough but good.",
-        "Started with free trial, upgraded to yearly immediately.",
-        "The 'God Mode' analytics showed me exactly where I was losing time.",
-        "Just wow. No other words.",
-        "Recommended to all my batchmates.",
-        "My accuracy went from 60% to 85% in a month.",
-        "Clean interface, no lag.",
-        "Support team is very responsive.",
-        "The night mode is great for late night study."
+    // 100+ Unique Indian First Names (Pan-India)
+    const indianFirstNames = [
+        "Aarav", "Vihaan", "Aditya", "Sai", "Arjun", "Reyansh", "Muhammad", "Aryan", "Krishna", "Ishaan",
+        "Shaurya", "Atharv", "Advik", "Pranav", "Advaith", "Aayush", "Dhruv", "Kabir", "Rudra", "Vivaan",
+        "Rahul", "Amit", "Rohit", "Vikram", "Suresh", "Ramesh", "Karthik", "Venkatesh", "Sanjay", "Manoj",
+        "Deepak", "Sunil", "Anil", "Rajesh", "Prakash", "Mukesh", "Nitin", "Sandeep", "Ajay", "Vijay",
+        "Ananya", "Diya", "Saanvi", "Aadhya", "Pari", "Kiara", "Myra", "Anvi", "Pihu", "Riya",
+        "Sneha", "Priya", "Neha", "Pooja", "Anjali", "Divya", "Swathi", "Lakshmi", "Meera", "Kavita",
+        "Ishita", "Simran", "Nisha", "Roshni", "Kiran", "Sangeeta", "Sunita", "Anita", "Deepa", "Rekha",
+        "Siddharth", "Gautam", "Abhishek", "Manish", "Vivek", "Vishal", "Ashish", "Alok", "Pankaj", "Tarun",
+        "Chetan", "Naveen", "Pradeep", "Sharad", "Bhuvan", "Yash", "Rohan", "Kunal", "Hardik", "Mayank"
     ];
 
-    function generateReviews(count) {
+    // Common Indian Surnames
+    const indianSurnames = [
+        "Sharma", "Verma", "Gupta", "Malhotra", "Bhatia", "Saxena", "Mehta", "Chopra", "Singh", "Kumar",
+        "Patel", "Reddy", "Nair", "Iyer", "Rao", "Gowda", "Pillai", "Menon", "Das", "Banerjee",
+        "Dutta", "Ghosh", "Chatterjee", "Mishra", "Dubey", "Tiwari", "Pandey", "Yadav", "Jha", "Thakur",
+        "Jain", "Agarwal", "Bansal", "Garg", "Mittal", "Joshi", "Deshoande", "Kulkarni", "Patil", "Deshmukh"
+    ];
+
+    // Strict Exam List (Matches Dropdown)
+    const strictExams = [
+        "SSC CGL", "SSC CHSL", "RRB NTPC", "Bank PO", "Bank Clerk", "Police Constable", "State Exams"
+    ];
+
+    // Diverse Comments (Short, Medium, Long, Hinglish, Emotional)
+    const reviewComments = [
+        "Best bot for practice.",
+        "Finally cleared my concepts.",
+        "Speed improved by 2x.",
+        "Winning ₹600 was a shock! Real money.",
+        "Recommended to all my friends.",
+        "Better than paid apps.",
+        "Daily streak keeps me disciplined.",
+        "Maths solutions are very clear.",
+        "GK quizzes are updated daily.",
+        "Reasoning section is tough but good.",
+        "Started with free plan, now on yearly.",
+        "No ads in premium is peaceful.",
+        "I practice while travelling.",
+        "The interface is very smooth.",
+        "Love the dark mode.",
+        "Support team helped me instantly.",
+        "Mock tests feel like real exam.",
+        "Detailed analysis showed my weak spots.",
+        "Competition with others is addictive.",
+        "Just wow. Elevate Aura is the future.",
+        "Simple, fast, effective.",
+        "No lag, works on 4G also.",
+        "Best investment for students.",
+        "Helped me clear Tier 1.",
+        "A must-have for aspirants.",
+        "Current affairs logic is great.",
+        "The timer makes it exciting.",
+        "I was losing hope, but this kept me going.",
+        "My rank improved from 5000 to 200.",
+        "Consistent practice is the key.",
+        "The explanations are short and crisp.",
+        "Perfect for last minute revision.",
+        "I use it 30 mins before sleep.",
+        "Very user friendly bot.",
+        "Premium is worth every paisa.",
+        "Legit platform. Got my reward.",
+        "Challenging questions.",
+        "Helps in time management.",
+        "Good for English vocab also.",
+        "Community feel is strong.",
+        "Bhai mazaa aa gaya practice karke.",
+        "Sahi hai boss, questions acche hai.",
+        "Best resource for SSC.",
+        "Finally found something good.",
+        "Superb experience.",
+        "10/10 would recommend.",
+        "Keeps me consistent.",
+        "Great initiative for students.",
+        "Love the weekly prizes.",
+        "Analysis view is very detailed."
+    ];
+
+    // Utility: Shuffle Array
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+
+    function generateUniqueReviews(count) {
         const generated = [];
+        // Shuffle names to ensure uniqueness order
+        const shuffledNames = shuffle([...indianFirstNames]); 
+        
         for (let i = 0; i < count; i++) {
-            const fname = firstNames[Math.floor(Math.random() * firstNames.length)];
-            const lname = lastNames[Math.floor(Math.random() * lastNames.length)];
-            const exam = exams[Math.floor(Math.random() * exams.length)];
-            const text = comments[Math.floor(Math.random() * comments.length)];
+            // Exhausted names check (loop back if needed, but 100 is plenty)
+            if (i >= shuffledNames.length) break; 
             
+            const fname = shuffledNames[i];
+            const lname = indianSurnames[Math.floor(Math.random() * indianSurnames.length)];
+            const exam = strictExams[Math.floor(Math.random() * strictExams.length)];
+            const text = reviewComments[Math.floor(Math.random() * reviewComments.length)];
+            
+            // Random Name Format
+            let finalName;
+            const format = Math.random();
+            if (format < 0.4) {
+                finalName = `${fname} ${lname}`; // Full Name (Rahul Sharma)
+            } else if (format < 0.7) {
+                 finalName = `${fname} ${lname[0]}.`; // First + Initial (Rahul S.)
+            } else {
+                 finalName = fname; // First Only (Rahul)
+            }
+
             generated.push({
-                name: `${fname} ${lname}`,
-                role: `${exam} Aspirant`,
+                name: finalName,
+                role: `${exam} Aspirant`, // Matches Dropdown
                 text: text
             });
         }
@@ -200,15 +275,15 @@
         const track = document.getElementById('reviewTrack');
         if (!track) return;
 
-        // Generate 50 unique reviews
-        const reviews = generateReviews(50);
+        // Generate 100 Unique Reviews (Enough for infinite feel)
+        const allReviews = generateUniqueReviews(100);
 
         const addCards = () => {
-             reviews.forEach(review => {
+             allReviews.forEach(review => {
                 const card = document.createElement('div');
                 card.className = 'review-card';
-                // Randomize star count slightly for realism (mostly 5, some 4)
-                const stars = Math.random() > 0.1 ? "⭐⭐⭐⭐⭐" : "⭐⭐⭐⭐";
+                // Randomize star count slightly
+                const stars = Math.random() > 0.05 ? "⭐⭐⭐⭐⭐" : "⭐⭐⭐⭐";
                 
                 card.innerHTML = `
                     <div class="user-info">
@@ -225,8 +300,8 @@
             });
         };
 
-        addCards();
-        addCards(); // Duplicate for loop
+        addCards(); 
+        addCards(); // Duplicate list once for seamless infinite scroll
     }
 
     // Initialize Review Wall
