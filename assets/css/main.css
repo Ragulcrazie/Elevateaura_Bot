@@ -212,6 +212,7 @@ body { padding-top: 100px; } /* Prevent value overlap */
 .logo-strip {
     display: flex; gap: 40px; justify-content: center; align-items: center; 
     margin-top: 40px; padding: 20px 0;
+    flex-wrap: wrap; /* Added to fix mobile overflow */
     opacity: 0.5; filter: grayscale(100%); transition: 0.3s;
 }
 .logo-strip:hover { opacity: 0.8; filter: grayscale(0%); }
