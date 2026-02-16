@@ -7,7 +7,7 @@
         <div class="top-bar">
             <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
                 <a href="mailto:elevateauraofficial@gmail.com" style="text-decoration: none;">📧 elevateauraofficial@gmail.com</a>
-                <a href="https://t.me/ElevateAura_Bot" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <a href="https://t.me/ElevateAura_Bot" onclick="return gtag_report_conversion(this.href);" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
                     <img src="/assets/img/telegramlogo.png" alt="Telegram" width="18" height="18" style="vertical-align: middle;"> @ElevateAura_Bot
                 </a>
             </div>
@@ -57,7 +57,7 @@
                 <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 10px 0;"></div>
                 <a href="/pages/about.html" class="mobile-link">About Us</a>
                 <a href="/pages/careers.html" class="mobile-link">Careers</a>
-                <a href="https://t.me/ElevateAura_Bot" class="mobile-link btn-primary" style="color: white !important; margin-top: 10px;">Start Practice</a>
+                <a href="https://t.me/ElevateAura_Bot" onclick="return gtag_report_conversion(this.href);" class="mobile-link btn-primary" style="color: white !important; margin-top: 10px;">Start Practice</a>
             </div>
         </nav>
     </header>
