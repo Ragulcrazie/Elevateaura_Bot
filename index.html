@@ -1,531 +1,401 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSC Daily Practice Questions with Solutions | Elevate Aura</title>
-    <meta name="description" content="Practice SSC, RRB, Bank & Police exam questions daily with full step-by-step solutions. Join Elevate Aura Telegram bot for free daily practice and smart exam preparation.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate Aura | Lean Product Studio for MVP Mobile Apps</title>
+    <meta name="description" content="Elevate Aura builds revenue-ready MVP mobile apps for startup founders and growing businesses in 30-60 days. Strategy, development, and automation handled end-to-end.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/img/logo.png" type="image/png">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/nav.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956207834"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17956207834');
-
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17956207834/ipDyCInL2fkbENr5l_JC',
-            'value': 1.0,
-            'currency': 'INR',
-            'event_callback': callback
-        });
-        return false;
-      }
-    </script>
 </head>
 <body>
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="container text-center">
-            <!-- Urgency Badge -->
-            <div id="countdown-timer" class="urgency-badge animate-in">🔴 LIVE: Today's Challenge Ends in 04:30:00</div>
-            
-            <div class="hero-badges animate-in" style="margin-top: 10px;">
-                <span class="badge">&#10024; New: AI Coach V2 Live</span>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="/" class="logo">
+                <img src="assets/img/logo.png" alt="Elevate Aura Logo" class="logo-img">
+                <span>Elevate Aura</span>
+            </a>
+            <div class="nav-links">
+                <a href="#who-we-help" class="nav-link">Who We Help</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary btn-sm">Book a Free Strategy Call</a>
             </div>
-            
-            <h1 class="animate-in delay-1">SSC Daily Practice Questions with <br> <span style="color: var(--primary)">Full Solutions.</span></h1>
-            <p class="animate-in delay-2" style="max-width: 800px; margin: 0 auto 20px auto;">Elevate Aura provides SSC daily practice questions with full solutions for aspirants preparing for SSC, RRB, Bank and Police exams. Our Telegram bot helps you practice exam-oriented questions daily with detailed explanations and AI-guided improvement.</p>
-            
-            <!-- Benefit Bullets -->
-            <ul class="hero-benefits animate-in delay-2" style="list-style: none; padding: 0; margin: 20px 0; display: inline-block; text-align: left;">
-                <li style="margin-bottom: 8px; font-size: 1.1rem;">✅ <strong>Win ₹600 Weekly Prizes</strong> (Real Cash)</li>
-                <li style="margin-bottom: 8px; font-size: 1.1rem;">✅ <strong>100% Free for Top Rankers</strong></li>
-                <li style="font-size: 1.1rem;">✅ <strong>Used by 5,000+ Serious Aspirants</strong></li>
-            </ul>
-            <div class="animate-in delay-3" style="display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; justify-content: center;">
-                <a href="https://t.me/ElevateAura_Bot?start=home_web" onclick="return gtag_report_conversion(this.href);" class="btn btn-primary">Start Free Practice</a>
-                <a href="#pricing" class="btn btn-secondary">View Premium Plans</a>
-            </div>
-            
-            <!-- Dashboard Image Placeholder -->
-            <div class="animate-in delay-3" style="margin-top: 60px; width: 100%; max-width: 900px; display: flex; justify-content: center;">
-                <div style="background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent); border: 1px solid var(--glass-border); border-radius: 20px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
-                    <img src="assets/img/latest_leaderboard.jpeg" alt="Elevate Aura Wallet & Leaderboard" style="width: 100%; border-radius: 12px; display: block; max-height: 500px; object-fit: contain;">
-                </div>
-            </div>
-
-            <!-- Trust Badges -->
-            <div class="trust-labels animate-in delay-3">
-                <span><img src="/assets/img/telegramlogo.png" height="24" alt="Telegram"> Official Telegram Bot</span>
-                <span>🔒 Secure Payments</span>
-                <span>📅 Updated Questions Daily</span>
-            </div>
-
-            <!-- Authority Strip -->
-            <div class="logo-strip animate-in delay-3">
-                <div class="auth-logo">SSC</div>
-                <div class="auth-logo">RRB</div>
-                <div class="auth-logo">IBPS <span>Bank</span></div>
-                <div class="auth-logo">POLICE</div>
-                <div class="auth-logo">GENERAL <span>GK</span></div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Stats -->
-    <section class="section">
-        <div class="container">
-            <div class="grid grid-4">
-                <div class="card text-center">
-                    <div class="stat-number">50k+</div>
-                    <div class="stat-label">Questions Solved</div>
-                </div>
-                <div class="card text-center">
-                    <div class="stat-number">4.8/5</div>
-                    <div class="stat-label">Student Rating</div>
-                </div>
-                <div class="card text-center">
-                    <div class="stat-number">₹600</div>
-                    <div class="stat-label">Weekly Prizes</div>
-                </div>
-                <div class="card text-center">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">AI Availability</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Overview -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <h2>Why Top Rankers Choose Us</h2>
-                <h2 style="font-size: 1.5rem; color: var(--text-muted); margin-top: 10px;">Daily SSC, RRB, Bank & Police Exam Practice on Telegram</h2>
-                <p>We replaced outdated books with a smart engine that learns with you.</p>
-                <div style="margin-top: 24px;">
-                    <button id="featuresBtn" class="features-toggle-btn">View Features ▾</button>
-                </div>
-            </div>
-            
-            <div id="features-content">
-            
-            <!-- Feature 1: AI Coach (Left Image, Right Text) -->
-            <div class="grid grid-2" style="align-items: center; margin-bottom: 80px;">
-                <div class="card animate-in" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
-                    
-                    <!-- New Live Chat Demo -->
-                    <div class="chat-demo">
-                        <div class="chat-header">
-                            <div class="bot-avatar">A</div>
-                            <div>
-                                <h5 style="margin: 0;">AI Coach</h5>
-                                <span style="font-size: 0.7rem; color: #10b981;">● Online</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Question -->
-                        <div class="msg msg-bot delay-msg-1">
-                            Q: What is the Cube Root of 343?
-                            <div class="option-btn">A) 6</div>
-                            <div class="option-btn selected">B) 7 <span style="float: right;">✅</span></div>
-                            <div class="option-btn">C) 8</div>
-                        </div>
-                        
-                        <!-- Explanation -->
-                        <div class="msg msg-bot delay-msg-2" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #d1fae5;">
-                            <strong>Correct! +10 Pts</strong><br>
-                            <span style="font-size: 0.8rem; opacity: 0.9;">Explanation: 7 × 7 × 7 = 343. This is a perfect cube.</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="animate-in delay-1">
-                    <span class="badge" style="margin-bottom: 16px; display: inline-block;">AI Coach</span>
-                    <h3>It's Not Just a Quiz. <br> It's a Personal Tutor.</h3>
-                    <p>Wrong answer? No problem. Our AI explains the concept step-by-step, just like a human teacher. It identifies your weak spots and helps you fix them instantly.</p>
-                    <ul style="list-style: none; color: var(--text-muted); margin-bottom: 24px;">
-                        <li style="margin-bottom: 10px;">✅ Detailed Step-by-Step Solutions</li>
-                        <li style="margin-bottom: 10px;">✅ Math & Reasoning Shortcuts</li>
-                        <li>✅ Concept Clarity in Seconds</li>
-                    </ul>
-                    <a href="https://t.me/ElevateAura_Bot?start=feature_ai" onclick="return gtag_report_conversion(this.href);" class="btn btn-secondary">Try AI Coach</a>
-                </div>
-            </div>
-
-             <!-- Feature 2: Weekly Cash Rewards (Right Image, Left Text) -->
-             <div class="grid grid-2" style="align-items: center; direction: rtl; text-align: left; margin-bottom: 80px;">
-                <div class="card animate-in delay-2" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
-                    
-                    <!-- New Wallet Demo -->
-                    <div class="wallet-demo">
-                        <div class="wallet-header">
-                            <h5 style="margin:0; text-transform:uppercase; letter-spacing:1px; color:#94a3b8; font-size:0.8rem;">My Wallet</h5>
-                            <span style="font-size:1.2rem;">💎</span>
-                        </div>
-                        
-                        <div class="balance-card">
-                            <div class="balance-label">Total Balance</div>
-                            <div class="balance-amount">₹650.00</div>
-                            <div style="font-size: 0.8rem; margin-top: 5px; opacity: 0.8;">Verified User • UPI Linked</div>
-                        </div>
-                        
-                        <div class="txn-list">
-                            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;">Recent Activity</p>
-                            <div class="txn-item">
-                                <div style="display:flex; gap:10px; align-items:center;">
-                                    <div class="txn-icon">🏆</div>
-                                    <div class="txn-details">
-                                        <h5>Rank #1 Bonus</h5>
-                                        <span>Today, 10:30 AM</span>
-                                    </div>
-                                </div>
-                                <div class="txn-amount">+ ₹100</div>
-                            </div>
-                            <div class="txn-item">
-                                <div style="display:flex; gap:10px; align-items:center;">
-                                    <div class="txn-icon">✅</div>
-                                    <div class="txn-details">
-                                        <h5>Daily Streak</h5>
-                                        <span>Yesterday</span>
-                                    </div>
-                                </div>
-                                <div class="txn-amount">+ ₹50</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="animate-in delay-3" style="direction: ltr;">
-                    <span class="badge" style="margin-bottom: 16px; display: inline-block;">Weekly Cash Pool</span>
-                    <h3>Earn While You Learn.</h3>
-                    <p>Education should pay you back. Consistent practice leads to mastery, and mastery leads to rewards. Top the weekly leaderboard and win real cash prizes directly to your wallet.</p>
-                     <ul style="list-style: none; color: var(--text-muted); margin-bottom: 24px;">
-                        <li style="margin-bottom: 10px;">🏆 ₹600 Weekly Prize Pool</li>
-                        <li style="margin-bottom: 10px;">🔥 Compete with 500+ Serious Aspirants</li>
-                        <li>💰 Instant Withdrawals via UPI</li>
-                    </ul>
-                    <a href="https://t.me/ElevateAura_Bot?start=feature_rewards" onclick="return gtag_report_conversion(this.href);" class="btn btn-secondary">View Leaderboard</a>
-                </div>
-            </div>
-
-            <!-- Feature 3: Career Guidance & Lead Gen (Left Image, Right Text) -->
-            <div class="grid grid-2" style="align-items: center;">
-                <div class="card animate-in delay-2" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
-                    <div style="background: var(--glass-bg); padding: 10px; border-radius: 20px; border: 1px solid var(--glass-border);">
-                         <img src="assets/img/career_rewards.jpeg" alt="Career Consultation Rewards" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    </div>
-                </div>
-                <div class="animate-in delay-3">
-                    <span class="badge" style="margin-bottom: 16px; display: inline-block; background: rgba(16, 185, 129, 0.1); color: #34d399; border-color: rgba(16, 185, 129, 0.2);">Exclusive Career Perks</span>
-                    <h3>Unlock Premium Guidance.</h3>
-                    <p>We don't just help you pass exams; we help you build a career. Top performers unlock exclusive access to career counseling and discounts from top coaching institutes.</p>
-                     <ul style="list-style: none; color: var(--text-muted); margin-bottom: 24px;">
-                        <li style="margin-bottom: 10px;">🎓 <strong>Free Career Consultation</strong> for toppers</li>
-                        <li style="margin-bottom: 10px;">🎁 <strong>Exclusive Discounts</strong> on courses</li>
-                        <li>📚 Access to Premium Study Materials</li>
-                    </ul>
-                    <a href="https://t.me/ElevateAura_Bot?start=feature_leads" onclick="return gtag_report_conversion(this.href);" class="btn btn-primary">Claim Free Guidance</a>
-                </div>
-            </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Exam Categories -->
-    <section class="section" style="background: linear-gradient(180deg, transparent, rgba(0,0,0,0.3));">
-        <div class="container">
-            <h2>Pick Your Battle</h2>
-            <div class="grid grid-4" style="margin-top: 32px;">
-                <a href="pages/ssc-daily-practice.html" class="card job-card">
-                    <span class="job-title">SSC Daily Practice Questions</span>
-                    <span>→</span>
-                </a>
-                <a href="pages/rrb-daily-practice.html" class="card job-card">
-                    <span class="job-title">RRB NTPC/Group D</span>
-                    <span>→</span>
-                </a>
-                <a href="pages/bank-daily-practice.html" class="card job-card">
-                    <span class="job-title">Bank PO/Clerk</span>
-                    <span>→</span>
-                </a>
-                <a href="pages/police-daily-practice.html" class="card job-card">
-                    <span class="job-title">Police Exams</span>
-                    <span>→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: #818cf8;">Start in 30 Seconds</span>
-                <h2>How It Works</h2>
-            </div>
-            
-            <div class="grid grid-3">
-                <div class="card step-card">
-                    <div class="step-number">01</div>
-                    <div class="icon" style="font-size: 2.5rem; color: var(--primary);">✈️</div>
-                    <h3 style="margin-top: 10px;">Join the Bot</h3>
-                    <p>Click "Start Practice" to launch the bot on Telegram. No app install required.</p>
-                </div>
-                <div class="card step-card">
-                    <div class="step-number">02</div>
-                    <div class="icon" style="font-size: 2.5rem; color: var(--secondary);">🧠</div>
-                    <h3 style="margin-top: 10px;">Take Daily Quiz</h3>
-                    <p>Practice 15 mins a day with AI-generated questions for your specific exam.</p>
-                </div>
-                <div class="card step-card">
-                    <div class="step-number">03</div>
-                    <div class="icon" style="font-size: 2.5rem; color: var(--accent);">🏆</div>
-                    <h3 style="margin-top: 10px;">Review & Win</h3>
-                    <p>Get instant analysis, improve weak areas, and win weekly cash rewards.</p>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="https://t.me/ElevateAura_Bot?start=how_it_works" onclick="return gtag_report_conversion(this.href);" class="btn btn-primary">Start Your Journey Now →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Membership Plans -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="badge" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">Unlock Your Potential</span>
-                <h2>Choose Your Path</h2>
-            </div>
-            
-            <div class="grid grid-3" style="margin: 0 auto; align-items: stretch;">
-                
-                <!-- Free Plan -->
-                <div class="card" style="border: 1px solid var(--glass-border); padding: 30px; display: flex; flex-direction: column;">
-                    <h3 style="color: var(--text-muted); font-size: 1.25rem;">Free Aspirant</h3>
-                    <div style="font-size: 2rem; font-weight: 800; margin: 10px 0;">₹0<span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/forever</span></div>
-                    <p style="margin-bottom: 20px; font-size: 0.9rem;">Test the waters with our trial.</p>
-                    
-                    <ul style="list-style: none; gap: 12px; display: flex; flex-direction: column; flex-grow: 1; font-size: 0.9rem;">
-                        <li>✅ <strong>3 Free Quizzes</strong> (Lifetime Trial)</li>
-                        <li>✅ Basic Score Tracking</li>
-                        <li>✅ Access to Public Leaderboard</li>
-                        <li style="opacity: 0.5;">🔒 No Detailed Analysis</li>
-                        <li style="opacity: 0.5;">🔒 Contains Ads</li>
-                    </ul>
-                    
-                    <a href="https://t.me/ElevateAura_Bot?start=plan_free" onclick="return gtag_report_conversion(this.href);" class="btn btn-secondary" style="margin-top: 20px; text-align: center;">Start Free Trial</a>
-                </div>
-
-                <!-- Monthly Plan -->
-                <div class="card" style="border: 1px solid var(--primary); background: rgba(99, 102, 241, 0.05); padding: 30px; display: flex; flex-direction: column; position: relative;">
-                    <h3 style="color: var(--primary); font-size: 1.25rem;">Monthly Fighter</h3>
-                    <div style="font-size: 2rem; font-weight: 800; margin: 10px 0;">₹99<span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/month</span></div>
-                    <p style="margin-bottom: 20px; font-size: 0.9rem;">Flexible plan for short-term goals.</p>
-                    
-                    <ul style="list-style: none; gap: 10px; display: flex; flex-direction: column; flex-grow: 1; font-size: 0.85rem;">
-                        <li>✅ <strong>Unlimited Practice Access</strong></li>
-                        <li>✅ <strong>Win ₹600 Weekly Prizes</strong></li>
-                        <li>✅ <strong>Detailed Performance Analysis</strong></li>
-                        <li>✅ <strong>Ad-Free Experience</strong></li>
-                        <li>✅ <strong>Full Step-by-Step Solutions</strong></li>
-                        <li>✅ <strong>Top Ranker Intel (Pace & Strategy)</strong></li>
-                        <li>✅ <strong>Private Career Consultation</strong> (Worth ₹999)</li>
-                        <li>✅ <strong>Priority 24/7 AI Coach</strong></li>
-                    </ul>
-                    
-                    <a href="https://t.me/ElevateAura_Bot?start=plan_monthly" onclick="return gtag_report_conversion(this.href);" class="btn btn-primary" style="margin-top: 20px; text-align: center;">Get Monthly Access</a>
-                </div>
-
-                <!-- Yearly Plan (Best Value) -->
-                <div class="card" style="border: 2px solid #f59e0b; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(0,0,0,0.8)); padding: 30px; position: relative; display: flex; flex-direction: column; overflow: visible;">
-                    
-                    <!-- Floating Badge -->
-                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #f59e0b; color: black; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.5); white-space: nowrap;">
-                        ✨ BEST VALUE: SAVE 16%
-                    </div>
-                    
-                    <h3 style="color: #f59e0b; font-size: 1.25rem; margin-top: 10px;">Yearly Legend</h3>
-                    <div style="font-size: 2rem; font-weight: 800; margin: 5px 0;">₹999<span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/year</span></div>
-                    <p style="margin-bottom: 20px; font-size: 0.9rem; color: #fff;">Commit to excellence & save big.</p>
-                    
-                    <ul style="list-style: none; gap: 10px; display: flex; flex-direction: column; flex-grow: 1; font-size: 0.85rem;">
-                        <!-- Core Premium Features (Same as Monthly) -->
-                        <li>✅ <strong>Unlimited Practice Access</strong></li>
-                        <li>✅ <strong>Win ₹600 Weekly Prizes</strong></li>
-                        <li>✅ <strong>Detailed Performance Analysis</strong></li>
-                        <li>✅ <strong>Ad-Free Experience</strong></li>
-                        <li>✅ <strong>Full Step-by-Step Solutions</strong></li>
-                        <li>✅ <strong>Top Ranker Intel (Pace & Strategy)</strong></li>
-                        <li>✅ <strong>Private Career Consultation</strong> (Worth ₹999)</li>
-                        <li>✅ <strong>Priority 24/7 AI Coach</strong></li>
-                        
-                        <!-- Yearly Exclusives -->
-                         <li style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); color: #f59e0b; font-weight: bold;">🌟 YEARLY BONUSES:</li>
-                        <li style="color: #fff;">✅ <strong>Year-Round Prize Eligibility</strong> (52 Weeks)</li>
-                        <li style="color: #fff;">✅ <strong>Instant AI Support</strong> (Zero Wait Time)</li>
-                    </ul>
-                    
-                    <a href="https://t.me/ElevateAura_Bot?start=plan_yearly" onclick="return gtag_report_conversion(this.href);" class="btn btn-primary" style="margin-top: 20px; text-align: center; background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3); border: none;">Become a Legend</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <!-- Testimonials (Infinite Wall) -->
-    <section class="section" style="background: rgba(255,255,255,0.02); overflow: hidden;">
-        <div class="container text-center">
-            <span class="badge" style="background: rgba(236, 72, 153, 0.1); color: #f472b6;">Wall of Love</span>
-            <h2>What Students Are Saying</h2>
-            
-            <div class="review-marquee-container">
-                <div class="review-track" id="reviewTrack">
-                    <!-- Reviews Injected via JS -->
-                </div>
-            </div>
-            
-            <button onclick="openReviewModal()" class="btn btn-secondary" style="margin-top: 30px;">✍️ Write a Review</button>
-        </div>
-    </section>
-
-    <!-- Review Modal -->
-    <div id="reviewModal" class="review-modal">
-        <div class="modal-content animate-in">
-            <button onclick="closeReviewModal()" class="modal-close">&times;</button>
-            <h3>Write a Review</h3>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">Share your experience with Elevate Aura.</p>
-            
-            <input type="text" id="reviewName" placeholder="Your Name" />
-            
-            <select id="reviewExam" style="width: 100%; background: #0f172a; border: 1px solid #334155; color: white; padding: 12px; border-radius: 8px; margin-bottom: 12px; font-family: var(--font-body);">
-                <option value="" disabled selected>Select Your Exam Goal</option>
-                <option value="SSC CGL">SSC CGL</option>
-                <option value="SSC CHSL">SSC CHSL</option>
-                <option value="RRB NTPC">RRB NTPC</option>
-                <option value="Bank PO">Bank PO</option>
-                <option value="Bank Clerk">Bank Clerk</option>
-                <option value="Police Constable">Police Constable</option>
-                <option value="State Exams">State Exams</option>
-            </select>
-
-            <div style="margin-bottom: 12px; font-size: 1.5rem;">
-                ⭐⭐⭐⭐⭐
-            </div>
-            <textarea id="reviewText" rows="4" placeholder="How has the bot helped you?"></textarea>
-            
-            <button onclick="submitReview()" class="btn btn-primary" style="width: 100%;">Submit Review</button>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#who-we-help" class="mobile-link">Who We Help</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#process" class="mobile-link">Process</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Book a Call</a>
     </div>
 
-    <!-- FAQ Section -->
-    <section class="section">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content animate-in">
+                <div class="badge">MVP Product Studio</div>
+                <h1 class="hero-title">We Build Revenue-Ready <span id="dynamic-role" class="dynamic-text">MVP Mobile Apps</span><span class="type-cursor"></span> in 30–60 Days</h1>
+                <p>Strategy, development, scalable backend architecture, and automation — handled end-to-end for visionary founders.</p>
+                <div class="hero-btns">
+                    <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Book a Free Strategy Call</a>
+                    <a href="#case-studies" class="btn btn-secondary">View Case Studies</a>
+                </div>
+                
+                <div class="tech-stack-row">
+                    <span>Powered by:</span>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Flutter</span>
+                        <span class="tech-pill">Supabase</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Stripe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-in delay-1">
+                <div class="glass-frame visual-wrapper">
+                    <img src="hero_abstract_tech_1772159977714.png" alt="Futuristic Tech Visual" class="hero-img">
+                    
+                    <!-- Smart Floating Terminal -->
+                    <div class="floating-terminal">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="prompt">$</span> init elevate_aura_mvp</div>
+                            <div class="terminal-line success">[OK] Architecture generated</div>
+                            <div class="terminal-line"><span class="prompt">$</span> deploy --target=production</div>
+                            <div class="terminal-line typing">Deploying scalable backend<span>_</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Help Section -->
+    <section id="who-we-help" class="section">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 40px;">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about Elevate Aura.</p>
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Who We Help</h2>
+                <p class="section-subtitle">Tailored solutions for growth-minded entrepreneurs.</p>
             </div>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">How does the AI Coach work?</div>
-                    <div class="faq-answer">
-                        <p>Our AI analyzes millions of past year questions (PYQs) from SSC, RRB, and Bank exams. If you make a mistake, it explains the concept step-by-step and provides shortcuts, acting like a personal tutor.</p>
-                    </div>
+            <div class="grid grid-4 grid-help">
+                <div class="card help-card glow-on-hover reveal">
+                    <div class="card-icon">🚀</div>
+                    <h3>Startup Founders</h3>
+                    <p>Validation of new ideas with lightning-fast MVP development.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do Weekly Rewards work?</div>
-                    <div class="faq-answer">
-                        <p>We believe in rewarding consistent effort. Every week, the top 10 performers on the Global Leaderboard share a prize pool of ₹600. Winning amounts are credited to your Elevate Aura wallet.</p>
-                    </div>
+                <div class="card help-card glow-on-hover reveal">
+                    <div class="card-icon">📱</div>
+                    <h3>SaaS Companies</h3>
+                    <p>Expanding your reach by launching high-performance mobile apps.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Which exams are covered?</div>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive daily practice for SSC (CGL, CHSL, MTS), RRB (NTPC, Group D), Banking (PO, Clerk), and Police exams. All content is updated for the 2024-25 syllabus.</p>
-                    </div>
+                <div class="card help-card glow-on-hover reveal">
+                    <div class="card-icon">🎓</div>
+                    <h3>Coaches</h3>
+                    <p>Building custom digital learning platforms for your community.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Why no App install?</div>
-                    <div class="faq-answer">
-                        <p>We value your phone's storage and battery. Elevate Aura is built directly into Telegram, allowing you to practice seamlessly without downloading heavy apps or dealing with slow interfaces.</p>
-                    </div>
+                <div class="card help-card glow-on-hover reveal">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Businesses</h3>
+                    <p>Automating operations with custom internal management tools.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-alt">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">End-to-end execution, zero fluff.</p>
+            </div>
+            <div class="grid grid-3 grid-services">
+                <div class="card service-card glow-on-hover reveal">
+                    <h3>MVP Mobile App Development</h3>
+                    <ul>
+                        <li>Flutter mobile development</li>
+                        <li>Supabase backend architecture</li>
+                        <li>Authentication, database, storage</li>
+                        <li>Scalable system design</li>
+                    </ul>
+                </div>
+                <div class="card service-card glow-on-hover reveal">
+                    <h3>Backend & Automation Systems</h3>
+                    <ul>
+                        <li>API integrations</li>
+                        <li>Custom workflows</li>
+                        <li>Business process automation</li>
+                        <li>Operational efficiency systems</li>
+                    </ul>
+                </div>
+                <div class="card service-card glow-on-hover reveal">
+                    <h3>Launch & Monetization Strategy</h3>
+                    <ul>
+                        <li>Subscription setup</li>
+                        <li>In-app purchases</li>
+                        <li>Revenue model guidance</li>
+                        <li>App launch preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section">
+        <div class="container shadow-container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">The Process</h2>
+                <p class="section-subtitle">From idea to market-ready product.</p>
+            </div>
+            <div class="process-grid grid grid-2">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-num">01</div>
+                        <div class="step-info">
+                            <h3>Discovery & Strategy</h3>
+                            <p>We align on your product-market fit and define the core features.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">02</div>
+                        <div class="step-info">
+                            <h3>Architecture & Design</h3>
+                            <p>Mapping out the system flow and high-fidelity UI/UX design.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">03</div>
+                        <div class="step-info">
+                            <h3>MVP Build (30–60 Days)</h3>
+                            <p>Rapid development focused on stability and core functionality.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">04</div>
+                        <div class="step-info">
+                            <h3>Launch & Scale Support</h3>
+                            <p>Deployment and post-launch refinement for long-term growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-visual reveal">
+                    <img src="process_visual_1772159997713.png" alt="Development Process" class="process-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section bg-alt">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Case Studies</h2>
+                <p class="section-subtitle">Proven results for global founders.</p>
+            </div>
+            <div class="grid grid-2 grid-cases">
+                <div class="card case-card glow-on-hover reveal">
+                    <span class="case-tag">EdTech MVP</span>
+                    <h3>Scaling Learning in the US Market</h3>
+                    <div class="case-details">
+                        <p><strong>Problem:</strong> Fragmented learning tools for niche coaches.</p>
+                        <p><strong>Solution:</strong> Unified Flutter app with real-time course delivery.</p>
+                        <p><strong>Stack:</strong> Flutter, Supabase, Stripe.</p>
+                        <p class="case-outcome"><strong>Outcome:</strong> 2,000+ active users in first 30 days.</p>
+                    </div>
+                </div>
+                <div class="card case-card glow-on-hover reveal">
+                    <span class="case-tag">FinTech Automation</span>
+                    <h3>Automating Global Transactions</h3>
+                    <div class="case-details">
+                        <p><strong>Problem:</strong> Manual reconciliation taking 20 hours/week.</p>
+                        <p><strong>Solution:</strong> Automated backend system with custom API hooks.</p>
+                        <p><strong>Stack:</strong> Node.js, Supabase, Plaid API.</p>
+                        <p class="case-outcome"><strong>Outcome:</strong> Reduced manual workload by 95%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container text-center reveal">
+            <h2 class="section-title">Transparent Starting Point</h2>
+            <div class="pricing-card card glow-on-hover">
+                <h3>MVP Projects starting at <span class="price">$3,000</span></h3>
+                <p>Final pricing depends on scope, integrations, and complexity. No hidden fees, no hourly traps.</p>
+                <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Get a Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-alt">
+        <div class="container">
+            <div class="grid grid-2 about-grid">
+                <div class="about-content reveal">
+                    <h2 class="section-title">About Elevate Aura</h2>
+                    <p>Elevate Aura is a lean product studio focused on building scalable MVP mobile apps using Flutter and Supabase. We partner with founders to validate ideas, launch quickly, and build revenue-ready systems designed for long-term growth.</p>
+                    <p>No bloated teams, no corporate overhead. Just high-quality engineering and strategic execution.</p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-item">
+                        <span class="stat-val">30-60</span>
+                        <span class="stat-lbl">Days to Launch</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val">100%</span>
+                        <span class="stat-lbl">Founder Focused</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta section">
+        <div class="container text-center reveal">
+            <h2>Ready to Launch Your MVP?</h2>
+            <p>Let's turn your vision into a revenue-ready reality.</p>
+            <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Book a Free Strategy Call</a>
+            <p class="contact-email">elevateauraofficial@gmail.com</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" style="max-width: 300px;">
-                    <a href="/" style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                        <img src="/assets/img/logo.png" width="32" alt="Logo">
-                        <span style="font-weight: 700; color: white; font-size: 1.2rem;">Elevate Aura</span>
-                    </a>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">
-                        The smartest way to prepare for government exams. AI-driven, gamified, and results-oriented.
-                    </p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="/">Home</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="pages/about.html">About Us</a>
-                    <a href="pages/careers.html">Careers</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Exams</h4>
-                    <a href="pages/ssc-daily-practice.html">SSC CGL/CHSL</a>
-                    <a href="pages/rrb-daily-practice.html">RRB NTPC</a>
-                    <a href="pages/bank-daily-practice.html">Bank PO</a>
-                    <a href="pages/police-daily-practice.html">Police Exams</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Legal & Contact</h4>
-                    <a href="pages/privacy.html">Privacy Policy</a>
-                    <a href="pages/terms.html">Terms & Conditions</a>
-                    <a href="mailto:elevateauraofficial@gmail.com">Contact Support</a>
-                    <div class="social-links" style="margin-top: 15px;">
-                        <a href="https://t.me/ElevateAura_Bot" onclick="return gtag_report_conversion(this.href);">🔵 Telegram</a>
-                    </div>
-                </div>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                     <img src="assets/img/logo.png" alt="Elevate Aura Logo" style="width: 32px;">
+                    <span>Elevate Aura</span>
+                </a>
+                <p>Lean Product Studio for International Founders.</p>
             </div>
+            <div class="footer-links">
+                <a href="#who-we-help">Who We Help</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Elevate Aura. All rights reserved. Built for Pioneers.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Advanced Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Advanced Hover Card Spotlight Effect
+        document.getElementById("cards-wrapper")?.addEventListener("mousemove", e => {
+            for(const card of document.getElementsByClassName("glow-on-hover")) {
+                const rect = card.getBoundingClientRect(),
+                      x = e.clientX - rect.left,
+                      y = e.clientY - rect.top;
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            }
+        });
+        
+        // Document wide hover listener for the cards since they are spread out
+        document.querySelectorAll('.glow-on-hover').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect(),
+                      x = e.clientX - rect.left,
+                      y = e.clientY - rect.top;
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            });
+        });
+
+        // Dynamic Typing Effect
+        const roles = ["MVP Mobile Apps", "SaaS Platforms", "Custom Backends", "Automation Tools"];
+        let count = 0; let index = 0; let currentText = ""; let letter = ""; let isDeleting = false;
+        
+        (function typeText() {
+            if (count === roles.length) { count = 0; }
+            currentText = roles[count];
             
-            <div class="copyright">
-                &copy; 2026 Elevate Aura. All rights reserved. Made with ❤️ for Aspirants.
-            </div>
-        </div>
-            <div class="seo-footer-links" style="display: none;"> <!-- Hidden from visual user, present for crawler -->
-           <a href="blog/free-ssc-questions.html">Free SSC Questions</a>
-           <a href="blog/free-ssc-practice-online.html">Free SSC Practice Online</a>
-           <a href="blog/start-ssc-preparation-free.html">Start SSC Preparation Free</a>
-           <a href="pages/ssc-daily-practice.html">SSC Daily Practice Questions</a>
-           <a href="blog/daily-free-ssc-questions-2026-02-15.html">Daily SSC Questions (15-Feb-2026)</a>
-           <a href="blog/ssc-percentage-questions-for-beginners.html">SSC Percentage Beginners</a>
-        </div>
-</footer>
+            if (isDeleting) {
+                letter = currentText.slice(0, --index);
+            } else {
+                letter = currentText.slice(0, ++index);
+            }
+            
+            document.getElementById('dynamic-role').textContent = letter;
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && letter.length === currentText.length) {
+                typeSpeed = 2000; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && letter.length === 0) {
+                isDeleting = false;
+                count++;
+                typeSpeed = 500; // Pause before typing new word
+            }
+            
+            setTimeout(typeText, typeSpeed);
+        }());
+    </script>
 </body>
 </html>
-
-
