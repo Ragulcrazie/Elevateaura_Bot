@@ -239,8 +239,18 @@
     <section id="pricing" class="section">
         <div class="container text-center reveal">
             <h2 class="section-title">Transparent Starting Point</h2>
+            
+            <div class="pricing-toggle-wrapper">
+                <span class="toggle-label active-regional" id="label-global">Global ($)</span>
+                <label class="switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label" id="label-india">India (₹)</span>
+            </div>
+
             <div class="pricing-card card glow-on-hover">
-                <h3>MVP Projects starting at <span class="price">$3,000</span></h3>
+                <h3>MVP Projects starting at <span class="price" id="display-price">$3,000</span></h3>
                 <p>Final pricing depends on scope, integrations, and complexity. No hidden fees, no hourly traps.</p>
                 <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Get a Custom Quote</a>
             </div>
@@ -396,6 +406,59 @@
             
             setTimeout(typeText, typeSpeed);
         }());
+
+        // Dynamic Pricing Logic (PPP)
+        const pricingToggle = document.getElementById('pricingToggle');
+        const displayPrice = document.getElementById('display-price');
+        const labelGlobal = document.getElementById('label-global');
+        const labelIndia = document.getElementById('label-india');
+        
+        const priceUSD = "$3,000";
+        const priceINR = "₹25,000";
+
+        function updatePricingUI(isIndia) {
+            if (isIndia) {
+                displayPrice.textContent = priceINR;
+                if(pricingToggle) pricingToggle.checked = true;
+                if(labelIndia) labelIndia.classList.add('active-regional');
+                if(labelGlobal) labelGlobal.classList.remove('active-regional');
+            } else {
+                displayPrice.textContent = priceUSD;
+                if(pricingToggle) pricingToggle.checked = false;
+                if(labelGlobal) labelGlobal.classList.add('active-regional');
+                if(labelIndia) labelIndia.classList.remove('active-regional');
+            }
+        }
+
+        // Manual Toggle Event
+        if (pricingToggle) {
+            pricingToggle.addEventListener('change', (e) => {
+                updatePricingUI(e.target.checked);
+            });
+        }
+
+        // Auto-detect Location via Free API
+        async function detectLocation() {
+            try {
+                // Using ipapi.co (free tier, no key required for frontend)
+                const response = await fetch('https://ipapi.co/json/');
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.country_code === 'IN') {
+                        updatePricingUI(true);
+                    } else {
+                        updatePricingUI(false);
+                    }
+                }
+            } catch (error) {
+                console.log("Location detection failed, defaulting to Global pricing.");
+                updatePricingUI(false); // Default to global
+            }
+        }
+        
+        // Initialize pricing
+        updatePricingUI(false); // Default state
+        detectLocation();
     </script>
 </body>
 </html>
