@@ -440,32 +440,3 @@
     </script>
 </body>
 </html>
-                displayPrice.textContent = priceUSD;
-            }
-        }
-
-        // Auto-detect Location via Free API
-        async function detectLocation() {
-            try {
-                // Using ipapi.co (free tier, no key required for frontend)
-                const response = await fetch('https://ipapi.co/json/');
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.country_code === 'IN') {
-                        updatePricingUI(true);
-                    } else {
-                        updatePricingUI(false);
-                    }
-                }
-            } catch (error) {
-                console.log("Location detection failed, defaulting to Global pricing.");
-                updatePricingUI(false); // Default to global
-            }
-        }
-        
-        // Initialize pricing
-        updatePricingUI(false); // Default state
-        detectLocation();
-    </script>
-</body>
-</html>
