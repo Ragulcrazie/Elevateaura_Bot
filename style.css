@@ -353,3 +353,32 @@ p  { font-size: 1.08rem; color: var(--text-muted); }
 
 .case-meta { display: flex; flex-direction: column; gap: 4px; }
 .case-client { font-weight: 800; font-size: 1.02rem; color: var(--ink); line-height: 1.15; }
+
+/* ============ Advanced 3D Motion Layer ============ */
+
+/* Card 3D tilt prep */
+.card { transform-style: preserve-3d; will-change: transform; }
+.card:not(:hover) { transition: transform .55s cubic-bezier(.2,.7,.3,1), box-shadow .35s, border-color .35s; }
+.card h3, .card-icon, .case-head, .stat-val { transform: translateZ(14px); }
+.service-card ul li { transform: translateZ(8px); }
+.card p, .case-details p { transform: translateZ(4px); }
+
+/* Button magnetic prep */
+.btn-primary, .btn-secondary { will-change: transform; }
+
+/* Stat counter no jitter */
+.stat-val { min-width: 72px; display: inline-block; }
+
+/* Hero glass frame: gentle 3D drift */
+.glass-frame { animation: glass-drift 10s ease-in-out infinite; transform-origin: center; }
+@keyframes glass-drift {
+    0%, 100% { transform: perspective(1400px) rotateY(0deg) rotateX(0deg) translateY(0); }
+    25%      { transform: perspective(1400px) rotateY(2.2deg) rotateX(-1.2deg) translateY(-10px); }
+    50%      { transform: perspective(1400px) rotateY(0deg) rotateX(-2deg) translateY(-16px); }
+    75%      { transform: perspective(1400px) rotateY(-2.2deg) rotateX(-1.2deg) translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .glass-frame { animation: none; }
+    .card h3, .card-icon, .service-card ul li, .card p, .case-details p, .case-head, .stat-val { transform: none; }
+}

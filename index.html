@@ -466,5 +466,53 @@
             setTimeout(typeText, typeSpeed);
         }());
     </script>
+    <script>
+    (function(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      // 3D tilt on cards
+      document.querySelectorAll('.card').forEach(function(c){
+        c.addEventListener('mousemove', function(e){
+          var r=c.getBoundingClientRect();
+          var x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+          var rY=(x-0.5)*12, rX=(0.5-y)*10;
+          c.style.transform='perspective(900px) rotateX('+rX+'deg) rotateY('+rY+'deg) translateY(-8px)';
+        });
+        c.addEventListener('mouseleave', function(){ c.style.transform=''; });
+      });
+      // Magnetic primary + secondary buttons
+      document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(b){
+        b.addEventListener('mousemove', function(e){
+          var r=b.getBoundingClientRect();
+          var x=(e.clientX-r.left-r.width/2)/r.width;
+          var y=(e.clientY-r.top-r.height/2)/r.height;
+          b.style.transform='translate('+(x*8)+'px,'+(y*4)+'px)';
+        });
+        b.addEventListener('mouseleave', function(){ b.style.transform=''; });
+      });
+      // Stat counter animation
+      var counters=document.querySelectorAll('.stat-val');
+      if (counters.length && 'IntersectionObserver' in window){
+        var obs=new IntersectionObserver(function(ents){
+          ents.forEach(function(en){
+            if (en.isIntersecting && !en.target.dataset.done){
+              var el=en.target;
+              var m=el.textContent.trim().match(/^(\d+)(.*)$/);
+              if (m){
+                var target=parseInt(m[1]), suffix=m[2], dur=1300, start=performance.now();
+                function tick(t){
+                  var p=Math.min(1,(t-start)/dur);
+                  el.textContent=Math.floor(p*target)+suffix;
+                  if (p<1) requestAnimationFrame(tick); else el.textContent=target+suffix;
+                }
+                requestAnimationFrame(tick);
+                el.dataset.done='1';
+              }
+            }
+          });
+        }, {threshold:0.4});
+        counters.forEach(function(c){ obs.observe(c); });
+      }
+    })();
+    </script>
 </body>
 </html>
