@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7c3aed">
     <title>Elevate Aura | 30-Day Operations Platforms for Founder-Led SMBs</title>
     <meta name="description" content="Elevate Aura builds complete digital operations platforms, field-staff mobile app, manager dashboard, GST billing and programmatic SEO, for founder-led medical, healthcare and growing businesses. Shipped solo in 30 days.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,13 +21,13 @@
     <meta property="og:title" content="Elevate Aura | 30-Day Operations Platforms for Founder-Led SMBs">
     <meta property="og:description" content="We build complete digital operations platforms for founder-led teams in 30 days. Strategy, development, scalable backend, and automation, handled end-to-end.">
     <meta property="og:url" content="https://elevateaura.co.in/">
-    <meta property="og:image" content="https://elevateaura.co.in/hero_abstract_tech_1772159977714.png">
+    <meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Elevate Aura | 30-Day Operations Platforms for Founder-Led SMBs">
     <meta name="twitter:description" content="We build complete digital operations platforms for founder-led teams in 30 days.">
-    <meta name="twitter:image" content="https://elevateaura.co.in/hero_abstract_tech_1772159977714.png">
+    <meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -36,13 +37,13 @@
       "name": "Elevate Aura",
       "url": "https://elevateaura.co.in/",
       "logo": "https://elevateaura.co.in/assets/img/logo.png",
-      "image": "https://elevateaura.co.in/hero_abstract_tech_1772159977714.png",
+      "image": "https://elevateaura.co.in/images/og_image.png",
       "description": "One-person product studio building complete digital operations platforms, mobile app, manager dashboard, GST billing and programmatic SEO, for founder-led medical, healthcare and growing businesses in 30 days.",
       "email": "elevateauraofficial@gmail.com",
       "founder": { "@type": "Person", "name": "Ragul Sekar" },
       "areaServed": ["US", "GB", "AU", "IN"],
-      "serviceType": ["Digital Operations Platforms", "Mobile App Development", "Business Process Automation", "Programmatic SEO"],
-      "knowsAbout": ["React Native", "Next.js", "Supabase", "WordPress", "Flutter", "Programmatic SEO", "GST Billing"]
+      "serviceType": ["Digital Operations Platforms", "CRM Software", "AMC Management Software", "Field Service Management", "Mobile App Development", "Business Process Automation", "Programmatic SEO"],
+      "knowsAbout": ["CRM", "AMC Management", "CMC", "Comprehensive Maintenance Contract", "Preventive Maintenance", "Warranty Management", "Service Contract Management", "Asset Lifecycle Management", "SLA Management", "Field Service Management", "Ticketing", "Inventory Management", "GST Billing", "Spare Parts Management", "Technician Scheduling", "React Native", "Next.js", "Supabase", "WordPress"]
     }
     </script>
 </head>
@@ -58,14 +59,15 @@
             <div class="nav-links">
                 <a href="#who-we-help" class="nav-link">Who We Help</a>
                 <a href="#services" class="nav-link">Services</a>
+                <a href="#modules" class="nav-link">Platform</a>
                 <a href="#process" class="nav-link">Process</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="pages/careers.html" class="nav-link">Careers</a>
                 <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request:%20%5BYour%20App/Company%20Name%5D&body=Hi%20Elevate%20Aura%20Team,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%20Here%20are%20some%20details%20about%20my%20project:%0A%0A1.%20What%20is%20the%20core%20problem%20your%20app%20solves?%0A%5BType%20answer%20here%5D%0A%0A2.%20What%20is%20your%20target%20timeline%20for%20this%20MVP?%0A%5BType%20answer%20here%5D%0A%0A3.%20Do%20you%20have%20a%20budget%20allocated%20for%20this%20project?%0A%5BType%20answer%20here%5D%0A%0A4.%20Best%20phone%20number%20or%20WhatsApp%20to%20reach%20you%20at:%0A%5BType%20answer%20here%5D%0A%0ALooking%20forward%20to%20speaking%20with%20you!" class="btn btn-primary btn-sm">Book a Free Strategy Call</a>
             </div>
-            <div class="mobile-toggle" id="mobileToggle">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -73,6 +75,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#who-we-help" class="mobile-link">Who We Help</a>
         <a href="#services" class="mobile-link">Services</a>
+        <a href="#modules" class="mobile-link">Platform</a>
         <a href="#process" class="mobile-link">Process</a>
         <a href="#pricing" class="mobile-link">Pricing</a>
         <a href="pages/careers.html" class="mobile-link">Careers</a>
@@ -103,22 +106,7 @@
             </div>
             <div class="hero-visual animate-in delay-1">
                 <div class="glass-frame visual-wrapper">
-                    <img src="hero.webp" alt="Futuristic Tech Visual" class="hero-img" width="640" height="640" loading="eager">
-                    
-                    <!-- Smart Floating Terminal -->
-                    <div class="floating-terminal">
-                        <div class="terminal-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line"><span class="prompt">$</span> init carna_medicare_platform</div>
-                            <div class="terminal-line success">[OK] 12 modules generated</div>
-                            <div class="terminal-line"><span class="prompt">$</span> deploy --target=production</div>
-                            <div class="terminal-line typing">Deploying scalable backend<span>_</span></div>
-                        </div>
-                    </div>
+                    <img src="images/hero_main.png" alt="Connected operations platform: dashboard, app and tools" class="hero-img" width="881" height="781" loading="eager">
                 </div>
             </div>
         </div>
@@ -128,10 +116,10 @@
     <section class="section clients-strip">
         <div class="container text-center reveal">
             <p class="eyebrow">Built for founder-led teams in medical equipment, robotics &amp; healthcare</p>
-            <div class="client-badges">
-                <div class="client-badge"><span class="client-logo cm">CM</span> Carna Medicare</div>
-                <div class="client-badge"><span class="client-logo mr">MR</span> Medline Robotics</div>
-                <div class="client-badge"><span class="client-logo ea">EA</span> Elevate Aura</div>
+            <div class="client-logos">
+                <img src="images/logo_carna.png" alt="Carna Medicare" class="client-logo-img logo-carna" loading="lazy">
+                <img src="images/logo_medline.png" alt="Medline Robotics" class="client-logo-img" loading="lazy">
+                <img src="images/logo_elevate.png" alt="Elevate Aura" class="client-logo-img logo-elevate" loading="lazy">
             </div>
         </div>
     </section>
@@ -162,8 +150,27 @@
                 <div class="card help-card glow-on-hover reveal">
                     <div class="card-icon">&#128640;</div>
                     <h3>Founder-Led Businesses</h3>
-                    <p>Any founder who wants a working platform shipped in 30 days, not a six-month agency project.</p>
+                    <p>Any founder, in India or abroad, who wants a working platform shipped in 30 days, not a six-month agency project.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Feature: Field App -->
+    <section class="section feature-band">
+        <div class="container">
+            <div class="fb-grid">
+                <div class="fb-text reveal">
+                    <span class="fb-eyebrow">Field Operations</span>
+                    <h2 class="fb-title">Your whole field team, live on one map</h2>
+                    <p>Every sales rep and service engineer in your pocket. Assign visits, track location, capture reports, and see who did what, the moment it happens.</p>
+                    <ul class="fb-list">
+                        <li>GPS tracking, geo-fenced attendance and beat plans</li>
+                        <li>Visit and task management with photo &amp; signature capture</li>
+                        <li>Works in the field offline, syncs when back online</li>
+                    </ul>
+                </div>
+                <div class="fb-visual reveal"><img src="images/newfield.png" class="fb-img" alt="Field-staff mobile app with map and task list" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -173,46 +180,136 @@
         <div class="container">
             <div class="section-header text-center reveal">
                 <h2 class="section-title">What I Build</h2>
-                <p class="section-subtitle">One founder, end to end. The full operations stack, plus any custom software you ask for, shipped in 30 working days.</p>
+                <p class="section-subtitle">One founder, end to end. From a full operations platform to a high-converting website, designed around your business and shipped in 30 working days, for founder-led teams in India and worldwide.</p>
             </div>
             <div class="grid grid-2 grid-services">
                 <div class="card service-card glow-on-hover reveal">
-                    <h3>Mobile App + Manager Dashboard</h3>
+                    <div class="card-icon">&#128241;</div>
+                    <h3>Digital Operations Platforms</h3>
+                    <p class="svc-tag">Your whole business in one system.</p>
+                    <p class="svc-desc">Move off spreadsheets and WhatsApp and onto one platform: a mobile app your field team carries and a manager dashboard your office runs on, built around the way you actually work, not a generic template.</p>
                     <ul>
-                        <li>Field-staff app (React Native / Expo)</li>
-                        <li>Web dashboard for managers</li>
-                        <li>Role-based access &amp; permissions</li>
-                        <li>Supabase realtime backend</li>
+                        <li>Field-staff mobile app for Android &amp; iOS</li>
+                        <li>Manager web dashboard with live data</li>
+                        <li>CRM, leads, customers &amp; follow-ups</li>
+                        <li>Role-based access for every team</li>
+                        <li>Realtime, scalable Supabase backend</li>
                     </ul>
                 </div>
                 <div class="card service-card glow-on-hover reveal">
-                    <h3>Custom CRM &amp; Software</h3>
+                    <div class="card-icon">&#129513;</div>
+                    <h3>Custom Software &amp; CRM</h3>
+                    <p class="svc-tag">Built to your workflow, not a template.</p>
+                    <p class="svc-desc">Need something specific? I design bespoke CRMs, internal tools, admin panels and customer portals that fit your exact process, whatever your business runs on, and connect cleanly to the tools you already use.</p>
                     <ul>
-                        <li>Complete CRM built around your sales flow</li>
-                        <li>Internal tools, admin panels &amp; portals</li>
-                        <li>Whatever software your business needs</li>
-                        <li>Built to your exact workflow, not a template</li>
+                        <li>Complete CRM around your sales flow</li>
+                        <li>Internal tools, admin panels &amp; dashboards</li>
+                        <li>Customer &amp; vendor self-service portals</li>
+                        <li>Any custom software your business needs</li>
+                    </ul>
+                </div>
+                <div class="card service-card featured glow-on-hover reveal">
+                    <span class="svc-badge">You&#39;re looking at one</span>
+                    <div class="card-icon">&#127760;</div>
+                    <h3>Websites &amp; SEO That Win Customers</h3>
+                    <p class="svc-tag">World-class design that ranks on Google.</p>
+                    <p class="svc-desc">Fast, beautiful, mobile-first websites that turn visitors into enquiries, paired with programmatic SEO that puts you on page one across every product and city you serve. The site you&#39;re reading right now? I designed and built it.</p>
+                    <ul>
+                        <li>Conversion-focused design &amp; copywriting</li>
+                        <li>Programmatic SEO: 50 to 250 ranking pages</li>
+                        <li>Schema markup &amp; Google rich results</li>
+                        <li>Blazing-fast, mobile-first performance</li>
+                        <li>GA4 + Search Console, set up &amp; verified</li>
+                        <li>Lead-capture forms &amp; enquiry chat</li>
                     </ul>
                 </div>
                 <div class="card service-card glow-on-hover reveal">
-                    <h3>Billing &amp; Ops Automation</h3>
+                    <div class="card-icon">&#9881;&#65039;</div>
+                    <h3>Billing &amp; Business Automation</h3>
+                    <p class="svc-tag">Stop running your business by hand.</p>
+                    <p class="svc-desc">GST-ready billing and the quiet automations that keep operations moving: invoices, payment follow-ups, inventory and WhatsApp, all connected so nothing slips through the cracks.</p>
                     <ul>
                         <li>GST quotation, invoice &amp; Delivery Challan</li>
                         <li>Payment tracker with WhatsApp reminders</li>
                         <li>Inventory &amp; order workflows</li>
-                        <li>WhatsApp Business integration</li>
-                    </ul>
-                </div>
-                <div class="card service-card glow-on-hover reveal">
-                    <h3>Website + Programmatic SEO</h3>
-                    <ul>
-                        <li>Per-product, per-city landing pages (50 to 250)</li>
-                        <li>Schema markup &amp; rich results</li>
-                        <li>GA4 + Search Console setup</li>
-                        <li>AI chatbot for lead capture</li>
+                        <li>WhatsApp Business &amp; payment-gateway integration</li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+<!-- Modules / Platform Section -->
+    <section id="modules" class="section bg-alt">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Everything Your Business Runs On</h2>
+                <p class="section-subtitle">From AMC, CMC and preventive maintenance to billing, inventory and field service &mdash; 67+ modules across twelve suites. Switch on what you need today, add the rest as you grow, with unlimited users on every plan.</p>
+            </div>
+            <div class="grid grid-3 modules-grid">
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#129309;</div>
+                    <h3>Sales &amp; CRM</h3>
+                    <div class="mod-chips"><span>Lead Capture</span><span>Lead Scoring</span><span>Lead Assignment</span><span>Customer Database</span><span>Doctors &amp; Dealers</span><span>Quotations</span><span>Sales Pipeline</span><span>Opportunities</span><span>Follow-ups</span><span>Territory Mapping</span><span>Sales Forecasting</span><span>Tenders</span><span>Sample &amp; Demo</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#127911;</div>
+                    <h3>Service &amp; Ticketing</h3>
+                    <div class="mod-chips"><span>Complaints</span><span>Ticketing</span><span>Priorities &amp; Categories</span><span>SLA Management</span><span>Escalation Rules</span><span>Breakdown / Repair</span><span>Service Scheduling</span><span>Resolution Tracking</span><span>Customer Sign-off</span><span>Service Reports</span><span>Customer Support</span><span>CSAT Feedback</span></div>
+                </div>
+                <div class="card module-card mod-featured glow-on-hover reveal">
+                    <span class="mod-badge">Revenue Engine</span>
+                    <div class="card-icon">&#128220;</div>
+                    <h3>AMC &amp; Service Contracts</h3>
+                    <div class="mod-chips"><span>AMC &mdash; Comprehensive</span><span>AMC &mdash; Non-Comprehensive</span><span>CMC</span><span>Warranty</span><span>Extended Warranty</span><span>Contract Creation</span><span>Renewal Alerts</span><span>Auto-Quotations</span><span>Revenue Protection</span><span>Contract Profitability</span><span>Multi-site Contracts</span><span>Contract Billing</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128737;&#65039;</div>
+                    <h3>Preventive Maintenance</h3>
+                    <div class="mod-chips"><span>PM Scheduling</span><span>Meter / Usage-based</span><span>PM Checklists</span><span>Calibration</span><span>Compliance &amp; Audit</span><span>Inspection Reports</span><span>Service Reminders</span><span>Recurring Jobs</span><span>Maintenance History</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#129658;</div>
+                    <h3>Asset &amp; Equipment Lifecycle</h3>
+                    <div class="mod-chips"><span>Asset Registry</span><span>Serial Tracking</span><span>Installation</span><span>Acceptance Sign-off</span><span>Warranty Linkage</span><span>Lifecycle Tracking</span><span>Asset 360 History</span><span>Depreciation</span><span>Transfers</span><span>Replacement</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128205;</div>
+                    <h3>Field Force &amp; Technician</h3>
+                    <div class="mod-chips"><span>GPS Live Tracking</span><span>Geo-fenced Attendance</span><span>Beat / Route Plans</span><span>Visit Verification</span><span>Mobile Field App</span><span>Work Orders</span><span>Photo &amp; Signature</span><span>Offline Mode</span><span>Skill-based Allocation</span><span>Productivity KPIs</span><span>Expenses</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128230;</div>
+                    <h3>Inventory &amp; Spare Parts</h3>
+                    <div class="mod-chips"><span>Stock Management</span><span>Multi-warehouse</span><span>Spare Parts</span><span>Engineer Allocation</span><span>Consumption Analytics</span><span>Batch Tracking</span><span>Expiry Tracking</span><span>Purchase Orders</span><span>Vendor Management</span><span>Supplier Performance</span><span>Reorder Alerts</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#129534;</div>
+                    <h3>Billing &amp; Finance</h3>
+                    <div class="mod-chips"><span>GST Quotation</span><span>GST Invoice</span><span>Delivery Challan</span><span>Service Invoices</span><span>Proforma</span><span>Credit / Debit Notes</span><span>e-Way Bill</span><span>Payment Tracking</span><span>Outstanding</span><span>Reminders</span><span>Customer Ledger</span><span>Revenue Analytics</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128101;</div>
+                    <h3>HR &amp; Workforce</h3>
+                    <div class="mod-chips"><span>Employee Profiles</span><span>Departments</span><span>Attendance</span><span>Leave</span><span>Shifts</span><span>Holiday Calendar</span><span>Payroll Integration</span><span>Performance</span><span>Role-Based Access</span><span>Permissions</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128202;</div>
+                    <h3>Executive &amp; Analytics</h3>
+                    <div class="mod-chips"><span>CEO Dashboard</span><span>Real-time KPIs</span><span>Revenue Analytics</span><span>Business Health Score</span><span>Custom Report Builder</span><span>Scheduled Reports</span><span>Territory Analytics</span><span>Service Analytics</span><span>Audit Logs</span><span>Data Export</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#128172;</div>
+                    <h3>Communication &amp; Portals</h3>
+                    <div class="mod-chips"><span>WhatsApp Business</span><span>WhatsApp Automation</span><span>Email &amp; Templates</span><span>SMS</span><span>Notifications</span><span>Comms History</span><span>Customer Portal</span><span>Vendor Portal</span><span>Dealer Portal</span><span>Self-service</span></div>
+                </div>
+                <div class="card module-card glow-on-hover reveal">
+                    <div class="card-icon">&#9889;</div>
+                    <h3>Smart Automation &amp; AI</h3>
+                    <div class="mod-chips"><span>Renewal Prediction</span><span>Predictive Maintenance</span><span>Smart Ticket Routing</span><span>Lead Scoring</span><span>Sales Forecasting</span><span>IoT Monitoring</span><span>Workflow Automation</span><span>Auto-reminders</span><span>Risk Detection</span></div>
+                </div>
+            </div>
+            <p class="modules-note reveal">One connected platform, not a dozen disconnected tools. Every module is built to your exact workflow and talks to the others &mdash; switch on what you need, add the rest as you grow.</p>
         </div>
     </section>
 
@@ -223,39 +320,46 @@
                 <h2 class="section-title">The Process</h2>
                 <p class="section-subtitle">From idea to market-ready product.</p>
             </div>
-            <div class="process-grid grid grid-2">
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-num">01</div>
-                        <div class="step-info">
-                            <h3>Discovery & Strategy</h3>
-                            <p>We align on your product-market fit and define the core features.</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-num">02</div>
-                        <div class="step-info">
-                            <h3>Architecture & Design</h3>
-                            <p>Mapping out the system flow and high-fidelity UI/UX design.</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-num">03</div>
-                        <div class="step-info">
-                            <h3>MVP Build (30 Days)</h3>
-                            <p>Rapid development focused on stability and core functionality.</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-num">04</div>
-                        <div class="step-info">
-                            <h3>Launch & Scale Support</h3>
-                            <p>Deployment and post-launch refinement for long-term growth.</p>
-                        </div>
-                    </div>
+            <img src="images/process_new.png" class="process-banner reveal" alt="Discovery to design to build to launch" width="360" height="247" style="display:block; width:100%; max-width:360px; height:auto; margin:0 auto 38px;" loading="lazy">
+            <div class="grid grid-4 process-row">
+                <div class="proc-card reveal">
+                    <span class="step-num">01</span>
+                    <h3>Discovery &amp; Strategy</h3>
+                    <p>We align on your goals and define the core features.</p>
                 </div>
-                <div class="process-visual reveal">
-                    <img src="process.webp" alt="Development Process" class="process-img" width="640" height="640" loading="lazy">
+                <div class="proc-card reveal">
+                    <span class="step-num">02</span>
+                    <h3>Architecture &amp; Design</h3>
+                    <p>Mapping the system flow and high-fidelity UI/UX.</p>
+                </div>
+                <div class="proc-card reveal">
+                    <span class="step-num">03</span>
+                    <h3>Build &amp; Ship (30 Days)</h3>
+                    <p>Focused development on a stable, working platform.</p>
+                </div>
+                <div class="proc-card reveal">
+                    <span class="step-num">04</span>
+                    <h3>Launch &amp; Scale</h3>
+                    <p>Deployment and post-launch support for long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Feature: Billing -->
+    <section class="section feature-band">
+        <div class="container">
+            <div class="fb-grid">
+                <div class="fb-visual reveal"><img src="images/billingnew.png" class="fb-img" alt="GST invoice screen with WhatsApp payment reminder" loading="lazy"></div>
+                <div class="fb-text reveal">
+                    <span class="fb-eyebrow">Billing &amp; Automation</span>
+                    <h2 class="fb-title">Billing that chases payments for you</h2>
+                    <p>GST quotations, invoices and Delivery Challans in seconds, then automatic WhatsApp reminders that follow up until you actually get paid.</p>
+                    <ul class="fb-list">
+                        <li>GST-ready quotation, invoice &amp; Delivery Challan</li>
+                        <li>Automatic WhatsApp payment reminders</li>
+                        <li>Live outstanding &amp; collection tracking</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -303,6 +407,19 @@
         </div>
     </section>
 
+<!-- Product Showcase Section -->
+    <section class="section showcase-section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">One Screen to Run It All</h2>
+                <p class="section-subtitle">The command center your managers live in: every lead, payment, AMC renewal and field visit, on a single real-time dashboard.</p>
+            </div>
+            <div class="showcase reveal">
+                <img src="images/newdashboard.png" class="sc-shot sc-wide" alt="Manager analytics dashboard with KPIs and charts" loading="lazy">
+            </div>
+        </div>
+    </section>
+
 <!-- Pricing Section -->
     <section id="pricing" class="section">
         <div class="container text-center reveal">
@@ -320,17 +437,24 @@
     <section id="about" class="section bg-alt">
         <div class="container">
             <div class="grid grid-2 about-grid">
+                <div class="about-photo reveal">
+                    <div class="founder-frame">
+                        <img src="images/passportsizenew.jpeg" alt="Ragul Sekar, founder of Elevate Aura" class="founder-img" loading="lazy">
+                    </div>
+                    <div class="founder-name">Ragul Sekar</div>
+                    <div class="founder-role">Founder &amp; Builder &middot; Chennai, India</div>
+                </div>
                 <div class="about-content reveal">
-                    <h2 class="section-title">About Elevate Aura</h2>
+                    <h2 class="section-title about-title">About Elevate Aura</h2>
                     <p>Elevate Aura is a one-person product studio run by Ragul Sekar from Chennai. I design, build and ship complete digital operations platforms, mobile app, manager dashboard, billing automation and a search-ready website, in 30 working days. Solo, end-to-end, no agency overhead.</p>
-                    <p>Three years building BFSI systems at TCS taught me how real operations work. Founders get a CEO-level discovery call on day one, AI-assisted delivery speed, and someone who actually picks up the phone.</p>
+                    <p>Four years building healthcare technology systems at TCS taught me how real operations work, under real compliance. Founders get a CEO-level discovery call on day one, fast and focused delivery, and someone who actually picks up the phone.</p>
                 </div>
-                <div class="about-stats reveal">
-                    <div class="stat-item"><span class="stat-val">30</span><span class="stat-lbl">Days to launch</span></div>
-                    <div class="stat-item"><span class="stat-val">3+</span><span class="stat-lbl">Platforms shipped</span></div>
-                    <div class="stat-item"><span class="stat-val">250+</span><span class="stat-lbl">SEO pages built</span></div>
-                    <div class="stat-item"><span class="stat-val">1</span><span class="stat-lbl">Founder, end-to-end</span></div>
-                </div>
+            </div>
+            <div class="about-stats reveal about-stats-row">
+                <div class="stat-item"><span class="stat-val">30</span><span class="stat-lbl">Days to launch</span></div>
+                <div class="stat-item"><span class="stat-val">3+</span><span class="stat-lbl">Platforms shipped</span></div>
+                <div class="stat-item"><span class="stat-val">250+</span><span class="stat-lbl">SEO pages built</span></div>
+                <div class="stat-item"><span class="stat-val">1</span><span class="stat-lbl">Founder, end-to-end</span></div>
             </div>
         </div>
     </section>
@@ -338,8 +462,8 @@
 <!-- Final CTA Section -->
     <section class="final-cta section">
         <div class="container text-center reveal">
-            <h2>Ready to Launch Your MVP?</h2>
-            <p>Let's turn your vision into a revenue-ready reality.</p>
+            <h2>Ready to Build Your Platform?</h2>
+            <p>Let's turn your vision into a revenue-ready reality, in 30 days.</p>
             <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request:%20%5BYour%20App/Company%20Name%5D&body=Hi%20Elevate%20Aura%20Team,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%20Here%20are%20some%20details%20about%20my%20project:%0A%0A1.%20What%20is%20the%20core%20problem%20your%20app%20solves?%0A%5BType%20answer%20here%5D%0A%0A2.%20What%20is%20your%20target%20timeline%20for%20this%20MVP?%0A%5BType%20answer%20here%5D%0A%0A3.%20Do%20you%20have%20a%20budget%20allocated%20for%20this%20project?%0A%5BType%20answer%20here%5D%0A%0A4.%20Best%20phone%20number%20or%20WhatsApp%20to%20reach%20you%20at:%0A%5BType%20answer%20here%5D%0A%0ALooking%20forward%20to%20speaking%20with%20you!" class="btn btn-primary">Book a Free Strategy Call</a>
             <p class="contact-email">elevateauraofficial@gmail.com</p>
         </div>
@@ -347,27 +471,52 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-inner">
+        <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="/" class="logo">
-                     <img src="assets/img/logo.png" alt="Elevate Aura Logo" style="width: 32px;">
+                    <img src="assets/img/logo.png" alt="Elevate Aura Logo" style="width: 34px;">
                     <span>Elevate Aura</span>
                 </a>
-                <p>Lean Product Studio for International Founders.</p>
+                <p>A one-person product studio building 30-day digital operations platforms for founder-led teams, in India and worldwide.</p>
+                <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request&body=Hi%20Ragul,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%0A%0A1.%20What%20does%20your%20business%20do?%0A2.%20What%20do%20you%20want%20to%20build?%0A3.%20Best%20WhatsApp%20number%20to%20reach%20you:%0A%0AThanks!" class="btn btn-primary btn-sm">Book a Free Strategy Call</a>
+                <div class="footer-social">
+                    <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.2 4.79 1.2 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.53 0-3.03-.41-4.34-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 01-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.69 8.25-8.24 8.25zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ragul-sekar" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.9a1.55 1.55 0 100 3.1 1.55 1.55 0 000-3.1zM18.34 18v-4.67c0-2.5-1.33-3.66-3.11-3.66-1.43 0-2.07.79-2.43 1.34V9.5h-2.67V18h2.67v-4.5c0-1.18.22-2.32 1.68-2.32 1.44 0 1.46 1.35 1.46 2.4V18h2.73z"/></svg>
+                    </a>
+                    <a href="mailto:elevateauraofficial@gmail.com" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.4l8 5.1 8-5.1V6H4zm16 2.9l-7.45 4.75a1 1 0 01-1.1 0L4 8.9V18h16V8.9z"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-links">
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#who-we-help">Who We Help</a>
                 <a href="#services">Services</a>
+                <a href="#modules">Platform</a>
                 <a href="#process">Process</a>
                 <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
                 <a href="pages/about.html">About</a>
                 <a href="pages/careers.html">Careers</a>
                 <a href="pages/contact.html">Contact</a>
-                <a href="pages/privacy.html">Privacy</a>
-                <a href="pages/terms.html">Terms</a>
+                <a href="#case-studies">Recent Work</a>
             </div>
-            <div class="footer-copy">
-                &copy; 2026 Elevate Aura. All rights reserved. Built for Pioneers.
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+                <span class="footer-meta">Chennai, India</span>
+                <span class="footer-meta">WhatsApp-first replies</span>
+                <div class="footer-legal-inline"><a href="pages/privacy.html">Privacy</a> &middot; <a href="pages/terms.html">Terms</a></div>
             </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2026 Elevate Aura. All rights reserved. &nbsp;&middot;&nbsp; Designed &amp; built in Chennai, India.</span>
+            <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">Back to top &#8593;</button>
         </div>
     </footer>
 
@@ -377,8 +526,9 @@
         const mobileMenu = document.getElementById('mobileMenu');
         
         mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+            const open = mobileMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
         // Close menu on link click
@@ -414,25 +564,12 @@
         }, observerOptions);
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-        // Advanced Hover Card Spotlight Effect
-        document.getElementById("cards-wrapper")?.addEventListener("mousemove", e => {
-            for(const card of document.getElementsByClassName("glow-on-hover")) {
-                const rect = card.getBoundingClientRect(),
-                      x = e.clientX, rect.left,
-                      y = e.clientY, rect.top;
-                card.style.setProperty("--mouse-x", `${x}px`);
-                card.style.setProperty("--mouse-y", `${y}px`);
-            }
-        });
-        
-        // Document wide hover listener for the cards since they are spread out
+        // Card spotlight glow follows the cursor, positioned relative to each card
         document.querySelectorAll('.glow-on-hover').forEach(card => {
             card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect(),
-                      x = e.clientX, rect.left,
-                      y = e.clientY, rect.top;
-                card.style.setProperty("--mouse-x", `${x}px`);
-                card.style.setProperty("--mouse-y", `${y}px`);
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
             });
         });
 
