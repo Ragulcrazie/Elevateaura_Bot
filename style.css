@@ -254,6 +254,11 @@ p  { font-size: 1.08rem; color: var(--text-muted); }
 .case-details p { margin-bottom: 8px; font-size: 0.92rem; color: var(--text-muted); }
 .case-details strong { color: var(--ink); }
 .case-outcome { margin-top: 14px; color: var(--primary-strong) !important; font-weight: 700; }
+.case-img { margin: -34px -34px 20px; padding: 16px 20px 4px; background: linear-gradient(160deg, #efe9fb 0%, #f7f3fe 100%); text-align: center; }
+.case-img img { width: 100%; max-width: 235px; display: inline-block; filter: drop-shadow(0 12px 20px rgba(124,58,237,.18)); }
+.case-img-brand { display: flex; align-items: center; justify-content: center; min-height: 132px; padding: 20px; background: linear-gradient(135deg, #ede9fe 0%, #fbeafe 100%); }
+.case-img-brand img { max-height: 48px; width: auto; max-width: 82%; filter: none; }
+.case-img-brand img.tall { max-height: 64px; }
 
 /* Pricing */
 .pricing-card {
