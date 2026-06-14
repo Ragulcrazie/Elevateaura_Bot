@@ -38,7 +38,7 @@
       "url": "https://elevateaura.co.in/",
       "logo": "https://elevateaura.co.in/assets/img/logo.png",
       "image": "https://elevateaura.co.in/images/og_image.png",
-      "description": "One-person product studio building complete digital operations platforms, mobile app, manager dashboard, GST billing and programmatic SEO, for founder-led medical, healthcare and growing businesses in 30 days.",
+      "description": "Founder-led product studio building complete digital operations platforms: mobile app, manager dashboard, GST billing and programmatic SEO, for founder-led medical, healthcare and growing businesses in 30 days.",
       "email": "elevateauraofficial@gmail.com",
       "founder": { "@type": "Person", "name": "Ragul Sekar" },
       "areaServed": ["US", "GB", "AU", "IN"],
@@ -46,6 +46,32 @@
       "knowsAbout": ["CRM", "AMC Management", "CMC", "Comprehensive Maintenance Contract", "Preventive Maintenance", "Warranty Management", "Service Contract Management", "Asset Lifecycle Management", "SLA Management", "Field Service Management", "Ticketing", "Inventory Management", "GST Billing", "Spare Parts Management", "Technician Scheduling", "React Native", "Next.js", "Supabase", "WordPress"]
     }
     </script>
+    <style>
+    /* Enhancement sections: outcomes, why, ecosystem */
+    .ea-out{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:980px;margin:0 auto}
+    @media(max-width:760px){.ea-out{grid-template-columns:1fr}}
+    .ea-o{display:flex;gap:13px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+    .ea-o:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    .ea-o .ck{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--primary-soft);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+    .ea-o p{font-size:1rem;color:var(--text-main);margin:0;line-height:1.45}
+    .ea-o b{color:var(--ink)}
+    .ea-why{max-width:940px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md)}
+    .ea-why-row{display:grid;grid-template-columns:1.15fr 1fr 1.1fr;align-items:stretch}
+    .ea-why-row>div{padding:15px 18px;border-bottom:1px solid var(--border);font-size:.98rem}
+    .ea-why-row:last-child>div{border-bottom:none}
+    .ea-why-head>div{font-weight:700;color:var(--text-faint);font-size:.9rem;letter-spacing:.02em;text-transform:uppercase;background:var(--bg-soft)}
+    .ea-why-head .us{color:var(--primary)}
+    .ea-cap{font-weight:700;color:var(--ink)}
+    .ea-oth{color:var(--text-muted)}
+    .ea-us{color:var(--ink);font-weight:600;background:linear-gradient(180deg,rgba(124,58,237,.07),rgba(192,38,211,.035))}
+    .ea-us::before{content:"\2713  ";color:var(--primary);font-weight:800}
+    @media(max-width:600px){.ea-why-row{grid-template-columns:1fr 1fr}.ea-why-cap{display:none}.ea-why-row>div{font-size:.9rem;padding:12px 13px}}
+    .ea-eco{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;max-width:980px;margin:0 auto}
+    .ea-eco .n{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:11px 15px;font-weight:700;color:var(--ink);font-size:.95rem;box-shadow:var(--shadow-sm);text-align:center}
+    .ea-eco .n .e{display:block;font-size:.72rem;color:var(--text-faint);font-weight:500;margin-top:2px}
+    .ea-eco .ar{color:var(--primary);font-weight:800;font-size:1.05rem}
+    @media(max-width:600px){.ea-eco{flex-direction:column}.ea-eco .ar{transform:rotate(90deg)}.ea-eco .n{width:80%}}
+    </style>
 </head>
 <body>
 
@@ -182,7 +208,7 @@
         <div class="container">
             <div class="section-header text-center reveal">
                 <h2 class="section-title">What I Build</h2>
-                <p class="section-subtitle">One founder, end to end. From a full operations platform to a high-converting website, designed around your business and shipped in 30 working days, for founder-led teams in India and worldwide.</p>
+                <p class="section-subtitle">Founder-led and built end to end. From a full operations platform to a high-converting website, designed around your business and shipped in 30 working days, for founder-led teams in India and worldwide.</p>
             </div>
             <div class="grid grid-2 grid-services">
                 <div class="card service-card glow-on-hover reveal">
@@ -241,12 +267,32 @@
         </div>
     </section>
 
-<!-- Modules / Platform Section -->
+<!-- Business Outcomes Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Business Outcomes</h2>
+                <p class="section-subtitle">Features are the how. These are the results founders actually buy.</p>
+            </div>
+            <div class="ea-out">
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>Get off WhatsApp and Excel.</b> One platform replaces the scattered chats, sheets and notebooks your operations run on today.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>One source of truth.</b> Customers, sales, service and billing data centralised, not spread across five tools.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>Stop AMC and CMC revenue leaking.</b> Every contract on a renewal clock, with lapsing revenue surfaced before it is gone.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>Faster service response.</b> Tickets, dispatch and SLAs in one flow, so breakdowns get handled before they cost a renewal.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>Less manual work.</b> Quotes, invoices, reminders and stock updates that run themselves instead of by hand.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>See the whole business.</b> Leads, payments, AMC renewals and field visits live on one owner dashboard.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>Get paid sooner.</b> Outstanding tracked and chased automatically over WhatsApp until the money lands.</p></div>
+                <div class="ea-o reveal"><span class="ck">&#10003;</span><p><b>A platform that scales.</b> Start with what you need, switch on more as you grow, without changing systems.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules / Platform Section -->
     <section id="modules" class="section bg-alt">
         <div class="container">
             <div class="section-header text-center reveal">
                 <h2 class="section-title">Everything Your Business Runs On</h2>
-                <p class="section-subtitle">From AMC, CMC and preventive maintenance to billing, inventory and field service &mdash; 67+ modules across twelve suites. Switch on what you need today, add the rest as you grow, with unlimited users on every plan.</p>
+                <p class="section-subtitle">From AMC, CMC and preventive maintenance to billing, inventory and field service, 87 modules across twelve suites. Switch on what you need today, add the rest as you grow, with unlimited users on every plan.</p>
             </div>
             <div class="grid grid-3 modules-grid">
                 <div class="card module-card glow-on-hover reveal">
@@ -263,7 +309,7 @@
                     <span class="mod-badge">Revenue Engine</span>
                     <div class="card-icon">&#128220;</div>
                     <h3>AMC &amp; Service Contracts</h3>
-                    <div class="mod-chips"><span>AMC &mdash; Comprehensive</span><span>AMC &mdash; Non-Comprehensive</span><span>CMC</span><span>Warranty</span><span>Extended Warranty</span><span>Contract Creation</span><span>Renewal Alerts</span><span>Auto-Quotations</span><span>Revenue Protection</span><span>Contract Profitability</span><span>Multi-site Contracts</span><span>Contract Billing</span></div>
+                    <div class="mod-chips"><span>AMC Comprehensive</span><span>AMC Non-Comprehensive</span><span>CMC</span><span>Warranty</span><span>Extended Warranty</span><span>Contract Creation</span><span>Renewal Alerts</span><span>Auto-Quotations</span><span>Revenue Protection</span><span>Contract Profitability</span><span>Multi-site Contracts</span><span>Contract Billing</span></div>
                 </div>
                 <div class="card module-card glow-on-hover reveal">
                     <div class="card-icon">&#128737;&#65039;</div>
@@ -311,7 +357,21 @@
                     <div class="mod-chips"><span>Renewal Prediction</span><span>Predictive Maintenance</span><span>Smart Ticket Routing</span><span>Lead Scoring</span><span>Sales Forecasting</span><span>IoT Monitoring</span><span>Workflow Automation</span><span>Auto-reminders</span><span>Risk Detection</span></div>
                 </div>
             </div>
-            <p class="modules-note reveal">One connected platform, not a dozen disconnected tools. Every module is built to your exact workflow and talks to the others &mdash; switch on what you need, add the rest as you grow.</p>
+            <p class="modules-note reveal">One connected platform, not a dozen disconnected tools. Every module is built to your exact workflow and talks to the others, switch on what you need, add the rest as you grow.</p>
+            <div class="reveal" style="margin-top:38px">
+                <div class="section-header text-center"><h3 style="font-size:1.5rem;margin-bottom:6px">One connected lifecycle</h3><p class="section-subtitle" style="margin-bottom:26px">Every stage flows into the next, so data is entered once and follows the work all the way through.</p></div>
+                <div class="ea-eco">
+                    <span class="n">Sales<span class="e">Leads in</span></span><span class="ar">&rarr;</span>
+                    <span class="n">CRM<span class="e">Qualify</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Quotation<span class="e">GST quote</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Orders<span class="e">Confirm</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Inventory<span class="e">Allocate</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Billing<span class="e">Invoice</span></span><span class="ar">&rarr;</span>
+                    <span class="n">AMC<span class="e">Contract</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Service<span class="e">Maintain</span></span><span class="ar">&rarr;</span>
+                    <span class="n">Analytics<span class="e">See it all</span></span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -343,6 +403,39 @@
                     <span class="step-num">04</span>
                     <h3>Launch &amp; Scale</h3>
                     <p>Deployment and post-launch support for long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Why Elevate Aura Section -->
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Why Elevate Aura</h2>
+                <p class="section-subtitle">Why founder-led teams pick a specialist over a generic agency or an off-the-shelf tool.</p>
+            </div>
+            <div class="ea-why reveal">
+                <div class="ea-why-row ea-why-head">
+                    <div class="ea-why-cap">&nbsp;</div><div>Generic agency or tool</div><div class="us">Elevate Aura</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">System fit</div><div class="ea-oth">Template-based, bend your process to fit</div><div class="ea-us">Built to your exact workflow</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">Delivery</div><div class="ea-oth">Long, open-ended timelines</div><div class="ea-us">30-day delivery framework</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">Who you talk to</div><div class="ea-oth">Account-manager layers and ticket queues</div><div class="ea-us">Direct access to the person who builds it</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">Domain</div><div class="ea-oth">Generic software for any business</div><div class="ea-us">Medical, healthcare and equipment specialist</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">Pricing</div><div class="ea-oth">Packages, add-ons and hourly traps</div><div class="ea-us">Transparent, fixed scope per project</div>
+                </div>
+                <div class="ea-why-row">
+                    <div class="ea-cap ea-why-cap">After launch</div><div class="ea-oth">Hand off and disappear</div><div class="ea-us">Ongoing support from the builder</div>
                 </div>
             </div>
         </div>
@@ -451,7 +544,7 @@
                 </div>
                 <div class="about-content reveal">
                     <h2 class="section-title about-title">About Elevate Aura</h2>
-                    <p>Elevate Aura is a one-person product studio run by Ragul Sekar from Chennai. I design, build and ship complete digital operations platforms, mobile app, manager dashboard, billing automation and a search-ready website, in 30 working days. Solo, end-to-end, no agency overhead.</p>
+                    <p>Elevate Aura is a founder-led product studio run by Ragul Sekar from Chennai. I design, build and ship complete digital operations platforms: mobile app, manager dashboard, billing automation and a search-ready website, in 30 working days, end to end, with direct access to the person who builds it.</p>
                     <p>Four years building healthcare technology systems at TCS taught me how real operations work, under real compliance. Founders get a CEO-level discovery call on day one, fast and focused delivery, and someone who actually picks up the phone.</p>
                 </div>
             </div>
@@ -459,7 +552,7 @@
                 <div class="stat-item"><span class="stat-val">30</span><span class="stat-lbl">Days to launch</span></div>
                 <div class="stat-item"><span class="stat-val">3+</span><span class="stat-lbl">Platforms shipped</span></div>
                 <div class="stat-item"><span class="stat-val">250+</span><span class="stat-lbl">SEO pages built</span></div>
-                <div class="stat-item"><span class="stat-val">1</span><span class="stat-lbl">Founder, end-to-end</span></div>
+                <div class="stat-item"><span class="stat-val">1</span><span class="stat-lbl">Direct point of contact</span></div>
             </div>
         </div>
     </section>
@@ -482,7 +575,7 @@
                     <img src="assets/img/logo.png" alt="Elevate Aura Logo" style="width: 34px;">
                     <span>Elevate Aura</span>
                 </a>
-                <p>A one-person product studio building 30-day digital operations platforms for founder-led teams, in India and worldwide.</p>
+                <p>A founder-led product studio building 30-day digital operations platforms for founder-led teams, in India and worldwide.</p>
                 <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request&body=Hi%20Ragul,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%0A%0A1.%20What%20does%20your%20business%20do?%0A2.%20What%20do%20you%20want%20to%20build?%0A3.%20Best%20WhatsApp%20number%20to%20reach%20you:%0A%0AThanks!" class="btn btn-primary btn-sm">Book a Free Strategy Call</a>
                 <div class="footer-social">
                     <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
