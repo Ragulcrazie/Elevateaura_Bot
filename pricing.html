@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing | Aura Business: Pick Your Modules</title>
+<meta name="description" content="Aura Business pricing by module count: 15 modules ₹6,000, 47 modules ₹12,000, all 87 modules ₹25,000 a month. Unlimited users. Pick your modules and see your price." />
+<link rel="stylesheet" href="aura.css" />
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="aura-business.html">Aura Business<small>by Elevate Aura</small></a>
+  <div class="navlinks">
+    <a class="lnk hide" href="modules.html">Modules</a>
+    <a class="lnk hide active" href="pricing.html">Pricing</a>
+    <a class="lnk hide" href="how-it-works.html">How it works</a>
+    <a class="lnk hide" href="about.html">About</a>
+    <a class="btn btn-ghost btn-sm" href="https://app.elevateaura.co.in/login">Login</a>
+    <a class="btn btn-primary btn-sm" href="contact.html">Book a demo</a>
+  </div>
+</div></nav>
+
+<header class="hero" style="padding-bottom:18px">
+  <div class="wrap">
+    <span class="pill">Simple, flat pricing</span>
+    <h1>Pay for the modules<br>you <span>actually use.</span></h1>
+    <p class="sub">Priced by how many modules you switch on, with unlimited users on every plan. Tick what you need below and the price follows.</p>
+  </div>
+</header>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="tiers">
+      <div class="tier"><b>15</b><div class="c">modules</div><div class="p">₹6,000 / month</div></div>
+      <div class="tier"><b>47</b><div class="c">modules</div><div class="p">₹12,000 / month</div></div>
+      <div class="tier"><b>87</b><div class="c">all modules</div><div class="p">₹25,000 / month</div></div>
+    </div>
+    <p class="lead" style="margin-bottom:22px">Every plan includes <b>unlimited users</b>, your own branding, WhatsApp support, and a one-time setup with your Excel data migrated (quoted on the demo call).</p>
+    <div class="selbar-tools">
+      <span class="chip" onclick="selectCount(15)">Auto-pick 15 (₹6,000)</span>
+      <span class="chip" onclick="selectCount(47)">Auto-pick 47 (₹12,000)</span>
+      <span class="chip" onclick="selectCount(87)">Select all 87 (₹25,000)</span>
+      <span class="chip" onclick="clearAll()">Clear</span>
+    </div>
+    <div id="catalog"></div>
+  </div>
+</section>
+
+<div class="summary"><div class="wrap">
+  <div class="info"><b id="count">0</b> <span class="t">modules · <span id="tier">pick to see price</span></span></div>
+  <a id="cta" class="btn btn-primary" href="#">Select modules to continue</a>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="fcol"><div class="brand">Aura Business</div><p style="margin-top:6px;max-width:260px;color:var(--muted)">The operating system for medical-equipment &amp; healthcare distributors. By Elevate Aura, Chennai.</p></div>
+  <div class="fcol"><h4>Product</h4><a href="modules.html">Modules</a><a href="pricing.html">Pricing</a><a href="how-it-works.html">How it works</a></div>
+  <div class="fcol"><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://app.elevateaura.co.in/login">Login</a></div>
+  <div class="fcol"><h4>Talk to us</h4><a href="https://wa.me/919578971156">WhatsApp</a><a href="mailto:raguls0907@gmail.com">Email</a></div>
+</div></footer>
+
+<script src="aura-info.js"></script>
+<script>
+const SUITES=[
+["CRM & Sales",["Leads & Pipeline","Customer / Hospital Accounts","Contacts & Decision-Makers","Field Visits + GPS check-in","Sample Tracking","Activity Feed / Rep log","Territory & Target Management","Lead-Source & Conversion Analytics"]],
+["Quotation, Orders & GST Billing",["GST Quotation Builder","Sales Orders","Tax Invoice (GST, PDF)","Delivery Challan","Payments & Receipts","Payment Tracker + reminders","E-Invoice (IRN / QR)","E-Way Bill","Credit Notes / Returns"]],
+["Inventory & Warehouse",["Product Catalog & Lookup","Brand & Authorization","Serial / Unit-level Stock","Stock Movements / Ledger","Multi-Warehouse","Batch & Expiry Tracking","Low-Stock & Reorder Alerts","Barcode / QR Scan"]],
+["AMC & Service Contracts ★",["Service Contracts (AMC)","CMC Contracts","Warranty Tracking","Preventive Maintenance Schedules","SLA Definitions & Breach Tracking","Service Invoices","Contract Renewal Engine","Asset / Installed-Base Register","AMC Revenue & Leakage Dashboard"]],
+["Field Service (FSM)",["Breakdown / Service Call Intake","Technician Dispatch","Mobile Job Card","Spare Parts Used per Job","Service History per Asset","Field Signature & Job-Done","Technician Route / Schedule"]],
+["Helpdesk & SLA",["Ticket Management","Ticket Status Workflow","Internal Notes / Collaboration","SLA Timers on Tickets","Customer Ticket Submission","CSAT / Feedback on Close"]],
+["Procurement",["Supplier Master","Purchase Orders","Goods Receipt (GRN)","Supplier Price Lists","PO Approval Workflow","Supplier Payments / Payables"]],
+["Tenders & Govt Sales",["Tender Tracker","Tender Document Vault","Bid / EMD & Deadline Reminders","Outcome & Win-Rate Analytics","Rate-Contract Management"]],
+["HRMS & Workforce",["Attendance (Geo + Selfie)","Leave Management","Staff Directory & Profiles","Role-Based Access Control","GPS / Field Tracking","Staff Verification","Payroll Inputs / Salary Register","Shift & Roster Planning"]],
+["Finance & Accounting",["Receivables Ageing","Payables Ledger","Expense Management","Cashflow Dashboard","GST Returns Prep (GSTR-1/3B)","Tally / Accounting Export","P&L by Product Line / Territory"]],
+["Customer & Distributor Portals",["Customer Self-Service Portal","Distributor / B2B Order Portal","Distributor Payment / UTR","Order Tracking Page","Quote-Request Inbound","Branded Login + Docs Vault"]],
+["Analytics, AI & Admin",["Owner / CEO Dashboard","Reports Engine","Notifications Hub","WhatsApp Business Integration","Audit Log / Activity Trail","Tenant Admin & Module Store","AI Assistant","Settings, Branding & Org Config"]]];
+const REVENUE=new Set(["Service Contracts (AMC)","Contract Renewal Engine","AMC Revenue & Leakage Dashboard","Tax Invoice (GST, PDF)","GST Quotation Builder","Receivables Ageing"]);
+const WA="919578971156";
+const cat=document.getElementById("catalog");
+SUITES.forEach((s)=>{const b=document.createElement("div");b.className="suite-block";
+  b.innerHTML=`<div class="suite-head"><h3>${s[0]}</h3><span class="meta">${s[1].length} modules</span></div>`;
+  const m=document.createElement("div");m.className="mods";
+  s[1].forEach((x)=>{const l=document.createElement("label");l.className="mod";
+    l.innerHTML=`<input type="checkbox" value="${x}" onchange="refresh()"><span>${x}${REVENUE.has(x)?'<span class="rev">REVENUE</span>':''}</span>`+auraTip(x);m.appendChild(l);});
+  b.appendChild(m);cat.appendChild(b);});
+function priceFor(n){if(n===0)return null;if(n<=15)return{p:"₹6,000",t:"Starter (up to 15 modules)"};if(n<=47)return{p:"₹12,000",t:"Growth (up to 47 modules)"};return{p:"₹25,000",t:"All-Access (all 87 modules)"};}
+function selected(){return[...document.querySelectorAll('.mod input:checked')].map(i=>i.value);}
+function refresh(){const sel=selected();const n=sel.length;const info=priceFor(n);
+  document.getElementById("count").textContent=n;
+  document.querySelectorAll('.mod').forEach(l=>l.classList.toggle('on',l.querySelector('input').checked));
+  const tierEl=document.getElementById("tier"),cta=document.getElementById("cta");
+  if(!info){tierEl.textContent="pick to see price";cta.textContent="Select modules to continue";cta.href="#";return;}
+  tierEl.innerHTML=`<b style="color:var(--brand)">${info.p}/mo</b> · ${info.t}`;
+  cta.textContent=`Book demo · ${n} modules · ${info.p}/mo`;
+  const msg=`Hi, I'd like an Aura Business demo. I've picked ${n} modules (${info.p}/mo):\n- `+sel.join("\n- ");
+  cta.href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;}
+function clearAll(){document.querySelectorAll('.mod input').forEach(i=>i.checked=false);refresh();}
+function selectCount(n){const all=[...document.querySelectorAll('.mod input')];all.forEach((i,idx)=>i.checked=idx<n);refresh();}
+refresh();
+</script>
+</body>
+</html>
