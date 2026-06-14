@@ -197,3 +197,67 @@ table.cmp{width:100%;border-collapse:collapse;min-width:880px}
 .cmp-legend span{display:inline-flex;align-items:center;gap:7px}
 .cmp-scroll-hint{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px;display:none}
 @media(max-width:900px){.cmp-scroll-hint{display:block}}
+
+/* stats / outcomes band */
+.statsband{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:22px;padding:30px 24px;box-shadow:var(--shadow);backdrop-filter:blur(4px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr);gap:24px}}
+.stat b{display:block;font-size:34px;font-weight:800;letter-spacing:-.02em;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.05}
+.stat span{display:block;font-size:13px;color:var(--muted);margin-top:6px;font-weight:500;line-height:1.35}
+/* outcomes list */
+.outcomes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:900px;margin:0 auto}
+@media(max-width:680px){.outcomes{grid-template-columns:1fr}}
+.outcome{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.18s}
+.outcome:hover{border-color:transparent;box-shadow:var(--shadow);transform:translateY(-2px)}
+.outcome .ico{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:17px}
+.outcome p{font-size:14.5px;color:#36364f;line-height:1.5}.outcome b{color:var(--ink)}
+/* founder card */
+.founder{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:center;background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow);backdrop-filter:blur(4px)}
+@media(max-width:600px){.founder{grid-template-columns:1fr;text-align:center}}
+.founder .avt{width:120px;height:120px;border-radius:24px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:42px;font-weight:800;box-shadow:0 14px 30px -10px rgba(124,58,237,.6);margin:0 auto}
+.founder h3{font-size:20px;font-weight:800;margin-bottom:2px}
+.founder .role{font-size:13.5px;color:var(--brand);font-weight:600;margin-bottom:10px}
+.founder p{font-size:15px;color:#36364f;line-height:1.6}
+.founder .creds{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.creds .cr{font-size:12px;font-weight:600;color:var(--brand-dark);background:var(--soft);border:1px solid var(--line2);border-radius:999px;padding:6px 13px}
+/* trust badges row */
+.trustrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.trustrow .tb{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#36364f;background:rgba(255,255,255,.8);border:1px solid var(--line2);border-radius:999px;padding:9px 17px;box-shadow:var(--shadow-sm)}
+.trustrow .tb b{color:var(--brand)}
+/* screenshot mockup frame */
+.mock{border-radius:16px;overflow:hidden;border:1px solid var(--line2);box-shadow:var(--shadow-lg);background:#fff}
+.mock .bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:linear-gradient(180deg,#faf8ff,#f1ecfb);border-bottom:1px solid var(--line)}
+.mock .bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.mock .bar i:nth-child(1){background:#ff5f57}.mock .bar i:nth-child(2){background:#febc2e}.mock .bar i:nth-child(3){background:#28c840}
+.mock .bar .u{margin-left:10px;font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:7px;padding:3px 12px}
+.mock svg{display:block;width:100%;height:auto}
+.mockcap{text-align:center;font-size:13px;color:var(--muted);margin-top:12px}
+/* flow diagram */
+.flowwrap{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);backdrop-filter:blur(4px)}
+.flowwrap+.flowwrap{margin-top:16px}
+.flowwrap h4{font-size:15.5px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.flowwrap h4 .dot{width:9px;height:9px;border-radius:50%;background:var(--grad)}
+.flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.flow .fstep{flex:1 1 0;min-width:120px;background:var(--soft2);border:1px solid var(--line);border-radius:13px;padding:13px 14px;position:relative}
+.flow .fstep .fn{font-size:11px;font-weight:800;color:var(--brand)}
+.flow .fstep h5{font-size:13.5px;font-weight:700;margin:3px 0 3px}
+.flow .fstep p{font-size:11.5px;color:var(--muted);line-height:1.4}
+.flow .arr{display:flex;align-items:center;justify-content:center;padding:0 7px;color:var(--brand-2);font-size:20px;font-weight:800}
+@media(max-width:680px){.flow{flex-direction:column}.flow .arr{transform:rotate(90deg);padding:6px 0}}
+/* industry page hero icon + feature rows */
+.ind-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+@media(max-width:700px){.ind-feats{grid-template-columns:1fr}}
+.ind-feat{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s}
+.ind-feat:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:transparent}
+.ind-feat .fi{font-size:24px;margin-bottom:10px}
+.ind-feat h3{font-size:16.5px;font-weight:700;margin-bottom:6px}
+.ind-feat p{font-size:14px;color:var(--muted);line-height:1.5}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.2s}
+.faq details[open]{box-shadow:var(--shadow);border-color:transparent}
+.faq summary{padding:18px 20px;font-weight:700;font-size:15.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--brand);font-weight:700;transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 20px 18px;font-size:14.5px;color:#36364f;line-height:1.6}
