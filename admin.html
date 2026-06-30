@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#7c3aed">
+    <title>Partner Applications · Admin · Elevate Aura</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+    :root{
+        --violet:#7c3aed; --violet-d:#6d28d9; --ink:#161226; --muted:#5d5878; --faint:#918bab;
+        --bg:#f5f3fc; --surface:#ffffff; --border:#e6e1f4; --soft:#f3eefe;
+        --green:#16a34a; --amber:#d97706; --red:#b91c1c; --blue:#2563eb;
+        --shadow:0 1px 2px rgba(22,18,38,.04),0 8px 24px rgba(22,18,38,.06);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+    a{color:var(--violet-d);text-decoration:none}
+    a:hover{text-decoration:underline}
+    button{font-family:inherit;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:11px;font-weight:600;font-size:.95rem;padding:12px 20px;transition:.18s}
+    .btn-primary{background:linear-gradient(135deg,#7c3aed,#c026d3);color:#fff}
+    .btn-primary:hover{filter:saturate(1.1);transform:translateY(-1px)}
+    .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+    .btn-ghost:hover{background:var(--surface);color:var(--ink)}
+    .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+    /* Login */
+    .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .auth-card{width:100%;max-width:400px;background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:38px 34px}
+    .auth-logo{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+    .auth-logo img{height:30px}
+    .auth-logo span{font-weight:800;font-size:1.15rem}
+    .auth-card h1{font-size:1.35rem;margin-bottom:4px}
+    .auth-card p.sub{color:var(--muted);font-size:.92rem;margin-bottom:24px}
+    .field{margin-bottom:15px}
+    .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+    .field input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:11px;font-family:inherit;font-size:1rem;background:#fff;color:var(--ink)}
+    .field input:focus{outline:none;border-color:var(--violet)}
+    #loginBtn{width:100%;margin-top:6px}
+    .msg{font-size:.88rem;margin-top:12px;padding:10px 12px;border-radius:9px;display:none}
+    .msg.err{display:block;background:#fdecec;color:var(--red)}
+
+    /* Dashboard */
+    .adm-top{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+    .adm-top-in{max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .adm-brand{display:flex;align-items:center;gap:10px}
+    .adm-brand img{height:26px}
+    .adm-brand b{font-weight:800}
+    .adm-brand small{color:var(--faint);font-weight:500;margin-left:4px}
+    .adm-user{display:flex;align-items:center;gap:14px;font-size:.9rem;color:var(--muted)}
+    .adm-main{max-width:1240px;margin:0 auto;padding:26px 24px 60px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+    .stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+    .stat .n{font-size:1.7rem;font-weight:800;line-height:1}
+    .stat .l{font-size:.82rem;color:var(--muted);margin-top:5px}
+    .stat.v .n{color:var(--violet-d)} .stat.g .n{color:var(--green)} .stat.a .n{color:var(--blue)}
+    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+    .search{flex:1;min-width:220px;max-width:380px;position:relative}
+    .search input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:11px;font-family:inherit;font-size:.95rem;background:var(--surface)}
+    .search input:focus{outline:none;border-color:var(--violet)}
+    .count{font-size:.88rem;color:var(--muted)}
+    .table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:auto;box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:1000px}
+    thead th{text-align:left;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);font-weight:700;padding:13px 16px;border-bottom:1px solid var(--border);white-space:nowrap;position:sticky;top:0;background:var(--surface)}
+    tbody td{padding:13px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+    tbody tr:last-child td{border-bottom:none}
+    tbody tr:hover{background:#faf8ff}
+    .nm{font-weight:600}
+    .sub2{color:var(--faint);font-size:.82rem}
+    .notes{max-width:240px;color:var(--muted);font-size:.85rem}
+    .when{color:var(--muted);white-space:nowrap;font-size:.85rem}
+    select.status{padding:7px 10px;border:1.5px solid var(--border);border-radius:9px;font-family:inherit;font-size:.85rem;font-weight:600;background:#fff;cursor:pointer}
+    select.status:focus{outline:none;border-color:var(--violet)}
+    .empty,.loading{padding:50px 20px;text-align:center;color:var(--muted)}
+    .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--soft);color:var(--violet-d)}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 20px;border-radius:11px;font-size:.9rem;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    @media(max-width:640px){.stats{grid-template-columns:1fr 1fr}.adm-user small{display:none}}
+    </style>
+</head>
+<body>
+
+    <!-- LOGIN -->
+    <div id="loginView" class="auth-wrap">
+        <div class="auth-card">
+            <div class="auth-logo"><img src="assets/img/logo.png" alt="Elevate Aura"><span>Elevate Aura</span></div>
+            <h1>Partner Admin</h1>
+            <p class="sub">Sign in to review and manage applications.</p>
+            <form id="loginForm" autocomplete="on">
+                <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="username"></div>
+                <div class="field"><label for="password">Password</label><input id="password" type="password" required autocomplete="current-password"></div>
+                <button type="submit" class="btn btn-primary" id="loginBtn">Sign in</button>
+                <div class="msg" id="loginMsg"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashView" style="display:none">
+        <header class="adm-top">
+            <div class="adm-top-in">
+                <div class="adm-brand"><img src="assets/img/logo.png" alt=""><b>Elevate Aura</b><small>Partner Applications</small></div>
+                <div class="adm-user"><span id="whoami"></span><button class="btn btn-ghost" id="signout">Sign out</button></div>
+            </div>
+        </header>
+        <main class="adm-main">
+            <div class="stats">
+                <div class="stat"><div class="n" id="s-total">0</div><div class="l">Total applications</div></div>
+                <div class="stat v"><div class="n" id="s-new">0</div><div class="l">New / unreviewed</div></div>
+                <div class="stat g"><div class="n" id="s-week">0</div><div class="l">This week</div></div>
+                <div class="stat a"><div class="n" id="s-active">0</div><div class="l">Active partners</div></div>
+            </div>
+            <div class="toolbar">
+                <div class="search"><input id="search" type="search" placeholder="Search name, firm, email, city…"></div>
+                <div style="display:flex;align-items:center;gap:14px">
+                    <span class="count" id="count"></span>
+                    <button class="btn btn-ghost" id="refresh">Refresh</button>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr>
+                        <th>Submitted</th><th>Applicant</th><th>Profession</th><th>City</th>
+                        <th>WhatsApp</th><th>Email</th><th>Knows / notes</th><th>Status</th>
+                    </tr></thead>
+                    <tbody id="rows"><tr><td colspan="8" class="loading">Loading…</td></tr></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+    (function () {
+        // ---- Config (Medops project) ----
+        var SUPABASE_URL = "https://mdfsxdyfndbqemibwvad.supabase.co";
+        var SUPABASE_ANON_KEY = "sb_publishable_-pRFen_l2P5zAgsQnSz35g_jRCfwAb_";
+        var ADMIN_EMAIL = "raguls0907@gmail.com"; // must match the Supabase Auth user + the RLS policy
+        var STATUSES = ["new", "contacted", "approved", "active", "rejected"];
+
+        var db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        var allApps = [];
+        var $ = function (id) { return document.getElementById(id); };
+
+        function toast(t) { var el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(function () { el.classList.remove('show'); }, 2200); }
+        function show(view) { $('loginView').style.display = view === 'login' ? 'flex' : 'none'; $('dashView').style.display = view === 'dash' ? 'block' : 'none'; }
+        function fmtDate(s) { if (!s) return '—'; var d = new Date(s); return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }) + ', ' + d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }); }
+        function waLink(num) { var d = (num || '').replace(/[^0-9]/g, ''); if (d.length === 10) d = '91' + d; return d ? 'https://wa.me/' + d : null; }
+        function td(text) { var c = document.createElement('td'); c.textContent = (text == null || text === '') ? '—' : text; return c; }
+
+        // ---- Auth ----
+        async function init() {
+            var res = await db.auth.getSession();
+            var session = res.data.session;
+            if (session && session.user && session.user.email === ADMIN_EMAIL) { show('dash'); $('whoami').textContent = session.user.email; load(); }
+            else { if (session) await db.auth.signOut(); show('login'); }
+        }
+
+        $('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            var btn = $('loginBtn'), msg = $('loginMsg');
+            msg.className = 'msg'; btn.disabled = true; btn.textContent = 'Signing in…';
+            var email = $('email').value.trim(), password = $('password').value;
+            var r = await db.auth.signInWithPassword({ email: email, password: password });
+            if (r.error) { msg.className = 'msg err'; msg.textContent = r.error.message || 'Sign in failed.'; btn.disabled = false; btn.textContent = 'Sign in'; return; }
+            if (r.data.user.email !== ADMIN_EMAIL) { await db.auth.signOut(); msg.className = 'msg err'; msg.textContent = 'This account is not authorised.'; btn.disabled = false; btn.textContent = 'Sign in'; return; }
+            $('whoami').textContent = r.data.user.email; show('dash'); btn.disabled = false; btn.textContent = 'Sign in'; load();
+        });
+
+        $('signout').addEventListener('click', async function () { await db.auth.signOut(); allApps = []; show('login'); $('password').value = ''; });
+
+        // ---- Data ----
+        async function load() {
+            $('rows').innerHTML = '<tr><td colspan="8" class="loading">Loading…</td></tr>';
+            var r = await db.from('partner_applications').select('*').order('created_at', { ascending: false });
+            if (r.error) { $('rows').innerHTML = '<tr><td colspan="8" class="empty">Could not load: ' + r.error.message + '</td></tr>'; return; }
+            allApps = r.data || [];
+            stats(); render();
+        }
+
+        function stats() {
+            var weekAgo = Date.now() - 7 * 864e5;
+            $('s-total').textContent = allApps.length;
+            $('s-new').textContent = allApps.filter(function (a) { return (a.status || 'new') === 'new'; }).length;
+            $('s-week').textContent = allApps.filter(function (a) { return new Date(a.created_at).getTime() > weekAgo; }).length;
+            $('s-active').textContent = allApps.filter(function (a) { return a.status === 'active'; }).length;
+        }
+
+        function render() {
+            var q = $('search').value.trim().toLowerCase();
+            var list = allApps.filter(function (a) {
+                if (!q) return true;
+                return [a.full_name, a.firm, a.email, a.city, a.profession, a.whatsapp, a.audience].join(' ').toLowerCase().indexOf(q) > -1;
+            });
+            $('count').textContent = list.length + (list.length === 1 ? ' application' : ' applications');
+            var tb = $('rows'); tb.innerHTML = '';
+            if (!list.length) { tb.innerHTML = '<tr><td colspan="8" class="empty">No applications' + (q ? ' match your search.' : ' yet.') + '</td></tr>'; return; }
+
+            list.forEach(function (a) {
+                var tr = document.createElement('tr');
+
+                tr.appendChild((function () { var c = document.createElement('td'); c.className = 'when'; c.textContent = fmtDate(a.created_at); return c; })());
+
+                var who = document.createElement('td');
+                var nm = document.createElement('div'); nm.className = 'nm'; nm.textContent = a.full_name || '—'; who.appendChild(nm);
+                if (a.firm) { var f = document.createElement('div'); f.className = 'sub2'; f.textContent = a.firm; who.appendChild(f); }
+                if (a.linkedin) { var li = document.createElement('a'); li.href = /^https?:\/\//.test(a.linkedin) ? a.linkedin : 'https://' + a.linkedin; li.target = '_blank'; li.rel = 'noopener'; li.className = 'sub2'; li.textContent = 'LinkedIn / site ↗'; who.appendChild(li); }
+                tr.appendChild(who);
+
+                tr.appendChild(td(a.profession));
+                tr.appendChild(td(a.city));
+
+                var wa = document.createElement('td');
+                var link = waLink(a.whatsapp);
+                if (link) { var aw = document.createElement('a'); aw.href = link; aw.target = '_blank'; aw.rel = 'noopener'; aw.textContent = a.whatsapp; wa.appendChild(aw); } else { wa.textContent = a.whatsapp || '—'; }
+                tr.appendChild(wa);
+
+                var em = document.createElement('td');
+                if (a.email) { var ae = document.createElement('a'); ae.href = 'mailto:' + a.email; ae.textContent = a.email; em.appendChild(ae); } else { em.textContent = '—'; }
+                tr.appendChild(em);
+
+                var notes = document.createElement('td'); notes.className = 'notes'; notes.textContent = a.audience || '—'; if (a.audience) notes.title = a.audience; tr.appendChild(notes);
+
+                var stCell = document.createElement('td');
+                var sel = document.createElement('select'); sel.className = 'status';
+                STATUSES.forEach(function (s) { var o = document.createElement('option'); o.value = s; o.textContent = s.charAt(0).toUpperCase() + s.slice(1); if ((a.status || 'new') === s) o.selected = true; sel.appendChild(o); });
+                sel.addEventListener('change', function () { updateStatus(a, sel.value, sel); });
+                stCell.appendChild(sel); tr.appendChild(stCell);
+
+                tb.appendChild(tr);
+            });
+        }
+
+        async function updateStatus(app, status, sel) {
+            sel.disabled = true;
+            var r = await db.from('partner_applications').update({ status: status }).eq('id', app.id);
+            sel.disabled = false;
+            if (r.error) { toast('Update failed: ' + r.error.message); return; }
+            app.status = status; stats(); toast('Status updated → ' + status);
+        }
+
+        $('search').addEventListener('input', render);
+        $('refresh').addEventListener('click', load);
+
+        init();
+    })();
+    </script>
+</body>
+</html>
