@@ -50,6 +50,20 @@
     .faq details[open] summary::after { transform: rotate(45deg); }
     .faq details p { padding: 0 24px 20px; color: var(--text-muted); line-height: 1.7; }
     @media (max-width: 760px) { .elig { grid-template-columns: 1fr; max-width: 460px; } .refer-rows .r { grid-template-columns: 1fr; } .refer-rows .k { padding-bottom: 4px; } }
+    .apply-wrap { max-width: 640px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 38px; box-shadow: var(--shadow-md); }
+    .apply-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .apply-form .fld { margin-bottom: 14px; }
+    .apply-form label { display: block; font-size: .88rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .apply-form input, .apply-form select, .apply-form textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border-strong); border-radius: 12px; font-family: inherit; font-size: 1rem; color: var(--ink); background: #fff; }
+    .apply-form input:focus, .apply-form select:focus, .apply-form textarea:focus { outline: none; border-color: var(--primary); }
+    .apply-form .consent { display: flex; gap: 9px; align-items: flex-start; font-size: .84rem; color: var(--text-muted); margin: 6px 0 16px; }
+    .apply-form .consent input { width: auto; margin-top: 4px; }
+    .apply-form .btn-primary { width: 100%; }
+    .apply-alt { text-align: center; margin-top: 14px; font-size: .9rem; color: var(--text-muted); }
+    .apply-err { display: none; color: #b91c1c; font-size: .9rem; text-align: center; margin-top: 12px; }
+    .apply-ok { display: none; text-align: center; padding: 18px 6px; }
+    .apply-ok .ck { width: 60px; height: 60px; border-radius: 50%; background: #16a34a; color: #fff; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    @media (max-width: 560px) { .apply-form .row2 { grid-template-columns: 1fr; } .apply-wrap { padding: 26px 20px; } }
     </style>
 </head>
 <body style="padding-top: 58px;">
@@ -72,7 +86,7 @@
                 <a href="aurapacs.html" class="nav-link nav-accent">AuraPACS</a>
                 <a href="pages/careers.html" class="nav-link">Careers</a>
             </div>
-            <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">Become a Partner</a>
+            <a href="#apply" class="btn btn-primary btn-sm nav-cta">Become a Partner</a>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -90,7 +104,7 @@
         <a href="aura-business.html" class="mobile-link">Aura Business</a>
         <a href="aurapacs.html" class="mobile-link">AuraPACS</a>
         <a href="pages/careers.html" class="mobile-link">Careers</a>
-        <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." class="btn btn-primary" target="_blank" rel="noopener">Become a Partner</a>
+        <a href="#apply" class="btn btn-primary">Become a Partner</a>
     </div>
 
     <!-- Hero -->
@@ -106,7 +120,7 @@
                 <span>Non-exclusive</span>
             </div>
             <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
-                <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." class="btn btn-primary" target="_blank" rel="noopener">Become a Partner</a>
+                <a href="#apply" class="btn btn-primary">Become a Partner</a>
                 <a href="#how" class="btn btn-secondary">How it works</a>
             </div>
             <div class="refer-trust">
@@ -282,8 +296,59 @@
         <div class="container text-center reveal">
             <h2>Ready to become a Business Development Partner?</h2>
             <p>One introduction is all it takes to start. I&#39;ll reply on WhatsApp, usually the same day.</p>
-            <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." class="btn btn-primary" target="_blank" rel="noopener">Become a Partner</a>
+            <a href="#apply" class="btn btn-primary">Become a Partner</a>
             <p class="contact-email">elevateauraofficial@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Application form -->
+    <section class="section bg-alt" id="apply">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Apply to become a partner</h2>
+                <p class="section-subtitle">Takes two minutes. I review every application personally and reply on WhatsApp, usually the same day.</p>
+            </div>
+            <div class="apply-wrap reveal">
+                <form id="applyForm" class="apply-form">
+                    <div class="row2">
+                        <div class="fld"><label for="f-name">Full name *</label><input id="f-name" name="full_name" required></div>
+                        <div class="fld"><label for="f-firm">Firm / company</label><input id="f-firm" name="firm" placeholder="Optional"></div>
+                    </div>
+                    <div class="row2">
+                        <div class="fld"><label for="f-prof">Your profession *</label>
+                            <select id="f-prof" name="profession" required>
+                                <option value="" disabled selected>Select&hellip;</option>
+                                <option>Chartered Accountant</option>
+                                <option>Company Secretary</option>
+                                <option>Business Consultant</option>
+                                <option>Medical Equipment Dealer</option>
+                                <option>Healthcare / Hospital Consultant</option>
+                                <option>Digital Marketing / Branding Agency</option>
+                                <option>IT Consultant / Software Freelancer</option>
+                                <option>Startup Mentor / Business Coach</option>
+                                <option>BNI Member</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="fld"><label for="f-city">City</label><input id="f-city" name="city" placeholder="e.g. Chennai"></div>
+                    </div>
+                    <div class="row2">
+                        <div class="fld"><label for="f-wa">WhatsApp number *</label><input id="f-wa" name="whatsapp" required inputmode="tel" placeholder="+91 &hellip;"></div>
+                        <div class="fld"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required placeholder="you@example.com"></div>
+                    </div>
+                    <div class="fld"><label for="f-li">LinkedIn / website</label><input id="f-li" name="linkedin" placeholder="Optional"></div>
+                    <div class="fld"><label for="f-aud">Who do you already know that might need this?</label><textarea id="f-aud" name="audience" rows="3" placeholder="e.g. a diagnostics lab on Excel, a medical distributor on WhatsApp&hellip;"></textarea></div>
+                    <label class="consent"><input type="checkbox" id="f-consent" required> I&#39;d like to join as a Business Development Partner. If I share a contact&#39;s details, I confirm I have their permission to do so.</label>
+                    <button type="submit" class="btn btn-primary" id="applyBtn">Submit application</button>
+                    <div class="apply-err" id="applyErr">Couldn&#39;t submit just now. Please try again, or message me on WhatsApp.</div>
+                    <p class="apply-alt">Prefer WhatsApp? <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." target="_blank" rel="noopener" style="color: var(--primary-strong); font-weight: 600;">Message me directly &rarr;</a></p>
+                </form>
+                <div class="apply-ok" id="applyOk">
+                    <div class="ck">&#10003;</div>
+                    <h3 style="margin-bottom: 8px;">Application received.</h3>
+                    <p style="color: var(--text-muted);">Thank you. I&#39;ll review it personally and reach out on WhatsApp, usually the same day.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -296,7 +361,7 @@
                     <span>Elevate Aura</span>
                 </a>
                 <p>A founder-led product studio building 30-day digital operations platforms for founder-led medical &amp; healthcare businesses.</p>
-                <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20apply%20as%20a%20Business%20Development%20Partner%20with%20Elevate%20Aura." class="btn btn-primary btn-sm" target="_blank" rel="noopener">Become a Partner</a>
+                <a href="#apply" class="btn btn-primary btn-sm">Become a Partner</a>
             </div>
             <div class="footer-col">
                 <h4>Explore</h4>
@@ -348,6 +413,58 @@
                 if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
             });
         });
+
+        /* ===== Partner application -> Supabase (Medops project) =====
+           FILL THESE TWO VALUES from Medops -> Project Settings -> API:
+             SUPABASE_URL      = Project URL  (https://xxxx.supabase.co)
+             SUPABASE_ANON_KEY = the "anon" / publishable key (safe in the browser)
+           The anon key is meant to be public; protection comes from the RLS
+           insert-only policy on the partner_applications table. */
+        var SUPABASE_URL = "https://mdfsxdyfndbqemibwvad.supabase.co";
+        var SUPABASE_ANON_KEY = "sb_publishable_-pRFen_l2P5zAgsQnSz35g_jRCfwAb_";
+
+        var applyForm = document.getElementById('applyForm');
+        if (applyForm) {
+            applyForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var btn = document.getElementById('applyBtn');
+                var err = document.getElementById('applyErr');
+                err.style.display = 'none';
+                btn.disabled = true; btn.textContent = 'Submitting…';
+                var payload = {
+                    full_name: document.getElementById('f-name').value.trim(),
+                    firm: document.getElementById('f-firm').value.trim() || null,
+                    profession: document.getElementById('f-prof').value,
+                    city: document.getElementById('f-city').value.trim() || null,
+                    whatsapp: document.getElementById('f-wa').value.trim(),
+                    email: document.getElementById('f-email').value.trim(),
+                    linkedin: document.getElementById('f-li').value.trim() || null,
+                    audience: document.getElementById('f-aud').value.trim() || null,
+                    source: 'website'
+                };
+                fetch(SUPABASE_URL + '/rest/v1/partner_applications', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(payload)
+                }).then(function (r) {
+                    if (r.ok) {
+                        applyForm.style.display = 'none';
+                        document.getElementById('applyOk').style.display = 'block';
+                        document.getElementById('applyOk').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        return r.text().then(function (t) { throw new Error(t); });
+                    }
+                }).catch(function () {
+                    err.style.display = 'block';
+                    btn.disabled = false; btn.textContent = 'Submit application';
+                });
+            });
+        }
     </script>
 </body>
 </html>
