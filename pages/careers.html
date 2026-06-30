@@ -4,7 +4,7 @@
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at Elevate Aura | Minimum Viable Product Studio</title>
     <link rel="icon" href="../assets/img/logo.png" type="image/png">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=15">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956207834"></script>
     <script>
@@ -15,7 +15,7 @@
       gtag('config', 'AW-17956207834');
     </script>
 </head>
-<body style="padding-top: 80px;">
+<body style="padding-top: 58px;">
 
     <!-- Navigation -->
     <nav class="nav">
@@ -27,13 +27,34 @@
             <div class="nav-links">
                 <a href="../index.html#who-we-help" class="nav-link">Who We Help</a>
                 <a href="../index.html#services" class="nav-link">Services</a>
+                <a href="../index.html#modules" class="nav-link">Platform</a>
                 <a href="../index.html#process" class="nav-link">Process</a>
                 <a href="../index.html#pricing" class="nav-link">Pricing</a>
+                <a href="../index.html#refer" class="nav-link">Refer &amp; Earn</a>
+                <a href="../aura-business.html" class="nav-link nav-accent">Aura Business</a>
+                <a href="../aurapacs.html" class="nav-link nav-accent">AuraPACS</a>
                 <a href="careers.html" class="nav-link">Careers</a>
-                <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary btn-sm">Book a Call</a>
             </div>
+            <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary btn-sm nav-cta">Book a Call</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#who-we-help" class="mobile-link">Who We Help</a>
+        <a href="../index.html#services" class="mobile-link">Services</a>
+        <a href="../index.html#modules" class="mobile-link">Platform</a>
+        <a href="../index.html#process" class="mobile-link">Process</a>
+        <a href="../index.html#pricing" class="mobile-link">Pricing</a>
+        <a href="../index.html#refer" class="mobile-link">Refer &amp; Earn</a>
+        <a href="../aura-business.html" class="mobile-link">Aura Business</a>
+        <a href="../aurapacs.html" class="mobile-link">AuraPACS</a>
+        <a href="careers.html" class="mobile-link">Careers</a>
+        <a href="mailto:elevateauraofficial@gmail.com" class="btn btn-primary">Book a Call</a>
+    </div>
 
     <header class="section text-center">
         <div class="container">
@@ -127,5 +148,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        var mobileToggle = document.getElementById('mobileToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        if (mobileToggle && mobileMenu) {
+            mobileToggle.addEventListener('click', function () {
+                var open = mobileMenu.classList.toggle('active');
+                mobileToggle.classList.toggle('active');
+                mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            document.querySelectorAll('.mobile-link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
-</h
+</html>
+
