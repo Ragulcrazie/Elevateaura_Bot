@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#7c3aed">
     <title>Elevate Aura | 30-Day Operations Platforms for Founder-Led SMBs</title>
     <meta name="description" content="Elevate Aura builds complete digital operations platforms, field-staff mobile app, manager dashboard, GST billing and programmatic SEO, for founder-led medical, healthcare and equipment businesses. Shipped solo in 30 days.">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="stylesheet" href="style.css?v=15">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -89,11 +89,11 @@
                 <a href="#process" class="nav-link">Process</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#refer" class="nav-link">Refer &amp; Earn</a>
-                <a href="aura-business.html" class="nav-link" style="color:#7c3aed;font-weight:700">Aura Business</a>
-                <a href="aurapacs.html" class="nav-link" style="color:#7c3aed;font-weight:700">AuraPACS</a>
+                <a href="aura-business.html" class="nav-link nav-accent">Aura Business</a>
+                <a href="aurapacs.html" class="nav-link nav-accent">AuraPACS</a>
                 <a href="pages/careers.html" class="nav-link">Careers</a>
-                <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request:%20%5BYour%20App/Company%20Name%5D&body=Hi%20Elevate%20Aura%20Team,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%20Here%20are%20some%20details%20about%20my%20project:%0A%0A1.%20What%20is%20the%20core%20problem%20your%20app%20solves?%0A%5BType%20answer%20here%5D%0A%0A2.%20What%20is%20your%20target%20timeline%20for%20this%20MVP?%0A%5BType%20answer%20here%5D%0A%0A3.%20Do%20you%20have%20a%20budget%20allocated%20for%20this%20project?%0A%5BType%20answer%20here%5D%0A%0A4.%20Best%20phone%20number%20or%20WhatsApp%20to%20reach%20you%20at:%0A%5BType%20answer%20here%5D%0A%0ALooking%20forward%20to%20speaking%20with%20you!" class="btn btn-primary btn-sm">Book a Free Strategy Call</a>
             </div>
+            <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request:%20%5BYour%20App/Company%20Name%5D&body=Hi%20Elevate%20Aura%20Team,%0A%0AI'd%20like%20to%20book%20a%20strategy%20call.%20Here%20are%20some%20details%20about%20my%20project:%0A%0A1.%20What%20is%20the%20core%20problem%20your%20app%20solves?%0A%5BType%20answer%20here%5D%0A%0A2.%20What%20is%20your%20target%20timeline%20for%20this%20MVP?%0A%5BType%20answer%20here%5D%0A%0A3.%20Do%20you%20have%20a%20budget%20allocated%20for%20this%20project?%0A%5BType%20answer%20here%5D%0A%0A4.%20Best%20phone%20number%20or%20WhatsApp%20to%20reach%20you%20at:%0A%5BType%20answer%20here%5D%0A%0ALooking%20forward%20to%20speaking%20with%20you!" class="btn btn-primary btn-sm nav-cta">Book a Free Strategy Call</a>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -783,6 +783,28 @@
         }, {threshold:0.4});
         counters.forEach(function(c){ obs.observe(c); });
       }
+    })();
+    </script>
+    <script>
+    // Nav scroll-spy: highlight the section currently in view
+    (function(){
+        var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a.nav-link[href^="#"]'));
+        if (!links.length || !('IntersectionObserver' in window)) return;
+        var map = {};
+        links.forEach(function(l){
+            var id = l.getAttribute('href').slice(1);
+            var sec = document.getElementById(id);
+            if (sec) map[id] = l;
+        });
+        var spy = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+                if (e.isIntersecting){
+                    links.forEach(function(l){ l.classList.remove('is-active'); });
+                    if (map[e.target.id]) map[e.target.id].classList.add('is-active');
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        Object.keys(map).forEach(function(id){ spy.observe(document.getElementById(id)); });
     })();
     </script>
 </body>
