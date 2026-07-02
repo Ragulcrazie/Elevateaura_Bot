@@ -151,9 +151,9 @@
 
         function toast(t) { var el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(function () { el.classList.remove('show'); }, 2200); }
         function show(view) { $('loginView').style.display = view === 'login' ? 'flex' : 'none'; $('dashView').style.display = view === 'dash' ? 'block' : 'none'; }
-        function fmtDate(s) { if (!s) return '—'; var d = new Date(s); return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }) + ', ' + d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }); }
+        function fmtDate(s) { if (!s) return '-'; var d = new Date(s); return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }) + ', ' + d.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }); }
         function waLink(num) { var d = (num || '').replace(/[^0-9]/g, ''); if (d.length === 10) d = '91' + d; return d ? 'https://wa.me/' + d : null; }
-        function td(text) { var c = document.createElement('td'); c.textContent = (text == null || text === '') ? '—' : text; return c; }
+        function td(text) { var c = document.createElement('td'); c.textContent = (text == null || text === '') ? '-' : text; return c; }
 
         // ---- Auth ----
         async function init() {
@@ -209,7 +209,7 @@
                 tr.appendChild((function () { var c = document.createElement('td'); c.className = 'when'; c.textContent = fmtDate(a.created_at); return c; })());
 
                 var who = document.createElement('td');
-                var nm = document.createElement('div'); nm.className = 'nm'; nm.textContent = a.full_name || '—'; who.appendChild(nm);
+                var nm = document.createElement('div'); nm.className = 'nm'; nm.textContent = a.full_name || '-'; who.appendChild(nm);
                 if (a.firm) { var f = document.createElement('div'); f.className = 'sub2'; f.textContent = a.firm; who.appendChild(f); }
                 if (a.linkedin) { var li = document.createElement('a'); li.href = /^https?:\/\//.test(a.linkedin) ? a.linkedin : 'https://' + a.linkedin; li.target = '_blank'; li.rel = 'noopener'; li.className = 'sub2'; li.textContent = 'LinkedIn / site ↗'; who.appendChild(li); }
                 tr.appendChild(who);
@@ -219,14 +219,14 @@
 
                 var wa = document.createElement('td');
                 var link = waLink(a.whatsapp);
-                if (link) { var aw = document.createElement('a'); aw.href = link; aw.target = '_blank'; aw.rel = 'noopener'; aw.textContent = a.whatsapp; wa.appendChild(aw); } else { wa.textContent = a.whatsapp || '—'; }
+                if (link) { var aw = document.createElement('a'); aw.href = link; aw.target = '_blank'; aw.rel = 'noopener'; aw.textContent = a.whatsapp; wa.appendChild(aw); } else { wa.textContent = a.whatsapp || '-'; }
                 tr.appendChild(wa);
 
                 var em = document.createElement('td');
-                if (a.email) { var ae = document.createElement('a'); ae.href = 'mailto:' + a.email; ae.textContent = a.email; em.appendChild(ae); } else { em.textContent = '—'; }
+                if (a.email) { var ae = document.createElement('a'); ae.href = 'mailto:' + a.email; ae.textContent = a.email; em.appendChild(ae); } else { em.textContent = '-'; }
                 tr.appendChild(em);
 
-                var notes = document.createElement('td'); notes.className = 'notes'; notes.textContent = a.audience || '—'; if (a.audience) notes.title = a.audience; tr.appendChild(notes);
+                var notes = document.createElement('td'); notes.className = 'notes'; notes.textContent = a.audience || '-'; if (a.audience) notes.title = a.audience; tr.appendChild(notes);
 
                 var stCell = document.createElement('td');
                 var sel = document.createElement('select'); sel.className = 'status';
