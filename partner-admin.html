@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Partner Program · Admin · Elevate Aura</title>
 <meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="icon" type="image/png" href="assets/images/logo.png" />
 <link rel="stylesheet" href="aura.css" />
 <style>
   body{background:var(--bg)}
@@ -45,6 +47,10 @@
   .partner-row.sel td{background:var(--soft)}
   .toast{position:fixed;bottom:24px;right:24px;background:var(--ink);color:#fff;padding:12px 20px;border-radius:12px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:99}
   .toast.show{opacity:1}
+  .tblwrap2{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tblwrap2 .tbl{min-width:860px}
+  .tierdue{display:inline-block;margin-left:6px;background:#fef3c7;color:#92400e;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:700;cursor:pointer}
+  @media(max-width:640px){.topbar h1{font-size:20px}.cards{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -80,9 +86,9 @@
 
     <div class="panel">
       <h2>Partners</h2>
-      <table class="tbl"><thead><tr>
+      <div class="tblwrap2"><table class="tbl"><thead><tr>
         <th>Name</th><th>Code</th><th>Track</th><th>Tier %</th><th>Since</th><th>Status</th><th>Portal link</th><th></th>
-      </tr></thead><tbody id="partners-body"></tbody></table>
+      </tr></thead><tbody id="partners-body"></tbody></table></div>
 
       <div class="rowform">
         <div class="field" style="margin:0"><label>Name</label><input id="np-name" placeholder="Partner name" /></div>
@@ -96,9 +102,9 @@
     <div class="panel" id="ref-panel" style="display:none">
       <div class="flex"><h2 class="grow" id="ref-title">Referrals</h2>
         <span class="muted" id="ref-summary"></span></div>
-      <table class="tbl"><thead><tr>
+      <div class="tblwrap2"><table class="tbl"><thead><tr>
         <th>Business</th><th>City</th><th>Introduced</th><th>Stage</th><th>Project ₹</th><th>Share %</th><th>Share ₹</th><th>Paid ₹</th><th>Payment</th><th></th>
-      </tr></thead><tbody id="refs-body"></tbody></table>
+      </tr></thead><tbody id="refs-body"></tbody></table></div>
 
       <div class="rowform">
         <div class="field" style="margin:0"><label>Business</label><input id="nr-business" placeholder="Business name" /></div>
@@ -135,6 +141,17 @@ function genCode() {
   return c;
 }
 function portalLink(code) { return location.origin + location.pathname.replace("partner-admin.html", "partner-portal.html") + "?code=" + code; }
+function normPhone(p) {
+  var d = String(p || "").replace(/\D/g, "");
+  if (d.length === 10) d = "91" + d;
+  return d;
+}
+// Suggested tier from closed clients: 1-2 -> 10, 3-4 -> 15, 5+ -> 20 (distribution: 25 flat)
+function suggestedTier(p) {
+  if (p.track === "distribution") return 25;
+  var closedCount = refs.filter(function (r) { return r.partner_id === p.id && isClosed(r); }).length;
+  return closedCount >= 5 ? 20 : closedCount >= 3 ? 15 : 10;
+}
 
 // ---------- AUTH ----------
 async function init() {
@@ -194,11 +211,12 @@ function renderPartners() {
       "<td><b>" + p.name + "</b>" + (p.phone ? '<div class="muted">' + p.phone + "</div>" : "") + "</td>" +
       "<td><code>" + p.code + "</code></td>" +
       "<td>" + p.track + "</td>" +
-      '<td><input class="num tier-edit" data-id="' + p.id + '" type="number" value="' + p.tier_percent + '" style="width:64px"></td>' +
+      '<td><input class="num tier-edit" data-id="' + p.id + '" type="number" value="' + p.tier_percent + '" style="width:64px">' +
+      (suggestedTier(p) > Number(p.tier_percent) ? '<span class="tierdue tier-apply" data-id="' + p.id + '" data-pct="' + suggestedTier(p) + '" title="Click to apply">Tier due: ' + suggestedTier(p) + "%</span>" : "") + "</td>" +
       "<td>" + p.partner_since + "</td>" +
       '<td><span class="pill2' + (p.active ? "" : " off") + '">' + (p.active ? "Active" : "Inactive") + "</span></td>" +
       '<td><span class="link-chip copy-link" data-code="' + p.code + '">Copy link</span> · ' +
-      '<a class="link-chip" target="_blank" href="https://wa.me/' + (p.phone || "") + "?text=" + encodeURIComponent("Your Elevate Aura partner portal: " + portalLink(p.code)) + '">WhatsApp</a></td>' +
+      '<a class="link-chip" target="_blank" rel="noopener" href="https://wa.me/' + normPhone(p.phone) + "?text=" + encodeURIComponent("Your Elevate Aura partner portal: " + portalLink(p.code)) + '">WhatsApp</a></td>' +
       '<td><button class="btn btn-ghost btn-xs toggle-active" data-id="' + p.id + '">' + (p.active ? "Deactivate" : "Activate") + "</button></td></tr>";
   }).join("");
 
@@ -224,10 +242,21 @@ function renderPartners() {
       toast("Tier updated"); loadAll();
     });
   });
+  document.querySelectorAll(".tier-apply").forEach(function (el) {
+    el.addEventListener("click", async function (e) {
+      e.stopPropagation();
+      await db.from("partners").update({ tier_percent: Number(el.dataset.pct) }).eq("id", el.dataset.id);
+      toast("Tier upgraded to " + el.dataset.pct + "%"); loadAll();
+    });
+  });
 }
 
 $("btn-add-partner").addEventListener("click", async function () {
+  var btn = this; if (btn.disabled) return;
   var name = $("np-name").value.trim(); if (!name) { toast("Enter partner name"); return; }
+  var phoneRaw = $("np-phone").value.trim();
+  if (phoneRaw && normPhone(phoneRaw).length !== 12) { toast("Phone should be 10 digits (or 12 with 91)"); return; }
+  btn.disabled = true; setTimeout(function () { btn.disabled = false; }, 1500);
   var track = $("np-track").value;
   var r = await db.from("partners").insert({
     name: name, phone: $("np-phone").value.trim() || null, track: track,
@@ -243,6 +272,8 @@ $("btn-add-partner").addEventListener("click", async function () {
 function renderRefs() {
   $("ref-panel").style.display = "block";
   $("ref-title").textContent = "Referrals · " + selPartner.name + " (" + selPartner.code + ")";
+  $("nr-share").value = selPartner.tier_percent;
+  if (!$("nr-date").value) $("nr-date").value = new Date().toISOString().slice(0, 10);
   var mine = refs.filter(function (r) { return r.partner_id === selPartner.id; });
   var earned = 0, paid = 0;
   mine.forEach(function (r) { if (isClosed(r)) { earned += shareOf(r); paid += (payments[r.id] || {}).total || 0; } });
@@ -273,9 +304,13 @@ function renderRefs() {
   });
   document.querySelectorAll(".add-pay").forEach(function (el) {
     el.addEventListener("click", async function () {
-      var amt = prompt("Payment amount (₹):"); if (!amt || isNaN(amt)) return;
+      var amt = prompt("Payment amount (₹):"); if (!amt || isNaN(amt) || Number(amt) <= 0) return;
+      var today = new Date().toISOString().slice(0, 10);
+      var dt = prompt("Paid on (YYYY-MM-DD):", today) || today;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(dt)) { toast("Invalid date, use YYYY-MM-DD"); return; }
       var ref = prompt("Transaction reference (UPI/NEFT ref, optional):") || null;
-      await db.from("partner_payments").insert({ referral_id: el.dataset.id, amount: Number(amt), txn_ref: ref });
+      var r = await db.from("partner_payments").insert({ referral_id: el.dataset.id, amount: Number(amt), paid_on: dt, txn_ref: ref });
+      if (r.error) { toast(r.error.message); return; }
       toast("Payment recorded"); loadAll();
     });
   });
@@ -289,7 +324,9 @@ function renderRefs() {
 
 $("btn-add-ref").addEventListener("click", async function () {
   if (!selPartner) return;
+  var btn = this; if (btn.disabled) return;
   var b = $("nr-business").value.trim(); if (!b) { toast("Enter business name"); return; }
+  btn.disabled = true; setTimeout(function () { btn.disabled = false; }, 1500);
   var r = await db.from("referrals").insert({
     partner_id: selPartner.id, business: b, city: $("nr-city").value.trim() || null,
     introduced_on: $("nr-date").value || new Date().toISOString().slice(0, 10),
