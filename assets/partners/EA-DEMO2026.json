@@ -1,0 +1,46 @@
+{
+  "partnerName": "Demo Partner",
+  "partnerSince": "2026-05-02",
+  "track": "referral",
+  "currentTierPercent": 15,
+  "referrals": [
+    {
+      "business": "Sunrise Diagnostics",
+      "city": "Chennai",
+      "introducedOn": "2026-05-10",
+      "stage": "delivered",
+      "projectValue": 290000,
+      "sharePercent": 10,
+      "paidAmount": 29000,
+      "lastPaidDate": "2026-06-18"
+    },
+    {
+      "business": "Sri Meditech Distributors",
+      "city": "Coimbatore",
+      "introducedOn": "2026-05-28",
+      "stage": "signed",
+      "projectValue": 340000,
+      "sharePercent": 10,
+      "paidAmount": 13600,
+      "lastPaidDate": "2026-06-25"
+    },
+    {
+      "business": "Green Cross Scan Centre",
+      "city": "Madurai",
+      "introducedOn": "2026-06-20",
+      "stage": "proposal",
+      "projectValue": 310000,
+      "sharePercent": 15,
+      "paidAmount": 0
+    },
+    {
+      "business": "Velan Ortho Clinic",
+      "city": "Chennai",
+      "introducedOn": "2026-06-29",
+      "stage": "first-call",
+      "projectValue": 0,
+      "sharePercent": 15,
+      "paidAmount": 0
+    }
+  ]
+}

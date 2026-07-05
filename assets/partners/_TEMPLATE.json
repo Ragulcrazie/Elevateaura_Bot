@@ -1,0 +1,22 @@
+{
+  "_HOW_TO_USE": "1) Copy this file. 2) Rename it to the partner's code, e.g. EA-9X4KQ72M.json (use a random 8-char code, never a guessable name). 3) Fill partner details. 4) Add one object in 'referrals' per referral. 5) git push. Share link: https://elevateaura.co.in/partner-portal.html?code=EA-9X4KQ72M",
+  "_STAGES": "introduced | first-call | demo | proposal | signed | delivered | not-closed",
+  "_RULES": "shareAmount is auto-calculated as projectValue x sharePercent unless you set shareAmount explicitly. paidAmount is cumulative amount paid so far to the partner for that referral.",
+
+  "partnerName": "Partner Full Name",
+  "partnerSince": "2026-07-05",
+  "track": "referral",
+  "currentTierPercent": 10,
+  "referrals": [
+    {
+      "business": "Business Name",
+      "city": "City",
+      "introducedOn": "2026-07-05",
+      "stage": "introduced",
+      "projectValue": 0,
+      "sharePercent": 10,
+      "paidAmount": 0,
+      "lastPaidDate": null
+    }
+  ]
+}

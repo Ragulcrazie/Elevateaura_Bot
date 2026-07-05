@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Partner Program · Admin · Elevate Aura</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="aura.css" />
+<style>
+  body{background:var(--bg)}
+  .aw{max-width:1180px;margin:0 auto;padding:0 24px}
+  .login-box{max-width:400px;margin:90px auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
+  .login-box h1{font-size:22px;margin-bottom:18px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+  .field input,.field select{width:100%;padding:11px 13px;border:1px solid var(--line2);border-radius:10px;font-size:14px;font-family:inherit;background:#fff}
+  .field input:focus,.field select:focus{outline:2px solid var(--accent)}
+  .msg{font-size:13px;margin-top:10px}.msg.err{color:#b91c1c}.msg.ok{color:#166534}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;flex-wrap:wrap;gap:10px}
+  .topbar h1{font-size:24px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:6px 0 24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .card .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+  .card .v{font-size:19px;font-weight:700;color:var(--ink)}
+  .card.hl .v{color:var(--brand)}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-bottom:22px}
+  .panel h2{font-size:17px;margin-bottom:14px}
+  .tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+  .tbl th{text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-bottom:2px solid var(--line)}
+  .tbl td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  .tbl tr:hover td{background:var(--soft2)}
+  .tbl select,.tbl input{padding:6px 8px;border:1px solid var(--line2);border-radius:8px;font-size:13px;font-family:inherit;background:#fff}
+  .tbl input.num{width:100px;text-align:right}
+  .btn-xs{padding:6px 12px;font-size:12px;border-radius:9px}
+  .btn-danger{background:#fee2e2;color:#b91c1c}
+  .rowform{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;align-items:end;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line2)}
+  .pill2{display:inline-block;border-radius:999px;padding:3px 10px;font-size:11px;font-weight:600;background:var(--soft);color:var(--brand)}
+  .pill2.off{background:#f3f4f6;color:#6b7280}
+  .link-chip{font-size:12px;color:var(--brand);cursor:pointer;font-weight:600}
+  .flex{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .grow{flex:1}
+  .muted{color:var(--muted);font-size:12px}
+  .hide2{display:none}
+  .partner-row{cursor:pointer}
+  .partner-row.sel td{background:var(--soft)}
+  .toast{position:fixed;bottom:24px;right:24px;background:var(--ink);color:#fff;padding:12px 20px;border-radius:12px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:99}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div id="view-login" class="hide2">
+  <div class="login-box">
+    <h1>Partner Program Admin</h1>
+    <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" /></div>
+    <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" /></div>
+    <button class="btn btn-primary" id="btn-login" style="width:100%;justify-content:center">Sign in</button>
+    <div class="msg" id="login-msg"></div>
+    <p class="muted" style="margin-top:14px">Same login as the applications admin page.</p>
+  </div>
+</div>
+
+<div id="view-dash" class="hide2">
+  <nav><div class="wrap">
+    <a class="logo" href="index.html">Elevate Aura<small>Partner Program Admin</small></a>
+    <div class="navlinks">
+      <a class="lnk hide" href="admin.html">Applications</a>
+      <a class="lnk hide" href="partner-portal.html" target="_blank">Partner portal &nearr;</a>
+      <span class="muted" id="whoami"></span>
+      <button class="btn btn-ghost btn-sm" id="btn-signout">Sign out</button>
+    </div>
+  </div></nav>
+
+  <div class="aw">
+    <div class="topbar"><h1>Partner Program</h1>
+      <span class="muted">Everything here is live on the partner portal instantly.</span>
+    </div>
+
+    <div class="cards" id="stats"></div>
+
+    <div class="panel">
+      <h2>Partners</h2>
+      <table class="tbl"><thead><tr>
+        <th>Name</th><th>Code</th><th>Track</th><th>Tier %</th><th>Since</th><th>Status</th><th>Portal link</th><th></th>
+      </tr></thead><tbody id="partners-body"></tbody></table>
+
+      <div class="rowform">
+        <div class="field" style="margin:0"><label>Name</label><input id="np-name" placeholder="Partner name" /></div>
+        <div class="field" style="margin:0"><label>Phone</label><input id="np-phone" placeholder="91XXXXXXXXXX" /></div>
+        <div class="field" style="margin:0"><label>Track</label><select id="np-track"><option value="referral">Referral (10-20%)</option><option value="distribution">Distribution (25%)</option></select></div>
+        <div class="field" style="margin:0"><label>Tier %</label><input id="np-tier" class="num" type="number" value="10" /></div>
+        <button class="btn btn-primary btn-xs" style="height:38px" id="btn-add-partner">+ Add partner</button>
+      </div>
+    </div>
+
+    <div class="panel" id="ref-panel" style="display:none">
+      <div class="flex"><h2 class="grow" id="ref-title">Referrals</h2>
+        <span class="muted" id="ref-summary"></span></div>
+      <table class="tbl"><thead><tr>
+        <th>Business</th><th>City</th><th>Introduced</th><th>Stage</th><th>Project ₹</th><th>Share %</th><th>Share ₹</th><th>Paid ₹</th><th>Payment</th><th></th>
+      </tr></thead><tbody id="refs-body"></tbody></table>
+
+      <div class="rowform">
+        <div class="field" style="margin:0"><label>Business</label><input id="nr-business" placeholder="Business name" /></div>
+        <div class="field" style="margin:0"><label>City</label><input id="nr-city" /></div>
+        <div class="field" style="margin:0"><label>Introduced on</label><input id="nr-date" type="date" /></div>
+        <div class="field" style="margin:0"><label>Project value ₹</label><input id="nr-value" class="num" type="number" value="0" /></div>
+        <div class="field" style="margin:0"><label>Share %</label><input id="nr-share" class="num" type="number" value="10" /></div>
+        <button class="btn btn-primary btn-xs" style="height:38px" id="btn-add-ref">+ Add referral</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+var SUPABASE_URL = "https://mdfsxdyfndbqemibwvad.supabase.co";
+var SUPABASE_ANON_KEY = "sb_publishable_-pRFen_l2P5zAgsQnSz35g_jRCfwAb_";
+var ADMIN_EMAIL = "raguls09@gmail.com";
+var db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+var $ = function (id) { return document.getElementById(id); };
+var INR = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
+var STAGES = ["introduced","first-call","demo","proposal","signed","delivered","not-closed"];
+var partners = [], selPartner = null, refs = [], payments = {};
+
+function toast(t) { var el = $("toast"); el.textContent = t; el.classList.add("show"); setTimeout(function(){ el.classList.remove("show"); }, 2200); }
+function show(v) { $("view-login").className = v === "login" ? "" : "hide2"; $("view-dash").className = v === "dash" ? "" : "hide2"; }
+function genCode() {
+  var chars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789", c = "EA-";
+  var a = new Uint32Array(8); crypto.getRandomValues(a);
+  for (var i = 0; i < 8; i++) c += chars[a[i] % chars.length];
+  return c;
+}
+function portalLink(code) { return location.origin + location.pathname.replace("partner-admin.html", "partner-portal.html") + "?code=" + code; }
+
+// ---------- AUTH ----------
+async function init() {
+  var res = await db.auth.getSession(); var s = res.data.session;
+  if (s && s.user && s.user.email === ADMIN_EMAIL) { show("dash"); $("whoami").textContent = s.user.email; loadAll(); }
+  else { if (s) await db.auth.signOut(); show("login"); }
+}
+$("btn-login").addEventListener("click", async function () {
+  var m = $("login-msg"); m.className = "msg";  m.textContent = "Signing in...";
+  var r = await db.auth.signInWithPassword({ email: $("email").value.trim(), password: $("password").value });
+  if (r.error) { m.className = "msg err"; m.textContent = r.error.message; return; }
+  if (r.data.user.email !== ADMIN_EMAIL) { await db.auth.signOut(); m.className = "msg err"; m.textContent = "This account is not authorised."; return; }
+  init();
+});
+$("password").addEventListener("keydown", function (e) { if (e.key === "Enter") $("btn-login").click(); });
+$("btn-signout").addEventListener("click", async function () { await db.auth.signOut(); show("login"); });
+
+// ---------- LOAD ----------
+async function loadAll() {
+  var p = await db.from("partners").select("*").order("created_at");
+  var r = await db.from("referrals").select("*").order("introduced_on", { ascending: false });
+  var pay = await db.from("partner_payments").select("*");
+  if (p.error || r.error || pay.error) { toast("Load failed: run the setup SQL first"); return; }
+  partners = p.data; refs = r.data;
+  payments = {};
+  pay.data.forEach(function (x) {
+    if (!payments[x.referral_id]) payments[x.referral_id] = { total: 0, last: null };
+    payments[x.referral_id].total += Number(x.amount);
+    if (!payments[x.referral_id].last || x.paid_on > payments[x.referral_id].last) payments[x.referral_id].last = x.paid_on;
+  });
+  renderStats(); renderPartners(); if (selPartner) renderRefs();
+}
+
+function shareOf(r) { return Math.round(Number(r.project_value) * Number(r.share_percent) / 100); }
+function isClosed(r) { return r.stage === "signed" || r.stage === "delivered"; }
+
+function renderStats() {
+  var open = 0, closedVal = 0, owed = 0, paid = 0, closedCount = 0;
+  refs.forEach(function (r) {
+    var pd = (payments[r.id] || {}).total || 0;
+    if (isClosed(r)) { closedCount++; closedVal += Number(r.project_value); owed += shareOf(r) - pd; paid += pd; }
+    else if (r.stage !== "not-closed") open++;
+  });
+  $("stats").innerHTML =
+    '<div class="card"><div class="k">Active partners</div><div class="v">' + partners.filter(function(p){return p.active;}).length + "</div></div>" +
+    '<div class="card"><div class="k">Open referrals</div><div class="v">' + open + "</div></div>" +
+    '<div class="card"><div class="k">Clients closed</div><div class="v">' + closedCount + "</div></div>" +
+    '<div class="card"><div class="k">Closed value</div><div class="v">₹' + INR.format(closedVal) + "</div></div>" +
+    '<div class="card hl"><div class="k">Share owed</div><div class="v">₹' + INR.format(owed) + "</div></div>" +
+    '<div class="card"><div class="k">Share paid</div><div class="v">₹' + INR.format(paid) + "</div></div>";
+}
+
+// ---------- PARTNERS ----------
+function renderPartners() {
+  $("partners-body").innerHTML = partners.map(function (p) {
+    return '<tr class="partner-row' + (selPartner && selPartner.id === p.id ? " sel" : "") + '" data-id="' + p.id + '">' +
+      "<td><b>" + p.name + "</b>" + (p.phone ? '<div class="muted">' + p.phone + "</div>" : "") + "</td>" +
+      "<td><code>" + p.code + "</code></td>" +
+      "<td>" + p.track + "</td>" +
+      '<td><input class="num tier-edit" data-id="' + p.id + '" type="number" value="' + p.tier_percent + '" style="width:64px"></td>' +
+      "<td>" + p.partner_since + "</td>" +
+      '<td><span class="pill2' + (p.active ? "" : " off") + '">' + (p.active ? "Active" : "Inactive") + "</span></td>" +
+      '<td><span class="link-chip copy-link" data-code="' + p.code + '">Copy link</span> · ' +
+      '<a class="link-chip" target="_blank" href="https://wa.me/' + (p.phone || "") + "?text=" + encodeURIComponent("Your Elevate Aura partner portal: " + portalLink(p.code)) + '">WhatsApp</a></td>' +
+      '<td><button class="btn btn-ghost btn-xs toggle-active" data-id="' + p.id + '">' + (p.active ? "Deactivate" : "Activate") + "</button></td></tr>";
+  }).join("");
+
+  document.querySelectorAll(".partner-row").forEach(function (row) {
+    row.addEventListener("click", function (e) {
+      if (e.target.closest("input,button,a,.copy-link")) return;
+      selPartner = partners.find(function (p) { return p.id === row.dataset.id; });
+      renderPartners(); renderRefs();
+    });
+  });
+  document.querySelectorAll(".copy-link").forEach(function (el) {
+    el.addEventListener("click", function () { navigator.clipboard.writeText(portalLink(el.dataset.code)); toast("Portal link copied"); });
+  });
+  document.querySelectorAll(".toggle-active").forEach(function (el) {
+    el.addEventListener("click", async function () {
+      var p = partners.find(function (x) { return x.id === el.dataset.id; });
+      await db.from("partners").update({ active: !p.active }).eq("id", p.id); loadAll();
+    });
+  });
+  document.querySelectorAll(".tier-edit").forEach(function (el) {
+    el.addEventListener("change", async function () {
+      await db.from("partners").update({ tier_percent: Number(el.value) }).eq("id", el.dataset.id);
+      toast("Tier updated"); loadAll();
+    });
+  });
+}
+
+$("btn-add-partner").addEventListener("click", async function () {
+  var name = $("np-name").value.trim(); if (!name) { toast("Enter partner name"); return; }
+  var track = $("np-track").value;
+  var r = await db.from("partners").insert({
+    name: name, phone: $("np-phone").value.trim() || null, track: track,
+    tier_percent: track === "distribution" ? 25 : Number($("np-tier").value || 10),
+    code: genCode()
+  }).select().single();
+  if (r.error) { toast(r.error.message); return; }
+  $("np-name").value = ""; $("np-phone").value = "";
+  toast("Partner added: " + r.data.code); loadAll();
+});
+
+// ---------- REFERRALS ----------
+function renderRefs() {
+  $("ref-panel").style.display = "block";
+  $("ref-title").textContent = "Referrals · " + selPartner.name + " (" + selPartner.code + ")";
+  var mine = refs.filter(function (r) { return r.partner_id === selPartner.id; });
+  var earned = 0, paid = 0;
+  mine.forEach(function (r) { if (isClosed(r)) { earned += shareOf(r); paid += (payments[r.id] || {}).total || 0; } });
+  $("ref-summary").textContent = "Earned ₹" + INR.format(earned) + " · Paid ₹" + INR.format(paid) + " · Pending ₹" + INR.format(earned - paid);
+
+  $("refs-body").innerHTML = mine.map(function (r) {
+    var pd = (payments[r.id] || {}).total || 0;
+    var opts = STAGES.map(function (s) { return '<option value="' + s + '"' + (r.stage === s ? " selected" : "") + ">" + s + "</option>"; }).join("");
+    return "<tr>" +
+      "<td><b>" + r.business + "</b></td><td>" + (r.city || "") + "</td><td>" + r.introduced_on + "</td>" +
+      '<td><select class="stage-edit" data-id="' + r.id + '">' + opts + "</select></td>" +
+      '<td><input class="num val-edit" data-id="' + r.id + '" type="number" value="' + r.project_value + '"></td>' +
+      '<td><input class="num pct-edit" data-id="' + r.id + '" type="number" value="' + r.share_percent + '" style="width:60px"></td>' +
+      "<td><b>₹" + INR.format(shareOf(r)) + "</b></td>" +
+      "<td>₹" + INR.format(pd) + "</td>" +
+      '<td><button class="btn btn-ghost btn-xs add-pay" data-id="' + r.id + '">+ Payment</button></td>' +
+      '<td><button class="btn btn-xs btn-danger del-ref" data-id="' + r.id + '">Delete</button></td></tr>';
+  }).join("") || '<tr><td colspan="10" class="muted" style="padding:18px">No referrals yet for this partner.</td></tr>';
+
+  document.querySelectorAll(".stage-edit").forEach(function (el) {
+    el.addEventListener("change", async function () { await db.from("referrals").update({ stage: el.value }).eq("id", el.dataset.id); toast("Stage updated"); loadAll(); });
+  });
+  document.querySelectorAll(".val-edit").forEach(function (el) {
+    el.addEventListener("change", async function () { await db.from("referrals").update({ project_value: Number(el.value) }).eq("id", el.dataset.id); toast("Value updated"); loadAll(); });
+  });
+  document.querySelectorAll(".pct-edit").forEach(function (el) {
+    el.addEventListener("change", async function () { await db.from("referrals").update({ share_percent: Number(el.value) }).eq("id", el.dataset.id); toast("Share % updated"); loadAll(); });
+  });
+  document.querySelectorAll(".add-pay").forEach(function (el) {
+    el.addEventListener("click", async function () {
+      var amt = prompt("Payment amount (₹):"); if (!amt || isNaN(amt)) return;
+      var ref = prompt("Transaction reference (UPI/NEFT ref, optional):") || null;
+      await db.from("partner_payments").insert({ referral_id: el.dataset.id, amount: Number(amt), txn_ref: ref });
+      toast("Payment recorded"); loadAll();
+    });
+  });
+  document.querySelectorAll(".del-ref").forEach(function (el) {
+    el.addEventListener("click", async function () {
+      if (!confirm("Delete this referral and its payment history?")) return;
+      await db.from("referrals").delete().eq("id", el.dataset.id); loadAll();
+    });
+  });
+}
+
+$("btn-add-ref").addEventListener("click", async function () {
+  if (!selPartner) return;
+  var b = $("nr-business").value.trim(); if (!b) { toast("Enter business name"); return; }
+  var r = await db.from("referrals").insert({
+    partner_id: selPartner.id, business: b, city: $("nr-city").value.trim() || null,
+    introduced_on: $("nr-date").value || new Date().toISOString().slice(0, 10),
+    project_value: Number($("nr-value").value || 0),
+    share_percent: Number($("nr-share").value || selPartner.tier_percent)
+  });
+  if (r.error) { toast(r.error.message); return; }
+  $("nr-business").value = ""; $("nr-city").value = "";
+  toast("Referral added"); loadAll();
+});
+
+init();
+</script>
+</body>
+</html>
