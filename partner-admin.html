@@ -50,6 +50,22 @@
   .tblwrap2{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .tblwrap2 .tbl{min-width:860px}
   .tierdue{display:inline-block;margin-left:6px;background:#fef3c7;color:#92400e;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:700;cursor:pointer}
+  .unread{background:#dc2626;color:#fff;border-radius:999px;min-width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;padding:0 4px;margin-left:4px}
+  .chatov{position:fixed;inset:0;background:rgba(19,19,43,.45);display:none;align-items:center;justify-content:center;z-index:200;padding:16px}
+  .chatov.open{display:flex}
+  .chatbox{background:#fff;border-radius:20px;width:100%;max-width:520px;max-height:82vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow)}
+  .chathead{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--soft2)}
+  .chatclose{border:none;background:none;font-size:26px;color:var(--muted);cursor:pointer;line-height:1;padding:4px}
+  .chatlog{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+  .mb{max-width:78%;padding:10px 14px;border-radius:16px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+  .mb .mt{font-size:10px;opacity:.7;margin-top:4px}
+  .mb.admin{align-self:flex-end;background:var(--grad);color:#fff;border-bottom-right-radius:4px}
+  .mb.partner{align-self:flex-start;background:#fff;border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:4px}
+  .mb.partner .who{font-size:10px;font-weight:700;color:var(--brand);margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em}
+  .chatempty{text-align:center;color:var(--muted);font-size:13px;margin:auto;padding:20px}
+  .chatinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid var(--line);background:#fff}
+  .chatinput textarea{flex:1;border:1px solid var(--line2);border-radius:12px;padding:11px 14px;font-size:14px;font-family:inherit;resize:none;max-height:110px}
+  @media(max-width:640px){.chatov{padding:0;align-items:flex-end}.chatbox{max-width:100%;border-radius:20px 20px 0 0;max-height:88vh}}
   @media(max-width:640px){.topbar h1{font-size:20px}.cards{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
@@ -118,6 +134,20 @@
   </div>
 </div>
 
+<div class="chatov" id="chatov">
+  <div class="chatbox">
+    <div class="chathead">
+      <div><b id="chat-title"></b><div class="muted" id="chat-sub"></div></div>
+      <button class="chatclose" id="chat-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="chatlog" id="chatlog"></div>
+    <div class="chatinput">
+      <textarea id="chat-text" rows="1" placeholder="Reply to the partner about this lead..."></textarea>
+      <button class="btn btn-primary btn-xs" style="height:auto" id="chat-send">Send</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -130,7 +160,13 @@ var db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 var $ = function (id) { return document.getElementById(id); };
 var INR = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
 var STAGES = ["introduced","first-call","demo","proposal","signed","delivered","not-closed"];
-var partners = [], selPartner = null, refs = [], payments = {};
+var partners = [], selPartner = null, refs = [], payments = {}, allMsgs = [];
+var chatRef = null, chatPoll = null, sendingMsg = false;
+function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function unreadCount(r) {
+  return allMsgs.filter(function (m) { return m.referral_id === r.id && m.sender === "partner" && m.created_at > (r.admin_last_read_at || ""); }).length;
+}
+function msgCount(rid) { return allMsgs.filter(function (m) { return m.referral_id === rid; }).length; }
 
 function toast(t) { var el = $("toast"); el.textContent = t; el.classList.add("show"); setTimeout(function(){ el.classList.remove("show"); }, 2200); }
 function show(v) { $("view-login").className = v === "login" ? "" : "hide2"; $("view-dash").className = v === "dash" ? "" : "hide2"; }
@@ -174,8 +210,9 @@ async function loadAll() {
   var p = await db.from("partners").select("*").order("created_at");
   var r = await db.from("referrals").select("*").order("introduced_on", { ascending: false });
   var pay = await db.from("partner_payments").select("*");
+  var msg = await db.from("referral_messages").select("*").order("created_at");
   if (p.error || r.error || pay.error) { toast("Load failed: run the setup SQL first"); return; }
-  partners = p.data; refs = r.data;
+  partners = p.data; refs = r.data; allMsgs = msg.error ? [] : msg.data;
   payments = {};
   pay.data.forEach(function (x) {
     if (!payments[x.referral_id]) payments[x.referral_id] = { total: 0, last: null };
@@ -201,14 +238,20 @@ function renderStats() {
     '<div class="card"><div class="k">Clients closed</div><div class="v">' + closedCount + "</div></div>" +
     '<div class="card"><div class="k">Closed value</div><div class="v">₹' + INR.format(closedVal) + "</div></div>" +
     '<div class="card hl"><div class="k">Share owed</div><div class="v">₹' + INR.format(owed) + "</div></div>" +
-    '<div class="card"><div class="k">Share paid</div><div class="v">₹' + INR.format(paid) + "</div></div>";
+    '<div class="card"><div class="k">Share paid</div><div class="v">₹' + INR.format(paid) + "</div></div>" +
+    (function () {
+      var un = refs.reduce(function (n, r) { return n + unreadCount(r); }, 0);
+      return un > 0 ? '<div class="card hl"><div class="k">Unread messages</div><div class="v">' + un + "</div></div>" : "";
+    })();
 }
 
 // ---------- PARTNERS ----------
 function renderPartners() {
   $("partners-body").innerHTML = partners.map(function (p) {
+    var pUnread = refs.filter(function (r) { return r.partner_id === p.id; })
+      .reduce(function (n, r) { return n + unreadCount(r); }, 0);
     return '<tr class="partner-row' + (selPartner && selPartner.id === p.id ? " sel" : "") + '" data-id="' + p.id + '">' +
-      "<td><b>" + p.name + "</b>" + (p.phone ? '<div class="muted">' + p.phone + "</div>" : "") + "</td>" +
+      "<td><b>" + esc(p.name) + "</b>" + (pUnread > 0 ? '<span class="unread">' + pUnread + "</span>" : "") + (p.phone ? '<div class="muted">' + esc(p.phone) + "</div>" : "") + "</td>" +
       "<td><code>" + p.code + "</code></td>" +
       "<td>" + p.track + "</td>" +
       '<td><input class="num tier-edit" data-id="' + p.id + '" type="number" value="' + p.tier_percent + '" style="width:64px">' +
@@ -282,14 +325,20 @@ function renderRefs() {
   $("refs-body").innerHTML = mine.map(function (r) {
     var pd = (payments[r.id] || {}).total || 0;
     var opts = STAGES.map(function (s) { return '<option value="' + s + '"' + (r.stage === s ? " selected" : "") + ">" + s + "</option>"; }).join("");
+    var contact = (r.contact_name || r.contact_phone)
+      ? '<div class="muted">' + (r.contact_name || "") + (r.contact_phone ? " · " + r.contact_phone : "") + "</div>" : "";
+    var srcBadge = r.submitted_by_partner ? ' <span class="pill2" title="Submitted by partner via portal">partner lead</span>' : "";
+    var noteLine = r.notes ? '<div class="muted" style="max-width:220px">' + r.notes + "</div>" : "";
     return "<tr>" +
-      "<td><b>" + r.business + "</b></td><td>" + (r.city || "") + "</td><td>" + r.introduced_on + "</td>" +
+      "<td><b>" + r.business + "</b>" + srcBadge + contact + noteLine + "</td><td>" + (r.city || "") + "</td><td>" + r.introduced_on + "</td>" +
       '<td><select class="stage-edit" data-id="' + r.id + '">' + opts + "</select></td>" +
       '<td><input class="num val-edit" data-id="' + r.id + '" type="number" value="' + r.project_value + '"></td>' +
       '<td><input class="num pct-edit" data-id="' + r.id + '" type="number" value="' + r.share_percent + '" style="width:60px"></td>' +
       "<td><b>₹" + INR.format(shareOf(r)) + "</b></td>" +
       "<td>₹" + INR.format(pd) + "</td>" +
-      '<td><button class="btn btn-ghost btn-xs add-pay" data-id="' + r.id + '">+ Payment</button></td>' +
+      '<td><button class="btn btn-ghost btn-xs add-pay" data-id="' + r.id + '">+ Payment</button> ' +
+      '<button class="btn btn-ghost btn-xs open-chat" data-id="' + r.id + '" data-title="' + esc(r.business) + '">&#128172; Chat' +
+      (unreadCount(r) > 0 ? '<span class="unread">' + unreadCount(r) + "</span>" : (msgCount(r.id) > 0 ? " (" + msgCount(r.id) + ")" : "")) + "</button></td>" +
       '<td><button class="btn btn-xs btn-danger del-ref" data-id="' + r.id + '">Delete</button></td></tr>';
   }).join("") || '<tr><td colspan="10" class="muted" style="padding:18px">No referrals yet for this partner.</td></tr>';
 
@@ -320,7 +369,67 @@ function renderRefs() {
       await db.from("referrals").delete().eq("id", el.dataset.id); loadAll();
     });
   });
+  document.querySelectorAll(".open-chat").forEach(function (el) {
+    el.addEventListener("click", function () { openChat(el.dataset.id, el.dataset.title); });
+  });
 }
+
+// ---------- lead discussion ----------
+function renderMessages() {
+  var msgs = allMsgs.filter(function (m) { return m.referral_id === chatRef; });
+  var log = $("chatlog");
+  log.innerHTML = msgs.length ? msgs.map(function (m) {
+    var t = new Date(m.created_at).toLocaleString("en-IN", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
+    return '<div class="mb ' + (m.sender === "admin" ? "admin" : "partner") + '">' +
+      (m.sender === "partner" ? '<div class="who">Partner</div>' : "") +
+      esc(m.body) + '<div class="mt">' + t + "</div></div>";
+  }).join("") : '<div class="chatempty">No messages yet. Whatever you write here, the partner sees on their portal with a notification badge.</div>';
+  log.scrollTop = log.scrollHeight;
+}
+
+async function refreshChat() {
+  if (!chatRef) return;
+  var m = await db.from("referral_messages").select("*").eq("referral_id", chatRef).order("created_at");
+  if (!m.error) {
+    allMsgs = allMsgs.filter(function (x) { return x.referral_id !== chatRef; }).concat(m.data);
+    renderMessages();
+  }
+}
+
+async function openChat(id, title) {
+  chatRef = id;
+  var r = refs.find(function (x) { return x.id === id; });
+  var p = r ? partners.find(function (x) { return x.id === r.partner_id; }) : null;
+  $("chat-title").textContent = title;
+  $("chat-sub").textContent = p ? "Partner: " + p.name + " (" + p.code + ")" : "";
+  $("chatov").classList.add("open");
+  renderMessages();
+  await db.from("referrals").update({ admin_last_read_at: new Date().toISOString() }).eq("id", id);
+  refreshChat();
+  chatPoll = setInterval(refreshChat, 12000);
+}
+
+function closeChat() {
+  $("chatov").classList.remove("open");
+  clearInterval(chatPoll); chatPoll = null; chatRef = null;
+  loadAll(); // refresh badges
+}
+$("chat-close").addEventListener("click", closeChat);
+$("chatov").addEventListener("click", function (e) { if (e.target.id === "chatov") closeChat(); });
+
+async function sendChat() {
+  var ta = $("chat-text"), body = ta.value.trim();
+  if (!body || sendingMsg || !chatRef) return;
+  sendingMsg = true; $("chat-send").disabled = true;
+  var r = await db.from("referral_messages").insert({ referral_id: chatRef, sender: "admin", body: body });
+  if (r.error) { toast(r.error.message); }
+  else { ta.value = ""; await db.from("referrals").update({ admin_last_read_at: new Date().toISOString() }).eq("id", chatRef); await refreshChat(); }
+  sendingMsg = false; $("chat-send").disabled = false; ta.focus();
+}
+$("chat-send").addEventListener("click", sendChat);
+$("chat-text").addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendChat(); }
+});
 
 $("btn-add-ref").addEventListener("click", async function () {
   if (!selPartner) return;
