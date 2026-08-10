@@ -103,6 +103,85 @@
   </div>
 </section>
 
+<style>
+#tour{padding-top:30px}
+#tour .tour{display:grid;grid-template-columns:344px 1fr;gap:24px;margin-top:34px;align-items:start}
+#tour .tour-tab{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:14px;padding:13px 15px;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;font-family:inherit}
+#tour .tour-tabs{display:flex;flex-direction:column;gap:10px}
+#tour .tour-tab:hover{border-color:var(--brand-2);box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+#tour .tour-tab.on{border-color:var(--brand);background:#fff;box-shadow:0 0 0 1.5px var(--brand) inset,var(--shadow-sm)}
+#tour .tour-tab .ti{width:36px;height:36px;border-radius:10px;background:var(--soft2);display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+#tour .tour-tab b{display:block;font-size:14.5px;color:var(--ink);font-weight:700;line-height:1.2}
+#tour .tour-tab small{display:block;font-size:12px;color:var(--muted);margin-top:3px;line-height:1.42}
+#tour .tour-frame{border-radius:16px;overflow:hidden;border:1px solid var(--line2);box-shadow:0 34px 70px -26px rgba(76,29,149,.55);background:#fff}
+#tour .tour-bar{background:#1c1030;display:flex;align-items:center;gap:7px;padding:11px 15px}
+#tour .tour-bar i{width:11px;height:11px;border-radius:50%;background:#4a3a63}
+#tour .tour-bar i:first-child{background:#ff5f57}#tour .tour-bar i:nth-child(2){background:#febc2e}#tour .tour-bar i:nth-child(3){background:#28c840}
+#tour .tour-bar span{margin-left:12px;font-size:12px;color:#c3b6df;background:rgba(255,255,255,.09);padding:5px 12px;border-radius:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2px}
+#tour .tour-imgs{position:relative;background:#f6f3ff;min-height:120px}
+#tour .tour-imgs img{display:none;width:100%;height:auto}
+#tour .tour-imgs img.on{display:block;animation:tourfade .45s ease}
+@keyframes tourfade{from{opacity:0;transform:scale(.996)}to{opacity:1;transform:none}}
+#tour .tour-cta{display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap}
+#tour .tour-note{color:var(--muted);font-size:14px}
+#tour .tour-live{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--brand-dark);background:var(--soft2);border:1px solid var(--line2);padding:5px 13px;border-radius:999px}
+#tour .tour-live .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.16)}
+@media(max-width:860px){#tour .tour{grid-template-columns:1fr}#tour .tour-tabs{flex-direction:row;flex-wrap:wrap}#tour .tour-tab{flex:1 1 46%}}
+@media(max-width:560px){#tour .tour-tab{flex:1 1 100%}}
+</style>
+<section id="tour">
+  <div class="wrap">
+    <span class="tour-live"><span class="dot"></span>Live product · running in Chennai today</span>
+    <h2 class="title" style="margin-top:14px">Not a mockup. The software your team will log into.</h2>
+    <p class="lead">These are real screens from Aura Business, the same platform running two distribution businesses in Chennai right now. Click through the modules your team will use every day.</p>
+    <div class="tour">
+      <div class="tour-tabs" role="tablist">
+        <button class="tour-tab on" data-i="0"><span class="ti">&#128202;</span><span><b>Owner dashboard</b><small>Pipeline, collections, AMC at risk and service, on one screen</small></span></button>
+        <button class="tour-tab" data-i="1"><span class="ti">&#127973;</span><span><b>Customers &amp; hospitals</b><small>Every account with credit terms and a health status</small></span></button>
+        <button class="tour-tab" data-i="2"><span class="ti">&#128230;</span><span><b>Inventory &amp; catalogue</b><small>Stock, HSN, list and cost price across every brand</small></span></button>
+        <button class="tour-tab" data-i="3"><span class="ti">&#128295;</span><span><b>Service desk</b><small>Tickets with SLA, priority and engineer assignment</small></span></button>
+        <button class="tour-tab" data-i="4"><span class="ti">&#128226;</span><span><b>Tender alerts</b><small>Government tenders auto-fetched for you every morning</small></span></button>
+        <button class="tour-tab" data-i="5"><span class="ti">&#128339;</span><span><b>Activity feed</b><small>A full audit trail of who did what, and when</small></span></button>
+      </div>
+      <div class="tour-stage">
+        <div class="tour-frame">
+          <div class="tour-bar"><i></i><i></i><i></i><span>app.elevateaura.co.in/dashboard</span></div>
+          <div class="tour-imgs">
+            <img class="on" src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png" alt="Aura Business owner dashboard showing customers, leads, outstanding, AMC contracts, roll call and quick actions" width="1680" height="945">
+            <img src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png" alt="Customers and hospitals master list with area, specialty, credit terms and account health" width="1680" height="945" loading="lazy">
+            <img src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png" alt="Inventory product catalogue of medical equipment with brand, HSN, list price, cost price and stock" width="1680" height="945" loading="lazy">
+            <img src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png" alt="Service desk ticket list with status, priority, assignee and SLA across hospitals" width="1680" height="945" loading="lazy">
+            <img src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png" alt="Tender alert engine auto-fetching government tenders across public procurement portals" width="1680" height="945" loading="lazy">
+            <img src="assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png" alt="Activity feed audit trail of user actions across modules with timestamps" width="1680" height="945" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tour-cta">
+      <a class="btn btn-primary" href="contact.html">Book a 30-min live walkthrough</a>
+      <span class="tour-note">See it running on your own products and hospitals.</span>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var tour=document.getElementById('tour'); if(!tour) return;
+  var tabs=tour.querySelectorAll('.tour-tab');
+  var imgs=tour.querySelectorAll('.tour-imgs img');
+  var bar=tour.querySelector('.tour-bar span');
+  var urls=['app.elevateaura.co.in/dashboard','app.elevateaura.co.in/customers','app.elevateaura.co.in/inventory','app.elevateaura.co.in/service-desk','app.elevateaura.co.in/tender-alerts','app.elevateaura.co.in/activity'];
+  var cur=0, timer=null;
+  function show(i){cur=i;tabs.forEach(function(t,n){t.classList.toggle('on',n===i);});imgs.forEach(function(m,n){m.classList.toggle('on',n===i);});if(bar)bar.textContent=urls[i]||urls[0];}
+  function next(){show((cur+1)%tabs.length);}
+  function start(){timer=setInterval(next,6000);}
+  function reset(){clearInterval(timer);start();}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i);reset();});});
+  tour.addEventListener('mouseenter',function(){clearInterval(timer);});
+  tour.addEventListener('mouseleave',function(){reset();});
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){start();}
+})();
+</script>
+
 <section style="padding-top:18px">
   <div class="wrap">
     <div class="strip">
@@ -140,9 +219,9 @@
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">See it</div>
-    <h2 class="title">One owner's screen for the whole business.</h2>
-    <p class="lead">A live command center: pipeline, collections, AMC at risk and open service calls, in one place.</p>
+    <div class="eyebrow">The money view</div>
+    <h2 class="title">The number most distributors never see: AMC revenue about to lapse.</h2>
+    <p class="lead">Aura Business puts every contract on a renewal clock and shows the lapsing revenue in rupees, so you chase it before it is gone.</p>
     <div class="mock">
       <div class="bar"><i></i><i></i><i></i><span class="u">app.elevateaura.co.in</span></div>
       <svg viewBox="0 0 920 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aura Business owner dashboard mockup">
