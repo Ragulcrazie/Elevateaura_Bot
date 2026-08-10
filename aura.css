@@ -45,6 +45,20 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .navlinks a.active{color:var(--brand);font-weight:700}
 .navlinks a.active::after{content:"";position:absolute;left:0;right:0;bottom:-24px;height:2px;background:var(--grad);border-radius:2px}
 @media(max-width:880px){.navlinks .hide{display:none}}
+/* products dropdown */
+.navdd{position:relative;display:flex;align-items:center}
+.navdd .ddbtn{display:inline-flex;align-items:center;gap:5px;background:none;border:none;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:500;color:var(--muted);padding:0;transition:color .15s}
+.navdd .ddbtn:hover,.navdd.open .ddbtn{color:var(--ink)}
+.navdd .ddbtn svg{width:13px;height:13px;transition:transform .25s}
+.navdd:hover .ddbtn svg,.navdd.open .ddbtn svg{transform:rotate(180deg)}
+.navdd .ddmenu{position:absolute;top:calc(100% + 16px);right:0;width:300px;max-width:86vw;background:#fff;border:1px solid var(--line2);border-radius:16px;box-shadow:0 22px 55px rgba(76,29,149,.16),0 6px 18px rgba(76,29,149,.08);padding:8px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s;z-index:60}
+.navdd .ddmenu::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.navdd:hover .ddmenu,.navdd.open .ddmenu{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.navdd .ddmenu a{display:flex;gap:11px;align-items:center;padding:9px 11px;border-radius:11px;transition:background .16s}
+.navdd .ddmenu a:hover{background:var(--soft2)}
+.navdd .ddmenu a .di{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:16px}
+.navdd .ddmenu a .dt b{display:block;color:var(--ink);font-size:14px;font-weight:700;line-height:1.2;-webkit-text-fill-color:var(--ink)}
+.navdd .ddmenu a .dt small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px;-webkit-text-fill-color:var(--muted)}
 
 /* hero */
 .hero{padding:90px 0 52px;text-align:center;position:relative}

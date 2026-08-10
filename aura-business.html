@@ -58,6 +58,19 @@
     <a class="lnk hide" href="pricing.html">Pricing</a>
     <a class="lnk hide" href="how-it-works.html">How it works</a>
     <a class="lnk hide" href="about.html">About</a>
+    <div class="navdd">
+      <button class="ddbtn" aria-haspopup="true" aria-expanded="false">Products
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="ddmenu">
+        <a href="/auracare/"><span class="di">&#129658;</span><span class="dt"><b>Auracare</b><small>Home nursing services</small></span></a>
+        <a href="aura-business.html"><span class="di">&#128202;</span><span class="dt"><b>Aura Business</b><small>CRM &amp; operations platform</small></span></a>
+        <a href="aurapacs.html"><span class="di">&#127973;</span><span class="dt"><b>HIMS</b><small>Hospital &amp; clinic management</small></span></a>
+        <a href="aurapacs.html"><span class="di">&#129659;</span><span class="dt"><b>AuraPACS</b><small>DICOM imaging, RIS &amp; worklist</small></span></a>
+        <a href="aura-learn.html"><span class="di">&#127891;</span><span class="dt"><b>Aura Learn</b><small>LMS &amp; exam prep</small></span></a>
+        <a href="product-development.html"><span class="di">&#128295;</span><span class="dt"><b>Product Development</b><small>Embedded &amp; device software</small></span></a>
+      </div>
+    </div>
     <a class="lnk hide" href="index.html" style="color:#9ca3af">&larr; Elevate Aura</a>
     <a class="btn btn-ghost btn-sm" href="https://app.elevateaura.co.in/login">Login</a>
     <a class="btn btn-primary btn-sm" href="contact.html">Book a demo</a>
@@ -435,5 +448,6 @@
   <div class="fcol"><h4>Talk to us</h4><a href="https://wa.me/919578971156">WhatsApp</a><a href="mailto:raguls0907@gmail.com">Email</a></div>
 </div></footer>
 
+<script>document.querySelectorAll('.navdd .ddbtn').forEach(function(b){var d=b.closest('.navdd');b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('.navdd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});});</script>
 </body>
 </html>
