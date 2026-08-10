@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#7c3aed">
     <title>Business Development Partner | Elevate Aura</title>
     <meta name="description" content="Become an Elevate Aura Business Development Partner. Introduce a medical or healthcare business and earn a revenue share on every successful introduction, recurring on Aura Business subscriptions. A flexible, revenue-share partnership.">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=16">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -82,8 +82,19 @@
                 <a href="index.html#process" class="nav-link">Process</a>
                 <a href="index.html#pricing" class="nav-link">Pricing</a>
                 <a href="partner.html" class="nav-link is-active" aria-current="page">Partners</a>
-                <a href="aura-business.html" class="nav-link nav-accent">Aura Business</a>
-                <a href="aurapacs.html" class="nav-link nav-accent">AuraPACS</a>
+                <div class="nav-item" id="prodDD">
+                    <button class="nav-ddtoggle" aria-haspopup="true" aria-expanded="false">Products
+                        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nav-dd">
+                        <a href="/auracare/"><span class="ddic">&#129658;</span><span class="ddtx"><b>Auracare</b><span>Home nursing services</span></span></a>
+                        <a href="aura-business.html"><span class="ddic">&#128202;</span><span class="ddtx"><b>Aura Business</b><span>CRM &amp; operations platform</span></span></a>
+                        <a href="aurapacs.html"><span class="ddic">&#127973;</span><span class="ddtx"><b>HIMS</b><span>Hospital &amp; clinic management</span></span></a>
+                        <a href="aurapacs.html"><span class="ddic">&#129659;</span><span class="ddtx"><b>AuraPACS</b><span>DICOM imaging, RIS &amp; worklist</span></span></a>
+                        <a href="aura-learn.html"><span class="ddic">&#127891;</span><span class="ddtx"><b>Aura Learn</b><span>LMS &amp; exam prep</span></span></a>
+                        <a href="product-development.html"><span class="ddic">&#128295;</span><span class="ddtx"><b>Product Development</b><span>Embedded &amp; device software</span></span></a>
+                    </div>
+                </div>
                 <a href="pages/careers.html" class="nav-link">Careers</a>
             </div>
             <a href="#apply" class="btn btn-primary btn-sm nav-cta">Become a Partner</a>
@@ -101,9 +112,14 @@
         <a href="index.html#process" class="mobile-link">Process</a>
         <a href="index.html#pricing" class="mobile-link">Pricing</a>
         <a href="partner.html" class="mobile-link">Partners</a>
-        <a href="aura-business.html" class="mobile-link">Aura Business</a>
-        <a href="aurapacs.html" class="mobile-link">AuraPACS</a>
         <a href="pages/careers.html" class="mobile-link">Careers</a>
+        <span class="m-group-label">Products</span>
+        <a href="/auracare/" class="mobile-link" style="color:#1F6F54;font-weight:700">Auracare</a>
+        <a href="aura-business.html" class="mobile-link" style="color:#7c3aed;font-weight:700">Aura Business</a>
+        <a href="aurapacs.html" class="mobile-link" style="color:#7c3aed;font-weight:700">HIMS</a>
+        <a href="aurapacs.html" class="mobile-link" style="color:#7c3aed;font-weight:700">AuraPACS</a>
+        <a href="aura-learn.html" class="mobile-link" style="color:#7c3aed;font-weight:700">Aura Learn</a>
+        <a href="product-development.html" class="mobile-link" style="color:#7c3aed;font-weight:700">Product Development</a>
         <a href="#apply" class="btn btn-primary">Become a Partner</a>
     </div>
 
@@ -407,6 +423,7 @@
                 });
             });
         }
+        (function(){var dd=document.getElementById('prodDD');if(dd){var t=dd.querySelector('.nav-ddtoggle');t.addEventListener('click',function(e){e.stopPropagation();var o=dd.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');t.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape')dd.classList.remove('open');});}})();
         document.querySelectorAll('a[href^="#"]').forEach(function (a) {
             a.addEventListener('click', function (e) {
                 var t = document.querySelector(this.getAttribute('href'));
