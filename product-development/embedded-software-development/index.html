@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Embedded Software Development | Firmware in C/C++ &amp; MicroPython | Elevate Aura</title>
+<meta name="description" content="Embedded software development, software-only: device firmware in C/C++ or MicroPython, sensor and peripheral drivers, state machines and power management, written to your controller and delivered ready to flash. Elevate Aura, Chennai. Book a free strategy call.">
+<link rel="canonical" href="https://elevateaura.co.in/product-development/embedded-software-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura Product Development">
+<meta property="og:title" content="Embedded Software Development | Elevate Aura">
+<meta property="og:description" content="Firmware in C/C++ or MicroPython, drivers, state machines and power management, ready to flash.">
+<meta property="og:url" content="https://elevateaura.co.in/product-development/embedded-software-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Embedded Software Development | Elevate Aura">
+<meta name="twitter:description" content="Embedded firmware written to your controller, delivered ready to flash.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="../dev.css">
+<link rel="icon" href="../../assets/img/logo.png" type="image/png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://elevateaura.co.in/"},
+{"@type":"ListItem","position":2,"name":"Product Development","item":"https://elevateaura.co.in/product-development.html"},
+{"@type":"ListItem","position":3,"name":"Embedded Software Development","item":"https://elevateaura.co.in/product-development/embedded-software-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Embedded software development",
+"provider":{"@type":"Organization","name":"Elevate Aura","url":"https://elevateaura.co.in/","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"}},
+"areaServed":"IN",
+"description":"Software-only embedded development: device firmware in C/C++ or MicroPython, sensor and peripheral drivers, state machines and power management, written to the controller and delivered ready to flash."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is embedded software development here?","acceptedAnswer":{"@type":"Answer","text":"Writing the firmware that runs on your device's controller: core logic, state machines, sensor and peripheral drivers, and power management, to your hardware spec."}},
+{"@type":"Question","name":"Which languages and controllers?","acceptedAnswer":{"@type":"Answer","text":"C/C++ or MicroPython depending on your microcontroller. We work to your chosen chip and toolchain rather than forcing ours."}},
+{"@type":"Question","name":"Do you design the hardware?","acceptedAnswer":{"@type":"Answer","text":"No. Software-only. We write firmware to your hardware team's specification and do not design PCBs or manufacture."}},
+{"@type":"Question","name":"How is the firmware delivered?","acceptedAnswer":{"@type":"Answer","text":"Delivered ready to flash to your chip, tested on your hardware, with documentation your team can maintain."}},
+{"@type":"Question","name":"Can you integrate sensors and peripherals?","acceptedAnswer":{"@type":"Answer","text":"Yes. We write drivers and integration for the sensors, actuators and peripherals your device uses."}}]}
+</script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="../../index.html">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Product Development &middot; software-only</span>
+  <span>Chennai, India</span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="../../index.html">Home</a></li>
+  <li><a href="../../product-development.html">Product Development</a></li>
+  <li><span aria-current="page">Embedded Software Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="d"></span>Firmware, to your controller</span>
+      <h1>Embedded software that runs <span class="hl">clean on your chip</span>.</h1>
+      <p class="sub">Device firmware in C/C++ or MicroPython: core logic, state machines, sensor and peripheral drivers, and power management. Written to your controller and toolchain, tested on your hardware, delivered ready to flash.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="../../contact.html">Book a Free Strategy Call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20embedded%20software." target="_blank" rel="noopener">Talk to us</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>C/C++ or MicroPython</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Tested on your hardware</span>
+      </div>
+    </div>
+    <div>
+      <div class="shot">
+        <div class="shot-bar"><i></i><i></i><i></i><span>firmware.c</span></div>
+        <div class="term">
+          <div class="ln"><span class="g">1</span><span><span class="c">// state machine, to spec</span></span></div>
+          <div class="ln"><span class="g">2</span><span><span class="m">state</span> = <span class="k">IDLE</span>;</span></div>
+          <div class="ln"><span class="g">3</span><span><span class="k">on</span>(sensor_ready) &rarr; <span class="m">SAMPLE</span></span></div>
+          <div class="ln"><span class="g">4</span><span><span class="k">read</span>(adc) <span class="s">ok</span></span></div>
+          <div class="ln"><span class="g">5</span><span><span class="k">sleep</span>(low_power) <span class="s">ok</span></span></div>
+          <div class="ln"><span class="g">6</span><span><span class="ok">&#10003; build passed</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The embedded problem</span>
+      <h2 class="h2">Firmware that half-works, drains the battery, and nobody documented.</h2>
+      <p class="lead">A prototype sketch that grew into production, timing bugs that appear once a day, power draw nobody budgeted for, and no documentation for the next engineer.</p>
+    </div>
+    <div class="pains">
+      <div class="pain rv"><h3>Flaky timing</h3><p>Race conditions that surface at the worst moment.</p></div>
+      <div class="pain rv d1"><h3>Power drain</h3><p>Sleep and wake never properly handled.</p></div>
+      <div class="pain rv d2"><h3>No docs</h3><p>Firmware only its original author understands.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How we build firmware</span>
+      <h2 class="h2">Spec, write, test, flash.</h2>
+    </div>
+    <div class="flow rv">
+      <div class="fs"><div class="n">01</div><h4>Spec</h4><p>Your chip and behaviour.</p></div>
+      <div class="arr">&rarr;</div>
+      <div class="fs"><div class="n">02</div><h4>Drivers</h4><p>Sensors, peripherals.</p></div>
+      <div class="arr">&rarr;</div>
+      <div class="fs"><div class="n">03</div><h4>Logic</h4><p>State and power.</p></div>
+      <div class="arr">&rarr;</div>
+      <div class="fs"><div class="n">04</div><h4>Test</h4><p>On your hardware.</p></div>
+      <div class="arr">&rarr;</div>
+      <div class="fs"><div class="n">05</div><h4>Flash</h4><p>Documented handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap split rev">
+    <div class="splitv rv">
+      <div class="shot">
+        <div class="shot-bar"><i></i><i></i><i></i><span>peripherals</span></div>
+        <div class="queue">
+          <div class="wh"><b>Peripheral map</b><span class="chip">Illustrative</span></div>
+          <div class="wr head"><span>Peripheral</span><span>Bus</span><span>Driver</span><span>Status</span></div>
+          <div class="wr"><span>Sensor</span><span class="tok">I2C</span><span>Written</span><span class="st b">Tested</span></div>
+          <div class="wr"><span>Display</span><span class="tok">SPI</span><span>Written</span><span class="st a">In test</span></div>
+          <div class="wr"><span>Radio</span><span class="tok">UART</span><span>Written</span><span class="st t">Wired</span></div>
+        </div>
+      </div>
+      <p class="shotcap">A sample peripheral map. Yours is built to your board.</p>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow">Solid, documented firmware</span>
+      <h2 class="h2">Firmware your team can maintain.</h2>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>State machines and core device logic</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Sensor, actuator and peripheral drivers</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Power management, sleep and wake</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Clean documentation and a <a href="../ble-device-software/">comms layer</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What we write</span>
+      <h2 class="h2">The embedded layer.</h2>
+    </div>
+    <div class="caps">
+      <div class="capg rv"><h3><span class="k">&#129513;</span>Core</h3><ul><li>State machines</li><li>Scheduling</li><li>Interrupts</li><li>Watchdog</li></ul></div>
+      <div class="capg rv d1"><h3><span class="k">&#128268;</span>Drivers</h3><ul><li>I2C</li><li>SPI</li><li>UART</li><li>ADC / GPIO</li></ul></div>
+      <div class="capg rv"><h3><span class="k">&#128267;</span>Power</h3><ul><li>Sleep modes</li><li>Wake</li><li>Duty cycle</li><li>Brownout</li></ul></div>
+      <div class="capg rv d1"><h3><span class="k">&#128221;</span>Quality</h3><ul><li>Tests</li><li>Logging</li><li>Docs</li><li>Handover</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Teams who need firmware, not a lab.</h2>
+    </div>
+    <div class="who rv">
+      <div class="w"><div class="g">&#129526;</div><b>Robotics</b><p>Control firmware.</p></div>
+      <div class="w"><div class="g">&#129430;</div><b>Device makers</b><p>Sensor products.</p></div>
+      <div class="w"><div class="g">&#128104;&#8205;&#128300;</div><b>Hardware teams</b><p>Firmware capacity.</p></div>
+      <div class="w"><div class="g">&#128161;</div><b>Founders</b><p>Prototype to product.</p></div>
+      <div class="w"><div class="g">&#127981;</div><b>Instruments</b><p>Lab and diagnostics.</p></div>
+      <div class="w"><div class="g">&#127760;</div><b>IoT</b><p>Connected sensors.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why you can trust it</span>
+      <h2 class="h2">Proof you can check.</h2>
+    </div>
+    <div class="cases rv">
+      <div class="case"><div class="ct"><span>&#129526;</span>Medline Robotics</div><div class="cb"><span class="tag">Real client</span><h4>Robotics-adjacent work</h4><p>We deliver for a Chennai medical robotics firm, so device and control software is familiar to us.</p><div class="out">Real medtech client</div></div></div>
+      <div class="case"><div class="ct"><span>&#9881;</span>Full stack</div><div class="cb"><span class="tag">Firmware to cloud</span><h4>We own the whole layer</h4><p>Firmware, app and cloud from one builder, so the embedded layer fits the rest without seams.</p><div class="out">One owner</div></div></div>
+      <div class="case"><div class="ct"><span>&#9878;</span>Clear boundary</div><div class="cb"><span class="tag">Software-only</span><h4>No overclaiming</h4><p>We write firmware to your hardware spec. We do not design or manufacture hardware, and we say so upfront.</p><div class="out">Honest scope</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Getting firmware written, three ways.</h2>
+    </div>
+    <div class="cmp rv">
+      <div class="r h"><div>&nbsp;</div><div>In-house hire</div><div>Generic dev shop</div><div class="us">Elevate Aura</div></div>
+      <div class="r"><div class="cap">Time to start</div><div>Months</div><div>Weeks</div><div class="us">Days</div></div>
+      <div class="r"><div class="cap">Medtech context</div><div>Varies</div><div>Rare</div><div class="us">Yes</div></div>
+      <div class="r"><div class="cap">Documentation</div><div>Varies</div><div>Thin</div><div class="us">Always</div></div>
+      <div class="r"><div class="cap">Fits app &amp; cloud</div><div>Separate</div><div>Separate</div><div class="us">One stack</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Common questions</span>
+      <h2 class="h2">Embedded software, answered.</h2>
+    </div>
+    <div class="faq rv">
+      <details open><summary>What is embedded software development here?</summary><p>Writing the firmware that runs on your device's controller: core logic, state machines, sensor and peripheral drivers, and power management, to your hardware spec.</p></details>
+      <details><summary>Which languages and controllers?</summary><p>C/C++ or MicroPython depending on your microcontroller. We work to your chosen chip and toolchain rather than forcing ours.</p></details>
+      <details><summary>Do you design the hardware?</summary><p>No. Software-only. We write firmware to your hardware team's specification and do not design PCBs or manufacture.</p></details>
+      <details><summary>How is the firmware delivered?</summary><p>Delivered ready to flash to your chip, tested on your hardware, with documentation your team can maintain.</p></details>
+      <details><summary>Can you integrate sensors and peripherals?</summary><p>Yes. We write drivers and integration for the sensors, actuators and peripherals your device uses. See also <a href="../firmware-development/">firmware development</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Explore product development</span><h2 class="h2" style="font-size:1.5rem">Related software services</h2></div>
+    <div class="who rv">
+      <a class="w" href="../medical-device-software-development/"><div class="g">&#129535;</div><b>Device software</b><p>Full stack.</p></a>
+      <a class="w" href="../firmware-development/"><div class="g">&#128268;</div><b>Firmware</b><p>Flash and drivers.</p></a>
+      <a class="w" href="../ble-device-software/"><div class="g">&#128246;</div><b>BLE software</b><p>Connectivity.</p></a>
+      <a class="w" href="../iot-product-development/"><div class="g">&#127760;</div><b>IoT products</b><p>Device to cloud.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Send us your controller and spec.</h2>
+      <p>Tell us the chip, the peripherals and what the device should do. We will write firmware that runs clean and hands over documented.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="../../contact.html">Book a Free Strategy Call</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20embedded%20software." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">C/C++ or MicroPython &middot; Tested on your hardware &middot; Ready to flash</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Product Development by Elevate Aura</h4>
+        <p class="b">Software-only device development: firmware, device communication, companion apps and cloud telemetry, written to your hardware team's spec. Built in Chennai.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Device software</h4>
+        <a href="../medical-device-software-development/">Medical Device Software</a>
+        <a href="../embedded-software-development/">Embedded Software</a>
+        <a href="../firmware-development/">Firmware Development</a>
+        <a href="../ble-device-software/">BLE Device Software</a>
+        <a href="../iot-product-development/">IoT Product Development</a>
+      </div>
+      <div>
+        <h4>Apps &amp; platforms</h4>
+        <a href="../medical-device-app-development/">Medical Device Apps</a>
+        <a href="../device-companion-app-development/">Companion Apps</a>
+        <a href="../healthcare-app-development/">Healthcare Apps</a>
+        <a href="../custom-healthcare-software/">Custom Healthcare Software</a>
+        <a href="../medical-technology-product-development/">Medical Technology Products</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Product Development &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var o;if('IntersectionObserver'in window){o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(function(el){o.observe(el);});}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});}})();
+</script>
+</body>
+</html>
