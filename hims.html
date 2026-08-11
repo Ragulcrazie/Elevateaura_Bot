@@ -50,15 +50,30 @@
 }
 </script>
 <style>
-.himg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.himg{border:1px solid var(--line,#e6e1f3);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 22px rgba(76,29,149,.06);transition:.2s}
-.himg:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(76,29,149,.12)}
-.himg .bar{background:#1c1030;display:flex;align-items:center;gap:6px;padding:8px 12px}
-.himg .bar i{width:9px;height:9px;border-radius:50%;background:#4a3a63}
-.himg .bar i:first-child{background:#ff5f57}.himg .bar i:nth-child(2){background:#febc2e}.himg .bar i:nth-child(3){background:#28c840}
-.himg img{display:block;width:100%;height:auto}
-.himg .cap{padding:12px 14px;font-size:.9rem;color:var(--muted,#605f7e)}
-.himg .cap b{color:var(--ink,#13132b);display:block;font-size:.98rem;margin-bottom:2px}
+#tour{padding-top:30px}
+#tour .tour-live{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--brand-dark,#5b21b6);background:var(--soft2,#f6f3ff);border:1px solid var(--line2,#e3dcf6);padding:5px 13px;border-radius:999px}
+#tour .tour-live .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.16)}
+#tour .tour{display:grid;grid-template-columns:344px 1fr;gap:24px;margin-top:34px;align-items:start}
+#tour .tour-tabs{display:flex;flex-direction:column;gap:10px}
+#tour .tour-tab{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:rgba(255,255,255,.86);border:1px solid var(--line,#e6e1f3);border-radius:14px;padding:13px 15px;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;font-family:inherit}
+#tour .tour-tab:hover{border-color:var(--brand-2,#a855f7);box-shadow:0 8px 22px rgba(76,29,149,.06);transform:translateY(-1px)}
+#tour .tour-tab.on{border-color:var(--brand,#6d28d9);background:#fff;box-shadow:0 0 0 1.5px var(--brand,#6d28d9) inset,0 8px 22px rgba(76,29,149,.06)}
+#tour .tour-tab .ti{width:36px;height:36px;border-radius:10px;background:var(--soft2,#f6f3ff);display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+#tour .tour-tab b{display:block;font-size:14.5px;color:var(--ink,#13132b);font-weight:700;line-height:1.2}
+#tour .tour-tab small{display:block;font-size:12px;color:var(--muted,#605f7e);margin-top:3px;line-height:1.42}
+#tour .tour-frame{border-radius:16px;overflow:hidden;border:1px solid var(--line2,#e3dcf6);box-shadow:0 34px 70px -26px rgba(76,29,149,.55);background:#fff}
+#tour .tour-bar{background:#1c1030;display:flex;align-items:center;gap:7px;padding:11px 15px}
+#tour .tour-bar i{width:11px;height:11px;border-radius:50%;background:#4a3a63}
+#tour .tour-bar i:first-child{background:#ff5f57}#tour .tour-bar i:nth-child(2){background:#febc2e}#tour .tour-bar i:nth-child(3){background:#28c840}
+#tour .tour-bar span{margin-left:12px;font-size:12px;color:#c3b6df;background:rgba(255,255,255,.09);padding:5px 12px;border-radius:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2px}
+#tour .tour-imgs{position:relative;background:#f6f3ff;min-height:120px}
+#tour .tour-imgs img{display:none;width:100%;height:auto}
+#tour .tour-imgs img.on{display:block;animation:tourfade .45s ease}
+@keyframes tourfade{from{opacity:0;transform:scale(.996)}to{opacity:1;transform:none}}
+#tour .tour-cta{display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap}
+#tour .tour-note{color:var(--muted,#605f7e);font-size:14px}
+@media(max-width:860px){#tour .tour{grid-template-columns:1fr}#tour .tour-tabs{flex-direction:row;flex-wrap:wrap}#tour .tour-tab{flex:1 1 46%}}
+@media(max-width:560px){#tour .tour-tab{flex:1 1 100%}}
 .hn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
 .hn-grid a{display:block;background:#fff;border:1px solid var(--line,#e6e1f3);border-radius:14px;padding:16px 18px;transition:.2s}
 .hn-grid a:hover{border-color:var(--brand,#6d28d9);transform:translateY(-2px);box-shadow:0 10px 24px rgba(109,40,217,.1)}
@@ -141,19 +156,56 @@
 
 <section id="screens">
   <div class="wrap">
-    <div class="eyebrow">See the product</div>
-    <h2 class="title">Real screens, not slideware.</h2>
-    <p class="lead">A working demo environment, with sample data. This is the actual HIMS your team would use.</p>
-    <div class="himg-grid">
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/opd-dashboard.png" alt="HIMS OPD dashboard with appointments, walk-ins, waiting and live doctor queues" loading="lazy"><div class="cap"><b>OPD dashboard</b>Appointments, walk-ins and live doctor queues.</div></div>
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/patients.png" alt="HIMS patient register with UHID, department and insurance" loading="lazy"><div class="cap"><b>Patient register</b>UHID, department, last visit and TPA per patient.</div></div>
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/billing.png" alt="HIMS GST invoice with itemised charges and bill summary" loading="lazy"><div class="cap"><b>GST billing</b>Itemised invoice with GST, TPA and payment mode.</div></div>
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/pharmacy.png" alt="HIMS pharmacy with pending prescriptions, low-stock and expiry alerts" loading="lazy"><div class="cap"><b>Pharmacy</b>Dispensing queue with low-stock and expiry alerts.</div></div>
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/laboratory.png" alt="HIMS laboratory LIMS order to result workflow" loading="lazy"><div class="cap"><b>Laboratory (LIMS)</b>Order to result, sample to verified release.</div></div>
-      <div class="himg"><div class="bar"><i></i><i></i><i></i></div><img src="assets/hims/bed-management.png" alt="HIMS bed management ward and bed occupancy" loading="lazy"><div class="cap"><b>Bed management</b>Live ward and bed occupancy across the hospital.</div></div>
+    <span class="tour-live"><span class="dot"></span>Working demo &middot; sample data shown</span>
+    <h2 class="title" style="margin-top:14px">Not a mockup. The software your team will log into.</h2>
+    <p class="lead">Real screens from HIMS, running in a demo environment. Click through the modules your hospital will use every day.</p>
+    <div class="tour">
+      <div class="tour-tabs" role="tablist">
+        <button class="tour-tab on" data-i="0"><span class="ti">&#128202;</span><span><b>OPD dashboard</b><small>Appointments, walk-ins, waiting and live doctor queues</small></span></button>
+        <button class="tour-tab" data-i="1"><span class="ti">&#128100;</span><span><b>Patient records</b><small>Every patient with UHID, department, last visit and TPA</small></span></button>
+        <button class="tour-tab" data-i="2"><span class="ti">&#129534;</span><span><b>GST &amp; TPA billing</b><small>Itemised invoice with GST, insurance and payment mode</small></span></button>
+        <button class="tour-tab" data-i="3"><span class="ti">&#128138;</span><span><b>Pharmacy</b><small>Dispensing queue with low-stock and expiry alerts</small></span></button>
+        <button class="tour-tab" data-i="4"><span class="ti">&#129514;</span><span><b>Laboratory (LIMS)</b><small>Order to result, sample to verified release</small></span></button>
+        <button class="tour-tab" data-i="5"><span class="ti">&#128715;</span><span><b>Bed management</b><small>Live ward and bed occupancy across the hospital</small></span></button>
+      </div>
+      <div class="tour-stage">
+        <div class="tour-frame">
+          <div class="tour-bar"><i></i><i></i><i></i><span>his.elevateaura.co.in/opd</span></div>
+          <div class="tour-imgs">
+            <img class="on" src="assets/hims/opd-dashboard.png" alt="HIMS OPD dashboard: appointments, walk-ins, waiting and live doctor queues across departments" width="1920" height="1080">
+            <img src="assets/hims/patients.png" alt="HIMS patient register with UHID, department, last visit and insurance or TPA per patient" width="1920" height="1080" loading="lazy">
+            <img src="assets/hims/billing.png" alt="HIMS GST invoice with itemised charges, discount, GST and a bill summary showing TPA and payment mode" width="1920" height="1080" loading="lazy">
+            <img src="assets/hims/pharmacy.png" alt="HIMS pharmacy: pending prescriptions, dispensing, low-stock and expiry alerts with batch-tracked inventory" width="1920" height="1080" loading="lazy">
+            <img src="assets/hims/laboratory.png" alt="HIMS laboratory LIMS: order to result workflow with samples, priority and status" width="1920" height="1080" loading="lazy">
+            <img src="assets/hims/bed-management.png" alt="HIMS bed management: live ward and bed occupancy with available, occupied, reserved and cleaning status" width="1920" height="1080" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tour-cta">
+      <a class="btn btn-primary" href="contact.html">Book a 30-min live walkthrough</a>
+      <span class="tour-note">See it running on your own hospital's workflow.</span>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var tour=document.getElementById('screens'); if(!tour) return;
+  var tabs=tour.querySelectorAll('.tour-tab');
+  var imgs=tour.querySelectorAll('.tour-imgs img');
+  var bar=tour.querySelector('.tour-bar span');
+  var urls=['his.elevateaura.co.in/opd','his.elevateaura.co.in/patients','his.elevateaura.co.in/billing','his.elevateaura.co.in/pharmacy','his.elevateaura.co.in/lab','his.elevateaura.co.in/beds'];
+  var cur=0, timer=null;
+  function show(i){cur=i;tabs.forEach(function(t,n){t.classList.toggle('on',n===i);});imgs.forEach(function(m,n){m.classList.toggle('on',n===i);});if(bar)bar.textContent=urls[i]||urls[0];}
+  function next(){show((cur+1)%tabs.length);}
+  function start(){timer=setInterval(next,6000);}
+  function reset(){clearInterval(timer);start();}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i);reset();});});
+  tour.addEventListener('mouseenter',function(){clearInterval(timer);});
+  tour.addEventListener('mouseleave',function(){reset();});
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){start();}
+})();
+</script>
 
 <section id="modules" style="background:#faf8ff">
   <div class="wrap">
