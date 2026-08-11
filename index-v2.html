@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0C1E33">
+<title>Elevate Aura | Digital Operating Systems for Healthcare & Medical Businesses</title>
+<meta name="description" content="Elevate Aura is a founder-led product studio building real software systems, CRM, HIMS, AuraPACS, LMS and embedded device software, for healthcare, medical equipment and diagnostics businesses in India. From WhatsApp and Excel to one connected platform, built end to end.">
+<link rel="canonical" href="https://elevateaura.co.in/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Elevate Aura | Digital Operating Systems for Healthcare & Medical Businesses">
+<meta property="og:description" content="Real software systems, CRM, HIMS, AuraPACS, LMS and embedded device software, built end to end for founder-led healthcare and medical businesses.">
+<meta property="og:url" content="https://elevateaura.co.in/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elevate Aura | Digital Operating Systems for Healthcare & Medical Businesses">
+<meta name="twitter:description" content="Real software systems built end to end for founder-led healthcare and medical businesses.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   ELEVATE AURA  ,  premium product-studio design system (v2)
+   Palette: deep navy + warm ivory + premium orange/gold + neutral gray
+   ========================================================================== */
+:root{
+  --navy:#0C1E33; --navy-900:#081524; --navy-800:#0f2740; --navy-700:#173250;
+  --ink:#0C1E33; --ink-soft:#33475b;
+  --ivory:#F5F1E9; --ivory-2:#FBF8F2; --paper:#FFFFFF;
+  --gray:#5C6B7A; --gray-2:#7d8a97; --gray-line:rgba(12,30,51,.10);
+  --gray-line-2:rgba(12,30,51,.06);
+  --accent:#E48A34; --accent-2:#D5761C; --accent-soft:rgba(228,138,52,.12);
+  --gold:#C79A4B;
+  --mint:#1F8A6B; --mint-soft:rgba(31,138,107,.10);
+  --shadow-sm:0 1px 2px rgba(12,30,51,.05),0 2px 8px rgba(12,30,51,.05);
+  --shadow-md:0 8px 24px rgba(12,30,51,.08),0 2px 6px rgba(12,30,51,.05);
+  --shadow-lg:0 24px 60px rgba(12,30,51,.14),0 6px 16px rgba(12,30,51,.08);
+  --shadow-navy:0 30px 70px rgba(8,21,36,.45);
+  --r-sm:12px; --r:18px; --r-lg:26px; --r-xl:34px;
+  --maxw:1200px;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --font-body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);background:var(--ivory);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  font-size:16.5px;
+}
+h1,h2,h3,h4,.dsp{font-family:var(--font);font-weight:700;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+section{position:relative}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.sec{padding:104px 0}
+.sec-sm{padding:72px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font);font-weight:700;
+  font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);border-radius:2px}
+.eyebrow.center::before{display:none}
+h2.h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:16px 0 0}
+.lead{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--ink-soft);max-width:640px;line-height:1.55;font-family:var(--font-body)}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.head{max-width:720px;margin:0 auto 56px}
+.head.center{text-align:center}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font);font-weight:700;
+  font-size:.98rem;padding:15px 26px;border-radius:100px;cursor:pointer;border:1px solid transparent;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,color .2s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 26px rgba(213,118,28,.32)}
+.btn-primary:hover{background:var(--accent-2);transform:translateY(-2px);box-shadow:0 16px 34px rgba(213,118,28,.4)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-800);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--gray-line)}
+.btn-ghost:hover{border-color:var(--navy);transform:translateY(-2px)}
+.btn-wa{background:#1F8A5B;color:#fff}
+.btn-wa:hover{background:#1a7650;transform:translateY(-2px)}
+.on-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.24)}
+.on-dark .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-lg{padding:17px 32px;font-size:1.04rem}
+.arrowlink{display:inline-flex;align-items:center;gap:6px;font-family:var(--font);font-weight:700;color:var(--accent-2);font-size:.95rem}
+.arrowlink .a{transition:transform .25s var(--ease)}
+.arrowlink:hover .a{transform:translateX(4px)}
+
+/* ---- nav ---- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .3s var(--ease)}
+.nav-in{max-width:1240px;margin:14px auto 0;padding:0 14px 0 20px;height:64px;display:flex;align-items:center;
+  justify-content:space-between;background:rgba(251,248,242,.72);backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--gray-line);border-radius:100px;
+  box-shadow:var(--shadow-sm);transition:all .3s var(--ease)}
+.nav.scrolled .nav-in{background:rgba(251,248,242,.92);box-shadow:var(--shadow-md);margin-top:8px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font);font-weight:800;font-size:1.12rem;letter-spacing:-.02em}
+.brand img{width:30px;height:30px;border-radius:8px}
+.brand .bdot{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-family:var(--font);font-weight:600;font-size:.92rem;color:var(--ink-soft);
+  padding:9px 13px;border-radius:100px;transition:color .2s,background .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--ink);background:rgba(12,30,51,.05)}
+.nav-cta{display:flex;align-items:center;gap:9px}
+.nav-wa{width:42px;height:42px;border-radius:50%;background:var(--mint-soft);color:var(--mint);
+  display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s}
+.nav-wa:hover{transform:translateY(-2px);background:rgba(31,138,107,.18)}
+.nav-wa svg{width:21px;height:21px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--gray-line);border-radius:12px;background:transparent;
+  cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{width:19px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* mobile fullscreen nav */
+.mnav{position:fixed;inset:0;z-index:99;background:var(--navy);color:#fff;display:flex;flex-direction:column;
+  padding:96px 30px 40px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:.4s var(--ease);overflow-y:auto}
+.mnav.on{opacity:1;visibility:visible;transform:none}
+.mnav a{font-family:var(--font);font-weight:700;font-size:1.5rem;color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.10)}
+.mnav a.acc{color:var(--accent)}
+.mnav .mcta{margin-top:26px;display:flex;flex-direction:column;gap:12px;border:none;padding:0}
+.mnav .mcta .btn{justify-content:center;font-size:1.05rem}
+
+/* ---- hero ---- */
+.hero{background:linear-gradient(165deg,#10273f 0%,#0C1E33 52%,#0a1729 100%);
+  color:#fff;padding:150px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-10%;right:-6%;width:640px;height:640px;
+  background:radial-gradient(circle,rgba(228,138,52,.20),transparent 62%);filter:blur(10px);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:34px 34px;mask-image:linear-gradient(180deg,#000,transparent 78%);opacity:.6;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:52px;align-items:center;position:relative;z-index:2}
+.hero h1{color:#fff;font-size:clamp(2.4rem,4.9vw,4rem);line-height:1.03}
+.hero h1 .hl{color:var(--accent);position:relative;white-space:nowrap}
+.hero .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:100px;padding:8px 16px;font-family:var(--font);font-weight:600;font-size:.82rem;letter-spacing:.01em;color:#e9eef4;margin-bottom:26px}
+.hero .pill .g{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(228,138,52,.25)}
+.hero p.sub{color:#b9c6d4;font-size:clamp(1.02rem,1.5vw,1.18rem);margin:22px 0 0;max-width:540px;line-height:1.55}
+.hero-btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.trust-row{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10)}
+.trust-row .ti{display:flex;align-items:center;gap:9px;font-family:var(--font);font-weight:600;font-size:.85rem;color:#c7d3df}
+.trust-row .ti svg{width:17px;height:17px;color:var(--accent);flex:0 0 auto}
+
+/* hero product visual */
+.hero-visual{position:relative;height:460px}
+.ecosys{position:absolute;inset:0}
+.ecosys svg.lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1}
+.ecosys svg.lines path{fill:none;stroke:rgba(228,138,52,.5);stroke-width:1.4;stroke-dasharray:5 7;
+  animation:dash 22s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-240}}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:250px;z-index:3;
+  background:linear-gradient(180deg,#fff,#f6f8fb);border-radius:18px;box-shadow:var(--shadow-navy);border:1px solid rgba(255,255,255,.6);overflow:hidden}
+.core .ct{background:var(--navy);padding:11px 14px;display:flex;align-items:center;gap:7px}
+.core .ct i{width:9px;height:9px;border-radius:50%;background:#33475b}
+.core .ct i:first-child{background:var(--accent)}
+.core .ct span{margin-left:auto;font-family:var(--font);font-size:.66rem;color:#8fa1b3;font-weight:600}
+.core .cb{padding:14px}
+.core .krow{display:flex;gap:8px;margin-bottom:12px}
+.core .k{flex:1;background:#f1f4f8;border-radius:10px;padding:9px 10px}
+.core .k b{font-family:var(--font);font-size:1.05rem;color:var(--navy);display:block;line-height:1}
+.core .k small{font-size:.56rem;color:var(--gray-2);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.core .bars{display:flex;align-items:flex-end;gap:6px;height:52px;padding-top:4px}
+.core .bars span{flex:1;background:linear-gradient(180deg,var(--accent),#f0a860);border-radius:4px 4px 0 0;opacity:.9}
+.node{position:absolute;z-index:4;background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.7);
+  border-radius:12px;padding:9px 13px 9px 11px;display:flex;align-items:center;gap:9px;box-shadow:0 10px 24px rgba(8,21,36,.28);
+  font-family:var(--font);font-weight:700;font-size:.8rem;color:var(--navy);white-space:nowrap;
+  animation:float 6s ease-in-out infinite}
+.node .ic{width:26px;height:26px;border-radius:8px;background:var(--accent-soft);color:var(--accent-2);
+  display:flex;align-items:center;justify-content:center;font-size:14px}
+.node.n1{top:2%;left:2%;animation-delay:0s}
+.node.n2{top:0;right:4%;animation-delay:.6s}
+.node.n3{top:40%;right:-4%;animation-delay:1.2s}
+.node.n4{bottom:6%;right:2%;animation-delay:1.8s}
+.node.n5{bottom:-2%;left:24%;animation-delay:2.4s}
+.node.n6{top:44%;left:-6%;animation-delay:3s}
+.node.n7{top:8%;left:34%;animation-delay:3.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(prefers-reduced-motion:reduce){.node,.ecosys svg.lines path{animation:none}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+/* generic surfaces */
+.bg-ivory{background:var(--ivory)}
+.bg-ivory2{background:var(--ivory-2)}
+.bg-paper{background:var(--paper)}
+.bg-navy{background:var(--navy);color:#fff}
+.bg-navy .lead,.bg-navy p{color:#b9c6d4}
+.bg-navy h2.h2,.bg-navy h3,.bg-navy h4{color:#fff}
+.bg-navy .eyebrow{color:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--gray-line);border-radius:var(--r);box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(228,138,52,.4)}
+
+/* ---- trust strip ---- */
+.tstrip{padding:26px 0;border-bottom:1px solid var(--gray-line)}
+.tstrip .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 34px}
+.tstrip .lbl{font-family:var(--font);font-weight:700;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-2)}
+.tstrip .t{font-family:var(--font);font-weight:700;font-size:1rem;color:var(--ink-soft);display:flex;align-items:center;gap:9px}
+.tstrip .t .d{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ---- problem / before-after ---- */
+.ba{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:stretch;max-width:1000px;margin:52px auto 0}
+.ba-col{border-radius:var(--r-lg);padding:30px 28px}
+.ba-before{background:#fbeee8;border:1px solid #f2d6c8}
+.ba-after{background:var(--navy);color:#fff;box-shadow:var(--shadow-navy);position:relative;overflow:hidden}
+.ba-after::after{content:"";position:absolute;top:-40%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(228,138,52,.28),transparent 65%)}
+.ba h4{font-family:var(--font);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.ba-before h4{color:#b5502a}.ba-after h4{color:var(--accent)}
+.ba-item{display:flex;align-items:center;gap:11px;padding:10px 0;font-size:.98rem;font-family:var(--font-body)}
+.ba-before .ba-item{color:#7a4a37;border-bottom:1px solid rgba(181,80,42,.14)}
+.ba-before .ba-item:last-child{border-bottom:none}
+.ba-before .bi{width:22px;height:22px;flex:0 0 auto;border-radius:6px;background:#f4dccf;color:#b5502a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.ba-after .ba-item{color:#d5e0eb;border-bottom:1px solid rgba(255,255,255,.10);position:relative;z-index:2}
+.ba-after .ba-item:last-child{border-bottom:none}
+.ba-after .bi{width:22px;height:22px;flex:0 0 auto;border-radius:6px;background:rgba(228,138,52,.2);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px}
+.ba-after .big{font-family:var(--font);font-weight:800;font-size:1.28rem;color:#fff;line-height:1.15;margin-bottom:6px;position:relative;z-index:2}
+.ba-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.8rem;font-weight:800}
+
+/* ---- solution cards ---- */
+.sol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.sol{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.sol .sol-top{padding:28px 28px 0;display:flex;align-items:flex-start;gap:16px}
+.sol .num{font-family:var(--font);font-weight:800;font-size:.92rem;color:var(--accent);letter-spacing:.04em;padding-top:4px}
+.sol .sic{width:52px;height:52px;border-radius:14px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;flex:0 0 auto}
+.sol h3{font-size:1.35rem;margin:0 0 5px}
+.sol .tag{font-family:var(--font);font-weight:600;color:var(--accent-2);font-size:.86rem}
+.sol .sol-body{padding:14px 28px 26px}
+.sol .sol-body p{color:var(--ink-soft);font-size:.98rem;margin-bottom:16px}
+.sol .caps{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.sol .caps span{font-family:var(--font);font-weight:600;font-size:.76rem;color:var(--ink-soft);background:var(--ivory);border:1px solid var(--gray-line);border-radius:100px;padding:5px 11px}
+.sol .mock{margin:0 0 0;height:150px;background:linear-gradient(160deg,#0f2740,#0C1E33);position:relative;overflow:hidden;border-top:1px solid var(--gray-line)}
+
+/* mini mock elements (shared) */
+.mm{position:absolute;background:rgba(255,255,255,.94);border-radius:8px;box-shadow:0 8px 18px rgba(8,21,36,.3)}
+.mm-bar{height:7px;border-radius:4px;background:rgba(255,255,255,.25)}
+
+/* ---- flagship ---- */
+.flag-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.flow .fs{display:flex;align-items:center;gap:8px}
+.flow .fs b{font-family:var(--font);font-weight:700;font-size:.82rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:100px;padding:7px 14px;transition:.3s var(--ease)}
+.flow .fs.act b{background:var(--accent);border-color:var(--accent);color:#fff}
+.flow .fs .arr{color:var(--accent);font-weight:800;opacity:.7}
+.dashmock{background:linear-gradient(180deg,#fff,#f4f7fa);border-radius:var(--r-lg);box-shadow:var(--shadow-navy);border:1px solid rgba(255,255,255,.5);overflow:hidden}
+.dashmock .dm-top{background:var(--navy-900);padding:13px 16px;display:flex;align-items:center;gap:8px}
+.dashmock .dm-top i{width:10px;height:10px;border-radius:50%;background:#33475b}
+.dashmock .dm-top i:first-child{background:var(--accent)}
+.dashmock .dm-top span{margin-left:12px;font-family:var(--font);font-size:.72rem;color:#8fa1b3;font-weight:600}
+.dashmock .dm-b{padding:18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.dashmock .kpi{background:var(--ivory-2);border:1px solid var(--gray-line);border-radius:12px;padding:13px}
+.dashmock .kpi small{font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-2);font-weight:700;font-family:var(--font)}
+.dashmock .kpi b{display:block;font-family:var(--font);font-size:1.4rem;color:var(--navy);margin-top:3px;line-height:1}
+.dashmock .kpi u{text-decoration:none;font-size:.66rem;font-weight:700;color:var(--mint)}
+.dashmock .chart{grid-column:1/3;background:#fff;border:1px solid var(--gray-line);border-radius:12px;padding:14px;height:140px;display:flex;align-items:flex-end;gap:8px}
+.dashmock .chart span{flex:1;background:linear-gradient(180deg,var(--accent),#f2b070);border-radius:5px 5px 0 0}
+.dashmock .side{background:#fff;border:1px solid var(--gray-line);border-radius:12px;padding:13px;display:flex;flex-direction:column;gap:9px}
+.dashmock .side .li{display:flex;align-items:center;gap:8px;font-size:.7rem;color:var(--ink-soft);font-family:var(--font);font-weight:600}
+.dashmock .side .li .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.dashmock .side .li .dot.g{background:var(--mint)}
+.dashmock .side .li .dot.b{background:#3b7dd8}
+
+/* stat band */
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+.statband .st{text-align:center;padding:8px}
+.statband .st b{font-family:var(--font);font-weight:800;font-size:clamp(2rem,4vw,2.8rem);color:var(--accent);display:block;line-height:1}
+.statband .st span{font-family:var(--font);font-weight:600;color:#c7d3df;font-size:.9rem;margin-top:8px;display:block}
+.bg-navy .statband .st b{color:var(--accent)}
+
+/* ---- module explorer ---- */
+.mex{display:grid;grid-template-columns:300px 1fr;gap:22px;margin-top:48px}
+.mex-tabs{display:flex;flex-direction:column;gap:6px}
+.mex-tab{display:flex;align-items:center;gap:12px;text-align:left;background:var(--paper);border:1px solid var(--gray-line);
+  border-radius:12px;padding:13px 15px;cursor:pointer;font-family:var(--font);font-weight:700;font-size:.9rem;color:var(--ink-soft);transition:.22s var(--ease)}
+.mex-tab .mi{width:30px;height:30px;border-radius:8px;background:var(--ivory);display:flex;align-items:center;justify-content:center;font-size:15px;transition:.22s}
+.mex-tab:hover{border-color:rgba(228,138,52,.4)}
+.mex-tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mex-tab.on .mi{background:rgba(228,138,52,.25)}
+.mex-tab .cnt{margin-left:auto;font-size:.72rem;color:var(--gray-2);font-weight:700}
+.mex-tab.on .cnt{color:#8fa1b3}
+.mex-panel{background:var(--paper);border:1px solid var(--gray-line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow-sm);min-height:420px}
+.mex-panel .ph{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.mex-panel .ph .pic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-size:22px}
+.mex-panel h3{font-size:1.4rem}
+.mex-panel .pd{color:var(--ink-soft);margin:0 0 22px;font-size:.97rem}
+.mex-mods{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mex-mods span{display:flex;align-items:center;gap:9px;font-family:var(--font-body);font-size:.9rem;color:var(--ink-soft);
+  background:var(--ivory-2);border:1px solid var(--gray-line-2);border-radius:10px;padding:11px 13px}
+.mex-mods span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+.mex-panel.swap{animation:fade .35s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---- lifecycle ---- */
+.life{margin-top:50px;overflow-x:auto;padding-bottom:14px}
+.life-track{display:flex;gap:0;min-width:900px;align-items:stretch}
+.life-step{flex:1;min-width:112px;text-align:center;position:relative;padding:0 6px}
+.life-step .ring{width:52px;height:52px;border-radius:50%;margin:0 auto 14px;background:var(--paper);border:2px solid var(--gray-line);
+  display:flex;align-items:center;justify-content:center;font-size:20px;position:relative;z-index:2;transition:.35s var(--ease)}
+.life-step .line{position:absolute;top:26px;left:50%;width:100%;height:2px;background:var(--gray-line);z-index:1}
+.life-step:last-child .line{display:none}
+.life-step b{font-family:var(--font);font-weight:700;font-size:.88rem;display:block;color:var(--ink)}
+.life-step small{font-size:.74rem;color:var(--gray-2)}
+.life-step.on .ring{background:var(--accent);border-color:var(--accent);color:#fff;transform:scale(1.08);box-shadow:0 10px 22px rgba(213,118,28,.35)}
+.life-step.on .line{background:var(--accent)}
+
+/* ---- healthcare / product UI mock ---- */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.split.rev .splitv{order:-1}
+.feat-list{list-style:none;margin:22px 0 0;display:flex;flex-direction:column;gap:13px}
+.feat-list li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;color:var(--ink-soft)}
+.feat-list li svg{width:22px;height:22px;flex:0 0 auto;color:var(--accent);margin-top:1px}
+.bg-navy .feat-list li{color:#c7d3df}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tagrow span{font-family:var(--font);font-weight:700;font-size:.78rem;padding:7px 13px;border-radius:100px;background:var(--accent-soft);color:var(--accent-2)}
+.bg-navy .tagrow span{background:rgba(228,138,52,.16);color:var(--accent)}
+/* PACS mock */
+.uimock{border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden;border:1px solid var(--gray-line);background:#fff}
+.uimock .um-top{background:var(--navy-900);padding:12px 16px;display:flex;align-items:center;gap:8px}
+.uimock .um-top i{width:9px;height:9px;border-radius:50%;background:#33475b}.uimock .um-top i:first-child{background:var(--accent)}
+.uimock .um-top span{margin-left:10px;font-family:var(--font);font-size:.72rem;color:#8fa1b3;font-weight:600}
+.pacs-b{display:grid;grid-template-columns:64px 1fr 130px;height:280px;background:#0d1622}
+.pacs-b .rail{background:#0a1220;display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px 0}
+.pacs-b .rail .ri{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:14px}
+.pacs-b .rail .ri.on{background:var(--accent);color:#fff}
+.pacs-b .view{position:relative;background:radial-gradient(circle at 50% 45%,#243447,#0d1622 72%);display:flex;align-items:center;justify-content:center}
+.pacs-b .view .scan{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 42% 40%,#c7d3df,#5c6b7a 55%,#1a2634 80%);box-shadow:0 0 60px rgba(199,211,223,.14);position:relative}
+.pacs-b .view .scan::after{content:"";position:absolute;inset:22px;border-radius:50%;background:radial-gradient(circle at 55% 55%,#8b98a6,#2a3646);opacity:.7}
+.pacs-b .view .cross{position:absolute;inset:0}
+.pacs-b .view .cross::before,.pacs-b .view .cross::after{content:"";position:absolute;background:rgba(228,138,52,.5)}
+.pacs-b .view .cross::before{left:50%;top:0;bottom:0;width:1px}
+.pacs-b .view .cross::after{top:50%;left:0;right:0;height:1px}
+.pacs-b .view .tag{position:absolute;left:12px;top:10px;font-family:var(--font);font-size:.62rem;color:#8fa1b3;line-height:1.5}
+.pacs-b .meta{background:#0a1220;padding:14px 12px;display:flex;flex-direction:column;gap:9px}
+.pacs-b .meta .mrow{font-family:var(--font);font-size:.64rem;color:#8fa1b3}
+.pacs-b .meta .mrow b{display:block;color:#e4ebf2;font-size:.78rem;margin-top:1px}
+.pacs-b .meta .wl{margin-top:auto;display:flex;flex-direction:column;gap:5px}
+.pacs-b .meta .wl i{height:8px;border-radius:3px;background:rgba(255,255,255,.09)}
+.pacs-b .meta .wl i.a{background:rgba(228,138,52,.5)}
+
+/* phone mock (LMS) */
+.phone{width:230px;margin:0 auto;background:var(--navy-900);border-radius:34px;padding:11px;box-shadow:var(--shadow-lg)}
+.phone .scr{background:var(--ivory-2);border-radius:24px;overflow:hidden;height:440px}
+.phone .ph-top{background:var(--navy);padding:18px 16px 16px;color:#fff}
+.phone .ph-top small{font-size:.66rem;color:#8fa1b3;font-family:var(--font);font-weight:600}
+.phone .ph-top b{font-family:var(--font);font-size:1.05rem;display:block;margin-top:2px}
+.phone .ph-prog{margin-top:12px;background:rgba(255,255,255,.14);border-radius:6px;height:8px;overflow:hidden}
+.phone .ph-prog i{display:block;height:100%;width:68%;background:var(--accent);border-radius:6px}
+.phone .ph-body{padding:14px}
+.phone .lc{background:#fff;border:1px solid var(--gray-line);border-radius:12px;padding:11px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.phone .lc .th{width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-size:17px;flex:0 0 auto}
+.phone .lc b{font-family:var(--font);font-size:.8rem;display:block}
+.phone .lc small{font-size:.66rem;color:var(--gray-2)}
+.phone .lc .pc{margin-left:auto;font-family:var(--font);font-weight:800;font-size:.72rem;color:var(--mint)}
+
+/* ---- industries ---- */
+.ind-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px}
+.ind-tab{font-family:var(--font);font-weight:700;font-size:.9rem;padding:11px 20px;border-radius:100px;border:1px solid var(--gray-line);
+  background:var(--paper);color:var(--ink-soft);cursor:pointer;transition:.22s var(--ease)}
+.ind-tab:hover{border-color:rgba(228,138,52,.5)}
+.ind-tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ind-panel{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--paper);border:1px solid var(--gray-line);
+  border-radius:var(--r-xl);padding:44px;box-shadow:var(--shadow-md)}
+.ind-panel h3{font-size:1.7rem;margin-bottom:12px}
+.ind-panel p{color:var(--ink-soft);margin-bottom:20px}
+.ind-caps{display:flex;flex-direction:column;gap:11px}
+.ind-caps .ic{display:flex;gap:11px;align-items:center;font-family:var(--font-body);font-size:.96rem;color:var(--ink-soft)}
+.ind-caps .ic .k{width:26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
+.ind-vis{aspect-ratio:4/3;border-radius:var(--r-lg);background:linear-gradient(160deg,#12293f,#0C1E33);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ind-vis .glyph{font-size:88px;filter:grayscale(.1)}
+.ind-vis .rings{position:absolute;inset:0}
+.ind-vis .rings i{position:absolute;border:1px solid rgba(228,138,52,.28);border-radius:50%}
+.ind-vis .rings i:nth-child(1){inset:18%}.ind-vis .rings i:nth-child(2){inset:30%}.ind-vis .rings i:nth-child(3){inset:42%}
+
+/* ---- case studies ---- */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.case{display:flex;flex-direction:column;overflow:hidden}
+.case .ct{height:112px;background:linear-gradient(155deg,#12293f,#0C1E33);display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
+.case .ct img{max-height:52px;width:auto;filter:brightness(0) invert(1);opacity:.92}
+.case .cname{font-family:var(--font);font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+.case .cname .cg{font-size:1.6rem}
+.case .cb{padding:24px}
+.case .tag{font-family:var(--font);font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-2)}
+.case h3{font-size:1.18rem;margin:8px 0 14px}
+.case .row{margin-bottom:11px}
+.case .row .k{font-family:var(--font);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gray-2);display:block;margin-bottom:2px}
+.case .row p{font-size:.9rem;color:var(--ink-soft);margin:0}
+.case .out{margin-top:14px;padding-top:14px;border-top:1px solid var(--gray-line);font-family:var(--font);font-weight:700;font-size:.9rem;color:var(--mint);display:flex;gap:8px;align-items:flex-start}
+.case .out svg{width:17px;height:17px;flex:0 0 auto;margin-top:2px}
+
+/* ---- process ---- */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:20px}
+.proc{padding:28px 26px;position:relative}
+.proc .pn{font-family:var(--font);font-weight:800;font-size:2.6rem;color:var(--gray-line);line-height:1}
+.proc.on-dark .pn{color:rgba(255,255,255,.12)}
+.proc h3{font-size:1.2rem;margin:10px 0 8px}
+.proc p{font-size:.94rem;color:var(--ink-soft)}
+.proc .bar{position:absolute;left:26px;right:26px;bottom:0;height:3px;background:var(--gray-line);border-radius:3px;overflow:hidden}
+.proc .bar i{display:block;height:100%;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
+.proc.in .bar i{transform:scaleX(1)}
+
+/* ---- why comparison ---- */
+.why{max-width:960px;margin:0 auto;background:var(--paper);border:1px solid var(--gray-line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+.why-row{display:grid;grid-template-columns:1fr 1fr 1.1fr}
+.why-row>div{padding:17px 22px;border-bottom:1px solid var(--gray-line);font-size:.96rem;font-family:var(--font-body)}
+.why-row:last-child>div{border-bottom:none}
+.why-head>div{font-family:var(--font);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.why-head .cap{color:var(--gray-2)}
+.why-head .gen{color:var(--gray-2)}
+.why-head .us{color:var(--accent-2)}
+.why .cap{font-family:var(--font);font-weight:700;color:var(--ink)}
+.why .gen{color:var(--gray-2)}
+.why .us{color:var(--ink);font-weight:600;background:linear-gradient(180deg,rgba(228,138,52,.07),rgba(228,138,52,.02));display:flex;gap:9px;align-items:flex-start}
+.why .us svg{width:18px;height:18px;color:var(--accent);flex:0 0 auto;margin-top:1px}
+
+/* ---- about ---- */
+.about-grid{display:grid;grid-template-columns:340px 1fr;gap:52px;align-items:center}
+.about-photo{position:relative}
+.about-photo .frame{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--gray-line);box-shadow:var(--shadow-lg);background:var(--navy);aspect-ratio:4/5}
+.about-photo .frame img{width:100%;height:100%;object-fit:cover}
+.about-photo .badge{position:absolute;bottom:-16px;left:24px;right:24px;background:var(--paper);border:1px solid var(--gray-line);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow-md)}
+.about-photo .badge b{font-family:var(--font);font-weight:800;font-size:1.05rem;display:block}
+.about-photo .badge small{color:var(--gray-2);font-size:.82rem}
+.about-content p{color:var(--ink-soft);margin-bottom:16px;font-size:1.03rem}
+.about-content p strong{color:var(--ink)}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}
+.about-stats .s b{font-family:var(--font);font-weight:800;font-size:1.7rem;color:var(--accent);display:block;line-height:1}
+.about-stats .s span{font-size:.82rem;color:var(--gray-2);margin-top:4px;display:block}
+
+/* ---- final CTA ---- */
+.cta{background:linear-gradient(160deg,#10273f,#0C1E33 60%,#0a1729);color:#fff;border-radius:var(--r-xl);padding:64px 48px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-navy)}
+.cta::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:620px;height:620px;background:radial-gradient(circle,rgba(228,138,52,.22),transparent 62%)}
+.cta h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem);position:relative;z-index:2}
+.cta p{color:#c0cdd9;max-width:560px;margin:18px auto 0;position:relative;z-index:2;font-size:1.08rem}
+.cta-btns{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap;position:relative;z-index:2}
+.cta .mail{margin-top:22px;font-family:var(--font);color:#8fa1b3;font-size:.92rem;position:relative;z-index:2}
+.cta .mail a{color:var(--accent);font-weight:700}
+
+/* ---- footer ---- */
+.footer{background:var(--navy-900);color:#c7d3df;padding:70px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+.footer .fbrand .brand{color:#fff;margin-bottom:16px}
+.footer .fbrand p{color:#8fa1b3;font-size:.92rem;max-width:290px;margin-bottom:18px}
+.footer .fsoc{display:flex;gap:10px}
+.footer .fsoc a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:#c7d3df;transition:.2s}
+.footer .fsoc a:hover{background:var(--accent);color:#fff}
+.footer .fsoc a svg{width:19px;height:19px}
+.footer h4{color:#fff;font-family:var(--font);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.footer .fcol a,.footer .fcol span{display:block;color:#8fa1b3;font-size:.92rem;padding:5px 0;transition:color .2s}
+.footer .fcol a:hover{color:var(--accent)}
+.foot-bot{border-top:1px solid rgba(255,255,255,.09);margin-top:44px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-bot span{color:#6d7d8c;font-size:.85rem}
+.foot-bot .tagline{font-family:var(--font);color:#8fa1b3;font-weight:600}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1080px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-cta .btn-primary{display:none}
+}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-visual{height:400px;max-width:460px;margin:0 auto;width:100%}
+  .flag-grid,.split,.about-grid,.ind-panel{grid-template-columns:1fr;gap:34px}
+  .split.rev .splitv{order:0}
+  .mex{grid-template-columns:1fr}
+  .mex-tabs{flex-direction:row;flex-wrap:wrap}
+  .mex-tab{flex:1 1 auto}
+  .mex-tab .cnt{display:none}
+  .about-photo{max-width:320px;margin:0 auto}
+}
+@media(max-width:820px){
+  .sec{padding:80px 0}
+  .sol-grid,.case-grid,.proc-grid,.statband,.about-stats{grid-template-columns:1fr 1fr}
+  .ba{grid-template-columns:1fr;gap:16px}
+  .ba-arrow{transform:rotate(90deg)}
+  .mex-mods{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .sec{padding:64px 0}
+  .head{margin-bottom:40px}
+  .sol-grid,.case-grid,.proc-grid,.statband,.about-stats,.mex-mods{grid-template-columns:1fr}
+  .why-row{grid-template-columns:1fr 1.2fr}
+  .why .cap{display:none}
+  .why-head .cap{display:none}
+  .cta{padding:44px 24px}
+  .ind-panel{padding:26px}
+  .nav-in{margin-top:8px}
+  .hero{padding:120px 0 72px}
+  .hero-visual{height:340px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .footer .fbrand{grid-column:1/-1}
+}
+/* ---- device / embedded stack ---- */
+.devstack{display:flex;flex-direction:column;gap:14px}
+.devlayer{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;padding:16px 18px;position:relative}
+.devlayer .dk{width:44px;height:44px;border-radius:12px;background:rgba(228,138,52,.16);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto}
+.devlayer b{font-family:var(--font);font-weight:700;font-size:1rem;color:#fff;display:block}
+.devlayer small{color:#9fb0c0;font-size:.82rem;font-family:var(--font-body)}
+.devlayer .sig{margin-left:auto;font-family:var(--font);font-weight:700;font-size:.68rem;letter-spacing:.06em;color:var(--accent);
+  background:rgba(228,138,52,.12);border-radius:100px;padding:5px 11px;white-space:nowrap}
+.devconn{width:2px;height:12px;background:rgba(228,138,52,.5);margin:-8px 0 -8px 40px}
+.soft-only{display:inline-flex;align-items:center;gap:9px;background:rgba(228,138,52,.14);border:1px solid rgba(228,138,52,.3);
+  color:var(--accent);font-family:var(--font);font-weight:700;font-size:.82rem;border-radius:100px;padding:9px 16px;margin-top:22px}
+/* ---- solution-card mini mock ---- */
+.mock{background:linear-gradient(160deg,#12293f,#0C1E33)}
+.mock::before{content:"";position:absolute;left:22px;right:22px;top:24px;bottom:-46px;border-radius:12px 12px 0 0;
+  background:linear-gradient(180deg,#ffffff,#eef2f7);box-shadow:0 0 0 1px rgba(255,255,255,.35),0 18px 44px rgba(0,0,0,.4)}
+.mock::after{content:"";position:absolute;left:40px;right:40px;top:44px;height:11px;border-radius:6px;background:var(--accent);
+  box-shadow:0 24px 0 -1px rgba(12,30,51,.14),0 46px 0 -1px rgba(12,30,51,.09),0 68px 0 -1px rgba(12,30,51,.06)}
+.mock[data-mock="pacs"]::before{background:linear-gradient(180deg,#1a2634,#0d1622)}
+.mock[data-mock="pacs"]::after{background:rgba(228,138,52,.7);box-shadow:0 24px 0 -1px rgba(255,255,255,.08),0 46px 0 -1px rgba(255,255,255,.05)}
+.mock[data-mock="dev"]::after{width:52px;border-radius:6px;left:40px;right:auto}
+
+/* anchor offset for fixed nav */
+section[id],header[id]{scroll-margin-top:92px}
+/* placeholders replaced progressively */
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"ProfessionalService",
+      "@id":"https://elevateaura.co.in/#org",
+      "name":"Elevate Aura",
+      "url":"https://elevateaura.co.in/",
+      "logo":"https://elevateaura.co.in/assets/img/logo.png",
+      "image":"https://elevateaura.co.in/images/og_image.png",
+      "description":"Founder-led product studio building real software systems, CRM, HIMS, AuraPACS, LMS and embedded device software, for healthcare, medical equipment and diagnostics businesses in India.",
+      "email":"elevateauraofficial@gmail.com",
+      "areaServed":"IN",
+      "address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},
+      "founder":{"@type":"Person","@id":"https://elevateaura.co.in/#ragul"},
+      "sameAs":["https://www.linkedin.com/in/ragul-sekar"],
+      "serviceType":["CRM Software","Hospital Management Software (HIMS)","PACS / DICOM Imaging Software","Radiology Information System (RIS)","Learning Management System (LMS)","Embedded & Firmware Software Development","Field Service Management","AMC Management Software","Business Process Automation"],
+      "knowsAbout":["CRM","AMC Management","Field Service Management","Inventory Management","GST Billing","HIMS","PACS","DICOM","RIS","LIMS","EMR","EHR","Learning Management System","Embedded Software","Firmware","BLE","Modbus","CAN Bus","React Native","Next.js","Supabase","Azure"]
+    },
+    {
+      "@type":"Person",
+      "@id":"https://elevateaura.co.in/#ragul",
+      "name":"Ragul Sekar",
+      "jobTitle":"Founder & Builder",
+      "worksFor":{"@id":"https://elevateaura.co.in/#org"},
+      "homeLocation":{"@type":"Place","name":"Chennai, India"},
+      "sameAs":["https://www.linkedin.com/in/ragul-sekar"]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"What does Elevate Aura build?","acceptedAnswer":{"@type":"Answer","text":"Real software systems built end to end: operations CRM, hospital management (HIMS) and AuraPACS DICOM imaging, learning platforms (LMS), and embedded device software, for healthcare, medical equipment and diagnostics businesses."}},
+        {"@type":"Question","name":"How long does a build take?","acceptedAnswer":{"@type":"Answer","text":"Projects run on a 30-working-day build framework where scope allows, delivered founder to founder with direct access to the person building it."}},
+        {"@type":"Question","name":"Do you work with hospitals and diagnostics centres?","acceptedAnswer":{"@type":"Answer","text":"Yes. HIMS covers OP/IP registration, appointments, EMR/EHR, LIMS and billing, and AuraPACS adds a zero-download DICOM viewer, RIS and modality worklist for radiology and labs."}},
+        {"@type":"Question","name":"Do you manufacture hardware?","acceptedAnswer":{"@type":"Answer","text":"No. Product Development is software only: firmware, device communication, companion apps and cloud telemetry built to your hardware team's specification. We do not manufacture hardware."}},
+        {"@type":"Question","name":"Where is Elevate Aura based?","acceptedAnswer":{"@type":"Answer","text":"Chennai, India, with in-person availability for local founders and WhatsApp-first communication."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="/" class="brand"><img src="assets/img/logo.png" alt="Elevate Aura logo">Elevate&nbsp;Aura<span class="bdot">.</span></a>
+    <div class="nav-links">
+      <a href="#solutions">Solutions</a>
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." class="nav-wa" target="_blank" rel="noopener" aria-label="WhatsApp Elevate Aura">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.2 4.79 1.2 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.53 0-3.03-.41-4.34-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 01-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.69 8.25-8.24 8.25zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-primary" style="padding:11px 20px;font-size:.9rem">Book a Strategy Call</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- mobile nav -->
+<div class="mnav" id="mnav">
+  <a href="#solutions">Solutions</a>
+  <a href="#products">Products</a>
+  <a href="#industries">Industries</a>
+  <a href="#work">Work</a>
+  <a href="#process">Process</a>
+  <a href="#about">About</a>
+  <div class="mcta">
+    <a href="#contact" class="btn btn-primary">Book a Strategy Call</a>
+    <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." class="btn btn-wa" target="_blank" rel="noopener">Talk on WhatsApp</a>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill"><span class="g"></span> Founder-led product &amp; operations studio</span>
+      <h1>Build the digital operating system your business <span class="hl">actually needs</span>.</h1>
+      <p class="sub">From WhatsApp and Excel to connected software platforms. CRM, field operations, billing, healthcare systems and automation, built around the way your business already works.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary btn-lg">Book a Strategy Call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#solutions" class="btn btn-ghost btn-lg">Explore our solutions</a>
+      </div>
+      <div class="trust-row">
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Healthcare &amp; medical technology</span>
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Founder-led delivery</span>
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>30-day build framework</span>
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>End-to-end development</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ecosys">
+        <svg class="lines" viewBox="0 0 480 460" preserveAspectRatio="none">
+          <path d="M240 230 L70 60"/><path d="M240 230 L410 46"/><path d="M240 230 L470 210"/>
+          <path d="M240 230 L420 420"/><path d="M240 230 L170 450"/><path d="M240 230 L20 250"/><path d="M240 230 L190 60"/>
+        </svg>
+        <div class="core">
+          <div class="ct"><i></i><i></i><i></i><span>Executive dashboard</span></div>
+          <div class="cb">
+            <div class="krow">
+              <div class="k"><b>&#8377;18.4L</b><small>Revenue</small></div>
+              <div class="k"><b>42</b><small>Open leads</small></div>
+              <div class="k"><b>7</b><small>AMC due</small></div>
+            </div>
+            <div class="bars"><span style="height:40%"></span><span style="height:62%"></span><span style="height:48%"></span><span style="height:78%"></span><span style="height:58%"></span><span style="height:88%"></span><span style="height:70%"></span></div>
+          </div>
+        </div>
+        <div class="node n1"><span class="ic">&#128202;</span>CRM</div>
+        <div class="node n2"><span class="ic">&#128241;</span>Field App</div>
+        <div class="node n3"><span class="ic">&#129534;</span>Billing</div>
+        <div class="node n4"><span class="ic">&#128230;</span>Inventory</div>
+        <div class="node n5"><span class="ic">&#128220;</span>AMC</div>
+        <div class="node n6"><span class="ic">&#127973;</span>Patient</div>
+        <div class="node n7"><span class="ic">&#128172;</span>WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="tstrip bg-ivory2">
+  <div class="wrap in">
+    <span class="lbl">Built for</span>
+    <span class="t"><span class="d"></span>Healthcare Technology</span>
+    <span class="t"><span class="d"></span>Medical Equipment</span>
+    <span class="t"><span class="d"></span>Medical Robotics</span>
+    <span class="t"><span class="d"></span>Diagnostics &amp; Imaging</span>
+    <span class="t"><span class="d"></span>Founder-Led SMBs</span>
+  </div>
+</section>
+
+<!-- ===================== PROBLEM ===================== -->
+<section class="sec bg-ivory" id="problem">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">The real problem</span>
+      <h2 class="h2">Your business has grown.<br>Your systems haven't.</h2>
+      <p class="lead">Most founder-led operations still run on a stack of tools that were never designed to talk to each other. The work gets done, but nothing connects, and nothing scales.</p>
+    </div>
+    <div class="ba reveal">
+      <div class="ba-col ba-before">
+        <h4>How it runs today</h4>
+        <div class="ba-item"><span class="bi">!</span>WhatsApp groups for everything</div>
+        <div class="ba-item"><span class="bi">!</span>Excel sheets that live on one laptop</div>
+        <div class="ba-item"><span class="bi">!</span>Manual follow-ups and paper invoices</div>
+        <div class="ba-item"><span class="bi">!</span>Disconnected apps that never sync</div>
+        <div class="ba-item"><span class="bi">!</span>AMC renewals missed until it is too late</div>
+        <div class="ba-item"><span class="bi">!</span>Field visits nobody can verify</div>
+        <div class="ba-item"><span class="bi">!</span>Customer history scattered across chats</div>
+      </div>
+      <div class="ba-arrow">&rarr;</div>
+      <div class="ba-col ba-after">
+        <h4>How it should run</h4>
+        <div class="big">One connected operating platform.</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>Every enquiry, order and contract in one place</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>Data entered once, flowing through the business</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>Billing, reminders and stock that run themselves</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>Field teams live on one map, in real time</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>Renewals surfaced before the revenue lapses</div>
+        <div class="ba-item"><span class="bi">&#10003;</span>The whole business on one owner dashboard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOLUTIONS ===================== -->
+<section class="sec bg-ivory2" id="solutions">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">What we build</span>
+      <h2 class="h2">Four ways we turn your workflow into software</h2>
+      <p class="lead">Real systems, built end to end for medical, healthcare and equipment businesses. Start with the one that fits, connect the rest as you grow.</p>
+    </div>
+    <div class="sol-grid">
+      <article class="card sol reveal">
+        <div class="sol-top">
+          <span class="num">01</span>
+          <span class="sic">&#128202;</span>
+          <div><h3>CRM &amp; Business Operations</h3><span class="tag">The operations platform</span></div>
+        </div>
+        <div class="sol-body">
+          <p>Sales, field operations, equipment, AMC, service, inventory and billing, running the full cycle from first enquiry to renewal, as a field mobile app and a founder web dashboard.</p>
+          <div class="caps"><span>Leads &amp; quotations</span><span>Field &amp; GPS</span><span>AMC &amp; service</span><span>GST billing</span><span>CEO dashboard</span></div>
+          <a href="aura-business.html" class="arrowlink">Explore Aura Business <span class="a">&rarr;</span></a>
+        </div>
+        <div class="mock" data-mock="crm"></div>
+      </article>
+      <article class="card sol reveal d1">
+        <div class="sol-top">
+          <span class="num">02</span>
+          <span class="sic">&#127973;</span>
+          <div><h3>HIMS &amp; AuraPACS</h3><span class="tag">Clinical operations software</span></div>
+        </div>
+        <div class="sol-body">
+          <p>Hospital, clinical and diagnostics workflows front desk to discharge, plus AuraPACS, a zero-download DICOM imaging system for radiology and labs, with billing throughout.</p>
+          <div class="caps"><span>OP / IP &amp; queue</span><span>EMR / EHR</span><span>DICOM viewer</span><span>RIS &amp; worklist</span><span>LIMS &amp; pharmacy</span></div>
+          <a href="aurapacs.html" class="arrowlink">Explore AuraPACS <span class="a">&rarr;</span></a>
+        </div>
+        <div class="mock" data-mock="pacs"></div>
+      </article>
+      <article class="card sol reveal">
+        <div class="sol-top">
+          <span class="num">03</span>
+          <span class="sic">&#127891;</span>
+          <div><h3>LMS &amp; Learning</h3><span class="tag">Training, certification, exam prep</span></div>
+        </div>
+        <div class="sol-body">
+          <p>A complete learning platform for training field teams, certifying service staff, or running a coaching business, proven on our own shipped product. Learner app plus instructor dashboard.</p>
+          <div class="caps"><span>Course library</span><span>Assessments</span><span>Certificates</span><span>Live classes</span><span>Analytics</span></div>
+          <a href="aura-learn.html" class="arrowlink">Explore Aura Learn <span class="a">&rarr;</span></a>
+        </div>
+        <div class="mock" data-mock="lms"></div>
+      </article>
+      <article class="card sol reveal d1">
+        <div class="sol-top">
+          <span class="num">04</span>
+          <span class="sic">&#128295;</span>
+          <div><h3>Product Development</h3><span class="tag">Embedded &amp; device software</span></div>
+        </div>
+        <div class="sol-body">
+          <p>For companies building a connected device, we write the software that runs it, firmware, device communication, companion app and cloud telemetry, to your hardware team's spec. Software only.</p>
+          <div class="caps"><span>Embedded firmware</span><span>BLE / Wi-Fi</span><span>Modbus / CAN</span><span>Companion app</span><span>Cloud telemetry</span></div>
+          <a href="product-development.html" class="arrowlink">Explore Product Development <span class="a">&rarr;</span></a>
+        </div>
+        <div class="mock" data-mock="dev"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FLAGSHIP CRM ===================== -->
+<section class="sec bg-navy on-dark" id="flagship">
+  <div class="wrap">
+    <div class="flag-grid">
+      <div class="flag-copy reveal">
+        <span class="eyebrow">Flagship platform &middot; Aura Business</span>
+        <h2 class="h2">One platform.<br>Your entire operation.</h2>
+        <p class="lead" style="margin-top:16px">From the first enquiry to the AMC renewal years later, every stage lives in one system. Your field team works from a mobile app, you watch the whole business from one dashboard.</p>
+        <div class="flow" id="crmFlow">
+          <span class="fs"><b>Lead</b></span><span class="fs"><span class="arr">&rarr;</span><b>Qualify</b></span>
+          <span class="fs"><span class="arr">&rarr;</span><b>Quotation</b></span><span class="fs"><span class="arr">&rarr;</span><b>Order</b></span>
+          <span class="fs"><span class="arr">&rarr;</span><b>Delivery</b></span><span class="fs"><span class="arr">&rarr;</span><b>AMC</b></span>
+          <span class="fs"><span class="arr">&rarr;</span><b>Service</b></span><span class="fs"><span class="arr">&rarr;</span><b>Renewal</b></span>
+        </div>
+        <div class="hero-btns" style="margin-top:30px">
+          <a href="aura-business.html" class="btn btn-primary">See what we can build <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#modules" class="btn btn-ghost">Browse the modules</a>
+        </div>
+      </div>
+      <div class="flag-visual reveal d1">
+        <div class="dashmock">
+          <div class="dm-top"><i></i><i></i><i></i><span>Aura Business &middot; Executive dashboard</span></div>
+          <div class="dm-b">
+            <div class="kpi"><small>Revenue (MTD)</small><b>&#8377;18.4L</b><u>&#9650; 12%</u></div>
+            <div class="kpi"><small>Open leads</small><b>42</b><u>&#9650; 8</u></div>
+            <div class="kpi"><small>AMC due</small><b>7</b><u style="color:var(--accent-2)">This week</u></div>
+            <div class="chart"><span style="height:44%"></span><span style="height:62%"></span><span style="height:52%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:92%"></span><span style="height:72%"></span><span style="height:84%"></span></div>
+            <div class="side">
+              <div class="li"><span class="dot"></span>Quotation sent &middot; Apollo</div>
+              <div class="li"><span class="dot g"></span>Payment received</div>
+              <div class="li"><span class="dot b"></span>Service ticket closed</div>
+              <div class="li"><span class="dot"></span>AMC renewal due</div>
+              <div class="li"><span class="dot g"></span>Field visit verified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="statband reveal">
+      <div class="st" data-count="87"><b>87</b><span>Connected modules</span></div>
+      <div class="st" data-count="12"><b>12</b><span>Integrated suites</span></div>
+      <div class="st" data-count="30"><b>30</b><span>Working days to launch</span></div>
+      <div class="st"><b>&#8734;</b><span>Users on every plan</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MODULE EXPLORER ===================== -->
+<section class="sec bg-ivory" id="modules">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">The platform</span>
+      <h2 class="h2">87 connected modules.<br>One operating system.</h2>
+      <p class="lead">Twelve suites that share one database and one login. Switch on what you need today, add the rest as you grow. Pick a suite to see what is inside.</p>
+    </div>
+    <div class="mex reveal" id="mex">
+      <div class="mex-tabs" role="tablist">
+        <button class="mex-tab on" data-t="m1" role="tab"><span class="mi">&#129309;</span>Sales &amp; CRM</button>
+        <button class="mex-tab" data-t="m2" role="tab"><span class="mi">&#127911;</span>Service &amp; Ticketing</button>
+        <button class="mex-tab" data-t="m3" role="tab"><span class="mi">&#128220;</span>AMC &amp; Contracts</button>
+        <button class="mex-tab" data-t="m4" role="tab"><span class="mi">&#128737;</span>Preventive Maintenance</button>
+        <button class="mex-tab" data-t="m5" role="tab"><span class="mi">&#129658;</span>Asset Lifecycle</button>
+        <button class="mex-tab" data-t="m6" role="tab"><span class="mi">&#128205;</span>Field Force</button>
+        <button class="mex-tab" data-t="m7" role="tab"><span class="mi">&#128230;</span>Inventory &amp; Spares</button>
+        <button class="mex-tab" data-t="m8" role="tab"><span class="mi">&#129534;</span>Billing &amp; Finance</button>
+        <button class="mex-tab" data-t="m9" role="tab"><span class="mi">&#128101;</span>HR &amp; Workforce</button>
+        <button class="mex-tab" data-t="m10" role="tab"><span class="mi">&#128202;</span>Executive &amp; Analytics</button>
+        <button class="mex-tab" data-t="m11" role="tab"><span class="mi">&#128172;</span>Communication</button>
+        <button class="mex-tab" data-t="m12" role="tab"><span class="mi">&#9889;</span>Automation &amp; AI</button>
+      </div>
+      <div class="mex-panels">
+        <div class="mex-panel" id="m1">
+          <div class="ph"><span class="pic">&#129309;</span><h3>Sales &amp; CRM</h3></div>
+          <p class="pd">Every lead, quote and opportunity from first touch to closed order, with your whole pipeline in one view.</p>
+          <div class="mex-mods"><span>Lead Capture</span><span>Lead Scoring</span><span>Lead Assignment</span><span>Customer Database</span><span>Doctors &amp; Dealers</span><span>Quotations</span><span>Sales Pipeline</span><span>Opportunities</span><span>Follow-ups</span><span>Territory Mapping</span><span>Sales Forecasting</span><span>Tenders</span><span>Sample &amp; Demo</span></div>
+        </div>
+        <div class="mex-panel" id="m2" hidden>
+          <div class="ph"><span class="pic">&#127911;</span><h3>Service &amp; Ticketing</h3></div>
+          <p class="pd">Complaints, tickets and SLAs in one flow, so breakdowns get handled before they cost a renewal.</p>
+          <div class="mex-mods"><span>Complaints</span><span>Ticketing</span><span>Priorities &amp; Categories</span><span>SLA Management</span><span>Escalation Rules</span><span>Breakdown / Repair</span><span>Service Scheduling</span><span>Resolution Tracking</span><span>Customer Sign-off</span><span>Service Reports</span><span>Customer Support</span><span>CSAT Feedback</span></div>
+        </div>
+        <div class="mex-panel" id="m3" hidden>
+          <div class="ph"><span class="pic">&#128220;</span><h3>AMC &amp; Service Contracts</h3></div>
+          <p class="pd">The revenue engine. Every contract on a renewal clock, with lapsing revenue surfaced before it is gone.</p>
+          <div class="mex-mods"><span>AMC Comprehensive</span><span>AMC Non-Comprehensive</span><span>CMC</span><span>Warranty</span><span>Extended Warranty</span><span>Contract Creation</span><span>Renewal Alerts</span><span>Auto-Quotations</span><span>Revenue Protection</span><span>Contract Profitability</span><span>Multi-site Contracts</span><span>Contract Billing</span></div>
+        </div>
+        <div class="mex-panel" id="m4" hidden>
+          <div class="ph"><span class="pic">&#128737;&#65039;</span><h3>Preventive Maintenance</h3></div>
+          <p class="pd">Scheduled PM, calibration and compliance, so equipment is serviced on time and every visit is on record.</p>
+          <div class="mex-mods"><span>PM Scheduling</span><span>Meter / Usage-based</span><span>PM Checklists</span><span>Calibration</span><span>Compliance &amp; Audit</span><span>Inspection Reports</span><span>Service Reminders</span><span>Recurring Jobs</span><span>Maintenance History</span></div>
+        </div>
+        <div class="mex-panel" id="m5" hidden>
+          <div class="ph"><span class="pic">&#129658;</span><h3>Asset &amp; Equipment Lifecycle</h3></div>
+          <p class="pd">Every unit tracked by serial number, from installation to replacement, with a full 360 history on tap.</p>
+          <div class="mex-mods"><span>Asset Registry</span><span>Serial Tracking</span><span>Installation</span><span>Acceptance Sign-off</span><span>Warranty Linkage</span><span>Lifecycle Tracking</span><span>Asset 360 History</span><span>Depreciation</span><span>Transfers</span><span>Replacement</span></div>
+        </div>
+        <div class="mex-panel" id="m6" hidden>
+          <div class="ph"><span class="pic">&#128205;</span><h3>Field Force &amp; Technician</h3></div>
+          <p class="pd">Your whole field team live on one map. Assign visits, track location, capture proof, all from a mobile app.</p>
+          <div class="mex-mods"><span>GPS Live Tracking</span><span>Geo-fenced Attendance</span><span>Beat / Route Plans</span><span>Visit Verification</span><span>Mobile Field App</span><span>Work Orders</span><span>Photo &amp; Signature</span><span>Offline Mode</span><span>Skill-based Allocation</span><span>Productivity KPIs</span><span>Expenses</span></div>
+        </div>
+        <div class="mex-panel" id="m7" hidden>
+          <div class="ph"><span class="pic">&#128230;</span><h3>Inventory &amp; Spare Parts</h3></div>
+          <p class="pd">Stock across warehouses and engineer vans, with batch, expiry and reorder alerts built in.</p>
+          <div class="mex-mods"><span>Stock Management</span><span>Multi-warehouse</span><span>Spare Parts</span><span>Engineer Allocation</span><span>Consumption Analytics</span><span>Batch Tracking</span><span>Expiry Tracking</span><span>Purchase Orders</span><span>Vendor Management</span><span>Supplier Performance</span><span>Reorder Alerts</span></div>
+        </div>
+        <div class="mex-panel" id="m8" hidden>
+          <div class="ph"><span class="pic">&#129534;</span><h3>Billing &amp; Finance</h3></div>
+          <p class="pd">GST quotations, invoices and Delivery Challans in seconds, then automatic reminders until you get paid.</p>
+          <div class="mex-mods"><span>GST Quotation</span><span>GST Invoice</span><span>Delivery Challan</span><span>Service Invoices</span><span>Proforma</span><span>Credit / Debit Notes</span><span>e-Way Bill</span><span>Payment Tracking</span><span>Outstanding</span><span>Reminders</span><span>Customer Ledger</span><span>Revenue Analytics</span></div>
+        </div>
+        <div class="mex-panel" id="m9" hidden>
+          <div class="ph"><span class="pic">&#128101;</span><h3>HR &amp; Workforce</h3></div>
+          <p class="pd">Profiles, attendance, leave and roles, so the people side of the business runs on the same platform.</p>
+          <div class="mex-mods"><span>Employee Profiles</span><span>Departments</span><span>Attendance</span><span>Leave</span><span>Shifts</span><span>Holiday Calendar</span><span>Payroll Integration</span><span>Performance</span><span>Role-Based Access</span><span>Permissions</span></div>
+        </div>
+        <div class="mex-panel" id="m10" hidden>
+          <div class="ph"><span class="pic">&#128202;</span><h3>Executive &amp; Analytics</h3></div>
+          <p class="pd">The whole business on one owner dashboard, with real-time KPIs, a health score and reports on demand.</p>
+          <div class="mex-mods"><span>CEO Dashboard</span><span>Real-time KPIs</span><span>Revenue Analytics</span><span>Business Health Score</span><span>Custom Report Builder</span><span>Scheduled Reports</span><span>Territory Analytics</span><span>Service Analytics</span><span>Audit Logs</span><span>Data Export</span></div>
+        </div>
+        <div class="mex-panel" id="m11" hidden>
+          <div class="ph"><span class="pic">&#128172;</span><h3>Communication &amp; Portals</h3></div>
+          <p class="pd">WhatsApp, email and SMS from inside the platform, plus self-service portals for customers, vendors and dealers.</p>
+          <div class="mex-mods"><span>WhatsApp Business</span><span>WhatsApp Automation</span><span>Email &amp; Templates</span><span>SMS</span><span>Notifications</span><span>Comms History</span><span>Customer Portal</span><span>Vendor Portal</span><span>Dealer Portal</span><span>Self-service</span></div>
+        </div>
+        <div class="mex-panel" id="m12" hidden>
+          <div class="ph"><span class="pic">&#9889;</span><h3>Smart Automation &amp; AI</h3></div>
+          <p class="pd">The platform works in the background, predicting renewals, routing tickets and flagging risk before you have to.</p>
+          <div class="mex-mods"><span>Renewal Prediction</span><span>Predictive Maintenance</span><span>Smart Ticket Routing</span><span>Lead Scoring</span><span>Sales Forecasting</span><span>IoT Monitoring</span><span>Workflow Automation</span><span>Auto-reminders</span><span>Risk Detection</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIFECYCLE ===================== -->
+<section class="sec bg-ivory2" id="lifecycle">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">One connected lifecycle</span>
+      <h2 class="h2">Enter data once.<br>Let it flow through the business.</h2>
+      <p class="lead">Nothing gets re-typed, nothing falls through the cracks. Each stage hands off cleanly to the next, all the way from a new enquiry to the analytics you run the business on.</p>
+    </div>
+    <div class="life reveal" id="life">
+      <div class="life-track">
+        <div class="life-step" data-i="0"><span class="line"></span><span class="ring">&#128269;</span><b>Lead</b><small>Enquiry in</small></div>
+        <div class="life-step" data-i="1"><span class="line"></span><span class="ring">&#128100;</span><b>Customer</b><small>Onboard</small></div>
+        <div class="life-step" data-i="2"><span class="line"></span><span class="ring">&#128203;</span><b>Quotation</b><small>GST quote</small></div>
+        <div class="life-step" data-i="3"><span class="line"></span><span class="ring">&#128722;</span><b>Order</b><small>Confirm</small></div>
+        <div class="life-step" data-i="4"><span class="line"></span><span class="ring">&#128230;</span><b>Inventory</b><small>Allocate</small></div>
+        <div class="life-step" data-i="5"><span class="line"></span><span class="ring">&#129534;</span><b>Invoice</b><small>Bill</small></div>
+        <div class="life-step" data-i="6"><span class="line"></span><span class="ring">&#128666;</span><b>Delivery</b><small>Dispatch</small></div>
+        <div class="life-step" data-i="7"><span class="line"></span><span class="ring">&#128220;</span><b>AMC</b><small>Contract</small></div>
+        <div class="life-step" data-i="8"><span class="line"></span><span class="ring">&#128295;</span><b>Service</b><small>Maintain</small></div>
+        <div class="life-step" data-i="9"><span class="line"></span><span class="ring">&#128260;</span><b>Renewal</b><small>Retain</small></div>
+        <div class="life-step" data-i="10"><span class="ring">&#128202;</span><b>Analytics</b><small>See it all</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HIMS + AURAPACS ===================== -->
+<section class="sec bg-ivory" id="products">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy reveal">
+        <span class="eyebrow">HIMS &amp; AuraPACS</span>
+        <h2 class="h2">Clinical operations without disconnected systems.</h2>
+        <p class="lead" style="margin-top:16px">Hospitals, clinics and diagnostic centres run front desk to discharge on one platform, with AuraPACS, our own zero-download DICOM imaging system, built in for radiology and labs.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>OP / IP registration, appointments and live queue</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Doctor and nursing workflows with EMR / EHR</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>AuraPACS web DICOM viewer, RIS and modality worklist</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>LIMS lab reporting, pharmacy and insurance / TPA billing</li>
+        </ul>
+        <div class="tagrow"><span>HIMS</span><span>AuraPACS</span><span>DICOM</span><span>RIS</span><span>LIMS</span><span>EMR / EHR</span><span>Billing</span><span>Patient App</span></div>
+        <div style="margin-top:28px"><a href="aurapacs.html" class="arrowlink">Explore AuraPACS <span class="a">&rarr;</span></a></div>
+      </div>
+      <div class="splitv reveal d1">
+        <div class="uimock">
+          <div class="um-top"><i></i><i></i><i></i><span>AuraPACS &middot; Radiology worklist</span></div>
+          <div class="pacs-b">
+            <div class="rail"><span class="ri on">&#128269;</span><span class="ri">&#8597;</span><span class="ri">&#9635;</span><span class="ri">&#9678;</span><span class="ri">&#9998;</span></div>
+            <div class="view">
+              <span class="tag">CT &middot; CHEST<br>512 &times; 512<br>W 350 / L 40</span>
+              <div class="scan"></div><div class="cross"></div>
+            </div>
+            <div class="meta">
+              <div class="mrow">Patient<b>Anonymised</b></div>
+              <div class="mrow">Study<b>CT Thorax</b></div>
+              <div class="mrow">Series<b>3 of 4</b></div>
+              <div class="mrow">Status<b style="color:var(--accent)">Reporting</b></div>
+              <div class="wl"><i class="a"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LMS ===================== -->
+<section class="sec bg-ivory2" id="lms">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="split-copy reveal">
+        <span class="eyebrow">Aura Learn &middot; LMS</span>
+        <h2 class="h2">Turn knowledge into a system.</h2>
+        <p class="lead" style="margin-top:16px">Train field teams, certify service staff, or run a coaching business. A learner mobile app and an instructor dashboard, proven on our own Play Store product, built for unlimited learners.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Course library with video lessons and offline access</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Quizzes, mock tests and auto-generated certificates</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Live classes, batches and a doubt-clearing forum</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp reminders, analytics and GST payments</li>
+        </ul>
+        <div class="tagrow"><span>Courses</span><span>Assessments</span><span>Certificates</span><span>Live Classes</span><span>Batches</span><span>Analytics</span><span>Offline</span></div>
+        <div style="margin-top:28px"><a href="aura-learn.html" class="arrowlink">Explore Aura Learn <span class="a">&rarr;</span></a></div>
+      </div>
+      <div class="splitv reveal d1">
+        <div class="phone">
+          <div class="scr">
+            <div class="ph-top">
+              <small>My learning</small>
+              <b>SI &amp; Constable Batch 2026</b>
+              <div class="ph-prog"><i></i></div>
+            </div>
+            <div class="ph-body">
+              <div class="lc"><span class="th">&#128218;</span><div><b>Polity: Fundamental Rights</b><small>Lesson 12 &middot; 18 min</small></div><span class="pc">DONE</span></div>
+              <div class="lc"><span class="th">&#9997;&#65039;</span><div><b>Mock Test 07</b><small>100 questions &middot; timed</small></div><span class="pc" style="color:var(--accent-2)">NOW</span></div>
+              <div class="lc"><span class="th">&#127909;</span><div><b>Live: Current Affairs</b><small>Today 7:00 PM</small></div></div>
+              <div class="lc"><span class="th">&#127894;&#65039;</span><div><b>Certificate</b><small>Unlock at 80%</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT DEVELOPMENT ===================== -->
+<section class="sec bg-navy on-dark" id="devsoftware">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy reveal">
+        <span class="eyebrow">Product Development</span>
+        <h2 class="h2">Software that connects the device to the real world.</h2>
+        <p class="lead" style="margin-top:16px">For medical-equipment and robotics companies building a connected product, we write the software that runs it, firmware, device communication, companion app and cloud telemetry, to your hardware team's specification.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Embedded firmware in C / C++ or MicroPython</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Sensor and peripheral integration logic</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>BLE, Wi-Fi, serial, Modbus and CAN communication</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Companion app with Supabase or Azure telemetry</li>
+        </ul>
+        <span class="soft-only">&#9679; Software only. We do not manufacture hardware.</span>
+      </div>
+      <div class="splitv reveal d1">
+        <div class="devstack">
+          <div class="devlayer"><span class="dk">&#129513;</span><div><b>Embedded firmware</b><small>Runs on your microcontroller</small></div><span class="sig">C / C++ &middot; MicroPython</span></div>
+          <div class="devconn"></div>
+          <div class="devlayer"><span class="dk">&#128225;</span><div><b>Sensor &amp; device data</b><small>Read, filter, act in real time</small></div><span class="sig">I2C &middot; SPI &middot; UART</span></div>
+          <div class="devconn"></div>
+          <div class="devlayer"><span class="dk">&#128246;</span><div><b>Communication layer</b><small>Device to app, app to cloud</small></div><span class="sig">BLE &middot; Wi-Fi &middot; Modbus &middot; CAN</span></div>
+          <div class="devconn"></div>
+          <div class="devlayer"><span class="dk">&#128241;</span><div><b>Companion app</b><small>Control, monitor, update</small></div><span class="sig">React Native</span></div>
+          <div class="devconn"></div>
+          <div class="devlayer"><span class="dk">&#9729;&#65039;</span><div><b>Cloud telemetry</b><small>Fleet data, alerts, history</small></div><span class="sig">Supabase &middot; Azure</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INDUSTRIES ===================== -->
+<section class="sec bg-ivory" id="industries">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">Who we build for</span>
+      <h2 class="h2">Built around your industry</h2>
+      <p class="lead">The same platform, shaped to how your sector actually operates. Pick yours to see what we build.</p>
+    </div>
+    <div class="ind-tabs reveal" id="indTabs">
+      <button class="ind-tab on" data-ind="i1">Medical Equipment</button>
+      <button class="ind-tab" data-ind="i2">Healthcare &amp; Diagnostics</button>
+      <button class="ind-tab" data-ind="i3">Medical Robotics</button>
+      <button class="ind-tab" data-ind="i4">Hospitals &amp; Imaging</button>
+      <button class="ind-tab" data-ind="i5">Training &amp; Education</button>
+      <button class="ind-tab" data-ind="i6">Founder-led SMBs</button>
+    </div>
+    <div class="reveal">
+      <div class="ind-panel" id="i1">
+        <div>
+          <h3>Medical Equipment Distributors</h3>
+          <p>Run the full distribution motion, from enquiry to AMC renewal, on one platform instead of spreadsheets and WhatsApp groups.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#128202;</span>Quotations, orders and tender tracking</div>
+            <div class="ic"><span class="k">&#128220;</span>AMC and CMC renewals with revenue protection</div>
+            <div class="ic"><span class="k">&#128205;</span>Field-staff GPS tracking and visit verification</div>
+            <div class="ic"><span class="k">&#129534;</span>GST invoices, Delivery Challans and payment chasing</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#127973;</span></div>
+      </div>
+      <div class="ind-panel" id="i2" hidden>
+        <div>
+          <h3>Healthcare &amp; Diagnostics</h3>
+          <p>Patient-facing apps, manager dashboards and lab workflows built around real clinical operations, not a generic template.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#128197;</span>Appointments, registration and live queue</div>
+            <div class="ic"><span class="k">&#128138;</span>LIMS lab reporting and pharmacy</div>
+            <div class="ic"><span class="k">&#128241;</span>Patient app with reports and reminders</div>
+            <div class="ic"><span class="k">&#129534;</span>Insurance / TPA and GST-ready billing</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#128300;</span></div>
+      </div>
+      <div class="ind-panel" id="i3" hidden>
+        <div>
+          <h3>Medical Robotics &amp; Devices</h3>
+          <p>An online store, distributor portal and the embedded software that runs the device itself, so you can sell it and connect it.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#128722;</span>E-commerce storefront and distributor portal</div>
+            <div class="ic"><span class="k">&#129513;</span>Firmware and device communication</div>
+            <div class="ic"><span class="k">&#9729;&#65039;</span>Companion app and cloud telemetry</div>
+            <div class="ic"><span class="k">&#128269;</span>Per-product, per-city SEO that ranks</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#129302;</span></div>
+      </div>
+      <div class="ind-panel" id="i4" hidden>
+        <div>
+          <h3>Hospitals &amp; Imaging Centres</h3>
+          <p>Asset tracking, service contracts and PACS-ready imaging for hospitals, labs and imaging centres, on one connected system.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#129430;</span>AuraPACS DICOM viewer, RIS and worklist</div>
+            <div class="ic"><span class="k">&#129658;</span>Equipment registry and lifecycle tracking</div>
+            <div class="ic"><span class="k">&#128220;</span>Service contracts and preventive maintenance</div>
+            <div class="ic"><span class="k">&#128202;</span>EMR / EHR and clinical dashboards</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#127973;</span></div>
+      </div>
+      <div class="ind-panel" id="i5" hidden>
+        <div>
+          <h3>Training &amp; Education</h3>
+          <p>A complete learning platform for coaching centres, certification bodies and internal training, proven on our own shipped product.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#128218;</span>Course library with offline video</div>
+            <div class="ic"><span class="k">&#9997;&#65039;</span>Mock tests, assessments and certificates</div>
+            <div class="ic"><span class="k">&#127909;</span>Live classes, batches and doubt forum</div>
+            <div class="ic"><span class="k">&#128172;</span>WhatsApp and Telegram nudges</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#127891;</span></div>
+      </div>
+      <div class="ind-panel" id="i6" hidden>
+        <div>
+          <h3>Founder-led SMBs</h3>
+          <p>If the business runs on you and a handful of tools, we turn that into one operating platform, with a direct line to the person who builds it.</p>
+          <div class="ind-caps">
+            <div class="ic"><span class="k">&#128202;</span>Operations CRM tuned to your workflow</div>
+            <div class="ic"><span class="k">&#9889;</span>Automation for billing, reminders and stock</div>
+            <div class="ic"><span class="k">&#128241;</span>Field app and owner dashboard</div>
+            <div class="ic"><span class="k">&#127760;</span>Search-ready website and SEO</div>
+          </div>
+        </div>
+        <div class="ind-vis"><div class="rings"><i></i><i></i><i></i></div><span class="glyph">&#128640;</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CASE STUDIES ===================== -->
+<section class="sec bg-ivory2" id="work">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">Recent work</span>
+      <h2 class="h2">Real platforms, shipped for real businesses</h2>
+      <p class="lead">Not mockups or concepts. Here is what we have actually built, end to end, for founder-led companies.</p>
+    </div>
+    <div class="case-grid">
+      <article class="card case reveal">
+        <div class="ct"><div class="cname"><span class="cg">&#127973;</span>Carna Medicare</div></div>
+        <div class="cb">
+          <span class="tag">Medical Equipment &middot; Chennai</span>
+          <h3>12-module operations platform</h3>
+          <div class="row"><span class="k">Problem</span><p>A distribution business run entirely on WhatsApp and Excel.</p></div>
+          <div class="row"><span class="k">What we built</span><p>Field-staff app, manager dashboard, GST billing and payment tracking in one platform.</p></div>
+          <div class="row"><span class="k">Technology</span><p>React Native, Supabase, WordPress.</p></div>
+          <div class="out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Shipped end to end in 30 days</div>
+        </div>
+      </article>
+      <article class="card case reveal d1">
+        <div class="ct"><div class="cname"><span class="cg">&#129302;</span>Medline Robotics</div></div>
+        <div class="cb">
+          <span class="tag">Medical Robotics &middot; Chennai</span>
+          <h3>E-commerce &amp; distributor platform</h3>
+          <div class="row"><span class="k">Problem</span><p>No online store and no way to take orders or manage distributors for a multi-line catalogue.</p></div>
+          <div class="row"><span class="k">What we built</span><p>Storefront, distributor portal, admin panel and quote-to-order flow, plus 250+ programmatic SEO pages.</p></div>
+          <div class="row"><span class="k">Technology</span><p>Supabase, JavaScript, Playwright.</p></div>
+          <div class="out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Live store and partner portal, indexed across every product and city</div>
+        </div>
+      </article>
+      <article class="card case reveal d2">
+        <div class="ct"><div class="cname"><span class="cg">&#127891;</span>Elevate Aura</div></div>
+        <div class="cb">
+          <span class="tag">Our own product &middot; Play Store</span>
+          <h3>Govt-exam prep app + bots</h3>
+          <div class="row"><span class="k">Problem</span><p>Build a self-funded EdTech product end to end, and prove the LMS stack on our own product.</p></div>
+          <div class="row"><span class="k">What we built</span><p>Android app on Google Play, Telegram practice bots and content automation.</p></div>
+          <div class="row"><span class="k">Technology</span><p>Flutter, Python, Supabase.</p></div>
+          <div class="out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Live on Google Play with automated daily practice</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="sec bg-ivory" id="process">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">How we deliver</span>
+      <h2 class="h2">Four steps. One 30-day framework.</h2>
+      <p class="lead">A focused, founder-led delivery model. You talk to the person building it at every stage, not an account manager.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="card proc reveal"><span class="pn">01</span><h3>Discover</h3><p>A CEO-level call to understand the business, the workflow and where it actually breaks.</p><span class="bar"><i></i></span></div>
+      <div class="card proc reveal d1"><span class="pn">02</span><h3>Architect</h3><p>Map the system, the data model and every workflow before a line of code is written.</p><span class="bar"><i></i></span></div>
+      <div class="card proc reveal d2"><span class="pn">03</span><h3>Build</h3><p>Focused development on a stable, working platform, shipped inside the 30-day framework where scope allows.</p><span class="bar"><i></i></span></div>
+      <div class="card proc reveal d3"><span class="pn">04</span><h3>Launch</h3><p>Deploy, train the team and support it after go-live, from the builder, not a ticket queue.</p><span class="bar"><i></i></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section class="sec bg-ivory2" id="why">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow center">Why Elevate Aura</span>
+      <h2 class="h2">A specialist, not a generic agency</h2>
+      <p class="lead">Why founder-led medical and healthcare teams pick a builder over an agency or an off-the-shelf tool.</p>
+    </div>
+    <div class="why reveal">
+      <div class="why-row why-head"><div class="cap">&nbsp;</div><div class="gen">Generic agency or tool</div><div class="us">Elevate Aura</div></div>
+      <div class="why-row"><div class="cap">System fit</div><div class="gen">Template-based, bend your process to fit</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Built around your exact workflow</div></div>
+      <div class="why-row"><div class="cap">Delivery</div><div class="gen">Long, open-ended timelines</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>30-day build framework</div></div>
+      <div class="why-row"><div class="cap">Who you talk to</div><div class="gen">Account-manager layers and ticket queues</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Direct access to the person who builds it</div></div>
+      <div class="why-row"><div class="cap">Domain</div><div class="gen">Generic software for any business</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Healthcare and medical specialisation</div></div>
+      <div class="why-row"><div class="cap">Scope</div><div class="gen">Packages, add-ons and hourly traps</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Clear, fixed scope per project</div></div>
+      <div class="why-row"><div class="cap">After launch</div><div class="gen">Hand off and disappear</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Ongoing support from the builder</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="sec bg-ivory" id="about">
+  <div class="wrap">
+    <div class="head reveal" style="margin-bottom:44px">
+      <span class="eyebrow">The founder</span>
+      <h2 class="h2">One builder. Accountable end to end.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="frame"><img src="images/passportsizenew.jpeg" alt="Ragul Sekar, founder of Elevate Aura" loading="lazy"></div>
+        <div class="badge"><b>Ragul Sekar</b><small>Founder &amp; Builder &middot; Chennai, India</small></div>
+      </div>
+      <div class="about-content reveal d1">
+        <p>Elevate Aura is a founder-led product studio run by <strong>Ragul Sekar</strong> from Chennai. I design, build and ship complete software systems, mobile app, dashboard, backend, automation and site, end to end, with direct access to the person who builds it.</p>
+        <p>Years building healthcare technology systems at <strong>TCS</strong> taught me how real operations work under real compliance. Founders get a CEO-level discovery call on day one, focused delivery, and someone who actually picks up the phone. No agency layers, no hand-offs.</p>
+        <p>The stack is modern and deliberate: <strong>React, Next.js, React Native, Supabase, WordPress, Python and Azure</strong>. The point is never the tech for its own sake, it is a system your team will actually use.</p>
+        <div class="about-stats">
+          <div class="s"><b>30</b><span>Days to launch</span></div>
+          <div class="s"><b>3+</b><span>Platforms shipped</span></div>
+          <div class="s"><b>250+</b><span>SEO pages built</span></div>
+          <div class="s"><b>1</b><span>Direct point of contact</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="sec bg-ivory2" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Your business already has the workflow.<br>Let's build the system around it.</h2>
+      <p>One conversation. Clear scope. A platform built around how you actually operate, not a template you have to bend to.</p>
+      <div class="cta-btns">
+        <a href="mailto:elevateauraofficial@gmail.com?subject=Strategy%20Call%20Request&body=Hi%20Ragul%2C%0A%0AI%27d%20like%20to%20book%20a%20strategy%20call.%0A%0A1.%20What%20does%20your%20business%20do%3F%0A2.%20What%20do%20you%20want%20to%20build%3F%0A3.%20Best%20WhatsApp%20number%20to%20reach%20you%3A%0A%0AThanks%21" class="btn btn-primary btn-lg">Book a Strategy Call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." class="btn btn-wa btn-lg" target="_blank" rel="noopener">Talk on WhatsApp</a>
+      </div>
+      <p class="mail">Chennai, India &middot; WhatsApp-first replies &middot; <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="fbrand">
+        <a href="/" class="brand"><img src="assets/img/logo.png" alt="Elevate Aura logo">Elevate&nbsp;Aura<span class="bdot">.</span></a>
+        <p>A founder-led product studio building real software systems for healthcare, medical equipment and diagnostics businesses in India.</p>
+        <div class="fsoc">
+          <a href="https://wa.me/919578971156?text=Hi%20Ragul%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Elevate%20Aura." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.2 4.79 1.2 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.53 0-3.03-.41-4.34-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 01-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.69 8.25-8.24 8.25zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></a>
+          <a href="https://www.linkedin.com/in/ragul-sekar" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.9a1.55 1.55 0 100 3.1 1.55 1.55 0 000-3.1zM18.34 18v-4.67c0-2.5-1.33-3.66-3.11-3.66-1.43 0-2.07.79-2.43 1.34V9.5h-2.67V18h2.67v-4.5c0-1.18.22-2.32 1.68-2.32 1.44 0 1.46 1.35 1.46 2.4V18h2.73z"/></svg></a>
+          <a href="mailto:elevateauraofficial@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.4l8 5.1 8-5.1V6H4zm16 2.9l-7.45 4.75a1 1 0 01-1.1 0L4 8.9V18h16V8.9z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Solutions</h4>
+        <a href="aura-business.html">CRM &amp; Operations</a>
+        <a href="aurapacs.html">HIMS</a>
+        <a href="aurapacs.html">AuraPACS</a>
+        <a href="aura-learn.html">LMS</a>
+        <a href="product-development.html">Product Development</a>
+      </div>
+      <div class="fcol">
+        <h4>Industries</h4>
+        <a href="#industries">Medical Equipment</a>
+        <a href="#industries">Healthcare</a>
+        <a href="#industries">Medical Robotics</a>
+        <a href="#industries">Hospitals &amp; Imaging</a>
+        <a href="#industries">Diagnostics</a>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="pages/privacy.html">Privacy</a>
+        <a href="pages/terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura. Designed &amp; built in Chennai, India.</span>
+      <span class="tagline">Built for businesses ready to move beyond WhatsApp and Excel.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- nav shrink on scroll ---- */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 20); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* ---- mobile nav ---- */
+  var burger = document.getElementById('burger'), mnav = document.getElementById('mnav');
+  function closeMnav(){ mnav.classList.remove('on'); burger.classList.remove('on'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  burger.addEventListener('click', function(){
+    var open = mnav.classList.toggle('on'); burger.classList.toggle('on');
+    burger.setAttribute('aria-expanded', open?'true':'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMnav); });
+
+  /* ---- reveal on scroll ---- */
+  if ('IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---- module explorer ---- */
+  var mtabs = document.querySelectorAll('.mex-tab');
+  mtabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      mtabs.forEach(function(t){ t.classList.remove('on'); });
+      tab.classList.add('on');
+      var target = tab.getAttribute('data-t');
+      document.querySelectorAll('.mex-panel').forEach(function(p){
+        if(p.id===target){ p.hidden=false; p.classList.remove('swap'); void p.offsetWidth; p.classList.add('swap'); }
+        else { p.hidden=true; }
+      });
+    });
+  });
+
+  /* ---- industries selector ---- */
+  var itabs = document.querySelectorAll('.ind-tab');
+  itabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      itabs.forEach(function(t){ t.classList.remove('on'); });
+      tab.classList.add('on');
+      var target = tab.getAttribute('data-ind');
+      document.querySelectorAll('.ind-panel').forEach(function(p){ p.hidden = (p.id!==target); });
+    });
+  });
+
+  /* ---- crm flow auto-cycle ---- */
+  var flow = document.getElementById('crmFlow');
+  if(flow && !reduce){
+    var steps = flow.querySelectorAll('.fs'), fi = 0;
+    setInterval(function(){
+      steps.forEach(function(s){ s.classList.remove('act'); });
+      steps[fi].classList.add('act');
+      fi = (fi+1) % steps.length;
+    }, 900);
+  }
+
+  /* ---- lifecycle staggered activation ---- */
+  var life = document.getElementById('life');
+  if(life && 'IntersectionObserver' in window){
+    var lifeSteps = life.querySelectorAll('.life-step');
+    var lo = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          lifeSteps.forEach(function(st,i){ setTimeout(function(){ st.classList.add('on'); }, reduce?0:i*160); });
+          lo.disconnect();
+        }
+      });
+    }, {threshold:0.3});
+    lo.observe(life);
+  }
+
+  /* ---- counters ---- */
+  function animateCount(el){
+    var m = el.textContent.trim().match(/^(\d+)(.*)$/); if(!m) return;
+    var target = parseInt(m[1],10), suffix = m[2], dur = 1200, start = performance.now();
+    function tick(t){ var p = Math.min(1,(t-start)/dur); el.textContent = Math.floor(p*target)+suffix; if(p<1) requestAnimationFrame(tick); else el.textContent = target+suffix; }
+    requestAnimationFrame(tick);
+  }
+  if('IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting && !e.target.dataset.done){ e.target.dataset.done='1'; if(!reduce) animateCount(e.target); } });
+    }, {threshold:0.5});
+    document.querySelectorAll('.statband .st b, .about-stats .s b').forEach(function(el){ co.observe(el); });
+  }
+
+  /* ---- magnetic primary buttons (desktop only) ---- */
+  if(!reduce && window.matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.btn-primary').forEach(function(b){
+      b.addEventListener('mousemove', function(e){
+        var r=b.getBoundingClientRect();
+        b.style.transform='translate('+((e.clientX-r.left-r.width/2)/r.width*8)+'px,'+((e.clientY-r.top-r.height/2)/r.height*4-2)+'px)';
+      });
+      b.addEventListener('mouseleave', function(){ b.style.transform=''; });
+    });
+  }
+
+  /* ---- nav active section highlight ---- */
+  var navLinks = {}, secs = [];
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){
+    var id=a.getAttribute('href').slice(1); var s=document.getElementById(id);
+    if(s){ navLinks[id]=a; secs.push(s); }
+  });
+  if(secs.length && 'IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ Object.values(navLinks).forEach(function(l){ l.classList.remove('on'); }); if(navLinks[e.target.id]) navLinks[e.target.id].classList.add('on'); } });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){ so.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
