@@ -50,28 +50,36 @@
 }
 </script>
 <style>
-#screens{padding-top:30px}
-#screens .tour-live{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--brand-dark,#5b21b6);background:var(--soft2,#f6f3ff);border:1px solid var(--line2,#e3dcf6);padding:5px 13px;border-radius:999px}
+#screens{padding:64px 0 30px;position:relative;overflow:hidden}
+#screens .wrap{position:relative;z-index:1}
+#screens::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 18%,rgba(124,58,237,.12),transparent 60%),linear-gradient(180deg,#faf8ff,transparent 42%);pointer-events:none}
+#screens .tour-live{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:#5b21b6;background:#fff;border:1px solid #e3dcf6;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(76,29,149,.06)}
 #screens .tour-live .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.16)}
-#screens .tour{display:grid;grid-template-columns:344px 1fr;gap:24px;margin-top:34px;align-items:start}
-#screens .tour-tabs{display:flex;flex-direction:column;gap:10px}
-#screens .tour-tab{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:rgba(255,255,255,.86);border:1px solid var(--line,#e6e1f3);border-radius:14px;padding:13px 15px;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;font-family:inherit}
-#screens .tour-tab:hover{border-color:var(--brand-2,#a855f7);box-shadow:0 8px 22px rgba(76,29,149,.06);transform:translateY(-1px)}
-#screens .tour-tab.on{border-color:var(--brand,#6d28d9);background:#fff;box-shadow:0 0 0 1.5px var(--brand,#6d28d9) inset,0 8px 22px rgba(76,29,149,.06)}
-#screens .tour-tab .ti{width:36px;height:36px;border-radius:10px;background:var(--soft2,#f6f3ff);display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
-#screens .tour-tab b{display:block;font-size:14.5px;color:var(--ink,#13132b);font-weight:700;line-height:1.2}
-#screens .tour-tab small{display:block;font-size:12px;color:var(--muted,#605f7e);margin-top:3px;line-height:1.42}
-#screens .tour-frame{border-radius:16px;overflow:hidden;border:1px solid var(--line2,#e3dcf6);box-shadow:0 34px 70px -26px rgba(76,29,149,.55);background:#fff}
-#screens .tour-bar{background:#1c1030;display:flex;align-items:center;gap:7px;padding:11px 15px}
+#screens .tour{display:grid;grid-template-columns:340px 1fr;gap:26px;margin-top:34px;align-items:start}
+#screens .tour-tabs{display:flex;flex-direction:column;gap:9px}
+#screens .tour-tab{position:relative;display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:rgba(255,255,255,.7);border:1px solid #ece7f8;border-radius:14px;padding:12px 15px 12px 17px;cursor:pointer;transition:transform .2s cubic-bezier(.22,.61,.36,1),box-shadow .2s,border-color .2s,background .2s;font-family:inherit;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+#screens .tour-tab::before{content:"";position:absolute;left:0;top:13px;bottom:13px;width:3px;border-radius:0 3px 3px 0;background:transparent;transition:.2s}
+#screens .tour-tab:hover{border-color:#d9cdf6;box-shadow:0 10px 26px rgba(76,29,149,.08);transform:translateY(-1px)}
+#screens .tour-tab.on{border-color:transparent;background:#fff;box-shadow:0 16px 36px -14px rgba(109,40,217,.4),0 0 0 1px rgba(109,40,217,.16)}
+#screens .tour-tab.on::before{background:linear-gradient(180deg,#7c3aed,#a855f7)}
+#screens .tour-tab .ti{width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,#efe9fe,#f6f3ff);border:1px solid #ece7f8;display:flex;align-items:center;justify-content:center;font-size:18px;flex:none;transition:.2s}
+#screens .tour-tab.on .ti{background:linear-gradient(150deg,#6d28d9,#a855f7);border-color:transparent;box-shadow:0 8px 18px rgba(109,40,217,.32)}
+#screens .tour-tab b{display:block;font-size:14.5px;color:#13132b;font-weight:800;line-height:1.2}
+#screens .tour-tab small{display:block;font-size:12px;color:#605f7e;margin-top:3px;line-height:1.42}
+#screens .tour-stage{position:relative}
+#screens .tour-stage::after{content:"";position:absolute;left:10%;right:10%;bottom:-20px;height:44px;background:radial-gradient(50% 100% at 50% 0,rgba(109,40,217,.3),transparent 70%);filter:blur(9px);z-index:-1}
+#screens .tour-frame{border-radius:18px;background:linear-gradient(135deg,#efe4ff,#cbb4ff 55%,#efe4ff);padding:1.5px;box-shadow:0 46px 92px -32px rgba(76,29,149,.62),0 12px 30px -14px rgba(19,19,43,.22)}
+#screens .tour-inner{border-radius:16.5px;overflow:hidden;background:#fff}
+#screens .tour-bar{background:#1c1030;display:flex;align-items:center;gap:7px;padding:12px 16px}
 #screens .tour-bar i{width:11px;height:11px;border-radius:50%;background:#4a3a63}
 #screens .tour-bar i:first-child{background:#ff5f57}#screens .tour-bar i:nth-child(2){background:#febc2e}#screens .tour-bar i:nth-child(3){background:#28c840}
-#screens .tour-bar span{margin-left:12px;font-size:12px;color:#c3b6df;background:rgba(255,255,255,.09);padding:5px 12px;border-radius:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2px}
+#screens .tour-bar span{margin-left:12px;font-size:12px;color:#c3b6df;background:rgba(255,255,255,.09);padding:5px 13px;border-radius:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2px}
 #screens .tour-imgs{position:relative;background:#f6f3ff;min-height:120px}
 #screens .tour-imgs img{display:none;width:100%;height:auto}
-#screens .tour-imgs img.on{display:block;animation:tourfade .45s ease}
-@keyframes tourfade{from{opacity:0;transform:scale(.996)}to{opacity:1;transform:none}}
-#screens .tour-cta{display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap}
-#screens .tour-note{color:var(--muted,#605f7e);font-size:14px}
+#screens .tour-imgs img.on{display:block;animation:tourfade .5s cubic-bezier(.22,.61,.36,1)}
+@keyframes tourfade{from{opacity:0;transform:scale(1.012)}to{opacity:1;transform:none}}
+#screens .tour-cta{display:flex;align-items:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+#screens .tour-note{color:#605f7e;font-size:14px}
 @media(max-width:860px){#screens .tour{grid-template-columns:1fr}#screens .tour-tabs{flex-direction:row;flex-wrap:wrap}#screens .tour-tab{flex:1 1 46%}}
 @media(max-width:560px){#screens .tour-tab{flex:1 1 100%}}
 .hn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
@@ -167,17 +175,29 @@
         <button class="tour-tab" data-i="3"><span class="ti">&#128138;</span><span><b>Pharmacy</b><small>Dispensing queue with low-stock and expiry alerts</small></span></button>
         <button class="tour-tab" data-i="4"><span class="ti">&#129514;</span><span><b>Laboratory (LIMS)</b><small>Order to result, sample to verified release</small></span></button>
         <button class="tour-tab" data-i="5"><span class="ti">&#128715;</span><span><b>Bed management</b><small>Live ward and bed occupancy across the hospital</small></span></button>
+        <button class="tour-tab" data-i="6"><span class="ti">&#128104;&#8205;&#9877;</span><span><b>Doctors</b><small>Clinical staff directory with departments and queues</small></span></button>
+        <button class="tour-tab" data-i="7"><span class="ti">&#128230;</span><span><b>Inventory</b><small>Consumables and equipment stock with reorder levels</small></span></button>
+        <button class="tour-tab" data-i="8"><span class="ti">&#128149;</span><span><b>ICU</b><small>Critical care monitoring with live vitals per bed</small></span></button>
+        <button class="tour-tab" data-i="9"><span class="ti">&#129701;</span><span><b>Operation theatre</b><small>OT schedule with surgeon, procedure and status</small></span></button>
+        <button class="tour-tab" data-i="10"><span class="ti">&#128657;</span><span><b>Emergency</b><small>Casualty and trauma triage board, live</small></span></button>
       </div>
       <div class="tour-stage">
         <div class="tour-frame">
-          <div class="tour-bar"><i></i><i></i><i></i><span>his.elevateaura.co.in/opd</span></div>
-          <div class="tour-imgs">
-            <img class="on" src="assets/hims/opd-dashboard.png" alt="HIMS OPD dashboard: appointments, walk-ins, waiting and live doctor queues across departments" width="1920" height="1080">
-            <img src="assets/hims/patients.png" alt="HIMS patient register with UHID, department, last visit and insurance or TPA per patient" width="1920" height="1080" loading="lazy">
-            <img src="assets/hims/billing.png" alt="HIMS GST invoice with itemised charges, discount, GST and a bill summary showing TPA and payment mode" width="1920" height="1080" loading="lazy">
-            <img src="assets/hims/pharmacy.png" alt="HIMS pharmacy: pending prescriptions, dispensing, low-stock and expiry alerts with batch-tracked inventory" width="1920" height="1080" loading="lazy">
-            <img src="assets/hims/laboratory.png" alt="HIMS laboratory LIMS: order to result workflow with samples, priority and status" width="1920" height="1080" loading="lazy">
-            <img src="assets/hims/bed-management.png" alt="HIMS bed management: live ward and bed occupancy with available, occupied, reserved and cleaning status" width="1920" height="1080" loading="lazy">
+          <div class="tour-inner">
+            <div class="tour-bar"><i></i><i></i><i></i><span>his.elevateaura.co.in/opd</span></div>
+            <div class="tour-imgs">
+              <img class="on" src="assets/hims/opd-dashboard.png" alt="HIMS OPD dashboard: appointments, walk-ins, waiting and live doctor queues across departments" width="1920" height="1080">
+              <img src="assets/hims/patients.png" alt="HIMS patient register with UHID, department, last visit and insurance or TPA per patient" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/billing.png" alt="HIMS GST invoice with itemised charges, discount, GST and a bill summary showing TPA and payment mode" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/pharmacy.png" alt="HIMS pharmacy: pending prescriptions, dispensing, low-stock and expiry alerts with batch-tracked inventory" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/laboratory.png" alt="HIMS laboratory LIMS: order to result workflow with samples, priority and status" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/bed-management.png" alt="HIMS bed management: live ward and bed occupancy with available, occupied, reserved and cleaning status" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/doctors.png" alt="HIMS doctors directory: clinical staff with department, room and view-queue action" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/inventory.png" alt="HIMS inventory: hospital-wide consumables and equipment stock by department with reorder levels" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/icu.png" alt="HIMS ICU: critical care monitoring with live vitals, medications and orders per bed" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/ot.png" alt="HIMS operation theatre: today's OT schedule with surgeon, anaesthetist, procedure and status" width="1920" height="1080" loading="lazy">
+              <img src="assets/hims/emergency.png" alt="HIMS emergency: casualty and trauma triage board with triage level, complaint and status" width="1920" height="1080" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -194,7 +214,7 @@
   var tabs=tour.querySelectorAll('.tour-tab');
   var imgs=tour.querySelectorAll('.tour-imgs img');
   var bar=tour.querySelector('.tour-bar span');
-  var urls=['his.elevateaura.co.in/opd','his.elevateaura.co.in/patients','his.elevateaura.co.in/billing','his.elevateaura.co.in/pharmacy','his.elevateaura.co.in/lab','his.elevateaura.co.in/beds'];
+  var urls=['his.elevateaura.co.in/opd','his.elevateaura.co.in/patients','his.elevateaura.co.in/billing','his.elevateaura.co.in/pharmacy','his.elevateaura.co.in/lab','his.elevateaura.co.in/beds','his.elevateaura.co.in/doctors','his.elevateaura.co.in/inventory','his.elevateaura.co.in/icu','his.elevateaura.co.in/ot','his.elevateaura.co.in/emergency'];
   var cur=0, timer=null;
   function show(i){cur=i;tabs.forEach(function(t,n){t.classList.toggle('on',n===i);});imgs.forEach(function(m,n){m.classList.toggle('on',n===i);});if(bar)bar.textContent=urls[i]||urls[0];}
   function next(){show((cur+1)%tabs.length);}
