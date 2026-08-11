@@ -100,6 +100,96 @@
   </div>
 </section>
 
+<style>
+#lmstour{padding:56px 0 30px;position:relative;overflow:hidden}
+#lmstour .wrap{position:relative;z-index:1}
+#lmstour::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 18%,rgba(124,58,237,.12),transparent 60%),linear-gradient(180deg,#faf8ff,transparent 42%);pointer-events:none}
+#lmstour .tour-live{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:#5b21b6;background:#fff;border:1px solid #e3dcf6;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(76,29,149,.06)}
+#lmstour .tour-live .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.16)}
+#lmstour .tour-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0 28px}
+#lmstour .tour-tab{position:relative;display:flex;gap:9px;align-items:center;text-align:left;background:rgba(255,255,255,.75);border:1px solid #ece7f8;border-radius:12px;padding:8px 15px 8px 10px;cursor:pointer;transition:transform .2s cubic-bezier(.22,.61,.36,1),box-shadow .2s,border-color .2s,background .2s;font-family:inherit}
+#lmstour .tour-tab:hover{border-color:#d9cdf6;box-shadow:0 10px 24px rgba(76,29,149,.09);transform:translateY(-1px)}
+#lmstour .tour-tab.on{border-color:transparent;background:#fff;box-shadow:0 14px 30px -12px rgba(109,40,217,.42),0 0 0 1px rgba(109,40,217,.18)}
+#lmstour .tour-tab .ti{width:30px;height:30px;border-radius:9px;background:linear-gradient(150deg,#efe9fe,#f6f3ff);border:1px solid #ece7f8;display:flex;align-items:center;justify-content:center;font-size:15px;flex:none;transition:.2s}
+#lmstour .tour-tab.on .ti{background:linear-gradient(150deg,#6d28d9,#a855f7);border-color:transparent;box-shadow:0 8px 18px rgba(109,40,217,.32)}
+#lmstour .tour-tab b{display:block;font-size:13px;color:#13132b;font-weight:700;line-height:1.15}
+#lmstour .tour-stage{position:relative;max-width:1000px;margin:0 auto}
+#lmstour .tour-stage::after{content:"";position:absolute;left:10%;right:10%;bottom:-20px;height:44px;background:radial-gradient(50% 100% at 50% 0,rgba(109,40,217,.3),transparent 70%);filter:blur(9px);z-index:-1}
+#lmstour .tour-frame{border-radius:18px;background:linear-gradient(135deg,#efe4ff,#cbb4ff 55%,#efe4ff);padding:1.5px;box-shadow:0 46px 92px -32px rgba(76,29,149,.62),0 12px 30px -14px rgba(19,19,43,.22)}
+#lmstour .tour-inner{border-radius:16.5px;overflow:hidden;background:#fff}
+#lmstour .tour-bar{background:#1c1030;display:flex;align-items:center;gap:7px;padding:12px 16px}
+#lmstour .tour-bar i{width:11px;height:11px;border-radius:50%;background:#4a3a63}
+#lmstour .tour-bar i:first-child{background:#ff5f57}#lmstour .tour-bar i:nth-child(2){background:#febc2e}#lmstour .tour-bar i:nth-child(3){background:#28c840}
+#lmstour .tour-bar span{margin-left:12px;font-size:12px;color:#c3b6df;background:rgba(255,255,255,.09);padding:5px 13px;border-radius:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2px}
+#lmstour .tour-imgs{position:relative;background:#f6f3ff;min-height:120px}
+#lmstour .tour-imgs img{display:none;width:100%;height:auto}
+#lmstour .tour-imgs img.on{display:block;animation:lmsfade .5s cubic-bezier(.22,.61,.36,1)}
+@keyframes lmsfade{from{opacity:0;transform:scale(1.012)}to{opacity:1;transform:none}}
+#lmstour .tour-cta{display:flex;align-items:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+#lmstour .tour-note{color:#605f7e;font-size:14px}
+@media(max-width:560px){#lmstour .tour-tabs{gap:8px}#lmstour .tour-tab{padding:7px 12px 7px 8px}#lmstour .tour-tab b{font-size:12px}#lmstour .tour-tab .ti{width:26px;height:26px;font-size:14px}}
+</style>
+<section id="lmstour">
+  <div class="wrap">
+    <span class="tour-live"><span class="dot"></span>Working demo &middot; sample data shown</span>
+    <h2 class="title" style="margin-top:14px">Not a mockup. The platform your institution logs into.</h2>
+    <p class="lead">Real screens from Aura Learn, running in a demo environment. Click through the modules your college, coaching centre or training team will use every day.</p>
+    <div class="tour-tabs" role="tablist">
+      <button class="tour-tab on" data-i="0"><span class="ti">&#128202;</span><b>Dashboard</b></button>
+      <button class="tour-tab" data-i="1"><span class="ti">&#127909;</span><b>Live classes</b></button>
+      <button class="tour-tab" data-i="2"><span class="ti">&#10067;</span><b>Question bank</b></button>
+      <button class="tour-tab" data-i="3"><span class="ti">&#9989;</span><b>Evaluation</b></button>
+      <button class="tour-tab" data-i="4"><span class="ti">&#127891;</span><b>Certificates</b></button>
+      <button class="tour-tab" data-i="5"><span class="ti">&#128226;</span><b>Communication</b></button>
+      <button class="tour-tab" data-i="6"><span class="ti">&#128241;</span><b>Mobile app</b></button>
+      <button class="tour-tab" data-i="7"><span class="ti">&#128200;</span><b>Management</b></button>
+      <button class="tour-tab" data-i="8"><span class="ti">&#128197;</span><b>Timetable</b></button>
+      <button class="tour-tab" data-i="9"><span class="ti">&#128179;</span><b>Fees</b></button>
+    </div>
+    <div class="tour-stage">
+      <div class="tour-frame">
+        <div class="tour-inner">
+          <div class="tour-bar"><i></i><i></i><i></i><span>lms.elevateaura.co.in/dashboard</span></div>
+          <div class="tour-imgs">
+            <img class="on" src="assets/lms/dashboard.png" alt="Aura Learn dashboard: students, faculty, attendance, engagement trend and course completion" width="1920" height="1080">
+            <img src="assets/lms/live-classes.png" alt="Aura Learn live classes: scheduled and in-progress sessions with a recording library" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/question-bank.png" alt="Aura Learn question bank: questions by subject, topic, difficulty and type" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/evaluation.png" alt="Aura Learn evaluation queue: assignments awaiting review with submissions and progress" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/certificates.png" alt="Aura Learn certificates: issued and pending certificates per student with templates" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/communication.png" alt="Aura Learn communication centre: automated WhatsApp, Telegram, email and push campaigns" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/mobile.png" alt="Aura Learn mobile learning app: courses, progress, streaks and offline lessons for learners" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/management.png" alt="Aura Learn management dashboard: cross-institution executive overview with enrolment by institution" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/timetable.png" alt="Aura Learn timetable: weekly class schedule by batch across subjects" width="1920" height="1080" loading="lazy">
+            <img src="assets/lms/fees.png" alt="Aura Learn fees and payments: collected, outstanding and per-student fee status" width="1920" height="1080" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tour-cta">
+      <a class="btn btn-primary" href="contact.html">Book a 30-min live walkthrough</a>
+      <span class="tour-note">See it running on your own courses and cohorts.</span>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var tour=document.getElementById('lmstour'); if(!tour) return;
+  var tabs=tour.querySelectorAll('.tour-tab');
+  var imgs=tour.querySelectorAll('.tour-imgs img');
+  var bar=tour.querySelector('.tour-bar span');
+  var urls=['lms.elevateaura.co.in/dashboard','lms.elevateaura.co.in/live-classes','lms.elevateaura.co.in/question-bank','lms.elevateaura.co.in/evaluation','lms.elevateaura.co.in/certificates','lms.elevateaura.co.in/communication','lms.elevateaura.co.in/mobile','lms.elevateaura.co.in/management','lms.elevateaura.co.in/timetable','lms.elevateaura.co.in/fees'];
+  var cur=0, timer=null;
+  function show(i){cur=i;tabs.forEach(function(t,n){t.classList.toggle('on',n===i);});imgs.forEach(function(m,n){m.classList.toggle('on',n===i);});if(bar)bar.textContent=urls[i]||urls[0];}
+  function next(){show((cur+1)%tabs.length);}
+  function start(){timer=setInterval(next,6000);}
+  function reset(){clearInterval(timer);start();}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i);reset();});});
+  tour.addEventListener('mouseenter',function(){clearInterval(timer);});
+  tour.addEventListener('mouseleave',function(){reset();});
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){start();}
+})();
+</script>
+
 <section style="padding-top:18px">
   <div class="wrap">
     <div class="strip">
