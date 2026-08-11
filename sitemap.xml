@@ -1,45 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap-0.9 http://www.sitemaps.org/schemas/sitemap-0.9/sitemap.xsd">
-  <url>
-    <loc>https://elevateaura.co.in/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/pages/about.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/pages/careers.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/pages/contact.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/pages/privacy.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/pages/terms.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://elevateaura.co.in/auracare/</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://elevateaura.co.in/</loc><lastmod>2026-08-11</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://elevateaura.co.in/about.html</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/contact.html</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/pricing.html</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/how-it-works.html</loc><lastmod>2026-08-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/partner.html</loc><lastmod>2026-08-11</lastmod><priority>0.5</priority></url>
+
+  <!-- Hub pages -->
+  <url><loc>https://elevateaura.co.in/auracare/</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business.html</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs.html</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn.html</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development.html</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Auracare cluster -->
+  <url><loc>https://elevateaura.co.in/auracare/home-nursing-services/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/home-nursing-services-chennai/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/elderly-home-care/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/post-hospitalization-home-care/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/home-injection-iv-services/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/wound-dressing-at-home/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/catheter-ryles-tube-care/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/12-24-hour-home-nursing/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/chronic-care-home-nursing/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/auracare/home-healthcare-services-chennai/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
+  <!-- Aura Business cluster -->
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-crm-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-field-service-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-amc-cmc-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-inventory-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-asset-management/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-billing-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/healthcare-crm-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/medical-equipment-distributor-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-business/healthcare-business-automation-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
+  <!-- AuraPACS cluster -->
+  <url><loc>https://elevateaura.co.in/aurapacs/pacs-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/dicom-viewer/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/cloud-pacs-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/ris-pacs-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/dicom-worklist-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/medical-imaging-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/radiology-workflow-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/diagnostic-centre-pacs/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/hospital-pacs-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aurapacs/pacs-software-chennai/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
+  <!-- Aura Learn cluster -->
+  <url><loc>https://elevateaura.co.in/aura-learn/learning-management-system/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/lms-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/online-exam-platform/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/online-quiz-platform/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/student-management-system/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/course-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/training-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/learning-app-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/exam-preparation-platform/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/aura-learn/custom-lms-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
+  <!-- HIMS cluster -->
+  <url><loc>https://elevateaura.co.in/hims/hospital-management-system/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/clinic-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-billing-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-appointment-management/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/patient-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/doctor-management-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-pharmacy-management/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-laboratory-management/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-inventory-management/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/hims/hospital-management-software-chennai/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
+  <!-- Product Development cluster -->
+  <url><loc>https://elevateaura.co.in/product-development/medical-device-software-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/embedded-software-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/firmware-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/ble-device-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/iot-product-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/medical-device-app-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/device-companion-app-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/healthcare-app-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/custom-healthcare-software/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://elevateaura.co.in/product-development/medical-technology-product-development/</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+
 </urlset>
