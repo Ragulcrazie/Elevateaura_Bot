@@ -3763,5 +3763,23 @@ viewRenderers.mis = function () {
 VIEW_TITLES.nursingBedside = "Bedside Chart";
 
 </script>
+<script>
+/* Deep-link support: open directly on a given module when the URL has a hash,
+   e.g. hospital.html#aurapacs opens the AuraPACS module instead of the dashboard. */
+(function(){
+  try{
+    var want=(location.hash||"").replace("#","").trim();
+    if(!want) return;
+    var tries=0, t=setInterval(function(){
+      tries++;
+      if(typeof navigateTo==="function" && document.getElementById("sidebar")){
+        clearInterval(t);
+        try{ navigateTo(want); }catch(e){}
+      }
+      if(tries>120) clearInterval(t);
+    },50);
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
