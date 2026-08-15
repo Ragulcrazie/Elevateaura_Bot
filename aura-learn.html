@@ -10,6 +10,7 @@
 <meta property="og:url" content="https://elevateaura.co.in/aura-learn.html" />
 <meta property="og:type" content="website" />
 <link rel="stylesheet" href="aura.css" />
+<link rel="stylesheet" href="assets/demo-gate.css" />
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -70,7 +71,7 @@
       </div>
     </div>
     <a class="lnk hide" href="index.html" style="color:#9ca3af">&larr; Elevate Aura</a>
-    <a class="btn btn-primary btn-sm" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20an%20Aura%20Learn%20demo" target="_blank">Book a demo</a>
+    <a class="btn btn-primary btn-sm" href="#" data-demo="lms">Launch live demo</a>
   </div>
 </div></nav>
 
@@ -80,8 +81,8 @@
     <h1>Your courses, learners<br><span>and certificates, in one platform.</span></h1>
     <p class="sub">A complete learning platform, a learner mobile app and an instructor dashboard, for training a field team, certifying service staff, or running a coaching or exam-prep business. Built and shipped on my own product, not a first attempt.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20an%20Aura%20Learn%20demo%20for%20my%20institute" target="_blank">Talk to us on WhatsApp</a>
-      <a class="btn btn-ghost" href="mailto:raguls0907@gmail.com?subject=Aura%20Learn%20demo">Email us</a>
+      <a class="btn btn-primary" href="#" data-demo="lms">Launch the live demo</a>
+      <a class="btn btn-ghost" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20an%20Aura%20Learn%20demo%20for%20my%20institute" target="_blank">Talk to us on WhatsApp</a>
     </div>
     <p style="margin-top:24px;font-size:13px;color:var(--muted)">Live in 30 days · Learner app + instructor dashboard · Unlimited learners · WhatsApp &amp; Telegram nudges</p>
   </div>
@@ -101,7 +102,7 @@
 </section>
 
 <style>
-#lmstour{padding:56px 0 30px;position:relative;overflow:hidden}
+#lmstour{padding:56px 0 30px;position:relative;overflow:hidden;scroll-margin-top:86px}
 #lmstour .wrap{position:relative;z-index:1}
 #lmstour::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 18%,rgba(124,58,237,.12),transparent 60%),linear-gradient(180deg,#faf8ff,transparent 42%);pointer-events:none}
 #lmstour .tour-live{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:#5b21b6;background:#fff;border:1px solid #e3dcf6;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(76,29,149,.06)}
@@ -406,5 +407,6 @@
 </div></footer>
 
 <script>document.querySelectorAll('.navdd .ddbtn').forEach(function(b){var d=b.closest('.navdd');b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('.navdd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});});</script>
+<script src="assets/demo-gate.js" defer></script>
 </body>
 </html>

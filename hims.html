@@ -12,6 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://elevateaura.co.in/images/og_image.png" />
 <link rel="stylesheet" href="aura.css" />
+<link rel="stylesheet" href="assets/demo-gate.css" />
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -50,7 +51,7 @@
 }
 </script>
 <style>
-#screens{padding:64px 0 30px;position:relative;overflow:hidden}
+#screens{padding:64px 0 30px;position:relative;overflow:hidden;scroll-margin-top:86px}
 #screens .wrap{position:relative;z-index:1}
 #screens::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 18%,rgba(124,58,237,.12),transparent 60%),linear-gradient(180deg,#faf8ff,transparent 42%);pointer-events:none}
 #screens .tour-live{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:#5b21b6;background:#fff;border:1px solid #e3dcf6;padding:6px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(76,29,149,.06)}
@@ -110,7 +111,7 @@
       </div>
     </div>
     <a class="lnk hide" href="index.html" style="color:#9ca3af">&larr; Elevate Aura</a>
-    <a class="btn btn-primary btn-sm" href="contact.html">Book a demo</a>
+    <a class="btn btn-primary btn-sm" href="#" data-demo="hims">Launch live demo</a>
   </div>
 </div></nav>
 
@@ -120,8 +121,8 @@
     <h1>Run the whole hospital,<br><span>front desk to discharge.</span></h1>
     <p class="sub">OP and IP, appointments, EMR, pharmacy, laboratory, inventory, and cash, insurance, TPA and GST billing on one platform, with AuraPACS imaging built in. One record from registration to discharge, instead of a separate system at every counter.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="contact.html">Book a Free Strategy Call</a>
-      <a class="btn btn-ghost" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20hospital%20management%20system.">Talk to us on WhatsApp</a>
+      <a class="btn btn-primary" href="#" data-demo="hims">Launch the live demo</a>
+      <a class="btn btn-ghost" href="contact.html">Book a Free Strategy Call</a>
     </div>
     <p style="margin-top:24px;font-size:13px;color:var(--muted)">Live in 30 days · OP/IP, EMR, pharmacy, lab &amp; billing · AuraPACS imaging built in · ABHA &amp; ABDM ready</p>
   </div>
@@ -281,5 +282,6 @@
 </div></footer>
 
 <script>document.querySelectorAll('.navdd .ddbtn').forEach(function(b){var d=b.closest('.navdd');b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('.navdd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});});</script>
+<script src="assets/demo-gate.js" defer></script>
 </body>
 </html>
