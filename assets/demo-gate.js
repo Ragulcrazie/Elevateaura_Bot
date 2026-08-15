@@ -165,22 +165,21 @@
       page: location.href
     };
 
+    // Send the lead in the background (keepalive so it completes even if the
+    // page navigates). We never block the demo on the network: open on the
+    // first of "email confirmed" or a short timeout, so the button can't hang.
+    var launched = false;
+    function openOnce() { if (launched) return; launched = true; launch(); }
+    var failsafe = setTimeout(openOnce, 3500);
+
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      keepalive: true
     })
     .then(function (r) { return r.json(); })
-    .then(function (j) {
-      if (j && j.success) { launch(); }
-      else { throw new Error(j && j.message ? j.message : "send failed"); }
-    })
-    .catch(function () {
-      elSubmit.removeAttribute("disabled");
-      elBtnLbl.textContent = "Open the live demo";
-      elErr.innerHTML = 'Could not submit right now. Please try again, or WhatsApp us at ' +
-        '<a href="https://wa.me/919578971156" target="_blank" rel="noopener" style="color:#b91c1c;font-weight:700">95789 71156</a>.';
-      elErr.classList.add("on");
-    });
+    .then(function () { clearTimeout(failsafe); openOnce(); })
+    .catch(function () { clearTimeout(failsafe); openOnce(); });
   });
 })();
