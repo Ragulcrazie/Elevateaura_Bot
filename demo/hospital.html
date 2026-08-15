@@ -3764,20 +3764,19 @@ VIEW_TITLES.nursingBedside = "Bedside Chart";
 
 </script>
 <script>
-/* Deep-link support: open directly on a given module when the URL has a hash,
-   e.g. hospital.html#aurapacs opens the AuraPACS module instead of the dashboard. */
+/* Deep-link support: hospital.html#aurapacs auto-enters the demo and opens the
+   AuraPACS module directly, skipping the splash and the dashboard. */
 (function(){
   try{
     var want=(location.hash||"").replace("#","").trim();
     if(!want) return;
-    var tries=0, t=setInterval(function(){
-      tries++;
-      if(typeof navigateTo==="function" && document.getElementById("sidebar")){
-        clearInterval(t);
-        try{ navigateTo(want); }catch(e){}
-      }
-      if(tries>120) clearInterval(t);
-    },50);
+    function go(){
+      try{ if(typeof enterDemo==="function") enterDemo(); }catch(e){}
+      try{ if(typeof navigateTo==="function") navigateTo(want); }catch(e){}
+    }
+    if(document.readyState==="loading"){
+      document.addEventListener("DOMContentLoaded", function(){ setTimeout(go,80); });
+    } else { setTimeout(go,80); }
   }catch(e){}
 })();
 </script>
