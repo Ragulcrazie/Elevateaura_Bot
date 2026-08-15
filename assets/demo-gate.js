@@ -14,7 +14,8 @@
   var DEMOS = {
     hospital: { url: "/demo/hospital.html", label: "Hospital HIMS + AuraPACS" },
     dental:   { url: "/demo/dental.html",   label: "Dental Clinic HIMS" },
-    lms:      { url: "/demo/lms.html",      label: "Aura Learn (LMS)" }
+    lms:      { url: "/demo/lms.html",      label: "Aura Learn (LMS)" },
+    aurapacs: { url: "https://demo.elevateaura.co.in/api/demo-login", label: "AuraPACS (medical imaging)" }
   };
 
   var state = { product: "", url: "" };
@@ -92,9 +93,10 @@
       elBack.classList.remove("ead-hide");
       showStep("choose");
     } else {
-      state.product = DEMOS.lms.label; state.url = DEMOS.lms.url;
-      elTitle.textContent = "See Aura Learn, live.";
-      elSub.textContent = "Real LMS with sample data. Tell us who you are and it opens right away.";
+      var d = DEMOS[mode] || DEMOS.lms;
+      state.product = d.label; state.url = d.url;
+      elTitle.textContent = "See " + d.label + ", live.";
+      elSub.textContent = "Real software with sample data. Tell us who you are and it opens right away.";
       elBack.classList.add("ead-hide");
       showStep("form");
     }
