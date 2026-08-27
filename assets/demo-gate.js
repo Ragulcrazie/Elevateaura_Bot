@@ -15,11 +15,32 @@
     hospital: { url: "/demo/hospital.html", label: "Hospital HIMS + AuraPACS" },
     dental:   { url: "/demo/dental.html",   label: "Dental Clinic HIMS" },
     lms:      { url: "/demo/lms.html",      label: "Aura Learn (LMS)" },
-    business: { url: "/demo/aura-business.html", label: "Aura Business" },
+    business: { url: "/demo/aura-business.html", label: "Aura Business - medical equipment" },
+    businessTrade: { url: "/demo/aura-business-trade.html", label: "Aura Business - general trade & industry" },
     aurapacs: { url: "https://demo.elevateaura.co.in/api/demo-login", label: "AuraPACS (medical imaging)" }
   };
 
-  var state = { product: "", url: "" };
+  /* Products that ship in more than one flavour show a chooser first. */
+  var CHOICES = {
+    hims: {
+      title: "Which HIMS would you like to see?",
+      sub: "Pick the version closest to you. The demo opens after a quick sign-in.",
+      opts: [
+        { key: "hospital", ic: "&#127973;", name: "Hospital HIMS", desc: "OP/IP, EMR, pharmacy, lab, billing + imaging" },
+        { key: "dental", ic: "&#129463;", name: "Dental clinic HIMS", desc: "Appointments, charting, treatment &amp; billing" }
+      ]
+    },
+    business: {
+      title: "Which business are we showing it on?",
+      sub: "Same platform, same modules. Pick the one closest to your industry.",
+      opts: [
+        { key: "businessTrade", ic: "&#127981;", name: "General trade &amp; industry", desc: "Distribution, plant &amp; facility service, AMC, tenders - any industry" },
+        { key: "business", ic: "&#127973;", name: "Medical equipment", desc: "Hospitals as customers, AMC/CAMC, biomedical service desk" }
+      ]
+    }
+  };
+
+  var state = { product: "", url: "", mode: "" };
 
   // ---- build modal DOM ----
   var ov = document.createElement("div");
@@ -34,20 +55,13 @@
       '</div>' +
       '<div class="ead-body">' +
         // choose step (HIMS only)
-        '<div data-step="choose" class="ead-choose ead-hide">' +
-          '<button class="ead-opt" type="button" data-pick="hospital">' +
-            '<span class="ic">&#127973;</span><span><b>Hospital HIMS</b><small>OP/IP, EMR, pharmacy, lab, billing + imaging</small></span><span class="ar">&rarr;</span>' +
-          '</button>' +
-          '<button class="ead-opt" type="button" data-pick="dental">' +
-            '<span class="ic">&#129463;</span><span><b>Dental clinic HIMS</b><small>Appointments, charting, treatment &amp; billing</small></span><span class="ar">&rarr;</span>' +
-          '</button>' +
-        '</div>' +
+        '<div data-step="choose" class="ead-choose ead-hide"></div>' +
         // form step
         '<form data-step="form" class="ead-hide" novalidate>' +
           '<button type="button" class="ead-back ead-hide" data-el="back">&larr; Choose a different version</button>' +
           '<div class="ead-err" data-el="err"></div>' +
           '<div class="ead-field"><label>Full name</label><input name="name" autocomplete="name" required></div>' +
-          '<div class="ead-field"><label>Organisation / clinic</label><input name="organisation" autocomplete="organization" required></div>' +
+          '<div class="ead-field"><label>Organisation / company</label><input name="organisation" autocomplete="organization" required></div>' +
           '<div class="ead-row">' +
             '<div class="ead-field"><label>Phone / WhatsApp</label><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>' +
             '<div class="ead-field"><label>City</label><input name="city" autocomplete="address-level2"></div>' +
@@ -88,9 +102,9 @@
   function open(mode) {
     elErr.classList.remove("on"); elErr.textContent = "";
     stForm.reset && stForm.reset();
-    if (mode === "hims") {
-      elTitle.textContent = "Which HIMS would you like to see?";
-      elSub.textContent = "Pick the version closest to you. The demo opens after a quick sign-in.";
+    state.mode = mode;
+    if (CHOICES[mode]) {
+      renderChoices(mode);
       elBack.classList.remove("ead-hide");
       showStep("choose");
     } else {
@@ -119,18 +133,29 @@
   ov.addEventListener("mousedown", function (e) { if (e.target === ov) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && ov.classList.contains("on")) close(); });
 
-  ov.querySelectorAll("[data-pick]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var key = b.getAttribute("data-pick");
-      state.product = DEMOS[key].label; state.url = DEMOS[key].url;
-      elTitle.textContent = "Sign in to open the demo";
-      elSub.textContent = state.product + " - real software with sample data.";
-      showStep("form");
-    });
+  function renderChoices(mode) {
+    var c = CHOICES[mode];
+    elTitle.innerHTML = c.title;
+    elSub.innerHTML = c.sub;
+    stChoose.innerHTML = c.opts.map(function (o) {
+      return '<button class="ead-opt" type="button" data-pick="' + o.key + '">' +
+        '<span class="ic">' + o.ic + '</span><span><b>' + o.name + '</b><small>' + o.desc + '</small></span>' +
+        '<span class="ar">&rarr;</span></button>';
+    }).join("");
+  }
+
+  stChoose.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-pick]");
+    if (!b) return;
+    var key = b.getAttribute("data-pick");
+    state.product = DEMOS[key].label; state.url = DEMOS[key].url;
+    elTitle.textContent = "Sign in to open the demo";
+    elSub.textContent = state.product + " - real software with sample data.";
+    showStep("form");
   });
+
   elBack.addEventListener("click", function () {
-    elTitle.textContent = "Which HIMS would you like to see?";
-    elSub.textContent = "Pick the version closest to you. The demo opens after a quick sign-in.";
+    renderChoices(CHOICES[state.mode] ? state.mode : "hims");
     showStep("choose");
   });
 

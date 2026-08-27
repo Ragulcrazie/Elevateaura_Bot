@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aura Business - Medical Equipment Distribution &amp; Field Service Platform</title>
+<title>Aura Business - Distribution, Field Service &amp; AMC Platform</title>
 <style>
 
 /* ==========================================================================
@@ -993,7 +993,7 @@ table.doc-table td.num, table.doc-table th.num { text-align:right; font-variant-
     <div class="landing-mark"><span class="dot"></span>Interactive Product Demonstration</div>
     <div class="landing-title">Aura <span class="accent">Business</span></div>
     <div class="landing-tagline">Distribution, Service and Cash. Connected.</div>
-    <p class="landing-sub">One platform for medical equipment distributors: CRM and quotations, GST billing and collections, inventory and procurement, AMC contracts, field service, tenders and workforce - with a field-staff mobile app on top.</p>
+    <p class="landing-sub">One platform for distributors and service businesses: CRM and quotations, GST billing and collections, inventory and procurement, AMC contracts, field service, tenders and workforce - with a field-staff mobile app on top.</p>
     <div class="landing-actions">
       <button class="btn btn-primary" id="btn-enter-demo">Enter Aura Business Demo</button>
       <button class="btn btn-secondary-dark" id="btn-request-walkthrough">Request Live Walkthrough</button>
@@ -1054,7 +1054,7 @@ table.doc-table td.num, table.doc-table th.num { text-align:right; font-variant-
           <div class="user-avatar">MD</div>
           <div class="user-meta">
             <strong id="current-role-label">Managing Director</strong>
-            <span>Aura Demo Distributors Pvt Ltd</span>
+            <span>Aura Demo Enterprises Pvt Ltd</span>
           </div>
           <span id="user-chevron"></span>
         </div>
@@ -1332,7 +1332,8 @@ function vBarChartSVG(opts) {
 
 <script>
 /* ==========================================================================
-   Aura Business - Central Mock Data Store
+   Aura Business - Central Mock Data Store (General trade variant)
+   Industrial and electrical equipment distribution with field service.
    Every screen reads from this single object so the demo feels connected.
    All companies, people, numbers and documents below are FICTIONAL and exist
    only to demonstrate the software.
@@ -1341,163 +1342,163 @@ function vBarChartSVG(opts) {
 const AURA = {
 
   company: {
-    name: "Aura Demo Distributors Pvt Ltd",
-    short: "Aura Demo Distributors",
-    line: "Medical Equipment Distribution &amp; Service",
-    gstin: "33AADCD9911F1Z4",
-    address: "No. 42, Industrial Estate 2nd Street, Guindy, Chennai - 600032",
-    phone: "+91 44 4000 1200",
-    email: "sales@aurademo.example",
-    branches: ["Chennai HO - Guindy", "Coimbatore Branch", "Madurai Branch"],
+    name: "Aura Demo Enterprises Pvt Ltd",
+    short: "Aura Demo Enterprises",
+    line: "Industrial &amp; Electrical Equipment Distribution",
+    gstin: "33AADCE4417K1Z9",
+    address: "Plot 118, Ambattur Industrial Estate, 4th Avenue, Chennai - 600058",
+    phone: "+91 44 4000 8800",
+    email: "sales@auratrade.example",
+    branches: ["Chennai HO - Ambattur", "Hosur Branch", "Coimbatore Branch"],
   },
 
   brands: [
-    { id: "b1", name: "Medisys Systems", country: "Germany", category: "Patient monitoring", status: "Authorized", validTill: "31 Mar 2027", territory: "Tamil Nadu &amp; Puducherry", skus: 14 },
-    { id: "b2", name: "Orbitek Diagnostics", country: "South Korea", category: "Imaging &amp; ultrasound", status: "Authorized", validTill: "30 Sep 2026", territory: "Tamil Nadu", skus: 9 },
-    { id: "b3", name: "Nihon Meditek", country: "Japan", category: "Critical care", status: "Authorized", validTill: "31 Dec 2026", territory: "South India", skus: 11 },
-    { id: "b4", name: "Corvia Surgical", country: "India", category: "OT equipment", status: "Renewal Due", validTill: "30 Sep 2026", territory: "Tamil Nadu &amp; Kerala", skus: 16 },
-    { id: "b5", name: "Steriline Instruments", country: "Italy", category: "Sterilisation", status: "Authorized", validTill: "31 Jul 2027", territory: "Tamil Nadu", skus: 7 },
-    { id: "b6", name: "Vantage Imaging", country: "India", category: "Radiology", status: "Under Review", validTill: "-", territory: "Proposed - South India", skus: 5 },
+    { id: "b1", name: "Voltek Electricals", country: "India", category: "Motors &amp; drives", status: "Authorized", validTill: "31 Mar 2027", territory: "Tamil Nadu &amp; Puducherry", skus: 22 },
+    { id: "b2", name: "Dynamo Drives", country: "Germany", category: "VFDs &amp; automation", status: "Authorized", validTill: "30 Sep 2026", territory: "Tamil Nadu", skus: 13 },
+    { id: "b3", name: "AirCore Compressors", country: "Italy", category: "Compressed air", status: "Authorized", validTill: "31 Dec 2026", territory: "South India", skus: 9 },
+    { id: "b4", name: "Hydroflo Pumps", country: "India", category: "Pumps &amp; water systems", status: "Renewal Due", validTill: "30 Sep 2026", territory: "Tamil Nadu &amp; Kerala", skus: 18 },
+    { id: "b5", name: "Suraksha Switchgear", country: "India", category: "Panels &amp; switchgear", status: "Authorized", validTill: "31 Jul 2027", territory: "Tamil Nadu", skus: 15 },
+    { id: "b6", name: "ThermaCool Systems", country: "South Korea", category: "Industrial cooling", status: "Under Review", validTill: "-", territory: "Proposed - South India", skus: 6 },
   ],
 
   products: [
-    { sku: "MS-PM-720", name: "Multipara Patient Monitor 12.1\"", brand: "Medisys Systems", cat: "Patient monitoring", hsn: "9018", gst: 12, list: 148000, cost: 96500, stock: 14, reorder: 6, bin: "A-01", warranty: "24 months" },
-    { sku: "NM-VN-350", name: "ICU Ventilator (Adult/Paed)", brand: "Nihon Meditek", cat: "Critical care", hsn: "9019", gst: 12, list: 985000, cost: 712000, stock: 3, reorder: 2, bin: "A-04", warranty: "24 months" },
-    { sku: "NM-SP-110", name: "Syringe Infusion Pump", brand: "Nihon Meditek", cat: "Critical care", hsn: "9018", gst: 12, list: 42500, cost: 26800, stock: 41, reorder: 15, bin: "B-02", warranty: "18 months" },
-    { sku: "NM-IP-210", name: "Volumetric Infusion Pump", brand: "Nihon Meditek", cat: "Critical care", hsn: "9018", gst: 12, list: 58000, cost: 37200, stock: 9, reorder: 12, bin: "B-03", warranty: "18 months" },
-    { sku: "OD-US-500", name: "Colour Doppler Ultrasound 4D", brand: "Orbitek Diagnostics", cat: "Imaging", hsn: "9018", gst: 12, list: 2150000, cost: 1580000, stock: 2, reorder: 1, bin: "A-07", warranty: "36 months" },
-    { sku: "OD-EC-120", name: "12-Channel ECG Machine", brand: "Orbitek Diagnostics", cat: "Diagnostics", hsn: "9018", gst: 12, list: 96000, cost: 61000, stock: 22, reorder: 8, bin: "B-06", warranty: "24 months" },
-    { sku: "CS-OT-900", name: "Hydraulic OT Table (7-function)", brand: "Corvia Surgical", cat: "OT equipment", hsn: "9402", gst: 18, list: 385000, cost: 254000, stock: 5, reorder: 3, bin: "C-01", warranty: "24 months" },
-    { sku: "CS-OL-450", name: "LED Surgical Light (Twin Dome)", brand: "Corvia Surgical", cat: "OT equipment", hsn: "9405", gst: 18, list: 268000, cost: 172000, stock: 0, reorder: 3, bin: "C-02", warranty: "24 months" },
-    { sku: "CS-DF-330", name: "Biphasic Defibrillator with AED", brand: "Corvia Surgical", cat: "Critical care", hsn: "9018", gst: 12, list: 315000, cost: 208000, stock: 6, reorder: 4, bin: "C-05", warranty: "24 months" },
-    { sku: "SL-AC-60", name: "Horizontal Autoclave 60L", brand: "Steriline Instruments", cat: "Sterilisation", hsn: "8419", gst: 18, list: 178000, cost: 118000, stock: 11, reorder: 5, bin: "D-01", warranty: "18 months" },
-    { sku: "SL-UW-30", name: "Ultrasonic Instrument Washer 30L", brand: "Steriline Instruments", cat: "Sterilisation", hsn: "8479", gst: 18, list: 92000, cost: 58000, stock: 4, reorder: 5, bin: "D-03", warranty: "12 months" },
-    { sku: "MS-CM-140", name: "Central Monitoring Station (8-bed)", brand: "Medisys Systems", cat: "Patient monitoring", hsn: "9018", gst: 12, list: 465000, cost: 318000, stock: 2, reorder: 2, bin: "A-02", warranty: "24 months" },
+    { sku: "VT-IM-1550", name: "3-Phase Induction Motor 15 HP", brand: "Voltek Electricals", cat: "Motors", hsn: "8501", gst: 18, list: 68000, cost: 44500, stock: 26, reorder: 10, bin: "A-01", warranty: "24 months" },
+    { sku: "AC-SC-7590", name: "Screw Air Compressor 75 HP", brand: "AirCore Compressors", cat: "Compressed air", hsn: "8414", gst: 18, list: 1180000, cost: 842000, stock: 3, reorder: 2, bin: "A-04", warranty: "24 months" },
+    { sku: "DD-VFD-220", name: "Variable Frequency Drive 22 kW", brand: "Dynamo Drives", cat: "Drives", hsn: "8504", gst: 18, list: 96000, cost: 62500, stock: 34, reorder: 12, bin: "B-02", warranty: "18 months" },
+    { sku: "DD-PLC-410", name: "PLC Control Panel (16 I/O)", brand: "Dynamo Drives", cat: "Automation", hsn: "8537", gst: 18, list: 142000, cost: 92000, stock: 7, reorder: 10, bin: "B-03", warranty: "18 months" },
+    { sku: "HF-SP-1250", name: "Submersible Pump Set 12.5 HP", brand: "Hydroflo Pumps", cat: "Pumps", hsn: "8413", gst: 18, list: 84000, cost: 54000, stock: 19, reorder: 8, bin: "B-06", warranty: "24 months" },
+    { sku: "HF-CP-300", name: "Centrifugal Process Pump 30 HP", brand: "Hydroflo Pumps", cat: "Pumps", hsn: "8413", gst: 18, list: 178000, cost: 116000, stock: 6, reorder: 4, bin: "C-01", warranty: "24 months" },
+    { sku: "SS-MCC-800", name: "MCC Panel 800A (Type-2 tested)", brand: "Suraksha Switchgear", cat: "Panels", hsn: "8537", gst: 18, list: 465000, cost: 312000, stock: 2, reorder: 2, bin: "C-02", warranty: "24 months" },
+    { sku: "SS-APFC-250", name: "APFC Panel 250 kVAr", brand: "Suraksha Switchgear", cat: "Panels", hsn: "8537", gst: 18, list: 298000, cost: 196000, stock: 0, reorder: 3, bin: "C-04", warranty: "24 months" },
+    { sku: "TC-CH-60", name: "Industrial Water Chiller 60 TR", brand: "ThermaCool Systems", cat: "Cooling", hsn: "8418", gst: 18, list: 1450000, cost: 1055000, stock: 1, reorder: 1, bin: "A-07", warranty: "36 months" },
+    { sku: "TC-CT-120", name: "FRP Cooling Tower 120 TR", brand: "ThermaCool Systems", cat: "Cooling", hsn: "8419", gst: 18, list: 320000, cost: 212000, stock: 4, reorder: 3, bin: "D-01", warranty: "18 months" },
+    { sku: "VT-DG-125", name: "Diesel Generator Set 125 kVA", brand: "Voltek Electricals", cat: "Power", hsn: "8502", gst: 18, list: 1120000, cost: 798000, stock: 2, reorder: 2, bin: "D-03", warranty: "24 months" },
+    { sku: "VT-GB-075", name: "Helical Gearbox 7.5 HP", brand: "Voltek Electricals", cat: "Power transmission", hsn: "8483", gst: 18, list: 46000, cost: 29500, stock: 41, reorder: 15, bin: "A-02", warranty: "12 months" },
   ],
 
   spares: [
-    { sku: "SP-SPO2-01", name: "SpO2 Probe (Adult, reusable)", brand: "Medisys Systems", stock: 34, reorder: 20, price: 4800 },
-    { sku: "SP-NIBP-02", name: "NIBP Cuff Set (3 sizes)", brand: "Medisys Systems", stock: 12, reorder: 15, price: 3600 },
-    { sku: "SP-VENT-AIR", name: "Ventilator Air Filter Kit", brand: "Nihon Meditek", stock: 6, reorder: 10, price: 7200 },
-    { sku: "SP-OT-GAS", name: "OT Table Gas Spring", brand: "Corvia Surgical", stock: 3, reorder: 4, price: 11500 },
-    { sku: "SP-ECG-CBL", name: "ECG Patient Cable 10-lead", brand: "Orbitek Diagnostics", stock: 18, reorder: 10, price: 5400 },
-    { sku: "SP-AC-GSKT", name: "Autoclave Door Gasket 60L", brand: "Steriline Instruments", stock: 9, reorder: 6, price: 2900 },
+    { sku: "SP-AIRFLT-01", name: "Compressor Air Filter Element", brand: "AirCore Compressors", stock: 28, reorder: 20, price: 6400 },
+    { sku: "SP-OILSEP-02", name: "Oil Separator Kit (75 HP)", brand: "AirCore Compressors", stock: 9, reorder: 12, price: 14200 },
+    { sku: "SP-BRG-6312", name: "Motor Bearing Set 6312-2RS", brand: "Voltek Electricals", stock: 46, reorder: 25, price: 3400 },
+    { sku: "SP-MECHSL-03", name: "Pump Mechanical Seal 45 mm", brand: "Hydroflo Pumps", stock: 4, reorder: 8, price: 8900 },
+    { sku: "SP-CONT-120", name: "Contactor 120A with coil", brand: "Suraksha Switchgear", stock: 22, reorder: 10, price: 5600 },
+    { sku: "SP-VFDFAN-01", name: "VFD Cooling Fan Assembly", brand: "Dynamo Drives", stock: 7, reorder: 6, price: 4300 },
   ],
 
   customers: [
-    { id: "C-1041", name: "Sunrise Multispeciality Hospital", type: "Private Hospital", beds: 210, city: "Chennai", area: "Porur", contact: "Mr. Balaji Sundaram", role: "Purchase Manager", phone: "+91 90000 11001", email: "purchase@sunrisedemo.example", gstin: "33AABCS4411K1ZP", terms: "45 days", outstanding: 940800, ytd: 4820000, health: "Active", since: "Jun 2022", rating: "A" },
-    { id: "C-1078", name: "Grace Medical Centre", type: "Nursing Home", beds: 60, city: "Chennai", area: "Ambattur", contact: "Dr. Revathi Nair", role: "Director", phone: "+91 90000 11002", email: "admin@gracedemo.example", gstin: "33AAECG7712L1ZQ", terms: "30 days", outstanding: 186500, ytd: 1140000, health: "Active", since: "Mar 2023", rating: "B" },
-    { id: "C-1103", name: "Kaveri Institute of Medical Sciences", type: "Teaching Hospital", beds: 540, city: "Coimbatore", area: "Peelamedu", contact: "Mr. Senthil Kumar", role: "Head - Biomedical", phone: "+91 90000 11003", email: "biomed@kaveridemo.example", gstin: "33AAJCK2290M1ZR", terms: "60 days", outstanding: 2380000, ytd: 9650000, health: "Key Account", since: "Jan 2021", rating: "A+" },
-    { id: "C-1156", name: "Lotus Mother &amp; Child Hospital", type: "Speciality Hospital", beds: 95, city: "Madurai", area: "Anna Nagar", contact: "Ms. Kalpana Devi", role: "Administrator", phone: "+91 90000 11004", email: "admin@lotusdemo.example", gstin: "33AADCL5567N1ZS", terms: "30 days", outstanding: 415000, ytd: 2260000, health: "Active", since: "Sep 2023", rating: "B" },
-    { id: "C-1188", name: "Prime Diagnostics &amp; Imaging", type: "Diagnostic Chain", beds: 0, city: "Chennai", area: "Anna Nagar", contact: "Mr. Faizal Ahmed", role: "Operations Head", phone: "+91 90000 11005", email: "ops@primedemo.example", gstin: "33AAGCP8834P1ZT", terms: "15 days", outstanding: 68000, ytd: 3110000, health: "Active", since: "Nov 2022", rating: "A" },
-    { id: "C-1204", name: "Sri Ranga Hospital", type: "Private Hospital", beds: 130, city: "Trichy", area: "Thillai Nagar", contact: "Mr. Gopinath R", role: "Purchase Officer", phone: "+91 90000 11006", email: "purchase@srirangademo.example", gstin: "33AABCS9921Q1ZU", terms: "45 days", outstanding: 1265000, ytd: 2980000, health: "Payment Overdue", since: "Feb 2024", rating: "C" },
-    { id: "C-1219", name: "Harbour City Hospital", type: "Private Hospital", beds: 175, city: "Chennai", area: "Thoraipakkam", contact: "Ms. Nithya Raghavan", role: "CFO", phone: "+91 90000 11007", email: "finance@harbourdemo.example", gstin: "33AAHCH3345R1ZV", terms: "45 days", outstanding: 0, ytd: 5340000, health: "Active", since: "Jul 2021", rating: "A" },
-    { id: "C-1240", name: "Nilgiri Speciality Clinic", type: "Clinic", beds: 18, city: "Coimbatore", area: "RS Puram", contact: "Dr. Mahesh Iyer", role: "Owner", phone: "+91 90000 11008", email: "clinic@nilgiridemo.example", gstin: "33AAKCN6678S1ZW", terms: "Advance", outstanding: 0, ytd: 486000, health: "New", since: "Jun 2026", rating: "B" },
+    { id: "C-1041", name: "Meenakshi Textile Mills", type: "Textile manufacturing", beds: 480, city: "Erode", area: "Perundurai Road", contact: "Mr. Balaji Sundaram", role: "Plant Head", phone: "+91 90000 11001", email: "purchase@meenakshidemo.example", gstin: "33AABCM4411K1ZP", terms: "45 days", outstanding: 944000, ytd: 4820000, health: "Active", since: "Jun 2022", rating: "A" },
+    { id: "C-1078", name: "Crescent Engineering Works", type: "Precision engineering", beds: 95, city: "Chennai", area: "Ambattur", contact: "Mr. Revathi Nair", role: "Director", phone: "+91 90000 11002", email: "admin@crescentdemo.example", gstin: "33AAECC7712L1ZQ", terms: "30 days", outstanding: 186500, ytd: 1140000, health: "Active", since: "Mar 2023", rating: "B" },
+    { id: "C-1103", name: "Anand Auto Components", type: "Auto ancillary", beds: 720, city: "Hosur", area: "SIPCOT Phase II", contact: "Mr. Senthil Kumar", role: "Head - Maintenance", phone: "+91 90000 11003", email: "maint@ananddemo.example", gstin: "33AAJCA2290M1ZR", terms: "60 days", outstanding: 2380000, ytd: 9650000, health: "Key Account", since: "Jan 2021", rating: "A+" },
+    { id: "C-1156", name: "Blue Bay Hotels &amp; Resorts", type: "Hospitality group", beds: 210, city: "Chennai", area: "East Coast Road", contact: "Ms. Kalpana Devi", role: "Chief Engineer", phone: "+91 90000 11004", email: "engg@bluebaydemo.example", gstin: "33AADCB5567N1ZS", terms: "30 days", outstanding: 415000, ytd: 2260000, health: "Active", since: "Sep 2023", rating: "B" },
+    { id: "C-1188", name: "Southern Cold Storage", type: "Cold chain &amp; warehousing", beds: 130, city: "Madurai", area: "Kappalur", contact: "Mr. Faizal Ahmed", role: "Operations Head", phone: "+91 90000 11005", email: "ops@southerncolddemo.example", gstin: "33AAGCS8834P1ZT", terms: "15 days", outstanding: 68000, ytd: 3110000, health: "Active", since: "Nov 2022", rating: "A" },
+    { id: "C-1204", name: "Vega Plastics Industries", type: "Plastic moulding", beds: 260, city: "Ranipet", area: "SIDCO Estate", contact: "Mr. Gopinath R", role: "Purchase Officer", phone: "+91 90000 11006", email: "purchase@vegademo.example", gstin: "33AABCV9921Q1ZU", terms: "45 days", outstanding: 1265000, ytd: 2980000, health: "Payment Overdue", since: "Feb 2024", rating: "C" },
+    { id: "C-1219", name: "Sri Vari Constructions", type: "Infrastructure &amp; builders", beds: 340, city: "Chennai", area: "Guindy", contact: "Ms. Nithya Raghavan", role: "CFO", phone: "+91 90000 11007", email: "finance@srivaridemo.example", gstin: "33AAHCS3345R1ZV", terms: "45 days", outstanding: 0, ytd: 5340000, health: "Active", since: "Jul 2021", rating: "A" },
+    { id: "C-1240", name: "Green Valley Schools", type: "Education campus", beds: 60, city: "Coimbatore", area: "Saravanampatti", contact: "Mr. Mahesh Iyer", role: "Facility Manager", phone: "+91 90000 11008", email: "facility@greenvalleydemo.example", gstin: "33AAKCG6678S1ZW", terms: "Advance", outstanding: 0, ytd: 486000, health: "New", since: "Jun 2026", rating: "B" },
   ],
 
   doctors: [
-    { id: "D-01", name: "Dr. Ashwin Venkatesh", speciality: "Cardiology", hospital: "Sunrise Multispeciality Hospital", city: "Chennai", influence: "High", lastMet: "18 Aug 2026", interest: "Defibrillators, monitors" },
-    { id: "D-02", name: "Dr. Revathi Nair", speciality: "Paediatrics", hospital: "Grace Medical Centre", city: "Chennai", influence: "High", lastMet: "12 Aug 2026", interest: "Infusion pumps" },
-    { id: "D-03", name: "Dr. Prakash Muthu", speciality: "Anaesthesiology", hospital: "Kaveri Institute of Medical Sciences", city: "Coimbatore", influence: "Very High", lastMet: "21 Aug 2026", interest: "Ventilators, OT tables" },
-    { id: "D-04", name: "Dr. Shalini Varma", speciality: "Radiology", hospital: "Prime Diagnostics &amp; Imaging", city: "Chennai", influence: "Medium", lastMet: "05 Aug 2026", interest: "Ultrasound systems" },
-    { id: "D-05", name: "Dr. Mahesh Iyer", speciality: "General Medicine", hospital: "Nilgiri Speciality Clinic", city: "Coimbatore", influence: "Medium", lastMet: "24 Aug 2026", interest: "ECG, autoclave" },
-    { id: "D-06", name: "Dr. Sanjana Rao", speciality: "Obstetrics", hospital: "Lotus Mother &amp; Child Hospital", city: "Madurai", influence: "High", lastMet: "16 Aug 2026", interest: "Foetal monitors, warmers" },
+    { id: "D-01", name: "Er. Ashwin Venkatesh", speciality: "Electrical consultant", hospital: "Meenakshi Textile Mills", city: "Erode", influence: "High", lastMet: "18 Aug 2026", interest: "APFC panels, energy audit" },
+    { id: "D-02", name: "Mr. Prakash Muthu", speciality: "Maintenance head", hospital: "Anand Auto Components", city: "Hosur", influence: "Very High", lastMet: "21 Aug 2026", interest: "Compressors, VFDs" },
+    { id: "D-03", name: "Ms. Revathi Nair", speciality: "Managing director", hospital: "Crescent Engineering Works", city: "Chennai", influence: "High", lastMet: "12 Aug 2026", interest: "Motors, gearboxes" },
+    { id: "D-04", name: "Er. Shalini Varma", speciality: "MEP consultant", hospital: "Sri Vari Constructions", city: "Chennai", influence: "Medium", lastMet: "05 Aug 2026", interest: "Pumps, DG sets" },
+    { id: "D-05", name: "Mr. Mahesh Iyer", speciality: "Facility manager", hospital: "Green Valley Schools", city: "Coimbatore", influence: "Medium", lastMet: "24 Aug 2026", interest: "Water systems, DG set" },
+    { id: "D-06", name: "Er. Sanjana Rao", speciality: "Project engineer", hospital: "Blue Bay Hotels &amp; Resorts", city: "Chennai", influence: "High", lastMet: "16 Aug 2026", interest: "Chillers, cooling towers" },
   ],
 
   staff: [
-    { id: "S-01", name: "Karthik Balaji", role: "Senior Sales Executive", territory: "Chennai South", phone: "+91 90000 22001", visitsMtd: 38, target: 4200000, achieved: 3260000, status: "On Field", lastPing: "11 min ago", location: "Porur, Chennai" },
+    { id: "S-01", name: "Karthik Balaji", role: "Senior Sales Executive", territory: "Chennai South", phone: "+91 90000 22001", visitsMtd: 38, target: 4200000, achieved: 3260000, status: "On Field", lastPing: "11 min ago", location: "Guindy, Chennai" },
     { id: "S-02", name: "Deepa Ramesh", role: "Sales Executive", territory: "Chennai North", phone: "+91 90000 22002", visitsMtd: 31, target: 2800000, achieved: 2940000, status: "On Field", lastPing: "4 min ago", location: "Ambattur, Chennai" },
-    { id: "S-03", name: "Vignesh Anand", role: "Service Engineer", territory: "Chennai", phone: "+91 90000 22003", visitsMtd: 44, target: 0, achieved: 0, status: "On Job", lastPing: "2 min ago", location: "Thoraipakkam, Chennai" },
-    { id: "S-04", name: "Mohammed Irfan", role: "Service Engineer", territory: "Coimbatore", phone: "+91 90000 22004", visitsMtd: 36, target: 0, achieved: 0, status: "On Job", lastPing: "26 min ago", location: "Peelamedu, Coimbatore" },
-    { id: "S-05", name: "Anitha Prakash", role: "Sales Executive", territory: "Madurai &amp; Trichy", phone: "+91 90000 22005", visitsMtd: 27, target: 2400000, achieved: 1580000, status: "Idle 2h", lastPing: "2 h 14 min ago", location: "Anna Nagar, Madurai" },
-    { id: "S-06", name: "Suresh Babu", role: "Area Sales Manager", territory: "Tamil Nadu", phone: "+91 90000 22006", visitsMtd: 19, target: 9500000, achieved: 8120000, status: "In Office", lastPing: "just now", location: "Guindy, Chennai" },
+    { id: "S-03", name: "Vignesh Anand", role: "Service Engineer", territory: "Chennai", phone: "+91 90000 22003", visitsMtd: 44, target: 0, achieved: 0, status: "On Job", lastPing: "2 min ago", location: "East Coast Road, Chennai" },
+    { id: "S-04", name: "Mohammed Irfan", role: "Service Engineer", territory: "Hosur &amp; Krishnagiri", phone: "+91 90000 22004", visitsMtd: 36, target: 0, achieved: 0, status: "On Job", lastPing: "26 min ago", location: "SIPCOT, Hosur" },
+    { id: "S-05", name: "Anitha Prakash", role: "Sales Executive", territory: "Madurai &amp; Ranipet", phone: "+91 90000 22005", visitsMtd: 27, target: 2400000, achieved: 1580000, status: "Idle 2h", lastPing: "2 h 14 min ago", location: "Kappalur, Madurai" },
+    { id: "S-06", name: "Suresh Babu", role: "Area Sales Manager", territory: "Tamil Nadu", phone: "+91 90000 22006", visitsMtd: 19, target: 9500000, achieved: 8120000, status: "In Office", lastPing: "just now", location: "Ambattur, Chennai" },
   ],
 
   leads: [
-    { id: "L-2201", customer: "Kaveri Institute of Medical Sciences", contact: "Mr. Senthil Kumar", product: "ICU Ventilator x 4", value: 3940000, stage: "Negotiation", owner: "Suresh Babu", source: "Existing customer", next: "Price revision call", nextOn: "28 Aug 2026", age: 34, prob: 70 },
-    { id: "L-2214", customer: "Harbour City Hospital", contact: "Ms. Nithya Raghavan", product: "Central Monitoring Station + 8 monitors", value: 1650000, stage: "Quotation", owner: "Karthik Balaji", source: "Referral", next: "Send revised quote", nextOn: "27 Aug 2026", age: 12, prob: 55 },
-    { id: "L-2220", customer: "Lotus Mother &amp; Child Hospital", contact: "Ms. Kalpana Devi", product: "Syringe pumps x 12", value: 510000, stage: "Quotation", owner: "Anitha Prakash", source: "Field visit", next: "Demo at site", nextOn: "29 Aug 2026", age: 9, prob: 60 },
-    { id: "L-2231", customer: "Sunrise Multispeciality Hospital", contact: "Mr. Balaji Sundaram", product: "OT Table + Surgical Light", value: 653000, stage: "Demo", owner: "Karthik Balaji", source: "Doctor referral", next: "OT trial run", nextOn: "30 Aug 2026", age: 6, prob: 45 },
-    { id: "L-2236", customer: "Prime Diagnostics &amp; Imaging", contact: "Mr. Faizal Ahmed", product: "Colour Doppler Ultrasound", value: 2150000, stage: "Negotiation", owner: "Suresh Babu", source: "Website enquiry", next: "Finance option review", nextOn: "27 Aug 2026", age: 21, prob: 65 },
-    { id: "L-2242", customer: "Nilgiri Speciality Clinic", contact: "Dr. Mahesh Iyer", product: "ECG Machine + Autoclave", value: 274000, stage: "New", owner: "Anitha Prakash", source: "WhatsApp enquiry", next: "First call", nextOn: "27 Aug 2026", age: 2, prob: 20 },
-    { id: "L-2247", customer: "Sri Ranga Hospital", contact: "Mr. Gopinath R", product: "Defibrillator x 2", value: 630000, stage: "New", owner: "Anitha Prakash", source: "Cold call", next: "Qualify budget", nextOn: "28 Aug 2026", age: 3, prob: 15 },
-    { id: "L-2189", customer: "Grace Medical Centre", contact: "Dr. Revathi Nair", product: "Infusion pumps x 6", value: 348000, stage: "Won", owner: "Deepa Ramesh", source: "Existing customer", next: "Delivery scheduled", nextOn: "29 Aug 2026", age: 41, prob: 100 },
-    { id: "L-2175", customer: "City Care Hospital", contact: "Mr. Ravi Shankar", product: "Patient monitors x 5", value: 740000, stage: "Lost", owner: "Karthik Balaji", source: "Tender", next: "Lost to L1 bidder", nextOn: "-", age: 58, prob: 0 },
+    { id: "L-2201", customer: "Anand Auto Components", contact: "Mr. Senthil Kumar", product: "Screw Air Compressor 75 HP x 3", value: 3540000, stage: "Negotiation", owner: "Suresh Babu", source: "Existing customer", next: "Price revision call", nextOn: "28 Aug 2026", age: 34, prob: 70 },
+    { id: "L-2214", customer: "Sri Vari Constructions", contact: "Ms. Nithya Raghavan", product: "MCC Panel + 8 motors", value: 1186608, stage: "Quotation", owner: "Karthik Balaji", source: "Consultant referral", next: "Send revised quote", nextOn: "27 Aug 2026", age: 12, prob: 55 },
+    { id: "L-2220", customer: "Blue Bay Hotels &amp; Resorts", contact: "Ms. Kalpana Devi", product: "Submersible pump sets x 6", value: 504000, stage: "Quotation", owner: "Anitha Prakash", source: "Field visit", next: "Site survey", nextOn: "29 Aug 2026", age: 9, prob: 60 },
+    { id: "L-2231", customer: "Meenakshi Textile Mills", contact: "Mr. Balaji Sundaram", product: "APFC Panel 250 kVAr + install", value: 653000, stage: "Demo", owner: "Karthik Balaji", source: "Consultant referral", next: "Load study at plant", nextOn: "30 Aug 2026", age: 6, prob: 45 },
+    { id: "L-2236", customer: "Southern Cold Storage", contact: "Mr. Faizal Ahmed", product: "Industrial Chiller 60 TR", value: 1450000, stage: "Negotiation", owner: "Suresh Babu", source: "Website enquiry", next: "Finance option review", nextOn: "27 Aug 2026", age: 21, prob: 65 },
+    { id: "L-2242", customer: "Green Valley Schools", contact: "Mr. Mahesh Iyer", product: "DG Set 125 kVA + AMC", value: 1204000, stage: "New", owner: "Anitha Prakash", source: "WhatsApp enquiry", next: "First call", nextOn: "27 Aug 2026", age: 2, prob: 20 },
+    { id: "L-2247", customer: "Vega Plastics Industries", contact: "Mr. Gopinath R", product: "VFD 22 kW x 6", value: 576000, stage: "New", owner: "Anitha Prakash", source: "Cold call", next: "Qualify budget", nextOn: "28 Aug 2026", age: 3, prob: 15 },
+    { id: "L-2189", customer: "Crescent Engineering Works", contact: "Ms. Revathi Nair", product: "Helical gearboxes x 8", value: 348000, stage: "Won", owner: "Deepa Ramesh", source: "Existing customer", next: "Delivery scheduled", nextOn: "29 Aug 2026", age: 41, prob: 100 },
+    { id: "L-2175", customer: "Coromandel Paper Mills", contact: "Mr. Ravi Shankar", product: "Process pumps x 5", value: 740000, stage: "Lost", owner: "Karthik Balaji", source: "Tender", next: "Lost to L1 bidder", nextOn: "-", age: 58, prob: 0 },
   ],
 
   quotations: [
-    { id: "QT-2026-0418", customer: "Harbour City Hospital", date: "22 Aug 2026", validTill: "21 Sep 2026", value: 1742048, status: "Sent", owner: "Karthik Balaji", items: 3, followUps: 1 },
-    { id: "QT-2026-0416", customer: "Kaveri Institute of Medical Sciences", date: "19 Aug 2026", validTill: "18 Sep 2026", value: 3940000, status: "Under Negotiation", owner: "Suresh Babu", items: 2, followUps: 3 },
-    { id: "QT-2026-0412", customer: "Lotus Mother &amp; Child Hospital", date: "17 Aug 2026", validTill: "16 Sep 2026", value: 510000, status: "Sent", owner: "Anitha Prakash", items: 1, followUps: 2 },
-    { id: "QT-2026-0409", customer: "Sunrise Multispeciality Hospital", date: "14 Aug 2026", validTill: "13 Sep 2026", value: 653000, status: "Sent", owner: "Karthik Balaji", items: 2, followUps: 1 },
-    { id: "QT-2026-0401", customer: "Grace Medical Centre", date: "08 Aug 2026", validTill: "07 Sep 2026", value: 348000, status: "Accepted", owner: "Deepa Ramesh", items: 1, followUps: 2 },
-    { id: "QT-2026-0394", customer: "Prime Diagnostics &amp; Imaging", date: "02 Aug 2026", validTill: "01 Sep 2026", value: 2150000, status: "Expiring Soon", owner: "Suresh Babu", items: 1, followUps: 4 },
+    { id: "QT-2026-0418", customer: "Sri Vari Constructions", date: "22 Aug 2026", validTill: "21 Sep 2026", value: 1186608, status: "Sent", owner: "Karthik Balaji", items: 3, followUps: 1 },
+    { id: "QT-2026-0416", customer: "Anand Auto Components", date: "19 Aug 2026", validTill: "18 Sep 2026", value: 3540000, status: "Under Negotiation", owner: "Suresh Babu", items: 2, followUps: 3 },
+    { id: "QT-2026-0412", customer: "Blue Bay Hotels &amp; Resorts", date: "17 Aug 2026", validTill: "16 Sep 2026", value: 504000, status: "Sent", owner: "Anitha Prakash", items: 1, followUps: 2 },
+    { id: "QT-2026-0409", customer: "Meenakshi Textile Mills", date: "14 Aug 2026", validTill: "13 Sep 2026", value: 653000, status: "Sent", owner: "Karthik Balaji", items: 2, followUps: 1 },
+    { id: "QT-2026-0401", customer: "Crescent Engineering Works", date: "08 Aug 2026", validTill: "07 Sep 2026", value: 348000, status: "Accepted", owner: "Deepa Ramesh", items: 1, followUps: 2 },
+    { id: "QT-2026-0394", customer: "Southern Cold Storage", date: "02 Aug 2026", validTill: "01 Sep 2026", value: 1450000, status: "Expiring Soon", owner: "Suresh Babu", items: 1, followUps: 4 },
   ],
 
   quoteDetail: {
     id: "QT-2026-0418",
-    customer: "Harbour City Hospital",
-    address: "12, East Coast Road, Thoraipakkam, Chennai - 600097",
-    gstin: "33AAHCH3345R1ZV",
+    customer: "Sri Vari Constructions",
+    address: "27, Industrial Link Road, Guindy, Chennai - 600032",
+    gstin: "33AAHCS3345R1ZV",
     attn: "Ms. Nithya Raghavan, CFO",
-    date: "22 Aug 2026", validTill: "21 Sep 2026", cost: 1121600,
+    date: "22 Aug 2026", validTill: "21 Sep 2026", cost: 734000,
     rows: [
-      { sku: "MS-CM-140", desc: "Central Monitoring Station (8-bed), with 24\" clinical display", hsn: "9018", qty: 1, rate: 465000, gst: 12 },
-      { sku: "MS-PM-720", desc: "Multipara Patient Monitor 12.1\" - ECG, SpO2, NIBP, Temp, Resp", hsn: "9018", qty: 8, rate: 132000, gst: 12 },
-      { sku: "SP-SPO2-01", desc: "SpO2 Probe (Adult, reusable) - spare set", hsn: "9018", qty: 8, rate: 4300, gst: 12 },
+      { sku: "SS-MCC-800", desc: "MCC Panel 800A, Type-2 tested, with APFC section", hsn: "8537", qty: 1, rate: 452000, gst: 18 },
+      { sku: "VT-IM-1550", desc: "3-Phase Induction Motor 15 HP, IE3, foot mounted", hsn: "8501", qty: 8, rate: 64000, gst: 18 },
+      { sku: "SP-CONT-120", desc: "Contactor 120A with coil - commissioning spares", hsn: "8536", qty: 8, rate: 5200, gst: 18 },
     ],
     terms: [
       "Payment: 50% advance with PO, balance against delivery.",
       "Delivery: 3-4 weeks from receipt of confirmed order.",
-      "Warranty: 24 months comprehensive, on-site.",
-      "Installation, commissioning and staff training included.",
+      "Warranty: 24 months against manufacturing defects.",
+      "Erection, commissioning and operator training included.",
       "Prices are ex-works Chennai; freight and insurance extra at actuals.",
     ],
   },
 
   invoices: [
-    { id: "INV-2026-1188", customer: "Sunrise Multispeciality Hospital", date: "20 Aug 2026", due: "04 Oct 2026", value: 940800, paid: 0, status: "Unpaid", mode: "-", dc: "DC-2026-0771" },
-    { id: "INV-2026-1183", customer: "Kaveri Institute of Medical Sciences", date: "14 Aug 2026", due: "13 Oct 2026", value: 2380000, paid: 0, status: "Unpaid", mode: "-", dc: "DC-2026-0768" },
-    { id: "INV-2026-1179", customer: "Sri Ranga Hospital", date: "02 Jul 2026", due: "16 Aug 2026", value: 1265000, paid: 0, status: "Overdue", mode: "-", dc: "DC-2026-0742" },
-    { id: "INV-2026-1174", customer: "Lotus Mother &amp; Child Hospital", date: "28 Jul 2026", due: "27 Aug 2026", value: 415000, paid: 0, status: "Due Today", mode: "-", dc: "DC-2026-0736" },
-    { id: "INV-2026-1170", customer: "Prime Diagnostics &amp; Imaging", date: "12 Aug 2026", due: "27 Aug 2026", value: 268000, paid: 200000, status: "Partly Paid", mode: "NEFT", dc: "DC-2026-0733" },
-    { id: "INV-2026-1162", customer: "Harbour City Hospital", date: "30 Jul 2026", due: "13 Sep 2026", value: 1180000, paid: 1180000, status: "Paid", mode: "RTGS", dc: "DC-2026-0729" },
-    { id: "INV-2026-1155", customer: "Grace Medical Centre", date: "18 Jul 2026", due: "17 Aug 2026", value: 186500, paid: 0, status: "Overdue", mode: "-", dc: "DC-2026-0724" },
+    { id: "INV-2026-1188", customer: "Meenakshi Textile Mills", date: "20 Aug 2026", due: "04 Oct 2026", value: 944000, paid: 0, status: "Unpaid", mode: "-", dc: "DC-2026-0771" },
+    { id: "INV-2026-1183", customer: "Anand Auto Components", date: "14 Aug 2026", due: "13 Oct 2026", value: 2380000, paid: 0, status: "Unpaid", mode: "-", dc: "DC-2026-0768" },
+    { id: "INV-2026-1179", customer: "Vega Plastics Industries", date: "02 Jul 2026", due: "16 Aug 2026", value: 1265000, paid: 0, status: "Overdue", mode: "-", dc: "DC-2026-0742" },
+    { id: "INV-2026-1174", customer: "Blue Bay Hotels &amp; Resorts", date: "28 Jul 2026", due: "27 Aug 2026", value: 415000, paid: 0, status: "Due Today", mode: "-", dc: "DC-2026-0736" },
+    { id: "INV-2026-1170", customer: "Southern Cold Storage", date: "12 Aug 2026", due: "27 Aug 2026", value: 268000, paid: 200000, status: "Partly Paid", mode: "NEFT", dc: "DC-2026-0733" },
+    { id: "INV-2026-1162", customer: "Sri Vari Constructions", date: "30 Jul 2026", due: "13 Sep 2026", value: 1180000, paid: 1180000, status: "Paid", mode: "RTGS", dc: "DC-2026-0729" },
+    { id: "INV-2026-1155", customer: "Crescent Engineering Works", date: "18 Jul 2026", due: "17 Aug 2026", value: 186500, paid: 0, status: "Overdue", mode: "-", dc: "DC-2026-0724" },
   ],
 
   invoiceDetail: {
     id: "INV-2026-1188",
-    customer: "Sunrise Multispeciality Hospital",
-    address: "88, Mount Poonamallee Road, Porur, Chennai - 600116",
-    gstin: "33AABCS4411K1ZP",
-    po: "SMH/PO/2026-27/0421",
+    customer: "Meenakshi Textile Mills",
+    address: "SF No. 214, Perundurai Road, Erode - 638011",
+    gstin: "33AABCM4411K1ZP",
+    po: "MTM/PO/2026-27/0421",
     date: "20 Aug 2026", due: "04 Oct 2026",
     place: "Tamil Nadu (33)",
-    words: "Nine Lakh Forty Thousand Eight Hundred",
-    bank: "Demo Bank, Guindy · A/c 0000 1111 2222 · IFSC DEMO0001234",
+    words: "Nine Lakh Forty Four Thousand",
+    bank: "Demo Bank, Ambattur · A/c 0000 3333 4444 · IFSC DEMO0005678",
     rows: [
-      { sku: "CS-DF-330", desc: "Biphasic Defibrillator with AED, trolley mounted", hsn: "9018", qty: 2, rate: 279500, gst: 12 },
-      { sku: "MS-PM-720", desc: "Multipara Patient Monitor 12.1\"", hsn: "9018", qty: 2, rate: 132000, gst: 12 },
-      { sku: "SP-NIBP-02", desc: "NIBP Cuff Set (3 sizes)", hsn: "9018", qty: 5, rate: 3400, gst: 12 },
+      { sku: "VT-DG-125", desc: "Diesel Generator Set 125 kVA with AMF panel", hsn: "8502", qty: 1, rate: 545000, gst: 18 },
+      { sku: "DD-VFD-220", desc: "Variable Frequency Drive 22 kW", hsn: "8504", qty: 2, rate: 88000, gst: 18 },
+      { sku: "SP-BRG-6312", desc: "Motor Bearing Set 6312-2RS", hsn: "8482", qty: 25, rate: 3160, gst: 18 },
     ],
   },
 
   challans: [
-    { id: "DC-2026-0771", customer: "Sunrise Multispeciality Hospital", date: "19 Aug 2026", items: 3, vehicle: "TN 09 BH 4412", driver: "Murugan S", status: "Delivered", pod: "Received by Mr. Balaji Sundaram, 19 Aug 4:20 PM", invoice: "INV-2026-1188" },
-    { id: "DC-2026-0774", customer: "Grace Medical Centre", date: "26 Aug 2026", items: 1, vehicle: "TN 09 BH 4412", driver: "Murugan S", status: "In Transit", pod: "-", invoice: "Pending" },
-    { id: "DC-2026-0768", customer: "Kaveri Institute of Medical Sciences", date: "13 Aug 2026", items: 2, vehicle: "TN 37 CD 9087", driver: "Rajendran K", status: "Delivered", pod: "Received by Mr. Senthil Kumar, 14 Aug 11:05 AM", invoice: "INV-2026-1183" },
-    { id: "DC-2026-0776", customer: "Nilgiri Speciality Clinic", date: "27 Aug 2026", items: 2, vehicle: "TN 37 CD 9087", driver: "Rajendran K", status: "Ready to Dispatch", pod: "-", invoice: "Pending" },
+    { id: "DC-2026-0771", customer: "Meenakshi Textile Mills", date: "19 Aug 2026", items: 3, vehicle: "TN 09 BH 4412", driver: "Murugan S", status: "Delivered", pod: "Received by Mr. Balaji Sundaram, 19 Aug 4:20 PM", invoice: "INV-2026-1188" },
+    { id: "DC-2026-0774", customer: "Crescent Engineering Works", date: "26 Aug 2026", items: 1, vehicle: "TN 09 BH 4412", driver: "Murugan S", status: "In Transit", pod: "-", invoice: "Pending" },
+    { id: "DC-2026-0768", customer: "Anand Auto Components", date: "13 Aug 2026", items: 2, vehicle: "TN 37 CD 9087", driver: "Rajendran K", status: "Delivered", pod: "Received by Mr. Senthil Kumar, 14 Aug 11:05 AM", invoice: "INV-2026-1183" },
+    { id: "DC-2026-0776", customer: "Green Valley Schools", date: "27 Aug 2026", items: 2, vehicle: "TN 37 CD 9087", driver: "Rajendran K", status: "Ready to Dispatch", pod: "-", invoice: "Pending" },
   ],
 
   receipts: [
-    { id: "RCT-2026-0912", customer: "Harbour City Hospital", date: "22 Aug 2026", amount: 1180000, mode: "RTGS", ref: "HDFC/RTGS/88213", against: "INV-2026-1162" },
-    { id: "RCT-2026-0908", customer: "Prime Diagnostics &amp; Imaging", date: "20 Aug 2026", amount: 200000, mode: "NEFT", ref: "ICIC/NEFT/44190", against: "INV-2026-1170" },
-    { id: "RCT-2026-0901", customer: "Kaveri Institute of Medical Sciences", date: "11 Aug 2026", amount: 1450000, mode: "Cheque", ref: "CHQ 442118", against: "INV-2026-1141" },
-    { id: "RCT-2026-0894", customer: "Sunrise Multispeciality Hospital", date: "05 Aug 2026", amount: 680000, mode: "UPI", ref: "UPI/2026080512", against: "INV-2026-1136" },
+    { id: "RCT-2026-0912", customer: "Sri Vari Constructions", date: "22 Aug 2026", amount: 1180000, mode: "RTGS", ref: "HDFC/RTGS/88213", against: "INV-2026-1162" },
+    { id: "RCT-2026-0908", customer: "Southern Cold Storage", date: "20 Aug 2026", amount: 200000, mode: "NEFT", ref: "ICIC/NEFT/44190", against: "INV-2026-1170" },
+    { id: "RCT-2026-0901", customer: "Anand Auto Components", date: "11 Aug 2026", amount: 1450000, mode: "Cheque", ref: "CHQ 442118", against: "INV-2026-1141" },
+    { id: "RCT-2026-0894", customer: "Meenakshi Textile Mills", date: "05 Aug 2026", amount: 680000, mode: "UPI", ref: "UPI/2026080512", against: "INV-2026-1136" },
   ],
 
   ageing: [
-    { bucket: "Not due", amount: 3388800, count: 3 },
+    { bucket: "Not due", amount: 3392000, count: 3 },
     { bucket: "1-30 days", amount: 415000, count: 1 },
     { bucket: "31-60 days", amount: 186500, count: 1 },
     { bucket: "61-90 days", amount: 1265000, count: 1 },
@@ -1505,123 +1506,123 @@ const AURA = {
   ],
 
   suppliers: [
-    { id: "SUP-01", name: "Medisys Systems India Pvt Ltd", city: "Mumbai", contact: "Mr. Anil Deshpande", phone: "+91 90000 33001", terms: "30 days", openPO: 2, rating: "A" },
-    { id: "SUP-02", name: "Nihon Meditek India LLP", city: "Bengaluru", contact: "Ms. Sowmya Rao", phone: "+91 90000 33002", terms: "45 days", openPO: 1, rating: "A" },
-    { id: "SUP-03", name: "Corvia Surgical Manufacturing", city: "Coimbatore", contact: "Mr. Prabhu N", phone: "+91 90000 33003", terms: "15 days", openPO: 1, rating: "B" },
-    { id: "SUP-04", name: "Steriline Instruments SRL (India)", city: "Chennai", contact: "Mr. Joseph Xavier", phone: "+91 90000 33004", terms: "Advance", openPO: 0, rating: "A" },
+    { id: "SUP-01", name: "Voltek Electricals India Pvt Ltd", city: "Pune", contact: "Mr. Anil Deshpande", phone: "+91 90000 33001", terms: "30 days", openPO: 2, rating: "A" },
+    { id: "SUP-02", name: "Dynamo Drives India LLP", city: "Bengaluru", contact: "Ms. Sowmya Rao", phone: "+91 90000 33002", terms: "45 days", openPO: 1, rating: "A" },
+    { id: "SUP-03", name: "Hydroflo Pumps Manufacturing", city: "Coimbatore", contact: "Mr. Prabhu N", phone: "+91 90000 33003", terms: "15 days", openPO: 1, rating: "B" },
+    { id: "SUP-04", name: "Suraksha Switchgear Works", city: "Chennai", contact: "Mr. Joseph Xavier", phone: "+91 90000 33004", terms: "Advance", openPO: 0, rating: "A" },
   ],
 
   purchaseOrders: [
-    { id: "PO-2026-0233", supplier: "Corvia Surgical Manufacturing", date: "21 Aug 2026", value: 516000, items: 2, eta: "05 Sep 2026", status: "Pending" },
-    { id: "PO-2026-0231", supplier: "Medisys Systems India Pvt Ltd", date: "18 Aug 2026", value: 965000, items: 3, eta: "01 Sep 2026", status: "Partially Received" },
-    { id: "PO-2026-0228", supplier: "Nihon Meditek India LLP", date: "12 Aug 2026", value: 1424000, items: 1, eta: "10 Sep 2026", status: "Pending" },
-    { id: "PO-2026-0221", supplier: "Medisys Systems India Pvt Ltd", date: "04 Aug 2026", value: 386000, items: 2, eta: "20 Aug 2026", status: "Received" },
+    { id: "PO-2026-0233", supplier: "Hydroflo Pumps Manufacturing", date: "21 Aug 2026", value: 516000, items: 2, eta: "05 Sep 2026", status: "Pending" },
+    { id: "PO-2026-0231", supplier: "Voltek Electricals India Pvt Ltd", date: "18 Aug 2026", value: 965000, items: 3, eta: "01 Sep 2026", status: "Partially Received" },
+    { id: "PO-2026-0228", supplier: "Dynamo Drives India LLP", date: "12 Aug 2026", value: 1424000, items: 1, eta: "10 Sep 2026", status: "Pending" },
+    { id: "PO-2026-0221", supplier: "Voltek Electricals India Pvt Ltd", date: "04 Aug 2026", value: 386000, items: 2, eta: "20 Aug 2026", status: "Received" },
   ],
 
   contracts: [
-    { id: "AMC-2026-118", customer: "Kaveri Institute of Medical Sciences", type: "CAMC", equipment: "6 x Multipara Monitor, 2 x Ventilator", value: 486000, start: "01 Oct 2025", end: "30 Sep 2026", daysLeft: 34, visits: "4 / year", done: 3, status: "Active" },
-    { id: "AMC-2026-104", customer: "Sunrise Multispeciality Hospital", type: "AMC", equipment: "OT Table, Surgical Light, Autoclave", value: 172000, start: "15 Sep 2025", end: "14 Sep 2026", daysLeft: 18, visits: "2 / year", done: 2, status: "Renewal Due" },
-    { id: "AMC-2026-097", customer: "Harbour City Hospital", type: "CAMC", equipment: "Central Station + 8 Monitors", value: 264000, start: "01 Apr 2026", end: "31 Mar 2027", daysLeft: 216, visits: "4 / year", done: 1, status: "Active" },
-    { id: "AMC-2026-089", customer: "Prime Diagnostics &amp; Imaging", type: "AMC", equipment: "Colour Doppler Ultrasound", value: 148000, start: "10 Sep 2025", end: "09 Sep 2026", daysLeft: 13, visits: "2 / year", done: 2, status: "Renewal Due" },
-    { id: "AMC-2025-078", customer: "Grace Medical Centre", type: "AMC", equipment: "ECG, Autoclave, Infusion pumps", value: 68000, start: "01 Aug 2025", end: "31 Jul 2026", daysLeft: -27, visits: "2 / year", done: 2, status: "Lapsed" },
-    { id: "AMC-2025-071", customer: "Sri Ranga Hospital", type: "CAMC", equipment: "2 x Defibrillator, 4 x Monitor", value: 212000, start: "01 Jul 2025", end: "30 Jun 2026", daysLeft: -58, visits: "4 / year", done: 3, status: "Lapsed" },
-    { id: "AMC-2026-121", customer: "Lotus Mother &amp; Child Hospital", type: "AMC", equipment: "Syringe pumps, Foetal monitor", value: 94000, start: "01 Jun 2026", end: "31 May 2027", daysLeft: 277, visits: "2 / year", done: 0, status: "Active" },
+    { id: "AMC-2026-118", customer: "Anand Auto Components", type: "CAMC", equipment: "3 x Screw Compressor, 2 x Chiller", value: 486000, start: "01 Oct 2025", end: "30 Sep 2026", daysLeft: 34, visits: "4 / year", done: 3, status: "Active" },
+    { id: "AMC-2026-104", customer: "Meenakshi Textile Mills", type: "AMC", equipment: "APFC Panel, 14 x Motor, Cooling Tower", value: 172000, start: "15 Sep 2025", end: "14 Sep 2026", daysLeft: 18, visits: "2 / year", done: 2, status: "Renewal Due" },
+    { id: "AMC-2026-097", customer: "Sri Vari Constructions", type: "CAMC", equipment: "DG Set 125 kVA + site distribution panels", value: 264000, start: "01 Apr 2026", end: "31 Mar 2027", daysLeft: 216, visits: "4 / year", done: 1, status: "Active" },
+    { id: "AMC-2026-089", customer: "Southern Cold Storage", type: "AMC", equipment: "Industrial Chiller 60 TR", value: 148000, start: "10 Sep 2025", end: "09 Sep 2026", daysLeft: 13, visits: "2 / year", done: 2, status: "Renewal Due" },
+    { id: "AMC-2025-078", customer: "Crescent Engineering Works", type: "AMC", equipment: "Compressor, gearboxes, VFDs", value: 68000, start: "01 Aug 2025", end: "31 Jul 2026", daysLeft: -27, visits: "2 / year", done: 2, status: "Lapsed" },
+    { id: "AMC-2025-071", customer: "Vega Plastics Industries", type: "CAMC", equipment: "2 x Chiller, 4 x Process Pump", value: 212000, start: "01 Jul 2025", end: "30 Jun 2026", daysLeft: -58, visits: "4 / year", done: 3, status: "Lapsed" },
+    { id: "AMC-2026-121", customer: "Blue Bay Hotels &amp; Resorts", type: "AMC", equipment: "Pump room, cooling tower, DG set", value: 94000, start: "01 Jun 2026", end: "31 May 2027", daysLeft: 277, visits: "2 / year", done: 0, status: "Active" },
   ],
 
   tickets: [
-    { id: "TKT-4412", customer: "Sunrise Multispeciality Hospital", equipment: "Multipara Monitor MS-PM-720", serial: "MS72-4471", issue: "SpO2 reading intermittent in ICU bed 4", priority: "High", raised: "26 Aug, 09:12", sla: 4, elapsed: 3.2, engineer: "Vignesh Anand", status: "In Progress", type: "Breakdown", contract: "None - chargeable" },
-    { id: "TKT-4410", customer: "Kaveri Institute of Medical Sciences", equipment: "ICU Ventilator NM-VN-350", serial: "NV35-1180", issue: "Air filter replacement - scheduled PM", priority: "Medium", raised: "26 Aug, 08:05", sla: 24, elapsed: 4.1, engineer: "Mohammed Irfan", status: "In Progress", type: "Preventive", contract: "AMC-2026-118" },
-    { id: "TKT-4407", customer: "Prime Diagnostics &amp; Imaging", equipment: "Ultrasound OD-US-500", serial: "OU50-0291", issue: "Probe image artefact on convex probe", priority: "Critical", raised: "25 Aug, 16:40", sla: 4, elapsed: 5.6, engineer: "Vignesh Anand", status: "SLA Breached", type: "Breakdown", contract: "AMC-2026-089" },
-    { id: "TKT-4405", customer: "Grace Medical Centre", equipment: "Autoclave SL-AC-60", serial: "SA60-3312", issue: "Door gasket leak, steam escaping", priority: "High", raised: "25 Aug, 11:20", sla: 8, elapsed: 2.0, engineer: "Vignesh Anand", status: "Awaiting Spare", type: "Breakdown", contract: "Lapsed - chargeable" },
-    { id: "TKT-4401", customer: "Harbour City Hospital", equipment: "Central Station MS-CM-140", serial: "MC14-0088", issue: "Network drop between station and bed 6", priority: "Medium", raised: "24 Aug, 14:55", sla: 24, elapsed: 22.0, engineer: "Vignesh Anand", status: "Resolved", type: "Breakdown", contract: "AMC-2026-097" },
-    { id: "TKT-4398", customer: "Lotus Mother &amp; Child Hospital", equipment: "Syringe Pump NM-SP-110", serial: "NS11-7742", issue: "Occlusion alarm false trigger", priority: "Low", raised: "23 Aug, 10:10", sla: 48, elapsed: 30.5, engineer: "Anitha Prakash", status: "Resolved", type: "Breakdown", contract: "AMC-2026-121" },
-    { id: "TKT-4396", customer: "Sri Ranga Hospital", equipment: "Defibrillator CS-DF-330", serial: "CD33-2210", issue: "Battery not holding charge", priority: "High", raised: "22 Aug, 17:30", sla: 8, elapsed: 8.0, engineer: "Unassigned", status: "Open", type: "Breakdown", contract: "Lapsed - chargeable" },
-    { id: "TKT-4390", customer: "Nilgiri Speciality Clinic", equipment: "ECG OD-EC-120", serial: "OE12-5561", issue: "Installation and staff training", priority: "Medium", raised: "21 Aug, 09:00", sla: 48, elapsed: 12.0, engineer: "Mohammed Irfan", status: "Scheduled", type: "Installation", contract: "In warranty" },
+    { id: "TKT-4412", customer: "Meenakshi Textile Mills", equipment: "APFC Panel SS-APFC-250", serial: "SA25-4471", issue: "Capacitor bank tripping intermittently on line 4", priority: "High", raised: "26 Aug, 09:12", sla: 4, elapsed: 3.2, engineer: "Vignesh Anand", status: "In Progress", type: "Breakdown", contract: "None - chargeable" },
+    { id: "TKT-4410", customer: "Anand Auto Components", equipment: "Screw Compressor AC-SC-7590", serial: "AS75-1180", issue: "Air filter and oil separator change - scheduled PM", priority: "Medium", raised: "26 Aug, 08:05", sla: 24, elapsed: 4.1, engineer: "Mohammed Irfan", status: "In Progress", type: "Preventive", contract: "AMC-2026-118" },
+    { id: "TKT-4407", customer: "Southern Cold Storage", equipment: "Industrial Chiller TC-CH-60", serial: "TC60-0291", issue: "Chilled water temperature not holding set point", priority: "Critical", raised: "25 Aug, 16:40", sla: 4, elapsed: 5.6, engineer: "Vignesh Anand", status: "SLA Breached", type: "Breakdown", contract: "AMC-2026-089" },
+    { id: "TKT-4405", customer: "Crescent Engineering Works", equipment: "Process Pump HF-CP-300", serial: "HC30-3312", issue: "Mechanical seal leaking at gland", priority: "High", raised: "25 Aug, 11:20", sla: 8, elapsed: 2.0, engineer: "Vignesh Anand", status: "Awaiting Spare", type: "Breakdown", contract: "Lapsed - chargeable" },
+    { id: "TKT-4401", customer: "Sri Vari Constructions", equipment: "DG Set VT-DG-125", serial: "VD12-0088", issue: "AMF panel not auto-starting on mains failure", priority: "Medium", raised: "24 Aug, 14:55", sla: 24, elapsed: 22.0, engineer: "Vignesh Anand", status: "Resolved", type: "Breakdown", contract: "AMC-2026-097" },
+    { id: "TKT-4398", customer: "Blue Bay Hotels &amp; Resorts", equipment: "Submersible Pump HF-SP-1250", serial: "HS12-7742", issue: "Dry-run protection triggering falsely", priority: "Low", raised: "23 Aug, 10:10", sla: 48, elapsed: 30.5, engineer: "Anitha Prakash", status: "Resolved", type: "Breakdown", contract: "AMC-2026-121" },
+    { id: "TKT-4396", customer: "Vega Plastics Industries", equipment: "VFD DD-VFD-220", serial: "DV22-2210", issue: "Overheat fault after 40 minutes of run", priority: "High", raised: "22 Aug, 17:30", sla: 8, elapsed: 8.0, engineer: "Unassigned", status: "Open", type: "Breakdown", contract: "Lapsed - chargeable" },
+    { id: "TKT-4390", customer: "Green Valley Schools", equipment: "DG Set VT-DG-125", serial: "VD12-5561", issue: "Installation, load test and operator training", priority: "Medium", raised: "21 Aug, 09:00", sla: 48, elapsed: 12.0, engineer: "Mohammed Irfan", status: "Scheduled", type: "Installation", contract: "In warranty" },
   ],
 
   serviceInvoices: [
-    { id: "SIN-2026-0331", customer: "Grace Medical Centre", ticket: "TKT-4405", date: "26 Aug 2026", labour: 2500, spares: 2900, total: 6372, status: "Draft" },
-    { id: "SIN-2026-0327", customer: "Sri Ranga Hospital", ticket: "TKT-4396", date: "25 Aug 2026", labour: 2500, spares: 8400, total: 12862, status: "Sent" },
-    { id: "SIN-2026-0322", customer: "Sunrise Multispeciality Hospital", ticket: "TKT-4389", date: "20 Aug 2026", labour: 3500, spares: 4800, total: 9794, status: "Paid" },
-    { id: "SIN-2026-0318", customer: "Nilgiri Speciality Clinic", ticket: "TKT-4381", date: "16 Aug 2026", labour: 2500, spares: 0, total: 2950, status: "Paid" },
+    { id: "SIN-2026-0331", customer: "Crescent Engineering Works", ticket: "TKT-4405", date: "26 Aug 2026", labour: 2500, spares: 8900, total: 13452, status: "Draft" },
+    { id: "SIN-2026-0327", customer: "Vega Plastics Industries", ticket: "TKT-4396", date: "25 Aug 2026", labour: 2500, spares: 4300, total: 8024, status: "Sent" },
+    { id: "SIN-2026-0322", customer: "Meenakshi Textile Mills", ticket: "TKT-4389", date: "20 Aug 2026", labour: 3500, spares: 5600, total: 10738, status: "Paid" },
+    { id: "SIN-2026-0318", customer: "Green Valley Schools", ticket: "TKT-4381", date: "16 Aug 2026", labour: 2500, spares: 0, total: 2950, status: "Paid" },
   ],
 
   visits: [
-    { id: "V-8841", staff: "Karthik Balaji", customer: "Sunrise Multispeciality Hospital", type: "Sales call", checkIn: "09:42", checkOut: "10:31", purpose: "OT table trial follow-up", outcome: "Trial fixed for 30 Aug", geo: "13.0374, 80.1580", photo: true },
-    { id: "V-8842", staff: "Deepa Ramesh", customer: "Grace Medical Centre", type: "Delivery", checkIn: "10:05", checkOut: "10:48", purpose: "Infusion pump handover", outcome: "POD captured, signed", geo: "13.1143, 80.1548", photo: true },
-    { id: "V-8843", staff: "Vignesh Anand", customer: "Harbour City Hospital", type: "Service", checkIn: "11:20", checkOut: "-", purpose: "TKT-4401 network fix", outcome: "In progress", geo: "12.9401, 80.2325", photo: false },
-    { id: "V-8844", staff: "Mohammed Irfan", customer: "Kaveri Institute of Medical Sciences", type: "Preventive", checkIn: "09:15", checkOut: "12:05", purpose: "Ventilator PM - AMC visit 3/4", outcome: "Checklist submitted", geo: "11.0293, 77.0287", photo: true },
-    { id: "V-8845", staff: "Anitha Prakash", customer: "Lotus Mother &amp; Child Hospital", type: "Sales call", checkIn: "10:30", checkOut: "11:12", purpose: "Syringe pump demo", outcome: "Quote requested for 12 units", geo: "9.9252, 78.1198", photo: true },
+    { id: "V-8841", staff: "Karthik Balaji", customer: "Meenakshi Textile Mills", type: "Sales call", checkIn: "09:42", checkOut: "10:31", purpose: "APFC panel load study follow-up", outcome: "Study fixed for 30 Aug", geo: "11.3410, 77.7172", photo: true },
+    { id: "V-8842", staff: "Deepa Ramesh", customer: "Crescent Engineering Works", type: "Delivery", checkIn: "10:05", checkOut: "10:48", purpose: "Gearbox handover", outcome: "POD captured, signed", geo: "13.1143, 80.1548", photo: true },
+    { id: "V-8843", staff: "Vignesh Anand", customer: "Sri Vari Constructions", type: "Service", checkIn: "11:20", checkOut: "-", purpose: "TKT-4401 AMF panel fix", outcome: "In progress", geo: "13.0067, 80.2206", photo: false },
+    { id: "V-8844", staff: "Mohammed Irfan", customer: "Anand Auto Components", type: "Preventive", checkIn: "09:15", checkOut: "12:05", purpose: "Compressor PM - AMC visit 3/4", outcome: "Checklist submitted", geo: "12.7409, 77.8253", photo: true },
+    { id: "V-8845", staff: "Anitha Prakash", customer: "Blue Bay Hotels &amp; Resorts", type: "Sales call", checkIn: "10:30", checkOut: "11:12", purpose: "Pump room site survey", outcome: "Quote requested for 6 units", geo: "12.8231, 80.2454", photo: true },
   ],
 
   attendance: [
-    { staff: "Karthik Balaji", in: "09:04", out: "18:22", hours: "9h 18m", status: "Present", mode: "GPS check-in", place: "Porur, Chennai" },
+    { staff: "Karthik Balaji", in: "09:04", out: "18:22", hours: "9h 18m", status: "Present", mode: "GPS check-in", place: "Guindy, Chennai" },
     { staff: "Deepa Ramesh", in: "09:12", out: "18:05", hours: "8h 53m", status: "Present", mode: "GPS check-in", place: "Ambattur, Chennai" },
-    { staff: "Vignesh Anand", in: "08:48", out: "-", hours: "running", status: "On Field", mode: "GPS check-in", place: "Thoraipakkam, Chennai" },
-    { staff: "Mohammed Irfan", in: "08:55", out: "-", hours: "running", status: "On Field", mode: "GPS check-in", place: "Peelamedu, Coimbatore" },
-    { staff: "Anitha Prakash", in: "09:35", out: "-", hours: "running", status: "Late", mode: "GPS check-in", place: "Anna Nagar, Madurai" },
-    { staff: "Suresh Babu", in: "09:00", out: "-", hours: "running", status: "Present", mode: "Office Wi-Fi", place: "Guindy, Chennai" },
+    { staff: "Vignesh Anand", in: "08:48", out: "-", hours: "running", status: "On Field", mode: "GPS check-in", place: "East Coast Road, Chennai" },
+    { staff: "Mohammed Irfan", in: "08:55", out: "-", hours: "running", status: "On Field", mode: "GPS check-in", place: "SIPCOT, Hosur" },
+    { staff: "Anitha Prakash", in: "09:35", out: "-", hours: "running", status: "Late", mode: "GPS check-in", place: "Kappalur, Madurai" },
+    { staff: "Suresh Babu", in: "09:00", out: "-", hours: "running", status: "Present", mode: "Office Wi-Fi", place: "Ambattur, Chennai" },
   ],
 
   leaves: [
     { id: "LV-221", staff: "Deepa Ramesh", type: "Casual Leave", from: "02 Sep 2026", to: "03 Sep 2026", days: 2, reason: "Family function", status: "Pending", balance: 6 },
     { id: "LV-219", staff: "Vignesh Anand", type: "Sick Leave", from: "28 Aug 2026", to: "28 Aug 2026", days: 1, reason: "Fever", status: "Approved", balance: 4 },
     { id: "LV-215", staff: "Anitha Prakash", type: "Earned Leave", from: "10 Sep 2026", to: "14 Sep 2026", days: 5, reason: "Personal travel", status: "Pending", balance: 11 },
-    { id: "LV-210", staff: "Mohammed Irfan", type: "Comp Off", from: "22 Aug 2026", to: "22 Aug 2026", days: 1, reason: "Sunday installation at Kaveri", status: "Approved", balance: 2 },
+    { id: "LV-210", staff: "Mohammed Irfan", type: "Comp Off", from: "22 Aug 2026", to: "22 Aug 2026", days: 1, reason: "Sunday commissioning at Anand Auto", status: "Approved", balance: 2 },
   ],
 
   samples: [
-    { id: "SM-331", product: "Syringe Infusion Pump", customer: "Lotus Mother &amp; Child Hospital", issued: "18 Aug 2026", dueBack: "01 Sep 2026", staff: "Anitha Prakash", status: "At Customer", days: 9 },
-    { id: "SM-329", product: "Multipara Patient Monitor", customer: "Harbour City Hospital", issued: "12 Aug 2026", dueBack: "26 Aug 2026", staff: "Karthik Balaji", status: "Overdue", days: 15 },
-    { id: "SM-326", product: "12-Channel ECG Machine", customer: "Nilgiri Speciality Clinic", issued: "21 Aug 2026", dueBack: "04 Sep 2026", staff: "Anitha Prakash", status: "At Customer", days: 6 },
-    { id: "SM-318", product: "LED Surgical Light", customer: "Sunrise Multispeciality Hospital", issued: "02 Aug 2026", dueBack: "16 Aug 2026", staff: "Karthik Balaji", status: "Returned", days: 14 },
+    { id: "SM-331", product: "Variable Frequency Drive 22 kW", customer: "Blue Bay Hotels &amp; Resorts", issued: "18 Aug 2026", dueBack: "01 Sep 2026", staff: "Anitha Prakash", status: "At Customer", days: 9 },
+    { id: "SM-329", product: "Energy Monitoring Meter", customer: "Sri Vari Constructions", issued: "12 Aug 2026", dueBack: "26 Aug 2026", staff: "Karthik Balaji", status: "Overdue", days: 15 },
+    { id: "SM-326", product: "Submersible Pump Set 12.5 HP", customer: "Green Valley Schools", issued: "21 Aug 2026", dueBack: "04 Sep 2026", staff: "Anitha Prakash", status: "At Customer", days: 6 },
+    { id: "SM-318", product: "PLC Control Panel (16 I/O)", customer: "Meenakshi Textile Mills", issued: "02 Aug 2026", dueBack: "16 Aug 2026", staff: "Karthik Balaji", status: "Returned", days: 14 },
   ],
 
   tenders: [
-    { id: "TN-90114", authority: "Tamil Nadu Medical Services Corporation", title: "Supply of Multipara Patient Monitors - 120 units", value: 17400000, emd: 348000, due: "05 Sep 2026", daysLeft: 9, status: "Preparing Bid", match: "High" },
-    { id: "TN-90108", authority: "ESI Corporation, Chennai", title: "Supply and installation of ICU Ventilators - 18 units", value: 16200000, emd: 324000, due: "29 Aug 2026", daysLeft: 2, status: "Documents Pending", match: "High" },
-    { id: "TN-90101", authority: "Govt. Medical College, Madurai", title: "OT Tables and Surgical Lights - 12 sets", value: 7100000, emd: 142000, due: "12 Sep 2026", daysLeft: 16, status: "Evaluating", match: "Medium" },
-    { id: "TN-90097", authority: "Coimbatore Corporation Health Wing", title: "Autoclaves and sterilisation equipment", value: 2450000, emd: 49000, due: "22 Aug 2026", daysLeft: -5, status: "Missed", match: "Medium" },
-    { id: "TN-90092", authority: "Railway Hospital, Perambur", title: "12-Channel ECG Machines - 24 units", value: 2300000, emd: 46000, due: "18 Sep 2026", daysLeft: 22, status: "Bid Submitted", match: "High" },
+    { id: "TN-90114", authority: "TANGEDCO, Tamil Nadu", title: "Supply of distribution transformers and APFC panels - 40 sets", value: 17400000, emd: 348000, due: "05 Sep 2026", daysLeft: 9, status: "Preparing Bid", match: "High" },
+    { id: "TN-90108", authority: "Chennai Metro Rail Ltd", title: "Supply and installation of DG sets - 12 units", value: 16200000, emd: 324000, due: "29 Aug 2026", daysLeft: 2, status: "Documents Pending", match: "High" },
+    { id: "TN-90101", authority: "TWAD Board, Madurai", title: "Submersible pump sets and control panels - 60 sets", value: 7100000, emd: 142000, due: "12 Sep 2026", daysLeft: 16, status: "Evaluating", match: "Medium" },
+    { id: "TN-90097", authority: "Coimbatore Corporation", title: "Sewage pumping station motors and drives", value: 2450000, emd: 49000, due: "22 Aug 2026", daysLeft: -5, status: "Missed", match: "Medium" },
+    { id: "TN-90092", authority: "Southern Railway, Perambur Workshop", title: "Air compressors and receivers - 8 units", value: 2300000, emd: 46000, due: "18 Sep 2026", daysLeft: 22, status: "Bid Submitted", match: "High" },
   ],
 
   distributors: [
-    { id: "DL-11", name: "Vellore Medi Agencies", territory: "Vellore &amp; Ranipet", owner: "Mr. Ramanathan", since: "2023", ytd: 1840000, outstanding: 264000, tier: "Silver", status: "Active" },
-    { id: "DL-14", name: "Kongu Health Distributors", territory: "Erode &amp; Salem", owner: "Mr. Palanisamy K", since: "2022", ytd: 3260000, outstanding: 0, tier: "Gold", status: "Active" },
-    { id: "DL-18", name: "Pearl City Meditech", territory: "Thoothukudi &amp; Tirunelveli", owner: "Ms. Jancy Rani", since: "2024", ytd: 940000, outstanding: 118000, tier: "Silver", status: "Active" },
-    { id: "DL-22", name: "Delta Surgicals", territory: "Thanjavur &amp; Kumbakonam", owner: "Mr. Karthikeyan V", since: "2025", ytd: 386000, outstanding: 62000, tier: "Bronze", status: "Onboarding" },
+    { id: "DL-11", name: "Vellore Power Agencies", territory: "Vellore &amp; Ranipet", owner: "Mr. Ramanathan", since: "2023", ytd: 1840000, outstanding: 264000, tier: "Silver", status: "Active" },
+    { id: "DL-14", name: "Kongu Industrial Traders", territory: "Erode &amp; Salem", owner: "Mr. Palanisamy K", since: "2022", ytd: 3260000, outstanding: 0, tier: "Gold", status: "Active" },
+    { id: "DL-18", name: "Pearl City Electricals", territory: "Thoothukudi &amp; Tirunelveli", owner: "Ms. Jancy Rani", since: "2024", ytd: 940000, outstanding: 118000, tier: "Silver", status: "Active" },
+    { id: "DL-22", name: "Delta Engineering Supplies", territory: "Thanjavur &amp; Kumbakonam", owner: "Mr. Karthikeyan V", since: "2025", ytd: 386000, outstanding: 62000, tier: "Bronze", status: "Onboarding" },
   ],
 
   ebooks: [
-    { id: "EB-01", title: "Patient Monitoring Range - 2026 Catalogue", brand: "Medisys Systems", pages: 24, size: "4.2 MB", downloads: 118, updated: "12 Aug 2026" },
-    { id: "EB-02", title: "Critical Care Product Guide", brand: "Nihon Meditek", pages: 32, size: "6.8 MB", downloads: 94, updated: "04 Aug 2026" },
-    { id: "EB-03", title: "OT Equipment Line Card", brand: "Corvia Surgical", pages: 12, size: "2.1 MB", downloads: 67, updated: "28 Jul 2026" },
-    { id: "EB-04", title: "Sterilisation Solutions Brochure", brand: "Steriline Instruments", pages: 16, size: "3.4 MB", downloads: 41, updated: "19 Jul 2026" },
-    { id: "EB-05", title: "AMC / CAMC Service Plans - Customer Copy", brand: "Aura Demo Distributors", pages: 8, size: "1.1 MB", downloads: 156, updated: "01 Aug 2026" },
+    { id: "EB-01", title: "Motors &amp; Drives Range - 2026 Catalogue", brand: "Voltek Electricals", pages: 24, size: "4.2 MB", downloads: 118, updated: "12 Aug 2026" },
+    { id: "EB-02", title: "Compressed Air Product Guide", brand: "AirCore Compressors", pages: 32, size: "6.8 MB", downloads: 94, updated: "04 Aug 2026" },
+    { id: "EB-03", title: "Switchgear &amp; Panels Line Card", brand: "Suraksha Switchgear", pages: 12, size: "2.1 MB", downloads: 67, updated: "28 Jul 2026" },
+    { id: "EB-04", title: "Pumps &amp; Water Systems Brochure", brand: "Hydroflo Pumps", pages: 16, size: "3.4 MB", downloads: 41, updated: "19 Jul 2026" },
+    { id: "EB-05", title: "AMC / CAMC Service Plans - Customer Copy", brand: "Aura Demo Enterprises", pages: 8, size: "1.1 MB", downloads: 156, updated: "01 Aug 2026" },
   ],
 
   activity: [
-    { time: "10:42 AM", user: "Karthik Balaji", action: "Checked in at Sunrise Multispeciality Hospital", detail: "Field visit V-8841 - GPS verified", icon: "mapPin", tone: "info" },
-    { time: "10:28 AM", user: "System", action: "SLA breach on TKT-4407", detail: "Prime Diagnostics - Ultrasound, 4h SLA exceeded by 1h 36m", icon: "alertTriangle", tone: "critical" },
-    { time: "10:05 AM", user: "Deepa Ramesh", action: "Delivery challan DC-2026-0774 dispatched", detail: "Grace Medical Centre - 1 item, vehicle TN 09 BH 4412", icon: "truck", tone: "info" },
-    { time: "09:51 AM", user: "Suresh Babu", action: "Quotation QT-2026-0416 revised", detail: "Kaveri Institute - value changed to Rs 39,40,000", icon: "fileText", tone: "warning" },
-    { time: "09:34 AM", user: "System", action: "AMC-2026-089 expiring in 13 days", detail: "Prime Diagnostics - renewal value Rs 1,48,000", icon: "clock", tone: "warning" },
-    { time: "09:12 AM", user: "Sunrise Multispeciality", action: "Ticket TKT-4412 raised", detail: "Multipara Monitor - SpO2 intermittent, ICU bed 4", icon: "alertCircle", tone: "critical" },
-    { time: "08:55 AM", user: "Mohammed Irfan", action: "Attendance marked", detail: "GPS check-in - Peelamedu, Coimbatore", icon: "checkCircle", tone: "success" },
-    { time: "Yesterday", user: "Accounts", action: "Receipt RCT-2026-0912 recorded", detail: "Harbour City Hospital - Rs 11,80,000 by RTGS", icon: "creditCard", tone: "success" },
+    { time: "10:42 AM", user: "Karthik Balaji", action: "Checked in at Meenakshi Textile Mills", detail: "Field visit V-8841 - GPS verified", icon: "mapPin", tone: "info" },
+    { time: "10:28 AM", user: "System", action: "SLA breach on TKT-4407", detail: "Southern Cold Storage - chiller, 4h SLA exceeded by 1h 36m", icon: "alertTriangle", tone: "critical" },
+    { time: "10:05 AM", user: "Deepa Ramesh", action: "Delivery challan DC-2026-0774 dispatched", detail: "Crescent Engineering Works - 1 item, vehicle TN 09 BH 4412", icon: "truck", tone: "info" },
+    { time: "09:51 AM", user: "Suresh Babu", action: "Quotation QT-2026-0416 revised", detail: "Anand Auto Components - value changed to Rs 35,40,000", icon: "fileText", tone: "warning" },
+    { time: "09:34 AM", user: "System", action: "AMC-2026-089 expiring in 13 days", detail: "Southern Cold Storage - renewal value Rs 1,48,000", icon: "clock", tone: "warning" },
+    { time: "09:12 AM", user: "Meenakshi Textile Mills", action: "Ticket TKT-4412 raised", detail: "APFC panel - capacitor bank tripping on line 4", icon: "alertCircle", tone: "critical" },
+    { time: "08:55 AM", user: "Mohammed Irfan", action: "Attendance marked", detail: "GPS check-in - SIPCOT, Hosur", icon: "checkCircle", tone: "success" },
+    { time: "Yesterday", user: "Accounts", action: "Receipt RCT-2026-0912 recorded", detail: "Sri Vari Constructions - Rs 11,80,000 by RTGS", icon: "creditCard", tone: "success" },
   ],
 
   notifications: [
     { group: "Needs action today", items: [
-      { key: "tickets", icon: "alertTriangle", tone: "critical", title: "TKT-4407 SLA breached", sub: "Prime Diagnostics - Ultrasound probe artefact - 1h 36m over", time: "12 min ago" },
+      { key: "tickets", icon: "alertTriangle", tone: "critical", title: "TKT-4407 SLA breached", sub: "Southern Cold Storage - chiller not holding set point - 1h 36m over", time: "12 min ago" },
       { key: "contracts", icon: "clock", tone: "warning", title: "2 AMC contracts expire in under 20 days", sub: "Rs 3,20,000 of renewal value at risk", time: "1 h ago" },
-      { key: "payments", icon: "creditCard", tone: "critical", title: "Rs 14,51,500 overdue across 2 invoices", sub: "Sri Ranga Hospital and Grace Medical Centre", time: "2 h ago" },
-      { key: "tenders", icon: "briefcase", tone: "warning", title: "Tender TN-90108 closes in 2 days", sub: "ESI Corporation - 18 ventilators - documents pending", time: "3 h ago" },
+      { key: "payments", icon: "creditCard", tone: "critical", title: "Rs 14,51,500 overdue across 2 invoices", sub: "Vega Plastics and Crescent Engineering Works", time: "2 h ago" },
+      { key: "tenders", icon: "briefcase", tone: "warning", title: "Tender TN-90108 closes in 2 days", sub: "Chennai Metro Rail - 12 DG sets - documents pending", time: "3 h ago" },
     ]},
     { group: "Operations", items: [
-      { key: "inventory", icon: "package", tone: "warning", title: "LED Surgical Light out of stock", sub: "CS-OL-450 - 1 open quotation depends on it", time: "5 h ago" },
-      { key: "samples", icon: "flask", tone: "warning", title: "Demo unit overdue for return", sub: "SM-329 monitor at Harbour City Hospital - 15 days out", time: "Yesterday" },
-      { key: "visits", icon: "mapPin", tone: "info", title: "Anitha Prakash idle for 2 hours", sub: "Last ping - Anna Nagar, Madurai", time: "Yesterday" },
+      { key: "inventory", icon: "package", tone: "warning", title: "APFC Panel 250 kVAr out of stock", sub: "SS-APFC-250 - 1 open quotation depends on it", time: "5 h ago" },
+      { key: "samples", icon: "flask", tone: "warning", title: "Trial unit overdue for return", sub: "SM-329 energy meter at Sri Vari Constructions - 15 days out", time: "Yesterday" },
+      { key: "visits", icon: "mapPin", tone: "info", title: "Anitha Prakash idle for 2 hours", sub: "Last ping - Kappalur, Madurai", time: "Yesterday" },
     ]},
   ],
 
@@ -1707,9 +1708,9 @@ const NAV = [
   ]},
   { section: "CRM &amp; Sales", items: [
     { id: "leads", label: "Leads &amp; Enquiries", icon: "briefcase" },
-    { id: "customers", label: "Customers / Hospitals", icon: "building2" },
-    { id: "doctors", label: "Doctors", icon: "stethoscope" },
-    { id: "hospitalLookup", label: "Hospital Lookup", icon: "search" },
+    { id: "customers", label: "Customers / Companies", icon: "building2" },
+    { id: "doctors", label: "Specifiers &amp; Consultants", icon: "hardHat" },
+    { id: "hospitalLookup", label: "Company Lookup", icon: "search" },
     { id: "activity", label: "Activity Feed", icon: "history" },
   ]},
   { section: "Quotation &amp; Billing", items: [
@@ -2280,15 +2281,15 @@ viewRenderers.dashboard = function () {
   html += `<div class="grid grid-1-2 gap-16 mb-16">
     ${panel(panelHead("Needs your attention", "Ranked by money at stake") + `<div class="panel-pad">
       <div class="action-panel-item" onclick="navigateTo('payments')"><span class="action-panel-dot critical"></span>
-        <div class="action-panel-label"><b>${lakhs(overdue)} overdue from 2 hospitals</b><span>Sri Ranga Hospital is 58 days past due</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
+        <div class="action-panel-label"><b>${lakhs(overdue)} overdue from 2 customers</b><span>Vega Plastics Industries is 58 days past due</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
       <div class="action-panel-item" onclick="navigateTo('service')"><span class="action-panel-dot warning"></span>
         <div class="action-panel-label"><b>2 AMC contracts expire within 20 days</b><span>₹3,20,000 of renewal value, no renewal quote sent</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
       <div class="action-panel-item" onclick="navigateTo('tickets')"><span class="action-panel-dot critical"></span>
         <div class="action-panel-label"><b>TKT-4407 has breached its 4-hour SLA</b><span>Prime Diagnostics ultrasound - contract customer</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
       <div class="action-panel-item" onclick="navigateTo('tenders')"><span class="action-panel-dot warning"></span>
-        <div class="action-panel-label"><b>Tender TN-90108 closes in 2 days</b><span>₹1.62 Cr, EMD not yet submitted</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
+        <div class="action-panel-label"><b>Tender TN-90108 closes in 2 days</b><span>₹1.62 Cr with Chennai Metro Rail, EMD not yet submitted</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
       <div class="action-panel-item" onclick="navigateTo('inventory')"><span class="action-panel-dot warning"></span>
-        <div class="action-panel-label"><b>LED Surgical Light out of stock</b><span>Blocking quotation QT-2026-0409 worth ₹6,53,000</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
+        <div class="action-panel-label"><b>APFC Panel 250 kVAr out of stock</b><span>Blocking quotation QT-2026-0409 worth ₹6,53,000</span></div>${ICON("chevronRight", "action-panel-arrow")}</div>
     </div>`)}
     ${panel(panelHead("Field team, live", "GPS check-ins from the mobile app", `<button class="btn btn-ghost btn-sm" onclick="navigateTo('staff')">Open staff monitoring</button>`) +
       `<div class="panel-pad">${fieldMapBoard()}</div>`)}
@@ -2310,12 +2311,12 @@ viewRenderers.dashboard = function () {
 
 function fieldMapBoard() {
   const pins = [
-    { x: 28, y: 34, label: "Karthik · Porur", cls: "" },
+    { x: 28, y: 34, label: "Karthik · Guindy", cls: "" },
     { x: 52, y: 22, label: "Deepa · Ambattur", cls: "" },
-    { x: 66, y: 58, label: "Vignesh · Thoraipakkam", cls: "" },
-    { x: 18, y: 68, label: "Irfan · Coimbatore", cls: "" },
+    { x: 66, y: 58, label: "Vignesh · ECR site", cls: "" },
+    { x: 18, y: 68, label: "Irfan · Hosur", cls: "" },
     { x: 78, y: 80, label: "Anitha · Madurai", cls: "warn" },
-    { x: 44, y: 50, label: "HO · Guindy", cls: "idle" },
+    { x: 44, y: 50, label: "HO · Ambattur", cls: "idle" },
   ];
   return `<div class="mapboard">
     ${pins.map(p => `<div class="map-pin ${p.cls}" style="left:${p.x}%;top:${p.y}%" onclick="navigateTo('visits')">
@@ -2347,15 +2348,15 @@ viewRenderers.insights = function () {
       <div class="text-sm text-sub">Nearly one in five losses is a quote nobody followed up. The follow-up clock on the quotation module exists to remove exactly this.</div>
     </div>`)}
     ${panel(panelHead("Revenue by product line", "Financial year to date") + `<div class="panel-pad">` +
-      vBarChartSVG({ labels: ["Monitor", "Critical", "Imaging", "OT", "Steril."], data: [86, 64, 52, 38, 21], width: 360 }) +
-      `<div class="text-xs text-muted mt-8">Values in ₹ lakh. Patient monitoring remains the volume line; imaging carries the highest per-deal value.</div></div>`)}
+      vBarChartSVG({ labels: ["Motors", "Drives", "Compress.", "Pumps", "Panels"], data: [86, 64, 52, 38, 21], width: 360 }) +
+      `<div class="text-xs text-muted mt-8">Values in ₹ lakh. Motors and drives remain the volume line; cooling and compressed air carry the highest per-deal value.</div></div>`)}
   </div>`;
 
   html += `<div class="grid grid-cols-2 gap-16">
     ${panel(panelHead("Customer concentration", "Risk view") + `<div class="panel-pad">
       ${AURA.customers.slice().sort((a, b) => b.ytd - a.ytd).slice(0, 5).map(c => progressBar(c.name, c.ytd, 9650000)).join("")}
       <div class="divider"></div>
-      <div class="text-sm text-sub">Kaveri Institute alone is 29% of revenue this year. Worth watching if their tender cycle shifts.</div>
+      <div class="text-sm text-sub">Anand Auto Components alone is 29% of revenue this year. Worth watching if their expansion cycle shifts.</div>
     </div>`)}
     ${panel(panelHead("Service profitability", "Last 90 days") + `<div class="panel-pad">
       <dl class="deflist">
@@ -2380,9 +2381,9 @@ viewRenderers.mobileApp = function () {
     <div class="phone-top"><div class="pt-hi">Wednesday, 27 Aug</div><div class="pt-name">Hi Karthik</div></div>
     <div class="phone-body">
       <div class="phone-card" style="border-left:3px solid var(--accent)"><b>Check in to start your day</b><small>GPS verified · Porur, Chennai</small></div>
-      <div class="phone-card"><b>4 visits planned today</b><small>Sunrise · Grace · Prime · Harbour City</small></div>
-      <div class="phone-card"><b>Follow up: QT-2026-0418</b><small>Harbour City · ₹17,42,048 · sent 5 days ago</small></div>
-      <div class="phone-card"><b>Demo unit overdue</b><small>SM-329 monitor · 15 days at customer</small></div>
+      <div class="phone-card"><b>4 visits planned today</b><small>Meenakshi · Crescent · Southern Cold · Sri Vari</small></div>
+      <div class="phone-card"><b>Follow up: QT-2026-0418</b><small>Sri Vari · ₹11,86,608 · sent 5 days ago</small></div>
+      <div class="phone-card"><b>Trial unit overdue</b><small>SM-329 energy meter · 15 days at customer</small></div>
       <div class="phone-card"><b>Target</b><small>₹32.6 L of ₹42 L · 78%</small></div>
     </div>
     <div class="phone-tabbar"><div class="on">${ICON("grid")}Home</div><div>${ICON("mapPin")}Visits</div><div>${ICON("fileText")}Quotes</div><div>${ICON("user")}Me</div></div>
@@ -2391,9 +2392,9 @@ viewRenderers.mobileApp = function () {
   const screen2 = `<div class="phone"><div class="phone-screen">
     <div class="phone-top"><div class="pt-hi">Job card</div><div class="pt-name">TKT-4412</div></div>
     <div class="phone-body">
-      <div class="phone-card"><b>Sunrise Multispeciality Hospital</b><small>ICU · bed 4 · Multipara Monitor</small></div>
-      <div class="phone-card"><b>Issue</b><small>SpO2 reading intermittent</small></div>
-      <div class="phone-card"><b>Spares used</b><small>SpO2 Probe (Adult) x 1 · ₹4,800</small></div>
+      <div class="phone-card"><b>Meenakshi Textile Mills</b><small>Spinning block · line 4 · APFC Panel</small></div>
+      <div class="phone-card"><b>Issue</b><small>Capacitor bank tripping intermittently</small></div>
+      <div class="phone-card"><b>Spares used</b><small>Contactor 120A x 1 · ₹5,600</small></div>
       <div class="phone-card"><b>Photos</b><small>2 attached · before and after</small></div>
       <div class="phone-card" style="border-left:3px solid var(--critical)"><b>Not under contract</b><small>Chargeable · service invoice will be raised</small></div>
       <div class="phone-card" style="background:var(--accent);color:#fff;border:none"><b style="color:#fff">Collect customer signature</b><small style="color:rgba(255,255,255,.85)">Closes the job and creates the invoice</small></div>
@@ -2402,12 +2403,12 @@ viewRenderers.mobileApp = function () {
   </div></div>`;
 
   const screen3 = `<div class="phone"><div class="phone-screen">
-    <div class="phone-top"><div class="pt-hi">New quotation</div><div class="pt-name">Lotus Mother &amp; Child</div></div>
+    <div class="phone-top"><div class="pt-hi">New quotation</div><div class="pt-name">Blue Bay Hotels</div></div>
     <div class="phone-body">
-      <div class="phone-card"><b>Syringe Infusion Pump</b><small>NM-SP-110 · 12 units · ₹42,500 each</small></div>
+      <div class="phone-card"><b>Submersible Pump Set 12.5 HP</b><small>HF-SP-1250 · 6 units · ₹84,000 each</small></div>
       <div class="phone-card"><b>Discount</b><small>8% · approved by Suresh Babu</small></div>
-      <div class="phone-card"><b>GST 12%</b><small>₹56,304</small></div>
-      <div class="phone-card"><b>Total</b><small style="font-size:15px;font-weight:750;color:var(--text-primary)">₹5,25,504</small></div>
+      <div class="phone-card"><b>GST 18%</b><small>₹83,462</small></div>
+      <div class="phone-card"><b>Total</b><small style="font-size:15px;font-weight:750;color:var(--text-primary)">₹5,47,251</small></div>
       <div class="phone-card" style="background:#25D366;border:none"><b style="color:#fff">Send on WhatsApp</b><small style="color:rgba(255,255,255,.9)">PDF with your letterhead and GSTIN</small></div>
     </div>
     <div class="phone-tabbar"><div>${ICON("grid")}Home</div><div>${ICON("mapPin")}Visits</div><div class="on">${ICON("fileText")}Quotes</div><div>${ICON("user")}Me</div></div>
@@ -2422,7 +2423,7 @@ viewRenderers.mobileApp = function () {
 
   html += `<div class="grid grid-cols-3 gap-16 mt-16">
     ${panel(`<div class="panel-pad"><div class="kpi-icon tone-info mb-8">${ICON("wind")}</div><b>Works offline</b>
-      <p class="text-sub mt-4">Visits, job cards and photos are captured without signal and sync the moment the phone reconnects. Hospitals are basements and dead zones.</p></div>`)}
+      <p class="text-sub mt-4">Visits, job cards and photos are captured without signal and sync the moment the phone reconnects. Plant floors, basements and sites are dead zones.</p></div>`)}
     ${panel(`<div class="panel-pad"><div class="kpi-icon tone-success mb-8">${ICON("mapPin")}</div><b>Check-in you can trust</b>
       <p class="text-sub mt-4">Every visit carries GPS coordinates, a timestamp and an optional site photo, so "I was there" is a record, not a claim.</p></div>`)}
     ${panel(`<div class="panel-pad"><div class="kpi-icon tone-warning mb-8">${ICON("messageCircle")}</div><b>WhatsApp built in</b>
@@ -2504,15 +2505,15 @@ function openNewLead() {
     <div class="modal-head"><h3>New enquiry</h3><button class="modal-close" onclick="closeModal()">${ICON("x")}</button></div>
     <div class="modal-body">
       <div class="grid grid-cols-2 gap-12">
-        <div class="field"><label>Hospital / customer <span class="req">*</span></label><input placeholder="Start typing to search existing customers"></div>
+        <div class="field"><label>Company / customer <span class="req">*</span></label><input placeholder="Start typing to search existing customers"></div>
         <div class="field"><label>Contact person <span class="req">*</span></label><input placeholder="Name"></div>
         <div class="field"><label>Mobile / WhatsApp <span class="req">*</span></label><input placeholder="+91"></div>
-        <div class="field"><label>Source</label><select><option>Field visit</option><option>WhatsApp enquiry</option><option>Website form</option><option>Doctor referral</option><option>Tender</option><option>Cold call</option></select></div>
+        <div class="field"><label>Source</label><select><option>Field visit</option><option>WhatsApp enquiry</option><option>Website form</option><option>Consultant referral</option><option>Tender</option><option>Cold call</option></select></div>
         <div class="field span-2"><label>Requirement</label><input placeholder="e.g. Syringe pumps x 12"></div>
         <div class="field"><label>Estimated value</label><input placeholder="₹"></div>
         <div class="field"><label>Assign to</label><select>${AURA.staff.map(s => `<option>${s.name}</option>`).join("")}</select></div>
       </div>
-      <div class="duplicate-alert mt-12">${ICON("info")}<div><b>Duplicate check runs as you type.</b><span>If this hospital already exists, the enquiry attaches to that account instead of creating a second one.</span></div></div>
+      <div class="duplicate-alert mt-12">${ICON("info")}<div><b>Duplicate check runs as you type.</b><span>If this company already exists, the enquiry attaches to that account instead of creating a second one.</span></div></div>
     </div>
     <div class="modal-foot"><button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="closeModal();demoAction('Enquiry created and assigned. A WhatsApp acknowledgement was sent to the customer.')">Create enquiry</button></div>
@@ -2521,14 +2522,14 @@ function openNewLead() {
 
 /* -------------------------------- CUSTOMERS ----------------------------- */
 viewRenderers.customers = function () {
-  let html = pageHeader("Customers / hospitals", `${AURA.customers.length} accounts · ${lakhs(AURA.customers.reduce((a, c) => a + c.outstanding, 0))} outstanding`,
+  let html = pageHeader("Customers / companies", `${AURA.customers.length} accounts · ${lakhs(AURA.customers.reduce((a, c) => a + c.outstanding, 0))} outstanding`,
     `<button class="btn btn-secondary btn-sm" onclick="demoInfo('Customer master exports to Excel with GSTIN, credit terms and outstanding.')">${ICON("download")}Export</button>
      <button class="btn btn-primary btn-sm" onclick="demoInfo('The customer form captures GSTIN, credit terms, delivery address and billing contacts.')">${ICON("plus")}Add customer</button>`);
 
   html += dataTable({
     columns: [
       { label: "Account", render: r => `<div class="flex items-center gap-8">${avatar(r.name)}<div><div class="cell-primary">${r.name}</div><div class="cell-sub">${r.id} · ${r.type}</div></div></div>` },
-      { label: "Location", render: r => `<div class="cell-primary">${r.city}</div><div class="cell-sub">${r.area}${r.beds ? " · " + r.beds + " beds" : ""}</div>` },
+      { label: "Location", render: r => `<div class="cell-primary">${r.city}</div><div class="cell-sub">${r.area}${r.beds ? " · " + r.beds + " staff" : ""}</div>` },
       { label: "Contact", render: r => `<div class="cell-primary">${r.contact}</div><div class="cell-sub">${r.role} · ${r.phone}</div>` },
       { label: "Terms", render: r => r.terms },
       { label: "Outstanding", render: r => r.outstanding ? `<b style="color:${r.outstanding > 1000000 ? "var(--critical)" : "var(--text-primary)"}">${inr(r.outstanding)}</b>` : `<span class="text-muted">Nil</span>` },
@@ -2597,41 +2598,41 @@ viewRenderers.customerProfile = function (params) {
 
 /* --------------------------------- DOCTORS ------------------------------ */
 viewRenderers.doctors = function () {
-  let html = pageHeader("Doctors", "The people who actually specify the equipment. Track influence, interest and last contact.",
-    `<button class="btn btn-primary btn-sm" onclick="demoInfo('Doctors are linked to hospitals, so every visit and enquiry rolls up to the account.')">${ICON("plus")}Add doctor</button>`);
+  let html = pageHeader("Specifiers &amp; consultants", "The people who actually specify what gets bought - plant heads, consultants, facility managers. Track influence, interest and last contact.",
+    `<button class="btn btn-primary btn-sm" onclick="demoInfo('Specifiers are linked to companies, so every visit and enquiry rolls up to the account.')">${ICON("plus")}Add specifier</button>`);
   html += dataTable({
     columns: [
-      { label: "Doctor", render: r => `<div class="flex items-center gap-8">${avatar(r.name)}<div><div class="cell-primary">${r.name}</div><div class="cell-sub">${r.speciality}</div></div></div>` },
-      { label: "Hospital", render: r => `<div class="cell-primary">${r.hospital}</div><div class="cell-sub">${r.city}</div>` },
+      { label: "Contact", render: r => `<div class="flex items-center gap-8">${avatar(r.name)}<div><div class="cell-primary">${r.name}</div><div class="cell-sub">${r.speciality}</div></div></div>` },
+      { label: "Company", render: r => `<div class="cell-primary">${r.hospital}</div><div class="cell-sub">${r.city}</div>` },
       { label: "Influence", render: r => `<span class="pill-tag ${r.influence === "Very High" ? "pill-critical" : r.influence === "High" ? "pill-warning" : "pill-info"}">${r.influence}</span>` },
       { label: "Interested in", render: r => r.interest },
       { label: "Last met", render: r => r.lastMet },
-      { label: "", render: r => `<div class="row-actions"><button class="row-action-btn" onclick="event.stopPropagation();demoInfo('Logs a visit against this doctor and their hospital.')">${ICON("mapPin")}</button></div>` },
+      { label: "", render: r => `<div class="row-actions"><button class="row-action-btn" onclick="event.stopPropagation();demoInfo('Logs a visit against this contact and their company.')">${ICON("mapPin")}</button></div>` },
     ],
     rows: AURA.doctors,
-    filters: [{ label: "All specialities", icon: "filter" }, { label: "All cities", icon: "mapPin" }],
+    filters: [{ label: "All roles", icon: "filter" }, { label: "All cities", icon: "mapPin" }],
   });
   return html;
 };
 
 /* ----------------------------- HOSPITAL LOOKUP -------------------------- */
 viewRenderers.hospitalLookup = function () {
-  let html = pageHeader("Hospital lookup", "A searchable directory of hospitals in your territory, including accounts you have not sold to yet.");
+  let html = pageHeader("Company lookup", "A searchable directory of companies in your territory, including accounts you have not sold to yet.");
   const prospects = [
-    { name: "Velmurugan Speciality Hospital", city: "Chennai", area: "Tambaram", beds: 85, type: "Private Hospital", status: "Prospect" },
-    { name: "Anna Nagar Ortho Centre", city: "Chennai", area: "Anna Nagar", beds: 40, type: "Speciality Hospital", status: "Prospect" },
-    { name: "Cauvery Multispeciality", city: "Trichy", area: "Srirangam", beds: 160, type: "Private Hospital", status: "Prospect" },
-    { name: "Kongu Medical Centre", city: "Erode", area: "Perundurai Road", beds: 110, type: "Private Hospital", status: "Prospect" },
+    { name: "Velmurugan Spinning Mills", city: "Coimbatore", area: "Kurichi", beds: 380, type: "Textile manufacturing", status: "Prospect" },
+    { name: "Ambattur Forge Industries", city: "Chennai", area: "Ambattur", beds: 140, type: "Forging &amp; machining", status: "Prospect" },
+    { name: "Cauvery Sugars &amp; Chemicals", city: "Trichy", area: "Lalgudi", beds: 610, type: "Process industry", status: "Prospect" },
+    { name: "Nilgiri Grand Hotels", city: "Coimbatore", area: "Race Course", beds: 95, type: "Hospitality group", status: "Prospect" },
   ];
   const rows = AURA.customers.map(c => ({ name: c.name, city: c.city, area: c.area, beds: c.beds, type: c.type, status: "Customer" })).concat(prospects);
   html += dataTable({
     columns: [
-      { label: "Hospital", render: r => `<div class="cell-primary">${r.name}</div><div class="cell-sub">${r.type}</div>` },
+      { label: "Company", render: r => `<div class="cell-primary">${r.name}</div><div class="cell-sub">${r.type}</div>` },
       { label: "City", render: r => r.city },
       { label: "Area", render: r => r.area },
-      { label: "Beds", render: r => r.beds || "-" },
+      { label: "Headcount", render: r => r.beds || "-" },
       { label: "Relationship", render: r => statusBadge(r.status === "Customer" ? "Active" : "New") },
-      { label: "", render: r => `<button class="btn btn-ghost btn-sm" onclick="demoInfo('Creates an enquiry against this hospital and assigns it to the territory owner.')">Create enquiry</button>` },
+      { label: "", render: r => `<button class="btn btn-ghost btn-sm" onclick="demoInfo('Creates an enquiry against this company and assigns it to the territory owner.')">Create enquiry</button>` },
     ],
     rows,
     filters: [{ label: "All cities", icon: "mapPin" }, { label: "Prospects only", icon: "filter" }],
@@ -2915,7 +2916,7 @@ function openChallanDrawer(id) {
       <div class="info-item"><span class="k">Items</span><span class="v">${d.items}</span></div>
     </div>
     ${panel(panelHead("Proof of delivery") + `<div class="panel-pad">
-      ${d.pod === "-" ? emptyState("clock", "Not delivered yet", "The driver captures a photo and signature on the mobile app at the hospital gate.")
+      ${d.pod === "-" ? emptyState("clock", "Not delivered yet", "The driver captures a photo and signature on the mobile app at the site gate.")
         : `<div class="checklist-item"><span class="checklist-check done">${ICON("check")}</span><div class="checklist-main"><b>${d.pod}</b><span>Signature and site photo captured on the mobile app, GPS verified</span></div></div>`}
     </div>`)}
     <div class="form-footer mt-16">
@@ -3005,8 +3006,8 @@ viewRenderers.serviceInvoices = function () {
 /* --------------------------- TICKETS / HELPDESK ------------------------- */
 viewRenderers.tickets = function () {
   const open = AURA.tickets.filter(t => t.status !== "Resolved");
-  let html = pageHeader("Tickets / helpdesk", `${open.length} open · ${AURA.tickets.filter(t => t.status === "SLA Breached").length} past SLA · every hospital sees the same clock you do`,
-    `<button class="btn btn-secondary btn-sm" onclick="demoInfo('Hospitals can raise tickets themselves from a QR code stuck on the equipment.')">${ICON("qrCode")}Customer QR intake</button>
+  let html = pageHeader("Tickets / helpdesk", `${open.length} open · ${AURA.tickets.filter(t => t.status === "SLA Breached").length} past SLA · every customer sees the same clock you do`,
+    `<button class="btn btn-secondary btn-sm" onclick="demoInfo('Customers can raise tickets themselves from a QR code stuck on the equipment.')">${ICON("qrCode")}Customer QR intake</button>
      <button class="btn btn-primary btn-sm" onclick="openNewTicket()">${ICON("plus")}Log a ticket</button>`);
 
   html += `<div class="kpi-row mb-16">
@@ -3041,7 +3042,7 @@ function openNewTicket() {
       <div class="grid grid-cols-2 gap-12">
         <div class="field"><label>Customer <span class="req">*</span></label><select>${AURA.customers.map(c => `<option>${c.name}</option>`).join("")}</select></div>
         <div class="field"><label>Equipment / serial <span class="req">*</span></label><input placeholder="Scan QR or type serial number"></div>
-        <div class="field span-2"><label>Issue reported</label><textarea rows="2" placeholder="What the hospital told you"></textarea></div>
+        <div class="field span-2"><label>Issue reported</label><textarea rows="2" placeholder="What the customer told you"></textarea></div>
         <div class="field"><label>Priority</label><select><option>Critical - 4 h</option><option selected>High - 8 h</option><option>Medium - 24 h</option><option>Low - 48 h</option></select></div>
         <div class="field"><label>Assign engineer</label><select><option>Auto-assign nearest</option>${AURA.staff.filter(s => s.role === "Service Engineer").map(s => `<option>${s.name}</option>`).join("")}</select></div>
       </div>
@@ -3055,7 +3056,7 @@ function openNewTicket() {
 viewRenderers.ticketDetail = function (params) {
   const t = findTicket(params.id) || AURA.tickets[0];
   let html = pageHeader(`${t.id} · ${t.equipment}`, `${t.customer} · serial ${t.serial} · raised ${t.raised}`,
-    `<button class="btn btn-secondary btn-sm" onclick="demoAction('Job card PDF sent to the hospital biomedical team.')">${ICON("printer")}Print job card</button>
+    `<button class="btn btn-secondary btn-sm" onclick="demoAction('Job card PDF sent to the customer's maintenance team.')">${ICON("printer")}Print job card</button>
      <button class="btn btn-primary btn-sm" onclick="demoAction('Job closed. A service invoice draft was created because this equipment is out of contract.')">${ICON("check")}Close job</button>`);
 
   html += `<div class="grid grid-2-1 gap-16">
@@ -3074,9 +3075,9 @@ viewRenderers.ticketDetail = function (params) {
         <div class="form-section">
           <div class="form-section-head"><span class="form-section-num">1</span><h4>Work done on site</h4></div>
           <div class="form-section-body cols-2">
-            <div class="field"><label>Diagnosis</label><input value="Sensor cable degraded at connector"></div>
-            <div class="field"><label>Action taken</label><input value="Replaced SpO2 probe, recalibrated, 30 min soak test"></div>
-            <div class="field"><label>Spares used</label><input value="SP-SPO2-01 · SpO2 Probe (Adult) x 1"></div>
+            <div class="field"><label>Diagnosis</label><input value="Contactor contacts pitted, coil weak"></div>
+            <div class="field"><label>Action taken</label><input value="Replaced contactor, retorqued busbar, 30 min load test"></div>
+            <div class="field"><label>Spares used</label><input value="SP-CONT-120 · Contactor 120A x 1"></div>
             <div class="field"><label>Labour hours</label><input value="1.5"></div>
           </div>
         </div>
@@ -3084,7 +3085,7 @@ viewRenderers.ticketDetail = function (params) {
           <div class="form-section-head"><span class="form-section-num">2</span><h4>Billing decision</h4></div>
           <div class="form-section-body cols-2">
             <div class="field"><label>Chargeable?</label><select><option selected>Yes - out of contract</option><option>No - covered under AMC</option><option>No - in warranty</option></select></div>
-            <div class="field"><label>Estimated invoice</label><input value="₹8,064 incl. GST"></div>
+            <div class="field"><label>Estimated invoice</label><input value="₹9,558 incl. GST"></div>
           </div>
         </div>
         <div class="duplicate-alert">${ICON("alertTriangle")}<div><b>A job cannot be closed without this decision.</b><span>This is the single control that stops service work being delivered free by accident.</span></div></div>
@@ -3092,10 +3093,10 @@ viewRenderers.ticketDetail = function (params) {
     </div>
     <div>
       ${panel(panelHead("Ticket timeline") + `<div class="panel-pad"><div class="timeline">
-        <div class="timeline-item"><div class="timeline-icon tone-critical">${ICON("alertCircle")}</div><div class="timeline-content"><div class="timeline-stage">Ticket raised</div><div class="timeline-detail">By hospital biomedical team via QR code</div><div class="timeline-time">${t.raised}</div></div></div>
+        <div class="timeline-item"><div class="timeline-icon tone-critical">${ICON("alertCircle")}</div><div class="timeline-content"><div class="timeline-stage">Ticket raised</div><div class="timeline-detail">By the plant maintenance team via QR code</div><div class="timeline-time">${t.raised}</div></div></div>
         <div class="timeline-item"><div class="timeline-icon tone-info">${ICON("user")}</div><div class="timeline-content"><div class="timeline-stage">Assigned to ${t.engineer}</div><div class="timeline-detail">Nearest available engineer, 6.4 km away</div><div class="timeline-time">09:18 AM</div></div></div>
-        <div class="timeline-item"><div class="timeline-icon tone-info">${ICON("mapPin")}</div><div class="timeline-content"><div class="timeline-stage">Engineer checked in on site</div><div class="timeline-detail">GPS verified at the hospital</div><div class="timeline-time">10:52 AM</div></div></div>
-        <div class="timeline-item"><div class="timeline-icon tone-warning">${ICON("package")}</div><div class="timeline-content"><div class="timeline-stage">Spare consumed</div><div class="timeline-detail">SpO2 Probe x 1 deducted from van stock</div><div class="timeline-time">11:31 AM</div></div></div>
+        <div class="timeline-item"><div class="timeline-icon tone-info">${ICON("mapPin")}</div><div class="timeline-content"><div class="timeline-stage">Engineer checked in on site</div><div class="timeline-detail">GPS verified at the site</div><div class="timeline-time">10:52 AM</div></div></div>
+        <div class="timeline-item"><div class="timeline-icon tone-warning">${ICON("package")}</div><div class="timeline-content"><div class="timeline-stage">Spare consumed</div><div class="timeline-detail">Contactor 120A x 1 deducted from van stock</div><div class="timeline-time">11:31 AM</div></div></div>
       </div></div>`)}
       <div class="mt-16">${panel(panelHead("Equipment history", t.serial) + `<div class="panel-pad">
         <dl class="deflist">
@@ -3106,8 +3107,8 @@ viewRenderers.ticketDetail = function (params) {
           <dt>Last service</dt><dd>02 Feb 2026</dd>
         </dl>
         <div class="divider"></div>
-        <div class="text-sm text-sub">Fourth ticket on this unit in 18 months. A CAMC quote at ₹34,000 a year would have covered all four.</div>
-        <button class="btn btn-secondary btn-sm w-full mt-12" onclick="demoAction('CAMC renewal quotation drafted for Sunrise Multispeciality Hospital.')">${ICON("shield")}Quote a CAMC</button>
+        <div class="text-sm text-sub">Fourth ticket on this panel in 18 months. A CAMC quote at ₹34,000 a year would have covered all four.</div>
+        <button class="btn btn-secondary btn-sm w-full mt-12" onclick="demoAction('CAMC renewal quotation drafted for Meenakshi Textile Mills.')">${ICON("shield")}Quote a CAMC</button>
       </div>`)}</div>
     </div>
   </div>`;
@@ -3125,7 +3126,7 @@ viewRenderers.service = function () {
     <div class="money-cell good"><div class="mc-label">Contract book</div><div class="mc-val">${lakhs(AURA.contracts.reduce((a, c) => a + c.value, 0))}</div><div class="mc-sub">${AURA.contracts.length} live and lapsed contracts</div></div>
     <div class="money-cell alert"><div class="mc-label">Expiring in 30 days</div><div class="mc-val">${lakhs(AURA.contracts.filter(c => c.daysLeft > 0 && c.daysLeft <= 30).reduce((a, c) => a + c.value, 0))}</div><div class="mc-sub">2 contracts, no renewal quote sent</div></div>
     <div class="money-cell alert"><div class="mc-label">Already lapsed</div><div class="mc-val">${lakhs(AURA.contracts.filter(c => c.daysLeft < 0).reduce((a, c) => a + c.value, 0))}</div><div class="mc-sub">Revenue walking out of the door</div></div>
-    <div class="money-cell"><div class="mc-label">Preventive visits due</div><div class="mc-val">5</div><div class="mc-sub">This month, across 3 hospitals</div></div>
+    <div class="money-cell"><div class="mc-label">Preventive visits due</div><div class="mc-val">5</div><div class="mc-sub">This month, across 3 customer sites</div></div>
   </div>`;
 
   html += dataTable({
@@ -3145,10 +3146,10 @@ viewRenderers.service = function () {
 
   html += `<div class="grid grid-cols-2 gap-16 mt-16">
     ${panel(panelHead("Preventive visit schedule", "Generated from each contract, not from memory") + `<div class="panel-pad">
-      <div class="checklist-item"><span class="checklist-check done">${ICON("check")}</span><div class="checklist-main"><b>Kaveri Institute · visit 3 of 4</b><span>Completed 26 Aug by Mohammed Irfan · checklist and photos filed</span></div></div>
-      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Harbour City Hospital · visit 2 of 4</b><span>Due 05 Sep · not yet scheduled</span></div></div>
-      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Lotus Mother &amp; Child · visit 1 of 2</b><span>Due 12 Sep · Anitha Prakash</span></div></div>
-      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Sunrise Multispeciality · visit 2 of 2</b><span>Due 08 Sep · contract expires 6 days later</span></div></div>
+      <div class="checklist-item"><span class="checklist-check done">${ICON("check")}</span><div class="checklist-main"><b>Anand Auto Components · visit 3 of 4</b><span>Completed 26 Aug by Mohammed Irfan · checklist and photos filed</span></div></div>
+      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Sri Vari Constructions · visit 2 of 4</b><span>Due 05 Sep · not yet scheduled</span></div></div>
+      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Blue Bay Hotels · visit 1 of 2</b><span>Due 12 Sep · Anitha Prakash</span></div></div>
+      <div class="checklist-item"><span class="checklist-check">${ICON("clock")}</span><div class="checklist-main"><b>Meenakshi Textile Mills · visit 2 of 2</b><span>Due 08 Sep · contract expires 6 days later</span></div></div>
     </div>`)}
     ${panel(panelHead("Why contracts lapse", "The pattern, from your own data") + `<div class="panel-pad">
       <p class="text-sub">Both lapsed contracts followed the same path: the last preventive visit was completed, nobody raised a renewal quote in the 45 days before expiry, and the customer only noticed when equipment failed and the job turned chargeable.</p>
@@ -3194,13 +3195,13 @@ viewRenderers.distributors = function () {
 };
 
 viewRenderers.distributorHome = function () {
-  let html = pageHeader("Distributor portal", "Kongu Health Distributors · Erode &amp; Salem · Gold tier",
+  let html = pageHeader("Distributor portal", "Kongu Industrial Traders · Erode &amp; Salem · Gold tier",
     `<button class="btn btn-primary btn-sm" onclick="demoAction('Order placed. Your office receives it instantly with the Gold tier pricing applied.')">${ICON("plus")}Place an order</button>`);
   html += `<div class="kpi-row mb-16">
     ${kpiCard("rupee", "navy", "Business this year", lakhs(3260000), "Gold tier maintained", "up")}
     ${kpiCard("creditCard", "success", "Outstanding", "Nil", "Credit limit ₹8 L", "up")}
     ${kpiCard("truck", "info", "Orders in transit", "1", "ETA 29 Aug", "up")}
-    ${kpiCard("package", "warning", "Items on back order", "1", "LED Surgical Light", "down")}
+    ${kpiCard("package", "warning", "Items on back order", "1", "APFC Panel 250 kVAr", "down")}
   </div>`;
   html += `<div class="grid grid-cols-2 gap-16">
     ${panel(panelHead("Your price list", "Gold tier") + dataTable({
@@ -3214,9 +3215,9 @@ viewRenderers.distributorHome = function () {
       rows: AURA.products.slice(0, 6),
     }))}
     ${panel(panelHead("Your orders") + `<div class="panel-pad"><div class="timeline">
-      <div class="timeline-item"><div class="timeline-icon tone-info">${ICON("truck")}</div><div class="timeline-content"><div class="timeline-stage">ORD-2026-0188 dispatched</div><div class="timeline-detail">4 syringe pumps · ₹1,39,400 · ETA 29 Aug</div><div class="timeline-time">25 Aug 2026</div></div></div>
-      <div class="timeline-item"><div class="timeline-icon tone-success">${ICON("checkCircle")}</div><div class="timeline-content"><div class="timeline-stage">Payment verified</div><div class="timeline-detail">UPI ₹1,39,400 · receipt issued</div><div class="timeline-time">24 Aug 2026</div></div></div>
-      <div class="timeline-item"><div class="timeline-icon tone-success">${ICON("checkCircle")}</div><div class="timeline-content"><div class="timeline-stage">ORD-2026-0179 delivered</div><div class="timeline-detail">2 ECG machines · POD signed</div><div class="timeline-time">12 Aug 2026</div></div></div>
+      <div class="timeline-item"><div class="timeline-icon tone-info">${ICON("truck")}</div><div class="timeline-content"><div class="timeline-stage">ORD-2026-0188 dispatched</div><div class="timeline-detail">4 submersible pump sets · ₹2,75,500 · ETA 29 Aug</div><div class="timeline-time">25 Aug 2026</div></div></div>
+      <div class="timeline-item"><div class="timeline-icon tone-success">${ICON("checkCircle")}</div><div class="timeline-content"><div class="timeline-stage">Payment verified</div><div class="timeline-detail">UPI ₹2,75,500 · receipt issued</div><div class="timeline-time">24 Aug 2026</div></div></div>
+      <div class="timeline-item"><div class="timeline-icon tone-success">${ICON("checkCircle")}</div><div class="timeline-content"><div class="timeline-stage">ORD-2026-0179 delivered</div><div class="timeline-detail">2 VFD 22 kW · POD signed</div><div class="timeline-time">12 Aug 2026</div></div></div>
     </div></div>`)}
   </div>`;
   return html;
@@ -3326,7 +3327,7 @@ viewRenderers.purchaseOrders = function () {
 
 /* ----------------------------- PRODUCT LOOKUP --------------------------- */
 viewRenderers.productLookup = function () {
-  let html = pageHeader("Product lookup", "What a sales person opens standing in front of a doctor: price, stock, warranty and the brochure.");
+  let html = pageHeader("Product lookup", "What a sales person opens standing on a customer's shop floor: price, stock, warranty and the brochure.");
   html += `<div class="grid grid-cols-3 gap-16">
     ${AURA.products.slice(0, 9).map(p => panel(`<div class="panel-pad">
       <div class="flex justify-between items-center mb-8">
@@ -3402,7 +3403,7 @@ viewRenderers.staff = function () {
         <dt>Distance covered</dt><dd>218 km</dd>
       </dl>
       <div class="divider"></div>
-      <div class="text-sm text-sub">Idle alerts are deliberately gentle. The point is to spot a staff member stuck at a hospital, not to police lunch breaks.</div>
+      <div class="text-sm text-sub">Idle alerts are deliberately gentle. The point is to spot a staff member stuck at a customer site, not to police lunch breaks.</div>
     </div>`)}
   </div>`;
 
@@ -3522,13 +3523,13 @@ viewRenderers.visits = function () {
 
 /* ----------------------------- SAMPLE TRACKING -------------------------- */
 viewRenderers.samples = function () {
-  let html = pageHeader("Sample tracking", "Demo units are expensive and they disappear. Every unit out has a name, a date and an owner.",
-    `<button class="btn btn-primary btn-sm" onclick="demoAction('Demo unit issued against SM-332. A return reminder is set for 14 days.')">${ICON("plus")}Issue demo unit</button>`);
+  let html = pageHeader("Sample tracking", "Trial and demo units are expensive and they disappear. Every unit out has a name, a date and an owner.",
+    `<button class="btn btn-primary btn-sm" onclick="demoAction('Trial unit issued against SM-332. A return reminder is set for 14 days.')">${ICON("plus")}Issue trial unit</button>`);
   html += `<div class="kpi-row mb-16">
     ${kpiCard("package", "info", "Units at customer", AURA.samples.filter(s => s.status === "At Customer").length, "Worth ₹2.87 L", "up")}
     ${kpiCard("alertTriangle", "critical", "Overdue for return", AURA.samples.filter(s => s.status === "Overdue").length, "SM-329, 15 days out", "down")}
     ${kpiCard("checkCircle", "success", "Returned this month", "1", "Condition verified", "up")}
-    ${kpiCard("trendingUp", "navy", "Demo to order rate", "58%", "7 of 12 demos converted", "up")}
+    ${kpiCard("trendingUp", "navy", "Trial to order rate", "58%", "7 of 12 trials converted", "up")}
   </div>`;
   html += dataTable({
     columns: [
@@ -3621,7 +3622,7 @@ viewRenderers.tenders = function () {
 
   html += `<div class="mt-16">${panel(panelHead("Morning tender digest", "What lands on your WhatsApp at 8 AM") + `<div class="panel-pad">
     <div class="wa-thread" style="max-width:560px">
-      <div class="wa-msg">🔔 <b>3 new tenders matched your brands today</b><br><br>1. TNMSC · 120 patient monitors · ₹1.74 Cr · closes 05 Sep<br>2. Govt Medical College Madurai · OT tables · ₹71 L · closes 12 Sep<br>3. Railway Hospital Perambur · 24 ECG machines · ₹23 L · closes 18 Sep<br><br>Open Aura Business to start a bid.<span class="wa-time">08:00</span></div>
+      <div class="wa-msg">🔔 <b>3 new tenders matched your brands today</b><br><br>1. TANGEDCO · 40 transformer &amp; APFC sets · ₹1.74 Cr · closes 05 Sep<br>2. TWAD Board Madurai · 60 pump sets · ₹71 L · closes 12 Sep<br>3. Southern Railway Perambur · 8 air compressors · ₹23 L · closes 18 Sep<br><br>Open Aura Business to start a bid.<span class="wa-time">08:00</span></div>
     </div>
     <div class="text-sm text-sub mt-12">Missing a deadline costs nothing on paper and everything in practice. One missed tender this year was worth ₹24.5 L.</div>
   </div>`)}</div>`;
