@@ -48,6 +48,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="assets/demo-gate.css" />
 </head>
 <body>
 
@@ -73,7 +74,7 @@
     </div>
     <a class="lnk hide" href="index.html" style="color:#9ca3af">&larr; Elevate Aura</a>
     <a class="btn btn-ghost btn-sm" href="https://app.elevateaura.co.in/login">Login</a>
-    <a class="btn btn-primary btn-sm" href="contact.html">Book a demo</a>
+    <a class="btn btn-primary btn-sm" href="#" data-demo="business">Launch live demo</a>
   </div>
 </div></nav>
 
@@ -83,8 +84,8 @@
     <h1>Run your <span>whole distribution business</span><br>from one screen.</h1>
     <p class="sub">CRM, GST billing, AMC contracts, field service, inventory and finance, connected rather than scattered across WhatsApp and Excel. And it shows you exactly how much AMC renewal money you are leaking.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="contact.html">Book a 30-min demo</a>
-      <a class="btn btn-ghost" href="modules.html">See the modules</a>
+      <a class="btn btn-primary" href="#" data-demo="business">Launch the live demo</a>
+      <a class="btn btn-ghost" href="contact.html">Book a 30-min demo</a>
     </div>
     <p style="margin-top:24px;font-size:13px;color:var(--muted)">Live in 30 days · GST-compliant invoicing · Unlimited users · Your data, your branding</p>
   </div>
@@ -161,8 +162,9 @@
       <b style="color:#5b21b6">This is only a slice.</b> The platform has far more modules than shown here, and we build fully customised software to match exactly how your business runs. <a href="contact.html" style="color:#6d28d9;font-weight:700">Ask for the full walkthrough &rarr;</a>
     </div>
     <div class="tour-cta">
-      <a class="btn btn-primary" href="contact.html">Book a 30-min live walkthrough</a>
-      <span class="tour-note">See it running on your own products and hospitals.</span>
+      <a class="btn btn-primary" href="#" data-demo="business">Open the working demo</a>
+      <a class="btn btn-ghost" href="contact.html">Book a 30-min live walkthrough</a>
+      <span class="tour-note">The demo opens with sample data. The walkthrough runs on your own products and hospitals.</span>
     </div>
   </div>
 </section>
@@ -544,7 +546,8 @@
       <h2>See how much AMC revenue you are leaking.</h2>
       <p>Book a 30-minute demo. We will show Aura Business on a business like yours, and you will leave knowing your numbers.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="contact.html">Book a demo</a>
+        <a class="btn btn-primary" href="#" data-demo="business">Launch the live demo</a>
+        <a class="btn btn-ghost" href="contact.html">Book a demo</a>
         <a class="btn btn-ghost" href="pricing.html">Build your plan</a>
       </div>
     </div>
@@ -560,5 +563,6 @@
 </div></footer>
 
 <script>document.querySelectorAll('.navdd .ddbtn').forEach(function(b){var d=b.closest('.navdd');b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('.navdd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});});</script>
+<script src="assets/demo-gate.js" defer></script>
 </body>
 </html>

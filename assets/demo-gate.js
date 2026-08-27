@@ -15,6 +15,7 @@
     hospital: { url: "/demo/hospital.html", label: "Hospital HIMS + AuraPACS" },
     dental:   { url: "/demo/dental.html",   label: "Dental Clinic HIMS" },
     lms:      { url: "/demo/lms.html",      label: "Aura Learn (LMS)" },
+    business: { url: "/demo/aura-business.html", label: "Aura Business" },
     aurapacs: { url: "https://demo.elevateaura.co.in/api/demo-login", label: "AuraPACS (medical imaging)" }
   };
 
