@@ -3765,18 +3765,28 @@ VIEW_TITLES.nursingBedside = "Bedside Chart";
 </script>
 <script>
 /* Deep-link support: hospital.html#aurapacs auto-enters the demo and opens the
-   AuraPACS module directly, skipping the splash and the dashboard. */
+   AuraPACS module directly, skipping the splash and the dashboard. Re-asserts
+   the target view a few times so a late dashboard render can't win the race. */
 (function(){
   try{
     var want=(location.hash||"").replace("#","").trim();
     if(!want) return;
-    function go(){
+    function run(){
       try{ if(typeof enterDemo==="function") enterDemo(); }catch(e){}
       try{ if(typeof navigateTo==="function") navigateTo(want); }catch(e){}
+      var n=0, t=setInterval(function(){
+        n++;
+        try{
+          if(typeof STATE!=="undefined" && STATE && STATE.view!==want && typeof navigateTo==="function"){
+            navigateTo(want);
+          }
+        }catch(e){}
+        if(n>=12) clearInterval(t);
+      },150);
     }
     if(document.readyState==="loading"){
-      document.addEventListener("DOMContentLoaded", function(){ setTimeout(go,80); });
-    } else { setTimeout(go,80); }
+      document.addEventListener("DOMContentLoaded", function(){ setTimeout(run,60); });
+    } else { setTimeout(run,60); }
   }catch(e){}
 })();
 </script>
