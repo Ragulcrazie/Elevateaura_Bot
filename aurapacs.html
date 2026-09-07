@@ -332,29 +332,22 @@
 .getwrap .eyebrow{color:#c9b6ff}
 .getwrap h2{color:#fff;margin:6px 0 10px;font-size:clamp(26px,3.2vw,36px);letter-spacing:-.02em}
 .getwrap .glead{color:#cdc4ee;max-width:640px;margin:0 0 30px;font-size:16px;line-height:1.65}
-.gsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px;margin-bottom:30px}
-.gstep{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:15px;padding:18px 18px 16px}
-.gstep b{display:flex;align-items:center;gap:10px;font-size:15px;margin-bottom:7px;line-height:1.3}
-.gnum{flex:0 0 24px;width:24px;height:24px;border-radius:8px;background:var(--grad);display:inline-flex;align-items:center;justify-content:center;line-height:1;font-size:12.5px;font-weight:800;color:#fff}
-.gstep span{display:block;color:#c3b9e6;font-size:13.5px;line-height:1.6}
-.cmdbox{background:#0c0819;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:100%}
-.cmdbox code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:#a8ffd9;flex:1 1 auto;min-width:0;white-space:nowrap;overflow-x:auto}
-.copybtn{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:8px 15px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .18s}
-.copybtn:hover{background:rgba(255,255,255,.2)}
-.getcta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;align-items:center}
+.getcta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.btn-big{padding:18px 32px;font-size:17px;border-radius:15px}
+.dlmeta{font-weight:500;opacity:.55;font-size:14px}
 .btn-onlight{background:#fff;color:#2a1458}
 .btn-onlight:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(0,0,0,.5)}
 .btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
 .btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
-.gnote{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:#b6abd8;font-size:13.5px;line-height:1.7;max-width:720px}
+.gnote a{color:#fff}
+.gnote{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);color:#b6abd8;font-size:13.5px;line-height:1.7;max-width:720px}
 .gnote b{color:#e6dfff}
 @media(max-width:640px){
   .getwrap{padding:30px 20px;border-radius:20px}
-  .cmdbox{padding:14px 15px;gap:12px}
+  .btn-big{padding:16px 20px;font-size:15.5px}
+  .dlmeta{display:block;margin-top:3px}
   /* On a phone, wrapping the command is better than hiding half of it behind a
      scroll nobody notices. */
-  .cmdbox code{font-size:12.5px;white-space:pre-wrap;word-break:break-all;overflow-x:visible}
-  .copybtn{width:100%}
   .getcta .btn{width:100%;justify-content:center}
 }
 
@@ -391,38 +384,21 @@
   <div class="wrap">
     <div class="getwrap">
       <div class="eyebrow">Get AuraPACS</div>
-      <h2>Installs on your server in about twenty minutes.</h2>
-      <p class="glead">One command on the machine that will hold your scans. It sets everything up, asks for an activation code, and hands you a working system. Your images never leave that server.</p>
-
-      <div class="gsteps">
-        <div class="gstep">
-          <b><span class="gnum">1</span>Run the command</b>
-          <span>On the server in your centre. It shows you a Site ID for that machine.</span>
-        </div>
-        <div class="gstep">
-          <b><span class="gnum">2</span>Send us the Site ID</b>
-          <span>On WhatsApp. Once your payment is confirmed we give you an activation code.</span>
-        </div>
-        <div class="gstep">
-          <b><span class="gnum">3</span>Enter the code</b>
-          <span>The software installs and starts. Open it from any computer on your network.</span>
-        </div>
-      </div>
-
-      <div class="cmdbox">
-        <code id="installcmd">curl -fsSL https://elevateaura.co.in/install | sudo bash</code>
-        <button class="copybtn" type="button" onclick="copyInstall(this)">Copy</button>
-      </div>
+      <h2>Download it. Install it. That is the whole setup.</h2>
+      <p class="glead">Runs on any Windows PC in your centre. It installs itself, starts with the computer, and works quietly in the background. Your scans stay on that machine and never reach us.</p>
 
       <div class="getcta">
-        <a class="btn btn-primary btn-onlight" href="/install" download="get-aurapacs.sh">Download the installer</a>
-        <a class="btn btn-outline" href="https://wa.me/919578971156?text=Hi%2C%20I%20want%20to%20install%20AuraPACS.%20Here%20is%20my%20Site%20ID%3A%20">Get an activation code</a>
+        <a class="btn btn-primary btn-onlight btn-big" href="https://license.elevateaura.co.in/download/AuraPACS-Setup.exe">
+          Download AuraPACS&nbsp;&nbsp;<span class="dlmeta">Windows &middot; 77 MB</span>
+        </a>
       </div>
 
       <p class="gnote">
-        <b>Needs internet once, on install day.</b> After that the system runs entirely on your own network, with no connection required. Scans, reports and patient details stay on your server and are never sent to us.
+        <b>You will need an activation code.</b> The installer shows a Site ID for your computer. Send it to us on
+        <a href="https://wa.me/919578971156?text=Hi%2C%20I%20have%20installed%20AuraPACS.%20My%20Site%20ID%20is%3A%20">WhatsApp</a>
+        and we give you the code once your payment is confirmed.
         <br><br>
-        <b>Requirements.</b> A computer running Ubuntu or Debian Linux, 8&nbsp;GB of memory, and disk space for your scans. Not sure what to buy? Ask us on WhatsApp and we will tell you exactly what to get.
+        <b>Needs internet once, on the day you install it.</b> After that it runs entirely on your own network with no connection at all. Scans, reports and patient details stay on that computer.
       </p>
     </div>
   </div>
@@ -470,35 +446,5 @@
 
 <script>document.querySelectorAll('.navdd .ddbtn').forEach(function(b){var d=b.closest('.navdd');b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});});document.addEventListener('click',function(e){document.querySelectorAll('.navdd.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open');});});</script>
 <script src="assets/demo-gate.js" defer></script>
-<script>
-function copyInstall(btn){
-  var t = document.getElementById('installcmd').textContent.trim();
-  var flash = function(msg){ var o = btn.getAttribute('data-label') || btn.textContent;
-    btn.setAttribute('data-label', o); btn.textContent = msg;
-    setTimeout(function(){ btn.textContent = btn.getAttribute('data-label'); }, 1600); };
-
-  // The clipboard API rejects on its own in plenty of ordinary situations: an
-  // insecure origin, a denied permission, an embedded browser. Swallowing that
-  // rejection left the button doing nothing at all with no explanation, so
-  // every failure path now falls through to the old method and, if that fails
-  // too, says so rather than pretending it worked.
-  var legacy = function(){
-    var ta = document.createElement('textarea');
-    ta.value = t; ta.setAttribute('readonly','');
-    ta.style.position = 'fixed'; ta.style.top = '-1000px';
-    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, t.length);
-    var ok = false;
-    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-    document.body.removeChild(ta);
-    flash(ok ? 'Copied' : 'Select and copy');
-  };
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(t).then(function(){ flash('Copied'); }, legacy);
-    return;
-  }
-  legacy();
-}
-</script>
 </body>
 </html>
