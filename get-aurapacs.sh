@@ -78,19 +78,31 @@ echo
 # ---------------------------------------------------------------------------
 # Activation
 # ---------------------------------------------------------------------------
+# When this is piped from curl, stdin is the script, so prompts have to come
+# from the terminal. In a context with no terminal at all (automation, a
+# container, a CI job) /dev/tty does not exist, and reading it printed an ugly
+# error and silently took the default. ask() degrades quietly instead.
+# -r and -w test permission bits. /dev/tty can exist, pass those, and still
+# fail to open with ENXIO when the process has no controlling terminal. The
+# only reliable test is to open it.
+if ( : < /dev/tty ) 2>/dev/null; then HAVE_TTY=yes; else HAVE_TTY=no; fi
+ask() { # ask <prompt> <default>
+  local _p="$1" _d="${2:-}" _v=""
+  if [ "$HAVE_TTY" = "yes" ]; then
+    read -rp "$_p" _v < /dev/tty || _v=""
+  elif [ -t 0 ]; then
+    read -rp "$_p" _v || _v=""
+  fi
+  printf '%s' "${_v:-$_d}"
+}
+
 ACTIVATION_CODE="${AURAPACS_ACTIVATION_CODE:-}"
 if [ -z "$ACTIVATION_CODE" ]; then
-  if [ -t 0 ]; then
-    read -rp "Activation code (AURA-XXXX-XXXX-XXXX): " ACTIVATION_CODE
-  else
-    # Piped from curl, so stdin is the script. Read from the terminal instead.
-    read -rp "Activation code (AURA-XXXX-XXXX-XXXX): " ACTIVATION_CODE < /dev/tty
-  fi
+  ACTIVATION_CODE="$(ask "Activation code (AURA-XXXX-XXXX-XXXX): " "")"
 fi
 [ -n "$ACTIVATION_CODE" ] || die "An activation code is required."
 
-read -rp "Storage folder for scans [$DATA_DIR_DEFAULT]: " IN < /dev/tty || IN=""
-DATA_DIR="${IN:-$DATA_DIR_DEFAULT}"
+DATA_DIR="$(ask "Storage folder for scans [$DATA_DIR_DEFAULT]: " "$DATA_DIR_DEFAULT")"
 
 # The names staff will actually type into a browser. The control plane cannot
 # guess a LAN address, so the certificate it issues is only correct if these
@@ -98,8 +110,7 @@ DATA_DIR="${IN:-$DATA_DIR_DEFAULT}"
 LAN_IPS="$(hostname -I 2>/dev/null || true)"
 LAN_HOST="$(hostname 2>/dev/null || echo aurapacs)"
 echo "  This server answers on: ${LAN_IPS:-unknown}"
-read -rp "Hostname staff will use in the browser [${LAN_HOST}.local]: " IN < /dev/tty || IN=""
-LAN_NAME="${IN:-${LAN_HOST}.local}"
+LAN_NAME="$(ask "Hostname staff will use in the browser [${LAN_HOST}.local]: " "${LAN_HOST}.local")"
 
 echo
 echo "==> Activating with $LICENSE_SERVER ..."
@@ -224,30 +235,111 @@ print(" ".join(d.get("names",[])))
     cp "$INSTALL_DIR/prod/Caddyfile.lan" "$INSTALL_DIR/prod/Caddyfile"
   fi
 
-  {
-    echo "AURAPACS_TLS=site"
-    echo "SITE_CERT_DIR=$INSTALL_DIR/certs"
-    # The agent replaces the site certificate with a publicly trusted one when
-    # it can, and leaves it strictly alone when it cannot. Off entirely at a
-    # site with no route out, so it is not retrying forever in the logs.
-    echo "CERT_AGENT_ENABLED=$SITE_ONLINE"
-  } >> "$INSTALL_DIR/.env"
+  # Held aside, NOT written to .env yet. Writing here would create the file,
+  # and the block below only fills in CLIENT_ID, the database password and the
+  # session secret when .env does not already exist. That ordering shipped an
+  # install whose .env contained three TLS lines and nothing else, so docker
+  # compose came up with no database password. Caught by installing on a clean
+  # machine; it would not have shown up any other way.
+  TLS_ENV="AURAPACS_TLS=site
+SITE_CERT_DIR=$INSTALL_DIR/certs
+CERT_AGENT_ENABLED=$SITE_ONLINE"
 fi
 
+# ---------------------------------------------------------------------------
+# Site configuration.
+#
+# The template ships with placeholders: changeme, REPLACE_WITH_SIGNED_KEY,
+# localhost URLs. An earlier version of this appended a handful of real values
+# and left the rest alone, so an install came up with "changeme" as the Orthanc
+# password, patient report links pointing at localhost, and a comment in the
+# file claiming the installer generated a password it had never generated.
+#
+# Every per-site value is set here, every secret is generated on this machine
+# so no two clinics share one, and the install refuses to start if a
+# placeholder survives.
+# ---------------------------------------------------------------------------
+gen() { head -c 48 /dev/urandom | base64 | tr -d '=+/\n' | cut -c1-"${1:-40}"; }
+
+setenv() { # setenv KEY VALUE  -- replace in place, or append. Never duplicate.
+  ENVFILE="$INSTALL_DIR/.env" SETK="$1" SETV="$2" python3 -c '
+import os, pathlib
+f, k, v = os.environ["ENVFILE"], os.environ["SETK"], os.environ["SETV"]
+p = pathlib.Path(f)
+lines = p.read_text().splitlines()
+hit = False
+out = []
+for line in lines:
+    if line.split("=", 1)[0].strip() == k and not line.lstrip().startswith("#"):
+        out.append(k + "=" + v); hit = True
+    else:
+        out.append(line)
+if not hit:
+    out.append(k + "=" + v)
+p.write_text("\n".join(out) + "\n")
+'
+}
+
 if [ ! -f "$INSTALL_DIR/.env" ]; then
-  cp "$INSTALL_DIR/.env.example" "$INSTALL_DIR/.env" 2>/dev/null || true
-  {
-    echo "CLIENT_ID=$CLIENT"
-    echo "AURAPACS_PROFILE=$PROFILE"
-    echo "DATA_DIR=$DATA_DIR"
-    echo "LICENSE_SERVER_URL=$LICENSE_SERVER"
-  } >> "$INSTALL_DIR/.env"
-  # Generated here rather than shipped, so no two installations share a secret.
-  for v in DB_PASSWORD SESSION_SECRET; do
-    grep -q "^$v=" "$INSTALL_DIR/.env" && sed -i "/^$v=/d" "$INSTALL_DIR/.env"
-    echo "$v=$(head -c 32 /dev/urandom | base64 | tr -d '=+/' | cut -c1-40)" >> "$INSTALL_DIR/.env"
-  done
+  cp "$INSTALL_DIR/.env.example" "$INSTALL_DIR/.env" || die "the release is missing .env.example; contact Elevate Aura"
   chmod 600 "$INSTALL_DIR/.env"
+
+  DB_PW="$(gen 40)"
+  SITE_URL="https://${LAN_NAME}"
+
+  setenv CLIENT_ID          "$CLIENT"
+  setenv AURAPACS_PROFILE   "$PROFILE"
+  setenv SEATS              "$SEATS"
+  setenv CLINIC_NAME        "${CUSTOMER:-AuraPACS}"
+  setenv DATA_DIR           "$DATA_DIR"
+  setenv LICENSE_SERVER_URL "$LICENSE_SERVER"
+
+  # Secrets, generated per installation: a leak at one clinic must not become
+  # a leak at all of them.
+  setenv DB_PASSWORD        "$DB_PW"
+  setenv DATABASE_URL       "postgres://aurapacs:${DB_PW}@postgres:5432/aurapacs"
+  setenv SESSION_SECRET     "$(gen 48)"
+  setenv ORTHANC_PASSWORD   "$(gen 32)"
+  setenv GATEWAY_SECRET     "$(gen 40)"
+  setenv BACKUP_KEY         "$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+
+  # The certificate agent authenticates with the licence. Left at its
+  # placeholder, certificate renewal silently never worked.
+  setenv LICENSE_KEY        "$(cat "$INSTALL_DIR/secrets/license.token")"
+
+  # Anything a browser or a patient opens. Left at localhost, every report link
+  # sent to a patient is dead on arrival.
+  setenv AURAPACS_DOMAIN      "$LAN_NAME"
+  setenv PUBLIC_BASE_URL      "$SITE_URL"
+  setenv SHARE_BASE_URL       "$SITE_URL"
+  setenv VIEWER_URL           "$SITE_URL/viewer"
+  setenv DICOMWEB_PUBLIC_URL  "$SITE_URL/api/dicom-web"
+  setenv COOKIE_SECURE        "true"
+fi
+
+# TLS settings go on after the config exists, so they never suppress it.
+if [ -n "${TLS_ENV:-}" ] && ! grep -q '^AURAPACS_TLS=' "$INSTALL_DIR/.env"; then
+  printf '%s\n' "$TLS_ENV" >> "$INSTALL_DIR/.env"
+fi
+
+# An install that reaches this point with an unusable config is worse than one
+# that stops, because the failure surfaces later as an unexplained container
+# crash. Check before starting anything.
+MISSING=""
+for v in CLIENT_ID DB_PASSWORD SESSION_SECRET DATA_DIR LICENSE_SERVER_URL LICENSE_KEY \
+         ORTHANC_PASSWORD DATABASE_URL SHARE_BASE_URL; do
+  grep -q "^$v=" "$INSTALL_DIR/.env" || MISSING="$MISSING $v"
+done
+[ -z "$MISSING" ] || die "Configuration is incomplete, missing:$MISSING
+Nothing has been started. Send this to Elevate Aura."
+
+# A surviving placeholder means a default password or a dead patient link, and
+# both fail silently. Stopping here is the only honest option.
+LEFTOVER=$(grep -nE "=(changeme|change-me[a-z-]*|REPLACE_WITH[A-Z_]*)( |$)|=https?://localhost" "$INSTALL_DIR/.env" || true)
+if [ -n "$LEFTOVER" ]; then
+  echo "$LEFTOVER" | sed 's/^/  /' >&2
+  die "The configuration above still contains template values. Nothing has been started.
+Send this to Elevate Aura."
 fi
 
 echo "==> Starting AuraPACS ..."
