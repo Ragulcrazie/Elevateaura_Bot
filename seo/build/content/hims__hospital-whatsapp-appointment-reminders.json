@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-whatsapp-appointment-reminders",
+  "title": "Hospital WhatsApp Appointment Reminders | Fewer No-Shows | HIMS",
+  "meta": "Send hospital appointment and follow-up reminders on WhatsApp from HIMS, drawn from the appointment book itself, so fewer patients quietly stop coming back.",
+  "h1": "Hospital WhatsApp appointment reminders sent from <span class=\"hl\">the appointment book itself</span>.",
+  "crumb": "WhatsApp Reminders",
+  "pill": "For front office and follow-up",
+  "sub": "Patients in India read WhatsApp. HIMS uses it to confirm appointments, remind before the visit and nudge a review that is due, all from the same appointment and patient record the front desk is already working in.",
+  "meta_ticks": [
+    "Reminders from the appointment record",
+    "Follow-up nudges when a review is due",
+    "No separate contact list to maintain"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patient-portal.png",
+    "alt": "HIMS patient portal view showing a patient's appointments and reports",
+    "bar": "his.elevateaura.co.in/portal"
+  },
+  "whatsapp_text": "Hi, I'd like to set up WhatsApp appointment reminders for our hospital.",
+  "primary_keyword": "hospital WhatsApp appointment reminders",
+  "secondary_keywords": [
+    "WhatsApp reminder software for hospitals",
+    "patient appointment reminder software India",
+    "clinic WhatsApp reminders",
+    "hospital follow-up reminder software",
+    "reduce patient no-shows software",
+    "appointment confirmation WhatsApp hospital"
+  ],
+  "intent": "commercial",
+  "persona": "Clinic or hospital owner losing follow-up visits because nobody reminds the patient",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What WhatsApp reminders do for a hospital",
+      "paras": [
+        "A reminder is only useful if it comes from the appointment, not from a list somebody keeps separately. HIMS sends appointment confirmations, reminders before the visit and follow-up nudges over WhatsApp using the appointment book and the patient record as the source, so there is no export, no second contact list and nothing to keep in step.",
+        "The reason to use WhatsApp rather than a phone call is simply that it gets read and it does not need anyone at the desk to make it happen. The reason to use it rather than a mass broadcast is that each message relates to a real appointment for a real patient under their UHID. Fewer patients drift away after the first visit when the review that is due actually reaches them."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why follow-ups are lost",
+      "h2": "Nobody decides to stop coming. They just are not reminded.",
+      "lead": "The visit that never happens leaves no trace, which is why most hospitals underestimate it.",
+      "items": [
+        {
+          "h": "Reminder calls that do not happen",
+          "p": "Calling every patient before the clinic is somebody's job until the day gets busy, which is every day."
+        },
+        {
+          "h": "Review dates only the doctor knows",
+          "p": "The consultant says come back in six weeks, it is written on a slip, and nothing in the hospital tracks it."
+        },
+        {
+          "h": "Contact lists kept separately",
+          "p": "A marketing sheet of phone numbers drifts out of date from the day it is exported."
+        },
+        {
+          "h": "Empty slots discovered on the day",
+          "p": "The clinic runs light and the reason is never recorded anywhere."
+        },
+        {
+          "h": "Broadcasts that annoy",
+          "p": "Untargeted messages go to everyone, and patients stop reading the ones that matter."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a reminder happens",
+      "h2": "From booking to the patient reading it.",
+      "steps": [
+        {
+          "h": "Appointment booked",
+          "p": "The slot is created against the patient's UHID with their mobile number already on record."
+        },
+        {
+          "h": "Confirmation sent",
+          "p": "The patient gets the doctor, the date and the time in writing."
+        },
+        {
+          "h": "Reminder before the visit",
+          "p": "A message goes out ahead of the appointment without anyone at the desk acting."
+        },
+        {
+          "h": "Patient arrives",
+          "p": "Registration and the token queue pick up from the same appointment."
+        },
+        {
+          "h": "Review scheduled",
+          "p": "The doctor sets the follow-up in the record rather than on a slip."
+        },
+        {
+          "h": "Follow-up nudge",
+          "p": "When the review falls due, the patient is reminded on the same number."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What can be sent",
+      "h2": "Messages tied to something real in the record.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Appointments",
+          "items": [
+            "Booking confirmation",
+            "Reminder before the visit",
+            "Reschedule and cancellation notice",
+            "Doctor, date and time in the message"
+          ]
+        },
+        {
+          "icon": "&#128257;",
+          "h": "Follow-up",
+          "items": [
+            "Review due nudges",
+            "Patients who have not returned",
+            "Per doctor or per department",
+            "Driven by the record, not a spreadsheet"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Around the visit",
+          "items": [
+            "Reports available in the patient portal",
+            "Imaging report links shared through AuraPACS",
+            "Billing and receipt acknowledgements",
+            "Messages against the patient's UHID"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Sent from your own WhatsApp Business number",
+            "Templates agreed with you at setup",
+            "Role-based access to who can send",
+            "No separate contact list to maintain"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-appointment-management/",
+        "label": "See appointment management"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where a message replaces a phone call.",
+      "items": [
+        {
+          "h": "Tomorrow's clinic",
+          "workflow": "Every patient booked for the morning list gets a reminder the evening before, with the doctor and the time.",
+          "result": "The front desk stops making rounds of calls."
+        },
+        {
+          "h": "A six-week review",
+          "workflow": "The doctor sets the review in the record and the patient is nudged when it falls due.",
+          "result": "The follow-up stops depending on the patient's memory."
+        },
+        {
+          "h": "A doctor on leave",
+          "workflow": "Affected appointments are identified from the roster and patients are told before they travel.",
+          "result": "Nobody arrives to a closed room."
+        },
+        {
+          "h": "A report is ready",
+          "workflow": "The patient is told their report is available and opens it from the portal or a shared link.",
+          "result": "Fewer trips made only to collect paper."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere the second visit matters.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Follow-up is most of the practice."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Reminders per doctor and department."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Appointments and reports ready."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front office",
+          "p": "One less round of calls every evening."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Owners",
+          "p": "Empty slots that have a reason."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways patients get reminded.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Who triggers the reminder",
+          "A staff member, if there is time",
+          "Nobody",
+          "The appointment itself"
+        ],
+        [
+          "Where the number comes from",
+          "A phone list",
+          "The bill",
+          "The patient record under their UHID"
+        ],
+        [
+          "Follow-up reviews",
+          "On a slip",
+          "Not tracked",
+          "Set in the record and nudged when due"
+        ],
+        [
+          "Targeting",
+          "Everybody or nobody",
+          "Not applicable",
+          "By doctor, department or appointment"
+        ],
+        [
+          "Effort to maintain",
+          "A list that ages daily",
+          "None, because nothing is sent",
+          "None, the record is the list"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "WhatsApp reminders, answered.",
+      "items": [
+        {
+          "q": "Do reminders go from our own number?",
+          "a": "Yes. Messages are sent from your hospital's WhatsApp Business number so the patient recognises who is writing. Setting that up with WhatsApp, including the message templates, is part of the project and is agreed with you before go-live."
+        },
+        {
+          "q": "Will this reduce no-shows?",
+          "a": "Patients who are reminded turn up more reliably than patients who are not, which is the whole reason to do it. We do not publish a figure for it, because the honest answer depends on your specialty, your patients and how far they travel."
+        },
+        {
+          "q": "Where do the phone numbers come from?",
+          "a": "From the patient record created at registration under the UHID, so there is no separate contact list to maintain. See <a href=\"/hims/uhid-patient-registration-software/\">UHID registration</a> for how that record is built."
+        },
+        {
+          "q": "Can we send follow-up reminders, not just appointment reminders?",
+          "a": "Yes. When the doctor sets a review date in the record, the patient can be nudged when it falls due, which is usually where more visits are lost than at the booked appointment."
+        },
+        {
+          "q": "Can patients reply?",
+          "a": "Messages come from your own business number, so replies land with your front desk like any other WhatsApp conversation. How you staff that is worth deciding before you switch reminders on."
+        },
+        {
+          "q": "Is this the same as sending reports on WhatsApp?",
+          "a": "Related but separate. Imaging reports are shared through AuraPACS as a secure link that needs no login. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp medical report sharing</a> for that workflow."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments",
+          "p": "The book behind the reminder."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#8986;",
+          "b": "Queue and tokens",
+          "p": "What happens on arrival."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#128100;",
+          "b": "UHID registration",
+          "p": "Where the number is captured."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "The smaller setup."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128241;",
+          "b": "Report sharing",
+          "p": "Imaging over WhatsApp."
+        }
+      ]
+    }
+  ]
+}

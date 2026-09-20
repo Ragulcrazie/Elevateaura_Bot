@@ -1,0 +1,221 @@
+{
+  "cluster": "compare",
+  "slug": "cloud-vs-on-premise-hospital-software",
+  "title": "Cloud vs On-Premise Hospital Software | Elevate Aura",
+  "meta": "Cloud vs on-premise hospital management software: internet dependence, who maintains the server, where data sits, what happens in an outage and the cost model.",
+  "h1": "Cloud vs on-premise hospital software: <span class=\"hl\">what happens when the line goes down</span>.",
+  "crumb": "Cloud vs on-premise",
+  "pill": "Comparison",
+  "sub": "Where your hospital system runs decides who maintains it, where the records sit, what the front desk can do during an outage and how you pay for it. This page sets out the trade-offs so you can ask the right questions before you sign.",
+  "meta_ticks": [
+    "Written for Indian hospitals",
+    "Fair about when on-premise wins",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See HIMS",
+  "cta_href": "/hims.html",
+  "whatsapp_text": "Hi, I read the cloud vs on-premise comparison and want to discuss deployment for our hospital.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "cloud vs on-premise hospital management software",
+  "secondary_keywords": [
+    "cloud hospital software India",
+    "on-premise hospital management system",
+    "hospital software server or cloud",
+    "hospital data location India",
+    "hospital software offline access"
+  ],
+  "intent": "comparison",
+  "persona": "Hospital owner or administrator deciding where the hospital system should run",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "A server in your building, or a workspace you sign in to",
+      "paras": [
+        "On-premise means the hospital system runs on a machine inside your hospital. Staff reach it over the local network, so the front desk keeps working when the internet does not. In exchange, the server, its power, its backups and its replacement in five years are yours to look after, and remote access is something you have to arrange deliberately.",
+        "Cloud means the system runs on managed infrastructure and every counter signs in over the internet. Nobody in the hospital patches a server or worries about a failed disk, a doctor can open the record from home, and new modules arrive without anyone visiting. In exchange, the hospital depends on its connection, and the data sits somewhere you should ask about in writing.",
+        "Most Indian hospitals choose on the strength of one question: what does the registration counter do at eleven in the morning when the line is down."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What actually differs",
+      "h2": "Four things that change, and one that does not",
+      "body": [
+        {
+          "h3": "Internet dependence"
+        },
+        "This is the real difference and the one buyers underestimate. On-premise, a connection failure stops remote viewing and outside communication, while registration, prescribing, dispensing and billing carry on across the local network. On cloud, a connection failure stops the counters. The honest mitigation is not a promise, it is a second connection from a different provider, and someone whose job it is to notice when the first one fails.",
+        {
+          "h3": "Who maintains it"
+        },
+        "On-premise, the hospital owns operating system updates, antivirus, the backup job and the hardware. Small hospitals often discover the backup was failing quietly for months. On cloud, that work sits with the provider and the hospital never sees it, which is a genuine saving in a building with no IT staff.",
+        {
+          "h3": "Where the data sits"
+        },
+        "On-premise, the records are physically in your hospital, which is reassuring, and exactly as safe as the room the machine is in and the state of your backups. On cloud, the records sit in a data centre. Ask where, ask what the backup and retention arrangements are, ask how you get a full export if you leave, and get the answers in the agreement. Regulatory obligations on health data change, so confirm your position with your own advisers rather than relying on a vendor's summary.",
+        {
+          "h3": "How you pay"
+        },
+        "Without quoting figures, the shapes differ. On-premise tends to front-load: hardware and a licence at the start, then support. Cloud tends to spread the same money across a subscription with the infrastructure inside it. The comparison is only meaningful over several years and only when hardware replacement, power, backup and someone's time are counted on the on-premise side."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "The trade-offs in one view",
+      "headers": [
+        "",
+        "On-premise",
+        "Cloud"
+      ],
+      "rows": [
+        [
+          "During an internet outage",
+          "Local counters keep working; remote access stops",
+          "Counters stop until the line returns"
+        ],
+        [
+          "During a power outage",
+          "Stops unless the server and network are on backup power",
+          "Staff devices need power; the system itself is unaffected"
+        ],
+        [
+          "Who maintains the server",
+          "The hospital, or whoever it pays",
+          "The provider"
+        ],
+        [
+          "Backups",
+          "Your responsibility, and worth testing monthly",
+          "Handled by the provider; confirm retention and export"
+        ],
+        [
+          "Remote access for doctors",
+          "Needs deliberate setup and hardening",
+          "Built in, from any browser"
+        ],
+        [
+          "Updates and new modules",
+          "Applied on site, on a schedule",
+          "Applied centrally without a visit"
+        ],
+        [
+          "Multiple branches",
+          "Each site needs its own server or a link back",
+          "One workspace, sites configured inside it"
+        ],
+        [
+          "Cost shape",
+          "More at the start, less monthly, plus hardware renewal",
+          "Spread monthly, infrastructure included"
+        ],
+        [
+          "Best fit",
+          "Poor connectivity, or a hard requirement that data stays in the building",
+          "Reliable connectivity, no IT staff, doctors who work off site"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Answer these before you choose",
+      "body": [
+        "The deployment question is worth settling before the software question, because it changes what you should be demonstrating.",
+        {
+          "ul": [
+            "<b>How often does your connection actually fail, and for how long?</b> Ask the staff, not the provider. If the answer is weekly, cloud-only needs a second line.",
+            "<b>Is there anyone who could look after a server?</b> If nobody in the building can tell you when the last backup ran, on-premise has a hidden cost.",
+            "<b>Do doctors need the record from outside?</b> Remote reading and after-hours access are simplest on cloud.",
+            "<b>Will you add a second branch?</b> One workspace across sites is much easier than servers in two buildings.",
+            "<b>What must never leave the building?</b> If that list is long, say so early; it changes the design, not just the price.",
+            "<b>What happens if you leave?</b> Agree the export format and timeline in the contract while you are still friendly."
+          ]
+        },
+        {
+          "h3": "What Elevate Aura does today"
+        },
+        "Being specific rather than flattering: Elevate Aura's HIMS is delivered as a cloud workspace, configured to your departments, tariffs and branding, with a live demo you can use before deciding. Imaging is the part of the stack that is explicitly hybrid: <a href=\"/aurapacs/hybrid-pacs/\">AuraPACS</a> runs an on-premise node on the centre's own network, which works without internet, with a thin cloud layer for remote viewing and encrypted offsite backup.",
+        "If your hospital needs the clinical system itself to run on hardware in your building, do not assume it either way from this page. Put the requirement on the table at the start of the call, and get the deployment you are being sold written into the scope document before anything is signed. See <a href=\"/hims/hospital-management-system/\">the hospital management system</a> and the <a href=\"/resources/hospital-software-implementation-checklist/\">implementation checklist</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Cloud vs on-premise, answered",
+      "items": [
+        {
+          "q": "What happens to a cloud hospital system when the internet fails?",
+          "a": "The counters stop until the connection returns, because every screen is served over it. Hospitals that choose cloud in areas with unreliable connectivity usually take a second line from a different provider and make one person responsible for noticing a failure quickly."
+        },
+        {
+          "q": "Is on-premise more secure than cloud?",
+          "a": "Not automatically. On-premise data is as secure as the room, the machine, the passwords and the backups around it. Cloud shifts that work to a provider with dedicated staff. What matters in both cases is role-based access, audit trails and tested backups."
+        },
+        {
+          "q": "How is Elevate Aura's HIMS deployed?",
+          "a": "As a cloud workspace configured to your hospital, with a live demo available before you decide. AuraPACS imaging is hybrid, with an on-premise node on your own network plus a cloud layer. Confirm the deployment you want on the call so it is written into the scope."
+        },
+        {
+          "q": "Can we start on cloud and move on-premise later, or the other way round?",
+          "a": "Treat it as a change of deployment rather than a setting, because it affects access, backups and support. Raise it as a requirement before signing so the scope reflects it, instead of discovering the position after go-live."
+        },
+        {
+          "q": "Which costs less over five years?",
+          "a": "It depends on your hardware, connectivity and staff. On-premise front-loads the spend and adds hardware renewal, power and someone's time. Cloud spreads it monthly with infrastructure included. Elevate Aura scopes each project on a call rather than publishing a price list."
+        },
+        {
+          "q": "Where will our patient data be stored?",
+          "a": "That is a question to answer in the agreement, covering location, backups, retention and how you obtain a full export if you leave. Health data obligations change over time, so confirm your own position with your advisers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "Every counter, one record."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#129659;",
+          "b": "Hybrid PACS",
+          "p": "Local node, cloud layer."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise PACS",
+          "p": "The same question for imaging."
+        },
+        {
+          "href": "/resources/hospital-software-implementation-checklist/",
+          "icon": "&#9989;",
+          "b": "Implementation checklist",
+          "p": "Decide deployment first."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "How to choose",
+          "p": "The buyer's checklist."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "purchase-order-grn-software",
+  "title": "Purchase Order and GRN Software for Distributors | Aura",
+  "meta": "Purchase order and GRN software with a supplier master and price lists, PO approval before commitment, and goods receipt that stocks in and opens a payable.",
+  "h1": "Purchase order and GRN software where receiving goods <span class=\"hl\">creates the payable</span>.",
+  "crumb": "Purchase Order &amp; GRN",
+  "pill": "For the buying side of a distributor",
+  "sub": "Aura Business holds your supplier master and their agreed price lists, routes purchase orders through approval before anyone commits money, and turns the goods receipt into a stock entry and a supplier payable in the same step.",
+  "meta_ticks": [
+    "Supplier master with agreed price lists",
+    "PO approval before commitment",
+    "GRN stocks in and opens the payable"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png",
+    "alt": "Aura Business procurement screen showing a purchase order with supplier, agreed rates and goods receipt status",
+    "bar": "app.elevateaura.co.in/purchase"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss purchase order and GRN software for our procurement.",
+  "primary_keyword": "purchase order and GRN software",
+  "secondary_keywords": [
+    "purchase order software India",
+    "goods receipt note software",
+    "procurement software for distributors",
+    "supplier management software",
+    "PO approval workflow software"
+  ],
+  "intent": "commercial",
+  "persona": "Purchase or operations manager buying stock from principals and suppliers",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a PO and a GRN each commit you to",
+      "paras": [
+        "A purchase order is a commitment to buy at an agreed rate. A goods receipt note is the record that the goods actually arrived, in what quantity and condition. The useful software behaviour is that the second one automatically does two things at once: it puts the received quantity into the right stock location, and it opens a payable against the supplier for what was received.",
+        "Aura Business handles this in the Procurement and Suppliers suite, through the Supplier Master, Supplier Price Lists, Purchase Orders, PO Approval Workflow, Goods Receipt and Supplier Payments. Because purchasing and inventory are the same system, a short delivery is visible as a short delivery rather than as a mysterious difference discovered at the next stock count."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where buying goes wrong",
+      "h2": "Purchasing errors are quiet until the supplier's statement arrives.",
+      "lead": "Sales mistakes get found by customers. Purchase mistakes get found by accountants, months later.",
+      "items": [
+        {
+          "h": "Orders placed on WhatsApp",
+          "p": "A purchase is agreed in a chat with no document, so there is nothing to check the invoice against."
+        },
+        {
+          "h": "Rates nobody can confirm",
+          "p": "The supplier bills at a higher rate than agreed and there is no price list to point at."
+        },
+        {
+          "h": "No approval before commitment",
+          "p": "A large order is placed by someone who did not need to ask anyone, and the money is already spent."
+        },
+        {
+          "h": "Short delivery not recorded",
+          "p": "Nine of ten cartons arrive, the paperwork says ten, and the difference becomes a stock loss."
+        },
+        {
+          "h": "Receipt does not reach stock",
+          "p": "Goods sit in the godown for a week before anyone enters them, so sales quote from a stale figure."
+        },
+        {
+          "h": "Payables reconstructed later",
+          "p": "What is owed to each supplier is worked out from invoices in a file rather than from receipts."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a purchase runs",
+      "h2": "From a shortfall to a supplier payment.",
+      "steps": [
+        {
+          "h": "Need identified",
+          "p": "A reorder alert or a customer order shows what has to be bought, and for which location."
+        },
+        {
+          "h": "PO raised",
+          "p": "Lines priced from the supplier's agreed price list, not from memory."
+        },
+        {
+          "h": "Approved",
+          "p": "The order passes through the approval workflow before it is sent."
+        },
+        {
+          "h": "Sent to the supplier",
+          "p": "The PO goes out as a document with delivery location and expected date."
+        },
+        {
+          "h": "Goods receipt",
+          "p": "GRN records what actually arrived, with serials, batches and expiry dates."
+        },
+        {
+          "h": "Stock and payable",
+          "p": "Received quantity enters the location and a payable opens against the supplier."
+        },
+        {
+          "h": "Paid",
+          "p": "Supplier payment recorded against the payable and the ledger closes."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The Procurement and Suppliers modules.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Suppliers",
+          "items": [
+            "Supplier master with GSTIN and terms",
+            "Supplier price lists per item",
+            "Principal and brand authorisation records",
+            "Lead times and expected delivery dates"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Ordering",
+          "items": [
+            "Purchase orders with priced lines",
+            "PO approval workflow",
+            "Delivery location on the order",
+            "Open and partially received PO list"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Receiving",
+          "items": [
+            "Goods receipt (GRN) against the PO",
+            "Short and excess quantities recorded",
+            "Serial, batch and expiry captured at receipt",
+            "Stock into the correct warehouse"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Paying",
+          "items": [
+            "Supplier payables ledger",
+            "Supplier payments against receipts",
+            "Expense management alongside",
+            "Cashflow dashboard including payables"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four purchasing days that stop costing money.",
+      "items": [
+        {
+          "h": "A reorder becomes an order",
+          "workflow": "A branch falls below its reorder level, the shortfall becomes a purchase order priced from the supplier's list, and it goes for approval.",
+          "result": "Buying is triggered by stock, not by a phone call from sales."
+        },
+        {
+          "h": "The rate is not argued about",
+          "workflow": "The supplier invoices above the agreed rate and the PO shows the price list figure on the line.",
+          "result": "The difference is raised before payment, not after."
+        },
+        {
+          "h": "A short delivery is caught at the gate",
+          "workflow": "The GRN records nine received against ten ordered, and the PO stays partly open.",
+          "result": "The balance is chased instead of becoming shrinkage."
+        },
+        {
+          "h": "Payables are real, not estimated",
+          "workflow": "Each receipt opens a payable, so what is owed to each supplier reflects goods actually in your building.",
+          "result": "Cashflow planning uses facts."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses that buy to sell or to service.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Buying from principals and importers against authorisations."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagent dealers",
+          "p": "Frequent repeat buying with batch and expiry at receipt."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "Spare parts bought for the service store and vans."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Large orders with long lead times and staged receipts."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Project buying against confirmed customer orders."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Chat orders, accounts entries, or procurement in the platform.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the order exists",
+          "A chat message",
+          "Entered after the fact",
+          "A PO document with priced lines"
+        ],
+        [
+          "Agreed rates",
+          "Remembered",
+          "On the last bill",
+          "Supplier price list on the item"
+        ],
+        [
+          "Approval before spending",
+          "None",
+          "None",
+          "PO approval workflow"
+        ],
+        [
+          "Goods receipt",
+          "A signed copy",
+          "Purchase voucher",
+          "GRN with short and excess recorded"
+        ],
+        [
+          "Effect on stock",
+          "Entered separately",
+          "Sometimes",
+          "Stocks into the named location at receipt"
+        ],
+        [
+          "Payable created",
+          "From the invoice file",
+          "From the voucher",
+          "From the receipt, item by item"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Purchase orders and GRN, answered.",
+      "items": [
+        {
+          "q": "Does the GRN update stock automatically?",
+          "a": "Yes. The quantity recorded as received enters the delivery location named on the purchase order, with serials, batches and expiry dates captured at that point, and the movement appears in the stock ledger."
+        },
+        {
+          "q": "What happens if only part of the order arrives?",
+          "a": "The GRN records what actually came. The purchase order stays partly open for the balance, so the outstanding quantity is visible and can be chased or cancelled rather than forgotten."
+        },
+        {
+          "q": "Can purchase orders need approval?",
+          "a": "Yes. The PO approval workflow routes orders for sign-off before they are sent, and you decide who approves what. The approval is recorded in the audit log."
+        },
+        {
+          "q": "How are supplier rates controlled?",
+          "a": "Each supplier carries a price list per item, so purchase order lines are priced from the agreed rate rather than typed. Differences between the price list and the supplier invoice are then visible."
+        },
+        {
+          "q": "Does this handle GST on purchases?",
+          "a": "Supplier invoices and payables are recorded with their tax detail and flow into the accounting export for your books. Input credit treatment is a matter for your accountant to confirm."
+        },
+        {
+          "q": "Can we buy for a specific customer order?",
+          "a": "Yes. A purchase order can be raised against a confirmed sales order so the incoming stock is expected for that delivery. See <a href=\"/aura-business/medical-equipment-warehouse-management/\">warehouse management</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory software",
+          "p": "Where received stock lands."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127970;",
+          "b": "Warehouse management",
+          "p": "Locations and transfers."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#8986;",
+          "b": "Batch and expiry",
+          "p": "Captured at goods receipt."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128736;",
+          "b": "Spare parts",
+          "p": "Buying for the service store."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128202;",
+          "b": "Receivables ageing",
+          "p": "The other side of the ledger."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "How much back office you need."
+        }
+      ]
+    }
+  ]
+}

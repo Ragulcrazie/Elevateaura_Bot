@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "e-way-bill-software-distributors",
+  "title": "E-Way Bill Software for Distributors and Dealers | Aura",
+  "meta": "E-way bill software for distributors: generate the bill with the despatch, record transporter and vehicle, and link it to the invoice or challan.",
+  "h1": "E-way bill software that generates the bill <span class=\"hl\">before the vehicle leaves</span>.",
+  "crumb": "E-Way Bill Software",
+  "pill": "For goods on the road",
+  "sub": "Aura Business generates the e-way bill from the invoice or delivery challan the consignment is travelling against, records the transporter and vehicle, and keeps the bill linked to the despatch so the office knows what the driver is carrying.",
+  "meta_ticks": [
+    "Generated with the despatch, not afterwards",
+    "Transporter and vehicle on the record",
+    "Linked to the invoice or challan"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business despatch record showing an e-way bill with transporter, vehicle number and the linked tax invoice",
+    "bar": "app.elevateaura.co.in/billing/e-way-bill"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss e-way bill software for our despatches.",
+  "primary_keyword": "e-way bill software distributors",
+  "secondary_keywords": [
+    "e-way bill generation software India",
+    "e-way bill from invoice software",
+    "transport documentation software GST",
+    "interstate consignment software",
+    "e-way bill software for medical equipment"
+  ],
+  "intent": "commercial",
+  "persona": "Despatch or accounts in-charge sending consignments by road across states",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an e-way bill is, in despatch terms",
+      "paras": [
+        "The e-way bill is the document that accompanies goods in transit under GST. It is generated before the movement starts, and it ties together the consignment, the value, the parties, the route and the vehicle. If your goods are stopped on the road, it is what is produced along with the invoice or challan the consignment travels against.",
+        "Whether a particular movement needs one depends on the value of the consignment, whether it crosses a state border and on state-level rules that are not identical everywhere. We do not publish those figures, because the only figure worth acting on is the current one for the states you move goods between. Confirm the position with your accountant. What Aura Business does is generate the bill from the despatch record you already created, in the E-Way Bill module of the Quotation, Orders and GST Billing suite."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where transport documents fail",
+      "h2": "The e-way bill is usually generated in the wrong place, at the wrong time.",
+      "lead": "It is a document about a physical movement, created by somebody sitting at a desk who cannot see the vehicle.",
+      "items": [
+        {
+          "h": "Raised after the truck left",
+          "p": "The consignment departs and the bill is generated later, which is exactly the wrong order."
+        },
+        {
+          "h": "Details typed a second time",
+          "p": "The invoice exists in one system and the bill is keyed again elsewhere, with room for mismatch."
+        },
+        {
+          "h": "Vehicle number unknown at the desk",
+          "p": "The despatch team knows the vehicle and the accounts team generates the bill, so the two do not meet."
+        },
+        {
+          "h": "Bill not linked to the document",
+          "p": "Nobody can tell which invoice or challan a given bill belongs to without searching."
+        },
+        {
+          "h": "Part deliveries not handled",
+          "p": "An order goes in two vehicles on two days and the documentation is built for one."
+        },
+        {
+          "h": "Driver carries the wrong copy",
+          "p": "The consignment moves with an invoice that does not match the bill generated for it."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a consignment is documented",
+      "h2": "From the despatch to the vehicle on the road.",
+      "steps": [
+        {
+          "h": "Document chosen",
+          "p": "The consignment travels against a tax invoice, or a delivery challan where the sale is not complete."
+        },
+        {
+          "h": "Consignment built",
+          "p": "Items, quantities, value and both addresses come from that document."
+        },
+        {
+          "h": "Transporter entered",
+          "p": "Transporter details and the vehicle number recorded at the point of loading."
+        },
+        {
+          "h": "Bill generated",
+          "p": "The e-way bill is raised and stored against the despatch."
+        },
+        {
+          "h": "Driver documents",
+          "p": "The driver leaves with the invoice or challan and the e-way bill reference for the consignment."
+        },
+        {
+          "h": "Vehicle change",
+          "p": "If the consignment is transhipped, the vehicle detail is updated against the same bill."
+        },
+        {
+          "h": "Closed",
+          "p": "Delivery is confirmed with signature and photo, and the despatch record holds all of it."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The e-way bill module and the despatch around it.",
+      "groups": [
+        {
+          "icon": "&#128739;",
+          "h": "The bill",
+          "items": [
+            "E-way bill generated from invoice or challan",
+            "Transporter and vehicle details",
+            "Consignment value and item lines carried across",
+            "Vehicle update for transhipment"
+          ]
+        },
+        {
+          "icon": "&#128196;",
+          "h": "Travelling documents",
+          "items": [
+            "Tax invoice with IRN and QR where applicable",
+            "Delivery challan for goods moving before sale",
+            "Returnable challan for demo and repair goods",
+            "Both linked to the same despatch"
+          ]
+        },
+        {
+          "icon": "&#127981;",
+          "h": "Interstate movement",
+          "items": [
+            "Place of supply driving IGST on the invoice",
+            "Ship-to address separate from bill-to",
+            "Branch and warehouse transfers documented",
+            "Dealer despatches across states"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Delivery",
+          "items": [
+            "Proof of delivery with signature and photo",
+            "Order tracking page for the customer",
+            "Stock reduced from the despatching location",
+            "Audit log of every despatch document"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four consignments that travel properly documented.",
+      "items": [
+        {
+          "h": "An interstate delivery leaves complete",
+          "workflow": "The invoice is raised with IGST, the e-way bill is generated against it with the vehicle number, and both go with the driver.",
+          "result": "Nothing is waiting to be created after departure."
+        },
+        {
+          "h": "A demo unit travels on a challan",
+          "workflow": "An evaluation unit moves on a returnable delivery challan, with the e-way bill generated against that challan rather than an invoice.",
+          "result": "The movement is documented without pretending a sale happened."
+        },
+        {
+          "h": "A branch transfer is treated as a movement",
+          "workflow": "Stock moving from the main godown to a branch is despatched on a transfer with its own documentation.",
+          "result": "In-transit stock is visible and legally documented."
+        },
+        {
+          "h": "A vehicle change does not break the paperwork",
+          "workflow": "The consignment is transhipped en route and the vehicle detail is updated against the existing bill.",
+          "result": "The documents and the truck still agree."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose goods travel by road.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "High-value consignments to hospitals in other states."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagent dealers",
+          "p": "Frequent despatches with cold-chain handling."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Central warehouse feeding dealers across the country."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Multi-branch businesses",
+          "p": "Stock transfers between their own locations."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "Site deliveries and project consignments."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A separate portal login, accounts software, or the despatch record.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the bill is created",
+          "A separate portal",
+          "Sometimes built in",
+          "From the invoice or challan record"
+        ],
+        [
+          "When it is created",
+          "Often after despatch",
+          "At invoicing",
+          "At loading, with the vehicle known"
+        ],
+        [
+          "Vehicle and transporter",
+          "Phoned to the office",
+          "Typed",
+          "Entered at the despatch point"
+        ],
+        [
+          "Linked to the document",
+          "Not linked",
+          "Loosely",
+          "Held against the despatch it belongs to"
+        ],
+        [
+          "Goods moving before sale",
+          "Improvised",
+          "Manual challan",
+          "Returnable or demo challan with its own bill"
+        ],
+        [
+          "Proof the goods arrived",
+          "A phone call",
+          "None",
+          "Signature and photo on the field app"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "E-way bills for distributors, answered.",
+      "items": [
+        {
+          "q": "When does a consignment need an e-way bill?",
+          "a": "It depends on the consignment value, whether the movement crosses a state border, and state-level rules that differ. We do not publish the figures because they change. Confirm the current position for your routes with your accountant."
+        },
+        {
+          "q": "Can the bill be raised from a delivery challan?",
+          "a": "Yes. Goods that move before a sale is complete, such as demo units or items going for repair, travel against a challan, and the e-way bill is generated from that document. See <a href=\"/aura-business/delivery-challan-software/\">delivery challan software</a>."
+        },
+        {
+          "q": "What does the driver actually carry?",
+          "a": "The document the consignment travels against, which is the tax invoice or the delivery challan, together with the e-way bill reference for that consignment. Both are produced from the same despatch record."
+        },
+        {
+          "q": "What if the vehicle changes on the way?",
+          "a": "The vehicle detail can be updated against the existing bill when the consignment is transhipped, so the documentation continues to match the vehicle actually carrying the goods."
+        },
+        {
+          "q": "Does it work for stock transfers between our own branches?",
+          "a": "Yes. A movement between your own locations is still a movement and is despatched on a documented transfer. See <a href=\"/aura-business/medical-equipment-warehouse-management/\">warehouse management</a>."
+        },
+        {
+          "q": "Is this connected to e-invoicing?",
+          "a": "They are separate requirements that share data. Where an invoice is registered, the same record is used to raise the bill, so nothing is entered twice. See <a href=\"/aura-business/e-invoice-software-distributors/\">e-invoice software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/e-invoice-software-distributors/",
+          "icon": "&#128290;",
+          "b": "E-invoice",
+          "p": "IRN and QR on the invoice."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128666;",
+          "b": "Delivery challan",
+          "p": "The other travelling document."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#128203;",
+          "b": "GST billing",
+          "p": "Place of supply and IGST."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127970;",
+          "b": "Warehouse management",
+          "p": "Transfers between locations."
+        },
+        {
+          "href": "/aura-business/software-for-medical-device-importers/",
+          "icon": "&#127981;",
+          "b": "Importers",
+          "p": "National despatch to dealers."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Order to despatch online."
+        }
+      ]
+    }
+  ]
+}

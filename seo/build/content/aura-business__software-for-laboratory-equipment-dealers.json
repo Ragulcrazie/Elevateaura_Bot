@@ -1,0 +1,354 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-laboratory-equipment-dealers",
+  "title": "Software for Laboratory Equipment Dealers | Aura Business",
+  "meta": "Software for laboratory equipment dealers selling to research and clinical labs: installation and training as a deliverable, AMC renewals and long-lead spares.",
+  "h1": "Software for laboratory equipment dealers, where the sale ends at <span class=\"hl\">training sign-off</span>.",
+  "crumb": "Laboratory Equipment Dealers",
+  "pill": "For dealers supplying research and clinical labs",
+  "sub": "Aura Business follows a lab instrument from the institutional enquiry through installation and application training to the annual contract that keeps it running, and keeps the long lead times on imported spares visible while a customer is waiting.",
+  "meta_ticks": [
+    "Installation and training tracked as deliverables",
+    "AMC renewals raised before cover lapses",
+    "Spare lead times visible to the service desk"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we sell laboratory instruments to research and clinical labs. I'd like to see how Aura Business handles installation, training and AMC.",
+  "primary_keyword": "software for laboratory equipment dealers",
+  "secondary_keywords": [
+    "lab instrument dealer software",
+    "scientific equipment distributor software India",
+    "laboratory equipment AMC software",
+    "research equipment supplier software",
+    "lab instrument installation tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or sales head of a dealership selling laboratory and scientific instruments to universities, research institutes and clinical laboratories",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a lab instrument dealer has to track after the order",
+      "paras": [
+        "Selling a laboratory instrument is not finished when the purchase order arrives. Somebody has to deliver it into a laboratory with the right bench, power and ventilation, install it, run it against a known sample, and train the people who will use it, often more than once as students and research staff change. Software for laboratory equipment dealers should treat installation and application training as deliverables with owners and dates, not as favours arranged over the phone after despatch.",
+        "The long tail is different from other medical trades. There is no monthly consumable that guarantees contact, so the annual maintenance contract and the spares business are the relationship. Aura Business keeps the instrument in an asset register per laboratory, raises the renewal before cover lapses, and shows the service desk the real procurement lead time on a spare that has to come from the principal, so the customer gets a date instead of a promise."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where deals and service slip",
+      "h2": "Long buying cycles, and a long wait for one part.",
+      "lead": "Institutional buyers move on their own calendar and their own paperwork. The service side then runs on parts that are weeks away.",
+      "items": [
+        {
+          "h": "Quotes rebuilt every year",
+          "p": "The same institute asks for a comparable quote each budget cycle and the old one cannot be found, so it is rebuilt from scratch."
+        },
+        {
+          "h": "Installation owned by nobody",
+          "p": "The instrument is delivered, then waits in a corridor because the bench, the power point or the engineer was never scheduled."
+        },
+        {
+          "h": "Training never closed out",
+          "p": "Application training is promised in the offer, delivered informally, and never signed off, so the customer claims it never happened."
+        },
+        {
+          "h": "Contracts lapse quietly",
+          "p": "Warranty ends, nobody offers a contract, and the first contact after that is a breakdown call with no cover in place."
+        },
+        {
+          "h": "Spare lead times unknown",
+          "p": "A part has to come from the principal and the service desk cannot say whether that is a fortnight or a quarter."
+        },
+        {
+          "h": "Instruments scattered and unlisted",
+          "p": "One university has your equipment in six departments and there is no single list of what you have supplied there."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "Enquiry, order, installation, training, contract.",
+      "steps": [
+        {
+          "h": "Enquire",
+          "p": "An institutional enquiry or tender document arrives and becomes an opportunity on the laboratory account with its contacts."
+        },
+        {
+          "h": "Quote",
+          "p": "A GST quotation is built from the catalogue with revisions kept as versions, so last year's offer is the base for this year's."
+        },
+        {
+          "h": "Order",
+          "p": "The purchase order becomes a sales order, and procurement raises a purchase order to the principal where the item is not in stock."
+        },
+        {
+          "h": "Install",
+          "p": "Delivery, site readiness and installation are raised as scheduled jobs with an engineer assigned and photo proof captured."
+        },
+        {
+          "h": "Train",
+          "p": "Application training is a job of its own, completed with the user's signature on the mobile job card."
+        },
+        {
+          "h": "Cover",
+          "p": "The serial enters the installed base with its warranty end date, and the renewal engine raises the contract offer before cover lapses."
+        },
+        {
+          "h": "Support",
+          "p": "Breakdown calls, spare requests with their lead times, and service history build on the same asset record."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for a capital sale with a long service life.",
+      "groups": [
+        {
+          "icon": "&#129513;",
+          "h": "Winning the order",
+          "items": [
+            "Leads and pipeline with institutional buying stages",
+            "GST quotation builder with saved versions",
+            "Tender tracker with document vault and deadline reminders",
+            "Rate-contract management for repeat institutional buyers",
+            "Sample and demo tracking for evaluation units"
+          ]
+        },
+        {
+          "icon": "&#128296;",
+          "h": "Installation and training",
+          "items": [
+            "Installation jobs scheduled with an engineer and a date",
+            "Mobile job card with photo proof and customer signature",
+            "Application training recorded as its own completed job",
+            "Asset register entry per laboratory and department"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Keeping it running",
+          "items": [
+            "Service contracts and comprehensive contracts",
+            "Warranty tracking with end dates",
+            "Preventive maintenance schedules and checklists",
+            "Contract renewal engine",
+            "Service history per serial number"
+          ]
+        },
+        {
+          "icon": "&#128666;",
+          "h": "Spares and supply",
+          "items": [
+            "Spare parts inventory with reorder levels",
+            "Purchase orders to the principal with expected dates",
+            "Goods receipt and supplier payables",
+            "Parts used per job, dropping stock automatically"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four situations a lab dealer meets every month.",
+      "items": [
+        {
+          "h": "Last year's quote becomes this year's",
+          "workflow": "The institute asks again at budget time; the saved quotation version is opened, updated for current prices and reissued the same day.",
+          "result": "A fast response while the budget is still open."
+        },
+        {
+          "h": "An instrument is not left in a corridor",
+          "workflow": "The sales order raises a site readiness check and an installation job, and the engineer confirms bench, power and ventilation before despatch is scheduled.",
+          "result": "The instrument is commissioned the week it arrives."
+        },
+        {
+          "h": "Training is evidenced",
+          "workflow": "The application training job is completed on the mobile app with the names trained and the user's signature captured.",
+          "result": "A record that settles the question a year later."
+        },
+        {
+          "h": "A customer gets a real date for a part",
+          "workflow": "The service desk sees the spare is not in stock, sees the supplier lead time on the purchase order, and tells the lab the expected week.",
+          "result": "An honest date instead of a weekly phone call."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers whose customers are laboratories.",
+      "items": [
+        {
+          "icon": "&#127979;",
+          "b": "University and institute suppliers",
+          "p": "Departmental buyers, tenders and budget cycles."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Clinical laboratory suppliers",
+          "p": "Instruments in pathology labs alongside the analysers."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Pharma and quality control lab suppliers",
+          "p": "Instruments where documented installation matters to the customer."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Scientific instrument importers",
+          "p": "Imported instruments with spares that have long lead times."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Dealers with their own service team",
+          "p": "Engineers covering a state, not a principal's national team."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, a generic CRM, or a dealer platform with service in it.",
+      "cols": [
+        "Spreadsheets and email",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Quote history",
+          "Files in folders",
+          "Attachments on a deal",
+          "Versioned quotations on the account"
+        ],
+        [
+          "Institutional tenders",
+          "A reminder in a diary",
+          "Not modelled",
+          "Tracker with documents and deadlines"
+        ],
+        [
+          "Installation",
+          "Arranged by phone",
+          "Deal marked closed",
+          "Scheduled job with proof and signature"
+        ],
+        [
+          "Training",
+          "Informal",
+          "Not covered",
+          "A completed job with names and signature"
+        ],
+        [
+          "Contract renewal",
+          "Remembered, sometimes",
+          "Not covered",
+          "Renewal engine on warranty and contract end dates"
+        ],
+        [
+          "Spare lead time",
+          "Asked by email",
+          "Not covered",
+          "Purchase order with expected date on the service call"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Laboratory equipment dealing, answered.",
+      "items": [
+        {
+          "q": "Can installation and training be tracked as separate deliverables?",
+          "a": "Yes. Each is raised as its own scheduled job against the sales order, assigned to an engineer or application specialist, and closed on the mobile job card with photos and the customer's signature. The order is only complete when both are closed."
+        },
+        {
+          "q": "How do we keep instruments organised when one institute has many departments?",
+          "a": "The asset register records each serial number with its department and location under the parent account, so a university with equipment in six departments has one account and six clear installation records."
+        },
+        {
+          "q": "Does it help with the annual contract offer after warranty?",
+          "a": "Yes. Warranty end dates sit on each asset and the contract renewal engine raises the offer before cover lapses, so the first contact after warranty is a proposal rather than a breakdown call. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>."
+        },
+        {
+          "q": "Can the service desk see how long a spare will take?",
+          "a": "When a part is not in stock, the purchase order to the supplier carries an expected date, and that date is visible on the service call. The customer gets a week rather than an open-ended wait."
+        },
+        {
+          "q": "Do you handle institutional tenders?",
+          "a": "Yes. The tender tracker holds the documents, EMD and deadline reminders, and records the outcome so win rates by product line are visible. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+        },
+        {
+          "q": "How is this different from your page for diagnostic equipment suppliers?",
+          "a": "A diagnostic supplier earns mainly from reagents flowing through a placed analyser. A laboratory equipment dealer usually earns from the instrument, then from contracts and spares, so the software emphasis moves from consumable pull-through to installation, renewals and procurement lead times."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/software-for-diagnostic-equipment-suppliers/",
+          "icon": "&#129514;",
+          "b": "Diagnostic equipment suppliers",
+          "p": "Analysers and reagent pull-through."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#9881;",
+          "b": "Spare parts inventory",
+          "p": "Stock, reorder and parts per job."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128197;",
+          "b": "Service contracts",
+          "p": "Contracts and renewals in one place."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Versions that survive a budget cycle."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tenders",
+          "p": "Institutional buying, tracked."
+        },
+        {
+          "href": "/resources/how-to-choose-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a CRM for this trade."
+        },
+        {
+          "href": "/aura-business/software-for-imaging-equipment-dealers/",
+          "icon": "&#129659;",
+          "b": "Imaging equipment dealers",
+          "p": "Long cycles and uptime obligations."
+        }
+      ]
+    }
+  ]
+}

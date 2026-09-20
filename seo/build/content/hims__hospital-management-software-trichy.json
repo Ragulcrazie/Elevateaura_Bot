@@ -1,0 +1,218 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-trichy",
+  "title": "Hospital Management Software in Trichy | Elevate Aura",
+  "meta": "Hospital management software for Trichy hospitals and nursing homes: OP and IP, EMR, pharmacy, lab, wards and TPA billing, set up on site by travel.",
+  "h1": "Hospital management software for Trichy, where the catchment reaches <span class=\"hl\">four districts out</span>.",
+  "crumb": "Trichy",
+  "pill": "Tiruchirappalli and central Tamil Nadu",
+  "sub": "HIMS runs OP and IP registration, EMR, pharmacy, laboratory, wards, theatre and billing with insurance and TPA claims for hospitals and nursing homes in Tiruchirappalli, with setup and counter training done in person by travel from Chennai.",
+  "demo_href": "/demo/hospital.html",
+  "meta_ticks": [
+    "Setup and training on site",
+    "Reached by road or rail from Chennai",
+    "WhatsApp support after go-live"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Trichy and would like to see HIMS.",
+  "primary_keyword": "hospital management software Trichy",
+  "secondary_keywords": [
+    "hospital software Trichy",
+    "HMS software Tiruchirappalli",
+    "nursing home software Trichy",
+    "hospital billing software Trichy",
+    "clinic software Tiruchirappalli"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital or nursing home in Tiruchirappalli",
+  "city": "Trichy",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Tiruchirappalli, configured on your own floor",
+      "paras": [
+        "HIMS is the hospital platform Elevate Aura builds in Chennai, and Trichy is close enough that the parts of a rollout which fail over a phone call are done at your hospital instead. The studio travels for the workflow study, for the decision about which modules go live first, and for the training of the staff at registration, pharmacy and billing.",
+        "Be clear about the rest. There is no Elevate Aura office, engineer or phone number in Trichy. After go-live the system is supported remotely and on WhatsApp by the person who built it, and a further visit is arranged only when something genuinely needs a person standing there."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Trichy context",
+      "h2": "A junction city whose hospitals serve a belt, not a town.",
+      "lead": "Tiruchirappalli sits at the centre of the state and at the centre of its rail network, and its hospitals carry the consequences of both.",
+      "body": [
+        "A hospital here is not treating one city. It is treating Thanjavur, Pudukkottai, Karur, Perambalur, Ariyalur and the villages between them, because Trichy is where the roads and the trains already go. A large part of the OP list arrives in the morning having travelled, and intends to be on the way home by evening. The same person may be back in three months, or not for three years, and will arrive with no file and a half-remembered account of what was done last time.",
+        "That makes the patient record, rather than the billing counter, the thing the hospital depends on. One UHID per person, the previous admission visible when they return, the discharge summary and the laboratory result retrievable from a name and a phone number. Where records live on paper in a district hospital's store room, the returning patient is effectively a new patient every time.",
+        {
+          "h3": "Referrals in, and reports out"
+        },
+        "Trichy hospitals also take referrals from smaller units across the belt, and the referring doctor usually never sees the patient again in person. The report has to reach him. With imaging on <a href=\"/aurapacs.html\">AuraPACS</a> inside the same record, the study and the signed report go out as a secure link over WhatsApp, with no login for the referrer, while the admission itself stays on the hospital's own record.",
+        {
+          "h3": "How a Trichy rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to walk the OP block, the wards, the pharmacy, the laboratory and the billing counter as they run today.",
+            "First-phase modules chosen from what you actually run, with the rest left for later.",
+            "Your existing patient, item and tariff data migrated in, and your branding on the screens and the bill.",
+            "Go-live training in person at each counter, on your own data, recorded for staff who join afterwards.",
+            "Live in 30 working days where scope allows, with WhatsApp and remote support taking over from there."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Trichy hospital tends to start with.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Front desk and OP",
+          "items": [
+            "OP registration on one UHID, reused on every return",
+            "Appointments, tokens and the queue display",
+            "Doctor rosters by department",
+            "WhatsApp appointment reminders"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Admission to discharge",
+          "items": [
+            "IP admission, ward and bed occupancy",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed",
+            "Discharge summary on the record"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Laboratory from order to verified result",
+            "Pharmacy dispensing queue with expiry alerts",
+            "AuraPACS imaging and WhatsApp report sharing"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and oversight",
+          "items": [
+            "Cash, insurance and TPA claim billing",
+            "GST on billable items",
+            "Consumables and equipment inventory",
+            "Live dashboard of OP, IP, beds and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Trichy situations the platform is built for.",
+      "items": [
+        {
+          "h": "A patient from Pudukkottai returning after two years",
+          "workflow": "The front desk finds the existing UHID from a name and a phone number, and the earlier admission, discharge summary and investigations open with it.",
+          "result": "A returning patient is not registered twice."
+        },
+        {
+          "h": "A referral from a smaller unit down the belt",
+          "workflow": "The study and the signed report leave as a secure WhatsApp link the referring doctor opens without a login, while the record stays with the hospital.",
+          "result": "The referrer is answered without a courier."
+        },
+        {
+          "h": "A day case that must finish before the last bus",
+          "workflow": "Token at registration, consultation on the record, lab and imaging ordered from one screen, results back on the same encounter, bill closed at one counter.",
+          "result": "One visit instead of a second journey."
+        },
+        {
+          "h": "A nursing home adding wards",
+          "workflow": "Registration, billing and pharmacy go live first, with beds, theatre and laboratory switched on once the team is comfortable.",
+          "result": "Nothing runs that nobody has been trained on."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Trichy, answered.",
+      "items": [
+        {
+          "q": "Will someone travel to Trichy for the setup?",
+          "a": "Yes. The workflow study and the go-live training are both done at your hospital. Elevate Aura is a founder-led studio in Chennai and Tiruchirappalli is reachable for a day or two on site by road or train. There is no local office and no local staff."
+        },
+        {
+          "q": "What does support look like once we are live?",
+          "a": "Remote, on WhatsApp, usually over a screen share, from the person who built the system. That is fast, and it is remote. Nobody walks into your hospital within the hour, because there is no team in Trichy."
+        },
+        {
+          "q": "We take patients from several districts. Does that change anything?",
+          "a": "It raises the value of registration discipline. One UHID per person means a patient returning after a long gap arrives with their earlier admissions, results and summaries attached, rather than being entered again as a new case."
+        },
+        {
+          "q": "Can referring doctors see the report?",
+          "a": "Imaging studies and signed reports can be shared as a secure link over WhatsApp, with no login needed by the referrer or the patient. The record itself stays inside the hospital system with role-based, audited access."
+        },
+        {
+          "q": "Do you work with nursing homes as well as larger hospitals?",
+          "a": "Yes. The platform scales down because modules are switched on selectively. See <a href=\"/hims/nursing-home-management-software/\">nursing home software</a> and <a href=\"/hims/small-hospital-software/\">small hospital software</a> for the lighter configurations."
+        },
+        {
+          "q": "How quickly can we be running?",
+          "a": "The framework is live in 30 working days where scope allows, and the scope is fixed before work starts. Migration of your data, your branding, the training visit and the first week of hand-holding all sit inside it."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128203;",
+          "b": "Hospital management system",
+          "p": "The platform, end to end."
+        },
+        {
+          "href": "/hims/hospital-management-software-madurai/",
+          "icon": "&#128205;",
+          "b": "Madurai",
+          "p": "The southern catchment."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospital software",
+          "p": "For a lighter setup."
+        },
+        {
+          "href": "/resources/hospital-software-implementation-checklist/",
+          "icon": "&#9989;",
+          "b": "Implementation checklist",
+          "p": "What to prepare before go-live."
+        }
+      ]
+    }
+  ]
+}

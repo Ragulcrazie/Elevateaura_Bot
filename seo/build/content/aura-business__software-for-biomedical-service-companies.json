@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-biomedical-service-companies",
+  "title": "Software for Biomedical Service Companies | Aura Business",
+  "meta": "Software for biomedical service companies: multi-brand contracts, engineer utilisation, spares sourced per job and service levels you can prove to a hospital.",
+  "h1": "Software for biomedical service companies with <span class=\"hl\">no sales arm to hide behind</span>.",
+  "crumb": "Biomedical Service Companies",
+  "pill": "For third-party multi-brand service firms",
+  "sub": "Aura Business fits a business whose entire product is service: contracts across a hospital's mixed fleet, engineers whose time is the cost base, spares sourced job by job, and an evidence trail that answers a hospital review without a week of preparation.",
+  "meta_ticks": [
+    "Contracts across brands you did not sell",
+    "Engineer time and utilisation on every job",
+    "PM compliance and uptime evidence on demand"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we are a third-party biomedical service company. I'd like to see how Aura Business handles multi-brand contracts and engineer utilisation.",
+  "primary_keyword": "software for biomedical service companies",
+  "secondary_keywords": [
+    "biomedical engineering service management software",
+    "third party medical equipment service software",
+    "multi-brand AMC management software India",
+    "hospital equipment maintenance service software",
+    "engineer utilisation tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or operations head of a third-party biomedical engineering firm maintaining hospital equipment across brands",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Service as the product, not as the tail of a sale",
+      "paras": [
+        "A biomedical service company has no equipment sales to subsidise its engineers. It maintains other people's machines: a hospital's ventilators from one manufacturer, monitors from another, sterilisers from a third, usually on a contract that covers a listed fleet rather than a single serial number. Software for this business has to run contracts across brands it did not supply, dispatch engineers efficiently enough to make the contract profitable, and get spares without a principal's warehouse behind it.",
+        "The other requirement is evidence. A hospital paying for maintenance eventually asks what it bought: which preventive visits were done, how fast breakdowns were attended, what was replaced and which instruments were calibrated and when. Aura Business keeps the fleet as an asset register per hospital, the preventive schedule per asset, every job card with photos and signatures, and the response and resolution times against the agreed service levels."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The third-party squeeze",
+      "h2": "You carry the promise without the manufacturer's resources.",
+      "lead": "Every structural advantage the original supplier has, the independent service firm has to create with organisation instead.",
+      "items": [
+        {
+          "h": "Fleet lists out of date",
+          "p": "The contract was signed against a schedule of equipment that has since moved wards, been replaced or been scrapped."
+        },
+        {
+          "h": "Preventive visits crowded out",
+          "p": "Breakdowns are urgent and planned visits are not, so the PM programme slips until the hospital asks for the record."
+        },
+        {
+          "h": "Engineer time unmeasured",
+          "p": "You know what the contracts pay. You do not know how many engineer days each one consumed."
+        },
+        {
+          "h": "Spares chased per job",
+          "p": "Parts come from several principals, agents and the open market, and each hunt happens in a chat window."
+        },
+        {
+          "h": "Nothing to show at review",
+          "p": "A quarterly review means someone spends two days assembling visit records from notebooks and messages."
+        },
+        {
+          "h": "Contract profitability unknown",
+          "p": "Renewals are priced from the last figure, so a loss-making contract renews at a loss again."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the contract schedule to the quarterly review.",
+      "steps": [
+        {
+          "h": "Load the fleet",
+          "p": "The equipment covered by the contract is entered as assets per hospital, ward and brand, with model and serial where available."
+        },
+        {
+          "h": "Define the promise",
+          "p": "The contract records what is covered, what is excluded, how many preventive visits are due and the response commitment."
+        },
+        {
+          "h": "Plan the year",
+          "p": "Preventive schedules are raised per asset with their checklists, including calibration where the instrument needs it."
+        },
+        {
+          "h": "Take the call",
+          "p": "Hospital staff raise a ticket or ring the desk, the call is logged, and an engineer with the right skill is dispatched."
+        },
+        {
+          "h": "Do the work",
+          "p": "The mobile job card records the fault, the time on site, the part fitted and the user's signature, offline if the ward has no signal."
+        },
+        {
+          "h": "Source the part",
+          "p": "A part not in stock becomes a purchase requirement on a supplier, with an expected date visible on the open job."
+        },
+        {
+          "h": "Prove it",
+          "p": "PM compliance, response times, breaches and parts consumed are reported per contract for the hospital review."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The service suites, without the sales weight.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Fleet and contracts",
+          "items": [
+            "Asset register per hospital, ward and brand",
+            "Annual and comprehensive contracts over a listed fleet",
+            "Multi-site contracts for one hospital group",
+            "SLA definitions and breach tracking",
+            "Contract renewal engine and revenue dashboard"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Planned work",
+          "items": [
+            "Preventive maintenance schedules per asset",
+            "Calibration and compliance checklists",
+            "Meter and usage-based schedules",
+            "Technician route and schedule planning"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Unplanned work",
+          "items": [
+            "Breakdown and service call intake",
+            "Ticketing with status workflow and SLA timers",
+            "Skill-based technician allocation and dispatch",
+            "Mobile job card with photo proof and offline mode",
+            "Service history per asset"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Running the firm",
+          "items": [
+            "Spare parts inventory and parts used per job",
+            "Purchase orders to multiple suppliers with expected dates",
+            "Service invoices and payment tracking",
+            "Contract profitability per hospital",
+            "Attendance, roster and field tracking for engineers",
+            "Customer portal for the hospital to raise and follow tickets"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things that decide whether a service contract pays.",
+      "items": [
+        {
+          "h": "The PM programme finishes the year",
+          "workflow": "Scheduled visits are raised per asset and shown against the contract, so the outstanding count is visible in month nine rather than month twelve.",
+          "result": "A completed programme instead of a rushed December."
+        },
+        {
+          "h": "An engineer's day is accounted for",
+          "workflow": "Jobs carry the engineer, the site, the time on the job card and the parts issued, so days are attributable to contracts.",
+          "result": "You can see which hospital consumes your capacity."
+        },
+        {
+          "h": "The hospital review takes an hour",
+          "workflow": "The contract report lists preventive visits completed, calls attended, response times against the agreement and parts replaced.",
+          "result": "A review prepared from the system, not from notebooks."
+        },
+        {
+          "h": "A renewal is priced honestly",
+          "workflow": "Contract profitability sets the invoiced value against the engineer days and parts consumed over the year.",
+          "result": "Either a corrected price or a contract you decline."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Firms that maintain equipment they did not sell.",
+      "items": [
+        {
+          "icon": "&#129302;",
+          "b": "Third-party biomedical firms",
+          "p": "Multi-brand contracts across a hospital's fleet."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "In-house biomedical departments",
+          "p": "A hospital's own team running the same workflows internally."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Specialist service companies",
+          "p": "One equipment family, many hospitals."
+        },
+        {
+          "icon": "&#128167;",
+          "b": "Calibration and testing firms",
+          "p": "Scheduled visits with checklists and certificates to file."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Facility service contractors",
+          "p": "Equipment maintenance as part of a wider site contract."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A spreadsheet, a generic helpdesk, or field service with contracts.",
+      "cols": [
+        "Spreadsheet and WhatsApp",
+        "Generic helpdesk tool",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Equipment covered",
+          "A schedule in the contract file",
+          "Not modelled",
+          "Asset register per hospital, ward and brand"
+        ],
+        [
+          "Preventive programme",
+          "A yearly plan nobody tracks",
+          "Recurring tickets",
+          "Schedules per asset with checklists and compliance view"
+        ],
+        [
+          "Response measurement",
+          "Reconstructed later",
+          "Ticket timers only",
+          "SLA definitions with breaches against the contract"
+        ],
+        [
+          "Field work",
+          "Phone and photos",
+          "A comment on a ticket",
+          "Mobile job card with parts, signature and offline mode"
+        ],
+        [
+          "Spares",
+          "Chased per job",
+          "Not covered",
+          "Stock, parts per job and purchase orders with dates"
+        ],
+        [
+          "Contract economics",
+          "Invoiced value only",
+          "Not covered",
+          "Profitability against engineer days and parts"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Third-party biomedical service, answered.",
+      "items": [
+        {
+          "q": "Can one contract cover equipment from several manufacturers?",
+          "a": "Yes. A contract covers a listed fleet of assets, and each asset carries its own brand, model, serial and location. Preventive schedules and checklists differ per asset, so one agreement can hold a mixed fleet without losing that detail."
+        },
+        {
+          "q": "How do we measure engineer utilisation?",
+          "a": "Every job records the engineer, the site, the time captured on the job card and the parts issued. That gives you jobs and days per engineer, and days consumed per contract, which is the number a service business runs on."
+        },
+        {
+          "q": "Can hospital staff log their own calls?",
+          "a": "Yes. The customer portal lets ward or biomedical staff raise a ticket and follow its status, which removes the phone tag and gives you a clean intake time for the response measurement."
+        },
+        {
+          "q": "What can we produce for a hospital review?",
+          "a": "Per contract: preventive visits due and completed, calls attended with response and resolution times, breaches against the agreed service levels, parts replaced and signed job cards with photographs."
+        },
+        {
+          "q": "How are calibration records kept?",
+          "a": "Calibration is scheduled as a preventive visit with its own checklist, completed on the job card and stored against the asset, so the history per instrument can be produced when the hospital's quality team asks for it."
+        },
+        {
+          "q": "We have no sales team. Do we need the CRM modules?",
+          "a": "Only the parts you want. Plans are priced by module tier with unlimited users, so a service-only firm can run the field service, contracts, ticketing, spares and finance suites and leave the sales modules switched off."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "The full service workflow."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Timers, breaches and evidence."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "The planned programme."
+        },
+        {
+          "href": "/aura-business/mobile-job-card-software/",
+          "icon": "&#128241;",
+          "b": "Mobile job card",
+          "p": "Proof from the ward."
+        },
+        {
+          "href": "/aura-business/hvac-amc-software/",
+          "icon": "&#10052;",
+          "b": "HVAC AMC",
+          "p": "The same model in another trade."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "SLAs explained plainly."
+        }
+      ]
+    }
+  ]
+}

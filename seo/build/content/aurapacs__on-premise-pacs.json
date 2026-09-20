@@ -2,7 +2,7 @@
   "cluster": "aurapacs",
   "slug": "on-premise-pacs",
   "title": "On-Premise PACS | Images on Your Own Machine | AuraPACS",
-  "meta": "On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.",
+  "meta": "On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet.",
   "h1": "On-premise PACS: your images on <span class=\"hl\">your own machine</span>, readable when the internet is not.",
   "crumb": "On-Premise PACS",
   "pill": "The local node",

@@ -339,6 +339,12 @@
           "icon": "&#9878;",
           "b": "Spreadsheets vs software",
           "p": "When Excel stops working."
+        },
+        {
+          "href": "/aura-business/medical-equipment-lead-management-software/",
+          "icon": "&#127919;",
+          "b": "Lead management",
+          "p": "Where the quote request starts."
         }
       ]
     }

@@ -1,0 +1,355 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-medical-consumables-distributors",
+  "title": "Software for Medical Consumables Distributors | Aura Business",
+  "meta": "Software for medical consumables distributors: batch and expiry control, repeat order cycles, accurate picking and the collections that thin margins depend on.",
+  "h1": "Software for medical consumables distributors, where <span class=\"hl\">margin is made in the detail</span>.",
+  "crumb": "Medical Consumables Distributors",
+  "pill": "For fast-moving medical supply businesses",
+  "sub": "Aura Business is built for volume distribution: every lot received with its expiry, repeat orders placed by the customer instead of dictated on the phone, picking scanned rather than remembered, and a receivables position you can read at nine in the morning.",
+  "meta_ticks": [
+    "Batch and expiry on every received lot",
+    "Repeat ordering through a B2B portal",
+    "Ageing and reminders on every account"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute medical consumables. I'd like to see how Aura Business handles expiry, repeat orders and collections.",
+  "primary_keyword": "software for medical consumables distributors",
+  "secondary_keywords": [
+    "medical consumables distribution software",
+    "surgical disposables distributor software India",
+    "expiry management software for distributors",
+    "B2B repeat order portal for medical supplies",
+    "medical supply stock and billing software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a distribution business supplying medical consumables and disposables to hospitals, clinics and retailers",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Where a consumables distributor actually makes or loses money",
+      "paras": [
+        "A consumables business turns its stock many times a year on a thin margin per line. Nothing dramatic decides the result. It is decided by whether expiry is managed before a lot becomes dead stock, whether the right item was picked and despatched, whether the order was captured without being typed twice, and whether the money came back inside the credit period. Software for medical consumables distributors has to be strong on exactly those four things and not much else.",
+        "Aura Business receives goods against a purchase order with batch numbers and expiry dates, holds stock by lot across warehouses, lets customers repeat their own orders on a portal, raises GST invoices with delivery challans and e-way bills at volume, and shows receivables ageing account by account with WhatsApp reminders behind it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The daily leak",
+      "h2": "Nothing here is a crisis. All of it is the margin.",
+      "lead": "High volume hides small errors, and small errors at high volume are the difference between a good year and a flat one.",
+      "items": [
+        {
+          "h": "Expiry noticed too late",
+          "p": "A lot passes its date on the shelf while newer stock is sold in front of it, and the loss is discovered at stocktake."
+        },
+        {
+          "h": "Physical stock and record disagree",
+          "p": "Orders are promised on a figure in a sheet that nobody has reconciled to the shelf for weeks."
+        },
+        {
+          "h": "The same order typed twice",
+          "p": "The customer sends a list, someone types it into a sheet, and someone else types it into an invoice."
+        },
+        {
+          "h": "Wrong size or variant despatched",
+          "p": "Similar items in different sizes are picked by eye, and the return costs more than the line earned."
+        },
+        {
+          "h": "Credit period quietly stretched",
+          "p": "A hospital pays a fortnight late every month and nothing in the process registers it."
+        },
+        {
+          "h": "No read on which lines pay",
+          "p": "Volume is visible, margin by product line is not, so low-yield lines are pushed as hard as good ones."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "Goods in, goods out, money in.",
+      "steps": [
+        {
+          "h": "Purchase",
+          "p": "A purchase order goes to the supplier against their price list, with the approval step you choose."
+        },
+        {
+          "h": "Receive by lot",
+          "p": "Goods receipt records batch numbers and expiry dates, and stock lands in the right warehouse location."
+        },
+        {
+          "h": "Order",
+          "p": "Customers repeat their own orders on the B2B portal, or reps raise them on the mobile app during visits."
+        },
+        {
+          "h": "Pick and despatch",
+          "p": "Items are scanned against the order, the oldest suitable lot is picked, and the challan and invoice are raised together."
+        },
+        {
+          "h": "Move",
+          "p": "E-way bills and e-invoice IRN and QR are generated where required, and the customer follows the order on a tracking page."
+        },
+        {
+          "h": "Collect",
+          "p": "Payments are recorded against invoices, reminders go out on WhatsApp, and ageing shows who is drifting."
+        },
+        {
+          "h": "Review",
+          "p": "Near-expiry alerts, stock ledger and margin by product line drive the next purchase decision."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules that suit fast stock and slim margins.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Lot control",
+          "items": [
+            "Batch and expiry tracking from goods receipt onward",
+            "Alerts on lots approaching their date",
+            "Oldest suitable lot picked at despatch",
+            "Credit notes and returns for short-dated stock",
+            "Stock movements and ledger per item and lot"
+          ]
+        },
+        {
+          "icon": "&#127978;",
+          "h": "Stock accuracy",
+          "items": [
+            "Multi-warehouse with locations and transfers",
+            "Barcode and QR scanning at receipt and picking",
+            "Low-stock and reorder alerts by line",
+            "Product catalogue and quick lookup across variants"
+          ]
+        },
+        {
+          "icon": "&#128722;",
+          "h": "Order capture",
+          "items": [
+            "Distributor and B2B order portal for repeat buyers",
+            "Customer self-service portal for hospitals and clinics",
+            "Orders raised by reps on the mobile app",
+            "Order tracking page for every despatch",
+            "Quote-request inbound from your website"
+          ]
+        },
+        {
+          "icon": "&#128181;",
+          "h": "Billing and cash",
+          "items": [
+            "GST tax invoices with gapless numbering at volume",
+            "Delivery challan, e-way bill, e-invoice IRN and QR",
+            "Payment tracker with automated reminders",
+            "Receivables ageing per account",
+            "GST returns preparation and accounting export"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four small wins that add up to the year.",
+      "items": [
+        {
+          "h": "A near-expiry lot is sold, not scrapped",
+          "workflow": "The alert lists lots approaching their date, and the sales team is given those lines to place with high-turnover customers first.",
+          "result": "Stock converted to cash instead of written off."
+        },
+        {
+          "h": "The order arrives already typed",
+          "workflow": "A hospital store repeats last month's list on the portal, and the office picks and despatches without re-keying anything.",
+          "result": "Fewer errors and a shorter order-to-despatch time."
+        },
+        {
+          "h": "The right variant leaves the building",
+          "workflow": "Picking is scanned against the order line, so a similar item in the wrong size is rejected before it is packed.",
+          "result": "Returns fall, and so does the freight spent on them."
+        },
+        {
+          "h": "A slow payer is seen in week one",
+          "workflow": "Ageing shows the account drifting past its terms, and a reminder with the invoice reference goes out automatically.",
+          "result": "The credit conversation happens early and politely."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses that move volume rather than machines.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Surgical disposables distributors",
+          "p": "Gloves, drapes, sutures and theatre disposables."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Hospital supply distributors",
+          "p": "Standing supply against a hospital store's monthly indent."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Clinic and nursing home suppliers",
+          "p": "Many small accounts with regular small orders."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "Regional stockists",
+          "p": "Buying from a national principal and supplying retailers onward."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Lab consumable suppliers",
+          "p": "Plastics and disposables with lot numbers that matter."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, accounting software, or distribution software.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Expiry",
+          "Read off cartons",
+          "Not held",
+          "Lot dates with alerts and picking order"
+        ],
+        [
+          "Stock accuracy",
+          "Reconciled occasionally",
+          "Value, not location",
+          "Scanned movements by warehouse and lot"
+        ],
+        [
+          "Order capture",
+          "Chat and re-keying",
+          "Typed into the invoice",
+          "Portal order that becomes the despatch"
+        ],
+        [
+          "Picking",
+          "By eye",
+          "Not covered",
+          "Scanned against the order line"
+        ],
+        [
+          "Collections",
+          "An outstanding list",
+          "Ledger balances",
+          "Ageing with automated reminders"
+        ],
+        [
+          "Line profitability",
+          "Not visible",
+          "Overall only",
+          "Margin by product line and territory"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Consumables distribution, answered.",
+      "items": [
+        {
+          "q": "Does the system stop us selling expired stock?",
+          "a": "Stock is held by lot with its expiry date, alerts surface lots approaching that date, and despatch picks the oldest suitable lot. What the system gives you is visibility and a default; the picking discipline is still yours."
+        },
+        {
+          "q": "Can hospital stores place their own indents?",
+          "a": "Yes. A hospital or clinic uses the customer self-service portal to repeat a previous order at its agreed prices, and larger buyers or sub-distributors use the B2B order portal. Both feed straight into despatch without re-keying."
+        },
+        {
+          "q": "How many invoices a day can it handle?",
+          "a": "Invoicing is designed for volume, with gapless numbering, challans and e-way bills raised from the same order and e-invoice IRN and QR where you are required to generate them. See <a href=\"/aura-business/e-invoice-software-distributors/\">e-invoice software</a>."
+        },
+        {
+          "q": "Can we see which product lines actually earn?",
+          "a": "Yes. Profit and loss by product line and territory separates volume from contribution, so a high-turnover line with almost no margin is visible next to a slower line that pays better."
+        },
+        {
+          "q": "How do returns of short-dated stock to the supplier work?",
+          "a": "The return is recorded against the goods receipt and lot, a credit note or debit adjustment is raised, and stock leaves the warehouse with the movement on the ledger, so the supplier claim can be evidenced."
+        },
+        {
+          "q": "Do we need the service and AMC modules?",
+          "a": "Usually not. A pure consumables business rarely runs engineers or contracts, so the service suite can stay switched off. Plans are priced by module tier with unlimited users, so you take the modules you use."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry",
+          "p": "Lot control in detail."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Locations, picking and transfers."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128181;",
+          "b": "Receivables ageing",
+          "p": "Where the margin is protected."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128667;",
+          "b": "E-way bill",
+          "p": "Movement paperwork at volume."
+        },
+        {
+          "href": "/aura-business/software-for-surgical-instrument-distributors/",
+          "icon": "&#129721;",
+          "b": "Surgical distribution",
+          "p": "Sets, loans and traceability."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When volume breaks the sheet."
+        },
+        {
+          "href": "/aura-business/software-for-dental-equipment-dealers/",
+          "icon": "&#129463;",
+          "b": "Dental equipment dealers",
+          "p": "Many small practices, repeat orders."
+        }
+      ]
+    }
+  ]
+}

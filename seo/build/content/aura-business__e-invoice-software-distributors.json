@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "e-invoice-software-distributors",
+  "title": "E-Invoice Software for Distributors with IRN and QR | Aura",
+  "meta": "E-invoice software for distributors: what the IRN and QR code mean, how e-invoicing sits inside ordinary GST invoicing, and when it applies to you.",
+  "h1": "E-invoice software that adds the <span class=\"hl\">IRN and QR code</span> to the invoice you already raise.",
+  "crumb": "E-Invoice Software",
+  "pill": "For distributors moving to e-invoicing",
+  "sub": "Aura Business generates the e-invoice for a tax invoice you raise in the normal way, prints the IRN and QR code on the PDF, and keeps the e-invoice, the e-way bill and the accounting export in one place instead of three portals.",
+  "meta_ticks": [
+    "IRN and QR printed on the invoice",
+    "Part of ordinary invoicing, not a separate step",
+    "Sits beside e-way bill and returns prep"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business invoice preview showing an e-invoice reference number and QR code printed on a GST tax invoice",
+    "bar": "app.elevateaura.co.in/billing/e-invoice"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss e-invoice software for our distribution business.",
+  "primary_keyword": "e-invoice software for distributors",
+  "secondary_keywords": [
+    "e-invoicing software India",
+    "IRN generation software",
+    "QR code invoice software GST",
+    "e-invoice for medical equipment distributors",
+    "GST e-invoice integration software"
+  ],
+  "intent": "commercial",
+  "persona": "Accounts head at a distributor whose business has come under e-invoicing",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What e-invoicing means for a distributor",
+      "paras": [
+        "E-invoicing does not mean sending an invoice by email. It means that the invoice you raise is reported to the government's invoice registration system, which returns an Invoice Reference Number, known as the IRN, and a QR code. Those are then printed on the invoice you give the customer. The invoice is still your invoice; it now carries a registration that anyone can verify.",
+        "Whether your business has to do this depends on rules that apply from a turnover threshold and that have changed more than once. We do not publish the figure, because the only useful answer is the current one for your business. Confirm with your accountant whether e-invoicing applies to you and from when. What Aura Business provides is the E-Invoice module in the Quotation, Orders and GST Billing suite, so that when it does apply, it is part of raising an invoice rather than a second job in another window."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where e-invoicing hurts",
+      "h2": "The pain is rarely the rule. It is the second data entry.",
+      "lead": "Most distributors who struggle with e-invoicing are not confused about the requirement. They are re-keying the same invoice into a portal and hoping the two copies match.",
+      "items": [
+        {
+          "h": "Invoice typed twice",
+          "p": "Once in your billing system and again into a portal, with every chance of a difference between them."
+        },
+        {
+          "h": "IRN not on the printed copy",
+          "p": "The registration is obtained but the invoice given to the customer does not carry the IRN or QR code."
+        },
+        {
+          "h": "Rejections nobody understands",
+          "p": "A registration fails on a formatting or master-data issue and the despatch waits while somebody investigates."
+        },
+        {
+          "h": "Cancellations handled badly",
+          "p": "A registered invoice is deleted in the billing system, leaving the two records disagreeing."
+        },
+        {
+          "h": "E-way bill raised separately",
+          "p": "The same consignment is entered again for the e-way bill with different details."
+        },
+        {
+          "h": "Return data does not tie up",
+          "p": "The accountant reconciles registered invoices against your books by hand every month."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it fits the invoice",
+      "h2": "Where e-invoicing sits in normal billing.",
+      "steps": [
+        {
+          "h": "Masters set up",
+          "p": "Your GSTIN, customer GSTINs and HSN codes are correct in the catalogue and customer master."
+        },
+        {
+          "h": "Invoice raised",
+          "p": "A tax invoice is created from the sales order, with gapless numbering as usual."
+        },
+        {
+          "h": "Registered",
+          "p": "The invoice is submitted for registration and the IRN and QR code come back."
+        },
+        {
+          "h": "Printed",
+          "p": "The IRN and QR code appear on the invoice PDF the customer receives."
+        },
+        {
+          "h": "E-way bill",
+          "p": "Where the goods are moving, the e-way bill is raised from the same record."
+        },
+        {
+          "h": "Cancelled properly",
+          "p": "A withdrawn invoice is cancelled within the rules rather than deleted, and a credit note is used afterwards."
+        },
+        {
+          "h": "Reported",
+          "p": "Registered invoices feed GSTR-1 prep and the Tally or accounting export."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The e-invoice module and what surrounds it.",
+      "groups": [
+        {
+          "icon": "&#128290;",
+          "h": "The e-invoice",
+          "items": [
+            "E-Invoice with IRN and QR",
+            "IRN and QR printed on the invoice PDF",
+            "Registration status visible on each invoice",
+            "Cancellation handled as cancellation"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Getting the data right",
+          "items": [
+            "HSN and tax rate held on the catalogue",
+            "Customer GSTIN on the account master",
+            "Place of supply from the ship-to address",
+            "Gapless invoice numbering per year"
+          ]
+        },
+        {
+          "icon": "&#128666;",
+          "h": "Alongside it",
+          "items": [
+            "E-way bill from the same invoice",
+            "Delivery challan for goods moving first",
+            "Credit notes and returns",
+            "Proforma before the tax invoice"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Afterwards",
+          "items": [
+            "GST returns prep (GSTR-1 and 3B)",
+            "Tally and accounting export",
+            "Receivables ageing on the same invoices",
+            "Audit log of every invoice action"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four billing moments under e-invoicing.",
+      "items": [
+        {
+          "h": "The invoice leaves complete",
+          "workflow": "A hospital sale is invoiced from the sales order, registered, and printed with the IRN and QR already on it.",
+          "result": "One document, one entry, nothing re-keyed."
+        },
+        {
+          "h": "A master-data error is found before despatch",
+          "workflow": "A registration fails because a customer GSTIN is wrong; the invoice is flagged and the master is corrected.",
+          "result": "The problem is fixed at the desk, not at the check post."
+        },
+        {
+          "h": "A wrong invoice is withdrawn cleanly",
+          "workflow": "A registered invoice that should not have been raised is cancelled properly, and a credit note is issued where cancellation is no longer available.",
+          "result": "The two records agree at month end."
+        },
+        {
+          "h": "The month reconciles itself",
+          "workflow": "Registered invoices, credit notes and challans feed the GSTR-1 data and the accounting export together.",
+          "result": "Your accountant files from your data."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "B2B sellers whose invoices are registered.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Capital sales with high invoice values to institutions."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagent dealers",
+          "p": "High invoice counts where registration cannot be manual."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Interstate billing to dealers across the country."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "Service and contract invoices registered like any other."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "The same requirement with different goods."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A portal, an accounting package, or e-invoicing inside operations.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the invoice starts",
+          "Typed fresh",
+          "Typed fresh",
+          "From the sales order or closed job"
+        ],
+        [
+          "Getting the IRN",
+          "Typed into a portal",
+          "Usually built in",
+          "From the invoice record itself"
+        ],
+        [
+          "IRN and QR on the PDF",
+          "Pasted or missing",
+          "Yes",
+          "Printed on your branded invoice"
+        ],
+        [
+          "E-way bill from the same data",
+          "Entered again",
+          "Sometimes",
+          "Raised from the invoice or challan"
+        ],
+        [
+          "Cancellation handling",
+          "Invoice deleted",
+          "Varies",
+          "Cancelled in series, credit note after"
+        ],
+        [
+          "What else uses the invoice",
+          "Nothing",
+          "The books",
+          "Ageing, reminders, contracts and service"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "E-invoicing for distributors, answered.",
+      "items": [
+        {
+          "q": "What is the IRN?",
+          "a": "The Invoice Reference Number is the identifier returned when an invoice is registered with the government's invoice registration system. It comes back with a QR code, and both are printed on the invoice you give the customer."
+        },
+        {
+          "q": "Does e-invoicing apply to our business?",
+          "a": "It applies from a turnover threshold that has changed over time. We do not publish the figure because only the current rule for your turnover matters. Confirm with your accountant whether you are covered and from which date."
+        },
+        {
+          "q": "Is the e-invoice a different invoice?",
+          "a": "No. It is the same tax invoice, registered. You raise it in the normal way from the order, and the registration adds the IRN and QR code to it. Numbering, GST calculation and the PDF are unchanged."
+        },
+        {
+          "q": "What happens if registration fails?",
+          "a": "The invoice is flagged with the reason, which is usually a master-data issue such as a GSTIN or an HSN code. It is corrected and resubmitted, and the despatch is held rather than going out with an unregistered document."
+        },
+        {
+          "q": "Can a registered invoice be cancelled?",
+          "a": "Cancellation is possible within the window the system allows; after that a credit note is the correct route. The platform keeps the invoice in the series either way. Ask your accountant which applies in your case."
+        },
+        {
+          "q": "Does it also do the e-way bill?",
+          "a": "Yes, from the same record, so the consignment details are not entered twice. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a> and <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#128203;",
+          "b": "GST billing",
+          "p": "HSN, tax split and returns prep."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128739;",
+          "b": "E-way bill",
+          "p": "Documents for the consignment."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128666;",
+          "b": "Delivery challan",
+          "p": "Goods moving before the invoice."
+        },
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "The full billing suite."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128202;",
+          "b": "Receivables ageing",
+          "p": "After the invoice goes out."
+        },
+        {
+          "href": "/resources/what-is-e-invoice-irn/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an IRN actually is."
+        }
+      ]
+    }
+  ]
+}

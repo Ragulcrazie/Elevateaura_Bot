@@ -1,0 +1,209 @@
+{
+  "cluster": "resources",
+  "slug": "emr-vs-ehr",
+  "title": "EMR vs EHR Explained for Indian Hospitals | Elevate Aura",
+  "meta": "EMR vs EHR in plain words: one record inside your hospital, one that follows the patient between them, and where ABDM and ABHA fit for Indian hospitals.",
+  "h1": "EMR vs EHR: one record inside your hospital, one that <span class=\"hl\">follows the patient out of it</span>.",
+  "crumb": "EMR vs EHR",
+  "pill": "Guide",
+  "sub": "An EMR is the clinical record your hospital keeps about a patient. An EHR is a record that travels with the patient across the places that treat them. This guide explains the difference and what an Indian hospital actually needs to buy.",
+  "meta_ticks": [
+    "Written for Indian hospitals",
+    "No jargon without an explanation",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See hospital EMR software",
+  "cta_href": "/hims/hospital-emr-software/",
+  "whatsapp_text": "Hi, I read the EMR vs EHR guide and want to ask about records for our hospital.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "EMR vs EHR",
+  "secondary_keywords": [
+    "difference between EMR and EHR",
+    "EMR meaning hospital",
+    "EHR meaning",
+    "electronic medical record India",
+    "ABDM EHR India"
+  ],
+  "intent": "informational",
+  "persona": "Hospital or clinic owner deciding what kind of electronic record to buy",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "The difference in two paragraphs",
+      "paras": [
+        "An EMR, or electronic medical record, is the clinical record one provider keeps about a patient: history, examination, diagnosis, orders, progress notes, prescriptions and reports, held inside that hospital or clinic. It replaces the paper case sheet and it belongs to the institution that wrote it.",
+        "An EHR, or electronic health record, is the wider idea: a record that follows the patient across every provider who treats them, so a hospital can see what a different clinic did last year. The distinction is not the software's features. It is whether the record stops at your boundary or crosses it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Where the confusion comes from",
+      "h2": "Why the two words are used interchangeably",
+      "lead": "Most products sold as EHRs are EMRs with a sharing feature, and most buyers do not need to care until the day they need a record from somewhere else.",
+      "body": [
+        "The terms were separated in American policy language, where EHR implied interoperability with other providers and EMR did not. Indian vendors inherited the vocabulary without the distinction, so the two words now appear on the same brochure. A useful test cuts through it: ask who else can read this record, under what consent, and by what standard. If the answer is only staff inside this hospital, it is an EMR, whatever the brochure says.",
+        {
+          "h3": "What an EMR gives you"
+        },
+        "Legibility, retrieval and continuity inside the building. The consultant sees the last visit, the ward nurse sees what the OP doctor ordered, the pharmacy dispenses against the prescription rather than a handwritten slip, and the bill is drawn from what was actually done. That alone removes most of the daily damage caused by paper.",
+        {
+          "h3": "What an EHR adds"
+        },
+        "Continuity outside the building: the discharge summary from another hospital, the scan done at a diagnostic centre two streets away, the prescription written by a clinic in another district. That requires identity, consent and a shared standard, which is why it is a national infrastructure question rather than a software feature you can simply switch on."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Side by side",
+      "h2": "EMR, EHR and the hospital system around them",
+      "body": [
+        "It also helps to separate both from the system that runs the hospital, because that is a third thing and the one most buyers actually shop for.",
+        {
+          "table": {
+            "headers": [
+              "",
+              "EMR",
+              "EHR",
+              "Hospital system (HIMS)"
+            ],
+            "rows": [
+              [
+                "Scope",
+                "Clinical record inside one provider",
+                "Health record across providers",
+                "Registration, EMR, pharmacy, lab, beds, billing, claims"
+              ],
+              [
+                "Who writes to it",
+                "Your doctors and nurses",
+                "Every provider the patient visits",
+                "Every counter in your hospital"
+              ],
+              [
+                "Who owns it",
+                "The hospital that created it",
+                "Shared, with the patient consenting to access",
+                "The hospital"
+              ],
+              [
+                "What it needs",
+                "Structured forms and one patient ID",
+                "Identity, consent and a common standard",
+                "Configured departments, tariffs and roles"
+              ],
+              [
+                "Main benefit",
+                "Nothing is lost between visits or counters",
+                "Nothing is repeated between institutions",
+                "The whole hospital runs off one record"
+              ],
+              [
+                "Main limitation",
+                "Stops at your boundary",
+                "Depends on others joining and on consent",
+                "Not an accounting or payroll system"
+              ]
+            ]
+          }
+        },
+        "Read <a href=\"/resources/what-is-hims/\">what is HIMS</a> for the third column in full, and <a href=\"/compare/hims-vs-emr/\">HIMS vs EMR</a> if you are deciding whether a clinical record alone is enough."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Indian picture",
+      "h2": "Where ABDM and ABHA fit",
+      "body": [
+        "India's answer to the EHR question is the Ayushman Bharat Digital Mission. ABDM does not ask hospitals to hand their records to a central database. It defines an identity for the patient, the ABHA number, and a consent-based way for records held by different providers to be discovered and shared when the patient allows it. The record stays where it was written; what moves is a pointer and a permission.",
+        {
+          "ul": [
+            "<b>ABHA number.</b> The patient's health identifier, used to link records held in different places to one person.",
+            "<b>Consent.</b> Sharing is patient-led and time-bound rather than open access between institutions.",
+            "<b>Records stay with the provider.</b> Your hospital keeps what it wrote; it is made discoverable, not surrendered.",
+            "<b>Structure matters.</b> A record kept as scanned images cannot be shared usefully. Structured fields can."
+          ]
+        },
+        "What a hospital should ask a vendor is narrow and answerable: can you link an ABHA number to our patient record, is our documentation structured rather than free text, and what is your path as the standards develop. In HIMS the record is structured, supports NABH-style documentation and is ABHA and ABDM ready. That is a statement about the software, not a certification of your hospital; accreditation and registration remain your process, and you should confirm your obligations with your own advisers.",
+        "Practically, the order of work is the same for almost every hospital. Get a structured EMR running on one patient identifier first, because an EHR built on duplicate records and scanned paper shares confusion rather than care. See <a href=\"/hims/hospital-emr-software/\">hospital EMR software</a> and <a href=\"/hims/abha-abdm-ready-hospital-software/\">ABHA and ABDM ready software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "EMR and EHR, answered",
+      "items": [
+        {
+          "q": "What is the difference between EMR and EHR?",
+          "a": "An EMR is the clinical record a single hospital or clinic keeps about a patient. An EHR is a record that follows the patient across providers. The difference is reach and sharing, not the quality of the notes inside."
+        },
+        {
+          "q": "Which does a small hospital or clinic need?",
+          "a": "A structured EMR on one patient identifier, inside a system that also handles registration, pharmacy, laboratory and billing. Cross-provider sharing becomes useful afterwards, and it is much easier to add once your own record is clean."
+        },
+        {
+          "q": "Is an EMR the same as a hospital management system?",
+          "a": "No. The EMR is the clinical half. A hospital management system adds registration, appointments, pharmacy, laboratory, beds, theatre, billing and claims around it. Buying an EMR alone leaves the counters running on paper."
+        },
+        {
+          "q": "Does ABDM make my hospital an EHR?",
+          "a": "ABDM provides the identity and consent layer that lets records held by different providers be shared with the patient's permission. Your hospital still keeps its own record. Being ABDM ready means the software can participate, not that your records have been centralised."
+        },
+        {
+          "q": "Do scanned documents count as an electronic record?",
+          "a": "They are better than a lost file and worse than structured data. A scan cannot be searched, charted or shared field by field. Structured entry is what lets a nurse see today's orders and lets a record be exchanged meaningfully later."
+        },
+        {
+          "q": "Who owns the patient record?",
+          "a": "In practice the provider that created it holds it, while the patient has rights over their health information and over consent to share it. The specifics depend on current regulation and your own contracts, so confirm the position with your advisers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128221;",
+          "b": "Hospital EMR software",
+          "p": "The clinical record in HIMS."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "What is HIMS",
+          "p": "The system around the record."
+        },
+        {
+          "href": "/compare/hims-vs-emr/",
+          "icon": "&#9878;",
+          "b": "HIMS vs EMR",
+          "p": "When a record alone is enough."
+        },
+        {
+          "href": "/hims/abha-abdm-ready-hospital-software/",
+          "icon": "&#127470;",
+          "b": "ABHA and ABDM ready",
+          "p": "What the phrase should mean."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#127380;",
+          "b": "What is UHID",
+          "p": "The identifier underneath it all."
+        },
+        {
+          "href": "/hims/e-prescription-software/",
+          "icon": "&#128138;",
+          "b": "E-prescription",
+          "p": "From the note to the counter."
+        }
+      ]
+    }
+  ]
+}

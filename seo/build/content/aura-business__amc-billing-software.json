@@ -1,0 +1,353 @@
+{
+  "cluster": "aura-business",
+  "slug": "amc-billing-software",
+  "title": "AMC Billing Software for Equipment Dealers | Aura Business",
+  "meta": "AMC billing software that invoices the contract itself: scheduled contract billing, part-period and renewal invoices, and GST service invoices outside cover.",
+  "h1": "AMC billing software that turns a signed contract into an <span class=\"hl\">invoice schedule</span>.",
+  "crumb": "AMC Billing Software",
+  "pill": "For dealers who bill contracts, not just goods",
+  "sub": "Aura Business bills the AMC itself. The contract value is split into the instalments you agreed, invoices are raised on their due dates with GST, part periods and renewals are handled, and work outside cover becomes a separate service invoice.",
+  "meta_ticks": [
+    "Contract value billed on a schedule",
+    "Part-period and renewal invoicing",
+    "Separate invoices for work outside cover"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing an annual maintenance contract invoice with contract period, instalment and GST breakup",
+    "bar": "app.elevateaura.co.in/billing"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss AMC billing software for our service contracts.",
+  "primary_keyword": "AMC billing software",
+  "secondary_keywords": [
+    "annual maintenance contract billing software",
+    "AMC invoice software India",
+    "CMC billing software",
+    "service contract invoicing software",
+    "GST AMC invoice software"
+  ],
+  "intent": "commercial",
+  "persona": "Accounts or service head of an equipment dealer that sells annual maintenance contracts",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What AMC billing software actually bills",
+      "paras": [
+        "AMC billing software invoices the contract, not the visit. You agree a contract value and a term, the software splits that value into the instalments you sell on (annual, half-yearly, quarterly or monthly), and raises a GST tax invoice on each due date against the customer and the assets the contract covers.",
+        "That is a different job from service billing. A visit made under an active AMC or CMC produces no invoice, because it is already paid for. A visit outside the cover, or a part not included in the contract, produces a service invoice of its own. Aura Business keeps both in the same GST-native billing suite, so the contract instalment, the out-of-cover service invoice and the spares on it all reach your accountant together."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where contract billing leaks",
+      "h2": "Contract revenue is the easiest revenue to forget to invoice.",
+      "lead": "Product sales invoice themselves because goods have to move. A contract instalment has nothing physical attached to it, so nobody notices when it is not raised.",
+      "items": [
+        {
+          "h": "The second instalment never goes out",
+          "p": "A quarterly AMC is invoiced once at signing and then forgotten until the customer asks why they have not been billed."
+        },
+        {
+          "h": "Mid-term contracts billed for a full year",
+          "p": "A contract that starts in the middle of a period is either overbilled or written down, because nobody works out the part period."
+        },
+        {
+          "h": "Free work under an expired contract",
+          "p": "The cover lapsed in March, the engineer went in April, and no service invoice was raised because nobody checked."
+        },
+        {
+          "h": "Added assets not billed",
+          "p": "Two more monitors go under an existing contract during the year and the contract value on the invoice never changes."
+        },
+        {
+          "h": "Renewal invoiced at the old rate",
+          "p": "The renewal is raised by copying last year's invoice, so the escalation you agreed is quietly dropped."
+        },
+        {
+          "h": "No link between invoice and cover",
+          "p": "The accountant cannot tell which invoice paid for which contract period, and disputes take days to settle."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a contract gets billed",
+      "h2": "From signature to the last instalment.",
+      "steps": [
+        {
+          "h": "Contract saved",
+          "p": "AMC or CMC recorded with value, term, covered assets and billing frequency."
+        },
+        {
+          "h": "Schedule built",
+          "p": "The contract value splits into dated instalments for the whole term."
+        },
+        {
+          "h": "Part period settled",
+          "p": "A mid-period start is billed pro rata for the first instalment only."
+        },
+        {
+          "h": "Invoice raised",
+          "p": "GST tax invoice on the due date, with the contract period printed on it."
+        },
+        {
+          "h": "Payment tracked",
+          "p": "Receipt applied to the instalment, reminders sent on WhatsApp until it clears."
+        },
+        {
+          "h": "Out-of-cover billed",
+          "p": "Jobs on uncovered assets or excluded spares become separate service invoices."
+        },
+        {
+          "h": "Renewal invoiced",
+          "p": "The renewal engine opens the next term at the revised value, not the old one."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The billing side of the AMC and Service Contracts suite.",
+      "groups": [
+        {
+          "icon": "&#128220;",
+          "h": "Contract billing",
+          "items": [
+            "Service Contracts (AMC) and CMC Contracts",
+            "Billing schedule per contract term",
+            "Billing schedule set to the contract terms",
+            "Contract Renewal Engine",
+            "Multi-site contracts billed to one customer"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "The invoice",
+          "items": [
+            "GST tax invoice with gapless numbering",
+            "Contract period and covered assets on the PDF",
+            "CGST, SGST or IGST by place of supply",
+            "Proforma before the instalment falls due",
+            "Credit notes for cancelled cover"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Outside the cover",
+          "items": [
+            "Service Invoices from closed jobs",
+            "Spares used per job priced on the invoice",
+            "Warranty Tracking so in-warranty work is not billed",
+            "Asset register showing what is covered"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money and evidence",
+          "items": [
+            "Payments and receipts against each instalment",
+            "Receivables ageing by customer",
+            "AMC revenue and leakage dashboard",
+            "Contract profitability against work done"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four contract-billing days that stop going wrong.",
+      "items": [
+        {
+          "h": "A quarterly contract bills itself",
+          "workflow": "A one-year CMC on four analysers is billed in four instalments; each one appears on the billing desk on its due date with the period already printed.",
+          "result": "Four invoices go out instead of one, without anybody remembering."
+        },
+        {
+          "h": "A mid-year start is charged correctly",
+          "workflow": "Cover begins in the middle of a quarter, so the first instalment is pro rata and the rest run full.",
+          "result": "No goodwill discount given by accident."
+        },
+        {
+          "h": "Work outside cover is charged",
+          "workflow": "An engineer attends a device that is not on the contract; the closed job card becomes a service invoice with labour and spares.",
+          "result": "The visit is paid for rather than absorbed."
+        },
+        {
+          "h": "A renewal carries the new rate",
+          "workflow": "At term end the renewal opens with the revised contract value and the asset list as it stands today.",
+          "result": "The escalation and the added devices both reach the invoice."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any business whose contracts are a revenue line.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Hospital AMC and CMC billed per site and per department."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab suppliers",
+          "p": "Analyser contracts with consumable terms priced separately."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial equipment firms",
+          "p": "Machines on annual cover across several plants."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services companies",
+          "p": "Lifts, HVAC and fire systems on recurring contracts."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Independent service companies",
+          "p": "Third-party cover on brands you did not sell."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where contract billing usually lives, and where it should.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Knows the contract term",
+          "In a column someone maintains",
+          "No, it holds invoices",
+          "Contract record with term and covered assets"
+        ],
+        [
+          "Raises the next instalment",
+          "Only if remembered",
+          "If you set up a recurring entry",
+          "From the contract schedule on the due date"
+        ],
+        [
+          "Part-period billing",
+          "Calculated by hand",
+          "Manual line",
+          "Pro rata on the first instalment"
+        ],
+        [
+          "Work outside cover",
+          "Often missed",
+          "Typed as a fresh invoice",
+          "Service invoice from the closed job card"
+        ],
+        [
+          "Renewal at the new value",
+          "Copy of last year",
+          "Copy of last year",
+          "Renewal engine with the current asset list"
+        ],
+        [
+          "Shows what is leaking",
+          "No",
+          "Outstanding report only",
+          "AMC revenue and leakage dashboard"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "AMC billing, answered.",
+      "items": [
+        {
+          "q": "Is AMC billing separate from my normal sales invoicing?",
+          "a": "The documents are separate but the system is not. Contract instalments, product invoices and service invoices are all GST tax invoices raised inside the same billing suite, so receivables, reminders and the accounting export cover all three together."
+        },
+        {
+          "q": "Can one contract be billed monthly instead of yearly?",
+          "a": "Yes. The billing frequency is a property of the contract, so the same cover can be sold annually to one hospital and quarterly or monthly to another, and each generates its own instalment schedule."
+        },
+        {
+          "q": "How is GST handled on a contract invoice?",
+          "a": "The instalment is invoiced with HSN or SAC and the tax split decided by place of supply, the same way a goods invoice is. The rate that applies to your contracts should be confirmed with your accountant."
+        },
+        {
+          "q": "What happens when the customer adds a machine mid-term?",
+          "a": "The asset is added to the contract and the remaining instalments reflect the revised value. Whether the addition is charged pro rata from that date is your commercial decision, and the invoice follows it."
+        },
+        {
+          "q": "Does a visit under AMC produce an invoice?",
+          "a": "No. A job closed against an active contract is recorded in the service history and closes to the contract. Only jobs on assets outside cover, or excluded spares, become a service invoice. See <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>."
+        },
+        {
+          "q": "How does this help at renewal time?",
+          "a": "The contract shows what was invoiced, what was collected, how many visits were made and what spares were consumed, so the renewal conversation is held on the record. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128220;",
+          "b": "AMC / CMC",
+          "p": "Contracts on a renewal clock."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Contract management",
+          "p": "Terms, cover and renewals."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Response and resolution cover."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128202;",
+          "b": "Receivables ageing",
+          "p": "Chasing unpaid instalments."
+        },
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "The full GST billing suite."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract covers what."
+        }
+      ]
+    }
+  ]
+}

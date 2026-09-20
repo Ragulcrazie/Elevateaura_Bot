@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "helpdesk-ticketing-equipment-dealers",
+  "title": "Helpdesk Ticketing Software for Equipment Dealers | Aura",
+  "meta": "Helpdesk ticketing for equipment dealers: customer-raised tickets, a status workflow your team follows, private internal notes and CSAT captured on close.",
+  "h1": "Helpdesk ticketing where the customer can <span class=\"hl\">raise it themselves</span> and see it move.",
+  "crumb": "Helpdesk Ticketing",
+  "pill": "For dealers whose support lives on phone calls",
+  "sub": "Aura Business gives your customers a way to raise a ticket without ringing anybody, moves it through a status workflow your team agrees on, keeps internal discussion separate from what the customer sees, and asks for a rating when it closes.",
+  "meta_ticks": [
+    "Customers raise tickets from the portal",
+    "Internal notes kept out of the customer view",
+    "CSAT captured when a ticket closes"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business helpdesk screen showing customer tickets with status, owner, internal notes and SLA timer",
+    "bar": "app.elevateaura.co.in/helpdesk"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss helpdesk ticketing software for our customer support.",
+  "primary_keyword": "helpdesk ticketing software for equipment dealers",
+  "secondary_keywords": [
+    "customer support ticketing software India",
+    "service ticket management software",
+    "customer portal ticket submission",
+    "CSAT feedback software for service teams",
+    "support desk software for distributors"
+  ],
+  "intent": "commercial",
+  "persona": "Customer support lead at an equipment dealer handling complaints and queries",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a ticket is, and how it differs from a service call",
+      "paras": [
+        "A ticket is the customer's side of the conversation. It starts when somebody at the hospital or the dealership has a problem or a question, and it ends when they agree it has been dealt with. Some tickets become field service calls. Many do not: a consumable query, a missing document, a training request, a billing question.",
+        "Aura Business runs this as the Ticketing and Helpdesk suite, with Ticket Management, a status workflow, internal notes, SLA timers, customer ticket submission from the portal and CSAT on close. Keeping it separate from dispatch matters, because a support desk that treats every query as an engineer visit either sends engineers unnecessarily or ignores everything that is not a breakdown."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why support feels chaotic",
+      "h2": "When every query arrives as a phone call, nothing is ever finished.",
+      "lead": "Support that lives on calls and personal WhatsApp has no queue, no owner and no record, so the same question is answered three times and the difficult one is answered never.",
+      "items": [
+        {
+          "h": "Queries only reach one person",
+          "p": "The customer rings the engineer they happen to know, and the office never hears about the issue."
+        },
+        {
+          "h": "No status the customer can see",
+          "p": "The only way to find out what is happening is to ring again, which is what they do."
+        },
+        {
+          "h": "Internal discussion in front of the customer",
+          "p": "With everything in one WhatsApp group, the team cannot discuss a problem candidly."
+        },
+        {
+          "h": "Queries that are not breakdowns get lost",
+          "p": "A document request or a training query has nowhere to sit, so it sits nowhere."
+        },
+        {
+          "h": "No idea what people complain about",
+          "p": "The same fault recurs across a product line and nothing is counted, so nothing is fixed."
+        },
+        {
+          "h": "Satisfaction is guessed",
+          "p": "You find out a customer was unhappy when they do not renew."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a ticket moves",
+      "h2": "From the customer's message to a rated close.",
+      "steps": [
+        {
+          "h": "Raised",
+          "p": "The customer submits from the portal, or your team logs a call or WhatsApp message as a ticket."
+        },
+        {
+          "h": "Linked",
+          "p": "The ticket attaches to the customer account and, where relevant, the asset and its contract."
+        },
+        {
+          "h": "Owned",
+          "p": "Assigned to a person, with an SLA timer running where the contract sets one."
+        },
+        {
+          "h": "Worked",
+          "p": "Status moves through your agreed workflow, with internal notes kept private."
+        },
+        {
+          "h": "Escalated or converted",
+          "p": "If it needs an engineer, a service call is raised from the ticket and dispatched."
+        },
+        {
+          "h": "Resolved",
+          "p": "The resolution is written for the customer, not just for the team."
+        },
+        {
+          "h": "Rated",
+          "p": "CSAT feedback is requested on close and stored against the customer."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The Ticketing and Helpdesk modules, and the portal beside them.",
+      "groups": [
+        {
+          "icon": "&#127915;",
+          "h": "The ticket",
+          "items": [
+            "Ticket management with owner and priority",
+            "Ticket status workflow you configure",
+            "Internal notes and collaboration",
+            "Attachments, photographs and documents"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Customer side",
+          "items": [
+            "Customer ticket submission from the portal",
+            "Customer self-service portal with history",
+            "Branded login and documents vault",
+            "Order tracking page alongside"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Urgency",
+          "items": [
+            "SLA timers on tickets",
+            "Priority and escalation",
+            "Convert a ticket to a service call",
+            "Link to the asset and its contract"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Learning from it",
+          "items": [
+            "CSAT and feedback on close",
+            "Ticket volume by product and customer",
+            "Reports engine for recurring issues",
+            "Audit log of every status change"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four support situations that improve immediately.",
+      "items": [
+        {
+          "h": "The hospital raises it without ringing",
+          "workflow": "A biomedical engineer logs a ticket from the customer portal at eleven at night with photographs attached.",
+          "result": "The issue is in the queue before your office opens."
+        },
+        {
+          "h": "A query does not become a wasted visit",
+          "workflow": "A settings question is resolved by the support desk on the ticket rather than by sending an engineer across the city.",
+          "result": "The customer is helped and the day is not spent."
+        },
+        {
+          "h": "The team can talk candidly",
+          "workflow": "Internal notes record that the fault looks like a known batch issue, while the customer sees only the status and the resolution.",
+          "result": "Honest internal discussion without an awkward customer conversation."
+        },
+        {
+          "h": "A recurring fault becomes visible",
+          "workflow": "Ticket volumes by product show the same complaint across one model over a quarter.",
+          "result": "You take it to the principal with numbers from your own desk."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers whose customers need answers as well as engineers.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Biomedical departments raising queries around the clock."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab suppliers",
+          "p": "Reagent, QC and result queries alongside machine faults."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers with dealer networks",
+          "p": "Sub-dealers raising support requests of their own."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Plant teams reporting issues from several sites."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "A single desk for everything that is not yet a job."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A support group chat, a generic CRM, or a helpdesk.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "How a customer raises an issue",
+          "Rings someone",
+          "Emails an inbox",
+          "Portal ticket, call or WhatsApp, all logged"
+        ],
+        [
+          "Ownership",
+          "Whoever answered",
+          "Assigned case",
+          "Named owner with a status workflow"
+        ],
+        [
+          "Internal versus customer-visible",
+          "All the same",
+          "Partly",
+          "Internal notes separate from the customer view"
+        ],
+        [
+          "Link to the machine",
+          "Described in words",
+          "No asset record",
+          "Ticket linked to serial, asset and contract"
+        ],
+        [
+          "Becoming an engineer visit",
+          "Another phone call",
+          "Separate process",
+          "Service call raised from the ticket"
+        ],
+        [
+          "Feedback on close",
+          "Never asked",
+          "Rarely",
+          "CSAT captured and reported"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Helpdesk ticketing, answered.",
+      "items": [
+        {
+          "q": "Can our customers raise tickets themselves?",
+          "a": "Yes. Customer ticket submission is part of the self-service portal, so a hospital's biomedical team can raise an issue with attachments at any hour and follow its status without ringing your office."
+        },
+        {
+          "q": "How is a ticket different from a service call?",
+          "a": "A ticket is a customer request of any kind. A service call is an engineer visit. Tickets that need an engineer convert to a service call and go to dispatch. See <a href=\"/aura-business/service-dispatch-software/\">service dispatch</a>."
+        },
+        {
+          "q": "Can we control who sees internal notes?",
+          "a": "Yes. Internal notes are for your team and are not shown in the customer portal view, while the status and the resolution are. Role-based access controls who can see and change what."
+        },
+        {
+          "q": "Do tickets have SLA timers?",
+          "a": "Yes. Where a contract sets response times, the timer runs on the ticket and at-risk tickets are flagged. See <a href=\"/aura-business/sla-management-software/\">SLA management</a>."
+        },
+        {
+          "q": "What is captured in CSAT?",
+          "a": "A short satisfaction response requested when the ticket closes, stored against the customer and the ticket so support quality can be reviewed by product line and by team member."
+        },
+        {
+          "q": "Can tickets come from WhatsApp?",
+          "a": "Messages received through the WhatsApp Business integration can be logged as tickets so that support arriving by chat joins the same queue rather than sitting on one person's phone."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "The wider service suite."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128506;",
+          "b": "Dispatch",
+          "p": "When a ticket needs an engineer."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Timers and escalation."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "The machine behind the ticket."
+        },
+        {
+          "href": "/aura-business/whatsapp-payment-reminder-software/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "The other customer channel."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management works."
+        }
+      ]
+    }
+  ]
+}

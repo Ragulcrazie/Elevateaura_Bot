@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-diagnostic-equipment-suppliers",
+  "title": "Software for Diagnostic Equipment Suppliers | Aura Business",
+  "meta": "Software for diagnostic equipment suppliers: reagent pull-through on every placed analyser, calibration and QC visits, and uptime the lab can depend on.",
+  "h1": "Software for diagnostic equipment suppliers, where the <span class=\"hl\">reagent is the business</span>.",
+  "crumb": "Diagnostic Equipment Suppliers",
+  "pill": "For analyser and lab instrument suppliers",
+  "sub": "Aura Business runs the analyser and everything that follows it: the reagent and consumable pull-through the placement was justified by, the calibration and quality control visits due on each machine, and the breakdown response a working laboratory cannot wait out.",
+  "meta_ticks": [
+    "Consumable pull-through per placed analyser",
+    "Calibration and QC visits scheduled",
+    "Breakdown clock running from the call"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we supply diagnostic analysers and reagents. I'd like to see how Aura Business handles consumable pull-through and service.",
+  "primary_keyword": "software for diagnostic equipment suppliers",
+  "secondary_keywords": [
+    "analyser supplier software",
+    "reagent supply management software",
+    "lab instrument dealer software India",
+    "diagnostic equipment service software",
+    "clinical analyser AMC software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of a firm supplying clinical analysers, lab instruments and the reagents that run on them",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a diagnostic equipment supplier actually sells",
+      "paras": [
+        "A diagnostic equipment supplier rarely makes its living on the analyser. The instrument goes into a pathology lab, a hospital lab or a collection centre, and what follows it is a stream of reagents, controls, calibrators, cuvettes and rotors that only you supply. Software for this trade has to connect the placed machine to that stream, so every analyser on your books shows the consumables it should be consuming and whether the lab is actually ordering them.",
+        "The second half of the job is uptime. A lab with a dead analyser cannot report samples, so it sends the work elsewhere and stops ordering your reagents that week. Aura Business keeps the asset register, the calibration and quality control visit schedule, the breakdown call clock and the consumable order history on the same record, so a drop in reagent orders and a rise in service calls are visible as the connected problem they usually are."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong",
+      "h2": "The analyser is placed. Then nobody watches what it eats.",
+      "lead": "Placement decisions are made on a consumption forecast. Very few suppliers ever check the forecast against reality on a specific machine.",
+      "items": [
+        {
+          "h": "Pull-through unmeasured",
+          "p": "An analyser was placed on the promise of monthly reagent volume, and nobody can say whether that lab has ordered any of it since March."
+        },
+        {
+          "h": "Reagent expiry written off",
+          "p": "Cold-chain stock is ordered in a large lot, sits past its date in the warehouse and is scrapped, because batch dates live on cartons rather than in a system."
+        },
+        {
+          "h": "Calibration visits slip",
+          "p": "Each instrument needs periodic calibration and QC verification. The schedule exists in an engineer's diary, so it runs late until the lab complains."
+        },
+        {
+          "h": "Breakdowns answered by chance",
+          "p": "A call comes to a mobile number. Whether an engineer reaches the lab today depends on who picked up, not on what the contract promised."
+        },
+        {
+          "h": "Consumable orders re-keyed",
+          "p": "The same lab sends the same reagent list by WhatsApp every month and someone types it into an invoice every month."
+        },
+        {
+          "h": "No view of a lab's worth",
+          "p": "The instrument, the contract, the reagent orders and the service cost sit in four places, so nobody knows which placements pay."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From placement to the reagent order that repeats.",
+      "steps": [
+        {
+          "h": "Place",
+          "p": "The analyser is despatched and installed, and the serial number enters the installed base against that laboratory and its site."
+        },
+        {
+          "h": "Commit",
+          "p": "The reagents and consumables that run on that model are linked to the asset, with the ordering pattern the placement assumed."
+        },
+        {
+          "h": "Schedule",
+          "p": "Calibration, quality control verification and preventive visits are raised against the machine on a date or usage basis."
+        },
+        {
+          "h": "Supply",
+          "p": "Repeat reagent orders come through the customer portal or the field rep, priced from the agreed list, batch and expiry picked at despatch."
+        },
+        {
+          "h": "Respond",
+          "p": "A breakdown call is logged, an engineer is dispatched, the job card records the fault and any part fitted, and the response clock is on the record."
+        },
+        {
+          "h": "Review",
+          "p": "The dashboard shows reagent orders, service cost and contract value per analyser, so a quiet placement is spotted while it can still be recovered."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a reagent-led business leans on.",
+      "groups": [
+        {
+          "icon": "&#128300;",
+          "h": "The placed instrument",
+          "items": [
+            "Asset and installed-base register by serial and laboratory",
+            "Service contracts and comprehensive contracts per analyser",
+            "Preventive maintenance with calibration and compliance checklists",
+            "Meter and usage-based schedules where the lab reports test counts",
+            "Service history per asset"
+          ]
+        },
+        {
+          "icon": "&#129514;",
+          "h": "Reagents and consumables",
+          "items": [
+            "Batch and expiry tracking on every reagent lot",
+            "Low-stock and reorder alerts on fast-moving lines",
+            "Multi-warehouse stock including a cold-chain location",
+            "Barcode or QR scanning at despatch",
+            "Credit notes and returns for short-dated stock"
+          ]
+        },
+        {
+          "icon": "&#128242;",
+          "h": "Repeat ordering",
+          "items": [
+            "Customer self-service portal for the laboratory",
+            "Distributor and B2B order portal for sub-dealers",
+            "Order tracking page for each despatch",
+            "WhatsApp reminders when an order is due"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Watching the numbers",
+          "items": [
+            "Contract profitability per instrument",
+            "P&amp;L by product line",
+            "Receivables ageing per laboratory",
+            "Owner dashboard across placements and service"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments that decide a reagent business.",
+      "items": [
+        {
+          "h": "A placement goes quiet",
+          "workflow": "The analyser record shows no consumable order for two cycles while two breakdown calls were logged in the same period.",
+          "result": "The area manager visits before the lab moves the work to another supplier."
+        },
+        {
+          "h": "A short-dated lot is used first",
+          "workflow": "Batch and expiry tracking surfaces a reagent lot nearing its date, and despatch picks that lot for the next order to a high-volume lab.",
+          "result": "Stock is sold rather than scrapped."
+        },
+        {
+          "h": "A calibration visit lands on time",
+          "workflow": "The preventive schedule raises the calibration and quality control visit, the engineer completes the checklist on the mobile job card and captures the operator's signature.",
+          "result": "The lab has the record its own quality review asks for."
+        },
+        {
+          "h": "A lab orders without ringing anyone",
+          "workflow": "The lab manager opens the portal, repeats last month's reagent list, and the order arrives priced and ready for despatch.",
+          "result": "No re-keying, and an order history that can be forecast against."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses whose machine creates a monthly order.",
+      "items": [
+        {
+          "icon": "&#129516;",
+          "b": "Clinical analyser suppliers",
+          "p": "Biochemistry, haematology and immunoassay platforms placed in labs."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital lab suppliers",
+          "p": "Instruments inside a hospital lab, where the biomedical team is also involved."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Point-of-care device suppliers",
+          "p": "Many small devices across collection centres and clinics, each with its own strips or cartridges."
+        },
+        {
+          "icon": "&#129440;",
+          "b": "Reagent-only distributors",
+          "p": "No instrument of your own, but the same expiry, cold-chain and repeat-order discipline."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "Regional sub-dealers",
+          "p": "Supplying reagents onward in a territory under a national principal."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, accounting software, or a platform that links the two halves.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Analyser register",
+          "A list of deliveries",
+          "An invoice line",
+          "Serial-level asset with site and history"
+        ],
+        [
+          "Reagent pull-through",
+          "Guessed from memory",
+          "Sales figures by item",
+          "Consumable orders linked to the placed machine"
+        ],
+        [
+          "Expiry control",
+          "Dates read off cartons",
+          "Not tracked",
+          "Batch and expiry with alerts and picking order"
+        ],
+        [
+          "Calibration and QC visits",
+          "Engineer's diary",
+          "Not covered",
+          "Scheduled with checklists and signed job cards"
+        ],
+        [
+          "Breakdown response",
+          "Whoever answers the phone",
+          "Not covered",
+          "Call intake, dispatch and response clock"
+        ],
+        [
+          "Repeat ordering",
+          "Monthly WhatsApp list",
+          "Manual invoice entry",
+          "Portal order the lab places itself"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Diagnostic equipment supply, answered.",
+      "items": [
+        {
+          "q": "Can we see reagent consumption against a specific analyser?",
+          "a": "Yes. The instrument is an asset with a serial number and a site, and the consumables that run on it are linked to it, so the record shows what that laboratory has ordered and when the last order was placed."
+        },
+        {
+          "q": "How is reagent expiry handled?",
+          "a": "Every lot is received with its batch number and expiry date, stock is held by batch, and alerts surface lots approaching their date. Despatch can pick the oldest usable lot, and returns of short-dated stock are recorded with a credit note."
+        },
+        {
+          "q": "Can calibration and quality control visits be scheduled separately from ordinary service?",
+          "a": "Yes. Preventive maintenance schedules carry their own calibration and compliance checklists, so a calibration visit raises its own job with its own checklist rather than being folded into a breakdown call."
+        },
+        {
+          "q": "Does the system track how fast we reach a lab after a breakdown call?",
+          "a": "Yes. The service call is logged at intake, dispatch and completion are stamped on the job, and SLA definitions on the contract show whether the response commitment was met. See <a href=\"/aura-business/sla-management-software/\">SLA management software</a>."
+        },
+        {
+          "q": "Can a laboratory place its own repeat orders?",
+          "a": "Yes. The customer self-service portal lets the lab repeat a previous order at its agreed prices and follow the despatch on an order tracking page. Larger suppliers give sub-dealers the distributor order portal instead."
+        },
+        {
+          "q": "Can we tell whether a placement is profitable?",
+          "a": "Contract profitability compares the contract value and reagent revenue on an instrument against the visits and parts consumed on it. That is the number that tells you whether a class of placement should be repeated."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/software-for-laboratory-equipment-dealers/",
+          "icon": "&#129516;",
+          "b": "Laboratory equipment dealers",
+          "p": "Instruments sold to research and clinical labs."
+        },
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#128230;",
+          "b": "Consumables distributors",
+          "p": "Fast-moving stock and expiry."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry",
+          "p": "Lot control end to end."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128736;",
+          "b": "Preventive maintenance",
+          "p": "Calibration and PM schedules."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every machine you have placed."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an SLA means in service."
+        },
+        {
+          "href": "/aura-business/software-for-imaging-equipment-dealers/",
+          "icon": "&#129659;",
+          "b": "Imaging equipment dealers",
+          "p": "Capital sales, installation, high-value AMC."
+        }
+      ]
+    }
+  ]
+}

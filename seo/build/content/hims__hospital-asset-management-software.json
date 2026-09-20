@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-asset-management-software",
+  "title": "Hospital Asset Management Software | Biomedical Register | HIMS",
+  "meta": "Hospital asset management software for the biomedical department: an equipment register with location, service and calibration history, warranty and AMC status.",
+  "h1": "Hospital asset management software for the <span class=\"hl\">biomedical department</span>, not the supplier.",
+  "crumb": "Hospital Asset Management",
+  "pill": "For biomedical engineers and administrators",
+  "sub": "HIMS holds your equipment the way the hospital owns it: a register of every unit, the ward or room it currently sits in, what was serviced and calibrated when, and which units are still under warranty or on a contract.",
+  "meta_ticks": [
+    "One register for every unit you own",
+    "Location, service and calibration history",
+    "Warranty and AMC status visible"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/inventory.png",
+    "alt": "HIMS inventory and equipment screen listing items, location and stock status",
+    "bar": "his.elevateaura.co.in/inventory"
+  },
+  "whatsapp_text": "Hi, I'd like to see equipment and asset tracking in HIMS for our hospital.",
+  "primary_keyword": "hospital asset management software",
+  "secondary_keywords": [
+    "biomedical equipment management software",
+    "hospital equipment tracking software",
+    "medical equipment register software for hospitals",
+    "hospital calibration tracking software",
+    "hospital AMC tracking software",
+    "hospital equipment maintenance software"
+  ],
+  "intent": "commercial",
+  "persona": "Biomedical engineer or hospital administrator responsible for the equipment the hospital owns",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Whose assets this page is about",
+      "paras": [
+        "This is the hospital side of equipment. The register belongs to the hospital that owns the monitors, the ventilators, the analysers and the chairs, and it answers the questions a biomedical engineer is asked: what do we own, where is that unit now, when was it last serviced or calibrated, and is it still covered. The equipment sits in the same HIMS inventory that already tracks consumables, so one system covers both what you consume and what you keep.",
+        "It is worth being clear about the other side of the same story. If you are the company that sells and services equipment across many hospitals, you are tracking an installed base, not your own ward equipment, and that lives in Aura Business. Read <a href=\"/aura-business/installed-base-management-software/\">installed base management software</a> for the dealer's view. This page is for the hospital that owns the machine."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What biomedical departments run into",
+      "h2": "The equipment list is a spreadsheet nobody trusts.",
+      "lead": "Most hospitals know roughly what they own. Roughly is the problem.",
+      "items": [
+        {
+          "h": "Units that have moved",
+          "p": "A monitor goes from one ward to another during a busy night and the register still says it is where it was bought for."
+        },
+        {
+          "h": "Service history in a file",
+          "p": "The engineer's visit report is a sheet in a drawer, so nobody can say what was replaced last time."
+        },
+        {
+          "h": "Calibration dates remembered",
+          "p": "Due dates are tracked by whoever has been there longest, and they surface only when an audit asks."
+        },
+        {
+          "h": "Warranty claimed too late",
+          "p": "A repair is paid for on a unit that was still covered, because the purchase paperwork was not to hand."
+        },
+        {
+          "h": "Contract renewals that slip",
+          "p": "An AMC lapses quietly and the next breakdown is billed as an out-of-contract call."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a unit is tracked",
+      "h2": "From purchase to the next calibration due date.",
+      "steps": [
+        {
+          "h": "Registered",
+          "p": "The unit is added with make, model, identification number and purchase details."
+        },
+        {
+          "h": "Located",
+          "p": "It is assigned to a department, ward or room so the register says where it is."
+        },
+        {
+          "h": "Covered",
+          "p": "Warranty period and any service contract are recorded against the unit."
+        },
+        {
+          "h": "Serviced",
+          "p": "Each attendance, breakdown or preventive visit is logged on the unit's history."
+        },
+        {
+          "h": "Calibrated",
+          "p": "Calibration records and due dates sit with the same unit."
+        },
+        {
+          "h": "Moved or retired",
+          "p": "Transfers between departments are recorded, so the history travels with the machine."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is in the register",
+      "h2": "Equipment tracking alongside consumables.",
+      "groups": [
+        {
+          "icon": "&#128736;",
+          "h": "The register",
+          "items": [
+            "Every unit the hospital owns",
+            "Make, model and identification number",
+            "Department, ward or room",
+            "Purchase and commissioning details"
+          ]
+        },
+        {
+          "icon": "&#128296;",
+          "h": "Service",
+          "items": [
+            "Service and breakdown history per unit",
+            "Preventive and calibration records",
+            "Due dates visible before they pass",
+            "Notes and documents against the unit"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Cover",
+          "items": [
+            "Warranty period per unit",
+            "Service contract status",
+            "What is covered and what is not",
+            "Renewals that are due"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Stores alongside",
+          "items": [
+            "Consumables with reorder levels",
+            "Low-stock alerts",
+            "Issue to departments",
+            "One inventory module, two kinds of item"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-inventory-management/",
+        "label": "See hospital inventory management"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "The four questions a biomedical engineer gets asked.",
+      "items": [
+        {
+          "h": "Where is that unit?",
+          "workflow": "The register is searched by identification number and returns the department it is currently assigned to.",
+          "result": "The hunt around the wards stops."
+        },
+        {
+          "h": "What went wrong last time?",
+          "workflow": "The service history on the unit shows the previous attendance and what was done.",
+          "result": "The engineer arrives informed."
+        },
+        {
+          "h": "Is this repair chargeable?",
+          "workflow": "Warranty and contract status are on the unit before the call is raised.",
+          "result": "Cover is claimed while it still applies."
+        },
+        {
+          "h": "An audit asks for calibration records",
+          "workflow": "Calibration entries and due dates are pulled from the register by department.",
+          "result": "The file is already assembled."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The people answerable for the machine, not the sale.",
+      "items": [
+        {
+          "icon": "&#128736;",
+          "b": "Biomedical departments",
+          "p": "A register they maintain rather than reconstruct."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Equipment spread over wards, theatres and labs."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Administrators",
+          "p": "What is owned, where it sits and what is covered."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Analysers and imaging units with calibration to prove."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality coordinators",
+          "p": "Equipment records that support NABH-style documentation."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hospitals track their equipment.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Where the register lives",
+          "A file per department",
+          "A central asset module",
+          "One register beside your stores"
+        ],
+        [
+          "Current location of a unit",
+          "Last known",
+          "Updated if someone remembers",
+          "Assigned department, changed on transfer"
+        ],
+        [
+          "Service history",
+          "Paper visit reports",
+          "Sometimes a separate maintenance system",
+          "Logged on the unit"
+        ],
+        [
+          "Warranty and contract",
+          "Purchase file",
+          "Finance module",
+          "On the unit, before the call is raised"
+        ],
+        [
+          "Effort to start",
+          "None until it fails",
+          "A long implementation",
+          "Your existing list imported at setup"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital asset management, answered.",
+      "items": [
+        {
+          "q": "Is this the same as your installed base module?",
+          "a": "No. This page is the hospital tracking equipment it owns. A dealer tracking units sold and serviced across many hospitals needs <a href=\"/aura-business/installed-base-management-software/\">installed base management software</a> in Aura Business, which is a different product for a different buyer."
+        },
+        {
+          "q": "Does it cover consumables as well as machines?",
+          "a": "Yes. The HIMS inventory module handles consumables with reorder levels and low-stock alerts, and the equipment register sits alongside it, so stores and biomedical are not two separate systems."
+        },
+        {
+          "q": "Can we record calibration due dates?",
+          "a": "Calibration entries and the next due date are recorded against each unit, so the department can see what is coming rather than discovering it during an audit."
+        },
+        {
+          "q": "Can we import the equipment list we already have?",
+          "a": "Yes. Your existing spreadsheet is migrated in during setup, which is how most hospitals start. Anything missing from the sheet gets filled in as units are serviced."
+        },
+        {
+          "q": "Does it track where a unit has moved to?",
+          "a": "Each unit is assigned to a department, ward or room, and transfers are recorded, so the register shows where the machine is now and the service history travels with it."
+        },
+        {
+          "q": "Does HIMS service the equipment for us?",
+          "a": "No. HIMS records what your biomedical team and your suppliers do. The software keeps the register, the history and the cover status. The engineering work stays with your department or the vendor who supplies the unit."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Hospital inventory",
+          "p": "Consumables and reorder levels."
+        },
+        {
+          "href": "/hims/hospital-procurement-software/",
+          "icon": "&#128722;",
+          "b": "Procurement",
+          "p": "Indents, orders and goods receipt."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "The administrator's live view."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128736;",
+          "b": "Installed base",
+          "p": "The dealer's side of the same machine."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Installed base, explained."
+        }
+      ]
+    }
+  ]
+}

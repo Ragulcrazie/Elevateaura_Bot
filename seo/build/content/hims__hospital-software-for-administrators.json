@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-software-for-administrators",
+  "title": "Hospital Software for Administrators | Run the Day | HIMS",
+  "meta": "Hospital software for administrators: occupancy and collections as they happen, department performance, doctor rosters and an audit trail behind every entry.",
+  "h1": "Hospital software for the administrator who has to <span class=\"hl\">answer for the day</span>.",
+  "crumb": "For Administrators",
+  "pill": "For hospital administrators",
+  "sub": "The administrator is asked about beds, money, staffing and complaints, usually in the same hour. HIMS puts occupancy, collections, departmental activity and rosters in one place, with the entry behind every figure still reachable.",
+  "meta_ticks": [
+    "Occupancy and collections as they happen",
+    "Department and doctor activity",
+    "An audit trail behind the numbers"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS ward occupancy view used by an administrator to see beds across the hospital",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, I am a hospital administrator and would like to see HIMS.",
+  "primary_keyword": "hospital software for administrators",
+  "secondary_keywords": [
+    "hospital administration software India",
+    "hospital administrator dashboard",
+    "hospital operations software",
+    "software for hospital managers",
+    "hospital occupancy and collections software",
+    "hospital audit trail software"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator or general manager responsible for the day-to-day running of the facility",
+  "page_type": "persona",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What the administrator's job needs from a system",
+      "paras": [
+        "An administrator does not use a hospital system the way a doctor or a billing clerk does. They are not entering data, they are answering for it. How many beds are free in the male ward, why did the pharmacy counter have a queue at noon, what has been collected today, who is on duty tomorrow evening, and who changed that bill. Those questions arrive in no particular order and usually need an answer before the next one arrives.",
+        "HIMS is useful here because every one of those answers comes from work the hospital has already done. Occupancy comes from bed management, collections from billing, departmental activity from the record the departments write to, rosters from the doctor schedule. Nothing is compiled, and because entries are attributed and timed, an administrator can go from a figure on the dashboard to the entry that produced it.",
+        "That last point matters more than it sounds. An administrator spends much of the day being told things by people who are busy, and a figure that can be opened down to the bill, the admission or the entry behind it is the difference between managing and mediating."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The administrator's normal day",
+      "h2": "Most of the job is finding out what already happened.",
+      "lead": "Not because it is hidden, but because it is in four places and three of them are people.",
+      "items": [
+        {
+          "h": "Occupancy by phone call",
+          "p": "Finding out how many beds are free means calling wards and adding up answers that are already stale."
+        },
+        {
+          "h": "Collections known tomorrow",
+          "p": "The day's money is confirmed when the counter closes and the sheets are totalled."
+        },
+        {
+          "h": "Department performance by anecdote",
+          "p": "Which department is busy is a matter of opinion because nobody produces comparable numbers."
+        },
+        {
+          "h": "Rosters on a printed sheet",
+          "p": "Who is sitting when is a notice on a wall, and changes are communicated verbally."
+        },
+        {
+          "h": "No trail behind a change",
+          "p": "A bill was altered or a discharge was delayed and there is no record of who did what, when."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A day run from the system",
+      "h2": "Morning to close, without a round of phone calls.",
+      "steps": [
+        {
+          "h": "Open the ward view",
+          "p": "Occupancy by ward, admissions expected and discharges due today."
+        },
+        {
+          "h": "Check the counters",
+          "p": "OP registrations and the token queues show where pressure is building."
+        },
+        {
+          "h": "Watch the departments",
+          "p": "Pharmacy, laboratory and theatre activity through the morning."
+        },
+        {
+          "h": "Read collections",
+          "p": "What has been taken, by payer, without waiting for a close."
+        },
+        {
+          "h": "Handle an exception",
+          "p": "A queried bill or a delayed discharge is opened down to the entry behind it."
+        },
+        {
+          "h": "Set up tomorrow",
+          "p": "Doctor rosters and appointments for the next day are confirmed."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What an administrator uses",
+      "h2": "The screens the job actually needs.",
+      "groups": [
+        {
+          "icon": "&#128716;",
+          "h": "Capacity",
+          "items": [
+            "Ward and bed occupancy, live",
+            "Admissions and discharges today",
+            "Theatre schedule",
+            "Emergency and casualty load"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Collections as they are taken",
+            "Payer mix across cash, TPA and corporate",
+            "Outstanding per payer",
+            "Bills with an audit trail"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Activity",
+          "items": [
+            "OP volume by department and doctor",
+            "Pharmacy and laboratory throughput",
+            "Reports by period",
+            "The live dashboard of OP, IP, beds and collections"
+          ]
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "h": "People and control",
+          "items": [
+            "Doctor rosters and consulting days",
+            "Role-based access per staff member",
+            "Entries attributed and timed",
+            "Supports NABH-style documentation"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-mis-dashboard/",
+        "label": "See the MIS dashboard"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four questions answered without leaving the chair.",
+      "items": [
+        {
+          "h": "Can we take this admission?",
+          "workflow": "The ward view shows free beds by category before the answer is given to the referring doctor.",
+          "result": "The bed is promised on fact."
+        },
+        {
+          "h": "Why is the pharmacy queue long?",
+          "workflow": "The dispensing queue and the OP token counts for the morning are read side by side.",
+          "result": "Staffing is moved where the load is."
+        },
+        {
+          "h": "A family disputes a bill",
+          "workflow": "The bill is opened with its itemised charges and the entries behind them, including who recorded what.",
+          "result": "The conversation happens with evidence."
+        },
+        {
+          "h": "A consultant wants an extra clinic",
+          "workflow": "OP volume for that doctor across the last period is read before the roster is changed.",
+          "result": "The decision is not made on impressions."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The people between the owner and the wards.",
+      "items": [
+        {
+          "icon": "&#128202;",
+          "b": "Hospital administrators",
+          "p": "Occupancy, money and staffing in one place."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "General managers",
+          "p": "Departmental performance without a compilation exercise."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality coordinators",
+          "p": "Attributed, timed entries to audit against."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Accounts heads",
+          "p": "Collections and outstanding across payers."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front office supervisors",
+          "p": "Queues and appointments as they build."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How administrators get their answers.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Occupancy",
+          "Phone the wards",
+          "A capacity module",
+          "Live from bed management"
+        ],
+        [
+          "Today's collections",
+          "After the counter closes",
+          "Next morning's report",
+          "As receipts are taken"
+        ],
+        [
+          "Departmental activity",
+          "Anecdote",
+          "Configured cost centres",
+          "From the record departments already write"
+        ],
+        [
+          "Tracing a change",
+          "Not possible",
+          "A system log somewhere",
+          "Audit trail on the entry"
+        ],
+        [
+          "Who you call when it breaks",
+          "Nobody",
+          "A ticket queue",
+          "The founder who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "For administrators, answered.",
+      "items": [
+        {
+          "q": "Can I see occupancy without calling the wards?",
+          "a": "Yes. Bed management shows every ward and bed as it currently stands, updated by the admissions, transfers and discharges the wards are already recording. See <a href=\"/hims/hospital-bed-management-software/\">bed management</a>."
+        },
+        {
+          "q": "Can I control what each staff member can see?",
+          "a": "Access is role based, so front desk, nursing, pharmacy, billing and management each see what their role allows. The roles are configured at setup and changed as your team changes."
+        },
+        {
+          "q": "Is there an audit trail behind a bill or a record?",
+          "a": "Entries are attributed to the user and timed, and bills carry an audit trail, so a disputed charge or an altered record can be traced rather than argued about."
+        },
+        {
+          "q": "Does it handle doctor rosters?",
+          "a": "Doctor rosters and consulting days are held in the system and drive the appointment book and the token queues, so a change to who is sitting when reaches the front desk rather than a notice board."
+        },
+        {
+          "q": "How is this different from the owner's view?",
+          "a": "The owner wants the headline daily. An administrator needs to act on it during the day and reach the entry behind it. Same platform, different depth. See <a href=\"/hims/hospital-owner-dashboard/\">the owner dashboard</a>."
+        },
+        {
+          "q": "How long before we are running on it?",
+          "a": "The scope is fixed at the start and the target is live in 30 working days where that scope allows, including migration of your existing data and training at your own counters."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "The live view and reports."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128188;",
+          "b": "Owner dashboard",
+          "p": "One screen, daily."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128716;",
+          "b": "Bed management",
+          "p": "Wards, beds and transfers."
+        },
+        {
+          "href": "/hims/doctor-management-software/",
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor management",
+          "p": "Who sits, and when."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128736;",
+          "b": "Hospital ERP",
+          "p": "The operations layer."
+        }
+      ]
+    }
+  ]
+}

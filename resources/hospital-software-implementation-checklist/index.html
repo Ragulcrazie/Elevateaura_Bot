@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Hospital Software Implementation Checklist for Go-Live</title>
+<meta name="description" content="A practical hospital software implementation checklist: data to prepare, the order to switch departments on, training per counter and what to test.">
+<link rel="canonical" href="https://elevateaura.co.in/resources/hospital-software-implementation-checklist/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Hospital Software Implementation Checklist for Go-Live">
+<meta property="og:description" content="A practical hospital software implementation checklist: data to prepare, the order to switch departments on, training per counter and what to test.">
+<meta property="og:url" content="https://elevateaura.co.in/resources/hospital-software-implementation-checklist/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hospital Software Implementation Checklist for Go-Live">
+<meta name="twitter:description" content="A practical hospital software implementation checklist: data to prepare, the order to switch departments on, training per counter and what to test.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://elevateaura.co.in/resources/"}, {"@type": "ListItem", "position": 3, "name": "Implementation checklist", "item": "https://elevateaura.co.in/resources/hospital-software-implementation-checklist/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Hospital software implementation checklist: what to do before go-live day.", "description": "A practical hospital software implementation checklist: data to prepare, the order to switch departments on, training per counter and what to test.", "url": "https://elevateaura.co.in/resources/hospital-software-implementation-checklist/", "mainEntityOfPage": "https://elevateaura.co.in/resources/hospital-software-implementation-checklist/", "image": "https://elevateaura.co.in/images/og_image.png", "author": {"@type": "Person", "name": "Ragul Sekar", "url": "https://www.linkedin.com/in/ragul-sekar"}, "publisher": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "logo": {"@type": "ImageObject", "url": "https://elevateaura.co.in/assets/img/logo.png"}}, "datePublished": "2026-09-20", "dateModified": "2026-09-20"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a hospital software implementation take?", "acceptedAnswer": {"@type": "Answer", "text": "Elevate Aura works to live in 30 working days where scope allows, with the scope fixed at the start. A single-specialty clinic sits at the shorter end; a hospital with IP, theatre, ICU and TPA billing sits at the longer end because there are more counters to configure and train."}}, {"@type": "Question", "name": "Should we go live with everything at once?", "acceptedAnswer": {"@type": "Answer", "text": "Rarely. Registration and the patient record first, then the clinical screens, then pharmacy and billing, then wards and claims. Later phases attach to the same record, so phasing costs nothing in rework and greatly reduces the chance of a bad first week."}}, {"@type": "Question", "name": "What data do we need to supply?", "acceptedAnswer": {"@type": "Answer", "text": "Patients, service and tariff master, pharmacy and consumable items, laboratory tests, doctors and staff with roles, wards and beds, payers you deal with, and your invoice, prescription and discharge formats with your logo."}}, {"@type": "Question", "name": "Who trains our staff?", "acceptedAnswer": {"@type": "Answer", "text": "For Elevate Aura customers, the founder who builds the system, at your counters, on your own data. Sessions can be recorded so staff who join later are taught the same way. In-person training happens in Chennai and by travel within Tamil Nadu."}}, {"@type": "Question", "name": "Should we keep the paper registers running?", "acceptedAnswer": {"@type": "Answer", "text": "For a short, fixed period, with an agreed date they stop. Parallel running indefinitely is how a hospital ends up maintaining two systems and trusting neither. Set the end date before go-live and hold it."}}, {"@type": "Question", "name": "What happens in the first week if something goes wrong?", "acceptedAnswer": {"@type": "Answer", "text": "There should be a named person per shift inside the hospital and a written escalation route outside it. Elevate Aura's support is WhatsApp and remote, usually over a screen share, from the person who built the system."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Plain-language guides to healthcare software</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%20read%20the%20implementation%20checklist%20and%20want%20to%20discuss%20a%20rollout%20for%20our%20hospital." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/resources/">Resources</a></li>
+  <li><span aria-current="page">Implementation checklist</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>Guide</span>
+      <h1>Hospital software implementation checklist: <span class="hl">what to do before go-live day</span>.</h1>
+      <p class="sub">Most hospital software problems are implementation problems, not product problems. This is the sequence that works: the data you prepare, the order departments go live in, who is trained at which counter, what you test, and what has to be ready on the first morning.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/hims/hospital-management-system/">See the hospital management system<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%20read%20the%20implementation%20checklist%20and%20want%20to%20discuss%20a%20rollout%20for%20our%20hospital." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Written from real rollouts</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Ordered, not a feature list</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Updated September 2026</span></div>
+      <p class="byline">By Ragul Sekar, founder of Elevate Aura &middot; Updated 2026-09-20</p>
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The short answer</span>
+      <h2 class="h2">Implementation in two paragraphs</h2>
+    </div>
+    <div class="ans rv"><p>A hospital software implementation is the work between signing and the first patient registered on the new system: preparing the data the software will run on, deciding which departments go live in which order, training each counter on its own screens, testing the flows that involve money and medicine, and arranging cover for the first week. The software is usually ready before the hospital is.</p><p>The pattern that fails is switching everything on for every department on a Monday morning with a demonstration instead of training. The pattern that works is a small first phase, real data, training at the counter, and a deliberate plan for the first three days.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Step one</span>
+      <h2 class="h2">Prepare the data before anything is configured</h2>
+      <p class="lead">Nearly every delay traces back to data that was promised in a week and arrived in a month, or arrived and was wrong.</p>
+    </div>
+    <div class="prose rv"><p>Start collecting these the day the project begins, because they come from different people and one of them is always on leave.</p><ul><li><b>Patient list.</b> Name, mobile number, date of birth or age, sex, address, and the existing registration number if you have one. Deduplicate before it is loaded, not after.</li><li><b>Service and tariff master.</b> Every consultation, procedure, bed category, package and investigation with its rate, and the rates that differ by payer.</li><li><b>Pharmacy and consumable items.</b> Item names, units, batch and expiry practice, suppliers and reorder levels.</li><li><b>Laboratory test master.</b> Test names, sample types, reference ranges and which tests are outsourced.</li><li><b>Doctors and staff.</b> Names, departments, consulting days, roles and what each role is allowed to see.</li><li><b>Wards and beds.</b> Ward names, bed numbers, categories and current occupancy.</li><li><b>Payers.</b> Insurers, TPAs and corporate accounts you deal with, and which of them you are in network with.</li><li><b>Documents.</b> Your invoice format, GST details, discharge summary and prescription layouts, and the logo file.</li></ul><p>One person in the hospital owns this list and signs off each item. If the tariff master is still in three spreadsheets a week before go-live, the go-live date is wrong, and moving it is cheaper than discovering it at the counter.</p></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Step two</span>
+      <h2 class="h2">Switch departments on in an order that makes sense</h2>
+    </div>
+    <div class="prose rv"><p>Go live where the hospital feels the benefit immediately and where mistakes are visible the same day. Later phases attach to the same patient record, so nothing is migrated twice.</p><div class="tbl" style="margin:14px 0 22px"><table><thead><tr><th>Phase</th><th>What goes live</th><th>Why here</th></tr></thead><tbody><tr><td>1</td><td>Registration, UHID, appointments and tokens</td><td>Everything else hangs off the patient record; get it right before volume arrives.</td></tr><tr><td>2</td><td>OP consultation, EMR and e-prescription</td><td>The doctor's screen is the hardest habit to change, so it gets its own phase.</td></tr><tr><td>3</td><td>Pharmacy and billing</td><td>Money and medicine, where errors show up the same day and can be corrected.</td></tr><tr><td>4</td><td>Laboratory and imaging</td><td>Orders now flow from a consultation that is already on the system.</td></tr><tr><td>5</td><td>Wards, beds, theatre and ICU</td><td>Inpatient work depends on registration, pharmacy and billing already being steady.</td></tr><tr><td>6</td><td>Insurance, TPA claims and corporate credit</td><td>Claims are only as good as the itemised bill from phase three.</td></tr><tr><td>7</td><td>Dashboards and reports</td><td>Numbers are meaningful once every counter is feeding the same record.</td></tr></tbody></table></div><p>A small clinic may compress this into two phases and a large hospital may stretch it over several weeks. What does not change is the order: identity, then clinical, then money, then everything that reads from them.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Step three</span>
+      <h2 class="h2">Train per counter, and test what hurts</h2>
+    </div>
+    <div class="prose rv"><h3>Training belongs at the desk</h3><p>A hall session is a demonstration. Training is a receptionist raising a real registration on her own screen with someone standing behind her. Run it counter by counter: registration, doctor consultation, nursing station, pharmacy, laboratory, billing and the owner's view. Each group needs only its own screens and the two things it hands to the next counter. Record the sessions, because staff join later and word of mouth teaches bad habits.</p><h3>What to test before go-live</h3><ul><li>Register a new patient, find them again by mobile number, and confirm a duplicate cannot be created silently.</li><li>Run one patient end to end: registration, token, consultation, prescription, laboratory order, result, pharmacy, bill.</li><li>Run an admission end to end: bed allocation, orders, consumables, discharge summary, final bill.</li><li>Raise a cash bill, a GST invoice and an insured or TPA bill, and check the printed formats on your own stationery.</li><li>Dispense a batch-tracked item and confirm stock and expiry behave as expected.</li><li>Check role-based access by logging in as each role and looking for what that role should not see.</li><li>Print everything a patient leaves with: bill, prescription, report, discharge summary.</li></ul><h3>Day one</h3><ul><li>Go live on a working day with normal volume, not a Sunday, so real problems appear while help is present.</li><li>Extra staff on the counters for the first three days, and a named person per shift who answers questions.</li><li>The old registers kept in parallel for a short, fixed period, with an agreed date they stop.</li><li>Printers, stationery, barcode scanners and logins tested the evening before, not on the morning.</li><li>A written escalation route, which for Elevate Aura customers is WhatsApp and remote support with the founder.</li><li>A review at the end of week one to fix the small irritations while everyone still remembers them.</li></ul><p>Elevate Aura's framework is live in 30 working days where scope allows, with scope fixed at the start. Data migration, branding, training and the first week of hand-holding sit inside that window. See <a href="/hims/hospital-management-system/">the hospital management system</a> and <a href="/resources/how-to-choose-hospital-management-software/">how to choose hospital software</a>.</p></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Implementation questions, answered</h2>
+    </div>
+    <div class="faq rv"><details open><summary>How long does a hospital software implementation take?</summary><p>Elevate Aura works to live in 30 working days where scope allows, with the scope fixed at the start. A single-specialty clinic sits at the shorter end; a hospital with IP, theatre, ICU and TPA billing sits at the longer end because there are more counters to configure and train.</p></details><details><summary>Should we go live with everything at once?</summary><p>Rarely. Registration and the patient record first, then the clinical screens, then pharmacy and billing, then wards and claims. Later phases attach to the same record, so phasing costs nothing in rework and greatly reduces the chance of a bad first week.</p></details><details><summary>What data do we need to supply?</summary><p>Patients, service and tariff master, pharmacy and consumable items, laboratory tests, doctors and staff with roles, wards and beds, payers you deal with, and your invoice, prescription and discharge formats with your logo.</p></details><details><summary>Who trains our staff?</summary><p>For Elevate Aura customers, the founder who builds the system, at your counters, on your own data. Sessions can be recorded so staff who join later are taught the same way. In-person training happens in Chennai and by travel within Tamil Nadu.</p></details><details><summary>Should we keep the paper registers running?</summary><p>For a short, fixed period, with an agreed date they stop. Parallel running indefinitely is how a hospital ends up maintaining two systems and trusting neither. Set the end date before go-live and hold it.</p></details><details><summary>What happens in the first week if something goes wrong?</summary><p>There should be a named person per shift inside the hospital and a written escalation route outside it. Elevate Aura's support is WhatsApp and remote, usually over a screen share, from the person who built the system.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep reading</span><h2 class="h2" style="font-size:1.5rem">Next in this series</h2></div>
+    <div class="who rv"><a class="w" href="/hims/hospital-management-system/"><div class="g">&#127973;</div><b>Hospital management system</b><p>The platform, end to end.</p></a><a class="w" href="/resources/how-to-choose-hospital-management-software/"><div class="g">&#9989;</div><b>How to choose</b><p>The buyer's checklist.</p></a><a class="w" href="/resources/what-is-uhid/"><div class="g">&#127380;</div><b>What is UHID</b><p>Clean identity before go-live.</p></a><a class="w" href="/resources/what-is-tpa-hospital-billing/"><div class="g">&#129534;</div><b>What is TPA billing</b><p>The phase six problem.</p></a><a class="w" href="/compare/cloud-vs-on-premise-hospital-software/"><div class="g">&#9878;</div><b>Cloud vs on-premise</b><p>Decide before you configure.</p></a><a class="w" href="/hims/hospital-mis-dashboard/"><div class="g">&#128200;</div><b>MIS dashboard</b><p>The last phase to switch on.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Still deciding what you need?</h2>
+      <p>Tell us how your centre or business works today and we will tell you plainly which parts of this apply to you, and which do not.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/hims/hospital-management-system/">See the hospital management system</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%20read%20the%20implementation%20checklist%20and%20want%20to%20discuss%20a%20rollout%20for%20our%20hospital." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">Plain-language guides to PACS, DICOM, HIMS, AMC software, CRM and device software, written by the team that builds them.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="/resources/">Resources home</a>
+        <a href="/resources/">All guides</a><a href="/compare/">Comparisons</a><a href="/case-studies/">Case Studies</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

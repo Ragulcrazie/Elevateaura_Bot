@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "sla-management-software",
+  "title": "SLA Management Software for Field Service | Aura Business",
+  "meta": "SLA management software for field service: response and resolution targets per contract, a live clock on every call, breach flags and evidence at renewal.",
+  "h1": "SLA management software that runs a <span class=\"hl\">clock on every call</span>, per contract.",
+  "crumb": "SLA Management",
+  "pill": "For dealers whose contracts promise response times",
+  "sub": "Aura Business stores the response and resolution times you promised in each AMC or CMC, starts a clock the moment a call is logged, flags calls heading for breach so somebody can act, and keeps the record you need at renewal.",
+  "meta_ticks": [
+    "Response and resolution targets per contract",
+    "Live clock and breach flags",
+    "SLA evidence at renewal time"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service screen showing open calls with SLA response clocks and breach warnings per contract",
+    "bar": "app.elevateaura.co.in/service/sla"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss SLA management software for our service contracts.",
+  "primary_keyword": "SLA management software field service",
+  "secondary_keywords": [
+    "SLA tracking software India",
+    "service level agreement software for AMC",
+    "response time tracking software",
+    "SLA breach escalation software",
+    "field service SLA compliance software"
+  ],
+  "intent": "commercial",
+  "persona": "Service manager accountable for contractual response and resolution times",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an SLA becomes once it is in software",
+      "paras": [
+        "A service level agreement is a promise with a number in it: attend within so many hours, restore within so many more. SLA management software turns that promise into something the service desk can see. Each contract carries its own response and resolution targets, every call logged against a covered asset starts a clock, and calls approaching their limit are visible before they breach rather than after.",
+        "Aura Business holds this as SLA Definitions and Breach Tracking in the AMC and Service Contracts suite, with SLA timers also running on helpdesk tickets. It is one of the few modules whose value is entirely about timing. A breach found the next morning is a report. A call flagged at hour three is a save."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why SLAs are breached",
+      "h2": "Most breaches are not capacity problems. They are visibility problems.",
+      "lead": "Nobody decides to miss a response time. The call simply sits in a queue where nothing indicates it is different from the others.",
+      "items": [
+        {
+          "h": "Different promises, one queue",
+          "p": "A four-hour contract and a next-day contract sit in the same list looking identical."
+        },
+        {
+          "h": "The clock exists only in the contract",
+          "p": "The response time is in a PDF nobody on the service desk has read."
+        },
+        {
+          "h": "Breach discovered by the customer",
+          "p": "The first anyone hears of it is an angry call from the hospital's biomedical head."
+        },
+        {
+          "h": "No escalation path",
+          "p": "A call heading for breach is nobody's problem until it becomes everybody's problem."
+        },
+        {
+          "h": "Penalties argued without data",
+          "p": "The customer claims repeated breaches and you cannot show your side of the record."
+        },
+        {
+          "h": "Renewals negotiated on feeling",
+          "p": "You cannot demonstrate that you met the terms, so the renewal price is pushed down."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the clock works",
+      "h2": "From the SLA definition to the renewal conversation.",
+      "steps": [
+        {
+          "h": "SLA defined",
+          "p": "Response and resolution times recorded on the contract, per priority where they differ."
+        },
+        {
+          "h": "Call logged",
+          "p": "A breakdown against a covered asset picks up that contract's targets automatically."
+        },
+        {
+          "h": "Clock starts",
+          "p": "Response time counts from intake; the resolution clock runs alongside it."
+        },
+        {
+          "h": "Queue ordered",
+          "p": "The dispatch board ranks calls by time remaining, not by arrival order."
+        },
+        {
+          "h": "Warning before breach",
+          "p": "Calls approaching their limit are flagged for the coordinator to act on."
+        },
+        {
+          "h": "Escalation",
+          "p": "A breached or at-risk call is escalated to a named person rather than drifting."
+        },
+        {
+          "h": "Recorded",
+          "p": "Response and resolution times are stored against the call, the asset and the contract."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "SLA handling across service and helpdesk.",
+      "groups": [
+        {
+          "icon": "&#9201;",
+          "h": "Definitions",
+          "items": [
+            "SLA definitions per contract",
+            "Separate response and resolution targets",
+            "Targets by call priority",
+            "Multi-site contracts with their own terms"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Live tracking",
+          "items": [
+            "Clock on every service call",
+            "SLA timers on helpdesk tickets",
+            "At-risk flags before breach",
+            "Escalation to a named owner"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Acting on it",
+          "items": [
+            "Dispatch board ordered by time remaining",
+            "Skill-based allocation for faster first-time fix",
+            "Technician route and schedule",
+            "Mobile job card closing the resolution clock"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Evidence",
+          "items": [
+            "Response and resolution times per call",
+            "Breach history per contract and customer",
+            "Service history per asset",
+            "Contract profitability alongside compliance"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments where the clock earns its keep.",
+      "items": [
+        {
+          "h": "The urgent contract is served first",
+          "workflow": "Two calls arrive together; the one on a four-hour contract shows less time remaining and is dispatched first.",
+          "result": "The queue reflects what you actually promised."
+        },
+        {
+          "h": "A breach is prevented at hour three",
+          "workflow": "A call approaching its response limit is flagged, and the coordinator reassigns it to a closer engineer.",
+          "result": "The visit happens inside the window."
+        },
+        {
+          "h": "A penalty claim is answered",
+          "workflow": "The customer claims three missed responses; the record shows the log time, the attendance time and the signature for each.",
+          "result": "The discussion is about facts."
+        },
+        {
+          "h": "The renewal holds its price",
+          "workflow": "At term end the contract shows calls attended, response times met and resolutions completed.",
+          "result": "You renew on performance rather than on a discount."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses that sell uptime, not just repairs.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment service teams",
+          "p": "Hospital contracts with strict attendance windows."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab support",
+          "p": "Analyser downtime that stops the lab reporting."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial service firms",
+          "p": "Production lines where downtime is charged for."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services",
+          "p": "Lift and HVAC contracts with statutory response terms."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Multi-brand service companies",
+          "p": "Different SLAs across several principals."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A contract in a drawer, a ticket tool, or SLAs on the desk.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the SLA lives",
+          "A PDF in a folder",
+          "Not recorded",
+          "On the contract, applied to calls"
+        ],
+        [
+          "Clock on a call",
+          "None",
+          "Created date only",
+          "Response and resolution timers"
+        ],
+        [
+          "Warning before breach",
+          "None",
+          "None",
+          "At-risk flag with escalation"
+        ],
+        [
+          "Different terms per customer",
+          "Remembered",
+          "One rule for all",
+          "Per contract and per priority"
+        ],
+        [
+          "Proof of attendance",
+          "A WhatsApp photo",
+          "A note",
+          "GPS check-in, job card and signature"
+        ],
+        [
+          "Use at renewal",
+          "Nothing to show",
+          "Nothing to show",
+          "Compliance record per contract"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "SLA management, answered.",
+      "items": [
+        {
+          "q": "Can different customers have different SLAs?",
+          "a": "Yes, and that is the point of holding them on the contract. A four-hour response for a teaching hospital and a next-working-day response for a small clinic both apply automatically to calls raised against their own assets."
+        },
+        {
+          "q": "When does the response clock start and stop?",
+          "a": "It starts when the call is logged and stops when the engineer is recorded as attending, which in practice is the GPS check-in on the mobile app. The resolution clock runs until the job is closed."
+        },
+        {
+          "q": "What happens when a call is about to breach?",
+          "a": "It is flagged on the service desk and escalated to the owner you have nominated, so a decision can be made to reassign, send a second engineer or inform the customer before the window closes."
+        },
+        {
+          "q": "Do helpdesk tickets have SLAs too?",
+          "a": "Yes. SLA timers run on tickets in the Ticketing and Helpdesk suite as well as on field service calls. See <a href=\"/aura-business/helpdesk-ticketing-equipment-dealers/\">helpdesk ticketing</a>."
+        },
+        {
+          "q": "Does missing an SLA calculate a penalty automatically?",
+          "a": "The breach is recorded with its times. Whether a penalty applies, and how it is computed, depends on your contract wording, so the platform gives you the evidence rather than a commercial judgement."
+        },
+        {
+          "q": "How does this help at renewal?",
+          "a": "The contract carries its call history, response times and resolutions, so the renewal is discussed against the record. See <a href=\"/aura-business/service-contract-management-software/\">contract management</a> and <a href=\"/aura-business/amc-billing-software/\">AMC billing</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Contract management",
+          "p": "Where the SLA is defined."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128506;",
+          "b": "Dispatch",
+          "p": "Acting on the clock."
+        },
+        {
+          "href": "/aura-business/helpdesk-ticketing-equipment-dealers/",
+          "icon": "&#127915;",
+          "b": "Helpdesk",
+          "p": "SLA timers on tickets."
+        },
+        {
+          "href": "/aura-business/amc-billing-software/",
+          "icon": "&#129534;",
+          "b": "AMC billing",
+          "p": "Billing the contract."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "The wider service suite."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an SLA means in service."
+        }
+      ]
+    }
+  ]
+}

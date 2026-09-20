@@ -1,0 +1,224 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-tpa-hospital-billing",
+  "title": "What Is TPA in Hospital Billing? A Plain-Language Guide",
+  "meta": "A TPA administers health insurance claims between the hospital and the insurer. What pre-authorisation is, what goes in the claim file and why payment is slow.",
+  "h1": "What is a TPA in hospital billing? The <span class=\"hl\">middle party that pays you</span>.",
+  "crumb": "What is TPA billing",
+  "pill": "Guide",
+  "sub": "TPA stands for Third Party Administrator. It is the company an insurer appoints to run claims between itself and your hospital: approving admissions, checking bills and releasing payment. This guide explains the process as the front office experiences it.",
+  "meta_ticks": [
+    "Written for Indian hospital front offices",
+    "Process explained, not sold",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See TPA billing in HIMS",
+  "cta_href": "/hims/hospital-insurance-tpa-billing-software/",
+  "whatsapp_text": "Hi, I read the TPA billing guide and have a question about our hospital's claims.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "what is TPA in hospital billing",
+  "secondary_keywords": [
+    "TPA meaning in hospital",
+    "third party administrator health insurance",
+    "cashless claim process hospital",
+    "TPA pre-authorisation",
+    "hospital insurance claim file"
+  ],
+  "intent": "informational",
+  "persona": "Hospital owner, administrator or billing manager dealing with insurance and TPA claims",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "TPA in two paragraphs",
+      "paras": [
+        "A TPA, or Third Party Administrator, is a company appointed by a health insurer to administer claims on its behalf. It is not the insurer and it is not the hospital. It issues the patient's card, approves the cashless admission, reviews the bill against the policy, queries what it does not accept and instructs the insurer to release payment to you.",
+        "For a hospital that means the patient in the bed is not the payer. The paperwork is the payer, and the money arrives weeks or months later depending on how well that paperwork was assembled on the day of admission."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The process",
+      "h2": "What actually happens between admission and payment",
+      "lead": "Every cashless admission runs through the same sequence. Knowing where it usually stalls is most of the job.",
+      "body": [
+        {
+          "h3": "1. Identify the payer at the desk"
+        },
+        "Before anything clinical happens, the front office establishes which policy is being used, which insurer issued it, which TPA administers it and whether your hospital is inside that TPA's network. If the hospital is out of network, the admission is a reimbursement case: the patient pays and claims later, and the hospital's role is limited to supplying documents.",
+        {
+          "h3": "2. Pre-authorisation"
+        },
+        "The hospital sends a request stating the provisional diagnosis, the proposed treatment or procedure, the expected length of stay and the estimated cost, signed by the treating doctor. The TPA approves a figure, partly approves, asks a question or declines. Nothing about this is automatic, and an emergency admission proceeds while the request is in flight.",
+        {
+          "h3": "3. Enhancement during the stay"
+        },
+        "If the patient stays longer, moves to intensive care or needs an additional procedure, the approved amount no longer covers the admission and a further request is raised. Enhancements are one of the commonest causes of a shortfall at discharge, because the treatment changed and nobody told the TPA on the day it changed.",
+        {
+          "h3": "4. The claim file at discharge"
+        },
+        "This is the document set the TPA pays against. It typically includes the signed claim form and policy or card details, the pre-authorisation and every enhancement, the discharge summary, the itemised bill with charge codes, pharmacy and consumable bills, investigation reports, the operation notes where there was surgery, and the patient's identity and address proof.",
+        {
+          "h3": "5. Query, settlement and the shortfall"
+        },
+        "The TPA either settles, deducts items it considers non-payable or raises a query. Deductions commonly fall on items excluded by the policy, consumables that are not itemised, or charges that do not match the treatment described in the summary. Whatever is deducted is either written off, billed to the patient under your own policy, or disputed. That decision is a commercial and contractual one, so confirm it with your advisers rather than taking a rule from a web page."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Why payment is slow",
+      "h2": "The delay is mostly information, not goodwill",
+      "body": [
+        "Hospitals tend to blame TPAs for slow payment, and TPAs tend to blame hospital paperwork. Both are describing the same failure from different ends: the claim file does not agree with itself. Where the bill, the discharge summary and the pre-authorisation describe three slightly different admissions, someone has to reconcile them, and the file goes into a queue while that happens.",
+        {
+          "ul": [
+            "<b>Approval taken late.</b> A planned admission where pre-authorisation was raised after the patient was already on the ward.",
+            "<b>Enhancement never raised.</b> The stay extended or the patient moved to ICU and the approved amount was never revised.",
+            "<b>Unitemised consumables.</b> A single line for consumables invites a deduction; a list of what was used does not.",
+            "<b>Bill typed separately from the record.</b> Charges re-entered by hand at discharge drift away from what the notes say was done.",
+            "<b>Documents missing at submission.</b> An investigation report or an operation note absent from the file restarts the clock.",
+            "<b>Nobody owns follow-up.</b> Claims submitted and then not tracked until the month-end receivables report."
+          ]
+        },
+        "The practical fix is not a harder negotiation. It is to make the bill a by-product of the treatment record, so the itemised bill, the summary and the claim form are three views of the same admission rather than three separate acts of typing."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "At the counter",
+      "h2": "What the front office must capture, and when",
+      "body": [
+        "Almost every deduction traces back to something not asked for at the desk. This is the minimum an insured admission needs before the patient leaves registration.",
+        {
+          "table": {
+            "headers": [
+              "Capture",
+              "When",
+              "Why it matters later"
+            ],
+            "rows": [
+              [
+                "Policy number, insurer and TPA name",
+                "At registration",
+                "Decides whether the case is cashless or reimbursement."
+              ],
+              [
+                "Card or e-card and patient identity proof",
+                "At registration",
+                "Identity mismatch is a standard query."
+              ],
+              [
+                "Network status of your hospital with that TPA",
+                "Before admission",
+                "An out-of-network cashless promise cannot be kept."
+              ],
+              [
+                "Provisional diagnosis and planned procedure",
+                "With pre-authorisation",
+                "The approval is written against this, not against the final bill."
+              ],
+              [
+                "Expected length of stay and estimate",
+                "With pre-authorisation",
+                "Sets the approved amount you must stay inside."
+              ],
+              [
+                "Any change in treatment or stay",
+                "The day it happens",
+                "Triggers the enhancement request before discharge, not after."
+              ],
+              [
+                "Itemised charges as they occur",
+                "Throughout the stay",
+                "Removes the discharge-day reconstruction of the bill."
+              ],
+              [
+                "Attendant's contact number",
+                "At registration",
+                "The person who answers when a query arrives weeks later."
+              ]
+            ]
+          }
+        },
+        "Where this sits in software: in <a href=\"/hims/hospital-insurance-tpa-billing-software/\">HIMS TPA and insurance billing</a> the payer and approval sit on the admission, charges accumulate on the encounter as treatment happens, and the cash portion, the insured portion and the claim are drawn from the same record. What the software cannot do is decide your policy on shortfalls or read a contract for you."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about TPAs",
+      "items": [
+        {
+          "q": "What does TPA stand for?",
+          "a": "Third Party Administrator. It is a company licensed to administer health insurance claims on behalf of an insurer, handling cards, pre-authorisation, bill review and settlement with the hospital. The insurer carries the risk; the TPA runs the process."
+        },
+        {
+          "q": "Is the TPA the same as the insurance company?",
+          "a": "No. The insurer issues the policy and pays the claim. The TPA administers it. One insurer may use several TPAs, and one TPA may serve several insurers, which is why the card and the policy can carry different names."
+        },
+        {
+          "q": "What is pre-authorisation?",
+          "a": "A request the hospital sends before or at the start of treatment stating the diagnosis, the planned procedure, the expected stay and the estimated cost. The TPA approves an amount against it. Treatment that goes beyond that amount needs an enhancement request."
+        },
+        {
+          "q": "Why do TPAs deduct part of the bill?",
+          "a": "Usually because an item is excluded by the policy, because consumables were not itemised, or because the charge does not match the treatment described in the discharge summary. Whether a deduction is disputed or absorbed is a commercial decision for your hospital and its advisers."
+        },
+        {
+          "q": "How long does a TPA claim take to settle?",
+          "a": "It varies by insurer, TPA and the state of the file. What a hospital can control is the file: complete documents, an itemised bill drawn from the record, enhancements raised on the day treatment changed, and someone tracking submitted claims rather than discovering them in ageing."
+        },
+        {
+          "q": "Can software make TPA claims faster?",
+          "a": "It can remove the part that is self-inflicted. When the bill is generated from the treatment record and the payer sits on the admission from registration, the claim file agrees with itself. Approval times and insurer policy remain outside your control."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#129534;",
+          "b": "TPA and insurance billing",
+          "p": "Claims from the record."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#128179;",
+          "b": "Hospital billing software",
+          "p": "Cash, insurer and GST."
+        },
+        {
+          "href": "/hims/hospital-corporate-credit-billing/",
+          "icon": "&#127970;",
+          "b": "Corporate credit billing",
+          "p": "When a company is the payer."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "What is HIMS",
+          "p": "The whole hospital system."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#127380;",
+          "b": "What is UHID",
+          "p": "One ID per patient."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        }
+      ]
+    }
+  ]
+}

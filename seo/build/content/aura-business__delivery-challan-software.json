@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "delivery-challan-software",
+  "title": "Delivery Challan Software for Distributors | Aura Business",
+  "meta": "Delivery challan software for goods despatched against an order, challan converted to a tax invoice, returnable and demo goods, and proof of delivery.",
+  "h1": "Delivery challan software for goods that move <span class=\"hl\">before the invoice does</span>.",
+  "crumb": "Delivery Challan Software",
+  "pill": "For despatch and demo goods",
+  "sub": "Aura Business raises a delivery challan against a sales order, reduces stock from the despatching location, converts the challan to a tax invoice when the sale is confirmed, handles returnable and demo goods, and captures proof of delivery.",
+  "meta_ticks": [
+    "Challan raised against the sales order",
+    "Convert challan to tax invoice",
+    "Returnable, demo and proof of delivery"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business despatch screen showing a delivery challan with item lines, despatch location and delivery status",
+    "bar": "app.elevateaura.co.in/challan"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss delivery challan software for our despatches.",
+  "primary_keyword": "delivery challan software",
+  "secondary_keywords": [
+    "delivery challan format software India",
+    "challan to invoice software",
+    "returnable challan software",
+    "demo goods challan software",
+    "proof of delivery software for distributors"
+  ],
+  "intent": "commercial",
+  "persona": "Despatch or stores in-charge at a distributor sending goods out daily",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a delivery challan is doing that an invoice is not",
+      "paras": [
+        "A delivery challan accompanies goods that are moving when the sale is not yet complete. The most common cases for a distributor are a demonstration unit going to a hospital for evaluation, goods despatched ahead of invoicing, material going out for job work or repair, and anything expected to come back. The challan records what physically left, from which location, for whom.",
+        "In Aura Business the Delivery Challan module sits between the sales order and the tax invoice. Raising it reduces stock from the despatching godown and creates a document the receiving party signs. When the sale is confirmed, the challan converts to a GST tax invoice carrying the same lines, so nothing is retyped and the goods movement and the sale remain separately documented."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where despatch goes wrong",
+      "h2": "Goods leave the building faster than the paperwork does.",
+      "lead": "Most challan problems are the same problem: something physical happened and no document was created at the moment it happened.",
+      "items": [
+        {
+          "h": "Demo units that never come home",
+          "p": "A monitor goes out for evaluation on a handwritten slip and nobody can say where it is eight months later."
+        },
+        {
+          "h": "Challan books with no link to stock",
+          "p": "The printed book is filled in by hand and the system's stock figure never changes."
+        },
+        {
+          "h": "Retyping the invoice",
+          "p": "When the customer confirms, the invoice is keyed again from the challan and the quantities do not match."
+        },
+        {
+          "h": "No proof of receipt",
+          "p": "The hospital store says it never arrived and you have nothing signed to show otherwise."
+        },
+        {
+          "h": "Returnable goods treated as sold",
+          "p": "Items sent for trial or repair are written off because nobody marked them returnable."
+        },
+        {
+          "h": "Challan and e-way bill out of step",
+          "p": "The e-way bill is created from different details than the document actually travelling with the goods."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How goods leave",
+      "h2": "From the sales order to a signed delivery.",
+      "steps": [
+        {
+          "h": "Order confirmed",
+          "p": "Lines, customer, GSTIN and ship-to address come from the sales order."
+        },
+        {
+          "h": "Challan raised",
+          "p": "Despatch document created with the quantity actually going, marked returnable where it applies."
+        },
+        {
+          "h": "Stock reduced",
+          "p": "The despatching godown is debited, with serial or batch recorded on the line."
+        },
+        {
+          "h": "Travel documents",
+          "p": "E-way bill generated for the consignment where the movement requires one."
+        },
+        {
+          "h": "Proof of delivery",
+          "p": "Receipt confirmed with signature and a photograph captured on the field app."
+        },
+        {
+          "h": "Converted or returned",
+          "p": "The challan becomes a tax invoice on confirmation, or the goods come back and the challan is closed."
+        },
+        {
+          "h": "Followed up",
+          "p": "Open challans and demo goods stay on a list until they are invoiced or returned."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The challan and the documents on either side of it.",
+      "groups": [
+        {
+          "icon": "&#128666;",
+          "h": "The challan",
+          "items": [
+            "Delivery challan against a sales order",
+            "Returnable and non-returnable challans",
+            "Demo and evaluation goods tracked separately",
+            "Serial and batch recorded on the line"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Becoming an invoice",
+          "items": [
+            "Challan converted to GST tax invoice",
+            "Gapless invoice numbering",
+            "CGST, SGST or IGST by place of supply",
+            "Proforma where the customer needs one first"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Stock effect",
+          "items": [
+            "Stock reduced from the despatching location",
+            "Multi-warehouse and van stock aware",
+            "Stock movements ledger entry per despatch",
+            "Return brings the goods back into stock"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Proof",
+          "items": [
+            "Field signature on delivery",
+            "Photo proof of the consignment",
+            "Order tracking page for the customer",
+            "E-way bill linked to the movement"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four despatches that stay documented.",
+      "items": [
+        {
+          "h": "A demo unit is tracked until it returns",
+          "workflow": "A patient monitor goes to a hospital on a returnable challan and stays on the open-challan list with its serial number.",
+          "result": "The unit is either bought or brought back, not lost."
+        },
+        {
+          "h": "The invoice matches what left",
+          "workflow": "The hospital confirms the purchase and the challan converts to a tax invoice with the same lines, quantities and serials.",
+          "result": "No difference between the goods and the bill."
+        },
+        {
+          "h": "The store cannot deny receipt",
+          "workflow": "The delivery is signed on the field app with a photograph of the cartons at the receiving dock.",
+          "result": "Disputes end with a document, not an argument."
+        },
+        {
+          "h": "Goods going for repair come back",
+          "workflow": "An analyser sent to the principal for repair leaves on a returnable challan and is received back against the same document.",
+          "result": "Stock and asset records stay honest."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses whose goods move before they are paid for.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Demo units, trials and staged deliveries to hospitals."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab suppliers",
+          "p": "Analysers placed on evaluation before purchase."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Stock transfers and consignments to regional dealers."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service businesses",
+          "p": "Goods sent out for repair and returned."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "Site deliveries against long-running project orders."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A printed challan book, accounts software, or the despatch in the system.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the challan is made",
+          "A printed book",
+          "A voucher type",
+          "From the sales order, with its lines"
+        ],
+        [
+          "Effect on stock",
+          "None until invoiced",
+          "Depends on the entry",
+          "Reduces the despatching location at once"
+        ],
+        [
+          "Returnable goods",
+          "Remembered",
+          "Manual tracking",
+          "Marked returnable and listed until closed"
+        ],
+        [
+          "Becoming an invoice",
+          "Typed again",
+          "Typed again",
+          "Converted, carrying lines, serials and batches"
+        ],
+        [
+          "Proof of delivery",
+          "Signed paper",
+          "None",
+          "Signature and photo on the field app"
+        ],
+        [
+          "E-way bill from the same record",
+          "Separate portal",
+          "Sometimes",
+          "Generated from the challan or invoice"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Delivery challans, answered.",
+      "items": [
+        {
+          "q": "When should we use a challan instead of an invoice?",
+          "a": "Whenever goods move without a completed sale, such as demo units, goods sent for job work or repair, and despatches ahead of invoicing. Which situations legally require a challan for your business should be confirmed with your accountant."
+        },
+        {
+          "q": "Does raising a challan reduce stock?",
+          "a": "Yes. The despatching godown or van is reduced when the challan is raised, and the movement appears in the stock ledger, so stock reflects what is physically in the building rather than what has been invoiced."
+        },
+        {
+          "q": "How does a challan become an invoice?",
+          "a": "The challan is converted, and the tax invoice is created with the same lines, quantities, serials and batches, with GST applied by place of supply. The link between the two documents is kept."
+        },
+        {
+          "q": "Can we track demo equipment out on trial?",
+          "a": "Yes. Goods sent on a returnable challan stay on an open list with their serial numbers until they are either invoiced or received back, so evaluation units do not disappear."
+        },
+        {
+          "q": "Is the e-way bill raised from the challan?",
+          "a": "It can be raised from the challan or from the invoice, depending on which document the consignment travels against. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "What proof of delivery do we get?",
+          "a": "The person delivering captures a signature and a photograph on the field app against the challan, and the customer can also follow the despatch on the order tracking page. See <a href=\"/aura-business/medical-equipment-dealer-management-software/\">dealer management</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "The full GST billing suite."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128739;",
+          "b": "E-way bill",
+          "p": "Documents for the road."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127970;",
+          "b": "Warehouse management",
+          "p": "Where the goods leave from."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#8986;",
+          "b": "Batch and expiry",
+          "p": "Batch on the despatch line."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#128203;",
+          "b": "GST billing",
+          "p": "Where the challan ends up."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Order to despatch online."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-e-invoice-irn",
+  "title": "What Is E-Invoice and IRN? A Distributor's Guide",
+  "meta": "E-invoice and IRN explained for a distributor: what the Invoice Registration Number and QR code are, how they fit normal billing and who needs to confirm.",
+  "h1": "What is an e-invoice, and what is an <span class=\"hl\">IRN</span>?",
+  "crumb": "E-invoice and IRN",
+  "pill": "Guide",
+  "sub": "An e-invoice is not an invoice sent by email. It is an ordinary tax invoice whose details have been reported to a government portal, which returns a unique Invoice Registration Number and a signed QR code that then appear on the printed copy.",
+  "meta_ticks": [
+    "Written for distributors, not accountants",
+    "Plain language, no jargon",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your e-invoice and IRN guide and would like to ask how it works in Aura Business.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is e-invoice and IRN",
+  "secondary_keywords": [
+    "IRN full form",
+    "Invoice Registration Number meaning",
+    "e-invoice QR code explained",
+    "e-invoicing for distributors India",
+    "how e-invoice works GST"
+  ],
+  "intent": "informational",
+  "persona": "Owner or accounts manager at a distribution business trying to understand e-invoicing before changing billing software",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "E-invoice and IRN in two paragraphs",
+      "paras": [
+        "E-invoicing is a reporting step, not a new kind of invoice. You raise a tax invoice in your own billing software as you always have. Before it is issued to the customer, its details are sent in a standard format to a government Invoice Registration Portal. The portal checks the data, registers it, and sends back a unique Invoice Registration Number, usually shortened to IRN, together with a digitally signed QR code. Your software prints the QR code on the invoice, and that invoice is now an e-invoice.",
+        "IRN stands for Invoice Registration Number. It is a long reference generated from details of the document itself, so it is unique to that invoice from that supplier. It is not your invoice number, which you continue to generate in your own series. The QR code is a signed summary of the invoice that anyone can scan to confirm the document was registered, which is why a customer's accounts department may reject an invoice that should carry one and does not."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The mechanics",
+      "h2": "What actually happens when you press save",
+      "lead": "For a distributor, the useful thing to understand is where the extra step sits in a day that already has quotations, orders, despatches and challans in it.",
+      "body": [
+        {
+          "ul": [
+            "<b>You raise the invoice.</b> The sales order becomes a tax invoice in your billing system, with your own invoice number from your own series.",
+            "<b>The details are reported.</b> The software sends the invoice data in the prescribed format to the registration portal, either directly or through an authorised intermediary.",
+            "<b>The portal responds.</b> If the data is valid, it returns the IRN and a signed QR code. If it is not, it returns an error and nothing is registered.",
+            "<b>The invoice is printed or sent.</b> The QR code and the IRN appear on the document the customer receives.",
+            "<b>The data flows onward.</b> Registered invoice details are used by the tax system, which is why e-invoicing reduces some of the separate keying that used to happen at return time.",
+            "<b>Corrections follow the rules.</b> A registered invoice cannot simply be edited. Cancellation is allowed only within a window set by the rules, and after that the correction is made with a credit note or an amendment."
+          ]
+        },
+        "Two practical consequences follow from this. The first is that your billing software and your e-invoicing have to be the same system or tightly connected, because an invoice that exists in one place and is registered from another will eventually disagree. The second is that the portal can reject data, so your team needs to see the failure at the moment of billing rather than discover it at month end."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Clearing up confusion",
+      "h2": "Three numbers that get mixed up",
+      "headers": [
+        "",
+        "Invoice number",
+        "IRN",
+        "E-way bill number"
+      ],
+      "rows": [
+        [
+          "Who creates it",
+          "You, in your own series",
+          "The registration portal",
+          "The e-way bill system"
+        ],
+        [
+          "What it is for",
+          "Identifying the document in your books",
+          "Confirming the invoice was registered",
+          "Authorising the movement of goods"
+        ],
+        [
+          "When it appears",
+          "When the invoice is raised",
+          "When the invoice data is accepted",
+          "When goods are despatched"
+        ],
+        [
+          "Printed on the invoice",
+          "Yes",
+          "Yes, with the signed QR code",
+          "Usually carried with the consignment"
+        ],
+        [
+          "Applies to",
+          "Every tax invoice",
+          "Suppliers and documents covered by the rules",
+          "Movements covered by the rules"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The honest part",
+      "h2": "Whether it applies to you is a question for your accountant",
+      "lead": "This is where a guide should stop being helpful and start being careful.",
+      "body": [
+        "E-invoicing applies to businesses that cross a turnover level notified by the government, and that level has been revised more than once since the system began. Certain categories of supplier and certain document types sit outside it, and some businesses that are not required to register invoices choose to do so because their larger customers prefer it. None of that can be settled from a web page.",
+        "So the only responsible advice is this: ask your chartered accountant whether e-invoicing applies to your business today, to which of your documents, and from what date. Then make sure your software can do it when the answer is yes. What a distributor should avoid is discovering the requirement from a customer's accounts department after an invoice has been rejected.",
+        "The related requirement most distributors meet at the same time is the e-way bill for moving goods. The two are separate systems with separate rules, but in practice they are generated minutes apart from the same despatch, which is an argument for having both in the software that raises the invoice rather than in three different browser tabs."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "In your software",
+      "h2": "What to look for in a billing system",
+      "body": [
+        "If you are choosing or changing software, these are the practical points to check rather than the marketing claim that e-invoicing is supported:",
+        {
+          "ul": [
+            "The IRN and QR code are obtained at the moment the invoice is raised, not in a separate batch job at the end of the day.",
+            "A rejection from the portal is shown to the person billing, with the reason, so it can be fixed immediately.",
+            "The printed invoice template places the QR code and IRN where your customers expect to see them.",
+            "Cancellation and credit notes follow the same trail, so your books and the registered records agree.",
+            "The e-way bill for the same despatch can be raised from the same document.",
+            "Invoice numbering stays gapless in your own series, because that is what your auditor will look at."
+          ]
+        },
+        "In Aura Business, e-invoice with IRN and QR, the e-way bill, the delivery challan, the tax invoice and credit notes all sit in the same quotation-to-billing suite, so a despatch produces one consistent set of documents. Setup and the applicability question are discussed on a call, and your own accountant confirms what you are required to do."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about e-invoicing",
+      "items": [
+        {
+          "q": "What is the full form of IRN?",
+          "a": "Invoice Registration Number. It is a unique reference returned by the government's Invoice Registration Portal when the details of a tax invoice are reported and accepted. It is separate from the invoice number you generate in your own series."
+        },
+        {
+          "q": "Is an e-invoice just an invoice sent by email?",
+          "a": "No. An invoice emailed as a PDF is simply a delivery method. An e-invoice is an invoice whose details have been reported to and registered by the portal, which returns the IRN and a signed QR code that appear on the document."
+        },
+        {
+          "q": "Does e-invoicing apply to my business?",
+          "a": "That depends on your turnover, your supply categories and the rules in force, which have changed over time. Confirm it with your chartered accountant rather than relying on any general guidance, including this page."
+        },
+        {
+          "q": "Can a registered e-invoice be edited?",
+          "a": "Not directly. Cancellation is permitted only within a window defined by the rules, and after that a correction is made through a credit note or an amendment. This is why catching data errors at the billing screen matters."
+        },
+        {
+          "q": "Is an e-invoice the same as an e-way bill?",
+          "a": "No. An e-way bill authorises the movement of goods and is generated from the e-way bill system, while an e-invoice registers the invoice details. They are separate requirements that often arise from the same despatch. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "What happens if we issue an invoice without an IRN when one was required?",
+          "a": "Your customer may refuse to accept the document, and you may have a compliance problem. The consequences are a matter for your accountant and the rules in force, which is why applicability should be confirmed before you rely on any billing process."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/aura-business/e-invoice-software-distributors/",
+          "icon": "&#129534;",
+          "b": "E-invoice software",
+          "p": "IRN and QR in the billing flow."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128667;",
+          "b": "E-way bill software",
+          "p": "Paperwork for goods in motion."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#128179;",
+          "b": "GST billing",
+          "p": "Quotation to tax invoice."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128220;",
+          "b": "Delivery challan",
+          "p": "Goods that move before billing."
+        },
+        {
+          "href": "/resources/how-to-choose-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Choosing a CRM",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#128230;",
+          "b": "Consumables distribution",
+          "p": "Billing at volume."
+        }
+      ]
+    }
+  ]
+}

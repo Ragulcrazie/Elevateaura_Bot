@@ -1,0 +1,218 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-salem",
+  "title": "Salem Hospital Management Software | HIMS by Elevate Aura",
+  "meta": "Hospital management software for Salem hospitals and nursing homes: OP and IP, EMR, pharmacy, lab, beds and TPA billing, set up on site by travel from Chennai.",
+  "h1": "Hospital software for Salem, sized for <span class=\"hl\">nursing homes and mid-size hospitals alike</span>.",
+  "crumb": "Salem",
+  "pill": "Salem and the western catchment",
+  "sub": "One platform for Salem's mix of small nursing homes and mid-size hospitals: OP and IP registration, EMR, pharmacy, laboratory, wards, theatre and billing with insurance and TPA claims, configured on site by travel from Chennai.",
+  "demo_href": "/demo/hospital.html",
+  "meta_ticks": [
+    "Modules switched on, not sold whole",
+    "On-site setup and counter training",
+    "WhatsApp support after go-live"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Salem and would like to see HIMS.",
+  "primary_keyword": "hospital management software Salem",
+  "secondary_keywords": [
+    "hospital software Salem",
+    "nursing home software Salem",
+    "HMS software Salem Tamil Nadu",
+    "hospital billing software Salem",
+    "clinic management software Salem"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a nursing home or mid-size hospital in Salem",
+  "city": "Salem",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "One platform, two very different Salem buyers",
+      "paras": [
+        "Salem's hospital sector is not one kind of institution. It runs from nursing homes with a handful of beds, two counters and no IT person, up to mid-size hospitals with wards, a theatre, an ICU, a laboratory and a pharmacy under one roof. HIMS serves both because modules are switched on rather than bought whole, and because the training is pitched at the staff who will actually use it.",
+        "Elevate Aura is a founder-led studio in Chennai. There is no office, engineer or phone number in Salem. The workflow study and the go-live training are done on site by travel, and after that the platform is supported remotely and on WhatsApp by the person who built it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Salem context",
+      "h2": "A working town whose hospitals absorb the districts around it.",
+      "lead": "Salem draws from Namakkal, Dharmapuri, Krishnagiri, Erode and the hill roads above the city, and it does so across a wide spread of hospital sizes.",
+      "body": [
+        "Much of the district's economy is transport, steel and agriculture, which shows up in the case mix as trauma, orthopaedic and occupational injury alongside ordinary general medicine. A hospital that takes those cases needs the emergency side working from day one: a triage board at casualty, an admission that starts from the same screen the patient arrived on, a theatre list that can absorb an unplanned case, and a bill that keeps up with what was used rather than being reconstructed at discharge.",
+        "The second Salem pattern is the owner-doctor nursing home. Here the same person is the clinician, the purchaser and the person who signs the bill book at night. Software for that setting fails if it needs an administrator to operate it. What works is a short set of modules, one screen per counter, and a dashboard the owner can read on a phone between cases.",
+        {
+          "h3": "Buying in phases instead of all at once"
+        },
+        "Because Salem hospitals sit at every size, the useful question is not which product but which modules first. Registration, billing and pharmacy usually go live together, because they are where money and mistakes meet. Wards, theatre, laboratory and imaging attach afterwards to the same patient record, with no migration, once the team has stopped thinking about the software and started using it.",
+        {
+          "h3": "How a Salem rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to walk the counters you actually have, which for a nursing home may be two.",
+            "A first phase chosen from that walk, with the rest written down for later rather than sold upfront.",
+            "Existing patient, item and tariff data loaded before go-live, with your branding on the screens, the app and the invoice.",
+            "Training in person at each counter on your own data, recorded for staff who join later.",
+            "Live inside 30 working days where scope allows, with WhatsApp support from the day after."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules, grouped the way a Salem hospital buys them.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Phase one, almost always",
+          "items": [
+            "OP registration on one UHID",
+            "Appointments, tokens and queue display",
+            "Cash, insurance and TPA billing with GST",
+            "Pharmacy dispensing with low-stock and expiry alerts"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "When there are beds",
+          "items": [
+            "IP admission through to discharge",
+            "Ward and bed occupancy at a glance",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed"
+          ]
+        },
+        {
+          "icon": "&#128657;",
+          "h": "When casualty is busy",
+          "items": [
+            "Emergency and casualty triage board",
+            "Admission raised from the emergency record",
+            "Consumables issued against the case",
+            "Imaging on the same record through AuraPACS"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "For the owner",
+          "items": [
+            "Live dashboard of OP, IP, beds and collections",
+            "Structured EMR and e-prescription",
+            "Laboratory from order to verified result",
+            "Equipment and consumables inventory with reorder levels"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Salem situations the platform is built for.",
+      "items": [
+        {
+          "h": "A road trauma case arriving at casualty",
+          "workflow": "Triage board entry, admission raised from the same record, theatre slot booked, consumables issued against the case as they are used.",
+          "result": "The bill reflects the night, not someone's memory of it."
+        },
+        {
+          "h": "An owner-doctor nursing home with two counters",
+          "workflow": "Registration, billing and pharmacy go live first; wards and laboratory follow once the team is comfortable with the first three.",
+          "result": "A nursing home runs it without hiring an administrator."
+        },
+        {
+          "h": "A mid-size hospital with five departments",
+          "workflow": "Every department writes to one patient record, with rosters, ward occupancy and theatre list visible from the same system.",
+          "result": "No department keeps its own private register."
+        },
+        {
+          "h": "The owner checking the day from elsewhere",
+          "workflow": "The live dashboard shows OP numbers, IP and bed occupancy and collections without anyone being asked to prepare a report.",
+          "result": "The day's position is visible without a phone call."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Salem, answered.",
+      "items": [
+        {
+          "q": "Do you have an office or engineer in Salem?",
+          "a": "No. Elevate Aura is a founder-led studio based in Chennai. Setup and go-live training in Salem are done in person by travel, and everything after that is remote and on WhatsApp with the person who built the system."
+        },
+        {
+          "q": "We are a ten-bed nursing home. Is this oversized for us?",
+          "a": "No, because modules are switched on selectively. A small nursing home commonly runs registration, billing, pharmacy and beds only. Theatre, ICU, laboratory and imaging attach later to the same record without migrating anything."
+        },
+        {
+          "q": "Our casualty is the busiest part of the hospital. Is that covered?",
+          "a": "Yes. There is an emergency and casualty triage board, and an admission can be raised from the emergency record rather than re-entered. See <a href=\"/hims/emergency-department-software/\">emergency department software</a> for how the board works."
+        },
+        {
+          "q": "Who trains our counter staff?",
+          "a": "The founder who builds the system, in person at your counters, on your own data. The session can be recorded so staff who join later are taught the same way rather than by word of mouth."
+        },
+        {
+          "q": "Can we start small and add modules later?",
+          "a": "Yes, and most hospitals do. Later modules attach to the patient record you already have, so adding wards or a laboratory is a configuration step rather than a second implementation."
+        },
+        {
+          "q": "How long does it take to go live?",
+          "a": "Thirty working days to go live is the framework, where scope allows, and the scope is agreed before anything begins. A two-counter nursing home is quicker than a hospital with IP, theatre, ICU and TPA billing, and the scope document states the timeline for yours."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#127966;",
+          "b": "Nursing home software",
+          "p": "Smaller IP-led setups."
+        },
+        {
+          "href": "/hims/emergency-department-software/",
+          "icon": "&#128657;",
+          "b": "Emergency software",
+          "p": "A live triage board."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed management",
+          "p": "Ward occupancy as it is."
+        },
+        {
+          "href": "/hims/hospital-management-software-coimbatore/",
+          "icon": "&#128205;",
+          "b": "Coimbatore",
+          "p": "The western cluster."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "How to choose",
+          "p": "A buyer's checklist."
+        }
+      ]
+    }
+  ]
+}

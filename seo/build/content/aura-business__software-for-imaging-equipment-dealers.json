@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-imaging-equipment-dealers",
+  "title": "Software for Imaging Equipment Dealers | Aura Business",
+  "meta": "Software for imaging equipment dealers: committee-led capital sales, site preparation and installation projects, high-value CMC and uptime commitments.",
+  "h1": "Software for imaging equipment dealers, from <span class=\"hl\">committee to uptime</span>.",
+  "crumb": "Imaging Equipment Dealers",
+  "pill": "For CT, MRI, X-ray and ultrasound dealers",
+  "sub": "Aura Business carries a capital imaging sale through the months it really takes: the committee and the tender, site preparation before the machine can arrive, a staged installation, and then a contract where downtime is measured and the customer is entitled to notice it.",
+  "meta_ticks": [
+    "Long capital pipeline with committee stages",
+    "Site readiness and installation as scheduled jobs",
+    "Uptime, SLA breaches and contract profitability"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we sell and service imaging equipment. I'd like to see how Aura Business handles installation projects and CMC uptime.",
+  "primary_keyword": "software for imaging equipment dealers",
+  "secondary_keywords": [
+    "radiology equipment dealer software",
+    "CT and MRI dealer management software",
+    "imaging equipment service software India",
+    "capital medical equipment sales software",
+    "CMC uptime tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of a dealership selling and servicing CT, MRI, X-ray, mammography and ultrasound systems",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What makes an imaging sale different from any other",
+      "paras": [
+        "An imaging system is one of the largest single purchases a hospital or diagnostic centre makes. The decision involves a radiologist, a biomedical engineer, a finance head and a committee, it often runs through a tender, and it can take the better part of a year. Software for imaging equipment dealers has to keep a pipeline alive across that span, hold every quotation revision, and remember that the machine cannot be delivered until a room, a power supply and the site works are ready.",
+        "After handover the economics invert. The contract on a high-value system is a serious annual sum, the customer is losing scan revenue for every hour the machine is down, and expensive assemblies are usually carved out of the cover by name. Aura Business tracks the installed system by serial and site, runs preventive visits against it, records response and resolution on every breakdown, and reports what a contract actually cost you to honour."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where value leaks",
+      "h2": "A year to win it, an afternoon to lose the contract.",
+      "lead": "Capital imaging punishes both a slow sales process and a vague service promise, and the same dealership usually has one of each.",
+      "items": [
+        {
+          "h": "The pipeline goes cold",
+          "p": "A committee postpones twice, the rep moves on, and a serious opportunity disappears from view without ever being lost."
+        },
+        {
+          "h": "Site works not sequenced",
+          "p": "The order is signed and the machine is ready, but the room, the power and the civil work were never scheduled against a date."
+        },
+        {
+          "h": "Installation run on messages",
+          "p": "Several people, several visits and a manufacturer engineer, coordinated in a chat group with no record of what was completed."
+        },
+        {
+          "h": "Downtime disputed",
+          "p": "The customer says the system was down for days, you say hours, and neither side has a timestamped record."
+        },
+        {
+          "h": "Carve-outs forgotten",
+          "p": "A high-value assembly excluded from the contract is replaced anyway, because the exclusion lives in a signed copy nobody reads."
+        },
+        {
+          "h": "Contract profit unknown",
+          "p": "The annual value is known, the visits and parts consumed under it are not, so renewals are priced on habit."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the first radiologist conversation to a contract you can price.",
+      "steps": [
+        {
+          "h": "Qualify",
+          "p": "The account holds the radiologist, the biomedical head, the purchase officer and the committee dates, with visits logged by the rep."
+        },
+        {
+          "h": "Offer",
+          "p": "Quotation versions, a tender submission where applicable, and the configuration that was finally approved, all on the account."
+        },
+        {
+          "h": "Prepare the site",
+          "p": "Site readiness is raised as its own set of jobs with dates, so despatch follows the room rather than the other way round."
+        },
+        {
+          "h": "Install and hand over",
+          "p": "Installation, acceptance testing and user orientation are completed as job cards with photos and signatures."
+        },
+        {
+          "h": "Register the asset",
+          "p": "The serial enters the installed base with its site, warranty end date and the exclusions that will apply under contract."
+        },
+        {
+          "h": "Hold the uptime",
+          "p": "Breakdown calls are timestamped, an engineer with the right skill is dispatched, and response and resolution are measured against the agreement."
+        },
+        {
+          "h": "Price the renewal",
+          "p": "Contract profitability shows the visits and parts consumed, so the next comprehensive offer is based on this machine's history."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules a capital imaging dealership uses hardest.",
+      "groups": [
+        {
+          "icon": "&#129309;",
+          "h": "The long sale",
+          "items": [
+            "Hospital and centre accounts with decision-makers by role",
+            "Leads and pipeline with long-cycle stages",
+            "Field visits with GPS check-in and visit notes",
+            "Quotation versions and proforma",
+            "Tender tracker, EMD and deadline reminders"
+          ]
+        },
+        {
+          "icon": "&#127959;",
+          "h": "Delivery and installation",
+          "items": [
+            "Installation and site readiness as scheduled jobs",
+            "Technician dispatch with skill-based allocation",
+            "Mobile job card with photo proof and signature",
+            "Delivery challan and e-way bill for the despatch",
+            "Asset and installed-base register by serial and site"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Uptime and contracts",
+          "items": [
+            "Comprehensive and annual contracts with named exclusions",
+            "SLA definitions and breach tracking",
+            "Preventive maintenance schedules with checklists",
+            "Breakdown intake, dispatch and service history per asset",
+            "Service invoices and contract renewal engine"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "The commercial view",
+          "items": [
+            "Contract profitability per system",
+            "AMC revenue and leakage dashboard",
+            "Spare parts inventory for high-value assemblies",
+            "Receivables ageing per centre"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four points where an imaging dealership wins or loses.",
+      "items": [
+        {
+          "h": "A postponed committee does not kill the deal",
+          "workflow": "The account carries the committee schedule and a next action date, so the reminder fires with the latest quotation version attached.",
+          "result": "You are on the agenda when it finally meets."
+        },
+        {
+          "h": "The room is ready before the truck leaves",
+          "workflow": "Site readiness jobs cover the civil work, power and access, and despatch is scheduled only once they are signed off.",
+          "result": "No machine waiting in a corridor and no idle installation team."
+        },
+        {
+          "h": "A downtime argument is settled with records",
+          "workflow": "Call intake, dispatch, arrival and job completion are timestamped on the job card, and the SLA on the contract is compared against them.",
+          "result": "A conversation about facts rather than impressions."
+        },
+        {
+          "h": "A renewal is priced from this machine",
+          "workflow": "Contract profitability shows what the last year of visits and parts on that serial number actually cost.",
+          "result": "A comprehensive offer that is not a guess."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealerships built around large imaging systems.",
+      "items": [
+        {
+          "icon": "&#129535;",
+          "b": "CT and MRI dealers",
+          "p": "Few sales a year, each worth a year of service revenue."
+        },
+        {
+          "icon": "&#9760;",
+          "b": "X-ray and mammography dealers",
+          "p": "Higher volume, site works and licences still involved."
+        },
+        {
+          "icon": "&#128167;",
+          "b": "Ultrasound dealers",
+          "p": "Many systems across clinics, probes as the running cost."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Third-party imaging service firms",
+          "p": "Servicing systems sold by somebody else."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Refurbished system dealers",
+          "p": "Where service history and uptime are the whole proposition."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A generic CRM, a service spreadsheet, or one platform across both.",
+      "cols": [
+        "Generic CRM",
+        "Service spreadsheet",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Long pipeline",
+          "Ages out as a dead lead",
+          "Not covered",
+          "Long-cycle stages with next dates and committee notes"
+        ],
+        [
+          "Site preparation",
+          "Not modelled",
+          "A line in a sheet",
+          "Scheduled jobs that gate despatch"
+        ],
+        [
+          "Installation record",
+          "Deal marked won",
+          "Engineer's notes",
+          "Job cards with photos, signature and acceptance"
+        ],
+        [
+          "Downtime evidence",
+          "None",
+          "Recalled later",
+          "Timestamped intake, dispatch and completion"
+        ],
+        [
+          "Contract exclusions",
+          "Not held",
+          "In the signed copy",
+          "Fields on the contract the service desk sees at intake"
+        ],
+        [
+          "Renewal pricing",
+          "Not covered",
+          "Last year plus a bit",
+          "Contract profitability per serial number"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Imaging equipment dealing, answered.",
+      "items": [
+        {
+          "q": "Can the pipeline cope with a sale that takes a year?",
+          "a": "Yes. Opportunities carry their own stages and next action dates, visits and quotation versions stay on the hospital account, and committee or tender dates drive the reminders, so a slow deal is followed rather than aged out."
+        },
+        {
+          "q": "How is site preparation handled before delivery?",
+          "a": "Site readiness is raised as scheduled jobs against the order, with an engineer, a date and photo evidence on completion. Despatch is planned against those jobs, so the machine arrives when the room can take it."
+        },
+        {
+          "q": "Can we prove response and resolution times on a downtime dispute?",
+          "a": "The service call records intake, dispatch, arrival and completion with timestamps, and the SLA definition on the contract states what was promised. The comparison is on the record rather than in anyone's memory. See <a href=\"/resources/what-is-sla-equipment-service/\">what an SLA means</a>."
+        },
+        {
+          "q": "How are excluded high-value assemblies handled?",
+          "a": "Inclusions and exclusions are held on the contract record, so when a call arrives the service desk can see immediately whether that assembly is covered before an engineer commits anything to the customer."
+        },
+        {
+          "q": "Do you also supply imaging software to these customers?",
+          "a": "Yes, separately. Some imaging dealers resell or bundle a picture archive and viewer with the system. That product is <a href=\"/aurapacs.html\">AuraPACS</a>, which stores, displays and shares studies; the reading is done by the centre's own radiologist."
+        },
+        {
+          "q": "Can engineers be allocated by skill rather than by who is free?",
+          "a": "Yes. Skill-based technician allocation means a call on a particular modality is routed to an engineer trained on it, and the dispatch board shows the schedule and route for the day."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "Call intake to service invoice."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Response, resolution and breaches."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#129309;",
+          "b": "Hospital sales CRM",
+          "p": "Committees and clinical champions."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every system, by serial and site."
+        },
+        {
+          "href": "/aura-business/software-for-biomedical-service-companies/",
+          "icon": "&#129302;",
+          "b": "Biomedical service firms",
+          "p": "Service without a sales arm."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract to offer."
+        }
+      ]
+    }
+  ]
+}

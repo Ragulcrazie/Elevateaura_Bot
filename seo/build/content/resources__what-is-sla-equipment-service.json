@@ -1,0 +1,222 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-sla-equipment-service",
+  "title": "What Is an SLA in Equipment Service? Plain Guide",
+  "meta": "An SLA in equipment service explained: response versus resolution time, how service levels sit inside AMC and CMC contracts.",
+  "h1": "What is an SLA in equipment service, and <span class=\"hl\">what does a breach cost</span>?",
+  "crumb": "SLAs in equipment service",
+  "pill": "Guide",
+  "sub": "A service level agreement is the part of a maintenance contract that says how fast you will act, measured from a defined starting point. Most disputes about service are really disputes about which clock was running and when it started.",
+  "meta_ticks": [
+    "Written for dealers and service firms",
+    "Response and resolution explained",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your SLA guide and want to ask how response and resolution are tracked in Aura Business.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is an SLA in equipment service",
+  "secondary_keywords": [
+    "SLA full form service level agreement",
+    "response time vs resolution time",
+    "SLA in AMC contract meaning",
+    "service level breach penalty equipment",
+    "uptime commitment maintenance contract"
+  ],
+  "intent": "informational",
+  "persona": "Owner or service manager of an equipment dealership or service company writing or being held to maintenance commitments",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "An SLA in two paragraphs",
+      "paras": [
+        "SLA stands for service level agreement. In equipment service it is the clause inside a maintenance contract that states what you will do within what time: acknowledge a call, reach the site, restore the machine, and in some contracts keep it available for a stated proportion of working hours over a period. It converts a promise of good service into something both sides can measure afterwards.",
+        "The two commitments that matter most are response time and resolution time, and they are not the same thing. Response is how long it takes you to react, usually measured from when the customer logs the call to when an engineer is on site or engaged with the problem. Resolution is how long it takes until the machine is working again. A service business can control response almost entirely and can never fully control resolution, which is why the two should be written differently."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The definitions",
+      "h2": "Response, resolution, and the words in between",
+      "lead": "An SLA is only as good as its definitions. Each of these terms has to say exactly when a clock starts and when it stops, or it will be read one way by you and another way by the customer.",
+      "body": [
+        {
+          "ul": [
+            "<b>Logging time.</b> The moment the call officially exists. Say whether that is a phone call, a message, a ticket on your portal or an email, because a message sent to an engineer's personal number at midnight should not start a clock.",
+            "<b>Acknowledgement.</b> Confirming to the customer that the call has been received and assigned. Easy to meet, and disproportionately effective at calming a frustrated customer.",
+            "<b>Response time.</b> From logging to an engineer being on site, or engaged remotely where remote support is part of the agreement. Say which it is.",
+            "<b>Resolution time.</b> From logging to the machine being usable again. Usually stated separately for faults that can be fixed on site and faults that need a part.",
+            "<b>Working hours.</b> Whether the clock runs only during your working day, and what happens on holidays. Without this, every weekend is a breach.",
+            "<b>Uptime or availability.</b> Some contracts add a commitment over a period rather than per incident, which suits machines whose downtime costs the customer revenue.",
+            "<b>Exclusions.</b> Parts held up beyond your control, the customer's power or facilities, a site that could not be accessed, or a fault caused by misuse."
+          ]
+        },
+        "The most common mistake is promising a single resolution time for every fault on every machine. A sensible agreement promises a firm response, a resolution target for faults inside your control, and a defined process, such as a standby unit or an agreed update rhythm, for faults that depend on a part you have to source."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Response, resolution and uptime compared",
+      "headers": [
+        "",
+        "Response time",
+        "Resolution time",
+        "Uptime commitment"
+      ],
+      "rows": [
+        [
+          "What it measures",
+          "How fast you react",
+          "How fast the machine works again",
+          "Availability over a period"
+        ],
+        [
+          "Clock starts",
+          "When the call is logged",
+          "When the call is logged",
+          "At the start of the measurement period"
+        ],
+        [
+          "Mostly within your control",
+          "Yes",
+          "Partly, depending on parts",
+          "Partly"
+        ],
+        [
+          "Typical evidence",
+          "Intake and dispatch timestamps",
+          "Job card completion and customer signature",
+          "Downtime recorded across all incidents"
+        ],
+        [
+          "Best used for",
+          "Every contract",
+          "Faults you can fix on site",
+          "Machines whose downtime costs the customer revenue"
+        ],
+        [
+          "Risk of over-promising",
+          "Low",
+          "High if a part must be imported",
+          "High without clear exclusions"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "In the contract",
+      "h2": "How service levels sit inside an AMC or CMC",
+      "lead": "The SLA is not a separate document in most Indian equipment contracts. It is a clause, and the rest of the agreement decides whether that clause is fair.",
+      "body": [
+        "In an annual maintenance contract, where parts are billed separately, the resolution commitment interacts directly with the parts question. If the customer has to approve a quotation for a part, the resolution clock should pause while that approval is pending, and the contract should say so. Otherwise you are held to a deadline the customer controls.",
+        "In a comprehensive contract, where the listed parts are included, resolution is more genuinely yours to manage, and customers expect a tighter commitment in exchange for the higher fee. That makes spares availability a commercial decision rather than an operational one: a tight promise means holding critical parts closer to the customer. The difference between the two contract types is set out in <a href=\"/compare/amc-vs-cmc/\">AMC versus CMC</a>.",
+        "Multi-site contracts need one more line. A customer with sites in several districts cannot reasonably expect the same response everywhere unless you have engineers everywhere. Tiering the commitment by site, or by criticality of the machine, is more honest than a single number that you will quietly miss at the furthest location."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Consequences and proof",
+      "h2": "What a breach costs, and what you should be able to show",
+      "body": [
+        {
+          "h3": "What a breach typically triggers"
+        },
+        {
+          "ul": [
+            "A credit or a penalty against the contract fee, often calculated per period of delay.",
+            "An extension of the contract term by the downtime suffered.",
+            "A free replacement or standby unit until the machine is restored.",
+            "Escalation to a named manager, which is the mildest and most common remedy.",
+            "In institutional and tender contracts, a deduction against performance security or an effect on future eligibility.",
+            "The quiet cost: a contract that is not renewed, which is usually larger than any penalty written into it."
+          ]
+        },
+        {
+          "h3": "The evidence to keep"
+        },
+        "Every one of those consequences turns on records, and records assembled after an argument has started are worth very little. Keep, per incident: the logging time and channel, the acknowledgement, who was assigned, the arrival time, the fault found, parts requested and received, the completion time, and the customer's signature on the job card with photographs. Keep, per contract: the preventive visits due and completed, and a downtime summary across the period.",
+        "A service system does this as a by-product of normal work rather than as an administrative exercise. In Aura Business, SLA definitions sit on the contract, timers run from call intake, breaches are flagged, and job cards are completed on the engineer's phone with photo proof and a signature, offline if the site has no network. The result is that a quarterly review with a customer is a report you print rather than a week you spend preparing."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about service levels",
+      "items": [
+        {
+          "q": "What does SLA stand for?",
+          "a": "Service level agreement. In equipment service it is the part of a maintenance contract that states the times within which you will respond to and resolve service calls, and sometimes the availability you will maintain over a period."
+        },
+        {
+          "q": "What is the difference between response time and resolution time?",
+          "a": "Response time is how long until an engineer is engaged with the problem, usually on site. Resolution time is how long until the machine works again. Response is within your control; resolution depends partly on parts and on the customer's own approvals."
+        },
+        {
+          "q": "Should resolution time pause while waiting for a part?",
+          "a": "In most fair contracts, yes, provided the delay is outside your control and the customer is kept informed. Write the pause and its conditions into the clause rather than relying on goodwill when the situation arises."
+        },
+        {
+          "q": "What is a reasonable response commitment?",
+          "a": "It depends on the machine, the distance and the contract type. The useful test is whether you could meet it on your worst day with your current engineer coverage. A commitment that only works on a good day is a commitment that will be breached."
+        },
+        {
+          "q": "How do we prove we met an SLA?",
+          "a": "With timestamps rather than recollection: when the call was logged and through which channel, when it was assigned, when the engineer arrived, when the job was completed, and the customer's signature on the job card. See <a href=\"/aura-business/sla-management-software/\">SLA management software</a>."
+        },
+        {
+          "q": "Do penalties actually get enforced?",
+          "a": "In institutional and government contracts they often do. In private contracts the more common consequence is escalation and a renewal that does not happen. Either way the remedy is the same: measure your own performance before the customer does."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management software",
+          "p": "Timers, breaches and reports."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Contracts and renewals."
+        },
+        {
+          "href": "/resources/what-is-cmc/",
+          "icon": "&#128218;",
+          "b": "What is CMC",
+          "p": "When you carry the parts risk."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract to offer."
+        },
+        {
+          "href": "/aura-business/software-for-biomedical-service-companies/",
+          "icon": "&#129302;",
+          "b": "Biomedical service firms",
+          "p": "Proving service levels."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "Call intake to invoice."
+        }
+      ]
+    }
+  ]
+}

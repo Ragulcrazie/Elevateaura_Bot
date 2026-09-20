@@ -205,3 +205,73 @@ medline-robotics-ecommerce-distributor-platform, exam-prep-learning-app.
   Titles are adjusted so the two sets do not compete.
 - Every page declares one self-referencing canonical. No parameters, no trailing-slash variants
   in internal links.
+
+## Batch 2: HIMS and Aura Business focus (September 2026)
+
+The owner's priority is HIMS and Aura Business (CRM), so the next tranche builds only those two
+clusters. These are the exact slugs; link to them freely from either cluster.
+
+### /hims/ (batch 2)
+| slug | primary keyword | type |
+|---|---|---|
+| hospital-nursing-management-software | hospital nursing management software | feature |
+| hospital-asset-management-software | hospital asset management software | feature |
+| e-prescription-software | e-prescription software India | feature |
+| hospital-mis-dashboard | hospital MIS dashboard | feature |
+| hospital-procurement-software | hospital procurement software | feature |
+| hospital-package-billing-software | hospital package billing software | feature |
+| hospital-corporate-credit-billing | hospital credit and corporate billing | feature |
+| uhid-patient-registration-software | UHID patient registration software | feature |
+| hospital-whatsapp-appointment-reminders | hospital WhatsApp appointment reminders | feature |
+| polyclinic-management-software | polyclinic management software | product |
+| small-hospital-software | small hospital software India | product |
+| day-care-centre-software | day care centre software | product |
+| hospital-software-for-administrators | hospital software for administrators | persona |
+| hospital-owner-dashboard | software for hospital owners dashboard | persona |
+| clinic-management-software-chennai | clinic management software Chennai | city |
+| hospital-management-software-trichy | hospital management software Trichy | city |
+| hospital-management-software-salem | hospital management software Salem | city |
+| hospital-management-software-vellore | hospital management software Vellore | city |
+| hospital-management-software-pondicherry | hospital management software Pondicherry | city |
+
+### /aura-business/ (batch 2)
+| slug | primary keyword | type |
+|---|---|---|
+| amc-billing-software | AMC billing software | feature |
+| medical-equipment-lead-management-software | medical equipment lead management software | feature |
+| service-dispatch-software | service dispatch software | feature |
+| mobile-job-card-software | mobile job card software | feature |
+| medical-equipment-warehouse-management | medical equipment warehouse management | feature |
+| batch-expiry-tracking-software | batch and expiry tracking software | feature |
+| delivery-challan-software | delivery challan software | feature |
+| receivables-ageing-software | receivables ageing software | feature |
+| whatsapp-payment-reminder-software | WhatsApp payment reminder software | feature |
+| purchase-order-grn-software | purchase order and GRN software | feature |
+| sla-management-software | SLA management software field service | feature |
+| helpdesk-ticketing-equipment-dealers | helpdesk ticketing software for equipment dealers | feature |
+| e-invoice-software-distributors | e-invoice software for distributors | feature |
+| e-way-bill-software-distributors | e-way bill software distributors | feature |
+| software-for-diagnostic-equipment-suppliers | software for diagnostic equipment suppliers | application |
+| software-for-medical-device-importers | software for medical device importers | application |
+| software-for-surgical-instrument-distributors | software for surgical instrument distributors | application |
+| software-for-laboratory-equipment-dealers | software for laboratory equipment dealers | application |
+| software-for-imaging-equipment-dealers | software for imaging equipment dealers | application |
+| software-for-dental-equipment-dealers | software for dental equipment dealers | application |
+| software-for-hospital-furniture-suppliers | software for hospital furniture suppliers | application |
+| software-for-medical-consumables-distributors | software for medical consumables distributors | application |
+| software-for-biomedical-service-companies | software for biomedical service companies | application |
+| industrial-equipment-distributor-software | industrial equipment distributor software | industry |
+| electrical-equipment-dealer-software | electrical equipment dealer software | industry |
+| hvac-amc-software | HVAC AMC software | industry |
+
+### /resources/ and /compare/ (batch 2, supporting these two clusters only)
+what-is-tpa-hospital-billing, emr-vs-ehr, what-is-uhid,
+hospital-software-implementation-checklist, what-is-e-invoice-irn,
+how-to-choose-medical-equipment-crm, what-is-sla-equipment-service;
+compare: hims-vs-emr, cloud-vs-on-premise-hospital-software.
+
+### Held back pending owner confirmation
+Eye, maternity, orthopaedic, paediatric, physiotherapy and ayurveda HIMS pages. These are only
+worth building if the platform genuinely differs for them (different forms, records or
+workflows). Without that, they would be the generic page with a specialty name swapped in,
+which is the doorway pattern this system refuses.

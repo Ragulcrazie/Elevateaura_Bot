@@ -1,0 +1,353 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-surgical-instrument-distributors",
+  "title": "Software for Surgical Instrument Distributors | Aura Business",
+  "meta": "Software for surgical instrument distributors: thousands of SKUs, sets and kits, loan sets out to theatres, sterilisation turnaround and lot traceability.",
+  "h1": "Software for surgical instrument distributors, built around <span class=\"hl\">sets that travel</span>.",
+  "crumb": "Surgical Instrument Distributors",
+  "pill": "For instrument, implant and set suppliers",
+  "sub": "Aura Business handles a catalogue of thousands of individual instruments, the sets and kits assembled from them, the loan sets that go out to a theatre for a case and come back, and the lot and serial traceability a hospital expects you to produce on request.",
+  "meta_ticks": [
+    "Sets and kits as well as single instruments",
+    "Loan sets out on challan with a return date",
+    "Lot and serial traceable to the case"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute surgical instruments and loan sets to theatres. I'd like to see how Aura Business tracks sets and lots.",
+  "primary_keyword": "software for surgical instrument distributors",
+  "secondary_keywords": [
+    "surgical instrument inventory software",
+    "loan set tracking software",
+    "implant lot traceability software India",
+    "surgical kit management software",
+    "theatre consignment stock software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or operations head of a distributor supplying surgical instruments, implants and loan sets to hospital theatres",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why surgical distribution is an inventory problem first",
+      "paras": [
+        "A surgical instrument distributor carries far more part numbers than almost any other medical trade, and a large share of them are never sold on their own. They are members of a set: a tray of instruments and sizes that goes to a theatre together because the surgeon may need any of them. Software for this business has to model the set as a thing you own, book out, price and chase, while still holding every instrument inside it as a stock item with its own lot or serial.",
+        "The second complication is that a set comes back. It goes out on a delivery challan for a case, the used items are billed, and the tray returns to be cleaned and sterilised before it can go anywhere else. Aura Business tracks the set as stock in a location, with a movement out, a consumption record, a return and a turnaround stage, so what you can actually promise a hospital next week is a real number rather than a count of trays on a shelf."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where it breaks",
+      "h2": "The tray is out, the paperwork is not.",
+      "lead": "Most of these businesses run on a catalogue spreadsheet, a challan book and the memory of whoever handles the theatre calls.",
+      "items": [
+        {
+          "h": "Sets counted, not tracked",
+          "p": "You know you own six sets. You cannot say where four of them are today or which are fit to send tomorrow."
+        },
+        {
+          "h": "Items missing on return",
+          "p": "A tray comes back short of two sizes and nobody notices until the next case, because nothing checked the set against its contents list."
+        },
+        {
+          "h": "Used items billed late",
+          "p": "The theatre note says what was implanted, the invoice follows a fortnight later, and some of it is never billed at all."
+        },
+        {
+          "h": "Lot numbers on paper only",
+          "p": "A hospital asks which lot went into a particular case, and the answer means searching a challan book."
+        },
+        {
+          "h": "Catalogue too big to search",
+          "p": "Thousands of part numbers, similar names and many sizes, so quoting is slow and the wrong reference is picked."
+        },
+        {
+          "h": "Turnaround invisible",
+          "p": "Sets waiting to be cleaned and sterilised look like available stock, so two theatres are promised the same tray."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the booking call to the invoice for what was used.",
+      "steps": [
+        {
+          "h": "Book",
+          "p": "A theatre requests a set for a date; the request is logged against the hospital account with the surgeon and the case."
+        },
+        {
+          "h": "Issue",
+          "p": "The set moves out of its location on a delivery challan, scanned item by item against its contents list."
+        },
+        {
+          "h": "Use",
+          "p": "After the case, the items consumed are recorded against the challan with their lot or serial numbers."
+        },
+        {
+          "h": "Bill",
+          "p": "A tax invoice is raised for what was used, with the balance returned rather than billed."
+        },
+        {
+          "h": "Return and turn around",
+          "p": "The tray is received back, checked against its contents, and held in a turnaround location until it is ready to go out again."
+        },
+        {
+          "h": "Replenish",
+          "p": "Consumed sizes trigger reorder alerts, and a purchase order goes to the principal to make the set whole."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules that suit a high-SKU, set-driven catalogue.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Catalogue and stock",
+          "items": [
+            "Product catalogue and fast lookup across thousands of references",
+            "Serial and unit-level stock for instruments and implants",
+            "Batch and lot tracking with expiry where it applies",
+            "Barcode and QR scanning at issue and return",
+            "Multi-warehouse, including theatre-side and turnaround locations",
+            "Stock movements and ledger per item"
+          ]
+        },
+        {
+          "icon": "&#129721;",
+          "h": "Sets and loans",
+          "items": [
+            "Sample and loan tracking with a responsible person and return date",
+            "Delivery challan for every set that leaves",
+            "Stock transfers between locations and hospitals",
+            "Return receipt against the original challan",
+            "Credit notes and returns for unused items"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing what was used",
+          "items": [
+            "GST tax invoice raised from the consumed lines",
+            "Proforma and quotation for scheduled cases",
+            "E-way bill for movements between cities",
+            "Payment tracker and reminders",
+            "Rate contracts with hospital groups"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Control",
+          "items": [
+            "Low-stock and reorder alerts by size",
+            "Purchase orders and goods receipt to rebuild sets",
+            "Receivables ageing per hospital",
+            "Audit log of every movement",
+            "Owner dashboard across sets and revenue"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things a set-based business needs to get right.",
+      "items": [
+        {
+          "h": "Two theatres want the same tray",
+          "workflow": "The set is shown as issued with a return date, and the second request is offered the next free tray or a date after turnaround.",
+          "result": "No promise that cannot be kept."
+        },
+        {
+          "h": "A tray returns short",
+          "workflow": "The return is scanned against the set contents and two sizes are missing, so a short-return note is raised on the hospital account the same day.",
+          "result": "The loss is recovered while the case is still remembered."
+        },
+        {
+          "h": "The invoice follows the case, not the month",
+          "workflow": "Consumed items are entered against the challan on return, and the tax invoice is raised from those lines with lot numbers on it.",
+          "result": "Nothing used goes unbilled."
+        },
+        {
+          "h": "A lot is traced in minutes",
+          "workflow": "The hospital asks about a specific reference; the item's movement ledger shows the goods receipt, the challan it went out on and the case it was billed against.",
+          "result": "A traceable answer instead of a search through challan books."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Distributors whose stock spends its life on the move.",
+      "items": [
+        {
+          "icon": "&#129721;",
+          "b": "Orthopaedic implant distributors",
+          "p": "Sets and sizes out for a case, billed on consumption."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "General surgical instrument dealers",
+          "p": "Large catalogues sold to hospitals and nursing homes."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Theatre consumable suppliers",
+          "p": "Sutures, disposables and single-use items with lot control."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "Sub-distributors for implant principals",
+          "p": "Holding a principal's sets in a territory."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Suppliers to hospital chains",
+          "p": "A rate contract at head office and sets moving between sites."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Challan books, accounting software, or set-aware stock control.",
+      "cols": [
+        "Challan book and Excel",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Sets",
+          "A count of trays",
+          "Not a concept",
+          "Stock with contents, location and status"
+        ],
+        [
+          "Loan out",
+          "Handwritten challan",
+          "Delivery note only",
+          "Challan with responsible person and return date"
+        ],
+        [
+          "Return check",
+          "By eye",
+          "Not covered",
+          "Scanned against the set contents list"
+        ],
+        [
+          "Billing consumption",
+          "From the theatre note, later",
+          "Manual invoice entry",
+          "Invoice raised from consumed lines on the challan"
+        ],
+        [
+          "Lot traceability",
+          "Paper records",
+          "Rarely lot-level",
+          "Lot and serial through every movement"
+        ],
+        [
+          "Replenishment",
+          "Noticed when short",
+          "Item-level only",
+          "Reorder alerts by size, purchase order to the principal"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Surgical instrument distribution, answered.",
+      "items": [
+        {
+          "q": "Can a set be handled as one item and as its contents at the same time?",
+          "a": "Yes. The set is held as stock in a location with a contents list, while each instrument or implant inside it remains a catalogue item with its own serial or lot. Issue and return are scanned against the contents so shortages are visible immediately."
+        },
+        {
+          "q": "How do you handle stock that sits at a hospital rather than in your warehouse?",
+          "a": "Create the hospital-side holding as its own location. Stock moved there stays yours and stays visible, movements are recorded, and consumption at the site is what triggers the invoice."
+        },
+        {
+          "q": "Can we bill only the items used from a set?",
+          "a": "Yes. The consumed lines are recorded against the challan after the case, and the tax invoice is raised from those lines with lot or serial numbers carried onto it. The rest is received back into stock."
+        },
+        {
+          "q": "Does the system know a tray is not available while it is being cleaned?",
+          "a": "Use a turnaround location. A returned set is received into it and only becomes available when it is moved back to the issuable location, so sterilisation time is reflected in what you can promise."
+        },
+        {
+          "q": "Is the catalogue workable at several thousand references?",
+          "a": "Yes. Product lookup, barcode scanning and brand-aware catalogue records are designed for large catalogues, and quotations are built by searching the catalogue rather than typing descriptions."
+        },
+        {
+          "q": "Can we prove which lot went to which case?",
+          "a": "The stock movement ledger holds every step from goods receipt to challan to invoice, and the audit log records who did what. That chain is what you show when a hospital asks about a specific reference."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Locations, transfers and movements."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry",
+          "p": "Lot control on every line."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128220;",
+          "b": "Delivery challan",
+          "p": "Goods that move before they are billed."
+        },
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#128230;",
+          "b": "Consumables distribution",
+          "p": "Fast-moving theatre stock."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#129309;",
+          "b": "Hospital sales CRM",
+          "p": "Surgeons, committees and accounts."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When the sheet stops coping."
+        },
+        {
+          "href": "/aura-business/software-for-dental-equipment-dealers/",
+          "icon": "&#129463;",
+          "b": "Dental equipment dealers",
+          "p": "Chairs, small equipment, consumables."
+        }
+      ]
+    }
+  ]
+}

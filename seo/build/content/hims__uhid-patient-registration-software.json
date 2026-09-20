@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "uhid-patient-registration-software",
+  "title": "UHID Patient Registration Software | One Hospital ID | HIMS",
+  "meta": "UHID patient registration software: one unique hospital ID per patient, registered once and carried through OP, IP, pharmacy, laboratory, imaging and billing.",
+  "h1": "UHID patient registration software: <span class=\"hl\">register once</span>, and the hospital knows them forever.",
+  "crumb": "UHID Registration Software",
+  "pill": "For the front desk",
+  "sub": "Every patient in HIMS gets one unique hospital identification number at first contact. That UHID is what OP, the ward, the pharmacy, the laboratory, imaging and billing all work against, so the same person is never two records.",
+  "meta_ticks": [
+    "One UHID per patient, created once",
+    "Searched before a new record is made",
+    "Carried across every department"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patients.png",
+    "alt": "HIMS patient list showing UHID, name, department and last visit for each registered patient",
+    "bar": "his.elevateaura.co.in/patients"
+  },
+  "whatsapp_text": "Hi, I'd like to see UHID registration in HIMS for our front desk.",
+  "primary_keyword": "UHID patient registration software",
+  "secondary_keywords": [
+    "hospital patient registration software",
+    "unique hospital identification number software",
+    "patient ID software India",
+    "OP registration software",
+    "duplicate patient record prevention",
+    "front desk registration software hospital"
+  ],
+  "intent": "commercial",
+  "persona": "Front office in-charge or hospital owner fixing patient identity before anything else",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a UHID is and why it comes first",
+      "paras": [
+        "A UHID is the unique hospital identification number a patient is given the first time they walk in. It is not a case number for that visit and not an admission number for that stay. It belongs to the person, and every visit, admission, prescription, laboratory order, imaging study and bill afterwards hangs off it. In HIMS the UHID is created at registration and never created again for the same person.",
+        "This is the least glamorous module in a hospital system and the one everything else depends on. If a patient can end up with three identification numbers, then the history is split three ways, the follow-up doctor sees a third of the story, and the outstanding on one of the three is invisible. Getting registration right is what makes a single patient record possible at all."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong at the counter",
+      "h2": "The same patient, registered three times, in three spellings.",
+      "lead": "Registration takes twenty seconds and decides whether the record is usable for the next decade.",
+      "items": [
+        {
+          "h": "A new record for every visit",
+          "p": "When searching is slower than typing, the counter creates a fresh entry and the history starts again."
+        },
+        {
+          "h": "Names spelled differently",
+          "p": "The same person is entered three ways across three visits and no search will ever bring them together."
+        },
+        {
+          "h": "OP and IP numbered separately",
+          "p": "The outpatient file and the admission file carry different numbers and nobody links them."
+        },
+        {
+          "h": "Departments keep their own registers",
+          "p": "Laboratory and pharmacy maintain their own numbering, so the same patient exists differently in each."
+        },
+        {
+          "h": "Old records unreachable",
+          "p": "A returning patient's previous reports exist somewhere but cannot be found in time to be useful."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One patient, one number",
+      "h2": "What the front desk actually does.",
+      "steps": [
+        {
+          "h": "Search first",
+          "p": "The counter looks for the patient by phone number or name before anything is created."
+        },
+        {
+          "h": "Existing patient found",
+          "p": "If they are already registered, the visit is added to the UHID they already hold."
+        },
+        {
+          "h": "New UHID created",
+          "p": "If they are genuinely new, demographics are captured once and a UHID is issued."
+        },
+        {
+          "h": "Visit or admission attached",
+          "p": "An OP token or an IP admission is created against that UHID, not beside it."
+        },
+        {
+          "h": "Departments work from it",
+          "p": "Pharmacy, laboratory, imaging and the wards all act against the same number."
+        },
+        {
+          "h": "Billing follows",
+          "p": "Every charge and every payer, cash, TPA or corporate, sits under the same patient."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What registration covers",
+      "h2": "The counter, and everything that depends on it.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "At the desk",
+          "items": [
+            "Search before create",
+            "Demographics captured once",
+            "UHID issued to the patient",
+            "OP and IP registration on the same identity"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "What hangs off the UHID",
+          "items": [
+            "Visits, admissions and discharges",
+            "Clinical record and prescriptions",
+            "Laboratory orders and results",
+            "Imaging studies through AuraPACS"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money under one identity",
+          "items": [
+            "Bills across OP and IP",
+            "Payer recorded at registration",
+            "Outstanding for that patient",
+            "Deposits and receipts"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Beyond the counter",
+          "items": [
+            "Appointments and token queue",
+            "Patient portal access to reports",
+            "WhatsApp appointment reminders",
+            "Built to support ABHA linking"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/patient-management-software/",
+        "label": "See patient management in full"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four times a clean UHID pays for itself.",
+      "items": [
+        {
+          "h": "A patient returns after two years",
+          "workflow": "The counter finds them on a phone number search and the doctor opens a history that is already there.",
+          "result": "The consultation starts informed."
+        },
+        {
+          "h": "An OP case becomes an admission",
+          "workflow": "The admission is created against the same UHID, so the morning's consultation and the ward notes are one record.",
+          "result": "Nothing is retyped at admission."
+        },
+        {
+          "h": "A laboratory result comes back",
+          "workflow": "The verified result posts to the UHID, so it is on the record whichever department ordered it.",
+          "result": "No printouts carried between counters."
+        },
+        {
+          "h": "An old imaging study is needed",
+          "workflow": "Previous studies are found under the same patient rather than by date and machine.",
+          "result": "The comparison happens in the reporting room."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere a patient comes back a second time.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "One identity across every department."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Shared front desk, several doctors, one record."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Repeat patients with comparable history."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "OP and IP on the same number."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front office staff",
+          "p": "A search that is faster than retyping."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hospitals identify a patient.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "What the number belongs to",
+          "The visit",
+          "The bill",
+          "The person"
+        ],
+        [
+          "Finding a returning patient",
+          "The old file, if it is found",
+          "By bill number",
+          "By phone or name, before creating"
+        ],
+        [
+          "OP and IP",
+          "Two registers",
+          "Two customers",
+          "One UHID, two kinds of visit"
+        ],
+        [
+          "Departments",
+          "Each keeps its own numbering",
+          "Not connected",
+          "All act against the UHID"
+        ],
+        [
+          "History available at the next visit",
+          "Sometimes",
+          "The last bill",
+          "Full searchable record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "UHID and registration, answered.",
+      "items": [
+        {
+          "q": "What exactly is a UHID?",
+          "a": "The unique hospital identification number issued to a patient at first contact. Visits, admissions, prescriptions, laboratory orders, imaging studies and bills all attach to it, which is what allows one continuous record instead of a file per visit."
+        },
+        {
+          "q": "How does the system stop duplicate records?",
+          "a": "Registration begins with a search on phone number or name, so the counter is shown existing patients before a new UHID is created. Making the search quicker than retyping is what actually prevents duplicates at a busy desk."
+        },
+        {
+          "q": "Can OP and IP share the same number?",
+          "a": "Yes. An admission is created against the existing UHID rather than as a separate identity, so the OP consultation that led to the admission and the ward notes afterwards sit on one record. See <a href=\"/hims/hospital-ipd-management-software/\">IPD software</a>."
+        },
+        {
+          "q": "What if we already have thousands of patients on paper or in Excel?",
+          "a": "Your existing patient data is migrated in during setup, so returning patients are found rather than re-registered. Records that were already duplicated in the old system are the ones to clean before migration."
+        },
+        {
+          "q": "Is the UHID related to ABHA?",
+          "a": "They are different things. The UHID is your hospital's own identifier for the patient. HIMS is built to support ABHA linking and ABDM-aligned workflows alongside it. Read <a href=\"/hims/abha-abdm-ready-hospital-software/\">what ABHA and ABDM ready means</a>."
+        },
+        {
+          "q": "Does the patient see their UHID?",
+          "a": "Yes. It is given at registration and is how the patient is identified at every counter afterwards, including in the patient portal where their reports are visible."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128100;",
+          "b": "Patient management",
+          "p": "The record behind the number."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128203;",
+          "b": "OPD software",
+          "p": "Tokens and consultation."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#8986;",
+          "b": "Queue management",
+          "p": "After registration comes the token."
+        },
+        {
+          "href": "/hims/hospital-whatsapp-appointment-reminders/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Bringing them back."
+        },
+        {
+          "href": "/hims/abha-abdm-ready-hospital-software/",
+          "icon": "&#128274;",
+          "b": "ABHA and ABDM",
+          "p": "The national identifier."
+        }
+      ]
+    }
+  ]
+}

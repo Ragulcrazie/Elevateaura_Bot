@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-warehouse-management",
+  "title": "Medical Equipment Warehouse Management Software | Aura",
+  "meta": "Warehouse management for medical equipment: multiple godowns and van stock, a full movements ledger, documented transfers and physical verification.",
+  "h1": "Warehouse management that knows which <span class=\"hl\">location</span> the stock is actually in.",
+  "crumb": "Warehouse Management",
+  "pill": "For dealers with more than one godown",
+  "sub": "Aura Business treats every godown, branch and engineer van as its own stock location, records every movement in a ledger, moves goods between locations on documented transfers, and supports physical verification against the book figure.",
+  "meta_ticks": [
+    "Multi-warehouse and engineer van stock",
+    "Every movement in one ledger",
+    "Transfers and physical verification"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png",
+    "alt": "Aura Business inventory screen showing stock by warehouse location with movements and transfer entries",
+    "bar": "app.elevateaura.co.in/inventory"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss warehouse management software for our equipment stock.",
+  "primary_keyword": "medical equipment warehouse management",
+  "secondary_keywords": [
+    "multi warehouse inventory software India",
+    "medical distributor warehouse software",
+    "stock transfer software for dealers",
+    "van stock management software",
+    "godown stock management software"
+  ],
+  "intent": "commercial",
+  "persona": "Operations or stores manager at a medical-equipment distributor running several stock locations",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What warehouse management adds to plain stock counting",
+      "paras": [
+        "Plain inventory tells you how many of an item you own. Warehouse management tells you where each one is, how it got there and who moved it. That distinction becomes urgent the moment you have a main godown, a branch, and engineers carrying parts in their vehicles, because the total on hand is then spread across locations that can each run out independently.",
+        "Aura Business handles this in the Inventory and Warehouse suite. Multi-Warehouse gives each location its own stock, Stock Movements and Ledger records every receipt, issue, transfer and adjustment with a reason and a user, and transfers move goods between locations as documented events rather than as an edited number."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where stock goes missing",
+      "h2": "Stock does not usually disappear. It stops being findable.",
+      "lead": "A single stock figure across several locations is worse than no figure, because people trust it and then act on it.",
+      "items": [
+        {
+          "h": "One number for three godowns",
+          "p": "The system says twelve are available; four are at the branch, six are in vans and only two are where the order is being picked."
+        },
+        {
+          "h": "Van stock is invisible",
+          "p": "Engineers carry parts worth a serious amount and none of it appears anywhere until it is used or lost."
+        },
+        {
+          "h": "Transfers by phone call",
+          "p": "Goods move between branches on a verbal request and neither side's records change."
+        },
+        {
+          "h": "Adjustments without reasons",
+          "p": "Somebody corrects a quantity to match the shelf and there is no record of what was corrected or why."
+        },
+        {
+          "h": "Physical verification takes a week",
+          "p": "Counting is done on paper, differences are argued about, and the book figure is overwritten rather than explained."
+        },
+        {
+          "h": "Reorder alerts fire on the wrong total",
+          "p": "A location is empty while the company-wide figure looks healthy, so nothing is reordered until an order fails."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How stock is controlled",
+      "h2": "Goods in, goods between, goods out, goods counted.",
+      "steps": [
+        {
+          "h": "Locations defined",
+          "p": "Main godown, branches, service store and each engineer's van set up as stock locations."
+        },
+        {
+          "h": "Receipt",
+          "p": "Goods receipt against a purchase order stocks the item into a named location."
+        },
+        {
+          "h": "Put away",
+          "p": "Serial or batch recorded against the item, with barcode or QR scan where used."
+        },
+        {
+          "h": "Transfer",
+          "p": "Movement between locations raised as a transfer, despatched and acknowledged on receipt."
+        },
+        {
+          "h": "Issue",
+          "p": "Stock leaves on a delivery challan for a sale, or onto a job card for a service visit."
+        },
+        {
+          "h": "Verification",
+          "p": "Physical count entered per location, differences recorded as reasoned adjustments."
+        },
+        {
+          "h": "Ledger",
+          "p": "Every one of those events remains queryable per item, per location, per user."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The Inventory and Warehouse modules that apply here.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Locations",
+          "items": [
+            "Multi-warehouse stock",
+            "Branch and service store locations",
+            "Engineer van stock",
+            "Asset transfers between sites"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Movement control",
+          "items": [
+            "Stock movements and ledger",
+            "Inter-location transfers with acknowledgement",
+            "Reasoned adjustments with an audit trail",
+            "Delivery challan for goods leaving"
+          ]
+        },
+        {
+          "icon": "&#128290;",
+          "h": "Identification",
+          "items": [
+            "Serial and unit-level stock",
+            "Batch and expiry tracking on consumables",
+            "Barcode and QR scan",
+            "Product catalogue and lookup"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Replenishment",
+          "items": [
+            "Low-stock and reorder alerts per location",
+            "Purchase orders raised from the shortfall",
+            "Goods receipt (GRN) into the right godown",
+            "Supplier price lists"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four warehouse problems that stop repeating.",
+      "items": [
+        {
+          "h": "An order is picked from the right place",
+          "workflow": "The sales order shows availability per location, so the picker knows the units are at the branch and raises a transfer rather than promising a delivery date.",
+          "result": "No order confirmed against stock that is elsewhere."
+        },
+        {
+          "h": "Van stock is accounted for",
+          "workflow": "Parts issued to an engineer sit in their van location until a job card consumes them or a transfer returns them.",
+          "result": "Every part is somewhere, on the record."
+        },
+        {
+          "h": "A transfer cannot be denied",
+          "workflow": "Goods sent between branches leave one location on despatch and only enter the other on acknowledgement, with both entries in the ledger.",
+          "result": "In-transit stock is visible instead of disputed."
+        },
+        {
+          "h": "The annual count produces answers",
+          "workflow": "Counts are entered per location and differences are recorded as adjustments with reasons rather than silently overwritten.",
+          "result": "You learn where the shrinkage happens."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses holding stock in more than one place.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Capital units, spares and consumables across godowns."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagent dealers",
+          "p": "High-volume stock with batch and expiry per location."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "A central warehouse feeding regional branches."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "A spares store plus stock in every engineer's vehicle."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "The same problem with different goods."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "One stock column, an accounts ledger, or real locations.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Stock per location",
+          "One column for everything",
+          "Sometimes, as a godown field",
+          "Each godown, branch and van separately"
+        ],
+        [
+          "Engineer van stock",
+          "Not tracked",
+          "Not tracked",
+          "A location that job cards consume from"
+        ],
+        [
+          "Transfers",
+          "A phone call",
+          "A journal entry",
+          "Despatch and acknowledgement, both logged"
+        ],
+        [
+          "Why a quantity changed",
+          "Unknown",
+          "Voucher narration",
+          "Movement ledger with reason and user"
+        ],
+        [
+          "Reorder alerts",
+          "Manual review",
+          "Company-wide",
+          "Per location, feeding a purchase order"
+        ],
+        [
+          "Physical verification",
+          "Paper count",
+          "Manual correction",
+          "Count per location with reasoned adjustments"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Warehouse management, answered.",
+      "items": [
+        {
+          "q": "How many warehouses can we set up?",
+          "a": "The multi-warehouse module is not limited to a fixed number. Godowns, branch stores, the service spares store and each engineer's van can all be modelled as locations, and stock is held and reported against each."
+        },
+        {
+          "q": "Is engineer van stock really separate?",
+          "a": "Yes. Parts issued to an engineer move into their location and stay there until a job card consumes them or they are transferred back, so the shelf figure and the road figure are never mixed."
+        },
+        {
+          "q": "Can we track serial numbers by location?",
+          "a": "Yes. Serial and unit-level stock means a specific machine is known to be in a specific location, which also feeds the installed-base register once it is sold. See <a href=\"/aura-business/installed-base-management-software/\">installed base</a>."
+        },
+        {
+          "q": "What happens during physical verification?",
+          "a": "Counts are entered per location and compared with the book figure. Differences are posted as adjustments with a reason and a user against them, so the ledger explains the correction rather than hiding it."
+        },
+        {
+          "q": "Do reorder alerts work per warehouse?",
+          "a": "Yes, which is the point of them. A branch can be below its reorder level while the company total looks comfortable, and the alert fires for that location. See <a href=\"/aura-business/purchase-order-grn-software/\">purchase orders and GRN</a>."
+        },
+        {
+          "q": "How does stock leave for a customer?",
+          "a": "On a delivery challan, which reduces the despatching location and can then be converted to a tax invoice. See <a href=\"/aura-business/delivery-challan-software/\">delivery challan software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory software",
+          "p": "The full stock suite."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#8986;",
+          "b": "Batch and expiry",
+          "p": "Consumables with a shelf life."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128736;",
+          "b": "Spare parts",
+          "p": "Service stock and van stock."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128221;",
+          "b": "Purchase and GRN",
+          "p": "How goods arrive."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128666;",
+          "b": "Delivery challan",
+          "p": "How goods leave."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When Excel stock breaks."
+        }
+      ]
+    }
+  ]
+}

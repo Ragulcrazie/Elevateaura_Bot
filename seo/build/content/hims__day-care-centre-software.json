@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "day-care-centre-software",
+  "title": "Day Care Centre Software | Same-Day Admission to Bill | HIMS",
+  "meta": "Day care centre software for same-day procedures and short stays: admission and discharge in one day, chair and bed turnaround, package billing on one record.",
+  "h1": "Day care centre software for treatment that <span class=\"hl\">starts and ends the same day</span>.",
+  "crumb": "Day Care Centre Software",
+  "pill": "For day care and short-stay units",
+  "sub": "A day care unit admits, treats and discharges between morning and evening, often several times over on the same chair or bed. HIMS runs that as a real admission with a real record, and bills it as the package it was quoted as.",
+  "meta_ticks": [
+    "Admission and discharge on one day",
+    "Chair and bed turnaround visible",
+    "Packages billed as one item"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS bed and ward view showing which places are occupied and which are free",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, we run a day care unit and would like to see HIMS.",
+  "primary_keyword": "day care centre software",
+  "secondary_keywords": [
+    "day care hospital software",
+    "same day surgery software India",
+    "short stay unit software",
+    "day care billing software hospital",
+    "outpatient procedure software",
+    "day care admission discharge software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or manager of a day care unit or short-stay centre where patients are admitted and discharged the same day",
+  "page_type": "product",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why day care does not fit OP or IP neatly",
+      "paras": [
+        "Day care sits awkwardly between the two workflows most hospital systems are built around. It is more than an outpatient consultation, because the patient occupies a place, receives a procedure or an infusion and is observed. It is less than an inpatient stay, because there is no overnight and the same chair or bed may take two or three patients before the unit closes. Treated as OP it loses the record; treated as IP it clogs the ward view.",
+        "HIMS handles it as a short admission. The patient is admitted under their existing UHID, given a place in the unit, treated and discharged the same day, with the clinical record, the drugs and consumables used and the observations all on that episode. Billing then works the way day care is actually sold, as a package covering the procedure rather than a list of departmental charges the patient never agreed to."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What day care units run into",
+      "h2": "Short stays are where records and bills quietly go missing.",
+      "lead": "The episode is over in hours, which is exactly why nobody documents it properly.",
+      "items": [
+        {
+          "h": "Recorded as an OP visit",
+          "p": "A procedure with observation is squeezed into a consultation entry, so the record does not reflect what happened."
+        },
+        {
+          "h": "Places tracked on a whiteboard",
+          "p": "Who is in which chair and when it frees up lives on a board that only the unit can see."
+        },
+        {
+          "h": "Repeat patients started afresh",
+          "p": "Someone coming twice a week is registered again each time and the history never accumulates."
+        },
+        {
+          "h": "Consumables not captured",
+          "p": "What was used during the session is drawn from stock informally and never reaches the bill."
+        },
+        {
+          "h": "The package argued at the counter",
+          "p": "The session was quoted as a package and billed as separate items, so discharge becomes a negotiation."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One day care session",
+      "h2": "Morning admission, evening discharge.",
+      "steps": [
+        {
+          "h": "Scheduled",
+          "p": "The session is booked against the patient's UHID, with reminders if you use them."
+        },
+        {
+          "h": "Admitted",
+          "p": "A short admission is created and a place in the unit is allocated."
+        },
+        {
+          "h": "Treated",
+          "p": "The procedure, drugs given and observations are recorded on the episode."
+        },
+        {
+          "h": "Consumables drawn",
+          "p": "Items used come from pharmacy and stores stock against this patient."
+        },
+        {
+          "h": "Discharged",
+          "p": "The patient leaves the same day and the place shows as free."
+        },
+        {
+          "h": "Billed",
+          "p": "The package is billed as one item, with anything outside it shown separately."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the unit gets",
+      "h2": "Short admissions with the record and the bill intact.",
+      "groups": [
+        {
+          "icon": "&#128716;",
+          "h": "The unit",
+          "items": [
+            "Places in the day care unit, occupied or free",
+            "Turnaround visible through the day",
+            "Same-day admission and discharge",
+            "Several sessions on one place per day"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "The record",
+          "items": [
+            "Short admission on the patient's UHID",
+            "Procedure notes and observations",
+            "Drugs administered recorded against the patient",
+            "Repeat sessions building one history"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "What gets used",
+          "items": [
+            "Pharmacy issues against the episode",
+            "Consumables from stores",
+            "Laboratory orders and verified results",
+            "Imaging through AuraPACS where relevant"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "Package billed as one item",
+            "Items outside the package shown apart",
+            "TPA and corporate payers on the same bill",
+            "GST applied where it applies"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-package-billing-software/",
+        "label": "See package billing"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things a day care unit stops improvising.",
+      "items": [
+        {
+          "h": "Two patients on one chair",
+          "workflow": "The morning session is discharged, the place shows free and the afternoon patient is admitted to it.",
+          "result": "Turnaround is visible rather than remembered."
+        },
+        {
+          "h": "A patient who comes every week",
+          "workflow": "Each session is an episode on the same UHID, so the sequence of treatments reads as one history.",
+          "result": "The doctor sees the course, not a single day."
+        },
+        {
+          "h": "A minor procedure quoted as a package",
+          "workflow": "The admission is created on the package and departmental charges resolve into it at discharge.",
+          "result": "The bill matches the quote."
+        },
+        {
+          "h": "A cashless day care case",
+          "workflow": "The approved portion and the patient balance sit on the same bill, with documents drawn from the episode.",
+          "result": "The claim describes what actually happened."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Units where the patient goes home the same evening.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Day care units",
+          "p": "Procedures and observation without an overnight."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Short-stay treatment centres",
+          "p": "Recurring sessions on a schedule."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Small hospitals",
+          "p": "A day care wing beside the wards."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics with procedures",
+          "p": "More than a consultation, less than an admission."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Billing counters",
+          "p": "Packages that hold up at discharge."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways day care gets recorded.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "What the episode is",
+          "An entry in a register",
+          "An invoice",
+          "A short admission on the record"
+        ],
+        [
+          "Places in the unit",
+          "A whiteboard",
+          "Not covered",
+          "Occupied and free, through the day"
+        ],
+        [
+          "Repeat sessions",
+          "Separate entries",
+          "Separate bills",
+          "One history under the UHID"
+        ],
+        [
+          "Consumables used",
+          "Noted informally",
+          "Typed at billing",
+          "Issued from stock against the patient"
+        ],
+        [
+          "Package billing",
+          "Reconciled by hand",
+          "A flat line with no detail",
+          "One line, with the postings underneath"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Day care software, answered.",
+      "items": [
+        {
+          "q": "Is a day care episode an OP visit or an admission?",
+          "a": "It is handled as a short admission, which is what keeps the clinical record, the consumables and the observations attached to the episode. The patient is admitted and discharged on the same day rather than being recorded as a consultation."
+        },
+        {
+          "q": "Do you have a dialysis module?",
+          "a": "No. HIMS does not carry specialty-specific modules, and it would be dishonest to claim one. What it does have is the generic short-stay flow described here: scheduled sessions, a place in the unit, the record, consumables and package billing. Tell us how your unit runs and we will say plainly what fits."
+        },
+        {
+          "q": "Can we see which chairs or beds are free?",
+          "a": "Yes. Places in the day care unit are tracked the way ward beds are, so the unit can see what is occupied and what has freed up as sessions finish. See <a href=\"/hims/hospital-bed-management-software/\">bed management</a>."
+        },
+        {
+          "q": "How are repeat patients handled?",
+          "a": "Every session is an episode under the same UHID, so a patient attending regularly builds one continuous history rather than a series of unrelated entries. See <a href=\"/hims/uhid-patient-registration-software/\">UHID registration</a>."
+        },
+        {
+          "q": "Can the session be billed as a package?",
+          "a": "Yes. The package is defined with its inclusions and billed as one item, with anything outside it shown separately. Read <a href=\"/hims/hospital-package-billing-software/\">package billing software</a> for how inclusions are set up."
+        },
+        {
+          "q": "Can we run day care alongside regular wards?",
+          "a": "Yes. Day care is part of the same platform as the wards, the theatre and OP, so a hospital with a day care wing runs both on one patient record rather than two systems."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128716;",
+          "b": "Bed management",
+          "p": "Occupied and free places."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#128230;",
+          "b": "Package billing",
+          "p": "One agreed package."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#128137;",
+          "b": "Theatre",
+          "p": "Lists and consumables."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospitals",
+          "p": "A day care wing beside wards."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "When the stay is longer."
+        }
+      ]
+    }
+  ]
+}

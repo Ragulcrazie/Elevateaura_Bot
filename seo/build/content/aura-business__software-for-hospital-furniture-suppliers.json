@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-hospital-furniture-suppliers",
+  "title": "Software for Hospital Furniture Suppliers | Aura Business",
+  "meta": "Software for hospital furniture suppliers: tender and project orders, phased delivery ward by ward, on-site assembly and warranty claims on moving parts.",
+  "h1": "Software for hospital furniture suppliers, delivered <span class=\"hl\">ward by ward</span>.",
+  "crumb": "Hospital Furniture Suppliers",
+  "pill": "For bed, trolley and ward furniture suppliers",
+  "sub": "Aura Business runs the order that arrives as a project: hundreds of beds and cabinets won on a tender, released in phases as wards become ready, assembled and installed on site, then carried on a warranty rather than an annual contract.",
+  "meta_ticks": [
+    "Tender and project orders with release phases",
+    "Partial challans against one sales order",
+    "Warranty claims on moving parts, tracked"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we supply hospital beds and furniture on project orders. I'd like to see how Aura Business handles phased delivery and installation.",
+  "primary_keyword": "software for hospital furniture suppliers",
+  "secondary_keywords": [
+    "hospital bed supplier software",
+    "medical furniture distributor software India",
+    "project order delivery tracking software",
+    "hospital furniture tender management",
+    "furniture installation job tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or project manager at a company supplying hospital beds, trolleys, cabinets and ward furniture on project and tender orders",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why a furniture order behaves like a project",
+      "paras": [
+        "Hospital furniture is rarely bought one bed at a time. A new hospital block, a ward refurbishment or a government tender produces a single order for hundreds of identical items, and that order is then released slowly, because the wards are painted and handed over in sequence. Software for hospital furniture suppliers has to hold one order against many part deliveries, so everybody can see what has gone, what is due and what has been billed.",
+        "The service story is also different from equipment. Beds, trolleys and cabinets are mechanical rather than electronic, so the obligation is usually a warranty with a stock of replacement castors, actuators, side rails and hydraulic parts, not a maintenance contract with scheduled visits. Aura Business tracks the order in phases, sends installation crews with job cards, and records warranty claims against the item and the ward it was installed in."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where project orders go wrong",
+      "h2": "One order, a dozen deliveries, and no single view of it.",
+      "lead": "The order value makes the business. The margin is lost in transport done twice, items delivered to the wrong floor and installation labour standing idle.",
+      "items": [
+        {
+          "h": "Balance quantities disputed",
+          "p": "After six part deliveries nobody agrees on how many beds are still due against the original order."
+        },
+        {
+          "h": "Deliveries ahead of the site",
+          "p": "A consignment reaches a hospital where the ward is not plastered, and the stock sits in a corridor at your risk."
+        },
+        {
+          "h": "Challans and invoices out of step",
+          "p": "Goods moved on challans over three months, and invoicing is reconstructed later from a pile of paper."
+        },
+        {
+          "h": "Installation crews unmanaged",
+          "p": "Assembly teams are sent without a list of what is on site, so half a day is spent finding cartons."
+        },
+        {
+          "h": "Warranty claims untraceable",
+          "p": "A bed fails in its second year and nobody can say when it was supplied or whether it is still in warranty."
+        },
+        {
+          "h": "Payment tied to milestones",
+          "p": "Payment follows delivery and installation stages, and the paperwork proving each stage is scattered."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the tender document to the last installed ward.",
+      "steps": [
+        {
+          "h": "Bid",
+          "p": "The tender is tracked with its documents, deadlines and EMD, and the submitted rates are recorded for reference."
+        },
+        {
+          "h": "Win and plan",
+          "p": "The award becomes a sales order with the full quantity, and the expected release phases are agreed with the hospital."
+        },
+        {
+          "h": "Produce or procure",
+          "p": "Purchase orders go to the manufacturer, goods are received into the warehouse, and stock is reserved against the order."
+        },
+        {
+          "h": "Deliver in phases",
+          "p": "Each release goes out on its own delivery challan and e-way bill, and the balance against the order updates automatically."
+        },
+        {
+          "h": "Assemble and install",
+          "p": "An installation job is raised per ward, closed on the mobile job card with photos and the ward in-charge signature."
+        },
+        {
+          "h": "Invoice and collect",
+          "p": "Tax invoices are raised against the delivered and installed quantities, and payments are tracked against the order."
+        },
+        {
+          "h": "Cover",
+          "p": "Each supplied item carries its warranty period, and a claim later opens a job with the part replaced from spares."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for bulk orders that arrive in pieces.",
+      "groups": [
+        {
+          "icon": "&#127963;",
+          "h": "Winning the work",
+          "items": [
+            "Tender tracker with document vault and deadlines",
+            "Bid, EMD and outcome analytics",
+            "Rate-contract management for repeat institutional supply",
+            "GST quotation builder for itemised schedules",
+            "Hospital and project accounts with contacts by role"
+          ]
+        },
+        {
+          "icon": "&#128667;",
+          "h": "Phased delivery",
+          "items": [
+            "Sales orders with balance quantity against each line",
+            "Delivery challan for every release",
+            "E-way bill for interstate and long-distance movement",
+            "Multi-warehouse stock and transfers to a site store",
+            "Order tracking page for the hospital"
+          ]
+        },
+        {
+          "icon": "&#128296;",
+          "h": "Assembly and installation",
+          "items": [
+            "Installation jobs raised per ward or floor",
+            "Technician dispatch and day schedules",
+            "Mobile job card with photo proof and signature",
+            "Offline mode for sites without signal"
+          ]
+        },
+        {
+          "icon": "&#128181;",
+          "h": "Money and cover",
+          "items": [
+            "Tax invoices against delivered quantities",
+            "Payment tracker and receivables ageing",
+            "Warranty tracking per supplied item",
+            "Spare parts inventory for castors, rails and actuators",
+            "Credit notes and returns for rejected items"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things a project supplier has to keep straight.",
+      "items": [
+        {
+          "h": "The balance quantity is never argued about",
+          "workflow": "Every challan is raised against the sales order line, so the order shows ordered, delivered and pending quantities at any moment.",
+          "result": "One number both sides can read."
+        },
+        {
+          "h": "A release waits for the ward, not the lorry",
+          "workflow": "The next phase is planned against the hospital's handover dates and despatched when the ward is confirmed ready.",
+          "result": "No stock sitting unprotected on a building site."
+        },
+        {
+          "h": "Installation is proved",
+          "workflow": "The ward installation job closes with photographs of the assembled beds and the ward in-charge signature on the mobile app.",
+          "result": "Evidence for the stage payment on the same day."
+        },
+        {
+          "h": "A warranty claim is settled quickly",
+          "workflow": "The item is found by its supply record, the warranty status is visible, and a job is raised with the replacement part issued from spares.",
+          "result": "A repair rather than an argument."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Suppliers whose orders come from projects.",
+      "items": [
+        {
+          "icon": "&#128719;",
+          "b": "Hospital bed manufacturers and dealers",
+          "p": "Electric and manual beds supplied by the ward."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Ward and theatre furniture suppliers",
+          "p": "Trolleys, cabinets, tables and stainless steel items."
+        },
+        {
+          "icon": "&#127963;",
+          "b": "Government tender suppliers",
+          "p": "Rate contracts and phased supply to public hospitals."
+        },
+        {
+          "icon": "&#127959;",
+          "b": "Turnkey hospital project suppliers",
+          "p": "Multiple categories against a single build."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Suppliers to hospital chains",
+          "p": "A standard specification rolled out across sites."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Challan books, accounting software, or order-aware project supply.",
+      "cols": [
+        "Challan book and Excel",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Order versus delivered",
+          "Added up by hand",
+          "Invoice history only",
+          "Balance quantity live on the order line"
+        ],
+        [
+          "Phased release",
+          "Agreed on the phone",
+          "Not modelled",
+          "Planned releases with challans against the order"
+        ],
+        [
+          "Site store",
+          "Nobody's stock",
+          "Not tracked",
+          "A warehouse location with transfers"
+        ],
+        [
+          "Installation",
+          "A crew and a phone",
+          "Not covered",
+          "Jobs per ward with photos and signature"
+        ],
+        [
+          "Warranty",
+          "The original invoice",
+          "Not tracked",
+          "Cover recorded per supplied item"
+        ],
+        [
+          "Stage payment evidence",
+          "Assembled later",
+          "Invoice only",
+          "Challan, job card and invoice on one order"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital furniture supply, answered.",
+      "items": [
+        {
+          "q": "Can one order be delivered over several months?",
+          "a": "Yes. The sales order holds the full quantity and each release goes out on its own delivery challan, so ordered, delivered and pending quantities are visible on the order at any time without adding up paperwork."
+        },
+        {
+          "q": "Do we need AMC contracts for furniture?",
+          "a": "Usually not. Most furniture obligations are warranty rather than scheduled maintenance, so the platform records the warranty period per supplied item and raises a job when a claim comes in. Annual contracts are available if you sell them on powered beds."
+        },
+        {
+          "q": "How is installation labour tracked across a large site?",
+          "a": "Installation is raised as jobs per ward or floor, assigned to a crew with a date, and closed on the mobile job card with photographs and the ward in-charge signature. Offline mode covers sites without network."
+        },
+        {
+          "q": "Can we hold stock at the hospital site?",
+          "a": "Yes. Create the site store as a warehouse location and transfer stock to it. Movements are recorded, so what is on site and what has been installed are separate and countable numbers."
+        },
+        {
+          "q": "Does it handle government tender supply?",
+          "a": "Yes. The tender tracker holds documents, EMD and deadlines, rate contracts govern the price on repeat supply, and outcome analytics show your win rate by category. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+        },
+        {
+          "q": "How are replacement parts for beds managed?",
+          "a": "Castors, side rails, actuators and similar parts are stock items with reorder levels, and a part used on a warranty job is issued against that job so stock drops and the claim history builds against the item."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128220;",
+          "b": "Delivery challan",
+          "p": "Every release against the order."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tenders",
+          "p": "Bids, EMD and outcomes."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128274;",
+          "b": "Warranty management",
+          "p": "Cover per supplied item."
+        },
+        {
+          "href": "/aura-business/electrical-equipment-dealer-software/",
+          "icon": "&#9889;",
+          "b": "Electrical dealers",
+          "p": "The other project-supply trade."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Site stores and transfers."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128181;",
+          "b": "Receivables ageing",
+          "p": "Stage payments, chased."
+        }
+      ]
+    }
+  ]
+}

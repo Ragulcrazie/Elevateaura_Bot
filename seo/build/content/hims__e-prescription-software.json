@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "e-prescription-software",
+  "title": "e-Prescription Software India | Written to Dispensed | HIMS",
+  "meta": "e-Prescription software for Indian hospitals and clinics: prescribe inside the consultation, choose from pharmacy stock, and dispense exactly what was typed.",
+  "h1": "e-Prescription software where the <span class=\"hl\">prescription the doctor types</span> is the one the pharmacy dispenses.",
+  "crumb": "e-Prescription Software",
+  "pill": "For doctors and pharmacists",
+  "sub": "HIMS lets a doctor prescribe from inside the consultation, choosing from the drugs the pharmacy actually holds. The prescription attaches to the patient record and appears in the dispensing queue, so nothing is read off handwriting.",
+  "meta_ticks": [
+    "Prescribe inside the consultation",
+    "Drug list from pharmacy stock",
+    "Appears in the dispensing queue"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/pharmacy.png",
+    "alt": "HIMS pharmacy screen showing the dispensing queue with drugs, batch and stock",
+    "bar": "his.elevateaura.co.in/pharmacy"
+  },
+  "whatsapp_text": "Hi, I'd like to see e-prescription and pharmacy dispensing in HIMS.",
+  "primary_keyword": "e-prescription software India",
+  "secondary_keywords": [
+    "electronic prescription software",
+    "e-prescribing software for hospitals",
+    "digital prescription software India",
+    "clinic prescription software",
+    "prescription to pharmacy software",
+    "doctor prescription software"
+  ],
+  "intent": "commercial",
+  "persona": "Consultant, clinic owner or hospital pharmacist who wants prescriptions typed rather than written",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What e-prescription software does here",
+      "paras": [
+        "e-Prescription in HIMS means the doctor writes the drug order in the patient record during the consultation rather than on a pad. The drug is picked from a list drawn from the hospital pharmacy's own stock, with dose, frequency and duration recorded as fields. The prescription then sits on the encounter alongside the history, the examination and the investigations ordered at the same visit.",
+        "From there it moves by itself. The pharmacy sees the prescription in the dispensing queue, dispenses against what was typed and the issue drops the stock it came from. In the ward, the same order is what nursing works from when a dose is due. Nothing is transcribed at any point, which is where most prescription errors and most billing mismatches actually come from.",
+        "None of this needs the doctor to change how they consult. The prescription is written where the notes are already being written, and the rest of the movement, to the counter, to the ward and on to the bill, happens because every department is reading the same record."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the paper slip causes trouble",
+      "h2": "A prescription is read by at least three people who did not write it.",
+      "lead": "The pad works fine for the doctor. Everyone downstream is guessing.",
+      "items": [
+        {
+          "h": "Handwriting interpreted",
+          "p": "The pharmacist reads a slip, decides what was meant, and dispenses a reasonable guess."
+        },
+        {
+          "h": "Drugs prescribed that are not stocked",
+          "p": "The patient walks to the counter and is told the item is not available, then walks back up."
+        },
+        {
+          "h": "No copy on the record",
+          "p": "The only copy of what was prescribed leaves the building with the patient."
+        },
+        {
+          "h": "Repeat visits start from scratch",
+          "p": "At the follow-up nobody can see what was given last month or whether it was finished."
+        },
+        {
+          "h": "Stock and billing disagree",
+          "p": "What was dispensed at the counter and what appears on the bill are reconciled by hand at the end of the day."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One prescription, end to end",
+      "h2": "From the consulting room to the counter.",
+      "steps": [
+        {
+          "h": "In the consultation",
+          "p": "The doctor opens the patient's record and prescribes without leaving it."
+        },
+        {
+          "h": "Picked from stock",
+          "p": "The drug list comes from what the pharmacy holds, so the item exists."
+        },
+        {
+          "h": "Dose recorded",
+          "p": "Strength, frequency and duration are captured as fields, not free text."
+        },
+        {
+          "h": "Attached to the record",
+          "p": "The prescription stays on the encounter and on the patient's history."
+        },
+        {
+          "h": "Into the queue",
+          "p": "The pharmacy sees it in the dispensing queue as the patient walks down."
+        },
+        {
+          "h": "Dispensed and billed",
+          "p": "The issue drops stock and the item reaches the bill without retyping."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Prescribing, dispensing and the record in one place.",
+      "groups": [
+        {
+          "icon": "&#128138;",
+          "h": "Prescribing",
+          "items": [
+            "Written inside the consultation",
+            "Drug list from pharmacy stock",
+            "Dose, frequency and duration as fields",
+            "Previous prescriptions visible"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "On the record",
+          "items": [
+            "Attached to the encounter",
+            "Part of the patient's searchable history",
+            "Visible to nursing on the ward",
+            "Carried into the discharge summary"
+          ]
+        },
+        {
+          "icon": "&#127974;",
+          "h": "At the pharmacy",
+          "items": [
+            "Dispensing queue per prescription",
+            "Batch and expiry on the issue",
+            "Low-stock and expiry alerts",
+            "Stock drops on dispensing"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "For the patient",
+          "items": [
+            "Prescription visible in the patient portal",
+            "Follow-up reminders over WhatsApp",
+            "Printable copy from the record",
+            "Repeat visits start from the last script"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-pharmacy-management/",
+        "label": "See pharmacy management in full"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where typing the script changes the day.",
+      "items": [
+        {
+          "h": "A busy OP clinic",
+          "workflow": "The doctor prescribes as the consultation ends and the pharmacy has the queue entry before the patient reaches the counter.",
+          "result": "The counter queue moves without a reading delay."
+        },
+        {
+          "h": "A drug that is out of stock",
+          "workflow": "The item shows as unavailable while the doctor is still prescribing, so an alternative is chosen in the room.",
+          "result": "The patient is not sent back upstairs."
+        },
+        {
+          "h": "A follow-up next month",
+          "workflow": "The doctor opens the record and sees exactly what was prescribed and for how long.",
+          "result": "The next decision is made on evidence."
+        },
+        {
+          "h": "An inpatient drug order",
+          "workflow": "The prescription on the record is what the ward works from and what the pharmacy issues against the admission.",
+          "result": "The bill matches what was actually given."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose prescription is read by someone else.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultants",
+          "p": "A script that survives the walk to the counter."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "OP prescribing with history on every repeat visit."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital pharmacies",
+          "p": "Dispense against text, not handwriting."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "One prescribing standard across departments."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Nursing staff",
+          "p": "Ward doses worked from the written order."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways a prescription reaches the pharmacy.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "How the drug is chosen",
+          "From memory",
+          "Typed at the counter",
+          "From the pharmacy's own stock list"
+        ],
+        [
+          "Who reads it",
+          "The pharmacist, from handwriting",
+          "The biller, from a slip",
+          "Nobody, it is already text"
+        ],
+        [
+          "Copy on the record",
+          "None",
+          "The bill only",
+          "On the encounter and the history"
+        ],
+        [
+          "Effect on stock",
+          "Adjusted later",
+          "Adjusted at billing",
+          "Drops when dispensed, with batch and expiry"
+        ],
+        [
+          "Visible to the ward",
+          "The file at the bed",
+          "No",
+          "Yes, the same order nursing acts on"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "e-Prescription in HIMS, answered.",
+      "items": [
+        {
+          "q": "Does the doctor prescribe from a drug master or from stock?",
+          "a": "From the drugs the pharmacy holds. That is what stops a prescription being written for an item the counter cannot supply, and it is why the dispensing queue and the stock ledger agree afterwards."
+        },
+        {
+          "q": "Can we still print a prescription for the patient?",
+          "a": "Yes. The prescription is printed from the record when the patient is buying outside, and it is also visible in the patient portal. The printed copy and the stored copy are the same document."
+        },
+        {
+          "q": "Is e-prescription available in clinics, not just hospitals?",
+          "a": "Yes. Clinics and polyclinics use the same consultation and prescribing flow without the IP modules. See <a href=\"/hims/clinic-management-software/\">clinic management software</a> for the smaller setup."
+        },
+        {
+          "q": "How does the pharmacy know a script has been written?",
+          "a": "It appears in the dispensing queue against the patient, so the counter works from a list rather than from slips carried down by patients. Dispensing drops stock from the batch it was issued from."
+        },
+        {
+          "q": "Does this handle controlled or restricted drugs?",
+          "a": "Prescriptions are recorded with the prescriber, the patient and the time, and pharmacy issues are tracked by batch, which is the record side. Any regulatory register your state requires should be discussed on the call so it is scoped correctly."
+        },
+        {
+          "q": "Is it part of the EMR?",
+          "a": "Yes. The prescription is one of the things written on the clinical record, alongside history, orders and notes. See <a href=\"/hims/hospital-emr-software/\">hospital EMR software</a> for the record as a whole."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#127974;",
+          "b": "Pharmacy",
+          "p": "Dispensing, stock and expiry."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "The record it attaches to."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128100;",
+          "b": "OPD software",
+          "p": "Tokens, queues and consultation."
+        },
+        {
+          "href": "/hims/hospital-nursing-management-software/",
+          "icon": "&#128719;",
+          "b": "Nursing",
+          "p": "Ward doses and charts."
+        },
+        {
+          "href": "/hims/abha-abdm-ready-hospital-software/",
+          "icon": "&#128274;",
+          "b": "ABHA and ABDM",
+          "p": "What ready really means."
+        }
+      ]
+    }
+  ]
+}

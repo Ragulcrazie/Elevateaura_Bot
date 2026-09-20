@@ -1,0 +1,212 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-uhid",
+  "title": "What Is UHID? One Hospital ID Per Patient, Explained",
+  "meta": "UHID is the unique hospital identification number given to a patient once and reused for every visit. Why duplicates happen and what they cost your hospital.",
+  "h1": "What is a UHID? The number that decides whether <span class=\"hl\">a patient has a history</span>.",
+  "crumb": "What is UHID",
+  "pill": "Guide",
+  "sub": "UHID stands for Unique Health Identification, the number a hospital gives a patient at first registration and reuses for every visit afterwards. This guide explains what it holds together, how duplicates are created and how to stop them at the desk.",
+  "meta_ticks": [
+    "Written for hospital front offices",
+    "Practical, not theoretical",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See UHID registration software",
+  "cta_href": "/hims/uhid-patient-registration-software/",
+  "whatsapp_text": "Hi, I read the UHID guide and want to ask about patient registration for our hospital.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "what is UHID",
+  "secondary_keywords": [
+    "UHID full form",
+    "UHID number meaning",
+    "unique hospital identification number",
+    "duplicate patient records hospital",
+    "patient registration number India"
+  ],
+  "intent": "informational",
+  "persona": "Hospital administrator or front-office manager responsible for patient registration",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "UHID in two paragraphs",
+      "paras": [
+        "A UHID is the Unique Health Identification number a hospital issues to a patient at first registration and then uses for the rest of that patient's relationship with the hospital. Every visit, admission, prescription, investigation, scan and bill attaches to it. It is issued once and never reissued.",
+        "It is not a visit number and it is not a bill number. Those change every time. The UHID is the one thing that does not, which is why it is the difference between a hospital that has a patient's history and a hospital that has a pile of unrelated visits with the same name on them."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What it holds together",
+      "h2": "One number, everything hanging off it",
+      "lead": "The value of a UHID is not the number. It is what can be pulled up when someone types it.",
+      "body": [
+        "Once a patient has one identifier, the hospital can answer questions it otherwise cannot. What was prescribed last time and did it work. Which investigations have already been done, so they are not repeated at the patient's expense. Whether this admission is a readmission. What the patient is allergic to. Who paid last time and under which policy. Each of those is only answerable because the records sit on one identifier instead of several.",
+        {
+          "h3": "Where the UHID appears"
+        },
+        {
+          "ul": [
+            "<b>Registration.</b> Created once, at the first visit, and searched for at every visit after.",
+            "<b>OP and IP.</b> Every consultation and every admission is an episode under the same UHID.",
+            "<b>Clinical record.</b> Notes, diagnoses, orders and prescriptions attach to it rather than to a visit slip.",
+            "<b>Laboratory and imaging.</b> A sample or a study carries the UHID so the result lands on the right person.",
+            "<b>Pharmacy.</b> Dispensing runs against the prescription on that record, and what was dispensed stays on it.",
+            "<b>Billing and claims.</b> Cash, insurance and TPA claims are raised against the episode and traceable to the patient."
+          ]
+        },
+        {
+          "h3": "UHID, MRN and ABHA are not the same thing"
+        },
+        "A UHID or MRN is issued by your hospital and means nothing outside it. An ABHA number is a national health identifier that belongs to the patient and is used to link records across providers with consent. They coexist: the ABHA is stored against the patient, while the UHID remains how your own system finds them. See <a href=\"/resources/emr-vs-ehr/\">EMR vs EHR</a> for why both exist."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The failure mode",
+      "h2": "How one patient becomes three records",
+      "body": [
+        "Nobody sets out to create a duplicate. It happens because the desk is busy and searching is slower than typing. These are the usual routes.",
+        {
+          "table": {
+            "headers": [
+              "How it happens",
+              "What you end up with",
+              "How to stop it"
+            ],
+            "rows": [
+              [
+                "Name spelled differently at a second visit",
+                "Two records, neither with the full history",
+                "Search on mobile number as well as name, and search before creating"
+              ],
+              [
+                "Patient cannot remember the card or number",
+                "A fresh registration as the quicker option",
+                "Show likely matches on screen with date of birth and last visit"
+              ],
+              [
+                "Two counters registering at once",
+                "The same person entered twice in an hour",
+                "One registration source, with other counters searching not creating"
+              ],
+              [
+                "Initials, surnames and honorifics entered inconsistently",
+                "Records that never match a search",
+                "A field order the desk cannot vary, with mobile number mandatory"
+              ],
+              [
+                "A minor registered under a parent's name",
+                "Treatment attached to the wrong person",
+                "Separate record for the child, linked to the guardian's contact"
+              ],
+              [
+                "An emergency admission with no details",
+                "A temporary record never merged afterwards",
+                "A defined merge step once identity is established"
+              ]
+            ]
+          }
+        },
+        "The cost is rarely a fine. It is repeated investigations, a scan that cannot be found and is done again, a discharge summary that omits the earlier admission, a claim queried because the history does not support the treatment, and an owner's dashboard counting the same patient as two new ones."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Getting it right",
+      "h2": "What good registration looks like",
+      "body": [
+        "Registration is the cheapest place in a hospital to prevent an expensive problem, and it is almost entirely a matter of discipline supported by the right screen.",
+        {
+          "ul": [
+            "Search first, create second. The screen should make searching faster than starting a new record.",
+            "Mobile number mandatory, and an attendant's number for patients who have travelled in.",
+            "Existing matches shown before a new UHID can be issued.",
+            "A single, fixed field order so two receptionists enter a name the same way.",
+            "A merge process, owned by someone, for the duplicates that still get through.",
+            "The ABHA number captured where the patient has one, stored alongside the UHID."
+          ]
+        },
+        "In practice this is what <a href=\"/hims/uhid-patient-registration-software/\">UHID patient registration in HIMS</a> is built around, with the record then read by the EMR, the pharmacy, the laboratory, the wards and billing. Cities where patients travel in feel this hardest, which is why it leads the conversation in places like <a href=\"/hims/hospital-management-software-vellore/\">Vellore</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about UHID",
+      "items": [
+        {
+          "q": "What is the full form of UHID?",
+          "a": "Unique Health Identification number, sometimes written as unique hospital identification. It is the single identifier a hospital issues to a patient at first registration and reuses for every later visit, admission, investigation and bill."
+        },
+        {
+          "q": "Is a UHID the same as an ABHA number?",
+          "a": "No. A UHID is issued by your hospital and only means something inside it. ABHA is a national health identifier that belongs to the patient and supports consent-based sharing between providers. A hospital record can carry both."
+        },
+        {
+          "q": "How is a UHID different from a bill or visit number?",
+          "a": "A visit or bill number identifies one episode and changes every time. The UHID identifies the person and never changes. Episodes hang off the UHID, which is what lets the hospital see a history rather than a list of unrelated visits."
+        },
+        {
+          "q": "What happens if a patient has two UHIDs?",
+          "a": "Their history is split, so investigations get repeated, earlier admissions are missed and claims are harder to support. The records need merging under a controlled process, and the desk practice that created the duplicate needs fixing at the same time."
+        },
+        {
+          "q": "Should a patient carry a card with the number?",
+          "a": "It helps, but no system should depend on it. Assume the card is at home. Search by mobile number and name, show likely matches on screen, and make finding the existing record faster than creating a new one."
+        },
+        {
+          "q": "Does a small clinic need UHIDs?",
+          "a": "Yes, and it is easier to start there. A clinic that issues one identifier per patient from day one keeps a usable history, and it will not have to clean up thousands of duplicates if it later adds beds, a laboratory or a second location."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#127380;",
+          "b": "UHID registration software",
+          "p": "One ID, enforced at the desk."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128203;",
+          "b": "Patient management",
+          "p": "The record across visits."
+        },
+        {
+          "href": "/resources/emr-vs-ehr/",
+          "icon": "&#128218;",
+          "b": "EMR vs EHR",
+          "p": "Inside, and beyond, your walls."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128337;",
+          "b": "OPD software",
+          "p": "Tokens, queues and consultation."
+        },
+        {
+          "href": "/hims/abha-abdm-ready-hospital-software/",
+          "icon": "&#127470;",
+          "b": "ABHA and ABDM ready",
+          "p": "The national identifier."
+        },
+        {
+          "href": "/resources/hospital-software-implementation-checklist/",
+          "icon": "&#9989;",
+          "b": "Implementation checklist",
+          "p": "Clean data before go-live."
+        }
+      ]
+    }
+  ]
+}

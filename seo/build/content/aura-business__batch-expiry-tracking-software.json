@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "batch-expiry-tracking-software",
+  "title": "Batch and Expiry Tracking Software for Distributors | Aura",
+  "meta": "Batch and expiry tracking for consumables and reagents: batch on every line, earliest-expiry batch offered first, alerts before expiry and full traceability.",
+  "h1": "Batch and expiry tracking that picks the <span class=\"hl\">oldest stock first</span>, every time.",
+  "crumb": "Batch &amp; Expiry Tracking",
+  "pill": "For consumables, reagents and kits",
+  "sub": "Aura Business holds batch numbers and expiry dates on consumables and reagents, can put the earliest-expiry batch in front of the picker at despatch, warns you while the stock is still saleable, and can tell you which batch went to which customer.",
+  "meta_ticks": [
+    "Batch and expiry on every stock line",
+    "Earliest-expiry batch offered first",
+    "Which batch went to which customer"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png",
+    "alt": "Aura Business inventory screen listing consumable stock by batch number with expiry dates and quantities",
+    "bar": "app.elevateaura.co.in/inventory/batches"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss batch and expiry tracking for our consumables stock.",
+  "primary_keyword": "batch and expiry tracking software",
+  "secondary_keywords": [
+    "expiry management software India",
+    "batch tracking software for distributors",
+    "reagent expiry tracking software",
+    "FEFO inventory software",
+    "consumables batch traceability software"
+  ],
+  "intent": "commercial",
+  "persona": "Stores or operations manager handling reagents, consumables and kits with a shelf life",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What batch and expiry tracking is for",
+      "paras": [
+        "If what you sell has a shelf life, a quantity on hand is not enough information to despatch against. You need to know which batch each unit belongs to, when that batch expires, which batch should go out next, and later, which customer received which batch. Aura Business does this through the Batch and Expiry Tracking module in the Inventory and Warehouse suite.",
+        "Two things follow from having batches. Picking can be first-expiry-first-out, so the stock closest to its date leaves first instead of whatever is nearest the door. And traceability works in both directions: from a batch to every customer who received it, and from a customer complaint back to the batch and the supplier it came from."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What expiry costs",
+      "h2": "Expired stock is money you already paid for, sitting on a shelf.",
+      "lead": "It is also the one inventory loss that is entirely predictable, and that is what makes it so annoying when it happens.",
+      "items": [
+        {
+          "h": "Newest stock picked first",
+          "p": "The cartons at the front of the rack are the ones that arrived last, so the older batch quietly ages out."
+        },
+        {
+          "h": "Expiry found at despatch",
+          "p": "A date is noticed while packing an urgent order, and now the order cannot go and nothing was reordered."
+        },
+        {
+          "h": "A hospital returns short-dated goods",
+          "p": "Reagents arrive with weeks left on them, the lab refuses them, and the return costs you twice."
+        },
+        {
+          "h": "No idea who got which batch",
+          "p": "The supplier reports a problem with one lot and you cannot say which customers received it."
+        },
+        {
+          "h": "Write-offs discovered at stock take",
+          "p": "The expiry loss surfaces once a year in a single unpleasant number."
+        },
+        {
+          "h": "Batch numbers not on the invoice",
+          "p": "Customers who need batch details for their own records keep ringing your office for them."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a batch is followed",
+      "h2": "From goods receipt to the customer who received it.",
+      "steps": [
+        {
+          "h": "Received with a batch",
+          "p": "The GRN records batch number, expiry date and quantity for each lot from the supplier."
+        },
+        {
+          "h": "Stocked by location",
+          "p": "The batch holds its own quantity in whichever godown or branch it went into."
+        },
+        {
+          "h": "Alerts as the date nears",
+          "p": "Stock approaching expiry is flagged while it is still worth selling or returning."
+        },
+        {
+          "h": "Earliest-expiry batch offered",
+          "p": "Despatch proposes the batch nearest its date, so old stock moves before new."
+        },
+        {
+          "h": "Batch on the document",
+          "p": "Batch number and expiry appear on the delivery challan and tax invoice lines."
+        },
+        {
+          "h": "Traced afterwards",
+          "p": "Any batch can be listed with the customers it went to, and any customer line traced back to its batch."
+        },
+        {
+          "h": "Written off deliberately",
+          "p": "Expired stock is removed as a reasoned adjustment rather than an unexplained quantity change."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Batch handling and everything it touches.",
+      "groups": [
+        {
+          "icon": "&#8986;",
+          "h": "Batch control",
+          "items": [
+            "Batch and expiry tracking per item",
+            "Expiry date captured at goods receipt",
+            "Stock per batch per location",
+            "Barcode or QR scan on the carton"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Warning",
+          "items": [
+            "Near-expiry alerts on the dashboard",
+            "Low-stock and reorder alerts alongside",
+            "Notifications hub for the stores team",
+            "Reports on stock by remaining shelf life"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Despatch",
+          "items": [
+            "Earliest-expiry batch offered first",
+            "Batch and expiry on the delivery challan",
+            "Batch and expiry on the GST invoice lines",
+            "Credit notes and returns by batch"
+          ]
+        },
+        {
+          "icon": "&#128269;",
+          "h": "Traceability",
+          "items": [
+            "Batch to customer listing",
+            "Customer line back to batch and supplier",
+            "Stock movements ledger per batch",
+            "Audit log of adjustments and write-offs"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four expiry situations handled properly.",
+      "items": [
+        {
+          "h": "Short-dated stock is sold, not wasted",
+          "workflow": "Reagents three months from expiry are flagged, and the sales team is given the list to place with labs that will consume them quickly.",
+          "result": "The batch is used while it still has value."
+        },
+        {
+          "h": "The lab gets long-dated goods",
+          "workflow": "The earliest-expiry suggestion is overridden for a customer whose contract needs a minimum shelf life on arrival, and the picked batch is recorded.",
+          "result": "No rejected deliveries at the door."
+        },
+        {
+          "h": "A supplier lot issue is contained",
+          "workflow": "The supplier flags a batch; the system lists every despatch that carried it, with customer, date and quantity.",
+          "result": "You call the right customers within the hour."
+        },
+        {
+          "h": "Write-offs stop being a surprise",
+          "workflow": "Expiry losses are posted month by month as reasoned adjustments rather than discovered at the annual count.",
+          "result": "The number is small and explainable."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone selling goods with a date printed on them.",
+      "items": [
+        {
+          "icon": "&#128300;",
+          "b": "Reagent and diagnostics dealers",
+          "p": "Lab reagents and kits with short, strict shelf lives."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Medical consumables distributors",
+          "p": "Disposables, sets and dressings sold in volume."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Equipment dealers with consumables",
+          "p": "Machines sold once, consumables sold every month."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Surgical and implant suppliers",
+          "p": "Items where batch traceability is expected by the customer."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial consumables trade",
+          "p": "Chemicals, adhesives and filters with use-by dates."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A quantity column, an accounts ledger, or real batches.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Batch held on stock",
+          "A note in a cell",
+          "Sometimes, at invoice level",
+          "Batch and expiry on the stock line itself"
+        ],
+        [
+          "Picking rule",
+          "Whatever is at the front",
+          "None",
+          "Earliest-expiry batch proposed at despatch"
+        ],
+        [
+          "Warning before expiry",
+          "None",
+          "None",
+          "Near-expiry alerts while stock is saleable"
+        ],
+        [
+          "Batch on the invoice",
+          "Typed if remembered",
+          "Manual line",
+          "Carried from the picked batch automatically"
+        ],
+        [
+          "Batch to customer trace",
+          "Not possible",
+          "Manual search",
+          "Listed from the batch record"
+        ],
+        [
+          "Expiry write-offs",
+          "Found at stock take",
+          "Journal entry",
+          "Reasoned adjustment in the movements ledger"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Batch and expiry tracking, answered.",
+      "items": [
+        {
+          "q": "Can an item have several live batches at once?",
+          "a": "Yes. Each batch holds its own quantity, expiry date and location, so the same product can sit in three batches across two godowns and the system still knows which one should be despatched next."
+        },
+        {
+          "q": "Does it force us to despatch the earliest-expiry batch?",
+          "a": "It is the proposed pick, not a lock. Some customers require a minimum remaining shelf life on arrival, so the picker can choose a different batch and the choice is recorded against the despatch."
+        },
+        {
+          "q": "How early do the alerts fire?",
+          "a": "Near-expiry thresholds are set to suit what you sell, because a reagent with a short life needs warning much earlier in relative terms than a disposable with a two-year date."
+        },
+        {
+          "q": "Does the batch number print on the invoice?",
+          "a": "Yes. Batch and expiry carry through from the picked stock onto the delivery challan and the GST tax invoice lines, so customers who need them for their own records get them without ringing you."
+        },
+        {
+          "q": "Can we trace a batch to its customers?",
+          "a": "Yes. Any batch can be listed with every despatch that carried it, and any invoice line can be traced back to the batch and the goods receipt it came from. See <a href=\"/aura-business/medical-equipment-warehouse-management/\">warehouse management</a>."
+        },
+        {
+          "q": "Does this apply to serialised equipment too?",
+          "a": "Serialised machines are tracked by serial number rather than batch, and both models run side by side. Consumables carry batches, capital equipment carries serials. See <a href=\"/aura-business/medical-equipment-inventory-software/\">inventory software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory software",
+          "p": "The full stock suite."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127970;",
+          "b": "Warehouse management",
+          "p": "Locations and movements."
+        },
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#129516;",
+          "b": "Consumables distributors",
+          "p": "Built for high-volume trade."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128666;",
+          "b": "Delivery challan",
+          "p": "Batch on the despatch document."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128221;",
+          "b": "Purchase and GRN",
+          "p": "Where batches are captured."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When Excel stock breaks."
+        }
+      ]
+    }
+  ]
+}

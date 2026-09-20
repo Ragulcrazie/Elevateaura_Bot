@@ -1,0 +1,219 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-pondicherry",
+  "title": "Hospital Management Software in Pondicherry | HIMS",
+  "meta": "Hospital management software for Puducherry hospitals and clinics: OP and IP, EMR, pharmacy, lab, wards and TPA billing, set up on site by travel from Chennai.",
+  "h1": "Hospital software for Pondicherry, where the catchment <span class=\"hl\">crosses a border every morning</span>.",
+  "crumb": "Pondicherry",
+  "pill": "Puducherry and the districts around it",
+  "sub": "HIMS runs OP and IP registration, EMR, pharmacy, laboratory, wards, theatre and billing with insurance and TPA claims for hospitals and clinics in Puducherry, set up and taught in person by travel from Chennai.",
+  "demo_href": "/demo/hospital.html",
+  "meta_ticks": [
+    "Setup and training on site",
+    "A short coastal run from Chennai",
+    "WhatsApp support after go-live"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Puducherry and would like to see HIMS.",
+  "primary_keyword": "hospital management software Pondicherry",
+  "secondary_keywords": [
+    "hospital software Puducherry",
+    "clinic management software Pondicherry",
+    "HMS software Puducherry",
+    "hospital billing software Pondicherry",
+    "nursing home software Puducherry"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital, nursing home or clinic in Puducherry",
+  "city": "Pondicherry",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Puducherry, configured on your own floor",
+      "paras": [
+        "HIMS is the hospital platform Elevate Aura builds in Chennai, and Puducherry is close enough down the coast that the parts of a rollout which go badly over a call are done at your hospital instead. The workflow study, the choice of which modules go live first and the training of the registration, pharmacy and billing counters all happen with your staff present.",
+        "There is no Elevate Aura office, engineer or phone number in Puducherry. Once the hospital is live, the platform is supported remotely and on WhatsApp by the person who built it, and a further visit is arranged only when something genuinely needs a person standing there."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Puducherry context",
+      "h2": "A small territory whose hospitals serve a much larger district belt.",
+      "lead": "Puducherry is compact, but its hospitals are not treating only the people who live inside it.",
+      "body": [
+        "A steady share of the daily OP list travels in from Villupuram, Cuddalore and the villages along the East Coast Road, because the hospitals here are the nearest ones worth the journey. The territory itself is also split into pockets that sit some distance apart, so a hospital's own patients are not all a ten-minute drive away either. What follows from that is an OP day built around people who want to be finished in one sitting, and an appointment desk that has to be reachable by phone and on WhatsApp rather than only in person.",
+        "The mix of institutions is broad: teaching-scale hospitals, private nursing homes, specialty clinics and diagnostic centres, often within a few streets of one another. Patients move between them, which is exactly when records go missing. A patient investigated at a diagnostic centre and admitted at a nursing home arrives with a printout and nothing else, and the hospital re-enters everything.",
+        {
+          "h3": "One record for a patient who moves between places"
+        },
+        "Inside a single institution the answer is a structured record built on one UHID, with the laboratory result, the imaging study and the prescription landing on the same encounter rather than being carried between counters. Where imaging matters, <a href=\"/aurapacs.html\">AuraPACS</a> sits on the same record and the study and signed report can go to the referring doctor as a secure WhatsApp link, no login required. For a referral out, the discharge summary and the results are all in one place to hand over.",
+        {
+          "h3": "How a Puducherry rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to sit at registration, the pharmacy, the laboratory and the billing counter during a normal working day.",
+            "First-phase modules chosen from that walk, with the rest recorded for later rather than sold upfront.",
+            "Existing patient, item and tariff data migrated in, and your branding on the screens and the bill.",
+            "Go-live training in person at each counter, on your own data, recorded for staff who join later.",
+            "Thirty working days to go live where scope allows, then support by WhatsApp and remote session."
+          ]
+        },
+        "Billing is GST-native throughout, with cash, insurance and TPA settlement on the same bill. If your hospital has payer arrangements that differ from the usual pattern, raise them on the call so the configuration is agreed before go-live rather than after."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Puducherry hospital switches on first.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Front desk and OP",
+          "items": [
+            "OP registration on one UHID",
+            "Appointments, tokens and the queue display",
+            "Doctor rosters by department",
+            "WhatsApp appointment reminders"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Wards and theatre",
+          "items": [
+            "IP admission through to discharge",
+            "Ward and bed occupancy at a glance",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Laboratory from order to verified result",
+            "Pharmacy dispensing queue with expiry alerts",
+            "AuraPACS imaging on the same record"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and oversight",
+          "items": [
+            "Cash, insurance and TPA claim billing",
+            "GST on billable items",
+            "Consumables and equipment inventory",
+            "Live dashboard of OP, IP, beds and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Puducherry situations the platform is built for.",
+      "items": [
+        {
+          "h": "A patient travelling in from Villupuram for the day",
+          "workflow": "Token at registration, consultation on the record, laboratory and imaging ordered from one screen, results back on the same encounter, bill closed at one counter.",
+          "result": "The visit finishes before the bus home."
+        },
+        {
+          "h": "A referral arriving from a nearby diagnostic centre",
+          "workflow": "The patient is registered once on a UHID, the outside report is attached to the encounter, and everything done afterwards stays on the same record.",
+          "result": "Nothing is re-entered from a printout."
+        },
+        {
+          "h": "An appointment desk that runs on WhatsApp",
+          "workflow": "Appointments are booked against the doctor's roster and reminders go out over WhatsApp Business rather than by a staff member ringing each patient.",
+          "result": "Fewer no-shows without more phone calls."
+        },
+        {
+          "h": "An insured admission",
+          "workflow": "Insurer, TPA and approval are recorded on the admission, and the itemised bill the record produces becomes the claim.",
+          "result": "The claim is assembled from one place, not three."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Puducherry, answered.",
+      "items": [
+        {
+          "q": "Do you have people in Puducherry?",
+          "a": "No. Elevate Aura is a founder-led studio in Chennai with no office, staff or phone number in Puducherry. Setup and go-live training are done on site by travel, and support after that is remote and on WhatsApp with the person who built the system."
+        },
+        {
+          "q": "Many of our patients come from Tamil Nadu districts. Does that matter to the software?",
+          "a": "Mainly at registration and follow-up. One UHID per patient, searchable by mobile number, keeps a returning out-of-district patient on the same record, and reports can reach them through the patient app or a secure WhatsApp link once they are home."
+        },
+        {
+          "q": "How is billing handled?",
+          "a": "Billing is GST-native, with cash, insurance and TPA claims on the same bill and charges captured as they occur on the encounter. If your payer arrangements are unusual, confirm the configuration on the call before go-live."
+        },
+        {
+          "q": "Can a clinic or nursing home use this, or is it only for hospitals?",
+          "a": "Both. Modules are switched on selectively, so a clinic may run registration, EMR, pharmacy and billing alone. See <a href=\"/hims/clinic-management-software/\">clinic management software</a> and <a href=\"/hims/nursing-home-management-software/\">nursing home software</a>."
+        },
+        {
+          "q": "What happens if something breaks during OP hours?",
+          "a": "You message on WhatsApp and it is looked at remotely, usually over a screen share. It is quick, and it is remote. Nobody walks into your hospital within the hour, because there is no local team."
+        },
+        {
+          "q": "How soon could we be live?",
+          "a": "The working framework is 30 days to go live where scope permits, against a scope agreed up front. Inside that period sit the data migration, the branding, the counter training and the first week of close support."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128203;",
+          "b": "Hospital management system",
+          "p": "The platform, end to end."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128337;",
+          "b": "OPD software",
+          "p": "Tokens, queues and consultation."
+        },
+        {
+          "href": "/hims/hospital-whatsapp-appointment-reminders/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Appointments without phone calls."
+        },
+        {
+          "href": "/hims/hospital-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Chennai",
+          "p": "On site, where the studio is."
+        },
+        {
+          "href": "/resources/what-is-tpa-hospital-billing/",
+          "icon": "&#128218;",
+          "b": "What is TPA billing",
+          "p": "Why the claim is slow."
+        }
+      ]
+    }
+  ]
+}

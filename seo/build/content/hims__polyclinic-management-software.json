@@ -1,0 +1,335 @@
+{
+  "cluster": "hims",
+  "slug": "polyclinic-management-software",
+  "title": "Polyclinic Management Software | Many Doctors, One Desk | HIMS",
+  "meta": "Polyclinic management software for several doctors under one roof: shared front desk, a queue per doctor, shared pharmacy and lab, collections read per doctor.",
+  "h1": "Polyclinic management software for <span class=\"hl\">several doctors sharing one front desk</span>.",
+  "crumb": "Polyclinic Software",
+  "pill": "For polyclinics and consultation centres",
+  "sub": "A polyclinic is not a small hospital. It is a shared reception, a shared pharmacy and a shared lab serving consultants who each run their own hours. HIMS gives each doctor their own queue and record while the counter works from one screen.",
+  "meta_ticks": [
+    "One reception, a queue per doctor",
+    "Shared pharmacy and laboratory",
+    "Collections readable per doctor"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/doctors.png",
+    "alt": "HIMS doctors screen showing consulting doctors, departments and clinic timings",
+    "bar": "his.elevateaura.co.in/doctors"
+  },
+  "whatsapp_text": "Hi, I run a polyclinic and would like to see HIMS.",
+  "primary_keyword": "polyclinic management software",
+  "secondary_keywords": [
+    "polyclinic software India",
+    "multi doctor clinic software",
+    "consultation centre management software",
+    "shared clinic management software",
+    "polyclinic billing and queue software",
+    "software for clinics with multiple doctors"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or manager of a polyclinic where several independent consultants share a reception",
+  "page_type": "product",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a polyclinic actually needs from software",
+      "paras": [
+        "A polyclinic has one thing a single-doctor clinic does not: several consultants working the same building on different days and different hours, sharing a reception, a pharmacy and often a small laboratory. The software problem is not clinical depth. It is keeping each doctor's patients, queue and record separate while the front desk handles all of them from one screen.",
+        "HIMS does that by keeping the patient identity shared and the workflow per doctor. A patient is registered once under a UHID, whichever consultant they came to see. Each doctor has their own appointment book and token queue. Prescriptions go to the shared pharmacy, investigations to the shared laboratory, and billing collects for whoever did the work, with the collections readable doctor by doctor at the end of the day."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where polyclinics struggle",
+      "h2": "One desk, five doctors, and no agreement on anything.",
+      "lead": "Everything that works in a single clinic gets awkward as soon as a second consultant shares the reception.",
+      "items": [
+        {
+          "h": "One queue for everybody",
+          "p": "Patients waiting for three different doctors sit in one corridor with no idea whose turn it is."
+        },
+        {
+          "h": "Registers per doctor",
+          "p": "Each consultant keeps their own book, so the same patient is registered again for every department."
+        },
+        {
+          "h": "Pharmacy caught in the middle",
+          "p": "The counter serves prescriptions from several doctors with no common format and no stock visibility."
+        },
+        {
+          "h": "Settlements argued at month end",
+          "p": "Nobody can say cleanly how many consultations each doctor did or what was collected against them."
+        },
+        {
+          "h": "Timings only the receptionist knows",
+          "p": "Which consultant sits on which day lives in one person's head, and collapses when they are away."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A patient at a polyclinic",
+      "h2": "Shared desk, separate consulting rooms.",
+      "steps": [
+        {
+          "h": "Registered once",
+          "p": "The counter searches, finds or creates the UHID, whichever doctor is being seen."
+        },
+        {
+          "h": "Sent to a doctor's queue",
+          "p": "A token is issued against that consultant, not the clinic as a whole."
+        },
+        {
+          "h": "Consultation",
+          "p": "The doctor writes on the shared patient record and prescribes from it."
+        },
+        {
+          "h": "Pharmacy and laboratory",
+          "p": "The prescription reaches the shared pharmacy queue; investigations reach the shared laboratory."
+        },
+        {
+          "h": "Billing",
+          "p": "Consultation, drugs and tests are collected at one counter, attributed to who did what."
+        },
+        {
+          "h": "Day close",
+          "p": "The day's volume and collections can be read per doctor and per service."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What a polyclinic gets",
+      "h2": "Shared where it helps, separate where it must be.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Shared",
+          "items": [
+            "One reception and one registration",
+            "One UHID per patient across consultants",
+            "Shared pharmacy with dispensing queue",
+            "Shared laboratory from order to verified result"
+          ]
+        },
+        {
+          "icon": "&#8986;",
+          "h": "Per doctor",
+          "items": [
+            "Appointment book per consultant",
+            "Token queue per consulting room",
+            "Rosters and consulting days",
+            "Their own notes on the shared record"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "One billing counter for everything",
+            "Consultation, pharmacy and lab on one bill",
+            "Collections readable per doctor",
+            "GST where it applies"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Around the visit",
+          "items": [
+            "WhatsApp appointment and follow-up reminders",
+            "Patient portal for reports",
+            "Imaging through AuraPACS where you have it",
+            "Live view of the day's OP and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/clinic-management-software/",
+        "label": "See clinic management software"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things that stop being arguments.",
+      "items": [
+        {
+          "h": "A busy evening with three consultants",
+          "workflow": "Each doctor has their own token queue and the waiting area knows which number is with whom.",
+          "result": "One corridor, three orderly queues."
+        },
+        {
+          "h": "A patient who sees two doctors",
+          "workflow": "Both consultations sit on the same UHID, so the second doctor sees the first one's notes and prescription.",
+          "result": "The patient stops being the messenger."
+        },
+        {
+          "h": "The pharmacy counter",
+          "workflow": "Prescriptions from every consultant arrive in one dispensing queue, drawn from stock the counter actually holds.",
+          "result": "No handwriting, no unavailable items."
+        },
+        {
+          "h": "End of the month",
+          "workflow": "Consultations and collections are read per doctor for the period from the same records that billed them.",
+          "result": "The settlement conversation starts from agreed numbers."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Buildings with more than one consulting room.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Several specialties, one reception."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Visiting consultants",
+          "p": "Doctors who sit two evenings a week."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Clinics with a pharmacy",
+          "p": "Prescription to counter without a slip."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Clinics with a lab",
+          "p": "Orders and verified results on the record."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Owners and managers",
+          "p": "Volume and collections per doctor."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways polyclinics are run.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Patient identity",
+          "A register per doctor",
+          "A customer per bill",
+          "One UHID across consultants"
+        ],
+        [
+          "Waiting",
+          "One corridor, no order",
+          "Not covered",
+          "A token queue per doctor"
+        ],
+        [
+          "Pharmacy",
+          "Slips read at the counter",
+          "Billed, not dispensed",
+          "Dispensing queue from stock"
+        ],
+        [
+          "Per-doctor numbers",
+          "Counted by hand",
+          "Filtered from invoices",
+          "Read from the day's records"
+        ],
+        [
+          "Growing into IP later",
+          "Start again",
+          "Start again",
+          "Switch on the modules you need"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Polyclinic software, answered.",
+      "items": [
+        {
+          "q": "Can each doctor have their own queue?",
+          "a": "Yes. Tokens are issued against the consultant rather than the clinic, so three doctors sitting at the same time each have their own order of patients while the front desk works from one screen. See <a href=\"/hims/hospital-queue-management-software/\">queue management</a>."
+        },
+        {
+          "q": "Do consultants see each other's notes?",
+          "a": "The patient record is shared, and what each role can see is controlled by role-based access configured at setup. Most polyclinics want continuity across consultants, which is the point of one UHID, but the access rules are yours to decide."
+        },
+        {
+          "q": "Can we work out what each doctor is owed?",
+          "a": "Consultations and collections are readable per doctor for any period, which is the data a settlement needs. If you want a specific share or payout calculation automated, describe the arrangement on the call so it is scoped rather than assumed."
+        },
+        {
+          "q": "Is this different from clinic software?",
+          "a": "It is the same platform with the multi-doctor parts switched on: a book and queue per consultant, shared pharmacy and lab, and per-doctor reporting. A single-doctor practice needs less. See <a href=\"/hims/clinic-management-software/\">clinic management software</a>."
+        },
+        {
+          "q": "What if we add beds later?",
+          "a": "The IP modules, bed management, admission and discharge, sit in the same platform and are switched on when you need them. Nothing has to be migrated because the patient record is already there."
+        },
+        {
+          "q": "When would a polyclinic be running on it?",
+          "a": "HIMS is delivered to a fixed scope and goes live in 30 working days where the scope allows. Setup, data migration from your existing sheets and training at your own counter are part of that."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "The single-practice setup."
+        },
+        {
+          "href": "/hims/doctor-management-software/",
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor management",
+          "p": "Rosters and consulting days."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#8986;",
+          "b": "Queue and tokens",
+          "p": "A queue per room."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospitals",
+          "p": "When beds are added."
+        },
+        {
+          "href": "/hims/e-prescription-software/",
+          "icon": "&#128138;",
+          "b": "e-Prescription",
+          "p": "To the shared pharmacy."
+        },
+        {
+          "href": "/hims/clinic-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Clinics in Chennai",
+          "p": "Set up in person, same city."
+        }
+      ]
+    }
+  ]
+}

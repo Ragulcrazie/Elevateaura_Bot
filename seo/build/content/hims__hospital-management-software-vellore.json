@@ -1,0 +1,230 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-vellore",
+  "title": "Hospital Management Software in Vellore | Elevate Aura",
+  "meta": "Hospital management software for Vellore, built for patients who travel in: UHID registration, EMR, wards, lab, imaging and TPA billing, set up on site.",
+  "h1": "Hospital software for Vellore, where most of the OP list <span class=\"hl\">has come from somewhere else</span>.",
+  "crumb": "Vellore",
+  "pill": "A town patients travel to",
+  "sub": "HIMS handles registration, EMR, pharmacy, laboratory, wards, theatre and billing for Vellore hospitals, with particular weight on registering out-of-town patients correctly and getting reports back to them once they have gone home.",
+  "demo_href": "/demo/hospital.html",
+  "meta_ticks": [
+    "Built around out-of-town registration",
+    "Two hours from Chennai by road",
+    "WhatsApp support after go-live"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Vellore and would like to see HIMS.",
+  "primary_keyword": "hospital management software Vellore",
+  "secondary_keywords": [
+    "hospital software Vellore",
+    "HMS software Vellore",
+    "clinic management software Vellore",
+    "hospital billing software Vellore",
+    "patient registration software Vellore"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital or clinic in Vellore treating patients who travel in",
+  "city": "Vellore",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "A hospital system for a town people travel to",
+      "paras": [
+        "Vellore is a medical destination. A large share of the people at the counter have travelled in for treatment, sometimes from other districts and other states, often with an attendant, usually for a fixed number of days. That shifts the weight of the software from the ward to the front desk: who this person is, what identifier they carry, which mobile number they can actually be reached on afterwards, and how the report gets to them once they are three hundred kilometres away.",
+        "Elevate Aura builds HIMS in Chennai, and Vellore is a short run up the highway, so the workflow study and the go-live training happen at your hospital rather than over a call. There is no office, staff or phone number in Vellore; support after go-live is remote and on WhatsApp."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Vellore context",
+      "h2": "Registration is the hard part when the patient is not local.",
+      "lead": "A hospital treating its own neighbourhood can recover from a sloppy registration desk. A hospital whose patients arrive by train cannot.",
+      "body": [
+        "The failure is always the same. The patient arrives, gives a name in a hurry, is registered, goes for an investigation, and is registered again at a second counter because the first record could not be found from the spelling. Now the hospital holds two people where there is one. The scan sits on one record, the prescription on the other, and the bill on whichever counter was last used. When the patient returns in six months, a third record is created, and the earlier treatment might as well not have happened.",
+        "One UHID per patient is the fix, and it has to be enforced at the desk rather than cleaned up later. Search on a phone number as well as a name, show the existing record before a new one can be created, and attach the attendant's contact details to the registration, because with an out-of-town patient the attendant's number is often the one that still works next month.",
+        {
+          "h3": "Getting the result home with the patient"
+        },
+        "The second Vellore problem is the report that is not ready when the patient leaves. A laboratory result verified the next morning, or an imaging study read after the family has caught the bus, has to travel. The patient app carries reports and follow-ups, and imaging studies and signed reports can be sent through <a href=\"/aurapacs.html\">AuraPACS</a> as a secure WhatsApp link that neither the patient nor a referring doctor needs a login to open. What does not happen is a phone call to the front desk asking someone to read a result aloud.",
+        {
+          "h3": "How a Vellore rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to watch registration, the wards, the pharmacy, the laboratory and the billing counter as they work today, Chennai to Vellore being a road trip rather than a journey.",
+            "First-phase modules chosen from that visit, with registration discipline settled before anything else.",
+            "Your patient, item and tariff data brought across, with your logo and hospital details on the screens and the bill.",
+            "Training in person at the counters, on your own data, recorded for later joiners.",
+            "Go-live inside 30 working days where scope allows, after which support is by WhatsApp and screen share."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules that matter most when patients travel in.",
+      "groups": [
+        {
+          "icon": "&#127380;",
+          "h": "Registration done properly",
+          "items": [
+            "One UHID per patient, searchable by name or number",
+            "Existing record shown before a duplicate is created",
+            "Attendant contact details on the registration",
+            "ABHA and ABDM ready records"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "The stay",
+          "items": [
+            "IP admission, ward and bed occupancy",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed",
+            "Discharge summary attached to the record"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Results and imaging",
+          "items": [
+            "Laboratory from order to verified result",
+            "Structured EMR and e-prescription",
+            "AuraPACS imaging on the same patient record",
+            "Secure WhatsApp sharing of report and images"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and follow-up",
+          "items": [
+            "Cash, insurance and TPA claim billing with GST",
+            "Patient app for reports and follow-ups",
+            "Consumables and equipment inventory",
+            "Live dashboard of OP, IP, beds and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Vellore situations the platform is built for.",
+      "items": [
+        {
+          "h": "A patient who has travelled overnight to be seen",
+          "workflow": "Registration finds or creates one UHID, records the attendant's number, and every counter that day writes to that single record.",
+          "result": "One person, one record, one bill."
+        },
+        {
+          "h": "A result verified after the family has left",
+          "workflow": "The laboratory result lands on the encounter, and the report reaches the patient through the app or a secure WhatsApp link.",
+          "result": "No second journey for a piece of paper."
+        },
+        {
+          "h": "A review visit six months later",
+          "workflow": "The desk searches by mobile number, opens the existing UHID, and the previous admission, investigations and discharge summary come with it.",
+          "result": "The review starts from what was actually done."
+        },
+        {
+          "h": "An insured admission for an out-of-district patient",
+          "workflow": "The insurer and the approved amount are attached to the admission, charges build as treatment happens, and the claim is raised from that bill.",
+          "result": "The claim file is assembled from one place."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Vellore, answered.",
+      "items": [
+        {
+          "q": "Will someone come to Vellore, or is this all remote?",
+          "a": "The workflow study and the go-live training are done in person. Elevate Aura is based in Chennai and Vellore is a short road trip, which makes a day on site practical. There is no local office or local staff, and support after go-live is remote and on WhatsApp."
+        },
+        {
+          "q": "How does the system stop duplicate patient records?",
+          "a": "Registration searches existing patients by name and mobile number and shows matches before a new record can be created, so one person keeps one UHID. See <a href=\"/resources/what-is-uhid/\">what is UHID</a> for how duplicates usually start."
+        },
+        {
+          "q": "Can a patient get their report after they have gone home?",
+          "a": "Yes. Reports and follow-ups are available in the patient app, and imaging studies with their signed reports can be sent as a secure link over WhatsApp that opens without a login."
+        },
+        {
+          "q": "Is the record ABHA and ABDM ready?",
+          "a": "Yes, HIMS is ABHA and ABDM ready and supports NABH-style structured documentation. That describes the software. Accreditation and registration remain your hospital's process, supported by the records the system keeps."
+        },
+        {
+          "q": "We also run an outpatient clinic alongside the hospital. One system or two?",
+          "a": "One. The clinic and the hospital share the same patient record and the same UHID, with modules switched on per site. See <a href=\"/hims/clinic-management-software/\">clinic management software</a> for the lighter configuration."
+        },
+        {
+          "q": "How long does it take to go live?",
+          "a": "Go-live is targeted at 30 working days from a fixed scope, where the scope allows it. That window covers the data load, your branding, the training visit and the first week afterwards."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#127380;",
+          "b": "UHID registration",
+          "p": "One ID per patient."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128203;",
+          "b": "Patient management",
+          "p": "The record across visits."
+        },
+        {
+          "href": "/hims/hospital-laboratory-management/",
+          "icon": "&#128300;",
+          "b": "Laboratory",
+          "p": "Order to verified result."
+        },
+        {
+          "href": "/hims/hospital-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Chennai",
+          "p": "Where the studio is based."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128241;",
+          "b": "WhatsApp report sharing",
+          "p": "Reports that reach the patient."
+        },
+        {
+          "href": "/hims/hospital-management-software-pondicherry/",
+          "icon": "&#128205;",
+          "b": "Puducherry",
+          "p": "Patients from Villupuram and Cuddalore."
+        },
+        {
+          "href": "/hims/hospital-management-software-salem/",
+          "icon": "&#128205;",
+          "b": "Salem",
+          "p": "Nursing homes and mid-size hospitals."
+        }
+      ]
+    }
+  ]
+}

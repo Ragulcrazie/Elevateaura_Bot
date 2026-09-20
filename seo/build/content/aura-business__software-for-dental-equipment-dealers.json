@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-dental-equipment-dealers",
+  "title": "Software for Dental Equipment Dealers | Aura Business",
+  "meta": "Software for dental equipment dealers: hundreds of single-chair clinics, repeat consumable orders, same-day chair repairs and small-ticket collections.",
+  "h1": "Software for dental equipment dealers, where the customer is <span class=\"hl\">one dentist</span>.",
+  "crumb": "Dental Equipment Dealers",
+  "pill": "For chair, equipment and consumable dealers",
+  "sub": "Aura Business suits a dealership with hundreds of small clinics rather than a handful of hospitals: quick quotes to the dentist who decides alone, repeat consumable orders without a phone call, and a technician who reaches a dead chair the same day.",
+  "meta_ticks": [
+    "Hundreds of clinic accounts, one owner each",
+    "Repeat consumable orders on a portal",
+    "Same-day chair repair with route planning"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we deal in dental chairs, equipment and consumables. I'd like to see how Aura Business handles many small clinic accounts.",
+  "primary_keyword": "software for dental equipment dealers",
+  "secondary_keywords": [
+    "dental supplies distributor software",
+    "dental chair service management software",
+    "dental dealer CRM India",
+    "dental consumables ordering portal",
+    "dental equipment AMC software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a dealership supplying dental chairs, small equipment and consumables to private dental practices",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why dental dealing is a volume problem, not a deal problem",
+      "paras": [
+        "A dental dealer does not manage twenty large accounts. It manages hundreds of small ones, most of them a single practice where the dentist is the buyer, the user and the person who pays. There is no purchase committee and no tender, so the sale turns on how fast a quote arrives and how quickly a chair is fixed. Software for dental equipment dealers has to make hundreds of light relationships manageable rather than make one heavy relationship elaborate.",
+        "The money comes in two streams. Chairs, autoclaves, compressors, X-ray units and handpieces are bought occasionally and serviced often. Composites, burs, gloves and impression materials are bought again and again, in small orders, at thin margins. Aura Business gives the clinic a portal to repeat its own consumable order, gives the technician a route and a mobile job card, and gives the office one view of a great many small balances."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What this trade struggles with",
+      "h2": "Small orders, small balances, and a chair that stopped this morning.",
+      "lead": "Nothing here is individually difficult. The difficulty is the number of them arriving at once.",
+      "items": [
+        {
+          "h": "The day is spent on the phone",
+          "p": "Orders, prices and availability are all asked and answered by call, so two people are on the phone instead of selling."
+        },
+        {
+          "h": "A dead chair closes a clinic",
+          "p": "The dentist cancels a day of appointments while waiting for a callback, and remembers it at renewal time."
+        },
+        {
+          "h": "Technicians cross the city twice",
+          "p": "Three calls in one neighbourhood are handled on three different days because nobody planned the route."
+        },
+        {
+          "h": "Many small dues, unchased",
+          "p": "No single overdue amount is worth an argument, and together they are the working capital of the business."
+        },
+        {
+          "h": "Consumable habits unknown",
+          "p": "A clinic that used to order every month stopped four months ago and nobody spotted it."
+        },
+        {
+          "h": "Warranty and contract dates lost",
+          "p": "Chairs sold three years ago have no record of what cover they carry, so every service call starts with a search."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "One day across a hundred clinics.",
+      "steps": [
+        {
+          "h": "Enquire",
+          "p": "A dentist asks about a chair or an upgrade; the lead is created on the clinic account with the practice details."
+        },
+        {
+          "h": "Quote fast",
+          "p": "A GST quotation is built from the catalogue on the spot and sent on WhatsApp while the interest is live."
+        },
+        {
+          "h": "Deliver and install",
+          "p": "The equipment is despatched with an invoice, and installation is a scheduled job with a signature on completion."
+        },
+        {
+          "h": "Reorder",
+          "p": "Consumables are repeated by the clinic on the customer portal, or by the rep on the mobile app during a visit."
+        },
+        {
+          "h": "Respond",
+          "p": "A breakdown call is logged, the technician nearest that area is dispatched, and the job card records the fault and parts fitted."
+        },
+        {
+          "h": "Collect",
+          "p": "Payment reminders go out on WhatsApp, and receivables ageing shows the whole book of small balances at once."
+        },
+        {
+          "h": "Retain",
+          "p": "Warranty and contract end dates on each chair drive the renewal offer before the cover runs out."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules that make many small accounts workable.",
+      "groups": [
+        {
+          "icon": "&#129463;",
+          "h": "The clinic relationship",
+          "items": [
+            "Customer accounts for each practice with its dentist and staff",
+            "Territory and route planning for reps",
+            "Field visits with GPS check-in",
+            "Quotation builder for on-the-spot offers",
+            "WhatsApp reminders and messages"
+          ]
+        },
+        {
+          "icon": "&#128722;",
+          "h": "Repeat ordering",
+          "items": [
+            "Customer self-service portal for consumable reorders",
+            "Order tracking page for each despatch",
+            "Batch and expiry on materials that carry dates",
+            "Low-stock and reorder alerts on fast lines",
+            "Quote-request inbound from your website"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Same-day service",
+          "items": [
+            "Breakdown call intake and ticketing",
+            "Technician dispatch and route scheduling",
+            "Mobile job card with photo proof and offline mode",
+            "Spare parts used per job, dropping stock",
+            "Warranty tracking and service contracts per chair"
+          ]
+        },
+        {
+          "icon": "&#128181;",
+          "h": "Getting paid",
+          "items": [
+            "GST invoices at volume with gapless numbering",
+            "Payment tracker and automated reminders",
+            "Receivables ageing across every clinic",
+            "Owner dashboard on orders, service and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four hours that matter in a dental dealership.",
+      "items": [
+        {
+          "h": "A chair is working again by evening",
+          "workflow": "The clinic logs the fault, the ticket routes to the technician covering that area, and the job card closes with the part fitted and the dentist's signature.",
+          "result": "A day of appointments saved, and a customer who renews."
+        },
+        {
+          "h": "Six calls become one run",
+          "workflow": "The dispatch board groups the day's calls by area and builds the technician's route before the first visit.",
+          "result": "More jobs closed per technician per day."
+        },
+        {
+          "h": "A quiet clinic is noticed",
+          "workflow": "The account shows no consumable order for four cycles, so the rep adds it to next week's visit list.",
+          "result": "A lapsed customer is asked about before it becomes a lost one."
+        },
+        {
+          "h": "Small dues are collected without a row",
+          "workflow": "Receivables ageing lists every overdue balance, and WhatsApp reminders go out in one batch with the invoice reference.",
+          "result": "Cash in, without a difficult phone call."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers serving practices rather than institutions.",
+      "items": [
+        {
+          "icon": "&#129463;",
+          "b": "Dental chair and equipment dealers",
+          "p": "Chairs, compressors, autoclaves and imaging units."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Dental consumable distributors",
+          "p": "Repeat materials ordered in small quantities."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Dental service companies",
+          "p": "Servicing chairs sold by other dealers."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Dealers serving dental colleges",
+          "p": "Larger institutional orders alongside the clinic book."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Multi-clinic chain suppliers",
+          "p": "One decision, many branches to deliver and service."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Phone and notebook, billing software, or a dealer platform.",
+      "cols": [
+        "Phone and notebook",
+        "Billing software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Taking a repeat order",
+          "A call and a written note",
+          "Typed into an invoice",
+          "Clinic repeats it on the portal"
+        ],
+        [
+          "Service call",
+          "A mobile number",
+          "Not covered",
+          "Ticket, dispatch and job card"
+        ],
+        [
+          "Technician routing",
+          "By instinct",
+          "Not covered",
+          "Calls grouped by area into a route"
+        ],
+        [
+          "Warranty on a chair",
+          "In the file, if kept",
+          "On an old invoice",
+          "Asset record with cover end date"
+        ],
+        [
+          "Collections",
+          "Chased when noticed",
+          "Outstanding list",
+          "Ageing plus automated WhatsApp reminders"
+        ],
+        [
+          "Spotting a lapsed clinic",
+          "Rarely",
+          "Not covered",
+          "Order gaps visible on the account"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Dental equipment dealing, answered.",
+      "items": [
+        {
+          "q": "Can clinics order consumables themselves?",
+          "a": "Yes. The customer self-service portal lets a practice repeat its previous order at its agreed prices and follow the despatch on a tracking page, which takes a large share of routine calls off your phone line."
+        },
+        {
+          "q": "How quickly can a service call reach a technician?",
+          "a": "The call is logged at intake, routed as a ticket, and dispatched to a technician who sees it on the mobile app. Offline mode means the job card can still be completed at a clinic with poor signal and syncs later."
+        },
+        {
+          "q": "Does it handle hundreds of small accounts without becoming unusable?",
+          "a": "That is the intended shape. Accounts, visits, orders and balances are listed and filtered by territory and by rep, and reminders are batched, so volume is handled in lists rather than one call at a time."
+        },
+        {
+          "q": "Can we run annual contracts on chairs?",
+          "a": "Yes. Each chair is an asset with a warranty end date, and annual or comprehensive contracts are recorded against it with preventive visits and a renewal offer raised before cover lapses. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>."
+        },
+        {
+          "q": "Do you also make software for the dental clinics themselves?",
+          "a": "Yes, that is a different product. Practices use clinic software for appointments, records and billing; see <a href=\"/hims/dental-clinic-management-software/\">dental clinic management software</a>. Aura Business is for the dealer supplying and servicing them."
+        },
+        {
+          "q": "Can reps take orders while visiting a clinic?",
+          "a": "Yes. The mobile app allows a GPS check-in at the practice, a visit note, a quotation or order raised on the spot, and a follow-up date, all of which appear on the account for the office to act on."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#128230;",
+          "b": "Consumables distribution",
+          "p": "Repeat orders and thin margins."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128667;",
+          "b": "Service dispatch",
+          "p": "Calls grouped into a day's route."
+        },
+        {
+          "href": "/aura-business/whatsapp-payment-reminder-software/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Collections without a phone call."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128181;",
+          "b": "Receivables ageing",
+          "p": "Many small balances in one view."
+        },
+        {
+          "href": "/hims/dental-clinic-management-software/",
+          "icon": "&#129463;",
+          "b": "Dental clinic software",
+          "p": "What your customers run."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128663;",
+          "b": "Technician app",
+          "p": "Job cards from the field."
+        }
+      ]
+    }
+  ]
+}

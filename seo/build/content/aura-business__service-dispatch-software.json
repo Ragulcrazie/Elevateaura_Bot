@@ -1,0 +1,352 @@
+{
+  "cluster": "aura-business",
+  "slug": "service-dispatch-software",
+  "title": "Service Dispatch Software for Equipment Engineers | Aura",
+  "meta": "Service dispatch software with one board of open calls by priority and SLA, engineer matching on skill and location, route planning and easy reassignment.",
+  "h1": "Service dispatch software: one screen that decides <span class=\"hl\">who goes where, today</span>.",
+  "crumb": "Service Dispatch Software",
+  "pill": "For the person allocating engineers each morning",
+  "sub": "Aura Business gives the dispatcher a live board of open service calls ordered by priority and SLA clock, matches each to an engineer by skill and location, builds the day's route, and lets a call be reassigned when the morning changes.",
+  "meta_ticks": [
+    "Open calls ranked by priority and SLA",
+    "Skill and location based allocation",
+    "Reassign without losing the history"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk board showing open service calls with priority, SLA time remaining and assigned engineer",
+    "bar": "app.elevateaura.co.in/dispatch"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss service dispatch software for our engineers.",
+  "primary_keyword": "service dispatch software",
+  "secondary_keywords": [
+    "technician dispatch software India",
+    "field service dispatch board",
+    "engineer scheduling software",
+    "service call allocation software",
+    "breakdown call management software"
+  ],
+  "intent": "commercial",
+  "persona": "Service coordinator or dispatcher allocating engineers to breakdown and maintenance calls",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What the dispatcher's screen has to show",
+      "paras": [
+        "Service dispatch software is the allocation screen. Every open service call sits on it, ordered by priority and by how much SLA time is left, with the customer, the asset, the fault reported and whether the device is under warranty or contract already attached. The dispatcher picks an engineer and the job lands on that engineer's mobile app.",
+        "In Aura Business this is the Technician Dispatch module in the Field Service suite, sitting between call intake and the mobile job card. It matters because the dispatcher is making the same decision forty times a morning, and the cost of getting it wrong is a wasted journey or a breached contract."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why allocation goes wrong",
+      "h2": "Dispatch done on a phone call is dispatch done blind.",
+      "lead": "The dispatcher who works from memory knows the engineers well and the calls badly, or the other way round. Neither is enough by nine in the morning.",
+      "items": [
+        {
+          "h": "No single list of open calls",
+          "p": "Some calls came by phone, some by WhatsApp, some through a rep, and none of them are in the same place."
+        },
+        {
+          "h": "Priority set by who shouted",
+          "p": "The loudest customer gets the engineer while a contract nearing SLA breach waits."
+        },
+        {
+          "h": "The wrong engineer sent",
+          "p": "Someone who has never worked on that model drives across the city and comes back without fixing it."
+        },
+        {
+          "h": "Three trips to the same area",
+          "p": "Two engineers cross each other because nobody looked at the calls by location."
+        },
+        {
+          "h": "Reassignment loses the thread",
+          "p": "A call is handed to another engineer over the phone and the original notes never arrive with it."
+        },
+        {
+          "h": "No idea where anyone is",
+          "p": "At three in the afternoon the dispatcher is calling engineers to ask whether they are free."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a call is dispatched",
+      "h2": "From the customer's phone call to an engineer on the way.",
+      "steps": [
+        {
+          "h": "Call intake",
+          "p": "Breakdown logged against the customer and the serial number, with the fault reported."
+        },
+        {
+          "h": "Cover checked",
+          "p": "The asset register shows warranty, AMC or CMC status before anyone is sent."
+        },
+        {
+          "h": "Priority and SLA",
+          "p": "The contract's response time starts the clock and sets the call's place in the queue."
+        },
+        {
+          "h": "Engineer matched",
+          "p": "Allocated on skill for that equipment, current location and today's load."
+        },
+        {
+          "h": "Route built",
+          "p": "The engineer's calls for the day are sequenced so the travel makes sense."
+        },
+        {
+          "h": "Job on the app",
+          "p": "The assignment appears on the mobile app with the asset's service history."
+        },
+        {
+          "h": "Reassigned if needed",
+          "p": "A call can move to another engineer carrying its notes, clock and history."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The dispatch modules and what feeds them.",
+      "groups": [
+        {
+          "icon": "&#128222;",
+          "h": "Intake",
+          "items": [
+            "Breakdown and service call intake",
+            "Customer ticket submission from the portal",
+            "Calls raised from a helpdesk ticket",
+            "Asset lookup by serial number"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Allocation",
+          "items": [
+            "Technician dispatch board",
+            "Skill-based technician allocation",
+            "GPS and field tracking of engineers",
+            "Technician route and schedule",
+            "Reassignment with full history"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Urgency",
+          "items": [
+            "SLA definitions per contract",
+            "Response clock on each call",
+            "Breach tracking and escalation",
+            "Warranty and contract status on the call"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "After dispatch",
+          "items": [
+            "Mobile job card completed on site",
+            "Spare parts used per job drop stock",
+            "Service history per asset",
+            "Service invoice where work is not covered"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four dispatch decisions that get easier.",
+      "items": [
+        {
+          "h": "The morning allocation takes twenty minutes",
+          "workflow": "Open calls are already ranked by SLA time left, and each one shows the equipment, the location and whether it is under contract.",
+          "result": "The board is cleared before the engineers leave home."
+        },
+        {
+          "h": "The right engineer goes the first time",
+          "workflow": "A ventilator call is matched to an engineer trained on that line rather than whoever is nearest.",
+          "result": "Fewer second visits for the same fault."
+        },
+        {
+          "h": "Two calls in one area are combined",
+          "workflow": "The route view shows both hospitals on the same side of the city and puts them on one engineer's day.",
+          "result": "Less travel, more calls closed."
+        },
+        {
+          "h": "A sick day does not break the day",
+          "workflow": "One engineer's calls are reassigned in bulk, each carrying its notes, history and remaining SLA time.",
+          "result": "Customers do not repeat themselves to a new engineer."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone running engineers against a clock.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment service teams",
+          "p": "Breakdown calls from hospitals with contractual response times."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab support",
+          "p": "Analyser downtime where the lab cannot report results."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial service firms",
+          "p": "Machine breakdowns across plants and sites."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services",
+          "p": "Lift, HVAC and fire system callouts."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Multi-brand service companies",
+          "p": "Engineers with different skills across several manufacturers."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Phone calls, a generic CRM, or a dispatch board.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "One list of open calls",
+          "Several lists",
+          "Cases, without assets",
+          "Live board with asset and cover"
+        ],
+        [
+          "Ordering the queue",
+          "By who called last",
+          "By created date",
+          "By priority and SLA time remaining"
+        ],
+        [
+          "Matching engineer to job",
+          "By memory",
+          "Round robin",
+          "Skill, location and current load"
+        ],
+        [
+          "Route for the day",
+          "Worked out in the car",
+          "No",
+          "Technician route and schedule"
+        ],
+        [
+          "Engineer sees the history",
+          "Asks the customer",
+          "No",
+          "Service history per serial on the app"
+        ],
+        [
+          "What happens after the fix",
+          "A WhatsApp message",
+          "Case closed",
+          "Job card, spares, invoice or contract close"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Service dispatch, answered.",
+      "items": [
+        {
+          "q": "Does the dispatcher see where engineers are?",
+          "a": "Yes. GPS and field tracking shows engineer location during working hours, and check-in happens against the customer site, so allocation can take the current position into account."
+        },
+        {
+          "q": "Can allocation be based on skill rather than distance?",
+          "a": "Yes. Skill-based technician allocation lets you record which engineers work on which equipment lines, so a specialised call is not given to the nearest available person by default."
+        },
+        {
+          "q": "What does the engineer receive on the phone?",
+          "a": "The job appears in the mobile app with the customer, site, asset and serial number, the fault reported, the cover status and the previous service history for that machine. See <a href=\"/aura-business/mobile-job-card-software/\">mobile job cards</a>."
+        },
+        {
+          "q": "Can a call be moved to another engineer mid-day?",
+          "a": "Yes. Reassignment keeps the call's notes, attachments, SLA clock and history, so the new engineer starts with everything the first one had."
+        },
+        {
+          "q": "How does the SLA affect the queue?",
+          "a": "Each contract carries its own response and resolution times. The clock on a call orders the board and flags calls approaching breach. See <a href=\"/aura-business/sla-management-software/\">SLA management</a>."
+        },
+        {
+          "q": "Does the app work where there is no signal?",
+          "a": "Yes. The engineer can complete the job card offline inside a basement or a shielded room and it syncs when the phone reconnects."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "The full FSM suite."
+        },
+        {
+          "href": "/aura-business/mobile-job-card-software/",
+          "icon": "&#128241;",
+          "b": "Mobile job card",
+          "p": "What the engineer fills in."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "The clock and the breach flag."
+        },
+        {
+          "href": "/aura-business/helpdesk-ticketing-equipment-dealers/",
+          "icon": "&#127915;",
+          "b": "Helpdesk",
+          "p": "Where customer tickets arrive."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every serial and its history."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management works."
+        }
+      ]
+    }
+  ]
+}

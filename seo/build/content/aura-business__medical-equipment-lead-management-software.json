@@ -1,0 +1,352 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-lead-management-software",
+  "title": "Medical Equipment Lead Management Software | Aura Business",
+  "meta": "Lead management software for medical equipment sellers: capture every enquiry source, assign an owner, chase on a cadence and see what actually converts.",
+  "h1": "Lead management software that gives every enquiry an <span class=\"hl\">owner and a next date</span>.",
+  "crumb": "Lead Management Software",
+  "pill": "For sales teams chasing hospital enquiries",
+  "sub": "Aura Business captures enquiries from your website, calls, WhatsApp, exhibitions and referrals into one pipeline, assigns each to a rep, scores it, holds the follow-up cadence, and reports which sources actually turn into orders.",
+  "meta_ticks": [
+    "Every enquiry source in one pipeline",
+    "Owner and next follow-up on each lead",
+    "Lead-source and conversion analytics"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business leads and pipeline screen showing enquiries with source, owner, score and next follow-up date",
+    "bar": "app.elevateaura.co.in/leads"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss lead management software for our medical equipment sales team.",
+  "primary_keyword": "medical equipment lead management software",
+  "secondary_keywords": [
+    "lead management software for medical devices",
+    "healthcare sales lead tracking software",
+    "enquiry management software India",
+    "lead scoring software for equipment sales",
+    "hospital enquiry follow-up software"
+  ],
+  "intent": "commercial",
+  "persona": "Sales manager at a medical-equipment distributor handling enquiries from hospitals and clinics",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What lead management does before a quotation exists",
+      "paras": [
+        "Lead management is the part of the sale that happens before anyone raises a quotation. An enquiry arrives from somewhere, someone has to own it, qualify it, keep contacting it on a sensible rhythm, and either move it forward or close it. Aura Business handles that inside the CRM and Sales suite through Leads and Pipeline, Lead-Source and Conversion Analytics and the rep activity feed.",
+        "For medical equipment the cycle is long and multi-person, so the useful part is not a prettier list. It is that the enquiry keeps a source, an owner and a dated next action from the first call until it becomes a quotation, and that at the end of the quarter you can see which sources produced orders rather than which produced noise."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How leads are lost",
+      "h2": "Most enquiries are not lost to a competitor. They are lost to silence.",
+      "lead": "A hospital enquiry that is answered in two days and then never followed up looks exactly like a lead that was never captured at all.",
+      "items": [
+        {
+          "h": "Enquiries live in four inboxes",
+          "p": "Website form, WhatsApp, a rep's phone and an exhibition notebook, with no single list anywhere."
+        },
+        {
+          "h": "Nobody owns it",
+          "p": "Two reps assume the other one is handling the enquiry, so neither calls back."
+        },
+        {
+          "h": "Follow-up stops at the third attempt",
+          "p": "A long-cycle capital enquiry is dropped because there was no scheduled next contact."
+        },
+        {
+          "h": "Everything is equally urgent",
+          "p": "With no score, a browsing clinic gets the same attention as a funded tender enquiry."
+        },
+        {
+          "h": "No idea what works",
+          "p": "You keep paying for an exhibition stall without knowing whether it produced a single order."
+        },
+        {
+          "h": "History leaves with the rep",
+          "p": "A rep resigns and the entire conversation history of their territory goes with them."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a lead moves",
+      "h2": "From enquiry to quotation, with nothing dropped.",
+      "steps": [
+        {
+          "h": "Captured with a source",
+          "p": "Website, WhatsApp, call, referral, exhibition or tender, tagged at entry."
+        },
+        {
+          "h": "Assigned an owner",
+          "p": "Routed by territory or product line so one named rep is responsible."
+        },
+        {
+          "h": "Qualified and scored",
+          "p": "Budget, equipment, decision-maker and timeline recorded, priority set."
+        },
+        {
+          "h": "Cadence set",
+          "p": "A dated next action on every open lead, visible on the rep's list."
+        },
+        {
+          "h": "Contacts and visits logged",
+          "p": "Calls, WhatsApp, field visits with GPS check-in and samples left behind."
+        },
+        {
+          "h": "Converted",
+          "p": "The lead becomes a customer account and a quotation, carrying its history."
+        },
+        {
+          "h": "Measured",
+          "p": "Conversion analysed by source, rep, territory and product line."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The CRM and Sales modules that carry a lead.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Capture",
+          "items": [
+            "Leads and Pipeline",
+            "Quote-Request Inbound from the website",
+            "WhatsApp Business enquiries",
+            "Tender Tracker enquiries",
+            "Contacts and Decision-Makers per account"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Ownership",
+          "items": [
+            "Assignment by territory or product line",
+            "Territory and Target Management",
+            "Role-based access so reps see their own book",
+            "Activity Feed and rep log"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Follow-up",
+          "items": [
+            "Dated next action on every lead",
+            "Field Visits with GPS check-in",
+            "Sample Tracking against the enquiry",
+            "Notifications hub for due follow-ups"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Analytics",
+          "items": [
+            "Lead-Source and Conversion Analytics",
+            "Pipeline by stage and value",
+            "Owner and CEO dashboard",
+            "Reports engine for source and rep views"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a managed pipeline changes.",
+      "items": [
+        {
+          "h": "A website enquiry is answered the same day",
+          "workflow": "A quote request from the site lands in the pipeline, routes to the rep for that territory and appears at the top of their list with the product asked about.",
+          "result": "The first call happens while the enquiry is still warm."
+        },
+        {
+          "h": "A capital lead survives a six-month cycle",
+          "workflow": "A CT enquiry is scored high, given a monthly cadence, and every visit, sample and contact is logged against it.",
+          "result": "The lead is still alive when the budget is finally released."
+        },
+        {
+          "h": "The exhibition is judged honestly",
+          "workflow": "Every badge scanned at the stall enters as a lead tagged to that event and is tracked to order or closure.",
+          "result": "You know whether to book the stall again."
+        },
+        {
+          "h": "A rep leaves without taking the pipeline",
+          "workflow": "Their open leads are reassigned with all contacts, notes and visit history intact.",
+          "result": "The handover takes an afternoon, not a quarter."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams selling equipment into institutions.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Capital and consumable enquiries from hospitals and clinics."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Lab enquiries where the reagent contract matters more than the machine."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Enquiries routed to the right regional dealer."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Project enquiries with long approval chains."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-led sales teams",
+          "p": "Two to twenty reps who currently work from their own phones."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where enquiries usually sit, and what that costs.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "All sources in one list",
+          "No, one list per person",
+          "Yes, with setup",
+          "Yes, tagged by source at entry"
+        ],
+        [
+          "Named owner per lead",
+          "Assumed",
+          "Yes",
+          "Yes, by territory and product line"
+        ],
+        [
+          "Field visit evidence",
+          "Photos in a group",
+          "Rarely",
+          "GPS check-in and visit log on the lead"
+        ],
+        [
+          "Samples left with a prospect",
+          "Remembered",
+          "No",
+          "Sample tracking against the account"
+        ],
+        [
+          "Turns into a quotation",
+          "Retyped",
+          "Separate tool",
+          "Quotation from the catalogue with GST"
+        ],
+        [
+          "Source-level conversion",
+          "No",
+          "Reports you build",
+          "Lead-source and conversion analytics"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Lead management for equipment sellers, answered.",
+      "items": [
+        {
+          "q": "Can leads come in from our website automatically?",
+          "a": "Yes. The Quote-Request Inbound module takes enquiries from your site into the pipeline with the product and message attached, so the rep sees what was asked rather than a bare name and number."
+        },
+        {
+          "q": "How does lead scoring work here?",
+          "a": "Scoring is based on the qualification fields your team fills, such as equipment, budget stage, decision-maker reached and expected timeline. It orders the rep's list; it does not decide for them."
+        },
+        {
+          "q": "Does it track WhatsApp enquiries?",
+          "a": "WhatsApp Business integration is part of the platform, and enquiries that arrive that way are recorded as leads with their source so the follow-up and the conversion reporting include them."
+        },
+        {
+          "q": "Can a manager see what reps did this week?",
+          "a": "Yes. The activity feed, field visits with GPS check-in and the attendance module give a factual record of calls, visits and updates per rep. See <a href=\"/aura-business/field-technician-tracking-app/\">field tracking</a>."
+        },
+        {
+          "q": "What happens when a lead becomes an order?",
+          "a": "It converts to a customer account, and the quotation, sales order, GST invoice and later the service contract all hang off the same record, so history is continuous. See <a href=\"/aura-business/medical-equipment-quotation-software/\">quotation software</a>."
+        },
+        {
+          "q": "Is this different from a general-purpose CRM?",
+          "a": "The pipeline itself is similar. The difference is what sits behind it: catalogue, serial numbers, installed base, AMC contracts and GST billing, so the lead does not end at the sale. See <a href=\"/compare/generic-crm-vs-medical-equipment-crm/\">the comparison</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#128202;",
+          "b": "Medical equipment CRM",
+          "p": "The full sales suite."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Selling into institutions."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Where a qualified lead goes next."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#128203;",
+          "b": "Tenders",
+          "p": "Government enquiries and bids."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128200;",
+          "b": "Dashboard",
+          "p": "Pipeline and conversion."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an equipment CRM is."
+        }
+      ]
+    }
+  ]
+}

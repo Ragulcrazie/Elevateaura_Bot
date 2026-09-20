@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "industrial-equipment-distributor-software",
+  "title": "Industrial Equipment Distributor Software | Aura Business",
+  "meta": "Industrial equipment distributor software for factory customers: plant-wise asset registers, breakdown response against production downtime, AMC and spares.",
+  "h1": "Industrial equipment distributor software for customers who <span class=\"hl\">lose money by the hour</span>.",
+  "crumb": "Industrial Equipment Distributors",
+  "pill": "For industrial machinery dealers and service firms",
+  "sub": "Aura Business suits a distributor whose customer is a factory: machines registered plant by plant and line by line, breakdown calls answered against what a stopped line costs, planned maintenance fitted into shutdown windows, and critical spares held where they are needed.",
+  "meta_ticks": [
+    "Assets registered per plant and line",
+    "Breakdown response measured against downtime",
+    "Planned work fitted to shutdown windows"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute and service industrial equipment for factories. I'd like to see how Aura Business handles plant assets and breakdowns.",
+  "primary_keyword": "industrial equipment distributor software",
+  "secondary_keywords": [
+    "industrial machinery dealer software India",
+    "factory equipment service management software",
+    "plant asset register software",
+    "industrial AMC and spares software",
+    "breakdown maintenance software for distributors"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of a distributor selling and maintaining industrial machinery for manufacturing plants",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What changes when the customer is a factory",
+      "paras": [
+        "An industrial equipment distributor sells into plants, and a plant does not measure a fault in inconvenience. It measures it in stopped production. That single fact reorders the software requirement: the asset has to be findable by plant and by line, the call has to be timestamped and answered against a promise, the engineer has to arrive with the right part, and the whole thing has to be evidenced afterwards because the customer's maintenance head reports on it.",
+        "Around the breakdown sits ordinary distribution work: quotations to a purchase department, machines supplied and commissioned, annual contracts, planned maintenance scheduled into the plant's shutdown windows, and a spares business that is often larger than the machine business. Aura Business holds all of it on one platform with a mobile app for engineers who work in places with no network."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The factory reality",
+      "h2": "The call comes at six in the morning and the line is stopped.",
+      "lead": "Industrial customers are unforgiving about response and indifferent to excuses about paperwork.",
+      "items": [
+        {
+          "h": "Nobody knows which machine",
+          "p": "The caller says a pump in the packing hall. Without a plant-wise register, identifying the machine is the first half hour."
+        },
+        {
+          "h": "The engineer arrives without the part",
+          "p": "The fault could have been guessed from the service history, but the history is in an old job book."
+        },
+        {
+          "h": "Planned visits never planned",
+          "p": "The plant has shutdown windows twice a year, and your preventive visits are not scheduled against them."
+        },
+        {
+          "h": "Site access wastes a morning",
+          "p": "Gate entry, safety induction and work permits are arranged on arrival rather than before the visit."
+        },
+        {
+          "h": "Spares stock in the wrong place",
+          "p": "A critical part sits in a warehouse eight hours away from the plant most likely to need it."
+        },
+        {
+          "h": "Multi-plant customers fragmented",
+          "p": "One group with four plants is handled as four unrelated customers, so nobody sees the whole relationship."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the purchase department to the plant floor.",
+      "steps": [
+        {
+          "h": "Sell",
+          "p": "Quotations to the purchase department from the catalogue, with the plant's technical contacts on the account."
+        },
+        {
+          "h": "Commission",
+          "p": "Installation and commissioning jobs at the plant, closed with photo proof and the maintenance head signature."
+        },
+        {
+          "h": "Register",
+          "p": "The machine enters the asset register with its plant, line, serial number, warranty end and running hours basis."
+        },
+        {
+          "h": "Contract",
+          "p": "An annual or comprehensive contract is recorded with its response commitment and the planned visit count."
+        },
+        {
+          "h": "Plan",
+          "p": "Preventive schedules are raised by date or by running hours, and aligned to the plant's shutdown windows."
+        },
+        {
+          "h": "Respond",
+          "p": "A breakdown call is logged, an engineer with the right skill is dispatched, and the job card is filled offline on the shop floor."
+        },
+        {
+          "h": "Report",
+          "p": "Response times, downtime, parts consumed and contract profitability are available per plant and per group."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules shaped for plant customers.",
+      "groups": [
+        {
+          "icon": "&#127981;",
+          "h": "The plant view",
+          "items": [
+            "Asset and installed-base register by plant, line and serial",
+            "Multi-site contracts across a group's plants",
+            "Customer accounts with maintenance and purchase contacts",
+            "Asset transfers when a machine moves between lines",
+            "Depreciation and asset records where you track them"
+          ]
+        },
+        {
+          "icon": "&#9888;",
+          "h": "Breakdown response",
+          "items": [
+            "Service call intake with timestamps",
+            "SLA definitions and breach tracking",
+            "Skill-based technician allocation and dispatch",
+            "Mobile job card with offline mode and photo proof",
+            "Service history per machine"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Planned maintenance",
+          "items": [
+            "Preventive schedules by date or running hours",
+            "Meter and usage-based maintenance",
+            "Checklists completed on the app",
+            "Technician route and schedule planning"
+          ]
+        },
+        {
+          "icon": "&#9881;",
+          "h": "Spares and commerce",
+          "items": [
+            "Spare parts inventory across multiple warehouses",
+            "Parts used per job, dropping stock",
+            "Purchase orders, GRN and supplier payables",
+            "GST invoices, e-way bills and service invoices",
+            "Contract profitability and P&amp;L by product line"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments on a factory account.",
+      "items": [
+        {
+          "h": "The machine is identified in a minute",
+          "workflow": "The caller names the plant and the line; the asset register returns the machine, its serial, its contract and its last three jobs.",
+          "result": "The engineer leaves knowing the likely fault."
+        },
+        {
+          "h": "Preventive work lands in the shutdown",
+          "workflow": "Schedules for that plant are grouped and planned into the shutdown window agreed with the maintenance head.",
+          "result": "Planned work without stopping production twice."
+        },
+        {
+          "h": "A critical spare sits near the plant",
+          "workflow": "Parts consumption history shows which items fail on that model, and stock is held at the warehouse nearest those plants.",
+          "result": "Hours saved on the response that matters most."
+        },
+        {
+          "h": "A group is seen as a group",
+          "workflow": "Four plants sit under one account with a multi-site contract, and reporting rolls up across them.",
+          "result": "A commercial conversation with the head office, based on the whole picture."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Distributors and service firms serving industry.",
+      "items": [
+        {
+          "icon": "&#9881;",
+          "b": "Machinery dealers",
+          "p": "Capital machines sold and serviced across a region."
+        },
+        {
+          "icon": "&#128167;",
+          "b": "Pump and compressor dealers",
+          "p": "High-population assets with running-hour maintenance."
+        },
+        {
+          "icon": "&#128295;",
+          "b": "Material handling suppliers",
+          "p": "Equipment spread across plants and warehouses."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Industrial service contractors",
+          "p": "Maintenance contracts without a machine sales arm."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Spares and consumable suppliers",
+          "p": "Repeat industrial supply against plant indents."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Job books, accounting software, or one platform for sales and service.",
+      "cols": [
+        "Job book and Excel",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Finding the machine",
+          "Asking the customer",
+          "An old invoice line",
+          "Asset register by plant, line and serial"
+        ],
+        [
+          "Response promise",
+          "Verbal",
+          "Not covered",
+          "SLA on the contract with breach tracking"
+        ],
+        [
+          "Field records",
+          "Paper job sheets",
+          "Not covered",
+          "Mobile job card, offline, with photos and signature"
+        ],
+        [
+          "Planned maintenance",
+          "A yearly intention",
+          "Not covered",
+          "Date and running-hour schedules with checklists"
+        ],
+        [
+          "Spares on a job",
+          "Noted, sometimes billed",
+          "Stock value only",
+          "Parts issued against the job, stock dropped"
+        ],
+        [
+          "Group customers",
+          "Separate ledgers",
+          "Separate accounts",
+          "One account, multi-site contracts, rolled-up reporting"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Industrial distribution and service, answered.",
+      "items": [
+        {
+          "q": "Can assets be organised by plant and production line?",
+          "a": "Yes. Each asset carries its customer, site and location detail, so a group with several plants can be navigated from the group down to a specific machine on a specific line, with its contract and service history attached."
+        },
+        {
+          "q": "Does maintenance scheduling support running hours rather than dates?",
+          "a": "Yes. Preventive maintenance can be scheduled on a calendar basis or on meter and usage readings, which suits machines whose service interval depends on hours run rather than months elapsed."
+        },
+        {
+          "q": "Will the engineer app work inside a plant with no signal?",
+          "a": "Yes. The mobile job card works offline: the engineer records the fault, parts fitted, photographs and the customer signature, and the job syncs when the device regains a connection."
+        },
+        {
+          "q": "Can one contract cover several plants of the same customer?",
+          "a": "Yes. Multi-site contracts hold assets across a group's locations under one agreement, while each site keeps its own visit schedule and service history. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>."
+        },
+        {
+          "q": "Is this only for medical equipment businesses?",
+          "a": "No. The platform is built for any trade that sells, installs and services, and the same modules serve industrial, electrical and building products distributors. The medical work is simply where most of the shipped experience is."
+        },
+        {
+          "q": "Can we see whether a service contract is worth renewing?",
+          "a": "Contract profitability compares what a contract invoiced against the visits and parts consumed under it, so a contract that costs more to honour than it earns is visible before you quote the renewal."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/electrical-equipment-dealer-software/",
+          "icon": "&#9889;",
+          "b": "Electrical dealers",
+          "p": "Panels, projects and commissioning."
+        },
+        {
+          "href": "/aura-business/hvac-amc-software/",
+          "icon": "&#10052;",
+          "b": "HVAC AMC",
+          "p": "Seasonal planned maintenance."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128667;",
+          "b": "Service dispatch",
+          "p": "Getting engineers to site."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every machine you support."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#9881;",
+          "b": "Spare parts inventory",
+          "p": "Stock where it is needed."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Response versus resolution."
+        }
+      ]
+    }
+  ]
+}

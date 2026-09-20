@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-corporate-credit-billing",
+  "title": "Hospital Credit and Corporate Billing Software | Panels | HIMS",
+  "meta": "Hospital credit and corporate billing software: bill companies and panels on credit, see outstanding per organisation and raise statements from the record.",
+  "h1": "Hospital credit and corporate billing that knows <span class=\"hl\">which company owes what</span>.",
+  "crumb": "Corporate Credit Billing",
+  "pill": "For accounts and front office",
+  "sub": "When the patient is not the payer, the bill still has to be right. HIMS bills corporate panels and empanelled organisations on credit, keeps the outstanding per company visible, and produces statements from the same admissions that generated the bills.",
+  "meta_ticks": [
+    "Companies and panels billed on credit",
+    "Outstanding per organisation",
+    "Statements from the same records"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/billing.png",
+    "alt": "HIMS billing screen showing a hospital invoice raised against a corporate payer on credit",
+    "bar": "his.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss corporate and credit billing in HIMS.",
+  "primary_keyword": "hospital credit and corporate billing",
+  "secondary_keywords": [
+    "corporate billing software for hospitals",
+    "hospital credit billing software",
+    "empanelled company billing hospital",
+    "hospital corporate panel management",
+    "hospital outstanding tracking software",
+    "hospital statement of account software"
+  ],
+  "intent": "commercial",
+  "persona": "Accounts head or front office in-charge of a hospital with corporate tie-ups and empanelled organisations",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What credit and corporate billing covers",
+      "paras": [
+        "Corporate billing is what happens when an employer, an institution or an empanelled organisation has agreed to pay for its people. The patient is treated and discharged without paying at the counter, the bill is raised against the company on credit, and the hospital then waits. HIMS records that from the moment the patient registers, so the front desk knows the payer before the first charge is posted rather than discovering it at discharge.",
+        "The part that matters most is what comes after. Bills raised on credit sit against the organisation, not against a pile of loose invoices, so accounts can see what each company owes, which bills make up that figure and what has been received. It is the same billing module that handles cash, insurance and TPA claims, so a hospital with all four kinds of payer is still looking at one set of books."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why corporate money arrives late",
+      "h2": "Credit billing usually fails at the follow-up, not the bill.",
+      "lead": "The bill gets raised. Then it disappears into a file until someone asks.",
+      "items": [
+        {
+          "h": "Payer found out at discharge",
+          "p": "The patient mentions the company entitlement at the counter and the whole bill is reworked on the spot."
+        },
+        {
+          "h": "Invoices tracked in a side register",
+          "p": "Credit bills are copied into a separate book, and the book and the system stop agreeing within a month."
+        },
+        {
+          "h": "Statements typed from scratch",
+          "p": "When a company asks what it owes, somebody spends a morning listing bills by hand."
+        },
+        {
+          "h": "Part payments unallocated",
+          "p": "A company pays a lump sum against several bills and nobody records which ones it cleared."
+        },
+        {
+          "h": "Nobody owns the chase",
+          "p": "Without a per-organisation outstanding figure, follow-up happens when cash runs short."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One credit patient",
+      "h2": "From registration to the company's payment.",
+      "steps": [
+        {
+          "h": "Organisation recorded",
+          "p": "The company or panel is set up once, with the entitlement it covers."
+        },
+        {
+          "h": "Payer set at registration",
+          "p": "The patient is registered against that organisation, so billing knows from the start."
+        },
+        {
+          "h": "Charges accrue",
+          "p": "OP consultations or the IP stay post to the bill as normal."
+        },
+        {
+          "h": "Bill raised on credit",
+          "p": "The company portion is billed to the organisation; anything not covered is collected from the patient."
+        },
+        {
+          "h": "Outstanding tracked",
+          "p": "The bill sits against the organisation in the outstanding view."
+        },
+        {
+          "h": "Statement and receipt",
+          "p": "A statement of bills is produced for the company and payments are recorded against them."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Credit billing beside cash, insurance and TPA.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Organisations",
+          "items": [
+            "Corporate and empanelled organisation master",
+            "What each panel covers",
+            "Patients linked to their organisation",
+            "Payer known at registration"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "Company portion billed on credit",
+            "Patient portion collected at the counter",
+            "OP consultations and IP admissions alike",
+            "Packages billed to a panel"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Following the money",
+          "items": [
+            "Outstanding per organisation",
+            "Bills that make up the outstanding",
+            "Receipts recorded against bills",
+            "Part payments visible"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Reporting",
+          "items": [
+            "Payer mix across cash, TPA and corporate",
+            "Collections on the live dashboard",
+            "Statements per organisation",
+            "Audit trail per bill"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-billing-software/",
+        "label": "See hospital billing in full"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments accounts will recognise.",
+      "items": [
+        {
+          "h": "An employee walks into OP",
+          "workflow": "Registration links the patient to the company, so the consultation is billed to the panel rather than collected in cash.",
+          "result": "No rework at the counter."
+        },
+        {
+          "h": "A company asks for a statement",
+          "workflow": "The bills raised against that organisation for the period are listed with what is paid and what is open.",
+          "result": "The statement takes minutes, not a morning."
+        },
+        {
+          "h": "A lump sum arrives",
+          "workflow": "The receipt is recorded and allocated against the specific bills it clears.",
+          "result": "The outstanding drops by the right amount."
+        },
+        {
+          "h": "Month-end review",
+          "workflow": "The owner reads outstanding by organisation alongside TPA claims and cash collections.",
+          "result": "Follow-up goes where the money actually is."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals with tie-ups, not just walk-ins.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals with corporate panels",
+          "p": "Employer tie-ups billed monthly."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Occupational health tie-ups",
+          "p": "Check-ups and consultations billed to an institution."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Accounts teams",
+          "p": "One outstanding figure per organisation."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front office",
+          "p": "Payer known before the first charge."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Owners",
+          "p": "Credit exposure visible on the dashboard."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways credit bills get tracked.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "When the payer is known",
+          "At discharge",
+          "At billing",
+          "At registration"
+        ],
+        [
+          "Where credit bills sit",
+          "A side register",
+          "In the invoice list",
+          "Against the organisation"
+        ],
+        [
+          "Statements",
+          "Typed by hand",
+          "Exported and edited",
+          "Produced from the bills themselves"
+        ],
+        [
+          "Part payments",
+          "Noted in the margin",
+          "A single receipt entry",
+          "Allocated against specific bills"
+        ],
+        [
+          "Seen beside TPA and cash",
+          "Three registers",
+          "Separate reports",
+          "One payer view on the dashboard"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Corporate and credit billing, answered.",
+      "items": [
+        {
+          "q": "Is corporate billing different from TPA billing?",
+          "a": "Yes. A TPA settles an insurance claim with pre-authorisation and claim documents. A corporate panel is a direct credit arrangement with an organisation. Both are handled in the same billing module. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+        },
+        {
+          "q": "Can part of a bill go to the company and part to the patient?",
+          "a": "Yes. The portion the organisation covers is billed on credit and the balance is collected from the patient on the same bill, so there is no second invoice and nothing to reconcile afterwards."
+        },
+        {
+          "q": "How do we see what a company owes us?",
+          "a": "Outstanding is held per organisation, with the bills that make it up and the receipts recorded against them. That figure also appears alongside TPA and cash on the <a href=\"/hims/hospital-mis-dashboard/\">MIS dashboard</a>."
+        },
+        {
+          "q": "Can we bill a package to a corporate panel?",
+          "a": "Yes. A package can be billed to an organisation on credit, with the inclusions resolving the same way they do for a cash patient. See <a href=\"/hims/hospital-package-billing-software/\">package billing</a>."
+        },
+        {
+          "q": "Does it handle OP consultations on credit, not just admissions?",
+          "a": "Yes. An empanelled employee coming to OP is registered against the organisation and the consultation is billed to the panel, which is often the bulk of corporate volume."
+        },
+        {
+          "q": "Is GST applied on corporate bills?",
+          "a": "Billing in HIMS is GST-native, and tax is applied where your accountant says it applies using rules configured at setup. What the correct treatment is for a given corporate arrangement is a question for your auditor rather than for the software."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Cash, GST, receipts."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#128203;",
+          "b": "TPA billing",
+          "p": "Claims and settlement."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#128230;",
+          "b": "Package billing",
+          "p": "One agreed package."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "Collections and outstanding."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#128100;",
+          "b": "UHID registration",
+          "p": "Where the payer is captured."
+        }
+      ]
+    }
+  ]
+}

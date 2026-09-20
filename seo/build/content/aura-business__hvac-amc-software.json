@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "hvac-amc-software",
+  "title": "HVAC AMC Software for Maintenance Contracts | Aura Business",
+  "meta": "HVAC AMC software for seasonal planned maintenance: many units per site, multi-site contracts, filter and consumable schedules and renewals before summer.",
+  "h1": "HVAC AMC software for contracts covering <span class=\"hl\">hundreds of units</span>.",
+  "crumb": "HVAC AMC Software",
+  "pill": "For air conditioning service businesses",
+  "sub": "Aura Business is built for maintenance work that arrives in waves: a contract covering every unit across a customer's sites, planned visits that must finish before the season, filter and consumable replacements on their own cycle, and renewals that all fall due together.",
+  "meta_ticks": [
+    "One contract, many units across many sites",
+    "Planned visits scheduled before the season",
+    "Filter and consumable cycles per unit"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we run HVAC maintenance contracts. I'd like to see how Aura Business handles multi-site AMCs and seasonal planned maintenance.",
+  "primary_keyword": "HVAC AMC software",
+  "secondary_keywords": [
+    "air conditioning maintenance contract software",
+    "HVAC service management software India",
+    "multi-site AMC software",
+    "preventive maintenance software for HVAC",
+    "AC service company software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or operations head of an HVAC dealer or service company running annual maintenance contracts across commercial sites",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why HVAC contracts break a normal service system",
+      "paras": [
+        "An HVAC maintenance contract is rarely about one machine. It covers a fleet: forty split units across an office, a chiller plant and its handling units in a hospital, or every unit in eighteen branches of the same customer. The contract is one agreement, the schedule is per unit, and the invoicing is usually per site or per group. Software for HVAC AMC work has to hold that shape, because a service system that assumes one asset per contract will not survive the first renewal.",
+        "The second difficulty is that the work is seasonal. Everybody wants their planned maintenance finished before the weather turns, which compresses a year of visits into a few weeks and then fills the following months with breakdown calls. Aura Business schedules planned visits per unit, plans engineer routes across sites, tracks filter and consumable replacement separately from the visit itself, and raises renewals before the season rather than after it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The seasonal squeeze",
+      "h2": "A year of planned work compressed into six weeks.",
+      "lead": "The problems of an HVAC service business are problems of capacity, repetition and scale rather than of complexity.",
+      "items": [
+        {
+          "h": "The unit list is out of date",
+          "p": "The contract covers units installed years ago, some replaced or moved, and the list has never been corrected."
+        },
+        {
+          "h": "Planned visits run late into the season",
+          "p": "The pre-season programme is still unfinished when the breakdown calls start, so it is quietly abandoned."
+        },
+        {
+          "h": "Engineers criss-cross the city",
+          "p": "Visits are assigned by whoever calls first rather than grouped by area, so half the day is travel."
+        },
+        {
+          "h": "Consumables not planned",
+          "p": "Filters and belts are replaced when an engineer notices, so the van does not carry what the site needed."
+        },
+        {
+          "h": "Multi-site billing is manual",
+          "p": "One customer with eighteen branches wants one invoice, or eighteen, and that is assembled by hand each time."
+        },
+        {
+          "h": "Renewals slip past the season",
+          "p": "Contracts lapse in the busiest month and are only noticed when a lapsed customer calls with a breakdown."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the unit list to the renewal, one season at a time.",
+      "steps": [
+        {
+          "h": "Survey and list",
+          "p": "Every unit is recorded as an asset with its site, location, capacity, make and installation date."
+        },
+        {
+          "h": "Contract",
+          "p": "One contract covers the listed units across one or many sites, with the visit count and response commitment agreed."
+        },
+        {
+          "h": "Schedule the season",
+          "p": "Planned visits are raised per unit and grouped into a programme that can be finished before the load arrives."
+        },
+        {
+          "h": "Route the engineers",
+          "p": "Visits are planned by area and by day, so a team covers a cluster of sites rather than one call at a time."
+        },
+        {
+          "h": "Do the visit",
+          "p": "The checklist is completed on the mobile job card, with filters or consumables issued against the job."
+        },
+        {
+          "h": "Handle breakdowns",
+          "p": "In-season calls are logged, dispatched against the contract response commitment, and closed with a job card."
+        },
+        {
+          "h": "Invoice and renew",
+          "p": "Contract invoicing per site or per group, and the renewal engine raises the offer ahead of the next season."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for fleets of small units.",
+      "groups": [
+        {
+          "icon": "&#10052;",
+          "h": "Units and contracts",
+          "items": [
+            "Asset register per site, floor and room",
+            "Multi-site contracts covering a listed fleet",
+            "Annual and comprehensive contracts with exclusions",
+            "Warranty tracking on newly installed units",
+            "Contract renewal engine and revenue dashboard"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Planned maintenance",
+          "items": [
+            "Preventive schedules per unit, by date or usage",
+            "Checklists completed on the app",
+            "Consumable and filter replacement cycles",
+            "Programme view of visits due, done and outstanding"
+          ]
+        },
+        {
+          "icon": "&#128667;",
+          "h": "The field day",
+          "items": [
+            "Technician route and schedule planning by area",
+            "Skill-based allocation for chillers and larger plant",
+            "Mobile job card with photos, signature and offline mode",
+            "Parts and consumables issued per job",
+            "Attendance with geo check-in and selfie"
+          ]
+        },
+        {
+          "icon": "&#128181;",
+          "h": "Commerce",
+          "items": [
+            "Service invoices per site or consolidated per customer",
+            "Breakdown calls chargeable outside the contract",
+            "Payment tracker and receivables ageing",
+            "Contract profitability by customer",
+            "Helpdesk portal for the customer's facilities team"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things a seasonal service business needs.",
+      "items": [
+        {
+          "h": "The pre-season programme finishes",
+          "workflow": "Visits due are shown as a programme with a completion count, so the shortfall is visible weeks before the season rather than during it.",
+          "result": "Planned work done while there is still capacity."
+        },
+        {
+          "h": "A day covers five sites, not two",
+          "workflow": "Scheduled visits are grouped by area into a route, and the engineer works down the list on the mobile app.",
+          "result": "More units serviced per engineer per day."
+        },
+        {
+          "h": "The van carries the right filters",
+          "workflow": "Consumable cycles per unit show what is due at the site being visited, and the parts are issued against the jobs before the run.",
+          "result": "One visit instead of two."
+        },
+        {
+          "h": "Eighteen branches, one invoice",
+          "workflow": "The multi-site contract holds all sites under one customer, and invoicing is raised consolidated or per site as agreed.",
+          "result": "Billing that matches how the customer wants to pay."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses that maintain many units for few customers.",
+      "items": [
+        {
+          "icon": "&#10052;",
+          "b": "HVAC dealers with a service arm",
+          "p": "Units sold, installed and then maintained under contract."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Air conditioning service companies",
+          "p": "Contracts on units installed by somebody else."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Facilities maintenance contractors",
+          "p": "HVAC as one line inside a wider site contract."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital and hotel service providers",
+          "p": "Critical sites with tighter response commitments."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial cooling service firms",
+          "p": "Chillers and plant rooms with usage-based schedules."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A visit register, a generic ticket tool, or contract-aware field service.",
+      "cols": [
+        "Visit register and Excel",
+        "Generic ticket tool",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Units under contract",
+          "A list in the agreement",
+          "Not modelled",
+          "Asset register per site and location"
+        ],
+        [
+          "Seasonal programme",
+          "A plan on a wall",
+          "Recurring tickets",
+          "Visits due, done and outstanding per contract"
+        ],
+        [
+          "Routing",
+          "By phone each morning",
+          "Not covered",
+          "Visits grouped by area into a day's route"
+        ],
+        [
+          "Consumables",
+          "Noticed on site",
+          "Not covered",
+          "Replacement cycles per unit, parts issued per job"
+        ],
+        [
+          "Multi-site customers",
+          "Separate files",
+          "Separate projects",
+          "One contract across sites, consolidated invoicing"
+        ],
+        [
+          "Renewals",
+          "Remembered late",
+          "Not covered",
+          "Renewal engine ahead of the season"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HVAC maintenance contracts, answered.",
+      "items": [
+        {
+          "q": "Can one contract cover hundreds of units across sites?",
+          "a": "Yes. A contract covers a listed fleet of assets, and each unit keeps its own location, schedule and service history. Multi-site contracts hold the sites of one customer under a single agreement with reporting across all of them."
+        },
+        {
+          "q": "How do we get the pre-season programme finished?",
+          "a": "Visits are raised per unit against the contract and shown as a programme with due, completed and outstanding counts. Routing groups them by area, so capacity is spent on units rather than on travel."
+        },
+        {
+          "q": "Can filter and consumable replacement be tracked separately from the visit?",
+          "a": "Yes. Consumables can run on their own replacement cycle per unit, and the items are issued against the job when they are fitted, so stock drops and the unit's history shows what was changed and when."
+        },
+        {
+          "q": "Can a customer's facilities team log calls themselves?",
+          "a": "Yes. The customer portal and helpdesk let a facilities team raise a call, see its status and see the visit history for their sites, which also gives you a clean intake time for measuring response."
+        },
+        {
+          "q": "Does it handle chargeable work outside the contract?",
+          "a": "Yes. A call can be recorded as covered or chargeable, with parts and labour billed on a service invoice where they fall outside the agreement. What is covered and excluded is held on the contract for the desk to check at intake."
+        },
+        {
+          "q": "Do renewals have to be chased manually?",
+          "a": "No. The renewal engine works from contract end dates and raises the offer in advance, which matters in a seasonal trade where a lapse during the busy months is rarely noticed until a breakdown call arrives."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/amc-billing-software/",
+          "icon": "&#129534;",
+          "b": "AMC billing",
+          "p": "Invoicing a contract fleet."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Schedules and checklists."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128667;",
+          "b": "Service dispatch",
+          "p": "Routes across sites."
+        },
+        {
+          "href": "/aura-business/industrial-equipment-distributor-software/",
+          "icon": "&#9881;",
+          "b": "Industrial distribution",
+          "p": "Plant assets and breakdowns."
+        },
+        {
+          "href": "/aura-business/software-for-biomedical-service-companies/",
+          "icon": "&#129302;",
+          "b": "Biomedical service firms",
+          "p": "Multi-brand service contracts."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What AMC software does."
+        }
+      ]
+    }
+  ]
+}

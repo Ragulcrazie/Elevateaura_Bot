@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "receivables-ageing-software",
+  "title": "Receivables Ageing Software for Distributors | Aura Business",
+  "meta": "Receivables ageing software that buckets unpaid invoices by age, shows who to chase first, holds the customer ledger and applies credit limits and days.",
+  "h1": "Receivables ageing software that tells you <span class=\"hl\">who to call this morning</span>.",
+  "crumb": "Receivables Ageing",
+  "pill": "For owners watching the collections number",
+  "sub": "Aura Business buckets every unpaid invoice by how long it has been outstanding, ranks customers by what is at risk rather than what is loudest, keeps a running customer ledger, and applies the credit limit and credit days you agreed.",
+  "meta_ticks": [
+    "Ageing buckets across the whole book",
+    "Customer ledger with every invoice and receipt",
+    "Credit limits and credit days applied"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard showing receivables ageing buckets and the largest overdue customer balances",
+    "bar": "app.elevateaura.co.in/finance/ageing"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss receivables ageing software for our collections.",
+  "primary_keyword": "receivables ageing software",
+  "secondary_keywords": [
+    "accounts receivable software India",
+    "outstanding payment tracking software",
+    "debtors ageing report software",
+    "credit limit management software",
+    "collections follow-up software for distributors"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or accounts head of a distributor whose cash is stuck in overdue invoices",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an ageing view is for",
+      "paras": [
+        "Receivables ageing sorts every unpaid invoice by how long it has been outstanding and groups it into buckets, so a balance that is a week old is never confused with one that is five months old. The total owed is a number your accountant already has. The ageing is what tells you which part of it is still normal trade credit and which part is a problem.",
+        "Aura Business holds this in the Finance and Accounting suite, fed directly by the invoices raised in the billing suite and the receipts entered against them. Because invoices, receipts, customer credit terms and the WhatsApp reminder run through the same system, the ageing view is also a working list: you can open the customer, see every open invoice, and act on it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why collections slip",
+      "h2": "Everyone knows the total outstanding. Almost nobody knows the shape of it.",
+      "lead": "A distributor with healthy sales and bad collections is a distributor that runs out of cash while looking profitable.",
+      "items": [
+        {
+          "h": "One number, no structure",
+          "p": "The outstanding figure is known to the rupee and nobody can say how much of it is over ninety days."
+        },
+        {
+          "h": "Chasing by noise",
+          "p": "The customer who calls gets attention, while the quiet one with the oldest balance is never rung."
+        },
+        {
+          "h": "Receipts not applied",
+          "p": "Payments arrive as bulk transfers and are never matched to specific invoices, so the ledger drifts."
+        },
+        {
+          "h": "Credit limits nobody checks",
+          "p": "A customer already past their agreed limit is despatched to again because the limit lives in someone's head."
+        },
+        {
+          "h": "Follow-up leaves no trace",
+          "p": "Three people chase the same customer and none of them knows what the last one was told."
+        },
+        {
+          "h": "Disputes surface at ninety days",
+          "p": "An invoice was never going to be paid because of a short delivery, and nobody found out for a quarter."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How collections run",
+      "h2": "From invoice raised to money in the bank.",
+      "steps": [
+        {
+          "h": "Invoice raised",
+          "p": "The GST tax invoice enters the customer ledger with its date and due date."
+        },
+        {
+          "h": "Credit terms applied",
+          "p": "The customer's credit days set when the invoice becomes overdue, not a general rule."
+        },
+        {
+          "h": "Ageing calculated",
+          "p": "The open balance falls into a bucket and moves along as it ages."
+        },
+        {
+          "h": "Chase list built",
+          "p": "The desk works down by age and value, not by who telephoned."
+        },
+        {
+          "h": "Reminder sent",
+          "p": "An automated WhatsApp reminder goes out on the schedule you set."
+        },
+        {
+          "h": "Receipt applied",
+          "p": "Payment matched against specific invoices, and the ledger and ageing update."
+        },
+        {
+          "h": "Escalated or resolved",
+          "p": "A disputed invoice is flagged and settled by credit note rather than sitting in the bucket."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The Finance modules behind collections.",
+      "groups": [
+        {
+          "icon": "&#128202;",
+          "h": "The ageing view",
+          "items": [
+            "Receivables ageing by bucket",
+            "Ageing by customer, territory and product line",
+            "Largest overdue balances first",
+            "Owner and CEO dashboard summary"
+          ]
+        },
+        {
+          "icon": "&#128220;",
+          "h": "The customer ledger",
+          "items": [
+            "Every invoice, receipt and credit note per customer",
+            "Payments and receipts applied to invoices",
+            "Credit notes and returns adjusted in the balance",
+            "Statement for the customer"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Credit control",
+          "items": [
+            "Credit limit per customer",
+            "Credit days driving the due date",
+            "Warning when an order breaches the limit",
+            "Role-based access to credit decisions"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Follow-up",
+          "items": [
+            "Payment tracker with reminders",
+            "WhatsApp payment reminders on a schedule",
+            "Follow-up notes against the customer",
+            "Distributor payment and UTR confirmation"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four collection days that get shorter.",
+      "items": [
+        {
+          "h": "The morning chase list writes itself",
+          "workflow": "The oldest and largest open balances are at the top of the ageing view with contact details and the last follow-up note.",
+          "result": "The calls that matter are made first."
+        },
+        {
+          "h": "A bulk transfer is matched properly",
+          "workflow": "A hospital pays one amount against four invoices; the receipt is split and applied to each.",
+          "result": "The ledger agrees with the customer's own records."
+        },
+        {
+          "h": "An over-limit order is caught",
+          "workflow": "A dealer already past their credit limit places another order and the limit breach is flagged before despatch.",
+          "result": "Exposure stops growing on its own."
+        },
+        {
+          "h": "A dispute is found in week two",
+          "workflow": "A reminder prompts the customer to say a line was short-supplied, and a credit note settles it.",
+          "result": "The invoice leaves the bucket instead of ageing in it."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses selling on credit into institutions.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Hospital payment cycles that run long by habit."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagent dealers",
+          "p": "High invoice counts where small balances add up."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "Dealer networks with individual credit limits."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "Contract instalments and service invoices both outstanding."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "Project billing with retention and staged payments."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A monthly report, or a live collections desk.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Ageing buckets",
+          "Rebuilt by hand",
+          "Yes, as a report",
+          "Live, with the invoices behind each bucket"
+        ],
+        [
+          "Who to chase first",
+          "Whoever is remembered",
+          "You read the report",
+          "Ranked by age and value on the desk"
+        ],
+        [
+          "Credit limit enforced",
+          "In someone's head",
+          "Sometimes a warning",
+          "Flagged at order and despatch"
+        ],
+        [
+          "Reminders",
+          "Typed one by one",
+          "Email statements",
+          "Automated WhatsApp on a schedule"
+        ],
+        [
+          "Follow-up history",
+          "Not kept",
+          "Not kept",
+          "Notes against the customer record"
+        ],
+        [
+          "Link to the sale",
+          "None",
+          "Invoice only",
+          "Order, challan, invoice, contract and job"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Receivables ageing, answered.",
+      "items": [
+        {
+          "q": "Can we set our own ageing buckets?",
+          "a": "Yes. The bucket boundaries are configured to match how your business thinks about credit, because a distributor selling to government hospitals has a very different sense of normal from one selling to private clinics."
+        },
+        {
+          "q": "Does it replace our accounting software?",
+          "a": "No. It manages invoicing, receipts, ageing and collections. Your accountant keeps the books, using the Tally or accounting export and the GST returns prep. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing</a>."
+        },
+        {
+          "q": "How are credit limits handled?",
+          "a": "Each customer carries a credit limit and credit days. The credit days set the due date on their invoices, and an order that would take the customer past the limit is flagged for a decision before despatch."
+        },
+        {
+          "q": "Can one payment settle several invoices?",
+          "a": "Yes. A receipt can be applied across multiple open invoices, wholly or partly, so a bulk transfer from a hospital leaves the ledger accurate rather than sitting as an unallocated credit."
+        },
+        {
+          "q": "Are AMC instalments included in the ageing?",
+          "a": "Yes. Contract instalments, product invoices and service invoices are all invoices, so they age together and appear in the same customer balance. See <a href=\"/aura-business/amc-billing-software/\">AMC billing</a>."
+        },
+        {
+          "q": "Can reminders go out automatically?",
+          "a": "Yes. Outstanding reminders can be sent on a schedule over WhatsApp and stop when the invoice is settled. See <a href=\"/aura-business/whatsapp-payment-reminder-software/\">WhatsApp payment reminders</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/whatsapp-payment-reminder-software/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Chasing without phone calls."
+        },
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "Where the invoice starts."
+        },
+        {
+          "href": "/aura-business/amc-billing-software/",
+          "icon": "&#128220;",
+          "b": "AMC billing",
+          "p": "Contract instalments outstanding."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128200;",
+          "b": "Dashboard",
+          "p": "Cashflow and collections."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Dealer credit and UTR."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "Where finance should sit."
+        }
+      ]
+    }
+  ]
+}

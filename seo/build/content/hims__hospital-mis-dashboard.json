@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-mis-dashboard",
+  "title": "Hospital MIS Dashboard | Live OP, IP, Beds, Collections | HIMS",
+  "meta": "Hospital MIS dashboard showing OP and IP numbers, bed occupancy and collections as they happen, with reports by department for owners and administrators.",
+  "h1": "A hospital MIS dashboard built from <span class=\"hl\">today's entries</span>, not last month's returns.",
+  "crumb": "Hospital MIS Dashboard",
+  "pill": "For owners and administrators",
+  "sub": "HIMS shows OP and IP volume, bed occupancy and collections live on one screen, because the numbers come from the registrations, admissions and bills the hospital is already making. Reports break the same figures down by department.",
+  "meta_ticks": [
+    "OP, IP, beds and collections live",
+    "Reports by department",
+    "No monthly compilation exercise"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/opd-dashboard.png",
+    "alt": "HIMS dashboard showing OP and IP counts, bed occupancy and collections for the day",
+    "bar": "his.elevateaura.co.in/dashboard"
+  },
+  "whatsapp_text": "Hi, I'd like to see the MIS dashboard and reports in HIMS.",
+  "primary_keyword": "hospital MIS dashboard",
+  "secondary_keywords": [
+    "hospital MIS software",
+    "hospital management information system dashboard",
+    "hospital reports software",
+    "hospital analytics dashboard India",
+    "hospital occupancy and collections dashboard",
+    "department wise hospital reports"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator or owner who wants the day's numbers without waiting for a monthly report",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What the MIS dashboard in HIMS shows",
+      "paras": [
+        "A hospital MIS dashboard is the management view of what the hospital did today: how many patients registered in OP, how many are admitted, how many beds are occupied ward by ward, and what has been collected. In HIMS that screen is not compiled by anybody. It reads the same registrations, admissions and bills the front desk and the billing counter have been creating since morning, so the figure on the screen and the figure in the register are the same figure.",
+        "Underneath the live view sit reports. The same numbers are broken down by department, by doctor, by payer and by period, so a conversation about why OP was thin last week can be had against data rather than impressions. Because billing, pharmacy, laboratory and the wards all write to one record, the departmental split does not require anyone to tag entries afterwards.",
+        "It also changes who can answer a question. When the figures are on a screen rather than in one person's ledger, a department head, an administrator and the owner are all arguing from the same number, and the argument moves on to what to do about it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why MIS usually arrives late",
+      "h2": "Most hospital numbers are assembled, not observed.",
+      "lead": "By the time the report reaches the owner, the month it describes is over.",
+      "items": [
+        {
+          "h": "Registers added up by hand",
+          "p": "OP counts, admissions and collections are totalled from separate books at month end by whoever is free."
+        },
+        {
+          "h": "Numbers that do not agree",
+          "p": "The billing total, the pharmacy total and the front desk count come from three sources and never tally."
+        },
+        {
+          "h": "Occupancy known only to the ward",
+          "p": "The administrator asks the nursing station how many beds are free and gets an answer that is already out of date."
+        },
+        {
+          "h": "No departmental split",
+          "p": "There is a hospital total but nothing that says which department produced it."
+        },
+        {
+          "h": "Outstanding invisible",
+          "p": "Cash collected is known. What is still sitting with TPAs and corporate panels is not."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a number gets on the screen",
+      "h2": "Nobody types the dashboard.",
+      "steps": [
+        {
+          "h": "The front desk registers",
+          "p": "Each OP registration and appointment counts itself."
+        },
+        {
+          "h": "The ward admits",
+          "p": "Admission, bed allocation and discharge move the occupancy figure."
+        },
+        {
+          "h": "Departments deliver",
+          "p": "Pharmacy issues, lab results and theatre cases post against the patient."
+        },
+        {
+          "h": "Billing collects",
+          "p": "Receipts and payer split land on the collections figure as they are taken."
+        },
+        {
+          "h": "The dashboard reads",
+          "p": "The screen aggregates what is already recorded, for today or any period."
+        },
+        {
+          "h": "Reports break it down",
+          "p": "The same figures are filtered by department, doctor, payer and date."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What you can see",
+      "h2": "The live view and the reports behind it.",
+      "groups": [
+        {
+          "icon": "&#128202;",
+          "h": "Live figures",
+          "items": [
+            "OP registrations today",
+            "IP admissions and discharges",
+            "Bed occupancy by ward",
+            "Collections as they are taken"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "By department",
+          "items": [
+            "OP volume per department and doctor",
+            "Pharmacy and laboratory activity",
+            "Theatre cases",
+            "Emergency and casualty load"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Payer mix across cash, insurance and TPA",
+            "Outstanding per payer",
+            "Package and credit billing totals",
+            "Receipts and refunds"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Trust in the number",
+          "items": [
+            "Drawn from the source entry, not a re-entry",
+            "Role-based access to what each person may see",
+            "Audit trail behind the figures",
+            "Same data the departments are using"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four questions the dashboard answers in seconds.",
+      "items": [
+        {
+          "h": "How did today go?",
+          "workflow": "The owner opens the dashboard in the evening and reads OP, IP, occupancy and collections for the day.",
+          "result": "The question is answered without a phone call."
+        },
+        {
+          "h": "Which department is carrying the month?",
+          "workflow": "OP volume and billing are filtered by department and doctor across the period.",
+          "result": "Rosters and clinic hours get decided on evidence."
+        },
+        {
+          "h": "Are the beds working?",
+          "workflow": "Ward occupancy is read alongside admissions and discharges for the week.",
+          "result": "Slow-turning wards become visible."
+        },
+        {
+          "h": "What is still owed to us?",
+          "workflow": "Outstanding is shown per payer, including TPAs and corporate panels.",
+          "result": "Follow-up is aimed at the right organisation."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The people asked to explain the month.",
+      "items": [
+        {
+          "icon": "&#128188;",
+          "b": "Hospital owners",
+          "p": "One screen instead of four phone calls."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Administrators",
+          "p": "Occupancy, volume and collections daily."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Accounts teams",
+          "p": "Collections and outstanding by payer."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Departmental performance without manual tagging."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality coordinators",
+          "p": "Activity figures that come from the record."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where management numbers come from.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "When the number arrives",
+          "Month end",
+          "Overnight batch, usually",
+          "As the entry is made"
+        ],
+        [
+          "Who compiles it",
+          "A staff member",
+          "A reporting team",
+          "Nobody"
+        ],
+        [
+          "Departmental split",
+          "Manual tagging",
+          "Configured cost centres",
+          "Comes from the record itself"
+        ],
+        [
+          "Occupancy",
+          "Asked from the ward",
+          "A separate module",
+          "Live from bed management"
+        ],
+        [
+          "Time to have it running",
+          "Already running badly",
+          "A long implementation",
+          "Live in 30 working days where scope allows"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "The hospital MIS dashboard, answered.",
+      "items": [
+        {
+          "q": "Is the dashboard live or does it run overnight?",
+          "a": "It is live. The figures read the registrations, admissions, dispensing, lab orders and bills as they are recorded, so what the screen shows in the afternoon reflects the morning that just happened."
+        },
+        {
+          "q": "Can we get reports by department and doctor?",
+          "a": "Yes. Because every entry already carries the department, the doctor and the patient, the reports filter the same data rather than asking anyone to tag it afterwards. Periods are selectable."
+        },
+        {
+          "q": "Does it show money owed by TPAs?",
+          "a": "Yes. Outstanding is shown per payer, so cashless claims sitting with a TPA are visible next to cash collections. The claim detail lives in <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+        },
+        {
+          "q": "Can we control who sees the numbers?",
+          "a": "Access is role based. A department head, an administrator and the owner see what their role allows, which is how collections and payer detail stay with the people who should have them."
+        },
+        {
+          "q": "Do we need a separate reporting tool?",
+          "a": "No. The dashboard and the reports are part of HIMS and read the same database the hospital works in, so there is nothing to export, load or reconcile between two systems."
+        },
+        {
+          "q": "How is this different from a hospital ERP?",
+          "a": "An ERP is a way of describing the whole operations layer. The dashboard is the management view on top of it. If you are weighing the two labels, read <a href=\"/compare/hims-vs-hospital-erp/\">HIMS vs hospital ERP</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128188;",
+          "b": "Owner dashboard",
+          "p": "The one screen to open daily."
+        },
+        {
+          "href": "/hims/hospital-software-for-administrators/",
+          "icon": "&#128202;",
+          "b": "For administrators",
+          "p": "Running the day from the system."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128716;",
+          "b": "Bed management",
+          "p": "Where occupancy comes from."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128736;",
+          "b": "Hospital ERP",
+          "p": "The operations modules."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs ERP",
+          "p": "Which label you need."
+        }
+      ]
+    }
+  ]
+}

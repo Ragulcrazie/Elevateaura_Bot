@@ -211,6 +211,18 @@
           "icon": "&#129659;",
           "b": "PACS in Madurai",
           "p": "Imaging and report sharing."
+        },
+        {
+          "href": "/hims/hospital-management-software-pondicherry/",
+          "icon": "&#128205;",
+          "b": "Puducherry",
+          "p": "Hospitals across the Puducherry belt."
+        },
+        {
+          "href": "/hims/hospital-management-software-trichy/",
+          "icon": "&#128205;",
+          "b": "Trichy",
+          "p": "Central Tamil Nadu junction city."
         }
       ]
     }

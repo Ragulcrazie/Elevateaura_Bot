@@ -210,6 +210,18 @@
           "icon": "&#129659;",
           "b": "PACS in Coimbatore",
           "p": "Imaging on the same record."
+        },
+        {
+          "href": "/hims/clinic-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Clinics in Chennai",
+          "p": "For single and group practices."
+        },
+        {
+          "href": "/hims/hospital-management-software-salem/",
+          "icon": "&#128205;",
+          "b": "Salem",
+          "p": "Western Tamil Nadu catchment."
         }
       ]
     }

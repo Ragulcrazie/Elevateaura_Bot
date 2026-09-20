@@ -1,0 +1,352 @@
+{
+  "cluster": "aura-business",
+  "slug": "mobile-job-card-software",
+  "title": "Mobile Job Card Software for Field Engineers | Aura Business",
+  "meta": "Mobile job card software for field engineers: work done, readings, spares, photos and customer signature, captured offline and synced when signal returns.",
+  "h1": "Mobile job card software that captures the visit <span class=\"hl\">while the engineer is still there</span>.",
+  "crumb": "Mobile Job Card Software",
+  "pill": "For engineers filling paper slips today",
+  "sub": "Aura Business gives your engineer a job card on their phone: what was done, readings taken, spares consumed, photographs of the machine and the customer's signature, all captured on site and synced to the office even if the basement has no signal.",
+  "meta_ticks": [
+    "Spares consumed drop stock automatically",
+    "Photo proof and customer signature on site",
+    "Offline capture that syncs later"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business mobile job card showing work done, spare parts consumed, readings and a captured customer signature",
+    "bar": "app.elevateaura.co.in/jobcard"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss mobile job card software for our field engineers.",
+  "primary_keyword": "mobile job card software",
+  "secondary_keywords": [
+    "digital job card app for engineers",
+    "field service job sheet software",
+    "offline job card app India",
+    "service report app with signature",
+    "technician job card software"
+  ],
+  "intent": "commercial",
+  "persona": "Service head whose engineers still fill paper job sheets on site",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an engineer fills in on the job card",
+      "paras": [
+        "The mobile job card is the record of a single visit, completed on the engineer's phone before they leave the site. It holds what the complaint was, what was actually done, any readings or checklist items the equipment requires, which spares came out of the van, photographs of the machine before and after, and the customer's signature confirming the work.",
+        "In Aura Business this is the Mobile Job Card module in the Field Service suite. The reason it matters commercially is simple: the spares recorded on it drop your stock, the labour and parts on it become a service invoice when the asset is out of cover, and the signature on it is what you produce when a customer disputes the visit months later."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What paper costs you",
+      "h2": "The job sheet that reaches the office three days late is already half wrong.",
+      "lead": "Everything downstream of the visit depends on the job card being accurate and prompt. Paper is neither.",
+      "items": [
+        {
+          "h": "Written in the car afterwards",
+          "p": "The details are reconstructed from memory once the engineer is back on the road."
+        },
+        {
+          "h": "Spares never reach the system",
+          "p": "Parts taken from the van are used and not recorded, so your stock figure drifts further from reality every week."
+        },
+        {
+          "h": "No before and after",
+          "p": "A customer claims the damage was caused during service and there is no photograph either way."
+        },
+        {
+          "h": "Signature on a slip in a bag",
+          "p": "Proof of the visit exists on paper that may or may not reach the office."
+        },
+        {
+          "h": "Invoicing waits on the paperwork",
+          "p": "An out-of-cover job cannot be billed until someone types up the sheet, which may be next week."
+        },
+        {
+          "h": "No signal, no record",
+          "p": "Hospital basements and shielded rooms kill the connection, so an app that needs the internet gets abandoned."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "What happens on site",
+      "h2": "The visit, from arrival to signature.",
+      "steps": [
+        {
+          "h": "Job opened",
+          "p": "The engineer opens the assigned call with the asset, complaint and past service history."
+        },
+        {
+          "h": "Check-in",
+          "p": "Arrival recorded at the customer site with GPS check-in and time."
+        },
+        {
+          "h": "Work recorded",
+          "p": "Diagnosis and work done entered, with the checklist where the job is a scheduled PM."
+        },
+        {
+          "h": "Readings captured",
+          "p": "Meter, usage or calibration readings entered against the serial number."
+        },
+        {
+          "h": "Spares consumed",
+          "p": "Parts picked from the engineer's van stock and attached to the job."
+        },
+        {
+          "h": "Photos and signature",
+          "p": "Photo proof attached, customer signs on the phone, job marked done."
+        },
+        {
+          "h": "Sync",
+          "p": "Offline work uploads when signal returns; the office sees the closed job and the stock movement."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "What the engineer's app carries, and what it writes back.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "On the phone",
+          "items": [
+            "Mobile job card with work done and diagnosis",
+            "PM checklists and calibration entries",
+            "Photo proof before and after",
+            "Field signature and job-done confirmation",
+            "Offline mode with later sync"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Parts",
+          "items": [
+            "Spare parts used per job",
+            "Van stock for each engineer",
+            "Stock dropped automatically on job close",
+            "Barcode or QR scan on the part"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Records written",
+          "items": [
+            "Service history per asset and serial",
+            "Attendance with geo and selfie",
+            "Activity feed for the service manager",
+            "Audit log of every change"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "What follows",
+          "items": [
+            "Closes against AMC, CMC or warranty",
+            "Service invoice with labour and spares when uncovered",
+            "Service report PDF shared with the customer",
+            "CSAT request on close"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things the office stops chasing.",
+      "items": [
+        {
+          "h": "The basement visit is still recorded",
+          "workflow": "An engineer works in an imaging room with no signal, completes the card offline, and it uploads in the car park.",
+          "result": "No visit is lost to a dead zone."
+        },
+        {
+          "h": "Van stock matches the van",
+          "workflow": "Two sensors fitted during the job are picked on the card and leave the engineer's van stock at close.",
+          "result": "The stock ledger and the vehicle agree at month end."
+        },
+        {
+          "h": "The invoice goes out the same evening",
+          "workflow": "An out-of-warranty repair closes with labour and spares on the card and becomes a GST service invoice without retyping.",
+          "result": "Billing stops waiting for paperwork."
+        },
+        {
+          "h": "A disputed visit is settled in a minute",
+          "workflow": "The customer says nobody came; the job card shows the check-in time, the photographs and their own signature.",
+          "result": "The conversation ends there."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams whose revenue depends on what happens on site.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment engineers",
+          "p": "Hospital visits that need photo and signature evidence."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and diagnostics support",
+          "p": "Calibration and QC readings recorded per analyser."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial maintenance teams",
+          "p": "Plant visits where spares consumption is the main cost."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services engineers",
+          "p": "Lift and HVAC visits with statutory checklists."
+        },
+        {
+          "icon": "&#128663;",
+          "b": "Van-stock service businesses",
+          "p": "Engineers carrying their own parts between calls."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Paper, a photo in a group, or a job card app.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the visit is recorded",
+          "Paper slip, photographed",
+          "A note on a case",
+          "Structured job card on the phone"
+        ],
+        [
+          "Works without signal",
+          "Yes, on paper",
+          "Usually not",
+          "Offline capture with later sync"
+        ],
+        [
+          "Spares consumption",
+          "Not recorded",
+          "Not linked to stock",
+          "Drops van stock on close"
+        ],
+        [
+          "Customer signature",
+          "On the slip",
+          "No",
+          "Captured on the device with time and place"
+        ],
+        [
+          "Turns into an invoice",
+          "Retyped",
+          "No",
+          "Service invoice from the closed card"
+        ],
+        [
+          "History for the next visit",
+          "In a file somewhere",
+          "Partial",
+          "Full service history per serial on the app"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Mobile job cards, answered.",
+      "items": [
+        {
+          "q": "What happens if the engineer has no internet on site?",
+          "a": "The job card is completed offline on the device, including photographs and the signature, and syncs to the office when the phone reconnects. This is normal in hospital basements and shielded imaging rooms."
+        },
+        {
+          "q": "Does recording a spare part reduce stock?",
+          "a": "Yes. Spares picked on the job card come out of the engineer's van stock when the job is closed and appear in the stock movements ledger, so consumption and reordering are based on real usage."
+        },
+        {
+          "q": "Can the job card include a checklist?",
+          "a": "Yes. Preventive maintenance visits carry the checklist for that equipment, and calibration entries and readings are recorded against the serial number. See <a href=\"/aura-business/preventive-maintenance-software/\">preventive maintenance</a>."
+        },
+        {
+          "q": "Is the customer signature legally useful?",
+          "a": "It is evidence of the visit and of the work accepted, captured with the time and the site. We do not offer legal advice on its evidentiary weight; confirm that with your own adviser if it matters to a contract."
+        },
+        {
+          "q": "Can the customer get a copy of the report?",
+          "a": "Yes. A service report is generated from the completed card with the work done, spares and signature, and can be shared with the customer from the platform."
+        },
+        {
+          "q": "Which phones does the app run on?",
+          "a": "The field app is built on React Native and runs on Android and iOS, with GPS and offline mode. See <a href=\"/mobile-app-development/medical-equipment-service-app/\">the service app</a> for how it is built."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "The full FSM suite."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128506;",
+          "b": "Dispatch",
+          "p": "How the job reaches the engineer."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128241;",
+          "b": "Technician tracking",
+          "p": "GPS, attendance and visits."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spare parts",
+          "p": "Van stock and consumption."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "History per serial number."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A field app shipped in 30 days."
+        }
+      ]
+    }
+  ]
+}

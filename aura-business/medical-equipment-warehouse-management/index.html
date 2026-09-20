@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Medical Equipment Warehouse Management Software | Aura</title>
+<meta name="description" content="Warehouse management for medical equipment: multiple godowns and van stock, a full movements ledger, documented transfers and physical verification.">
+<link rel="canonical" href="https://elevateaura.co.in/aura-business/medical-equipment-warehouse-management/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aura Business by Elevate Aura">
+<meta property="og:title" content="Medical Equipment Warehouse Management Software | Aura">
+<meta property="og:description" content="Warehouse management for medical equipment: multiple godowns and van stock, a full movements ledger, documented transfers and physical verification.">
+<meta property="og:url" content="https://elevateaura.co.in/aura-business/medical-equipment-warehouse-management/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medical Equipment Warehouse Management Software | Aura">
+<meta name="twitter:description" content="Warehouse management for medical equipment: multiple godowns and van stock, a full movements ledger, documented transfers and physical verification.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aura-business/biz.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Aura Business", "item": "https://elevateaura.co.in/aura-business.html"}, {"@type": "ListItem", "position": 3, "name": "Warehouse Management", "item": "https://elevateaura.co.in/aura-business/medical-equipment-warehouse-management/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Aura Business Warehouse Management", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Warehouse management for medical equipment: multiple godowns and van stock, a full movements ledger, documented transfers and physical verification.", "url": "https://elevateaura.co.in/aura-business/medical-equipment-warehouse-management/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many warehouses can we set up?", "acceptedAnswer": {"@type": "Answer", "text": "The multi-warehouse module is not limited to a fixed number. Godowns, branch stores, the service spares store and each engineer's van can all be modelled as locations, and stock is held and reported against each."}}, {"@type": "Question", "name": "Is engineer van stock really separate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Parts issued to an engineer move into their location and stay there until a job card consumes them or they are transferred back, so the shelf figure and the road figure are never mixed."}}, {"@type": "Question", "name": "Can we track serial numbers by location?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Serial and unit-level stock means a specific machine is known to be in a specific location, which also feeds the installed-base register once it is sold. See installed base."}}, {"@type": "Question", "name": "What happens during physical verification?", "acceptedAnswer": {"@type": "Answer", "text": "Counts are entered per location and compared with the book figure. Differences are posted as adjustments with a reason and a user against them, so the ledger explains the correction rather than hiding it."}}, {"@type": "Question", "name": "Do reorder alerts work per warehouse?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, which is the point of them. A branch can be below its reorder level while the company total looks comfortable, and the alert fires for that location. See purchase orders and GRN."}}, {"@type": "Question", "name": "How does stock leave for a customer?", "acceptedAnswer": {"@type": "Answer", "text": "On a delivery challan, which reduces the despatching location and can then be converted to a tax invoice. See delivery challan software."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Aura Business, the operations platform</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20warehouse%20management%20software%20for%20our%20equipment%20stock." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aura-business.html">Aura Business</a></li>
+  <li><span aria-current="page">Warehouse Management</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="d"></span>For dealers with more than one godown</span>
+      <h1>Warehouse management that knows which <span class="hl">location</span> the stock is actually in.</h1>
+      <p class="sub">Aura Business treats every godown, branch and engineer van as its own stock location, records every movement in a ledger, moves goods between locations on documented transfers, and supports physical verification against the book figure.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/contact.html">Book a Free Strategy Call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="/demo/aura-business.html">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20warehouse%20management%20software%20for%20our%20equipment%20stock." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Multi-warehouse and engineer van stock</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Every movement in one ledger</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Transfers and physical verification</span></div>
+      
+    </div>
+    <div><div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span>app.elevateaura.co.in/inventory</span></div><img src="/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png" alt="Aura Business inventory screen showing stock by warehouse location with movements and transfer entries" width="1680" height="945"></div></div>
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What warehouse management adds to plain stock counting</h2>
+    </div>
+    <div class="ans rv"><p>Plain inventory tells you how many of an item you own. Warehouse management tells you where each one is, how it got there and who moved it. That distinction becomes urgent the moment you have a main godown, a branch, and engineers carrying parts in their vehicles, because the total on hand is then spread across locations that can each run out independently.</p><p>Aura Business handles this in the Inventory and Warehouse suite. Multi-Warehouse gives each location its own stock, Stock Movements and Ledger records every receipt, issue, transfer and adjustment with a reason and a user, and transfers move goods between locations as documented events rather than as an edited number.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Where stock goes missing</span>
+      <h2 class="h2">Stock does not usually disappear. It stops being findable.</h2>
+      <p class="lead">A single stock figure across several locations is worse than no figure, because people trust it and then act on it.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>One number for three godowns</h3><p>The system says twelve are available; four are at the branch, six are in vans and only two are where the order is being picked.</p></div><div class="pain rv d1"><h3>Van stock is invisible</h3><p>Engineers carry parts worth a serious amount and none of it appears anywhere until it is used or lost.</p></div><div class="pain rv d2"><h3>Transfers by phone call</h3><p>Goods move between branches on a verbal request and neither side's records change.</p></div><div class="pain rv"><h3>Adjustments without reasons</h3><p>Somebody corrects a quantity to match the shelf and there is no record of what was corrected or why.</p></div><div class="pain rv d1"><h3>Physical verification takes a week</h3><p>Counting is done on paper, differences are argued about, and the book figure is overwritten rather than explained.</p></div><div class="pain rv d2"><h3>Reorder alerts fire on the wrong total</h3><p>A location is empty while the company-wide figure looks healthy, so nothing is reordered until an order fails.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How stock is controlled</span>
+      <h2 class="h2">Goods in, goods between, goods out, goods counted.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Locations defined</h4><p>Main godown, branches, service store and each engineer's van set up as stock locations.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Receipt</h4><p>Goods receipt against a purchase order stocks the item into a named location.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Put away</h4><p>Serial or batch recorded against the item, with barcode or QR scan where used.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Transfer</h4><p>Movement between locations raised as a transfer, despatched and acknowledged on receipt.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Issue</h4><p>Stock leaves on a delivery challan for a sale, or onto a job card for a service visit.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Verification</h4><p>Physical count entered per location, differences recorded as reasoned adjustments.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">07</div><h4>Ledger</h4><p>Every one of those events remains queryable per item, per location, per user.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The Inventory and Warehouse modules that apply here.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#127970;</span>Locations</h3><ul><li>Multi-warehouse stock</li><li>Branch and service store locations</li><li>Engineer van stock</li><li>Asset transfers between sites</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128203;</span>Movement control</h3><ul><li>Stock movements and ledger</li><li>Inter-location transfers with acknowledgement</li><li>Reasoned adjustments with an audit trail</li><li>Delivery challan for goods leaving</li></ul></div><div class="capg rv"><h3><span class="k">&#128290;</span>Identification</h3><ul><li>Serial and unit-level stock</li><li>Batch and expiry tracking on consumables</li><li>Barcode and QR scan</li><li>Product catalogue and lookup</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128276;</span>Replenishment</h3><ul><li>Low-stock and reorder alerts per location</li><li>Purchase orders raised from the shortfall</li><li>Goods receipt (GRN) into the right godown</li><li>Supplier price lists</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/modules.html">See all 87 modules across 12 suites <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Four warehouse problems that stop repeating.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>An order is picked from the right place</h3><p class="r"><b>Workflow:</b> The sales order shows availability per location, so the picker knows the units are at the branch and raises a transfer rather than promising a delivery date.</p><p><b>Result:</b> No order confirmed against stock that is elsewhere.</p></div><div class="u rv d1"><h3>Van stock is accounted for</h3><p class="r"><b>Workflow:</b> Parts issued to an engineer sit in their van location until a job card consumes them or a transfer returns them.</p><p><b>Result:</b> Every part is somewhere, on the record.</p></div><div class="u rv"><h3>A transfer cannot be denied</h3><p class="r"><b>Workflow:</b> Goods sent between branches leave one location on despatch and only enter the other on acknowledgement, with both entries in the ledger.</p><p><b>Result:</b> In-transit stock is visible instead of disputed.</p></div><div class="u rv d1"><h3>The annual count produces answers</h3><p class="r"><b>Workflow:</b> Counts are entered per location and differences are recorded as adjustments with reasons rather than silently overwritten.</p><p><b>Result:</b> You learn where the shrinkage happens.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Businesses holding stock in more than one place.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Medical equipment distributors</b><p>Capital units, spares and consumables across godowns.</p></div><div class="w"><div class="g">&#128300;</div><b>Consumables and reagent dealers</b><p>High-volume stock with batch and expiry per location.</p></div><div class="w"><div class="g">&#127981;</div><b>Importers and national distributors</b><p>A central warehouse feeding regional branches.</p></div><div class="w"><div class="g">&#128736;</div><b>Service companies</b><p>A spares store plus stock in every engineer's vehicle.</p></div><div class="w"><div class="g">&#9881;</div><b>Industrial and electrical dealers</b><p>The same problem with different goods.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">One stock column, an accounts ledger, or real locations.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Spreadsheets and WhatsApp</div><div>Accounting software</div><div class="us">Aura Business</div></div><div class="r"><div class="cap">Stock per location</div><div>One column for everything</div><div>Sometimes, as a godown field</div><div class="us">Each godown, branch and van separately</div></div><div class="r"><div class="cap">Engineer van stock</div><div>Not tracked</div><div>Not tracked</div><div class="us">A location that job cards consume from</div></div><div class="r"><div class="cap">Transfers</div><div>A phone call</div><div>A journal entry</div><div class="us">Despatch and acknowledgement, both logged</div></div><div class="r"><div class="cap">Why a quantity changed</div><div>Unknown</div><div>Voucher narration</div><div class="us">Movement ledger with reason and user</div></div><div class="r"><div class="cap">Reorder alerts</div><div>Manual review</div><div>Company-wide</div><div class="us">Per location, feeding a purchase order</div></div><div class="r"><div class="cap">Physical verification</div><div>Paper count</div><div>Manual correction</div><div class="us">Count per location with reasoned adjustments</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Warehouse management, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>How many warehouses can we set up?</summary><p>The multi-warehouse module is not limited to a fixed number. Godowns, branch stores, the service spares store and each engineer's van can all be modelled as locations, and stock is held and reported against each.</p></details><details><summary>Is engineer van stock really separate?</summary><p>Yes. Parts issued to an engineer move into their location and stay there until a job card consumes them or they are transferred back, so the shelf figure and the road figure are never mixed.</p></details><details><summary>Can we track serial numbers by location?</summary><p>Yes. Serial and unit-level stock means a specific machine is known to be in a specific location, which also feeds the installed-base register once it is sold. See <a href="/aura-business/installed-base-management-software/">installed base</a>.</p></details><details><summary>What happens during physical verification?</summary><p>Counts are entered per location and compared with the book figure. Differences are posted as adjustments with a reason and a user against them, so the ledger explains the correction rather than hiding it.</p></details><details><summary>Do reorder alerts work per warehouse?</summary><p>Yes, which is the point of them. A branch can be below its reorder level while the company total looks comfortable, and the alert fires for that location. See <a href="/aura-business/purchase-order-grn-software/">purchase orders and GRN</a>.</p></details><details><summary>How does stock leave for a customer?</summary><p>On a delivery challan, which reduces the despatching location and can then be converted to a tax invoice. See <a href="/aura-business/delivery-challan-software/">delivery challan software</a>.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related Aura Business software</h2></div>
+    <div class="who rv"><a class="w" href="/aura-business/medical-equipment-inventory-software/"><div class="g">&#128230;</div><b>Inventory software</b><p>The full stock suite.</p></a><a class="w" href="/aura-business/batch-expiry-tracking-software/"><div class="g">&#8986;</div><b>Batch and expiry</b><p>Consumables with a shelf life.</p></a><a class="w" href="/aura-business/medical-spare-parts-inventory-software/"><div class="g">&#128736;</div><b>Spare parts</b><p>Service stock and van stock.</p></a><a class="w" href="/aura-business/purchase-order-grn-software/"><div class="g">&#128221;</div><b>Purchase and GRN</b><p>How goods arrive.</p></a><a class="w" href="/aura-business/delivery-challan-software/"><div class="g">&#128666;</div><b>Delivery challan</b><p>How goods leave.</p></a><a class="w" href="/compare/spreadsheets-vs-distributor-software/"><div class="g">&#9878;</div><b>Spreadsheets vs software</b><p>When Excel stock breaks.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/contact.html">Book a Free Strategy Call</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20warehouse%20management%20software%20for%20our%20equipment%20stock." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Aura Business by Elevate Aura</h4>
+        <p class="b">The operations platform for distributors, dealers and field-service businesses. CRM, service, AMC, inventory and GST billing in one system.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Aura Business</h4>
+        <a href="/aura-business.html">Aura Business home</a>
+        <a href="/aura-business/medical-equipment-crm-software/">Medical Equipment CRM</a><a href="/aura-business/medical-equipment-field-service-software/">Field Service</a><a href="/aura-business/medical-equipment-amc-cmc-software/">AMC / CMC</a><a href="/aura-business/medical-equipment-inventory-software/">Inventory</a><a href="/aura-business/medical-equipment-billing-software/">Billing</a><a href="/modules.html">All 87 modules</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

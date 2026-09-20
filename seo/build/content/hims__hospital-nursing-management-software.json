@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-nursing-management-software",
+  "title": "Hospital Nursing Management Software | Charts, Handover | HIMS",
+  "meta": "Hospital nursing management software: vitals and charts per bed, handover on the record, medication recorded against the patient, tasks from doctor orders.",
+  "h1": "Hospital nursing management software that keeps the <span class=\"hl\">chart, the handover and the drug given</span> on the bed.",
+  "crumb": "Nursing Management Software",
+  "pill": "For nursing in-charges and ward sisters",
+  "sub": "HIMS gives the ward its own working view of the patient record: vitals and nursing charts against each bed, tasks raised by doctor orders, what was administered and when, and a handover the next shift can actually read.",
+  "meta_ticks": [
+    "Vitals and charts per bed",
+    "Tasks raised from doctor orders",
+    "Handover written on the record"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/icu.png",
+    "alt": "HIMS ward view showing live vitals recorded against each occupied bed",
+    "bar": "his.elevateaura.co.in/icu"
+  },
+  "whatsapp_text": "Hi, I'd like to see how nursing works in HIMS for our wards.",
+  "primary_keyword": "hospital nursing management software",
+  "secondary_keywords": [
+    "nursing software for hospitals",
+    "nursing charting software India",
+    "ward management software",
+    "nursing handover software",
+    "medication administration record software",
+    "nursing notes software"
+  ],
+  "intent": "commercial",
+  "persona": "Nursing superintendent, ward in-charge or hospital owner moving ward paperwork off the clipboard",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What nursing management means inside HIMS",
+      "paras": [
+        "Nursing in HIMS is not sold as a separate product. It is the ward-facing half of the same patient record the doctor writes in: the nurse opens the bed, sees the orders raised that morning, records vitals and observations on the chart, notes what was administered, and leaves a handover entry for the next shift. Everything lands on the admission, not on a clipboard that stays at the nurses station.",
+        "That single-record design is the whole point. When a consultant changes a drug at eleven in the morning, the ward sees the change the moment it is written. When the shift turns over at eight, the incoming nurse reads what the outgoing nurse recorded rather than what she remembers. In ICU the same chart carries live vitals per bed, so the sickest patients are documented in the same structure as the rest of the hospital."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What the ward actually struggles with",
+      "h2": "The ward runs on memory, paper and a second phone call.",
+      "lead": "Nursing is usually the best documented part of a hospital and the least shared.",
+      "items": [
+        {
+          "h": "Orders that arrive verbally",
+          "p": "A drug or an investigation is changed during the round and reaches the ward as a spoken instruction with nothing written behind it."
+        },
+        {
+          "h": "Charts that stay at the bed",
+          "p": "Vitals sit on a folder hanging off the cot, so the doctor at home cannot see the trend."
+        },
+        {
+          "h": "Handover done from memory",
+          "p": "Shift change happens in a corridor. What was pending, what was refused and what is due in an hour gets passed along verbally."
+        },
+        {
+          "h": "Drugs given, not recorded",
+          "p": "The dose is administered on time and written up later, so the record and the pharmacy issue slip disagree at discharge."
+        },
+        {
+          "h": "The discharge summary starts from nothing",
+          "p": "A week of nursing observations never reaches the summary because it was never in the system."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A nursing shift in HIMS",
+      "h2": "From taking over the ward to handing it back.",
+      "steps": [
+        {
+          "h": "Open the ward",
+          "p": "The bed view shows every occupied bed, the patient on it and what is due."
+        },
+        {
+          "h": "Read the handover",
+          "p": "The previous shift's entries are on each admission, in order."
+        },
+        {
+          "h": "Tasks from orders",
+          "p": "Drug, investigation and observation orders written by the doctor appear against the patient."
+        },
+        {
+          "h": "Chart the round",
+          "p": "Vitals, intake and output and observations are recorded on the nursing chart."
+        },
+        {
+          "h": "Record administration",
+          "p": "What was given, when and by whom is logged against the patient, not on a loose sheet."
+        },
+        {
+          "h": "Hand over",
+          "p": "The closing note goes on the record and the next shift opens it, not a notebook."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the ward gets",
+      "h2": "Nursing workflows that sit inside the record.",
+      "groups": [
+        {
+          "icon": "&#128202;",
+          "h": "Charting",
+          "items": [
+            "Vitals against the bed",
+            "Nursing notes and observations",
+            "Intake and output entries",
+            "Live vitals per bed in ICU"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Medication",
+          "items": [
+            "The doctor's e-prescription on the record",
+            "Administration recorded against the patient",
+            "Drugs issued from the pharmacy queue",
+            "Consumables drawn from inventory"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Shift work",
+          "items": [
+            "Tasks raised by doctor orders",
+            "Handover entries by shift",
+            "Bed and ward view of who is where",
+            "Transfers between wards on the same record"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access for nursing staff",
+            "Every entry attributed and timed",
+            "Supports NABH-style documentation",
+            "Audit trail on the admission"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-ipd-management-software/",
+        "label": "See the full IPD workflow"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments the ward will recognise.",
+      "items": [
+        {
+          "h": "A drug changed on the round",
+          "workflow": "The consultant edits the prescription on the record and the ward sees the new order against that bed straight away.",
+          "result": "Nobody works from a verbal instruction."
+        },
+        {
+          "h": "Eight o'clock shift change",
+          "workflow": "The outgoing nurse closes her entries and the incoming nurse opens the same admissions with the handover already written.",
+          "result": "The corridor briefing stops being the record."
+        },
+        {
+          "h": "A duty doctor called at night",
+          "workflow": "He opens the patient and reads the vitals charted through the evening before walking up to the ward.",
+          "result": "He arrives already knowing the picture."
+        },
+        {
+          "h": "Discharge day",
+          "workflow": "The summary is written from a record that already holds a week of nursing charts and administration entries.",
+          "result": "Nothing has to be reconstructed."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any facility with beds and more than one shift.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several wards, several shifts, one chart standard."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Small teams where the handover cannot depend on one person."
+        },
+        {
+          "icon": "&#128567;",
+          "b": "Intensive care",
+          "p": "Live vitals per bed in the same structure as the wards."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Duty medical officers",
+          "p": "A readable trend before walking to the bed."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality coordinators",
+          "p": "Nursing documentation that is attributed and timed."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Ward documentation, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Where the chart lives",
+          "Folder at the bed",
+          "Not covered",
+          "On the admission, readable anywhere"
+        ],
+        [
+          "How orders reach the ward",
+          "Spoken or handwritten",
+          "Not covered",
+          "Raised as tasks from the doctor's order"
+        ],
+        [
+          "Shift handover",
+          "Corridor briefing",
+          "Not covered",
+          "Written entries by shift on the record"
+        ],
+        [
+          "Drug administration",
+          "Written up later",
+          "Issue slip only",
+          "Logged against the patient with time and user"
+        ],
+        [
+          "Feeds the summary",
+          "Retyped",
+          "No",
+          "Already on the record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Nursing in HIMS, answered.",
+      "items": [
+        {
+          "q": "Is nursing a separate module we have to buy?",
+          "a": "No. Nursing workflows are part of the clinical record in HIMS, alongside the doctor's side of it. The ward gets its own view of the same admission rather than a second system to log into. See the <a href=\"/hims/hospital-management-system/\">hospital management system</a> page."
+        },
+        {
+          "q": "Can nurses record vitals against a bed?",
+          "a": "Yes. Vitals and observations are charted against the patient occupying the bed, and in ICU the same structure carries live vitals per bed. The ward view shows which beds are occupied and by whom."
+        },
+        {
+          "q": "How does the ward know what the doctor ordered?",
+          "a": "Orders written in the record, including the e-prescription, appear against the patient in the ward, so nursing works from the written order rather than an instruction passed on during the round."
+        },
+        {
+          "q": "Is medication administration recorded?",
+          "a": "What was administered is recorded against the patient with the time and the user who entered it, on the same record the prescription sits on. The pharmacy side of the drug, dispensing and stock, is handled in the <a href=\"/hims/hospital-pharmacy-management/\">pharmacy module</a>."
+        },
+        {
+          "q": "Does this help with NABH documentation?",
+          "a": "Nursing entries are structured, attributed and timed, which is what NABH-style documentation asks for. The accreditation decision itself rests with the assessing body and looks at how your hospital works, not at which software produced the notes."
+        },
+        {
+          "q": "Will nurses actually use it on a busy shift?",
+          "a": "The ward view is built around beds rather than menus, so charting a round is a short sequence of entries. Training at your own front desk and ward is part of the setup, and the system is scoped to go live in 30 working days where scope allows."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128716;",
+          "b": "Bed management",
+          "p": "Ward and bed occupancy."
+        },
+        {
+          "href": "/hims/icu-management-software/",
+          "icon": "&#128567;",
+          "b": "ICU software",
+          "p": "Live vitals per bed."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "The clinical record itself."
+        },
+        {
+          "href": "/hims/e-prescription-software/",
+          "icon": "&#128138;",
+          "b": "e-Prescription",
+          "p": "From consultation to dispensing."
+        }
+      ]
+    }
+  ]
+}

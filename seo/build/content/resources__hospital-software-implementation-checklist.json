@@ -1,0 +1,233 @@
+{
+  "cluster": "resources",
+  "slug": "hospital-software-implementation-checklist",
+  "title": "Hospital Software Implementation Checklist for Go-Live",
+  "meta": "A practical hospital software implementation checklist: data to prepare, the order to switch departments on, training per counter and what to test.",
+  "h1": "Hospital software implementation checklist: <span class=\"hl\">what to do before go-live day</span>.",
+  "crumb": "Implementation checklist",
+  "pill": "Guide",
+  "sub": "Most hospital software problems are implementation problems, not product problems. This is the sequence that works: the data you prepare, the order departments go live in, who is trained at which counter, what you test, and what has to be ready on the first morning.",
+  "meta_ticks": [
+    "Written from real rollouts",
+    "Ordered, not a feature list",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See the hospital management system",
+  "cta_href": "/hims/hospital-management-system/",
+  "whatsapp_text": "Hi, I read the implementation checklist and want to discuss a rollout for our hospital.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "hospital software implementation checklist",
+  "secondary_keywords": [
+    "hospital management system implementation",
+    "HIS go live checklist",
+    "hospital software data migration",
+    "hospital software training plan",
+    "how to implement hospital software"
+  ],
+  "intent": "informational",
+  "persona": "Hospital owner or administrator preparing to roll out a hospital management system",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Implementation in two paragraphs",
+      "paras": [
+        "A hospital software implementation is the work between signing and the first patient registered on the new system: preparing the data the software will run on, deciding which departments go live in which order, training each counter on its own screens, testing the flows that involve money and medicine, and arranging cover for the first week. The software is usually ready before the hospital is.",
+        "The pattern that fails is switching everything on for every department on a Monday morning with a demonstration instead of training. The pattern that works is a small first phase, real data, training at the counter, and a deliberate plan for the first three days."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step one",
+      "h2": "Prepare the data before anything is configured",
+      "lead": "Nearly every delay traces back to data that was promised in a week and arrived in a month, or arrived and was wrong.",
+      "body": [
+        "Start collecting these the day the project begins, because they come from different people and one of them is always on leave.",
+        {
+          "ul": [
+            "<b>Patient list.</b> Name, mobile number, date of birth or age, sex, address, and the existing registration number if you have one. Deduplicate before it is loaded, not after.",
+            "<b>Service and tariff master.</b> Every consultation, procedure, bed category, package and investigation with its rate, and the rates that differ by payer.",
+            "<b>Pharmacy and consumable items.</b> Item names, units, batch and expiry practice, suppliers and reorder levels.",
+            "<b>Laboratory test master.</b> Test names, sample types, reference ranges and which tests are outsourced.",
+            "<b>Doctors and staff.</b> Names, departments, consulting days, roles and what each role is allowed to see.",
+            "<b>Wards and beds.</b> Ward names, bed numbers, categories and current occupancy.",
+            "<b>Payers.</b> Insurers, TPAs and corporate accounts you deal with, and which of them you are in network with.",
+            "<b>Documents.</b> Your invoice format, GST details, discharge summary and prescription layouts, and the logo file."
+          ]
+        },
+        "One person in the hospital owns this list and signs off each item. If the tariff master is still in three spreadsheets a week before go-live, the go-live date is wrong, and moving it is cheaper than discovering it at the counter."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step two",
+      "h2": "Switch departments on in an order that makes sense",
+      "body": [
+        "Go live where the hospital feels the benefit immediately and where mistakes are visible the same day. Later phases attach to the same patient record, so nothing is migrated twice.",
+        {
+          "table": {
+            "headers": [
+              "Phase",
+              "What goes live",
+              "Why here"
+            ],
+            "rows": [
+              [
+                "1",
+                "Registration, UHID, appointments and tokens",
+                "Everything else hangs off the patient record; get it right before volume arrives."
+              ],
+              [
+                "2",
+                "OP consultation, EMR and e-prescription",
+                "The doctor's screen is the hardest habit to change, so it gets its own phase."
+              ],
+              [
+                "3",
+                "Pharmacy and billing",
+                "Money and medicine, where errors show up the same day and can be corrected."
+              ],
+              [
+                "4",
+                "Laboratory and imaging",
+                "Orders now flow from a consultation that is already on the system."
+              ],
+              [
+                "5",
+                "Wards, beds, theatre and ICU",
+                "Inpatient work depends on registration, pharmacy and billing already being steady."
+              ],
+              [
+                "6",
+                "Insurance, TPA claims and corporate credit",
+                "Claims are only as good as the itemised bill from phase three."
+              ],
+              [
+                "7",
+                "Dashboards and reports",
+                "Numbers are meaningful once every counter is feeding the same record."
+              ]
+            ]
+          }
+        },
+        "A small clinic may compress this into two phases and a large hospital may stretch it over several weeks. What does not change is the order: identity, then clinical, then money, then everything that reads from them."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step three",
+      "h2": "Train per counter, and test what hurts",
+      "body": [
+        {
+          "h3": "Training belongs at the desk"
+        },
+        "A hall session is a demonstration. Training is a receptionist raising a real registration on her own screen with someone standing behind her. Run it counter by counter: registration, doctor consultation, nursing station, pharmacy, laboratory, billing and the owner's view. Each group needs only its own screens and the two things it hands to the next counter. Record the sessions, because staff join later and word of mouth teaches bad habits.",
+        {
+          "h3": "What to test before go-live"
+        },
+        {
+          "ul": [
+            "Register a new patient, find them again by mobile number, and confirm a duplicate cannot be created silently.",
+            "Run one patient end to end: registration, token, consultation, prescription, laboratory order, result, pharmacy, bill.",
+            "Run an admission end to end: bed allocation, orders, consumables, discharge summary, final bill.",
+            "Raise a cash bill, a GST invoice and an insured or TPA bill, and check the printed formats on your own stationery.",
+            "Dispense a batch-tracked item and confirm stock and expiry behave as expected.",
+            "Check role-based access by logging in as each role and looking for what that role should not see.",
+            "Print everything a patient leaves with: bill, prescription, report, discharge summary."
+          ]
+        },
+        {
+          "h3": "Day one"
+        },
+        {
+          "ul": [
+            "Go live on a working day with normal volume, not a Sunday, so real problems appear while help is present.",
+            "Extra staff on the counters for the first three days, and a named person per shift who answers questions.",
+            "The old registers kept in parallel for a short, fixed period, with an agreed date they stop.",
+            "Printers, stationery, barcode scanners and logins tested the evening before, not on the morning.",
+            "A written escalation route, which for Elevate Aura customers is WhatsApp and remote support with the founder.",
+            "A review at the end of week one to fix the small irritations while everyone still remembers them."
+          ]
+        },
+        "Elevate Aura's framework is live in 30 working days where scope allows, with scope fixed at the start. Data migration, branding, training and the first week of hand-holding sit inside that window. See <a href=\"/hims/hospital-management-system/\">the hospital management system</a> and <a href=\"/resources/how-to-choose-hospital-management-software/\">how to choose hospital software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Implementation questions, answered",
+      "items": [
+        {
+          "q": "How long does a hospital software implementation take?",
+          "a": "Elevate Aura works to live in 30 working days where scope allows, with the scope fixed at the start. A single-specialty clinic sits at the shorter end; a hospital with IP, theatre, ICU and TPA billing sits at the longer end because there are more counters to configure and train."
+        },
+        {
+          "q": "Should we go live with everything at once?",
+          "a": "Rarely. Registration and the patient record first, then the clinical screens, then pharmacy and billing, then wards and claims. Later phases attach to the same record, so phasing costs nothing in rework and greatly reduces the chance of a bad first week."
+        },
+        {
+          "q": "What data do we need to supply?",
+          "a": "Patients, service and tariff master, pharmacy and consumable items, laboratory tests, doctors and staff with roles, wards and beds, payers you deal with, and your invoice, prescription and discharge formats with your logo."
+        },
+        {
+          "q": "Who trains our staff?",
+          "a": "For Elevate Aura customers, the founder who builds the system, at your counters, on your own data. Sessions can be recorded so staff who join later are taught the same way. In-person training happens in Chennai and by travel within Tamil Nadu."
+        },
+        {
+          "q": "Should we keep the paper registers running?",
+          "a": "For a short, fixed period, with an agreed date they stop. Parallel running indefinitely is how a hospital ends up maintaining two systems and trusting neither. Set the end date before go-live and hold it."
+        },
+        {
+          "q": "What happens in the first week if something goes wrong?",
+          "a": "There should be a named person per shift inside the hospital and a written escalation route outside it. Elevate Aura's support is WhatsApp and remote, usually over a screen share, from the person who built the system."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "The platform, end to end."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#9989;",
+          "b": "How to choose",
+          "p": "The buyer's checklist."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#127380;",
+          "b": "What is UHID",
+          "p": "Clean identity before go-live."
+        },
+        {
+          "href": "/resources/what-is-tpa-hospital-billing/",
+          "icon": "&#129534;",
+          "b": "What is TPA billing",
+          "p": "The phase six problem."
+        },
+        {
+          "href": "/compare/cloud-vs-on-premise-hospital-software/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Decide before you configure."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128200;",
+          "b": "MIS dashboard",
+          "p": "The last phase to switch on."
+        }
+      ]
+    }
+  ]
+}

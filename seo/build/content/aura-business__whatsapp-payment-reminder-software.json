@@ -1,0 +1,351 @@
+{
+  "cluster": "aura-business",
+  "slug": "whatsapp-payment-reminder-software",
+  "title": "WhatsApp Payment Reminder Software for Dealers | Aura",
+  "meta": "WhatsApp payment reminder software that sends outstanding reminders on a schedule, with invoice details in the message, and stops as soon as you are paid.",
+  "h1": "WhatsApp payment reminders that go out on a schedule and <span class=\"hl\">stop when you are paid</span>.",
+  "crumb": "WhatsApp Payment Reminders",
+  "pill": "For accounts teams tired of ringing",
+  "sub": "Aura Business sends outstanding-payment reminders over WhatsApp on the rhythm you set, with the invoice number, amount and due date in the message, and takes a customer off the run the moment their receipt is entered.",
+  "meta_ticks": [
+    "Reminders on a schedule you define",
+    "Invoice details inside the message",
+    "Stops automatically once paid"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer master screen showing outstanding invoices with WhatsApp reminder status against each customer",
+    "bar": "app.elevateaura.co.in/customers"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to discuss WhatsApp payment reminders for our outstanding invoices.",
+  "primary_keyword": "WhatsApp payment reminder software",
+  "secondary_keywords": [
+    "automated payment reminder software India",
+    "WhatsApp business payment reminders",
+    "outstanding payment reminder software",
+    "invoice reminder automation for distributors",
+    "collection reminder software"
+  ],
+  "intent": "commercial",
+  "persona": "Accounts executive chasing overdue invoices from hospitals and dealers",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an automated reminder run actually does",
+      "paras": [
+        "A reminder run takes every invoice that is open and due, works out which customers need contacting today under the schedule you set, and sends each one a WhatsApp message with their own invoice number, amount and due date in it. When a receipt is entered against that invoice, the customer drops off the run without anybody having to remember to stop it.",
+        "In Aura Business this is the WhatsApp Business integration in the Analytics and Platform suite, driven by the Payment Tracker and the receivables ageing in the Finance suite. It matters because most overdue payments in a distribution business are not refusals. They are invoices sitting unactioned in somebody's approval queue, and a polite message with the reference in it is usually all that moves them."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why chasing fails",
+      "h2": "Reminders are boring, repetitive, and the first thing to be skipped.",
+      "lead": "A person who has to send forty individual messages by hand will send fifteen, and will send them to whoever they remember.",
+      "items": [
+        {
+          "h": "Typed one message at a time",
+          "p": "Each reminder is written by hand with the invoice number copied across from another screen."
+        },
+        {
+          "h": "Messages without a reference",
+          "p": "A vague request for payment reaches an accounts department that handles hundreds of invoices and goes nowhere."
+        },
+        {
+          "h": "Reminders after the money arrived",
+          "p": "A customer who paid last week gets chased again and the relationship takes the damage."
+        },
+        {
+          "h": "No rhythm at all",
+          "p": "One reminder goes at ninety days, when nothing goes at seven, fourteen and thirty."
+        },
+        {
+          "h": "Sent from a personal number",
+          "p": "The follow-up history lives on one employee's phone and leaves when they do."
+        },
+        {
+          "h": "Nobody knows what was sent",
+          "p": "Two people chase the same balance and the customer hears two different things."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the run works",
+      "h2": "From an unpaid invoice to a stopped reminder.",
+      "steps": [
+        {
+          "h": "Invoice open",
+          "p": "The GST invoice sits unpaid with a due date set by the customer's credit days."
+        },
+        {
+          "h": "Schedule applied",
+          "p": "Your reminder rhythm decides which day each open invoice is contacted on."
+        },
+        {
+          "h": "Message built",
+          "p": "Invoice number, amount, due date and your business name filled into the template."
+        },
+        {
+          "h": "Sent on WhatsApp",
+          "p": "The reminder goes to the contact recorded against that customer account."
+        },
+        {
+          "h": "Logged",
+          "p": "The send is recorded against the customer so the whole team sees what went out."
+        },
+        {
+          "h": "Receipt entered",
+          "p": "Payment applied to the invoice and the balance updates in the ageing view."
+        },
+        {
+          "h": "Run stops",
+          "p": "A settled invoice drops out of the reminder run with no manual action."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The reminder engine and what it reads from.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "Sending",
+          "items": [
+            "WhatsApp Business integration",
+            "Payment tracker with reminders",
+            "Reminder schedule per stage of overdue",
+            "Contact per customer account"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "The message",
+          "items": [
+            "Invoice number, amount and due date",
+            "Your branding and business name",
+            "Link to the order tracking page",
+            "Plain language, no attachments required"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "What drives it",
+          "items": [
+            "Receivables ageing buckets",
+            "Credit days and due dates",
+            "AMC instalments and service invoices included",
+            "Distributor payment and UTR confirmation"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Control",
+          "items": [
+            "Log of every reminder sent",
+            "Stops when the receipt is applied",
+            "Customers excluded where a dispute is open",
+            "Audit trail of who changed a schedule"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things that change on the collections desk.",
+      "items": [
+        {
+          "h": "The gentle first nudge actually happens",
+          "workflow": "A reminder goes out a few days after the due date with the invoice reference, before anybody has to ring.",
+          "result": "Many invoices clear before they ever become a phone call."
+        },
+        {
+          "h": "The message reaches the right desk",
+          "workflow": "The reminder carries the invoice number, so the hospital's accounts team can locate it without ringing back for details.",
+          "result": "The approval queue moves."
+        },
+        {
+          "h": "A paid customer is left alone",
+          "workflow": "The receipt is applied in the morning and the afternoon reminder run skips that customer.",
+          "result": "No apologetic follow-up call."
+        },
+        {
+          "h": "The team sees one history",
+          "workflow": "Every reminder sent is logged against the customer alongside the ageing and the follow-up notes.",
+          "result": "Two people never chase the same balance twice."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose invoices are paid late as a matter of routine.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Hospital accounts departments with long approval chains."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables dealers",
+          "p": "Many small invoices per customer per month."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers with dealer networks",
+          "p": "Sub-dealers paying against credit limits."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service companies",
+          "p": "Contract instalments and job invoices both chased."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "Site billing that ages quietly."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Manual messages, statements by email, or a reminder run.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "How reminders are sent",
+          "Typed by a person",
+          "Email statement",
+          "Automated WhatsApp on a schedule"
+        ],
+        [
+          "Invoice details in the message",
+          "Copied by hand",
+          "Attached statement",
+          "Filled from the invoice record"
+        ],
+        [
+          "Stops when paid",
+          "Only if noticed",
+          "Next statement",
+          "Automatically, on receipt entry"
+        ],
+        [
+          "Who the message comes from",
+          "A personal number",
+          "An email alias",
+          "Your business account"
+        ],
+        [
+          "History of what was sent",
+          "One person's phone",
+          "Sent items",
+          "Logged against the customer record"
+        ],
+        [
+          "Linked to ageing",
+          "No",
+          "Report only",
+          "Driven by the ageing buckets"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "WhatsApp payment reminders, answered.",
+      "items": [
+        {
+          "q": "What does the reminder message say?",
+          "a": "A short, plain message naming your business, the invoice number, the amount outstanding and the due date, with a request to confirm payment. The wording is set up for you during onboarding and is not written fresh each time."
+        },
+        {
+          "q": "Will a customer who has paid still be chased?",
+          "a": "No. Reminders are driven by the open balance, so once the receipt is applied against the invoice the customer leaves the run. This is why applying receipts promptly matters more than the reminders themselves."
+        },
+        {
+          "q": "How often are reminders sent?",
+          "a": "On the schedule you choose, typically a light first reminder shortly after the due date and firmer ones as the balance ages. Different schedules can be used for different kinds of customers."
+        },
+        {
+          "q": "Can we stop reminders for one customer?",
+          "a": "Yes. A customer or a single invoice can be excluded, which is what you want when a dispute is open or a payment plan has been agreed, and the exclusion is recorded."
+        },
+        {
+          "q": "Does this need WhatsApp Business?",
+          "a": "Messages are sent through the WhatsApp Business integration so they come from your business account rather than a personal number. The account setup is done with you during implementation."
+        },
+        {
+          "q": "Are AMC instalments reminded as well?",
+          "a": "Yes. Any open invoice can enter the run, including contract instalments and service invoices. See <a href=\"/aura-business/receivables-ageing-software/\">receivables ageing</a> for how the chase list is ordered."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128202;",
+          "b": "Receivables ageing",
+          "p": "Who to chase first."
+        },
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "Where invoices are raised."
+        },
+        {
+          "href": "/aura-business/helpdesk-ticketing-equipment-dealers/",
+          "icon": "&#127915;",
+          "b": "Helpdesk",
+          "p": "When a reminder raises a query."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Dealer payments and UTR."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128200;",
+          "b": "Dashboard",
+          "p": "Collections at a glance."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "Payment tracking shipped in 30 days."
+        }
+      ]
+    }
+  ]
+}

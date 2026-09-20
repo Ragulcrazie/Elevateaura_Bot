@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "software-for-medical-device-importers",
+  "title": "Software for Medical Device Importers | Aura Business",
+  "meta": "Software for medical device importers: principal authorisations, consignment cost build-up, stock in transit, sub-dealer appointment and interstate despatch.",
+  "h1": "Software for medical device importers, from the <span class=\"hl\">consignment to the sub-dealer</span>.",
+  "crumb": "Medical Device Importers",
+  "pill": "For importers and national distributors",
+  "sub": "Aura Business fits the importer's shape: authorisations held from overseas principals, a consignment whose true cost is more than the supplier invoice, stock that is bought before it arrives, and a sub-dealer network that has to be appointed, priced and supplied across states.",
+  "meta_ticks": [
+    "Brand authorisation per principal and territory",
+    "Consignment cost build-up and in-transit stock",
+    "Sub-dealer portal and interstate despatch"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we import medical devices and appoint sub-dealers. I'd like to see how Aura Business handles consignments and the dealer network.",
+  "primary_keyword": "software for medical device importers",
+  "secondary_keywords": [
+    "medical device import distribution software",
+    "importer ERP for medical devices India",
+    "sub-dealer network management software",
+    "landed cost software for importers",
+    "national distributor software medical devices"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a company that imports medical devices under principal agreements and distributes them through state-level sub-dealers",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What importing changes about distribution software",
+      "paras": [
+        "An importer buys in consignments, not in small top-up orders. Money leaves months before revenue arrives, a shipment exists as committed stock long before it can be sold, and the cost of a unit is the supplier invoice plus freight, duty, clearing and inland movement rather than the invoice alone. Software for medical device importers has to hold that cost build-up, hold the stock that is in transit, and still price a quote today from a number that is honest.",
+        "The other half is the channel. You hold authorisation from a principal for particular brands, product lines and territories, and you pass parts of it on when you appoint sub-dealers. Aura Business records the authorisations, gives each sub-dealer its own price list and order portal, and despatches interstate with the tax invoice, delivery challan and e-way bill raised together."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The importer's problems",
+      "h2": "Cost, timing and a channel you cannot see into.",
+      "lead": "These are not the problems of a local trader buying from a domestic principal. They come from distance, from consignment sizes and from selling through other people.",
+      "items": [
+        {
+          "h": "Cost known too late",
+          "p": "Quotes go out on the supplier invoice price, and the clearing and freight costs arrive weeks later to reveal what the margin really was."
+        },
+        {
+          "h": "Stock that exists but is not here",
+          "p": "A shipment has left the principal and is committed to two customers, but there is nowhere to record it, so sales is told there is nothing."
+        },
+        {
+          "h": "Authorisation boundaries blurred",
+          "p": "A sub-dealer quotes outside its territory or outside the brands it holds, and the principal hears about it before you do."
+        },
+        {
+          "h": "Serial numbers lost on arrival",
+          "p": "Units arrive with serials on a packing list, and by the time they reach a hospital nobody can say which serial went where."
+        },
+        {
+          "h": "Interstate paperwork rushed",
+          "p": "Despatches to another state need the invoice, challan and e-way bill to agree, and they are assembled by hand at the last minute."
+        },
+        {
+          "h": "No read on sell-through",
+          "p": "You know what you sold to sub-dealers. You do not know what they sold on, so the next consignment is ordered blind."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the principal's proforma to a hospital in another state.",
+      "steps": [
+        {
+          "h": "Hold the authorisation",
+          "p": "Each principal is a supplier record with the brands, product lines and territories you are authorised for, and the documents in the vault."
+        },
+        {
+          "h": "Order the consignment",
+          "p": "A purchase order goes to the principal through the approval workflow, against the principal's price list."
+        },
+        {
+          "h": "Track it in transit",
+          "p": "The shipment sits as an in-transit warehouse location, so committed stock is visible to sales before it lands."
+        },
+        {
+          "h": "Receive and cost",
+          "p": "Goods receipt records serials and batches, and the additional costs of the consignment are added so the stock carries its real cost."
+        },
+        {
+          "h": "Appoint and price",
+          "p": "Sub-dealers are created as distributor accounts with their own authorised product list and agreed prices on the portal."
+        },
+        {
+          "h": "Despatch across states",
+          "p": "Sales order to tax invoice with the correct interstate tax treatment, delivery challan and e-way bill, and an order tracking page for the dealer."
+        },
+        {
+          "h": "Watch the channel",
+          "p": "Payments by UTR, receivables ageing per dealer, and analytics by product line feed the next consignment decision."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for buying far away and selling through others.",
+      "groups": [
+        {
+          "icon": "&#128674;",
+          "h": "Procurement and arrival",
+          "items": [
+            "Supplier master for each overseas principal",
+            "Purchase orders and PO approval workflow",
+            "Supplier price lists driving the catalogue",
+            "Goods receipt with serials and batches",
+            "Multi-warehouse, including an in-transit location",
+            "Supplier payables against each consignment"
+          ]
+        },
+        {
+          "icon": "&#127981;",
+          "h": "Brand and authorisation",
+          "items": [
+            "Brand and authorisation per product line and territory",
+            "Document vault for authorisation letters and certificates",
+            "Rate contracts where a hospital group buys direct",
+            "Territory management across the dealer network"
+          ]
+        },
+        {
+          "icon": "&#127970;",
+          "h": "The dealer network",
+          "items": [
+            "Distributor and B2B order portal per sub-dealer",
+            "Distributor payment and UTR confirmation",
+            "Order tracking page for every despatch",
+            "Branded login and docs vault",
+            "Receivables ageing per dealer"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Despatch and compliance",
+          "items": [
+            "GST tax invoice with gapless numbering",
+            "Interstate tax treatment on the invoice",
+            "Delivery challan and e-way bill",
+            "E-invoice with IRN and QR",
+            "Credit notes and returns"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "A consignment, followed all the way through.",
+      "items": [
+        {
+          "h": "A shipment is sold before it lands",
+          "workflow": "The consignment is on a purchase order and shown in the in-transit location, so a rep can commit a unit with an honest arrival expectation.",
+          "result": "Orders are taken instead of turned away."
+        },
+        {
+          "h": "The real cost reaches the quote",
+          "workflow": "Freight, clearing and inland charges are added to the consignment at goods receipt, so the stock cost reflects what the unit actually cost to land.",
+          "result": "The margin on the next quote is not a guess."
+        },
+        {
+          "h": "A new sub-dealer starts ordering",
+          "workflow": "The dealer is created with its authorised product list and price list, given a branded portal login, and places its first order with a UTR reference.",
+          "result": "No onboarding by chat, and no re-keying."
+        },
+        {
+          "h": "A serial is traced back to the box it arrived in",
+          "workflow": "A device comes back for service; its serial links to the goods receipt, the dealer it went to and the hospital that installed it.",
+          "result": "A warranty claim to the principal that can be evidenced."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Companies that stand between a foreign principal and an Indian buyer.",
+      "items": [
+        {
+          "icon": "&#127758;",
+          "b": "Exclusive country importers",
+          "p": "One principal, national rights, a dealer network to build."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Multi-principal importers",
+          "p": "Several overseas brands with separate price lists and warranty terms."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "National distributors",
+          "p": "Buying from an Indian manufacturer but running the same state-wise channel."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Consumables importers",
+          "p": "Batch-controlled imported stock moving in volume."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Importers who also sell direct",
+          "p": "Large hospitals served directly while dealers cover the rest."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, accounting software, or an importer-shaped platform.",
+      "cols": [
+        "Spreadsheets and email",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Consignment cost",
+          "A separate workings sheet",
+          "Purchase value only",
+          "Additional costs added to the consignment at receipt"
+        ],
+        [
+          "Stock in transit",
+          "In someone's head",
+          "Not stock until received",
+          "An in-transit location visible to sales"
+        ],
+        [
+          "Authorisation",
+          "A folder of letters",
+          "Not modelled",
+          "Brand and territory per product line, documents in the vault"
+        ],
+        [
+          "Sub-dealer ordering",
+          "Email and chat",
+          "Manual invoice entry",
+          "Portal with that dealer's own list and prices"
+        ],
+        [
+          "Serial traceability",
+          "Packing lists in a file",
+          "Rarely serial-level",
+          "Serial from goods receipt to installation"
+        ],
+        [
+          "Interstate despatch",
+          "Assembled by hand",
+          "Invoice only",
+          "Invoice, challan, e-way bill and IRN together"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Importing and distributing, answered.",
+      "items": [
+        {
+          "q": "Can the system hold the full cost of a consignment, not just the supplier invoice?",
+          "a": "Yes. Additional charges on a consignment are added at goods receipt so the received stock carries a cost that includes them. Your accountant decides which charges belong in stock cost, and the system records what you configure."
+        },
+        {
+          "q": "How is stock that has not arrived yet handled?",
+          "a": "Keep an in-transit warehouse location. A consignment on a purchase order is visible there, so sales can see what is coming and roughly when, without it being confused with stock on the shelf."
+        },
+        {
+          "q": "Can each sub-dealer see only the products it is authorised for?",
+          "a": "Yes. A distributor account carries its own authorised product list and price list, so the portal shows that dealer only what it may buy, at the prices agreed with it."
+        },
+        {
+          "q": "Does it raise e-way bills for interstate despatch?",
+          "a": "Yes. The despatch produces the tax invoice, delivery challan and e-way bill from the same sales order, and e-invoice IRN and QR where you are required to generate them. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "Can we track warranty claims back to the principal?",
+          "a": "Each unit carries its serial from goods receipt onward, with its warranty record and its service history. A failure can therefore be evidenced with the job card and the serial when you raise it with the principal."
+        },
+        {
+          "q": "Do you support invoicing outside India?",
+          "a": "Billing is GST-native and built for Indian requirements. For despatches or entities outside India, invoicing is configurable and the requirements should be confirmed on a call before scoping."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127981;",
+          "b": "Dealer management",
+          "p": "The multi-brand channel in full."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128203;",
+          "b": "Purchase orders and GRN",
+          "p": "Ordering and receiving a consignment."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Locations, movements and serials."
+        },
+        {
+          "href": "/aura-business/e-invoice-software-distributors/",
+          "icon": "&#129534;",
+          "b": "E-invoice",
+          "p": "IRN and QR on your invoices."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#127970;",
+          "b": "Portal development",
+          "p": "A branded dealer portal."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#128221;",
+          "b": "Case study",
+          "p": "A distributor portal we built."
+        }
+      ]
+    }
+  ]
+}

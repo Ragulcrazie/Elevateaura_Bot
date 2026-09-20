@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "small-hospital-software",
+  "title": "Small Hospital Software India | 10 to 50 Beds | HIMS",
+  "meta": "Small hospital software for a 10 to 50 bed facility run by a few people: the modules you actually need, set up and taught, with no IT department required.",
+  "h1": "Small hospital software for a facility with <span class=\"hl\">beds, but no IT department</span>.",
+  "crumb": "Small Hospital Software",
+  "pill": "For 10 to 50 bed hospitals",
+  "sub": "A hospital with a few wards, a pharmacy, a lab and a small office does not need an enterprise programme. It needs registration, OP, beds, pharmacy, lab and billing working properly, set up for it and taught to the people who will use it.",
+  "meta_ticks": [
+    "Scoped to what a small hospital runs",
+    "Set up and taught at your counter",
+    "Live in 30 working days where scope allows"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patients.png",
+    "alt": "HIMS patient list for a small hospital showing UHID, department and last visit",
+    "bar": "his.elevateaura.co.in/patients"
+  },
+  "whatsapp_text": "Hi, we run a small hospital and would like to see HIMS.",
+  "primary_keyword": "small hospital software India",
+  "secondary_keywords": [
+    "hospital software for small hospitals",
+    "affordable hospital management software India",
+    "software for 30 bed hospital",
+    "simple hospital management system",
+    "hospital software without IT team",
+    "small hospital HIMS"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or doctor-proprietor of a small hospital with a handful of wards and a small administrative team",
+  "page_type": "product",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a small hospital actually needs",
+      "paras": [
+        "A hospital of ten to fifty beds usually runs on a few people doing several jobs each. The same person may handle registration and billing. The pharmacy is one counter. There is no IT department and nobody whose job is to maintain a system. What that hospital needs is the working core done properly: registration under one UHID, OP consultation and prescription, beds and admissions, pharmacy, laboratory and billing including TPA and corporate payers.",
+        "What it does not need is an enterprise implementation. Large hospital systems are sold with modules that assume departments you do not have, configuration that assumes staff you cannot spare, and a rollout measured in quarters. HIMS is delivered to a fixed scope, set up with your own data, taught at your own counter, and goes live in 30 working days where the scope allows. Modules you do not run yet are switched on later without starting again."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why software fails at this size",
+      "h2": "Small hospitals are sold the wrong problem.",
+      "lead": "It is rarely the features that defeat a small hospital. It is everything around them.",
+      "items": [
+        {
+          "h": "Bought for a hospital you are not",
+          "p": "The demo shows department heads, approval chains and roles that assume a staff of hundreds."
+        },
+        {
+          "h": "Configuration left to you",
+          "p": "The system arrives empty and somebody at the hospital is expected to set up items, rates and users."
+        },
+        {
+          "h": "Training that happened once",
+          "p": "One session for whoever was free, then the staff who actually do the work learn from each other."
+        },
+        {
+          "h": "Support through a ticket queue",
+          "p": "A counter problem at nine in the morning waits for a response from somebody who has never seen your hospital."
+        },
+        {
+          "h": "Back to the register",
+          "p": "Within a month the billing counter is on the system and everything else has quietly returned to paper."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a small hospital goes live",
+      "h2": "From your registers to a working system.",
+      "steps": [
+        {
+          "h": "Scope agreed",
+          "p": "We settle what you run today: OP, beds, pharmacy, lab, billing and which payers."
+        },
+        {
+          "h": "Your data migrated",
+          "p": "Existing patient, item and rate sheets are brought in rather than retyped."
+        },
+        {
+          "h": "Set up for you",
+          "p": "Departments, doctors, wards, items and users are configured before anyone is trained."
+        },
+        {
+          "h": "Taught at the counter",
+          "p": "Front desk, pharmacy, ward and billing staff are trained on the screens they will use."
+        },
+        {
+          "h": "Go live",
+          "p": "The hospital runs on it, with the founder reachable on WhatsApp during the first weeks."
+        },
+        {
+          "h": "Grow into it",
+          "p": "Theatre, ICU, imaging or the patient portal are switched on when you need them."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "The working core",
+      "h2": "What a small hospital switches on first.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Front of house",
+          "items": [
+            "OP and IP registration under one UHID",
+            "Appointments and token queue",
+            "WhatsApp appointment reminders",
+            "Patient portal for reports"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Wards",
+          "items": [
+            "Bed and ward occupancy",
+            "Admission to discharge",
+            "Nursing charts and notes",
+            "Discharge summary from the record"
+          ]
+        },
+        {
+          "icon": "&#127974;",
+          "h": "Departments",
+          "items": [
+            "Pharmacy with dispensing queue and expiry alerts",
+            "Laboratory from order to verified result",
+            "Inventory with reorder levels",
+            "Theatre and ICU when you need them"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Cash billing with GST",
+            "TPA and insurance claims",
+            "Corporate and credit panels",
+            "Live view of OP, IP, beds and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in a small hospital's week.",
+      "items": [
+        {
+          "h": "One person on registration and billing",
+          "workflow": "The same screen registers the patient, issues the token and raises the bill against that UHID.",
+          "result": "Two jobs stop being two registers."
+        },
+        {
+          "h": "A cashless admission",
+          "workflow": "The TPA, the pre-authorisation and the patient balance are tracked on the admission rather than in a coordinator's phone.",
+          "result": "The family gets a straight answer."
+        },
+        {
+          "h": "Pharmacy stock on a Sunday",
+          "workflow": "Low stock and near-expiry items are flagged in the system rather than noticed on the shelf.",
+          "result": "Ordering stops being a weekly panic."
+        },
+        {
+          "h": "The owner's evening",
+          "workflow": "OP count, occupancy and collections are read on one screen from home.",
+          "result": "No round of phone calls at nine at night."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Facilities where everybody does more than one job.",
+      "items": [
+        {
+          "icon": "&#127966;",
+          "b": "10 to 50 bed hospitals",
+          "p": "A few wards and a small office."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor-owned hospitals",
+          "p": "Run by the people who also treat."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Nursing homes",
+          "p": "IP-led with a modest OP load."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front desk staff",
+          "p": "One screen instead of four registers."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Owners",
+          "p": "Numbers without an administrator to compile them."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "What a small hospital is usually choosing between.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "What it assumes you have",
+          "Diligent staff",
+          "Departments and an IT team",
+          "A few people doing several jobs"
+        ],
+        [
+          "Who configures it",
+          "Nobody",
+          "Your team, after training",
+          "Set up for you before go-live"
+        ],
+        [
+          "Time to working",
+          "Already broken",
+          "Measured in quarters",
+          "Live in 30 working days where scope allows"
+        ],
+        [
+          "Who answers a problem",
+          "Nobody",
+          "A ticket queue",
+          "The founder who built it, on WhatsApp"
+        ],
+        [
+          "Adding modules later",
+          "Not possible",
+          "A new project",
+          "Switched on, same record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Small hospital software, answered.",
+      "items": [
+        {
+          "q": "Do we need an IT person to run this?",
+          "a": "No. Setup, configuration and data migration are done for you, and training happens at your own counters. Support is on WhatsApp with the founder who built the system, which is the practical answer at this size."
+        },
+        {
+          "q": "Can we start with only part of it?",
+          "a": "Yes. Most small hospitals start with registration, OP, pharmacy, beds and billing, then add laboratory, theatre, ICU or the patient portal later. The patient record is the same, so nothing is migrated a second time."
+        },
+        {
+          "q": "How quickly can a small hospital switch over?",
+          "a": "The scope is fixed at the start and the target is live in 30 working days where that scope allows. A hospital that wants theatre, ICU and imaging from day one is a larger scope and is quoted as such."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "There is no published price, because the scope decides it. Tell us what you run today and how many wards and counters are involved, and the project is scoped on a call."
+        },
+        {
+          "q": "We already use a billing package. Is that enough?",
+          "a": "It is enough for bills. It does not hold the clinical record, the beds, the pharmacy stock or the claims, which is where a small hospital loses most of its time. See <a href=\"/hims/hospital-billing-software/\">hospital billing</a> for how billing fits into the whole."
+        },
+        {
+          "q": "Are you only in Chennai?",
+          "a": "In-person work is Chennai and travel within Tamil Nadu. Everywhere else is served remotely: cloud deployment, remote setup and training, and WhatsApp support. Plenty of hospitals go live that way."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "IP-led, small team."
+        },
+        {
+          "href": "/hims/polyclinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Consultants, no beds."
+        },
+        {
+          "href": "/hims/hospital-management-software-pricing/",
+          "icon": "&#8377;",
+          "b": "Pricing",
+          "p": "What drives the number."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128188;",
+          "b": "Owner dashboard",
+          "p": "The evening screen."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        }
+      ]
+    }
+  ]
+}

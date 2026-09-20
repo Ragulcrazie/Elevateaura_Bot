@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-package-billing-software",
+  "title": "Hospital Package Billing Software | Surgery Packages | HIMS",
+  "meta": "Hospital package billing software: bill a surgery or treatment package as one item, define the inclusions, and keep the TPA and cash portions on one bill.",
+  "h1": "Hospital package billing software that bills a surgery as <span class=\"hl\">one agreed package</span>, across every department.",
+  "crumb": "Package Billing Software",
+  "pill": "For billing counters and TPA desks",
+  "sub": "A package quoted to a patient covers theatre, room, drugs, investigations and the surgeon. HIMS lets you define what sits inside the package, bill it as one line, and still see what each department actually delivered underneath.",
+  "meta_ticks": [
+    "One package, many departments",
+    "Inclusions defined before admission",
+    "Works with cash and TPA portions"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/billing.png",
+    "alt": "HIMS billing screen showing a package line on a hospital invoice with payer and GST",
+    "bar": "his.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss package billing for surgeries in HIMS.",
+  "primary_keyword": "hospital package billing software",
+  "secondary_keywords": [
+    "surgery package billing software",
+    "treatment package billing hospital",
+    "hospital package management software",
+    "package rate billing software India",
+    "hospital surgery costing software",
+    "package inclusions billing"
+  ],
+  "intent": "commercial",
+  "persona": "Billing in-charge or owner of a hospital that quotes fixed packages for surgeries and treatments",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What package billing has to solve",
+      "paras": [
+        "A package is a promise made before the admission: one agreed amount for a surgery or a course of treatment, whatever the individual departments end up charging. The difficulty is that the hospital still runs on departmental charges. Theatre, room, pharmacy, laboratory and the consultant each post what they did, and somebody has to reconcile all of that against the single figure quoted to the family.",
+        "HIMS handles both halves at once. The package is defined with its inclusions, so when the admission is created against that package the bill shows one line to the patient. Underneath, the departmental postings are still there, which is how the hospital can see what a package actually consumed and whether the inclusions are still sensible. Where a TPA covers part of it, the approved and patient portions sit on the same bill.",
+        "The other reason to keep the detail is the claim. A package billed to a TPA still has to be supported by documents describing the admission, and those documents come from the same record the postings came from, which is what stops the bill and the claim telling different stories."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where packages leak",
+      "h2": "A package quoted in the OPD becomes an argument at discharge.",
+      "lead": "The family was told one thing. The bill was built from another.",
+      "items": [
+        {
+          "h": "Nobody knows what is included",
+          "p": "The consultant, the counter and the family each have a different idea of whether an extra scan sits inside the package."
+        },
+        {
+          "h": "Departments bill anyway",
+          "p": "Theatre and pharmacy post their charges as usual, and the counter strips them out by hand at discharge."
+        },
+        {
+          "h": "Extras added silently",
+          "p": "Items outside the package accumulate during the stay and appear on the final bill without warning."
+        },
+        {
+          "h": "Package and claim disagree",
+          "p": "The TPA is billed a package rate while the supporting documents show itemised charges that do not match."
+        },
+        {
+          "h": "No idea what a package costs you",
+          "p": "Because the detail is discarded at billing, the hospital never learns what the package actually consumed."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One packaged admission",
+      "h2": "From the quote to the final bill.",
+      "steps": [
+        {
+          "h": "Package defined",
+          "p": "The package is set up with its inclusions: room category, theatre, consultant, routine drugs and investigations."
+        },
+        {
+          "h": "Quoted before admission",
+          "p": "The family is told what the package covers and what sits outside it."
+        },
+        {
+          "h": "Admitted on the package",
+          "p": "The admission is created against the package, so billing knows the basis from day one."
+        },
+        {
+          "h": "Departments post as usual",
+          "p": "Theatre, pharmacy, laboratory and consultant charges land on the admission."
+        },
+        {
+          "h": "Package applied",
+          "p": "Included items resolve into the package line; anything outside it is shown separately."
+        },
+        {
+          "h": "Payers settled",
+          "p": "The approved TPA portion and the patient portion are collected against the same bill."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Packages, extras and the payers behind them.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "The package",
+          "items": [
+            "Package definition with inclusions",
+            "Room category and stay covered",
+            "Theatre and consultant components",
+            "Routine drugs and investigations inside the package"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "What sits outside",
+          "items": [
+            "Items outside the package shown separately",
+            "Extended stay handled explicitly",
+            "Additional investigations itemised",
+            "The family sees included and extra apart"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Payers",
+          "items": [
+            "Cash packages with deposits",
+            "TPA approved portion and patient balance",
+            "Corporate and credit panels on the same package",
+            "GST applied where it applies"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "What you learn",
+          "items": [
+            "Departmental postings kept underneath",
+            "What a package actually consumed",
+            "Package volumes by department",
+            "Audit trail on the bill"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-billing-software/",
+        "label": "See hospital billing in full"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four situations a package bill has to survive.",
+      "items": [
+        {
+          "h": "A planned surgery",
+          "workflow": "The admission is created on the package, theatre and pharmacy post as usual and the discharge bill shows the package line.",
+          "result": "The family pays what they were quoted."
+        },
+        {
+          "h": "The stay runs longer",
+          "workflow": "Days beyond the package are shown as an explicit extra rather than folded in quietly.",
+          "result": "The conversation happens before discharge day."
+        },
+        {
+          "h": "A cashless package",
+          "workflow": "The approved amount covers the package and the balance is collected on the same bill.",
+          "result": "One bill, two payers, nothing reconciled later."
+        },
+        {
+          "h": "A quarterly review",
+          "workflow": "The hospital reads what each package consumed across the period from the postings underneath.",
+          "result": "Inclusions get revised on evidence."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals that quote before they treat.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Surgical hospitals",
+          "p": "Planned procedures quoted as one figure."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Standard procedures with standard inclusions."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "TPA desks",
+          "p": "Package rates against approved amounts."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Billing counters",
+          "p": "One line to the family, detail underneath."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Owners",
+          "p": "What the package really consumed."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways a package reaches the bill.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Where inclusions are defined",
+          "In a quotation letter",
+          "Not defined, only a rate",
+          "On the package, before admission"
+        ],
+        [
+          "Departmental charges",
+          "Struck off by hand",
+          "Overwritten at the counter",
+          "Posted, then resolved into the package"
+        ],
+        [
+          "Extras",
+          "Added at discharge",
+          "Added at discharge",
+          "Shown separately as they arise"
+        ],
+        [
+          "TPA portion",
+          "A second document",
+          "Manual split",
+          "On the same bill as the patient share"
+        ],
+        [
+          "What the package consumed",
+          "Unknown",
+          "Unknown",
+          "Readable from the postings underneath"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Package billing, answered.",
+      "items": [
+        {
+          "q": "Can we define our own packages?",
+          "a": "Yes. Packages are set up with the inclusions your hospital agrees: room category, theatre, consultant, routine drugs and investigations. They are configured during setup and changed later as your practice changes."
+        },
+        {
+          "q": "What happens when the patient stays longer than the package?",
+          "a": "Days and items beyond the package appear as explicit extras rather than being folded into the package line, so the family and the counter are looking at the same thing before discharge."
+        },
+        {
+          "q": "Do departments still post their charges?",
+          "a": "Yes, and that is deliberate. Theatre, pharmacy and laboratory post as they normally do, then the package resolves what is included. The detail stays underneath so the hospital can see what the package consumed."
+        },
+        {
+          "q": "Does package billing work with TPA claims?",
+          "a": "Yes. The approved portion and the patient balance sit on the same bill. Pre-authorisation, enhancements and claim documents are handled in <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+        },
+        {
+          "q": "Can a corporate panel be billed a package on credit?",
+          "a": "Yes. A package can be billed to a company on credit, and the outstanding sits against that organisation. See <a href=\"/hims/hospital-corporate-credit-billing/\">credit and corporate billing</a>."
+        },
+        {
+          "q": "How is GST handled on a package?",
+          "a": "Billing in HIMS is GST-native and tax is applied to the services and items where your accountant says it applies. The rules are configured at setup. Treat this as a billing capability and let your auditor decide the treatment itself."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Cash, GST, receipts."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#128203;",
+          "b": "TPA billing",
+          "p": "Pre-auth to settlement."
+        },
+        {
+          "href": "/hims/hospital-corporate-credit-billing/",
+          "icon": "&#127970;",
+          "b": "Corporate credit",
+          "p": "Panels billed on credit."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#128137;",
+          "b": "Theatre",
+          "p": "The OT list and consumables."
+        },
+        {
+          "href": "/hims/day-care-centre-software/",
+          "icon": "&#128716;",
+          "b": "Day care",
+          "p": "Same-day procedures."
+        }
+      ]
+    }
+  ]
+}

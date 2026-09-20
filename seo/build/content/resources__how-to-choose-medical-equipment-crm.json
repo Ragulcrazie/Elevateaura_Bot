@@ -1,0 +1,232 @@
+{
+  "cluster": "resources",
+  "slug": "how-to-choose-medical-equipment-crm",
+  "title": "How to Choose a CRM for a Medical Equipment Business",
+  "meta": "A buyer's checklist for choosing a medical equipment CRM: after-sales cover, GST billing, the field app, renewals, data ownership, migration and pricing models.",
+  "h1": "How to choose a CRM for a medical equipment business, <span class=\"hl\">without regretting it</span>.",
+  "crumb": "Choosing a CRM",
+  "pill": "Guide",
+  "sub": "Most CRM disappointments in this trade come from the same mistake: the system was judged on how it handles a sale and never on what happens for the next seven years of service, contracts and renewals on the same machine.",
+  "meta_ticks": [
+    "Written by a team that builds this software",
+    "Checklist plus demo questions",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your guide on choosing a medical equipment CRM and would like to discuss our requirements.",
+  "date": "2026-09-20",
+  "primary_keyword": "how to choose a CRM for a medical equipment business",
+  "secondary_keywords": [
+    "medical equipment CRM checklist",
+    "choosing distributor software India",
+    "CRM buying guide for equipment dealers",
+    "questions to ask on a CRM demo",
+    "medical equipment software evaluation"
+  ],
+  "intent": "informational",
+  "persona": "Owner or general manager of a medical equipment distribution or service business evaluating software for the first time",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "What actually decides whether the choice was right",
+      "paras": [
+        "Judge a medical equipment CRM on the work that comes after the invoice. Almost every product on the market can hold a lead, send a quotation and show a pipeline. Far fewer can hold the serial number you delivered, the warranty that expires on it, the contract that follows, the engineer who visited last month and the part that was fitted. If a system cannot do that, your team will end up running the service half of the business in a spreadsheet anyway, and you will have paid for half a solution.",
+        "The other deciding factors are unglamorous: whether billing is built for Indian requirements rather than bolted on, whether the field app works when there is no network, whether your existing data can be brought in, and whether you can get your data out again. Price matters too, but the pricing model matters more than the number, because a per-user model quietly penalises you for giving the software to the people who most need it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "First test",
+      "h2": "Does it cover after-sales, or only the sale",
+      "lead": "This is the single question that separates a generic CRM from software that suits this trade. Ask it before anything else, because everything else can be worked around and this cannot.",
+      "body": [
+        "Work through your own last twelve months and check that the system can hold each of these without a workaround:",
+        {
+          "ul": [
+            "<b>The installed base.</b> Every unit you have delivered, by serial number, with its customer, site and department.",
+            "<b>Warranty.</b> The cover period on each unit and the date it ends, visible before an engineer is sent out free of charge.",
+            "<b>Contracts.</b> Annual and comprehensive agreements with what is included, what is excluded and how many visits are due.",
+            "<b>Preventive maintenance.</b> Scheduled visits raised per machine, with the checklist the engineer must complete.",
+            "<b>Service calls.</b> Intake, dispatch, the job card, the part fitted and the customer's signature.",
+            "<b>Renewals.</b> An offer raised before cover lapses, rather than a reminder somebody sets by hand.",
+            "<b>Spares.</b> Stock that drops when a part is used on a job, not a separate stock sheet."
+          ]
+        },
+        "If the answer to several of these is that it can be managed with a custom field or an attachment, you are being sold a sales tool with a service story attached to it. That is a reasonable product for a business that only sells. It is the wrong product for a business that also services what it sells."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Second test",
+      "h2": "The things that are painful to add later",
+      "lead": "Some gaps can be lived with and fixed in year two. These four are usually not, because they touch either compliance or the people who are furthest from the office.",
+      "body": [
+        {
+          "h3": "Billing built for where you operate"
+        },
+        "Quotation, sales order, tax invoice, delivery challan, credit note and e-way bill should come from the same record, with the invoice numbering the way your auditor expects it. If invoicing happens in a different product, somebody re-keys every transaction and the two systems disagree by the end of the quarter. E-invoice with an IRN and QR code should be available for when it applies to you; see <a href=\"/resources/what-is-e-invoice-irn/\">what an e-invoice and IRN are</a>.",
+        {
+          "h3": "A field app your engineers will actually use"
+        },
+        "The test is not whether there is a mobile app. It is whether an engineer can complete a job card in a basement plant room with no signal, attach photographs, record the part fitted and capture a signature, and have it sync later. Ask to see that demonstrated with the device in flight mode.",
+        {
+          "h3": "Roles and visibility"
+        },
+        "A rep should not see every customer's pricing, an engineer should not see the receivables ledger, and the owner should see everything. Role-based access and an audit log of who changed what are far harder to retrofit than to require at the start.",
+        {
+          "h3": "Your data, in and out"
+        },
+        "Ask who owns the data, where it is hosted, how an export is produced and in what format. A vendor who is relaxed about giving you an export is a vendor who expects to keep you by being useful."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Commercials",
+      "h2": "Pricing models, and what each one rewards",
+      "headers": [
+        "Model",
+        "How it is charged",
+        "What to watch for"
+      ],
+      "rows": [
+        [
+          "Per user",
+          "A fee for every named login",
+          "You start rationing logins. Field engineers and junior staff are left out, and the data goes incomplete for exactly the people the system is meant to serve."
+        ],
+        [
+          "Per module or tier, unlimited users",
+          "A fee for the set of modules you switch on, with everyone in the company able to log in",
+          "Check what counts as a module and what happens when you want one more. This is the model Aura Business uses, with tiers described by module count."
+        ],
+        [
+          "Per transaction or per document",
+          "A fee tied to invoices, jobs or messages",
+          "Costs rise exactly when business is good, and the finance team starts avoiding the system in busy months."
+        ],
+        [
+          "One-time custom build",
+          "A fixed project fee for software built to your scope",
+          "Clarify what happens after handover: who fixes a fault, who adds a feature, and on what terms."
+        ],
+        [
+          "Free or entry tier",
+          "Little or no fee for a limited version",
+          "Usually the sales half only. Check the cost of the modules you will need in month four rather than in week one."
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The demo",
+      "h2": "Questions to ask while somebody is showing you the screen",
+      "lead": "Do not watch a prepared tour. Bring your own situation and make the vendor drive through it in front of you.",
+      "body": [
+        {
+          "ul": [
+            "Take one machine you sold three years ago. Show me its invoice, warranty, contract, every visit and every part fitted, on one screen.",
+            "A customer rings to say a unit is down. Show me the intake, who it is assigned to and what the engineer sees on the phone.",
+            "Show me a job card completed with the device offline, then synced.",
+            "Show me every contract expiring in the next ninety days and the renewal offer that goes out.",
+            "Raise a quotation, revise it twice, and show me which version the customer accepted.",
+            "Show me receivables ageing and what a payment reminder looks like when it reaches the customer.",
+            "Export my customer list and my installed base while I watch.",
+            "Who does the data migration from our current spreadsheets, and what does it cost?",
+            "What happens in week one after go-live, and who trains our engineers?",
+            "If we stop paying, what happens to the data?"
+          ]
+        },
+        "Two more practical points. Ask how long implementation takes and what would make it slower, because a delivery timeline with no conditions attached is a timeline nobody intends to meet. And ask who you will speak to when something breaks: with a small studio you often get the person who built it, which is faster than a ticket queue but means you should check they are contactable the way you prefer to work."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before you sign",
+      "h2": "Migration, go-live and the first quarter",
+      "body": [
+        "Decide what you are bringing across. Most distributors migrate the customer master, the product catalogue, opening stock, outstanding invoices and the installed base with warranty and contract dates. That last item is usually the hardest and the most valuable, because it is the foundation of every renewal you will raise afterwards.",
+        "Phase the rollout rather than switching everything on in one week. A common order is billing and inventory first, because they replace something that already exists, then service and contracts, then the field app with the engineers, then portals for customers. Each stage should have somebody inside your business who owns it.",
+        "Finally, agree what success looks like before you start. Contracts renewed on time, service calls closed with a job card, invoices raised the same day as despatch: pick two or three measures you can read from the system in ninety days. Read <a href=\"/resources/what-is-medical-equipment-crm/\">what a medical equipment CRM is</a> for the background, and <a href=\"/compare/crm-vs-erp-for-medical-equipment-distributors/\">CRM versus ERP</a> if you are also weighing a larger system."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Choosing software, answered",
+      "items": [
+        {
+          "q": "Do we need a medical equipment CRM or a general CRM?",
+          "a": "If you only sell, a general CRM may be enough. If you install and service what you sell, you need installed base, warranty, contracts, preventive maintenance and job cards in the same system, and those are rarely present in a general CRM."
+        },
+        {
+          "q": "Should we buy a CRM or an ERP?",
+          "a": "It depends on where your complexity sits. If it is in manufacturing, costing and consolidated accounts, look at an ERP. If it is in customers, quotations, stock, service and contracts, a distribution and service platform fits better and is far quicker to implement."
+        },
+        {
+          "q": "How long should implementation take?",
+          "a": "For a distribution business with clean data and a fixed scope, a matter of weeks rather than months is reasonable. Elevate Aura works to going live in thirty working days where scope allows. Unclear scope and unready data are what stretch a timeline."
+        },
+        {
+          "q": "Is per-user pricing worse than unlimited users?",
+          "a": "Not always, but it changes behaviour. When each login costs money, field engineers and junior staff tend to be left off the system, and incomplete field data undermines the whole point of buying it. An unlimited-user model removes that temptation."
+        },
+        {
+          "q": "What data should we prepare before a migration?",
+          "a": "A clean customer master with GST details, a product catalogue with codes, current stock, outstanding invoices, and the installed base with serial numbers, warranty end dates and existing contracts. Cleaning these is the work that decides how smooth go-live is."
+        },
+        {
+          "q": "How do we judge support from a small vendor?",
+          "a": "Ask who answers, on what channel, and how quickly. A founder-led studio usually means direct access to the person who built the system, which is faster than a queue, but confirm the contact route and the working hours before you commit."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "What is a medical equipment CRM",
+          "p": "The category explained."
+        },
+        {
+          "href": "/resources/what-is-e-invoice-irn/",
+          "icon": "&#129534;",
+          "b": "E-invoice and IRN",
+          "p": "What the QR code is for."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#9201;",
+          "b": "SLAs in service",
+          "p": "Response versus resolution."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "Which one a dealer needs."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#128202;",
+          "b": "Spreadsheets vs software",
+          "p": "When the sheet stops coping."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-pricing/",
+          "icon": "&#128176;",
+          "b": "How pricing works",
+          "p": "Module tiers, unlimited users."
+        }
+      ]
+    }
+  ]
+}

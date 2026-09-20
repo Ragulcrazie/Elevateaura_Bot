@@ -1,0 +1,224 @@
+{
+  "cluster": "hims",
+  "slug": "clinic-management-software-chennai",
+  "title": "Clinic Management Software in Chennai | Elevate Aura",
+  "meta": "Clinic management software for Chennai clinics and polyclinics: registration, appointments, EMR, pharmacy and GST billing, set up in person in the same city.",
+  "h1": "Clinic management software for Chennai, built <span class=\"hl\">in the same city you practise in</span>.",
+  "crumb": "Chennai clinics",
+  "pill": "For Chennai clinics and polyclinics",
+  "sub": "Registration, appointments and tokens, a structured EMR, e-prescription, pharmacy and GST billing for single-doctor clinics and group practices in Chennai, set up and taught at your own desk by the person who builds the software.",
+  "demo_href": "/demo/hospital.html",
+  "meta_ticks": [
+    "Same city, not a remote vendor",
+    "Setup and training at your clinic",
+    "Same-day visit when it is needed"
+  ],
+  "whatsapp_text": "Hi, I run a clinic in Chennai and would like to see the clinic software.",
+  "primary_keyword": "clinic management software Chennai",
+  "secondary_keywords": [
+    "clinic software Chennai",
+    "doctor clinic software Chennai",
+    "polyclinic software Chennai",
+    "clinic billing software Chennai",
+    "OPD software for Chennai clinics"
+  ],
+  "intent": "local",
+  "persona": "Doctor or practice manager running a single-doctor clinic or group practice in Chennai",
+  "city": "Chennai",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Clinic software from a studio that is already in Chennai",
+      "paras": [
+        "Elevate Aura is a founder-led software studio based in Chennai, so a Chennai clinic is the one case where nothing about the rollout is remote. The person who writes the software can sit at your reception, watch a real evening OP session and then configure registration, the token queue, the consultation screen and the bill around what he saw rather than around a requirements form.",
+        "That also changes what support means here. Elsewhere it is WhatsApp and a screen share. In Chennai it can be WhatsApp, a screen share, or someone at your desk the same day if the problem genuinely needs a person in the room."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Chennai context",
+      "h2": "A city of small clinics, each with its own two-hour rush.",
+      "lead": "Chennai practice is neighbourhood practice. Most clinics draw from a few surrounding streets, and the traffic across the city means a patient rarely crosses town twice for the same complaint.",
+      "body": [
+        "The result is a day with two sharp peaks: a morning session before work and an evening session that fills up from about six o'clock. Between them the clinic is quiet and the software is barely touched. During them, a receptionist is registering a walk-in, answering a phone call about a token, taking a card payment and finding last month's prescription at the same time. Software for a Chennai clinic has to survive those two hours, not the average of the day.",
+        "The other local pattern is the group practice: a paediatrician, a physician and a dermatologist sharing one reception, one pharmacy shelf and one bill book, each with different consulting days. One patient may see two of them in the same week. If each doctor keeps a separate register, the clinic has three versions of the same person and no way to see the whole history at the next visit.",
+        {
+          "h3": "What being in the same city changes"
+        },
+        {
+          "ul": [
+            "The workflow study happens in person, during a real session, not over a call.",
+            "Your existing patient list, item list and rates are migrated in before go-live, and your branding goes on the screens and the bill.",
+            "Training is done at your reception desk on your own data, with your own receptionist raising real registrations.",
+            "The first busy evening after go-live can be watched in person rather than reconstructed afterwards.",
+            "Day-to-day support is still WhatsApp and remote, because that is faster than travel; a visit is arranged when it actually helps."
+          ]
+        },
+        {
+          "h3": "Where a clinic outgrows this page"
+        },
+        "A clinic that starts admitting patients, running its own laboratory or keeping beds overnight has stopped being a clinic. The same platform covers that, with wards, IP billing and lab modules switched on. See <a href=\"/hims/hospital-management-software-chennai/\">hospital management software in Chennai</a> and <a href=\"/hims/polyclinic-management-software/\">polyclinic management software</a> for the larger configurations."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Chennai clinic switches on first.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Reception",
+          "items": [
+            "Registration on one UHID per patient",
+            "Appointments and a live token queue",
+            "Doctor rosters for shared consulting rooms",
+            "WhatsApp appointment reminders"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Consultation",
+          "items": [
+            "Structured EMR with the previous visits alongside",
+            "E-prescription printed or sent to the patient",
+            "Investigations ordered from the same screen",
+            "Follow-up recorded against the same record"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Pharmacy and stock",
+          "items": [
+            "Dispensing queue fed by the prescription",
+            "Low-stock and expiry alerts on the shelf",
+            "Consumables and reorder levels",
+            "Batch tracking on what is dispensed"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Money and the day's view",
+          "items": [
+            "Cash and card billing with GST on billable items",
+            "Insurance and TPA claims where the clinic accepts them",
+            "Patient app for reports and follow-ups",
+            "Live dashboard of the day's OP and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/clinic-management-software/",
+        "label": "See the full clinic management software"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Chennai clinic situations the platform is built for.",
+      "items": [
+        {
+          "h": "The six o'clock rush at a single-doctor clinic",
+          "workflow": "Walk-ins take a token at reception, the doctor sees the queue on screen, the prescription prints as the patient stands up, and the bill is closed at the same desk.",
+          "result": "Nobody is asked to wait while a register is searched."
+        },
+        {
+          "h": "A group practice sharing one reception",
+          "workflow": "Three doctors, three rosters, one patient record. A patient seen by the physician on Monday arrives at the dermatologist on Thursday with the history already on the screen.",
+          "result": "One patient, one record, whoever they consult."
+        },
+        {
+          "h": "A patient who wants the prescription again",
+          "workflow": "The receptionist opens the UHID, finds the visit and reissues the prescription or the bill without asking the doctor to remember.",
+          "result": "A two-minute phone call instead of a repeat visit."
+        },
+        {
+          "h": "Go-live on a working evening",
+          "workflow": "Training happens at your desk during a real session, with your own staff using the system on live patients while someone watches over their shoulder.",
+          "result": "The clinic is live having already used it under pressure."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Clinic software in Chennai, answered.",
+      "items": [
+        {
+          "q": "Are you actually based in Chennai?",
+          "a": "Yes. Elevate Aura is a founder-led studio in Chennai and the software is written here. For a Chennai clinic that means the workflow study, the setup and the training happen in person, and a support visit is possible on the same day when the problem needs someone present."
+        },
+        {
+          "q": "We are one doctor with one receptionist. Is this too big for us?",
+          "a": "No. Modules are switched on rather than bought whole, so a single-doctor clinic can start with registration, appointments, EMR and billing alone. Pharmacy, laboratory and the patient app attach to the same record later without any migration."
+        },
+        {
+          "q": "Can several doctors share one clinic in the system?",
+          "a": "Yes. Each doctor has a roster and a consultation screen, and role-based access keeps records visible to the people who should see them. The patient keeps one UHID across every doctor in the clinic."
+        },
+        {
+          "q": "Will you move our existing patient records in?",
+          "a": "Existing patient, item and rate data is migrated in during setup, which is part of the go-live rather than a separate exercise. Bring whatever you keep it in today and it is reviewed before anything is loaded."
+        },
+        {
+          "q": "How long does a clinic take to go live?",
+          "a": "The framework is live in 30 working days where scope allows, with scope fixed at the start. A single-doctor clinic sits at the shorter end of that, because there are fewer counters to configure and fewer people to train."
+        },
+        {
+          "q": "Do you handle insurance and TPA billing for clinics?",
+          "a": "Yes, where the clinic accepts it. The payer sits on the visit and the claim is raised from the bill the record produced. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a> for how the claim file is assembled."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic management software",
+          "p": "The product, in full."
+        },
+        {
+          "href": "/hims/hospital-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Hospitals in Chennai",
+          "p": "The larger configuration."
+        },
+        {
+          "href": "/hims/polyclinic-management-software/",
+          "icon": "&#128203;",
+          "b": "Polyclinic software",
+          "p": "Several doctors, one desk."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#127380;",
+          "b": "UHID registration",
+          "p": "One ID per patient."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#128218;",
+          "b": "What is UHID",
+          "p": "Why duplicates cost you."
+        },
+        {
+          "href": "/hims/hospital-management-software-trichy/",
+          "icon": "&#128205;",
+          "b": "Trichy",
+          "p": "Hospitals serving nearby districts."
+        }
+      ]
+    }
+  ]
+}

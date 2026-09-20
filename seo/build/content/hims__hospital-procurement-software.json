@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-procurement-software",
+  "title": "Hospital Procurement Software | Indents to Goods Receipt | HIMS",
+  "meta": "Hospital procurement software for stores: ward indents, reorder levels that trigger buying, purchase orders and goods receipt into the same hospital inventory.",
+  "h1": "Hospital procurement software that starts at the <span class=\"hl\">ward indent</span> and ends at the stores shelf.",
+  "crumb": "Hospital Procurement Software",
+  "pill": "For stores and purchase staff",
+  "sub": "HIMS treats buying as the front end of your inventory. Wards raise indents, reorder levels flag what is running low, orders go out against those needs, and goods received are booked into the same stock the hospital issues from.",
+  "meta_ticks": [
+    "Indents raised by wards and departments",
+    "Reorder levels that trigger buying",
+    "Goods receipt into the same stock"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/inventory.png",
+    "alt": "HIMS stores screen showing consumable items, stock on hand and reorder level",
+    "bar": "his.elevateaura.co.in/inventory"
+  },
+  "whatsapp_text": "Hi, I'd like to see how purchase and stores work in HIMS.",
+  "primary_keyword": "hospital procurement software",
+  "secondary_keywords": [
+    "hospital purchase software",
+    "hospital stores management software",
+    "hospital indent software",
+    "hospital consumables purchase software",
+    "purchase order software for hospitals",
+    "hospital goods receipt software"
+  ],
+  "intent": "commercial",
+  "persona": "Stores in-charge or purchase officer buying consumables for a hospital",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What procurement means in a hospital context",
+      "paras": [
+        "Hospital procurement is the buying side of stores: gloves, sutures, fluids, reagents, linen and every other consumable that a ward, a theatre or a laboratory asks for and then uses up. In HIMS this is not a separate system bolted onto inventory. The stock module already knows what each item is, how much is on hand and the level below which it should be reordered, so buying is simply what happens when that level is crossed or a department raises an indent.",
+        "Keeping it in one place is what makes the numbers usable. An item ordered, received and issued follows the same record, so the stores balance reflects goods actually booked in rather than a purchase file that somebody reconciles later. Equipment is tracked in the same module, which is why the biomedical register and the consumables shelf are not two different databases."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How hospital buying goes wrong",
+      "h2": "Stores usually find out too late and buy too much.",
+      "lead": "Purchasing is reactive in most hospitals because nothing tells anyone in advance.",
+      "items": [
+        {
+          "h": "Indents on scraps of paper",
+          "p": "A ward sister writes what she needs on a sheet, it goes to stores, and nobody can say later who asked for what."
+        },
+        {
+          "h": "Stockouts discovered at the bed",
+          "p": "The shortage is found when an item is needed, not when it fell below a sensible level."
+        },
+        {
+          "h": "Panic buying at a premium",
+          "p": "Because the shortfall is urgent, the purchase is made from whoever can deliver today."
+        },
+        {
+          "h": "Goods received without checking",
+          "p": "A delivery is accepted and stacked, and the difference between what was ordered and what came is found a month later."
+        },
+        {
+          "h": "Expiry noticed on the shelf",
+          "p": "Over-ordering leaves batches that quietly reach their expiry date in the store room."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One consumable, one cycle",
+      "h2": "From the ward asking to the shelf being filled.",
+      "steps": [
+        {
+          "h": "Indent raised",
+          "p": "A ward, theatre or laboratory asks stores for what it needs, on the system."
+        },
+        {
+          "h": "Reorder level checked",
+          "p": "Items already below their reorder level are flagged for buying."
+        },
+        {
+          "h": "Order placed",
+          "p": "A purchase order goes to the supplier against the items and quantities agreed."
+        },
+        {
+          "h": "Goods received",
+          "p": "The delivery is booked in against the order, with batch and expiry where it applies."
+        },
+        {
+          "h": "Stock updated",
+          "p": "Stores balance rises and the item becomes issuable to departments."
+        },
+        {
+          "h": "Issued and consumed",
+          "p": "Issues to wards, theatre and the pharmacy drop the balance again."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is covered",
+      "h2": "Buying, receiving and issuing on one stock record.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Demand",
+          "items": [
+            "Indents from wards and departments",
+            "Reorder levels per item",
+            "Low-stock alerts",
+            "Consumption visible by department"
+          ]
+        },
+        {
+          "icon": "&#128722;",
+          "h": "Buying",
+          "items": [
+            "Purchase orders against indents and reorder needs",
+            "Item, quantity and supplier on the order",
+            "Orders open until received",
+            "Order history per item"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Receiving",
+          "items": [
+            "Goods receipt booked against the order",
+            "Batch and expiry where the item carries them",
+            "Short and excess deliveries visible",
+            "Stock updated on receipt"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Alongside",
+          "items": [
+            "Equipment register in the same module",
+            "Pharmacy stock with its own dispensing flow",
+            "Issues to wards, theatre and laboratory",
+            "Expiry alerts before the date passes"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-inventory-management/",
+        "label": "See hospital inventory management"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things stores stop doing by hand.",
+      "items": [
+        {
+          "h": "The weekly ward indent",
+          "workflow": "Each ward raises its indent on the system and stores works from one consolidated list.",
+          "result": "No sheets, and a record of who asked."
+        },
+        {
+          "h": "An item drifting low",
+          "workflow": "The reorder level flags it days before the shelf empties and it goes on the next order.",
+          "result": "Urgent buying becomes rare."
+        },
+        {
+          "h": "A short delivery",
+          "workflow": "Goods receipt is booked against the order and the shortfall shows as still outstanding.",
+          "result": "The difference is raised while the invoice is fresh."
+        },
+        {
+          "h": "A theatre case",
+          "workflow": "Consumables issued to the case drop stores stock and reach the patient's bill.",
+          "result": "Usage and billing come from one movement."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who answers for the store room.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Stores in-charge",
+          "p": "Indents, orders and receipts in one place."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several departments consuming from one store."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Small stores run without a purchase department."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Laboratories",
+          "p": "Reagents with batch and expiry to watch."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Administrators",
+          "p": "What is being consumed, by which department."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hospitals buy consumables.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "How a need is raised",
+          "A sheet from the ward",
+          "A workflow with approvals",
+          "An indent on the system, with reorder alerts"
+        ],
+        [
+          "When a shortage is known",
+          "When it runs out",
+          "In a nightly report",
+          "When the item crosses its reorder level"
+        ],
+        [
+          "Goods receipt",
+          "Delivery note filed",
+          "Booked against the PO",
+          "Booked against the order, with batch and expiry"
+        ],
+        [
+          "Link to what is used",
+          "None",
+          "Through interfaces",
+          "The same stock the wards issue from"
+        ],
+        [
+          "What it takes to run",
+          "One diligent person",
+          "A purchase department",
+          "Stores staff on the screen they already use"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital procurement, answered.",
+      "items": [
+        {
+          "q": "Is procurement a separate module from inventory?",
+          "a": "No. Buying in HIMS is the front end of the inventory module, which is why an order, a receipt and an issue all move the same stock figure. See <a href=\"/hims/hospital-inventory-management/\">hospital inventory management</a> for the stock side."
+        },
+        {
+          "q": "Does it include a supplier payables ledger?",
+          "a": "Procurement in HIMS covers the movement of goods: indents, orders, receipt and stock. A full supplier payables and accounting ledger is not what this module is for. If you need that depth, say so on the call so it is scoped honestly."
+        },
+        {
+          "q": "Can wards raise their own indents?",
+          "a": "That is how it is set up: departments raise indents on the system rather than sending sheets to stores, so the request carries the department, the item and the quantity, and stores works from a consolidated list. How far you take the buying workflow is agreed when we scope your stores."
+        },
+        {
+          "q": "How do reorder levels work?",
+          "a": "Each item carries a level below which it should be reordered. When stock crosses it, the item is flagged in the low-stock view so buying is triggered by the balance rather than by someone noticing an empty shelf."
+        },
+        {
+          "q": "Does pharmacy stock come through the same process?",
+          "a": "Pharmacy has its own dispensing queue and stock with batch and expiry tracking, and it sits in the same platform. See <a href=\"/hims/hospital-pharmacy-management/\">pharmacy management</a> for how drugs are handled specifically."
+        },
+        {
+          "q": "We already run purchase in a spreadsheet. Can it be moved?",
+          "a": "Yes. Your item list, suppliers and opening balances are migrated in during setup, which is the normal starting point. From then on the sheet stops being the source of truth."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Inventory",
+          "p": "Stock, reorder and expiry."
+        },
+        {
+          "href": "/hims/hospital-asset-management-software/",
+          "icon": "&#128736;",
+          "b": "Asset register",
+          "p": "The equipment you keep."
+        },
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#127974;",
+          "b": "Pharmacy",
+          "p": "Drug stock and dispensing."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "Consumption and collections."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128188;",
+          "b": "Hospital ERP",
+          "p": "The operations layer."
+        }
+      ]
+    }
+  ]
+}

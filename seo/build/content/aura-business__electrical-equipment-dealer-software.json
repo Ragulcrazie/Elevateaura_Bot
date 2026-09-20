@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "electrical-equipment-dealer-software",
+  "title": "Electrical Equipment Dealer Software | Aura Business",
+  "meta": "Electrical equipment dealer software for panel and switchgear supply: project schedules, staged despatch, site commissioning and warranty claims upward.",
+  "h1": "Electrical equipment dealer software for <span class=\"hl\">supply against a project</span>.",
+  "crumb": "Electrical Equipment Dealers",
+  "pill": "For panel, switchgear and cable dealers",
+  "sub": "Aura Business handles the way electrical supply actually works: an itemised schedule quoted against a project, material released as the site progresses, commissioning and testing recorded at site, and defective units claimed back to the principal with evidence.",
+  "meta_ticks": [
+    "Itemised project schedules quoted and tracked",
+    "Material released as the site is ready",
+    "Warranty claims to the principal, evidenced"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we deal in electrical panels and switchgear on project orders. I'd like to see how Aura Business handles supply and commissioning.",
+  "primary_keyword": "electrical equipment dealer software",
+  "secondary_keywords": [
+    "switchgear dealer management software",
+    "electrical panel supplier software India",
+    "project material supply tracking software",
+    "electrical distributor ERP alternative",
+    "commissioning and warranty claim software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a dealership supplying electrical panels, switchgear, cables and accessories to contractors and industrial projects",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why electrical supply is a schedule, not an order",
+      "paras": [
+        "An electrical dealer is usually quoting against somebody else's project. The enquiry arrives as a schedule of items with ratings and makes, the order is placed by a contractor whose own programme decides when material is wanted, and the supply happens in releases over months. Software for an electrical equipment dealer has to keep the quoted schedule, the ordered quantities and the delivered quantities in one place, because the gap between them is where disputes and dead stock both come from.",
+        "Then there are two obligations that follow the goods. Panels and larger equipment are commissioned and tested at site, which is site work with a record attached, and a unit that fails under warranty is not your loss to absorb but a claim to make against the principal. Aura Business tracks serial numbers from goods receipt to the site, holds commissioning as a job with proof, and keeps warranty claims with the evidence attached."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where project supply hurts",
+      "h2": "Quoted in March, delivered in pieces until October.",
+      "lead": "The money is made on a competitive schedule and lost in the months of supply that follow it.",
+      "items": [
+        {
+          "h": "The quoted schedule disappears",
+          "p": "The order references the quotation, and the quotation was a spreadsheet emailed by someone who has since left."
+        },
+        {
+          "h": "Material blocked for a stalled site",
+          "p": "Stock is bought in for a project that slows down, and it sits reserved for months against nothing."
+        },
+        {
+          "h": "Balance quantities disputed",
+          "p": "After many part deliveries, the contractor's count and yours do not agree and the last invoice is held."
+        },
+        {
+          "h": "Commissioning not recorded",
+          "p": "A panel is energised and tested, and there is no signed record of when or by whom when a question arises."
+        },
+        {
+          "h": "Warranty claims absorbed",
+          "p": "A failed unit is replaced free to keep the contractor happy, and the claim to the principal is never filed."
+        },
+        {
+          "h": "Retention money forgotten",
+          "p": "A portion of the order value is held against completion and nobody is chasing it a year later."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the enquiry schedule to the final claim.",
+      "steps": [
+        {
+          "h": "Quote the schedule",
+          "p": "The itemised schedule is quoted from the catalogue with makes and ratings, and revisions are kept as versions."
+        },
+        {
+          "h": "Take the order",
+          "p": "The order becomes a sales order with the full quantities, tied to the project and the contractor's account."
+        },
+        {
+          "h": "Procure",
+          "p": "Purchase orders go to the principals against their price lists, and goods are received with serial numbers."
+        },
+        {
+          "h": "Release to site",
+          "p": "Each release goes out on a delivery challan with an e-way bill, and the balance on the order line updates."
+        },
+        {
+          "h": "Commission",
+          "p": "Commissioning and testing are raised as jobs at site, closed with photographs and the site engineer signature."
+        },
+        {
+          "h": "Bill and collect",
+          "p": "Invoices follow the delivered and commissioned quantities, with payment tracking and reminders on the balance."
+        },
+        {
+          "h": "Claim",
+          "p": "A failure in the warranty period opens a job, and the claim to the principal carries the serial and the job record."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for schedule-based supply.",
+      "groups": [
+        {
+          "icon": "&#128221;",
+          "h": "Quoting a project",
+          "items": [
+            "GST quotation builder for long itemised schedules",
+            "Quotation versions kept against the project",
+            "Brand and authorisation per product line",
+            "Supplier price lists driving cost",
+            "Tender tracker where the project is tendered"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Supply in releases",
+          "items": [
+            "Sales orders with balance quantity per line",
+            "Delivery challan for every release",
+            "E-way bill and e-invoice IRN and QR",
+            "Multi-warehouse and transfers to a site store",
+            "Serial and unit-level stock"
+          ]
+        },
+        {
+          "icon": "&#9889;",
+          "h": "Site work",
+          "items": [
+            "Commissioning and testing jobs with dates",
+            "Mobile job card with photo proof and signature",
+            "Technician dispatch and route planning",
+            "Offline mode for sites under construction",
+            "Service history per installed unit"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "After handover",
+          "items": [
+            "Warranty tracking per serial number",
+            "Warranty claims to the principal with job evidence",
+            "Annual contracts where you sell maintenance",
+            "Payment tracker, retention follow-up and ageing"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four points where an electrical dealer protects its margin.",
+      "items": [
+        {
+          "h": "The quoted schedule is still on the record",
+          "workflow": "The order is raised from the accepted quotation version, so rates, makes and ratings carry through without retyping.",
+          "result": "No arguments about what was offered."
+        },
+        {
+          "h": "A slowing site is visible early",
+          "workflow": "The order shows how much has been released and when the last challan went out, so a project that has stalled stands out.",
+          "result": "Buying decisions are adjusted before stock is stranded."
+        },
+        {
+          "h": "Commissioning is evidenced",
+          "workflow": "The commissioning job closes with photographs of the installed panel and the site engineer signature on the app.",
+          "result": "The completion claim is supported the same day."
+        },
+        {
+          "h": "A failed unit becomes a claim",
+          "workflow": "The serial number links to the goods receipt and the principal, and the job card records the fault and the replacement issued.",
+          "result": "A claim filed with evidence rather than a cost absorbed."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers whose customer is building something.",
+      "items": [
+        {
+          "icon": "&#9889;",
+          "b": "Switchgear and panel dealers",
+          "p": "Authorised supply against project schedules."
+        },
+        {
+          "icon": "&#128267;",
+          "b": "Cable and accessory distributors",
+          "p": "Bulk releases to site over a construction programme."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial automation dealers",
+          "p": "Drives and controls with commissioning at site."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Generator and UPS dealers",
+          "p": "Equipment sold with installation and annual contracts."
+        },
+        {
+          "icon": "&#127959;",
+          "b": "Building products suppliers",
+          "p": "Any trade supplying a project in phases."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, accounting software, or project-aware supply.",
+      "cols": [
+        "Spreadsheets and email",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "The quoted schedule",
+          "An emailed sheet",
+          "Not kept",
+          "Versioned quotation on the project account"
+        ],
+        [
+          "Balance to supply",
+          "Counted by hand",
+          "Invoices only",
+          "Live balance per order line"
+        ],
+        [
+          "Site store",
+          "Untracked",
+          "Not modelled",
+          "A location with transfers and movements"
+        ],
+        [
+          "Commissioning",
+          "A phone call",
+          "Not covered",
+          "A job with photos and signature"
+        ],
+        [
+          "Warranty claims",
+          "Rarely filed",
+          "Not covered",
+          "Serial, job evidence and claim on the principal"
+        ],
+        [
+          "Retention",
+          "Forgotten",
+          "A ledger balance",
+          "Tracked on the order with reminders"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Electrical dealing, answered.",
+      "items": [
+        {
+          "q": "Can we quote a schedule with dozens of line items?",
+          "a": "Yes. The quotation builder works from the catalogue, so a long schedule with makes and ratings is assembled by selection rather than typing, and revisions are kept as versions against the project account."
+        },
+        {
+          "q": "How is part supply against one order handled?",
+          "a": "The sales order holds the ordered quantity per line and every release is a delivery challan against it, so ordered, delivered and pending quantities are live on the order and do not need reconciling from paperwork."
+        },
+        {
+          "q": "Can we record commissioning and testing at site?",
+          "a": "Yes. Commissioning is raised as a job with a date and an engineer, completed on the mobile job card with photographs and a site signature, and stored against the installed unit. Offline mode covers sites without network."
+        },
+        {
+          "q": "Does it help with warranty claims back to the manufacturer?",
+          "a": "Each unit is traceable by serial from goods receipt to the site, and the failure is recorded on a job card with photographs. That is the evidence a principal asks for when you file the claim. See <a href=\"/aura-business/medical-equipment-warranty-management-software/\">warranty management</a>."
+        },
+        {
+          "q": "Is the platform really used outside healthcare?",
+          "a": "Yes. Aura Business is built for any business that sells, installs and services, including industrial, electrical and building products distributors. The modules are the same; the records and workflows you switch on differ by trade."
+        },
+        {
+          "q": "Can the contractor see the status of a release?",
+          "a": "Yes. An order tracking page shows each stage of a despatch, and a contractor with a portal login can see their orders, invoices and outstanding balance without ringing your office."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/industrial-equipment-distributor-software/",
+          "icon": "&#9881;",
+          "b": "Industrial distribution",
+          "p": "Factory customers and breakdowns."
+        },
+        {
+          "href": "/aura-business/software-for-hospital-furniture-suppliers/",
+          "icon": "&#128719;",
+          "b": "Project supply in healthcare",
+          "p": "Phased delivery and installation."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128220;",
+          "b": "Delivery challan",
+          "p": "Releases against an order."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128203;",
+          "b": "Purchase orders and GRN",
+          "p": "Buying against a project."
+        },
+        {
+          "href": "/aura-business/mobile-job-card-software/",
+          "icon": "&#128241;",
+          "b": "Mobile job card",
+          "p": "Commissioning proof from site."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128181;",
+          "b": "Receivables ageing",
+          "p": "Retention and balances."
+        }
+      ]
+    }
+  ]
+}

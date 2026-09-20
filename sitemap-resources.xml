@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://elevateaura.co.in/resources/</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/emr-vs-ehr/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/hospital-software-implementation-checklist/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/how-medical-equipment-service-management-works/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/how-to-choose-hospital-management-software/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/how-to-choose-medical-equipment-crm/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/how-to-choose-pacs/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-amc-software/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-cmc/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-dicom-modality-worklist/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-dicom/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/what-is-e-invoice-irn/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-hims/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-installed-base-management/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-lms/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
@@ -15,11 +19,16 @@
   <url><loc>https://elevateaura.co.in/resources/what-is-pacs/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-preventive-maintenance-software/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/resources/what-is-ris/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/what-is-sla-equipment-service/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/what-is-tpa-hospital-billing/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/resources/what-is-uhid/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://elevateaura.co.in/compare/amc-vs-cmc/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/cloud-pacs-vs-on-premise-pacs/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/compare/cloud-vs-on-premise-hospital-software/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/crm-vs-erp-for-medical-equipment-distributors/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/generic-crm-vs-medical-equipment-crm/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://elevateaura.co.in/compare/hims-vs-emr/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/hims-vs-hospital-erp/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/lms-vs-youtube-and-whatsapp-for-coaching/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>
   <url><loc>https://elevateaura.co.in/compare/pacs-vs-cloud-storage/</loc><lastmod>2026-09-20</lastmod><priority>0.6</priority></url>

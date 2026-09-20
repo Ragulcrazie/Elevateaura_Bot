@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-owner-dashboard",
+  "title": "Software for Hospital Owners | One Dashboard Daily | HIMS",
+  "meta": "A hospital owner dashboard that shows collections, beds, OP volume and outstanding including TPA on one screen, and tells you what is worth looking at each day.",
+  "h1": "A hospital owner dashboard you can read in <span class=\"hl\">two minutes a day</span>.",
+  "crumb": "Hospital Owner Dashboard",
+  "pill": "For hospital owners",
+  "sub": "Most owners do not want to operate the software. They want one screen that says what came in today, how full the hospital is, how many patients came through OP and how much money is still sitting with TPAs and companies.",
+  "meta_ticks": [
+    "Collections, beds, OP and outstanding",
+    "Readable from your phone",
+    "Every figure traceable to its entry"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/opd-dashboard.png",
+    "alt": "HIMS dashboard as an owner sees it, with the day's OP, IP, occupancy and collections",
+    "bar": "his.elevateaura.co.in/dashboard"
+  },
+  "whatsapp_text": "Hi, I own a hospital and would like to see the owner dashboard in HIMS.",
+  "primary_keyword": "software for hospital owners dashboard",
+  "secondary_keywords": [
+    "hospital owner dashboard software",
+    "hospital software for owners India",
+    "hospital revenue dashboard",
+    "hospital occupancy and collections view",
+    "hospital outstanding dashboard",
+    "daily hospital performance screen"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or managing director of a hospital who wants the numbers daily without running the system",
+  "page_type": "persona",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an owner should be able to see",
+      "paras": [
+        "An owner needs four things on one screen: what was collected, how full the beds are, how many patients came through OP, and how much money is owed to the hospital and by whom. Everything else can wait. In HIMS those four figures come from the registrations, admissions and bills the hospital made during the day, so there is nothing to compile and nobody to ask.",
+        "The dashboard is deliberately shallow at the top and deep underneath. The headline says collections today. One level down it splits by payer, so cash sits next to what the TPAs and corporate panels still owe. Occupancy breaks down by ward. OP volume breaks down by department and doctor. An owner who wants only the headline can stop at the headline, and one who wants to know why can keep going until they reach the entry.",
+        "It is also the one screen that does not depend on anybody being available. The administrator may be on leave and the accountant may be at the bank, and the owner can still see what the hospital did today without asking either of them for it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How owners usually find out",
+      "h2": "Ownership by phone call is a slow way to run a hospital.",
+      "lead": "The information exists. It just reaches the owner last, and edited.",
+      "items": [
+        {
+          "h": "The evening round of calls",
+          "p": "Beds from the ward, money from the counter, OP from the front desk, and no way to check any of it."
+        },
+        {
+          "h": "Numbers that arrive monthly",
+          "p": "By the time the statement is ready, the month it describes cannot be changed."
+        },
+        {
+          "h": "Cash understood, credit not",
+          "p": "What was collected is roughly known. What is stuck with TPAs and companies is somebody else's problem."
+        },
+        {
+          "h": "No way to compare",
+          "p": "This week against last week, this doctor against that one, is guesswork without comparable data."
+        },
+        {
+          "h": "Dependence on one person",
+          "p": "When the accountant or the administrator is away, the owner cannot answer basic questions about their own hospital."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The two-minute routine",
+      "h2": "What to look at, in what order.",
+      "steps": [
+        {
+          "h": "Collections today",
+          "p": "What has actually been received, from all payers, as it happens."
+        },
+        {
+          "h": "Payer split",
+          "p": "How much of it is cash and how much is waiting on a TPA or a company."
+        },
+        {
+          "h": "Beds",
+          "p": "Occupancy by ward, admissions in and discharges out today."
+        },
+        {
+          "h": "OP volume",
+          "p": "Patients seen, by department and by doctor."
+        },
+        {
+          "h": "Outstanding",
+          "p": "What is owed to the hospital, and by which TPA or organisation."
+        },
+        {
+          "h": "One thing to chase",
+          "p": "Whatever looks wrong is opened down to the bill or the admission behind it."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the owner sees",
+      "h2": "Four headlines, with depth behind each.",
+      "groups": [
+        {
+          "icon": "&#8377;",
+          "h": "Money in",
+          "items": [
+            "Collections as they are taken",
+            "Cash, insurance, TPA and corporate split",
+            "Receipts and refunds",
+            "Any period, not just today"
+          ]
+        },
+        {
+          "icon": "&#128716;",
+          "h": "Beds",
+          "items": [
+            "Occupancy by ward",
+            "Admissions and discharges today",
+            "Theatre and ICU load",
+            "Emergency activity"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Patients",
+          "items": [
+            "OP registrations for the day",
+            "Volume by department and doctor",
+            "Pharmacy and laboratory activity",
+            "Appointments booked ahead"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Money out there",
+          "items": [
+            "Outstanding per TPA",
+            "Outstanding per corporate panel",
+            "Claims by status",
+            "Bills that make up each figure"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-mis-dashboard/",
+        "label": "See the MIS dashboard and reports"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things an owner stops guessing about.",
+      "items": [
+        {
+          "h": "How today went",
+          "workflow": "Collections, occupancy and OP volume are read on the phone at the end of the evening.",
+          "result": "The round of calls stops."
+        },
+        {
+          "h": "Why the bank balance is thin",
+          "workflow": "Outstanding is read per TPA and per company alongside what was actually collected.",
+          "result": "The gap has a name and an amount."
+        },
+        {
+          "h": "Whether a new consultant is working",
+          "workflow": "OP volume and billing for that doctor across the period are compared with the clinic hours given.",
+          "result": "The arrangement is reviewed on data."
+        },
+        {
+          "h": "Away from the hospital",
+          "workflow": "The same screen is read from anywhere, because the system runs in the cloud.",
+          "result": "Being away stops meaning being uninformed."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The person who carries the risk.",
+      "items": [
+        {
+          "icon": "&#128188;",
+          "b": "Hospital owners",
+          "p": "One screen instead of four calls."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor-proprietors",
+          "p": "Running a hospital between consultations."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Small hospitals",
+          "p": "No administrator to compile numbers."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Departmental comparison that holds up."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Partners and investors",
+          "p": "The same figures the counter produced."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How owners keep track.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "When you know the day's number",
+          "The next morning",
+          "In a scheduled report",
+          "While the day is still running"
+        ],
+        [
+          "Who prepares it",
+          "A staff member",
+          "A reporting team",
+          "Nobody"
+        ],
+        [
+          "Credit and TPA money",
+          "In a side ledger",
+          "In a finance module",
+          "Beside cash, per payer"
+        ],
+        [
+          "Checking a figure",
+          "Ask the person who wrote it",
+          "Raise a request",
+          "Open it down to the bill"
+        ],
+        [
+          "Reading it from elsewhere",
+          "Not possible",
+          "If remote access is configured",
+          "From your phone, it runs in the cloud"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "The owner dashboard, answered.",
+      "items": [
+        {
+          "q": "Do I have to learn the whole system?",
+          "a": "No. The dashboard is the only screen most owners open. Everything on it is produced by the staff doing their normal work, so there is nothing for you to enter and nothing to maintain."
+        },
+        {
+          "q": "Can I see it from outside the hospital?",
+          "a": "Yes. HIMS runs in the cloud with a live demo at his.elevateaura.co.in, so the same screen opens on a phone or a laptop wherever you are, subject to the access your role has."
+        },
+        {
+          "q": "Does it show what TPAs still owe us?",
+          "a": "Yes. Outstanding is held per payer, so claims sitting with each TPA and balances with each corporate panel appear next to cash collections. Claim detail is in <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+        },
+        {
+          "q": "Can staff see the same figures I do?",
+          "a": "Only what their role allows. Access is role based, so collections, payer detail and departmental performance can be restricted to the people who should have them."
+        },
+        {
+          "q": "How do I know the numbers are right?",
+          "a": "They come from the registration, admission and billing entries themselves rather than a summary somebody typed. Any figure can be opened down to the bills or admissions behind it, and entries are attributed and timed."
+        },
+        {
+          "q": "We are a small hospital. Is this overkill?",
+          "a": "It is usually the opposite. A small hospital has no administrator to compile numbers, so the dashboard is often the first reason an owner buys. See <a href=\"/hims/small-hospital-software/\">small hospital software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "Reports behind the headline."
+        },
+        {
+          "href": "/hims/hospital-software-for-administrators/",
+          "icon": "&#128203;",
+          "b": "For administrators",
+          "p": "Acting on it during the day."
+        },
+        {
+          "href": "/hims/hospital-corporate-credit-billing/",
+          "icon": "&#127970;",
+          "b": "Corporate credit",
+          "p": "Where outstanding builds up."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospitals",
+          "p": "No administrator needed."
+        },
+        {
+          "href": "/hims/hospital-management-software-pricing/",
+          "icon": "&#8377;",
+          "b": "Pricing",
+          "p": "What drives the number."
+        }
+      ]
+    }
+  ]
+}

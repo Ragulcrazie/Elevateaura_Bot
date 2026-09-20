@@ -1,0 +1,216 @@
+{
+  "cluster": "compare",
+  "slug": "hims-vs-emr",
+  "title": "HIMS vs EMR: Which Does Your Hospital Need | Elevate Aura",
+  "meta": "HIMS vs EMR compared: a whole hospital system against a clinical record alone, what each covers, and when a clinic genuinely needs nothing more than an EMR.",
+  "h1": "HIMS vs EMR: the whole hospital, or <span class=\"hl\">only the doctor's screen</span>.",
+  "crumb": "HIMS vs EMR",
+  "pill": "Comparison",
+  "sub": "An EMR is the clinical record. A HIMS is the record plus every counter around it: registration, queue, pharmacy, laboratory, beds, billing and claims. This page separates them and says plainly when an EMR on its own is the right purchase.",
+  "meta_ticks": [
+    "Written for Indian hospitals and clinics",
+    "Fair about when an EMR is enough",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See HIMS",
+  "cta_href": "/hims.html",
+  "whatsapp_text": "Hi, I read the HIMS vs EMR comparison and want to discuss what our clinic needs.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "HIMS vs EMR",
+  "secondary_keywords": [
+    "difference between HIMS and EMR",
+    "EMR vs hospital management system",
+    "do we need HIMS or EMR",
+    "clinic EMR software India",
+    "HIS vs EMR"
+  ],
+  "intent": "comparison",
+  "persona": "Clinic or hospital owner deciding between an EMR alone and a full hospital system",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "One screen, or every counter",
+      "paras": [
+        "An EMR is for the clinician. It holds history, examination, diagnosis, orders, progress notes and prescriptions against one patient, and its job is that the next consultation starts from what the last one found. Nothing in it registers a patient, moves a queue, dispenses a drug, releases a laboratory result or raises a bill.",
+        "A HIMS is for the whole institution. It includes an EMR and puts the counters around it: OP and IP registration on one UHID, appointments and tokens, pharmacy, laboratory, inventory, beds, theatre, emergency, billing with insurance and TPA claims, and a dashboard of the day.",
+        "The choice is therefore not about record quality. It is about how many places in your building currently run on paper, and whether you are willing to keep them there."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each behaves",
+      "h2": "What changes on the floor",
+      "body": [
+        {
+          "h3": "With an EMR alone"
+        },
+        "The consulting room improves and nothing else does. The doctor has structured notes and a prescription that prints, and the patient's earlier visits are visible. Meanwhile the front desk still keeps its own register, the pharmacy still reads a handwritten slip or retypes the prescription, the laboratory still returns a printout that somebody files, and the bill is still assembled by hand. Two records now exist for the same visit: the clinical one and the commercial one, and they agree only when somebody makes them agree.",
+        {
+          "h3": "With a HIMS"
+        },
+        "Registration creates the record and everything after it writes to the same place. The order the doctor raises appears on the laboratory worklist and the pharmacy queue. The charge appears as the event happens rather than being reconstructed at discharge. Imaging arrives on the record through <a href=\"/aurapacs.html\">AuraPACS</a>. The claim is raised from the bill the record produced. The cost is that more people have to change how they work, on the same day.",
+        {
+          "h3": "The join that decides it"
+        },
+        "Ask one question of your own hospital: how does a charge become a bill today. If the answer involves somebody reading a case sheet and typing into a separate book, an EMR will not fix it and may make it slower, because the case sheet is now on a screen the billing clerk does not use. That single workflow is usually what settles the argument."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "EMR alone, HIMS, and what each leaves you doing",
+      "cols": [
+        "EMR alone",
+        "EMR plus separate tools",
+        "HIMS"
+      ],
+      "rows": [
+        [
+          "Clinical record",
+          "Structured notes, orders and prescriptions",
+          "Same, with the rest bolted around it",
+          "Same record, read by every counter"
+        ],
+        [
+          "Registration and identity",
+          "Not covered; kept in a register",
+          "A second system with its own numbering",
+          "One UHID created once and reused"
+        ],
+        [
+          "Queue and appointments",
+          "Not covered",
+          "A booking tool that does not know the doctor's roster",
+          "Appointments, tokens and rosters on one screen"
+        ],
+        [
+          "Pharmacy and laboratory",
+          "Orders written, not fulfilled",
+          "Separate stock and lab software, re-keyed",
+          "Dispensing queue and lab from order to verified result"
+        ],
+        [
+          "Beds, theatre and ICU",
+          "Not covered",
+          "Usually a whiteboard",
+          "Bed occupancy, theatre list and live vitals per bed"
+        ],
+        [
+          "Billing and claims",
+          "Not covered",
+          "Typed again from the case sheet",
+          "Cash, insurance and TPA with GST, drawn from the record"
+        ],
+        [
+          "Who has to change habits",
+          "Doctors only",
+          "Doctors, plus staff maintaining two systems",
+          "Every counter, phased over the rollout"
+        ],
+        [
+          "Best fit",
+          "A single-doctor clinic with a simple, cash bill",
+          "A hospital tolerating integration work",
+          "Any hospital, nursing home or growing clinic"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "When an EMR really is enough",
+      "body": [
+        "There is a genuine case for buying only an EMR, and it should be stated plainly rather than argued away. If you are a single doctor or a small practice where the consultation is the entire business, an EMR alone is the honest answer.",
+        {
+          "ul": [
+            "<b>One consulting room, one receptionist.</b> Registration is a name in a book and finding a patient takes seconds because there are not many of them.",
+            "<b>No dispensing and no in-house laboratory.</b> Prescriptions and requests leave the building, so there is no queue to manage inside it.",
+            "<b>A flat, cash bill.</b> Consultation charge and nothing else, with no insurer, TPA or package pricing involved.",
+            "<b>No beds.</b> Nobody stays overnight, so there is no admission, no ward and no discharge summary.",
+            "<b>Specialist practice inside someone else's hospital.</b> The hospital already runs the counters; you only need your own clinical notes."
+          ]
+        },
+        "The moment two of those stop being true, the arithmetic changes. A clinic that starts dispensing, accepts an insurer, adds a second doctor or keeps a patient overnight now has counters, and counters are what a HIMS exists to run.",
+        "If you are between the two, buy in the order the work happens: get identity and the clinical record right first, then add pharmacy, laboratory, beds and claims as phases. That is exactly how a HIMS rollout is sequenced anyway, so starting small does not mean buying twice. See <a href=\"/hims/hospital-emr-software/\">hospital EMR software</a>, <a href=\"/hims/clinic-management-software/\">clinic management software</a> and the <a href=\"/resources/hospital-software-implementation-checklist/\">implementation checklist</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS vs EMR, answered",
+      "items": [
+        {
+          "q": "Is an EMR part of a HIMS?",
+          "a": "Yes. In Elevate Aura's HIMS the EMR is the clinical layer of the same system that handles registration, pharmacy, laboratory, beds, billing and claims. It is not a separate product bolted on, which is why the bill can be drawn from what was recorded."
+        },
+        {
+          "q": "Can we buy the EMR now and the rest later?",
+          "a": "Yes. Modules are switched on rather than bought whole, and later modules attach to the patient record you already have. Adding pharmacy or beds afterwards is a configuration step, not a second implementation."
+        },
+        {
+          "q": "We already have an EMR. Do we have to replace it?",
+          "a": "Not necessarily, but be honest about the join. If billing, pharmacy and the laboratory still retype what the EMR holds, you are paying for two records of the same visit. Raise it on a call and the options can be walked through against your actual workflow."
+        },
+        {
+          "q": "Is an EMR cheaper than a HIMS?",
+          "a": "Less software usually costs less, but the comparison is incomplete. Count the staff time spent keeping a separate register, retyping prescriptions and reconstructing bills. Elevate Aura scopes both on a call rather than publishing a price list."
+        },
+        {
+          "q": "What is the difference between EMR and EHR here?",
+          "a": "EMR is the record inside your hospital; EHR is a record shared across providers with the patient's consent, which in India runs through ABHA and ABDM. See <a href=\"/resources/emr-vs-ehr/\">EMR vs EHR</a> for the full explanation."
+        },
+        {
+          "q": "How long does a HIMS take to go live compared with an EMR?",
+          "a": "An EMR alone touches one group of users, so it is quicker. A HIMS touches every counter and is phased. The framework is live in 30 working days where scope allows, with the scope fixed at the start."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128221;",
+          "b": "Hospital EMR software",
+          "p": "The clinical layer in full."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "Every counter, one record."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic management software",
+          "p": "The smaller configuration."
+        },
+        {
+          "href": "/resources/emr-vs-ehr/",
+          "icon": "&#128218;",
+          "b": "EMR vs EHR",
+          "p": "Inside, and beyond, your walls."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "The other half of the question."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}
