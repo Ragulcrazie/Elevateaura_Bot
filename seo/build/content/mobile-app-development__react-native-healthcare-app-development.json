@@ -1,0 +1,329 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "react-native-healthcare-app-development",
+  "title": "React Native Healthcare App Development | Elevate Aura",
+  "meta": "React Native healthcare app development for patient, staff and field apps that share a stack with your web platform. Carna Medicare's app shipped in 30 days.",
+  "h1": "React Native healthcare app development that shares a stack with <span class=\"hl\">the rest of your platform</span>.",
+  "crumb": "React Native Healthcare App Development",
+  "pill": "For teams on a JavaScript stack",
+  "sub": "React Native builds Android and iOS apps from one JavaScript or TypeScript codebase using native platform widgets. We use it when the app sits beside a Next.js web dashboard and a Supabase backend, which is how the Carna Medicare field-staff app was delivered.",
+  "meta_ticks": [
+    "One JavaScript codebase, both stores",
+    "Shares logic with a Next.js web app",
+    "Carna Medicare field app shipped in 30 days"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a React Native healthcare app.",
+  "primary_keyword": "React Native healthcare app development",
+  "secondary_keywords": [
+    "React Native app development company India",
+    "React Native medical app",
+    "React Native app developers Chennai",
+    "React Native field app",
+    "React Native Supabase app"
+  ],
+  "intent": "commercial",
+  "persona": "Healthcare or distribution business owner, or a technical lead, deciding whether React Native is the right stack for their app",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What React Native healthcare app development is, and when we choose it",
+      "paras": [
+        "React Native healthcare app development means building your app in Meta's React Native framework: JavaScript or TypeScript, one codebase, compiled to real native components on Android and iOS. Elevate Aura uses it whenever the app is one part of a larger platform that also has a web dashboard and a shared backend.",
+        "The clearest example is Carna Medicare, a medical-equipment distributor in Chennai. Their 12-module operations platform includes a field-staff app in React Native, a manager dashboard, GST billing, payment tracking and service tracking, all on Supabase, with a WordPress site alongside. The whole platform shipped in 30 days, and the app and dashboard share data models and logic because they share a language.",
+        "When the app is a standalone, interface-heavy product with no JavaScript around it, <a href=\"/mobile-app-development/flutter-healthcare-app-development/\">Flutter</a> may be the better call. We advise on that before scope is fixed."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The platform problem",
+      "h2": "When the app and the dashboard are built by different people in different languages.",
+      "lead": "Healthcare and distribution apps rarely live alone. They report to an office dashboard, and that is where the trouble starts.",
+      "items": [
+        {
+          "h": "Two definitions of a job",
+          "p": "The app calls it a visit, the dashboard calls it a call, and the fields do not line up."
+        },
+        {
+          "h": "Logic written twice",
+          "p": "Validation rules, GST calculations and status flows are coded once in the app and again on the web, and drift apart."
+        },
+        {
+          "h": "Two vendors to chase",
+          "p": "A bug that crosses the app and the dashboard bounces between two teams who each blame the other."
+        },
+        {
+          "h": "Web team cannot help",
+          "p": "Your in-house developers write JavaScript, and the app was built in something they cannot read."
+        },
+        {
+          "h": "Slow changes",
+          "p": "A new field on the job card needs a change in three places by three people."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How we build in React Native",
+      "h2": "One stack from the field to the office.",
+      "steps": [
+        {
+          "h": "Stack call",
+          "p": "We check your existing web stack and backend and confirm React Native is the right fit."
+        },
+        {
+          "h": "Shared backend",
+          "p": "Supabase: auth, Postgres, storage and realtime shared by app and dashboard."
+        },
+        {
+          "h": "Shared models",
+          "p": "One TypeScript definition of a customer, a job, an invoice, used by both clients."
+        },
+        {
+          "h": "App screens",
+          "p": "Role-based screens, offline storage, GPS, camera and signature capture."
+        },
+        {
+          "h": "Web dashboard",
+          "p": "Next.js dashboard for the office, in the same repository."
+        },
+        {
+          "h": "Ship both",
+          "p": "Store release and web deployment together, with support from the builder."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "A React Native build from Elevate Aura.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "App",
+          "items": [
+            "TypeScript, one codebase, both stores",
+            "Native platform look and feel",
+            "Offline storage and sync",
+            "GPS, camera, barcode, signature",
+            "Push notifications"
+          ]
+        },
+        {
+          "icon": "&#128421;",
+          "h": "Alongside the app",
+          "items": [
+            "Next.js web dashboard",
+            "Shared TypeScript models and validation",
+            "WordPress or Next.js public site"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Backend",
+          "items": [
+            "Supabase or Azure",
+            "Role-based access and audit log",
+            "Connections to HIMS, AuraPACS, Aura Business"
+          ]
+        },
+        {
+          "icon": "&#128640;",
+          "h": "Release and after",
+          "items": [
+            "Store listings and review",
+            "Versioned releases",
+            "Support on WhatsApp"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+        "label": "See the React Native platform we shipped"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "Where React Native fits",
+      "h2": "Apps that belong to a bigger platform.",
+      "items": [
+        {
+          "h": "Field-staff app plus manager dashboard",
+          "workflow": "Reps log visits with GPS check-in and orders in the app; managers see the pipeline, billing and payments on the web, all from one Supabase database.",
+          "result": "The Carna Medicare pattern: app, dashboard, billing and tracking shipped together in 30 days."
+        },
+        {
+          "h": "Hospital staff app on HIMS",
+          "workflow": "Doctors and nurses use the app; administrators use the HIMS web dashboard; both read the same appointments, EMR and billing.",
+          "result": "No duplicate logic between the mobile and web sides."
+        },
+        {
+          "h": "Distributor ordering app beside a B2B portal",
+          "workflow": "Dealers order from the app or the web portal; pricing rules and order status are defined once.",
+          "result": "One rulebook, two front doors."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Where a React Native build makes sense.",
+      "items": [
+        {
+          "icon": "&#128736;",
+          "b": "Distributors and dealers",
+          "p": "Field app plus office dashboard."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals on HIMS",
+          "p": "Staff and patient apps on a JavaScript stack."
+        },
+        {
+          "icon": "&#128421;",
+          "b": "Businesses with a Next.js site",
+          "p": "Share models and logic with the web."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128187;",
+          "b": "In-house JavaScript teams",
+          "p": "An app your developers can maintain."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Device companion apps",
+          "p": "Product Development builds these in React Native."
+        },
+        {
+          "icon": "&#128200;",
+          "b": "Anyone unsure",
+          "p": "We will say if Flutter fits better."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "React Native against the alternatives, in practice.",
+      "cols": [
+        "Two native codebases",
+        "No-code app builder",
+        "Elevate Aura on React Native"
+      ],
+      "rows": [
+        [
+          "Codebases to maintain",
+          "Two",
+          "None you control",
+          "One, in TypeScript"
+        ],
+        [
+          "Shares logic with the web dashboard",
+          "No",
+          "No",
+          "Yes, same models and validation"
+        ],
+        [
+          "Offline, GPS, camera, signature",
+          "Yes, twice",
+          "Limited",
+          "Yes, once"
+        ],
+        [
+          "Who can maintain it",
+          "Two specialist teams",
+          "The builder's vendor",
+          "Any JavaScript developer, or us"
+        ],
+        [
+          "Shipped proof",
+          "Varies",
+          "Varies",
+          "Carna Medicare field app, live"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "React Native healthcare app development, answered.",
+      "items": [
+        {
+          "q": "What have you built in React Native?",
+          "a": "The Carna Medicare field-staff app, part of a 12-module operations platform with a manager dashboard, GST billing, payment tracking and service tracking, on Supabase with a WordPress site. It shipped in 30 days. The Aura Business mobile app follows the same pattern."
+        },
+        {
+          "q": "Is React Native truly native?",
+          "a": "The screens use the platform's own native components, so the app looks and behaves like an Android app on Android and an iOS app on iOS. The business logic is written once in JavaScript or TypeScript."
+        },
+        {
+          "q": "Can it share code with our web app?",
+          "a": "Yes, when the web app is in JavaScript. Data models, validation rules and API clients are shared with a Next.js dashboard, which is the main reason we choose React Native for platform builds."
+        },
+        {
+          "q": "Does it handle offline mode and GPS?",
+          "a": "Yes. Offline storage with background sync, GPS check-in, camera, barcode scanning and signature capture are all standard parts of the field apps we build in React Native."
+        },
+        {
+          "q": "Who owns the code?",
+          "a": "You do. The repository is handed over with documentation, and any JavaScript developer can work on it. Support from the builder continues on WhatsApp."
+        },
+        {
+          "q": "When would you not recommend React Native?",
+          "a": "When the app is a standalone, design-heavy product with no JavaScript web platform beside it, or when your team already works in Dart. Then we suggest Flutter, which we have also shipped to Google Play."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related mobile app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/flutter-healthcare-app-development/",
+          "icon": "&#128302;",
+          "b": "Flutter apps",
+          "p": "The other stack we ship."
+        },
+        {
+          "href": "/mobile-app-development/field-service-mobile-app-development/",
+          "icon": "&#128205;",
+          "b": "Field service app",
+          "p": "The classic React Native platform app."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "icon": "&#127973;",
+          "b": "Hospital apps",
+          "p": "Staff and patient apps on HIMS."
+        },
+        {
+          "href": "/product-development/healthcare-app-development/",
+          "icon": "&#128268;",
+          "b": "Healthcare app development",
+          "p": "The product development view."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128203;",
+          "b": "Carna Medicare",
+          "p": "React Native platform in 30 days."
+        }
+      ]
+    }
+  ]
+}

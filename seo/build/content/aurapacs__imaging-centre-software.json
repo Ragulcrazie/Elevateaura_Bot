@@ -1,0 +1,337 @@
+{
+  "cluster": "aurapacs",
+  "slug": "imaging-centre-software",
+  "title": "Imaging Centre Software | Desk to Report to GST Bill | AuraPACS",
+  "meta": "Imaging centre software that runs the whole centre: front desk scheduling, worklist to the machines, browser viewer, reporting, GST billing.",
+  "h1": "Imaging centre software that runs the whole centre, from <span class=\"hl\">front desk to GST invoice</span>.",
+  "crumb": "Imaging Centre Software",
+  "pill": "For the whole centre",
+  "sub": "An imaging centre is a front desk, a few modalities, a reporting radiologist and a stream of referrers. AuraPACS covers all of it: scheduling that feeds the worklist, studies landing from the machines, a browser viewer, templated reports, GST billing and WhatsApp sharing, with a role for each person.",
+  "meta_ticks": [
+    "Scheduling to worklist to report",
+    "GST billing built in",
+    "One role per staff member"
+  ],
+  "whatsapp_text": "Hi, we run an imaging centre and want software for the whole workflow, not only the viewer.",
+  "primary_keyword": "imaging centre software",
+  "secondary_keywords": [
+    "diagnostic imaging centre software",
+    "radiology centre management software",
+    "scan centre software",
+    "imaging centre management system",
+    "radiology centre billing software",
+    "scan centre software India"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a diagnostic imaging centre who wants one system for the desk, the machines, the reports and the bills",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What imaging centre software should cover",
+      "paras": [
+        "Imaging centre software is the system that runs the day at a scan centre: booking the patient, sending the details to the scanner, receiving the study, reading and reporting it, billing the patient and getting the result to the referrer. AuraPACS covers that whole line in one product, with a browser interface and a role for the front desk, technician, radiologist and referrer.",
+        "Most centres run this on three or four disconnected things: a register or spreadsheet for bookings, the scanner console for images, a document for reports and a separate billing package. Every hand-off between them is a retyped name. Putting the steps in one system is what removes the retyping and the lost studies."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The disconnected centre",
+      "h2": "Four tools, four copies of the patient's name.",
+      "lead": "The problems at a scan centre are rarely about any single tool. They come from the gaps between them.",
+      "items": [
+        {
+          "h": "Bookings in a register",
+          "p": "The day's appointments live in a book or a spreadsheet the technician cannot see from the scanner."
+        },
+        {
+          "h": "Retyped at the console",
+          "p": "The technician enters the patient again on the modality, and the spelling drifts."
+        },
+        {
+          "h": "Images on the scanner only",
+          "p": "Studies stay on the console until they are deleted for space or burned to a disc."
+        },
+        {
+          "h": "Reports in a document",
+          "p": "Written in Word, printed, filed by date, unconnected to the images."
+        },
+        {
+          "h": "Billing somewhere else",
+          "p": "A separate billing package or a manual invoice book, with no link to the study performed."
+        },
+        {
+          "h": "Referrers chase by phone",
+          "p": "The referring physician calls the desk to ask whether the report is ready."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "One patient, start to finish, in one system.",
+      "steps": [
+        {
+          "h": "Front desk books",
+          "p": "Patient registered, study scheduled, referrer recorded."
+        },
+        {
+          "h": "Worklist to the machine",
+          "p": "The entry appears on the modality; the technician selects it."
+        },
+        {
+          "h": "Study received",
+          "p": "Images land on the on-premise node and are filed under the patient."
+        },
+        {
+          "h": "Radiologist reads",
+          "p": "In the browser, on site or remote, with priors from the history."
+        },
+        {
+          "h": "Report signed",
+          "p": "Template report finalised to a PDF on the study."
+        },
+        {
+          "h": "Billed",
+          "p": "GST invoice raised for the study from the same system."
+        },
+        {
+          "h": "Shared",
+          "p": "Secure WhatsApp link to the referrer and patient."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Every part of the centre, by role.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Front desk",
+          "items": [
+            "Scheduling and patient registration",
+            "Modality worklist",
+            "Full searchable patient history",
+            "GST billing and invoicing"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Technician",
+          "items": [
+            "Worklist on the machine, no retyping",
+            "Study lands automatically",
+            "Any modality: CT, MR, X-ray, ultrasound, mammography and more"
+          ]
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "h": "Radiologist",
+          "items": [
+            "Browser viewer, nothing installed",
+            "Slice scrolling and window/level",
+            "Structured templates per modality",
+            "Remote reading from home"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Referrer and owner",
+          "items": [
+            "WhatsApp secure links",
+            "Referrer role for regular referrers",
+            "Role-based access, every view audited",
+            "Encrypted offsite backup"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/diagnostic-centre-management-software/",
+        "label": "Need lab and pathology too? See diagnostic centre management software"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "A day at the centre.",
+      "items": [
+        {
+          "h": "Morning rush at the desk",
+          "workflow": "Patients are registered once; each study goes to the right machine's worklist.",
+          "result": "The technician starts each scan by selecting a name, not typing one."
+        },
+        {
+          "h": "The radiologist arrives at noon",
+          "workflow": "The pending list shows the morning's studies; each opens in the browser with its prior.",
+          "result": "Reports are signed in the order they arrived."
+        },
+        {
+          "h": "The patient pays at the counter",
+          "workflow": "A GST invoice is raised against the study from the same screen.",
+          "result": "No separate billing book to reconcile at the end of the day."
+        },
+        {
+          "h": "The referrer gets the result",
+          "workflow": "Front desk sends the secure link on WhatsApp the moment the report is signed.",
+          "result": "No phone call asking whether it is ready."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Imaging centres of any size.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Single-site scan centres",
+          "p": "CT, MR, ultrasound and X-ray under one roof."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Ultrasound and X-ray clinics",
+          "p": "Smaller centres that still need booking, reporting and billing."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Two-branch groups",
+          "p": "One archive, one reader, two front desks."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital imaging departments",
+          "p": "Where the department bills and reports as its own unit."
+        },
+        {
+          "icon": "&#129514;",
+          "b": "Imaging plus laboratory",
+          "p": "Pair with HIMS for lab, pharmacy and OP billing."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running the centre, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Enterprise PACS",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Booking to scanner",
+          "Register and retyping",
+          "Separate RIS licence",
+          "Worklist built in"
+        ],
+        [
+          "Images",
+          "Console and discs",
+          "Server rack",
+          "On-premise node, cloud backup"
+        ],
+        [
+          "Reporting",
+          "Word documents",
+          "Separate module",
+          "Templates, PDF on the study"
+        ],
+        [
+          "Billing",
+          "Invoice book",
+          "Third-party integration",
+          "GST invoicing built in"
+        ],
+        [
+          "Sharing",
+          "Courier and phone photos",
+          "Portal login",
+          "WhatsApp secure link"
+        ],
+        [
+          "Time to live",
+          "None",
+          "Months",
+          "30 working days where scope allows"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Imaging centre software, answered.",
+      "items": [
+        {
+          "q": "Is this a PACS or a RIS?",
+          "a": "Both, in one product. AuraPACS has the archive and viewer of a PACS and the scheduling, worklist, reporting and billing of a RIS, so a small centre does not buy two systems. See <a href=\"/aurapacs/ris-pacs-software/\">RIS PACS software</a>."
+        },
+        {
+          "q": "Does it handle GST invoices?",
+          "a": "Yes. GST billing and invoicing are built in, so the invoice for a study is raised from the same system that holds the study."
+        },
+        {
+          "q": "What about the laboratory and pharmacy?",
+          "a": "Those sit in HIMS, which includes AuraPACS imaging. A centre that runs pathology alongside imaging should look at <a href=\"/hims/diagnostic-centre-management-software/\">diagnostic centre management software</a>."
+        },
+        {
+          "q": "Which staff get logins?",
+          "a": "Everyone who needs one: front desk, technician, radiologist and referrer roles are built in, each seeing only what its role allows, with every view audited."
+        },
+        {
+          "q": "Does the centre need internet all day?",
+          "a": "No. Booking, worklist, receiving, viewing, reporting and billing run on the on-premise node over the local network. The cloud layer adds remote reading, WhatsApp links and encrypted backup when the connection is available."
+        },
+        {
+          "q": "How long does it take to go live?",
+          "a": "Around 30 working days where scope allows: node installed, modalities connected, templates and branding set up, staff trained. In Chennai this can be done in person; elsewhere it is done remotely."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#128300;",
+          "b": "Diagnostic centre PACS",
+          "p": "PACS sized for one centre."
+        },
+        {
+          "href": "/aurapacs/radiology-workflow-software/",
+          "icon": "&#128200;",
+          "b": "Radiology workflow",
+          "p": "Worklist to sign-off."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/hims/diagnostic-centre-management-software/",
+          "icon": "&#129514;",
+          "b": "Diagnostic centre management",
+          "p": "Lab, pharmacy and imaging together."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128218;",
+          "b": "What is RIS",
+          "p": "Where scheduling and billing fit."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-pricing",
+  "title": "PACS Software Pricing Models Explained | AuraPACS",
+  "meta": "PACS software pricing: how per-study, subscription and owned-licence models behave over five years, what moves the quote, and the one exit question to ask.",
+  "h1": "PACS software pricing: three models, <span class=\"hl\">five years apart</span>.",
+  "crumb": "PACS Pricing",
+  "pill": "For imaging centres and hospitals",
+  "sub": "Imaging software is sold in three very different ways, and the one you accept decides what you pay for the rest of the decade. This page compares the models, the cost drivers behind them, and the questions that settle it.",
+  "meta_ticks": [
+    "Per study, subscription or owned",
+    "Storage and modalities explained",
+    "Hybrid: the archive stays yours"
+  ],
+  "whatsapp_text": "Hi, I'd like to understand AuraPACS pricing for our imaging centre.",
+  "primary_keyword": "PACS software pricing",
+  "secondary_keywords": [
+    "PACS cost India",
+    "cloud PACS price",
+    "DICOM software cost",
+    "PACS pricing models",
+    "radiology software cost India"
+  ],
+  "intent": "transactional",
+  "persona": "Owner of a diagnostic or imaging centre, or an administrator at a hospital with imaging, comparing PACS quotes",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How PACS is priced, and why the quote follows a call",
+      "paras": [
+        "AuraPACS is quoted after a short call, because an imaging quote is decided by your modalities, your study volume, how long you keep studies and where the system runs, none of which fit on a web page. The wider market prices imaging three ways: per study, by subscription for each modality or user, and as a licence you own with support alongside it. Those three behave very differently once five years have passed.",
+        "AuraPACS is hybrid. An on-premise node sits on your own network and keeps receiving and reading when the internet does not, and a thin cloud layer handles remote viewing and encrypted offsite backup. After activation the system runs on your network, so you are not paying a toll on every scan you perform.",
+        "If you are still comparing architectures rather than commercial models, read <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud PACS versus on-premise PACS</a> first and come back to the money afterwards."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The three models",
+      "h2": "What each pricing model feels like in year one and year five",
+      "lead": "Judge a model by its shape over time rather than by its opening number. Growth in your own volume is what separates them.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Model",
+              "Year one",
+              "Year five",
+              "The clause to read"
+            ],
+            "rows": [
+              [
+                "Per study",
+                "Light to begin, easy to approve",
+                "Rises with every scan you perform and never stops",
+                "How the rate changes once volume crosses a band"
+              ],
+              [
+                "Subscription per modality or user",
+                "Predictable monthly outgo",
+                "Still running, and larger after every new machine or radiologist",
+                "What is charged when you add a modality mid-term"
+              ],
+              [
+                "Licence you own, with support",
+                "A larger initial commitment",
+                "Support continues, the system itself is already yours",
+                "What support covers and what is billed separately"
+              ]
+            ]
+          }
+        },
+        "The per-study model is the one that deserves the hardest look, because it is the only one that punishes you for being busy. A centre that doubles its scans doubles its software bill while its costs per scan stay flat everywhere else. Subscription per modality has a milder version of the same problem: the day you add a second ultrasound or a new CT, the monthly figure moves.",
+        {
+          "h3": "What moves an imaging quote in any model"
+        },
+        {
+          "ul": [
+            "<b>Number and age of modalities.</b> Each CT, MR, CR or DR, ultrasound and mammography unit has to be configured to send, and older consoles take longer to coax.",
+            "<b>Storage growth.</b> A cross-sectional study is far heavier than a plain film, so your modality mix and your retention period together decide how fast the archive grows.",
+            "<b>On-premise hardware.</b> The node runs on a machine at your centre. Whether you already have something suitable or need to buy it belongs in the comparison.",
+            "<b>Remote reading.</b> Radiologists reading from home or a second site, and referrers receiving reports, change how much of the cloud layer you use.",
+            "<b>Prior studies.</b> Years of images on discs or an old archive have to be brought in, which is work with a definable scope."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "Always in the system",
+      "h2": "What AuraPACS includes whichever way it is scoped.",
+      "groups": [
+        {
+          "icon": "&#129659;",
+          "h": "Archive and viewing",
+          "items": [
+            "On-premise node that works without internet",
+            "DICOM receive straight from the machines",
+            "Zero-download browser viewer on any laptop",
+            "Full searchable patient history"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Workflow",
+          "items": [
+            "Modality worklist, so nothing is retyped at the console",
+            "Structured reporting templates per modality",
+            "Report finalised to PDF and attached to the study",
+            "Role-based access for radiologist, technician, front desk and referrer"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Sharing and safety",
+          "items": [
+            "WhatsApp report sharing by secure link, no login for the patient",
+            "Remote reading from home or a second site",
+            "Encrypted offsite backup",
+            "Audited access across records"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Running the centre",
+          "items": [
+            "GST billing and invoicing built in",
+            "Windows demo installer to try before committing",
+            "Activation by Site ID, then the system runs on your network",
+            "Support on WhatsApp from the person who built it"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See AuraPACS in full"
+      }
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before you sign anything",
+      "h2": "Ask every vendor what they keep if you stop paying",
+      "lead": "This is the single question that reorders most shortlists, and it is best asked while the supplier still wants your business.",
+      "body": [
+        "Put it plainly: if we stop paying you next year, what happens to our studies. A good answer names the export format, says who performs the export, how long it takes and whether it is chargeable, and confirms that the images themselves remain your records. A vague answer is itself the answer. Get whichever reply you receive in writing and attached to the contract.",
+        {
+          "h3": "Then compare like for like"
+        },
+        {
+          "ul": [
+            "<b>Model your own volume.</b> Take a busy month of your own studies, project it forward with the growth you expect, and run all three models across it before you look at any proposal.",
+            "<b>Count the machines you actually own.</b> Include the ultrasound in the side room. Quotes written from an optimistic machine list get revised upwards later.",
+            "<b>Separate software from hardware.</b> Ask which part of the quote is the node and which is the licence, so you are not comparing one supplier's hardware with another's software.",
+            "<b>Check the reading experience.</b> A viewer that needs installing on every laptop costs staff time every week, whatever the invoice says.",
+            "<b>Ask what a busy Saturday looks like.</b> Support that exists only on weekday mornings is cheaper for a reason."
+          ]
+        },
+        "The reason the hybrid model matters commercially, not just technically, is ownership. When the archive lives on your node and the cloud layer is there for remote viewing and backup, you are buying a system rather than renting access to your own images. The fuller buying checklist, including the test transfer worth insisting on, is in <a href=\"/resources/how-to-choose-pacs/\">how to choose a PACS</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS cost questions, answered without a figure.",
+      "items": [
+        {
+          "q": "Why don't you publish PACS prices?",
+          "a": "Because the honest answer depends on your modality mix, study volume, retention period and whether the node runs on hardware you already own. A single published number would suit almost nobody reading it, and sending you off with the wrong one helps neither of us."
+        },
+        {
+          "q": "Is per-study billing cheaper?",
+          "a": "It is lighter at the start and open ended afterwards, because the meter runs for as long as you scan. Model it against your own projected volume rather than today's, and compare that total with a system you own outright with support alongside it."
+        },
+        {
+          "q": "What does storage cost as we grow?",
+          "a": "Storage is driven by your modality mix and retention period, since cross-sectional studies are far heavier than plain films. Estimate from one real month of your own output. With a hybrid setup the archive sits on your node, with encrypted offsite backup behind it."
+        },
+        {
+          "q": "Do you charge per radiologist or per modality?",
+          "a": "The scoping conversation covers how many modalities send to the system and how many people read remotely, because both affect the work involved. We do not want a model that makes you hesitate before connecting a machine you already own."
+        },
+        {
+          "q": "Can we try it before committing anything?",
+          "a": "Yes. There is a live demo at pacs.elevateaura.co.in and a small Windows demo installer that runs against the demo server, so your radiologist and technician can judge the viewer and the worklist before any commercial discussion happens."
+        },
+        {
+          "q": "What is not included in a PACS quote?",
+          "a": "Ask every supplier, including us, for this in writing. Typically the machine the node runs on, your network and internet link, and any console licence your modality vendor controls sit outside the software quote. Knowing that early prevents an awkward week later."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related imaging reading",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid imaging in full."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#128272;",
+          "b": "Hybrid PACS",
+          "p": "On-premise node, cloud layer."
+        },
+        {
+          "href": "/aurapacs/cloud-pacs-software/",
+          "icon": "&#9729;",
+          "b": "Cloud PACS",
+          "p": "Remote viewing and backup."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#9989;",
+          "b": "Choosing a PACS",
+          "p": "The checklist before you sign."
+        },
+        {
+          "href": "/aura-learn/lms-pricing/",
+          "icon": "&#127891;",
+          "b": "LMS pricing",
+          "p": "Per learner, and why it breaks."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-pricing/",
+          "icon": "&#128188;",
+          "b": "Aura Business pricing",
+          "p": "Module tiers, unlimited users."
+        }
+      ]
+    }
+  ],
+  "cta_h2": "Bring your machine list and a month of volume.",
+  "cta_p": "Half an hour on a call with your modality list, your study volume and your retention needs is enough for us to scope the node, the storage and the setup, and to quote once instead of three times."
+}

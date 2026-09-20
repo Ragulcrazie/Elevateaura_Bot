@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Medical Equipment E-commerce Development | Elevate Aura</title>
+<meta name="description" content="Medical equipment e-commerce development: a B2B storefront with quote-to-order, distributor pricing and payment verification by UTR.">
+<link rel="canonical" href="https://elevateaura.co.in/web-development/medical-equipment-ecommerce-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Medical Equipment E-commerce Development | Elevate Aura">
+<meta property="og:description" content="Medical equipment e-commerce development: a B2B storefront with quote-to-order, distributor pricing and payment verification by UTR.">
+<meta property="og:url" content="https://elevateaura.co.in/web-development/medical-equipment-ecommerce-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medical Equipment E-commerce Development | Elevate Aura">
+<meta name="twitter:description" content="Medical equipment e-commerce development: a B2B storefront with quote-to-order, distributor pricing and payment verification by UTR.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Websites & E-commerce", "item": "https://elevateaura.co.in/web-development/"}, {"@type": "ListItem", "position": 3, "name": "Medical Equipment E-commerce Development", "item": "https://elevateaura.co.in/web-development/medical-equipment-ecommerce-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Medical Equipment E-commerce Development", "serviceType": "Medical Equipment E-commerce Development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Medical equipment e-commerce development: a B2B storefront with quote-to-order, distributor pricing and payment verification by UTR.", "url": "https://elevateaura.co.in/web-development/medical-equipment-ecommerce-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does UTR payment verification work?", "acceptedAnswer": {"@type": "Answer", "text": "After paying by NEFT, RTGS or IMPS the buyer enters the UTR number against the order in the portal. Your accounts team matches it to the bank credit and marks it verified, which releases the order. This is the flow built for Medline Robotics."}}, {"@type": "Question", "name": "Can we also accept card or UPI payments?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A payment gateway can sit alongside bank transfer for smaller orders and walk-in buyers. Institutional orders usually stay on transfer with UTR verification."}}, {"@type": "Question", "name": "Can dealers see different prices from hospitals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Price tiers are assigned per account, so a logged-in dealer sees dealer pricing and a hospital account sees its own, while the public storefront shows specifications and quote requests. See distributor portal development."}}, {"@type": "Question", "name": "Does the store handle GST invoicing?", "acceptedAnswer": {"@type": "Answer", "text": "Quotations and orders are GST-native, and when connected to Aura Business the order becomes a tax invoice with CGST, SGST or IGST, gapless numbering, e-invoice and e-way bill where applicable. See GST billing software."}}, {"@type": "Question", "name": "What platform is it built on?", "acceptedAnswer": {"@type": "Answer", "text": "Next.js and Supabase, with a Postgres database, authentication and storage, the same stack as the Medline Robotics platform. WordPress is used for content-only sites, not for storefronts with pricing and orders."}}, {"@type": "Question", "name": "How long does a storefront take?", "acceptedAnswer": {"@type": "Answer", "text": "Live in 30 working days where scope allows. Catalogue import from your price list, quotation flow and UTR verification are the core; dealer tiers and Aura Business integration are scoped with you."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Websites, e-commerce and distributor portals</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20online%20store%20for%20medical%20equipment." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/web-development/">Websites &amp; E-commerce</a></li>
+  <li><span aria-current="page">Medical Equipment E-commerce Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For distributors, dealers and OEMs</span>
+      <h1>Medical equipment e-commerce development for buyers who order by <span class="hl">quotation and bank transfer</span>.</h1>
+      <p class="sub">Hospitals and dealers do not buy a ventilator with a card at checkout. They ask for a quote, negotiate, order and pay by NEFT. We build storefronts around that: quote-to-order, distributor pricing, order status and UTR payment verification, on Next.js and Supabase.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20online%20store%20for%20medical%20equipment." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Quote-to-order, not just add to cart</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Distributor pricing behind login</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Payment verification by UTR</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What medical equipment e-commerce development delivers</h2>
+    </div>
+    <div class="ans rv"><p>Medical equipment e-commerce development builds an online store that works the way medical buying actually works in India. A public storefront shows the catalogue; a buyer requests a quotation, receives it, converts it to an order, and pays by bank transfer, with the UTR number submitted and verified before the order is released. Dealers see their own pricing after login.</p><p>Elevate Aura built exactly this for Medline Robotics, a medical robotics company in Chennai: a storefront, a distributor portal, quotations, distributor ordering and UTR payment verification, on Supabase and JavaScript, with 253 product and city SEO landing pages feeding the store. That platform is the template for this service.</p><p>Orders and payments can flow into <a href="/aura-business.html">Aura Business</a> as sales orders, invoices and receipts, so the store and the office share one record.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why standard e-commerce fails here</span>
+      <h2 class="h2">A retail cart does not fit a hospital purchase.</h2>
+      <p class="lead">Off-the-shelf shop platforms assume a consumer with a card. Medical buying has quotes, approvals, dealers and bank transfers.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>No quotation step</h3><p>The hospital needs a formal quote for approval before it can order. A cart with a checkout button has nowhere for that to happen.</p></div><div class="pain rv d1"><h3>One price for everyone</h3><p>Dealers, hospitals and walk-in buyers pay different prices. A retail platform shows one figure to all of them.</p></div><div class="pain rv d2"><h3>Card-only payment</h3><p>Institutional buyers pay by NEFT or RTGS. Matching those transfers to orders by hand takes an accounts person half a day.</p></div><div class="pain rv"><h3>Orders that do not reach operations</h3><p>The store emails an order; someone retypes it into the billing system and stock is updated later, or never.</p></div><div class="pain rv d1"><h3>GST as an afterthought</h3><p>Invoices need CGST, SGST or IGST by state, gapless numbering and e-invoice where applicable. Retail plugins rarely get this right.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How an order runs</span>
+      <h2 class="h2">From storefront to verified payment.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Browse</h4><p>Public catalogue by product line, specifications and applications.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Request quote</h4><p>Buyer builds a list and asks for a quotation; dealers see their price tier.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Quotation</h4><p>GST quotation generated and sent; revisions tracked.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Order</h4><p>Quote converted to an order with delivery details and terms.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Pay by transfer</h4><p>Buyer pays by NEFT or RTGS and submits the UTR number in the portal.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Verify and fulfil</h4><p>UTR verified against the bank credit; order released, invoice raised, stock reduced.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The storefront and what sits behind it.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128722;</span>Storefront</h3><ul><li>Catalogue by product line</li><li>Specification and brochure per product</li><li>Quote request and enquiry</li><li>WhatsApp on every product</li><li>Product and city SEO pages</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128203;</span>Quote to order</h3><ul><li>GST quotation builder</li><li>Quote revisions and acceptance</li><li>Order from quote</li><li>Order status and tracking page</li></ul></div><div class="capg rv"><h3><span class="k">&#8377;</span>Pricing and payment</h3><ul><li>Distributor and customer price tiers</li><li>UTR submission and verification</li><li>Payment gateway where wanted</li><li>Receipts and outstanding view</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Operations</h3><ul><li>Sales orders into Aura Business</li><li>GST invoice and e-way bill from the order</li><li>Stock reduced on fulfilment</li><li>Dealer login and documents vault</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/aura-business/medical-equipment-quotation-software/">See the quotation module in Aura Business <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Three orders a medical storefront handles.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A hospital buying two units</h3><p class="r"><b>Workflow:</b> The purchase officer requests a quote for two units, gets a GST quotation PDF, obtains internal approval and converts it to an order a week later.</p><p><b>Result:</b> The quote, order and invoice are one chain, with nothing retyped.</p></div><div class="u rv d1"><h3>A dealer's monthly order</h3><p class="r"><b>Workflow:</b> The dealer logs in, sees dealer pricing, places a bulk order and pays by RTGS, entering the UTR in the portal.</p><p><b>Result:</b> Accounts verifies the credit and the order is released without an email thread.</p></div><div class="u rv"><h3>A walk-in buyer from a city page</h3><p class="r"><b>Workflow:</b> A clinic in another city lands on a product-and-city page, requests a quote and pays by transfer.</p><p><b>Result:</b> A customer the sales team never had to find.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Sellers whose buyers are institutions and dealers.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#128230;</div><b>Distributors</b><p>Dealer network ordering online.</p></div><div class="w"><div class="g">&#127981;</div><b>Manufacturers and OEMs</b><p>Direct and dealer channels on one store.</p></div><div class="w"><div class="g">&#129302;</div><b>Medical robotics and devices</b><p>The Medline Robotics model.</p></div><div class="w"><div class="g">&#128300;</div><b>Consumables and reagents</b><p>Repeat orders with price tiers.</p></div><div class="w"><div class="g">&#129463;</div><b>Dental and surgical supplies</b><p>Clinics ordering by quote.</p></div><div class="w"><div class="g">&#127973;</div><b>Hospital suppliers</b><p>Tender and rate-contract pricing.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Retail shop platform, generic agency, or a built medical storefront.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Retail shop platform</div><div>Generic web agency</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Quotation step</div><div>Plugin, if any</div><div>Custom work</div><div class="us">Built in, GST quotation to order</div></div><div class="r"><div class="cap">Dealer pricing</div><div>Limited</div><div>Custom work</div><div class="us">Price tiers behind login</div></div><div class="r"><div class="cap">Bank transfer payment</div><div>Manual matching</div><div>Manual matching</div><div class="us">UTR submitted and verified in the portal</div></div><div class="r"><div class="cap">Link to billing and stock</div><div>Export</div><div>Integration project</div><div class="us">Sales orders and stock in Aura Business</div></div><div class="r"><div class="cap">Proof</div><div>Varies</div><div>Varies</div><div class="us">Medline Robotics storefront and portal, live</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Medical equipment e-commerce development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>How does UTR payment verification work?</summary><p>After paying by NEFT, RTGS or IMPS the buyer enters the UTR number against the order in the portal. Your accounts team matches it to the bank credit and marks it verified, which releases the order. This is the flow built for Medline Robotics.</p></details><details><summary>Can we also accept card or UPI payments?</summary><p>Yes. A payment gateway can sit alongside bank transfer for smaller orders and walk-in buyers. Institutional orders usually stay on transfer with UTR verification.</p></details><details><summary>Can dealers see different prices from hospitals?</summary><p>Yes. Price tiers are assigned per account, so a logged-in dealer sees dealer pricing and a hospital account sees its own, while the public storefront shows specifications and quote requests. See <a href="/web-development/medical-distributor-portal-development/">distributor portal development</a>.</p></details><details><summary>Does the store handle GST invoicing?</summary><p>Quotations and orders are GST-native, and when connected to Aura Business the order becomes a tax invoice with CGST, SGST or IGST, gapless numbering, e-invoice and e-way bill where applicable. See <a href="/aura-business/gst-billing-software-medical-equipment-distributors/">GST billing software</a>.</p></details><details><summary>What platform is it built on?</summary><p>Next.js and Supabase, with a Postgres database, authentication and storage, the same stack as the Medline Robotics platform. WordPress is used for content-only sites, not for storefronts with pricing and orders.</p></details><details><summary>How long does a storefront take?</summary><p>Live in 30 working days where scope allows. Catalogue import from your price list, quotation flow and UTR verification are the core; dealer tiers and Aura Business integration are scoped with you.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related e-commerce pages</h2></div>
+    <div class="who rv"><a class="w" href="/web-development/"><div class="g">&#128421;</div><b>Websites and e-commerce</b><p>Every web service.</p></a><a class="w" href="/web-development/healthcare-b2b-ecommerce-platform/"><div class="g">&#127970;</div><b>B2B e-commerce platform</b><p>Tiers, credit terms, bulk orders.</p></a><a class="w" href="/web-development/medical-distributor-portal-development/"><div class="g">&#128274;</div><b>Distributor portal</b><p>Dealer login and tracking.</p></a><a class="w" href="/web-development/medical-equipment-website-development/"><div class="g">&#128230;</div><b>Equipment website</b><p>Catalogue and enquiry first.</p></a><a class="w" href="/aura-business/medical-equipment-quotation-software/"><div class="g">&#128203;</div><b>Quotation software</b><p>The GST quote behind the order.</p></a><a class="w" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="g">&#129302;</div><b>Medline Robotics</b><p>The storefront we shipped.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Planning a site or a store?</h2>
+      <p>Tell us what you sell and who buys it. We will scope the build, the catalogue structure and the pages worth ranking.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20online%20store%20for%20medical%20equipment." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">WordPress and Next.js websites, online stores, product catalogues and distributor portals for medical-equipment and healthcare businesses.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Websites &amp; E-commerce</h4>
+        <a href="/web-development/">Websites &amp; E-commerce home</a>
+        <a href="/web-development/">Websites &amp; E-commerce</a><a href="/seo-services/">SEO Services</a><a href="/case-studies/">Case Studies</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+{
+  "cluster": "product-development",
+  "slug": "micropython-development-services",
+  "title": "MicroPython Development Services | Elevate Aura",
+  "meta": "MicroPython development services for device logic, sensors and comms: where MicroPython is the right call, where it is not, and how to move to C/C++ later.",
+  "h1": "MicroPython where it earns its place, and <span class=\"hl\">C/C++ where it does not</span>.",
+  "crumb": "MicroPython Development",
+  "pill": "Software-only, device logic",
+  "sub": "Elevate Aura writes device firmware in MicroPython where the board supports it and the timing allows: application logic, sensor reading, communication and cloud sync. We also say plainly when a job belongs in C or C++, and how a MicroPython build is carried across later.",
+  "meta_ticks": [
+    "Device logic, sensors and comms",
+    "Honest about where the limits sit",
+    "A defined path to C/C++ later"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we are considering MicroPython for our device. Can we discuss whether it fits?",
+  "cta_h2": "Tell us the board and what the device has to do.",
+  "cta_p": "We will say whether MicroPython is the right call for your controller and timing, or whether C or C++ is the safer starting point, before any work is scoped.",
+  "primary_keyword": "MicroPython development",
+  "secondary_keywords": [
+    "MicroPython development services",
+    "MicroPython firmware development",
+    "MicroPython embedded developer India",
+    "MicroPython sensor and comms development",
+    "MicroPython to C++ migration",
+    "Python firmware for microcontrollers"
+  ],
+  "intent": "commercial",
+  "persona": "Hardware or product lead deciding whether MicroPython is a sensible base for their device firmware",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "MicroPython development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "When MicroPython is the right choice, and when it is not",
+      "paras": [
+        "MicroPython runs a Python interpreter on the microcontroller itself, so device logic is written and changed in Python rather than compiled from C. Elevate Aura builds in MicroPython where it fits: application logic, reading sensors, driving peripherals, talking over Wi-Fi or serial, and pushing readings to the cloud.",
+        "It fits best when the board has the memory headroom, when the work is logic and communication rather than microsecond timing, and when the product is still moving. Changing behaviour is fast, a device can be inspected interactively, and a working unit exists early.",
+        "It fits badly where deterministic timing, tight interrupt work, very low power or a memory constrained part is involved. In those cases we say so and write C or C++ instead. Either way this is a software-only engagement: the board, the controller choice, manufacturing and the hardware regulatory route stay with your team."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The decision",
+      "h2": "Choosing the language after the board is bought.",
+      "lead": "The language question usually arrives late, framed as a preference, when it is actually a constraint question.",
+      "items": [
+        {
+          "h": "Chosen because the team knows Python",
+          "p": "A sensible instinct, but the controller's memory and timing decide whether the instinct survives."
+        },
+        {
+          "h": "Chosen against without checking",
+          "p": "A team writes months of C for logic that never needed it, and iteration slows to a crawl."
+        },
+        {
+          "h": "No plan for the move later",
+          "p": "The prototype ships in MicroPython and nobody has decided what happens when the unit cost has to fall."
+        },
+        {
+          "h": "Timing found out on the bench",
+          "p": "An interrupt-driven requirement appears after the architecture is set, and everything is rewritten under pressure."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a fit assessment to firmware on your board.",
+      "steps": [
+        {
+          "h": "Fit assessment",
+          "p": "Controller, memory, timing and power reviewed against what the device must do."
+        },
+        {
+          "h": "Recommendation",
+          "p": "MicroPython, C/C++ or a split, stated plainly with the reasons."
+        },
+        {
+          "h": "Device logic",
+          "p": "Application logic, state handling and configuration written in MicroPython."
+        },
+        {
+          "h": "Sensors and comms",
+          "p": "I2C, SPI, UART and ADC reading, plus Wi-Fi, BLE or serial links."
+        },
+        {
+          "h": "Test on hardware",
+          "p": "Run on your boards, with memory and timing measured, not assumed."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, build and flashing instructions, documented and owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "What MicroPython does well on a device.",
+      "groups": [
+        {
+          "icon": "&#9881;",
+          "h": "Device logic",
+          "items": [
+            "Application state handling",
+            "Configuration and calibration storage",
+            "Scheduling and periodic tasks",
+            "Error handling and safe defaults"
+          ]
+        },
+        {
+          "icon": "&#128225;",
+          "h": "Sensors and peripherals",
+          "items": [
+            "I2C, SPI, UART and ADC reading",
+            "Actuator and output control",
+            "Sampling and simple filtering",
+            "Local storage of readings"
+          ]
+        },
+        {
+          "icon": "&#128246;",
+          "h": "Communication",
+          "items": [
+            "Wi-Fi provisioning and sync",
+            "BLE where the port supports it",
+            "Serial and Modbus links",
+            "Cloud upload to Supabase or Azure"
+          ]
+        },
+        {
+          "icon": "&#9888;",
+          "h": "Where we say no",
+          "items": [
+            "Hard real-time control loops",
+            "Very tight memory budgets",
+            "Aggressive low-power duty cycles",
+            "Ports with no MicroPython support"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where MicroPython is the sensible base.",
+      "items": [
+        {
+          "h": "A device whose behaviour is still being argued about",
+          "workflow": "Logic is written in MicroPython so a change can be tried on a real unit the same afternoon rather than the following sprint.",
+          "result": "The specification settles against a working device instead of a document."
+        },
+        {
+          "h": "A sensor unit that mostly reads and reports",
+          "workflow": "The board samples its sensors on a schedule, stores readings and uploads them over Wi-Fi when the link is up.",
+          "result": "A connected product without a compile-and-flash cycle for every change."
+        },
+        {
+          "h": "A product that must move to C/C++ later",
+          "workflow": "The MicroPython build defines behaviour, interfaces and tests, and the C/C++ rewrite is done against them.",
+          "result": "A migration with a reference to check against, not a blank page."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams deciding how to start their firmware.",
+      "items": [
+        {
+          "icon": "&#128640;",
+          "b": "Device founders",
+          "p": "A working unit early, without a firmware hire."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Read, log and report workloads."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Medical device teams",
+          "p": "Prototypes and non-critical device logic."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment makers",
+          "p": "Monitoring and reporting add-ons."
+        },
+        {
+          "icon": "&#128187;",
+          "b": "Python teams",
+          "p": "Software people meeting hardware."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Application logic off their plate."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "MicroPython against the alternatives.",
+      "cols": [
+        "MicroPython",
+        "C/C++",
+        "How we choose"
+      ],
+      "rows": [
+        [
+          "Speed of change",
+          "Fast, edit on the device",
+          "Compile and flash each time",
+          "MicroPython while the spec moves"
+        ],
+        [
+          "Timing control",
+          "Interpreted, less predictable",
+          "Deterministic",
+          "C/C++ for anything time critical"
+        ],
+        [
+          "Memory footprint",
+          "Interpreter overhead",
+          "Lean",
+          "C/C++ on constrained parts"
+        ],
+        [
+          "Low power duty cycling",
+          "Workable, not optimal",
+          "Fine control",
+          "C/C++ where battery life is the spec"
+        ],
+        [
+          "Path afterwards",
+          "Carries into a C/C++ rewrite",
+          "Already there",
+          "Decided with you at the start"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "MicroPython development, answered.",
+      "items": [
+        {
+          "q": "Is MicroPython good enough to ship?",
+          "a": "On the right board and the right workload, yes. Logic, sensor reading, communication and cloud sync run well. Hard real-time control, very tight memory and aggressive power budgets do not suit it, and in those cases we recommend C or C++ instead."
+        },
+        {
+          "q": "What if we outgrow it?",
+          "a": "That is planned for rather than discovered. The MicroPython build defines the behaviour, the interfaces and the tests, and the C or C++ version is written against them. See <a href=\"/product-development/embedded-c-cpp-development-services/\">embedded C/C++ development services</a>."
+        },
+        {
+          "q": "Can you mix the two?",
+          "a": "Yes, that is often the right answer. Time critical work sits in C, and the application logic above it stays in MicroPython. Where a port allows a C module to be exposed to Python, we use it and document the boundary clearly."
+        },
+        {
+          "q": "Do you choose the microcontroller?",
+          "a": "No. Elevate Aura is software-only, so the controller, board, sensors and power design are your hardware team's decisions. We will tell you honestly whether MicroPython is supported and sensible on the part you have chosen."
+        },
+        {
+          "q": "Who owns the code?",
+          "a": "You do. Source, build and flashing instructions and documentation are handed over, and your team or another engineer can maintain it without depending on us."
+        },
+        {
+          "q": "Can the device get a companion app and cloud?",
+          "a": "Yes. The same engagement can add a React Native app and a telemetry pipeline on Supabase or Azure, so the device and the software around it are written to fit. See <a href=\"/product-development/iot-product-development/\">IoT product development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers, peripherals, testing."
+        },
+        {
+          "href": "/product-development/firmware-development/",
+          "icon": "&#128268;",
+          "b": "Firmware development",
+          "p": "Written to your hardware spec."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "Read, calibrate, act."
+        },
+        {
+          "href": "/product-development/wifi-connected-device-software/",
+          "icon": "&#128246;",
+          "b": "Wi-Fi device software",
+          "p": "Onboarding and cloud sync."
+        },
+        {
+          "href": "/product-development/embedded-software-development/",
+          "icon": "&#9881;",
+          "b": "Embedded software",
+          "p": "The whole device software layer."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

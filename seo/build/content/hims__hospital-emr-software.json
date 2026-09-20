@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-emr-software",
+  "title": "Hospital EMR Software | Structured Records, e-Prescription | HIMS",
+  "meta": "Hospital EMR software with structured history, orders, notes, reports and e-prescription on one record across OP, IP, lab, pharmacy and AuraPACS imaging.",
+  "h1": "Hospital EMR software that keeps <span class=\"hl\">one clinical record</span> from the first OP visit to discharge.",
+  "crumb": "Hospital EMR Software",
+  "pill": "For doctors, nurses and quality teams",
+  "sub": "HIMS gives every patient a structured electronic medical record: history, examination, orders, progress notes, lab and imaging reports and e-prescriptions, written once and read in OP, the ward, the pharmacy and the reporting room.",
+  "meta_ticks": [
+    "Structured history, orders and notes",
+    "Lab, pharmacy and AuraPACS on the same record",
+    "Supports NABH-style documentation"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patients.png",
+    "alt": "HIMS patient record list showing UHID, department, last visit and payer for each patient",
+    "bar": "his.elevateaura.co.in/patients"
+  },
+  "whatsapp_text": "Hi, I'd like to see the EMR in HIMS for our hospital.",
+  "primary_keyword": "hospital EMR software",
+  "secondary_keywords": [
+    "electronic medical record software for hospitals",
+    "EMR software India",
+    "hospital EHR software",
+    "e-prescription software for hospitals",
+    "NABH documentation software",
+    "clinical documentation software"
+  ],
+  "intent": "commercial",
+  "persona": "Medical director, quality coordinator or owner of a hospital moving clinical notes off paper",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital EMR software means in HIMS",
+      "paras": [
+        "Hospital EMR software is the clinical half of a hospital information system: the place where a doctor records history and findings, raises orders, writes progress notes and issues prescriptions against a single patient record. In HIMS the EMR is not a bolt-on. It is the same record that registration created, that the lab and pharmacy read, and that billing draws charges from.",
+        "The record is structured rather than free text. History, examination, diagnosis, orders, notes and reports each sit in their own place, which is what allows the EMR to support NABH-style documentation and lets a nurse on the ward see exactly what the OP doctor ordered that morning. Imaging studies and radiology reports arrive on the same record through AuraPACS."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why paper and scattered files fail",
+      "h2": "A clinical record that lives in five places is not a record.",
+      "lead": "Most hospitals already document well. The problem is where the documentation ends up.",
+      "items": [
+        {
+          "h": "History retold at every counter",
+          "p": "The OP note is in a case sheet, the admission note in a file, the lab report on a printout. The patient explains everything again on the ward."
+        },
+        {
+          "h": "Orders that do not reach the lab",
+          "p": "A handwritten investigation order is carried to the lab by a relative, and nobody knows if the sample was collected."
+        },
+        {
+          "h": "Prescriptions read by guesswork",
+          "p": "The pharmacy interprets handwriting, and the dispensed drug does not always match what the doctor intended."
+        },
+        {
+          "h": "Audit files assembled by hand",
+          "p": "When a quality audit asks for complete documentation on a set of admissions, someone spends days pulling case sheets."
+        },
+        {
+          "h": "Discharge summaries typed from memory",
+          "p": "The summary is written on the last day from whatever the file contains, missing the investigations that were done elsewhere."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a record is built",
+      "h2": "One patient, one record, added to by every department.",
+      "steps": [
+        {
+          "h": "Registered once",
+          "p": "UHID created at OP or IP registration, demographics captured once."
+        },
+        {
+          "h": "History and examination",
+          "p": "Doctor records complaints, history and findings in structured fields."
+        },
+        {
+          "h": "Orders raised",
+          "p": "Lab, imaging and drug orders go straight to LIMS, AuraPACS and the pharmacy queue."
+        },
+        {
+          "h": "Results return",
+          "p": "Verified lab results and radiology reports attach to the same encounter."
+        },
+        {
+          "h": "Notes and e-Rx",
+          "p": "Progress notes, nursing entries and the e-prescription accumulate on the record."
+        },
+        {
+          "h": "Discharge",
+          "p": "The discharge summary is prepared from what the record already holds."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the EMR holds",
+      "h2": "The clinical record and the modules that write to it.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Documentation",
+          "items": [
+            "Structured history and examination",
+            "Diagnosis and problem list",
+            "Progress and consultation notes",
+            "Nursing notes and charts",
+            "Discharge summary"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Orders and prescriptions",
+          "items": [
+            "Lab orders to LIMS",
+            "Imaging orders to AuraPACS",
+            "e-Prescription to the pharmacy queue",
+            "Consumables from inventory"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Results on the record",
+          "items": [
+            "Verified lab results",
+            "Radiology images and reports",
+            "Previous visits and admissions",
+            "Full searchable history"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access for doctors, nurses and front desk",
+            "Supports NABH-style documentation",
+            "Built to support ABHA linking",
+            "Patient portal view of reports"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a connected EMR changes on a normal day.",
+      "items": [
+        {
+          "h": "A returning OP patient",
+          "workflow": "The doctor opens the UHID and sees last month's notes, the drugs prescribed and the lab values before the patient sits down.",
+          "result": "The consultation starts from the record, not from a retelling."
+        },
+        {
+          "h": "An investigation ordered in OP",
+          "workflow": "The order lands in the laboratory worklist; the result comes back verified and appears on the same encounter.",
+          "result": "No printouts carried between counters."
+        },
+        {
+          "h": "A ward round",
+          "workflow": "The consultant reads the nursing chart and overnight notes on the record and adds today's orders.",
+          "result": "Nursing acts on written orders, not recalled ones."
+        },
+        {
+          "h": "A documentation audit",
+          "workflow": "The quality team pulls the admissions for the period and checks each record against the documentation standard.",
+          "result": "The file is already assembled."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any facility where more than one person touches the clinical record.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Records shared across departments and shifts."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "IP-led facilities that need clean admission-to-discharge notes."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "OP records with e-prescription and follow-up history."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultants",
+          "p": "Doctors who want their notes readable across the hospital."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality teams",
+          "p": "Coordinators preparing NABH-style documentation."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Case sheets, a standalone EMR, or the EMR inside HIMS.",
+      "cols": [
+        "Paper case sheets",
+        "Standalone EMR",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Structure of the note",
+          "Free hand",
+          "Structured, in its own database",
+          "Structured, on the hospital's single record"
+        ],
+        [
+          "Orders reach lab and pharmacy",
+          "Carried by hand",
+          "Interface needed",
+          "Same platform, no interface"
+        ],
+        [
+          "Imaging on the record",
+          "Film or CD",
+          "Separate PACS login",
+          "AuraPACS built in"
+        ],
+        [
+          "Charges from the record",
+          "Retyped at billing",
+          "Exported to billing",
+          "Billing pulls from the encounter"
+        ],
+        [
+          "Who supports you",
+          "Nobody",
+          "Vendor ticket queue",
+          "The founder who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital EMR software, answered.",
+      "items": [
+        {
+          "q": "Is the EMR a separate product from HIMS?",
+          "a": "No. The EMR is a module of HIMS and shares the patient record with registration, the pharmacy, the laboratory, inventory and billing. See the <a href=\"/hims/hospital-management-system/\">hospital management system</a> page for the whole platform."
+        },
+        {
+          "q": "Does the EMR support NABH documentation?",
+          "a": "The EMR is structured to support NABH-style documentation: history, examination, orders, notes, consent and discharge summary each have their place on the record. Accreditation itself is assessed by the accrediting body against your hospital's processes, not by the software."
+        },
+        {
+          "q": "Can doctors write e-prescriptions?",
+          "a": "Yes. The prescription is written in the EMR and appears in the pharmacy dispensing queue, so the pharmacist dispenses against what the doctor typed rather than against handwriting."
+        },
+        {
+          "q": "How do imaging reports reach the record?",
+          "a": "Imaging is handled by AuraPACS, which is built into HIMS. Studies land from the machine, the radiologist reports in the browser viewer, and the images and report sit on the patient's record. See <a href=\"/aurapacs/hospital-pacs-software/\">hospital PACS software</a>."
+        },
+        {
+          "q": "Is it ABHA and ABDM ready?",
+          "a": "HIMS is built to support ABHA linking and ABDM-aligned workflows. Read <a href=\"/hims/abha-abdm-ready-hospital-software/\">what ABHA and ABDM ready means</a> before comparing vendors."
+        },
+        {
+          "q": "Can we start with OP records only?",
+          "a": "Yes. Many hospitals begin with OP registration, EMR and e-prescription and add IP, pharmacy and lab later. The record structure is the same, so nothing has to be migrated when the next module is switched on."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128203;",
+          "b": "OPD software",
+          "p": "Tokens, queues and consultation."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128100;",
+          "b": "Patient management",
+          "p": "One record per UHID."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one you need."
+        }
+      ]
+    }
+  ]
+}

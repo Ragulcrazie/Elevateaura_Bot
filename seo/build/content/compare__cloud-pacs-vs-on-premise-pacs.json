@@ -1,0 +1,211 @@
+{
+  "cluster": "compare",
+  "slug": "cloud-pacs-vs-on-premise-pacs",
+  "title": "Cloud PACS vs On-Premise PACS vs Hybrid Compared | Elevate Aura",
+  "meta": "Cloud PACS vs on-premise PACS, plus the hybrid option: internet dependence, who owns the data, backup, cost model and remote reading.",
+  "h1": "Cloud PACS vs on-premise PACS: the trade-offs, and the <span class=\"hl\">hybrid</span> middle.",
+  "crumb": "Cloud vs on-premise PACS",
+  "pill": "Comparison",
+  "sub": "Where your PACS runs decides what happens when the internet drops, where your patients' images live and what you pay in year five. This comparison covers cloud, on-premise and hybrid deployment without assuming one size fits every centre.",
+  "meta_ticks": [
+    "Three deployment models, one table",
+    "Written for Indian connectivity",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the cloud vs on-premise PACS comparison and want to discuss deployment for our centre.",
+  "date": "2026-09-20",
+  "primary_keyword": "cloud PACS vs on-premise PACS",
+  "secondary_keywords": [
+    "cloud vs on-premise PACS",
+    "hybrid PACS",
+    "on-premise PACS advantages",
+    "cloud PACS disadvantages",
+    "PACS deployment options"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or administrator of an imaging centre or small hospital choosing how a PACS should be deployed",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Cloud, on-premise, or both",
+      "paras": [
+        "Cloud PACS is for a centre with a reliable uplink that values remote reading and zero servers on site, and accepts that every scan depends on the internet. On-premise PACS is for a centre that wants images on its own network, working without internet, and is prepared to own backup and hardware.",
+        "Hybrid is for the centre that wants both: a node at the centre that receives and serves studies locally, plus a thin cloud layer for remote viewing and an encrypted offsite copy. It is the model most small centres in India end up choosing once they have lost a day to a broken connection."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "What actually runs where",
+      "body": [
+        {
+          "h3": "Cloud PACS"
+        },
+        "The machine sends each study over the internet to the vendor's servers. Viewing, reporting and sharing happen in the browser against those servers. Nothing runs at the centre except the modality and a router. If the uplink slows, sends queue; if it fails, the study cannot be read until it is back. Pricing is typically a subscription or a per-study charge.",
+        {
+          "h3": "On-premise PACS"
+        },
+        "A server at the centre runs the DICOM receiver, archive and viewer. Studies never leave the building unless you send them. Reading is fast on the local network and unaffected by the internet. The centre owns the hardware, the backup discipline and the replacement cycle. Remote reading needs a VPN or a separately exposed viewer, which is where many on-premise setups become either insecure or unused.",
+        {
+          "h3": "Hybrid PACS"
+        },
+        "A node at the centre does everything on-premise does, and a cloud layer adds two things: remote viewing for a radiologist at home or a second site, and an encrypted offsite copy of every study. When the internet is down the centre keeps scanning and reading; when it is back the cloud catches up. This is how <a href=\"/aurapacs/hybrid-pacs/\">AuraPACS</a> is built."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "Three deployment models, criterion by criterion",
+      "cols": [
+        "Cloud PACS",
+        "On-premise PACS",
+        "Hybrid PACS"
+      ],
+      "rows": [
+        [
+          "Works without internet",
+          "No; sends queue and reading stops",
+          "Yes, fully",
+          "Yes; the local node keeps working and syncs later"
+        ],
+        [
+          "Where the data lives",
+          "On the vendor's servers",
+          "On your server, at your centre",
+          "At your centre, with an encrypted copy offsite"
+        ],
+        [
+          "Backup",
+          "Included by the vendor; ask how you get your data out",
+          "Your responsibility; often forgotten",
+          "Automatic offsite copy from the local node"
+        ],
+        [
+          "Remote reading",
+          "Built in",
+          "Needs a VPN or extra setup",
+          "Built in through the cloud layer"
+        ],
+        [
+          "Hardware at the centre",
+          "None beyond the network",
+          "A server you buy and maintain",
+          "One node on the centre's network"
+        ],
+        [
+          "Cost model",
+          "Subscription or per study, for as long as you use it",
+          "Licence and hardware up front, support after",
+          "Licence for the node, with the cloud layer as part of the system"
+        ],
+        [
+          "When it wins",
+          "Reliable internet, several sites, no appetite for hardware",
+          "Unreliable internet, strict data locality, one site",
+          "Unreliable internet plus a need for remote reading and offsite backup"
+        ],
+        [
+          "When it loses",
+          "The first long outage on a busy day",
+          "The first disk failure with no tested backup, or the first request to read from home",
+          "A centre that genuinely never needs remote access or offsite copies"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Start with the connection, not the brochure",
+      "body": [
+        "If your centre has had an internet outage in the last month that lasted more than an hour, cloud-only is a risk you are taking on every scan. If your radiologist ever reads from home, pure on-premise will either be extended with a remote path or quietly bypassed with CDs and WhatsApp screenshots.",
+        {
+          "ul": [
+            "<b>Choose cloud</b> when the uplink is genuinely reliable, you run several sites that share readers, and you would rather pay monthly than own anything. Confirm what happens to your studies if you stop paying.",
+            "<b>Choose on-premise</b> when connectivity is poor and everything happens under one roof: scanning, reading and reporting. Budget real time for backup and test a restore once a quarter.",
+            "<b>Choose hybrid</b> when you want the centre to keep working through outages and still need remote reading and an offsite copy without building a VPN. Read <a href=\"/aurapacs/on-premise-pacs/\">on-premise PACS</a> for the local node and <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading</a> for the cloud side."
+          ]
+        },
+        "Whatever you choose, ask two questions every vendor should answer in writing: who owns the data, and how do you export all of it in DICOM if you leave. See <a href=\"/resources/how-to-choose-pacs/\">how to choose a PACS</a> for the rest of the checklist."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Cloud vs on-premise PACS, answered",
+      "items": [
+        {
+          "q": "Which is better, cloud PACS or on-premise PACS?",
+          "a": "Neither is better in the abstract. Cloud wins on remote access and zero hardware; on-premise wins on independence from the internet and data locality. Hybrid combines the two and is usually the better fit for centres with unreliable connectivity that still want remote reading."
+        },
+        {
+          "q": "Does a cloud PACS work during an internet outage?",
+          "a": "Not for new studies or reading. Some setups cache sends and forward them later, but the radiologist cannot open studies stored in the cloud until the connection returns. A hybrid node avoids this by keeping the archive local."
+        },
+        {
+          "q": "Is on-premise PACS more secure?",
+          "a": "Images stay on your network, which many centres prefer. Security then depends on your own practices: access control, patching, and an offsite backup. A hybrid system keeps the local control and adds the encrypted offsite copy."
+        },
+        {
+          "q": "What hardware does a hybrid PACS need?",
+          "a": "One node on the centre's network. With AuraPACS the demo runs from a small Windows installer against the demo server; after payment the full system is activated by Site ID and runs on the customer's own network."
+        },
+        {
+          "q": "Can I switch from cloud to hybrid later?",
+          "a": "Yes, if the cloud vendor lets you export every study in DICOM. Ask for the export terms before you sign the first contract, because that answer decides how easy the move will be."
+        },
+        {
+          "q": "How is remote reading handled in each model?",
+          "a": "Cloud: built in. On-premise: a VPN or a separately secured viewer. Hybrid: the cloud layer serves the study to a browser at home or a second site, with role-based access and an audit trail."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aurapacs/cloud-pacs-software/",
+          "icon": "&#9729;",
+          "b": "Cloud PACS software",
+          "p": "The cloud side of AuraPACS."
+        },
+        {
+          "href": "/aurapacs/on-premise-pacs/",
+          "icon": "&#128421;",
+          "b": "On-premise PACS",
+          "p": "The node at the centre."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#128279;",
+          "b": "Hybrid PACS",
+          "p": "Local node plus cloud layer."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Why a folder is not an archive."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

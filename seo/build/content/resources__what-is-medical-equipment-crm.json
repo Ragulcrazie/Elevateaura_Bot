@@ -1,0 +1,226 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-medical-equipment-crm",
+  "title": "What Is Medical Equipment CRM? A Guide for Distributors",
+  "meta": "A medical equipment CRM follows the machine from enquiry to quote, order, installation, AMC and renewal. Why a generic sales CRM stops at the purchase order.",
+  "h1": "What is a medical equipment CRM? <span class=\"hl\">The sale is the beginning</span>.",
+  "crumb": "Medical equipment CRM",
+  "pill": "Guide",
+  "sub": "In equipment distribution the customer relationship starts, rather than ends, when the order is signed. This guide explains the full cycle a specialised CRM has to hold and where an ordinary sales tool runs out.",
+  "meta_ticks": [
+    "Written by a team that builds distributor software",
+    "Based on real distribution workflows",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the medical equipment CRM guide and want to discuss our sales and service cycle.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is medical equipment CRM",
+  "secondary_keywords": [
+    "medical equipment CRM meaning",
+    "CRM for medical device distributors",
+    "equipment sales and service CRM",
+    "why generic CRM fails for equipment",
+    "medical device sales pipeline",
+    "distributor CRM India"
+  ],
+  "intent": "informational",
+  "persona": "Founder or sales head of a medical equipment distribution or dealership business",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Medical equipment CRM in two paragraphs",
+      "paras": [
+        "CRM stands for Customer Relationship Management. A medical equipment CRM is one built around the life of a machine rather than the life of a deal. It carries the enquiry, the quotation, the order, the delivery and installation, the maintenance contract, every service call afterwards and the renewal that follows a year later.",
+        "An ordinary sales CRM treats the purchase order as the finish line and marks the opportunity won. In equipment distribution that moment is where most of the future income starts, because contracts, spares and repeat sales all depend on what happens after the machine is switched on."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The cycle",
+      "h2": "Seven stages a distributor actually manages",
+      "lead": "Walk one deal through from first call to renewal and it becomes obvious why sales software alone cannot hold it.",
+      "body": [
+        {
+          "h3": "1. Enquiry"
+        },
+        "A hospital, clinic or laboratory asks about a machine. The enquiry needs a source, a territory and an owner, because knowing which sources convert is how a small team decides where to spend the week.",
+        {
+          "h3": "2. Quotation"
+        },
+        "Equipment quotations are not one line. They carry the model, accessories, installation, warranty terms, delivery timing and the tax treatment, and they are revised several times. Each revision has to be retrievable, because a purchase committee will quote your second version back at you.",
+        {
+          "h3": "3. Order and payment"
+        },
+        "The accepted quotation becomes a sales order, then a tax invoice and a delivery challan. Payments arrive in instalments against a purchase order, so a payment tracker matters more than a forecast.",
+        {
+          "h3": "4. Delivery and installation"
+        },
+        "The unit is despatched, installed and commissioned, and a serial number now exists at a named site. This is the moment a sales record should become an asset record.",
+        {
+          "h3": "5. Warranty"
+        },
+        "The machine is covered, service is free to the customer and costly to you, and the clock towards a contract sale is already running.",
+        {
+          "h3": "6. Contract and service"
+        },
+        "A maintenance contract is quoted, sold and delivered as scheduled visits and breakdown attendance. Details are in <a href=\"/resources/what-is-amc-software/\">what is AMC software</a> and <a href=\"/resources/how-medical-equipment-service-management-works/\">how service management works</a>.",
+        {
+          "h3": "7. Renewal and repeat sale"
+        },
+        "The contract is renewed, consumables are supplied, and eventually the machine is replaced. The same account has now generated income four separate ways from one original sale."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The gap",
+      "h2": "Where a generic CRM stops",
+      "lead": "Generic tools are well built. They are simply built for a different shape of business, one where the product is delivered and the relationship resets.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "What the business needs",
+              "Generic sales CRM",
+              "Equipment CRM"
+            ],
+            "rows": [
+              [
+                "Pipeline and follow-ups",
+                "Yes, this is what it is for",
+                "Yes"
+              ],
+              [
+                "Quotation with accessories and tax",
+                "A document attachment",
+                "A built quotation that becomes the order"
+              ],
+              [
+                "Serial number at a named site",
+                "Not a concept",
+                "The central record"
+              ],
+              [
+                "Warranty and contract dates",
+                "A custom field somebody must update",
+                "Dates that raise visits, quotes and invoices"
+              ],
+              [
+                "Service call and job card",
+                "A ticket, disconnected from stock",
+                "A job card that consumes spares and closes with a signature"
+              ],
+              [
+                "Spare parts stock",
+                "Elsewhere",
+                "Same system, updated by the job"
+              ],
+              [
+                "Renewal income visibility",
+                "Manual reporting",
+                "A lapsing list in rupees"
+              ]
+            ]
+          }
+        },
+        "The practical symptom is familiar. The deal is marked won, and from that day the machine lives in an engineer's phone, a stock register and an accounting package, with nothing joining them. The comparison is set out in <a href=\"/compare/generic-crm-vs-medical-equipment-crm/\">generic CRM vs medical equipment CRM</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Buying",
+      "h2": "What to look for, and what to ignore",
+      "body": [
+        {
+          "ul": [
+            "Ask to see a single machine's page: who bought it, when it was installed, what cover it has, every call attended and every part fitted. If that page does not exist, it is a sales tool.",
+            "Ask how a quotation becomes an invoice without retyping, and whether the invoice carries GST correctly with gapless numbering.",
+            "Ask what the field engineer sees on a phone, and whether it works where a hospital basement has no signal.",
+            "Ask how renewals surface: a report somebody runs, or a list waiting on Monday morning.",
+            "Ignore module counts in a brochure. Ask which modules you will switch on in month one."
+          ]
+        },
+        "Elevate Aura's product for this is <a href=\"/aura-business/medical-equipment-crm-software/\">medical equipment CRM software</a>, part of Aura Business, which spans CRM and sales, quotation and GST billing, inventory, contracts and field service in one platform with a web dashboard for the office and a mobile app for the field. The team selling into hospitals has a closer view on <a href=\"/aura-business/hospital-sales-crm/\">hospital sales CRM</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about medical equipment CRM",
+      "items": [
+        {
+          "q": "How is a medical equipment CRM different from a normal CRM?",
+          "a": "A normal CRM manages opportunities up to the order. An equipment CRM continues past it, holding the installed machine by serial number with its warranty, maintenance contract, service history and renewal date, so the account keeps producing income after the sale."
+        },
+        {
+          "q": "Do I need a CRM if I only sell a few machines a month?",
+          "a": "The volume that matters is not sales but installed units. A dealer selling a few machines monthly builds an installed base of hundreds within a few years, and it is those contracts and service calls, not the pipeline, that become unmanageable on paper."
+        },
+        {
+          "q": "Can the same system handle sales and service?",
+          "a": "It should, because they share the same records. Aura Business keeps leads, quotations, GST invoices, stock, contracts and field service job cards in one platform rather than as separate products that have to be reconciled."
+        },
+        {
+          "q": "What does a field sales rep actually use?",
+          "a": "A mobile app for visits with location check-in, the account and contact history, and the ability to raise or send a quotation without returning to the office. The office sees the same activity on the dashboard the same day."
+        },
+        {
+          "q": "How does a CRM help with tenders and government sales?",
+          "a": "Tenders run on deadlines, deposits and documents rather than on conversations. Aura Business tracks tenders with a document vault, deadline reminders and win-rate reporting, which is a different workflow from the ordinary sales pipeline."
+        },
+        {
+          "q": "Is there a real example of this being built?",
+          "a": "Yes. Carna Medicare, a medical equipment distributor in Chennai, runs a twelve-module operations platform built by Elevate Aura covering a field-staff app, a manager dashboard, GST billing, payment tracking and service tracking, shipped in thirty days."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Contracts and the renewal clock."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128736;",
+          "b": "Service management explained",
+          "p": "Call intake to invoice."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128203;",
+          "b": "Installed base management",
+          "p": "One page per machine."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic CRM vs equipment CRM",
+          "p": "Where the generic tool stops."
+        },
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#129659;",
+          "b": "Medical equipment CRM",
+          "p": "Sales, service and contracts together."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127974;",
+          "b": "Carna Medicare",
+          "p": "A distributor platform, shipped."
+        }
+      ]
+    }
+  ]
+}

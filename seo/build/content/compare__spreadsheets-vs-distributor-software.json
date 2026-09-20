@@ -1,0 +1,225 @@
+{
+  "cluster": "compare",
+  "slug": "spreadsheets-vs-distributor-software",
+  "title": "Spreadsheets vs Distributor Software | Elevate Aura",
+  "meta": "Spreadsheets vs distributor software: when Excel is genuinely enough, and the four points where it breaks, AMC renewals, stock, collections and field work.",
+  "h1": "Spreadsheets vs distributor software: when Excel is enough, and <span class=\"hl\">where it breaks</span>.",
+  "crumb": "Spreadsheets vs software",
+  "pill": "Comparison",
+  "sub": "Excel is free, flexible and already installed, and for a one-person distribution business it is often the correct answer. This page is about the four specific moments when it stops being the correct answer, and what changes when it does.",
+  "meta_ticks": [
+    "Honest about when Excel wins",
+    "Four breaking points, named",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the spreadsheets vs distributor software comparison and want to discuss moving off Excel.",
+  "date": "2026-09-20",
+  "primary_keyword": "spreadsheets vs distributor software",
+  "secondary_keywords": [
+    "Excel vs distribution software",
+    "when to stop using Excel for business",
+    "move from Excel to software",
+    "distributor management software India",
+    "Excel AMC tracking problems"
+  ],
+  "intent": "comparison",
+  "persona": "Owner of a small distribution or dealership business running the company on Excel and WhatsApp",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Excel is right until two people need the same answer",
+      "paras": [
+        "Spreadsheets are the right tool for a business where one person holds the whole picture. A single owner with a handful of customers, a few contracts, one store of stock and no field team can run a clean, fast operation in Excel, and a platform would slow them down. Nothing in this page argues otherwise.",
+        "Distributor software becomes the right tool at a specific moment: when more than one person needs the same answer at the same time, and when the answer has to be true without somebody being asked. That moment usually arrives through one of four doors, AMC renewals, stock, collections or field visibility, and it arrives for almost every business that grows."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "What a spreadsheet is actually doing for you",
+      "body": [
+        {
+          "h3": "The case for Excel"
+        },
+        "A spreadsheet is a single file you can shape to your exact process in an afternoon, with no licence, no training and no vendor. It handles a customer list, an order register, a stock sheet and a contract tracker perfectly well at small scale, and it has a genuine advantage over any platform: it will let you do the unusual thing your trade does that no software vendor has modelled. For one or two people at a stable volume, that flexibility is worth more than structure.",
+        {
+          "h3": "What software is doing instead"
+        },
+        "A platform trades some of that flexibility for shared truth. There is one customer record, one product, one stock figure and one contract, and every action writes to it. A technician closing a job card records the part used, and stock drops without anyone typing. An approved quotation becomes a sales order and then a tax invoice with the same numbers. A contract reaching its renewal window appears on a dashboard rather than waiting to be remembered. That is what is being bought: not features, but the removal of re-entry and recall.",
+        {
+          "h3": "The failure mode nobody plans for"
+        },
+        "Spreadsheets do not fail loudly. Instead there are two versions of the stock sheet, a contract tab last updated in March, an invoice number used twice, and a figure the owner no longer trusts enough to act on. By the time the cost is visible it has been paid for several quarters."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "Spreadsheets against a platform, criterion by criterion",
+      "cols": [
+        "Spreadsheets",
+        "Spreadsheets plus WhatsApp",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Whatever you build: lists, registers, trackers",
+          "The same, with the conversation and the photos in a chat",
+          "CRM, quotation, GST billing, stock, AMC, field service and finance in one place"
+        ],
+        [
+          "Deployment",
+          "Already installed, nothing to set up",
+          "Already in everyone's pocket",
+          "A cloud workspace with your Excel data migrated in, plus a field app"
+        ],
+        [
+          "Cost model",
+          "Effectively free, paid for in the owner's hours",
+          "Free, paid for in searching old chats",
+          "By module tier; field staff cost nothing extra to add"
+        ],
+        [
+          "Who runs it",
+          "One person who understands the file",
+          "Everyone, and therefore nobody",
+          "Office on the dashboard, field on the app, owner on one view"
+        ],
+        [
+          "AMC renewals",
+          "A tab, accurate until it is not",
+          "A reminder someone meant to set",
+          "A renewal clock per contract, with lapsing revenue in rupees"
+        ],
+        [
+          "Stock accuracy",
+          "Correct on the day it was counted",
+          "Adjusted by message, reconciled monthly",
+          "Serial and batch level, moved by every issue, receipt and job card"
+        ],
+        [
+          "Collections",
+          "An ageing sheet updated when someone has time",
+          "Chased by whoever remembers",
+          "Payment tracker with reminders and receivables ageing"
+        ],
+        [
+          "Field visibility",
+          "None; you ask",
+          "Photos and location shared by hand",
+          "GPS check-in, visit logs, job cards with photo proof, offline"
+        ],
+        [
+          "When it wins",
+          "One person, few contracts, an unusual process",
+          "A two-person team that talks all day",
+          "More than one person needing the same answer, or a field team"
+        ],
+        [
+          "When it loses",
+          "The second version of the file",
+          "The message nobody can find",
+          "A one-person business that would never switch the modules on"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Four breaking points, and how to test for them",
+      "body": [
+        "Rather than deciding on principle, test for the four places Excel actually breaks in a distribution and service business. If none of them hurts, stay where you are.",
+        {
+          "ul": [
+            "<b>AMC renewals.</b> Count how many contracts expired last quarter, then how many were renewed. If the second answer is slow, the spreadsheet is recording recurring revenue after the fact rather than tracking it. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>.",
+            "<b>Stock.</b> Pick three serial numbers and ask where each unit is today. If the answer needs a phone call, the stock sheet is a snapshot rather than a ledger, and spare parts issued on service calls are quietly missing from it.",
+            "<b>Collections.</b> Ask for the total outstanding over ninety days, by customer, right now. If it takes longer than a minute, chasing is done from memory and the oldest invoices are the ones nobody remembers.",
+            "<b>Field visibility.</b> Ask what each field staff member did yesterday and what proof exists. If the answer is a WhatsApp group, your service record lives in a chat that cannot be searched by customer or asset. See <a href=\"/aura-business/field-technician-tracking-app/\">technician tracking</a>."
+          ]
+        },
+        "If one of the four hurts, it can usually be fixed without replacing everything. Aura Business is priced by module tier, so switching on service and contracts without procurement or tenders is a normal way to begin.",
+        "The spreadsheet is not thrown away either. Your existing Excel data is migrated in during setup, so the customer list, product list and open contracts become the starting records rather than something to retype. See how that looked for <a href=\"/case-studies/carna-medicare-medical-equipment-distributor-platform/\">a distribution business in Chennai</a> that ran entirely on WhatsApp and Excel."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Spreadsheets vs distributor software, answered",
+      "items": [
+        {
+          "q": "Is Excel really fine for a small distribution business?",
+          "a": "For one person with a small customer list, few contracts and no field team, yes. Excel is flexible, free and fast. The argument for software starts when a second person needs the same answer, or when a contract lapses unnoticed."
+        },
+        {
+          "q": "What is the first thing that breaks?",
+          "a": "Usually AMC and CMC renewals, because a lapsed contract makes no noise. The revenue simply does not arrive, and the customer stays unserviced until they complain. Stock accuracy is typically the second."
+        },
+        {
+          "q": "Do we lose our existing spreadsheets?",
+          "a": "No. Your Excel data is migrated into the workspace during setup, so customers, products and open contracts carry over. You can continue to export from the platform whenever you want a spreadsheet for a specific analysis."
+        },
+        {
+          "q": "How long does moving off Excel take?",
+          "a": "The framework is 30 working days where scope allows, covering configuring your workspace, applying your branding to the dashboard, app and invoices, migrating your data and training your team."
+        },
+        {
+          "q": "Will field staff actually use an app?",
+          "a": "They use it when it makes their day shorter: a job card on the phone instead of a form, photo proof instead of explaining, and offline working so a site with no signal is not a problem. Usage drops when an app is only a reporting tool."
+        },
+        {
+          "q": "Can we start with one area instead of everything?",
+          "a": "Yes. Pricing is by module tier rather than per user, so a business can begin with CRM, billing and service, then switch on inventory, procurement, tenders or finance later. See <a href=\"/modules.html\">all 87 modules</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128230;",
+          "b": "Distributor software",
+          "p": "The whole operation in one platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127978;",
+          "b": "Dealer management software",
+          "p": "Sales, stock and service for dealers."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128295;",
+          "b": "Spare parts inventory",
+          "p": "Stock that moves with the job card."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "From WhatsApp and Excel to a platform."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "What to buy after the spreadsheet."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

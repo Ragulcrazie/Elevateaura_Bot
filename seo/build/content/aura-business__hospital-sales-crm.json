@@ -1,0 +1,352 @@
+{
+  "cluster": "aura-business",
+  "slug": "hospital-sales-crm",
+  "title": "Hospital Sales CRM for Medical Equipment Sellers | Aura Business",
+  "meta": "Hospital sales CRM for teams selling into hospitals: purchase committees, biomedical departments, doctors as influencers, demo loans, quotation cycles, tenders.",
+  "h1": "A hospital sales CRM built for the way <span class=\"hl\">hospitals actually buy</span>.",
+  "crumb": "Hospital Sales CRM",
+  "pill": "For reps and managers selling into hospitals",
+  "sub": "Aura Business maps every hospital account with its purchase committee, biomedical department and clinical champions, tracks demo units on loan, keeps each quotation revision and tender on the account, and schedules the follow-ups that a long hospital buying cycle demands.",
+  "meta_ticks": [
+    "Committee, biomedical and doctors per account",
+    "Demo and sample loans tracked",
+    "Quotes, tenders and rate contracts on the account"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business customer list of hospital accounts with contacts, stage, last visit and next follow-up",
+    "bar": "app.elevateaura.co.in/customers"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss a sales CRM for our team that sells to hospitals.",
+  "primary_keyword": "hospital sales CRM",
+  "secondary_keywords": [
+    "CRM for selling to hospitals",
+    "medical sales CRM India",
+    "hospital account management software",
+    "purchase committee tracking CRM",
+    "medical rep visit tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Sales manager or rep at a medical-equipment company whose customers are hospitals, medical colleges and hospital chains",
+  "page_type": "persona",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a hospital sales CRM has to handle",
+      "paras": [
+        "A hospital sales CRM tracks a sale that has many people and few decisions: a doctor who wants the equipment, a biomedical engineer who evaluates it, a purchase officer who runs the process, a committee that approves it, and often a tender or rate contract that governs the price. Aura Business holds all of them on one hospital account, with the visits, demo loans, quotation versions and follow-ups that happen between the first conversation and the purchase order.",
+        "The sale can take a quarter or a year. What the CRM must do is make sure the account does not go quiet because a rep changed, a committee meeting was postponed, or a quote revision was sent from a personal email. Every touch is on the account, and every account has a next date."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why hospital deals stall",
+      "h2": "The sale is not lost. It is forgotten.",
+      "lead": "Hospital purchasing is slow by design. A generic CRM built for quick B2B deals treats a nine-month cycle as a dead lead.",
+      "items": [
+        {
+          "h": "Contacts in the rep's phone",
+          "p": "The consultant, the biomedical head and the purchase officer are known to one rep, and known to nobody when the rep moves on."
+        },
+        {
+          "h": "Committee dates missed",
+          "p": "The purchase committee meets monthly; the quote arrives a day late and waits another month."
+        },
+        {
+          "h": "Demo units in limbo",
+          "p": "An ultrasound sits in a department for evaluation and nobody has asked for a decision or the unit back."
+        },
+        {
+          "h": "Quote revisions untracked",
+          "p": "Three revisions later the committee approves a version the rep cannot find."
+        },
+        {
+          "h": "Tender and direct sale confused",
+          "p": "The same hospital buys some items by tender and others directly, and the pipeline does not distinguish."
+        },
+        {
+          "h": "Follow-ups by memory",
+          "p": "'I'll call them next month' is the entire follow-up plan for a deal worth lakhs."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The hospital buying cycle",
+      "h2": "From clinical interest to purchase order, tracked.",
+      "steps": [
+        {
+          "h": "Interest",
+          "p": "A doctor or department asks; the lead is created on the hospital account with the clinical contact."
+        },
+        {
+          "h": "Visit",
+          "p": "Rep visits with GPS check-in and notes; biomedical and purchase contacts added by role."
+        },
+        {
+          "h": "Demo",
+          "p": "A demo unit or sample is issued on loan with a return date and an evaluation outcome."
+        },
+        {
+          "h": "Quote",
+          "p": "GST quotation from the catalogue; revisions kept as versions; rate-contract prices where they apply."
+        },
+        {
+          "h": "Committee or tender",
+          "p": "The route to purchase is recorded; tender dates and EMD tracked if it goes that way."
+        },
+        {
+          "h": "Order",
+          "p": "Purchase order received, sales order raised, delivery and installation scheduled."
+        },
+        {
+          "h": "After",
+          "p": "The asset enters the installed base; warranty and the future AMC are already visible."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "CRM modules shaped for hospital accounts.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "The account",
+          "items": [
+            "Customer and hospital accounts",
+            "Contacts and decision-makers by role",
+            "Doctors as clinical influencers",
+            "Department-level records for large hospitals",
+            "Credit limit and account health"
+          ]
+        },
+        {
+          "icon": "&#128663;",
+          "h": "The rep's work",
+          "items": [
+            "Leads and pipeline by stage",
+            "Field visits with GPS check-in",
+            "Activity feed and rep log",
+            "Follow-up reminders and next dates",
+            "Territory and target management"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Demos and documents",
+          "items": [
+            "Sample and demo tracking with return dates",
+            "GST quotation builder with versions",
+            "Proforma and tender formats",
+            "Tender tracker, EMD and deadlines",
+            "Rate-contract management"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Management view",
+          "items": [
+            "Lead-source and conversion analytics",
+            "Pipeline on the owner dashboard",
+            "Quote-request inbound from the website",
+            "WhatsApp reminders to contacts"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "How the CRM keeps a slow deal alive.",
+      "items": [
+        {
+          "h": "A committee meeting is not missed",
+          "workflow": "The account records the committee's monthly date; the follow-up reminder fires a week before with the latest quote version attached.",
+          "result": "The proposal is on the table when the decision is made."
+        },
+        {
+          "h": "A demo turns into a decision",
+          "workflow": "The demo unit's return date passes; the rep is prompted to collect an evaluation outcome from the department head.",
+          "result": "Either an order or the unit back, within the month."
+        },
+        {
+          "h": "A rep leaves, the account stays",
+          "workflow": "Contacts, visit notes, quote versions and the next action are on the account; the new rep picks it up from the activity feed.",
+          "result": "No relationship walks out with the resignation."
+        },
+        {
+          "h": "A rate contract is used correctly",
+          "workflow": "A medical college has a rate contract for consumables; a new quote for those items pulls the contract price and flags the end date.",
+          "result": "The quote is compliant and the renewal is on the calendar."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams whose customer is a hospital.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Equipment distributors",
+          "p": "Selling capital equipment to private and government hospitals."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Direct reps working clinical champions and committees."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab suppliers",
+          "p": "Selling analysers and reagent contracts to hospital labs."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital chain suppliers",
+          "p": "One decision at head office, many sites to serve."
+        },
+        {
+          "icon": "&#127963;",
+          "b": "Government hospital suppliers",
+          "p": "Where the sale is a tender and a rate contract."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A generic CRM, an ERP, or a CRM that knows hospitals.",
+      "cols": [
+        "Generic CRM",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Contacts",
+          "A list",
+          "A list",
+          "Roles: doctor, biomedical, purchase, committee"
+        ],
+        [
+          "Demo units",
+          "Not modelled",
+          "Stock transfer",
+          "Loan with return date and outcome"
+        ],
+        [
+          "Quotation",
+          "Attachment",
+          "Yes, complex",
+          "GST builder with versions and tender format"
+        ],
+        [
+          "Tenders and rate contracts",
+          "No",
+          "Sometimes",
+          "Tracker, EMD, deadlines, rate contracts"
+        ],
+        [
+          "After the sale",
+          "Deal closed",
+          "Separate modules",
+          "Installed base, warranty, AMC pipeline"
+        ],
+        [
+          "Field reps",
+          "Mobile app, extra",
+          "Rarely",
+          "App with GPS check-in and visit log"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital sales CRM, answered.",
+      "items": [
+        {
+          "q": "Can I record doctors who influence a purchase but never sign a PO?",
+          "a": "Yes. Contacts on a hospital account are recorded by role, so a consultant can be the clinical champion, the biomedical head the technical evaluator, and the purchase officer the commercial contact. Visits and notes are logged against any of them."
+        },
+        {
+          "q": "How are demo and sample loans tracked?",
+          "a": "The sample tracking module issues a unit to a hospital department with a responsible rep and a return date, and prompts for an outcome when the date passes. Demo stock is a location in inventory, so the units are never lost."
+        },
+        {
+          "q": "Does it handle both direct sales and tenders to the same hospital?",
+          "a": "Yes. A hospital account can have direct opportunities in the pipeline and tenders in the tender tracker at the same time, with rate contracts recorded where they govern price. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+        },
+        {
+          "q": "What does a rep do on the mobile app?",
+          "a": "Check in by GPS at the hospital, log the visit and who was met, update the opportunity stage, issue or collect a demo unit, and set the next follow-up. Managers see the activity feed on the web dashboard."
+        },
+        {
+          "q": "How is this different from a healthcare CRM for hospitals themselves?",
+          "a": "This CRM is for companies selling to hospitals. A hospital managing its own patients uses a different product; see <a href=\"/aura-business/healthcare-crm-software/\">healthcare CRM software</a> for that distinction and HIMS for hospital operations."
+        },
+        {
+          "q": "What happens after the purchase order?",
+          "a": "The sales order, delivery, installation and acceptance are handled in the same platform, the serial enters the installed base, and warranty and AMC opportunities are visible from day one. See <a href=\"/aura-business/installed-base-management-software/\">installed base management software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#129309;",
+          "b": "Equipment CRM",
+          "p": "The full CRM and cycle."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Versions the committee approves."
+        },
+        {
+          "href": "/aura-business/medical-device-crm-software/",
+          "icon": "&#129302;",
+          "b": "Device CRM",
+          "p": "The manufacturer's view."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tenders",
+          "p": "When the hospital buys by tender."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a medical equipment CRM is."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic CRM vs ours",
+          "p": "Why hospital sales need more."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-preventive-maintenance-software",
+  "title": "What Is Preventive Maintenance Software? A Guide",
+  "meta": "Preventive maintenance software turns contracts into scheduled visits, checklists and calibration records. A plain guide to PM against breakdown work.",
+  "h1": "What is preventive maintenance software? <span class=\"hl\">Visits that schedule themselves</span>.",
+  "crumb": "Preventive maintenance",
+  "pill": "Guide",
+  "sub": "Preventive maintenance is the work you do before something fails. The software generates those visits from the contract, gives the engineer a checklist and keeps the completed record as evidence you can show.",
+  "meta_ticks": [
+    "Written by a team that builds service software",
+    "Contract-driven, not diary-driven",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the preventive maintenance guide and want to discuss PM scheduling for our machines.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is preventive maintenance software",
+  "secondary_keywords": [
+    "preventive maintenance meaning",
+    "PM schedule software",
+    "preventive vs breakdown maintenance",
+    "PM checklist equipment",
+    "calibration record software",
+    "maintenance schedule from AMC"
+  ],
+  "intent": "informational",
+  "persona": "Service head or owner of an equipment dealership delivering contracted maintenance visits",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Preventive maintenance software in two paragraphs",
+      "paras": [
+        "Preventive maintenance, usually shortened to PM, is planned work carried out on a machine at intervals to keep it running: cleaning, inspection, adjustment, calibration and the replacement of wear items. Preventive maintenance software creates those visits automatically from the contract or the machine's usage, assigns them, gives the engineer a checklist to complete and stores the result against the serial number.",
+        "The point is that nobody has to remember. A contract signed in April produces a visit in July without a coordinator scanning a folder, and a completed visit leaves behind a record that can be shown to a customer or an auditor a year later."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Two kinds of work",
+      "h2": "Preventive against breakdown maintenance",
+      "lead": "Every service department does both. The ratio between them is one of the more honest measures of how well the department is run.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "",
+              "Breakdown maintenance",
+              "Preventive maintenance"
+            ],
+            "rows": [
+              [
+                "Starts with",
+                "A customer ringing in distress",
+                "A date generated from the contract"
+              ],
+              [
+                "Timing",
+                "Whenever it happens, often the worst moment",
+                "Planned into the route in advance"
+              ],
+              [
+                "Parts",
+                "Whatever is needed, possibly not in stock",
+                "Known wear items, carried on the visit"
+              ],
+              [
+                "Cost to you",
+                "Emergency travel and an unplanned day",
+                "A scheduled slot on a planned route"
+              ],
+              [
+                "Effect on the customer",
+                "Downtime, and a difficult renewal conversation",
+                "A visit they can see they paid for"
+              ],
+              [
+                "Can it be eliminated",
+                "No",
+                "It is the thing that reduces the other"
+              ]
+            ]
+          }
+        },
+        "A department consumed by breakdowns quietly stops delivering preventive visits, which produces more breakdowns. Software does not break that loop by itself, but it makes the loop visible: due visits sit on a list and stay there, in plain sight, until somebody either attends or decides not to."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How schedules appear",
+      "h2": "Visits generated from the contract, the calendar or the meter",
+      "lead": "The schedule should be a consequence of something already recorded, never a separate diary that a coordinator maintains by hand.",
+      "body": [
+        {
+          "h3": "From the contract"
+        },
+        "A maintenance contract states how many visits are included and over what period. The moment that contract is created, the visits for its whole term should exist as planned jobs on that machine. If the contract is renewed, the next set follows. The contract side is covered in <a href=\"/resources/what-is-amc-software/\">what is AMC software</a>.",
+        {
+          "h3": "From the calendar"
+        },
+        "Machines outside a contract may still need fixed-interval attention, either because you promised it at installation or because the manufacturer recommends it. These are date-driven schedules tied to the asset rather than to an agreement.",
+        {
+          "h3": "From usage"
+        },
+        "Some equipment is better serviced on hours run, cycles completed or another meter reading than on a calendar. Meter and usage-based schedules raise the visit when the reading crosses a threshold, which the engineer records on the previous job.",
+        {
+          "h3": "Then the visit becomes ordinary work"
+        },
+        "Once generated, a preventive visit is assigned like any other job, planned into a technician's route with nearby calls, and closed with a job card. Because it competes for the same people as breakdown calls, seeing both on one schedule is what makes the week plannable."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The record",
+      "h2": "Checklists, calibration and the evidence you leave behind",
+      "lead": "A visit that produces no record is worth very little three months later, when the customer says the machine was never attended.",
+      "body": [
+        "A useful preventive visit produces four things:",
+        {
+          "ul": [
+            "<b>A completed checklist</b> specific to that model, so the visit means the same thing regardless of which engineer attended.",
+            "<b>Readings and observations</b>, including any meter values that drive the next schedule.",
+            "<b>Photographic proof and a customer signature</b> captured on the mobile app at the site, working offline where there is no signal.",
+            "<b>Any parts replaced</b>, issued against the job so stock falls and the machine's history is accurate."
+          ]
+        },
+        "Calibration records deserve a particular mention. Where a machine's readings matter, the calibration performed and the date it is next due belong on the asset itself, not in a file. Hospitals and laboratories being audited will ask for them, and finding them quickly is the difference between a short conversation and a long one. What any specific audit or regulation requires of your business is something to confirm with your own advisers.",
+        "Aura Business generates preventive maintenance schedules from service contracts, supports calibration and compliance checklists, meter and usage-based scheduling, technician allocation and mobile job cards with photo proof and offline working. The product page is <a href=\"/aura-business/preventive-maintenance-software/\">preventive maintenance software</a>, and the surrounding workflow is in <a href=\"/resources/how-medical-equipment-service-management-works/\">how service management works</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about preventive maintenance",
+      "items": [
+        {
+          "q": "What does PM mean in maintenance?",
+          "a": "Preventive maintenance: planned work performed at intervals to keep a machine running, such as inspection, cleaning, adjustment, calibration and replacing wear items, as opposed to repairing a fault after it has occurred."
+        },
+        {
+          "q": "How many preventive visits should a contract include?",
+          "a": "It is a commercial decision based on the machine, the site conditions and what the market expects for that product. Whatever number you promise, the schedule should be generated from the contract so the promise is delivered rather than remembered."
+        },
+        {
+          "q": "Can preventive maintenance be scheduled on usage instead of dates?",
+          "a": "Yes, where a meter reading reflects wear better than the calendar does. The reading is captured by the engineer on the previous visit, and the next job is raised when it crosses the agreed threshold."
+        },
+        {
+          "q": "What should a PM checklist contain?",
+          "a": "The steps specific to that model, the readings to record, the wear items to inspect or replace, any calibration to perform and a place for the customer signature. Model-specific checklists are what make two different engineers produce the same visit."
+        },
+        {
+          "q": "How does preventive maintenance affect contract renewals?",
+          "a": "Strongly. A customer who has seen every promised visit renews as a matter of routine. A customer who only ever sees an engineer during a breakdown treats the renewal as an expense to question, because from their side the contract produced nothing visible."
+        },
+        {
+          "q": "Is this the same as a CMMS?",
+          "a": "A maintenance management system is usually built for a factory maintaining its own machines. A dealer maintaining machines at customer sites also needs contracts, chargeability, spares consumption and invoicing, which is why service contract and field service modules sit alongside the schedules."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Where the visits come from."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128736;",
+          "b": "Service management explained",
+          "p": "The surrounding workflow."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128203;",
+          "b": "Installed base management",
+          "p": "The asset the schedule hangs on."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "What the fee has to cover."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#129659;",
+          "b": "Preventive maintenance software",
+          "p": "Schedules, checklists, calibration."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128221;",
+          "b": "AMC and CMC software",
+          "p": "Contracts that raise the visits."
+        }
+      ]
+    }
+  ]
+}

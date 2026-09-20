@@ -1,0 +1,202 @@
+{
+  "cluster": "resources",
+  "slug": "index",
+  "title": "Healthcare Software Guides | Elevate Aura Resources",
+  "meta": "Plain-language guides to PACS, DICOM, RIS, HIMS, AMC and CMC contracts, service management and learning platforms, written for Indian owners and founders.",
+  "h1": "Plain-language guides to the software <span class=\"hl\">your business runs on</span>.",
+  "crumb": "Guides",
+  "pill": "Resources",
+  "sub": "Fourteen guides explaining the terms suppliers use, written for clinic owners, hospital administrators, distributor founders and institute owners in India. No jargon without an explanation and no sales pitch.",
+  "meta_ticks": [
+    "Written by the team that builds the software",
+    "Every acronym defined on first use",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See what we build",
+  "cta_href": "/",
+  "whatsapp_text": "Hi, I was reading the Elevate Aura guides and have a question.",
+  "date": "2026-09-20",
+  "primary_keyword": "healthcare software guides",
+  "secondary_keywords": [
+    "PACS DICOM RIS explained",
+    "hospital software guides India",
+    "AMC CMC contract guide",
+    "medical equipment service guide",
+    "healthcare software glossary"
+  ],
+  "intent": "informational",
+  "persona": "Owner or founder in healthcare, imaging, equipment distribution or training researching software",
+  "page_type": "hub",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "What this is",
+      "h2": "Guides written for buyers, not for engineers",
+      "paras": [
+        "Healthcare and equipment software is sold in acronyms. PACS, DICOM, RIS, HIMS, EMR, TPA, AMC, CMC, SLA, MWL and LMS all turn up in the same quotation, and the supplier rarely stops to explain which of them you are actually buying.",
+        "These guides explain each term in ordinary language, with the Indian context that matters: GST on the invoice, TPA claims, ABHA and ABDM, WhatsApp as the channel customers actually read, and the practice around maintenance contracts in equipment trade. They are written by the people who build the software, which is stated plainly so you can weigh it.",
+        "Start anywhere. Each guide defines its own terms, links to the others where a concept overlaps, and ends with the product page that solves the problem if you decide software is the answer."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "Imaging",
+      "h2": "Radiology and imaging software",
+      "items": [
+        {
+          "href": "/resources/what-is-pacs/",
+          "b": "What is PACS",
+          "p": "The system that receives, stores, displays and shares your scans, and what it replaces."
+        },
+        {
+          "href": "/resources/what-is-dicom/",
+          "b": "What is DICOM",
+          "p": "The file format and network language every scanner speaks, explained without engineer jargon."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "b": "What is RIS",
+          "p": "Scheduling, worklist, reporting and billing for a radiology department, and how it differs from PACS."
+        },
+        {
+          "href": "/resources/what-is-dicom-modality-worklist/",
+          "b": "What is a modality worklist",
+          "p": "How booked patients appear on the machine so nobody retypes a name at the console."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "b": "How to choose a PACS",
+          "p": "Compatibility, workflow, deployment and pricing, plus the test transfer you should insist on."
+        }
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "Hospitals and clinics",
+      "h2": "Hospital management software",
+      "items": [
+        {
+          "href": "/resources/what-is-hims/",
+          "b": "What is HIMS",
+          "p": "The modules, the journey from registration to discharge, EMR, TPA billing and ABHA explained."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "b": "How to choose hospital software",
+          "p": "A buyer's checklist for Indian hospitals, with ten questions to ask during the demonstration."
+        }
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "Equipment trade",
+      "h2": "Distribution, contracts and service",
+      "items": [
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "b": "What is a medical equipment CRM",
+          "p": "Enquiry to quote, order, installation, contract and renewal, and where a generic CRM stops."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "b": "What is AMC software",
+          "p": "Annual maintenance contracts in Indian trade, the renewal clock and where contract revenue leaks."
+        },
+        {
+          "href": "/resources/what-is-cmc/",
+          "b": "What is CMC",
+          "p": "Comprehensive contracts: what parts are included, how the fee is priced and the risk you take on."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "b": "How service management works",
+          "p": "Call intake, dispatch, job card, spares, SLA and invoice, with the numbers an owner should watch."
+        },
+        {
+          "href": "/resources/what-is-preventive-maintenance-software/",
+          "b": "What is preventive maintenance software",
+          "p": "Visits generated from contracts, model checklists, calibration records and audit evidence."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "b": "What is installed base management",
+          "p": "The register of every unit you have sold, and why it is your contract pipeline."
+        }
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "Training",
+      "h2": "Learning platforms",
+      "items": [
+        {
+          "href": "/resources/what-is-lms/",
+          "b": "What is an LMS",
+          "p": "Courses, assessments, batches, certificates and analytics, for institutes and for staff training."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to use these",
+      "h2": "Three ways people read this series",
+      "body": [
+        {
+          "ul": [
+            "<b>Before a demonstration.</b> Read the guide covering the product you are being shown, so the conversation happens on your terms and the question list comes with you.",
+            "<b>When a quotation arrives.</b> Look up the acronyms in it. Quotations often price several distinct things as though they were one, and knowing which is which changes the negotiation.",
+            "<b>When something is not working.</b> If studies cannot be found, contracts lapse unnoticed or reports sit undelivered, the guide on that workflow usually names the cause before it names a product."
+          ]
+        },
+        "Where two products are commonly confused, the decision is set out on the <a href=\"/compare/\">comparisons</a> pages. Where you want to see what has actually been built rather than described, the <a href=\"/case-studies/\">case studies</a> cover three real projects: a distributor operations platform, a robotics distributor and e-commerce platform, and a government examination preparation app published on Google Play.",
+        "Elevate Aura is a founder-led software studio in Chennai. If a guide leaves a question unanswered, the fastest route is a message on WhatsApp to the person who wrote it."
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Elsewhere on the site",
+      "h2": "Comparisons, case studies and products",
+      "items": [
+        {
+          "href": "/compare/",
+          "icon": "&#9878;",
+          "b": "Comparisons",
+          "p": "AMC vs CMC, cloud vs on-premise, and more."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#128188;",
+          "b": "Case studies",
+          "p": "Three platforms actually shipped."
+        },
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#128444;",
+          "b": "AuraPACS",
+          "p": "Hybrid imaging for centres and hospitals."
+        },
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Hospital and clinic management."
+        },
+        {
+          "href": "/aura-business.html",
+          "icon": "&#129659;",
+          "b": "Aura Business",
+          "p": "Operations for distributors and dealers."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127891;",
+          "b": "Aura Learn",
+          "p": "Courses, tests and certificates."
+        }
+      ]
+    }
+  ]
+}

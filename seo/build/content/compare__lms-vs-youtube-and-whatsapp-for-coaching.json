@@ -1,0 +1,225 @@
+{
+  "cluster": "compare",
+  "slug": "lms-vs-youtube-and-whatsapp-for-coaching",
+  "title": "LMS vs YouTube and WhatsApp for Coaching | Aura Learn",
+  "meta": "LMS vs YouTube and WhatsApp for coaching institutes: what free tools do well, what they hide, and when progress, tests and payments need a real platform.",
+  "h1": "LMS vs YouTube and WhatsApp: free and <span class=\"hl\">blind</span>, or structured and measured.",
+  "crumb": "LMS vs free tools",
+  "pill": "Comparison",
+  "sub": "Most coaching institutes start on YouTube and WhatsApp because both are free and every student already has them. This page sets out what that stack genuinely does well, what it cannot tell you, and the point at which a learning platform pays for itself.",
+  "meta_ticks": [
+    "Fair about when free tools win",
+    "Written for Indian coaching",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Learn",
+  "cta_href": "/aura-learn.html",
+  "whatsapp_text": "Hi, I read the LMS vs YouTube and WhatsApp comparison and want to discuss a platform for our institute.",
+  "date": "2026-09-20",
+  "primary_keyword": "LMS vs YouTube and WhatsApp for coaching",
+  "secondary_keywords": [
+    "do coaching institutes need an LMS",
+    "WhatsApp groups for teaching problems",
+    "YouTube vs LMS for online classes",
+    "coaching institute app",
+    "online coaching platform India"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or academic head of a coaching institute or exam-prep business deciding whether to move off free tools",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Reach, or a record of who learned",
+      "paras": [
+        "YouTube and WhatsApp are for a teacher who needs reach and conversation, quickly and at no cost. YouTube hosts video for any number of viewers and costs nothing. WhatsApp is where students already are, so announcements, doubts and material actually get seen. For a new institute, one subject and a small batch, this is the sensible start and there is no reason to rush past it.",
+        "A learning platform is for an institute that has to know something the free stack cannot tell it: who watched, who finished, who scored what, who has fallen behind, who has paid, and who is ready to be certified. The moment revenue depends on those answers, running blind becomes the expensive option."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "What each stack actually does",
+      "body": [
+        {
+          "h3": "The free stack"
+        },
+        "Lessons are recorded or streamed on a video platform, material is shared as files in a group, tests are sent as PDFs and answers come back as photographs, doubts arrive between forwards and birthday messages, and fees are collected by transfer and ticked off in a spreadsheet. It works because every part is familiar, and because the teacher carries the structure in their head.",
+        {
+          "h3": "What it cannot show you"
+        },
+        "Three things are missing rather than broken. Progress: a view count is not a record of who watched what and how far they got. Assessment: a scanned answer sheet is not a score you can compare across a batch, and marking by hand limits how often you can test. Control: once a video and a PDF are shared they travel, and a group is a poor place to keep a paying cohort separate from a free one.",
+        {
+          "h3": "What a platform adds"
+        },
+        "A learner mobile app holds the content library with video lessons, downloads and offline access, so students in low-connectivity areas can keep going. Quizzes and mock tests are auto-graded with instant scores and review, drawn from question banks. Batches and cohorts keep groups separate, with a timetable and recorded live classes. Progress runs per learner and per batch, so a student going quiet is visible before the parent calls. Certificates are issued on completion. Payments and fees are handled with GST, and WhatsApp reminders and Telegram bot nudges keep engagement where students already are."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "Free tools against a learning platform",
+      "cols": [
+        "YouTube and WhatsApp",
+        "Free tools plus a test app",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Video hosting, file sharing, announcements and doubts",
+          "The same, with tests in a separate tool",
+          "Courses, tests, batches, live classes, certificates, payments and analytics"
+        ],
+        [
+          "Deployment",
+          "Nothing to set up; everyone already has it",
+          "Two or three logins, reconciled by the teacher",
+          "Learner mobile app plus an instructor and admin web dashboard"
+        ],
+        [
+          "Cost model",
+          "Free, paid for in the teacher's hours",
+          "Free tier plus whatever the test tool charges",
+          "Scoped per institute, with unlimited learners"
+        ],
+        [
+          "Who runs it",
+          "The teacher, from memory",
+          "The teacher, plus somebody collating results",
+          "Instructors, admin staff on batches and fees, learners in the app"
+        ],
+        [
+          "Progress tracking",
+          "View counts only; no idea who finished",
+          "Test scores, disconnected from the lessons",
+          "Per learner and per batch, across lessons and tests"
+        ],
+        [
+          "Assessment",
+          "PDFs marked by hand, slowly",
+          "Auto-graded, but outside the course",
+          "Auto-graded quizzes and mock tests with instant scores and review"
+        ],
+        [
+          "Access control",
+          "Anyone with the link or the group invite",
+          "The same problem, in two places",
+          "Batches and cohorts, so paying learners get what they paid for"
+        ],
+        [
+          "Certificates",
+          "Made by hand, if at all",
+          "Not covered",
+          "Issued on completion, with compliance tracking"
+        ],
+        [
+          "When it wins",
+          "A new institute, one small batch, nothing to prove",
+          "A teacher who tests often but keeps content free",
+          "Several batches, paid cohorts, results that must be evidenced"
+        ],
+        [
+          "When it loses",
+          "The first term parents ask for progress",
+          "The month the two systems stop agreeing",
+          "A single teacher with one free class"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Move when the answers start costing you",
+      "body": [
+        "There is no virtue in buying a platform early. An institute with one batch, free content and a teacher who knows every student by name is well served by YouTube and WhatsApp. Keep the free stack while all three of these are true: you can name every student, you can remember who has paid, and nobody has asked you to prove a result.",
+        {
+          "ul": [
+            "<b>Move when you cannot answer a parent.</b> The question is always the same: how is my child doing. If answering means scrolling a chat, the record is in the wrong place.",
+            "<b>Move when marking limits testing.</b> Institutes test less often than they should because marking is manual. Auto-graded <a href=\"/aura-learn/mock-test-platform/\">mock tests</a> change how often you can assess without changing your staffing.",
+            "<b>Move when paid and free blur.</b> Once a paying cohort exists, a shared link and an open group are a revenue leak. Batches keep the boundary without policing it.",
+            "<b>Move when you certify.</b> If completion has to be evidenced, certificates and compliance tracking are not optional. See <a href=\"/aura-learn/certification-training-platform/\">certification platform</a>."
+          ]
+        },
+        "Keep what works. The point of a platform is not to end the WhatsApp group, and the best setups still use it. What changes is that the content, the tests, the batch and the payment sit in a system that remembers, while the conversation stays where it always was. The approach came out of the founder's own government-exam-prep app on Google Play, which pairs an Android app with Telegram practice bots.",
+        "Before committing, run one batch through the platform alongside your existing groups for a term, and see how long it takes to answer three questions: who is behind, who has not paid, and who is ready to certify. See the <a href=\"/demo/lms.html\">Aura Learn demo</a> or read <a href=\"/aura-learn/coaching-institute-management-software/\">coaching institute software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "LMS vs YouTube and WhatsApp, answered",
+      "items": [
+        {
+          "q": "Can a coaching institute run entirely on YouTube and WhatsApp?",
+          "a": "Yes, and many do successfully at small scale. The limits are progress tracking, assessment at volume, access control between paid and free learners, and payment records. None matter with one small batch; all matter with several."
+        },
+        {
+          "q": "Do students have to stop using WhatsApp?",
+          "a": "No. Aura Learn sends reminders and drip content over WhatsApp and nudges over a Telegram bot, because that is where students already are. The platform holds the course, the tests and the records; the conversation stays where it works."
+        },
+        {
+          "q": "What about students with poor internet?",
+          "a": "Course video and material can be downloaded for offline access in the learner app, and progress syncs when the student is back in coverage. That matters more outside the metros than most feature lists admit."
+        },
+        {
+          "q": "Is an LMS priced per student?",
+          "a": "Aura Learn is built for unlimited learners, so growing a batch does not change what you pay. The scope is agreed on a call rather than from a price list, because institutes differ in what they need switched on."
+        },
+        {
+          "q": "How do payments and fees work?",
+          "a": "Payments, subscriptions and fees are handled in the platform with GST, so a learner's access, batch and payment status sit on the same record. That removes the spreadsheet that usually tracks who has paid."
+        },
+        {
+          "q": "Is this proven or a first attempt?",
+          "a": "Aura Learn grew out of the founder's own government-exam-prep product: an Android app live on Google Play with Telegram practice bots and content automation, built end to end. See the <a href=\"/case-studies/exam-prep-learning-app/\">case study</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aura-learn/learning-management-system/",
+          "icon": "&#127891;",
+          "b": "Learning management system",
+          "p": "The platform, end to end."
+        },
+        {
+          "href": "/aura-learn/coaching-institute-management-software/",
+          "icon": "&#128218;",
+          "b": "Coaching institute software",
+          "p": "Batches, fees and timetables."
+        },
+        {
+          "href": "/aura-learn/mock-test-platform/",
+          "icon": "&#128221;",
+          "b": "Mock test platform",
+          "p": "Auto-graded tests and review."
+        },
+        {
+          "href": "/aura-learn/exam-preparation-platform/",
+          "icon": "&#128214;",
+          "b": "Exam preparation platform",
+          "p": "Built for exam-prep businesses."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "icon": "&#128241;",
+          "b": "Exam prep app case study",
+          "p": "Where Aura Learn came from."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

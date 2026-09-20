@@ -1,0 +1,331 @@
+{
+  "cluster": "aurapacs",
+  "slug": "hybrid-pacs",
+  "title": "Hybrid PACS | On-Premise Node Plus Cloud Layer | AuraPACS",
+  "meta": "Hybrid PACS explained: which parts of AuraPACS run on the node in your centre, which run in the cloud, and exactly what keeps working when power or internet fails.",
+  "h1": "Hybrid PACS: local where it must be fast, cloud where it must be <span class=\"hl\">reachable</span>.",
+  "crumb": "Hybrid PACS",
+  "pill": "Built for Indian power and connectivity",
+  "sub": "A hybrid PACS splits the work in two. An on-premise node inside the centre receives, stores and serves studies over the local network. A thin cloud layer adds remote reading, WhatsApp share links and an encrypted offsite copy. This page explains what runs where and what survives each kind of failure.",
+  "meta_ticks": [
+    "Node keeps working offline",
+    "Cloud adds reach and backup",
+    "One product, not two systems"
+  ],
+  "whatsapp_text": "Hi, I'd like to understand how the hybrid AuraPACS setup would work at our centre.",
+  "primary_keyword": "hybrid PACS",
+  "secondary_keywords": [
+    "hybrid PACS architecture",
+    "on-premise and cloud PACS",
+    "PACS for unreliable internet",
+    "hybrid cloud PACS India",
+    "PACS power cut",
+    "PACS failover"
+  ],
+  "intent": "commercial",
+  "persona": "Centre owner or IT consultant comparing cloud, on-premise and hybrid PACS before choosing",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hybrid means, concretely",
+      "paras": [
+        "Hybrid PACS means the archive and viewer live on a machine in your building, and a cloud service mirrors what is needed for people outside the building. In AuraPACS the node handles DICOM receive, the modality worklist, the local archive, the browser viewer and reporting. The cloud layer handles remote viewing from home or a second site, the secure links you send on WhatsApp, and the encrypted offsite backup.",
+        "The split is deliberate. Indian centres deal with power cuts, shared fibre lines and afternoons when the uplink crawls. Pure cloud fails on the day the line is down. Pure on-premise fails on the day a disk dies or the radiologist is out of town. Hybrid is the arrangement where neither failure stops the centre."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The two ways single-location PACS fails",
+      "h2": "Cloud-only and on-premise-only each have one bad day a month.",
+      "lead": "Neither model is wrong. Each just has a failure it cannot absorb, and small centres cannot afford a spare of everything.",
+      "items": [
+        {
+          "h": "Uplink down, cloud unreachable",
+          "p": "Studies queue on the scanner, the viewer will not load, the reporting backlog grows until the connection returns."
+        },
+        {
+          "h": "Uplink slow, everything slow",
+          "p": "A cloud viewer streaming a multi-series MR over a congested line makes the radiologist wait for every slice."
+        },
+        {
+          "h": "Disk fails, archive gone",
+          "p": "An on-premise server with no offsite copy loses years of studies to one hardware fault."
+        },
+        {
+          "h": "Radiologist away, nothing read",
+          "p": "On-premise-only means reading happens inside the building or through a VPN someone has to maintain."
+        },
+        {
+          "h": "Referrers cannot see anything",
+          "p": "Without a cloud endpoint, sharing a study means a CD or a printed film again."
+        },
+        {
+          "h": "Power cut in the middle of a scan",
+          "p": "Any PACS goes dark without power, but what matters is how quickly the node is back and whether anything was lost."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "What runs where",
+      "h2": "The node and the cloud layer, task by task.",
+      "steps": [
+        {
+          "h": "Node: receive",
+          "p": "Modalities send DICOM to the node on the local network. No internet involved."
+        },
+        {
+          "h": "Node: worklist",
+          "p": "Scheduled patients are pushed to the machine so nothing is retyped."
+        },
+        {
+          "h": "Node: archive and viewer",
+          "p": "Studies are indexed locally and opened in a browser from any PC on the network."
+        },
+        {
+          "h": "Node: reporting",
+          "p": "Templates, sign-off and the PDF are all done against the local copy."
+        },
+        {
+          "h": "Cloud: sync",
+          "p": "When online, an encrypted copy of each study syncs offsite."
+        },
+        {
+          "h": "Cloud: remote and share",
+          "p": "Radiologists read from outside, and WhatsApp links resolve, through the cloud layer."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "Failure modes",
+      "h2": "What still works, failure by failure.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Internet down",
+          "items": [
+            "Scanning and DICOM receive continue",
+            "Local viewing and reporting continue",
+            "Worklist continues",
+            "Sharing and remote reading wait, then catch up"
+          ]
+        },
+        {
+          "icon": "&#128167;",
+          "h": "Internet slow",
+          "items": [
+            "Local reads are unaffected",
+            "Sync runs in the background",
+            "Remote readers see the study once it has synced"
+          ]
+        },
+        {
+          "icon": "&#128190;",
+          "h": "Node hardware fails",
+          "items": [
+            "Encrypted offsite copy still exists",
+            "Remote viewing of synced studies continues",
+            "Node rebuilt and restored from backup"
+          ]
+        },
+        {
+          "icon": "&#9889;",
+          "h": "Power cut",
+          "items": [
+            "Node resumes on restart",
+            "Modalities resend or re-queue studies",
+            "Nothing typed twice thanks to the worklist"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/cloud-pacs-software/",
+        "label": "See the cloud PACS page"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "A week at a hybrid centre.",
+      "items": [
+        {
+          "h": "Monday, fibre cut on the main road",
+          "workflow": "The morning's CT and ultrasound run against the node. Reports are finalised locally.",
+          "result": "When the line returns in the evening, the backlog of share links goes out at once."
+        },
+        {
+          "h": "Wednesday, radiologist at a conference",
+          "workflow": "She opens the day's MR studies in a browser from her hotel through the cloud layer.",
+          "result": "Reports are signed the same day."
+        },
+        {
+          "h": "Friday, referrer asks for images",
+          "workflow": "Front desk sends the study's secure link on WhatsApp.",
+          "result": "The physician opens the images and PDF on a phone without any login."
+        },
+        {
+          "h": "Any day, the question of ownership",
+          "workflow": "The archive is on the centre's own machine, with an encrypted copy offsite.",
+          "result": "No per-study rent, and a copy that survives a disk failure."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Centres where both reliability and reach matter.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres",
+          "p": "Cannot stop scanning for the ISP, cannot burn CDs for every referrer."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Centres with a visiting radiologist",
+          "p": "Reading happens from home more often than from the reading room."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Small hospitals",
+          "p": "Wards need images at night, consultants want them on their phones."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Two-branch groups",
+          "p": "One archive, two locations, one reader."
+        },
+        {
+          "icon": "&#9889;",
+          "b": "Tier-2 and tier-3 towns",
+          "p": "Where power and fibre are both shared with the rest of the street."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where the PACS lives, three ways.",
+      "cols": [
+        "Pay-per-scan teleradiology",
+        "Enterprise PACS",
+        "AuraPACS hybrid"
+      ],
+      "rows": [
+        [
+          "Internet down",
+          "Nothing uploads, nothing is read",
+          "Local reads continue if installed on site",
+          "Local reads, reports and worklist continue"
+        ],
+        [
+          "Offsite backup",
+          "Provider holds the copy",
+          "Extra licence and hardware",
+          "Encrypted copy included"
+        ],
+        [
+          "Remote reading",
+          "By their radiologists",
+          "VPN and installed client",
+          "Your radiologist, in a browser"
+        ],
+        [
+          "Sharing with referrers",
+          "Portal or email",
+          "Portal login",
+          "WhatsApp secure link"
+        ],
+        [
+          "Ownership",
+          "Rented per study",
+          "Owned, heavy to run",
+          "Owned, node plus cloud layer"
+        ],
+        [
+          "Time to live",
+          "Sign-up",
+          "Months",
+          "30 working days where scope allows"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hybrid PACS, answered.",
+      "items": [
+        {
+          "q": "Is hybrid two products or one?",
+          "a": "One. AuraPACS installs as a node on your network and the cloud layer is part of the same system. You do not buy an on-premise licence and then a cloud subscription from someone else."
+        },
+        {
+          "q": "What exactly stops when the internet drops?",
+          "a": "Remote reading from outside the centre, WhatsApp share links and the offsite sync. Receiving studies, the worklist, local viewing and reporting all continue on the node. See <a href=\"/aurapacs/on-premise-pacs/\">on-premise PACS</a> for the node in detail."
+        },
+        {
+          "q": "How does the offsite copy work?",
+          "a": "Each study on the node is copied, encrypted, to the cloud layer when the connection is available. If the node's disk fails, the archive is restored from that copy."
+        },
+        {
+          "q": "Can a radiologist read from home?",
+          "a": "Yes. Authorised users open synced studies in a browser from anywhere, with role-based access and every view audited. See <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading</a>."
+        },
+        {
+          "q": "Do we need to manage the cloud ourselves?",
+          "a": "No. The cloud layer is operated as part of AuraPACS. Your IT person installs the node with remote guidance and points the modalities at it; the rest is configured for you."
+        },
+        {
+          "q": "Is the hybrid setup slower than pure on-premise?",
+          "a": "Local reading is the same, because the viewer serves from the node. The sync to the cloud runs in the background and does not sit between the scanner and the reading screen."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/on-premise-pacs/",
+          "icon": "&#128187;",
+          "b": "On-premise PACS",
+          "p": "The node in detail."
+        },
+        {
+          "href": "/aurapacs/cloud-pacs-software/",
+          "icon": "&#9729;",
+          "b": "Cloud PACS",
+          "p": "The cloud layer."
+        },
+        {
+          "href": "/aurapacs/pacs-software-india/",
+          "icon": "&#127470;&#127475;",
+          "b": "PACS software India",
+          "p": "Indian centre realities."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#128218;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "The side-by-side."
+        }
+      ]
+    }
+  ]
+}

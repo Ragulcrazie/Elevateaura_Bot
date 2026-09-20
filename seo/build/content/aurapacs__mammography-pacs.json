@@ -1,0 +1,343 @@
+{
+  "cluster": "aurapacs",
+  "slug": "mammography-pacs",
+  "title": "Mammography PACS | High-Resolution Images and Priors",
+  "meta": "Mammography PACS for large high-resolution images: careful window/level in the browser, prior screening rounds beside today's.",
+  "h1": "Mammography PACS built for <span class=\"hl\">large, detailed images</span> and comparison with the last round.",
+  "crumb": "Mammography PACS",
+  "pill": "For mammography units",
+  "sub": "Mammography images are large and high-resolution, read with careful window/level, and almost always compared with the previous round. AuraPACS stores them on a node in your centre, opens them in a browser at full detail, keeps every prior in the patient's history and shares the report with the patient securely.",
+  "meta_ticks": [
+    "Full-resolution images archived",
+    "Priors in the patient history",
+    "Report to the patient on WhatsApp"
+  ],
+  "whatsapp_text": "Hi, we run a mammography unit and would like to discuss AuraPACS.",
+  "primary_keyword": "mammography PACS",
+  "secondary_keywords": [
+    "mammography image archive",
+    "mammography reporting software",
+    "breast imaging PACS",
+    "mammography viewer",
+    "digital mammography software",
+    "mammography prior comparison"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or radiologist at a diagnostic centre or women's health clinic running a digital mammography unit",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a mammography PACS does",
+      "paras": [
+        "A mammography PACS receives the large, high-resolution images from the unit, stores them without loss of detail, presents them for reading with fine window/level control, and keeps every previous round so the radiologist can compare. AuraPACS does this on an on-premise node with a browser viewer, and attaches the signed report to the study for sharing.",
+        "Mammography puts two demands on a PACS that other modalities do not. The images are big, so storage and viewing must handle full resolution rather than a downsized copy. And comparison with priors is the norm, so the archive must find last year's study in seconds."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong with mammography",
+      "h2": "Big images, and a reading that depends on what was seen last time.",
+      "lead": "Mammography reading is slower and more careful than most, and the workflow around it has to respect that.",
+      "items": [
+        {
+          "h": "Priors on a CD somewhere",
+          "p": "Last year's screening round is on a disc the patient may or may not have kept, so comparison is often impossible."
+        },
+        {
+          "h": "Images downsized to share",
+          "p": "A JPEG on WhatsApp or a print loses the detail the radiologist needed."
+        },
+        {
+          "h": "Reading tied to the console",
+          "p": "The full-resolution image is only on the acquisition workstation, so reading waits for that seat."
+        },
+        {
+          "h": "Report separate from images",
+          "p": "The report is typed elsewhere and the patient receives paper with no connection to the study."
+        },
+        {
+          "h": "Patients need privacy",
+          "p": "Breast imaging results are sensitive and need to reach the patient directly and securely."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the unit to a report the patient can open.",
+      "steps": [
+        {
+          "h": "Scheduled",
+          "p": "The patient is booked once; the entry reaches the mammography worklist."
+        },
+        {
+          "h": "Acquired",
+          "p": "The technologist selects the patient on the unit; views are captured."
+        },
+        {
+          "h": "Received",
+          "p": "Full-resolution images are sent as DICOM to the node and filed under the patient."
+        },
+        {
+          "h": "Priors opened",
+          "p": "The previous round is found in the patient history and opened beside today's."
+        },
+        {
+          "h": "Read and reported",
+          "p": "Careful window/level in the browser; report on a mammography template, signed to PDF."
+        },
+        {
+          "h": "Shared securely",
+          "p": "A secure link is sent to the patient and referring doctor on WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What a mammography unit uses",
+      "h2": "The parts of AuraPACS that matter most for breast imaging.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "From the unit",
+          "items": [
+            "DICOM receive of full-resolution images",
+            "Modality worklist to the unit",
+            "Archive on your node",
+            "Encrypted offsite backup"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Reading",
+          "items": [
+            "Browser viewer at full detail",
+            "Window/level control",
+            "Prior rounds from the patient history",
+            "Remote reading by the radiologist"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting",
+          "items": [
+            "Mammography report template",
+            "Sign-off to PDF on the study",
+            "Every action audited"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Privacy and sharing",
+          "items": [
+            "Role-based access",
+            "Secure WhatsApp link to the patient",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/dicom-viewer/",
+        "label": "See the browser DICOM viewer"
+      }
+    },
+    {
+      "type": "table",
+      "eyebrow": "Mammography specifics",
+      "h2": "What breast imaging needs from a PACS.",
+      "headers": [
+        "Mammography requirement",
+        "Why it matters",
+        "In AuraPACS"
+      ],
+      "rows": [
+        [
+          "Large high-resolution images",
+          "Detail is the whole point of the exam",
+          "Received and stored as sent; viewed at full detail in the browser"
+        ],
+        [
+          "Careful window/level",
+          "Subtle differences in density are what the radiologist looks for",
+          "Window/level adjustment in the viewer"
+        ],
+        [
+          "Prior comparison",
+          "Every round is read against the last",
+          "Searchable patient history; priors open alongside"
+        ],
+        [
+          "Storage",
+          "Each study is heavy; years of screening add up",
+          "Archive sized to volume on your node, backed up offsite"
+        ],
+        [
+          "Sensitive results",
+          "The patient should receive the report directly and privately",
+          "Secure link to the patient, every view audited"
+        ],
+        [
+          "Radiologist availability",
+          "Breast imaging readers are often shared across centres",
+          "Remote reading in a browser through the cloud layer"
+        ]
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Where mammography is acquired and read.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres with a mammography unit",
+          "p": "One unit alongside ultrasound and X-ray."
+        },
+        {
+          "icon": "&#128105;&#8205;&#9877;",
+          "b": "Women's health clinics",
+          "p": "Screening rounds and follow-up in one history."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital breast imaging",
+          "p": "Surgeons open the study on the ward or in OPD."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Visiting breast radiologists",
+          "p": "Read the centre's list from home in a browser."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Screening programmes",
+          "p": "Serial rounds findable by patient over years."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Handling mammography, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Image fidelity",
+          "Film or a downsized copy",
+          "As uploaded",
+          "Full resolution on your node"
+        ],
+        [
+          "Priors",
+          "If the patient kept the disc",
+          "Only what was sent to them",
+          "Every round in the patient history"
+        ],
+        [
+          "Who reads",
+          "Your radiologist, on the console",
+          "Their radiologists",
+          "Your radiologist, any browser"
+        ],
+        [
+          "Patient receives",
+          "Paper report",
+          "Portal or email",
+          "Secure WhatsApp link"
+        ],
+        [
+          "Cost model",
+          "Film per exam",
+          "Per study",
+          "Owned system, scoped on a call"
+        ],
+        [
+          "Works without internet",
+          "Yes",
+          "No",
+          "Yes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Mammography PACS, answered.",
+      "items": [
+        {
+          "q": "Are mammography images stored at full resolution?",
+          "a": "Yes. The node receives whatever the unit sends as DICOM and stores it as received. The browser viewer opens the study at full detail rather than a preview copy."
+        },
+        {
+          "q": "Can the radiologist compare with last year's round?",
+          "a": "Yes. Earlier studies are in the patient's searchable history on the node and can be opened alongside the current study in the viewer, with independent window/level."
+        },
+        {
+          "q": "Does the viewer support the fine window/level mammography needs?",
+          "a": "The browser viewer provides window/level adjustment on the full-resolution image. Reading-room display hardware and its calibration remain your choice; AuraPACS does not supply monitors. See <a href=\"/aurapacs/dicom-viewer/\">DICOM viewer</a>."
+        },
+        {
+          "q": "How does the patient receive her report?",
+          "a": "By a secure link sent on WhatsApp, which opens the report PDF and, if you choose, the images, without any login. Access is role-based and every view is audited. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp report sharing</a>."
+        },
+        {
+          "q": "How much storage does mammography need?",
+          "a": "More per study than X-ray or ultrasound, because the images are large. The archive is on your own node and is sized to your annual volume on a call, with an encrypted offsite copy."
+        },
+        {
+          "q": "Is AuraPACS a diagnostic device?",
+          "a": "No. It stores, displays and shares the images. The read and the report are by your radiologist."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/ultrasound-pacs/",
+          "icon": "&#128300;",
+          "b": "Ultrasound PACS",
+          "p": "Frames and cine loops."
+        },
+        {
+          "href": "/aurapacs/digital-x-ray-pacs/",
+          "icon": "&#129471;",
+          "b": "Digital X-ray PACS",
+          "p": "CR and DR, filmless."
+        },
+        {
+          "href": "/aurapacs/medical-image-archive-storage/",
+          "icon": "&#128451;",
+          "b": "Image archive",
+          "p": "Storage planning."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#128218;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs viewer",
+          "p": "When a viewer is not enough."
+        }
+      ]
+    }
+  ]
+}

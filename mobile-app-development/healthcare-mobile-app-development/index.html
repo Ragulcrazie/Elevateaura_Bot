@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Healthcare Mobile App Development, Workflow First | Elevate Aura</title>
+<meta name="description" content="Healthcare mobile app development built around real clinical and operational workflows. React Native or Flutter, GPS, offline mode and store publishing.">
+<link rel="canonical" href="https://elevateaura.co.in/mobile-app-development/healthcare-mobile-app-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Healthcare Mobile App Development, Workflow First | Elevate Aura">
+<meta property="og:description" content="Healthcare mobile app development built around real clinical and operational workflows. React Native or Flutter, GPS, offline mode and store publishing.">
+<meta property="og:url" content="https://elevateaura.co.in/mobile-app-development/healthcare-mobile-app-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healthcare Mobile App Development, Workflow First | Elevate Aura">
+<meta name="twitter:description" content="Healthcare mobile app development built around real clinical and operational workflows. React Native or Flutter, GPS, offline mode and store publishing.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Mobile App Development", "item": "https://elevateaura.co.in/mobile-app-development/"}, {"@type": "ListItem", "position": 3, "name": "Healthcare Mobile App Development", "item": "https://elevateaura.co.in/mobile-app-development/healthcare-mobile-app-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Healthcare Mobile App Development", "serviceType": "Healthcare Mobile App Development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Healthcare mobile app development built around real clinical and operational workflows. React Native or Flutter, GPS, offline mode and store publishing.", "url": "https://elevateaura.co.in/mobile-app-development/healthcare-mobile-app-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "React Native or Flutter, which do you recommend?", "acceptedAnswer": {"@type": "Answer", "text": "Both are in use here. React Native was used for the Carna Medicare field app, Flutter for our own exam-prep app on Google Play. The choice depends on your existing web stack, the libraries you need and who will maintain the app later. See React Native and Flutter."}}, {"@type": "Question", "name": "Can the app connect to the hospital system we already use?", "acceptedAnswer": {"@type": "Answer", "text": "If your system exposes an API, yes. If you use HIMS or AuraPACS from Elevate Aura the app connects natively to appointments, EMR, lab results, billing and imaging. Where no API exists we discuss a practical sync on the call."}}, {"@type": "Question", "name": "How do you handle patient data?", "acceptedAnswer": {"@type": "Answer", "text": "Data lives in your backend, with role-based access, authentication and an audit log. Records are structured to be ABHA and ABDM ready when built on HIMS. We do not claim regulatory certifications; we build to the workflow and the access rules you sign off."}}, {"@type": "Question", "name": "Do you publish the app to the stores?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Developer accounts, listings, screenshots, privacy declarations and the review process are handled as part of the build. Our own exam-prep app went through this process and is live on Google Play."}}, {"@type": "Question", "name": "What does the app cost?", "acceptedAnswer": {"@type": "Answer", "text": "There is no price list because every app is scoped to its workflow. After a discovery call you receive a fixed scope with a timeline. The delivery framework is live in 30 working days where scope allows."}}, {"@type": "Question", "name": "Will the app work in a ward or a basement with no signal?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, where offline mode is in scope. Forms, job cards and check-ins are saved on the device and synced when the connection returns, with conflicts resolved on the server side."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Mobile apps for healthcare and field teams</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20healthcare%20mobile%20app%20development." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+  <li><span aria-current="page">Healthcare Mobile App Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For hospitals, clinics, diagnostics and dealers</span>
+      <h1>Healthcare mobile app development that starts from the <span class="hl">workflow, not the wireframe</span>.</h1>
+      <p class="sub">We build healthcare mobile apps for Android and iOS around the way care and supply actually run in India: appointments, queues, reports, field visits and service calls. React Native or Flutter, a Supabase or Azure backend, and store publishing included.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20healthcare%20mobile%20app%20development." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Scoped from a real workflow</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Offline mode and GPS built in</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Published to Play Store and App Store</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What healthcare mobile app development means here</h2>
+    </div>
+    <div class="ans rv"><p>Healthcare mobile app development is the design, build and release of an Android and iOS app that carries a clinical or operational workflow: a patient booking and paying, a nurse recording vitals, a phlebotomist collecting samples on a route, an engineer closing a service call. Elevate Aura builds these apps in React Native or Flutter with a Supabase or Azure backend.</p><p>The difference from a generic app build is the starting point. We begin with the workflow as it runs today, on paper, WhatsApp and Excel, and design the screens to remove steps from it. GPS, offline mode, photo proof and WhatsApp messaging are included where the workflow needs them, not sold as add-ons.</p><p>The app is published to Google Play and the App Store as part of the delivery, and the person who built it remains the person who supports it.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why healthcare apps fail</span>
+      <h2 class="h2">Most healthcare apps are abandoned within weeks of launch.</h2>
+      <p class="lead">Not because the code was bad, but because the app asked staff and patients to work in a way they never did.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Designed from a feature list</h3><p>The brief said appointments, reports and chat. Nobody asked how the front desk actually handles a walk-in when the doctor is running late.</p></div><div class="pain rv d1"><h3>Breaks without signal</h3><p>Basements, wards and rural roads have poor connectivity. An app that needs a live connection for every tap is put down by the second day.</p></div><div class="pain rv d2"><h3>A second copy of the data</h3><p>The app has its own database, so reports, bills and appointments drift away from what the hospital system says.</p></div><div class="pain rv"><h3>No WhatsApp</h3><p>Patients in India live on WhatsApp. An app that only sends push notifications talks to itself.</p></div><div class="pain rv d1"><h3>Never reaches the store</h3><p>Developer accounts, listings, screenshots and review rejections are left to the customer, and the app stays an APK on a shared drive.</p></div><div class="pain rv d2"><h3>Nobody to call</h3><p>The agency team that built it has moved to the next project. The fix for a broken login waits in a ticket queue.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How we build</span>
+      <h2 class="h2">From the workflow on paper to an app in the store.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Workflow discovery</h4><p>We walk the current process with the people who do it, in person in Chennai or on a call.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Data model and backend</h4><p>Supabase or Azure: authentication, Postgres, storage, realtime, and connections to HIMS, AuraPACS or Aura Business.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Screens for each role</h4><p>Patient, doctor, nurse, technician or engineer each get only the screens their job needs.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Offline, GPS and proof</h4><p>Local storage and sync, location capture, photos and signatures wherever the workflow needs evidence.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Test on real devices</h4><p>Builds go to your team early, on the phones they actually use.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Publish and support</h4><p>Store listings, release, and support from the builder on WhatsApp.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The building blocks of a healthcare app.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128241;</span>App</h3><ul><li>React Native or Flutter, one codebase</li><li>Android and iOS</li><li>Role-based screens and access</li><li>Offline mode with background sync</li><li>Push notifications</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128205;</span>Field and proof</h3><ul><li>GPS check-in and route capture</li><li>Photo proof with timestamp</li><li>Digital signature capture</li><li>Barcode and QR scanning</li></ul></div><div class="capg rv"><h3><span class="k">&#128172;</span>Messaging</h3><ul><li>WhatsApp reminders and reports</li><li>Secure report links without login</li><li>In-app notices and alerts</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Backend and integration</h3><ul><li>Supabase or Azure backend</li><li>HIMS, AuraPACS and Aura Business connections</li><li>Your existing API where one exists</li><li>Audit log of who did what</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/mobile-app-development/">See every app type we build <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Three healthcare apps and the workflow each one carries.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>Sample collection on a route</h3><p class="r"><b>Workflow:</b> A diagnostic centre's phlebotomist sees the day's pickups on a map, checks in at each home with GPS, scans the sample barcode and marks it collected.</p><p><b>Result:</b> The lab knows what is arriving before the bike does, and the patient gets a WhatsApp update.</p></div><div class="u rv d1"><h3>Nurse vitals on the ward</h3><p class="r"><b>Workflow:</b> A nurse records vitals against the bed on a phone; entries save locally and sync to the EMR when the ward Wi-Fi returns.</p><p><b>Result:</b> No paper charts retyped at the station at the end of the shift.</p></div><div class="u rv"><h3>Service engineer at a hospital</h3><p class="r"><b>Workflow:</b> An engineer opens the assigned call, completes the job card, records spares used and captures the biomedical department's signature.</p><p><b>Result:</b> The call closes against the contract and stock updates without a phone call to the office.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Anyone who delivers care or supplies it.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Hospitals</b><p>Patient and staff apps on top of HIMS.</p></div><div class="w"><div class="g">&#129658;</div><b>Clinics and polyclinics</b><p>Booking, tokens and follow-ups.</p></div><div class="w"><div class="g">&#128300;</div><b>Diagnostic centres</b><p>Collection routes and report delivery.</p></div><div class="w"><div class="g">&#128736;</div><b>Equipment dealers</b><p>Field sales and service apps.</p></div><div class="w"><div class="g">&#127968;</div><b>Home care providers</b><p>Visit scheduling and proof of visit.</p></div><div class="w"><div class="g">&#128640;</div><b>Health startups</b><p>A first release that can be tested with real users.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Three ways to get a healthcare app built.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Generic app agency</div><div>Freelancer marketplace</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Starting point</div><div>Your feature list</div><div>Your feature list</div><div class="us">Your workflow, walked through with staff</div></div><div class="r"><div class="cap">Indian healthcare context</div><div>Varies</div><div>Rarely</div><div class="us">HIMS, ABHA-ready records, WhatsApp, GST billing</div></div><div class="r"><div class="cap">Offline mode</div><div>Extra scope</div><div>Often skipped</div><div class="us">Designed in from the first screen</div></div><div class="r"><div class="cap">Backend</div><div>Separate team</div><div>Separate hire</div><div class="us">Same builder, Supabase or Azure</div></div><div class="r"><div class="cap">Store publishing</div><div>Sometimes</div><div>Usually left to you</div><div class="us">Included</div></div><div class="r"><div class="cap">Who supports it after launch</div><div>Account manager</div><div>Whoever is available</div><div class="us">The person who wrote it</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Healthcare mobile app development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>React Native or Flutter, which do you recommend?</summary><p>Both are in use here. React Native was used for the Carna Medicare field app, Flutter for our own exam-prep app on Google Play. The choice depends on your existing web stack, the libraries you need and who will maintain the app later. See <a href="/mobile-app-development/react-native-healthcare-app-development/">React Native</a> and <a href="/mobile-app-development/flutter-healthcare-app-development/">Flutter</a>.</p></details><details><summary>Can the app connect to the hospital system we already use?</summary><p>If your system exposes an API, yes. If you use HIMS or AuraPACS from Elevate Aura the app connects natively to appointments, EMR, lab results, billing and imaging. Where no API exists we discuss a practical sync on the call.</p></details><details><summary>How do you handle patient data?</summary><p>Data lives in your backend, with role-based access, authentication and an audit log. Records are structured to be ABHA and ABDM ready when built on HIMS. We do not claim regulatory certifications; we build to the workflow and the access rules you sign off.</p></details><details><summary>Do you publish the app to the stores?</summary><p>Yes. Developer accounts, listings, screenshots, privacy declarations and the review process are handled as part of the build. Our own exam-prep app went through this process and is live on Google Play.</p></details><details><summary>What does the app cost?</summary><p>There is no price list because every app is scoped to its workflow. After a discovery call you receive a fixed scope with a timeline. The delivery framework is live in 30 working days where scope allows.</p></details><details><summary>Will the app work in a ward or a basement with no signal?</summary><p>Yes, where offline mode is in scope. Forms, job cards and check-ins are saved on the device and synced when the connection returns, with conflicts resolved on the server side.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related mobile app services</h2></div>
+    <div class="who rv"><a class="w" href="/mobile-app-development/"><div class="g">&#128241;</div><b>Mobile app development</b><p>Every app type in one place.</p></a><a class="w" href="/mobile-app-development/hospital-mobile-app-development/"><div class="g">&#127973;</div><b>Hospital apps</b><p>Patient and staff apps on HIMS.</p></a><a class="w" href="/mobile-app-development/patient-app-development/"><div class="g">&#128100;</div><b>Patient app</b><p>Book, pay, collect reports.</p></a><a class="w" href="/mobile-app-development/field-service-mobile-app-development/"><div class="g">&#128205;</div><b>Field service app</b><p>Job cards, GPS, offline sync.</p></a><a class="w" href="/product-development/healthcare-app-development/"><div class="g">&#128268;</div><b>Healthcare app development</b><p>The product development view.</p></a><a class="w" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="g">&#128203;</div><b>Carna Medicare</b><p>A field app shipped in 30 days.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Need an app your team will actually use?</h2>
+      <p>Tell us the workflow it has to support. We will scope the app, the backend it talks to and the timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20healthcare%20mobile%20app%20development." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">Android and iOS apps for hospitals, clinics, medical-equipment companies and field teams, built on React Native and Flutter with GPS, offline mode and Play Store publishing.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Mobile App Development</h4>
+        <a href="/mobile-app-development/">Mobile App Development home</a>
+        <a href="/mobile-app-development/">Mobile App Development</a><a href="/aura-business.html">Aura Business</a><a href="/hims.html">HIMS</a><a href="/product-development.html">Device software</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>On-Premise PACS | Images on Your Own Machine | AuraPACS</title>
+<meta name="description" content="On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.">
+<link rel="canonical" href="https://elevateaura.co.in/aurapacs/on-premise-pacs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AuraPACS by Elevate Aura">
+<meta property="og:title" content="On-Premise PACS | Images on Your Own Machine | AuraPACS">
+<meta property="og:description" content="On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.">
+<meta property="og:url" content="https://elevateaura.co.in/aurapacs/on-premise-pacs/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="On-Premise PACS | Images on Your Own Machine | AuraPACS">
+<meta name="twitter:description" content="On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aurapacs/pacs.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "AuraPACS", "item": "https://elevateaura.co.in/aurapacs.html"}, {"@type": "ListItem", "position": 3, "name": "On-Premise PACS", "item": "https://elevateaura.co.in/aurapacs/on-premise-pacs/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuraPACS On-Premise PACS", "applicationCategory": "HealthApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.", "url": "https://elevateaura.co.in/aurapacs/on-premise-pacs/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does AuraPACS work with no internet at all?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The on-premise node receives studies from the modalities, stores them and serves the browser viewer over your local network. Remote viewing, WhatsApp sharing and offsite backup need a connection, and they catch up when it returns."}}, {"@type": "Question", "name": "What hardware does the node need?", "acceptedAnswer": {"@type": "Answer", "text": "A Windows machine on the centre's network with enough disk for your study volume. The demo installer is 200 KB and runs against the demo server; after activation by Site ID the full system runs on that machine. Sizing is agreed on a call based on your modalities."}}, {"@type": "Question", "name": "Is this different from the hybrid PACS?", "acceptedAnswer": {"@type": "Answer", "text": "It is the same product. The on-premise node is the foundation; the cloud layer adds remote viewing and encrypted backup. See hybrid PACS for how the two parts share the work."}}, {"@type": "Question", "name": "Who owns the images?", "acceptedAnswer": {"@type": "Answer", "text": "You do. They are stored on your hardware, on your premises, and the encrypted backup copy exists so a disk failure does not cost you the archive. There is no per-study charge for keeping them."}}, {"@type": "Question", "name": "Do we still need a server room?", "acceptedAnswer": {"@type": "Answer", "text": "No. The node is a single machine on the network. Heavy tasks such as offsite backup and remote access are handled by the cloud layer rather than by extra hardware at the centre."}}, {"@type": "Question", "name": "Who installs it outside Chennai?", "acceptedAnswer": {"@type": "Answer", "text": "Your own IT person, with remote guidance from Elevate Aura over WhatsApp and screen share. In Chennai the installation and modality connection can be done in person."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; AuraPACS, browser-based imaging</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20on-premise%20PACS%20for%20our%20imaging%20centre." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aurapacs.html">AuraPACS</a></li>
+  <li><span aria-current="page">On-Premise PACS</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>The local node</span>
+      <h1>On-premise PACS: your images on <span class="hl">your own machine</span>, readable when the internet is not.</h1>
+      <p class="sub">AuraPACS runs an on-premise node on the centre's own network. Modalities send to it, the browser viewer serves from it, and reports are written against it. A thin cloud layer adds remote viewing and an encrypted offsite copy, but the day's work never depends on the uplink.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="https://pacs.elevateaura.co.in/" target="_blank" rel="noopener">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20on-premise%20PACS%20for%20our%20imaging%20centre." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Works without internet</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Studies served over your local network</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Cloud backup added on top</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What an on-premise PACS means in AuraPACS</h2>
+    </div>
+    <div class="ans rv"><p>An on-premise PACS keeps the archive, the DICOM receiver and the viewer on a machine inside your centre. Your CT, MR, X-ray or ultrasound sends each study to that node over the local network, the radiologist opens it in a browser from the same network, and the report is saved beside the images. None of that traffic leaves the building.</p><p>AuraPACS is built around exactly this node. The cloud layer sits on top for remote viewing and encrypted offsite backup, which is why the product is described as hybrid, but if the internet drops the node carries on receiving, storing and serving studies on its own.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why centres ask for on-premise</span>
+      <h2 class="h2">Cloud-only imaging makes the uplink a single point of failure.</h2>
+      <p class="lead">The reasons are practical rather than ideological. A centre that scans all day cannot have its viewer stop because a fibre line was cut on the road outside.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Every study crosses the internet</h3><p>A cloud-only system uploads each CT before anyone can read it, so a slow afternoon connection becomes a slow reporting afternoon.</p></div><div class="pain rv d1"><h3>Outage means downtime</h3><p>When the connection fails the technician can still scan, but nobody can open, compare or report until it returns.</p></div><div class="pain rv d2"><h3>The archive belongs to someone else</h3><p>Images sit in a provider's storage under a per-study contract, and getting them back at the end is rarely simple.</p></div><div class="pain rv"><h3>Large studies feel slow</h3><p>Multi-slice CT and MR series are heavy. Pulling them down from a remote server is slower than reading from a machine in the next room.</p></div><div class="pain rv d1"><h3>Old workstation PACS is the other extreme</h3><p>Legacy on-premise systems needed installed viewer software on every reading PC, a server room and an engineer on call.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How the node works</span>
+      <h2 class="h2">From the modality to the reading screen, all on your network.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Node installed</h4><p>AuraPACS is installed on a Windows machine on your network and given an AE title and port.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Modalities pointed at it</h4><p>Each scanner is configured to send DICOM to the node, the same way it would to any archive.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Study received and indexed</h4><p>Images land automatically and are filed by patient, study and series.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Opened in the browser</h4><p>Any authorised laptop on the local network opens the study with nothing installed.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Report attached</h4><p>The radiologist writes on a template and finalises a PDF against the study.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Cloud copy made</h4><p>When the connection is up, an encrypted backup and remote-view copy sync to the cloud layer.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What runs on the node</span>
+      <h2 class="h2">The local machine does the heavy lifting.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128229;</span>Receive</h3><ul><li>DICOM receive from any modality</li><li>CT, MR, X-ray, ultrasound, mammography and more</li><li>Modality worklist served to the machines</li><li>Automatic filing by patient and study</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128451;</span>Store</h3><ul><li>Archive on your own hardware</li><li>Full searchable patient history</li><li>Retention under your control</li><li>Encrypted offsite backup via the cloud layer</li></ul></div><div class="capg rv"><h3><span class="k">&#128187;</span>Read and report</h3><ul><li>Zero-download browser viewer</li><li>Slice scrolling and window/level</li><li>Structured templates per modality</li><li>PDF report attached to the study</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Control</h3><ul><li>Role-based access, every view audited</li><li>GST billing and invoicing built in</li><li>WhatsApp share links when online</li><li>Activation by Site ID, then runs on your network</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/aurapacs.html">See the whole AuraPACS platform <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">What stays working when the line goes down.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>The internet drops mid-morning</h3><p class="r"><b>Workflow:</b> The CT keeps sending to the node. The radiologist keeps opening studies from the reading room. Reports are finalised as usual.</p><p><b>Result:</b> Only WhatsApp sharing and remote viewing wait for the connection to return.</p></div><div class="u rv d1"><h3>A large multi-slice CT opens fast</h3><p class="r"><b>Workflow:</b> The study is served from the node over the local network rather than pulled from a remote server.</p><p><b>Result:</b> Scrolling and windowing feel local because they are.</p></div><div class="u rv"><h3>An old study is needed for comparison</h3><p class="r"><b>Workflow:</b> Front desk searches the patient's history on the node and the prior opens beside today's scan.</p><p><b>Result:</b> No CD to find, no upload to wait for.</p></div><div class="u rv d1"><h3>The centre wants to own its archive</h3><p class="r"><b>Workflow:</b> Images stay on hardware the centre bought, in a folder structure it can see.</p><p><b>Result:</b> There is no per-study rent and no lock-in at renewal time.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Centres that want imaging inside the building.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Diagnostic centres</b><p>Daily CT, MR and ultrasound volume that cannot pause for the ISP.</p></div><div class="w"><div class="g">&#127974;</div><b>Small hospitals</b><p>Casualty and wards need images available at 2 am regardless of connectivity.</p></div><div class="w"><div class="g">&#9889;</div><b>Weak-connectivity locations</b><p>Towns and outskirts where the uplink is shared and unreliable.</p></div><div class="w"><div class="g">&#128274;</div><b>Owners with data concerns</b><p>Centres that want to know exactly which machine holds their patients' images.</p></div><div class="w"><div class="g">&#128736;</div><b>Centres with an IT person</b><p>One capable person can install the node with remote guidance.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">On-premise, done three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>CDs, film and forwarding</div><div>Legacy workstation PACS</div><div class="us">AuraPACS node</div></div><div class="r"><div class="cap">Works without internet</div><div>Yes, but nothing is searchable</div><div>Yes</div><div class="us">Yes, node receives and serves locally</div></div><div class="r"><div class="cap">Viewer</div><div>CD viewer per disc</div><div>Installed software per workstation</div><div class="us">Any browser on the network</div></div><div class="r"><div class="cap">Backup</div><div>None</div><div>Manual, your problem</div><div class="us">Encrypted offsite copy through the cloud layer</div></div><div class="r"><div class="cap">Remote reading</div><div>Courier the disc</div><div>VPN and installed client</div><div class="us">Browser via the cloud layer</div></div><div class="r"><div class="cap">Sharing with referrers</div><div>Print or courier</div><div>Portal login</div><div class="us">WhatsApp secure link</div></div><div class="r"><div class="cap">Who supports you</div><div>No one</div><div>Vendor engineer visit</div><div class="us">The person who built it</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">On-premise PACS, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Does AuraPACS work with no internet at all?</summary><p>Yes. The on-premise node receives studies from the modalities, stores them and serves the browser viewer over your local network. Remote viewing, WhatsApp sharing and offsite backup need a connection, and they catch up when it returns.</p></details><details><summary>What hardware does the node need?</summary><p>A Windows machine on the centre's network with enough disk for your study volume. The demo installer is 200 KB and runs against the demo server; after activation by Site ID the full system runs on that machine. Sizing is agreed on a call based on your modalities.</p></details><details><summary>Is this different from the hybrid PACS?</summary><p>It is the same product. The on-premise node is the foundation; the cloud layer adds remote viewing and encrypted backup. See <a href="/aurapacs/hybrid-pacs/">hybrid PACS</a> for how the two parts share the work.</p></details><details><summary>Who owns the images?</summary><p>You do. They are stored on your hardware, on your premises, and the encrypted backup copy exists so a disk failure does not cost you the archive. There is no per-study charge for keeping them.</p></details><details><summary>Do we still need a server room?</summary><p>No. The node is a single machine on the network. Heavy tasks such as offsite backup and remote access are handled by the cloud layer rather than by extra hardware at the centre.</p></details><details><summary>Who installs it outside Chennai?</summary><p>Your own IT person, with remote guidance from Elevate Aura over WhatsApp and screen share. In Chennai the installation and modality connection can be done in person.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related AuraPACS pages</h2></div>
+    <div class="who rv"><a class="w" href="/aurapacs.html"><div class="g">&#129659;</div><b>AuraPACS</b><p>The whole platform.</p></a><a class="w" href="/aurapacs/hybrid-pacs/"><div class="g">&#9729;</div><b>Hybrid PACS</b><p>What runs where, and why.</p></a><a class="w" href="/aurapacs/dicom-server-software/"><div class="g">&#128229;</div><b>DICOM server</b><p>AE titles, ports, worklist.</p></a><a class="w" href="/aurapacs/medical-image-archive-storage/"><div class="g">&#128451;</div><b>Image archive</b><p>Indexing, retention, backup.</p></a><a class="w" href="/resources/what-is-pacs/"><div class="g">&#128218;</div><b>What is PACS</b><p>The plain-language guide.</p></a><a class="w" href="/compare/cloud-pacs-vs-on-premise-pacs/"><div class="g">&#9878;</div><b>Cloud vs on-premise</b><p>Side by side.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20on-premise%20PACS%20for%20our%20imaging%20centre." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AuraPACS by Elevate Aura</h4>
+        <p class="b">Hybrid on-premise and cloud PACS with a browser DICOM viewer, modality worklist, reporting and WhatsApp report sharing, for clinics, diagnostic centres and hospitals.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>AuraPACS</h4>
+        <a href="/aurapacs.html">AuraPACS home</a>
+        <a href="/aurapacs/pacs-software/">PACS Software</a><a href="/aurapacs/dicom-viewer/">DICOM Viewer</a><a href="/aurapacs/cloud-pacs-software/">Cloud PACS</a><a href="/aurapacs/ris-pacs-software/">RIS PACS</a><a href="/aurapacs/dicom-worklist-software/">DICOM Worklist</a><a href="/hims.html">HIMS</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

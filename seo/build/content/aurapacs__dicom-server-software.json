@@ -1,0 +1,337 @@
+{
+  "cluster": "aurapacs",
+  "slug": "dicom-server-software",
+  "title": "DICOM Server Software | Receive, Store, Worklist Node | AuraPACS",
+  "meta": "DICOM server software explained for centre IT: AE titles, ports, pointing each modality at the node, and the worklist service that fills in patient details.",
+  "h1": "DICOM server software: the node that <span class=\"hl\">receives, stores and serves</span> every study.",
+  "crumb": "DICOM Server",
+  "pill": "For the centre's IT person",
+  "sub": "The DICOM server is the part of AuraPACS your modalities talk to. It listens on an AE title and port, accepts studies as they are sent, files them, and answers worklist queries from the scanners. This page explains what it does and what the centre's IT configures, in plain terms.",
+  "meta_ticks": [
+    "One AE title and port per node",
+    "Any DICOM modality",
+    "Installed by your IT with remote guidance"
+  ],
+  "whatsapp_text": "Hi, I look after IT at an imaging centre and want to understand the AuraPACS DICOM server setup.",
+  "primary_keyword": "DICOM server software",
+  "secondary_keywords": [
+    "DICOM server",
+    "DICOM receiver",
+    "DICOM store SCP",
+    "DICOM node setup",
+    "AE title configuration",
+    "modality DICOM configuration"
+  ],
+  "intent": "commercial",
+  "persona": "IT person or technically minded owner at a diagnostic centre who will install the node and configure the scanners",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a DICOM server does",
+      "paras": [
+        "A DICOM server is a program that waits on the network for imaging machines to send it studies. Each CT, MR, X-ray or ultrasound is configured with the server's address, port and Application Entity title, and at the end of a scan it transmits the images using the DICOM protocol. The server accepts them, checks the patient and study identifiers inside the files, and stores them.",
+        "In AuraPACS the DICOM server runs on the on-premise node. The same node also provides the modality worklist service, which the scanners query to get the day's scheduled patients, and serves the stored studies to the browser viewer. There is no separate product to buy or a second server to run."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where setups go wrong",
+      "h2": "Almost every DICOM problem is a configuration mismatch, not a fault.",
+      "lead": "The protocol is old and dependable. What fails is a wrong port, a mistyped AE title or a firewall nobody mentioned.",
+      "items": [
+        {
+          "h": "AE title mismatch",
+          "p": "The scanner is told to send to one AE title and the server is listening under another. The send fails with no useful message on the console."
+        },
+        {
+          "h": "Port blocked",
+          "p": "The node's DICOM port is closed by a Windows firewall rule or a router, so the association never opens."
+        },
+        {
+          "h": "IP changes overnight",
+          "p": "The node gets a new address from DHCP and every modality is now sending into nothing."
+        },
+        {
+          "h": "Worklist never configured",
+          "p": "The scanner can send studies but was never set up to query the worklist, so patient details are still retyped."
+        },
+        {
+          "h": "Vendor engineer needed for a menu",
+          "p": "The modality's DICOM settings are behind a service menu the centre has never opened."
+        },
+        {
+          "h": "Nobody wrote it down",
+          "p": "Six months later nobody remembers which AE title the ultrasound uses."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "What your IT configures",
+      "h2": "The setup, step by step, with remote guidance.",
+      "steps": [
+        {
+          "h": "Install the node",
+          "p": "Run the AuraPACS installer on a Windows machine on the centre's network."
+        },
+        {
+          "h": "Fix the address",
+          "p": "Give the node a static IP so modalities always find it."
+        },
+        {
+          "h": "Note the AE title and port",
+          "p": "The node listens under one AE title on one port; write both down."
+        },
+        {
+          "h": "Open the firewall",
+          "p": "Allow inbound connections on that port from the modalities' addresses."
+        },
+        {
+          "h": "Configure each modality",
+          "p": "In the scanner's DICOM settings add the node as a storage destination: IP, port, AE title."
+        },
+        {
+          "h": "Add the worklist",
+          "p": "Point the scanner's worklist query at the same node, then test with one scheduled patient."
+        },
+        {
+          "h": "Send a test study",
+          "p": "A verification and a test send from each machine confirm the study lands and opens in the browser."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the node provides",
+      "h2": "The DICOM services on the AuraPACS node.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Receive and store",
+          "items": [
+            "Accepts studies from any DICOM modality",
+            "CT, MR, X-ray (CR/DR), ultrasound, mammography and more",
+            "Files by patient, study and series",
+            "Archive on the node's own disks"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Worklist",
+          "items": [
+            "Modality worklist service on the same node",
+            "Scheduled patients pushed to the scanner",
+            "Study returns matched to the order",
+            "No retyping at the console"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Serve",
+          "items": [
+            "Studies served to the browser viewer",
+            "Works over the local network without internet",
+            "Encrypted copy synced to the cloud layer"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Operations",
+          "items": [
+            "Windows installer",
+            "Activation by Site ID via WhatsApp",
+            "Remote guidance over WhatsApp and screen share",
+            "In-person setup in Chennai"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/dicom-worklist-software/",
+        "label": "See the worklist in detail"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Typical configuration days.",
+      "items": [
+        {
+          "h": "A CT and an ultrasound on day one",
+          "workflow": "Both are given the node's IP, port and AE title as a storage destination; a test send from each arrives and opens in the browser.",
+          "result": "Two modalities live in an afternoon, guided over WhatsApp."
+        },
+        {
+          "h": "The old ultrasound has no network port",
+          "workflow": "The machine cannot send DICOM; the centre plans a replacement or an export route and the rest of the modalities go live.",
+          "result": "An honest answer rather than a broken promise."
+        },
+        {
+          "h": "Worklist added a week later",
+          "workflow": "The CT's worklist query is pointed at the node; front desk schedules a patient and it appears on the console.",
+          "result": "Patient names stop being retyped."
+        },
+        {
+          "h": "The node's IP changed",
+          "workflow": "Sends fail; the static address is restored and the modalities reconnect.",
+          "result": "A five-minute fix once the cause is known."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The person who will do the setup.",
+      "items": [
+        {
+          "icon": "&#128736;",
+          "b": "In-house IT",
+          "p": "One capable person who can install Windows software and set a static IP."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Technically minded owners",
+          "p": "Comfortable following steps over a screen share."
+        },
+        {
+          "icon": "&#128295;",
+          "b": "Modality service engineers",
+          "p": "Who add the storage destination and worklist on the scanner side."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Centres outside Chennai",
+          "p": "Everything on this page is done remotely with guidance."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Centres in Chennai",
+          "p": "Where the node install and modality connection can be done in person."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting studies off the scanner, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Enterprise PACS",
+        "AuraPACS node"
+      ],
+      "rows": [
+        [
+          "How studies leave the modality",
+          "Burned to disc by the technician",
+          "DICOM send to a server rack",
+          "DICOM send to a Windows node"
+        ],
+        [
+          "Worklist",
+          "None",
+          "Separate RIS integration",
+          "Same node"
+        ],
+        [
+          "Who configures it",
+          "Nobody",
+          "Vendor engineers, weeks",
+          "Your IT with remote guidance"
+        ],
+        [
+          "Hardware",
+          "A CD burner",
+          "Servers and a data centre",
+          "One machine on the network"
+        ],
+        [
+          "Works without internet",
+          "Yes",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Support",
+          "No one",
+          "Ticket queue",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "DICOM server software, answered.",
+      "items": [
+        {
+          "q": "What is an AE title?",
+          "a": "The Application Entity title is the name a DICOM device uses on the network. The node has one, each modality has one, and they must match what is configured on each side for a send or a worklist query to succeed. See <a href=\"/resources/what-is-dicom/\">What is DICOM</a>."
+        },
+        {
+          "q": "Which port does the node use?",
+          "a": "The node listens on a single configurable port for DICOM connections. The exact value is set at installation and given to you to enter on each modality, along with the node's IP and AE title."
+        },
+        {
+          "q": "Can our IT person do this without a vendor visit?",
+          "a": "Yes, with remote guidance from Elevate Aura over WhatsApp and screen share. The scanner-side settings may need the modality's service engineer if they sit behind a service menu. In Chennai the setup can be done in person."
+        },
+        {
+          "q": "Does the worklist run on the same server?",
+          "a": "Yes. The modality worklist service is part of the AuraPACS node, so the scanner sends studies to and queries scheduled patients from the same address. See <a href=\"/aurapacs/dicom-worklist-software/\">DICOM worklist software</a>."
+        },
+        {
+          "q": "What if a machine does not support DICOM send?",
+          "a": "Very old units sometimes cannot send over the network. That is confirmed on a call before setup, so you know which modalities will connect and which need a workaround or replacement."
+        },
+        {
+          "q": "Does the node need the internet to receive studies?",
+          "a": "No. Receiving, the worklist and local viewing run on the centre's network. The internet is used for the encrypted offsite copy, remote reading and WhatsApp links."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/on-premise-pacs/",
+          "icon": "&#128187;",
+          "b": "On-premise PACS",
+          "p": "The node as a whole."
+        },
+        {
+          "href": "/aurapacs/dicom-worklist-software/",
+          "icon": "&#128203;",
+          "b": "DICOM worklist",
+          "p": "Schedule once, appears on the machine."
+        },
+        {
+          "href": "/aurapacs/medical-image-archive-storage/",
+          "icon": "&#128451;",
+          "b": "Image archive",
+          "p": "Where received studies go."
+        },
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128218;",
+          "b": "What is DICOM",
+          "p": "The protocol explained."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs viewer",
+          "p": "A viewer has no server."
+        }
+      ]
+    }
+  ]
+}

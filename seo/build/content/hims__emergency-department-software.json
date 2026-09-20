@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "emergency-department-software",
+  "title": "Emergency Department Software | Casualty Triage Board | HIMS",
+  "meta": "Emergency department and casualty software with a live triage board for trauma and medical emergencies, fast registration.",
+  "h1": "Emergency department software with a <span class=\"hl\">live casualty triage board</span> and one-step admission.",
+  "crumb": "Emergency Department Software",
+  "pill": "For casualty and trauma teams",
+  "sub": "HIMS runs casualty on a live triage board: patients are registered in seconds, placed in a bay with a triage category and status, ordered for and treated from the board, and either discharged from casualty or converted into an inpatient admission on the same record.",
+  "meta_ticks": [
+    "Live triage board with category and status",
+    "Registration in seconds, details later",
+    "Casualty to IP admission in one step"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/emergency.png",
+    "alt": "HIMS emergency screen showing the casualty and trauma triage board with patient status",
+    "bar": "his.elevateaura.co.in/emergency"
+  },
+  "whatsapp_text": "Hi, I'd like to see the casualty triage board in HIMS.",
+  "primary_keyword": "emergency department software",
+  "secondary_keywords": [
+    "casualty management software",
+    "hospital emergency room software",
+    "triage software for hospitals",
+    "trauma care software India",
+    "ER management system",
+    "casualty registration software"
+  ],
+  "intent": "commercial",
+  "persona": "Casualty medical officer, emergency in-charge or administrator of a hospital that receives emergencies",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What emergency department software does",
+      "paras": [
+        "Emergency department software runs the casualty area of a hospital from the moment a patient arrives: a fast registration that can be completed later, a triage category, a place on a live board showing every patient in the department and their status, orders and treatment from that board, and a clean exit either to discharge or to an inpatient bed. In HIMS the casualty and trauma triage board is a module of the same platform that runs OP, IP and billing.",
+        "The design principle is that casualty cannot wait for paperwork. The board comes first; demographics, payer details and consent follow once the patient is stable. Because the casualty record is the hospital record, an admission from casualty carries its investigations, drugs and notes straight into the ward, the ICU or the operation theatre."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why casualty runs on memory",
+      "h2": "The busiest department in the hospital is usually the least documented.",
+      "lead": "Nobody has time to write in casualty. So the record is built afterwards, or not at all.",
+      "items": [
+        {
+          "h": "Registration blocks treatment",
+          "p": "The desk needs a name, an address and a payer before a file exists, and the patient is on a trolley in the corridor."
+        },
+        {
+          "h": "No one can see the whole bay",
+          "p": "The medical officer knows the cases they have seen. The in-charge does not know how many are waiting or who has been there longest."
+        },
+        {
+          "h": "Orders shouted, not recorded",
+          "p": "Investigations and drugs given in casualty are written up later from memory, if at all."
+        },
+        {
+          "h": "Admission starts again",
+          "p": "The patient reaches the ward and the admission is registered afresh, losing the casualty notes."
+        },
+        {
+          "h": "Casualty charges vanish",
+          "p": "Drugs, dressings and procedures done in casualty rarely make it onto the bill."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One casualty case",
+      "h2": "From arrival to the ward.",
+      "steps": [
+        {
+          "h": "Fast registration",
+          "p": "Name or unknown patient, a UHID and a bay, in seconds."
+        },
+        {
+          "h": "Triage",
+          "p": "Category assigned and the patient appears on the live board."
+        },
+        {
+          "h": "Orders and treatment",
+          "p": "Investigations, imaging and drugs ordered from the board against the record."
+        },
+        {
+          "h": "Status updates",
+          "p": "Waiting, under treatment, awaiting results, ready for decision."
+        },
+        {
+          "h": "Decision",
+          "p": "Discharge from casualty, or convert to an IP admission with a bed."
+        },
+        {
+          "h": "Details completed",
+          "p": "Demographics, payer and consent finished once the patient is stable."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The casualty module and its connections.",
+      "groups": [
+        {
+          "icon": "&#128657;",
+          "h": "Triage board",
+          "items": [
+            "Live board of every patient in casualty",
+            "Triage category and bay",
+            "Status per patient",
+            "Time since arrival"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Registration",
+          "items": [
+            "Fast registration with minimal fields",
+            "Unknown patient handling",
+            "Details completed later",
+            "Existing patients found by UHID or phone"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Clinical",
+          "items": [
+            "Orders to lab, AuraPACS and pharmacy",
+            "Casualty notes on the EMR",
+            "Drugs and consumables against the case",
+            "Supports NABH-style documentation"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Onward",
+          "items": [
+            "Convert to IP admission in one step",
+            "Free beds and ICU beds visible from casualty",
+            "OT list for emergency surgery",
+            "Casualty charges on the bill"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-ipd-management-software/",
+        "label": "See what happens after admission"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in casualty.",
+      "items": [
+        {
+          "h": "A road accident at night",
+          "workflow": "Registered as an unknown patient in a bay, triaged red, imaging ordered to AuraPACS from the board; details added when relatives arrive.",
+          "result": "Treatment starts before the paperwork."
+        },
+        {
+          "h": "A chest pain that needs the ICU",
+          "workflow": "The medical officer sees a free ICU bed on the board and converts the casualty record into an admission with that bed.",
+          "result": "The ICU receives the record, not a verbal handover."
+        },
+        {
+          "h": "A minor injury treated and sent home",
+          "workflow": "Dressing and injection recorded against the case, discharged from casualty with the bill raised from what was done.",
+          "result": "Casualty revenue is captured."
+        },
+        {
+          "h": "A crowded evening",
+          "workflow": "The in-charge sees eight patients on the board, two waiting longest, and reassigns the second medical officer.",
+          "result": "Waiting is managed from a screen, not from noise."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any hospital that receives emergencies.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "A casualty that feeds every department."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "A small casualty with one medical officer."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Casualty medical officers",
+          "p": "A board instead of a register."
+        },
+        {
+          "icon": "&#128105;&#8205;&#9877;&#65039;",
+          "b": "Emergency nursing",
+          "p": "Orders and drugs recorded as given."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Administrators",
+          "p": "Casualty load and admissions on the dashboard."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running casualty, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Registration",
+          "Full form before a file exists",
+          "Bill header only",
+          "Seconds, details later"
+        ],
+        [
+          "Who is in the department",
+          "Casualty register",
+          "Not covered",
+          "Live triage board with status"
+        ],
+        [
+          "Orders from casualty",
+          "Verbal, written later",
+          "Not covered",
+          "To lab, imaging and pharmacy from the board"
+        ],
+        [
+          "Admission",
+          "New file on the ward",
+          "New bill",
+          "Same record, one step"
+        ],
+        [
+          "Casualty charges",
+          "Mostly lost",
+          "Typed from memory",
+          "Raised from what was recorded"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Emergency department software, answered.",
+      "items": [
+        {
+          "q": "Can a patient be registered without full details?",
+          "a": "Yes. Casualty registration needs only enough to create a UHID and a place on the board, including an unknown patient. Demographics, payer and consent are completed once the patient is stable, on the same record."
+        },
+        {
+          "q": "What does the triage board show?",
+          "a": "Every patient currently in casualty with their bay, triage category, status and time since arrival, so the in-charge sees the department at a glance. It is the same board shown in the <a href=\"/demo/hospital.html\">hospital demo</a>."
+        },
+        {
+          "q": "How does a casualty case become an admission?",
+          "a": "The medical officer converts the casualty record into an IP admission and picks a free bed, including ICU beds, from the bed board. Everything ordered and given in casualty is already on the admission. See <a href=\"/hims/hospital-bed-management-software/\">bed management</a>."
+        },
+        {
+          "q": "Can imaging be ordered from casualty?",
+          "a": "Yes. An imaging order goes to AuraPACS, the study lands from the machine and the images open in the browser viewer on the patient's record, so the casualty team and the radiologist see the same study."
+        },
+        {
+          "q": "Are casualty charges billed?",
+          "a": "Drugs, consumables and procedures recorded against the casualty case are raised on the bill, whether the patient is discharged from casualty or admitted. See <a href=\"/hims/hospital-billing-software/\">hospital billing software</a>."
+        },
+        {
+          "q": "Is the emergency module part of HIMS?",
+          "a": "Yes. It is one module of the hospital platform and shares the record with OP, IP, ICU, OT, pharmacy, laboratory and billing. Read the <a href=\"/hims/hospital-management-system/\">hospital management system</a> page for the whole picture."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/icu-management-software/",
+          "icon": "&#128147;",
+          "b": "ICU",
+          "p": "Where the sickest go next."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed management",
+          "p": "Free beds from the board."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#129657;",
+          "b": "Operation theatre",
+          "p": "Emergency cases on the OT list."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128203;",
+          "b": "IPD software",
+          "p": "The admission that follows."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

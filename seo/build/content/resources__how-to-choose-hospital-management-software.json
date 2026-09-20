@@ -1,0 +1,200 @@
+{
+  "cluster": "resources",
+  "slug": "how-to-choose-hospital-management-software",
+  "title": "How to Choose Hospital Management Software in India",
+  "meta": "A buyer's checklist for Indian hospitals: modules, TPA billing, ABHA, imaging, data ownership, migration, training and the questions to ask during a demo.",
+  "h1": "How to choose hospital management software: <span class=\"hl\">a buyer's checklist</span>.",
+  "crumb": "Choosing hospital software",
+  "pill": "Guide",
+  "sub": "Most hospital software decisions are made on a two-hour demonstration of the prettiest screens. This checklist covers what to examine instead, in the order an Indian hospital owner should examine it.",
+  "meta_ticks": [
+    "Written by a team that builds hospital software",
+    "Questions, not a sales pitch",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See HIMS",
+  "cta_href": "/hims.html",
+  "whatsapp_text": "Hi, I read the buyer's checklist and want to run through it for our hospital.",
+  "date": "2026-09-20",
+  "primary_keyword": "how to choose hospital management software",
+  "secondary_keywords": [
+    "hospital software buyer checklist",
+    "HMS selection criteria India",
+    "questions to ask hospital software vendor",
+    "hospital software demo questions",
+    "hospital software implementation India",
+    "choosing HIMS for a nursing home"
+  ],
+  "intent": "informational",
+  "persona": "Owner, managing doctor or administrator selecting software for an Indian hospital or nursing home",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "What the decision really turns on",
+      "paras": [
+        "Choosing hospital management software means deciding four things: which modules you will genuinely switch on, whether the billing handles the way Indian hospitals get paid, who owns your data, and who answers the telephone at ten at night. Feature lists rarely separate suppliers. These four do.",
+        "Work through the sections below before the first demonstration and take the question list with you. If a term is unfamiliar, start with <a href=\"/resources/what-is-hims/\">what is HIMS</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Scope",
+      "h2": "Start from your own patient journey, not their module list",
+      "lead": "Write down what happens in your hospital today, counter by counter, and judge each product against that sheet.",
+      "body": [
+        {
+          "h3": "Decide what goes live first"
+        },
+        "Almost every hospital begins with registration, appointments and billing, then adds the clinical record, pharmacy, laboratory and wards. What matters is that the later modules exist in the same product, so adding them is configuration rather than a second purchase.",
+        {
+          "h3": "Check the pieces specific to you"
+        },
+        {
+          "ul": [
+            "A nursing home needs beds, nursing workflows and a discharge summary more than a theatre module.",
+            "A polyclinic needs queues, tokens and doctor rosters, and may never admit a patient.",
+            "A hospital with a scanner needs imaging inside the system, not a separate archive nobody links to."
+          ]
+        },
+        {
+          "h3": "Ask who the product was built for"
+        },
+        "Software built for large groups assumes dedicated information technology staff and a finance team. Software built for smaller hospitals assumes the administrator does several jobs. The mismatch shows up in month three, not in the demonstration."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Indian specifics",
+      "h2": "Billing, TPA, ABHA and GST",
+      "lead": "This is where generic or imported products struggle, and where you should spend most of the demonstration.",
+      "body": [
+        {
+          "h3": "Cash, insurance and TPA on the same bill"
+        },
+        "A TPA, or Third Party Administrator, processes claims for an insurer. Ask to see a bill part paid in cash and part claimed, with a different tariff, a pre-authorisation attached and a partial settlement recorded. Then ask how you would find every claim unsettled after sixty days.",
+        {
+          "h3": "GST on the invoice, not afterwards"
+        },
+        "Pharmacy sales, consumables and many services carry tax. Confirm invoices are produced from the system rather than reconstructed in an accounting package, and ask how the data reaches your accountant.",
+        {
+          "h3": "ABHA and ABDM"
+        },
+        "ABDM is the Ayushman Bharat Digital Mission and ABHA is the health account identifier under it. Ask whether the product links records to that identifier and what the hospital itself has to do. Requirements change, so confirm the current position with your own advisers.",
+        {
+          "h3": "Imaging and laboratory"
+        },
+        "If you run a scanner or a laboratory, ask whether results and studies attach to the same patient record. Elevate Aura's system has AuraPACS imaging built in, and laboratory orders run from request to verified result. See <a href=\"/resources/what-is-pacs/\">what is PACS</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "After the signature",
+      "h2": "Data, migration, training and support",
+      "lead": "These four decide whether the purchase succeeds, and none of them appear in a feature comparison.",
+      "body": [
+        {
+          "ul": [
+            "<b>Data ownership.</b> Ask who owns the records, where they are stored, and what export you receive if you leave. Get it in the agreement.",
+            "<b>Migration.</b> Patient masters, item masters, doctors and outstanding balances must come across. Elevate Aura migrates existing spreadsheet data in as part of setup.",
+            "<b>Training.</b> Reception, nursing, pharmacy and accounts each learn a different subset. Ask what happens when a receptionist leaves in month four.",
+            "<b>Support.</b> Ask who answers, on what channel and at what hours, because a hospital runs at night. Elevate Aura is founder-led from Chennai with support on WhatsApp from the person who built the system.",
+            "<b>Timeline.</b> Ask what live means and what is deferred to get there. Elevate Aura works to a fixed scope and aims to be live in thirty working days where the scope allows."
+          ]
+        },
+        {
+          "h3": "Questions to ask in the demonstration"
+        },
+        {
+          "ul": [
+            "Show me registration to discharge for one patient, using only screens I would have.",
+            "Show me a part-insured bill with a partial settlement.",
+            "How does a prescription reach the pharmacy queue, and what happens if the drug is out of stock?",
+            "Show me the live view of beds and collections an owner would open in the morning.",
+            "How do I get my data out, in what format?",
+            "Who trains my staff, and who retrains the replacement?",
+            "Who do I message at ten at night, and how soon do they reply?"
+          ]
+        },
+        "If the product is being sold to you as an enterprise resource planning system, read <a href=\"/compare/hims-vs-hospital-erp/\">HIMS vs hospital ERP</a> first. The Elevate Aura product is described on <a href=\"/hims/hospital-management-system/\">hospital management system</a>, with claims detail on <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions from hospital buyers",
+      "items": [
+        {
+          "q": "Should a small hospital buy cloud or on-premise software?",
+          "a": "Cloud removes server upkeep and makes remote access simple, which suits most small hospitals. Where power or connectivity is unreliable, ask what keeps working during an outage."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "It depends on scope and on how clean your existing data is. Elevate Aura works to a fixed scope and aims to be live in thirty working days where that scope allows, with spreadsheets migrated in and staff trained."
+        },
+        {
+          "q": "What is the most common mistake hospitals make?",
+          "a": "Switching every module on at once. Staff revert to paper for the parts that feel slow, the records split in two, and the project is judged a failure. Start with the counters that touch every patient."
+        },
+        {
+          "q": "Do I need separate software for pharmacy and laboratory?",
+          "a": "Not if the hospital system includes them, and it is better that it does. A prescription reaching the dispensing queue by itself, and a laboratory order returning a verified result to the same record, remove two points where paper is re-entered."
+        },
+        {
+          "q": "How do I check a supplier can actually support us?",
+          "a": "Ask who will do the work, not how large the company is. Ask for the support channel, the hours and the name of the person who answers. For Elevate Aura that is the founder, on WhatsApp."
+        },
+        {
+          "q": "Can we keep our existing billing software?",
+          "a": "You can, but it usually recreates the problem you are solving, because the clinical record and the money live apart and staff key the same visit twice. If you must keep it, agree what is exported, how often, and who fixes a mismatch."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#127973;",
+          "b": "What is HIMS",
+          "p": "Modules and the patient journey."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "If you run a scanner."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128203;",
+          "b": "What is RIS",
+          "p": "Radiology scheduling and reporting."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one you are being sold."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#129659;",
+          "b": "Hospital management system",
+          "p": "The Elevate Aura product."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#128179;",
+          "b": "TPA and insurance billing",
+          "p": "Claims that stay visible."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "field-service-mobile-app-development",
+  "title": "Field Service Mobile App Development: Job Cards and GPS",
+  "meta": "Field service mobile app development for technicians: job cards, GPS check-in, photo and signature proof, spares used and offline sync, tied to your desk.",
+  "h1": "Field service mobile app development for technicians who work <span class=\"hl\">where the signal is not</span>.",
+  "crumb": "Field Service Mobile App Development",
+  "pill": "For service teams and dealers",
+  "sub": "A field service app gives each technician the day's calls, a job card that works offline, GPS check-in, photo and signature proof and the spares they used, then syncs everything to the service desk. We build it standalone or on the Aura Business field module.",
+  "meta_ticks": [
+    "Job cards that work offline",
+    "GPS check-in, photos, signatures",
+    "Spares used drop stock"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a field service app for our technicians.",
+  "primary_keyword": "field service mobile app development",
+  "secondary_keywords": [
+    "technician mobile app development",
+    "field service app India",
+    "job card app for technicians",
+    "offline field service app",
+    "service engineer app development"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner of a business that installs and maintains equipment with technicians on the road",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What field service mobile app development delivers",
+      "paras": [
+        "Field service mobile app development produces the app a technician opens at the start of the day: assigned calls in order, the customer and asset for each, a job card to complete on site, GPS check-in on arrival, photos of the fault and the fix, the spares consumed, and the customer's signature. All of it is captured offline and synced when a connection returns.",
+        "Elevate Aura builds these apps in React Native or Flutter. Where the business runs Aura Business, the app is the mobile side of the Field Service suite, so dispatch, job cards, spares, service history per asset and AMC or CMC contracts are already on the server. Where you have another service desk, the app connects to its API.",
+        "The <a href=\"/aura-business/field-technician-tracking-app/\">technician tracking app</a> page describes the Aura Business version; this page covers the custom build."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The field problem",
+      "h2": "What goes wrong between the service desk and the site.",
+      "lead": "The office knows a call was assigned. Everything after that lives in the technician's head and phone gallery.",
+      "items": [
+        {
+          "h": "No proof of arrival",
+          "p": "The customer says the engineer came at four; the engineer says two. Without GPS check-in there is nothing to show."
+        },
+        {
+          "h": "Job cards filled in later",
+          "p": "Paper cards are completed in the evening from memory, so readings and remarks are approximate."
+        },
+        {
+          "h": "Spares vanish",
+          "p": "A part is fitted from the van and never recorded, so stock is wrong and the customer is not billed."
+        },
+        {
+          "h": "Photos in a personal gallery",
+          "p": "Before and after photos exist on the engineer's phone and leave with the engineer."
+        },
+        {
+          "h": "Apps that need signal",
+          "p": "A cloud form that will not open in a plant room or a hospital basement is abandoned on the first day."
+        },
+        {
+          "h": "Signature by WhatsApp",
+          "p": "A photo of a signed paper is the only evidence the job was accepted."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A call in the app",
+      "h2": "From dispatch to a closed, signed job.",
+      "steps": [
+        {
+          "h": "Dispatch",
+          "p": "The desk assigns the call; it appears on the technician's list with route order."
+        },
+        {
+          "h": "Check in",
+          "p": "GPS and timestamp on arrival at the site."
+        },
+        {
+          "h": "Job card",
+          "p": "Checklist, readings, fault found, work done, photos before and after."
+        },
+        {
+          "h": "Spares",
+          "p": "Parts used scanned or picked from the van stock; stock is reduced."
+        },
+        {
+          "h": "Sign-off",
+          "p": "Customer signs on the screen; job-done status set."
+        },
+        {
+          "h": "Sync",
+          "p": "Everything uploads when the phone has signal; the desk closes the call against the contract or invoices it."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The technician's app, and what it talks to.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Calls and job cards",
+          "items": [
+            "Assigned calls with route order",
+            "Asset and service history on the call",
+            "Checklists per equipment model",
+            "Readings, remarks and fault codes",
+            "Photo proof with timestamp"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Location and proof",
+          "items": [
+            "GPS check-in and check-out",
+            "Technician route and schedule",
+            "Digital signature and job-done",
+            "Attendance with geo and selfie"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Spares and stock",
+          "items": [
+            "Spares used per job",
+            "Barcode and QR scan",
+            "Van stock and requests",
+            "Serial-level tracking"
+          ]
+        },
+        {
+          "icon": "&#128225;",
+          "h": "Offline and sync",
+          "items": [
+            "Full job card offline",
+            "Background sync on signal",
+            "Conflict handling on the server",
+            "Connects to Aura Business or your API"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-business/medical-equipment-field-service-software/",
+        "label": "See the Field Service suite in Aura Business"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three field situations the app is built for.",
+      "items": [
+        {
+          "h": "Breakdown at a hospital",
+          "workflow": "The engineer arrives, checks in, reads the asset's history in the app, replaces a board from the van, photographs the repair and gets the biomedical engineer's signature.",
+          "result": "The call closes under the CMC and the board leaves stock the same minute."
+        },
+        {
+          "h": "A PM round in a factory basement",
+          "workflow": "No signal underground. The checklist and readings are completed offline across six machines and sync in the car park.",
+          "result": "The service desk sees six completed PMs before the engineer reaches the next site."
+        },
+        {
+          "h": "A disputed visit",
+          "workflow": "The customer disputes that an engineer attended. The desk pulls the GPS check-in, photos and signature from the job.",
+          "result": "The dispute ends with evidence, not argument."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any team that fixes things at the customer's site.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Hospital and lab installed base."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial equipment",
+          "p": "Compressors, machines, panels."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Electrical and solar",
+          "p": "Installations and AMC visits."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services",
+          "p": "Lifts, HVAC, fire systems."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Independent service firms",
+          "p": "Multi-brand maintenance."
+        },
+        {
+          "icon": "&#128663;",
+          "b": "Installation crews",
+          "p": "Site proof and handover sign-off."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Forms app, generic FSM subscription, or a built field app.",
+      "cols": [
+        "Forms and chat apps",
+        "Generic FSM subscription",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Offline job card",
+          "Partial",
+          "Usually",
+          "Complete, with photos and signature"
+        ],
+        [
+          "Spares to stock",
+          "No",
+          "Separate inventory add-on",
+          "Spares used drop stock in the same system"
+        ],
+        [
+          "Contract awareness",
+          "No",
+          "Rare",
+          "Closes against AMC or CMC or invoices"
+        ],
+        [
+          "Fit to your checklists",
+          "Generic",
+          "Configurable to a point",
+          "Built per equipment model"
+        ],
+        [
+          "Per-user cost",
+          "Low",
+          "Per seat",
+          "Unlimited users on Aura Business plans"
+        ],
+        [
+          "Support",
+          "None",
+          "Ticket queue",
+          "The builder, on WhatsApp"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Field service mobile app development, answered.",
+      "items": [
+        {
+          "q": "Does the app work without internet?",
+          "a": "Yes. The technician downloads the day's calls, completes job cards, photos, spares and signatures offline, and the app syncs when signal returns. Conflicts, such as a call reassigned while offline, are resolved on the server."
+        },
+        {
+          "q": "Do we need Aura Business to use the app?",
+          "a": "No. The app can be built to connect to your existing service desk through its API. If you have no service desk, Aura Business provides dispatch, job cards, spares, contracts and billing on the office side. See <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>."
+        },
+        {
+          "q": "How does GPS check-in work?",
+          "a": "On arrival the technician taps check in; the app records location and time against the call. Route and schedule views show the office where each technician is expected next. Location is captured at check-in and check-out, not tracked continuously unless you ask for it."
+        },
+        {
+          "q": "Can spares used reduce stock?",
+          "a": "Yes. Spares picked or scanned on the job card are deducted from van or warehouse stock and appear on the service invoice if the visit is not covered by a contract."
+        },
+        {
+          "q": "Can we use our own checklists?",
+          "a": "Yes. Checklists are defined per equipment model, including calibration readings where relevant, so every engineer completes the same steps on the same machine."
+        },
+        {
+          "q": "How long does the build take?",
+          "a": "Live in 30 working days where scope allows. The Carna Medicare field-staff app, part of a 12-module platform, shipped in 30 days on React Native and Supabase."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related field service pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/medical-equipment-service-app/",
+          "icon": "&#128736;",
+          "b": "Medical equipment service app",
+          "p": "The dealer engineer's version."
+        },
+        {
+          "href": "/mobile-app-development/react-native-healthcare-app-development/",
+          "icon": "&#9883;",
+          "b": "React Native apps",
+          "p": "The stack behind the Carna app."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128205;",
+          "b": "Technician tracking app",
+          "p": "The Aura Business module."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "PM visits on the job card."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128203;",
+          "b": "Carna Medicare",
+          "p": "Field app shipped in 30 days."
+        }
+      ]
+    }
+  ]
+}

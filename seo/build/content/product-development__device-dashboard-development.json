@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "device-dashboard-development",
+  "title": "Device Monitoring Dashboard Development | Elevate Aura",
+  "meta": "Device monitoring dashboard development: a web view of your fleet with telemetry, device status, alerts and user roles, built on your Supabase or Azure backend.",
+  "h1": "A dashboard that tells you which device needs <span class=\"hl\">attention today</span>.",
+  "crumb": "Device Dashboard",
+  "pill": "Software-only, web dashboard",
+  "sub": "Elevate Aura builds the web dashboard for a fleet of connected devices: current status per unit, telemetry over time, alerts when something goes outside its band, and roles so a support engineer, a manager and a customer each see what they should.",
+  "meta_ticks": [
+    "Fleet status and device detail views",
+    "Alerts and roles, on your backend",
+    "Built on Supabase or Azure"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need a monitoring dashboard for our devices in the field. Can we discuss what it should show?",
+  "cta_h2": "Tell us what your support team asks every morning.",
+  "cta_p": "The answers to those questions are the dashboard. Tell us what the devices report and who needs to see it, and we will scope the views, the alerts and the roles around them.",
+  "primary_keyword": "device monitoring dashboard development",
+  "secondary_keywords": [
+    "IoT device dashboard development",
+    "fleet monitoring dashboard software",
+    "remote device monitoring web application",
+    "telemetry dashboard development services",
+    "connected device admin portal development",
+    "equipment monitoring dashboard India"
+  ],
+  "intent": "commercial",
+  "persona": "Product or service lead at a device company that needs one place to see every unit in the field",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Device monitoring dashboard development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a device monitoring dashboard is for",
+      "paras": [
+        "A device monitoring dashboard is the web application your team opens to see a fleet of devices at once: which units are reporting, which have gone quiet, what they are measuring and which ones need somebody to act. Elevate Aura builds it on the same engagement as the firmware and the telemetry pipeline, or on top of a backend you already have.",
+        "It is built around questions rather than charts. Which devices have not been heard from since yesterday, which ones are outside their normal band, which firmware version is where, and what has this particular unit been doing for the last week. Each of those becomes a view, and the views are what people use.",
+        "Roles decide who sees what, because a support engineer, an internal manager and a customer looking at their own units need different things. Alerting is described generically and configured to your thresholds rather than ours. The devices and their hardware stay with your team. This is a software-only engagement."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The visibility problem",
+      "h2": "The devices are reporting. Nobody is reading it.",
+      "lead": "Telemetry without a place to look at it is a storage bill rather than an operations tool.",
+      "items": [
+        {
+          "h": "Data in a table nobody queries",
+          "p": "Readings land in a database and the only person who can answer a question is the engineer who built it."
+        },
+        {
+          "h": "Silence goes unnoticed",
+          "p": "A device stops reporting and nobody finds out until the customer rings about something else."
+        },
+        {
+          "h": "No alerting, or far too much",
+          "p": "Either nothing fires, or every minor wobble sends an email and people stop reading them."
+        },
+        {
+          "h": "One login for everyone",
+          "p": "There is no way to show a customer their own units without showing them everybody else's."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From telemetry to a screen people actually open.",
+      "steps": [
+        {
+          "h": "Questions first",
+          "p": "What your support and service teams need to answer every day, written down."
+        },
+        {
+          "h": "Data model",
+          "p": "Devices, owners, readings, events and versions modelled on Supabase or Azure."
+        },
+        {
+          "h": "Views",
+          "p": "Fleet list, device detail, history and version views built around those questions."
+        },
+        {
+          "h": "Alerts",
+          "p": "Thresholds, silence detection and who is notified, configured to your rules."
+        },
+        {
+          "h": "Roles",
+          "p": "Support, manager and customer access, with each scoped to its own units."
+        },
+        {
+          "h": "Hand over",
+          "p": "Deployed on your cloud account, documented, source owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is built",
+      "h2": "The dashboard, view by view.",
+      "groups": [
+        {
+          "icon": "&#128421;",
+          "h": "Fleet view",
+          "items": [
+            "Every unit with its current state",
+            "Last seen and reporting gaps",
+            "Filter by site, owner or model",
+            "Firmware version across the fleet"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Device detail",
+          "items": [
+            "Telemetry over a chosen period",
+            "Events, faults and error history",
+            "Settings and configuration in use",
+            "Service and update history"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Alerts",
+          "items": [
+            "Thresholds per reading",
+            "Silence and offline detection",
+            "Email or WhatsApp notification",
+            "Acknowledgement and notes"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Access",
+          "items": [
+            "Roles for support, manager and customer",
+            "Customer scoped to its own units",
+            "Audit of who changed what",
+            "Branded login for your customers"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where the dashboard changes the working day.",
+      "items": [
+        {
+          "h": "A support team starting the morning",
+          "workflow": "One screen lists units that went quiet overnight and units outside their normal band, ordered by how long it has been.",
+          "result": "The day starts with a list instead of a search."
+        },
+        {
+          "h": "A customer asking about their own units",
+          "workflow": "The customer signs in to a branded view scoped to their sites and sees status and history without contacting anyone.",
+          "result": "Fewer calls, and a question answered at the time it is asked."
+        },
+        {
+          "h": "Checking a rollout before releasing it widely",
+          "workflow": "The version view shows which units took the new build and whether their readings and error counts look normal.",
+          "result": "A release decision based on the fleet rather than a hope."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Companies with devices they can no longer see.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device makers",
+          "p": "Units across clinics and homes."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Machines on customer floors."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment makers",
+          "p": "An installed base to support."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service organisations",
+          "p": "Engineers who need a first look."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Benchtop units reporting results."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "IoT product teams",
+          "p": "A fleet growing past a spreadsheet."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting a fleet dashboard, three ways.",
+      "cols": [
+        "Generic IoT platform",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Views",
+          "Their template",
+          "Whatever was quickest",
+          "Built from your team's questions"
+        ],
+        [
+          "Where the data lives",
+          "Vendor cloud",
+          "Wherever it ended up",
+          "Your Supabase or Azure account"
+        ],
+        [
+          "Customer facing access",
+          "Extra tier",
+          "Rarely considered",
+          "Roles scoped per customer"
+        ],
+        [
+          "Firmware and dashboard together",
+          "Separate vendors",
+          "Separate people",
+          "One builder across both"
+        ],
+        [
+          "Who you call about a bug",
+          "Vendor support",
+          "Whoever is free",
+          "The person who wrote it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Device dashboards, answered.",
+      "items": [
+        {
+          "q": "Where does the data live?",
+          "a": "In your own Supabase or Azure account. The dashboard is deployed there, the source is handed over and your team can maintain or move it. Nothing depends on an Elevate Aura account remaining open."
+        },
+        {
+          "q": "Can our customers log in and see their own devices?",
+          "a": "Yes. Roles scope a customer to their own sites and units with a branded login, while your support and management roles see the whole fleet. Who changed what is recorded."
+        },
+        {
+          "q": "How do alerts work?",
+          "a": "Thresholds are set per reading, and a device that stops reporting for longer than its expected interval raises an alert of its own. Notification goes by email or WhatsApp, and an alert can be acknowledged with a note so two people do not chase the same thing."
+        },
+        {
+          "q": "Do you supply the devices or any hardware?",
+          "a": "No. Elevate Aura is software-only. We do not design PCBs, manufacture, source components, do mechanical work or handle hardware regulatory certification. The devices are yours, and we build the software that reads and presents what they send."
+        },
+        {
+          "q": "Can it show firmware versions across the fleet?",
+          "a": "Yes, and that view is usually one of the most used. It pairs with the update path, so a staged rollout can be watched before a build is released widely. See <a href=\"/product-development/ota-firmware-update-development/\">OTA firmware update development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "How the readings arrive."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Versions and staged rollout."
+        },
+        {
+          "href": "/product-development/healthcare-iot-software-development/",
+          "icon": "&#129658;",
+          "b": "Healthcare IoT software",
+          "p": "Device to clinic workflows."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "Where the numbers come from."
+        },
+        {
+          "href": "/product-development/device-companion-app-development/",
+          "icon": "&#128241;",
+          "b": "Companion app",
+          "p": "The owner's side of the fleet."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

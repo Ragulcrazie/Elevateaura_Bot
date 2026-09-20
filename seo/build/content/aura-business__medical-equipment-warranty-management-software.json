@@ -1,0 +1,341 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-warranty-management-software",
+  "title": "Equipment Warranty Management Software | Aura Business",
+  "meta": "Equipment warranty management software that tracks warranty and extended warranty per serial, shows warranty vs AMC vs CMC cover on every service call.",
+  "h1": "Equipment warranty management software that knows <span class=\"hl\">who pays for the visit</span>.",
+  "crumb": "Warranty Management",
+  "pill": "For dealers who honour warranty on what they sell",
+  "sub": "Aura Business records manufacturer warranty and the extended warranty you sell against every serial, shows on each service call whether warranty, AMC or CMC applies, logs parts replaced under warranty for the claim to your principal, and alerts you before cover ends so the AMC is sold in time.",
+  "meta_ticks": [
+    "Warranty per serial, from acceptance",
+    "Cover shown on every service call",
+    "Expiry alerts feed AMC sales"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer master showing a hospital's equipment with warranty end dates and contract status",
+    "bar": "app.elevateaura.co.in/assets"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss warranty management software for our equipment business.",
+  "primary_keyword": "equipment warranty management software",
+  "secondary_keywords": [
+    "medical equipment warranty tracking software",
+    "extended warranty management software India",
+    "warranty claim tracking for dealers",
+    "warranty expiry alert software",
+    "warranty vs AMC software"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner of an equipment dealer who handles warranty calls, principal claims and the AMC sale that follows",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What equipment warranty management software does",
+      "paras": [
+        "Equipment warranty management software records the warranty on every unit you have installed, by serial number and with a start date that matches what the manufacturer will honour, and uses that record to decide on every service call whether the visit and the parts are free to the customer, chargeable, or covered by a contract. In Aura Business this is the Warranty Tracking module, sitting on the installed-base register next to AMC and CMC contracts.",
+        "Warranty is the cover a dealer most often gives away twice: once to the hospital, when a visit outside warranty is not charged because nobody checked, and once to itself, when a part replaced under warranty is never claimed back from the principal. The module exists to stop both."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where warranty costs you",
+      "h2": "Warranty is a promise with a date on it, and the date is usually wrong.",
+      "lead": "The invoice date is known. The installation date, the extended cover the customer bought, and the parts already replaced under claim are not.",
+      "items": [
+        {
+          "h": "Cover assumed from the invoice",
+          "p": "The hospital insists the year runs from installation; the principal insists it runs from shipment; your engineer is on site with neither date."
+        },
+        {
+          "h": "Extended warranty in a drawer",
+          "p": "The customer paid for two extra years and the certificate is in a file, so the call is billed and the argument follows."
+        },
+        {
+          "h": "Warranty, AMC and CMC confused",
+          "p": "The same ventilator may be under principal warranty for parts and your AMC for labour, and nobody can say who covers what on this call."
+        },
+        {
+          "h": "Claims never raised",
+          "p": "The engineer fits a board from your stock, the customer pays nothing, and the principal is never asked to replace it."
+        },
+        {
+          "h": "Expiry unseen",
+          "p": "Warranty ends quietly; the first you hear is a breakdown call on an uncovered machine, and the AMC is now sold under pressure."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How warranty runs",
+      "h2": "From acceptance to the AMC that replaces it.",
+      "steps": [
+        {
+          "h": "Set",
+          "p": "Warranty term and start basis recorded on the serial at installation or acceptance."
+        },
+        {
+          "h": "Extend",
+          "p": "Extended warranty sold by you is added to the same asset with its own dates."
+        },
+        {
+          "h": "Check",
+          "p": "A service call shows warranty, AMC and CMC status side by side before dispatch."
+        },
+        {
+          "h": "Serve",
+          "p": "The job card marks the visit and each spare as warranty, contract or chargeable."
+        },
+        {
+          "h": "Claim",
+          "p": "Parts replaced under warranty are logged with serials for the claim to your principal."
+        },
+        {
+          "h": "Alert",
+          "p": "Expiring warranties surface for the sales team as an AMC or extended-warranty opportunity."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Warranty tracking, and the modules around it.",
+      "groups": [
+        {
+          "icon": "&#128737;",
+          "h": "Warranty records",
+          "items": [
+            "Warranty tracking per serial",
+            "Start basis: installation, acceptance or invoice",
+            "Extended warranty sold by you",
+            "Warranty terms per brand and product line"
+          ]
+        },
+        {
+          "icon": "&#128222;",
+          "h": "On the service call",
+          "items": [
+            "Warranty, AMC and CMC status on the ticket",
+            "Spares marked warranty, contract or chargeable",
+            "Service invoice only for chargeable items",
+            "Service history per asset"
+          ]
+        },
+        {
+          "icon": "&#127981;",
+          "h": "Claims to the principal",
+          "items": [
+            "Parts replaced under warranty logged with serials",
+            "Failed-part serial tied to GRN and supplier",
+            "Supplier master and payables for credit received",
+            "Documents in the asset's vault"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Expiry to revenue",
+          "items": [
+            "Expiring-warranty lists by customer",
+            "Contract renewal engine",
+            "WhatsApp reminders to the customer",
+            "AMC revenue and leakage dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where the warranty record settles the question.",
+      "items": [
+        {
+          "h": "A call on a machine with three kinds of cover",
+          "workflow": "A monitor is under principal warranty for parts, your AMC for labour, and a hospital-wide CMC for consumables; the ticket shows all three and the job card allocates each line accordingly.",
+          "result": "The customer is billed for nothing they already paid for, and you give away nothing you should charge."
+        },
+        {
+          "h": "A board replaced under warranty is claimed",
+          "workflow": "The failed board's serial, the replacement serial and the job card are logged; the claim to the principal is raised with that evidence and the credit tracked in payables.",
+          "result": "Your stock is replenished at the principal's cost, not yours."
+        },
+        {
+          "h": "Extended warranty is honoured without a search",
+          "workflow": "The customer bought two extra years; the asset shows the extended term and the call is closed as covered.",
+          "result": "No dispute and no digging through files."
+        },
+        {
+          "h": "Warranty expiry becomes an AMC",
+          "workflow": "Sixty analysers at a lab chain leave warranty in the next quarter; the list goes to the rep with contacts and the renewal engine tracks each quote.",
+          "result": "The AMC is sold before the first uncovered breakdown."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who installs equipment that carries a promise.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Principal warranty on what you sell, your AMC after it."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Your own warranty across dealers and territories."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Analysers with parts warranty and reagent obligations."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Compressors, drives and panels with manufacturer cover."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building products",
+          "p": "Lifts and HVAC with long warranty and statutory service."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Certificates in a file, a generic CRM, or warranty on the asset.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Warranty record",
+          "Invoice date plus a year",
+          "A custom field",
+          "Per serial, from the basis you choose"
+        ],
+        [
+          "Extended warranty",
+          "A certificate somewhere",
+          "Another field",
+          "Second term on the same asset"
+        ],
+        [
+          "On the service call",
+          "Engineer asks the office",
+          "Not connected",
+          "Warranty, AMC, CMC shown before dispatch"
+        ],
+        [
+          "Parts under warranty",
+          "Lost in stock",
+          "Not tracked",
+          "Logged with serials for the principal claim"
+        ],
+        [
+          "Expiry",
+          "Nobody knows",
+          "Manual report",
+          "List by customer, feeding AMC sales"
+        ],
+        [
+          "Billing",
+          "Argued",
+          "Separate",
+          "Only chargeable lines reach the invoice"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Warranty management, answered.",
+      "items": [
+        {
+          "q": "What is the difference between warranty, AMC and CMC on a service call?",
+          "a": "Warranty is the manufacturer's or your own promise for a fixed term after sale, usually covering defects. An AMC is a paid annual contract, typically for scheduled visits and labour. A CMC is comprehensive and includes spares. The ticket shows which applies so the job card allocates each line correctly. See <a href=\"/compare/amc-vs-cmc/\">AMC vs CMC</a>."
+        },
+        {
+          "q": "Can warranty start from the installation date?",
+          "a": "Yes. Each asset's warranty can start from installation, customer acceptance or invoice date, whichever your principal honours, and the term can differ by brand and product line."
+        },
+        {
+          "q": "How are warranty claims to the principal handled?",
+          "a": "Parts replaced under warranty are recorded on the job card with the failed and replacement serials, tied to the asset and to the GRN the part came from. That record is the evidence for your claim to the principal; the claim itself is raised with the principal in their process, and the credit received is tracked in payables."
+        },
+        {
+          "q": "Does extended warranty work like a contract?",
+          "a": "Extended warranty sold by you is recorded on the asset with its own dates and terms, invoiced through GST billing, and treated as cover on service calls in the same way as a contract. See <a href=\"/aura-business/service-contract-management-software/\">service contract management software</a>."
+        },
+        {
+          "q": "How do expiry alerts reach the sales team?",
+          "a": "The installed-base register produces lists of serials whose warranty ends in a chosen window, grouped by customer with contacts. These appear on the desk and the owner dashboard, and the renewal engine tracks the AMC or extended-warranty quote for each."
+        },
+        {
+          "q": "Can we track warranty on equipment we did not sell?",
+          "a": "Yes. Assets you maintain but did not supply can be created in the register with whatever warranty information the customer provides, so the coverage check works on third-party equipment too."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128220;",
+          "b": "AMC / CMC",
+          "p": "The contracts that follow warranty."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "The register warranty sits on."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128276;",
+          "b": "Service contracts",
+          "p": "Extended warranty and renewals."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spare parts",
+          "p": "Parts replaced under claim."
+        },
+        {
+          "href": "/resources/what-is-cmc/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a CMC covers."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Choosing the cover to sell."
+        }
+      ]
+    }
+  ]
+}

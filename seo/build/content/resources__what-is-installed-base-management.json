@@ -1,0 +1,205 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-installed-base-management",
+  "title": "What Is Installed Base Management? A Dealer's Guide",
+  "meta": "Your installed base is every unit you have sold, by serial number and site. A plain guide to why that register is your AMC pipeline and service history.",
+  "h1": "What is installed base management? <span class=\"hl\">Every machine you have sold</span>.",
+  "crumb": "Installed base management",
+  "pill": "Guide",
+  "sub": "The installed base is the register of every unit sitting at a customer site with your name on it. Kept properly it becomes the contract pipeline, the service history and the replacement list all at once.",
+  "meta_ticks": [
+    "Written by a team that builds distributor software",
+    "Serial-number thinking, not account thinking",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the installed base guide and want to discuss an asset register for our machines.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is installed base management",
+  "secondary_keywords": [
+    "installed base meaning",
+    "equipment asset register",
+    "serial number tracking for dealers",
+    "installed base AMC pipeline",
+    "asset history per machine",
+    "installed base software"
+  ],
+  "intent": "informational",
+  "persona": "Founder or service head of an equipment dealership with machines in the field",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Installed base management in two paragraphs",
+      "paras": [
+        "Your installed base is the list of units you have sold and commissioned, held by serial number with the customer, the site and the department each one sits in. Managing it means attaching everything that happens to a machine to the machine itself: warranty, contract, every visit, every part fitted and every reading taken.",
+        "Most dealerships have this information. Very few have it in one place. It is split between an invoice ledger, an engineer's phone, a stock register and somebody's memory, which is why questions such as how many of a given model are out of cover cannot be answered on a Tuesday afternoon."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The unit of record",
+      "h2": "File against the serial number, not the customer",
+      "lead": "This is the single change that makes everything else work, and it is a habit rather than a feature.",
+      "body": [
+        "A hospital that has bought thirty machines from you is one account and thirty assets. Filing service events under the account produces a long, useless list. Filing them under the serial number produces a history per machine.",
+        {
+          "table": {
+            "headers": [
+              "On the asset record",
+              "What it unlocks"
+            ],
+            "rows": [
+              [
+                "Serial number, model, site and department",
+                "The engineer goes to the right floor on the first attempt"
+              ],
+              [
+                "Sale and installation dates",
+                "The age of the machine, which drives contract pricing"
+              ],
+              [
+                "Warranty end date",
+                "A contract quotation prepared before cover lapses"
+              ],
+              [
+                "Current contract and its type",
+                "Chargeability decided at call intake"
+              ],
+              [
+                "Every job card and part fitted",
+                "Failure history for this unit and this model"
+              ],
+              [
+                "Preventive visits due and completed",
+                "Evidence that the contract was delivered"
+              ],
+              [
+                "Transfers between sites",
+                "The register stays true when a customer moves a machine"
+              ]
+            ]
+          }
+        },
+        "Once this record exists, several jobs stop being investigations. Call intake sees cover instantly. A comprehensive contract can be priced from what that model has actually cost you. A manufacturer's field notice becomes a list of serial numbers rather than a week of telephone calls."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The commercial argument",
+      "h2": "The installed base is your contract pipeline",
+      "lead": "Sales teams work a pipeline of enquiries. The larger and more predictable pipeline is already installed at your customers.",
+      "body": [
+        "Every unit in the register is at one of a few stages, and each stage has an obvious next action:",
+        {
+          "ul": [
+            "<b>In warranty.</b> Nothing is owed to you yet, but the date to approach the customer is known and should be sitting in a list, not in a memory.",
+            "<b>Under contract.</b> The obligations are visits you must deliver, and the date to renew is fixed.",
+            "<b>Out of cover.</b> The machine is running without an agreement. Every call is chargeable, and every call is also a reason to offer a contract.",
+            "<b>Ageing.</b> The machine has passed the point where repairs are worth it, making it a replacement enquiry rather than a service problem.",
+            "<b>Consuming.</b> Whatever the machine uses routinely is repeat business that belongs to you by default and to a competitor by neglect."
+          ]
+        },
+        "This is why the register matters more than a customer list. A dealership selling a modest number of machines each month accumulates hundreds of installed units within a few years, and it is those units that quietly become unmanageable. The cycle around them is described in <a href=\"/resources/what-is-medical-equipment-crm/\">what is a medical equipment CRM</a>.",
+        "Aura Business holds this as an asset and installed-base register alongside warranty tracking, service contracts, service history per asset, asset transfers and a dashboard showing what is lapsing. The product pages are <a href=\"/aura-business/installed-base-management-software/\">installed base management software</a> and <a href=\"/aura-business/medical-equipment-asset-management/\">medical equipment asset management</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Getting started",
+      "h2": "Building the register when the data is scattered",
+      "lead": "Nobody begins with a clean list. The practical route is to build it from what you already have and then keep it correct by making it part of normal work.",
+      "body": [
+        {
+          "ul": [
+            "Start from your sales invoices, which contain the model, customer and date, and pull serial numbers from delivery records.",
+            "Add warranty end dates next, because they produce the first actions.",
+            "Let engineers correct the register in the field. The person in front of the machine can confirm the serial number, the department and whether it is still there.",
+            "Make installation the moment an asset record is created, so new sales never enter the same backlog.",
+            "Accept that older units will be incomplete. A register covering recent years is worth far more than a perfect one you never finish.",
+            "Elevate Aura migrates existing spreadsheet data in during setup, so an incomplete list is a starting point rather than an obstacle."
+          ]
+        },
+        "Keep the maintenance of this register close to the work. A register updated by a coordinator from paperwork drifts within months. A register updated by the job card that closed this morning stays true."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about installed base management",
+      "items": [
+        {
+          "q": "What does installed base mean?",
+          "a": "It is the total set of units you have sold and commissioned that are currently in use at customer sites, tracked individually by serial number rather than counted as sales volume."
+        },
+        {
+          "q": "How is this different from inventory?",
+          "a": "Inventory is stock you still own and can sell. The installed base is equipment the customer owns and you are responsible for maintaining. They are different records with different questions, although both are kept by serial number."
+        },
+        {
+          "q": "Why track by serial number rather than by customer?",
+          "a": "Because service, warranty and contracts attach to a machine, not to an organisation. A customer with thirty machines has thirty different cover positions and thirty different histories, and only serial-level records can express that."
+        },
+        {
+          "q": "What if a customer moves a machine to another branch?",
+          "a": "The asset record should support a transfer, so the history stays with the machine while the site changes. Without that, the engineer is dispatched to the old address and the history is rebuilt from scratch at the new one."
+        },
+        {
+          "q": "How does the installed base help with spare parts stock?",
+          "a": "It tells you what is in the field: which models, how many, how old and where. Stocking then follows from the population you support rather than from last year orders."
+        },
+        {
+          "q": "Can I build this from my accounting software?",
+          "a": "It is a reasonable start for the model, customer and date, but accounting records rarely hold serial numbers, sites or departments, and never hold service history. Treat the export as seed data."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Turning the register into renewals."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128200;",
+          "b": "Medical equipment CRM",
+          "p": "The full cycle around a machine."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128736;",
+          "b": "Service management explained",
+          "p": "Where the history comes from."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic CRM vs equipment CRM",
+          "p": "Why serial numbers matter."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#129659;",
+          "b": "Installed base management",
+          "p": "One page per machine."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128274;",
+          "b": "Warranty management",
+          "p": "Know when cover ends."
+        }
+      ]
+    }
+  ]
+}

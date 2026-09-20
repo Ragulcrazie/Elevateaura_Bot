@@ -1,0 +1,215 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-hyderabad",
+  "title": "Medical Equipment Software in Hyderabad | Aura Business",
+  "meta": "Medical equipment software for Hyderabad distributors and device makers serving Telangana and Andhra Pradesh: CRM, AMC, service, inventory and GST billing.",
+  "h1": "Medical equipment software for Hyderabad distributors serving <span class=\"hl\">two states</span>.",
+  "crumb": "Hyderabad",
+  "pill": "Hyderabad, Telangana and Andhra Pradesh",
+  "sub": "Aura Business gives Hyderabad's equipment distributors and device manufacturers one platform for hospital chain accounts, AMC and service across Telangana and Andhra Pradesh, inventory and GST billing, with remote onboarding from Chennai and support on WhatsApp.",
+  "meta_ticks": [
+    "Remote onboarding from Chennai",
+    "WhatsApp support from the builder",
+    "Unlimited users on every plan"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk showing open calls across hospital sites with engineer and SLA status",
+    "bar": "app.elevateaura.co.in/service"
+  },
+  "whatsapp_text": "Hi, we are a medical equipment business in Hyderabad and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Hyderabad",
+  "secondary_keywords": [
+    "medical equipment CRM Hyderabad",
+    "medical device software Telangana",
+    "AMC management software Hyderabad",
+    "medical equipment distributor software Andhra Pradesh",
+    "hospital equipment service software Hyderabad"
+  ],
+  "intent": "local",
+  "persona": "Owner of a medical-equipment distributor or device company in Hyderabad with customers across Telangana and Andhra Pradesh",
+  "city": "Hyderabad",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Hyderabad, onboarded remotely",
+      "paras": [
+        "Aura Business is the operations platform Elevate Aura builds for businesses that sell, install and service medical equipment, and Hyderabad companies use it through remote deployment from Chennai: scoping on a call, data migrated from Excel, training over screen-share, and support on WhatsApp from the founder who built it.",
+        "Elevate Aura has no office or staff in Hyderabad, and this page does not pretend otherwise. What it offers is a platform designed to be run without site visits, a fixed-scope project, and a direct line to the person responsible for it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Hyderabad context",
+      "h2": "Hospital chains at home, customers across two states.",
+      "lead": "A Hyderabad distributor typically sells to the city's hospital chains and medical colleges while servicing equipment in district hospitals across Telangana and along the Andhra coast. The territory is wide and the service obligation follows the equipment wherever it went.",
+      "body": [
+        "Hospital chains buy centrally and consume locally. One purchase committee at head office approves the equipment, one contract covers every branch, and the service call comes from whichever site the machine is in. Aura Business handles this with hospital accounts that hold departments and branches, multi-site contracts that attach serials at each branch, and a ticket that resolves to the right asset and agreement no matter which site raised it.",
+        "The two-state territory is a logistics and compliance problem as much as a sales one. Engineers based in Hyderabad cover calls hours away, spares travel with them, and an invoice to a hospital in Andhra Pradesh carries IGST while one to a Telangana hospital carries CGST and SGST. The Field Service suite dispatches by area and skill and gives engineers an offline job card for hospitals with poor signal; the GST Billing suite decides the tax split from the customer's place of supply and raises e-way bills for consignments crossing the border.",
+        {
+          "h3": "For Hyderabad's device manufacturers"
+        },
+        "The city's growing device manufacturing base has the manufacturer's version of the same problems: dealers in several states, demo units on loan, and an installed base that needs to be visible by dealer and territory. The CRM and Portals suites cover doctors and decision-makers, sample tracking, territory targets, a dealer order portal with UTR payments, and the installed-base register.",
+        {
+          "h3": "What remote onboarding looks like"
+        },
+        {
+          "ul": [
+            "Scoping call to map the workflow across sales, service and billing, and pick modules.",
+            "Customers, hospital sites, contracts, installed base and stock imported from your spreadsheets.",
+            "Dashboard, mobile app and invoices carry your branding.",
+            "Office and field training over screen-share; engineers install the app from a link.",
+            "Live in 30 working days where scope allows; WhatsApp support after."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a two-state distributor runs on.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Hospital chain accounts",
+          "items": [
+            "Customer and hospital accounts with branches",
+            "Contacts and decision-makers by role",
+            "Multi-site AMC and CMC contracts",
+            "Customer self-service portal for tickets",
+            "Quotation builder with versions and tender format"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Service across the territory",
+          "items": [
+            "Call intake and dispatch by area and skill",
+            "Technician route and GPS check-in",
+            "Offline mobile job card with photos and signature",
+            "Spares used per job, deducted from engineer kits",
+            "SLA timers and breach tracking"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Two-state billing",
+          "items": [
+            "CGST and SGST or IGST by place of supply",
+            "E-invoice IRN and QR",
+            "E-way bills for interstate consignments",
+            "Receivables ageing by customer",
+            "GSTR-1 and 3B prep, Tally export"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Hyderabad situations the platform handles.",
+      "items": [
+        {
+          "h": "One CMC, six hospital branches",
+          "workflow": "A chain's contract attaches forty serials across branches in Hyderabad and two district towns; a call from any branch shows the same cover and SLA.",
+          "result": "Every branch is served under the agreement, and none is billed twice."
+        },
+        {
+          "h": "A district hospital call is closed offline",
+          "workflow": "The engineer drives three hours, completes the job card and collects the signature without signal, and it syncs on the way back.",
+          "result": "The record exists the same day, not after the next office visit."
+        },
+        {
+          "h": "An Andhra invoice carries the right tax",
+          "workflow": "The customer's GSTIN and delivery address put the supply in Andhra Pradesh; the invoice applies IGST and the e-way bill is generated before dispatch.",
+          "result": "No correction, no held consignment."
+        },
+        {
+          "h": "A manufacturer sees its base by dealer",
+          "workflow": "Every installed serial carries the dealer and district; the reports engine groups installations and warranty status by both.",
+          "result": "Dealer reviews and service planning use the same list."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Hyderabad, answered.",
+      "items": [
+        {
+          "q": "Is there any in-person support in Hyderabad?",
+          "a": "No. Elevate Aura works from Chennai and serves Hyderabad remotely: cloud deployment, screen-share onboarding and WhatsApp support. In-person work is offered in Chennai and in parts of Tamil Nadu reachable by travel."
+        },
+        {
+          "q": "Can one contract cover hospital branches in both states?",
+          "a": "Yes. A multi-site contract attaches serials at any number of branches regardless of state, and the service ticket resolves to the right agreement from the asset. Billing for the contract follows the customer's GST registration and place of supply."
+        },
+        {
+          "q": "How do engineers work in hospitals with no mobile signal?",
+          "a": "The mobile job card runs in offline mode. Fault, work done, spares, photos and the customer signature are captured on the phone and sync when it reconnects. See <a href=\"/aura-business/field-technician-tracking-app/\">the technician app</a>."
+        },
+        {
+          "q": "Does it handle IGST and e-way bills for Andhra Pradesh customers?",
+          "a": "Yes. The tax split is decided by place of supply from the customer record, and e-way bills are raised from the invoice or challan for consignments that cross the state border. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing software</a>."
+        },
+        {
+          "q": "Can we start with a few modules and add more?",
+          "a": "Yes. Aura Business plans are by module count, 15, 47 or all 87, with unlimited users on every plan. Many distributors start with CRM, billing and AMC and switch on field service, inventory and portals later."
+        },
+        {
+          "q": "Who supports us after go-live?",
+          "a": "Ragul Sekar, the founder who builds and runs the platform, on WhatsApp and phone. There is no ticket queue between you and the person who can fix the issue."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "Multi-site AMC and CMC."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Selling to hospital chains."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-bangalore/",
+          "icon": "&#128205;",
+          "b": "Bangalore",
+          "p": "Device makers and dealers."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-mumbai/",
+          "icon": "&#128205;",
+          "b": "Mumbai",
+          "p": "Importers and national distributors."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A distributor platform, shipped."
+        }
+      ]
+    }
+  ]
+}

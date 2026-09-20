@@ -1,0 +1,197 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-hims",
+  "title": "What Is HIMS? Hospital Information Management Explained",
+  "meta": "HIMS is the software that runs a hospital from registration to discharge. A plain guide to the modules, EMR, TPA billing and ABHA for Indian hospital owners.",
+  "h1": "What is HIMS? A <span class=\"hl\">plain guide</span> for hospital and clinic owners.",
+  "crumb": "What is HIMS",
+  "pill": "Guide",
+  "sub": "HIMS stands for Hospital Information Management System. It is the single system that follows a patient from the registration counter to the discharge summary, and carries the money, the medicines and the records along with them.",
+  "meta_ticks": [
+    "Written by a team that builds hospital software",
+    "Indian workflows, Indian terms",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See HIMS",
+  "cta_href": "/hims.html",
+  "whatsapp_text": "Hi, I read the HIMS guide and want to discuss software for our hospital.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is HIMS",
+  "secondary_keywords": [
+    "HIMS full form",
+    "hospital information management system",
+    "HIMS vs HMS",
+    "hospital management software modules",
+    "HIMS meaning in hospital",
+    "hospital ERP difference"
+  ],
+  "intent": "informational",
+  "persona": "Owner, administrator or managing doctor of an Indian hospital, nursing home or polyclinic",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "HIMS in two paragraphs",
+      "paras": [
+        "A Hospital Information Management System, shortened to HIMS, is one piece of software that holds a hospital's clinical and commercial work in the same place. Registration, appointments, consultation notes, prescriptions, pharmacy, laboratory, wards and beds, theatre, billing and the discharge summary all write to the same patient record.",
+        "The test of a real HIMS is whether a fact entered once is available everywhere. A patient registered at the counter should appear on the doctor's list, their prescription should reach the pharmacy queue, and the medicines dispensed should land on the bill without anyone retyping a line."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The journey",
+      "h2": "Follow one patient from the gate to the discharge summary",
+      "lead": "The clearest way to understand the modules is to walk a single case through them, because each handover is where paper-based hospitals leak time and money.",
+      "body": [
+        {
+          "h3": "Outpatient: registration to prescription"
+        },
+        "The patient is registered or found from an earlier visit, a token is issued and the queue display moves. The doctor opens the record, sees earlier visits, writes structured notes and issues an electronic prescription. The consultation charge is already on the bill before the patient leaves the room.",
+        {
+          "h3": "Orders: pharmacy, laboratory and imaging"
+        },
+        "The prescription drops into the pharmacy dispensing queue, where stock, batch and expiry are tracked so an expired strip does not reach a counter. Laboratory orders run from request to verified result, and imaging orders reach the scanner. In the Elevate Aura system the imaging piece is AuraPACS, built in rather than bolted on.",
+        {
+          "h3": "Inpatient: admission, ward, theatre, ICU"
+        },
+        "Admission assigns a bed from a live occupancy view, so nobody walks the floor to find one. Nursing workflows, theatre scheduling, intensive care observations and casualty triage all add to the same record and the same running bill.",
+        {
+          "h3": "Discharge and the bill"
+        },
+        "Discharge closes the episode, produces the summary and finalises the account. Everything charged along the way is already on it, which is the difference between a discharge that takes twenty minutes and one that takes three hours of reconciliation."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Two words you cannot avoid",
+      "h2": "EMR and TPA billing, explained for owners",
+      "body": [
+        {
+          "h3": "EMR is the clinical record, not a scanned file"
+        },
+        "EMR stands for Electronic Medical Record. The important word is structured. If complaints, findings, diagnoses and drugs sit in defined fields rather than in a free paragraph, the record can be searched, reused at the next visit and pulled into a discharge summary. A folder of scanned pages is storage, not an EMR. Structured records are also what makes NABH-style documentation practical, because the evidence is produced as a by-product of ordinary work.",
+        {
+          "h3": "TPA billing is a separate discipline"
+        },
+        "A TPA, or Third Party Administrator, is the company that processes claims on behalf of an insurer. Cash billing ends when the patient pays. A claim does not: it has a pre-authorisation, a tariff that differs from your cash rate, documents to attach, a submission, a wait and often a partial settlement to chase. A hospital system has to keep cash, insurance and TPA claims apart in the same bill and show you what is still outstanding.",
+        {
+          "h3": "ABHA and ABDM"
+        },
+        "ABDM is the Ayushman Bharat Digital Mission, the national programme for digital health records, and ABHA is the health account identifier a patient can be given under it. Hospital software described as ABHA and ABDM ready is built so a patient's record can be linked to that identifier. What each hospital must do to participate changes over time, so confirm the current requirements with your own advisers before committing to a timeline."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Names in the market",
+      "h2": "HIMS, HMS and hospital ERP",
+      "lead": "Suppliers use these labels loosely. What matters is where the emphasis sits.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Label",
+              "Emphasis",
+              "Typical buyer"
+            ],
+            "rows": [
+              [
+                "HMS",
+                "Front office: registration, appointments, billing. Clinical depth varies.",
+                "Clinics and small nursing homes"
+              ],
+              [
+                "HIMS",
+                "Clinical and administrative together, with EMR, pharmacy, laboratory and wards on one record.",
+                "Hospitals, polyclinics, nursing homes"
+              ],
+              [
+                "Hospital ERP",
+                "Finance, stores, purchase and human resources first, with clinical work added on.",
+                "Larger groups with a finance-led purchase"
+              ]
+            ]
+          }
+        },
+        "The practical question is not the label but the order of the demonstration. Ask to see the patient journey first. If the first screen you are shown is a ledger, you are looking at an ERP. The side by side is in <a href=\"/compare/hims-vs-hospital-erp/\">HIMS vs hospital ERP</a>, and the buying checklist is in <a href=\"/resources/how-to-choose-hospital-management-software/\">how to choose hospital management software</a>.",
+        "Elevate Aura's product is described on <a href=\"/hims/hospital-management-system/\">hospital management system</a>, with the clinical record detailed on <a href=\"/hims/hospital-emr-software/\">hospital EMR software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about HIMS",
+      "items": [
+        {
+          "q": "What is the full form of HIMS?",
+          "a": "Hospital Information Management System. It is software that manages patient registration, clinical records, pharmacy, laboratory, wards, theatre, imaging and billing on a single record rather than in separate registers."
+        },
+        {
+          "q": "What is the difference between HIMS and EMR?",
+          "a": "The EMR is the clinical record inside the system: complaints, findings, diagnoses, prescriptions and results. HIMS is the whole platform around it, including queues, beds, pharmacy stock, claims and accounts. An EMR without the rest leaves the money side on paper."
+        },
+        {
+          "q": "Does a small nursing home need a full HIMS?",
+          "a": "Usually a subset is enough to begin with: registration, appointments, EMR, pharmacy and billing. What matters is that the remaining modules exist in the same product, so adding beds or a laboratory later is a configuration and not a second purchase."
+        },
+        {
+          "q": "Can HIMS handle insurance and TPA claims?",
+          "a": "A system built for Indian hospitals should separate cash, insurance and TPA amounts on the same bill, hold claim documents against the episode and show what remains unsettled. Ask to see a part-settled claim during the demonstration, not a clean cash bill."
+        },
+        {
+          "q": "Is HIMS the same as ABDM compliance?",
+          "a": "No. Software described as ABHA and ABDM ready is built to link records to a patient health account identifier, but participation involves steps the hospital itself must complete. Confirm the current requirements with your advisers."
+        },
+        {
+          "q": "How long does it take to implement HIMS in a hospital?",
+          "a": "That turns on the number of modules and the state of your current records. Elevate Aura works to a fixed scope and aims to be live in thirty working days where the scope allows, with existing records migrated in."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#9989;",
+          "b": "How to choose hospital software",
+          "p": "A buyer's checklist for India."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "The imaging half of a hospital."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128203;",
+          "b": "What is RIS",
+          "p": "Radiology scheduling and reporting."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one you are being sold."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "The Elevate Aura product."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128221;",
+          "b": "Hospital EMR software",
+          "p": "Structured clinical records."
+        }
+      ]
+    }
+  ]
+}

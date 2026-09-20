@@ -1,0 +1,348 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-for-mri-centres",
+  "title": "PACS for MRI Centres | Priors and Remote Reading | AuraPACS",
+  "meta": "PACS for MRI centres: long multi-series studies received straight from the scanner, priors opened beside today’s study, and reading from home in a browser.",
+  "h1": "PACS for MRI centres where the radiologist is <span class=\"hl\">not always in the building</span>.",
+  "crumb": "PACS for MRI Centres",
+  "pill": "For MRI centres",
+  "sub": "MRI studies are long, with many series per exam, and the radiologist who reads them is often visiting or remote. AuraPACS files every series from the scanner, shows priors alongside, opens in a browser from anywhere allowed, and turns the report into a PDF on the study within the day.",
+  "meta_ticks": [
+    "Every series filed automatically",
+    "Priors beside today's exam",
+    "Read from home in a browser"
+  ],
+  "whatsapp_text": "Hi, we run an MRI centre and would like to discuss AuraPACS for remote reading and reporting.",
+  "primary_keyword": "PACS for MRI centres",
+  "secondary_keywords": [
+    "MRI centre software",
+    "MRI PACS",
+    "PACS for MRI",
+    "MRI reporting software",
+    "MRI remote reading",
+    "MRI image archive"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of an MRI centre that depends on a visiting or remote radiologist for reporting",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a PACS changes for an MRI centre",
+      "paras": [
+        "A PACS for an MRI centre receives every series of every exam from the scanner, stores it against the patient, and lets the radiologist read it wherever they are, with the earlier exam beside it. AuraPACS does that from a node on your network with a cloud layer for reading outside the centre.",
+        "The thing that makes MRI different from other modalities is the length of the study and the reading arrangement. Exams have many series, each with its own contrast and orientation, and most standalone MRI centres in India rely on a radiologist who visits on set days or reads remotely. Report turnaround is the number the centre's referrers judge it on."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong at MRI centres",
+      "h2": "Long studies, one reader, and a reporting queue that grows overnight.",
+      "lead": "MRI centres rarely have a full-time radiologist on site. Everything about the workflow has to assume the reader is somewhere else.",
+      "items": [
+        {
+          "h": "Reports wait for the visit",
+          "p": "Studies pile up until the radiologist comes on Tuesday and Friday, so a Wednesday patient waits days."
+        },
+        {
+          "h": "Series scattered on the console",
+          "p": "A lumbar spine exam has several sequences; if one is missed on the CD the report is incomplete."
+        },
+        {
+          "h": "No prior for comparison",
+          "p": "A follow-up brain MR six months later cannot be compared because the earlier exam is on a disc the patient kept."
+        },
+        {
+          "h": "Remote reading by VPN",
+          "p": "The radiologist needs installed software and a VPN that somebody has to keep working."
+        },
+        {
+          "h": "Report typed elsewhere, attached by hand",
+          "p": "The report is written in a document, emailed to the centre and printed. It is not on the study."
+        },
+        {
+          "h": "The referrer only sees paper",
+          "p": "The neurologist who ordered the scan reads a printed summary without the images."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the scanner to a signed report, with the reader anywhere.",
+      "steps": [
+        {
+          "h": "Scheduled",
+          "p": "Front desk books the exam; it appears on the MRI worklist without retyping."
+        },
+        {
+          "h": "All series received",
+          "p": "At the end of the exam, every sequence lands on the node and is filed under one study."
+        },
+        {
+          "h": "Prior located",
+          "p": "The patient's history shows earlier exams, ready to open beside today's."
+        },
+        {
+          "h": "Read remotely",
+          "p": "The radiologist opens the study in a browser at home, scrolls slices, adjusts window/level."
+        },
+        {
+          "h": "Reported on a template",
+          "p": "MR template per region, finalised to a PDF attached to the study."
+        },
+        {
+          "h": "Shared the same day",
+          "p": "Secure WhatsApp link to the referring consultant and the patient."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What an MRI centre uses",
+      "h2": "The parts of AuraPACS that matter most for MR.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "From the scanner",
+          "items": [
+            "DICOM receive of multi-series exams",
+            "Modality worklist to the MRI",
+            "Archive on your node",
+            "Encrypted offsite backup"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "For the reader",
+          "items": [
+            "Browser viewer, nothing installed",
+            "Slice scrolling per series",
+            "Window/level adjustment",
+            "Priors from the patient history"
+          ]
+        },
+        {
+          "icon": "&#127968;",
+          "h": "Away from the centre",
+          "items": [
+            "Remote reading from home or a second site",
+            "Role-based access for the visiting radiologist",
+            "Every view audited"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting and sharing",
+          "items": [
+            "MR templates per region",
+            "Sign-off to PDF on the study",
+            "WhatsApp secure link",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/dicom-viewer/",
+        "label": "See the browser DICOM viewer"
+      }
+    },
+    {
+      "type": "table",
+      "eyebrow": "MR specifics",
+      "h2": "What MRI needs from a PACS.",
+      "headers": [
+        "MRI requirement",
+        "Why it matters",
+        "In AuraPACS"
+      ],
+      "rows": [
+        [
+          "Many series per exam",
+          "Each sequence is its own stack; the reader moves between them constantly",
+          "All series filed under one study, opened in the browser viewer"
+        ],
+        [
+          "Comparison with priors",
+          "Follow-up exams are judged against the last one",
+          "Searchable patient history; earlier exams open beside today's"
+        ],
+        [
+          "Reader off site",
+          "Most MRI centres rely on a visiting or remote radiologist",
+          "Remote reading in a browser through the cloud layer"
+        ],
+        [
+          "Turnaround",
+          "Referrers choose centres that report quickly",
+          "Read and sign the same day from anywhere allowed"
+        ],
+        [
+          "Report on the study",
+          "A report in a separate folder gets lost",
+          "PDF attached to the study and to the share link"
+        ],
+        [
+          "Large studies over weak links",
+          "Uploading everything before reading is slow",
+          "Local reads on the node; sync in the background"
+        ]
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "MRI centres and the people who read for them.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Standalone MRI centres",
+          "p": "One scanner, a visiting radiologist, referrers across town."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Visiting radiologists",
+          "p": "Read the centre's list from home between visits."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "CT and MRI centres",
+          "p": "Both modalities in one archive and one reporting queue."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital MRI units",
+          "p": "Consultants open the exam on the ward before the report."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Groups with two sites",
+          "p": "One reader covers two scanners from one screen."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Reporting at an MRI centre, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Who reads",
+          "Your radiologist, on visit days",
+          "Their radiologists",
+          "Your radiologist, from anywhere allowed"
+        ],
+        [
+          "Turnaround",
+          "Next visit",
+          "Their queue",
+          "Same day, when the reader is available"
+        ],
+        [
+          "Priors",
+          "If the disc can be found",
+          "Only what was uploaded to them",
+          "Full history on your node"
+        ],
+        [
+          "Report location",
+          "Separate document",
+          "Their portal",
+          "PDF on the study"
+        ],
+        [
+          "Referrer access",
+          "Printed report",
+          "Portal login",
+          "WhatsApp link with images"
+        ],
+        [
+          "Cost model",
+          "Courier and discs",
+          "Per study, forever",
+          "Owned system, scoped on a call"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS for MRI centres, answered.",
+      "items": [
+        {
+          "q": "Can our visiting radiologist read from home?",
+          "a": "Yes. Studies synced through the cloud layer open in a browser with slice scrolling and window/level, with nothing to install. Access is role-based and every view is audited. See <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading software</a>."
+        },
+        {
+          "q": "Are all sequences of an exam kept together?",
+          "a": "Yes. The node receives every series the scanner sends and files them under one study for the patient, so the reader moves between sequences without hunting for a missing one."
+        },
+        {
+          "q": "How do we compare with the previous MRI?",
+          "a": "The patient's full history is searchable. An earlier exam stored on the node can be opened alongside the current one in the browser viewer."
+        },
+        {
+          "q": "How fast can reports go out?",
+          "a": "As soon as the radiologist signs. The finalised PDF is attached to the study and the secure link can be sent on WhatsApp straight away, so turnaround is set by the reader's availability rather than by couriers."
+        },
+        {
+          "q": "Does this replace a teleradiology service?",
+          "a": "It gives your own radiologist remote reading. If you also use a third-party reporting service, that is a separate arrangement; AuraPACS is not a reporting service. See <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud vs on-premise PACS</a> for the deployment trade-offs."
+        },
+        {
+          "q": "Is AuraPACS a diagnostic device?",
+          "a": "No. It stores, displays and shares imaging. The clinical read and the report are the radiologist's."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-for-ct-scan-centres/",
+          "icon": "&#128300;",
+          "b": "PACS for CT centres",
+          "p": "High-volume multi-slice."
+        },
+        {
+          "href": "/aurapacs/teleradiology-remote-reading-software/",
+          "icon": "&#127968;",
+          "b": "Remote reading",
+          "p": "Your radiologist, from home."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Side by side."
+        }
+      ]
+    }
+  ]
+}

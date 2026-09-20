@@ -1,0 +1,212 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-lms",
+  "title": "What Is an LMS? Learning Management Systems Explained",
+  "meta": "An LMS holds courses, tests, batches, certificates and learner progress in one place. A plain guide for coaching institutes and staff training teams.",
+  "h1": "What is an LMS? A plain guide for <span class=\"hl\">institutes and trainers</span>.",
+  "crumb": "What is an LMS",
+  "pill": "Guide",
+  "sub": "LMS stands for Learning Management System. It is the software that holds your course content, sets the tests, tracks who has learned what and issues the certificate at the end, for students or for your own staff.",
+  "meta_ticks": [
+    "Written by a team that runs its own learning app",
+    "Coaching and staff training covered",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Learn",
+  "cta_href": "/aura-learn.html",
+  "whatsapp_text": "Hi, I read the LMS guide and want to discuss a learning platform for our institute.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is an LMS",
+  "secondary_keywords": [
+    "LMS full form",
+    "learning management system meaning",
+    "LMS for coaching institutes",
+    "LMS for staff training",
+    "what does an LMS do",
+    "LMS features explained"
+  ],
+  "intent": "informational",
+  "persona": "Owner of a coaching institute or a training manager responsible for certifying staff",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "An LMS in two paragraphs",
+      "paras": [
+        "A Learning Management System is one place where teaching material is published, learners are enrolled into batches, tests are set and graded, progress is recorded and certificates are issued. Learners normally use a mobile app or a browser, while instructors and administrators work from a dashboard.",
+        "The word management is the important one. Recorded lessons are only the visible part. What an institute actually buys is the record: who is enrolled, who watched what, who scored what, who has fallen behind and who has completed the course. That record is impossible to keep once content is scattered across a messaging group and a video service."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The parts",
+      "h2": "What sits inside a learning platform",
+      "lead": "Products differ in polish rather than in structure. These are the pieces you will be shown, and what each is for.",
+      "body": [
+        {
+          "h3": "Content and courses"
+        },
+        "A library of video lessons, notes and downloads, arranged into courses and chapters, with offline access so a learner on a poor connection or a long commute is not stuck. Content can be dripped, meaning lessons unlock on a schedule rather than all at once, which keeps a batch moving together.",
+        {
+          "h3": "Assessment"
+        },
+        "Quizzes and mock tests drawn from a question bank, automatically graded, with instant scores and a review of what went wrong. For examination preparation this is the heart of the product, since practice volume is what learners are paying for.",
+        {
+          "h3": "Batches, live classes and the timetable"
+        },
+        "Learners are grouped into cohorts with their own timetable, live classes or webinars are held and recorded, and a discussion or doubt forum gives students somewhere to ask that is not a private message to a teacher at midnight.",
+        {
+          "h3": "Progress, certificates and money"
+        },
+        "Analytics per learner and per batch show who is progressing and who has stopped. Certificates are issued on completion. Fees, subscriptions and GST payments are handled in the same system, so enrolment and payment are one record rather than two."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Two different buyers",
+      "h2": "Coaching institutes and companies want different things",
+      "lead": "The same platform serves both, but the questions each should ask on a demonstration are not the same.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "",
+              "Coaching or exam-prep institute",
+              "Company training its own staff"
+            ],
+            "rows": [
+              [
+                "What success looks like",
+                "Scores improve and learners renew",
+                "Everyone required is certified and current"
+              ],
+              [
+                "Most used feature",
+                "Mock tests and question banks",
+                "Assessment with a pass mark and a record"
+              ],
+              [
+                "Grouping",
+                "Batches by examination and year",
+                "Cohorts by role, branch or joining date"
+              ],
+              [
+                "Reminders",
+                "Nudges to practise and to pay fees",
+                "Nudges about a certificate expiring"
+              ],
+              [
+                "The report that matters",
+                "Progress per learner, per batch",
+                "Who is compliant and who is overdue"
+              ],
+              [
+                "Payment",
+                "Fees and subscriptions",
+                "Usually none inside the platform"
+              ]
+            ]
+          }
+        },
+        "Field and service businesses form a third group that often goes unnoticed. A dealership certifying engineers on each equipment model needs exactly the same machinery: a course per model, an assessment, a certificate and a report showing who is cleared to attend which machine."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Practical",
+      "h2": "Signs you have outgrown messaging groups and a video channel",
+      "lead": "Most institutes start with a messaging group and a video service, and that is a reasonable start. The point at which it stops working is fairly recognisable.",
+      "body": [
+        {
+          "ul": [
+            "You cannot say who has watched a lesson, only who has replied in the group.",
+            "Test scores live in a spreadsheet somebody maintains by hand after every mock.",
+            "New joiners have to scroll months of messages to find the material.",
+            "Content is freely forwarded outside the batch that paid for it.",
+            "Fee reminders and teaching happen in the same conversation, and both get ignored.",
+            "You have no simple answer when a parent or a manager asks how a learner is progressing."
+          ]
+        },
+        "Aura Learn is built around this: a learner mobile app with an instructor and administrator dashboard, a course and content library with offline access, quizzes and mock tests with instant scoring and review, question banks, certificates on completion, compliance tracking for regulated training, live classes with recordings, a doubt forum, batches, a timetable, analytics per learner and batch, WhatsApp reminders and drip content, Telegram bot nudges, and GST payments and fees, with unlimited learners. It grew out of the founder's own government examination preparation app, which is live on Google Play.",
+        "Product pages: <a href=\"/aura-learn/learning-management-system/\">learning management system</a>, <a href=\"/aura-learn/coaching-institute-management-software/\">coaching institute software</a> and <a href=\"/aura-learn/mock-test-platform/\">mock test platform</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about learning management systems",
+      "items": [
+        {
+          "q": "What is the full form of LMS?",
+          "a": "Learning Management System. It is software that delivers courses and tests, enrols learners into batches, records progress and scores, and issues certificates, with a dashboard for instructors and administrators."
+        },
+        {
+          "q": "Can an LMS replace our WhatsApp groups?",
+          "a": "It replaces the parts that need a record: content, tests, progress and payments. Messaging still has a place for announcements, which is why Aura Learn sends reminders and drip content over WhatsApp while the material itself stays inside the app."
+        },
+        {
+          "q": "Does an LMS work on a mobile phone?",
+          "a": "That is how most learners in India use one. Aura Learn provides a learner mobile app with offline access to lessons and downloads, so a student on a weak connection can still study and sync progress later."
+        },
+        {
+          "q": "How are mock tests graded?",
+          "a": "Objective questions are graded automatically from the question bank, with an instant score and a review of each answer. That is what makes high practice volume possible without a teacher marking every paper."
+        },
+        {
+          "q": "Can we use an LMS to train our own service engineers?",
+          "a": "Yes. Build a course per equipment model, set an assessment, issue a certificate on completion and track compliance, so you can show who is cleared to work on which machine. This is the same machinery coaching institutes use."
+        },
+        {
+          "q": "How many learners can be enrolled?",
+          "a": "Aura Learn is offered with unlimited learners, so a growing batch does not change what you are paying for. Scope and setup are discussed on a call, and there is a live demo you can open first."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "More guides and products",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "The full plain-language series."
+        },
+        {
+          "href": "/compare/lms-vs-youtube-and-whatsapp-for-coaching/",
+          "icon": "&#9878;",
+          "b": "LMS vs messaging groups",
+          "p": "When the free route stops working."
+        },
+        {
+          "href": "/aura-learn/learning-management-system/",
+          "icon": "&#129659;",
+          "b": "Learning management system",
+          "p": "The Elevate Aura product."
+        },
+        {
+          "href": "/aura-learn/coaching-institute-management-software/",
+          "icon": "&#127891;",
+          "b": "Coaching institute software",
+          "p": "Batches, fees and mock tests."
+        },
+        {
+          "href": "/aura-learn/mock-test-platform/",
+          "icon": "&#128221;",
+          "b": "Mock test platform",
+          "p": "Question banks and instant scores."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "icon": "&#128241;",
+          "b": "Exam-prep learning app",
+          "p": "Built and published by us."
+        }
+      ]
+    }
+  ]
+}

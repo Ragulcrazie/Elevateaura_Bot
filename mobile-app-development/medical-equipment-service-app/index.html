@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Medical Equipment Service App for Dealer Engineers | Elevate Aura</title>
+<meta name="description" content="A medical equipment service app for dealer engineers: service calls, job cards per device, spares used, calibration readings and sign-off against the contract.">
+<link rel="canonical" href="https://elevateaura.co.in/mobile-app-development/medical-equipment-service-app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Medical Equipment Service App for Dealer Engineers | Elevate Aura">
+<meta property="og:description" content="A medical equipment service app for dealer engineers: service calls, job cards per device, spares used, calibration readings and sign-off against the contract.">
+<meta property="og:url" content="https://elevateaura.co.in/mobile-app-development/medical-equipment-service-app/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medical Equipment Service App for Dealer Engineers | Elevate Aura">
+<meta name="twitter:description" content="A medical equipment service app for dealer engineers: service calls, job cards per device, spares used, calibration readings and sign-off against the contract.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Mobile App Development", "item": "https://elevateaura.co.in/mobile-app-development/"}, {"@type": "ListItem", "position": 3, "name": "Medical Equipment Service App", "item": "https://elevateaura.co.in/mobile-app-development/medical-equipment-service-app/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Medical Equipment Service App", "serviceType": "Medical Equipment Service App", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "A medical equipment service app for dealer engineers: service calls, job cards per device, spares used, calibration readings and sign-off against the contract.", "url": "https://elevateaura.co.in/mobile-app-development/medical-equipment-service-app/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this the same as the Aura Business mobile app?", "acceptedAnswer": {"@type": "Answer", "text": "The Aura Business mobile app already includes the Field Service module: job cards, spares, signatures, photo proof and offline mode. This page describes that app configured for a medical-equipment dealer, or a custom version connected to a different service desk. See the technician tracking app."}}, {"@type": "Question", "name": "Does the engineer see the contract status on site?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each call carries the device's warranty, AMC or CMC status from the installed-base register, so the engineer knows before starting whether the visit and spares are covered."}}, {"@type": "Question", "name": "Can it produce the PM report the hospital asks for?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When the job card is signed, a PM or service report PDF is generated with the checklist, calibration readings, photos and signature, and can be shared with the hospital on WhatsApp or email."}}, {"@type": "Question", "name": "Does it work in imaging rooms and basements without signal?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The job card, readings, spares and signature are captured offline and synced when the phone regains a connection."}}, {"@type": "Question", "name": "How are spares handled?", "acceptedAnswer": {"@type": "Answer", "text": "Spares used on the job card are deducted from van or warehouse stock at serial or batch level, and appear on the service invoice if the visit is not covered by a contract. See spare parts inventory."}}, {"@type": "Question", "name": "How quickly can our engineers be on it?", "acceptedAnswer": {"@type": "Answer", "text": "Live in 30 working days where scope allows. Your installed base, contracts and engineer list are imported from Excel and your branding goes on the app and the PM reports."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Mobile apps for healthcare and field teams</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20service%20app%20for%20our%20medical%20equipment%20engineers." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+  <li><span aria-current="page">Medical Equipment Service App</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For medical-equipment dealers</span>
+      <h1>A medical equipment service app built for the engineer standing in a <span class="hl">hospital corridor</span>.</h1>
+      <p class="sub">The dealer's service engineer needs one app: today's calls, the device's history by serial number, a job card with the right checklist, spares used, and the biomedical department's signature. We build it on the Aura Business field module or to your own service desk.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20service%20app%20for%20our%20medical%20equipment%20engineers." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Service history per serial number</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Job card with checklist and calibration</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Closes against AMC or CMC</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What a medical equipment service app does</h2>
+    </div>
+    <div class="ans rv"><p>A medical equipment service app is the engineer's side of a dealer's service operation. It lists the breakdown and preventive maintenance calls assigned to the engineer, shows the installed device by serial number with its warranty, AMC or CMC status and full history, and gives the engineer a job card with the checklist for that model, calibration readings, spares used, photos and the hospital's signature.</p><p>Elevate Aura builds this app as the mobile half of the <a href="/aura-business.html">Aura Business</a> Field Service and AMC suites, where call intake, dispatch, the installed-base register, contracts, spares stock and service invoices already exist, or as a custom app connected to the service desk you run today. Aura Business is running two distribution businesses in Chennai today.</p><p>This page is specific to medical-equipment dealers. For the general version see <a href="/mobile-app-development/field-service-mobile-app-development/">field service mobile app development</a>.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The dealer's service desk</span>
+      <h2 class="h2">Why medical equipment service is harder than other field work.</h2>
+      <p class="lead">A ventilator is not a compressor. The hospital keeps records, expects evidence, and the contract decides who pays.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Which contract covers this call?</h3><p>The engineer does not know whether the device is under warranty, AMC or CMC, so the visit is either billed wrongly or not at all.</p></div><div class="pain rv d1"><h3>The biomedical file</h3><p>The hospital's biomedical department wants a PM report per device with checklist and signature. A WhatsApp photo does not pass an NABH-style audit.</p></div><div class="pain rv d2"><h3>Calibration by memory</h3><p>Readings are written on a notepad and typed later, if at all, so calibration certificates lapse unnoticed.</p></div><div class="pain rv"><h3>Spares from the bag</h3><p>A sensor fitted from the engineer's kit never reaches the stock ledger or the invoice.</p></div><div class="pain rv d1"><h3>History nobody can find</h3><p>The same monitor fails a third time and nobody can see the first two visits.</p></div><div class="pain rv d2"><h3>No signal in the ICU basement</h3><p>Imaging rooms and plant areas kill connectivity; a cloud-only form is useless there.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">A service call in the app</span>
+      <h2 class="h2">From the hospital's complaint to a closed, covered visit.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Call intake</h4><p>The hospital raises the breakdown; the desk logs it against the serial number.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Dispatch</h4><p>Assigned to the engineer with the right skill; appears on the app with route order.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>On site</h4><p>GPS check-in, device history and contract status read before touching the machine.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Job card</h4><p>Model checklist, fault, work done, calibration readings, spares scanned, photos.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Sign-off</h4><p>Biomedical engineer signs on screen; PM or service report PDF generated.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Close</h4><p>Visit closes against warranty, AMC or CMC, or becomes a GST service invoice.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The service engineer's app, and the desk behind it.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128203;</span>Calls</h3><ul><li>Breakdown and PM calls per engineer</li><li>Route and schedule</li><li>SLA timer visible on the call</li><li>Skill-based allocation</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128295;</span>Job card</h3><ul><li>Checklist per equipment model</li><li>Calibration and compliance checklists</li><li>Meter and usage readings</li><li>Photo proof and signature</li><li>Offline completion and sync</li></ul></div><div class="capg rv"><h3><span class="k">&#128230;</span>Installed base and spares</h3><ul><li>Asset register by serial number</li><li>Warranty, AMC and CMC status</li><li>Service history per asset</li><li>Spares used drop stock</li><li>Batch and expiry on consumables</li></ul></div><div class="capg rv d1"><h3><span class="k">&#8377;</span>Money</h3><ul><li>Closes against the contract</li><li>GST service invoice when not covered</li><li>Contract profitability</li><li>Renewal evidence at term end</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/modules.html">See all 87 modules across 12 suites <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Three calls a dealer's engineer handles every week.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A patient monitor under CMC</h3><p class="r"><b>Workflow:</b> The engineer sees the monitor is on a comprehensive contract, replaces the SpO2 module from stock, records the serial and gets the sign-off.</p><p><b>Result:</b> The visit closes under the CMC, the module leaves stock, and no invoice is raised by mistake.</p></div><div class="u rv d1"><h3>A quarterly PM on a lab analyser</h3><p class="r"><b>Workflow:</b> The PM checklist for that model appears on the job card with calibration fields; the engineer completes it offline in the lab and syncs later.</p><p><b>Result:</b> The hospital receives a PM report PDF with readings and signature for its biomedical file.</p></div><div class="u rv"><h3>An out-of-warranty ultrasound</h3><p class="r"><b>Workflow:</b> The device has no active contract; the job card records a probe replacement and labour.</p><p><b>Result:</b> A GST service invoice is generated from the job card and the receivable is tracked.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Dealers and service firms across the equipment they maintain.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Critical care equipment</b><p>Ventilators, monitors, pumps.</p></div><div class="w"><div class="g">&#129516;</div><b>Imaging</b><p>X-ray, ultrasound, CT service partners.</p></div><div class="w"><div class="g">&#128300;</div><b>Laboratory analysers</b><p>Calibration and QC visits.</p></div><div class="w"><div class="g">&#129463;</div><b>Dental and surgical</b><p>Chairs, autoclaves, OT lights.</p></div><div class="w"><div class="g">&#128736;</div><b>Multi-brand service firms</b><p>Third-party maintenance contracts.</p></div><div class="w"><div class="g">&#127970;</div><b>OEM service partners</b><p>Warranty calls on the OEM's behalf.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">WhatsApp groups, a generic field tool, or a dealer service app.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>WhatsApp and Excel</div><div>Generic field service tool</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Knows the contract on the call</div><div>No</div><div>Rarely</div><div class="us">Warranty, AMC or CMC shown before the visit</div></div><div class="r"><div class="cap">Checklist per model</div><div>No</div><div>Generic forms</div><div class="us">Per model with calibration fields</div></div><div class="r"><div class="cap">PM report for the biomedical file</div><div>A photo</div><div>Generic PDF</div><div class="us">Report with checklist, readings, signature</div></div><div class="r"><div class="cap">Spares and invoice</div><div>Manual</div><div>Separate tools</div><div class="us">Stock drops, invoice raised if not covered</div></div><div class="r"><div class="cap">Users</div><div>Unlimited</div><div>Per seat</div><div class="us">Unlimited users on every Aura Business plan</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Medical equipment service app, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Is this the same as the Aura Business mobile app?</summary><p>The Aura Business mobile app already includes the Field Service module: job cards, spares, signatures, photo proof and offline mode. This page describes that app configured for a medical-equipment dealer, or a custom version connected to a different service desk. See the <a href="/aura-business/field-technician-tracking-app/">technician tracking app</a>.</p></details><details><summary>Does the engineer see the contract status on site?</summary><p>Yes. Each call carries the device's warranty, AMC or CMC status from the installed-base register, so the engineer knows before starting whether the visit and spares are covered.</p></details><details><summary>Can it produce the PM report the hospital asks for?</summary><p>Yes. When the job card is signed, a PM or service report PDF is generated with the checklist, calibration readings, photos and signature, and can be shared with the hospital on WhatsApp or email.</p></details><details><summary>Does it work in imaging rooms and basements without signal?</summary><p>Yes. The job card, readings, spares and signature are captured offline and synced when the phone regains a connection.</p></details><details><summary>How are spares handled?</summary><p>Spares used on the job card are deducted from van or warehouse stock at serial or batch level, and appear on the service invoice if the visit is not covered by a contract. See <a href="/aura-business/medical-spare-parts-inventory-software/">spare parts inventory</a>.</p></details><details><summary>How quickly can our engineers be on it?</summary><p>Live in 30 working days where scope allows. Your installed base, contracts and engineer list are imported from Excel and your branding goes on the app and the PM reports.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related service app pages</h2></div>
+    <div class="who rv"><a class="w" href="/mobile-app-development/"><div class="g">&#128241;</div><b>Mobile app development</b><p>All app types.</p></a><a class="w" href="/mobile-app-development/field-service-mobile-app-development/"><div class="g">&#128205;</div><b>Field service app</b><p>The general version.</p></a><a class="w" href="/mobile-app-development/react-native-healthcare-app-development/"><div class="g">&#9883;</div><b>React Native apps</b><p>The stack behind field apps.</p></a><a class="w" href="/aura-business/medical-equipment-amc-cmc-software/"><div class="g">&#128220;</div><b>AMC / CMC software</b><p>The contracts the app closes against.</p></a><a class="w" href="/aura-business/installed-base-management-software/"><div class="g">&#128203;</div><b>Installed base</b><p>Every serial and its history.</p></a><a class="w" href="/compare/amc-vs-cmc/"><div class="g">&#9878;</div><b>AMC vs CMC</b><p>Which contract covers what.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Need an app your team will actually use?</h2>
+      <p>Tell us the workflow it has to support. We will scope the app, the backend it talks to and the timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20service%20app%20for%20our%20medical%20equipment%20engineers." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">Android and iOS apps for hospitals, clinics, medical-equipment companies and field teams, built on React Native and Flutter with GPS, offline mode and Play Store publishing.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Mobile App Development</h4>
+        <a href="/mobile-app-development/">Mobile App Development home</a>
+        <a href="/mobile-app-development/">Mobile App Development</a><a href="/aura-business.html">Aura Business</a><a href="/hims.html">HIMS</a><a href="/product-development.html">Device software</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

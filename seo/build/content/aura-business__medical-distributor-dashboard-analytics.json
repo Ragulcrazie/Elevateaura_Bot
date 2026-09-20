@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-distributor-dashboard-analytics",
+  "title": "Medical Distributor Dashboard and Analytics Software",
+  "meta": "Medical distributor analytics with an owner dashboard for pipeline, collections, AMC at risk and open service calls, plus a reports engine, P&L by product line.",
+  "h1": "A medical distributor dashboard that shows the owner <span class=\"hl\">what needs a decision today</span>.",
+  "crumb": "Distributor Dashboard",
+  "pill": "For owners who run the business from one screen",
+  "sub": "Aura Business puts pipeline, collections, AMC revenue at risk and open service calls on one owner dashboard, backs it with a reports engine, P&L by product line and territory, receivables ageing and service analytics, and sends the numbers to you rather than waiting to be opened.",
+  "meta_ticks": [
+    "Pipeline, collections, AMC, service on one screen",
+    "P&amp;L by product line and territory",
+    "Reports delivered on WhatsApp"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard with pipeline value, outstanding collections, AMC renewals due and open service calls",
+    "bar": "app.elevateaura.co.in/dashboard"
+  },
+  "whatsapp_text": "Hi, I'd like to see the owner dashboard and reports in Aura Business.",
+  "primary_keyword": "medical distributor analytics",
+  "secondary_keywords": [
+    "owner dashboard for distributors",
+    "medical equipment distributor reporting software",
+    "receivables ageing dashboard India",
+    "P&L by product line software",
+    "service analytics for equipment dealers"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or director of a medical-equipment distributor who currently gets numbers from three people and two spreadsheets",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical distributor analytics should show an owner",
+      "paras": [
+        "Medical distributor analytics is the set of numbers an owner needs to run sales, service and money at the same time: the pipeline and what will close this month, what is outstanding and how old it is, which AMC and CMC contracts lapse soon and what they are worth, how many service calls are open and which are breaching SLA, and which product lines and territories actually make money. Aura Business shows these on the Owner and CEO Dashboard and lets you go deeper through the reports engine.",
+        "The difference from a stitched-together report is that every number on the dashboard is the live total of transactions already in the system: quotes, invoices, receipts, contracts and job cards. Nobody prepares the dashboard. It is simply the state of the business at the moment you open it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How owners get numbers today",
+      "h2": "Three people, two spreadsheets and a week's delay.",
+      "lead": "The sales manager has the pipeline, the accountant has the outstanding, the service head has the open calls, and the owner has a phone.",
+      "items": [
+        {
+          "h": "Monday numbers on Thursday",
+          "p": "The weekly report is assembled by hand and is stale before it is read."
+        },
+        {
+          "h": "Outstanding without ages",
+          "p": "The total receivable is known; which invoices are past ninety days, and with whom, is not."
+        },
+        {
+          "h": "AMC leakage invisible",
+          "p": "Contracts lapse without a number attached, so the loss never appears anywhere."
+        },
+        {
+          "h": "Profit by product a mystery",
+          "p": "Turnover is reported by brand; margin after spares, travel and service is not."
+        },
+        {
+          "h": "Service measured by complaints",
+          "p": "Response times, repeat visits and SLA breaches are known only when a hospital escalates."
+        },
+        {
+          "h": "Reports nobody opens",
+          "p": "Dashboards exist in the accounting tool, but the owner is in the field and never logs in."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the numbers arrive",
+      "h2": "From transactions to a decision.",
+      "steps": [
+        {
+          "h": "Transactions",
+          "p": "Quotes, orders, invoices, receipts, contracts and job cards entered once by the team."
+        },
+        {
+          "h": "Dashboard",
+          "p": "Owner dashboard totals them live: pipeline, collections, AMC at risk, open calls."
+        },
+        {
+          "h": "Drill down",
+          "p": "Click a number to see the invoices, contracts or tickets behind it."
+        },
+        {
+          "h": "Reports",
+          "p": "Reports engine for P&amp;L by product line and territory, ageing, service and win-rate."
+        },
+        {
+          "h": "Delivered",
+          "p": "Notifications hub and WhatsApp integration bring the numbers to you."
+        },
+        {
+          "h": "Ask",
+          "p": "The AI assistant answers a question about the data in plain language."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The dashboard, the reports and how they reach you.",
+      "groups": [
+        {
+          "icon": "&#128202;",
+          "h": "Owner dashboard",
+          "items": [
+            "Pipeline by stage and expected close",
+            "Collections and outstanding",
+            "AMC revenue and leakage in rupees",
+            "Open service calls and SLA status",
+            "Cashflow dashboard"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Finance reports",
+          "items": [
+            "Receivables ageing by customer",
+            "P&amp;L by product line and territory",
+            "Payables ledger",
+            "Expense management",
+            "GST returns prep"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Sales and service analytics",
+          "items": [
+            "Lead-source and conversion analytics",
+            "Territory and target tracking",
+            "Tender outcome and win-rate analytics",
+            "Service history and repeat-call views",
+            "CSAT on ticket close"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Delivery and platform",
+          "items": [
+            "Reports engine with saved reports",
+            "Notifications hub",
+            "WhatsApp Business integration",
+            "AI assistant over your data",
+            "Audit log and role-based access"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four decisions the dashboard makes easier.",
+      "items": [
+        {
+          "h": "Which customer to call about money",
+          "workflow": "Receivables ageing shows two hospital groups with invoices past ninety days; the owner calls those two, not the whole list.",
+          "result": "Collection effort goes where the risk is."
+        },
+        {
+          "h": "Which contracts to save this month",
+          "workflow": "The AMC at-risk tile shows contracts lapsing in thirty days with their rupee value; the owner reviews the top five with the service head.",
+          "result": "Renewal revenue is protected before it becomes leakage."
+        },
+        {
+          "h": "Which product line to push",
+          "workflow": "P&amp;L by product line shows the high-turnover brand has the lowest margin after service cost, and a quieter line has the highest.",
+          "result": "Sales targets change to favour margin, not just volume."
+        },
+        {
+          "h": "Whether service is slipping",
+          "workflow": "Open calls, SLA breaches and repeat visits per engineer are on one view, reviewed weekly.",
+          "result": "Problems are seen before the hospital escalates them."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Owners and directors who want one screen, not three reports.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-owners",
+          "p": "Running sales, service and money personally."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Directors of distributors",
+          "p": "Several branches, several brands, one P&amp;L."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device company founders",
+          "p": "Installed base, dealers and territories at a glance."
+        },
+        {
+          "icon": "&#128176;",
+          "b": "Finance heads",
+          "p": "Ageing, payables, cashflow and GST prep without a spreadsheet."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service heads",
+          "p": "SLA, repeat calls and contract profitability."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Spreadsheets, accounting dashboards, or a live operations view.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Source of numbers",
+          "Typed weekly",
+          "Invoices and receipts",
+          "Every transaction across sales, service and money"
+        ],
+        [
+          "Pipeline",
+          "A sheet",
+          "Not included",
+          "Live by stage with expected close"
+        ],
+        [
+          "AMC at risk",
+          "Not shown",
+          "Not shown",
+          "Contracts lapsing with rupee value"
+        ],
+        [
+          "Service metrics",
+          "None",
+          "None",
+          "Open calls, SLA breaches, repeat visits"
+        ],
+        [
+          "P&amp;L by product and territory",
+          "Manual",
+          "By ledger, if set up",
+          "Built in, including service cost"
+        ],
+        [
+          "How it reaches you",
+          "Someone sends it",
+          "Log in",
+          "Dashboard, WhatsApp, notifications, AI assistant"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Distributor dashboard and analytics, answered.",
+      "items": [
+        {
+          "q": "What is on the owner dashboard by default?",
+          "a": "Pipeline value by stage, collections and outstanding, AMC and CMC revenue at risk in rupees, open service calls with SLA status, and cashflow. Tiles are configured to your priorities during setup, and each drills down to the underlying records."
+        },
+        {
+          "q": "Can reports be sent to me automatically?",
+          "a": "Reports from the reports engine can be delivered through the notifications hub and WhatsApp Business integration. The exact schedule and recipients are set up for your business during scoping, so confirm what you need on the call."
+        },
+        {
+          "q": "How is P&L by product line calculated?",
+          "a": "Revenue from invoices is grouped by product line or territory and set against cost of goods from purchases and the cost of service closed against contracts, so a brand's true margin includes what it costs you to support it. See <a href=\"/aura-business/medical-equipment-management-software/\">medical equipment management software</a>."
+        },
+        {
+          "q": "What does receivables ageing show?",
+          "a": "Outstanding invoices by customer in age buckets, with the contact and the last reminder sent, so collections calls go to the oldest and largest first. Payment reminders can go out on WhatsApp from the payment tracker."
+        },
+        {
+          "q": "What service analytics are included?",
+          "a": "Open and closed calls by period, response and resolution against SLA, breaches, repeat calls per asset, spares consumed per job, contract profitability and CSAT collected on ticket close. See <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>."
+        },
+        {
+          "q": "Can I ask questions instead of building reports?",
+          "a": "Yes. The AI assistant in the Analytics suite answers plain-language questions over your own data, such as which customers are past ninety days or which contracts lapse next month, and points to the records behind the answer."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The platform behind the dashboard."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Where collections start."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "The AMC at-risk number."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128222;",
+          "b": "Service management",
+          "p": "The calls on the dashboard."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tenders",
+          "p": "Win-rate analytics."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "Reporting without an ERP."
+        }
+      ]
+    }
+  ]
+}

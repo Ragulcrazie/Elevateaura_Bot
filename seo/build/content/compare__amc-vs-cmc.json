@@ -1,0 +1,215 @@
+{
+  "cluster": "compare",
+  "slug": "amc-vs-cmc",
+  "title": "AMC vs CMC: What Each Contract Covers | Elevate Aura",
+  "meta": "AMC vs CMC explained for equipment dealers and hospitals: what each covers, how each is priced, who carries the spare-parts risk and when to offer which.",
+  "h1": "AMC vs CMC: what each contract covers, and who carries the <span class=\"hl\">spare-parts risk</span>.",
+  "crumb": "AMC vs CMC",
+  "pill": "Comparison",
+  "sub": "AMC and CMC sound like the same product with a different letter. They are two different risk positions. This page sets out what each covers, how the pricing logic follows from that, and where warranty and extended warranty sit alongside them.",
+  "meta_ticks": [
+    "For dealers and for hospitals",
+    "Four contract types, one table",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AMC and CMC software",
+  "cta_href": "/aura-business/medical-equipment-amc-cmc-software/",
+  "whatsapp_text": "Hi, I read the AMC vs CMC comparison and want to discuss contract management for our business.",
+  "date": "2026-09-20",
+  "primary_keyword": "AMC vs CMC",
+  "secondary_keywords": [
+    "difference between AMC and CMC",
+    "what is CMC contract",
+    "comprehensive maintenance contract meaning",
+    "AMC CMC medical equipment",
+    "annual maintenance contract vs comprehensive"
+  ],
+  "intent": "comparison",
+  "persona": "Dealer, service head or hospital administrator deciding which maintenance contract to offer or buy",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Labour only, or labour plus parts",
+      "paras": [
+        "An AMC, an annual maintenance contract, is for the buyer who wants scheduled servicing and a guaranteed response, and is willing to pay separately for whatever part fails. It suits reliable equipment, a buyer with a spares budget, and a dealer who does not want to underwrite an unpredictable parts bill.",
+        "A CMC, a comprehensive maintenance contract, is for the buyer who wants one predictable annual figure covering labour and the parts fitted during the year. It suits critical equipment where downtime is expensive, buyers who need a fixed line in the budget, and dealers who know the failure pattern of that model well enough to price the risk. The letter that changes is small; the risk that moves is not."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "Definitions, and what actually sits inside each contract",
+      "body": [
+        {
+          "h3": "AMC, annual maintenance contract"
+        },
+        "The dealer commits to a defined number of preventive maintenance visits in the year, plus breakdown attendance within an agreed response time. Engineer time and travel are included. Spare parts, consumables and often calibration are billed separately when used, at a rate card attached to the contract. The customer's annual outlay is the contract value plus whatever breaks.",
+        {
+          "h3": "CMC, comprehensive maintenance contract"
+        },
+        "The same visits and response commitments, with spare parts included. The contract normally lists exclusions, and those exclusions are the whole negotiation: consumables, probes, batteries, detectors, tubes, glassware, accidental damage, damage from power fluctuation, and anything classified as a major assembly. A CMC without a clear exclusion list is a dispute waiting to happen.",
+        {
+          "h3": "Warranty and extended warranty, the other two options"
+        },
+        "Warranty is the manufacturer's or dealer's obligation included in the purchase price, running for a defined period from installation. It typically covers defects rather than wear, and it is the reason a service contract should start the day the warranty ends, not the day someone remembers. Extended warranty continues those original terms for a further period and is bought before the original expires. Because it inherits the warranty's defect wording it is usually narrower than a CMC, and it rarely includes preventive visits."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Four contract types, criterion by criterion",
+      "headers": [
+        "Criterion",
+        "Warranty",
+        "Extended warranty",
+        "AMC",
+        "CMC"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Manufacturing defects for a fixed period after installation",
+          "The same defect cover, continued for a further period",
+          "Preventive visits, breakdown attendance, labour and travel",
+          "Everything in an AMC plus the spare parts fitted, minus a stated exclusion list"
+        ],
+        [
+          "Spare parts",
+          "Covered if the part failed as a defect",
+          "Covered on the same defect terms",
+          "Billed separately against a rate card",
+          "Included, except for the listed exclusions"
+        ],
+        [
+          "Pricing logic",
+          "Built into the purchase price",
+          "Priced on the remaining defect risk of a known unit",
+          "Priced on engineer time, travel and response commitment",
+          "Engineer time plus an estimate of the year's parts consumption"
+        ],
+        [
+          "Who carries the risk",
+          "The manufacturer or dealer",
+          "Whoever issues the extension",
+          "The customer, who pays for whatever fails",
+          "The dealer, who absorbs parts within the exclusions"
+        ],
+        [
+          "When it is offered",
+          "At sale, automatically",
+          "Before the warranty expires",
+          "As warranty ends, and yearly after",
+          "As warranty ends, where budget certainty matters"
+        ],
+        [
+          "When it wins for the buyer",
+          "The first year, at no extra cost",
+          "Newer equipment with a good record",
+          "Reliable equipment and an in-house spares budget",
+          "Critical equipment, heavy usage, fixed budget lines"
+        ],
+        [
+          "When it loses",
+          "Wear and usage damage fall outside it",
+          "No preventive visits, so the machine drifts",
+          "One expensive failure can exceed a year of contract value",
+          "A model you cannot predict, or a vague exclusion list"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Price the risk before you name the letter",
+      "body": [
+        "For a dealer, the decision is underwriting. A CMC is profitable when you have enough service history on that model to know roughly what it consumes in a year, and dangerous when you do not. That history exists only if every job card, part issued and breakdown was recorded against the serial number. Sell CMC on the equipment you know and AMC on the equipment you are still learning.",
+        {
+          "ul": [
+            "<b>Offer AMC</b> when the parts risk is genuinely unpredictable, when the customer has its own biomedical team and a spares budget, or when the equipment is simple enough that labour is the whole job.",
+            "<b>Offer CMC</b> when downtime is expensive for the customer, when you have a reliable spare-parts supply chain for that model, and when you can write an exclusion list that both sides understand at signing.",
+            "<b>Offer extended warranty</b> when the customer wants continuity of the original terms rather than a service programme, and pair it with a preventive maintenance schedule so the machine is still serviced."
+          ]
+        },
+        "For a hospital buying, the question is which risk you would rather hold. AMC keeps the annual fee lower and leaves you exposed to one bad failure; CMC converts that exposure into a known figure. Ask for the exclusion list, the response time and the number of preventive visits in writing before comparing quotations.",
+        "Whichever you run, the operational risk is the same: contracts lapse quietly, and a renewal nobody chased is revenue gone. <a href=\"/aura-business/service-contract-management-software/\">Service contract management</a> puts every AMC and CMC on a renewal clock, shows lapsing revenue in rupees, and links each contract to the asset, its history and the <a href=\"/aura-business/preventive-maintenance-software/\">preventive maintenance schedule</a> behind it."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "AMC vs CMC, answered",
+      "items": [
+        {
+          "q": "How is a CMC different from an AMC?",
+          "a": "An AMC covers preventive visits, breakdown attendance and labour, with spare parts billed separately. A CMC covers the same service plus the spare parts fitted during the year, subject to a stated exclusion list. The difference is who carries the parts risk."
+        },
+        {
+          "q": "Is CMC always more expensive than AMC?",
+          "a": "The contract value is higher because it includes parts. Total annual cost to the buyer can be lower if a significant part fails, and higher if nothing does. That is the trade: a fixed figure against a variable one."
+        },
+        {
+          "q": "What is usually excluded from a CMC?",
+          "a": "Consumables and wear items are the common exclusions, along with accidental damage, damage from power fluctuation, and sometimes named major assemblies. The exclusion list should be attached to the contract and read before signing, not after a failure."
+        },
+        {
+          "q": "When should a service contract start?",
+          "a": "The day the warranty ends. Gaps between warranty expiry and contract start are where unbilled service happens. Tracking warranty end dates against the installed base is the only reliable way to catch them. See <a href=\"/aura-business/medical-equipment-warranty-management-software/\">warranty management</a>."
+        },
+        {
+          "q": "Can one system hold both AMC and CMC contracts?",
+          "a": "Yes. In Aura Business both sit against the asset in the installed-base register, each with its own terms, SLA, visit schedule and renewal date, so the renewal engine and the service team work from the same record. Read <a href=\"/resources/what-is-cmc/\">what a CMC is</a>."
+        },
+        {
+          "q": "How do dealers stop contracts lapsing?",
+          "a": "By putting every contract on a renewal clock rather than a spreadsheet, alerting the account owner ahead of expiry, and showing the value of contracts about to lapse on the owner dashboard so nobody has to remember. Read <a href=\"/resources/what-is-amc-software/\">what AMC software is</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128197;",
+          "b": "AMC and CMC software",
+          "p": "Contracts, SLAs and renewals in one place."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Service contract management",
+          "p": "The renewal engine and leakage dashboard."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128736;",
+          "b": "Preventive maintenance",
+          "p": "Schedules, checklists and calibration."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128218;",
+          "b": "What is AMC software",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/resources/what-is-cmc/",
+          "icon": "&#128220;",
+          "b": "What is a CMC",
+          "p": "Comprehensive contracts explained."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

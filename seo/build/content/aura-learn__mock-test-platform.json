@@ -1,0 +1,332 @@
+{
+  "cluster": "aura-learn",
+  "slug": "mock-test-platform",
+  "title": "Mock Test Platform | Aura Learn",
+  "meta": "Mock test platform for coaching and exam prep: build timed tests from a question bank, grade on submission, show instant scores with review, track every learner.",
+  "h1": "A mock test platform that grades the paper the moment the <span class=\"hl\">learner submits</span>.",
+  "crumb": "Mock Test Platform",
+  "pill": "For exam-prep and coaching businesses",
+  "sub": "Aura Learn lets you build full-length timed mock tests from your own question bank, release them to a batch, grade them on submission and hand each learner an instant score with a question-by-question review, with analytics per learner and per batch on the dashboard.",
+  "meta_ticks": [
+    "Timed tests from your question bank",
+    "Auto-graded with instant scores",
+    "Per-learner and per-batch analytics"
+  ],
+  "whatsapp_text": "Hi, I'd like to see the mock test platform in Aura Learn for our exam-prep batches.",
+  "primary_keyword": "mock test platform",
+  "secondary_keywords": [
+    "online mock test software",
+    "mock test app for coaching institutes",
+    "test series software",
+    "online test platform India",
+    "mock exam software",
+    "practice test platform"
+  ],
+  "intent": "commercial",
+  "persona": "Academic head or founder of an exam-prep institute that runs a weekly test series",
+  "page_type": "feature",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a mock test platform does here",
+      "paras": [
+        "A mock test platform lets an institute build timed, exam-pattern tests from a question bank, deliver them to learners in an app, grade them automatically and show every learner where they went wrong. In Aura Learn this is the assessment layer of the same platform that holds your courses, batches and fees, so a test series is not a separate subscription.",
+        "Faculty write or import questions once, tag them by subject and topic, and assemble a paper with a time limit and a release window. Learners sit the test in the mobile app, see their score on submission, and open a review that shows each question, their answer and the correct one. The dashboard records the attempt per learner and rolls scores up per batch."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The test series problem",
+      "h2": "A weekly test series is the hardest thing to keep running by hand.",
+      "lead": "Setting the paper, printing it, marking it and returning it takes the whole week, and the learner gets feedback after the topic has moved on.",
+      "items": [
+        {
+          "h": "Marking eats the weekend",
+          "p": "Faculty spend Sunday evening checking answer sheets instead of preparing Monday's class."
+        },
+        {
+          "h": "Feedback arrives late",
+          "p": "By the time the score is returned, the learner cannot remember why they picked the wrong option."
+        },
+        {
+          "h": "Papers reused without records",
+          "p": "The same questions go into next year's tests because nobody knows which ones were already used."
+        },
+        {
+          "h": "No picture of the batch",
+          "p": "Faculty cannot see which topic the whole batch is failing without adding up marks by hand."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a test runs",
+      "h2": "From question bank to reviewed result.",
+      "steps": [
+        {
+          "h": "Bank",
+          "p": "Questions written or imported, tagged by subject and topic."
+        },
+        {
+          "h": "Assemble",
+          "p": "Paper built from the bank with sections, marks and a time limit."
+        },
+        {
+          "h": "Release",
+          "p": "Test scheduled for a batch with a start time and window."
+        },
+        {
+          "h": "Attempt",
+          "p": "Learner sits the timed test in the app; submission is automatic at time-up."
+        },
+        {
+          "h": "Grade",
+          "p": "Objective questions graded on submission; score shown instantly."
+        },
+        {
+          "h": "Review",
+          "p": "Learner reviews each question; faculty see topic-wise results per batch."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Everything a test series needs, in the learner app and the dashboard.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Question bank",
+          "items": [
+            "Subject and topic tagging",
+            "Reuse across quizzes and mocks",
+            "Bulk import of questions",
+            "Explanations stored with the answer"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Test delivery",
+          "items": [
+            "Timed, full-length mock tests",
+            "Scheduled release per batch",
+            "Auto-submit at time-up",
+            "Attempt history per learner"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Grading and review",
+          "items": [
+            "Auto-graded on submission",
+            "Instant score",
+            "Question-by-question review",
+            "Correct answer and explanation shown"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Analytics",
+          "items": [
+            "Score trend per learner",
+            "Topic-wise results per batch",
+            "Attempt and completion tracking",
+            "Daily practice nudges on Telegram"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-learn/online-exam-platform/",
+        "label": "See the online exam platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a test series looks like when nothing is marked by hand.",
+      "items": [
+        {
+          "h": "The Sunday full-length mock",
+          "workflow": "A paper is scheduled for the batch with a fixed start time; learners attempt it in the app and it submits itself when the timer ends.",
+          "result": "Every learner has a score and a review before dinner, and faculty have topic-wise results for Monday."
+        },
+        {
+          "h": "A weak topic shows up early",
+          "workflow": "The batch analytics show most learners losing marks on the same topic across two tests.",
+          "result": "Faculty schedule a revision class for that topic instead of guessing."
+        },
+        {
+          "h": "Daily practice between mocks",
+          "workflow": "A Telegram bot pushes a short set of questions from the bank each day, and WhatsApp reminds learners of the next scheduled test.",
+          "result": "The batch stays in the habit between weekly papers."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who runs a test series.",
+      "items": [
+        {
+          "icon": "&#127963;",
+          "b": "Government exam prep",
+          "p": "Objective-pattern papers for recruitment exams."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Entrance exam coaching",
+          "p": "Full-length mocks on the exam's timing."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "School tuition",
+          "p": "Chapter tests and term revision."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Professional exam coaching",
+          "p": "Accounting, banking and insurance certifications."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Test-series publishers",
+          "p": "Selling a mock series as a product in its own app."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Colleges",
+          "p": "Placement and aptitude practice for final-year students."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Paper and OMR, a free quiz form, or a test platform.",
+      "cols": [
+        "Paper and OMR",
+        "Free quiz forms",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Timer",
+          "Invigilator's watch",
+          "None",
+          "Per test, auto-submit at time-up"
+        ],
+        [
+          "Grading",
+          "By hand or OMR scanner",
+          "Basic auto-check",
+          "On submission, with review and explanation"
+        ],
+        [
+          "Question reuse",
+          "Old papers in a cupboard",
+          "Copy and paste",
+          "Tagged bank shared across tests and quizzes"
+        ],
+        [
+          "Per-learner history",
+          "Register",
+          "Spreadsheet export",
+          "Score trend and topic analysis in the app"
+        ],
+        [
+          "Content control",
+          "Papers photographed",
+          "Link forwarded",
+          "Inside the learner app, per batch"
+        ],
+        [
+          "Fits the rest of the institute",
+          "No",
+          "No",
+          "Same platform as courses, batches and fees"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Mock test platform, answered.",
+      "items": [
+        {
+          "q": "Are the tests timed?",
+          "a": "Yes. Each mock test has a time limit and a release window for the batch. The app submits the attempt automatically when time runs out, and the score is shown straight away."
+        },
+        {
+          "q": "How are tests graded?",
+          "a": "Objective questions are graded automatically on submission against the answer key in the question bank. Learners then open a review that shows each question, their answer, the correct answer and any explanation you stored."
+        },
+        {
+          "q": "Can we reuse questions across tests?",
+          "a": "Yes. Questions live in a tagged bank and can be pulled into any quiz or mock test, and the bank records where each question has been used. See <a href=\"/aura-learn/question-bank-software/\">question bank software</a> for how the bank is organised."
+        },
+        {
+          "q": "What analytics do faculty get?",
+          "a": "Score per attempt and the trend per learner, plus topic-wise results per batch, so you can see which topics the batch is losing marks on and plan revision accordingly. Attempt and completion are tracked too, so you know who skipped the test."
+        },
+        {
+          "q": "Can learners take a mock test on their phone?",
+          "a": "Yes. Tests are attempted in the learner mobile app, which is the same app that holds their lessons, timetable and notices. Lessons can be downloaded for offline study; a timed test needs a connection to submit."
+        },
+        {
+          "q": "Is this proven on a real exam-prep product?",
+          "a": "Yes. Elevate Aura's own government-exam-prep app runs on the same stack, is live on Google Play and uses Telegram practice bots for daily questions. See the <a href=\"/case-studies/exam-prep-learning-app/\">exam-prep app case study</a> for what was built."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/online-exam-platform/",
+          "icon": "&#9201;",
+          "b": "Online exams",
+          "p": "Timed tests and mocks."
+        },
+        {
+          "href": "/aura-learn/question-bank-software/",
+          "icon": "&#128203;",
+          "b": "Question banks",
+          "p": "Tag, reuse, analyse."
+        },
+        {
+          "href": "/aura-learn/online-quiz-platform/",
+          "icon": "&#10067;",
+          "b": "Online quizzes",
+          "p": "Daily quizzes and streaks."
+        },
+        {
+          "href": "/aura-learn/coaching-institute-management-software/",
+          "icon": "&#127963;",
+          "b": "Coaching institutes",
+          "p": "Batches, fees and tests."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "icon": "&#127891;",
+          "b": "Case study",
+          "p": "Our own exam-prep app."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

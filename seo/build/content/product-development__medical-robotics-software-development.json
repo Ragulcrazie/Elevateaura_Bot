@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "medical-robotics-software-development",
+  "title": "Medical Robotics Software Development | Elevate Aura",
+  "meta": "Medical robotics software: control and communication software for robotics companies, written to your hardware spec and tested on your machine. Software-only.",
+  "h1": "Control and communication software for <span class=\"hl\">medical robotics</span> companies.",
+  "crumb": "Medical Robotics Software",
+  "pill": "For robotics companies",
+  "sub": "Elevate Aura writes the software layers around a medical robot: controller firmware, the internal bus that lets its boards agree with each other, the operator or companion app, and the cloud layer that lets a support team see a machine on a customer site.",
+  "meta_ticks": [
+    "Controller firmware in C/C++",
+    "CAN, Modbus and serial between boards",
+    "Operator app and remote monitoring"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we are a medical robotics company and need device software written. Can we discuss the machine?",
+  "cta_h2": "Tell us where your robot's software is thin.",
+  "cta_p": "Controller firmware, the internal bus, the operator interface or the support view of machines in the field. Tell us which layer is missing and we will scope it, with the hardware boundary stated first.",
+  "primary_keyword": "medical robotics software",
+  "secondary_keywords": [
+    "medical robotics software development",
+    "surgical robotics software development services",
+    "robotics control software development India",
+    "robot communication software development",
+    "medical robot companion app development",
+    "robotics embedded software services"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or product lead at a medical robotics company that needs device software written to its own hardware design",
+  "page_type": "industry",
+  "phase": 4,
+  "service_type": "Medical robotics software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What we write for a robotics company, and what we have shipped",
+      "paras": [
+        "Medical robotics software, as Elevate Aura offers it, means the software layers around a machine your team has designed: firmware on the controllers, the communication between them over CAN, Modbus or serial, an operator or companion app, and a cloud layer so a support team can see a machine sitting on a customer site.",
+        "Being precise about the track record matters here. Elevate Aura has worked with a medical robotics company, Medline Robotics in Chennai, and what we built for them was an <a href=\"/case-studies/medline-robotics-ecommerce-distributor-platform/\">e-commerce and distributor platform</a>, not its robot software. This page offers device software capability rather than a robotics reference.",
+        "The engagement is software-only. Mechanical design, the arm or stage, electronics, PCB design, manufacturing and hardware regulatory certification stay with your team, along with the safety architecture and the regulatory route. We write software to your specification and deliver documentation your team can use in its own submissions."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The software gap",
+      "h2": "The mechanics are impressive. The software is several prototypes.",
+      "lead": "Robotics teams are usually strong on mechanism and electronics, and thin on the layers that make a machine supportable.",
+      "items": [
+        {
+          "h": "Boards that do not agree",
+          "p": "Each controller was written separately, and the machine has no single view of its own state."
+        },
+        {
+          "h": "An interface built for the lab",
+          "p": "The operator screen assumes the person using it helped build the machine."
+        },
+        {
+          "h": "No view of a machine in the field",
+          "p": "A fault on a customer site is described over the phone by somebody who was not watching it."
+        },
+        {
+          "h": "No way to update firmware",
+          "p": "Every software fix after delivery turns into a visit with a laptop and a programmer."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From your machine specification to software on it.",
+      "steps": [
+        {
+          "h": "Scope and boundary",
+          "p": "Controllers, buses, interfaces and the software-only line agreed in writing."
+        },
+        {
+          "h": "Architecture",
+          "p": "State model across the machine, message plan between boards, fault behaviour."
+        },
+        {
+          "h": "Firmware",
+          "p": "Controller software in C/C++ to your spec, with drivers and safe defaults."
+        },
+        {
+          "h": "Communication",
+          "p": "CAN, Modbus or serial between boards, and the link out of the machine."
+        },
+        {
+          "h": "App and cloud",
+          "p": "Operator or companion app, telemetry and a support dashboard."
+        },
+        {
+          "h": "Test and hand over",
+          "p": "Run on your hardware, documented, source owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The software layers of a robotic machine.",
+      "groups": [
+        {
+          "icon": "&#9881;",
+          "h": "On the controllers",
+          "items": [
+            "Firmware in C/C++ to your spec",
+            "State handling across machine modes",
+            "Peripheral and sensor drivers",
+            "Fault detection and safe defaults"
+          ]
+        },
+        {
+          "icon": "&#128268;",
+          "h": "Between the boards",
+          "items": [
+            "CAN message and identifier plan",
+            "Modbus or serial links where used",
+            "Heartbeat and node presence",
+            "Behaviour when a node goes quiet"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "For the operator",
+          "items": [
+            "Tablet or web operator interface",
+            "Status, faults and guided recovery",
+            "Settings with enforced limits",
+            "React Native for Android and iOS"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "For support",
+          "items": [
+            "Telemetry to Supabase or Azure",
+            "Fleet dashboard and alerts",
+            "Usage and fault history per machine",
+            "OTA update path and version view"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where a robotics company usually needs a hand.",
+      "items": [
+        {
+          "h": "Several controllers, one machine state",
+          "workflow": "Each board publishes its state and faults on a planned message set, and the supervising controller acts on them or stops the machine.",
+          "result": "One agreed view of the machine instead of several opinions."
+        },
+        {
+          "h": "An interface a trained operator can use",
+          "workflow": "The screen shows what the machine is doing, what is wrong and the next step, with limits enforced on the controller rather than in the interface.",
+          "result": "Operation that does not depend on the engineer who built it."
+        },
+        {
+          "h": "Supporting machines you cannot visit",
+          "workflow": "Usage, faults and firmware versions are reported to a dashboard, and fixes go out as field updates.",
+          "result": "Support that starts before the customer calls."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Robotics companies that build their own machines.",
+      "items": [
+        {
+          "icon": "&#129302;",
+          "b": "Medical robotics companies",
+          "p": "Machines for clinical settings."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Device companies adding motion",
+          "p": "Actuated devices and stages."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab automation builders",
+          "p": "Handling and sample movement."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial robotics teams",
+          "p": "Cells reporting to a plant system."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service organisations",
+          "p": "Visibility of an installed base."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Software capacity without a hire."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting robotics software written, three ways.",
+      "cols": [
+        "In-house hire",
+        "Large engineering services firm",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Firmware, app and cloud",
+          "Three different hires",
+          "Separate teams",
+          "One builder across all three"
+        ],
+        [
+          "Tested on your machine",
+          "Yes",
+          "Sometimes on a rig",
+          "On your hardware before handover"
+        ],
+        [
+          "Safety and regulatory route",
+          "Yours",
+          "Sold as a service",
+          "Yours, and we say so plainly"
+        ],
+        [
+          "Hardware work",
+          "Your team",
+          "Often included",
+          "Not offered: software-only"
+        ],
+        [
+          "Who owns the code",
+          "You",
+          "Negotiated",
+          "You, with source and documentation"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical robotics software, answered.",
+      "items": [
+        {
+          "q": "Have you written software for a medical robot?",
+          "a": "Not the robot software. Elevate Aura built an e-commerce and distributor platform for Medline Robotics, a medical robotics company in Chennai: storefront, distributor portal, quotations, ordering, payment verification and SEO landing pages. The device software capability described here is offered on its own merits. See the <a href=\"/case-studies/medline-robotics-ecommerce-distributor-platform/\">Medline Robotics case study</a>."
+        },
+        {
+          "q": "Do you design the robot or its electronics?",
+          "a": "No. This is a software-only engagement. Mechanical design, the arm or stage, electronics, PCB design, component sourcing, manufacturing and hardware regulatory certification all stay with your team. We write firmware, communication and application software to your specification."
+        },
+        {
+          "q": "Who owns the safety architecture?",
+          "a": "Your team does. Safety design, hazard analysis and the regulatory route are yours, and we implement to the behaviour your specification defines. We deliver design, interface and test documentation your team can use in its own submissions, and we do not claim compliance on your behalf."
+        },
+        {
+          "q": "Can you handle the bus between our controllers?",
+          "a": "Yes. CAN is the usual choice inside a machine with several controllers, with Modbus or serial where those are already in use. See <a href=\"/product-development/can-bus-software-development/\">CAN bus software development</a> for how the message and identifier plan is handled."
+        },
+        {
+          "q": "Can we see machines on customer sites?",
+          "a": "Yes. Usage, faults and firmware versions are reported into a pipeline on Supabase or Azure and shown on a dashboard with alerts and roles. See <a href=\"/product-development/device-dashboard-development/\">device dashboard development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/can-bus-software-development/",
+          "icon": "&#128663;",
+          "b": "CAN bus software",
+          "p": "Inside the machine."
+        },
+        {
+          "href": "/product-development/medical-device-firmware-development/",
+          "icon": "&#129658;",
+          "b": "Medical device firmware",
+          "p": "Written to your spec."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Machines in the field."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Fixes without a site visit."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#128722;",
+          "b": "Medline Robotics",
+          "p": "The platform we did build."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "doctor-app-development",
+  "title": "Doctor App Development: Roster, Queue, e-Prescription",
+  "meta": "Doctor app development for hospitals and clinics: today's roster, the live consult queue, EMR on rounds, e-prescription and imaging opened from an AuraPACS link.",
+  "h1": "Doctor app development for the consultant who is <span class=\"hl\">never at a desk</span>.",
+  "crumb": "Doctor App Development",
+  "pill": "For hospitals, polyclinics and consultants",
+  "sub": "A doctor app puts the roster, the consult queue, the patient's record, e-prescription and imaging on the consultant's phone. We build it on HIMS and AuraPACS so nothing is retyped and every action lands in the hospital record.",
+  "meta_ticks": [
+    "Roster and live consult queue",
+    "E-prescription into the pharmacy queue",
+    "Imaging opened from an AuraPACS link"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a doctor app for our hospital or clinic.",
+  "primary_keyword": "doctor app development",
+  "secondary_keywords": [
+    "doctor mobile app development",
+    "physician app development India",
+    "consultant app for hospitals",
+    "e-prescription app development",
+    "doctor roster app"
+  ],
+  "intent": "commercial",
+  "persona": "Medical director, hospital IT head or polyclinic owner who wants doctors working from a phone",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a doctor app does",
+      "paras": [
+        "Doctor app development produces a mobile app for the consultants of a hospital or clinic. It shows each doctor's roster, the consult queue for the current session, the patient's EMR when a token is called, and lets the doctor write an e-prescription, order investigations and open imaging, all against the encounter in the hospital system.",
+        "Elevate Aura builds the doctor app on <a href=\"/hims.html\">HIMS</a>, where doctor rosters, the OP queue, EMR, e-prescription, pharmacy and laboratory already exist as modules, and on <a href=\"/aurapacs.html\">AuraPACS</a> for imaging, which opens in a browser viewer from a link with no download. The app is for Android and iOS from one codebase.",
+        "The result is a consultant who can run a session, do rounds and answer a report query from a phone, while the hospital record stays complete."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The doctor's day",
+      "h2": "Why doctors end up on WhatsApp instead of the hospital system.",
+      "lead": "Desktop systems assume the doctor is sitting in front of them. Most of a consultant's day happens somewhere else.",
+      "items": [
+        {
+          "h": "The roster is a message",
+          "p": "Session times and room changes arrive as texts from the coordinator, and the doctor arrives to a queue nobody told them about."
+        },
+        {
+          "h": "Prescriptions on paper",
+          "p": "Handwritten scripts are retyped at the pharmacy, or not typed at all, so the EMR is missing the one thing that matters."
+        },
+        {
+          "h": "Reports as photos",
+          "p": "A junior sends a photo of the X-ray to the consultant's phone. The read is done on a compressed image with no window and level."
+        },
+        {
+          "h": "Rounds without the chart",
+          "p": "On the ward the doctor asks the nurse for last night's vitals because the system is at the station, not at the bed."
+        },
+        {
+          "h": "No idea of the queue",
+          "p": "The consultant does not know how many patients are waiting, so sessions overrun and walk-ins are turned away."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A session in the app",
+      "h2": "From the morning roster to the last token.",
+      "steps": [
+        {
+          "h": "Roster",
+          "p": "Today's sessions, rooms and expected numbers, straight from the HIMS roster."
+        },
+        {
+          "h": "Queue",
+          "p": "Live token list for the session, with arrived and waiting states."
+        },
+        {
+          "h": "Call the token",
+          "p": "The patient's EMR opens: history, allergies, previous prescriptions, results."
+        },
+        {
+          "h": "Consult",
+          "p": "Structured notes, e-prescription and investigation orders against the encounter."
+        },
+        {
+          "h": "Imaging",
+          "p": "CT, MR, X-ray or ultrasound opened in the AuraPACS browser viewer from the app."
+        },
+        {
+          "h": "Close",
+          "p": "Token completed, pharmacy and lab queues updated, next patient called."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The doctor app, screen by screen.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Schedule",
+          "items": [
+            "Personal roster across sites",
+            "Session and room changes",
+            "Leave and cover requests",
+            "OT schedule where relevant"
+          ]
+        },
+        {
+          "icon": "&#127915;",
+          "h": "Queue and consult",
+          "items": [
+            "Live consult queue per session",
+            "Call, skip and recall tokens",
+            "EMR view with structured notes",
+            "E-prescription into the pharmacy queue",
+            "Lab and imaging orders"
+          ]
+        },
+        {
+          "icon": "&#129516;",
+          "h": "Results and imaging",
+          "items": [
+            "Verified lab results with alerts",
+            "AuraPACS viewer link per study",
+            "Finalised radiology report PDF",
+            "Search a patient's full history"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Ward and access",
+          "items": [
+            "Bed list and rounds view",
+            "ICU vitals per bed where deployed",
+            "Role-based access, audited",
+            "Works on a poor ward connection"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/doctor-management-software/",
+        "label": "See the doctor module in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three moments a doctor app earns its place.",
+      "items": [
+        {
+          "h": "A report query at 9 pm",
+          "workflow": "A referrer asks about a CT done that afternoon. The consultant opens the study from the app in the AuraPACS viewer, scrolls the slices and replies.",
+          "result": "No trip to the reading room and no photo of a screen."
+        },
+        {
+          "h": "An overrunning OP session",
+          "workflow": "The queue shows twelve waiting with forty minutes left. The doctor asks the front desk in the app to move new walk-ins to the evening session.",
+          "result": "Patients are told at registration, not after two hours in a chair."
+        },
+        {
+          "h": "Rounds at 7 am",
+          "workflow": "The doctor walks the ward with the bed list, reads overnight vitals and updates the e-prescription per bed.",
+          "result": "Pharmacy and nursing see the changes before the round ends."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Doctors, and the people who schedule them.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultants",
+          "p": "Multiple sites, one roster."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital medical directors",
+          "p": "Complete EMR and prescription records."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Visiting doctors with sessions to fill."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Radiologists",
+          "p": "Remote reading through AuraPACS."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Nursing supervisors",
+          "p": "Orders reach the ward without a call."
+        },
+        {
+          "icon": "&#128138;",
+          "b": "Pharmacy",
+          "p": "Prescriptions arrive typed, not photographed."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Chat groups, a standalone app, or a doctor app on HIMS.",
+      "cols": [
+        "WhatsApp groups",
+        "Standalone doctor app",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Where the prescription lands",
+          "A photo in a chat",
+          "In the app's own database",
+          "In the HIMS EMR and pharmacy queue"
+        ],
+        [
+          "Imaging",
+          "Screen photos",
+          "Rarely",
+          "AuraPACS viewer with slice scrolling and window/level"
+        ],
+        [
+          "Queue",
+          "Coordinator messages",
+          "Manual entry",
+          "Live from HIMS tokens"
+        ],
+        [
+          "Record completeness",
+          "None",
+          "Partial",
+          "Every action against the encounter"
+        ],
+        [
+          "Who maintains it",
+          "Nobody",
+          "Vendor ticket queue",
+          "The builder of HIMS and the app"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Doctor app development, answered.",
+      "items": [
+        {
+          "q": "Does the doctor app replace the HIMS desktop?",
+          "a": "No. It is a mobile front on the same modules. Detailed documentation, discharge summaries and billing stay on the desktop where a keyboard helps. The app covers what a doctor does while moving: roster, queue, consult, prescription and reports."
+        },
+        {
+          "q": "How does the doctor view scans?",
+          "a": "Each study in AuraPACS has a link that opens the zero-download browser viewer. From the app the doctor opens CT, MR, X-ray or ultrasound with slice scrolling and window/level on a phone or laptop. The diagnostic read remains with the hospital's radiologist."
+        },
+        {
+          "q": "Can doctors write prescriptions in the app?",
+          "a": "Yes. E-prescription is a HIMS module. The prescription is saved against the encounter and appears in the pharmacy dispensing queue, so the pharmacy does not retype it from paper."
+        },
+        {
+          "q": "Can one doctor use it across two hospitals?",
+          "a": "If both hospitals run HIMS the roster can show sessions per site. Across different systems each site needs its own connection, which we discuss on the call."
+        },
+        {
+          "q": "Does it need a strong network?",
+          "a": "The queue and EMR need a connection to stay live, but notes and prescriptions drafted on a weak ward connection are held on the device and saved when it returns."
+        },
+        {
+          "q": "How is access controlled?",
+          "a": "Each doctor sees only their own sessions and the patients under their care, with role-based access and an audit log in HIMS. Access is revoked centrally when a doctor leaves."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related doctor app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "icon": "&#127973;",
+          "b": "Hospital apps",
+          "p": "Patient and staff apps together."
+        },
+        {
+          "href": "/mobile-app-development/patient-app-development/",
+          "icon": "&#128100;",
+          "b": "Patient app",
+          "p": "The other side of the consult."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "EMR in HIMS",
+          "p": "The record the app writes to."
+        },
+        {
+          "href": "/aurapacs/dicom-viewer/",
+          "icon": "&#129516;",
+          "b": "DICOM viewer",
+          "p": "The viewer the app opens."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a PACS is."
+        }
+      ]
+    }
+  ]
+}

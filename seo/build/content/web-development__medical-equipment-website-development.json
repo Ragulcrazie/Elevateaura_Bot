@@ -1,0 +1,329 @@
+{
+  "cluster": "web-development",
+  "slug": "medical-equipment-website-development",
+  "title": "Medical Equipment Website Development | Elevate Aura",
+  "meta": "Medical equipment website development: a catalogue-led site with enquiry and quote forms, WhatsApp CTAs and SEO-ready product pages, in WordPress or Next.js.",
+  "h1": "Medical equipment website development that turns a catalogue into <span class=\"hl\">enquiries</span>.",
+  "crumb": "Medical Equipment Website Development",
+  "pill": "For dealers, distributors and OEMs",
+  "sub": "A medical equipment website has one job: let a hospital purchase officer find the product, read the specification and ask for a quote in under a minute. We build that site in WordPress or Next.js, with a structured catalogue, enquiry and quote forms and WhatsApp on every page.",
+  "meta_ticks": [
+    "Catalogue structured by product line",
+    "Enquiry, quote and WhatsApp on every product",
+    "SEO-ready pages from day one"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a website for our medical equipment business.",
+  "primary_keyword": "medical equipment website development",
+  "secondary_keywords": [
+    "medical equipment website design",
+    "medical equipment dealer website",
+    "medical equipment company website India",
+    "medical supplies website development",
+    "WordPress medical equipment website"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or marketing head of a medical-equipment dealer, distributor or manufacturer",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment website development covers",
+      "paras": [
+        "Medical equipment website development is the design and build of a public website for a dealer, distributor or manufacturer, organised around the products: a catalogue split by product line and category, a page per product with specifications and brochure, and an enquiry or quote form and a WhatsApp button wherever a buyer might want to ask.",
+        "Elevate Aura builds these sites in WordPress when your team will add products and news themselves, or in Next.js on Supabase when the catalogue is large or the site will grow into a storefront or distributor portal later. Either way the page structure, schema and GA4 tracking are set up so product and city pages can rank.",
+        "Enquiries do not go to an inbox that nobody checks. They can land as leads in Aura Business, with the product and page recorded against each one."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why equipment websites underperform",
+      "h2": "Most medical equipment websites are a brochure PDF with a menu.",
+      "lead": "Hospitals search by product and city. A site that only says who you are and lists brands is invisible to them.",
+      "items": [
+        {
+          "h": "No page per product",
+          "p": "One page listing forty products means no product can be found in search and none has a specification to read."
+        },
+        {
+          "h": "Enquiries to a generic inbox",
+          "p": "A contact form that emails info@ with no product name, so the sales team asks the buyer what they wanted."
+        },
+        {
+          "h": "No WhatsApp",
+          "p": "Purchase officers and biomedical engineers ask on WhatsApp. A site without it forces a phone call during a shift."
+        },
+        {
+          "h": "Brochures locked in PDFs",
+          "p": "Specifications exist only in a downloadable brochure, invisible to search and unreadable on a phone."
+        },
+        {
+          "h": "Nobody can update it",
+          "p": "A new product line waits three weeks for the agency to add a page."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How we build it",
+      "h2": "From your product list to a site that earns enquiries.",
+      "steps": [
+        {
+          "h": "Catalogue structure",
+          "p": "Product lines, categories and products mapped from your price list and brochures."
+        },
+        {
+          "h": "Stack choice",
+          "p": "WordPress for editorial control, Next.js on Supabase for scale and later ordering."
+        },
+        {
+          "h": "Product page template",
+          "p": "Specification table, images, brochure download, applications, enquiry, quote and WhatsApp."
+        },
+        {
+          "h": "Enquiry routing",
+          "p": "Forms and WhatsApp carry the product name; leads land in Aura Business or your inbox."
+        },
+        {
+          "h": "SEO foundations",
+          "p": "URL structure, schema, GA4 events and the first product-line and city pages."
+        },
+        {
+          "h": "Launch and hand over",
+          "p": "Your team trained to add products; support from the builder."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "A medical equipment website, page by page.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Catalogue",
+          "items": [
+            "Product lines and categories",
+            "Product page with specification table",
+            "Brochure and datasheet downloads",
+            "Brand and authorisation pages",
+            "Related products and accessories"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Enquiry",
+          "items": [
+            "Enquiry form with product prefilled",
+            "Request a quote flow",
+            "WhatsApp CTA with product context",
+            "Call and email links that are tracked"
+          ]
+        },
+        {
+          "icon": "&#128269;",
+          "h": "SEO and tracking",
+          "items": [
+            "Product and organisation schema",
+            "GA4 events for form, WhatsApp and call",
+            "Product-line and city page framework",
+            "Fast, mobile-first pages"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Operations",
+          "items": [
+            "Leads into Aura Business CRM",
+            "Editable by your team",
+            "Path to storefront or dealer portal later"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/web-development/",
+        "label": "See every website and e-commerce service"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a structured equipment site does for a dealer.",
+      "items": [
+        {
+          "h": "A purchase officer at 11 pm",
+          "workflow": "Searches for a patient monitor model, lands on the product page, reads the specification and sends a WhatsApp with the product name already in the message.",
+          "result": "The sales rep replies in the morning with a quote, not a question."
+        },
+        {
+          "h": "A new product line",
+          "workflow": "The dealer takes on a new brand of infusion pumps; the marketing assistant adds the category and six products from the brochure in an afternoon.",
+          "result": "No agency ticket, and the pages are indexed within the week."
+        },
+        {
+          "h": "A tender enquiry",
+          "workflow": "A government hospital asks for a specification sheet for a tender; the product page has it as a download and a structured table.",
+          "result": "The sheet is sent from the site link rather than dug out of a drive."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any business that sells equipment to healthcare.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Multi-brand catalogues."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Distributors",
+          "p": "Regional catalogues with dealer enquiries."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Product lines with technical documentation."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and diagnostics suppliers",
+          "p": "Analysers, reagents, consumables."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical suppliers",
+          "p": "Chairs, instruments, consumables."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service providers",
+          "p": "AMC and repair enquiries by equipment type."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways to get an equipment website built.",
+      "cols": [
+        "Generic web agency",
+        "Template builder",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Catalogue structure",
+          "Pages as you list them",
+          "Generic shop template",
+          "Mapped from your product lines for search"
+        ],
+        [
+          "Enquiry context",
+          "Contact form",
+          "Contact form",
+          "Product carried into form and WhatsApp"
+        ],
+        [
+          "Where leads go",
+          "Inbox",
+          "Inbox",
+          "Aura Business CRM, or your inbox if you prefer"
+        ],
+        [
+          "Path to ordering",
+          "New project",
+          "Limited",
+          "Storefront and dealer portal on the same stack"
+        ],
+        [
+          "Who you speak to",
+          "Account manager",
+          "Support chat",
+          "The builder"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [0, 1]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical equipment website development, answered.",
+      "items": [
+        {
+          "q": "Should we use WordPress or Next.js?",
+          "a": "WordPress if your team will edit content often and the site is mainly a catalogue with enquiries. Next.js on Supabase if the catalogue is large, you want dealer logins and pricing later, or the site will generate hundreds of product and city pages. We recommend one on the call."
+        },
+        {
+          "q": "Can we show prices?",
+          "a": "That is your decision. Many dealers show specifications and take quote requests, while a storefront or dealer portal shows prices behind a login. See <a href=\"/web-development/medical-equipment-ecommerce-development/\">medical equipment e-commerce development</a> for the ordering version."
+        },
+        {
+          "q": "Where do enquiries go?",
+          "a": "To your inbox and WhatsApp, and optionally into Aura Business as leads with the product and page recorded, so the sales pipeline starts from the website. See <a href=\"/aura-business/medical-equipment-crm-software/\">medical equipment CRM</a>."
+        },
+        {
+          "q": "Will the site rank for our products?",
+          "a": "The structure gives each product and product line its own page with schema and clean URLs, which is the foundation for ranking. We do not guarantee positions. Programmatic product and city pages are a separate service described under <a href=\"/seo-services/medical-equipment-seo/\">medical equipment SEO</a>."
+        },
+        {
+          "q": "Can our team add products themselves?",
+          "a": "Yes. In WordPress through the editor, in Next.js through a simple admin on Supabase. Training is part of the handover."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "Live in 30 working days where scope allows. A catalogue site with enquiry forms usually fits inside that; large catalogues are imported from your Excel or price list rather than typed."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related website and e-commerce pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128230;",
+          "b": "Product catalogue website",
+          "p": "The catalogue in depth."
+        },
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "icon": "&#128722;",
+          "b": "E-commerce",
+          "p": "When buyers should order online."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128274;",
+          "b": "Distributor portal",
+          "p": "Dealer login and pricing."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128269;",
+          "b": "Medical equipment SEO",
+          "p": "Product and city pages."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Store, portal, 253 pages."
+        }
+      ]
+    }
+  ]
+}

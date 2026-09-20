@@ -1,0 +1,248 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-pricing",
+  "title": "Hospital Management Software Pricing India | HIMS",
+  "meta": "Hospital management software pricing in India: what really drives the cost, which charges buyers forget, and the questions to ask before you sign a HIMS contract.",
+  "h1": "What actually drives <span class=\"hl\">hospital software pricing</span> in India.",
+  "crumb": "HIMS Pricing",
+  "pill": "For hospital and clinic owners",
+  "sub": "A hospital system is costed by the departments it has to run, not by a sticker on a brochure. This page sets out what moves the number, the charges that surface after signature, and how to compare two quotes honestly.",
+  "meta_ticks": [
+    "Costed by department and module",
+    "The charges buyers forget",
+    "Quoted after a scoping call"
+  ],
+  "whatsapp_text": "Hi, I'd like to understand how HIMS is priced for our hospital.",
+  "primary_keyword": "hospital management software pricing India",
+  "secondary_keywords": [
+    "HIMS cost",
+    "hospital software price",
+    "clinic management software cost",
+    "hospital information system pricing",
+    "hospital software quote India"
+  ],
+  "intent": "transactional",
+  "persona": "Owner, administrator or managing director of a hospital, nursing home or clinic comparing HIMS quotes",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why a hospital system is quoted after a call",
+      "paras": [
+        "HIMS is quoted once we have seen your hospital, because the cost follows the shape of the hospital rather than a list. A single-speciality clinic running OP and billing is a different build from a hospital running OP, IP, EMR, pharmacy, laboratory, imaging, theatre, ICU and TPA claims. The pricing model is therefore departmental: you are quoted for the modules the hospital will actually run, plus the setup around them.",
+        "That setup is the half of the cost most brochures leave out. Migrating patients, dues and stock from whatever you run today, training every counter that touches the system, and support once the go-live week is over are real work with real hours behind them.",
+        "The honest version is that nobody can price a hospital from a web form. What we can do is tell you exactly which questions decide the number, so the quotes on your desk become comparable."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What moves the number",
+      "h2": "The seven things that decide what a hospital system costs",
+      "lead": "Read any two hospital quotes side by side and the gap between them will usually be explained by this table rather than by the software itself.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Cost driver",
+              "Smaller end",
+              "Larger end"
+            ],
+            "rows": [
+              [
+                "Departments live",
+                "OP registration, appointments and billing",
+                "OP, IP, EMR, pharmacy, lab, theatre, ICU and casualty"
+              ],
+              [
+                "Clinical depth",
+                "Prescriptions and basic notes",
+                "Structured EMR with NABH-style documentation and nursing workflows"
+              ],
+              [
+                "Imaging",
+                "No imaging, or reports as attachments",
+                "AuraPACS built in, studies landing from the machines"
+              ],
+              [
+                "Billing complexity",
+                "Cash and card at one counter",
+                "Insurance and TPA claims alongside cash, across many counters"
+              ],
+              [
+                "Data migration",
+                "A patient list and outstanding dues",
+                "Years of records, pharmacy stock and ledgers from an old system"
+              ],
+              [
+                "Training",
+                "One reception and one billing counter",
+                "Every counter, ward and shift, including night staff"
+              ],
+              [
+                "Support",
+                "Normal hours, remote",
+                "Cover through the hours a casualty department is open"
+              ]
+            ]
+          }
+        },
+        {
+          "h3": "Imaging is the driver people forget to ask about"
+        },
+        "Diagnostic centres and hospitals with a CT, MR or X-ray unit often price the hospital system and the imaging archive separately, discover they do not talk to each other, and pay twice for the join. AuraPACS imaging is built into HIMS, so studies arrive from the machine against the same patient record that reception created. If imaging is in your plan for next year rather than this one, say so during scoping, because it changes how the build is sequenced.",
+        {
+          "h3": "Migration and training are not optional extras"
+        },
+        "A hospital cannot start empty. Patients, dues, pharmacy stock and doctor rosters have to come across, and every person at a counter has to be able to work faster on the new screen than on the old one by the end of the first week. Where these appear as a separate line item, at least they have been thought about. Where they are missing from a quote entirely, they have not gone away."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the quote has to cover",
+      "h2": "The scope a HIMS quote should set out in writing.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Patient flow",
+          "items": [
+            "OP and IP registration",
+            "Appointments, queue and token display",
+            "Bed and ward management, ICU vitals",
+            "Theatre scheduling and casualty triage"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Clinical and diagnostics",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Pharmacy dispensing, low-stock and expiry alerts",
+            "Laboratory from order to verified result",
+            "AuraPACS imaging inside the same record"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Cash, card, insurance and TPA claim billing",
+            "GST on billing documents",
+            "Consumables and equipment inventory",
+            "Live dashboard of OP, IP, beds and collections"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "The work around it",
+          "items": [
+            "Migration from your current records",
+            "Counter-by-counter training",
+            "ABHA and ABDM readiness",
+            "Support on WhatsApp from the person who built it"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims.html",
+        "label": "See everything HIMS runs"
+      }
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The bill after the bill",
+      "h2": "Costs hospitals discover in year two",
+      "lead": "Most regret in hospital software is not about the first payment. It is about what was never discussed before the first payment.",
+      "body": [
+        {
+          "ul": [
+            "<b>Licences that grow with your staff.</b> If the contract counts users, every new nurse, pharmacist and billing clerk raises the bill. Ask what the same contract costs with the headcount you expect in three years.",
+            "<b>Modules charged later.</b> A system quoted without the laboratory or theatre is cheaper on paper and expensive the day you open one. Ask for the price of every module you have not bought yet, in writing, now.",
+            "<b>Migration billed as a project.</b> Confirm who moves the patient list, dues and pharmacy stock, and whether that sits inside the quote.",
+            "<b>Training by the day.</b> Ask how many sessions are included, whether night shift counts, and what a repeat session costs after staff turnover.",
+            "<b>Support tiers.</b> Ask who answers at nine in the evening, on what channel, and what is defined as chargeable work rather than support.",
+            "<b>Exit.</b> Ask what happens to patient records if you stop paying. Get the export format and the timeline in writing before signature, because that is the last moment you have any leverage."
+          ]
+        },
+        "Two quotes are only comparable once both have been forced to answer those six. Our longer buying guide walks through demonstrations and references as well, in <a href=\"/resources/how-to-choose-hospital-management-software/\">how to choose hospital management software</a>. If you are weighing a hospital system against a general ERP, the differences that matter are set out in <a href=\"/compare/hims-vs-hospital-erp/\">HIMS versus hospital ERP</a>.",
+        "One last suggestion. Before any pricing conversation, write down the three counters where your hospital loses the most time today. Whichever supplier you choose, that list is the only honest measure of whether the money was well spent."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital software pricing, answered plainly.",
+      "items": [
+        {
+          "q": "Why don't you publish a price for HIMS?",
+          "a": "Because hospitals are not interchangeable. A clinic running OP and billing and a hospital running theatre, ICU, lab and TPA claims would need very different numbers, and any single figure on this page would mislead almost every reader. A wrong number wastes your evening, so we scope first."
+        },
+        {
+          "q": "What information do you need to quote?",
+          "a": "The departments you run today, the ones you plan to open, whether imaging is included, roughly how many counters and beds are in use, what system or registers you are on now, and how much history has to come across. That is enough to scope the build."
+        },
+        {
+          "q": "Is HIMS priced per user or per bed?",
+          "a": "Hospital software is sold several ways in this market and the only model that matters is the one in your contract. HIMS is scoped by the departments and modules you run rather than sold from a list, so we answer that against your own headcount and bed count on the call."
+        },
+        {
+          "q": "Does the cost change if we add a department later?",
+          "a": "Opening a laboratory, theatre or imaging unit is a change of scope, so it is quoted as its own piece of work rather than appearing silently on a renewal. Telling us during scoping what you intend to open keeps that step small."
+        },
+        {
+          "q": "Is training included in the quote?",
+          "a": "Training is part of the scope we agree, and it is itemised so you can see it. We work counter by counter rather than running one long session, because reception, billing, pharmacy and nursing each need a different half hour."
+        },
+        {
+          "q": "How long until the hospital is live?",
+          "a": "The delivery target is live in 30 working days where the scope allows it. Migration volume and the number of departments going live together are the two things that move that date, which is another reason both sit openly in the quote."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Next steps before you decide",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The hospital system in full."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128203;",
+          "b": "Hospital management system",
+          "p": "OP to IP to discharge."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Cash, insurance and TPA."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#9989;",
+          "b": "Choosing a HIMS",
+          "p": "The checklist before you sign."
+        },
+        {
+          "href": "/aurapacs/pacs-software-pricing/",
+          "icon": "&#129659;",
+          "b": "PACS pricing models",
+          "p": "If imaging is in scope."
+        },
+        {
+          "href": "/aura-learn/lms-pricing/",
+          "icon": "&#127891;",
+          "b": "LMS pricing",
+          "p": "For staff training platforms."
+        }
+      ]
+    }
+  ],
+  "cta_h2": "Tell us the hospital, and we will tell you the scope.",
+  "cta_p": "A 30-minute call covering your departments, counters and current records is enough for us to put a proper quote together, with migration, training and support written as separate lines rather than hidden inside one figure."
+}

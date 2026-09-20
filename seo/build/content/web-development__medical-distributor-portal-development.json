@@ -1,0 +1,332 @@
+{
+  "cluster": "web-development",
+  "slug": "medical-distributor-portal-development",
+  "title": "Medical Distributor Portal Development | Elevate Aura",
+  "meta": "Medical distributor portal development: dealer login, ordering at dealer prices, price lists, order tracking, UTR payments and a documents vault.",
+  "h1": "Medical distributor portal development that takes dealers <span class=\"hl\">off the phone</span>.",
+  "crumb": "Medical Distributor Portal Development",
+  "pill": "For distributors and OEMs with a dealer network",
+  "sub": "A distributor portal gives every dealer a login where they order at their own price, download the current price list and brochures, track orders and submit payment UTRs. We build it on Next.js and Supabase, or switch it on inside Aura Business.",
+  "meta_ticks": [
+    "Dealer login with own pricing",
+    "Order tracking and UTR payments",
+    "Price lists and documents vault"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a distributor portal for our dealers.",
+  "primary_keyword": "medical distributor portal development",
+  "secondary_keywords": [
+    "dealer portal development India",
+    "distributor ordering portal",
+    "B2B dealer login portal medical",
+    "distributor management portal",
+    "medical dealer portal software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or sales head of a medical-equipment distributor or manufacturer managing dealers by phone and WhatsApp",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a medical distributor portal is",
+      "paras": [
+        "A medical distributor portal is a private website where your dealers log in to do the things they currently do by phone: check the current price list, place an order at their dealer price, see where last week's order is, download brochures and certificates, and tell you the UTR of the payment they just made.",
+        "Elevate Aura builds distributor portals in two ways. As a custom portal on Next.js and Supabase, which is how the Medline Robotics distributor portal was built alongside their storefront. Or as the Customer and Distributor Portals suite inside <a href=\"/aura-business/medical-equipment-dealer-management-software/\">Aura Business</a>, which includes a distributor order portal, UTR payment, order tracking page, quote-request inbound and a branded login with a documents vault.",
+        "Either way the portal writes to the same sales orders, stock and receivables your office works from."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The dealer network problem",
+      "h2": "Managing forty dealers on WhatsApp is a full-time job for two people.",
+      "lead": "Every dealer question is the same five questions, asked at different times of the day.",
+      "items": [
+        {
+          "h": "What is the current price?",
+          "p": "Price lists are sent as PDFs and dealers quote from last quarter's version."
+        },
+        {
+          "h": "Where is my order?",
+          "p": "Order status is a phone call to the office, who call the warehouse, who call back."
+        },
+        {
+          "h": "Orders typed twice",
+          "p": "A dealer's WhatsApp order is retyped into the billing system, with the wrong variant."
+        },
+        {
+          "h": "Which payment was that?",
+          "p": "Bank credits arrive without a reference and accounts guesses which dealer paid for which order."
+        },
+        {
+          "h": "Send me the brochure again",
+          "p": "Certificates, brochures and authorisation letters are re-sent daily from someone's phone."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a dealer uses it",
+      "h2": "From login to a tracked, paid order.",
+      "steps": [
+        {
+          "h": "Login",
+          "p": "Each dealer account has its price tier, credit terms and territory."
+        },
+        {
+          "h": "Price list",
+          "p": "Current prices and stock indication per product, always the latest version."
+        },
+        {
+          "h": "Order",
+          "p": "Cart at dealer pricing, or a quote request for special pricing."
+        },
+        {
+          "h": "Track",
+          "p": "Order status from confirmation to dispatch, with the e-way bill and invoice attached."
+        },
+        {
+          "h": "Pay",
+          "p": "UTR submitted against the invoice; outstanding shown per dealer."
+        },
+        {
+          "h": "Documents",
+          "p": "Brochures, certificates and authorisation letters in a vault, per brand."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The dealer portal, feature by feature.",
+      "groups": [
+        {
+          "icon": "&#128274;",
+          "h": "Accounts",
+          "items": [
+            "Branded dealer login",
+            "Price tier per dealer",
+            "Territory and product authorisation",
+            "Dealer onboarding and approval"
+          ]
+        },
+        {
+          "icon": "&#128722;",
+          "h": "Ordering",
+          "items": [
+            "Order at dealer price",
+            "Quote request for special pricing",
+            "Repeat last order",
+            "Order tracking page"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Invoice and e-way bill downloads",
+            "UTR submission and verification",
+            "Outstanding and ageing per dealer",
+            "Credit notes visible"
+          ]
+        },
+        {
+          "icon": "&#128193;",
+          "h": "Documents",
+          "items": [
+            "Price list versions",
+            "Brochures and datasheets",
+            "Certificates and authorisation letters",
+            "Announcements to the network"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See the Customer and Distributor Portals suite"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes for the distributor's office.",
+      "items": [
+        {
+          "h": "Price revision day",
+          "workflow": "The new price list is published in the portal; every dealer sees it at login and the old PDF stops circulating.",
+          "result": "No dealer quotes a hospital from a stale list."
+        },
+        {
+          "h": "A dealer in another state",
+          "workflow": "The dealer orders at 10 pm, the order arrives as a sales order with IGST applied, and the dispatch status updates in the portal.",
+          "result": "No morning phone call, no retyping."
+        },
+        {
+          "h": "Month-end reconciliation",
+          "workflow": "Each dealer's payments carry a UTR against a specific invoice; accounts verifies the credits in one sitting.",
+          "result": "Outstanding per dealer is accurate without a spreadsheet."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any supplier with a network to serve.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Regional distributors",
+          "p": "Dealers across districts and states."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Authorised dealer network."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device and robotics companies",
+          "p": "The Medline Robotics model."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables suppliers",
+          "p": "High-frequency repeat orders."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital group suppliers",
+          "p": "A portal per hospital account."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service partners",
+          "p": "Spares ordering for engineers."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "WhatsApp, a generic B2B platform, or a portal on your operations.",
+      "cols": [
+        "WhatsApp and PDFs",
+        "Generic B2B platform",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Dealer pricing",
+          "PDF per tier",
+          "Configurable",
+          "Per account, always current"
+        ],
+        [
+          "Order into billing",
+          "Retyped",
+          "Export or integration",
+          "Sales order in Aura Business directly"
+        ],
+        [
+          "Payment matching",
+          "By guesswork",
+          "Gateway only",
+          "UTR per invoice, verified"
+        ],
+        [
+          "Documents",
+          "Re-sent daily",
+          "Sometimes",
+          "Vault per brand, always current"
+        ],
+        [
+          "Per-dealer cost",
+          "None",
+          "Per seat",
+          "Unlimited users on Aura Business plans"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical distributor portal development, answered.",
+      "items": [
+        {
+          "q": "Custom portal or the Aura Business portal?",
+          "a": "If you already run Aura Business, the Customer and Distributor Portals suite switches on with your existing customers, prices and stock. If you need a portal with a public storefront and a specific design, we build it custom on Next.js and Supabase, as for Medline Robotics."
+        },
+        {
+          "q": "Can each dealer see different prices?",
+          "a": "Yes. Price tiers are assigned per dealer account, and product authorisation can limit which brands or lines a dealer sees. Special pricing is handled through a quote request inside the portal."
+        },
+        {
+          "q": "How do dealers pay?",
+          "a": "By bank transfer, entering the UTR against the invoice in the portal, which your accounts team verifies. A payment gateway can be added for smaller orders. Outstanding and ageing are visible to the dealer and to you."
+        },
+        {
+          "q": "Does the portal update stock?",
+          "a": "When connected to Aura Business, a confirmed portal order becomes a sales order and fulfilment reduces stock at the warehouse level, with batch and expiry where relevant. See <a href=\"/aura-business/medical-equipment-inventory-software/\">inventory software</a>."
+        },
+        {
+          "q": "Can we onboard new dealers through it?",
+          "a": "Yes. A dealer application form collects the GST number, documents and territory, and an approval step in the office activates the account with the right tier."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "Live in 30 working days where scope allows. Your dealer list and price lists are imported from Excel and your branding goes on the login and every page."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related portal and e-commerce pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "icon": "&#128722;",
+          "b": "E-commerce",
+          "p": "Storefront with quote-to-order."
+        },
+        {
+          "href": "/web-development/healthcare-b2b-ecommerce-platform/",
+          "icon": "&#127970;",
+          "b": "B2B platform",
+          "p": "Tiers, credit terms, bulk orders."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#128736;",
+          "b": "Dealer management software",
+          "p": "The operations behind the portal."
+        },
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128230;",
+          "b": "Distributor software",
+          "p": "Sales, stock, billing, service."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "The portal we shipped."
+        }
+      ]
+    }
+  ]
+}

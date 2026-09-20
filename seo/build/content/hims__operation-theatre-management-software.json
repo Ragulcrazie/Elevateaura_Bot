@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "operation-theatre-management-software",
+  "title": "Operation Theatre Management Software | HIMS",
+  "meta": "Operation theatre management software: OT schedule by surgeon, procedure and status, pre-operative documentation on the record.",
+  "h1": "Operation theatre management software that puts the <span class=\"hl\">OT list, the consumables and the bill</span> on the same admission.",
+  "crumb": "Operation Theatre Software",
+  "pill": "For OT in-charges and surgical teams",
+  "sub": "HIMS schedules every case by theatre, surgeon, procedure and status, keeps pre-operative documentation on the patient's record, draws consumables and implants from inventory as they are used, and posts OT charges straight to the inpatient bill.",
+  "meta_ticks": [
+    "OT list by theatre, surgeon and status",
+    "Consumables drawn from inventory per case",
+    "OT charges on the IP bill"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/ot.png",
+    "alt": "HIMS operation theatre schedule showing cases by theatre with surgeon, procedure and status",
+    "bar": "his.elevateaura.co.in/ot"
+  },
+  "whatsapp_text": "Hi, I'd like to see operation theatre scheduling in HIMS.",
+  "primary_keyword": "operation theatre management software",
+  "secondary_keywords": [
+    "OT management software",
+    "OT scheduling software for hospitals",
+    "surgery scheduling software India",
+    "operating room management system",
+    "OT billing software",
+    "surgical case scheduling"
+  ],
+  "intent": "commercial",
+  "persona": "OT in-charge, surgeon or administrator of a hospital running one or more theatres",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What operation theatre management software does",
+      "paras": [
+        "Operation theatre management software keeps the OT list, the case documentation, the consumables and the charges for every surgery in one place. In HIMS a case is scheduled against a theatre, a surgeon, a procedure and a time, and its status moves from planned to in progress to completed so the ward, the surgeon and the front desk see the same list.",
+        "The case belongs to the admission. Pre-operative notes and consent are recorded on the patient's EMR, the implants and consumables used are issued from inventory against the case, and the OT charges, surgeon fees and anaesthesia post to the running IP bill. When the patient returns to the ward, nothing about the surgery has to be reconstructed for the discharge summary or the TPA claim."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the OT whiteboard is not enough",
+      "h2": "A surgery generates documentation, stock movement and charges. The whiteboard captures none of them.",
+      "lead": "The OT list is usually right. What happens around it is where the leakage is.",
+      "items": [
+        {
+          "h": "The list lives in one room",
+          "p": "The ward, the anaesthetist and the billing desk each phone the OT to ask whether the case has started."
+        },
+        {
+          "h": "Implants used, not billed",
+          "p": "A plate and six screws go into the patient; the box is in the bin and the charge is nowhere."
+        },
+        {
+          "h": "Consent and pre-op notes in a loose file",
+          "p": "The documentation exists, but it is not on the record when the TPA asks for it."
+        },
+        {
+          "h": "Surgeon fees added from memory",
+          "p": "The assistant surgeon and the anaesthetist are billed at discharge from whoever remembers the case."
+        },
+        {
+          "h": "Theatre time unaccounted",
+          "p": "Nobody can say how many cases each theatre ran last month, or which surgeon over-ran their slot."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One case",
+      "h2": "From listing to the IP bill.",
+      "steps": [
+        {
+          "h": "Case listed",
+          "p": "Theatre, surgeon, procedure, anaesthetist and time booked against the admission."
+        },
+        {
+          "h": "Pre-operative documentation",
+          "p": "Assessment, consent and pre-op orders recorded on the EMR."
+        },
+        {
+          "h": "In progress",
+          "p": "Status updated as the case starts; the ward and front desk see it."
+        },
+        {
+          "h": "Consumables issued",
+          "p": "Implants, disposables and drugs drawn from OT stock against the case."
+        },
+        {
+          "h": "Completed",
+          "p": "Operative notes on the record; case marked done."
+        },
+        {
+          "h": "Charges post",
+          "p": "OT time, surgeon and anaesthesia fees and consumables land on the IP bill."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The OT module and what it connects to.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Scheduling",
+          "items": [
+            "OT list by theatre and day",
+            "Surgeon, anaesthetist and procedure per case",
+            "Case status: planned, in progress, completed",
+            "Emergency cases added to the list"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Documentation",
+          "items": [
+            "Pre-operative assessment and consent on the EMR",
+            "Operative notes",
+            "Post-operative orders to the ward",
+            "Supports NABH-style documentation"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Stock",
+          "items": [
+            "Implants and consumables issued per case",
+            "OT store with reorder levels",
+            "Batch and expiry on high-value items",
+            "Usage visible to the purchase desk"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "OT charges to the running IP bill",
+            "Surgeon and anaesthesia fees",
+            "Package cases with extras itemised",
+            "Documents ready for the TPA claim"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-ipd-management-software/",
+        "label": "See the full inpatient workflow"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes around the theatre.",
+      "items": [
+        {
+          "h": "Tomorrow's list",
+          "workflow": "The OT in-charge books four cases across two theatres; the surgeons, the ward and the anaesthetist see the same list that evening.",
+          "result": "No phone calls to confirm the order."
+        },
+        {
+          "h": "An orthopaedic implant",
+          "workflow": "The implant is issued from OT stock against the case and appears as a line on the IP bill at cost the hospital has set.",
+          "result": "The charge and the stock movement happen together."
+        },
+        {
+          "h": "A TPA package case",
+          "workflow": "The package covers the procedure; the extra consumables are itemised separately so the claim and the patient's share are clear.",
+          "result": "No dispute about what the package included."
+        },
+        {
+          "h": "An emergency case at night",
+          "workflow": "Casualty admits, the case is added to the OT list and the theatre status shows it running.",
+          "result": "The morning list is adjusted around it."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any facility with a theatre.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several theatres, several surgical departments."
+        },
+        {
+          "icon": "&#129657;",
+          "b": "Surgical and day-care centres",
+          "p": "High case volume, short stays."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "One theatre, one list, no missed charge."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Surgeons",
+          "p": "Their list and their notes, on the record."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "OT stores",
+          "p": "Implants tracked from shelf to bill."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running the OT, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "OT list",
+          "Whiteboard",
+          "Not covered",
+          "Shared list by theatre, surgeon and status"
+        ],
+        [
+          "Consumables and implants",
+          "Written in the OT register",
+          "Typed as a bill line",
+          "Issued from stock against the case"
+        ],
+        [
+          "Pre-op documentation",
+          "Loose file",
+          "Not covered",
+          "On the patient's EMR"
+        ],
+        [
+          "Charges",
+          "Added at discharge",
+          "Typed from slips",
+          "Posted to the running IP bill"
+        ],
+        [
+          "Theatre utilisation",
+          "Unknown",
+          "Unknown",
+          "Cases per theatre and surgeon"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Operation theatre management software, answered.",
+      "items": [
+        {
+          "q": "Is the OT module linked to admissions?",
+          "a": "Yes. Every case is scheduled against an IP admission, so the patient's record, bed, orders and running bill are already there. See <a href=\"/hims/hospital-ipd-management-software/\">hospital IPD software</a> for the admission side."
+        },
+        {
+          "q": "How are implants and consumables charged?",
+          "a": "They are issued from the OT store against the case. The stock reduces and the item appears on the IP bill in the same action, so a used implant cannot go unbilled. Stock and reorder levels are handled by the <a href=\"/hims/hospital-inventory-management/\">inventory module</a>."
+        },
+        {
+          "q": "Can we record a pre-operative checklist?",
+          "a": "Pre-operative assessment, consent and orders are recorded on the patient's EMR against the case. If your hospital follows a specific checklist format, describe it on the call and it is configured with the project."
+        },
+        {
+          "q": "Does the OT schedule show status live?",
+          "a": "Yes. A case moves from planned to in progress to completed, and the OT list is visible to the ward, the front desk and the surgeons, so nobody needs to phone the theatre."
+        },
+        {
+          "q": "How does OT billing work with packages and TPA?",
+          "a": "A package case is billed at the package rate with extras itemised separately, and the operative notes and consent are on the record for the claim. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a>."
+        },
+        {
+          "q": "Can we run more than one theatre?",
+          "a": "Yes. Theatres are configured during setup and each has its own list. Cases per theatre and per surgeon are visible for planning and for management review."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "The admission the case belongs to."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Inventory",
+          "p": "Implants and consumables."
+        },
+        {
+          "href": "/hims/icu-management-software/",
+          "icon": "&#128147;",
+          "b": "ICU",
+          "p": "Post-operative critical care."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Packages, cash, TPA and GST."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        }
+      ]
+    }
+  ]
+}

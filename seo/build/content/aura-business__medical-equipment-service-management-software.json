@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-service-management-software",
+  "title": "Medical Equipment Service Management Software | Aura Business",
+  "meta": "Medical equipment service management software that carries a breakdown call through dispatch, job card, spares, SLA and invoice, and files it on the asset.",
+  "h1": "Medical equipment service management software that closes the <span class=\"hl\">whole after-sales loop</span>.",
+  "crumb": "Service Management Software",
+  "pill": "For dealers who service what they sell",
+  "sub": "Aura Business takes a breakdown call from a hospital, dispatches the right engineer, records the job card and spares on the mobile app, watches the SLA clock, and turns the closed job into a contract entry or a GST service invoice, all against the serial number.",
+  "meta_ticks": [
+    "Call to invoice without re-typing",
+    "SLA clock on every ticket",
+    "History filed per serial number"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk listing open breakdown calls with asset, assigned engineer, SLA status and job stage",
+    "bar": "app.elevateaura.co.in/service"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss service management software for our medical equipment business.",
+  "primary_keyword": "medical equipment service management software",
+  "secondary_keywords": [
+    "biomedical service management software",
+    "equipment service call management software",
+    "after-sales service software for medical equipment dealers",
+    "service job card software India",
+    "medical equipment service tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner of a medical-equipment dealer running breakdown calls, AMC visits and spares for hospital customers",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment service management software covers",
+      "paras": [
+        "Medical equipment service management software is the system that takes a breakdown call from a hospital and carries it through dispatch, the technician's job card, the spares consumed, the SLA timer and the final invoice, then files every one of those steps against the serial number that was serviced. In Aura Business this runs across the Field Service and Ticketing suites, sharing one customer master and one installed-base register with sales, contracts and billing.",
+        "The value is in the loop rather than in any single step. A call that is logged but never dispatched, a job card that never reaches billing, or a spare fitted on site but never deducted from stock are the gaps a dealer quietly pays for every month. Here each stage hands off to the next, so nothing is typed twice and nothing is forgotten."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where after-sales leaks",
+      "h2": "Five places a service call goes wrong between the phone and the invoice.",
+      "lead": "Most dealers already have engineers who fix things well. What they lack is a record of the fix that the office, the accountant and the hospital can all trust.",
+      "items": [
+        {
+          "h": "Calls logged in a chat group",
+          "p": "A ward sister messages the sales rep, who forwards it to an engineer. Nobody owns the call, and nobody can say when it was raised."
+        },
+        {
+          "h": "Coverage decided on the spot",
+          "p": "The engineer cannot see whether the machine is under warranty, AMC or CMC, so the visit is either given away free or billed to an angry customer."
+        },
+        {
+          "h": "Job cards on paper",
+          "p": "The carbon copy stays in the van, the spares list is incomplete, and the office invoices from memory a week later."
+        },
+        {
+          "h": "SLA breaches discovered at renewal",
+          "p": "The hospital brings a list of slow responses to the renewal meeting and you have no counter-record."
+        },
+        {
+          "h": "No history per machine",
+          "p": "The same ventilator has failed three times this year and nobody noticed, because each call was a fresh ticket with no asset behind it."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a call moves",
+      "h2": "From the first call to a line in the asset history.",
+      "steps": [
+        {
+          "h": "Intake",
+          "p": "The call is logged on the desk, from the customer portal, or by the rep on the app, against the asset."
+        },
+        {
+          "h": "Coverage check",
+          "p": "The ticket shows warranty, AMC or CMC status and the SLA that applies."
+        },
+        {
+          "h": "Dispatch",
+          "p": "An engineer is assigned by location, skill and schedule, and gets the job on the mobile app."
+        },
+        {
+          "h": "Job card",
+          "p": "Fault, work done, readings, photos and spares are captured on site, offline if needed."
+        },
+        {
+          "h": "Sign-off",
+          "p": "The customer signs on the phone and the job is marked done."
+        },
+        {
+          "h": "Close",
+          "p": "Covered jobs close to the contract; the rest become a GST service invoice with spares priced in."
+        },
+        {
+          "h": "History",
+          "p": "The record sits on the serial number, ready for the next call, the audit and the renewal."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The service modules, and the suites they connect to.",
+      "groups": [
+        {
+          "icon": "&#128222;",
+          "h": "Intake and ticketing",
+          "items": [
+            "Breakdown and service call intake",
+            "Customer ticket submission from the portal",
+            "Ticket status workflow and internal notes",
+            "SLA timers and breach tracking",
+            "CSAT feedback on close"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Dispatch and field",
+          "items": [
+            "Technician dispatch by skill and location",
+            "Technician route and schedule",
+            "Mobile job card with offline mode",
+            "Photo proof and field signature",
+            "GPS check-in at the site"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Spares and assets",
+          "items": [
+            "Spare parts used per job, dropping stock",
+            "Serial and unit-level stock",
+            "Service history per asset",
+            "Warranty, AMC and CMC coverage on the ticket",
+            "Preventive maintenance schedules"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing and reporting",
+          "items": [
+            "Service invoices with GST",
+            "Closure against AMC or CMC",
+            "AMC revenue and leakage dashboard",
+            "Service reports for the owner",
+            "WhatsApp reminders and updates"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes once the loop is connected.",
+      "items": [
+        {
+          "h": "A night-time breakdown is owned by someone",
+          "workflow": "The ICU logs a ticket on the customer portal at 11 pm; it lands on the desk with the SLA running and is assigned to the on-call engineer in the morning roster.",
+          "result": "The response time is on record and nobody argues about when the call came in."
+        },
+        {
+          "h": "A visit under CMC is not invoiced by mistake",
+          "workflow": "The ticket shows the monitor is under a comprehensive contract, so the engineer's spares and labour close to the contract instead of raising a bill.",
+          "result": "The hospital is not chased for money it does not owe."
+        },
+        {
+          "h": "A chargeable job is billed the same day",
+          "workflow": "An out-of-contract analyser is repaired; the job card lists two spares and three hours; the office converts it to a GST service invoice before the engineer is back.",
+          "result": "Revenue that used to wait a fortnight is raised the day the work is done."
+        },
+        {
+          "h": "A repeat failure is spotted",
+          "workflow": "The asset history shows the same fault code three times in a quarter, and the service head raises a replacement recommendation to the customer.",
+          "result": "A chronic problem becomes a sales conversation rather than a fourth free visit."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses where the service desk is the reputation.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Monitors, ventilators, imaging and lab analysers across many hospitals."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device and robotics firms",
+          "p": "Installation, commissioning and ongoing service on their own products."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Analysers that need fast turnaround because the lab stops without them."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Third-party service companies",
+          "p": "Multi-brand maintenance contracts with hospitals and nursing homes."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Any trade where a breakdown call leads to a job card and a bill."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Chat groups, a generic CRM, or a dealer platform.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Call intake",
+          "Messages in a group",
+          "A lead form repurposed",
+          "Ticket against an asset with SLA running"
+        ],
+        [
+          "Coverage check",
+          "Ask the owner",
+          "Not modelled",
+          "Warranty, AMC, CMC shown on the ticket"
+        ],
+        [
+          "Job card",
+          "Paper or photo",
+          "Notes field",
+          "Mobile job card with spares, photos, signature"
+        ],
+        [
+          "Spares to stock",
+          "Counted at year end",
+          "Separate tool",
+          "Deducted from serial stock per job"
+        ],
+        [
+          "Invoice",
+          "Typed in accounting software",
+          "Export and re-type",
+          "GST service invoice from the closed job"
+        ],
+        [
+          "Asset history",
+          "None",
+          "None",
+          "Every job on the serial number"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Service management software, answered.",
+      "items": [
+        {
+          "q": "How is this different from field service software?",
+          "a": "Field service is the engineer's side: dispatch, route, mobile job card. Service management is the whole loop around it, including intake, SLA, contract coverage, spares, invoicing and asset history. Aura Business includes both; see <a href=\"/aura-business/medical-equipment-field-service-software/\">field service software</a> for the mobile side."
+        },
+        {
+          "q": "Can hospitals raise their own service calls?",
+          "a": "Yes. The customer self-service portal lets a hospital submit a ticket against its own equipment, and the ticket lands on your desk with the SLA timer already running. Calls can also be logged by your office or by a rep on the mobile app."
+        },
+        {
+          "q": "Does the engineer need internet on site?",
+          "a": "No. The mobile job card works in offline mode, so photos, readings, spares and the customer signature are captured inside a basement or a rural hospital and sync when the phone reconnects."
+        },
+        {
+          "q": "How does it know whether a job should be billed?",
+          "a": "Every asset in the installed-base register carries its warranty, AMC or CMC status. The ticket shows that coverage, so a covered job closes against the contract and an uncovered one becomes a GST service invoice with spares and labour."
+        },
+        {
+          "q": "Does spare consumption affect inventory?",
+          "a": "Yes. Spares recorded on the job card are deducted from serial or unit-level stock, so the warehouse figure reflects what left in the engineer's bag. See <a href=\"/aura-business/medical-spare-parts-inventory-software/\">spare parts inventory software</a>."
+        },
+        {
+          "q": "What does setup involve?",
+          "a": "Aura Business is delivered on a 30-working-day framework where scope allows. Your customer list, installed base and open contracts are imported from Excel, your branding goes on the app and service reports, and support is direct from the founder who built it."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "Dispatch and mobile job cards."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "AMC, CMC and warranty terms."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spare parts",
+          "p": "Stock that moves with the job."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management works."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When the sheet stops working."
+        }
+      ]
+    }
+  ]
+}

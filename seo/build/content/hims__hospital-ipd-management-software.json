@@ -1,0 +1,341 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-ipd-management-software",
+  "title": "Hospital IPD Management Software | Admission to Discharge | HIMS",
+  "meta": "Hospital IPD software for admission, bed allocation, ward rounds, nursing charts, running IP bills with interim statements, TPA pre-auth and discharge summary.",
+  "h1": "Hospital IPD software that runs an admission from <span class=\"hl\">bed allocation to discharge summary</span>.",
+  "crumb": "Hospital IPD Software",
+  "pill": "For wards, nursing stations and IP billing",
+  "sub": "HIMS manages inpatients on one record: admission and bed allocation, doctor orders and ward rounds, nursing charts, pharmacy and lab against the admission, a running IP bill with interim statements, TPA pre-authorisation and a discharge summary drawn from the notes.",
+  "meta_ticks": [
+    "Bed allocated at admission",
+    "Running IP bill with interim statements",
+    "Discharge summary from the record"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS bed management screen showing wards, occupied and free beds and admitted patients",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, I'd like to see the inpatient workflow in HIMS for our hospital.",
+  "primary_keyword": "hospital IPD software",
+  "secondary_keywords": [
+    "IPD management software",
+    "inpatient management system",
+    "hospital admission discharge software",
+    "IP billing software",
+    "ward management software",
+    "nursing station software"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator, nursing superintendent or owner of a hospital with admitted patients",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital IPD software does in HIMS",
+      "paras": [
+        "Hospital IPD software handles everything that happens between admission and discharge: allocating a bed, recording doctor orders and ward rounds, keeping nursing charts, issuing drugs and investigations against the admission, running the IP bill as charges accrue, coordinating TPA pre-authorisation and producing the discharge summary. In HIMS the inpatient workflow is a continuation of the same record that OP or casualty created.",
+        "The difference from an OP visit is time and money. An admission runs for days, involves several shifts of staff and accumulates charges from pharmacy, lab, OT and the ward. HIMS keeps that running total visible so an interim bill can be printed for the family or the TPA at any point, and the final bill at discharge is what the record says, not what someone reconstructed."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where admissions leak",
+      "h2": "Inpatient care is where documentation, nursing and money all meet.",
+      "lead": "The longer the stay, the more places a charge or an order can fall through.",
+      "items": [
+        {
+          "h": "Bed given, register not updated",
+          "p": "The ward knows which bed is taken; the front desk does not, so a new admission is promised a bed that is already occupied."
+        },
+        {
+          "h": "Orders lost between shifts",
+          "p": "The evening consultant's verbal order is not on the chart when the night nurse comes on duty."
+        },
+        {
+          "h": "Charges missed on the final bill",
+          "p": "Dressings, injections and a second scan were done but never reached billing, so the hospital absorbs them."
+        },
+        {
+          "h": "TPA pre-auth on paper",
+          "p": "Pre-authorisation is chased by phone and fax, and the status is known only to one person."
+        },
+        {
+          "h": "Discharge summary written last",
+          "p": "The summary is typed on the day of discharge from a file, delaying the patient and missing details."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One admission",
+      "h2": "Admission to discharge on HIMS.",
+      "steps": [
+        {
+          "h": "Admit",
+          "p": "Admission raised from OP, casualty or direct; deposit and payer recorded."
+        },
+        {
+          "h": "Allocate bed",
+          "p": "A free bed in the right ward is assigned and occupancy updates live."
+        },
+        {
+          "h": "Orders and rounds",
+          "p": "Consultant orders drugs, investigations and diet on the record during rounds."
+        },
+        {
+          "h": "Nursing",
+          "p": "Vitals, medication administration and nursing notes charted per shift."
+        },
+        {
+          "h": "Running bill",
+          "p": "Pharmacy, lab, OT and ward charges accrue; interim bills on demand."
+        },
+        {
+          "h": "Pre-auth and claim",
+          "p": "TPA pre-authorisation and claim documents prepared from the record."
+        },
+        {
+          "h": "Discharge",
+          "p": "Summary generated, final bill settled, bed released."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The inpatient modules in HIMS.",
+      "groups": [
+        {
+          "icon": "&#128719;",
+          "h": "Admission and beds",
+          "items": [
+            "IP registration and admission",
+            "Ward and bed allocation",
+            "Live occupancy across wards",
+            "Transfers between beds and wards",
+            "ICU with live vitals per bed"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Clinical",
+          "items": [
+            "Doctor orders and progress notes",
+            "Nursing charts and medication records",
+            "Lab and imaging against the admission",
+            "OT scheduling linked to the admission"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "IP billing",
+          "items": [
+            "Deposits and packages",
+            "Running bill with interim statements",
+            "Cash, insurance and TPA in one view",
+            "GST where applicable",
+            "Final bill at discharge"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Discharge",
+          "items": [
+            "Discharge summary from the record",
+            "TPA pre-auth and claim documents",
+            "Bed released to the dashboard",
+            "Follow-up OP booking"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes on the ward.",
+      "items": [
+        {
+          "h": "A planned surgical admission",
+          "workflow": "Admitted with a package and a deposit, bed allocated, OT slot booked against the admission, consumables and implants charged as used.",
+          "result": "The package bill and the extras are visible before discharge."
+        },
+        {
+          "h": "A night-shift handover",
+          "workflow": "The evening orders are on the record; the night nurse charts vitals and medication against them.",
+          "result": "Nothing depends on a verbal handover."
+        },
+        {
+          "h": "A family asking for the bill on day three",
+          "workflow": "The ward prints an interim statement showing room, pharmacy, lab and procedures to date.",
+          "result": "No surprise at discharge."
+        },
+        {
+          "h": "A TPA case",
+          "workflow": "Pre-authorisation raised at admission, enhancement requested as the stay extends, claim documents pulled from the same record.",
+          "result": "The claim matches the treatment."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any facility with admitted patients.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several wards, ICU and OT on one bed board."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "IP-led facilities with a small team."
+        },
+        {
+          "icon": "&#129657;",
+          "b": "Surgical centres",
+          "p": "Short stays with packages and OT charges."
+        },
+        {
+          "icon": "&#128105;&#8205;&#9877;&#65039;",
+          "b": "Nursing superintendents",
+          "p": "Charts and orders per shift."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "TPA desks",
+          "p": "Pre-auth and claims from the record."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Inpatient management, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Bed status",
+          "Ward register",
+          "Not tracked",
+          "Live occupancy on the dashboard"
+        ],
+        [
+          "Orders and nursing charts",
+          "Paper chart",
+          "Not covered",
+          "On the admission record"
+        ],
+        [
+          "Running IP bill",
+          "Reconstructed at discharge",
+          "Typed from slips",
+          "Accrues from pharmacy, lab, OT and ward"
+        ],
+        [
+          "TPA pre-auth",
+          "Phone and fax",
+          "Separate file",
+          "Raised and tracked on the record"
+        ],
+        [
+          "Discharge summary",
+          "Typed last",
+          "Not covered",
+          "Generated from the notes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital IPD software, answered.",
+      "items": [
+        {
+          "q": "Can an OP visit be converted to an admission?",
+          "a": "Yes. An admission can be raised from an OP consultation, from the casualty triage board or directly at the front desk. In each case it continues on the same UHID, so history, orders and previous bills are already attached."
+        },
+        {
+          "q": "Does the bed board update automatically?",
+          "a": "When a bed is allocated at admission, transferred or released at discharge, the ward and bed occupancy view updates for everyone, so the front desk and the ward see the same free beds. See <a href=\"/hims/hospital-bed-management-software/\">bed management software</a>."
+        },
+        {
+          "q": "Can we print an interim bill mid-stay?",
+          "a": "Yes. The IP bill runs as charges accrue from pharmacy, laboratory, OT and the ward, and an interim statement can be printed at any point for the family or the TPA."
+        },
+        {
+          "q": "How is TPA pre-authorisation handled?",
+          "a": "Pre-authorisation is raised against the admission with the payer recorded, and claim documents are prepared from the treatment record at discharge. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing software</a>."
+        },
+        {
+          "q": "Where does the discharge summary come from?",
+          "a": "It is generated from what the record already holds: diagnosis, procedures, investigations, medication and follow-up advice. The consultant reviews and signs it rather than typing it from a file."
+        },
+        {
+          "q": "Does IPD include the ICU and OT?",
+          "a": "Yes. ICU beds with live vitals per bed and operation theatre scheduling are both linked to the admission, so their charges and notes land on the same IP record."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed management",
+          "p": "Live ward occupancy."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#128203;",
+          "b": "TPA billing",
+          "p": "Pre-auth and claims."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#129657;",
+          "b": "Operation theatre",
+          "p": "OT schedule and billing."
+        },
+        {
+          "href": "/hims/icu-management-software/",
+          "icon": "&#128147;",
+          "b": "ICU",
+          "p": "Live vitals per bed."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one you need."
+        },
+        {
+          "href": "/hims/multi-specialty-hospital-software/",
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospital",
+          "p": "One record across departments."
+        }
+      ]
+    }
+  ]
+}

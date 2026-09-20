@@ -1,0 +1,349 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-for-ct-scan-centres",
+  "title": "PACS for CT Scan Centres | Worklist to Report | AuraPACS",
+  "meta": "PACS for CT scan centres: receive multi-slice studies straight from the scanner, plan storage growth, push the worklist to the CT.",
+  "h1": "PACS for CT scan centres that handle <span class=\"hl\">high-volume, multi-slice</span> studies all day.",
+  "crumb": "PACS for CT Centres",
+  "pill": "For CT scan centres",
+  "sub": "A CT centre produces large multi-slice studies at a steady rate. AuraPACS receives each one from the scanner automatically, stores it on a node in the centre, opens it in a browser with slice scrolling and window/level, and gets the report to the referring doctor on WhatsApp.",
+  "meta_ticks": [
+    "Worklist pushed to the CT",
+    "Slice scrolling in the browser",
+    "Report PDF attached to the study"
+  ],
+  "whatsapp_text": "Hi, we run a CT scan centre and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS for CT scan centres",
+  "secondary_keywords": [
+    "CT scan centre software",
+    "CT PACS",
+    "PACS for CT",
+    "CT scan reporting software",
+    "CT imaging archive",
+    "CT centre worklist"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or radiologist-partner of a standalone CT scan centre in India",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a PACS does for a CT centre",
+      "paras": [
+        "A PACS for a CT scan centre takes each study off the scanner the moment it finishes, files it against the patient, lets the radiologist scroll through the slices in a browser, and attaches the signed report so it can be shared. AuraPACS does that on an on-premise node in your centre, with a cloud layer for remote reading and backup.",
+        "CT is the modality where volume and size meet. A single study is a multi-slice series that may run to hundreds of images, and a busy centre produces many a day. The two things that matter most are that nothing is typed twice between front desk and scanner, and that the archive keeps growing without anyone burning CDs."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong at CT centres",
+      "h2": "Volume is the problem, and CDs were never the answer.",
+      "lead": "CT centres run on throughput. Every manual step between the scanner and the referrer is repeated dozens of times a day.",
+      "items": [
+        {
+          "h": "Patient details retyped at the console",
+          "p": "Front desk registers the patient, then the technologist types the name again on the CT. Spelling drifts and studies get mismatched."
+        },
+        {
+          "h": "The scanner's disk fills up",
+          "p": "Studies are deleted from the console to make room, and the only copy left is the CD the patient took home."
+        },
+        {
+          "h": "Reading tied to one workstation",
+          "p": "The radiologist reads only on the console PC or a single installed workstation, so the report waits for that seat."
+        },
+        {
+          "h": "Reports typed in Word",
+          "p": "Every report starts from a blank page, and the PDF lives in a folder unrelated to the images."
+        },
+        {
+          "h": "Referrers wait for a courier",
+          "p": "The orthopaedic surgeon who ordered the scan sees it when the patient brings the film, not when the report is signed."
+        },
+        {
+          "h": "Priors are unfindable",
+          "p": "A follow-up chest CT cannot be compared because last year's study is on a disc in a drawer."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From booking to a shared CT report.",
+      "steps": [
+        {
+          "h": "Booked at the desk",
+          "p": "Front desk schedules the patient and the study once."
+        },
+        {
+          "h": "Worklist to the CT",
+          "p": "The entry appears on the scanner's worklist; the technologist selects it, nothing retyped."
+        },
+        {
+          "h": "Study received",
+          "p": "At the end of the scan, every series lands on the node automatically."
+        },
+        {
+          "h": "Read in the browser",
+          "p": "Radiologist scrolls slices and adjusts window/level on any laptop, on site or remote."
+        },
+        {
+          "h": "Report on a CT template",
+          "p": "Structured template, finalised to a PDF attached to the study."
+        },
+        {
+          "h": "Shared",
+          "p": "Secure link sent on WhatsApp to the referrer and patient."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What a CT centre uses",
+      "h2": "The parts of AuraPACS that matter most for CT.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Front desk",
+          "items": [
+            "Scheduling and modality worklist",
+            "Patient history search",
+            "GST billing and invoicing",
+            "Role-based front-desk access"
+          ]
+        },
+        {
+          "icon": "&#128229;",
+          "h": "Scanner",
+          "items": [
+            "DICOM receive from the CT",
+            "Multi-series studies filed automatically",
+            "Archive on your own node",
+            "Encrypted offsite backup"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Reading",
+          "items": [
+            "Browser viewer, nothing installed",
+            "Slice scrolling and window/level",
+            "Priors beside today's study",
+            "Remote reading from home"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting",
+          "items": [
+            "CT reporting templates",
+            "Finalise and sign to PDF",
+            "PDF attached to the study",
+            "WhatsApp share link"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/radiology-workflow-software/",
+        "label": "See the full radiology workflow"
+      }
+    },
+    {
+      "type": "table",
+      "eyebrow": "CT specifics",
+      "h2": "What CT needs from a PACS, and how AuraPACS answers it.",
+      "headers": [
+        "CT requirement",
+        "Why it matters",
+        "In AuraPACS"
+      ],
+      "rows": [
+        [
+          "Multi-slice series",
+          "Hundreds of images per study; reading means scrolling, not opening one picture",
+          "Browser viewer with slice scrolling and window/level"
+        ],
+        [
+          "Storage growth",
+          "Each study is large; a year of CT fills a disk faster than any other modality",
+          "Archive on your node, sized on a call, with encrypted offsite copy"
+        ],
+        [
+          "Worklist",
+          "Retyping patient details at the console causes mismatched studies",
+          "Modality worklist: schedule once, appears on the CT"
+        ],
+        [
+          "Reporting",
+          "Every CT report has the same skeleton; blank pages waste time",
+          "Structured templates per modality, finalised to PDF"
+        ],
+        [
+          "Sharing",
+          "Referring surgeons and physicians want the images, not only the report",
+          "Secure WhatsApp link opens images and PDF, no login"
+        ],
+        [
+          "Outages",
+          "The scanner cannot wait for the ISP",
+          "On-premise node works without internet"
+        ]
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "CT centres of every shape.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Standalone CT centres",
+          "p": "One or two scanners, a visiting or partner radiologist."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Multi-modality diagnostic centres",
+          "p": "CT alongside MR, ultrasound and X-ray in one archive."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital CT departments",
+          "p": "Casualty and wards need the study before the report."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Remote-reading radiologists",
+          "p": "Read the centre's CT list from home in a browser."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Second-branch CT",
+          "p": "A new scanner in another locality, same archive."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a CT centre, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Where the study lives",
+          "Scanner console, then a CD",
+          "Provider's cloud, per study",
+          "Your node, with encrypted backup"
+        ],
+        [
+          "Worklist to the CT",
+          "No",
+          "Sometimes",
+          "Yes"
+        ],
+        [
+          "Who reads",
+          "Your radiologist, on the console",
+          "Their radiologists",
+          "Your radiologist, any browser"
+        ],
+        [
+          "Report format",
+          "Word document",
+          "Their template",
+          "Your CT templates, PDF on the study"
+        ],
+        [
+          "Referrer sees images",
+          "When the patient brings the CD",
+          "Portal login",
+          "WhatsApp link, no login"
+        ],
+        [
+          "Cost model",
+          "Discs and courier",
+          "Per study, forever",
+          "Owned system, scoped on a call"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS for CT centres, answered.",
+      "items": [
+        {
+          "q": "Will our CT scanner send to AuraPACS?",
+          "a": "Any CT that sends DICOM over the network can be pointed at the AuraPACS node by AE title and port, which is the standard way scanners talk to an archive. The specific model is confirmed on a call before setup. See <a href=\"/aurapacs/dicom-server-software/\">DICOM server software</a>."
+        },
+        {
+          "q": "How much storage does a CT centre need?",
+          "a": "It depends on studies per day and slices per study. The archive lives on your own node, so disk is sized to your volume on a call, and the encrypted offsite copy means a disk failure does not lose the history."
+        },
+        {
+          "q": "Does the worklist work with our scanner?",
+          "a": "The node provides a DICOM modality worklist. Once the CT is configured to query it, scheduled patients appear on the console and the technologist selects them rather than retyping. See <a href=\"/aurapacs/dicom-worklist-software/\">DICOM worklist software</a>."
+        },
+        {
+          "q": "Can the radiologist read CT from home?",
+          "a": "Yes. The browser viewer opens CT studies with slice scrolling and window/level on any laptop, and the cloud layer makes synced studies available to authorised users outside the centre."
+        },
+        {
+          "q": "Are the reports in our format?",
+          "a": "Reports are written on structured templates per modality, so CT brain, CT chest and CT abdomen can each have a template. The finalised PDF carries your branding and is attached to the study."
+        },
+        {
+          "q": "Is AuraPACS a diagnostic device?",
+          "a": "No. It stores, displays and shares imaging. The read and the report are done by your radiologist."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-for-mri-centres/",
+          "icon": "&#129522;",
+          "b": "PACS for MRI centres",
+          "p": "Long multi-series studies."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/aurapacs/medical-image-archive-storage/",
+          "icon": "&#128451;",
+          "b": "Image archive",
+          "p": "Storage planning."
+        },
+        {
+          "href": "/resources/what-is-dicom-modality-worklist/",
+          "icon": "&#128218;",
+          "b": "What is a worklist",
+          "p": "Why nothing is typed twice."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Why a folder is not enough."
+        }
+      ]
+    }
+  ]
+}

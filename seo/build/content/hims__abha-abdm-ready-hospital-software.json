@@ -1,0 +1,200 @@
+{
+  "cluster": "hims",
+  "slug": "abha-abdm-ready-hospital-software",
+  "title": "ABHA and ABDM Ready Hospital Software | What It Means | HIMS",
+  "meta": "What ABHA and ABDM ready actually means for a hospital, the questions to put to any vendor, and how HIMS is built to support ABHA linking.",
+  "h1": "ABHA and ABDM ready hospital software, and <span class=\"hl\">what that phrase should mean</span> before you sign.",
+  "crumb": "ABHA / ABDM Ready",
+  "pill": "For hospital owners and IT leads",
+  "sub": "Vendors advertise ABHA and ABDM readiness freely. This page explains what the Ayushman Bharat Health Account and the Ayushman Bharat Digital Mission are, what readiness can reasonably mean in a product, and the questions to put to every vendor including this one.",
+  "meta_ticks": [
+    "Built to support ABHA linking",
+    "ABDM-aligned workflows",
+    "No certification claimed"
+  ],
+  "whatsapp_text": "Hi, we are checking ABHA and ABDM readiness for our hospital software.",
+  "primary_keyword": "ABHA ABDM ready hospital software",
+  "secondary_keywords": [
+    "ABDM ready hospital management software",
+    "ABHA enabled hospital software",
+    "ABHA integration hospital software",
+    "what is ABHA number",
+    "what is ABDM",
+    "digital health record software India"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital owner or IT lead assessing vendor claims about ABHA and ABDM readiness",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What ABHA and ABDM ready means, plainly",
+      "paras": [
+        "ABHA stands for Ayushman Bharat Health Account. It is a health account a person creates and controls under India's national digital health programme, so that records created at different facilities can be associated with the person rather than with a file at one hospital. ABDM stands for Ayushman Bharat Digital Mission, the wider programme that defines the registries, identifiers and consent-based exchange those records are meant to move through.",
+        "Ready is a vendor word, not a status anyone confers on software. At its most honest it means three things: the system can hold a patient's ABHA number against the hospital record, clinical documentation is structured rather than scanned, and linking and consent steps can be switched on without rebuilding the record. HIMS is built to support ABHA linking and ABDM-aligned workflows on that basis.",
+        "Elevate Aura claims no certification, registration or approval of any kind under the programme, and nothing here should be read as one. Requirements change, so confirm the current position with your own advisers and with official programme sources."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The background",
+      "h2": "What the two names actually refer to",
+      "lead": "Most confusion in vendor conversations comes from the two terms being used interchangeably. They are not the same thing.",
+      "body": [
+        {
+          "h3": "ABHA, the patient's health account"
+        },
+        "A patient creates a health account and holds it themselves. The point is portability: a consultation, an admission or an investigation can be associated with that account instead of living only in the hospital that produced it, and the patient decides what is shared. For your hospital the practical consequence is that the ABHA number becomes a second identifier beside your own UHID, not a replacement for it.",
+        {
+          "h3": "ABDM, the programme around it"
+        },
+        "The mission sets out the shared pieces the ecosystem runs on: identifiers for patients, registries for facilities and health professionals, and consent-based exchange of health information. It is a framework participants join and work within, and the detail of that participation has changed more than once since the programme began.",
+        {
+          "h3": "Why a hospital should care now"
+        },
+        "Becoming record-ready is slow work. Structuring documentation, tightening registration and getting staff to enter data properly takes months, and it is worth doing for its own sake before any external requirement lands. A hospital whose notes are scanned images cannot participate even when it wants to."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The checklist",
+      "h2": "What to ask any vendor, including us",
+      "lead": "Take these to every shortlisted vendor and ask for the answers in writing rather than in a demo.",
+      "body": [
+        {
+          "ul": [
+            "Ask exactly what ready means in the product today. A field that stores an ABHA number, an account linking flow, consent capture and record sharing are four different things, and one word covers all of them in most brochures.",
+            "Ask to be shown the screen where an ABHA number is captured and where it appears against the record afterwards.",
+            "Ask whether clinical documentation is structured. A scanned discharge summary is a picture, and a picture cannot be shared as a record.",
+            "Ask who carries responsibility for any registration or enrolment the programme requires, the hospital or the vendor.",
+            "Ask what happens when programme requirements change: is it covered, or a chargeable project each time.",
+            "Ask how access to records is restricted and audited, because consent means little if any logged-in user can open any chart.",
+            "Ask what your data looks like if you leave, in what format, and how long it takes to get it.",
+            "Verify the current requirements with your own advisers and official programme sources rather than with a vendor deck."
+          ]
+        },
+        {
+          "h3": "Where HIMS stands today"
+        },
+        "HIMS is built to support ABHA linking and ABDM-aligned workflows. Concretely: registration holds your own UHID with room for the patient's ABHA number beside it, the clinical record is structured so history, orders, notes, results and the discharge summary sit in their own fields rather than in a scan, access is role-based and every view is audited, and the patient app gives the patient their own view of reports. What is switched on, and in what order, is scoped on a call.",
+        "What HIMS does not do is claim a certification, a listing or an approval. If that matters to your board, put the question to your advisers first, then ask every vendor to evidence what they claim."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the record already does",
+      "h2": "The foundations readiness actually rests on.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Identity and registration",
+          "items": [
+            "One UHID per patient across OP and IP",
+            "Room for the patient's ABHA number on the record",
+            "Demographics captured once at registration",
+            "Full searchable visit and admission history"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Structured documentation",
+          "items": [
+            "History, examination and diagnosis in fields",
+            "Orders, progress notes and nursing entries",
+            "Verified laboratory results on the encounter",
+            "Discharge summary built from the record"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Access and audit",
+          "items": [
+            "Role-based access for doctors, nurses and front desk",
+            "Every view attributable to a user",
+            "Patient app and portal view of reports",
+            "Supports NABH-style documentation"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-emr-software/",
+        "label": "See how the EMR is structured"
+      }
+    },
+    {
+      "type": "faq",
+      "h2": "ABHA and ABDM, answered.",
+      "items": [
+        {
+          "q": "What is an ABHA number in simple terms?",
+          "a": "It is a health account the patient creates and controls, used to associate records made at different facilities with that person rather than with one hospital's file. In your system it sits alongside your own UHID."
+        },
+        {
+          "q": "Is HIMS certified or registered under ABDM?",
+          "a": "No such claim is made. HIMS is built to support ABHA linking and ABDM-aligned workflows. Certification, registration and listing questions belong with your own advisers and official programme sources, and every vendor should be asked to evidence what they claim."
+        },
+        {
+          "q": "Do patients need an ABHA number to be registered?",
+          "a": "No. Registration runs on your own UHID and works exactly as it does today. Where a patient has an ABHA number it is held against the record, and where they do not, nothing about the visit changes."
+        },
+        {
+          "q": "Why does structured documentation matter so much?",
+          "a": "Because a record has to be data to be shared as a record. A photographed case sheet is an image, and no integration turns it into a shareable clinical record. Structuring the notes is the work that comes first."
+        },
+        {
+          "q": "Who should we confirm the current requirements with?",
+          "a": "Your own advisers, your compliance consultant if you use one, and the official programme sources. Requirements have changed over the life of the programme, and a vendor page is not the place to settle them."
+        },
+        {
+          "q": "Can we add this later rather than at go-live?",
+          "a": "Yes, and most hospitals do. The useful work at go-live is clean registration and structured documentation. Linking and sharing steps are switched on afterwards without changing the record you have built."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Every module, one record."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "One structured clinical record."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128100;",
+          "b": "Patient management",
+          "p": "One record per UHID."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128451;",
+          "b": "Hospital management system",
+          "p": "Every module in one view."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide: what is HIMS",
+          "p": "Modules and the patient journey."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#9878;",
+          "b": "How to choose",
+          "p": "A buyer's checklist."
+        }
+      ]
+    }
+  ]
+}

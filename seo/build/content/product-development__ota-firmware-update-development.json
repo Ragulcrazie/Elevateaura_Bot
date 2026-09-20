@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "ota-firmware-update-development",
+  "title": "OTA Firmware Update System Development | Elevate Aura",
+  "meta": "OTA firmware update system development: signed update delivery, version tracking, rollback on a failed boot, and updates triggered from your companion app.",
+  "h1": "An OTA update path, built before the device <span class=\"hl\">leaves the building</span>.",
+  "crumb": "OTA Firmware Updates",
+  "pill": "Software-only, field updates",
+  "sub": "Elevate Aura builds the over-the-air update path for connected devices: how a new build is published and delivered, how a device knows which version it is running, what happens when an update fails, and how an owner triggers one from the companion app.",
+  "meta_ticks": [
+    "Delivery, verification and install",
+    "Version tracking across the fleet",
+    "Rollback when a build does not boot"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, our device needs an OTA update path. Can we discuss how it should work?",
+  "cta_h2": "Decide the update path before the first unit ships.",
+  "cta_p": "Tell us the controller, its storage and how the device connects. We will scope an update path that fits the part you have, including the app side and the version view across your fleet.",
+  "primary_keyword": "OTA firmware update development",
+  "secondary_keywords": [
+    "over the air firmware update system",
+    "OTA update software development services",
+    "firmware versioning and rollback development",
+    "remote firmware update for IoT devices",
+    "app triggered firmware update",
+    "embedded OTA development India"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or product lead at a device company that has to fix firmware on units already in the field",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "OTA firmware update development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an OTA update system has to get right",
+      "paras": [
+        "An over-the-air update system is how firmware reaches a device that is already in a customer's hands. Elevate Aura builds that path end to end: publishing a build, delivering it over Wi-Fi, BLE or a gateway, verifying it before it is trusted, installing it, and recording which version each unit is now running.",
+        "The hard part is failure. An update that arrives half way through a power cut, or a build that starts and then stops responding, must leave a working device behind. We design that behaviour generically around your controller and its storage: the running image is not discarded until a new one has proved it boots, and a device that cannot confirm a healthy start returns to what it had.",
+        "We also build the human side: the version view across your fleet, staged rollout to a small group first, and an update the owner can trigger from the companion app. Hardware, storage layout capability and the bootloader support on the part are your hardware team's territory. This is a software-only engagement."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The field problem",
+      "h2": "The bug is fixed. The devices are in other people's buildings.",
+      "lead": "Without an update path, every firmware defect becomes a logistics problem with a travel budget attached to it.",
+      "items": [
+        {
+          "h": "Site visits to flash a device",
+          "p": "An engineer drives out with a programmer to change three lines of code."
+        },
+        {
+          "h": "Nobody knows what is running where",
+          "p": "Support cannot answer the first question of any investigation: which build is on that unit."
+        },
+        {
+          "h": "A failed update bricks a unit",
+          "p": "The old image was erased before the new one had proved it could boot."
+        },
+        {
+          "h": "Everything updated at once",
+          "p": "A bad build reaches the whole fleet in an afternoon because there was no staged rollout."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a published build to a device running it safely.",
+      "steps": [
+        {
+          "h": "Scope the part",
+          "p": "Controller, storage, bootloader support and the link the update travels over."
+        },
+        {
+          "h": "Publish",
+          "p": "A build is versioned, signed and made available to the fleet or a subset."
+        },
+        {
+          "h": "Deliver",
+          "p": "Download over Wi-Fi, BLE or a gateway, resumable and power aware."
+        },
+        {
+          "h": "Verify and install",
+          "p": "Integrity and signature checked before anything is written or trusted."
+        },
+        {
+          "h": "Confirm or roll back",
+          "p": "The device proves a healthy boot, or returns to the previous working image."
+        },
+        {
+          "h": "Report",
+          "p": "Version, outcome and any error recorded against the unit."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is built",
+      "h2": "The update path, on the device and around it.",
+      "groups": [
+        {
+          "icon": "&#128260;",
+          "h": "On the device",
+          "items": [
+            "Download and resume handling",
+            "Signature and integrity checks",
+            "Install and healthy-boot confirmation",
+            "Return to the previous image on failure"
+          ]
+        },
+        {
+          "icon": "&#128290;",
+          "h": "Versioning",
+          "items": [
+            "Version reported by every unit",
+            "Compatibility rules before an install",
+            "Update history per device",
+            "Settings preserved across updates"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Delivery",
+          "items": [
+            "Build publishing and storage",
+            "Staged rollout to a pilot group",
+            "Retry for devices that were offline",
+            "Supabase or Azure backend"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "People",
+          "items": [
+            "Update triggered from the app",
+            "Progress and failure messages",
+            "Fleet version view on a dashboard",
+            "Runbook for your support team"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What an update path is worth.",
+      "items": [
+        {
+          "h": "A defect found after shipping",
+          "workflow": "A fix is published to a pilot group, confirmed against their reported version, then released to the rest of the fleet.",
+          "result": "A firmware fix without a travel plan."
+        },
+        {
+          "h": "An owner updating from the app",
+          "workflow": "The app shows that a newer build exists, the owner starts it, and progress and any failure are shown plainly.",
+          "result": "Updates happen without a support ticket."
+        },
+        {
+          "h": "An update interrupted by a power cut",
+          "workflow": "The partially written image never becomes the running one, and the device starts on the build it already had.",
+          "result": "A unit that comes back on rather than going to the workshop."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone shipping firmware they cannot reach by hand.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device makers",
+          "p": "Units in clinics and homes."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Machines on customer sites."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment makers",
+          "p": "An installed base across regions."
+        },
+        {
+          "icon": "&#128225;",
+          "b": "IoT product teams",
+          "p": "Connected devices at volume."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware founders",
+          "p": "First shipment, first field fix."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service teams",
+          "p": "Fewer visits, faster fixes."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting updates to the field, three ways.",
+      "cols": [
+        "Manual flashing",
+        "Vendor OTA platform",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Reaching a shipped unit",
+          "A site visit",
+          "Yes, on their terms",
+          "Yes, on your backend"
+        ],
+        [
+          "Rollback on a failed boot",
+          "Not applicable",
+          "Usually",
+          "Designed for your controller"
+        ],
+        [
+          "Fleet version view",
+          "A spreadsheet",
+          "Their console",
+          "Your dashboard, your data"
+        ],
+        [
+          "App triggered update",
+          "No",
+          "Sometimes",
+          "Built with your companion app"
+        ],
+        [
+          "Where the data lives",
+          "Nowhere",
+          "Vendor cloud",
+          "Your Supabase or Azure"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "OTA firmware updates, answered.",
+      "items": [
+        {
+          "q": "What stops a failed update from bricking a device?",
+          "a": "The new image is verified before it is trusted and the previous working image is kept until the new one has confirmed a healthy start. A device that cannot confirm that start returns to the build it was running. The exact arrangement depends on the storage and bootloader support your controller offers."
+        },
+        {
+          "q": "How does an update reach the device?",
+          "a": "Over whatever link the product already has: Wi-Fi to your backend, BLE from the companion app, or a gateway on the machine's own bus. Downloads resume after an interruption rather than starting again from the beginning."
+        },
+        {
+          "q": "How do we know which version each unit runs?",
+          "a": "Every device reports its version, and that is recorded against the unit with its update history and any failure. The fleet view sits on a dashboard your support team uses. See <a href=\"/product-development/device-dashboard-development/\">device dashboard development</a>."
+        },
+        {
+          "q": "Can an owner start the update themselves?",
+          "a": "Yes. The companion app shows that a newer build is available, starts the update, shows progress and reports failures in plain language rather than an error code. See <a href=\"/product-development/device-companion-app-development/\">device companion app development</a>."
+        },
+        {
+          "q": "Do you work on the bootloader or the hardware?",
+          "a": "We work in software only. Where your part provides bootloader and storage support for updates we write to it, but the controller choice, memory layout capability, board and hardware route stay with your team. We do not design PCBs or certify anything."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/firmware-development/",
+          "icon": "&#128268;",
+          "b": "Firmware development",
+          "p": "The build being updated."
+        },
+        {
+          "href": "/product-development/wifi-connected-device-software/",
+          "icon": "&#128246;",
+          "b": "Wi-Fi device software",
+          "p": "The link updates travel over."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Fleet versions at a glance."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "The backend behind it."
+        },
+        {
+          "href": "/product-development/medical-device-firmware-development/",
+          "icon": "&#129658;",
+          "b": "Medical device firmware",
+          "p": "Written to your spec."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

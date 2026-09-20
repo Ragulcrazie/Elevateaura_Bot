@@ -1,0 +1,217 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-coimbatore",
+  "title": "Hospital Management Software in Coimbatore | HIMS",
+  "meta": "Hospital management software for Coimbatore hospitals, nursing homes and clinics: OP and IP, EMR, pharmacy, lab and billing, set up on site by travel.",
+  "h1": "Hospital management software for Coimbatore, set up and <span class=\"hl\">taught at your front desk</span>.",
+  "crumb": "Coimbatore",
+  "pill": "Coimbatore and the western districts",
+  "sub": "HIMS runs OP and IP registration, EMR, pharmacy, laboratory, inventory, wards and GST, insurance and TPA billing for Coimbatore hospitals, nursing homes and clinics, with the setup and the front-desk training done in person by travel from Chennai.",
+  "meta_ticks": [
+    "Setup and training in person",
+    "A day from Chennai by road or train",
+    "WhatsApp support after go-live"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Coimbatore and would like to see HIMS.",
+  "primary_keyword": "hospital management software Coimbatore",
+  "secondary_keywords": [
+    "hospital software Coimbatore",
+    "HMS software Coimbatore",
+    "clinic management software Coimbatore",
+    "nursing home software Coimbatore",
+    "hospital billing software Tamil Nadu"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital, nursing home or clinic in Coimbatore",
+  "city": "Coimbatore",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Coimbatore, with the first days spent on site",
+      "paras": [
+        "HIMS is the hospital system Elevate Aura builds in Chennai, and Coimbatore is near enough that the parts of a rollout that go badly over a phone call are done at your hospital instead. Chennai to Coimbatore is a day by road or an overnight train, so the workflow study, the decision about which modules go live first and the training of the people at the registration and billing counters happen with your staff in the room.",
+        "There is no office, no engineer and no support desk in Coimbatore. Once the hospital is live, the platform is supported remotely and on WhatsApp by the person who built it, and a further visit is arranged only when something genuinely needs someone standing there."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Coimbatore context",
+      "h2": "A dense hospital cluster with patients arriving from three directions.",
+      "lead": "Coimbatore treats its own city and also draws steadily from Tiruppur, Erode, the Nilgiris and across the Kerala border, and that mix is what shapes the front desk.",
+      "body": [
+        "A large share of the OP list is people who have travelled in for the day. They want the consultation, the investigation, the scan and the bill finished in one sitting, because there is a bus or a train to catch back. That is a software problem as much as a staffing one: the token queue has to be visible, the laboratory result has to come back onto the same record rather than as a printout carried between counters, and the bill has to be assembled as the visit happens rather than reconstructed at the end of it.",
+        "The city also holds everything from multi-specialty hospitals with wards, theatres and an ICU down to single-specialty units and nursing homes with two counters and no IT person. The same platform serves both because modules are switched on rather than bought whole, and because the training is pitched at the staff who will actually use it.",
+        {
+          "h3": "Payers, not just patients"
+        },
+        "A meaningful part of admissions in the cluster are settled by an insurer or a TPA rather than by the patient at the counter. That changes what the software has to hold: the payer and the approval on the admission, the itemised bill drawn from the record, and the claim raised from the same place rather than compiled by hand from three files. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA and insurance billing</a> for how a claim is assembled.",
+        {
+          "h3": "How a Coimbatore rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to walk your OP, ward, pharmacy, laboratory and billing counters as they actually work today.",
+            "Modules chosen for the first phase, with the rest left for later rather than sold upfront.",
+            "Your existing patient, item and rate data brought in, and your branding on the screens and the bill.",
+            "Go-live training in person at the front desk, the pharmacy counter and the wards, on your own data, with the session recorded for staff who join later.",
+            "Live in 30 working days where scope allows, then WhatsApp and remote support from the founder."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Coimbatore hospital switches on first.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Front desk and OP",
+          "items": [
+            "OP registration on one UHID",
+            "Appointments, tokens and the queue display",
+            "Doctor rosters by department",
+            "Patient app for reports and follow-ups"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Wards and theatre",
+          "items": [
+            "IP admission through to discharge",
+            "Ward and bed occupancy at a glance",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Pharmacy dispensing queue with low-stock and expiry alerts",
+            "Laboratory from order to verified result",
+            "AuraPACS imaging on the same record"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and the day's numbers",
+          "items": [
+            "Cash, insurance and TPA claim billing",
+            "GST on billable items",
+            "Consumables and equipment inventory",
+            "Live dashboard of OP, IP, beds and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Coimbatore situations the platform is built for.",
+      "items": [
+        {
+          "h": "A patient from Tiruppur who has to leave by evening",
+          "workflow": "Token at registration, consultation on the record, laboratory and imaging ordered from the same screen, results back on the encounter, bill closed at one counter.",
+          "result": "The day finishes in one visit rather than two."
+        },
+        {
+          "h": "A nursing home with two counters and no IT staff",
+          "workflow": "Registration, billing and pharmacy go live first; wards and laboratory follow once the team is comfortable.",
+          "result": "Nothing is switched on that nobody has been trained to use."
+        },
+        {
+          "h": "An insured admission",
+          "workflow": "The payer and approval sit on the admission, charges accumulate on the encounter, and the claim is raised from the bill the record produced.",
+          "result": "The claim file is assembled from one place instead of three."
+        },
+        {
+          "h": "Training that happens at the counter",
+          "workflow": "Go-live day is spent at your front desk with your own staff raising real registrations and real bills while someone watches over their shoulder.",
+          "result": "The hospital goes live having already used the system."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Coimbatore, answered.",
+      "items": [
+        {
+          "q": "Will someone actually travel to Coimbatore?",
+          "a": "Yes, for the workflow study and for go-live training. Elevate Aura is a founder-led studio based in Chennai, and Coimbatore is reachable for a day or two on site. There is no local office and no local staff, and support after go-live is remote and on WhatsApp."
+        },
+        {
+          "q": "Who trains our front desk and pharmacy counter?",
+          "a": "The founder who builds the system does the training, on your own data, at your counters. The session can be recorded so that staff who join later are taught the same way rather than by word of mouth."
+        },
+        {
+          "q": "What happens if something breaks during OP hours?",
+          "a": "You message or call on WhatsApp and it is looked at remotely, usually over a screen share. Be clear about what that means: it is fast, and it is remote. Nobody walks into your hospital within the hour, because there is no Coimbatore team."
+        },
+        {
+          "q": "Do you work with nursing homes and clinics as well as hospitals?",
+          "a": "Yes. The same platform scales down, and modules are switched on selectively. See <a href=\"/hims/nursing-home-management-software/\">nursing home software</a> and <a href=\"/hims/clinic-management-software/\">clinic management software</a> for the smaller configurations."
+        },
+        {
+          "q": "Can we start with registration and billing only?",
+          "a": "Yes, and many do. Pharmacy, laboratory, wards and imaging are added afterwards without migrating anything, because they attach to the same patient record you started with."
+        },
+        {
+          "q": "How quickly can we be running?",
+          "a": "Live in 30 working days where scope allows, with scope fixed at the start. Data migration, branding, the on-site training and the first week of hand-holding sit inside that window."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Clinical and billing in one."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128203;",
+          "b": "OPD software",
+          "p": "Tokens, queues and consultation."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#127966;",
+          "b": "Nursing home software",
+          "p": "Smaller IP-led setups."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#129534;",
+          "b": "TPA and insurance billing",
+          "p": "Claims from the record."
+        },
+        {
+          "href": "/hims/hospital-management-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Chennai",
+          "p": "On-site, where the studio is."
+        },
+        {
+          "href": "/aurapacs/pacs-software-coimbatore/",
+          "icon": "&#129659;",
+          "b": "PACS in Coimbatore",
+          "p": "Imaging on the same record."
+        }
+      ]
+    }
+  ]
+}

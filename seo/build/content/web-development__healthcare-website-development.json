@@ -1,0 +1,324 @@
+{
+  "cluster": "web-development",
+  "slug": "healthcare-website-development",
+  "title": "Healthcare Website Development for Hospitals | Elevate Aura",
+  "meta": "Healthcare website development for hospitals, clinics and diagnostic centres: doctor and department pages, appointment CTAs, fast load times and medical schema.",
+  "h1": "Healthcare website development for the moment a patient is <span class=\"hl\">choosing where to go</span>.",
+  "crumb": "Healthcare Website Development",
+  "pill": "For hospitals, clinics and diagnostic centres",
+  "sub": "A patient searching at night wants three things: is this the right department, who is the doctor, and how do I book. We build hospital, clinic and diagnostic centre sites around those three answers, on WordPress or Next.js, with schema and GA4 in place.",
+  "meta_ticks": [
+    "Doctor and department pages",
+    "Appointment and enquiry CTAs",
+    "Schema markup and GA4 events"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a website for our hospital or clinic.",
+  "schema": "Service",
+  "service_type": "Healthcare website development",
+  "area_served": "India",
+  "primary_keyword": "healthcare website development",
+  "secondary_keywords": [
+    "hospital website development India",
+    "clinic website design Chennai",
+    "diagnostic centre website development",
+    "medical website developer",
+    "doctor website development"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator, clinic owner or diagnostic centre manager commissioning a new website",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare website development covers",
+      "paras": [
+        "Healthcare website development builds the public face of a hospital, clinic or diagnostic centre: a page for every department and every service, a profile for every doctor with qualifications, timings and the departments they sit in, and an appointment or enquiry route from each of those pages that takes seconds to use.",
+        "Elevate Aura builds these sites in WordPress where your team will add doctors and notices themselves, or in Next.js where the site has to talk to a booking system. Pages are built light so they open on a phone on mobile data, and department, doctor and location details are marked up in schema so search engines read them correctly.",
+        "Where the hospital runs <a href=\"/hims.html\">HIMS</a>, an appointment request from the site can land in the appointment queue rather than in an inbox, and the patient can be reminded on WhatsApp."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why most hospital sites lose the patient",
+      "h2": "The site is not the problem. The missing page is.",
+      "lead": "Patients search for a department, a condition or a doctor. Most hospital sites answer with a homepage and a phone number.",
+      "items": [
+        {
+          "h": "One page for all services",
+          "p": "Cardiology, orthopaedics and the lab share a single Services page, so nothing ranks for the search a patient actually types."
+        },
+        {
+          "h": "Doctors listed as a photo grid",
+          "p": "No profile page means no qualifications, no timings and nothing for a patient to trust before ringing."
+        },
+        {
+          "h": "Booking hidden behind a phone number",
+          "p": "The number is at the top and the bottom. There is no form, no WhatsApp, and nothing that works when the front desk is closed."
+        },
+        {
+          "h": "No structured data",
+          "p": "Address, timings, departments and doctors sit as plain text, so search engines have to guess at the basics."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the build runs",
+      "h2": "From your department list to a site that books.",
+      "steps": [
+        {
+          "h": "Map the departments",
+          "p": "Every department, service and diagnostic test gets its own page, planned against what patients search for."
+        },
+        {
+          "h": "Choose the stack",
+          "p": "WordPress when your team posts notices and doctor changes weekly; Next.js when the site must read live timings or slots."
+        },
+        {
+          "h": "Build the templates",
+          "p": "A department template, a doctor template and a location template, so a new page is content entry rather than a design job."
+        },
+        {
+          "h": "Wire the CTAs",
+          "p": "Appointment form, call button and WhatsApp on every page, each routed to the right desk and tracked in GA4."
+        },
+        {
+          "h": "Speed and schema",
+          "p": "Images compressed and sized, scripts trimmed, and schema added for the organisation, doctors and pages."
+        },
+        {
+          "h": "Launch and hand over",
+          "p": "Live in 30 working days where scope allows, with a walkthrough of how to add a doctor or a notice."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The pages and the plumbing behind them.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Clinical pages",
+          "items": [
+            "Department page per specialty",
+            "Service and procedure pages",
+            "Diagnostic test and package pages",
+            "Doctor profile with timings"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Getting the patient in",
+          "items": [
+            "Appointment request form",
+            "Call and WhatsApp on every page",
+            "Enquiry routed by department",
+            "Directions, timings and emergency number"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Findable and measured",
+          "items": [
+            "Schema for organisation, doctors and pages",
+            "Clean URL structure per department",
+            "Fast first load on mobile data",
+            "GA4 events on call, form and WhatsApp"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Connected",
+          "items": [
+            "Appointment requests into HIMS",
+            "WhatsApp confirmation and reminders",
+            "Reports and bills behind a patient login",
+            "Editable content for your own team"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-appointment-management/",
+        "label": "See appointment management in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three searches a healthcare site has to win.",
+      "items": [
+        {
+          "h": "A parent at 10 pm",
+          "workflow": "A parent searches for a paediatric department nearby, lands on the department page, reads the doctor profile and sends a WhatsApp message.",
+          "result": "The front desk opens to a named enquiry instead of a missed call."
+        },
+        {
+          "h": "A referral checking a doctor",
+          "workflow": "A patient given a doctor's name searches for it, finds the profile with qualifications and OP timings, and books for the right day.",
+          "result": "Fewer patients arriving on a day the doctor does not sit."
+        },
+        {
+          "h": "A scan enquiry",
+          "workflow": "Someone searches for a scan the diagnostic centre offers, reaches the test page with preparation notes, and requests a slot.",
+          "result": "An enquiry that arrives already knowing the test and the preparation."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Healthcare providers whose patients search first.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "A page per department and doctor."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Services, timings and quick booking."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Test pages with preparation and packages."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental practices",
+          "p": "Treatment pages and consultation enquiry."
+        },
+        {
+          "icon": "&#128106;",
+          "b": "Nursing homes",
+          "p": "Facilities, admissions and directions."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Single-doctor practices",
+          "p": "One strong profile that ranks for the name."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways a hospital site gets built.",
+      "cols": [
+        "Template site builder",
+        "Generic web agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Department pages",
+          "One services page",
+          "Whatever the brief said",
+          "A page per department, planned on search demand"
+        ],
+        [
+          "Doctor profiles",
+          "Photo grid",
+          "Photo grid with a bio",
+          "Template with qualifications, timings and department"
+        ],
+        [
+          "Booking route",
+          "Contact form",
+          "Contact form",
+          "Form, call and WhatsApp on every page, routed by department"
+        ],
+        [
+          "Schema markup",
+          "Generic",
+          "Optional extra",
+          "Organisation, doctor and page schema in the build"
+        ],
+        [
+          "Link to the hospital system",
+          "None",
+          "Separate project",
+          "Requests into HIMS appointments where the hospital runs it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare website development, answered.",
+      "items": [
+        {
+          "q": "WordPress or Next.js for a hospital site?",
+          "a": "WordPress when your marketing or front-office team will add doctors, notices and camps themselves. Next.js when the site must read live data such as slots or doctor availability. The choice is made on the discovery call and written into the scope."
+        },
+        {
+          "q": "Can patients book appointments on the site?",
+          "a": "Yes. At minimum the site takes an appointment request with department, doctor and preferred time. Where the hospital runs HIMS, that request lands in the appointment queue and the patient can be confirmed and reminded on WhatsApp."
+        },
+        {
+          "q": "Can we publish patient reviews or ratings?",
+          "a": "Reviews are yours to collect through your own channels, and we will not write or invent them. The site can link to where patients leave feedback, and real reviews you have collected can be displayed once you provide them."
+        },
+        {
+          "q": "Will the site rank for our departments?",
+          "a": "No one can guarantee rankings. What we control is the structure: a page per department and doctor, clean URLs, schema, fast load and internal links. Ongoing work is a separate service, described under <a href=\"/seo-services/hospital-seo-services/\">hospital SEO services</a>."
+        },
+        {
+          "q": "How long does a hospital website take?",
+          "a": "Live in 30 working days where scope allows. Collecting doctor details and department content from your side is usually the slowest part, so that sheet is started on day one."
+        },
+        {
+          "q": "Can you build for a hospital in another city?",
+          "a": "Yes. The build, reviews and support run remotely over calls and WhatsApp for hospitals anywhere in India and abroad. Meetings in person happen in Chennai, and travel within Tamil Nadu is arranged where it helps."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related website pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/medical-equipment-website-development/",
+          "icon": "&#128230;",
+          "b": "Equipment website",
+          "p": "Catalogue and enquiry first."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128203;",
+          "b": "Product catalogue website",
+          "p": "Specifications and brochures."
+        },
+        {
+          "href": "/web-development/healthcare-b2b-ecommerce-platform/",
+          "icon": "&#127970;",
+          "b": "B2B e-commerce platform",
+          "p": "Tiers, credit terms, bulk orders."
+        },
+        {
+          "href": "/seo-services/hospital-seo-services/",
+          "icon": "&#128269;",
+          "b": "Hospital SEO services",
+          "p": "Getting found after launch."
+        },
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The system behind the booking."
+        }
+      ]
+    }
+  ]
+}

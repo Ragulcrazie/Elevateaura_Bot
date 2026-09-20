@@ -1,0 +1,215 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-coimbatore",
+  "title": "Medical Equipment Software in Coimbatore | Aura Business",
+  "meta": "Medical equipment software for Coimbatore dealers and manufacturers serving Tamil Nadu and Kerala hospitals: CRM, AMC, field service and GST billing.",
+  "h1": "Medical equipment software for Coimbatore, with a builder who can <span class=\"hl\">come to your office</span>.",
+  "crumb": "Coimbatore",
+  "pill": "Coimbatore and western Tamil Nadu",
+  "sub": "Aura Business serves Coimbatore's medical equipment dealers and manufacturers with one platform for hospital sales, AMC and service across Tamil Nadu and Kerala, inventory and GST billing, with a kick-off and training visit from Chennai and remote support after.",
+  "meta_ticks": [
+    "Kick-off and training in person",
+    "Reachable from Chennai by road or train",
+    "WhatsApp support after go-live"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer master showing hospital accounts with installed equipment, contracts and service history",
+    "bar": "app.elevateaura.co.in/customers"
+  },
+  "whatsapp_text": "Hi, we are a medical equipment business in Coimbatore and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Coimbatore",
+  "secondary_keywords": [
+    "medical equipment CRM Coimbatore",
+    "AMC management software Coimbatore",
+    "medical equipment dealer software Tamil Nadu",
+    "field service software Coimbatore",
+    "medical equipment software Kerala dealers"
+  ],
+  "intent": "local",
+  "persona": "Owner of a medical-equipment dealer or manufacturer in Coimbatore serving hospitals in western Tamil Nadu and Kerala",
+  "city": "Coimbatore",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Coimbatore, with an in-person start",
+      "paras": [
+        "Aura Business is the operations platform Elevate Aura builds in Chennai for businesses that sell, install and service medical equipment, and Coimbatore is close enough that the kick-off and the training can be done at your office. Chennai to Coimbatore is a day trip by road or an overnight train, so the scoping session, the go-live training and the first review can be in person, with everything else done remotely and supported on WhatsApp.",
+        "There is no Coimbatore office. The platform is deployed in the cloud, your data is migrated from Excel, and the founder who built it is the person you message when something needs attention."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Coimbatore context",
+      "h2": "An engineering city with a hospital cluster and a border to serve across.",
+      "lead": "Coimbatore combines a manufacturing and engineering base with a dense group of hospitals, and its equipment dealers routinely serve customers across the Kerala border as well as the western districts of Tamil Nadu.",
+      "body": [
+        "For a dealer, the daily reality is hospitals in the city, nursing homes and district hospitals across Tiruppur, Erode and the Nilgiris, and customers in Palakkad, Thrissur and further into Kerala. Engineers cover long distances, spares travel with them, and the same customer may be invoiced under CGST and SGST in Tamil Nadu or IGST across the border. Aura Business dispatches calls by area and skill, gives engineers an offline job card, deducts spares from engineer kits, and decides the tax split from the customer's place of supply.",
+        "For the city's equipment manufacturers, the concerns are the installed base and the channel: which serials are running where, which dealers in Kerala and Karnataka sold them, what warranty each carries, and how to sell the AMC when it ends. The installed-base register, warranty tracking, the dealer order portal and the renewal engine cover that.",
+        {
+          "h3": "What an in-person kick-off adds"
+        },
+        "Remote onboarding works, and it is how businesses outside Tamil Nadu are served. Being able to sit in your office for a day changes two things: the scoping session can walk through the actual files, forms and habits your team uses, and the training can be done with the engineers present, phones in hand, on the real data. After that, support and iteration are remote, which is how the two Chennai distribution businesses already on the platform are run day to day.",
+        {
+          "h3": "The Coimbatore onboarding path"
+        },
+        {
+          "ul": [
+            "Scoping visit at your office to map sales, service and billing and choose modules.",
+            "Customers, installed base, contracts and stock imported from your spreadsheets.",
+            "Your branding on the dashboard, app and invoices.",
+            "Go-live training in person for office staff and engineers, with recordings for later hires.",
+            "Live in 30 working days where scope allows, then WhatsApp support and a review visit if needed."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a Coimbatore dealer uses first.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Sales to hospitals",
+          "items": [
+            "Hospital accounts with contacts by role",
+            "Field visits with GPS check-in",
+            "GST quotation builder with versions",
+            "Tender tracker and rate contracts",
+            "Sample and demo tracking"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Service across the region",
+          "items": [
+            "AMC, CMC and warranty on every serial",
+            "Preventive maintenance schedules",
+            "Dispatch by area and skill, technician route",
+            "Offline mobile job card with photos and signature",
+            "Spares used per job from engineer kits"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing across the border",
+          "items": [
+            "CGST and SGST within Tamil Nadu, IGST to Kerala",
+            "E-invoice IRN and QR, e-way bills",
+            "Service invoices and contract invoices",
+            "Receivables ageing and WhatsApp reminders",
+            "GSTR-1 and 3B prep, Tally export"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Coimbatore situations the platform handles.",
+      "items": [
+        {
+          "h": "A Kerala hospital is served under a Tamil Nadu contract",
+          "workflow": "The CMC is held by the Coimbatore dealer; the hospital in Thrissur raises a ticket on the portal; the engineer is dispatched with the cover shown and the job closes to the contract.",
+          "result": "Service across the border runs on the same record as service in the city."
+        },
+        {
+          "h": "Spares reach the Nilgiris with the engineer",
+          "workflow": "Parts are issued to the engineer's kit on Monday, consumed on job cards through the week in hill hospitals, and reconciled on Friday.",
+          "result": "The kit count is known and the used parts are billed or closed to contract."
+        },
+        {
+          "h": "A manufacturer's AMC pipeline appears",
+          "workflow": "Serials sold through Kerala dealers show warranty ending next quarter; the list goes to the sales team with contacts.",
+          "result": "AMC quotes go out before the first uncovered breakdown."
+        },
+        {
+          "h": "Training happens on real data, in person",
+          "workflow": "The go-live day is spent at your office with engineers logging their first job cards on the app and the office raising its first invoices.",
+          "result": "The team goes live having already used the system."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Coimbatore, answered.",
+      "items": [
+        {
+          "q": "Will someone actually come to Coimbatore?",
+          "a": "Yes, for the kick-off and the go-live training. Elevate Aura is a founder-led studio in Chennai, and Coimbatore is reachable by road or train for a day or two on site. There is no local office, and support after go-live is on WhatsApp and phone."
+        },
+        {
+          "q": "Can we serve Kerala customers from the same system?",
+          "a": "Yes. Customers in Kerala are ordinary accounts with their own GSTIN and address, so invoices carry IGST, e-way bills are raised for consignments crossing the border, and service tickets from Kerala hospitals resolve to the same assets and contracts."
+        },
+        {
+          "q": "Do you work with equipment manufacturers as well as dealers?",
+          "a": "Yes. Manufacturers use the installed-base register, warranty tracking, the dealer order portal and the CRM for doctors and decision-makers. See <a href=\"/aura-business/medical-device-crm-software/\">medical device CRM software</a>."
+        },
+        {
+          "q": "How do engineers in hill or rural hospitals use the app?",
+          "a": "The mobile job card works offline, so fault, work done, spares, photos and the customer signature are captured without signal and sync later. See <a href=\"/aura-business/field-technician-tracking-app/\">the technician app</a>."
+        },
+        {
+          "q": "How long does implementation take?",
+          "a": "Aura Business is delivered on a 30-working-day framework where scope allows, including the scoping visit, Excel data migration, branding and the in-person training. Scope is fixed per project."
+        },
+        {
+          "q": "Which modules do most dealers start with?",
+          "a": "CRM, quotations and GST billing, plus AMC and service, then inventory and portals as the team settles in. Plans are by module count, 15, 47 or all 87, with unlimited users on every plan. See <a href=\"/modules.html\">the full module list</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128222;",
+          "b": "Service management",
+          "p": "Call to invoice."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128241;",
+          "b": "Technician app",
+          "p": "Offline job cards on the road."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Serials and the AMC pipeline."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-bangalore/",
+          "icon": "&#128205;",
+          "b": "Bangalore",
+          "p": "Device makers and dealers."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A Chennai distributor, live in 30 days."
+        }
+      ]
+    }
+  ]
+}

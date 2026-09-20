@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "multi-specialty-hospital-software",
+  "title": "Multi-Specialty Hospital Software | One Record | HIMS",
+  "meta": "Multi-specialty hospital software that keeps one patient record across departments, with doctor rosters by department, department queues.",
+  "h1": "Multi-specialty hospital software where <span class=\"hl\">every department reads the same record</span>.",
+  "crumb": "Multi-Specialty Hospital Software",
+  "pill": "For hospitals with many departments",
+  "sub": "HIMS runs a multi-specialty hospital as one system: a single patient record that cardiology, orthopaedics, medicine and surgery all write to, doctor rosters and queues by department, one pharmacy and one laboratory serving everyone, and a dashboard of OP, IP, beds and collections.",
+  "meta_ticks": [
+    "One record across every department",
+    "Doctor rosters and queues by department",
+    "Shared pharmacy, lab and imaging"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/doctors.png",
+    "alt": "HIMS doctors directory showing clinical staff by department with their queues",
+    "bar": "his.elevateaura.co.in/doctors"
+  },
+  "whatsapp_text": "Hi, we run a multi-specialty hospital and would like to see HIMS.",
+  "primary_keyword": "multi-specialty hospital software",
+  "secondary_keywords": [
+    "multispeciality hospital management software",
+    "hospital software for multiple departments",
+    "hospital information system India",
+    "department-wise hospital software",
+    "large hospital management system",
+    "hospital software with doctor rosters"
+  ],
+  "intent": "commercial",
+  "persona": "Managing director, administrator or IT head of a multi-specialty hospital replacing department-level systems",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What multi-specialty hospital software has to do",
+      "paras": [
+        "Multi-specialty hospital software has one job that a clinic system does not: keep many departments, each with its own doctors, queues and habits, writing to a single patient record and drawing on shared services. HIMS does this by treating a department as a view of the hospital rather than a separate system. Cardiology and orthopaedics see their own rosters and queues, but the pharmacy they prescribe to, the laboratory they order from and the bed board they admit to are the same for everyone.",
+        "For management the payoff is a live dashboard of the whole hospital: OP visits, admissions, bed occupancy and collections across departments on one screen, instead of a monthly compilation from each department's register. AuraPACS imaging is built in, so radiology is one more department on the same record rather than an external service."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The department-silo problem",
+      "h2": "A hospital with eight departments often has eight ways of keeping records.",
+      "lead": "Growth adds departments faster than it adds systems, so each one improvises.",
+      "items": [
+        {
+          "h": "Cross-referrals lose the file",
+          "p": "A medicine patient referred to cardiology is registered again, and the first consultant's notes never reach the second."
+        },
+        {
+          "h": "Rosters on a noticeboard",
+          "p": "Which consultant sits in which room on which afternoon is known to the department secretary and nobody else."
+        },
+        {
+          "h": "Every department wants its own pharmacy",
+          "p": "Stock is split, expiry is missed and the same drug is reordered by three people."
+        },
+        {
+          "h": "Lab reports collected by hand",
+          "p": "Reports are printed in the laboratory and carried to the department, and a percentage of them arrive after the patient has left."
+        },
+        {
+          "h": "Management sees last month",
+          "p": "Department heads compile numbers for a review meeting, and the figures disagree with the accounts."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One patient, many departments",
+      "h2": "How a cross-department case runs on HIMS.",
+      "steps": [
+        {
+          "h": "Registered once",
+          "p": "UHID created at the first visit, reused at every department."
+        },
+        {
+          "h": "Department queue",
+          "p": "Token issued for the consultant on that department's roster."
+        },
+        {
+          "h": "Referral",
+          "p": "The consultant refers to another department; the record goes with the patient."
+        },
+        {
+          "h": "Shared services",
+          "p": "Orders to the one laboratory, one pharmacy and AuraPACS, whoever raised them."
+        },
+        {
+          "h": "Admission",
+          "p": "Bed allocated from the hospital board under the admitting department."
+        },
+        {
+          "h": "One bill, one dashboard",
+          "p": "Charges from every department on the same bill; totals on the live dashboard."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Department structure on a single platform.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Departments",
+          "items": [
+            "Doctors grouped by department",
+            "Rosters and availability per department",
+            "Queues per doctor and per department",
+            "Cross-department referrals on the record"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "One record",
+          "items": [
+            "Structured EMR shared across departments",
+            "e-Prescription from any consultant",
+            "Full history across visits and admissions",
+            "Supports NABH-style documentation"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Shared services",
+          "items": [
+            "Central pharmacy with dispensing queue",
+            "Laboratory (LIMS) from order to verified result",
+            "AuraPACS imaging on the record",
+            "Inventory with reorder levels"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Management",
+          "items": [
+            "Live dashboard of OP, IP, beds and collections",
+            "Cash, insurance and TPA billing in one view",
+            "Role-based access by department and role",
+            "Patient app and portal"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes across the hospital.",
+      "items": [
+        {
+          "h": "A referral from medicine to cardiology",
+          "workflow": "The physician refers on the record; the patient is queued for the cardiologist, who reads the physician's notes and the morning's lab results before the consultation.",
+          "result": "One visit, two departments, no second registration."
+        },
+        {
+          "h": "A visiting surgeon's Tuesday clinic",
+          "workflow": "The roster shows the surgeon in room four from two o'clock; tokens open for that session and the queue appears on the OPD dashboard.",
+          "result": "The front desk answers availability from the roster."
+        },
+        {
+          "h": "One pharmacy for eight departments",
+          "workflow": "Prescriptions from every department land in the same dispensing queue; low-stock and expiry alerts cover the whole hospital.",
+          "result": "Stock is bought once and watched once."
+        },
+        {
+          "h": "The Monday review",
+          "workflow": "Management opens the dashboard for OP, admissions, occupancy and collections, filtered as needed.",
+          "result": "The meeting starts from live numbers."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals where departments have outgrown the shared register.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Medicine, surgery and the specialties on one platform."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Growing nursing homes",
+          "p": "Adding departments without adding systems."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Department heads",
+          "p": "Their roster, their queue, the shared record."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Management",
+          "p": "One dashboard for the whole hospital."
+        },
+        {
+          "icon": "&#128187;",
+          "b": "Hospital IT",
+          "p": "One platform to run instead of many."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running many departments, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Patient record",
+          "One file per department",
+          "One record, heavy configuration",
+          "One record, configured to your departments"
+        ],
+        [
+          "Rosters and queues",
+          "Noticeboard",
+          "Module, often extra",
+          "Built in, per department"
+        ],
+        [
+          "Pharmacy and lab",
+          "Separate registers",
+          "Separate modules and licences",
+          "Shared services on the same platform"
+        ],
+        [
+          "Imaging",
+          "External",
+          "Third-party PACS interface",
+          "AuraPACS built in"
+        ],
+        [
+          "Delivery",
+          "None",
+          "Months, large team",
+          "30-day framework where scope allows, founder-led"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Multi-specialty hospital software, answered.",
+      "items": [
+        {
+          "q": "Do departments get their own screens?",
+          "a": "Each department has its own doctors, rosters and queues, and consultants see their own patients. The record underneath is shared, so a referral or an admission carries the full history. See <a href=\"/hims/doctor-management-software/\">doctor management software</a>."
+        },
+        {
+          "q": "Does HIMS have specialty-specific EMR templates?",
+          "a": "The EMR is structured for history, examination, orders, notes and reports and is used the same way by every department. Specialty-specific forms are not on record as separate modules; tell us what a department needs and it is scoped on the call."
+        },
+        {
+          "q": "Can the pharmacy and laboratory serve all departments?",
+          "a": "Yes. There is one pharmacy with one dispensing queue and one laboratory with one worklist. Orders from any department land there and results return to the ordering consultant on the patient's record."
+        },
+        {
+          "q": "How is imaging handled across departments?",
+          "a": "AuraPACS is built into HIMS. Any department can order a study, the study lands from the machine, the radiologist reports in the browser viewer and the report attaches to the record. See <a href=\"/aurapacs/hospital-pacs-software/\">hospital PACS software</a>."
+        },
+        {
+          "q": "Can management see department-wise numbers?",
+          "a": "The live dashboard shows OP, IP, beds and collections for the hospital, and doctor and department views show queues and load. How you want numbers cut for review meetings is set up during the project."
+        },
+        {
+          "q": "How long does a multi-department rollout take?",
+          "a": "HIMS is delivered on a 30-working-day framework where scope allows. Larger hospitals usually go live department by department on the same record, starting with OP and billing. See <a href=\"/compare/hims-vs-hospital-erp/\">HIMS vs hospital ERP</a> if you are weighing a larger system."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128203;",
+          "b": "Hospital management system",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/doctor-management-software/",
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor management",
+          "p": "Rosters by department."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128202;",
+          "b": "Hospital ERP",
+          "p": "Operations modules, honestly described."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#129658;",
+          "b": "EMR",
+          "p": "One record across departments."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one you need."
+        }
+      ]
+    }
+  ]
+}

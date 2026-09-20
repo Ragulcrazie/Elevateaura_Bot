@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "wifi-connected-device-software",
+  "title": "Wi-Fi Connected Device Software | Elevate Aura",
+  "meta": "Wi-Fi connected device software: onboarding a device onto the customer's network, reconnect logic that survives an outage, cloud sync and pairing from your app.",
+  "h1": "Wi-Fi device software that survives the <span class=\"hl\">customer's network</span>.",
+  "crumb": "Wi-Fi Device Software",
+  "pill": "Software-only, wireless",
+  "sub": "Elevate Aura writes the Wi-Fi layer for connected products: how the device is provisioned onto a network it has never seen, how it behaves when that network goes away, how it syncs with the cloud, and how the companion app pairs with it in the first place.",
+  "meta_ticks": [
+    "Provisioning and onboarding flow",
+    "Reconnect and offline behaviour",
+    "Cloud sync on Supabase or Azure"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we have a Wi-Fi connected device and need the provisioning and cloud sync written. Can we talk?",
+  "cta_h2": "Tell us where the device has to connect.",
+  "cta_p": "Home Wi-Fi, a hospital network or a factory VLAN all behave differently. Tell us the module, the controller and where the product will live, and we will scope the connectivity layer and the app side with it.",
+  "primary_keyword": "Wi-Fi connected device software",
+  "secondary_keywords": [
+    "Wi-Fi provisioning software development",
+    "connected device onboarding software",
+    "Wi-Fi firmware development services",
+    "smart device cloud sync development",
+    "ESP based device software development",
+    "IoT Wi-Fi connectivity software India"
+  ],
+  "intent": "commercial",
+  "persona": "Product or engineering lead at a device company whose product has to get onto a customer's Wi-Fi and stay there",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Wi-Fi connected device software",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What Wi-Fi connected device software has to do",
+      "paras": [
+        "Wi-Fi connected device software is the part of the firmware that gets a product onto a network it has never seen, keeps it there, and carries its data to the cloud. Elevate Aura writes that layer to your hardware spec, together with the companion app screens that walk the owner through the first connection.",
+        "Most of the work is in the unglamorous half. Credentials have to be captured and stored without being typed on a device with no keyboard. The radio has to come back after a router reboot, a moved access point or an hour with no internet, without a person power cycling anything. Readings taken while offline have to reach the cloud once the link returns, in order and without duplicates.",
+        "We write the provisioning flow, the connection and retry logic, the buffering and sync, and the pairing path in the app. The module, antenna, board and enclosure are your hardware team's work. This is a software-only engagement, and we say so before scoping."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The connectivity problem",
+      "h2": "It worked on the bench Wi-Fi.",
+      "lead": "Connectivity complaints are rarely about the radio. They are about what the software does in the five minutes after the radio fails.",
+      "items": [
+        {
+          "h": "Onboarding people give up on",
+          "p": "The first connection needs a hotspot, an app screen and clear failure messages, not a manual with an IP address in it."
+        },
+        {
+          "h": "No reconnect strategy",
+          "p": "The device retries in a tight loop, drains the battery or hammers the router, and never backs off."
+        },
+        {
+          "h": "Data lost while offline",
+          "p": "Nothing is buffered, so an outage becomes a hole in the record that no one can explain later."
+        },
+        {
+          "h": "Credentials handled carelessly",
+          "p": "Network details are stored in plain flash and no one has thought about how the device is handed to a new owner."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From an unboxed device to steady cloud sync.",
+      "steps": [
+        {
+          "h": "Scope the network",
+          "p": "Module, controller, and where the product lives: home, clinic, ward or plant."
+        },
+        {
+          "h": "Provisioning",
+          "p": "Hotspot or BLE assisted onboarding, with app screens and clear errors."
+        },
+        {
+          "h": "Connection logic",
+          "p": "Retry with backoff, roaming, credential storage and reset to factory."
+        },
+        {
+          "h": "Sync",
+          "p": "Local buffering, ordered upload and de-duplication on the cloud side."
+        },
+        {
+          "h": "Test on hardware",
+          "p": "Router reboots, weak signal and outages exercised on your boards."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, build instructions and a support runbook your team keeps."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The connectivity layer, device and app.",
+      "groups": [
+        {
+          "icon": "&#128274;",
+          "h": "Onboarding",
+          "items": [
+            "Device hotspot provisioning",
+            "BLE assisted Wi-Fi handover",
+            "Credential storage and clearing",
+            "Factory reset and re-onboarding"
+          ]
+        },
+        {
+          "icon": "&#128246;",
+          "h": "Staying connected",
+          "items": [
+            "Retry with backoff",
+            "Access point roaming behaviour",
+            "Signal and link state reporting",
+            "Power aware duty cycling"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Cloud sync",
+          "items": [
+            "Local buffering while offline",
+            "Ordered upload on reconnect",
+            "Supabase or Azure pipeline",
+            "Command and setting sync down"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Companion app",
+          "items": [
+            "Pairing and setup screens",
+            "Connection status and troubleshooting",
+            "Device settings and control",
+            "React Native for Android and iOS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where the connectivity layer earns its place.",
+      "items": [
+        {
+          "h": "A device onboarded by a non-technical owner",
+          "workflow": "The app finds the device over its own hotspot, sends the network credentials and confirms the link before the screen moves on.",
+          "result": "Setup finishes without a support call."
+        },
+        {
+          "h": "Equipment on a clinic network",
+          "workflow": "The device tolerates a nightly router restart, reconnects on its own and uploads what it buffered in between.",
+          "result": "The record has no gaps and nobody visits the site."
+        },
+        {
+          "h": "A product moving to a new owner",
+          "workflow": "A defined reset clears stored credentials and identity, and the device returns to its onboarding state.",
+          "result": "Resale or redeployment without a trip back to the factory."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Products that connect in someone else's building.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device makers",
+          "p": "Devices on clinic and home networks."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital equipment",
+          "p": "Kit that must sit on a managed network."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Machines reporting from the floor."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Benchtop units sending results onward."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware founders",
+          "p": "A first connected product to ship."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Connectivity software without a hire."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting the Wi-Fi layer built, three ways.",
+      "cols": [
+        "Module vendor sample code",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Reconnect and backoff",
+          "Minimal",
+          "Happy path only",
+          "Written and tested against outages"
+        ],
+        [
+          "Offline buffering",
+          "No",
+          "Rarely",
+          "Buffered, ordered and de-duplicated"
+        ],
+        [
+          "App and cloud side",
+          "Not included",
+          "Another person",
+          "Same builder, same engagement"
+        ],
+        [
+          "Tested on your hardware",
+          "On the vendor board",
+          "Sometimes",
+          "On your boards, with failures forced"
+        ],
+        [
+          "Hardware boundary",
+          "Not applicable",
+          "Blurred",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Wi-Fi device software, answered.",
+      "items": [
+        {
+          "q": "How does a device with no screen join a network?",
+          "a": "Usually the device raises its own temporary hotspot and the companion app hands over the network credentials, or the app sends them over BLE. We build whichever fits your hardware, including the app screens, the confirmation step and readable failure messages."
+        },
+        {
+          "q": "What happens when the internet goes down?",
+          "a": "The device keeps working locally, buffers readings in its own storage and retries the link with a backoff so it does not drain power or flood the router. When the link returns the buffered data uploads in order and duplicates are rejected on the cloud side."
+        },
+        {
+          "q": "Can you build the companion app as well?",
+          "a": "Yes. The app is built in React Native for Android and iOS on the same engagement, so pairing, status and control are written to match the firmware. See <a href=\"/product-development/device-companion-app-development/\">device companion app development</a>."
+        },
+        {
+          "q": "Do you choose the Wi-Fi module or antenna?",
+          "a": "No. Elevate Aura is software-only. The module, antenna, board layout, certification of the radio and the enclosure are all your hardware team's decisions. We write and test the software on the hardware you provide."
+        },
+        {
+          "q": "Can the device be updated in the field afterwards?",
+          "a": "Yes, and it should be. Once a product is on customer networks, an update path is how you fix a connectivity bug without a site visit. See <a href=\"/product-development/ota-firmware-update-development/\">OTA firmware update development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/ble-device-software/",
+          "icon": "&#128246;",
+          "b": "BLE device software",
+          "p": "Pairing, GATT and streaming."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Versioning and rollback."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "Where the readings land."
+        },
+        {
+          "href": "/product-development/device-companion-app-development/",
+          "icon": "&#128241;",
+          "b": "Companion app",
+          "p": "Pair, control, troubleshoot."
+        },
+        {
+          "href": "/product-development/iot-product-development/",
+          "icon": "&#128225;",
+          "b": "IoT product development",
+          "p": "Device, app and cloud together."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

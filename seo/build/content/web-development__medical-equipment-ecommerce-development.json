@@ -1,0 +1,333 @@
+{
+  "cluster": "web-development",
+  "slug": "medical-equipment-ecommerce-development",
+  "title": "Medical Equipment E-commerce Development | Elevate Aura",
+  "meta": "Medical equipment e-commerce development: a B2B storefront with quote-to-order, distributor pricing and payment verification by UTR.",
+  "h1": "Medical equipment e-commerce development for buyers who order by <span class=\"hl\">quotation and bank transfer</span>.",
+  "crumb": "Medical Equipment E-commerce Development",
+  "pill": "For distributors, dealers and OEMs",
+  "sub": "Hospitals and dealers do not buy a ventilator with a card at checkout. They ask for a quote, negotiate, order and pay by NEFT. We build storefronts around that: quote-to-order, distributor pricing, order status and UTR payment verification, on Next.js and Supabase.",
+  "meta_ticks": [
+    "Quote-to-order, not just add to cart",
+    "Distributor pricing behind login",
+    "Payment verification by UTR"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss an online store for medical equipment.",
+  "primary_keyword": "medical equipment e-commerce development",
+  "secondary_keywords": [
+    "medical equipment online store development",
+    "B2B medical e-commerce platform India",
+    "medical supplies e-commerce website",
+    "quote to order e-commerce",
+    "medical equipment storefront development"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a medical-equipment distributor or manufacturer who wants hospitals and dealers to order online",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment e-commerce development delivers",
+      "paras": [
+        "Medical equipment e-commerce development builds an online store that works the way medical buying actually works in India. A public storefront shows the catalogue; a buyer requests a quotation, receives it, converts it to an order, and pays by bank transfer, with the UTR number submitted and verified before the order is released. Dealers see their own pricing after login.",
+        "Elevate Aura built exactly this for Medline Robotics, a medical robotics company in Chennai: a storefront, a distributor portal, quotations, distributor ordering and UTR payment verification, on Supabase and JavaScript, with 253 product and city SEO landing pages feeding the store. That platform is the template for this service.",
+        "Orders and payments can flow into <a href=\"/aura-business.html\">Aura Business</a> as sales orders, invoices and receipts, so the store and the office share one record."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why standard e-commerce fails here",
+      "h2": "A retail cart does not fit a hospital purchase.",
+      "lead": "Off-the-shelf shop platforms assume a consumer with a card. Medical buying has quotes, approvals, dealers and bank transfers.",
+      "items": [
+        {
+          "h": "No quotation step",
+          "p": "The hospital needs a formal quote for approval before it can order. A cart with a checkout button has nowhere for that to happen."
+        },
+        {
+          "h": "One price for everyone",
+          "p": "Dealers, hospitals and walk-in buyers pay different prices. A retail platform shows one figure to all of them."
+        },
+        {
+          "h": "Card-only payment",
+          "p": "Institutional buyers pay by NEFT or RTGS. Matching those transfers to orders by hand takes an accounts person half a day."
+        },
+        {
+          "h": "Orders that do not reach operations",
+          "p": "The store emails an order; someone retypes it into the billing system and stock is updated later, or never."
+        },
+        {
+          "h": "GST as an afterthought",
+          "p": "Invoices need CGST, SGST or IGST by state, gapless numbering and e-invoice where applicable. Retail plugins rarely get this right."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How an order runs",
+      "h2": "From storefront to verified payment.",
+      "steps": [
+        {
+          "h": "Browse",
+          "p": "Public catalogue by product line, specifications and applications."
+        },
+        {
+          "h": "Request quote",
+          "p": "Buyer builds a list and asks for a quotation; dealers see their price tier."
+        },
+        {
+          "h": "Quotation",
+          "p": "GST quotation generated and sent; revisions tracked."
+        },
+        {
+          "h": "Order",
+          "p": "Quote converted to an order with delivery details and terms."
+        },
+        {
+          "h": "Pay by transfer",
+          "p": "Buyer pays by NEFT or RTGS and submits the UTR number in the portal."
+        },
+        {
+          "h": "Verify and fulfil",
+          "p": "UTR verified against the bank credit; order released, invoice raised, stock reduced."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The storefront and what sits behind it.",
+      "groups": [
+        {
+          "icon": "&#128722;",
+          "h": "Storefront",
+          "items": [
+            "Catalogue by product line",
+            "Specification and brochure per product",
+            "Quote request and enquiry",
+            "WhatsApp on every product",
+            "Product and city SEO pages"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Quote to order",
+          "items": [
+            "GST quotation builder",
+            "Quote revisions and acceptance",
+            "Order from quote",
+            "Order status and tracking page"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Pricing and payment",
+          "items": [
+            "Distributor and customer price tiers",
+            "UTR submission and verification",
+            "Payment gateway where wanted",
+            "Receipts and outstanding view"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Operations",
+          "items": [
+            "Sales orders into Aura Business",
+            "GST invoice and e-way bill from the order",
+            "Stock reduced on fulfilment",
+            "Dealer login and documents vault"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-business/medical-equipment-quotation-software/",
+        "label": "See the quotation module in Aura Business"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three orders a medical storefront handles.",
+      "items": [
+        {
+          "h": "A hospital buying two units",
+          "workflow": "The purchase officer requests a quote for two units, gets a GST quotation PDF, obtains internal approval and converts it to an order a week later.",
+          "result": "The quote, order and invoice are one chain, with nothing retyped."
+        },
+        {
+          "h": "A dealer's monthly order",
+          "workflow": "The dealer logs in, sees dealer pricing, places a bulk order and pays by RTGS, entering the UTR in the portal.",
+          "result": "Accounts verifies the credit and the order is released without an email thread."
+        },
+        {
+          "h": "A walk-in buyer from a city page",
+          "workflow": "A clinic in another city lands on a product-and-city page, requests a quote and pays by transfer.",
+          "result": "A customer the sales team never had to find."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Sellers whose buyers are institutions and dealers.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Distributors",
+          "p": "Dealer network ordering online."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Direct and dealer channels on one store."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Medical robotics and devices",
+          "p": "The Medline Robotics model."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and reagents",
+          "p": "Repeat orders with price tiers."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical supplies",
+          "p": "Clinics ordering by quote."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital suppliers",
+          "p": "Tender and rate-contract pricing."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Retail shop platform, generic agency, or a built medical storefront.",
+      "cols": [
+        "Retail shop platform",
+        "Generic web agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Quotation step",
+          "Plugin, if any",
+          "Custom work",
+          "Built in, GST quotation to order"
+        ],
+        [
+          "Dealer pricing",
+          "Limited",
+          "Custom work",
+          "Price tiers behind login"
+        ],
+        [
+          "Bank transfer payment",
+          "Manual matching",
+          "Manual matching",
+          "UTR submitted and verified in the portal"
+        ],
+        [
+          "Link to billing and stock",
+          "Export",
+          "Integration project",
+          "Sales orders and stock in Aura Business"
+        ],
+        [
+          "Proof",
+          "Varies",
+          "Varies",
+          "Medline Robotics storefront and portal, live"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical equipment e-commerce development, answered.",
+      "items": [
+        {
+          "q": "How does UTR payment verification work?",
+          "a": "After paying by NEFT, RTGS or IMPS the buyer enters the UTR number against the order in the portal. Your accounts team matches it to the bank credit and marks it verified, which releases the order. This is the flow built for Medline Robotics."
+        },
+        {
+          "q": "Can we also accept card or UPI payments?",
+          "a": "Yes. A payment gateway can sit alongside bank transfer for smaller orders and walk-in buyers. Institutional orders usually stay on transfer with UTR verification."
+        },
+        {
+          "q": "Can dealers see different prices from hospitals?",
+          "a": "Yes. Price tiers are assigned per account, so a logged-in dealer sees dealer pricing and a hospital account sees its own, while the public storefront shows specifications and quote requests. See <a href=\"/web-development/medical-distributor-portal-development/\">distributor portal development</a>."
+        },
+        {
+          "q": "Does the store handle GST invoicing?",
+          "a": "Quotations and orders are GST-native, and when connected to Aura Business the order becomes a tax invoice with CGST, SGST or IGST, gapless numbering, e-invoice and e-way bill where applicable. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing software</a>."
+        },
+        {
+          "q": "What platform is it built on?",
+          "a": "Next.js and Supabase, with a Postgres database, authentication and storage, the same stack as the Medline Robotics platform. WordPress is used for content-only sites, not for storefronts with pricing and orders."
+        },
+        {
+          "q": "How long does a storefront take?",
+          "a": "Live in 30 working days where scope allows. Catalogue import from your price list, quotation flow and UTR verification are the core; dealer tiers and Aura Business integration are scoped with you."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related e-commerce pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/healthcare-b2b-ecommerce-platform/",
+          "icon": "&#127970;",
+          "b": "B2B e-commerce platform",
+          "p": "Tiers, credit terms, bulk orders."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128274;",
+          "b": "Distributor portal",
+          "p": "Dealer login and tracking."
+        },
+        {
+          "href": "/web-development/medical-equipment-website-development/",
+          "icon": "&#128230;",
+          "b": "Equipment website",
+          "p": "Catalogue and enquiry first."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128203;",
+          "b": "Quotation software",
+          "p": "The GST quote behind the order."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "The storefront we shipped."
+        }
+      ]
+    }
+  ]
+}

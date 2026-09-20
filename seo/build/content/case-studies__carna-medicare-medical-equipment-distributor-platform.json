@@ -1,0 +1,213 @@
+{
+  "cluster": "case-studies",
+  "slug": "carna-medicare-medical-equipment-distributor-platform",
+  "title": "Medical Equipment Distributor Software Case Study | Elevate Aura",
+  "meta": "How Carna Medicare, a medical equipment distributor in Chennai, moved from WhatsApp and Excel to a 12-module operations platform shipped in 30 days.",
+  "h1": "Carna Medicare: a 12-module operations platform for a <span class=\"hl\">medical equipment distributor</span>.",
+  "crumb": "Carna Medicare",
+  "pill": "Case study &middot; Chennai",
+  "sub": "A medical-equipment distribution business in Chennai was running on WhatsApp and Excel. Elevate Aura built a 12-module operations platform with a field-staff app, a manager dashboard, GST billing, payment tracking and service tracking, and shipped it in 30 days.",
+  "meta_ticks": [
+    "Medical equipment &middot; Chennai",
+    "React Native, Supabase, WordPress",
+    "Shipped end to end in 30 days"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the Carna Medicare case study and want something similar for our distribution business.",
+  "date": "2026-09-20",
+  "primary_keyword": "medical equipment distributor software case study",
+  "secondary_keywords": [
+    "medical equipment distribution platform",
+    "field staff app for distributors",
+    "GST billing for medical equipment dealers",
+    "distributor operations platform India",
+    "Chennai medical equipment software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a medical-equipment distribution business considering a custom operations platform",
+  "page_type": "case-study",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What was built, and for whom",
+      "paras": [
+        "Carna Medicare is a medical-equipment distribution business in Chennai. Elevate Aura built and shipped a 12-module operations platform for it: a field-staff mobile app, a manager dashboard, GST billing, payment tracking and service tracking, on React Native, Supabase and WordPress, delivered end to end in 30 days.",
+        "It is the project Aura Business grew out of, which is why the product covers the sale, the stock, the service contract and the invoice rather than only the pipeline."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before",
+      "h2": "The situation",
+      "body": [
+        "The business was run entirely on WhatsApp and Excel. That is not unusual for a founder-led distribution business, and it works for a while: the owner holds the picture, the field team reports by message, and the spreadsheets are close enough to true on the day they are updated.",
+        "The limits show up in the places where two people need the same answer at once. Which quotation went out, at what price. Whether that invoice was paid. Which unit went to which customer, and when its service is due. What the field team did yesterday, and what proof exists. Every one of those answers existed somewhere, in a chat thread or a tab, and each one had to be asked for."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The build",
+      "h2": "What was built",
+      "body": [
+        "One platform covering twelve modules, split across two interfaces: a web dashboard for the office and a mobile app for people in the field.",
+        {
+          "ul": [
+            "<b>Field-staff app.</b> Built in React Native so the team in the field works from a phone rather than reporting back by message.",
+            "<b>Manager dashboard.</b> A single web view of what is happening across sales, payments and service.",
+            "<b>GST billing.</b> Tax invoicing native to the platform, so the invoice is raised where the order is.",
+            "<b>Payment tracking.</b> What has been invoiced, what has been received and what is outstanding, in one place rather than in a receivables sheet.",
+            "<b>Service tracking.</b> Service work recorded against the customer and the equipment, so history is kept rather than remembered.",
+            "<b>Website.</b> Built on WordPress alongside the platform."
+          ]
+        },
+        "The data layer is Supabase, which is what keeps the office dashboard and the field app working from the same records rather than from two copies."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The method",
+      "h2": "How the work ran",
+      "body": [
+        "Every Elevate Aura build follows the same 30-working-day framework, and this one was no exception.",
+        {
+          "h3": "Discovery"
+        },
+        "Scope is fixed before anything is built: which modules are in, what each screen has to do, and which parts of the existing way of working are kept rather than redesigned. Fixed scope is what makes a 30-day timeline meaningful rather than optimistic.",
+        {
+          "h3": "Configure"
+        },
+        "The workspace is set up with the customer's branding across the dashboard, the app and the invoices, and the modules are switched on and shaped to how the business actually works.",
+        {
+          "h3": "Migrate"
+        },
+        "Existing Excel data is brought in, so the customer list, products and open records become the starting point instead of something to retype.",
+        {
+          "h3": "Train"
+        },
+        "Office staff learn the dashboard and field staff learn the app, and support afterwards comes directly from the person who built it, on WhatsApp and in person in Chennai."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Before and after",
+      "h2": "What each part of the platform replaced",
+      "headers": [
+        "Module or component",
+        "What it replaced"
+      ],
+      "rows": [
+        [
+          "Field-staff mobile app (React Native)",
+          "Field updates sent as WhatsApp messages and photographs"
+        ],
+        [
+          "Manager dashboard",
+          "Asking each person, then assembling the answer in a spreadsheet"
+        ],
+        [
+          "GST billing",
+          "Invoices prepared separately from the quotation that produced them"
+        ],
+        [
+          "Payment tracking",
+          "A receivables sheet updated whenever somebody had time"
+        ],
+        [
+          "Service tracking",
+          "Service history held in an engineer's memory and a chat thread"
+        ],
+        [
+          "Shared database (Supabase)",
+          "Several copies of the same workbook, each slightly different"
+        ],
+        [
+          "WordPress website",
+          "Enquiries arriving only through phone and WhatsApp"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "After",
+      "h2": "What it changed",
+      "body": [
+        "The change is a change in where the record lives. Work that used to be reported now writes itself: a field visit is logged in the app rather than described in a message, an invoice is raised from the order it belongs to rather than rebuilt, and service done on a machine is attached to that machine rather than to whoever remembers it.",
+        "For the office that means the answer to an operational question is looked up instead of asked for. For the field team it means the day ends without a round of reporting messages. For the owner it means one dashboard rather than a set of separate files that have to be reconciled before they can be trusted.",
+        "The platform is the origin of <a href=\"/aura-business.html\">Aura Business</a>, now a productised version of the same work with 12 suites and 87 modules, running in distribution businesses in Chennai today."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "About this project",
+      "items": [
+        {
+          "q": "What exactly was delivered?",
+          "a": "A 12-module operations platform with a field-staff mobile app, a manager dashboard, GST billing, payment tracking and service tracking, plus a WordPress website. The stack was React Native, Supabase and WordPress, and it was shipped end to end in 30 days."
+        },
+        {
+          "q": "Is 30 days realistic for a platform this size?",
+          "a": "It is the standard Elevate Aura framework: live in 30 working days where scope allows. It works because the scope is fixed in discovery and because one person builds the whole thing, so there is no handover between teams."
+        },
+        {
+          "q": "Can we get the same platform?",
+          "a": "The productised version is <a href=\"/aura-business.html\">Aura Business</a>, with 12 suites and 87 modules priced by module tier and unlimited users. Custom work is scoped on a call when a business needs something outside those modules."
+        },
+        {
+          "q": "What happened to the existing spreadsheets?",
+          "a": "They were migrated in during setup. Customer lists, products and open records become the starting data in the platform, and exports remain available whenever a spreadsheet is the right tool for a specific analysis."
+        },
+        {
+          "q": "Who supports the platform afterwards?",
+          "a": "The founder, Ragul Sekar, who built it. Support is direct on WhatsApp and in person in Chennai, rather than through a ticket queue or an account-management layer."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "The product pages",
+      "h2": "What this platform became",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128230;",
+          "b": "Distributor software",
+          "p": "The productised version of this build."
+        },
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128736;",
+          "b": "Field service software",
+          "p": "Dispatch, job cards and spares."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Invoice, challan and e-way bill."
+        },
+        {
+          "href": "/mobile-app-development/field-service-mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Field service app development",
+          "p": "The React Native side of the work."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Store, portal and SEO pages."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#128203;",
+          "b": "All case studies",
+          "p": "Every project in one place."
+        }
+      ]
+    }
+  ]
+}

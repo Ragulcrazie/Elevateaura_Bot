@@ -1,0 +1,164 @@
+{
+  "cluster": "compare",
+  "slug": "index",
+  "title": "Software Comparisons for Healthcare Buyers | Elevate Aura",
+  "meta": "Side-by-side software comparisons for hospitals, imaging centres, distributors and coaching institutes, including when the cheaper option is the right one.",
+  "h1": "Software comparisons for people who have to <span class=\"hl\">choose and live with it</span>.",
+  "crumb": "Comparisons",
+  "pill": "Honest side-by-sides",
+  "sub": "Nine comparisons written for buyers rather than for search engines: what each option covers, how each is priced, who has to run it, and the situations where the option we do not sell is the right one.",
+  "meta_ticks": [
+    "Written by the team that builds it",
+    "Every page names when to say no",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I read one of your comparisons and want to talk through what suits our business.",
+  "date": "2026-09-20",
+  "primary_keyword": "healthcare software comparisons",
+  "secondary_keywords": [
+    "PACS comparison",
+    "CRM vs ERP distributor",
+    "AMC vs CMC",
+    "HIMS vs hospital ERP",
+    "LMS comparison India"
+  ],
+  "intent": "comparison",
+  "persona": "Hospital, imaging centre, distributor or institute buyer comparing categories of software before shortlisting",
+  "page_type": "hub",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What these comparisons are for",
+      "paras": [
+        "Most comparison pages exist to make one product win. These exist to help you work out which category of software your problem belongs to, which is the decision that actually costs money when it goes wrong. A centre that buys a viewer when it needed an archive, or a distributor that buys an ERP when it needed a service system, has bought a real product that solves somebody else's problem.",
+        "Every page follows the same shape: who each option is for, how each one works, a side-by-side table covering what it includes, deployment, cost model, who runs it and where it fails, and then a section on how to decide. Where an option we do not sell is the right answer, the page says so plainly.",
+        "Elevate Aura builds PACS, hospital software, an operations platform for distributors and a learning platform, so the bias is declared rather than hidden. The tables are written so you can check them against any vendor's demo."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "All comparisons",
+      "h2": "Nine side-by-sides, grouped by what you are buying.",
+      "items": [
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "b": "PACS vs DICOM viewer",
+          "p": "When a free viewer is genuinely enough, and the point at which a centre outgrows one."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "b": "PACS vs cloud storage",
+          "p": "Why a shared folder of studies is not an archive, and what breaks first."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "b": "Cloud PACS vs on-premise PACS",
+          "p": "Internet dependence, data ownership, backup and the hybrid middle ground."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "b": "HIMS vs hospital ERP",
+          "p": "The clinical record against enterprise resource planning, and where billing sits."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "b": "CRM vs ERP for distributors",
+          "p": "What each covers, where the after-sales loop falls, and when an ERP is genuinely right."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "b": "Generic CRM vs medical equipment CRM",
+          "p": "Leads-only against lead to renewal, with GST billing, field service and AMC."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "b": "AMC vs CMC",
+          "p": "What each contract covers, how each is priced, and who carries the spare-parts risk."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "b": "Spreadsheets vs distributor software",
+          "p": "When Excel is the correct answer, and the four points where it stops being one."
+        },
+        {
+          "href": "/compare/lms-vs-youtube-and-whatsapp-for-coaching/",
+          "b": "LMS vs YouTube and WhatsApp",
+          "p": "Free and blind against structured and measured, for coaching institutes."
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "How these are written",
+      "h2": "What makes a comparison worth reading.",
+      "items": [
+        {
+          "icon": "&#9878;",
+          "b": "The losing case is named",
+          "p": "Every page states the situations where the option we do not sell is the better buy."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "The same criteria each time",
+          "p": "Coverage, deployment, cost model, who runs it, when it wins and when it loses."
+        },
+        {
+          "icon": "&#128176;",
+          "b": "Cost described, not quoted",
+          "p": "Pricing logic is explained without numbers, because every scope is quoted on a call."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Written by the builder",
+          "p": "By the person who builds and supports these systems, not by a marketing team."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Guides and real projects",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "Guides",
+          "p": "Plain-language explanations of each category."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#127973;",
+          "b": "Case studies",
+          "p": "Three platforms built and shipped."
+        },
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128230;",
+          "b": "Aura Business",
+          "p": "Operations platform for distributors."
+        },
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid imaging for centres."
+        },
+        {
+          "href": "/hims.html",
+          "icon": "&#129658;",
+          "b": "HIMS",
+          "p": "Hospital and clinic management."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127891;",
+          "b": "Aura Learn",
+          "p": "Courses, tests and certification."
+        }
+      ]
+    }
+  ]
+}

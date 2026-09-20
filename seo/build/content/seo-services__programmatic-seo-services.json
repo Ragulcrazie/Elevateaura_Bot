@@ -1,0 +1,330 @@
+{
+  "cluster": "seo-services",
+  "slug": "programmatic-seo-services",
+  "title": "Programmatic SEO Services Done Responsibly | Elevate Aura",
+  "meta": "Programmatic SEO services: real search intent, unique data per page, templates and internal links, 50 to 250 pages per product and city, no doorway pages.",
+  "h1": "Programmatic SEO services, with the <span class=\"hl\">doorway pages left out</span>.",
+  "crumb": "Programmatic SEO Services",
+  "pill": "For catalogues and multi-city businesses",
+  "sub": "Generating hundreds of pages is easy and usually a mistake. Doing it well means proving the demand, holding unique data for every page, designing a template that reads like a page a person wanted, and refusing the pages that fail those tests.",
+  "meta_ticks": [
+    "50 to 250 pages per product and city",
+    "Unique data per page or no page",
+    "Doorway pages refused"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss programmatic SEO for our catalogue.",
+  "schema": "Service",
+  "service_type": "Programmatic SEO",
+  "area_served": "India",
+  "primary_keyword": "programmatic SEO services",
+  "secondary_keywords": [
+    "programmatic SEO agency India",
+    "scaled content SEO",
+    "product and city landing pages",
+    "template landing page SEO",
+    "bulk landing page generation"
+  ],
+  "intent": "commercial",
+  "persona": "Marketing lead at a business with a large catalogue or a wide service territory",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What programmatic SEO actually is",
+      "paras": [
+        "Programmatic SEO is building a set of pages from a data source and a template instead of writing each one by hand. It suits businesses with structured repetition: a product in a city, a model in an application, a service at a branch. Done properly it gives a searcher exactly the page they asked for. Done badly it produces hundreds of near-identical pages that search engines call doorway pages and treat accordingly.",
+        "The difference is entirely in the data. If each page carries something genuinely different, a specification, a real application note, an actual service reach or a real price band, it is a page. If the only variable is a city name dropped into the same sentences, it is not, and we will not build it.",
+        "The site describes this work as 50 to 250 pages per product and city. Elevate Aura built 253 product and city landing pages across four product lines for Medline Robotics, a medical robotics company in Chennai."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How programmatic SEO goes wrong",
+      "h2": "Five hundred pages that all say the same thing.",
+      "lead": "Most failed programmatic projects fail the same way, and the failure is visible before a single page is published.",
+      "items": [
+        {
+          "h": "One paragraph, many cities",
+          "p": "The same text with a place name substituted. A searcher recognises it instantly, and so does a search engine."
+        },
+        {
+          "h": "Demand never checked",
+          "p": "Pages built for combinations nobody searches, filling the site with content that can never earn a visit."
+        },
+        {
+          "h": "Claims that are not true locally",
+          "p": "A page implying an office or same-day service in a city where the business has neither."
+        },
+        {
+          "h": "No internal linking plan",
+          "p": "Hundreds of orphan pages with nothing linking to them, so most are never crawled properly."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How we build a page set",
+      "h2": "Six checks before a set goes live.",
+      "steps": [
+        {
+          "h": "Prove the intent",
+          "p": "Each combination is checked for real search demand. Combinations without it are dropped from the plan, not padded out."
+        },
+        {
+          "h": "Find the unique data",
+          "p": "Every page must carry something true and specific to it. If the data does not exist, the page is not built."
+        },
+        {
+          "h": "Design the template",
+          "p": "A layout that reads as a deliberate page: heading, the specific data, the differences that matter and a clear next step."
+        },
+        {
+          "h": "Vary the structure honestly",
+          "p": "Sections that only apply to some pages appear only on those pages, rather than being filled with filler text everywhere."
+        },
+        {
+          "h": "Link the set in",
+          "p": "Category hubs, breadcrumbs and sideways links between related pages, so nothing is an orphan."
+        },
+        {
+          "h": "Review and prune",
+          "p": "After the set has been indexed, pages that attract nothing are rewritten or removed, and the finding shapes the next set."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "What a programmatic engagement delivers.",
+      "groups": [
+        {
+          "icon": "&#128202;",
+          "h": "Data work",
+          "items": [
+            "Source data audited from your systems",
+            "Fields defined per page type",
+            "Gaps identified before building",
+            "Import and refresh routine"
+          ]
+        },
+        {
+          "icon": "&#128196;",
+          "h": "Templates",
+          "items": [
+            "Product and city template",
+            "Application and use-case template",
+            "Category hub pages",
+            "Conditional sections, not filler"
+          ]
+        },
+        {
+          "icon": "&#128279;",
+          "h": "Crawl and index",
+          "items": [
+            "Internal link plan and hubs",
+            "Sitemaps split by page type",
+            "Canonical and near-duplicate rules",
+            "Index coverage monitoring"
+          ]
+        },
+        {
+          "icon": "&#9878;",
+          "h": "Guard rails",
+          "items": [
+            "Doorway pages refused in writing",
+            "No claim of a presence you do not have",
+            "Minimum unique content per page",
+            "Pruning built into the schedule"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/seo-services/medical-equipment-seo/",
+        "label": "The equipment version of this work"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where a page set earns its keep.",
+      "items": [
+        {
+          "h": "A catalogue with four product lines",
+          "workflow": "Each model gets a specification page, each application an explainer, and the cities actually supplied get pages describing delivery, installation and service reach.",
+          "result": "The Medline Robotics pattern: 253 pages across four lines."
+        },
+        {
+          "h": "A service business across a state",
+          "workflow": "Only the towns where engineers genuinely travel get pages, each stating the honest travel position rather than implying a branch.",
+          "result": "Fewer pages than the spreadsheet allowed, and none that mislead."
+        },
+        {
+          "h": "A set that should not be built",
+          "workflow": "Research shows no demand for a model-and-city combination and no data to distinguish the pages from each other.",
+          "result": "We say so and the budget goes to pages that can work."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses with structured repetition.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Large catalogues",
+          "p": "Many models across several lines."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Multi-city suppliers",
+          "p": "Real delivery and service reach."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service networks",
+          "p": "Engineers who genuinely travel."
+        },
+        {
+          "icon": "&#128187;",
+          "b": "Software companies",
+          "p": "Feature, integration and use-case pages."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables suppliers",
+          "p": "Compatibility per parent equipment."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Course and exam businesses",
+          "p": "A page per exam or syllabus."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hundreds of pages get made.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Page source",
+          "Hand-written, slowly",
+          "Spun from one template",
+          "Generated from audited data with a real template"
+        ],
+        [
+          "Demand check",
+          "Keyword list",
+          "None",
+          "Every combination checked before it is planned"
+        ],
+        [
+          "Uniqueness test",
+          "Word count",
+          "Word count",
+          "A named data field per page, or the page is dropped"
+        ],
+        [
+          "Internal links",
+          "Manual",
+          "None",
+          "Hubs, breadcrumbs and sideways links designed with the set"
+        ],
+        [
+          "Pruning",
+          "Rarely",
+          "Never",
+          "Scheduled review that removes pages that earn nothing"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Programmatic SEO services, answered.",
+      "items": [
+        {
+          "q": "How many pages will you build for us?",
+          "a": "Typically 50 to 250 per product and city programme, decided after the demand research. Medline Robotics ended at 253 across four product lines. The number is an outcome of the data, never a target agreed in advance."
+        },
+        {
+          "q": "Are programmatic pages against search engine guidelines?",
+          "a": "Pages built from data to serve a real search are not. Doorway pages, meaning near-identical pages made only to funnel visitors, are. The difference is whether each page carries something genuinely unique, which is why we test that first."
+        },
+        {
+          "q": "Will you build city pages for cities where we have no office?",
+          "a": "Only if the page says honestly what you do there. For Elevate Aura that means setup is remote and support is on WhatsApp, with in-person work in Chennai. We will write the same honest position for you, not imply a branch."
+        },
+        {
+          "q": "What if our data is not good enough?",
+          "a": "Then we fix the data before building pages, or we do not build the set. A catalogue with no specification fields cannot produce distinguishable pages, so the first job is structuring it. See <a href=\"/web-development/medical-product-catalogue-website/\">catalogue website development</a>."
+        },
+        {
+          "q": "Is this AI-generated content?",
+          "a": "The pages are generated from your data through templates, and the written sections are drafted and edited by a person against that data. Nothing is published that neither of us has read."
+        },
+        {
+          "q": "What happens to pages that never attract anyone?",
+          "a": "They are reviewed after indexing and either rewritten with better data or removed. Leaving dead pages on a site helps nobody, and pruning is written into the engagement rather than left as an optional extra."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128230;",
+          "b": "Medical equipment SEO",
+          "p": "Product and city pages in practice."
+        },
+        {
+          "href": "/seo-services/medical-device-seo/",
+          "icon": "&#129302;",
+          "b": "Medical device SEO",
+          "p": "For manufacturers and OEMs."
+        },
+        {
+          "href": "/seo-services/healthcare-saas-seo/",
+          "icon": "&#128187;",
+          "b": "Healthcare SaaS SEO",
+          "p": "Clusters instead of city pages."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128203;",
+          "b": "Catalogue website",
+          "p": "The data these pages need."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#128188;",
+          "b": "Medline Robotics",
+          "p": "253 pages, four product lines."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "cluster": "compare",
+  "slug": "generic-crm-vs-medical-equipment-crm",
+  "title": "Generic CRM vs Medical Equipment CRM | Elevate Aura",
+  "meta": "Generic CRM vs medical equipment CRM: leads-only against lead to renewal, GST billing, field service and AMC, plus when a generic CRM is genuinely enough.",
+  "h1": "Generic CRM vs medical equipment CRM: leads only, or <span class=\"hl\">lead to renewal</span>.",
+  "crumb": "Generic vs industry CRM",
+  "pill": "Comparison",
+  "sub": "Every CRM stores a lead. The question for an equipment business is what happens after the order: the invoice, the installation, the contract and the service call. This page compares the two honestly, including the cases where a generic CRM is the right answer.",
+  "meta_ticks": [
+    "Lead to renewal, not lead to won",
+    "Fair about pure sales teams",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See the CRM",
+  "cta_href": "/aura-business/medical-equipment-crm-software/",
+  "whatsapp_text": "Hi, I read the generic CRM vs medical equipment CRM comparison and want to discuss our sales and service setup.",
+  "date": "2026-09-20",
+  "primary_keyword": "generic CRM vs medical equipment CRM",
+  "secondary_keywords": [
+    "industry specific CRM vs generic CRM",
+    "best CRM for medical equipment business",
+    "CRM with AMC tracking",
+    "CRM with GST billing India",
+    "medical device CRM comparison"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or sales head of a medical-equipment business choosing between a general-purpose CRM and an industry CRM",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Where your CRM is allowed to stop",
+      "paras": [
+        "A generic CRM is for a team whose job ends when the order is won. It stores leads, contacts, companies, deals and activities, and it is genuinely good at that. If you sell and hand over, with no installation, no warranty obligation and no service contract, a generic CRM is enough and anything heavier is wasted.",
+        "A medical-equipment CRM is for a business whose relationship with the customer starts at the order rather than ending there. The unit gets installed and carries a serial number, the warranty runs out, an AMC or CMC is offered, the machine breaks, an engineer is dispatched, a spare part is consumed, a service invoice follows and the contract comes up for renewal. That loop is the business, and a generic CRM has no place to hold it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "Two different shapes of record",
+      "body": [
+        {
+          "h3": "What a generic CRM records"
+        },
+        "The core objects are lead, contact, account, opportunity and activity. Pipelines are configurable, reports are good, and email and calendar integrations are mature. What you cannot easily create is a serial-numbered asset that belongs to a customer, has a warranty end date, carries a contract, accumulates a service history and consumes spare parts. People try, and it becomes a custom build that nobody maintains once the person who configured it leaves.",
+        {
+          "h3": "What a medical-equipment CRM records"
+        },
+        "The same pipeline, plus the objects this trade runs on. Hospital and clinic accounts with the decision-makers named, field visits with a GPS check-in, territory and target management. Then a GST quotation that becomes a sales order, a tax invoice with CGST, SGST and IGST treatment, a delivery challan, an e-invoice and an e-way bill. Then the installed-base register: which unit went where, under what warranty, on which contract. Then service: breakdown intake, dispatch, a mobile job card with photo proof, and the spare part that drops out of stock when it is used.",
+        {
+          "h3": "Why the GST side matters more than it sounds"
+        },
+        "Most general-purpose CRMs are built for markets where the invoice is a downstream accounting event. In India the quotation, the order and the invoice are the same conversation, and the tax treatment changes the number the buyer sees. When billing lives outside the CRM, somebody re-keys the quotation and the two disagree by quarter end. <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing inside the platform</a> removes that step."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "Generic CRM against an industry platform",
+      "cols": [
+        "Generic CRM",
+        "Generic CRM plus add-ons",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Leads, contacts, deals, activities and reporting",
+          "The same, with bolted-on billing or ticketing from other vendors",
+          "CRM, quotation, GST billing, inventory, AMC, field service and finance in one platform"
+        ],
+        [
+          "Installed base",
+          "Not a concept; serial numbers live in a spreadsheet",
+          "Possible as a custom object somebody has to maintain",
+          "A register of every unit delivered, with warranty, contract and service history"
+        ],
+        [
+          "AMC and CMC",
+          "Recorded as a renewal reminder if someone sets one",
+          "A second system, reconciled by hand",
+          "Contracts, SLAs, preventive schedules and a renewal engine against the asset"
+        ],
+        [
+          "Field service",
+          "Not covered",
+          "A separate tool with its own login",
+          "Dispatch, mobile job card, photo proof, spares used, offline mode"
+        ],
+        [
+          "GST billing",
+          "Usually an integration to an accounts package",
+          "Works, until the quotation and the invoice disagree",
+          "Native tax invoice, challan, e-invoice, e-way bill, credit notes"
+        ],
+        [
+          "Cost model",
+          "Per user each month, so field staff make it expensive",
+          "Several per-user bills that grow independently",
+          "Module tier pricing, with unlimited users included"
+        ],
+        [
+          "Who runs it",
+          "The sales team only",
+          "Sales, service and accounts, each in a different place",
+          "Office, field and owner, working from one customer record"
+        ],
+        [
+          "When it wins",
+          "A pure sales team with no service obligation after delivery",
+          "A business committed to tools it will not replace",
+          "A business that sells, installs and then services what it sold"
+        ],
+        [
+          "When it loses",
+          "The first renewal nobody chased",
+          "Month three, when nobody knows which system is correct",
+          "A team that only needs a pipeline and nothing else"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "One question decides it",
+      "body": [
+        "Ask whether you owe the customer anything after the delivery note is signed. If the answer is no, buy the generic CRM with the best interface, because you will use it every day and the rest is overhead. A trading business that ships boxes, a consultancy selling projects, a dealer who passes service back to the manufacturer: all are fine on a general-purpose tool.",
+        "If the answer is yes, the question becomes where that obligation is recorded. In most equipment businesses it lives in a service engineer's head, a WhatsApp group and one spreadsheet. That becomes a software problem the moment a contract lapses unnoticed, or a machine is serviced under a warranty that expired last year.",
+        {
+          "ul": [
+            "<b>Stay generic</b> if your sales team is the only team using the system, if service is somebody else's responsibility, and if an accountant raises invoices in a package that already works.",
+            "<b>Go industry-specific</b> if field staff need a mobile app, if you quote and invoice under GST from the same record, or if AMC and CMC renewals are a real part of your revenue. See <a href=\"/aura-business/installed-base-management-software/\">installed base management</a>.",
+            "<b>Avoid the middle</b>, which is a generic CRM plus a billing tool plus a field-service app, each with its own customer list. The reconciliation cost is paid quietly every month."
+          ]
+        },
+        "Before choosing, ask any vendor to run one enquiry through to a renewal on your own data. A generic CRM will stop at closed-won. Compare also <a href=\"/compare/crm-vs-erp-for-medical-equipment-distributors/\">CRM against ERP</a> if somebody has quoted you an ERP for the same problem."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Generic CRM vs medical equipment CRM, answered",
+      "items": [
+        {
+          "q": "Is a generic CRM ever enough for a medical equipment business?",
+          "a": "Yes, when the business is purely sales: you quote, you deliver, and service is the manufacturer's obligation rather than yours. In that case a generic CRM with good reporting is the right tool and an industry platform would sit unused."
+        },
+        {
+          "q": "What does an industry CRM add that matters most?",
+          "a": "The installed base. Once every delivered unit has a record with a warranty date, a contract and a service history, renewals, preventive maintenance, dispatch and spares all become automatic consequences rather than separate tasks."
+        },
+        {
+          "q": "Can we not just customise a generic CRM?",
+          "a": "You can, and it usually works for a year. The cost appears later as unmaintained custom objects, automations nobody understands, and a mobile experience field staff avoid."
+        },
+        {
+          "q": "Does the CRM handle GST invoicing?",
+          "a": "In Aura Business, yes. The quotation becomes a sales order and a tax invoice with CGST, SGST or IGST, gapless numbering, delivery challan, e-invoice IRN and QR, and e-way bill, with an export to your accounting package."
+        },
+        {
+          "q": "How is pricing different?",
+          "a": "Generic CRMs are usually priced per user each month, which penalises putting field staff on the system. Aura Business is priced by module tier with unlimited users, so technicians and reps cost nothing extra to add."
+        },
+        {
+          "q": "Can field engineers use it without internet?",
+          "a": "Yes. The field app supports offline working, so a job card, photos and a customer signature can be captured at a site with no signal and sync when the engineer is back in coverage. See <a href=\"/aura-business/medical-equipment-field-service-software/\">field service software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#128202;",
+          "b": "Medical equipment CRM",
+          "p": "Pipeline, visits and accounts."
+        },
+        {
+          "href": "/aura-business/medical-device-crm-software/",
+          "icon": "&#129513;",
+          "b": "Medical device CRM",
+          "p": "For manufacturers and OEM sales."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128221;",
+          "b": "Installed base management",
+          "p": "Every unit, warranty and contract."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "What is a medical equipment CRM",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "When an ERP is genuinely right."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

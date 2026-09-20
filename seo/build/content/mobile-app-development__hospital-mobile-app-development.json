@@ -1,0 +1,338 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "hospital-mobile-app-development",
+  "title": "Hospital Mobile App Development: Patient and Staff Apps",
+  "meta": "Hospital mobile app development tied to your HIMS: a patient app for appointments, tokens, reports and bills, plus staff apps for doctors, nurses and admin.",
+  "h1": "Hospital mobile app development that runs on the <span class=\"hl\">hospital's own system</span>.",
+  "crumb": "Hospital Mobile App Development",
+  "pill": "For hospitals and nursing homes",
+  "sub": "A hospital app is only useful when it shows the same appointments, tokens, reports and bills the front desk sees. We build patient and staff apps on top of HIMS, or on your existing hospital system, so the app and the hospital never disagree.",
+  "meta_ticks": [
+    "Patient app and staff apps",
+    "Tied to HIMS appointments, queue and billing",
+    "Android and iOS from one codebase"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a mobile app for our hospital.",
+  "primary_keyword": "hospital mobile app development",
+  "secondary_keywords": [
+    "hospital app development company",
+    "hospital patient app",
+    "hospital staff app development",
+    "HIMS mobile app",
+    "hospital app India"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator or IT head who wants a patient-facing app and staff apps that work with the hospital system",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital mobile app development covers",
+      "paras": [
+        "Hospital mobile app development means two families of apps. The patient app lets a patient book an appointment, see their token position, receive reports and pay bills. The staff apps give doctors, nurses and the front desk the parts of the hospital system they need while moving around the building.",
+        "Elevate Aura builds both on top of <a href=\"/hims.html\">HIMS</a>, the hospital and clinic management system, so appointments, the OP queue, EMR entries, lab results, imaging from AuraPACS and billing are read from and written to one database. If your hospital already runs a different system with an API, the apps connect to that instead.",
+        "The apps ship for Android and iOS from one codebase, and the hospital's branding goes on the store listing and every screen."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why hospital apps disappoint",
+      "h2": "A hospital app that is not connected to the hospital is a brochure.",
+      "lead": "The common failures are all the same failure: the app and the hospital system are two separate worlds.",
+      "items": [
+        {
+          "h": "Appointments booked twice",
+          "p": "The app takes a booking, an email goes to the front desk, someone retypes it into the system. Slots clash and patients wait."
+        },
+        {
+          "h": "Tokens nobody trusts",
+          "p": "The queue in the app is a guess. Patients still crowd the corridor because the number on the wall is the real one."
+        },
+        {
+          "h": "Reports delivered by hand",
+          "p": "Lab and imaging reports are printed and collected in person because the app cannot reach the LIMS or PACS."
+        },
+        {
+          "h": "Doctors cannot see the chart",
+          "p": "A consultant on rounds wants the last prescription and the latest vitals, and the app shows only a calendar."
+        },
+        {
+          "h": "Bills that do not match",
+          "p": "The amount in the app differs from the bill at the counter because billing lives elsewhere."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it is built",
+      "h2": "From the OP counter to two apps in the store.",
+      "steps": [
+        {
+          "h": "Map the patient journey",
+          "p": "Registration, appointment, token, consult, lab, pharmacy, bill, discharge. We find the steps an app should remove."
+        },
+        {
+          "h": "Decide the system of record",
+          "p": "HIMS, or your existing hospital system through its API."
+        },
+        {
+          "h": "Patient app",
+          "p": "Booking, token position, reports, bills, WhatsApp updates, family members on one login."
+        },
+        {
+          "h": "Staff apps",
+          "p": "Doctor rounds, nursing vitals, front desk check-in, each with its own role and access."
+        },
+        {
+          "h": "Pilot on one department",
+          "p": "One OP department runs the apps for real before the rest of the hospital."
+        },
+        {
+          "h": "Publish and roll out",
+          "p": "Store release with the hospital's brand, then department by department."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Patient app and staff apps, module by module.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Patient app",
+          "items": [
+            "Appointment booking by doctor and slot",
+            "Live token and queue position",
+            "Lab and imaging reports",
+            "Bills, receipts and online payment",
+            "Family profiles on one login"
+          ]
+        },
+        {
+          "icon": "&#129657;",
+          "h": "Doctor app",
+          "items": [
+            "Today's roster and OP queue",
+            "EMR view on rounds",
+            "E-prescription",
+            "Imaging via AuraPACS viewer link"
+          ]
+        },
+        {
+          "icon": "&#128137;",
+          "h": "Nursing and ward",
+          "items": [
+            "Vitals against the bed",
+            "Task and medication lists",
+            "Bed occupancy view",
+            "Offline entry in wards"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Front desk and admin",
+          "items": [
+            "Walk-in registration and tokens",
+            "Live dashboard of OP, IP and beds",
+            "WhatsApp reminders and reports",
+            "Role-based access and audit"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims.html",
+        "label": "See what HIMS covers"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes when the app is connected to HIMS.",
+      "items": [
+        {
+          "h": "A patient books at night",
+          "workflow": "The patient picks a consultant and a slot in the app; the slot is blocked in HIMS at that moment and a WhatsApp confirmation goes out.",
+          "result": "The front desk sees the booking in the morning without retyping anything."
+        },
+        {
+          "h": "Waiting from the car park",
+          "workflow": "On arrival the patient checks in; the app shows the token position and sends a notice two tokens before their turn.",
+          "result": "Fewer people standing in the corridor, and the queue on the wall and in the app agree."
+        },
+        {
+          "h": "Report without a second visit",
+          "workflow": "When the lab verifies a result or a radiology report is finalised, the patient receives a secure link on WhatsApp and the PDF in the app.",
+          "result": "No trip back to the hospital to collect paper."
+        },
+        {
+          "h": "Consultant on rounds",
+          "workflow": "The doctor opens the bed list on the phone, reads last night's vitals and writes the e-prescription against the encounter.",
+          "result": "Pharmacy sees the prescription in its dispensing queue immediately."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals of every size, and the departments inside them.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Patient app plus doctor and ward apps."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Nursing homes",
+          "p": "Simple booking and reports for a small team."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Many doctors, one queue app."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic wings",
+          "p": "Report delivery on WhatsApp and in-app."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultants",
+          "p": "A roster and queue in the pocket."
+        },
+        {
+          "icon": "&#128200;",
+          "b": "Hospital owners",
+          "p": "Live OP, IP, bed and collection numbers on a phone."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Standalone app, HIMS vendor add-on, or an app built on HIMS.",
+      "cols": [
+        "Standalone booking app",
+        "Generic app agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Source of appointments and tokens",
+          "Its own database",
+          "Whatever you integrate later",
+          "HIMS, read and written live"
+        ],
+        [
+          "Reports in the app",
+          "Manual upload",
+          "Depends on integrations",
+          "From LIMS and AuraPACS when finalised"
+        ],
+        [
+          "Staff apps",
+          "None",
+          "Separate project",
+          "Doctor, nursing and front desk in the same build"
+        ],
+        [
+          "Billing",
+          "Separate",
+          "Separate",
+          "GST, insurance and TPA billing from HIMS"
+        ],
+        [
+          "Who you speak to",
+          "Support email",
+          "Project manager",
+          "The builder of both the app and HIMS"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital mobile app development, answered.",
+      "items": [
+        {
+          "q": "Do we need HIMS from Elevate Aura to get the app?",
+          "a": "No. The apps are built on HIMS by default because every module is already there, but they can connect to another hospital system that exposes an API. What the app can show depends on what that API provides, which we confirm before scoping."
+        },
+        {
+          "q": "Can a patient manage family members?",
+          "a": "Yes. One login can hold several patient profiles, so a parent books for a child or an elderly relative and receives their reports and reminders on the same phone."
+        },
+        {
+          "q": "How are lab and imaging reports delivered?",
+          "a": "When a lab result is verified in HIMS or a radiology report is finalised in AuraPACS, the patient gets the PDF in the app and a secure WhatsApp link that opens without a login. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp report sharing</a>."
+        },
+        {
+          "q": "Is the app ABHA ready?",
+          "a": "HIMS is built to be ABHA and ABDM ready, and the patient app inherits that structure for records. We do not describe the software as certified; the hospital completes its own ABDM registration."
+        },
+        {
+          "q": "What about the doctor's app?",
+          "a": "The doctor app shows the roster, the live consult queue, the patient's EMR and lets the doctor write an e-prescription and open imaging. It is described in full on <a href=\"/mobile-app-development/doctor-app-development/\">doctor app development</a>."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "Live in 30 working days where scope allows, usually starting with the patient app and one department as a pilot. Staff apps follow in the same codebase, and the hospital's branding is applied before release."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related hospital app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/patient-app-development/",
+          "icon": "&#128100;",
+          "b": "Patient app",
+          "p": "The patient side in detail."
+        },
+        {
+          "href": "/mobile-app-development/doctor-app-development/",
+          "icon": "&#129657;",
+          "b": "Doctor app",
+          "p": "Roster, queue, e-prescription."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments in HIMS",
+          "p": "The module behind the booking."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#127915;",
+          "b": "Queue and tokens",
+          "p": "How tokens are issued."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "healthcare-mobile-app-development",
+  "title": "Healthcare Mobile App Development, Workflow First | Elevate Aura",
+  "meta": "Healthcare mobile app development built around real clinical and operational workflows. React Native or Flutter, GPS, offline mode and store publishing.",
+  "h1": "Healthcare mobile app development that starts from the <span class=\"hl\">workflow, not the wireframe</span>.",
+  "crumb": "Healthcare Mobile App Development",
+  "pill": "For hospitals, clinics, diagnostics and dealers",
+  "sub": "We build healthcare mobile apps for Android and iOS around the way care and supply actually run in India: appointments, queues, reports, field visits and service calls. React Native or Flutter, a Supabase or Azure backend, and store publishing included.",
+  "meta_ticks": [
+    "Scoped from a real workflow",
+    "Offline mode and GPS built in",
+    "Published to Play Store and App Store"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss healthcare mobile app development.",
+  "primary_keyword": "healthcare mobile app development",
+  "secondary_keywords": [
+    "medical app development",
+    "healthcare app developers India",
+    "clinical workflow app development",
+    "healthcare Android app development",
+    "healthcare iOS app development"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital IT head, clinic owner or healthcare founder commissioning a mobile app",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare mobile app development means here",
+      "paras": [
+        "Healthcare mobile app development is the design, build and release of an Android and iOS app that carries a clinical or operational workflow: a patient booking and paying, a nurse recording vitals, a phlebotomist collecting samples on a route, an engineer closing a service call. Elevate Aura builds these apps in React Native or Flutter with a Supabase or Azure backend.",
+        "The difference from a generic app build is the starting point. We begin with the workflow as it runs today, on paper, WhatsApp and Excel, and design the screens to remove steps from it. GPS, offline mode, photo proof and WhatsApp messaging are included where the workflow needs them, not sold as add-ons.",
+        "The app is published to Google Play and the App Store as part of the delivery, and the person who built it remains the person who supports it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why healthcare apps fail",
+      "h2": "Most healthcare apps are abandoned within weeks of launch.",
+      "lead": "Not because the code was bad, but because the app asked staff and patients to work in a way they never did.",
+      "items": [
+        {
+          "h": "Designed from a feature list",
+          "p": "The brief said appointments, reports and chat. Nobody asked how the front desk actually handles a walk-in when the doctor is running late."
+        },
+        {
+          "h": "Breaks without signal",
+          "p": "Basements, wards and rural roads have poor connectivity. An app that needs a live connection for every tap is put down by the second day."
+        },
+        {
+          "h": "A second copy of the data",
+          "p": "The app has its own database, so reports, bills and appointments drift away from what the hospital system says."
+        },
+        {
+          "h": "No WhatsApp",
+          "p": "Patients in India live on WhatsApp. An app that only sends push notifications talks to itself."
+        },
+        {
+          "h": "Never reaches the store",
+          "p": "Developer accounts, listings, screenshots and review rejections are left to the customer, and the app stays an APK on a shared drive."
+        },
+        {
+          "h": "Nobody to call",
+          "p": "The agency team that built it has moved to the next project. The fix for a broken login waits in a ticket queue."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How we build",
+      "h2": "From the workflow on paper to an app in the store.",
+      "steps": [
+        {
+          "h": "Workflow discovery",
+          "p": "We walk the current process with the people who do it, in person in Chennai or on a call."
+        },
+        {
+          "h": "Data model and backend",
+          "p": "Supabase or Azure: authentication, Postgres, storage, realtime, and connections to HIMS, AuraPACS or Aura Business."
+        },
+        {
+          "h": "Screens for each role",
+          "p": "Patient, doctor, nurse, technician or engineer each get only the screens their job needs."
+        },
+        {
+          "h": "Offline, GPS and proof",
+          "p": "Local storage and sync, location capture, photos and signatures wherever the workflow needs evidence."
+        },
+        {
+          "h": "Test on real devices",
+          "p": "Builds go to your team early, on the phones they actually use."
+        },
+        {
+          "h": "Publish and support",
+          "p": "Store listings, release, and support from the builder on WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The building blocks of a healthcare app.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "App",
+          "items": [
+            "React Native or Flutter, one codebase",
+            "Android and iOS",
+            "Role-based screens and access",
+            "Offline mode with background sync",
+            "Push notifications"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Field and proof",
+          "items": [
+            "GPS check-in and route capture",
+            "Photo proof with timestamp",
+            "Digital signature capture",
+            "Barcode and QR scanning"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Messaging",
+          "items": [
+            "WhatsApp reminders and reports",
+            "Secure report links without login",
+            "In-app notices and alerts"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Backend and integration",
+          "items": [
+            "Supabase or Azure backend",
+            "HIMS, AuraPACS and Aura Business connections",
+            "Your existing API where one exists",
+            "Audit log of who did what"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/mobile-app-development/",
+        "label": "See every app type we build"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three healthcare apps and the workflow each one carries.",
+      "items": [
+        {
+          "h": "Sample collection on a route",
+          "workflow": "A diagnostic centre's phlebotomist sees the day's pickups on a map, checks in at each home with GPS, scans the sample barcode and marks it collected.",
+          "result": "The lab knows what is arriving before the bike does, and the patient gets a WhatsApp update."
+        },
+        {
+          "h": "Nurse vitals on the ward",
+          "workflow": "A nurse records vitals against the bed on a phone; entries save locally and sync to the EMR when the ward Wi-Fi returns.",
+          "result": "No paper charts retyped at the station at the end of the shift."
+        },
+        {
+          "h": "Service engineer at a hospital",
+          "workflow": "An engineer opens the assigned call, completes the job card, records spares used and captures the biomedical department's signature.",
+          "result": "The call closes against the contract and stock updates without a phone call to the office."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who delivers care or supplies it.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals",
+          "p": "Patient and staff apps on top of HIMS."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Booking, tokens and follow-ups."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Collection routes and report delivery."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Equipment dealers",
+          "p": "Field sales and service apps."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Home care providers",
+          "p": "Visit scheduling and proof of visit."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Health startups",
+          "p": "A first release that can be tested with real users."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways to get a healthcare app built.",
+      "cols": [
+        "Generic app agency",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Starting point",
+          "Your feature list",
+          "Your feature list",
+          "Your workflow, walked through with staff"
+        ],
+        [
+          "Indian healthcare context",
+          "Varies",
+          "Rarely",
+          "HIMS, ABHA-ready records, WhatsApp, GST billing"
+        ],
+        [
+          "Offline mode",
+          "Extra scope",
+          "Often skipped",
+          "Designed in from the first screen"
+        ],
+        [
+          "Backend",
+          "Separate team",
+          "Separate hire",
+          "Same builder, Supabase or Azure"
+        ],
+        [
+          "Store publishing",
+          "Sometimes",
+          "Usually left to you",
+          "Included"
+        ],
+        [
+          "Who supports it after launch",
+          "Account manager",
+          "Whoever is available",
+          "The person who wrote it"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare mobile app development, answered.",
+      "items": [
+        {
+          "q": "React Native or Flutter, which do you recommend?",
+          "a": "Both are in use here. React Native was used for the Carna Medicare field app, Flutter for our own exam-prep app on Google Play. The choice depends on your existing web stack, the libraries you need and who will maintain the app later. See <a href=\"/mobile-app-development/react-native-healthcare-app-development/\">React Native</a> and <a href=\"/mobile-app-development/flutter-healthcare-app-development/\">Flutter</a>."
+        },
+        {
+          "q": "Can the app connect to the hospital system we already use?",
+          "a": "If your system exposes an API, yes. If you use HIMS or AuraPACS from Elevate Aura the app connects natively to appointments, EMR, lab results, billing and imaging. Where no API exists we discuss a practical sync on the call."
+        },
+        {
+          "q": "How do you handle patient data?",
+          "a": "Data lives in your backend, with role-based access, authentication and an audit log. Records are structured to be ABHA and ABDM ready when built on HIMS. We do not claim regulatory certifications; we build to the workflow and the access rules you sign off."
+        },
+        {
+          "q": "Do you publish the app to the stores?",
+          "a": "Yes. Developer accounts, listings, screenshots, privacy declarations and the review process are handled as part of the build. Our own exam-prep app went through this process and is live on Google Play."
+        },
+        {
+          "q": "What does the app cost?",
+          "a": "There is no price list because every app is scoped to its workflow. After a discovery call you receive a fixed scope with a timeline. The delivery framework is live in 30 working days where scope allows."
+        },
+        {
+          "q": "Will the app work in a ward or a basement with no signal?",
+          "a": "Yes, where offline mode is in scope. Forms, job cards and check-ins are saved on the device and synced when the connection returns, with conflicts resolved on the server side."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related mobile app services",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "Every app type in one place."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "icon": "&#127973;",
+          "b": "Hospital apps",
+          "p": "Patient and staff apps on HIMS."
+        },
+        {
+          "href": "/mobile-app-development/patient-app-development/",
+          "icon": "&#128100;",
+          "b": "Patient app",
+          "p": "Book, pay, collect reports."
+        },
+        {
+          "href": "/mobile-app-development/field-service-mobile-app-development/",
+          "icon": "&#128205;",
+          "b": "Field service app",
+          "p": "Job cards, GPS, offline sync."
+        },
+        {
+          "href": "/product-development/healthcare-app-development/",
+          "icon": "&#128268;",
+          "b": "Healthcare app development",
+          "p": "The product development view."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128203;",
+          "b": "Carna Medicare",
+          "p": "A field app shipped in 30 days."
+        }
+      ]
+    }
+  ]
+}

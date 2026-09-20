@@ -1,0 +1,347 @@
+{
+  "cluster": "aura-business",
+  "slug": "service-contract-management-software",
+  "title": "Service Contract Management Software for Dealers | Aura Business",
+  "meta": "Service contract management software for AMC, CMC, warranty, extended warranty and rate contracts, with multi-site terms, profitability and a renewal engine.",
+  "h1": "Service contract management software for every <span class=\"hl\">contract type you sell</span>.",
+  "crumb": "Service Contract Software",
+  "pill": "For businesses that live on renewals",
+  "sub": "Aura Business holds AMC, CMC, warranty, extended warranty and rate contracts in one register, links each to the assets and sites it covers, shows what each contract earns and costs, and puts every one on a renewal clock before it lapses.",
+  "meta_ticks": [
+    "Five contract types, one register",
+    "Profitability per contract",
+    "Renewal engine with reminders"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard showing contracts due for renewal and AMC revenue at risk in rupees",
+    "bar": "app.elevateaura.co.in/contracts"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss service contract management software for our AMC and CMC business.",
+  "primary_keyword": "service contract management software",
+  "secondary_keywords": [
+    "AMC contract management software",
+    "CMC contract software",
+    "maintenance contract management software India",
+    "contract renewal software for equipment dealers",
+    "multi-site service contract software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of an equipment dealer whose recurring revenue comes from AMC, CMC and warranty contracts",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What service contract management software does",
+      "paras": [
+        "Service contract management software keeps every maintenance agreement you have sold in one register, with its type, term, covered assets, visit entitlements and price, and then uses that register to decide how service calls are handled and when renewals are chased. Aura Business treats this as the revenue engine of the platform: the AMC and Service Contracts suite sits between the installed base on one side and the service desk and billing on the other.",
+        "The register is not limited to annual maintenance. It holds AMC, comprehensive CMC, manufacturer warranty, extended warranty sold by you, and rate contracts with government or corporate buyers, and each type carries its own rules about what a visit costs the customer and what it costs you."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why contracts leak",
+      "h2": "A contract you cannot see is a contract you will not renew.",
+      "lead": "The typical dealer knows roughly how many AMCs are running. Very few can say which ones are profitable, which lapse next month, and which hospital sites are covered by the same agreement.",
+      "items": [
+        {
+          "h": "Types muddled together",
+          "p": "An AMC and a CMC on the same customer are both called 'the contract', so spares are given away under an agreement that only covers labour."
+        },
+        {
+          "h": "Multi-site terms in one cell",
+          "p": "A hospital group with six branches has one agreement, and the spreadsheet cannot say which serial at which branch is covered."
+        },
+        {
+          "h": "Profit unknown until year end",
+          "p": "Visits, spares and travel are never added up against the contract price, so a loss-making CMC is renewed at the same rate."
+        },
+        {
+          "h": "Renewals chased after expiry",
+          "p": "The reminder is the customer's call about a breakdown on a machine whose cover ended two months ago."
+        },
+        {
+          "h": "Rate contracts forgotten",
+          "p": "A rate contract with a government buyer has fixed prices and an end date, and nobody checks either before quoting."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The contract lifecycle",
+      "h2": "From the sale of cover to its renewal.",
+      "steps": [
+        {
+          "h": "Create",
+          "p": "Choose the type, term, price, sites and the assets from the installed base it covers."
+        },
+        {
+          "h": "Entitle",
+          "p": "Set PM visits, response SLA, spares inclusion and exclusions per type."
+        },
+        {
+          "h": "Serve",
+          "p": "Service calls and PM visits check the contract and close against it."
+        },
+        {
+          "h": "Measure",
+          "p": "Visits, spares and labour accumulate as cost against the contract value."
+        },
+        {
+          "h": "Remind",
+          "p": "The renewal engine surfaces expiring contracts with the rupee value at stake."
+        },
+        {
+          "h": "Renew",
+          "p": "Quote the renewal from the record, invoice it, and start the next term."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Contract types, terms, money and renewals.",
+      "groups": [
+        {
+          "icon": "&#128220;",
+          "h": "Contract types",
+          "items": [
+            "Service contracts (AMC)",
+            "Comprehensive CMC contracts",
+            "Warranty and extended warranty tracking",
+            "Rate-contract management",
+            "Multi-site contracts across branches"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Terms and entitlements",
+          "items": [
+            "Preventive maintenance schedules from the term",
+            "SLA definitions and breach tracking",
+            "Covered assets from the installed base",
+            "Exclusions and spares inclusion by type"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Contract profitability",
+            "Service invoices for uncovered work",
+            "AMC revenue and leakage dashboard in rupees",
+            "GST invoicing of the contract itself"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Renewals",
+          "items": [
+            "Contract renewal engine",
+            "Renewal prediction",
+            "WhatsApp reminders to the customer",
+            "Renewal quote from the existing record"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "How the contract register earns its keep.",
+      "items": [
+        {
+          "h": "A group contract covers the right machines",
+          "workflow": "A hospital chain signs one CMC for forty monitors across five branches; each serial is attached to the contract with its branch, so a call from any site resolves to the same agreement.",
+          "result": "No branch is refused service and no branch is double-billed."
+        },
+        {
+          "h": "A loss-making CMC is repriced",
+          "workflow": "At renewal, the contract shows visits made, spares consumed and labour hours against its price; the margin is negative.",
+          "result": "The renewal is quoted higher with the evidence attached, or converted to an AMC with spares billed separately."
+        },
+        {
+          "h": "An extended warranty is sold at the right moment",
+          "workflow": "Manufacturer warranty on a batch of analysers ends next quarter; the renewal engine lists them with the customer contacts.",
+          "result": "The rep offers extended cover before the first out-of-warranty breakdown."
+        },
+        {
+          "h": "A rate contract is honoured without re-checking",
+          "workflow": "A quotation to a government hospital pulls prices from its active rate contract and warns when the contract end date is near.",
+          "result": "Quotes match the agreed rates and the renewal is not missed."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose recurring revenue is a contract.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "AMC and CMC on critical care, imaging and lab equipment."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Warranty and extended warranty on their own installed base."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital chain suppliers",
+          "p": "One agreement, many branches, many serials."
+        },
+        {
+          "icon": "&#127963;",
+          "b": "Government suppliers",
+          "p": "Rate contracts with fixed prices and hard end dates."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial service firms",
+          "p": "Compressors, panels and machines on annual cover."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Multi-brand service companies",
+          "p": "Contracts across products from different principals."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where contracts usually live, and where they should.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Contract types",
+          "One column called 'AMC'",
+          "A recurring invoice",
+          "AMC, CMC, warranty, extended, rate contract"
+        ],
+        [
+          "Covered assets",
+          "Free text",
+          "Not tracked",
+          "Serials from the installed base, per site"
+        ],
+        [
+          "Service call check",
+          "Ask around",
+          "Not possible",
+          "Coverage shown on the ticket"
+        ],
+        [
+          "Profitability",
+          "Guessed",
+          "Revenue only",
+          "Cost of visits and spares against price"
+        ],
+        [
+          "Renewal",
+          "Calendar reminder",
+          "Invoice reminder",
+          "Renewal engine with rupee value at risk"
+        ],
+        [
+          "Multi-site",
+          "Separate rows",
+          "Separate customers",
+          "One contract, many branches"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Service contract management, answered.",
+      "items": [
+        {
+          "q": "What is the difference between an AMC and a CMC in the system?",
+          "a": "Both are contract types with their own entitlement rules. An AMC usually covers labour and scheduled visits with spares billed separately; a CMC is comprehensive and includes spares. The type on the contract decides how a service call closes. See <a href=\"/compare/amc-vs-cmc/\">AMC vs CMC</a>."
+        },
+        {
+          "q": "Can one contract cover equipment at several hospital sites?",
+          "a": "Yes. A multi-site contract attaches serials from different branches of the same customer, so a call from any branch resolves to the right agreement and the PM schedule is generated per site."
+        },
+        {
+          "q": "How is contract profitability calculated?",
+          "a": "Every PM visit, breakdown call, spare part and labour entry that closes against the contract accumulates as cost. The contract view sets that against the contract value so you can see margin before you quote the renewal."
+        },
+        {
+          "q": "How does the renewal engine work?",
+          "a": "Contracts approaching their end date appear on the desk and the owner dashboard with the rupee value at stake, and WhatsApp reminders can go to the customer. Renewal prediction flags the ones most likely to lapse so the rep calls those first."
+        },
+        {
+          "q": "Are warranty periods tracked here too?",
+          "a": "Yes. Manufacturer warranty and extended warranty sit on the same register and the same asset, so a service call shows all cover at once. See <a href=\"/aura-business/medical-equipment-warranty-management-software/\">warranty management software</a>."
+        },
+        {
+          "q": "Can rate contracts feed quotations?",
+          "a": "Yes. A rate contract holds agreed prices and an end date; quotations to that buyer use those prices, and the end date is watched so the contract can be renewed or re-tendered in time."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128220;",
+          "b": "AMC / CMC",
+          "p": "The contract suite in depth."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Visits generated from the term."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "The assets a contract covers."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty",
+          "p": "Manufacturer and extended cover."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What AMC software is."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract covers what."
+        }
+      ]
+    }
+  ]
+}

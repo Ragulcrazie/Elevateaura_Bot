@@ -1,0 +1,324 @@
+{
+  "cluster": "seo-services",
+  "slug": "hospital-seo-services",
+  "title": "Hospital SEO Services for Indian Hospitals | Elevate Aura",
+  "meta": "Hospital SEO services: a page per department and doctor, appointment tracking, GA4 events and schema, with no ranking promises and no fabricated reviews.",
+  "h1": "Hospital SEO services built around <span class=\"hl\">departments, doctors and appointments</span>.",
+  "crumb": "Hospital SEO Services",
+  "pill": "For multi-specialty hospitals",
+  "sub": "A hospital has dozens of departments and a long doctor roster, and almost every patient search names one or the other. Hospital SEO gives each of them a page worth ranking, then measures the appointment requests those pages produce.",
+  "meta_ticks": [
+    "A page per department and doctor",
+    "Appointment requests tracked in GA4",
+    "Reviews stay yours to collect"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our hospital.",
+  "schema": "Service",
+  "service_type": "Hospital search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "hospital SEO services",
+  "secondary_keywords": [
+    "SEO for hospitals India",
+    "hospital digital marketing Chennai",
+    "department page SEO hospital",
+    "doctor profile SEO",
+    "hospital appointment tracking GA4"
+  ],
+  "intent": "commercial",
+  "persona": "Marketing head or administrator at a multi-specialty hospital",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital SEO services cover",
+      "paras": [
+        "Hospital SEO is largely an inventory problem. You have thirty departments, a hundred consultants, a list of procedures and often more than one campus, and a website that represents all of it in about a dozen pages. The work is to give each department, each doctor, each major procedure and each campus a page that is genuinely worth landing on, and to keep that set maintained as the roster changes.",
+        "Alongside the pages sits the technical layer: index coverage across a large site, clean URLs by department, schema for the hospital, its departments and its doctors, and load times that survive a phone on mobile data. Then the measurement layer: GA4 events on appointment forms, call buttons and WhatsApp, so a department can be discussed in terms of appointment requests rather than sessions.",
+        "Two things we will not do. We will not promise a ranking, because nobody controls that. And we will not write, buy or arrange patient reviews. Reviews are the hospital's own to collect from real patients."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why large hospital sites underperform",
+      "h2": "A hundred consultants and one Our Doctors page.",
+      "lead": "The problem is rarely the writing. It is that the site has far fewer pages than the hospital has things patients search for.",
+      "items": [
+        {
+          "h": "Departments as menu items",
+          "p": "A department listed in a dropdown with two lines of text cannot answer the search that names it."
+        },
+        {
+          "h": "Doctors without profiles",
+          "p": "A photo and a designation give a patient nothing to decide on and search engines nothing to index."
+        },
+        {
+          "h": "Roster changes never reflected",
+          "p": "Consultants who left are still listed and new ones are missing, so the most searched names lead nowhere."
+        },
+        {
+          "h": "Appointments untracked",
+          "p": "The form posts to an inbox with no event, so no one can attribute a single appointment to a department page."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From the department list to measured appointments.",
+      "steps": [
+        {
+          "h": "Inventory",
+          "p": "Departments, procedures, consultants, campuses and packages listed against what patients actually search for."
+        },
+        {
+          "h": "Template design",
+          "p": "One department template, one doctor template, one procedure template, so scale is content entry rather than design."
+        },
+        {
+          "h": "Technical pass",
+          "p": "Index coverage on a large site, URL structure per department, schema for hospital, department and physician, mobile speed."
+        },
+        {
+          "h": "Build the set",
+          "p": "Pages filled from the hospital's own clinical, roster and timing data, reviewed by your team before publication."
+        },
+        {
+          "h": "Appointment tracking",
+          "p": "GA4 events on every appointment form, call tap and WhatsApp link, labelled by department and doctor."
+        },
+        {
+          "h": "Maintain",
+          "p": "A routine for adding and retiring doctors and departments, so the set stays accurate as the roster moves."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The hospital page set and its plumbing.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Page set",
+          "items": [
+            "Department page per specialty",
+            "Doctor profile per consultant",
+            "Procedure and treatment pages",
+            "Campus and unit pages"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Technical",
+          "items": [
+            "Index coverage across a large site",
+            "URL structure by department",
+            "Hospital, department and physician schema",
+            "Mobile speed and image handling"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Appointment paths",
+          "items": [
+            "Appointment request on every page",
+            "Call and WhatsApp per department",
+            "Routing to the right desk",
+            "Requests into HIMS where it is running"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Measurement",
+          "items": [
+            "GA4 events labelled by department",
+            "Search Console query reporting",
+            "Doctor-name query tracking",
+            "Monthly written review"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-appointment-management/",
+        "label": "Appointment management in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three hospital searches and what answers them.",
+      "items": [
+        {
+          "h": "A consultant searched by name",
+          "workflow": "A referred patient searches the consultant's name and reaches a profile with qualifications, department, OP days and a request form.",
+          "result": "An appointment request instead of a call to a switchboard."
+        },
+        {
+          "h": "A department with a waiting list",
+          "workflow": "The department page carries the conditions treated, the consultants, the facilities and the route to book, and its form is tagged to that department.",
+          "result": "The marketing head can see which departments the site is filling."
+        },
+        {
+          "h": "A second campus",
+          "workflow": "The newer unit gets its own page with its own consultants, timings, directions and emergency number.",
+          "result": "Local searches near that unit have something to reach."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals with more to show than a homepage.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Many departments, one site."
+        },
+        {
+          "icon": "&#128106;",
+          "b": "Hospital groups",
+          "p": "Several units across cities."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Specialty hospitals",
+          "p": "One discipline, deep procedure content."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Teaching hospitals",
+          "p": "Large rosters that change each year."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Hospitals with imaging and labs",
+          "p": "Diagnostics searched separately."
+        },
+        {
+          "icon": "&#128657;",
+          "b": "Emergency-led hospitals",
+          "p": "Urgent local searches at all hours."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hospitals buy search marketing.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Generic web agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Page coverage",
+          "Blog posts added monthly",
+          "Whatever the redesign included",
+          "A page per department, doctor, procedure and campus"
+        ],
+        [
+          "Roster maintenance",
+          "Not included",
+          "Change requests",
+          "A routine for adding and retiring doctors"
+        ],
+        [
+          "Appointment measurement",
+          "Sessions and bounce rate",
+          "None",
+          "GA4 events labelled by department and doctor"
+        ],
+        [
+          "Patient reviews",
+          "Sometimes arranged",
+          "Sometimes arranged",
+          "Never written or bought; yours to collect"
+        ],
+        [
+          "What is promised",
+          "A position or a visitor target",
+          "A finished site",
+          "The page set, the fixes and the reporting, with no position promised"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital SEO services, answered.",
+      "items": [
+        {
+          "q": "Can you guarantee our hospital ranks first for our city?",
+          "a": "No. Rankings are decided by search engines and change without notice, and anyone promising a position is either guessing or planning something we would not do. We commit to the page set delivered, the technical work and honest reporting."
+        },
+        {
+          "q": "Will you arrange patient reviews or ratings for us?",
+          "a": "No. Reviews must come from real patients through your own channels, and we will not write, buy or solicit them on your behalf. We can add clear links so a patient who wants to leave feedback can find where to do it."
+        },
+        {
+          "q": "We have over a hundred doctors. Is a page each realistic?",
+          "a": "Yes, because it is a template filled from your roster data rather than a hundred design jobs. The harder part is keeping it current, so a routine for adding and retiring profiles is part of the work."
+        },
+        {
+          "q": "Can appointment requests go into our hospital system?",
+          "a": "Where the hospital runs <a href=\"/hims.html\">HIMS</a>, a request from any page can land in the appointment queue and the patient can be confirmed on WhatsApp. Other systems are connected through their APIs where they expose one."
+        },
+        {
+          "q": "How do you report on a department?",
+          "a": "Each department page's forms, call taps and WhatsApp links are tagged as GA4 events carrying the department name, and Search Console shows the queries that page reached. The accounts are yours, so you can check any figure we quote."
+        },
+        {
+          "q": "Do you work with hospitals outside Chennai?",
+          "a": "Yes. The work is remote for hospitals anywhere in India, with calls and WhatsApp for reviews and approvals. In-person meetings are in Chennai, with travel elsewhere in Tamil Nadu by arrangement."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/healthcare-seo-services/",
+          "icon": "&#129658;",
+          "b": "Healthcare SEO",
+          "p": "Clinics and diagnostic centres."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "Page sets done properly."
+        },
+        {
+          "href": "/seo-services/healthcare-saas-seo/",
+          "icon": "&#128187;",
+          "b": "Healthcare SaaS SEO",
+          "p": "For software sold to hospitals."
+        },
+        {
+          "href": "/web-development/healthcare-website-development/",
+          "icon": "&#128421;",
+          "b": "Healthcare website",
+          "p": "The site the pages sit on."
+        },
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Where an appointment lands."
+        }
+      ]
+    }
+  ]
+}

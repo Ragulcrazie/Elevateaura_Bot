@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "icu-management-software",
+  "title": "ICU Management Software | HIMS",
+  "meta": "ICU management software with live vitals per bed, critical-care nursing charts, doctor orders, ICU bed status and step-down transfers.",
+  "h1": "ICU management software with <span class=\"hl\">live vitals per bed</span> and a nursing chart that follows the patient.",
+  "crumb": "ICU Management Software",
+  "pill": "For intensivists and critical-care nursing",
+  "sub": "HIMS shows every ICU bed with its patient and live vitals, keeps the critical-care nursing chart and doctor orders on the admission record, and treats step-up and step-down as ordinary transfers on the hospital's bed board.",
+  "meta_ticks": [
+    "Live vitals per ICU bed",
+    "Critical-care nursing charts on the record",
+    "Step-down to the ward in one transfer"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/icu.png",
+    "alt": "HIMS ICU screen showing critical care beds with live vitals per bed and patient details",
+    "bar": "his.elevateaura.co.in/icu"
+  },
+  "whatsapp_text": "Hi, I'd like to see the ICU module in HIMS.",
+  "primary_keyword": "ICU management software",
+  "secondary_keywords": [
+    "critical care management software",
+    "ICU monitoring software for hospitals",
+    "ICU nursing chart software",
+    "intensive care unit software India",
+    "ICU bed management",
+    "critical care documentation software"
+  ],
+  "intent": "commercial",
+  "persona": "Intensivist, ICU in-charge or administrator of a hospital with a critical-care unit",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What ICU management software does in HIMS",
+      "paras": [
+        "ICU management software gives the critical-care unit its own view of the hospital record: each bed with its patient, live vitals per bed, the nursing chart for the shift, the intensivist's orders and the status of the bed itself. In HIMS this is a module of the inpatient system rather than a separate application, so an ICU stay is part of the same admission that started in casualty or the ward.",
+        "The ICU differs from a general ward in the density of documentation. Vitals are recorded far more often, medication and infusion changes are frequent, and orders change by the hour. The ICU screen in HIMS is built around that density, while everything it records still lands on the one patient record that the ward, the pharmacy, billing and the discharge summary read."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the ICU chart matters",
+      "h2": "Critical care produces the most documentation in the hospital and keeps it in the worst place.",
+      "lead": "A bedside flow sheet is complete for the shift and invisible to everyone outside the unit.",
+      "items": [
+        {
+          "h": "The chart stays at the bedside",
+          "p": "The consultant reviewing from the OPD, the ward receiving the step-down and the TPA desk all need what is on that sheet."
+        },
+        {
+          "h": "Orders changed verbally",
+          "p": "An infusion rate is changed on a round; the change reaches the chart an hour later, or not at all."
+        },
+        {
+          "h": "Bed status known only in the unit",
+          "p": "Casualty asks if there is an ICU bed; the answer depends on who picks up the phone."
+        },
+        {
+          "h": "Charges lost in the volume",
+          "p": "Ventilator days, infusions and monitoring charges are billed at discharge from whatever the file shows."
+        },
+        {
+          "h": "Step-down loses the history",
+          "p": "The patient moves to the ward with a summary and the ICU chart stays behind."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One ICU stay",
+      "h2": "From admission to step-down.",
+      "steps": [
+        {
+          "h": "Admitted to ICU",
+          "p": "From casualty, OT or a ward transfer; the ICU bed is allocated on the board."
+        },
+        {
+          "h": "Vitals per bed",
+          "p": "Live vitals shown against the bed on the ICU screen."
+        },
+        {
+          "h": "Orders",
+          "p": "Intensivist orders drugs, infusions and investigations on the record."
+        },
+        {
+          "h": "Nursing chart",
+          "p": "Critical-care chart, medication administration and notes per shift."
+        },
+        {
+          "h": "Charges accrue",
+          "p": "ICU bed days, procedures and consumables post to the IP bill."
+        },
+        {
+          "h": "Step-down",
+          "p": "Transfer to the ward; the ICU bed frees and the record continues."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The ICU module and its connections.",
+      "groups": [
+        {
+          "icon": "&#128147;",
+          "h": "Bedside",
+          "items": [
+            "Live vitals per bed",
+            "Patient, consultant and admission day per bed",
+            "Bed status: occupied, free, reserved",
+            "ICU beds on the hospital bed board"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Documentation",
+          "items": [
+            "Critical-care nursing charts",
+            "Medication and infusion records",
+            "Intensivist orders and progress notes",
+            "Supports NABH-style documentation"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Orders out",
+          "items": [
+            "Drugs to the pharmacy queue",
+            "Investigations to the laboratory worklist",
+            "Imaging to AuraPACS",
+            "Consumables from inventory"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing and beyond",
+          "items": [
+            "ICU charges on the running IP bill",
+            "TPA enhancement for extended stays",
+            "Step-down transfer to the ward",
+            "History carried into the discharge summary"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-bed-management-software/",
+        "label": "See bed management across the hospital"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in the unit.",
+      "items": [
+        {
+          "h": "A casualty admission at two in the morning",
+          "workflow": "The triage board shows a patient needing critical care; the bed board shows one ICU bed free and the transfer is made on the record.",
+          "result": "No phone call to confirm the bed."
+        },
+        {
+          "h": "A consultant reviewing from outside the unit",
+          "workflow": "The consultant opens the record from the OPD and reads the overnight chart, the vitals and the current orders.",
+          "result": "The review does not wait for a printed sheet."
+        },
+        {
+          "h": "An extended stay on a TPA case",
+          "workflow": "ICU days accrue on the running bill; the TPA desk raises an enhancement against the same admission with the chart as evidence.",
+          "result": "The approved amount keeps up with the stay."
+        },
+        {
+          "h": "Step-down to the ward",
+          "workflow": "The transfer moves the patient to a ward bed; the ICU chart and orders remain on the record for the ward team.",
+          "result": "The ward starts from the history, not from a summary."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any hospital with a critical-care unit.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "ICU, HDU and post-operative care on one board."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes with an ICU",
+          "p": "A few critical beds that must be documented well."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Intensivists",
+          "p": "Orders and charts on the record, not on a clipboard."
+        },
+        {
+          "icon": "&#128105;&#8205;&#9877;&#65039;",
+          "b": "Critical-care nursing",
+          "p": "A chart built for hourly entries."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality and TPA desks",
+          "p": "Documentation available without visiting the unit."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "ICU documentation, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Vitals",
+          "Bedside flow sheet",
+          "Not covered",
+          "Live vitals per bed on the ICU screen"
+        ],
+        [
+          "Nursing chart",
+          "Paper, stays in the unit",
+          "Not covered",
+          "On the admission record, readable anywhere"
+        ],
+        [
+          "Bed availability",
+          "Phone the unit",
+          "Not covered",
+          "ICU beds on the hospital bed board"
+        ],
+        [
+          "ICU charges",
+          "Added at discharge",
+          "Typed from slips",
+          "Accrue daily to the IP bill"
+        ],
+        [
+          "Step-down history",
+          "Summary sheet",
+          "Not covered",
+          "Full chart carried on the record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "ICU management software, answered.",
+      "items": [
+        {
+          "q": "What does live vitals per bed mean?",
+          "a": "The ICU screen in HIMS shows each bed with its patient and the current vitals recorded against that bed, as shown in the <a href=\"/demo/hospital.html\">hospital demo</a>. How vitals reach the screen in your unit, from your monitors or from nursing entry, is confirmed on the call for your equipment."
+        },
+        {
+          "q": "Is the ICU chart different from the ward chart?",
+          "a": "Yes. The critical-care nursing chart is built for frequent entries: vitals, infusions, medication administration and notes per shift. It sits on the same admission record as the ward chart, so the history is continuous."
+        },
+        {
+          "q": "Can casualty see whether an ICU bed is free?",
+          "a": "Yes. ICU beds are part of the hospital bed board, so the triage desk sees occupied and free critical-care beds without calling the unit. See <a href=\"/hims/emergency-department-software/\">emergency department software</a>."
+        },
+        {
+          "q": "How are ICU charges billed?",
+          "a": "ICU bed days, procedures, consumables and drugs post to the running IP bill as they happen, and an interim statement can be printed for the family or the TPA at any point."
+        },
+        {
+          "q": "Does the ICU module support NABH documentation?",
+          "a": "The ICU chart, orders and notes are structured to support NABH-style documentation. Accreditation is assessed against your unit's processes by the accrediting body; the software gives you the record."
+        },
+        {
+          "q": "Is the ICU sold separately from HIMS?",
+          "a": "No. It is a module of the inpatient system and shares the record, the pharmacy, the laboratory and billing. See <a href=\"/hims/hospital-ipd-management-software/\">hospital IPD software</a> for the admission side."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed management",
+          "p": "ICU beds on the same board."
+        },
+        {
+          "href": "/hims/emergency-department-software/",
+          "icon": "&#128657;",
+          "b": "Emergency department",
+          "p": "Triage board to ICU."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128203;",
+          "b": "IPD software",
+          "p": "The admission record."
+        },
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#128138;",
+          "b": "Pharmacy",
+          "p": "Orders to the dispensing queue."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

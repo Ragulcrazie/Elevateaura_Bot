@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "can-bus-software-development",
+  "title": "CAN Bus Software Development for Equipment | Elevate Aura",
+  "meta": "CAN bus software development for robotics and equipment: message handling on the controller, node logic, and a bridge that carries CAN data to an app or cloud.",
+  "h1": "CAN bus software for machines whose parts must <span class=\"hl\">agree with each other</span>.",
+  "crumb": "CAN Bus Software",
+  "pill": "Software-only, wired protocols",
+  "sub": "Elevate Aura writes the CAN software that runs inside robotics and equipment: the node logic on each controller, the message handling that keeps the bus predictable, and the bridge that carries selected CAN data out to a companion app or a cloud dashboard.",
+  "meta_ticks": [
+    "Node logic in C/C++ or MicroPython",
+    "Message handling and fault behaviour",
+    "CAN to app or cloud bridging"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need CAN bus software written for our equipment. Can we discuss the controllers and the message set?",
+  "cta_h2": "Send us the message set, or let us define one.",
+  "cta_p": "Tell us how many nodes sit on the bus, what each one must say, and whether the data has to leave the machine. We will scope the CAN layer and any bridge to an app or cloud.",
+  "primary_keyword": "CAN bus software development",
+  "secondary_keywords": [
+    "CAN bus firmware development",
+    "CAN communication software for robotics",
+    "CANopen style message handling software",
+    "CAN to cloud gateway software",
+    "embedded CAN development services India",
+    "CAN node software development"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering lead at a robotics or equipment company whose controllers have to exchange data over a CAN bus",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "CAN bus software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What CAN bus software development covers here",
+      "paras": [
+        "CAN bus software development is writing the code that lets the controllers inside one machine exchange short, prioritised messages over a shared two-wire bus. Elevate Aura writes that code on the nodes: what each controller publishes, what it listens for, how often, and what it does when a message it depends on stops arriving.",
+        "Arbitration on CAN is decided by message identifier, so the identifier plan is a design decision rather than an afterthought. We agree the message set and identifier priorities with your team, implement them on your controllers in C/C++ or MicroPython, and test the behaviour on your hardware under load and under fault.",
+        "Where the data has to leave the machine, we also write the bridge: a node or small gateway that filters the traffic worth keeping and forwards it to a companion app or a telemetry pipeline. The transceivers, wiring, termination and the boards themselves stay with your hardware team. This is a software-only engagement."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The CAN problem",
+      "h2": "Every board works alone. Together they argue.",
+      "lead": "CAN faults rarely look like software faults, which is why they are usually found late and on a live machine.",
+      "items": [
+        {
+          "h": "Identifiers handed out ad hoc",
+          "p": "Priorities were never planned, so a chatty status message delays the one that had to be on time."
+        },
+        {
+          "h": "No behaviour for a missing node",
+          "p": "A controller drops off the bus and the rest of the machine keeps going as though nothing happened."
+        },
+        {
+          "h": "Bus load nobody measured",
+          "p": "Periodic messages were added one at a time until the bus was fuller than anyone had checked."
+        },
+        {
+          "h": "Nothing leaves the machine",
+          "p": "Rich diagnostic traffic exists on the bus, and none of it reaches the people who support the machine."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a message set to a bus that behaves under load.",
+      "steps": [
+        {
+          "h": "Message set",
+          "p": "Identifiers, payload layout, senders, listeners and rates agreed with your team."
+        },
+        {
+          "h": "Node software",
+          "p": "Transmit and receive logic written on each controller in your toolchain."
+        },
+        {
+          "h": "Fault behaviour",
+          "p": "Timeouts, missing nodes, error states and safe defaults defined and implemented."
+        },
+        {
+          "h": "Bridge",
+          "p": "Filtering and forwarding to a companion app or cloud pipeline, where you need it."
+        },
+        {
+          "h": "Test on hardware",
+          "p": "Run on your boards with bus load and fault injection, with logs kept."
+        },
+        {
+          "h": "Hand over",
+          "p": "Message documentation, source and build instructions, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The CAN layer, node by node.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "On the node",
+          "items": [
+            "Transmit and receive handling",
+            "Filters and masks per controller",
+            "Payload packing and scaling",
+            "Periodic and event-driven sending"
+          ]
+        },
+        {
+          "icon": "&#9881;",
+          "h": "Bus behaviour",
+          "items": [
+            "Identifier and priority plan",
+            "Heartbeat and node presence",
+            "Timeout and fallback states",
+            "Error counters and recovery"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Off the machine",
+          "items": [
+            "Filtered bridge to a gateway",
+            "Companion app over BLE or Wi-Fi",
+            "Telemetry to Supabase or Azure",
+            "Diagnostic logs for service teams"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Handover",
+          "items": [
+            "Message and identifier documentation",
+            "Test notes from your hardware",
+            "Source and build instructions",
+            "Configuration guide"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where CAN software gets written.",
+      "items": [
+        {
+          "h": "A robot with several motion controllers",
+          "workflow": "Each axis controller publishes state and faults on planned identifiers, and the supervising controller acts on them or stops.",
+          "result": "The machine has one agreed view of itself instead of several."
+        },
+        {
+          "h": "Equipment that must report a fault to service",
+          "workflow": "A bridge node filters fault and usage frames off the bus and forwards them to a cloud pipeline.",
+          "result": "Support sees the fault before the customer rings."
+        },
+        {
+          "h": "A machine driven from a tablet",
+          "workflow": "A gateway translates a small command set from the companion app into CAN frames, with limits enforced on the node.",
+          "result": "An operator interface that cannot put the bus into an unsafe state."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Builders of machines with more than one controller.",
+      "items": [
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Axis, sensor and supervisor controllers."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment makers",
+          "p": "Multi-board devices with internal traffic."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial equipment",
+          "p": "Machines with distributed control."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Integrators",
+          "p": "Adding a gateway to an installed machine."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Bus software without a specialist hire."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Device founders",
+          "p": "A prototype bus made fit to ship."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting CAN software written, three ways.",
+      "cols": [
+        "In-house hire",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Identifier and priority plan",
+          "Yes",
+          "Usually skipped",
+          "Designed and documented with you"
+        ],
+        [
+          "Fault behaviour on the bus",
+          "Yes",
+          "Happy path only",
+          "Timeouts and safe defaults implemented"
+        ],
+        [
+          "Tested on your hardware",
+          "Yes",
+          "Rarely",
+          "Always, under load and fault"
+        ],
+        [
+          "Bridge to app and cloud",
+          "Separate hires",
+          "Separate person",
+          "Same builder, same engagement"
+        ],
+        [
+          "Hardware boundary",
+          "None",
+          "Blurred",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "CAN bus software development, answered.",
+      "items": [
+        {
+          "q": "Do you define the message set or work from ours?",
+          "a": "Either. If your team has a message and identifier plan we implement it as written. If not, we define it with you: which node sends what, payload layout and scaling, send rates and identifier priorities, and we document it for your own engineers and integrators."
+        },
+        {
+          "q": "Which controllers and languages do you use?",
+          "a": "C or C++ on most production controllers, and MicroPython where the board supports it and the timing allows. We work to the chip and toolchain your hardware team has already chosen rather than asking you to move to something we prefer."
+        },
+        {
+          "q": "Can CAN data reach a phone or a dashboard?",
+          "a": "Yes. A bridge filters the frames worth keeping and forwards them onward, over BLE or Wi-Fi to an app or into a pipeline on Supabase or Azure. See <a href=\"/product-development/device-to-cloud-telemetry-software/\">device-to-cloud telemetry software</a>."
+        },
+        {
+          "q": "Do you supply transceivers or wire the bus?",
+          "a": "No. Elevate Aura is software-only. Transceivers, isolation, termination, cable runs and the boards themselves are your hardware team's work. We write the software that runs on what you provide and test it on your hardware."
+        },
+        {
+          "q": "What about Modbus or serial links?",
+          "a": "Also covered. See <a href=\"/product-development/modbus-software-development/\">Modbus software development</a> for RTU and TCP, and <a href=\"/product-development/embedded-software-development/\">embedded software development</a> for UART and other serial links."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/modbus-software-development/",
+          "icon": "&#128268;",
+          "b": "Modbus software",
+          "p": "RTU, TCP and gateways."
+        },
+        {
+          "href": "/product-development/medical-robotics-software-development/",
+          "icon": "&#129302;",
+          "b": "Medical robotics software",
+          "p": "Control and communication."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "The readings behind the frames."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Where the fleet is watched."
+        },
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers and peripherals."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

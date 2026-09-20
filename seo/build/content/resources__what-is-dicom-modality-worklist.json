@@ -1,0 +1,216 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-dicom-modality-worklist",
+  "title": "What Is a DICOM Modality Worklist? A Plain Guide",
+  "meta": "A modality worklist sends booked patient details to the scanner so nobody retypes a name. A plain guide to how MWL works and why it prevents mismatched studies.",
+  "h1": "What is a DICOM modality worklist? <span class=\"hl\">Type the name once</span>.",
+  "crumb": "Modality worklist",
+  "pill": "Guide",
+  "sub": "A modality worklist puts today's booked patients on the scanner's own screen, so the technician selects a row instead of typing a name. It is the cheapest fix available for mismatched and unfindable studies.",
+  "meta_ticks": [
+    "Written by a team that builds imaging software",
+    "Explained without engineer jargon",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the modality worklist guide and want to ask about setting it up on our machines.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is a DICOM modality worklist",
+  "secondary_keywords": [
+    "DICOM MWL meaning",
+    "modality worklist software",
+    "worklist on CT machine",
+    "DICOM worklist setup",
+    "prevent patient mismatch imaging",
+    "MWL full form"
+  ],
+  "intent": "informational",
+  "persona": "Radiographer, centre manager or owner running imaging machines",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Modality worklist in two paragraphs",
+      "paras": [
+        "A DICOM modality worklist, often shortened to MWL, is a network service that supplies a scanner with the list of patients booked for it. The technician presses a button on the console, the list appears, the correct row is selected and the scan begins with the patient name, identifier, date of birth and order already filled in.",
+        "Modality here simply means an imaging machine: a CT, MRI, X-ray unit, ultrasound or mammography system. The worklist exists because the alternative is typing, and typing at a busy console is where patient records go wrong."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The mechanism",
+      "h2": "What happens between the counter and the console",
+      "lead": "The sequence takes a second in practice and is worth understanding once, because it explains every failure mode.",
+      "body": [
+        {
+          "h3": "1. The booking is made"
+        },
+        "Front desk registers the patient and books a study on a named machine. The record carries the patient identity, the examination requested, the referring doctor and an accession number, the unique reference for that order.",
+        {
+          "h3": "2. The machine asks"
+        },
+        "At the console the technician opens the worklist screen. The machine sends a query across the network to the worklist service, usually filtered by today's date and by its own name, so an ultrasound does not show CT bookings.",
+        {
+          "h3": "3. The list comes back"
+        },
+        "Rows appear with the patient name, identifier, age, sex, the study requested and the scheduled time. The technician confirms the patient and selects the row.",
+        {
+          "h3": "4. The details flow into the images"
+        },
+        "Every image produced now carries those details in its tags, including the accession number. When the study reaches the archive it files itself against the right patient and the right order without anyone matching it by hand. The tag structure is explained in <a href=\"/resources/what-is-dicom/\">what is DICOM</a>.",
+        "When the machine cannot reach the worklist, most consoles fall back to manual entry. That is useful in an emergency and dangerous as a habit, because the study is still produced, simply with whatever was typed."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Why it matters",
+      "h2": "What goes wrong without a worklist",
+      "lead": "Every centre that types at the console has the same collection of problems, and they are rarely recognised as one problem with one cause.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Situation",
+              "Typed at the console",
+              "Selected from a worklist"
+            ],
+            "rows": [
+              [
+                "Patient name",
+                "Spelled differently each visit",
+                "Identical every time"
+              ],
+              [
+                "Finding an earlier scan",
+                "Depends on remembering the spelling used",
+                "Matched on the identifier"
+              ],
+              [
+                "Two patients with the same name",
+                "A real risk of the wrong record",
+                "Separated by identifier and booking"
+              ],
+              [
+                "Linking to the report and bill",
+                "Manual, by name and date",
+                "By accession number"
+              ],
+              [
+                "Emergency case at midnight",
+                "Typed, as always",
+                "Typed, as a recognised exception"
+              ]
+            ]
+          }
+        },
+        "The worst version is the study never found again. It sits in the archive under a misspelling, and two years later nobody can produce the prior when a comparison would have changed the reading.",
+        "A worklist also gives the technician a clear view of the day. The queue on the console matches the queue at the counter, so nobody walks out to ask who is next."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Setting it up",
+      "h2": "What connecting a machine involves",
+      "lead": "Described generically, because every console names things slightly differently, but the shape is the same on all of them.",
+      "body": [
+        "Your engineer will need four pieces of information for each machine, all supplied by whoever runs the worklist service:",
+        {
+          "ul": [
+            "The network address of the worklist service and the port it listens on.",
+            "The short name the service answers to, which the console labels as an AE title or similar.",
+            "The short name this machine will identify itself by, so the service can filter the list to that machine.",
+            "Which filters to apply by default, normally today's date and this machine."
+          ]
+        },
+        "After that the engineer runs a handshake test to confirm the two can talk, then a live query to confirm a real booking appears. Points to watch:",
+        {
+          "ul": [
+            "The machine must be on a network that reaches the service. Standalone consoles on an isolated socket are the usual obstacle.",
+            "Worklist is sometimes a licensed option on older machines and may need switching on by the manufacturer.",
+            "Agree with the staff what to do for an unregistered emergency patient, so the exception is deliberate rather than routine.",
+            "Once the list is live, stop the console from being used to type new patients except in that agreed case."
+          ]
+        },
+        "AuraPACS includes modality worklist so the patient is scheduled once and appears on the machine without retyping, alongside automatic DICOM receive, a browser viewer and reporting. The detail is on <a href=\"/aurapacs/dicom-worklist-software/\">DICOM worklist software</a>, and the wider system in <a href=\"/resources/what-is-pacs/\">what is PACS</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about modality worklists",
+      "items": [
+        {
+          "q": "What does MWL stand for?",
+          "a": "Modality Worklist. It is the DICOM service that supplies an imaging machine with the list of patients scheduled for it, so the technician selects a booking instead of typing patient details at the console."
+        },
+        {
+          "q": "Do I need a RIS to have a worklist?",
+          "a": "You need something that holds the bookings and publishes them to the machines. That may be a radiology information system, a hospital system or an imaging platform that includes scheduling. A separate product is not required for a single centre."
+        },
+        {
+          "q": "Will a worklist work on an older machine?",
+          "a": "Usually, provided the console supports the service and it has been licensed and switched on. Ask your service engineer to check the network settings on the machine itself, since the capability is sometimes present but never configured."
+        },
+        {
+          "q": "What happens during an emergency when there is no booking?",
+          "a": "The technician can still enter details manually and scan. Treat that as a defined exception with a rule for correcting the record afterwards, rather than letting manual entry become the normal route."
+        },
+        {
+          "q": "Can a worklist stop studies being filed under the wrong patient?",
+          "a": "It removes the largest cause, which is typing at the console. Correct selection by the technician still matters, so the safeguard is a list that shows enough detail to confirm the patient standing in front of them."
+        },
+        {
+          "q": "Does a worklist slow the technician down?",
+          "a": "It does the opposite. Selecting a row is faster than entering a name, identifier and study, and it removes the later work of finding and correcting studies filed under a misspelling."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128196;",
+          "b": "What is DICOM",
+          "p": "Tags and network services."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "Where the study lands."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128203;",
+          "b": "What is RIS",
+          "p": "Where the booking is made."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs DICOM viewer",
+          "p": "Archive or screen only."
+        },
+        {
+          "href": "/aurapacs/dicom-worklist-software/",
+          "icon": "&#129659;",
+          "b": "DICOM worklist software",
+          "p": "Schedule once, appears on the machine."
+        },
+        {
+          "href": "/aurapacs/dicom-server-software/",
+          "icon": "&#128225;",
+          "b": "DICOM server software",
+          "p": "Receives what the machine sends."
+        }
+      ]
+    }
+  ]
+}

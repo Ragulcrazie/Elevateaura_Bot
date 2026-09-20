@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>DICOM Server Software | Receive, Store, Worklist Node | AuraPACS</title>
+<meta name="description" content="DICOM server software explained for centre IT: AE titles, ports, pointing each modality at the node, and the worklist service that fills in patient details.">
+<link rel="canonical" href="https://elevateaura.co.in/aurapacs/dicom-server-software/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AuraPACS by Elevate Aura">
+<meta property="og:title" content="DICOM Server Software | Receive, Store, Worklist Node | AuraPACS">
+<meta property="og:description" content="DICOM server software explained for centre IT: AE titles, ports, pointing each modality at the node, and the worklist service that fills in patient details.">
+<meta property="og:url" content="https://elevateaura.co.in/aurapacs/dicom-server-software/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DICOM Server Software | Receive, Store, Worklist Node | AuraPACS">
+<meta name="twitter:description" content="DICOM server software explained for centre IT: AE titles, ports, pointing each modality at the node, and the worklist service that fills in patient details.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aurapacs/pacs.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "AuraPACS", "item": "https://elevateaura.co.in/aurapacs.html"}, {"@type": "ListItem", "position": 3, "name": "DICOM Server", "item": "https://elevateaura.co.in/aurapacs/dicom-server-software/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuraPACS DICOM Server", "applicationCategory": "HealthApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "DICOM server software explained for centre IT: AE titles, ports, pointing each modality at the node, and the worklist service that fills in patient details.", "url": "https://elevateaura.co.in/aurapacs/dicom-server-software/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an AE title?", "acceptedAnswer": {"@type": "Answer", "text": "The Application Entity title is the name a DICOM device uses on the network. The node has one, each modality has one, and they must match what is configured on each side for a send or a worklist query to succeed. See What is DICOM."}}, {"@type": "Question", "name": "Which port does the node use?", "acceptedAnswer": {"@type": "Answer", "text": "The node listens on a single configurable port for DICOM connections. The exact value is set at installation and given to you to enter on each modality, along with the node's IP and AE title."}}, {"@type": "Question", "name": "Can our IT person do this without a vendor visit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with remote guidance from Elevate Aura over WhatsApp and screen share. The scanner-side settings may need the modality's service engineer if they sit behind a service menu. In Chennai the setup can be done in person."}}, {"@type": "Question", "name": "Does the worklist run on the same server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The modality worklist service is part of the AuraPACS node, so the scanner sends studies to and queries scheduled patients from the same address. See DICOM worklist software."}}, {"@type": "Question", "name": "What if a machine does not support DICOM send?", "acceptedAnswer": {"@type": "Answer", "text": "Very old units sometimes cannot send over the network. That is confirmed on a call before setup, so you know which modalities will connect and which need a workaround or replacement."}}, {"@type": "Question", "name": "Does the node need the internet to receive studies?", "acceptedAnswer": {"@type": "Answer", "text": "No. Receiving, the worklist and local viewing run on the centre's network. The internet is used for the encrypted offsite copy, remote reading and WhatsApp links."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; AuraPACS, browser-based imaging</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%20look%20after%20IT%20at%20an%20imaging%20centre%20and%20want%20to%20understand%20the%20AuraPACS%20DICOM%20server%20setup." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aurapacs.html">AuraPACS</a></li>
+  <li><span aria-current="page">DICOM Server</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For the centre's IT person</span>
+      <h1>DICOM server software: the node that <span class="hl">receives, stores and serves</span> every study.</h1>
+      <p class="sub">The DICOM server is the part of AuraPACS your modalities talk to. It listens on an AE title and port, accepts studies as they are sent, files them, and answers worklist queries from the scanners. This page explains what it does and what the centre's IT configures, in plain terms.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="https://pacs.elevateaura.co.in/" target="_blank" rel="noopener">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%20look%20after%20IT%20at%20an%20imaging%20centre%20and%20want%20to%20understand%20the%20AuraPACS%20DICOM%20server%20setup." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>One AE title and port per node</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Any DICOM modality</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Installed by your IT with remote guidance</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What a DICOM server does</h2>
+    </div>
+    <div class="ans rv"><p>A DICOM server is a program that waits on the network for imaging machines to send it studies. Each CT, MR, X-ray or ultrasound is configured with the server's address, port and Application Entity title, and at the end of a scan it transmits the images using the DICOM protocol. The server accepts them, checks the patient and study identifiers inside the files, and stores them.</p><p>In AuraPACS the DICOM server runs on the on-premise node. The same node also provides the modality worklist service, which the scanners query to get the day's scheduled patients, and serves the stored studies to the browser viewer. There is no separate product to buy or a second server to run.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Where setups go wrong</span>
+      <h2 class="h2">Almost every DICOM problem is a configuration mismatch, not a fault.</h2>
+      <p class="lead">The protocol is old and dependable. What fails is a wrong port, a mistyped AE title or a firewall nobody mentioned.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>AE title mismatch</h3><p>The scanner is told to send to one AE title and the server is listening under another. The send fails with no useful message on the console.</p></div><div class="pain rv d1"><h3>Port blocked</h3><p>The node's DICOM port is closed by a Windows firewall rule or a router, so the association never opens.</p></div><div class="pain rv d2"><h3>IP changes overnight</h3><p>The node gets a new address from DHCP and every modality is now sending into nothing.</p></div><div class="pain rv"><h3>Worklist never configured</h3><p>The scanner can send studies but was never set up to query the worklist, so patient details are still retyped.</p></div><div class="pain rv d1"><h3>Vendor engineer needed for a menu</h3><p>The modality's DICOM settings are behind a service menu the centre has never opened.</p></div><div class="pain rv d2"><h3>Nobody wrote it down</h3><p>Six months later nobody remembers which AE title the ultrasound uses.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What your IT configures</span>
+      <h2 class="h2">The setup, step by step, with remote guidance.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Install the node</h4><p>Run the AuraPACS installer on a Windows machine on the centre's network.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Fix the address</h4><p>Give the node a static IP so modalities always find it.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Note the AE title and port</h4><p>The node listens under one AE title on one port; write both down.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Open the firewall</h4><p>Allow inbound connections on that port from the modalities' addresses.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Configure each modality</h4><p>In the scanner's DICOM settings add the node as a storage destination: IP, port, AE title.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Add the worklist</h4><p>Point the scanner's worklist query at the same node, then test with one scheduled patient.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">07</div><h4>Send a test study</h4><p>A verification and a test send from each machine confirm the study lands and opens in the browser.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What the node provides</span>
+      <h2 class="h2">The DICOM services on the AuraPACS node.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128229;</span>Receive and store</h3><ul><li>Accepts studies from any DICOM modality</li><li>CT, MR, X-ray (CR/DR), ultrasound, mammography and more</li><li>Files by patient, study and series</li><li>Archive on the node's own disks</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128203;</span>Worklist</h3><ul><li>Modality worklist service on the same node</li><li>Scheduled patients pushed to the scanner</li><li>Study returns matched to the order</li><li>No retyping at the console</li></ul></div><div class="capg rv"><h3><span class="k">&#128187;</span>Serve</h3><ul><li>Studies served to the browser viewer</li><li>Works over the local network without internet</li><li>Encrypted copy synced to the cloud layer</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128736;</span>Operations</h3><ul><li>Windows installer</li><li>Activation by Site ID via WhatsApp</li><li>Remote guidance over WhatsApp and screen share</li><li>In-person setup in Chennai</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/aurapacs/dicom-worklist-software/">See the worklist in detail <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Typical configuration days.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A CT and an ultrasound on day one</h3><p class="r"><b>Workflow:</b> Both are given the node's IP, port and AE title as a storage destination; a test send from each arrives and opens in the browser.</p><p><b>Result:</b> Two modalities live in an afternoon, guided over WhatsApp.</p></div><div class="u rv d1"><h3>The old ultrasound has no network port</h3><p class="r"><b>Workflow:</b> The machine cannot send DICOM; the centre plans a replacement or an export route and the rest of the modalities go live.</p><p><b>Result:</b> An honest answer rather than a broken promise.</p></div><div class="u rv"><h3>Worklist added a week later</h3><p class="r"><b>Workflow:</b> The CT's worklist query is pointed at the node; front desk schedules a patient and it appears on the console.</p><p><b>Result:</b> Patient names stop being retyped.</p></div><div class="u rv d1"><h3>The node's IP changed</h3><p class="r"><b>Workflow:</b> Sends fail; the static address is restored and the modalities reconnect.</p><p><b>Result:</b> A five-minute fix once the cause is known.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">The person who will do the setup.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#128736;</div><b>In-house IT</b><p>One capable person who can install Windows software and set a static IP.</p></div><div class="w"><div class="g">&#128104;&#8205;&#128188;</div><b>Technically minded owners</b><p>Comfortable following steps over a screen share.</p></div><div class="w"><div class="g">&#128295;</div><b>Modality service engineers</b><p>Who add the storage destination and worklist on the scanner side.</p></div><div class="w"><div class="g">&#127973;</div><b>Centres outside Chennai</b><p>Everything on this page is done remotely with guidance.</p></div><div class="w"><div class="g">&#128205;</div><b>Centres in Chennai</b><p>Where the node install and modality connection can be done in person.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Getting studies off the scanner, three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>CDs, film and forwarding</div><div>Enterprise PACS</div><div class="us">AuraPACS node</div></div><div class="r"><div class="cap">How studies leave the modality</div><div>Burned to disc by the technician</div><div>DICOM send to a server rack</div><div class="us">DICOM send to a Windows node</div></div><div class="r"><div class="cap">Worklist</div><div>None</div><div>Separate RIS integration</div><div class="us">Same node</div></div><div class="r"><div class="cap">Who configures it</div><div>Nobody</div><div>Vendor engineers, weeks</div><div class="us">Your IT with remote guidance</div></div><div class="r"><div class="cap">Hardware</div><div>A CD burner</div><div>Servers and a data centre</div><div class="us">One machine on the network</div></div><div class="r"><div class="cap">Works without internet</div><div>Yes</div><div>Yes</div><div class="us">Yes</div></div><div class="r"><div class="cap">Support</div><div>No one</div><div>Ticket queue</div><div class="us">The person who built it</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">DICOM server software, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>What is an AE title?</summary><p>The Application Entity title is the name a DICOM device uses on the network. The node has one, each modality has one, and they must match what is configured on each side for a send or a worklist query to succeed. See <a href="/resources/what-is-dicom/">What is DICOM</a>.</p></details><details><summary>Which port does the node use?</summary><p>The node listens on a single configurable port for DICOM connections. The exact value is set at installation and given to you to enter on each modality, along with the node's IP and AE title.</p></details><details><summary>Can our IT person do this without a vendor visit?</summary><p>Yes, with remote guidance from Elevate Aura over WhatsApp and screen share. The scanner-side settings may need the modality's service engineer if they sit behind a service menu. In Chennai the setup can be done in person.</p></details><details><summary>Does the worklist run on the same server?</summary><p>Yes. The modality worklist service is part of the AuraPACS node, so the scanner sends studies to and queries scheduled patients from the same address. See <a href="/aurapacs/dicom-worklist-software/">DICOM worklist software</a>.</p></details><details><summary>What if a machine does not support DICOM send?</summary><p>Very old units sometimes cannot send over the network. That is confirmed on a call before setup, so you know which modalities will connect and which need a workaround or replacement.</p></details><details><summary>Does the node need the internet to receive studies?</summary><p>No. Receiving, the worklist and local viewing run on the centre's network. The internet is used for the encrypted offsite copy, remote reading and WhatsApp links.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related AuraPACS pages</h2></div>
+    <div class="who rv"><a class="w" href="/aurapacs.html"><div class="g">&#129659;</div><b>AuraPACS</b><p>The whole platform.</p></a><a class="w" href="/aurapacs/on-premise-pacs/"><div class="g">&#128187;</div><b>On-premise PACS</b><p>The node as a whole.</p></a><a class="w" href="/aurapacs/dicom-worklist-software/"><div class="g">&#128203;</div><b>DICOM worklist</b><p>Schedule once, appears on the machine.</p></a><a class="w" href="/aurapacs/medical-image-archive-storage/"><div class="g">&#128451;</div><b>Image archive</b><p>Where received studies go.</p></a><a class="w" href="/resources/what-is-dicom/"><div class="g">&#128218;</div><b>What is DICOM</b><p>The protocol explained.</p></a><a class="w" href="/compare/pacs-vs-dicom-viewer/"><div class="g">&#9878;</div><b>PACS vs viewer</b><p>A viewer has no server.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%20look%20after%20IT%20at%20an%20imaging%20centre%20and%20want%20to%20understand%20the%20AuraPACS%20DICOM%20server%20setup." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AuraPACS by Elevate Aura</h4>
+        <p class="b">Hybrid on-premise and cloud PACS with a browser DICOM viewer, modality worklist, reporting and WhatsApp report sharing, for clinics, diagnostic centres and hospitals.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>AuraPACS</h4>
+        <a href="/aurapacs.html">AuraPACS home</a>
+        <a href="/aurapacs/pacs-software/">PACS Software</a><a href="/aurapacs/dicom-viewer/">DICOM Viewer</a><a href="/aurapacs/cloud-pacs-software/">Cloud PACS</a><a href="/aurapacs/ris-pacs-software/">RIS PACS</a><a href="/aurapacs/dicom-worklist-software/">DICOM Worklist</a><a href="/hims.html">HIMS</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

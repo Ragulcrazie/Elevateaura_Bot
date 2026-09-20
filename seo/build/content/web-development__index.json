@@ -1,0 +1,195 @@
+{
+  "cluster": "web-development",
+  "slug": "index",
+  "title": "Healthcare Website and E-commerce Development | Elevate Aura",
+  "meta": "Healthcare website and e-commerce development from Chennai: medical equipment sites, B2B storefronts, distributor portals and catalogue pages that take enquiries.",
+  "h1": "Healthcare website and e-commerce development for businesses that <span class=\"hl\">sell to hospitals</span>.",
+  "crumb": "Websites and E-commerce",
+  "pill": "Founder-built, Chennai",
+  "sub": "Elevate Aura builds websites, online stores, distributor portals and product catalogues for medical-equipment companies, hospitals, clinics and diagnostic centres, in WordPress or Next.js on Supabase. The site you are reading was designed and built by the founder.",
+  "meta_ticks": [
+    "WordPress or Next.js, chosen per project",
+    "Storefronts, portals and catalogues",
+    "This site is our own work"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a website or online store.",
+  "primary_keyword": "healthcare website and e-commerce development",
+  "secondary_keywords": [
+    "healthcare web development company India",
+    "medical website development Chennai",
+    "medical e-commerce development",
+    "distributor portal development",
+    "Next.js healthcare website"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or marketing head of a medical-equipment company, hospital or clinic commissioning a website, store or portal",
+  "page_type": "hub",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What this service is",
+      "paras": [
+        "Elevate Aura designs and builds the web side of a healthcare or medical-equipment business: the public website with a structured product catalogue and enquiry forms, the B2B storefront where hospitals and dealers order, the distributor portal with dealer pricing and order tracking, and the SEO pages that bring buyers to all three.",
+        "Sites are built in WordPress where content editing by your team matters most, or in Next.js on Supabase where the site is really an application: pricing tiers, quotations, order status, UTR payment verification. Medline Robotics, a medical robotics company in Chennai, runs a storefront, distributor portal and 253 product and city landing pages built this way.",
+        "Every page below is one part of that picture. Each ends with a call to the person who will build it."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "What we build",
+      "h2": "Website and e-commerce services, by what you need online.",
+      "items": [
+        {
+          "href": "/web-development/medical-equipment-website-development/",
+          "b": "Medical equipment website development",
+          "p": "A catalogue-led site with enquiry and quote forms, WhatsApp CTAs and SEO-ready product pages."
+        },
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "b": "Medical equipment e-commerce development",
+          "p": "A B2B storefront with quote-to-order, distributor pricing and payment verification by UTR."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "b": "Medical distributor portal development",
+          "p": "Dealer login, ordering, price lists, order tracking and a documents vault."
+        },
+        {
+          "href": "/web-development/healthcare-website-development/",
+          "b": "Healthcare website development",
+          "p": "Hospital, clinic and diagnostic centre sites with doctors, departments and appointment CTAs."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "b": "Medical product catalogue website",
+          "p": "A structured catalogue per product line with specifications, brochures and per-product enquiry."
+        },
+        {
+          "href": "/web-development/healthcare-b2b-ecommerce-platform/",
+          "b": "Healthcare B2B e-commerce platform",
+          "p": "Multi-tier pricing, credit terms, bulk ordering and integration with Aura Business orders and stock."
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "How the work runs",
+      "h2": "What is different about a founder-built site.",
+      "items": [
+        {
+          "icon": "&#128100;",
+          "b": "The builder designs it",
+          "p": "Ragul Sekar scopes, designs, codes and launches the site. This one included."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Stack chosen for the job",
+          "p": "WordPress when your team edits content daily; Next.js on Supabase when the site holds pricing, orders and logins."
+        },
+        {
+          "icon": "&#128269;",
+          "b": "SEO built into the structure",
+          "p": "Product-line and city pages, schema and GA4 are part of the site architecture, not a later add-on."
+        },
+        {
+          "icon": "&#128172;",
+          "b": "WhatsApp where buyers are",
+          "p": "Enquiry forms and WhatsApp CTAs on every product page, because that is how Indian B2B buyers ask."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Connected to operations",
+          "p": "Enquiries, quotes and orders flow into Aura Business, so the website feeds the CRM instead of an inbox."
+        },
+        {
+          "icon": "&#128197;",
+          "b": "Fixed scope, clear timeline",
+          "p": "Live in 30 working days where scope allows, with the site reviewed with you as it takes shape."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare website and e-commerce development, answered.",
+      "items": [
+        {
+          "q": "WordPress or Next.js, which do you use?",
+          "a": "Both. WordPress suits a content-led site your team edits every week. Next.js on Supabase suits a site that is really an application, with logins, dealer pricing, quotations and order status. The choice is made on the discovery call and explained in the scope."
+        },
+        {
+          "q": "What have you built on the web?",
+          "a": "The Medline Robotics storefront, distributor portal, quotation and ordering flow, UTR payment verification and 253 product and city SEO pages. Carna Medicare's platform included a WordPress site. And this website, which the founder designed and built. See the <a href=\"/case-studies/\">case studies</a>."
+        },
+        {
+          "q": "Can the website connect to our CRM or ERP?",
+          "a": "Yes. Enquiries and quote requests can land in Aura Business as leads, and orders from a storefront or portal can create sales orders and reduce stock there. Other systems can be connected through their APIs."
+        },
+        {
+          "q": "Do you handle SEO as well?",
+          "a": "Yes. Site structure, schema and GA4 are part of every build, and programmatic product-line and city pages are available as a separate service. See <a href=\"/seo-services/\">SEO services</a>."
+        },
+        {
+          "q": "How long does a site take?",
+          "a": "Live in 30 working days where scope allows. A catalogue site is quicker than a storefront with dealer pricing and payment verification, and the scope document states the timeline for yours."
+        },
+        {
+          "q": "Do you work outside Chennai?",
+          "a": "Yes. Websites and stores are built and hosted remotely for customers anywhere in India and abroad, with reviews and support on WhatsApp. In-person meetings are in Chennai."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related services and products",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Pages that bring buyers to the site."
+        },
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128736;",
+          "b": "Aura Business",
+          "p": "Where enquiries and orders land."
+        },
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128230;",
+          "b": "Distributor software",
+          "p": "The operations behind a portal."
+        },
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile apps",
+          "p": "The app half of the build."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Store, portal and 253 pages."
+        },
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Appointments behind a hospital site."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Medical Device Firmware Development | To Your Spec | Elevate Aura</title>
+<meta name="description" content="Medical device firmware development to your hardware spec: state handling, power management, sensors and comms in C/C++ or MicroPython, tested on your board.">
+<link rel="canonical" href="https://elevateaura.co.in/product-development/medical-device-firmware-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura Product Development">
+<meta property="og:title" content="Medical Device Firmware Development | To Your Spec | Elevate Aura">
+<meta property="og:description" content="Medical device firmware development to your hardware spec: state handling, power management, sensors and comms in C/C++ or MicroPython, tested on your board.">
+<meta property="og:url" content="https://elevateaura.co.in/product-development/medical-device-firmware-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medical Device Firmware Development | To Your Spec | Elevate Aura">
+<meta name="twitter:description" content="Medical device firmware development to your hardware spec: state handling, power management, sensors and comms in C/C++ or MicroPython, tested on your board.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/product-development/dev.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Product Development", "item": "https://elevateaura.co.in/product-development.html"}, {"@type": "ListItem", "position": 3, "name": "Medical Device Firmware", "item": "https://elevateaura.co.in/product-development/medical-device-firmware-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Medical Device Firmware", "serviceType": "Medical device firmware development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Medical device firmware development to your hardware spec: state handling, power management, sensors and comms in C/C++ or MicroPython, tested on your board.", "url": "https://elevateaura.co.in/product-development/medical-device-firmware-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you handle the regulatory side?", "acceptedAnswer": {"@type": "Answer", "text": "No. Regulatory strategy, submissions and certification stay with your team. We deliver firmware with design, interface and test documentation that your team can use in its own regulatory submissions, but we do not claim compliance with any standard on your behalf."}}, {"@type": "Question", "name": "Which controllers and languages?", "acceptedAnswer": {"@type": "Answer", "text": "C/C++ for most production controllers, MicroPython where the board supports it and the timing allows. We work to the chip and toolchain your hardware team has chosen rather than asking you to change. See embedded C/C++ development."}}, {"@type": "Question", "name": "Do you design or build the hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. This is a software-only engagement. We do not design PCBs, source components, manufacture, or do mechanical or enclosure work. Your hardware team provides the board and the specification; we write and test the firmware on it."}}, {"@type": "Question", "name": "Who owns the code?", "acceptedAnswer": {"@type": "Answer", "text": "You do. The firmware is delivered ready to flash with source, build instructions and documentation, and your team can maintain it or hand it to another engineer without depending on us."}}, {"@type": "Question", "name": "Can you also build the app and cloud side?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same engagement can include a companion app in React Native and a telemetry pipeline on Supabase or Azure, so the firmware, app and cloud are written to fit. See medical device app development."}}, {"@type": "Question", "name": "How is the work scoped and priced?", "acceptedAnswer": {"@type": "Answer", "text": "Fixed scope per project, agreed after a call about your controller, sensors, states and comms. There is no published rate card; the plan and timeline are given after the spec is understood."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Product Development, embedded &amp; device software</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20medical%20device%20that%20needs%20its%20firmware%20written.%20Can%20we%20discuss%20the%20spec%3F" target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/product-development.html">Product Development</a></li>
+  <li><span aria-current="page">Medical Device Firmware</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>Software-only, for device companies</span>
+      <h1>Medical device firmware written to your hardware team's <span class="hl">specification</span>.</h1>
+      <p class="sub">Elevate Aura writes the firmware that runs a medical device: core logic, state handling, power management, sensor reading and communication, in C/C++ or MicroPython, to the specification your hardware team hands over. Tested on your hardware, delivered ready to flash, with documentation your team keeps.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20medical%20device%20that%20needs%20its%20firmware%20written.%20Can%20we%20discuss%20the%20spec%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>C/C++ or MicroPython, to your controller</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Tested on your hardware before handover</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>You own the code and the documentation</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What medical device firmware development means here</h2>
+    </div>
+    <div class="ans rv"><p>Medical device firmware development is writing the software that runs on the device's own controller: how it starts, the states it moves through, how it reads its sensors, how it manages power and how it talks to a phone, gateway or cloud. Elevate Aura writes that layer in C/C++ or MicroPython to the hardware specification your team provides.</p><p>It is a software-only engagement. Your team designs the board, chooses the controller and sensors and owns the regulatory route. We write the firmware, test it on the hardware you send, and hand it over ready to flash with documentation your team can use in its own regulatory submissions. We do not design PCBs, manufacture anything or certify the device.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The firmware problem</span>
+      <h2 class="h2">The hardware is done. The firmware is a prototype that grew.</h2>
+      <p class="lead">Many device teams reach a working board with firmware that was written to prove a point, not to ship.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>States nobody wrote down</h3><p>The device behaves differently after a brownout because the state machine was never defined, only implied.</p></div><div class="pain rv d1"><h3>Power budget missed</h3><p>Sleep and wake were handled last, so the battery life on the datasheet and the bench do not match.</p></div><div class="pain rv d2"><h3>Sensor timing that drifts</h3><p>Readings are taken in the main loop with delays, and the sample rate wanders when comms are busy.</p></div><div class="pain rv"><h3>No documentation for the file</h3><p>The submission needs a description of what the software does, and the only description is the code.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How the work runs</span>
+      <h2 class="h2">From your spec to firmware ready to flash.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Scope to spec</h4><p>Controller, sensors, states, comms and the software boundary agreed.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Architecture</h4><p>State machine, scheduling and power modes designed and reviewed with your team.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Drivers and logic</h4><p>Sensor and peripheral drivers, core logic and error handling written.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Comms</h4><p>BLE, Wi-Fi, serial, Modbus or CAN layer as the device requires.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Test on hardware</h4><p>Validated on your boards, with logs and test notes.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Hand over</h4><p>Ready to flash, documented, code owned by you.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is written</span>
+      <h2 class="h2">The firmware layer for a medical device.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#9881;</span>Core</h3><ul><li>State machine and device modes</li><li>Scheduling and interrupts</li><li>Watchdog and fault handling</li><li>Configuration and calibration storage</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128267;</span>Power</h3><ul><li>Sleep and wake modes</li><li>Duty cycling</li><li>Brownout handling</li><li>Battery state reporting</li></ul></div><div class="capg rv"><h3><span class="k">&#128225;</span>Sensors and comms</h3><ul><li>I2C, SPI, UART, ADC drivers</li><li>Sensor sampling and filtering</li><li>BLE, Wi-Fi, Modbus, CAN</li><li>OTA update path</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128203;</span>Handover</h3><ul><li>Tests on your hardware</li><li>Logging for diagnosis</li><li>Design and interface documentation</li><li>Ready-to-flash build</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/product-development.html">See the full product development scope <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">What a firmware engagement looks like.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A monitoring device with a defined state model</h3><p class="r"><b>Workflow:</b> Idle, measuring, alarm, charging and fault are defined with your team, then implemented as a state machine with logged transitions.</p><p><b>Result:</b> The device behaves the same way every time, and the behaviour is documented.</p></div><div class="u rv d1"><h3>A battery device that lasts as long as the spec says</h3><p class="r"><b>Workflow:</b> Sampling, radio and display are duty-cycled and the controller sleeps between them, measured on your board.</p><p><b>Result:</b> Power draw is known before the enclosure is sealed.</p></div><div class="u rv"><h3>A device that must report to an app</h3><p class="r"><b>Workflow:</b> The firmware exposes a BLE profile, and a companion app built on the same engagement pairs, reads and controls it.</p><p><b>Result:</b> Both sides are written to fit, by one builder.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Device companies with hardware designed and firmware missing.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#129658;</div><b>Patient monitoring</b><p>Vitals, wearables and bedside devices.</p></div><div class="w"><div class="g">&#128300;</div><b>Diagnostics and instruments</b><p>Readers, analysers and handheld testers.</p></div><div class="w"><div class="g">&#129302;</div><b>Medical robotics</b><p>Control and communication firmware.</p></div><div class="w"><div class="g">&#127973;</div><b>Hospital equipment makers</b><p>Pumps, therapy and support devices.</p></div><div class="w"><div class="g">&#128104;&#8205;&#128295;</div><b>Hardware teams</b><p>Firmware capacity without a hire.</p></div><div class="w"><div class="g">&#128640;</div><b>Medtech founders</b><p>From a working prototype to shippable firmware.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Getting medical device firmware written, three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>In-house hire</div><div>Generic outsourcing</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Time to start</div><div>Months to recruit</div><div>Weeks</div><div class="us">Days, scoped on a call</div></div><div class="r"><div class="cap">Written to your spec</div><div>Yes</div><div>Often to theirs</div><div class="us">Yes, to your controller and toolchain</div></div><div class="r"><div class="cap">Tested on your hardware</div><div>Yes</div><div>Sometimes</div><div class="us">Always, before handover</div></div><div class="r"><div class="cap">Documentation</div><div>Varies</div><div>Thin</div><div class="us">Design and interface docs for your file</div></div><div class="r"><div class="cap">Firmware, app and cloud together</div><div>Separate hires</div><div>Separate vendors</div><div class="us">One builder</div></div><div class="r"><div class="cap">Hardware boundary</div><div>None</div><div>Blurred</div><div class="us">Explicit: software-only</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Medical device firmware, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Do you handle the regulatory side?</summary><p>No. Regulatory strategy, submissions and certification stay with your team. We deliver firmware with design, interface and test documentation that your team can use in its own regulatory submissions, but we do not claim compliance with any standard on your behalf.</p></details><details><summary>Which controllers and languages?</summary><p>C/C++ for most production controllers, MicroPython where the board supports it and the timing allows. We work to the chip and toolchain your hardware team has chosen rather than asking you to change. See <a href="/product-development/embedded-c-cpp-development-services/">embedded C/C++ development</a>.</p></details><details><summary>Do you design or build the hardware?</summary><p>No. This is a software-only engagement. We do not design PCBs, source components, manufacture, or do mechanical or enclosure work. Your hardware team provides the board and the specification; we write and test the firmware on it.</p></details><details><summary>Who owns the code?</summary><p>You do. The firmware is delivered ready to flash with source, build instructions and documentation, and your team can maintain it or hand it to another engineer without depending on us.</p></details><details><summary>Can you also build the app and cloud side?</summary><p>Yes. The same engagement can include a companion app in React Native and a telemetry pipeline on Supabase or Azure, so the firmware, app and cloud are written to fit. See <a href="/product-development/medical-device-app-development/">medical device app development</a>.</p></details><details><summary>How is the work scoped and priced?</summary><p>Fixed scope per project, agreed after a call about your controller, sensors, states and comms. There is no published rate card; the plan and timeline are given after the spec is understood.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related device software services</h2></div>
+    <div class="who rv"><a class="w" href="/product-development/medical-device-software-development/"><div class="g">&#129658;</div><b>Medical device software</b><p>Firmware, comms, app and cloud.</p></a><a class="w" href="/product-development/embedded-c-cpp-development-services/"><div class="g">&#128187;</div><b>Embedded C/C++</b><p>Drivers, peripherals, testing.</p></a><a class="w" href="/product-development/sensor-integration-software/"><div class="g">&#128225;</div><b>Sensor integration</b><p>Read, calibrate, act.</p></a><a class="w" href="/product-development/ota-firmware-update-development/"><div class="g">&#128260;</div><b>OTA updates</b><p>Versioning and rollback.</p></a><a class="w" href="/product-development/firmware-development/"><div class="g">&#128268;</div><b>Firmware development</b><p>Drivers, OTA, ready to flash.</p></a><a class="w" href="/product-development.html"><div class="g">&#127968;</div><b>Product development</b><p>The full software-only scope.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Send us the controller and the spec.</h2>
+      <p>Tell us the chip, the sensors, the states the device must move through and what it talks to. We will scope the firmware, be clear about the software-only boundary and give you a fixed plan.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20medical%20device%20that%20needs%20its%20firmware%20written.%20Can%20we%20discuss%20the%20spec%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura Product Development</h4>
+        <p class="b">Embedded and device software for medical-device and robotics companies: firmware, communication, companion apps and cloud telemetry, written to your hardware spec.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Product Development</h4>
+        <a href="/product-development.html">Product Development home</a>
+        <a href="/product-development/medical-device-software-development/">Medical Device Software</a><a href="/product-development/embedded-software-development/">Embedded Software</a><a href="/product-development/firmware-development/">Firmware</a><a href="/product-development/ble-device-software/">BLE Device Software</a><a href="/product-development/iot-product-development/">IoT Product Development</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

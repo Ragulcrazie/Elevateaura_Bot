@@ -1,0 +1,333 @@
+{
+  "cluster": "aurapacs",
+  "slug": "teleradiology-remote-reading-software",
+  "title": "Remote Reading Software for Radiologists | AuraPACS",
+  "meta": "Remote reading software that lets your own radiologist read from home or a second site in a browser, with role-based access and every view audited.",
+  "h1": "Remote reading software for <span class=\"hl\">your own radiologist</span>, from home or a second site.",
+  "crumb": "Remote Reading",
+  "pill": "Teleradiology without a third party",
+  "sub": "AuraPACS gives the radiologist you already work with a browser viewer and reporting from anywhere you allow. Studies sync from the on-premise node through the cloud layer; the reader opens them, reports and signs. It is your radiologist, your archive and your report, not a pay-per-scan service.",
+  "meta_ticks": [
+    "Browser viewer, nothing installed",
+    "Role-based access, audited",
+    "Your radiologist, not ours"
+  ],
+  "whatsapp_text": "Hi, our radiologist reads remotely and we'd like to discuss AuraPACS.",
+  "primary_keyword": "teleradiology software",
+  "secondary_keywords": [
+    "remote reading software",
+    "remote radiology reporting",
+    "read scans from home",
+    "teleradiology PACS",
+    "radiologist remote access",
+    "multi-site radiology reading"
+  ],
+  "intent": "commercial",
+  "persona": "Centre owner whose radiologist visits on set days or reads from another city, and who wants reporting to continue between visits",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What remote reading means in AuraPACS",
+      "paras": [
+        "Remote reading in AuraPACS means an authorised radiologist opens the centre's studies in a browser from wherever they are, scrolls the slices, adjusts window/level, writes the report on a template and signs it, exactly as they would in the reading room. Studies are received on the on-premise node and made available outside through the cloud layer.",
+        "This is teleradiology in the sense of reading at a distance, but it is not a teleradiology service. AuraPACS does not supply radiologists or charge per study read. It gives the radiologist you already work with a way to report between visits, and gives you role-based control and an audit trail over who saw what."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why remote reading is hard today",
+      "h2": "The radiologist is willing. The setup is what fails.",
+      "lead": "Most small centres have a radiologist who could read from home. What they lack is a safe way to get the study to them.",
+      "items": [
+        {
+          "h": "Screenshots on WhatsApp",
+          "p": "A few slices are photographed and sent; the radiologist reports on a fraction of the study."
+        },
+        {
+          "h": "VPN and installed software",
+          "p": "A workstation client and a VPN that someone has to maintain, and that breaks when the radiologist changes laptop."
+        },
+        {
+          "h": "Anonymous access",
+          "p": "A shared login means nobody knows who opened which patient's study."
+        },
+        {
+          "h": "Report comes back by email",
+          "p": "The document is emailed to the centre, printed and filed, disconnected from the images."
+        },
+        {
+          "h": "Pay-per-scan lock-in",
+          "p": "Outsourcing to a service solves the reading but bills every study forever and takes the relationship with your radiologist away."
+        },
+        {
+          "h": "Slow uplinks",
+          "p": "Uploading a whole MR to a remote workstation over a weak line takes longer than the read."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the scanner to a report signed elsewhere.",
+      "steps": [
+        {
+          "h": "Study received locally",
+          "p": "The modality sends to the on-premise node as usual."
+        },
+        {
+          "h": "Synced",
+          "p": "An encrypted copy reaches the cloud layer when the connection is up."
+        },
+        {
+          "h": "Pending list",
+          "p": "The radiologist logs in from home and sees unread studies for their role."
+        },
+        {
+          "h": "Read in the browser",
+          "p": "Slice scrolling and window/level on any laptop, priors from the history."
+        },
+        {
+          "h": "Reported and signed",
+          "p": "Template report finalised to PDF on the study, same as on site."
+        },
+        {
+          "h": "Shared by the centre",
+          "p": "Front desk sends the secure WhatsApp link to the referrer."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Remote reading, and the controls around it.",
+      "groups": [
+        {
+          "icon": "&#127968;",
+          "h": "For the reader",
+          "items": [
+            "Browser viewer, nothing installed",
+            "CT, MR, X-ray, ultrasound on any laptop",
+            "Slice scrolling and window/level",
+            "Reporting templates and sign-off"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "For the owner",
+          "items": [
+            "Role-based access per radiologist",
+            "Every view audited",
+            "Archive stays on your node",
+            "No per-study charge for reading"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Sites",
+          "items": [
+            "Read from home",
+            "Read from a second branch",
+            "One reader across two scanners"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Around it",
+          "items": [
+            "Modality worklist at the centre",
+            "WhatsApp secure links",
+            "GST billing from the same system",
+            "Works without internet on site"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/hybrid-pacs/",
+        "label": "See how the node and cloud layer share the work"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Reading arrangements this fits.",
+      "items": [
+        {
+          "h": "Visiting radiologist, two days a week",
+          "workflow": "On the other days he opens the pending list from home and reports; on visit days he reviews in person.",
+          "result": "Reports go out daily instead of twice a week."
+        },
+        {
+          "h": "Radiologist in another city",
+          "workflow": "She reads the centre's CT and MR from her own practice in a browser, with her own login.",
+          "result": "The centre keeps its radiologist and its archive; nothing is outsourced."
+        },
+        {
+          "h": "Two branches, one reader",
+          "workflow": "Both nodes sync to the cloud layer; the radiologist sees one pending list across both.",
+          "result": "The second branch does not need its own radiologist on site."
+        },
+        {
+          "h": "Night-time casualty CT",
+          "workflow": "The on-call radiologist opens the study on a laptop at home and reports.",
+          "result": "The emergency physician gets the report without waiting for morning."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Centres that own the reading relationship.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres",
+          "p": "A partner or visiting radiologist who reads between visits."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Radiologists",
+          "p": "Read for one or more centres from one browser."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Small hospitals",
+          "p": "On-call reporting at night without a workstation at home."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Two-branch groups",
+          "p": "One reader, two scanners, one archive."
+        },
+        {
+          "icon": "&#9878;",
+          "b": "Owners avoiding per-scan billing",
+          "p": "Remote reading without renting the archive."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Reading at a distance, three ways.",
+      "cols": [
+        "Pay-per-scan teleradiology",
+        "Enterprise PACS",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Who reads",
+          "Their radiologists",
+          "Yours, with installed client",
+          "Yours, in a browser"
+        ],
+        [
+          "Cost per study read",
+          "Yes, forever",
+          "No",
+          "No"
+        ],
+        [
+          "Software at the reader's end",
+          "Their portal",
+          "Workstation client and VPN",
+          "Any browser"
+        ],
+        [
+          "Where the archive lives",
+          "Their cloud",
+          "Your data centre",
+          "Your node, with encrypted backup"
+        ],
+        [
+          "Access control",
+          "Theirs",
+          "Yours, complex",
+          "Role-based, every view audited"
+        ],
+        [
+          "Report lands on the study",
+          "In their portal",
+          "Yes",
+          "Yes, PDF on the study"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Remote reading software, answered.",
+      "items": [
+        {
+          "q": "Is AuraPACS a teleradiology service?",
+          "a": "No. It does not supply radiologists or charge per study read. It gives your own radiologist a browser viewer and reporting from anywhere you allow. If you use a third-party reporting service as well, that is a separate arrangement."
+        },
+        {
+          "q": "What does the radiologist need at home?",
+          "a": "A laptop with a standard browser and an internet connection. The viewer opens CT, MR, X-ray and ultrasound with nothing installed. Display quality for reading is the radiologist's choice."
+        },
+        {
+          "q": "How is access controlled?",
+          "a": "Each radiologist has their own login with the radiologist role. Every view is audited, so the owner can see who opened which study and when. See <a href=\"/aurapacs/radiology-workflow-software/\">radiology workflow</a>."
+        },
+        {
+          "q": "Does the whole study have to upload before reading?",
+          "a": "Studies sync from the on-premise node to the cloud layer in the background after they are received. The remote reader opens the synced study in the browser; on-site reading is never held up by the sync."
+        },
+        {
+          "q": "Can one radiologist cover two branches?",
+          "a": "Yes. Each branch runs its own node and both sync to the cloud layer, so the reader sees a single pending list across sites."
+        },
+        {
+          "q": "Does the report written remotely reach the centre?",
+          "a": "It is written on the study itself, so it is already at the centre the moment it is signed. Front desk sends the secure link on WhatsApp. See <a href=\"/aurapacs/radiology-reporting-software/\">reporting software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-for-mri-centres/",
+          "icon": "&#129522;",
+          "b": "PACS for MRI centres",
+          "p": "Where remote reading matters most."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/aurapacs/cloud-pacs-software/",
+          "icon": "&#9729;",
+          "b": "Cloud PACS",
+          "p": "The layer that reaches outside."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "Teleradiology versus PACS."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Where the reader connects to."
+        }
+      ]
+    }
+  ]
+}

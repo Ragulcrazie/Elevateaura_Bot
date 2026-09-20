@@ -1,0 +1,321 @@
+{
+  "cluster": "product-development",
+  "slug": "embedded-c-cpp-development-services",
+  "title": "Embedded C/C++ Development Services | Elevate Aura",
+  "meta": "Embedded C/C++ development services: firmware to your spec, peripheral drivers, interrupt and timing work, tested on your board and handed over ready to flash.",
+  "h1": "Embedded C and C++ written to your spec, tested on <span class=\"hl\">your board</span>.",
+  "crumb": "Embedded C/C++",
+  "pill": "Software-only, to your toolchain",
+  "sub": "Elevate Aura writes production embedded C and C++ to the specification your hardware team hands over: peripheral drivers, interrupt and timing work, state handling and power modes, built in your toolchain, tested on your boards and delivered ready to flash.",
+  "meta_ticks": [
+    "Drivers for I2C, SPI, UART and ADC",
+    "Your controller, your toolchain",
+    "Ready to flash, with the source"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need embedded C/C++ written for our controller. Can we discuss the spec?",
+  "cta_h2": "Send the controller, the peripherals and the spec.",
+  "cta_p": "Tell us the part, the toolchain your team already uses and what the firmware must do. We will scope the work, be explicit about the software-only boundary and give you a fixed plan.",
+  "primary_keyword": "embedded C/C++ development services",
+  "secondary_keywords": [
+    "embedded C development services",
+    "embedded C++ firmware developer",
+    "microcontroller driver development services",
+    "bare metal firmware development India",
+    "peripheral driver development",
+    "embedded software outsourcing C/C++"
+  ],
+  "intent": "commercial",
+  "persona": "Hardware or engineering lead who needs production C/C++ firmware written for a board their team has designed",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Embedded C/C++ development services",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What embedded C and C++ work covers here",
+      "paras": [
+        "Embedded C/C++ development is writing the code that runs directly on your microcontroller: the drivers that talk to each peripheral, the interrupt and timing work underneath them, the state handling that decides what the device does, and the power modes that decide how long it lasts.",
+        "We write it in the toolchain your team already uses, against the part your team has already chosen. That matters more than it sounds, because firmware written comfortably somewhere else and ported afterwards is where most of the surprises live. Compilation, flashing and debugging happen on your hardware from the start.",
+        "The handover is source, build instructions, test notes and documentation, ready to flash, and the code is yours. We do not design PCBs, source components, manufacture, do mechanical or enclosure work, or handle hardware regulatory certification. This is a software-only engagement, and the boundary is stated before anything is scoped."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The firmware gap",
+      "h2": "The board is back from the fab. The firmware is a bring-up script.",
+      "lead": "Bring-up code proves the hardware works. It rarely survives contact with a product.",
+      "items": [
+        {
+          "h": "Drivers written as demos",
+          "p": "Each peripheral has a snippet that once worked, with no error handling and no shared timing discipline."
+        },
+        {
+          "h": "Everything in the main loop",
+          "p": "Delays hold up the whole device, and behaviour changes whenever another task is added."
+        },
+        {
+          "h": "Interrupts nobody owns",
+          "p": "Shared variables are read outside a critical section and the fault shows up once a week."
+        },
+        {
+          "h": "No tests, no notes",
+          "p": "The only record of what the firmware does is the firmware, and the person who wrote it has moved on."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a controller and a spec to firmware ready to flash.",
+      "steps": [
+        {
+          "h": "Scope",
+          "p": "Part, toolchain, peripherals, behaviour and the software boundary agreed."
+        },
+        {
+          "h": "Architecture",
+          "p": "Task structure, interrupt strategy, state model and power modes designed."
+        },
+        {
+          "h": "Drivers",
+          "p": "I2C, SPI, UART, ADC, timers and GPIO written with real error handling."
+        },
+        {
+          "h": "Application logic",
+          "p": "Device behaviour, configuration storage, faults and safe defaults."
+        },
+        {
+          "h": "Test on hardware",
+          "p": "Run on your boards, with timing and power measured and logged."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, build instructions, test notes and documentation, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The layers below the product.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Drivers",
+          "items": [
+            "I2C, SPI, UART and ADC",
+            "Timers, PWM and GPIO",
+            "Flash and external storage",
+            "Display and input peripherals"
+          ]
+        },
+        {
+          "icon": "&#9881;",
+          "h": "Core",
+          "items": [
+            "Interrupt handling and priorities",
+            "Task structure or scheduler use",
+            "State machine and device modes",
+            "Watchdog and fault recovery"
+          ]
+        },
+        {
+          "icon": "&#128267;",
+          "h": "Power and timing",
+          "items": [
+            "Sleep and wake modes",
+            "Duty cycling around sampling",
+            "Brownout behaviour",
+            "Timing measured on the board"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Handover",
+          "items": [
+            "Source and build instructions",
+            "Test notes from your hardware",
+            "Interface and design documentation",
+            "Ready-to-flash build"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the work usually looks like.",
+      "items": [
+        {
+          "h": "Bring-up code turned into a product build",
+          "workflow": "Demo snippets are replaced with drivers that report errors, and the main loop becomes a defined state machine.",
+          "result": "Behaviour that repeats, and a fault that can be traced."
+        },
+        {
+          "h": "A driver for a part nobody has used",
+          "workflow": "A sensor or peripheral is brought up from its datasheet against your board, with timing checked rather than assumed.",
+          "result": "The part works in the product, not only in the evaluation kit."
+        },
+        {
+          "h": "Firmware capacity without a hire",
+          "workflow": "Your team keeps the hardware and the roadmap, and hands over a defined firmware scope with a fixed plan.",
+          "result": "A release date that does not wait on recruitment."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams with a board and no firmware capacity.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Electronics done, software queued."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Medical device makers",
+          "p": "Production firmware to a spec."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Controller level software."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Drivers and measurement logic."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment makers",
+          "p": "Embedded work between projects."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware founders",
+          "p": "Prototype firmware made shippable."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting embedded C/C++ written, three ways.",
+      "cols": [
+        "In-house hire",
+        "Large engineering services firm",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Time to start",
+          "Months to recruit",
+          "Weeks of process",
+          "Days, scoped on a call"
+        ],
+        [
+          "Who writes the code",
+          "Your engineer",
+          "A changing team",
+          "The person you spoke to"
+        ],
+        [
+          "Your toolchain and part",
+          "Yes",
+          "Often theirs",
+          "Yes, we work in yours"
+        ],
+        [
+          "Tested on your hardware",
+          "Yes",
+          "Sometimes on theirs",
+          "Always, on your boards"
+        ],
+        [
+          "Hardware boundary",
+          "None",
+          "Broad and blurred",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Embedded C/C++ development, answered.",
+      "items": [
+        {
+          "q": "Which controllers do you work with?",
+          "a": "The one your hardware team has chosen. We write to your part and in the toolchain your team already uses rather than asking you to move, because porting later is where the expensive surprises come from."
+        },
+        {
+          "q": "Bare metal or an RTOS?",
+          "a": "Whichever the device needs. Simple periodic work with a clean interrupt strategy often does not need a scheduler. Where several independent activities and timing constraints exist, a real-time operating system on your part is the sensible base, and we say which we think fits and why."
+        },
+        {
+          "q": "Do you design the hardware or the board?",
+          "a": "No. This is a software-only engagement. PCB design, component sourcing, manufacturing, mechanical and enclosure work and hardware regulatory certification all stay with your team. We write and test firmware on the hardware you provide."
+        },
+        {
+          "q": "What do we get at the end?",
+          "a": "Source, build and flashing instructions, test notes from your boards and interface and design documentation. The code is yours and your team or another engineer can maintain it without depending on us."
+        },
+        {
+          "q": "Can you write MicroPython instead?",
+          "a": "Where the board supports it and the timing allows, yes, and it is often faster for logic-heavy work. See <a href=\"/product-development/micropython-development-services/\">MicroPython development</a>. We will tell you which we think fits your part before any work starts."
+        },
+        {
+          "q": "Can you cover comms and the app too?",
+          "a": "Yes. BLE, Wi-Fi, serial, Modbus and CAN layers, a React Native companion app and a Supabase or Azure pipeline can all sit in the same engagement. See <a href=\"/product-development/embedded-software-development/\">embedded software development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/firmware-development/",
+          "icon": "&#128268;",
+          "b": "Firmware development",
+          "p": "Written to your hardware spec."
+        },
+        {
+          "href": "/product-development/micropython-development-services/",
+          "icon": "&#128013;",
+          "b": "MicroPython",
+          "p": "Where it fits, and where not."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "Drivers with a purpose."
+        },
+        {
+          "href": "/product-development/can-bus-software-development/",
+          "icon": "&#128663;",
+          "b": "CAN bus software",
+          "p": "Nodes and message handling."
+        },
+        {
+          "href": "/product-development/medical-device-firmware-development/",
+          "icon": "&#129658;",
+          "b": "Medical device firmware",
+          "p": "For device companies."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "cluster": "aurapacs",
+  "slug": "radiology-reporting-software",
+  "title": "Radiology Reporting Software | Templates to Signed PDF | AuraPACS",
+  "meta": "Radiology reporting software with structured templates per modality, sign-off by the radiologist and a finalised PDF attached to the study and the share link.",
+  "h1": "Radiology reporting software that goes from template to <span class=\"hl\">signed PDF on the study</span>.",
+  "crumb": "Radiology Reporting",
+  "pill": "Reporting inside the PACS",
+  "sub": "AuraPACS reporting lives next to the images. The radiologist opens the study in the browser, picks the template for that modality and region, fills the findings, signs off, and the PDF is attached to the study and to the share link. No Word documents, no separate folder.",
+  "meta_ticks": [
+    "Templates per modality",
+    "Sign-off to PDF on the study",
+    "Same link carries images and report"
+  ],
+  "whatsapp_text": "Hi, I'd like to discuss radiology reporting software for our centre.",
+  "primary_keyword": "radiology reporting software",
+  "secondary_keywords": [
+    "structured radiology reporting",
+    "radiology report templates",
+    "radiology reporting system India",
+    "report writing software for radiologists",
+    "PACS reporting module",
+    "radiology report PDF"
+  ],
+  "intent": "commercial",
+  "persona": "Radiologist or centre owner who still types reports in Word and wants them on the study",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What radiology reporting software does here",
+      "paras": [
+        "Radiology reporting software gives the radiologist a structured template for each kind of study, captures the findings and impression, and produces a signed report that stays with the images. In AuraPACS the report is written in the same browser window as the viewer, finalised to a PDF, attached to the study and included in the secure link sent to the referrer.",
+        "The difference from typing in a document is where the report ends up. A Word file in a folder is unconnected to the study, gets renamed, and is emailed as an attachment. A report on the study is found by searching the patient, opens with the images, and goes out with them."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why reporting is the slow step",
+      "h2": "The scan takes minutes. The report takes the rest of the day.",
+      "lead": "Most delay between a scan and a result is not the radiologist's reading time. It is the handling around the report.",
+      "items": [
+        {
+          "h": "Blank page every time",
+          "p": "Each CT abdomen report starts from nothing, so the same normal findings are retyped daily."
+        },
+        {
+          "h": "Report and images in different places",
+          "p": "The images are on the PACS, the report is in a documents folder named by date, and the two never meet."
+        },
+        {
+          "h": "Dictated, typed, corrected, printed",
+          "p": "A typist transcribes, the radiologist corrects on paper, the front desk prints. Each hand-off adds hours."
+        },
+        {
+          "h": "No sign-off record",
+          "p": "Nobody can say who finalised the report or when, because a document has no audit trail."
+        },
+        {
+          "h": "Emailed as an attachment",
+          "p": "The referrer receives a PDF by email with no way to see the images it describes."
+        },
+        {
+          "h": "Amendments overwrite",
+          "p": "A corrected report replaces the original file and the earlier version is gone."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From an unread study to a shared report.",
+      "steps": [
+        {
+          "h": "Study in the pending list",
+          "p": "Received studies appear as unread for the radiologist's role."
+        },
+        {
+          "h": "Open with the viewer",
+          "p": "Images and the report editor side by side in one browser tab."
+        },
+        {
+          "h": "Template chosen",
+          "p": "Modality and region pick the template: CT brain, MR lumbar spine, ultrasound abdomen."
+        },
+        {
+          "h": "Findings entered",
+          "p": "Structured sections filled; normal text kept, abnormal text edited."
+        },
+        {
+          "h": "Signed off",
+          "p": "The radiologist finalises; the PDF is generated with your branding and attached to the study."
+        },
+        {
+          "h": "Shared",
+          "p": "The secure link now carries the images and the report together."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The reporting module and what sits around it.",
+      "groups": [
+        {
+          "icon": "&#128221;",
+          "h": "Templates",
+          "items": [
+            "Structured templates per modality",
+            "Per-region templates within a modality",
+            "Findings and impression sections",
+            "Your centre's wording, not a generic one"
+          ]
+        },
+        {
+          "icon": "&#9997;",
+          "h": "Sign-off",
+          "items": [
+            "Radiologist role finalises",
+            "Every action audited",
+            "PDF generated with your branding",
+            "Attached to the study"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Where it is written",
+          "items": [
+            "In the browser beside the viewer",
+            "On site or reading remotely",
+            "Nothing installed"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "After sign-off",
+          "items": [
+            "WhatsApp secure link, no login",
+            "Report and images in one link",
+            "Found again from the patient history",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/ris-pacs-software/",
+        "label": "See RIS and PACS together"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in the reporting room.",
+      "items": [
+        {
+          "h": "A normal CT brain in a minute",
+          "workflow": "The template opens with standard normal findings; the radiologist confirms and signs.",
+          "result": "The report is on the study and shared before the patient has left the waiting area."
+        },
+        {
+          "h": "A remote reader signs from home",
+          "workflow": "The visiting radiologist opens the pending list in a browser, reports and finalises.",
+          "result": "No document to email back to the centre for printing."
+        },
+        {
+          "h": "The referrer asks which scan the report refers to",
+          "workflow": "Front desk resends the secure link; it opens the images and the PDF together.",
+          "result": "No confusion between two studies on the same day."
+        },
+        {
+          "h": "An old report is needed",
+          "workflow": "The patient's history is searched and the earlier study opens with its signed PDF.",
+          "result": "No folder search by date."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who writes or waits for a radiology report.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Radiologists",
+          "p": "Templates that match how they already dictate."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres",
+          "p": "Turnaround measured in hours, not days."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Hospital radiology departments",
+          "p": "Consultants find the report on the study from the ward."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Sonologists",
+          "p": "Ultrasound reports written and shared in the same sitting."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Front desk",
+          "p": "One place to see what is pending and what is signed."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Writing the report, three ways.",
+      "cols": [
+        "Word and email",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Where the report lives",
+          "A folder on one PC",
+          "Their portal",
+          "On the study, on your node"
+        ],
+        [
+          "Templates",
+          "Copy from last week's file",
+          "Their format",
+          "Your templates per modality"
+        ],
+        [
+          "Sign-off record",
+          "None",
+          "Theirs",
+          "Radiologist role, audited"
+        ],
+        [
+          "Reaches the referrer",
+          "Email attachment",
+          "Portal login",
+          "WhatsApp link with images"
+        ],
+        [
+          "Written from home",
+          "Then emailed back",
+          "By their readers",
+          "In the browser, same as on site"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Ticket queue",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Radiology reporting software, answered.",
+      "items": [
+        {
+          "q": "Can we use our own report formats?",
+          "a": "Yes. Templates are structured per modality and region, and they are set up with your centre's wording and branding during implementation. The finalised PDF looks like your report, not a generic one."
+        },
+        {
+          "q": "Is the report written in the same screen as the images?",
+          "a": "Yes. The viewer and the report editor sit in one browser tab, so the radiologist scrolls slices and writes findings without switching applications. See <a href=\"/aurapacs/dicom-viewer/\">DICOM viewer</a>."
+        },
+        {
+          "q": "Who can finalise a report?",
+          "a": "Only users with the radiologist role. Technician, front desk and referrer roles see what their role allows, and every action is audited. See <a href=\"/aurapacs/radiology-workflow-software/\">radiology workflow</a>."
+        },
+        {
+          "q": "Can a remote radiologist report?",
+          "a": "Yes. Reporting works the same way from home or a second site through the cloud layer, in a browser with nothing installed."
+        },
+        {
+          "q": "How does the report reach the patient and referrer?",
+          "a": "The signed PDF is attached to the study, and a secure link sent on WhatsApp opens the report and the images without a login at their end."
+        },
+        {
+          "q": "Does AuraPACS read or interpret the scan?",
+          "a": "No. AuraPACS is not a diagnostic device. It stores and displays the images and gives the radiologist a place to write; the interpretation is theirs."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "The report on a phone."
+        },
+        {
+          "href": "/aurapacs/teleradiology-remote-reading-software/",
+          "icon": "&#127968;",
+          "b": "Remote reading",
+          "p": "Report from home."
+        },
+        {
+          "href": "/aurapacs/ris-pacs-software/",
+          "icon": "&#128203;",
+          "b": "RIS PACS",
+          "p": "Scheduling to sign-off."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128218;",
+          "b": "What is RIS",
+          "p": "Where reporting fits."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs viewer",
+          "p": "A viewer has no reporting."
+        },
+        {
+          "href": "/aurapacs/imaging-centre-software/",
+          "icon": "&#127973;",
+          "b": "Imaging centre software",
+          "p": "Front desk to billing, one centre."
+        }
+      ]
+    }
+  ]
+}

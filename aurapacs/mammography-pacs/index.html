@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Mammography PACS | High-Resolution Images and Priors</title>
+<meta name="description" content="Mammography PACS for large high-resolution images: careful window/level in the browser, prior screening rounds beside today&#x27;s.">
+<link rel="canonical" href="https://elevateaura.co.in/aurapacs/mammography-pacs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AuraPACS by Elevate Aura">
+<meta property="og:title" content="Mammography PACS | High-Resolution Images and Priors">
+<meta property="og:description" content="Mammography PACS for large high-resolution images: careful window/level in the browser, prior screening rounds beside today&#x27;s.">
+<meta property="og:url" content="https://elevateaura.co.in/aurapacs/mammography-pacs/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mammography PACS | High-Resolution Images and Priors">
+<meta name="twitter:description" content="Mammography PACS for large high-resolution images: careful window/level in the browser, prior screening rounds beside today&#x27;s.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aurapacs/pacs.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "AuraPACS", "item": "https://elevateaura.co.in/aurapacs.html"}, {"@type": "ListItem", "position": 3, "name": "Mammography PACS", "item": "https://elevateaura.co.in/aurapacs/mammography-pacs/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuraPACS Mammography PACS", "applicationCategory": "HealthApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Mammography PACS for large high-resolution images: careful window/level in the browser, prior screening rounds beside today's.", "url": "https://elevateaura.co.in/aurapacs/mammography-pacs/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are mammography images stored at full resolution?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The node receives whatever the unit sends as DICOM and stores it as received. The browser viewer opens the study at full detail rather than a preview copy."}}, {"@type": "Question", "name": "Can the radiologist compare with last year's round?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Earlier studies are in the patient's searchable history on the node and can be opened alongside the current study in the viewer, with independent window/level."}}, {"@type": "Question", "name": "Does the viewer support the fine window/level mammography needs?", "acceptedAnswer": {"@type": "Answer", "text": "The browser viewer provides window/level adjustment on the full-resolution image. Reading-room display hardware and its calibration remain your choice; AuraPACS does not supply monitors. See DICOM viewer."}}, {"@type": "Question", "name": "How does the patient receive her report?", "acceptedAnswer": {"@type": "Answer", "text": "By a secure link sent on WhatsApp, which opens the report PDF and, if you choose, the images, without any login. Access is role-based and every view is audited. See WhatsApp report sharing."}}, {"@type": "Question", "name": "How much storage does mammography need?", "acceptedAnswer": {"@type": "Answer", "text": "More per study than X-ray or ultrasound, because the images are large. The archive is on your own node and is sized to your annual volume on a call, with an encrypted offsite copy."}}, {"@type": "Question", "name": "Is AuraPACS a diagnostic device?", "acceptedAnswer": {"@type": "Answer", "text": "No. It stores, displays and shares the images. The read and the report are by your radiologist."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; AuraPACS, browser-based imaging</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20we%20run%20a%20mammography%20unit%20and%20would%20like%20to%20discuss%20AuraPACS." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aurapacs.html">AuraPACS</a></li>
+  <li><span aria-current="page">Mammography PACS</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For mammography units</span>
+      <h1>Mammography PACS built for <span class="hl">large, detailed images</span> and comparison with the last round.</h1>
+      <p class="sub">Mammography images are large and high-resolution, read with careful window/level, and almost always compared with the previous round. AuraPACS stores them on a node in your centre, opens them in a browser at full detail, keeps every prior in the patient's history and shares the report with the patient securely.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="https://pacs.elevateaura.co.in/" target="_blank" rel="noopener">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20we%20run%20a%20mammography%20unit%20and%20would%20like%20to%20discuss%20AuraPACS." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Full-resolution images archived</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Priors in the patient history</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Report to the patient on WhatsApp</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What a mammography PACS does</h2>
+    </div>
+    <div class="ans rv"><p>A mammography PACS receives the large, high-resolution images from the unit, stores them without loss of detail, presents them for reading with fine window/level control, and keeps every previous round so the radiologist can compare. AuraPACS does this on an on-premise node with a browser viewer, and attaches the signed report to the study for sharing.</p><p>Mammography puts two demands on a PACS that other modalities do not. The images are big, so storage and viewing must handle full resolution rather than a downsized copy. And comparison with priors is the norm, so the archive must find last year's study in seconds.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What goes wrong with mammography</span>
+      <h2 class="h2">Big images, and a reading that depends on what was seen last time.</h2>
+      <p class="lead">Mammography reading is slower and more careful than most, and the workflow around it has to respect that.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Priors on a CD somewhere</h3><p>Last year's screening round is on a disc the patient may or may not have kept, so comparison is often impossible.</p></div><div class="pain rv d1"><h3>Images downsized to share</h3><p>A JPEG on WhatsApp or a print loses the detail the radiologist needed.</p></div><div class="pain rv d2"><h3>Reading tied to the console</h3><p>The full-resolution image is only on the acquisition workstation, so reading waits for that seat.</p></div><div class="pain rv"><h3>Report separate from images</h3><p>The report is typed elsewhere and the patient receives paper with no connection to the study.</p></div><div class="pain rv d1"><h3>Patients need privacy</h3><p>Breast imaging results are sensitive and need to reach the patient directly and securely.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How it runs</span>
+      <h2 class="h2">From the unit to a report the patient can open.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Scheduled</h4><p>The patient is booked once; the entry reaches the mammography worklist.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Acquired</h4><p>The technologist selects the patient on the unit; views are captured.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Received</h4><p>Full-resolution images are sent as DICOM to the node and filed under the patient.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Priors opened</h4><p>The previous round is found in the patient history and opened beside today's.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Read and reported</h4><p>Careful window/level in the browser; report on a mammography template, signed to PDF.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Shared securely</h4><p>A secure link is sent to the patient and referring doctor on WhatsApp.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What a mammography unit uses</span>
+      <h2 class="h2">The parts of AuraPACS that matter most for breast imaging.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128229;</span>From the unit</h3><ul><li>DICOM receive of full-resolution images</li><li>Modality worklist to the unit</li><li>Archive on your node</li><li>Encrypted offsite backup</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128187;</span>Reading</h3><ul><li>Browser viewer at full detail</li><li>Window/level control</li><li>Prior rounds from the patient history</li><li>Remote reading by the radiologist</li></ul></div><div class="capg rv"><h3><span class="k">&#128221;</span>Reporting</h3><ul><li>Mammography report template</li><li>Sign-off to PDF on the study</li><li>Every action audited</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Privacy and sharing</h3><ul><li>Role-based access</li><li>Secure WhatsApp link to the patient</li><li>GST invoice from the same system</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/aurapacs/dicom-viewer/">See the browser DICOM viewer <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Mammography specifics</span>
+      <h2 class="h2">What breast imaging needs from a PACS.</h2>
+    </div>
+    <div class="tbl rv"><table><thead><tr><th>Mammography requirement</th><th>Why it matters</th><th>In AuraPACS</th></tr></thead><tbody><tr><td>Large high-resolution images</td><td>Detail is the whole point of the exam</td><td>Received and stored as sent; viewed at full detail in the browser</td></tr><tr><td>Careful window/level</td><td>Subtle differences in density are what the radiologist looks for</td><td>Window/level adjustment in the viewer</td></tr><tr><td>Prior comparison</td><td>Every round is read against the last</td><td>Searchable patient history; priors open alongside</td></tr><tr><td>Storage</td><td>Each study is heavy; years of screening add up</td><td>Archive sized to volume on your node, backed up offsite</td></tr><tr><td>Sensitive results</td><td>The patient should receive the report directly and privately</td><td>Secure link to the patient, every view audited</td></tr><tr><td>Radiologist availability</td><td>Breast imaging readers are often shared across centres</td><td>Remote reading in a browser through the cloud layer</td></tr></tbody></table></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Where mammography is acquired and read.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Diagnostic centres with a mammography unit</b><p>One unit alongside ultrasound and X-ray.</p></div><div class="w"><div class="g">&#128105;&#8205;&#9877;</div><b>Women's health clinics</b><p>Screening rounds and follow-up in one history.</p></div><div class="w"><div class="g">&#127974;</div><b>Hospital breast imaging</b><p>Surgeons open the study on the ward or in OPD.</p></div><div class="w"><div class="g">&#128104;&#8205;&#9877;</div><b>Visiting breast radiologists</b><p>Read the centre's list from home in a browser.</p></div><div class="w"><div class="g">&#128205;</div><b>Screening programmes</b><p>Serial rounds findable by patient over years.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Handling mammography, three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>CDs, film and forwarding</div><div>Pay-per-scan teleradiology</div><div class="us">AuraPACS</div></div><div class="r"><div class="cap">Image fidelity</div><div>Film or a downsized copy</div><div>As uploaded</div><div class="us">Full resolution on your node</div></div><div class="r"><div class="cap">Priors</div><div>If the patient kept the disc</div><div>Only what was sent to them</div><div class="us">Every round in the patient history</div></div><div class="r"><div class="cap">Who reads</div><div>Your radiologist, on the console</div><div>Their radiologists</div><div class="us">Your radiologist, any browser</div></div><div class="r"><div class="cap">Patient receives</div><div>Paper report</div><div>Portal or email</div><div class="us">Secure WhatsApp link</div></div><div class="r"><div class="cap">Cost model</div><div>Film per exam</div><div>Per study</div><div class="us">Owned system, scoped on a call</div></div><div class="r"><div class="cap">Works without internet</div><div>Yes</div><div>No</div><div class="us">Yes</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Mammography PACS, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Are mammography images stored at full resolution?</summary><p>Yes. The node receives whatever the unit sends as DICOM and stores it as received. The browser viewer opens the study at full detail rather than a preview copy.</p></details><details><summary>Can the radiologist compare with last year's round?</summary><p>Yes. Earlier studies are in the patient's searchable history on the node and can be opened alongside the current study in the viewer, with independent window/level.</p></details><details><summary>Does the viewer support the fine window/level mammography needs?</summary><p>The browser viewer provides window/level adjustment on the full-resolution image. Reading-room display hardware and its calibration remain your choice; AuraPACS does not supply monitors. See <a href="/aurapacs/dicom-viewer/">DICOM viewer</a>.</p></details><details><summary>How does the patient receive her report?</summary><p>By a secure link sent on WhatsApp, which opens the report PDF and, if you choose, the images, without any login. Access is role-based and every view is audited. See <a href="/aurapacs/whatsapp-medical-report-sharing/">WhatsApp report sharing</a>.</p></details><details><summary>How much storage does mammography need?</summary><p>More per study than X-ray or ultrasound, because the images are large. The archive is on your own node and is sized to your annual volume on a call, with an encrypted offsite copy.</p></details><details><summary>Is AuraPACS a diagnostic device?</summary><p>No. It stores, displays and shares the images. The read and the report are by your radiologist.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related AuraPACS pages</h2></div>
+    <div class="who rv"><a class="w" href="/aurapacs.html"><div class="g">&#129659;</div><b>AuraPACS</b><p>The whole platform.</p></a><a class="w" href="/aurapacs/ultrasound-pacs/"><div class="g">&#128300;</div><b>Ultrasound PACS</b><p>Frames and cine loops.</p></a><a class="w" href="/aurapacs/digital-x-ray-pacs/"><div class="g">&#129471;</div><b>Digital X-ray PACS</b><p>CR and DR, filmless.</p></a><a class="w" href="/aurapacs/medical-image-archive-storage/"><div class="g">&#128451;</div><b>Image archive</b><p>Storage planning.</p></a><a class="w" href="/resources/how-to-choose-pacs/"><div class="g">&#128218;</div><b>How to choose a PACS</b><p>A buyer's checklist.</p></a><a class="w" href="/compare/pacs-vs-dicom-viewer/"><div class="g">&#9878;</div><b>PACS vs viewer</b><p>When a viewer is not enough.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20we%20run%20a%20mammography%20unit%20and%20would%20like%20to%20discuss%20AuraPACS." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AuraPACS by Elevate Aura</h4>
+        <p class="b">Hybrid on-premise and cloud PACS with a browser DICOM viewer, modality worklist, reporting and WhatsApp report sharing, for clinics, diagnostic centres and hospitals.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>AuraPACS</h4>
+        <a href="/aurapacs.html">AuraPACS home</a>
+        <a href="/aurapacs/pacs-software/">PACS Software</a><a href="/aurapacs/dicom-viewer/">DICOM Viewer</a><a href="/aurapacs/cloud-pacs-software/">Cloud PACS</a><a href="/aurapacs/ris-pacs-software/">RIS PACS</a><a href="/aurapacs/dicom-worklist-software/">DICOM Worklist</a><a href="/hims.html">HIMS</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

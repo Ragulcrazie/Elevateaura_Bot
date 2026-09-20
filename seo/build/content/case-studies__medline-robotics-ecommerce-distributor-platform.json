@@ -1,0 +1,213 @@
+{
+  "cluster": "case-studies",
+  "slug": "medline-robotics-ecommerce-distributor-platform",
+  "title": "Medical Equipment E-commerce Case Study | Elevate Aura",
+  "meta": "How Medline Robotics, a medical robotics company in Chennai, got a storefront, distributor portal, quote-to-order flow and 253 product and city SEO pages.",
+  "h1": "Medline Robotics: a storefront, a distributor portal and <span class=\"hl\">253 SEO pages</span>.",
+  "crumb": "Medline Robotics",
+  "pill": "Case study &middot; Chennai",
+  "sub": "A medical robotics company in Chennai had no online store and no way to manage distributors. Elevate Aura built a custom storefront, a distributor portal with quotations and ordering, UTR payment verification, and 253 product and city landing pages across four product lines.",
+  "meta_ticks": [
+    "Medical robotics &middot; Chennai",
+    "Supabase, JavaScript, Playwright",
+    "Live store and partner portal"
+  ],
+  "demo_href": "",
+  "cta_label": "See web development",
+  "cta_href": "/web-development/",
+  "whatsapp_text": "Hi, I read the Medline Robotics case study and want a store and distributor portal for our business.",
+  "date": "2026-09-20",
+  "primary_keyword": "medical equipment e-commerce case study",
+  "secondary_keywords": [
+    "medical robotics e-commerce platform",
+    "distributor portal development",
+    "B2B storefront medical devices",
+    "programmatic SEO product pages",
+    "quote to order flow India"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or marketing head of a medical-device or robotics company that sells through distributors and wants to sell online",
+  "page_type": "case-study",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What was built, and for whom",
+      "paras": [
+        "Medline Robotics is a medical robotics company in Chennai. Elevate Aura built its e-commerce and distributor platform: a custom storefront, a distributor portal, quotations, distributor ordering and payment verification by UTR, plus 253 product and city SEO landing pages across four product lines.",
+        "The stack is Supabase, JavaScript and Playwright, with Playwright doing the automated generation and checking that makes a page set of that size maintainable by one person."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before",
+      "h2": "The situation",
+      "body": [
+        "There was no online store and no way to take orders or manage distributors for a multi-line catalogue. Enquiries arrived by phone and message, quotations were prepared one at a time, and distributors had no place of their own to see prices, place an order or check where it had reached.",
+        "The second half of the problem was discovery. A multi-line catalogue sold across many cities has a large number of genuine search queries behind it, one for each product and place combination, and none of them had a page to land on."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The build",
+      "h2": "What was built",
+      "body": [
+        "One platform with a public face and a partner face, and a page layer built on top of both.",
+        {
+          "ul": [
+            "<b>Storefront.</b> A custom e-commerce front end for the catalogue, rather than a generic template fitted around it.",
+            "<b>Distributor portal.</b> A logged-in area for partners, separate from the public store.",
+            "<b>Quotations.</b> A quote-to-order flow, so an enquiry becomes a quotation and then an order in one path.",
+            "<b>Distributor ordering.</b> Partners place and track their own orders instead of sending them in.",
+            "<b>Payment verification by UTR.</b> Bank-transfer payments verified against the reference, which is how most B2B payment actually happens in India.",
+            "<b>253 landing pages.</b> Product and city pages across four product lines, generated programmatically and checked automatically."
+          ]
+        },
+        "Supabase holds the catalogue, the partner accounts and the orders. Playwright generates and verifies the page set, so 253 pages stay consistent without 253 manual edits."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The method",
+      "h2": "How the work ran",
+      "body": [
+        "The same 30-working-day framework used on every Elevate Aura build, adapted to a platform with a public storefront.",
+        {
+          "h3": "Discovery"
+        },
+        "Scope fixed before code: which product lines, what a distributor can and cannot do, how a quotation becomes an order, and how payment is confirmed. The page architecture is decided here too, because it follows the catalogue structure.",
+        {
+          "h3": "Configure"
+        },
+        "The storefront, the portal and the ordering flow are built and shaped to the catalogue, with branding applied across both faces of the platform.",
+        {
+          "h3": "Migrate"
+        },
+        "Existing product and price information is brought into the catalogue, which is also what the programmatic pages are generated from, so the store and the SEO layer never disagree.",
+        {
+          "h3": "Train"
+        },
+        "The team learns the admin side and the distributor-facing flow, with support afterwards direct from the person who built it, on WhatsApp and in person in Chennai."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Before and after",
+      "h2": "What each component replaced",
+      "headers": [
+        "Component",
+        "What it replaced"
+      ],
+      "rows": [
+        [
+          "Custom storefront",
+          "A catalogue that could only be enquired about by phone or message"
+        ],
+        [
+          "Distributor portal",
+          "Partners asking the office for prices, stock and order status"
+        ],
+        [
+          "Quotation and quote-to-order flow",
+          "Quotations prepared individually and re-keyed when they became orders"
+        ],
+        [
+          "Distributor ordering",
+          "Orders sent in as messages and entered by hand at the other end"
+        ],
+        [
+          "UTR payment verification",
+          "Confirming bank transfers by asking and checking statements separately"
+        ],
+        [
+          "253 product and city pages",
+          "One site with no page for most of what buyers actually search for"
+        ],
+        [
+          "Playwright automation",
+          "Editing and checking a large page set by hand"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "After",
+      "h2": "What it changed",
+      "body": [
+        "The company now has two doors instead of one. The public storefront gives a buyer somewhere to arrive, read about a product and ask for a quotation without a phone call first. The distributor portal gives a partner somewhere to log in, see their own pricing, place an order and follow it, without going through the office for each step.",
+        "The workflow change in the middle is the quote-to-order path. An enquiry, a quotation and an order are now stages of the same record rather than three separate documents, which removes the re-keying step where details used to drift.",
+        "The page layer changes how buyers find the catalogue at all. Each product and city combination has its own page generated from the same catalogue data the store uses, so the two stay in step. The same approach is offered as <a href=\"/seo-services/programmatic-seo-services/\">programmatic SEO</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "About this project",
+      "items": [
+        {
+          "q": "What exactly was delivered?",
+          "a": "A custom storefront, a distributor portal, quotations, distributor ordering and payment verification by UTR, plus 253 product and city SEO landing pages across four product lines. The stack was Supabase, JavaScript and Playwright."
+        },
+        {
+          "q": "Why 253 pages rather than a handful?",
+          "a": "Because buyers search by product and by place, and each combination is a different query. Generating a page per combination from the catalogue means the site answers those queries directly instead of sending everyone to one general page."
+        },
+        {
+          "q": "How does UTR payment verification work?",
+          "a": "B2B buyers in India commonly pay by bank transfer, which produces a UTR reference. The platform captures that reference against the order so payment can be confirmed against the order record rather than reconciled separately."
+        },
+        {
+          "q": "Can a distributor portal connect to an operations platform?",
+          "a": "Yes. Orders from a portal can create sales orders and reduce stock in <a href=\"/aura-business.html\">Aura Business</a>, so the partner-facing side and the internal operations side work from the same records."
+        },
+        {
+          "q": "Can you build the same for our catalogue?",
+          "a": "Yes. Storefronts, distributor portals and catalogue sites are scoped on a call and built in WordPress or on a Supabase stack depending on how much of the site is really an application. See <a href=\"/web-development/\">web development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "The service pages",
+      "h2": "What was built here",
+      "items": [
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "icon": "&#128722;",
+          "b": "Medical equipment e-commerce",
+          "p": "B2B storefronts and quote-to-order."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128273;",
+          "b": "Distributor portal development",
+          "p": "Dealer login, pricing and ordering."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128269;",
+          "b": "Programmatic SEO",
+          "p": "Product and city pages at scale."
+        },
+        {
+          "href": "/web-development/",
+          "icon": "&#127760;",
+          "b": "Websites and e-commerce",
+          "p": "The whole web service."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A 12-module operations platform."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#128203;",
+          "b": "All case studies",
+          "p": "Every project in one place."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "cluster": "aura-learn",
+  "slug": "question-bank-software",
+  "title": "Question Bank Software | Build, Tag, Reuse Questions | Aura Learn",
+  "meta": "Question bank software for coaching and training: organise questions by subject and topic, reuse them across quizzes and mock tests, with review mode and analytics.",
+  "h1": "Question bank software that writes a question once and <span class=\"hl\">uses it everywhere</span>.",
+  "crumb": "Question Bank Software",
+  "pill": "For faculty and training authors",
+  "sub": "Aura Learn holds your questions in one tagged bank, organised by subject, topic and difficulty, so faculty can assemble quizzes, daily practice and full mock tests from the same pool, store the explanation with each answer and see which questions the batch keeps getting wrong.",
+  "meta_ticks": [
+    "One bank feeding quizzes and mock tests",
+    "Tags by subject, topic and difficulty",
+    "Explanation shown in review mode"
+  ],
+  "whatsapp_text": "Hi, I'd like to see the question bank in Aura Learn for our quizzes and mock tests.",
+  "primary_keyword": "question bank software",
+  "secondary_keywords": [
+    "question bank management system",
+    "online question bank",
+    "question paper generator software",
+    "question bank for coaching institutes",
+    "MCQ bank software",
+    "test item bank software"
+  ],
+  "intent": "commercial",
+  "persona": "Academic coordinator or faculty head who maintains the institute's questions",
+  "page_type": "feature",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What question bank software does here",
+      "paras": [
+        "Question bank software stores every question your institute writes in one organised pool, with the answer, an explanation and tags, so tests can be assembled from it instead of written from scratch each time. In Aura Learn the bank is the source for quizzes, daily practice sets and full mock tests, and all of them are graded from the same answer key.",
+        "Faculty add questions one at a time or import them in bulk, tag each by subject, topic and difficulty, and attach the explanation the learner will see in review. When a paper is assembled the platform records which questions were used and where, so the bank shows what has been overexposed and what has never been asked. Analytics on each question show how often learners get it wrong."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The question problem",
+      "h2": "Ten thousand questions, spread across documents nobody can search.",
+      "lead": "Most institutes have written more questions than they will ever need. The problem is finding them, reusing them and knowing which ones actually work.",
+      "items": [
+        {
+          "h": "Questions locked in papers",
+          "p": "Each test is a document, so reusing one good question means finding the paper and copying it out."
+        },
+        {
+          "h": "No tags, no assembly",
+          "p": "Building a topic-wise test means reading through old papers to find questions on that topic."
+        },
+        {
+          "h": "Explanations lost",
+          "p": "The answer key exists; the reasoning behind it stays in the faculty member's head."
+        },
+        {
+          "h": "No idea which questions work",
+          "p": "Nobody knows whether a question is too easy, too hard or simply badly worded."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From a written question to a reviewed answer.",
+      "steps": [
+        {
+          "h": "Add",
+          "p": "Write in the dashboard or import in bulk."
+        },
+        {
+          "h": "Tag",
+          "p": "Subject, topic, difficulty; explanation attached."
+        },
+        {
+          "h": "Assemble",
+          "p": "Pull questions by tag into a quiz or mock test."
+        },
+        {
+          "h": "Deliver",
+          "p": "Test attempted in the learner app, graded on submission."
+        },
+        {
+          "h": "Review",
+          "p": "Learner sees the correct answer and the explanation."
+        },
+        {
+          "h": "Learn from it",
+          "p": "Question analytics show what the batch gets wrong."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Building the bank, and everything that draws from it.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Organise",
+          "items": [
+            "Subject, topic and difficulty tags",
+            "Bulk import of questions",
+            "Explanation stored with each answer",
+            "Search and filter the bank"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Assemble",
+          "items": [
+            "Quizzes and mock tests from the bank",
+            "Sections and marks per question",
+            "Usage history per question",
+            "Daily practice sets for the Telegram bot"
+          ]
+        },
+        {
+          "icon": "&#128269;",
+          "h": "Review mode",
+          "items": [
+            "Correct answer shown after submission",
+            "Explanation per question",
+            "Learner's own answer alongside",
+            "Instant score"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Analytics",
+          "items": [
+            "Wrong-answer rate per question",
+            "Topic-wise results per batch",
+            "Per-learner weak topics",
+            "Questions never used"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a well-kept bank does for the institute.",
+      "items": [
+        {
+          "h": "A topic test is built in minutes",
+          "workflow": "Faculty filter the bank to one topic and a difficulty band and pull thirty questions into a quiz.",
+          "result": "The test is released the same afternoon."
+        },
+        {
+          "h": "A bad question is found and fixed",
+          "workflow": "Question analytics show one item answered wrong by nearly the whole batch; faculty check it and correct the wording.",
+          "result": "The bank improves with every test."
+        },
+        {
+          "h": "Daily practice without daily effort",
+          "workflow": "A practice set is drawn from the bank each day and pushed to learners by the Telegram bot.",
+          "result": "Learners get fresh questions; faculty do not write them daily."
+        },
+        {
+          "h": "Learners revise from their own mistakes",
+          "workflow": "In review mode each wrong answer shows the explanation, and the learner's weak topics are listed in the app.",
+          "result": "Revision is targeted rather than general."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who writes and reuses questions.",
+      "items": [
+        {
+          "icon": "&#127963;",
+          "b": "Exam-prep institutes",
+          "p": "Large objective banks by subject and topic."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Schools and tuition",
+          "p": "Chapter-wise questions per class and board."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Colleges",
+          "p": "Internal tests and placement aptitude."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Corporate trainers",
+          "p": "Product and process questions reused across batches."
+        },
+        {
+          "icon": "&#128221;",
+          "b": "Certification bodies",
+          "p": "Assessment items maintained centrally."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Content publishers",
+          "p": "Selling practice sets through an app."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Documents, a spreadsheet, or a question bank inside the LMS.",
+      "cols": [
+        "Documents",
+        "Spreadsheet of questions",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Finding a question",
+          "Open old papers",
+          "Filter a column",
+          "Search by subject, topic, difficulty"
+        ],
+        [
+          "Building a test",
+          "Copy and paste",
+          "Copy into a form",
+          "Pull by tag straight into a quiz or mock"
+        ],
+        [
+          "Explanation for learners",
+          "Separate answer key",
+          "A column, if kept",
+          "Shown in review mode after submission"
+        ],
+        [
+          "Usage history",
+          "None",
+          "Manual note",
+          "Recorded per question"
+        ],
+        [
+          "Question analytics",
+          "None",
+          "None",
+          "Wrong-answer rate per question and topic"
+        ],
+        [
+          "Connected to grading",
+          "No",
+          "No",
+          "Same answer key grades every test"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Question bank software, answered.",
+      "items": [
+        {
+          "q": "Can we import questions we already have?",
+          "a": "Yes. Existing questions can be imported in bulk from a structured file, then tagged by subject, topic and difficulty in the dashboard. Explanations can be imported at the same time or added later by faculty."
+        },
+        {
+          "q": "Can one question be used in several tests?",
+          "a": "Yes. That is the point of a bank. A question can be pulled into any quiz, practice set or mock test, and its usage history shows where it has appeared so faculty can avoid overexposing it. See the <a href=\"/aura-learn/mock-test-platform/\">mock test platform</a>."
+        },
+        {
+          "q": "What is review mode?",
+          "a": "After a learner submits, review mode shows each question with the learner's answer, the correct answer and the stored explanation. It is where most of the learning from a test happens, so explanations are worth writing well."
+        },
+        {
+          "q": "What analytics come from the bank?",
+          "a": "Per question, how often it is answered wrong. Per batch, topic-wise results. Per learner, the topics they keep missing. Together these show which questions need rewording and which topics need reteaching."
+        },
+        {
+          "q": "Does the bank feed the Telegram practice bot?",
+          "a": "Yes. Daily practice sets are drawn from the bank and pushed to learners by the Telegram bot, the same approach used in Elevate Aura's own exam-prep app. See the <a href=\"/case-studies/exam-prep-learning-app/\">exam-prep app case study</a>."
+        },
+        {
+          "q": "Is the bank separate from the LMS?",
+          "a": "No. It is part of Aura Learn, alongside courses, batches, live classes and fees, so the same bank serves quizzes after lessons and full mock tests. See <a href=\"/aura-learn/online-quiz-platform/\">online quiz platform</a> for the quiz side."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/mock-test-platform/",
+          "icon": "&#128221;",
+          "b": "Mock tests",
+          "p": "Timed, auto-graded, reviewed."
+        },
+        {
+          "href": "/aura-learn/online-quiz-platform/",
+          "icon": "&#10067;",
+          "b": "Online quizzes",
+          "p": "Daily quizzes and streaks."
+        },
+        {
+          "href": "/aura-learn/online-exam-platform/",
+          "icon": "&#9201;",
+          "b": "Online exams",
+          "p": "Timed tests and mocks."
+        },
+        {
+          "href": "/aura-learn/online-assessment-platform/",
+          "icon": "&#9989;",
+          "b": "Assessments",
+          "p": "Training and hiring-style evaluation."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "icon": "&#127891;",
+          "b": "Case study",
+          "p": "Our own exam-prep app."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

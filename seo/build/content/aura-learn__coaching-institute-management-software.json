@@ -1,0 +1,332 @@
+{
+  "cluster": "aura-learn",
+  "slug": "coaching-institute-management-software",
+  "title": "Coaching Institute Management Software | Aura Learn",
+  "meta": "Coaching institute management software with batches, timetable, GST fee collection, a learner app, mock tests and WhatsApp reminders. Unlimited learners.",
+  "h1": "Coaching institute software that runs <span class=\"hl\">batches, fees and tests</span> from one desk.",
+  "crumb": "Coaching Institute Software",
+  "pill": "For coaching centres and exam-prep institutes",
+  "sub": "Aura Learn gives a coaching institute a learner app for lessons and mock tests, and an admin dashboard for batches, timetable, fees with GST and reminders on WhatsApp and Telegram, so the front office stops running on registers and group chats.",
+  "meta_ticks": [
+    "Batches, timetable and fees in one dashboard",
+    "Learner app with lessons and mock tests",
+    "Unlimited learners, no per-seat pricing"
+  ],
+  "whatsapp_text": "Hi, I run a coaching institute and would like to see Aura Learn for batches, fees and tests.",
+  "primary_keyword": "coaching institute management software",
+  "secondary_keywords": [
+    "coaching institute software",
+    "coaching centre management software",
+    "coaching class management app",
+    "institute management software India",
+    "tuition centre software",
+    "exam coaching software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or centre head of a coaching institute running several batches a year",
+  "page_type": "industry",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What coaching institute management software does here",
+      "paras": [
+        "Coaching institute management software keeps the admissions register, the batch timetable, the fee ledger and the teaching itself in one system instead of four. In Aura Learn the institute gets an admin dashboard on the web and the learners get a mobile app, and both read from the same batch list.",
+        "A learner is admitted into a batch, pays a fee that raises a GST receipt, sees the timetable and lessons in the app, sits mock tests that are graded on submission, and gets a WhatsApp reminder when a class, a test or an instalment is due. The centre head sees attendance at live classes, test scores and outstanding fees per batch without asking anyone."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The front-office problem",
+      "h2": "A coaching centre runs on a register, a fee book and five WhatsApp groups.",
+      "lead": "The teaching is often excellent. The administration around it is where students slip, fees go uncollected and the owner loses the picture.",
+      "items": [
+        {
+          "h": "Fees chased by memory",
+          "p": "Instalments are noted in a diary, so the second and third payments depend on someone remembering to ask."
+        },
+        {
+          "h": "Timetable changes lost",
+          "p": "A rescheduled class is announced in one group and missed by the students who muted it."
+        },
+        {
+          "h": "Mock tests marked by hand",
+          "p": "OMR sheets are checked over the weekend and the scores reach students a week late, when the topic has moved on."
+        },
+        {
+          "h": "No view across batches",
+          "p": "The owner cannot say which batch is attending, which is dropping off and which has the highest fee dues."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From admission to result, on one platform.",
+      "steps": [
+        {
+          "h": "Admit",
+          "p": "Learner added to a batch; fee plan and instalments set."
+        },
+        {
+          "h": "Collect",
+          "p": "Payment recorded, GST receipt raised, reminder sent for the next due date."
+        },
+        {
+          "h": "Schedule",
+          "p": "Timetable published to the batch; changes reach every learner in the app."
+        },
+        {
+          "h": "Teach",
+          "p": "Recorded lessons, notes and live classes with recordings, per batch."
+        },
+        {
+          "h": "Test",
+          "p": "Mock tests from the question bank, graded on submission, reviewed in the app."
+        },
+        {
+          "h": "Nudge",
+          "p": "WhatsApp reminders and a Telegram bot keep daily practice going."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The institute side and the learner side.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Batches and timetable",
+          "items": [
+            "Batches and cohorts",
+            "Timetable per batch",
+            "Live class schedule with recordings",
+            "Attendance at live sessions"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Fees and GST",
+          "items": [
+            "Fee plans and instalments",
+            "GST payments and subscriptions",
+            "Due-date reminders on WhatsApp",
+            "Outstanding fees per batch"
+          ]
+        },
+        {
+          "icon": "&#128218;",
+          "h": "Teaching",
+          "items": [
+            "Course and content library",
+            "Video lessons with offline download",
+            "Notes and downloads with access control",
+            "Discussion and doubt forum"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Testing and progress",
+          "items": [
+            "Question banks",
+            "Auto-graded quizzes and mock tests",
+            "Instant scores and answer review",
+            "Progress per learner and per batch"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-learn.html",
+        "label": "See the full Aura Learn platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes at the counter and in the classroom.",
+      "items": [
+        {
+          "h": "The third instalment gets collected",
+          "workflow": "The fee plan has three dates; the app reminds the learner on WhatsApp before each one and the dashboard lists who has not paid.",
+          "result": "The office asks once, with a record, instead of chasing from memory."
+        },
+        {
+          "h": "A Sunday mock test is scored by Sunday evening",
+          "workflow": "The test is built from the question bank, released to the batch at a set time, and graded the moment each learner submits.",
+          "result": "Students review wrong answers the same day and faculty see weak topics before Monday's class."
+        },
+        {
+          "h": "A timetable change reaches everyone",
+          "workflow": "The batch timetable is edited once on the dashboard and every learner in that batch sees it in the app.",
+          "result": "No one turns up to a cancelled class."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any institute that admits learners in batches.",
+      "items": [
+        {
+          "icon": "&#127963;",
+          "b": "Government exam coaching",
+          "p": "State and central service exams, banking, railways and police recruitment."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Entrance exam coaching",
+          "p": "Medical, engineering and management entrance batches."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Tuition centres",
+          "p": "School-board tuition run in weekday and weekend batches."
+        },
+        {
+          "icon": "&#128172;",
+          "b": "Language and skill academies",
+          "p": "Spoken English, computing and vocational courses with certificates."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Online-only coaching",
+          "p": "Institutes that teach through the app and live classes with no classroom."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Multi-branch institutes",
+          "p": "One dashboard across branches, each with its own batches."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Register and WhatsApp, a school ERP, or a learning platform.",
+      "cols": [
+        "Register and WhatsApp",
+        "Generic school ERP",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Fee collection",
+          "Diary and cash book",
+          "Fee module, often no GST",
+          "GST payments, instalments, reminders"
+        ],
+        [
+          "Teaching content",
+          "YouTube links and PDFs",
+          "Rarely included",
+          "Lessons, notes and live classes in the learner app"
+        ],
+        [
+          "Mock tests",
+          "OMR marked by hand",
+          "Basic quiz, if any",
+          "Question bank, auto-graded, instant review"
+        ],
+        [
+          "Learner engagement",
+          "Group messages",
+          "SMS",
+          "WhatsApp reminders and Telegram bot nudges"
+        ],
+        [
+          "Pricing basis",
+          "Free but manual",
+          "Per student",
+          "Unlimited learners"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Ticket queue",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Coaching institute software, answered.",
+      "items": [
+        {
+          "q": "Does it handle fees and instalments?",
+          "a": "Yes. Each learner is placed on a fee plan with due dates, payments raise a GST receipt, and the dashboard shows outstanding fees per batch. Reminders for upcoming instalments go out on WhatsApp."
+        },
+        {
+          "q": "Can students take mock tests in the app?",
+          "a": "Yes. Tests are built from your question bank, released to a batch at a set time, graded on submission and reviewed in the app with instant scores. See the <a href=\"/aura-learn/mock-test-platform/\">mock test platform</a> for details."
+        },
+        {
+          "q": "Do we pay per student?",
+          "a": "No. Aura Learn is built for unlimited learners, so a growing batch, a new course or an extra branch does not change what you pay. Pricing is scoped on a call around the modules you switch on, not the number of students."
+        },
+        {
+          "q": "Does it work in areas with poor connectivity?",
+          "a": "Yes. Lessons and material can be downloaded in the learner app and watched offline, with progress syncing when the learner is back online. Live classes and timed tests need a connection while they run."
+        },
+        {
+          "q": "Can we run live classes?",
+          "a": "Yes. Live classes and webinars run inside the platform, the recordings are kept for the batch so absentees can catch up, and a discussion forum handles doubts between sessions without a separate chat group."
+        },
+        {
+          "q": "How long does it take to go live?",
+          "a": "Aura Learn is delivered on a 30-working-day framework where scope allows. Your batches, fee plans and content are set up for you, with your branding on the app and dashboard, and support comes directly from the founder on WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/exam-preparation-platform/",
+          "icon": "&#128218;",
+          "b": "Exam preparation",
+          "p": "Coaching and test prep."
+        },
+        {
+          "href": "/aura-learn/mock-test-platform/",
+          "icon": "&#128221;",
+          "b": "Mock tests",
+          "p": "Timed, auto-graded, reviewed."
+        },
+        {
+          "href": "/aura-learn/student-management-system/",
+          "icon": "&#127891;",
+          "b": "Student management",
+          "p": "Admissions, batches and fees."
+        },
+        {
+          "href": "/aura-learn/question-bank-software/",
+          "icon": "&#128203;",
+          "b": "Question banks",
+          "p": "Build once, reuse everywhere."
+        },
+        {
+          "href": "/compare/lms-vs-youtube-and-whatsapp-for-coaching/",
+          "icon": "&#9878;",
+          "b": "LMS vs YouTube and WhatsApp",
+          "p": "What free tools cost you."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

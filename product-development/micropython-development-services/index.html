@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>MicroPython Development Services | Elevate Aura</title>
+<meta name="description" content="MicroPython development services for device logic, sensors and comms: where MicroPython is the right call, where it is not, and how to move to C/C++ later.">
+<link rel="canonical" href="https://elevateaura.co.in/product-development/micropython-development-services/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura Product Development">
+<meta property="og:title" content="MicroPython Development Services | Elevate Aura">
+<meta property="og:description" content="MicroPython development services for device logic, sensors and comms: where MicroPython is the right call, where it is not, and how to move to C/C++ later.">
+<meta property="og:url" content="https://elevateaura.co.in/product-development/micropython-development-services/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MicroPython Development Services | Elevate Aura">
+<meta name="twitter:description" content="MicroPython development services for device logic, sensors and comms: where MicroPython is the right call, where it is not, and how to move to C/C++ later.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/product-development/dev.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Product Development", "item": "https://elevateaura.co.in/product-development.html"}, {"@type": "ListItem", "position": 3, "name": "MicroPython Development", "item": "https://elevateaura.co.in/product-development/micropython-development-services/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "MicroPython Development", "serviceType": "MicroPython development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "MicroPython development services for device logic, sensors and comms: where MicroPython is the right call, where it is not, and how to move to C/C++ later.", "url": "https://elevateaura.co.in/product-development/micropython-development-services/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is MicroPython good enough to ship?", "acceptedAnswer": {"@type": "Answer", "text": "On the right board and the right workload, yes. Logic, sensor reading, communication and cloud sync run well. Hard real-time control, very tight memory and aggressive power budgets do not suit it, and in those cases we recommend C or C++ instead."}}, {"@type": "Question", "name": "What if we outgrow it?", "acceptedAnswer": {"@type": "Answer", "text": "That is planned for rather than discovered. The MicroPython build defines the behaviour, the interfaces and the tests, and the C or C++ version is written against them. See embedded C/C++ development services."}}, {"@type": "Question", "name": "Can you mix the two?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, that is often the right answer. Time critical work sits in C, and the application logic above it stays in MicroPython. Where a port allows a C module to be exposed to Python, we use it and document the boundary clearly."}}, {"@type": "Question", "name": "Do you choose the microcontroller?", "acceptedAnswer": {"@type": "Answer", "text": "No. Elevate Aura is software-only, so the controller, board, sensors and power design are your hardware team's decisions. We will tell you honestly whether MicroPython is supported and sensible on the part you have chosen."}}, {"@type": "Question", "name": "Who owns the code?", "acceptedAnswer": {"@type": "Answer", "text": "You do. Source, build and flashing instructions and documentation are handed over, and your team or another engineer can maintain it without depending on us."}}, {"@type": "Question", "name": "Can the device get a companion app and cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same engagement can add a React Native app and a telemetry pipeline on Supabase or Azure, so the device and the software around it are written to fit. See IoT product development."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Product Development, embedded &amp; device software</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20we%20are%20considering%20MicroPython%20for%20our%20device.%20Can%20we%20discuss%20whether%20it%20fits%3F" target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/product-development.html">Product Development</a></li>
+  <li><span aria-current="page">MicroPython Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>Software-only, device logic</span>
+      <h1>MicroPython where it earns its place, and <span class="hl">C/C++ where it does not</span>.</h1>
+      <p class="sub">Elevate Aura writes device firmware in MicroPython where the board supports it and the timing allows: application logic, sensor reading, communication and cloud sync. We also say plainly when a job belongs in C or C++, and how a MicroPython build is carried across later.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20we%20are%20considering%20MicroPython%20for%20our%20device.%20Can%20we%20discuss%20whether%20it%20fits%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Device logic, sensors and comms</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Honest about where the limits sit</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>A defined path to C/C++ later</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">When MicroPython is the right choice, and when it is not</h2>
+    </div>
+    <div class="ans rv"><p>MicroPython runs a Python interpreter on the microcontroller itself, so device logic is written and changed in Python rather than compiled from C. Elevate Aura builds in MicroPython where it fits: application logic, reading sensors, driving peripherals, talking over Wi-Fi or serial, and pushing readings to the cloud.</p><p>It fits best when the board has the memory headroom, when the work is logic and communication rather than microsecond timing, and when the product is still moving. Changing behaviour is fast, a device can be inspected interactively, and a working unit exists early.</p><p>It fits badly where deterministic timing, tight interrupt work, very low power or a memory constrained part is involved. In those cases we say so and write C or C++ instead. Either way this is a software-only engagement: the board, the controller choice, manufacturing and the hardware regulatory route stay with your team.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The decision</span>
+      <h2 class="h2">Choosing the language after the board is bought.</h2>
+      <p class="lead">The language question usually arrives late, framed as a preference, when it is actually a constraint question.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Chosen because the team knows Python</h3><p>A sensible instinct, but the controller's memory and timing decide whether the instinct survives.</p></div><div class="pain rv d1"><h3>Chosen against without checking</h3><p>A team writes months of C for logic that never needed it, and iteration slows to a crawl.</p></div><div class="pain rv d2"><h3>No plan for the move later</h3><p>The prototype ships in MicroPython and nobody has decided what happens when the unit cost has to fall.</p></div><div class="pain rv"><h3>Timing found out on the bench</h3><p>An interrupt-driven requirement appears after the architecture is set, and everything is rewritten under pressure.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How the work runs</span>
+      <h2 class="h2">From a fit assessment to firmware on your board.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Fit assessment</h4><p>Controller, memory, timing and power reviewed against what the device must do.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Recommendation</h4><p>MicroPython, C/C++ or a split, stated plainly with the reasons.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Device logic</h4><p>Application logic, state handling and configuration written in MicroPython.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Sensors and comms</h4><p>I2C, SPI, UART and ADC reading, plus Wi-Fi, BLE or serial links.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Test on hardware</h4><p>Run on your boards, with memory and timing measured, not assumed.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Hand over</h4><p>Source, build and flashing instructions, documented and owned by you.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is written</span>
+      <h2 class="h2">What MicroPython does well on a device.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#9881;</span>Device logic</h3><ul><li>Application state handling</li><li>Configuration and calibration storage</li><li>Scheduling and periodic tasks</li><li>Error handling and safe defaults</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128225;</span>Sensors and peripherals</h3><ul><li>I2C, SPI, UART and ADC reading</li><li>Actuator and output control</li><li>Sampling and simple filtering</li><li>Local storage of readings</li></ul></div><div class="capg rv"><h3><span class="k">&#128246;</span>Communication</h3><ul><li>Wi-Fi provisioning and sync</li><li>BLE where the port supports it</li><li>Serial and Modbus links</li><li>Cloud upload to Supabase or Azure</li></ul></div><div class="capg rv d1"><h3><span class="k">&#9888;</span>Where we say no</h3><ul><li>Hard real-time control loops</li><li>Very tight memory budgets</li><li>Aggressive low-power duty cycles</li><li>Ports with no MicroPython support</li></ul></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Where MicroPython is the sensible base.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A device whose behaviour is still being argued about</h3><p class="r"><b>Workflow:</b> Logic is written in MicroPython so a change can be tried on a real unit the same afternoon rather than the following sprint.</p><p><b>Result:</b> The specification settles against a working device instead of a document.</p></div><div class="u rv d1"><h3>A sensor unit that mostly reads and reports</h3><p class="r"><b>Workflow:</b> The board samples its sensors on a schedule, stores readings and uploads them over Wi-Fi when the link is up.</p><p><b>Result:</b> A connected product without a compile-and-flash cycle for every change.</p></div><div class="u rv"><h3>A product that must move to C/C++ later</h3><p class="r"><b>Workflow:</b> The MicroPython build defines behaviour, interfaces and tests, and the C/C++ rewrite is done against them.</p><p><b>Result:</b> A migration with a reference to check against, not a blank page.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Teams deciding how to start their firmware.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#128640;</div><b>Device founders</b><p>A working unit early, without a firmware hire.</p></div><div class="w"><div class="g">&#128300;</div><b>Instrument makers</b><p>Read, log and report workloads.</p></div><div class="w"><div class="g">&#129658;</div><b>Medical device teams</b><p>Prototypes and non-critical device logic.</p></div><div class="w"><div class="g">&#127981;</div><b>Equipment makers</b><p>Monitoring and reporting add-ons.</p></div><div class="w"><div class="g">&#128187;</div><b>Python teams</b><p>Software people meeting hardware.</p></div><div class="w"><div class="g">&#128104;&#8205;&#128295;</div><b>Hardware teams</b><p>Application logic off their plate.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">MicroPython against the alternatives.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>MicroPython</div><div>C/C++</div><div class="us">How we choose</div></div><div class="r"><div class="cap">Speed of change</div><div>Fast, edit on the device</div><div>Compile and flash each time</div><div class="us">MicroPython while the spec moves</div></div><div class="r"><div class="cap">Timing control</div><div>Interpreted, less predictable</div><div>Deterministic</div><div class="us">C/C++ for anything time critical</div></div><div class="r"><div class="cap">Memory footprint</div><div>Interpreter overhead</div><div>Lean</div><div class="us">C/C++ on constrained parts</div></div><div class="r"><div class="cap">Low power duty cycling</div><div>Workable, not optimal</div><div>Fine control</div><div class="us">C/C++ where battery life is the spec</div></div><div class="r"><div class="cap">Path afterwards</div><div>Carries into a C/C++ rewrite</div><div>Already there</div><div class="us">Decided with you at the start</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">MicroPython development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Is MicroPython good enough to ship?</summary><p>On the right board and the right workload, yes. Logic, sensor reading, communication and cloud sync run well. Hard real-time control, very tight memory and aggressive power budgets do not suit it, and in those cases we recommend C or C++ instead.</p></details><details><summary>What if we outgrow it?</summary><p>That is planned for rather than discovered. The MicroPython build defines the behaviour, the interfaces and the tests, and the C or C++ version is written against them. See <a href="/product-development/embedded-c-cpp-development-services/">embedded C/C++ development services</a>.</p></details><details><summary>Can you mix the two?</summary><p>Yes, that is often the right answer. Time critical work sits in C, and the application logic above it stays in MicroPython. Where a port allows a C module to be exposed to Python, we use it and document the boundary clearly.</p></details><details><summary>Do you choose the microcontroller?</summary><p>No. Elevate Aura is software-only, so the controller, board, sensors and power design are your hardware team's decisions. We will tell you honestly whether MicroPython is supported and sensible on the part you have chosen.</p></details><details><summary>Who owns the code?</summary><p>You do. Source, build and flashing instructions and documentation are handed over, and your team or another engineer can maintain it without depending on us.</p></details><details><summary>Can the device get a companion app and cloud?</summary><p>Yes. The same engagement can add a React Native app and a telemetry pipeline on Supabase or Azure, so the device and the software around it are written to fit. See <a href="/product-development/iot-product-development/">IoT product development</a>.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related device software services</h2></div>
+    <div class="who rv"><a class="w" href="/product-development/embedded-c-cpp-development-services/"><div class="g">&#128187;</div><b>Embedded C/C++</b><p>Drivers, peripherals, testing.</p></a><a class="w" href="/product-development/firmware-development/"><div class="g">&#128268;</div><b>Firmware development</b><p>Written to your hardware spec.</p></a><a class="w" href="/product-development/sensor-integration-software/"><div class="g">&#128225;</div><b>Sensor integration</b><p>Read, calibrate, act.</p></a><a class="w" href="/product-development/wifi-connected-device-software/"><div class="g">&#128246;</div><b>Wi-Fi device software</b><p>Onboarding and cloud sync.</p></a><a class="w" href="/product-development/embedded-software-development/"><div class="g">&#9881;</div><b>Embedded software</b><p>The whole device software layer.</p></a><a class="w" href="/product-development.html"><div class="g">&#127968;</div><b>Product development</b><p>The full software-only scope.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Tell us the board and what the device has to do.</h2>
+      <p>We will say whether MicroPython is the right call for your controller and timing, or whether C or C++ is the safer starting point, before any work is scoped.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20we%20are%20considering%20MicroPython%20for%20our%20device.%20Can%20we%20discuss%20whether%20it%20fits%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura Product Development</h4>
+        <p class="b">Embedded and device software for medical-device and robotics companies: firmware, communication, companion apps and cloud telemetry, written to your hardware spec.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Product Development</h4>
+        <a href="/product-development.html">Product Development home</a>
+        <a href="/product-development/medical-device-software-development/">Medical Device Software</a><a href="/product-development/embedded-software-development/">Embedded Software</a><a href="/product-development/firmware-development/">Firmware</a><a href="/product-development/ble-device-software/">BLE Device Software</a><a href="/product-development/iot-product-development/">IoT Product Development</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

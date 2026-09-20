@@ -1,0 +1,266 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-erp-software",
+  "title": "Hospital ERP Software | Operations Modules in HIMS",
+  "meta": "Hospital ERP software, honestly: what HIMS covers for consumables, indents, billing, the money view and rosters, and where a finance ERP still differs.",
+  "h1": "Hospital ERP software, or a hospital system that <span class=\"hl\">runs the operations</span> as well as the ward?",
+  "crumb": "Hospital ERP Software",
+  "pill": "For owners, administrators and stores teams",
+  "sub": "Hospitals searching for ERP usually want one system behind the clinical one: consumables that reconcile, indents raised on level, bills that match the record, and rosters that match who is on duty. HIMS covers that ground, and this page is honest about where it stops.",
+  "meta_ticks": [
+    "Stores, billing and rosters on the patient record",
+    "Live view of OP, IP, beds and collections",
+    "No general ledger, and we say so"
+  ],
+  "whatsapp_text": "Hi, we are comparing hospital ERP options and would like to understand HIMS.",
+  "primary_keyword": "hospital ERP software",
+  "secondary_keywords": [
+    "hospital ERP system India",
+    "hospital resource planning software",
+    "hospital inventory and billing software",
+    "hospital operations software",
+    "HIMS vs hospital ERP",
+    "hospital administration software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of a hospital comparing a hospital ERP against a hospital information system",
+  "page_type": "product",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What buyers mean by hospital ERP, and what HIMS actually is",
+      "paras": [
+        "When a hospital asks for ERP software it usually means the system behind the clinical one: stock that reconciles, reorder raised on a level rather than on an empty shelf, bills that agree with what was given, collections visible while the day is running, and rosters that reflect who is in the building. HIMS covers that ground because those modules sit on the same patient record as OP, IP, pharmacy and the laboratory.",
+        "HIMS is a hospital information system with operations modules, not a general-ledger accounting package. It is not where your accountant keeps the books. It produces the billing, collection and stock figures your accountant works from, and your accounting software keeps the ledger."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What sends hospitals looking for ERP",
+      "h2": "The clinical side went digital and the operations side did not.",
+      "lead": "Almost every hospital that asks for ERP is describing the same handful of gaps.",
+      "items": [
+        {
+          "h": "Stock counted twice and trusted once",
+          "p": "The pharmacy keeps one register and the ward store another, and the difference surfaces at the annual count."
+        },
+        {
+          "h": "Reorder driven by an empty shelf",
+          "p": "An indent is written when someone notices a box is finished, so fast movers run out and slow movers expire."
+        },
+        {
+          "h": "Charges that never reach the bill",
+          "p": "Consumables and investigations are noted on a slip and typed at discharge, so some of them quietly never arrive."
+        },
+        {
+          "h": "Collections known only at month end",
+          "p": "The owner learns what OP, IP and pharmacy brought in once the accounts close, not while there is time to act."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The operational modules hospitals are shopping for.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Stores and pharmacy",
+          "items": [
+            "Consumables and equipment inventory",
+            "Reorder levels and low-stock alerts",
+            "Pharmacy dispensing queue with expiry alerts",
+            "Issues tied to the patient encounter"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and the money view",
+          "items": [
+            "Cash, insurance and TPA claim billing",
+            "GST on billable items",
+            "Live dashboard of OP, IP, beds and collections",
+            "Figures your accountant can work from"
+          ]
+        },
+        {
+          "icon": "&#128101;",
+          "h": "People and access",
+          "items": [
+            "Doctor rosters by department",
+            "Doctor and nursing workflows on the ward",
+            "Role-based access for every user",
+            "Patient app and portal"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "The clinical core it hangs on",
+          "items": [
+            "OP and IP registration on one UHID",
+            "Structured EMR, e-prescription and discharge",
+            "Laboratory from order to verified result",
+            "Bed, ICU and theatre management, with AuraPACS imaging"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The honest part",
+      "h2": "What a hospital ERP promises that HIMS does not do",
+      "lead": "Shortlisting goes faster when the gaps are on the table before the demo.",
+      "body": [
+        {
+          "h3": "Accounting and the ledger"
+        },
+        "HIMS holds no general-ledger accounting: it is not a replacement for the package your accountant works in. It records what was billed, what was collected and what is outstanding, and your accounting package carries it from there. If a vendor says their hospital system replaces your accounts software, ask them to draw a trial balance out of it in front of you.",
+        {
+          "h3": "Formal procurement"
+        },
+        "Buying inside HIMS is driven by reorder levels and stock alerts rather than by a supplier master, purchase order, goods receipt and payables chain. Hospitals that need that formality run procurement in <a href=\"/aura-business.html\">Aura Business</a> and keep HIMS for the clinical and billing side.",
+        {
+          "h3": "What you gain instead"
+        },
+        "An enterprise ERP is designed around finance and then fitted to a hospital. HIMS starts at the patient record, so a consumable issued on the ward, an investigation ordered in OP and a claim raised at discharge are one event seen from three desks. Read <a href=\"/compare/hims-vs-hospital-erp/\">HIMS vs hospital ERP</a> before you decide."
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the operations modules change on a normal day.",
+      "items": [
+        {
+          "h": "Ward consumables stop leaking",
+          "workflow": "Items issued to a ward are booked against the admission that used them instead of against the ward in general.",
+          "result": "The count at the end of the week explains itself."
+        },
+        {
+          "h": "A discharge bill with nothing retyped",
+          "workflow": "Room days, investigations, drugs dispensed and consumables used are already on the encounter when the bill is raised.",
+          "result": "Discharge waits on the doctor, not on the counter."
+        },
+        {
+          "h": "The owner checks the day at eight in the evening",
+          "workflow": "OP numbers, admissions, bed occupancy and collections are read off the live dashboard from wherever the owner is.",
+          "result": "Questions get asked the same evening rather than next month."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways hospitals try to solve this.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Stock and consumables",
+          "A register per store",
+          "Full materials management",
+          "Consumables and equipment with reorder levels"
+        ],
+        [
+          "Where the bill comes from",
+          "Slips typed at discharge",
+          "Interfaced from the clinical system",
+          "Built from the patient encounter"
+        ],
+        [
+          "Accounting ledger",
+          "Outside the system",
+          "General ledger included",
+          "Not included, figures go to your accountant"
+        ],
+        [
+          "Who supports you",
+          "Nobody",
+          "An implementation partner and a ticket queue",
+          "The founder who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital ERP software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS a hospital ERP?",
+          "a": "It is a hospital information system carrying the operations modules most ERP searches are really after: inventory, pharmacy, billing, collections, rosters and a live dashboard. It is not a finance-first ERP, because it has no general ledger."
+        },
+        {
+          "q": "Can it replace our accounting software?",
+          "a": "No. HIMS gives you billing, collections, outstandings and stock movement. Ledgers and statutory accounts stay in your accounting package, and your accountant works from the HIMS figures."
+        },
+        {
+          "q": "Does it handle purchase orders and suppliers?",
+          "a": "HIMS drives reorder from stock levels and alerts rather than a purchase order and goods receipt chain. Hospitals needing that run it in <a href=\"/aura-business.html\">Aura Business</a> alongside HIMS, scoped on a call."
+        },
+        {
+          "q": "Does the billing cover insurance and TPA?",
+          "a": "Yes, alongside cash, with GST on billable items. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">hospital TPA and insurance billing</a> for how a claim is assembled from the record."
+        },
+        {
+          "q": "Can we start with part of it?",
+          "a": "Yes. Most hospitals begin with registration, billing and pharmacy, then add inventory, laboratory, wards and imaging. Nothing is migrated when the next module is switched on."
+        },
+        {
+          "q": "What is the go-live timeline?",
+          "a": "Live in 30 working days where scope allows, with scope fixed per project. Data migration, branding and staff training sit inside that window."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "OP, IP, clinical and money."
+        },
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#128203;",
+          "b": "Hospital management system",
+          "p": "Every module in one view."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Hospital inventory",
+          "p": "Consumables, equipment and reorder."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#129534;",
+          "b": "Hospital billing",
+          "p": "Cash, insurance and GST."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which one a hospital needs."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "How to choose",
+          "p": "A buyer's checklist."
+        }
+      ]
+    }
+  ]
+}

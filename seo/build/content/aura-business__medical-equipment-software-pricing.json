@@ -1,0 +1,240 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-pricing",
+  "title": "Medical Equipment Software Pricing | Aura Business",
+  "meta": "How medical equipment software pricing works at Aura Business: three module tiers, unlimited users, never per seat. See what moves a quote, then book a call.",
+  "h1": "Medical equipment software pricing, explained <span class=\"hl\">module by module</span>.",
+  "crumb": "Software Pricing",
+  "pill": "For owners collecting quotes",
+  "sub": "Aura Business is priced by how much of the platform you switch on, not by how many people use it. This page sets out the pricing model, what pushes a quote up or down, and how to compare vendors fairly.",
+  "meta_ticks": [
+    "Priced by module tier",
+    "Unlimited users on every plan",
+    "Scoped on a 30-minute call"
+  ],
+  "cta_label": "Book a scoping call",
+  "cta_href": "/contact.html",
+  "whatsapp_text": "Hi, I'd like to understand Aura Business pricing for our medical equipment business.",
+  "primary_keyword": "medical equipment software pricing",
+  "secondary_keywords": [
+    "medical equipment CRM price",
+    "distributor software cost India",
+    "AMC software pricing",
+    "medical equipment software quote",
+    "field service software pricing India"
+  ],
+  "intent": "transactional",
+  "persona": "Owner or director of a medical-equipment distribution, dealer or service business comparing software quotes",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How Aura Business is priced, and why the figure follows a call",
+      "paras": [
+        "Aura Business is quoted after a short call, because the number follows the scope you switch on rather than a published list. The model itself is plain: you pay for how many of the 87 modules you turn on, in three tiers of 15, 47 or all 87, and every tier carries unlimited users. Office staff, technicians and management are never counted, so the bill does not move when the field team grows.",
+        "The rest of a quote is the work around the software: migrating the spreadsheets you run on today, putting your branding on the dashboard, the mobile app and your invoices, and any customisation or integration your trade needs. Those are defined pieces of work rather than a running meter, which is why two businesses of similar size are often quoted differently."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What moves the number",
+      "h2": "What makes an Aura Business quote bigger or smaller",
+      "lead": "Four things decide the size of a quote: how many modules you switch on, how much old data comes across, how far the workflows bend to your process, and what has to talk to what.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "What gets scoped",
+              "Keeps the quote lean",
+              "Pushes the quote up"
+            ],
+            "rows": [
+              [
+                "Module tier",
+                "The 15-module tier for sales, billing and stock",
+                "All 87 modules, including tenders, HRMS and finance"
+              ],
+              [
+                "Data migration",
+                "One clean workbook per area, current year only",
+                "Years of installed-base and service history in mixed files"
+              ],
+              [
+                "Customisation",
+                "Job cards, quotations and invoices as they ship",
+                "Approval chains and documents reworked to your process"
+              ],
+              [
+                "Integrations",
+                "GST documents and WhatsApp reminders as built",
+                "Accounting exports and portals wired in both directions"
+              ],
+              [
+                "Rollout",
+                "One office and one service team learning together",
+                "Several warehouses and territories going live at once"
+              ]
+            ]
+          }
+        },
+        {
+          "h3": "Why per-seat pricing punishes a growing field team"
+        },
+        "A seat licence is a tax on hiring. The technicians who most need the mobile job card tend to be added last, so people at the edge of the business share a login or stay on paper, and the service history you bought the system for is never recorded. Aura Business is never billed per seat for that reason, and the module store lets you switch further suites on when the business asks for them rather than when a sales cycle does."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "Always in the box",
+      "h2": "What every Aura Business plan includes.",
+      "groups": [
+        {
+          "icon": "&#128101;",
+          "h": "Unlimited users",
+          "items": [
+            "Office, warehouse and field staff on the same plan",
+            "No seat licences and no user top-ups",
+            "Role-based access per job",
+            "Web dashboard for the office, mobile app for the field"
+          ]
+        },
+        {
+          "icon": "&#128229;",
+          "h": "Setup",
+          "items": [
+            "Your existing Excel data migrated in",
+            "Your branding on the dashboard, app and invoices",
+            "GST-native documents configured for your trade",
+            "Module store to switch modules on later"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Support from the builder",
+          "items": [
+            "You speak to the person who built the system",
+            "WhatsApp support, no ticket queue to climb",
+            "Remote setup wherever you are",
+            "In-person work in Chennai"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Platform",
+          "items": [
+            "Audit log across records",
+            "Tenant admin and settings",
+            "Notifications hub",
+            "Live in 30 working days where scope allows"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before you sign anything",
+      "h2": "Compare on total cost of ownership, not the headline figure",
+      "lead": "The quote you accept is rarely what you end up paying. Put every vendor through the same list and the differences show up quickly.",
+      "body": [
+        {
+          "ul": [
+            "<b>Is the licence per user?</b> Ask what the bill looks like after you hire five technicians, and again after twenty.",
+            "<b>Which modules are in this quote?</b> Get the list in writing, then ask what is charged when you need one that is missing.",
+            "<b>Who moves the old data?</b> Ask whether migration sits inside the quote or arrives later as its own project.",
+            "<b>What does support cover?</b> Ask which channel, who answers, and what is billed as work rather than support.",
+            "<b>What do you take with you if you leave?</b> Settle the export format for customers, assets and service history before you sign."
+          ]
+        },
+        {
+          "h3": "Against spreadsheets, the real cost is invisible"
+        },
+        "A workbook costs nothing and loses money quietly: AMC contracts that lapsed because nobody was reminded, warranty claims that expired unnoticed, spares issued against no job. Put a rough figure on a year of that leakage before you compare quotes, and see <a href=\"/compare/spreadsheets-vs-distributor-software/\">spreadsheets versus distributor software</a>.",
+        {
+          "h3": "Against per-user tools, compare the same five years"
+        },
+        "A generic CRM sold per user looks light until you add the field team, the second warehouse and the add-ons for service and billing. Line both options up over the same period with the headcount you expect at the end of it, then check what the cheaper tool still cannot do: AMC renewals, serial-level stock, and a job card that drops spares."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Pricing questions we are asked most.",
+      "items": [
+        {
+          "q": "Why don't you publish your prices?",
+          "a": "Because a published number would be wrong for almost everyone who read it. Scope varies enormously between a single dealer on the 15-module tier and a distributor running all 87 with years of data to migrate. A figure that misleads you wastes your time and ours, so we scope first and quote once."
+        },
+        {
+          "q": "How is Aura Business priced?",
+          "a": "By how much of the platform you switch on. There are three module tiers, 15, 47 or all 87 modules, and every tier includes unlimited users. Setup work, which covers migrating your existing Excel data and applying your branding, is scoped alongside the tier."
+        },
+        {
+          "q": "Do you charge per user or per seat?",
+          "a": "No. User count does not appear in the quote at all. You can put every technician, storekeeper and accounts person on the system with their own role-based login, and your cost is unchanged when you hire more of them next quarter."
+        },
+        {
+          "q": "Is data migration included?",
+          "a": "Setup includes migrating your existing Excel data. How much work that is depends on how many years and how many formats you are bringing across, so we look at your actual files during scoping rather than assuming. Messy data is normal and is not a problem."
+        },
+        {
+          "q": "Can we start on a lower tier and add modules later?",
+          "a": "Yes. The module store lets you switch further modules on as the business needs them, and moving up a tier is scoped as its own small change. Most businesses begin with the suites that carry revenue today, usually sales, billing, stock and service."
+        },
+        {
+          "q": "How quickly do we get an actual number?",
+          "a": "Usually from one call. A 30-minute demo call is enough to agree the module tier, look at the spreadsheets you run on, and identify any customisation or integration. The quote follows that conversation, with the setup work itemised rather than bundled."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related reading before you buy",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128188;",
+          "b": "Aura Business",
+          "p": "The platform in full."
+        },
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#128200;",
+          "b": "Medical equipment CRM",
+          "p": "Sales side of the platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128197;",
+          "b": "AMC and CMC software",
+          "p": "The contract revenue engine."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "Where Excel starts costing money."
+        },
+        {
+          "href": "/hims/hospital-management-software-pricing/",
+          "icon": "&#127973;",
+          "b": "HIMS pricing",
+          "p": "How hospital systems are costed."
+        },
+        {
+          "href": "/aurapacs/pacs-software-pricing/",
+          "icon": "&#129659;",
+          "b": "PACS pricing models",
+          "p": "Per study, subscription or owned."
+        }
+      ]
+    }
+  ],
+  "cta_h2": "Get the scope right, then get the number.",
+  "cta_p": "Bring a list of what you sell, install and service, and the spreadsheets you run on today. Half an hour on a call is enough to settle the module tier and the setup work, and your quote follows from that."
+}

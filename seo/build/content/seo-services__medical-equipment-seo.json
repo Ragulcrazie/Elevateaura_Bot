@@ -1,0 +1,330 @@
+{
+  "cluster": "seo-services",
+  "slug": "medical-equipment-seo",
+  "title": "Medical Equipment SEO Services in India | Elevate Aura",
+  "meta": "Medical equipment SEO: product-line and city landing pages, technical SEO, product schema and enquiry tracking, with Medline Robotics as the worked example.",
+  "h1": "Medical equipment SEO that puts a page where the <span class=\"hl\">purchase officer is searching</span>.",
+  "crumb": "Medical Equipment SEO",
+  "pill": "For distributors, dealers and OEMs",
+  "sub": "Buyers search by product line, by model, by application and by city. Medical equipment SEO builds a page for each of those searches that is worth landing on, fixes what stops it being indexed, and records the enquiry it produces.",
+  "meta_ticks": [
+    "Product-line and city pages",
+    "Product schema and technical fixes",
+    "Enquiry tracking in GA4"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our medical equipment business.",
+  "schema": "Service",
+  "service_type": "Medical equipment search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "medical equipment SEO",
+  "secondary_keywords": [
+    "medical equipment SEO services India",
+    "SEO for medical device distributors",
+    "medical equipment website SEO",
+    "product landing pages SEO",
+    "medical supplies SEO agency"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or sales head of a medical-equipment distribution or manufacturing business",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment SEO involves",
+      "paras": [
+        "Medical equipment SEO is the work of making each thing you sell findable on its own terms. A hospital purchase officer does not search for your company name. They search for the equipment, sometimes with a model number, sometimes with an application, very often with a city attached. Each of those searches needs a page carrying the specification, the application and a way to ask for a quote.",
+        "The work has three parts. Structure: a URL and template design that lets product, application and city pages exist without becoming copies of each other. Technical: indexing, page speed, product schema, canonical rules and internal links. Measurement: GA4 events on enquiry forms, call taps and WhatsApp clicks, with Search Console showing which queries the pages reach.",
+        "Elevate Aura built 253 product and city SEO landing pages across four product lines for Medline Robotics, a medical robotics company in Chennai, alongside their storefront and distributor portal. Rankings are never promised, by us or by anyone. The method and the delivered pages are what we commit to."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why equipment sites stay invisible",
+      "h2": "The catalogue is a PDF and the site has nine pages.",
+      "lead": "Most medical-equipment websites have nothing for a search engine to match against a specific product query.",
+      "items": [
+        {
+          "h": "Nothing below the category",
+          "p": "A Products page listing forty items gives search engines one page to rank for forty different searches."
+        },
+        {
+          "h": "Specifications inside images",
+          "p": "Spec tables saved as pictures carry no text, so the detail a buyer searched for is invisible."
+        },
+        {
+          "h": "City searches unanswered",
+          "p": "Buyers add a city to almost every equipment search, and the site has no page that speaks to any city."
+        },
+        {
+          "h": "Indexing quietly blocked",
+          "p": "Missing sitemaps, accidental noindex tags and duplicate URLs keep pages out of the index regardless of the content."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From your price list to pages that earn their place.",
+      "steps": [
+        {
+          "h": "Demand research",
+          "p": "Product lines, models, applications and cities are checked for real search demand before a single page is planned."
+        },
+        {
+          "h": "Architecture",
+          "p": "A URL structure per line, product, application and city, with the internal linking decided at the same time."
+        },
+        {
+          "h": "Technical clean-up",
+          "p": "Indexing, sitemaps, canonicals, speed on mobile data and product schema fixed before new pages are added."
+        },
+        {
+          "h": "Page build",
+          "p": "Templates filled from your own product data, with the unique content each page needs written rather than spun."
+        },
+        {
+          "h": "Conversion paths",
+          "p": "Enquiry form, quote request and WhatsApp on every page, each tagged so its source can be read later."
+        },
+        {
+          "h": "Report and extend",
+          "p": "Search Console and GA4 reviewed, weak pages rewritten or removed, and the next set scoped on evidence."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The work, item by item.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Pages",
+          "items": [
+            "Product-line landing pages",
+            "Model and specification pages",
+            "Application and use-setting pages",
+            "Product and city pages where demand exists"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Technical",
+          "items": [
+            "Index coverage and sitemap repair",
+            "Canonical and duplicate URL rules",
+            "Mobile speed and image handling",
+            "Product and organisation schema"
+          ]
+        },
+        {
+          "icon": "&#128279;",
+          "h": "Structure",
+          "items": [
+            "URL architecture per product line",
+            "Internal links between related models",
+            "Breadcrumbs and category hubs",
+            "Brochure and datasheet pages"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Measurement",
+          "items": [
+            "GA4 events on form, call and WhatsApp",
+            "Search Console set up and reviewed",
+            "Query and page reporting",
+            "Enquiries into Aura Business as leads"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/seo-services/programmatic-seo-services/",
+        "label": "How page sets are generated responsibly"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three searches an equipment page has to meet.",
+      "items": [
+        {
+          "h": "A model number search",
+          "workflow": "A biomedical engineer types the model they were told to source and reaches your page with the specification table and brochure.",
+          "result": "A quote request from someone who already knows what they want."
+        },
+        {
+          "h": "An application search",
+          "workflow": "A department head searches for equipment by the procedure it is used for, and lands on an application page listing the suitable models.",
+          "result": "An enquiry earlier in the buying process than a model search."
+        },
+        {
+          "h": "A product and city search",
+          "workflow": "A clinic in a city you supply searches for a supplier there and finds a page describing your reach, terms and service cover for that city.",
+          "result": "A conversation that would otherwise have gone to a local competitor."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses whose buyers search before they ring.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Equipment distributors",
+          "p": "Several brands and many models."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Own range and a dealer network."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and diagnostics suppliers",
+          "p": "Reagents, analysers and consumables."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical suppliers",
+          "p": "Long catalogues, clinic buyers."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics and device companies",
+          "p": "Applications matter as much as specs."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service and spares businesses",
+          "p": "Searches by parent equipment."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways equipment SEO gets bought.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "What arrives each month",
+          "An audit and recommendations",
+          "Articles by word count",
+          "Pages published on your site, named in the scope"
+        ],
+        [
+          "Who implements it",
+          "Your developer, later",
+          "Nobody",
+          "The same person who wrote the recommendation"
+        ],
+        [
+          "Product knowledge",
+          "Briefed in",
+          "Researched from the web",
+          "Built from your specification sheets and price list"
+        ],
+        [
+          "Technical work",
+          "Listed for someone else",
+          "Out of scope",
+          "Indexing, schema, speed and canonicals done in the site"
+        ],
+        [
+          "What is promised",
+          "Rankings or traffic figures",
+          "Rankings",
+          "Method, pages delivered and measurement, never a ranking"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical equipment SEO, answered.",
+      "items": [
+        {
+          "q": "How many pages will you build?",
+          "a": "As many as there is genuine demand and genuine data for. The site states a range of 50 to 250 pages per product and city for programmatic work, and Medline Robotics ended at 253 across four lines. The number for you is set after the demand research, not before."
+        },
+        {
+          "q": "How long before we see results?",
+          "a": "We do not put a date on rankings, because that would be a guess. Indexing of new pages is usually visible in Search Console within weeks, and what happens after that depends on competition, the site's history and the search engine."
+        },
+        {
+          "q": "Do you need access to our website?",
+          "a": "Yes, editor or admin access to the site, plus GA4 and Search Console. Where the site is on a platform that cannot support the page structure, we say so before any content is scoped."
+        },
+        {
+          "q": "Can you work on a site you did not build?",
+          "a": "Yes. Existing WordPress and Next.js sites are the common case. The first phase is usually technical clean-up, because adding pages to a site with indexing problems wastes the content."
+        },
+        {
+          "q": "How do we know an enquiry came from search?",
+          "a": "Every form, call button and WhatsApp link is tagged as a GA4 event with the page it came from, and enquiries can be created as leads in <a href=\"/aura-business.html\">Aura Business</a> with the source recorded. You read both yourself."
+        },
+        {
+          "q": "Do we need a new website first?",
+          "a": "Not always. If the catalogue has no page per product, that structure has to exist before SEO can do anything, and that may be a build. See <a href=\"/web-development/medical-product-catalogue-website/\">product catalogue website</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "How page sets are built."
+        },
+        {
+          "href": "/seo-services/medical-equipment-lead-generation/",
+          "icon": "&#128231;",
+          "b": "Lead generation",
+          "p": "From page to CRM record."
+        },
+        {
+          "href": "/seo-services/medical-device-seo/",
+          "icon": "&#129302;",
+          "b": "Medical device SEO",
+          "p": "For manufacturers and OEMs."
+        },
+        {
+          "href": "/web-development/medical-equipment-website-development/",
+          "icon": "&#128230;",
+          "b": "Equipment website",
+          "p": "The site underneath."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#128188;",
+          "b": "Medline Robotics",
+          "p": "The worked example."
+        }
+      ]
+    }
+  ]
+}

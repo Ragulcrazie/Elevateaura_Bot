@@ -1,0 +1,347 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-dealer-management-software",
+  "title": "Medical Equipment Dealer Management Software | Aura Business",
+  "meta": "Medical equipment dealer management software for multi-brand dealers: brand authorisation, principal price lists, a distributor order portal.",
+  "h1": "Medical equipment dealer management software for <span class=\"hl\">multi-brand operations</span>.",
+  "crumb": "Dealer Management Software",
+  "pill": "For dealers carrying several principals",
+  "sub": "Aura Business runs a dealer that represents several brands: which products you are authorised to sell, each principal's price list, a portal where your sub-dealers order and pay by UTR, and an order tracking page that stops the status calls.",
+  "meta_ticks": [
+    "Brand and authorisation per product line",
+    "Principal price lists loaded",
+    "Sub-dealer portal with UTR payments"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business customers screen listing dealer and hospital accounts with brand, territory and outstanding",
+    "bar": "app.elevateaura.co.in/customers"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss dealer management software for our multi-brand medical equipment business.",
+  "primary_keyword": "medical equipment dealer management software",
+  "secondary_keywords": [
+    "dealer management system for medical devices",
+    "distributor portal software India",
+    "multi-brand dealer software",
+    "B2B order portal for medical distributors",
+    "sub-dealer management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a multi-brand medical-equipment dealership with principals above and sub-dealers or hospital customers below",
+  "page_type": "product",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment dealer management software runs",
+      "paras": [
+        "Medical equipment dealer management software runs the two-sided business a dealer actually has: principals above, who authorise you for certain brands and territories and send price lists, and customers below, who may be hospitals buying directly or sub-dealers ordering in bulk. Aura Business handles both sides with brand and authorisation records, supplier price lists, a distributor order portal, UTR-based payment confirmation and an order tracking page.",
+        "A dealer carrying four brands has four price lists, four warranty policies, four sets of authorisation letters and four purchase relationships, and one sales team quoting across all of them. The point of the software is that the sales team, the tender desk and the accounts team all work from the same brand-aware catalogue."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The multi-brand problem",
+      "h2": "Every principal has its own rules, and your team has one head.",
+      "lead": "The dealership grew brand by brand. The tools stayed as one spreadsheet per brand and a WhatsApp group per sub-dealer.",
+      "items": [
+        {
+          "h": "Authorisation unclear",
+          "p": "A rep quotes a brand in a district you are not authorised for, and the principal finds out from the hospital."
+        },
+        {
+          "h": "Price lists out of date",
+          "p": "The principal revised prices in April; the quote in June still uses the old list and the margin vanishes."
+        },
+        {
+          "h": "Sub-dealer orders on chat",
+          "p": "Orders arrive as photos of handwritten lists, and someone keys them into an invoice."
+        },
+        {
+          "h": "Payments matched by hand",
+          "p": "Bank transfers arrive with UTR numbers, and accounts spends the morning matching them to orders."
+        },
+        {
+          "h": "Status calls all day",
+          "p": "Sub-dealers ring to ask whether the order has been dispatched, because there is nowhere to look."
+        },
+        {
+          "h": "Purchases not tied to sales",
+          "p": "Stock is ordered from the principal by gut feel, because sales orders and purchase orders live apart."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the dealership runs",
+      "h2": "From the principal's price list to the sub-dealer's receipt.",
+      "steps": [
+        {
+          "h": "Authorise",
+          "p": "Brands, product lines and territories you hold are recorded with the authorisation documents."
+        },
+        {
+          "h": "Price",
+          "p": "Each principal's price list is loaded as a supplier price list and drives your catalogue cost."
+        },
+        {
+          "h": "Sell",
+          "p": "Direct quotes to hospitals, or sub-dealers order on the portal at their agreed prices."
+        },
+        {
+          "h": "Pay",
+          "p": "The sub-dealer uploads the UTR; the payment is confirmed against the order."
+        },
+        {
+          "h": "Procure and fulfil",
+          "p": "Purchase orders to the principal, GRN into stock, dispatch with invoice and e-way bill."
+        },
+        {
+          "h": "Track",
+          "p": "The order tracking page shows each stage to the customer; the owner sees it all on the dashboard."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for the principal side and the customer side.",
+      "groups": [
+        {
+          "icon": "&#127981;",
+          "h": "Principal side",
+          "items": [
+            "Brand and authorisation per product line",
+            "Supplier master for each principal",
+            "Supplier price lists",
+            "Purchase orders and PO approval",
+            "Goods receipt (GRN) and supplier payables"
+          ]
+        },
+        {
+          "icon": "&#127970;",
+          "h": "Customer and sub-dealer side",
+          "items": [
+            "Distributor and B2B order portal",
+            "Distributor payment by UTR",
+            "Order tracking page",
+            "Branded login and docs vault",
+            "Customer self-service portal for hospitals"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Selling",
+          "items": [
+            "GST quotation builder with brand-aware catalogue",
+            "Sales orders, tax invoices, e-way bills",
+            "Territory and target management",
+            "Tenders with principal authorisation letters in the vault"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Running it",
+          "items": [
+            "Multi-warehouse stock by brand",
+            "P&amp;L by product line and territory",
+            "Receivables ageing per sub-dealer",
+            "Owner dashboard across all brands"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "A week at a four-brand dealership.",
+      "items": [
+        {
+          "h": "A price revision lands on Monday",
+          "workflow": "The principal's new price list is loaded as the supplier price list; quotes from that afternoon use the new cost and the margin rule.",
+          "result": "No quote goes out on last quarter's prices."
+        },
+        {
+          "h": "A sub-dealer orders at midnight",
+          "workflow": "The sub-dealer places an order on the portal from the list authorised for them, uploads the UTR the next morning, and the order moves to fulfilment.",
+          "result": "No phone call, no re-keying, no unmatched payment."
+        },
+        {
+          "h": "An authorisation question is settled",
+          "workflow": "A rep checks the brand record before quoting a district and sees the authorisation ends at the state border.",
+          "result": "No quote where you cannot supply."
+        },
+        {
+          "h": "The owner sees which brand pays",
+          "workflow": "P&amp;L by product line shows one brand carries the volume while another carries the margin.",
+          "result": "The next principal negotiation is based on numbers."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers with more than one principal, or more than one tier.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-brand equipment dealers",
+          "p": "Several principals, one sales team, one warehouse."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "A network of state-level sub-dealers ordering from you."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Manufacturers with a channel",
+          "p": "The same portal from the principal's side."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and diagnostics dealers",
+          "p": "High order frequency where a portal saves hours a day."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical dealers",
+          "p": "Authorised dealerships outside healthcare."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Chat and Excel, accounting software, or a dealer platform.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Brand authorisation",
+          "A folder of letters",
+          "Not modelled",
+          "Recorded per product line and territory"
+        ],
+        [
+          "Principal price lists",
+          "One sheet per brand",
+          "Item cost, manually updated",
+          "Supplier price lists driving the catalogue"
+        ],
+        [
+          "Sub-dealer ordering",
+          "Photos of lists",
+          "Not included",
+          "Portal with their own price list"
+        ],
+        [
+          "Payment confirmation",
+          "Bank statement matching",
+          "Receipt entry",
+          "UTR uploaded and matched to the order"
+        ],
+        [
+          "Order status",
+          "Phone calls",
+          "Not visible to the customer",
+          "Tracking page per order"
+        ],
+        [
+          "Purchases from sales",
+          "Gut feel",
+          "Separate",
+          "PO to the principal from stock and orders"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Dealer management software, answered.",
+      "items": [
+        {
+          "q": "Can we hold different price lists for different sub-dealers?",
+          "a": "Yes. Each distributor or sub-dealer account has its own agreed prices and the products it is authorised to buy, so the portal shows them only what applies to them."
+        },
+        {
+          "q": "How does UTR payment confirmation work?",
+          "a": "The sub-dealer pays by bank transfer and enters the UTR reference against the order in the portal. Your accounts team confirms it against the bank credit and the order moves to fulfilment, with the receipt recorded against the account."
+        },
+        {
+          "q": "Do principals get any access?",
+          "a": "Access is role-based, so you decide. Some dealers share nothing; others give a principal's regional manager a read-only view of installed base or sell-through for their brand. This is agreed at setup."
+        },
+        {
+          "q": "Does it handle stock by brand across warehouses?",
+          "a": "Yes. Multi-warehouse inventory, serial-level stock and brand records mean you can see what you hold of each principal's products at each location. See <a href=\"/aura-business/medical-equipment-inventory-software/\">inventory software</a>."
+        },
+        {
+          "q": "Is there a real example of a distributor portal built by Elevate Aura?",
+          "a": "Yes. Medline Robotics in Chennai runs a distributor portal with distributor ordering, quotations and UTR payment verification built by Elevate Aura. See the <a href=\"/case-studies/medline-robotics-ecommerce-distributor-platform/\">case study</a>."
+        },
+        {
+          "q": "Can a hospital customer use the same portal?",
+          "a": "Hospitals use the customer self-service portal, which shows their own orders, invoices, equipment and service tickets, while sub-dealers use the distributor order portal. Both share the branded login and docs vault. See <a href=\"/web-development/medical-distributor-portal-development/\">distributor portal development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128202;",
+          "b": "Distributor software",
+          "p": "The distributor's full platform."
+        },
+        {
+          "href": "/aura-business/medical-device-crm-software/",
+          "icon": "&#129302;",
+          "b": "Device CRM",
+          "p": "The principal's side of the channel."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Invoices and e-way bills."
+        },
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory",
+          "p": "Stock by brand and warehouse."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#127970;",
+          "b": "Portal development",
+          "p": "A branded portal of your own."
+        },
+        {
+          "href": "/compare/crm-vs-erp-for-medical-equipment-distributors/",
+          "icon": "&#9878;",
+          "b": "CRM vs ERP",
+          "p": "What a dealer actually needs."
+        }
+      ]
+    }
+  ]
+}

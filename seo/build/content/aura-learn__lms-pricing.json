@@ -1,0 +1,241 @@
+{
+  "cluster": "aura-learn",
+  "slug": "lms-pricing",
+  "title": "LMS Pricing in India: What Drives Cost | Aura Learn",
+  "meta": "LMS pricing in India explained: why per-learner billing breaks a growing institute, what really drives a quote, and how Aura Learn keeps learners unlimited.",
+  "h1": "LMS pricing in India: why <span class=\"hl\">per-learner billing</span> breaks.",
+  "crumb": "LMS Pricing",
+  "pill": "For coaching institutes and training teams",
+  "sub": "Most learning platforms charge by the head, which turns every new batch into a bigger invoice. This page explains what genuinely drives an LMS quote, and why Aura Learn does not count your learners.",
+  "meta_ticks": [
+    "Unlimited learners",
+    "Quoted after a scoping call",
+    "Learner app and admin dashboard"
+  ],
+  "whatsapp_text": "Hi, I'd like to understand Aura Learn pricing for our institute.",
+  "primary_keyword": "LMS pricing India",
+  "secondary_keywords": [
+    "learning management system cost",
+    "coaching institute software price",
+    "online exam platform cost India",
+    "LMS quote India",
+    "training platform pricing"
+  ],
+  "intent": "transactional",
+  "persona": "Owner of a coaching institute, exam-prep business or corporate training team choosing a learning platform",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How Aura Learn is priced, and why we quote after a call",
+      "paras": [
+        "Aura Learn is quoted once we understand what you teach and how, because the work sits in your content, your assessments and your integrations rather than in a subscription band. The one thing we can say before any call is the part that matters most to a growing institute: learners are unlimited. You are not billed by the head, so a successful admission season does not arrive with its own invoice.",
+        "That is a deliberate break from how the market usually sells. Per-learner pricing is comfortable for the vendor and awkward for you, because the moment your business works, your software cost rises in step with it.",
+        "Everything else in a quote comes from scope: how much course material has to be brought across, whether you run live classes, how heavy your assessment and question-bank needs are, whether the learner app carries your branding, and what has to connect to payments."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The model to avoid",
+      "h2": "Why per-learner pricing breaks a coaching business",
+      "lead": "Head-count billing looks reasonable on a demo call and turns into a management problem in the second year.",
+      "body": [
+        "Consider what an institute actually does when learners are metered. It hesitates before enrolling a free trial batch. It shares logins between siblings. It leaves last year's students locked out rather than paying to keep them, losing the alumni who bring the next referrals. It delays the corporate training pilot because thirty extra accounts need approval. None of those are teaching decisions, and all of them are caused by the pricing model.",
+        "The same distortion hits companies training their own staff. A compliance course that should reach every field technician reaches only the ones already licensed, which defeats the purpose of buying a training platform at all.",
+        {
+          "h3": "What actually drives an Aura Learn quote"
+        },
+        {
+          "table": {
+            "headers": [
+              "Cost driver",
+              "Keeps the quote lean",
+              "Pushes the quote up"
+            ],
+            "rows": [
+              [
+                "Content migration",
+                "A handful of courses you upload yourself",
+                "Years of video, notes and downloads to restructure and bring across"
+              ],
+              [
+                "Assessments",
+                "Quizzes built from your existing papers",
+                "Large question banks with mock tests modelled on a specific exam"
+              ],
+              [
+                "Live classes",
+                "Recorded lessons only",
+                "Live sessions and webinars with recordings published back to batches"
+              ],
+              [
+                "Certificates and compliance",
+                "A completion certificate template",
+                "Compliance tracking for regulated training with renewal dates"
+              ],
+              [
+                "App branding",
+                "Standard learner app",
+                "Your branding through the app and dashboard"
+              ],
+              [
+                "Payments",
+                "Fees collected as you do today",
+                "GST payments, subscriptions and fee plans inside the platform"
+              ]
+            ]
+          }
+        },
+        "Read that table as a planning tool rather than a menu. Institutes that begin with their strongest course, their existing question papers and recorded lessons are live sooner and spend less, and they add live classes or compliance tracking once the first cohort has proved the workflow."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "Always included",
+      "h2": "What comes with Aura Learn whatever the scope.",
+      "groups": [
+        {
+          "icon": "&#127891;",
+          "h": "Unlimited learners",
+          "items": [
+            "No per-learner or per-seat counting",
+            "Free trial batches without a licence conversation",
+            "Past students keep their access",
+            "Learner mobile app plus instructor and admin web dashboard"
+          ]
+        },
+        {
+          "icon": "&#128218;",
+          "h": "Teaching",
+          "items": [
+            "Course and content library with video lessons and downloads",
+            "Offline access for learners on poor connections",
+            "Batches, cohorts and timetable",
+            "Discussion and doubt forum"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Assessment",
+          "items": [
+            "Quizzes and mock tests, auto-graded with instant scores",
+            "Question banks and review",
+            "Certificates on completion",
+            "Progress and analytics per learner and batch"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Running the business",
+          "items": [
+            "WhatsApp reminders and drip content",
+            "Telegram bot nudges",
+            "GST payments, subscriptions and fees",
+            "Support on WhatsApp from the person who built it"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-learn.html",
+        "label": "See Aura Learn in full"
+      }
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before you sign anything",
+      "h2": "How to compare two LMS quotes honestly",
+      "lead": "Compare the cost of running the platform for three years at the size you intend to be, not the cost of starting it at the size you are.",
+      "body": [
+        {
+          "ul": [
+            "<b>Project your own growth.</b> Take the learner count you hope to have in three years and ask every vendor to price that, today, in writing.",
+            "<b>Check what an inactive learner costs.</b> Some contracts count anyone who ever registered, which quietly turns your alumni list into a bill.",
+            "<b>Ask who moves the content.</b> Video, notes and past papers do not migrate themselves, and that work belongs in the quote rather than in your evenings.",
+            "<b>Separate the app from the platform.</b> Branded app publishing is a distinct piece of work. Confirm whether it is included and who owns the store listing.",
+            "<b>Look at the payment path.</b> If fees are collected outside the system, someone reconciles them by hand every month for as long as you use it.",
+            "<b>Settle the exit.</b> Ask what export you receive for your courses, learner records and results if you leave, and how long it takes."
+          ]
+        },
+        "There is also the option nobody quotes for, which is carrying on with video links and message groups. It is free until it is not: results are chased by hand, material is forwarded rather than controlled, and no one can tell you which learners stopped opening the lessons. We have set out where that line falls in <a href=\"/compare/lms-vs-youtube-and-whatsapp-for-coaching/\">LMS versus YouTube and WhatsApp for coaching</a>, and if the terminology is new, start with <a href=\"/resources/what-is-lms/\">what is an LMS</a>.",
+        "Aura Learn is not a theory. It was proven on our own exam-prep product, an Android app on Google Play with Telegram practice bots behind it, before it was offered to anyone else."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "LMS pricing questions, answered honestly.",
+      "items": [
+        {
+          "q": "Why don't you publish LMS prices?",
+          "a": "Because the scope behind two institutes of the same size can be completely different. One uploads ten recorded courses, another needs a large question bank, live classes and a branded app. Publishing one number would mislead nearly everyone, and correcting it later wastes your time."
+        },
+        {
+          "q": "Do you charge per learner or per student?",
+          "a": "No. Learners are unlimited on Aura Learn, which means enrolment decisions stay academic and commercial rather than technical. Adding a batch, running a free trial group or keeping last year's students on the platform does not change what you pay."
+        },
+        {
+          "q": "What do you need in order to quote?",
+          "a": "How many courses you teach and in what form, whether you run live classes, how much assessment and question-bank work you need, whether the learner app should carry your branding, and how you want fees collected. That is usually one conversation."
+        },
+        {
+          "q": "Is content migration included?",
+          "a": "It is scoped and itemised rather than assumed. Bringing a handful of courses across is quick, while several years of video, notes and past papers that need restructuring is real work, so we look at what you actually have before quoting."
+        },
+        {
+          "q": "Can we start with one course and expand?",
+          "a": "Yes, and most institutes should. Put your strongest course on the platform with your existing papers as the first assessments, run one cohort through it end to end, then add live classes, certificates or compliance tracking with evidence behind the decision."
+        },
+        {
+          "q": "How soon can we open it to students?",
+          "a": "The delivery target is live in 30 working days where the scope allows. Content volume is the usual variable, since the platform is ready long before a large back catalogue is. Starting with one course is the fastest route to a real launch."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related learning platform reading",
+      "items": [
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127891;",
+          "b": "Aura Learn",
+          "p": "The learning platform in full."
+        },
+        {
+          "href": "/aura-learn/coaching-institute-management-software/",
+          "icon": "&#127979;",
+          "b": "Coaching institutes",
+          "p": "Batches, fees and results."
+        },
+        {
+          "href": "/aura-learn/lms-software/",
+          "icon": "&#128218;",
+          "b": "LMS software",
+          "p": "Courses, tests and certificates."
+        },
+        {
+          "href": "/compare/lms-vs-youtube-and-whatsapp-for-coaching/",
+          "icon": "&#9878;",
+          "b": "LMS vs video and chat",
+          "p": "When free stops being free."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-pricing/",
+          "icon": "&#128188;",
+          "b": "Aura Business pricing",
+          "p": "Module tiers, unlimited users."
+        },
+        {
+          "href": "/hims/hospital-management-software-pricing/",
+          "icon": "&#127973;",
+          "b": "HIMS pricing",
+          "p": "What drives a hospital quote."
+        }
+      ]
+    }
+  ],
+  "cta_h2": "Tell us what you teach, and we will scope it.",
+  "cta_p": "Half an hour on a call covering your courses, your assessments and how you collect fees is enough for a proper quote, with content migration and app branding written as their own lines instead of buried in a monthly figure."
+}

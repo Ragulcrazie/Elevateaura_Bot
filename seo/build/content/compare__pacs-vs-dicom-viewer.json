@@ -1,0 +1,200 @@
+{
+  "cluster": "compare",
+  "slug": "pacs-vs-dicom-viewer",
+  "title": "PACS vs DICOM Viewer: Which Does Your Centre Need | Elevate Aura",
+  "meta": "PACS vs DICOM viewer, compared honestly. When a free viewer is enough (a CD, one doctor) and when you need the archive.",
+  "h1": "PACS vs DICOM viewer: when a viewer is enough and when you need the <span class=\"hl\">whole system</span>.",
+  "crumb": "PACS vs DICOM viewer",
+  "pill": "Comparison",
+  "sub": "A DICOM viewer opens a study. A PACS receives, stores, indexes, displays and shares every study your machines produce. This comparison explains what each covers, what each costs you in effort, and the point at which a centre outgrows a viewer.",
+  "meta_ticks": [
+    "Written by a team that builds both",
+    "Fair about when a viewer wins",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the PACS vs DICOM viewer comparison and want to talk about imaging for our centre.",
+  "date": "2026-09-20",
+  "primary_keyword": "PACS vs DICOM viewer",
+  "secondary_keywords": [
+    "difference between PACS and DICOM viewer",
+    "DICOM viewer vs PACS",
+    "do I need a PACS or a viewer",
+    "PACS or DICOM viewer for small clinic",
+    "free DICOM viewer limitations"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or radiologist at a small imaging centre or clinic deciding whether a viewer is enough",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "A viewer serves one reader. A PACS serves the centre.",
+      "paras": [
+        "A DICOM viewer is for one person opening one study at a time: a doctor reading a CD a patient brought in, a radiologist checking a scan sent as a file, a student learning anatomy. It is free or cheap, installs on a laptop, and does that job well.",
+        "A PACS is for a centre that produces studies every day and has to find them again, get them read, attach reports and send them to referrers. If you own a modality, you will end up needing the archive, the worklist and the sharing. A viewer is one part of a PACS; it is not a substitute for it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "What a viewer does, and what a PACS does around it",
+      "body": [
+        {
+          "h3": "A DICOM viewer"
+        },
+        "The viewer reads DICOM files from a folder, a CD or a USB stick and displays them with the tools a reader expects: slice scrolling, window and level, zoom, measurement, sometimes multi-planar views. It does not receive images from a machine over the network, it does not keep a database of patients and studies, and it does not know who the referring doctor is. When you close it, the study is wherever the file was. Several capable viewers are free for personal use, and many radiologists keep one installed for exactly that reason.",
+        {
+          "h3": "A PACS"
+        },
+        "A PACS runs a DICOM server that your CT, MRI, X-ray or ultrasound machine sends to automatically at the end of each scan. It stores the study, indexes it by patient, date and modality, shows it in a viewer, holds the report against it and gets the result to the referrer. The viewer inside a PACS is opened from the patient list, not from a file. In a browser-based PACS such as <a href=\"/aurapacs/pacs-software/\">AuraPACS</a> nothing is installed; the radiologist opens the study from any laptop. The guide <a href=\"/resources/what-is-pacs/\">What is PACS</a> covers the four jobs in more detail.",
+        "The confusion comes from the fact that the viewer is the only part a doctor sees. The archive, the worklist and the sharing run in the background, which is why a centre can run on a viewer for a year before the gaps show."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Viewer alone against a PACS, criterion by criterion",
+      "headers": [
+        "Criterion",
+        "DICOM viewer alone",
+        "PACS"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Opening and reading a study from a file, CD or folder",
+          "Receiving from the machine, archiving, patient index, viewer, reporting, sharing"
+        ],
+        [
+          "Deployment",
+          "Installed on one computer; some run in a browser from an uploaded file",
+          "A server at the centre, in the cloud, or a hybrid node plus a cloud layer"
+        ],
+        [
+          "Cost model",
+          "Often free for personal use; paid versions licensed per computer",
+          "A licence you own, a subscription, or per-study charges; ask what you keep if you stop paying"
+        ],
+        [
+          "Who runs it",
+          "The doctor who installed it",
+          "The centre; the vendor handles setup, the front desk and technicians use it daily"
+        ],
+        [
+          "Finding an old study",
+          "Only if you know which folder or CD it is on",
+          "Search by name, ID, date or modality; prior studies appear next to today's"
+        ],
+        [
+          "Getting the report to the referrer",
+          "Not part of the viewer; email or print separately",
+          "PDF attached to the study; secure link by WhatsApp or email"
+        ],
+        [
+          "When it wins",
+          "One doctor, occasional studies, reading media patients bring in",
+          "Any centre that owns a modality and produces studies daily"
+        ],
+        [
+          "When it loses",
+          "The moment you need last year's scan or have to send today's to three people",
+          "A single doctor with no machine, or a centre that only ever reads outside CDs"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Three questions settle it",
+      "body": [
+        {
+          "ul": [
+            "<b>Do you own an imaging machine?</b> If yes, studies are being produced daily and must go somewhere. Burning CDs or copying to a shared drive is an archive, just a bad one. A PACS is the right answer, sized to the centre. If no, a viewer is probably enough.",
+            "<b>Does more than one person need the study?</b> A referrer, a second radiologist, the patient. A viewer serves the person at the keyboard; a PACS serves the people who are not in the room.",
+            "<b>Will you need the study again?</b> Follow-up scans are compared against priors. A viewer cannot show you the prior unless you go and find it."
+          ]
+        },
+        "There are honest cases where a viewer alone is the right choice. A consultant physician who receives CDs from outside centres and needs to look before referring on. A small clinic with no modality that reads outside reports. A teaching setting. In each of these, buying a PACS would be paying for an archive with nothing to archive.",
+        "There is also a middle position: a centre that has a modality but sends every study to an outside reporting service. It still needs an archive and a worklist locally, because the machine has to send somewhere and the front desk has to find the study when the patient returns. See the <a href=\"/aurapacs/dicom-viewer/\">AuraPACS viewer page</a> for what a browser viewer inside a PACS looks like, and <a href=\"/compare/pacs-vs-cloud-storage/\">PACS vs cloud storage</a> if your current answer is a shared folder."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS vs DICOM viewer, answered",
+      "items": [
+        {
+          "q": "Can a DICOM viewer replace a PACS?",
+          "a": "No. A viewer displays a study; it does not receive from the machine, index patients, hold reports or share studies. A viewer is one component of a PACS. A centre with its own modality will need the other components within months."
+        },
+        {
+          "q": "Is a free DICOM viewer good enough for a radiologist?",
+          "a": "For reading a study someone has handed over on a CD or as files, yes; many are excellent. For daily reporting at a centre, the missing parts are the worklist, the patient history and the report workflow, not the image tools."
+        },
+        {
+          "q": "Does a PACS include a DICOM viewer?",
+          "a": "Yes. Every PACS has a viewer, opened from the patient list. In AuraPACS the viewer runs in the browser with slice scrolling and window and level, so nothing is installed on the reading laptop."
+        },
+        {
+          "q": "What does a small clinic with one ultrasound machine need?",
+          "a": "Even one machine produces studies every day. A small on-premise or hybrid PACS gives the clinic automatic receive, a searchable archive and a way to send the report to the referrer. See <a href=\"/aurapacs/diagnostic-centre-pacs/\">PACS for diagnostic centres</a>."
+        },
+        {
+          "q": "Can I start with a viewer and add a PACS later?",
+          "a": "Yes, and many centres do. The cost of waiting is the studies produced in between, which sit on CDs or a drive and have to be imported later if you want them searchable. Start the archive as early as you can."
+        },
+        {
+          "q": "Is DICOM itself a product I have to buy?",
+          "a": "No. DICOM is the standard your machines already speak. You buy software that uses it: a viewer, a PACS, or both. The guide <a href=\"/resources/what-is-dicom/\">What is DICOM</a> explains the standard."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aurapacs/dicom-viewer/",
+          "icon": "&#128444;",
+          "b": "AuraPACS DICOM viewer",
+          "p": "The browser viewer inside the PACS."
+        },
+        {
+          "href": "/aurapacs/pacs-software/",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid PACS with WhatsApp sharing."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The four jobs every PACS does."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Why a folder is not an archive."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#127973;",
+          "b": "PACS for diagnostic centres",
+          "p": "Sized for one centre."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

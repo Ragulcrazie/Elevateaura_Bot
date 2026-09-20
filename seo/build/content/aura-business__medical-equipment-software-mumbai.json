@@ -1,0 +1,215 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-mumbai",
+  "title": "Medical Equipment Software in Mumbai | Aura Business",
+  "meta": "Medical equipment software for Mumbai importers and national distributors: multi-state dealer networks, IGST billing, e-way bills, dealer portals and AMC.",
+  "h1": "Medical equipment software for Mumbai importers with <span class=\"hl\">dealers in every state</span>.",
+  "crumb": "Mumbai",
+  "pill": "Mumbai and Maharashtra",
+  "sub": "Aura Business gives Mumbai's importers and national distributors one platform for multi-state dealer networks, IGST-heavy interstate billing with e-way bills, dealer portals with UTR payments, and the installed base and AMC that follow the equipment, deployed remotely from Chennai.",
+  "meta_ticks": [
+    "Remote onboarding from Chennai",
+    "IGST and e-way bills built in",
+    "Dealer portal with UTR payments"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing an interstate GST invoice with IGST, IRN and e-way bill status",
+    "bar": "app.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, we are a medical equipment importer or distributor in Mumbai and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Mumbai",
+  "secondary_keywords": [
+    "medical equipment distributor software Mumbai",
+    "medical device importer software India",
+    "dealer network management software Maharashtra",
+    "IGST billing software for distributors",
+    "medical equipment CRM Mumbai"
+  ],
+  "intent": "local",
+  "persona": "Director of a Mumbai-based importer or national distributor of medical equipment with dealers across India",
+  "city": "Mumbai",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Mumbai, run without a site visit",
+      "paras": [
+        "Aura Business is an operations platform for businesses that import, distribute, install and service medical equipment, and Mumbai companies deploy it remotely from Elevate Aura's studio in Chennai. Scoping happens on a call, data is migrated from your spreadsheets, training is over screen-share, and support is on WhatsApp with the founder who built it.",
+        "Elevate Aura has no presence in Mumbai and does not offer on-site work there. For a national distributor whose own dealers are spread across the country, a platform built to be run remotely is the point rather than a compromise."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Mumbai context",
+      "h2": "The goods land in Mumbai. The customers are everywhere else.",
+      "lead": "Mumbai is where a large share of imported medical equipment enters the country and where many national distributors are headquartered. The operational consequence is that most of what a Mumbai distributor sells leaves Maharashtra, through a dealer network that has to be priced, supplied, paid and supported state by state.",
+      "body": [
+        "The dealer network is the first thing to put in order. Each dealer holds an authorisation for certain brands and territories, buys at its own price list, pays by bank transfer, and wants to know when the consignment will ship. Aura Business records brand and authorisation per dealer, loads dealer price lists, gives each dealer a branded portal to order and upload UTRs, and shows order status on a tracking page so the phone stops ringing.",
+        "Interstate billing is the second. A Mumbai distributor invoicing a dealer in Gujarat, Kerala or Assam applies IGST, and the consignment needs an e-way bill before it moves. The GST Billing suite decides the tax split from the dealer's place of supply, generates the e-invoice IRN and QR, raises the e-way bill from the invoice, and handles credit notes for returns and rate differences. GSTR-1 and 3B prep and a Tally export keep the accountant in step with a high invoice volume.",
+        {
+          "h3": "The equipment does not stop at the dealer"
+        },
+        "An importer's obligations follow the equipment: principal warranty to honour, claims to raise with the overseas manufacturer, and an installed base that is the pipeline for AMC and extended warranty. The installed-base register records every serial with the dealer, hospital and warranty start; warranty tracking marks parts replaced under claim; and the renewal engine lists expiring cover by dealer and city so the contract is sold in time.",
+        {
+          "h3": "Remote deployment for a national business"
+        },
+        {
+          "ul": [
+            "Scoping call with the director and the accounts and dealer-management heads.",
+            "Dealer master, price lists, installed base and open contracts imported from Excel.",
+            "Dealers onboarded to the portal from a link, with a short recorded walkthrough.",
+            "Office training over screen-share; role-based access for branches and dealers.",
+            "Live in 30 working days where scope allows; support on WhatsApp."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a national distributor uses most.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Dealer network",
+          "items": [
+            "Brand and authorisation per dealer and territory",
+            "Dealer price lists",
+            "Distributor and B2B order portal",
+            "Distributor payment by UTR",
+            "Order tracking page and docs vault"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Interstate billing",
+          "items": [
+            "IGST by place of supply",
+            "E-invoice IRN and QR",
+            "E-way bill from the invoice",
+            "Credit notes and returns",
+            "GSTR-1 and 3B prep, Tally export"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Installed base and cover",
+          "items": [
+            "Installed-base register by dealer and city",
+            "Warranty tracking and principal claims",
+            "AMC, CMC and extended warranty",
+            "Contract renewal engine",
+            "Multi-warehouse stock with serials and batches"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Mumbai situations the platform is built for.",
+      "items": [
+        {
+          "h": "Forty dealers, one order desk",
+          "workflow": "Dealers across states order on the portal at their own price lists, upload UTRs, and watch dispatch on the tracking page; the desk confirms payments and releases orders.",
+          "result": "The order desk handles exceptions, not every order."
+        },
+        {
+          "h": "A consignment to Assam leaves with its papers",
+          "workflow": "The invoice applies IGST, the IRN is generated, and the e-way bill is raised from the same record with transporter details before pickup.",
+          "result": "No consignment held for a missing document."
+        },
+        {
+          "h": "A principal warranty claim has evidence",
+          "workflow": "A board replaced under warranty at a hospital in Pune is logged with failed and replacement serials on the job card, tied to the GRN it arrived on.",
+          "result": "The claim to the overseas manufacturer is filed with dates and serials."
+        },
+        {
+          "h": "The director sees the country on one screen",
+          "workflow": "P&amp;L by product line and territory, receivables ageing by dealer, and AMC at risk by state on the owner dashboard.",
+          "result": "Decisions on dealers and brands from live numbers."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Mumbai, answered.",
+      "items": [
+        {
+          "q": "Do you visit Mumbai for implementation?",
+          "a": "No. Elevate Aura is based in Chennai and serves Mumbai remotely, with cloud deployment, screen-share onboarding and WhatsApp support. In-person work is limited to Chennai and places in Tamil Nadu reachable by travel."
+        },
+        {
+          "q": "Can dealers in different states have different price lists and product access?",
+          "a": "Yes. Each dealer account carries its authorised brands, territory and price list, and the portal shows only what applies. See <a href=\"/aura-business/medical-equipment-dealer-management-software/\">dealer management software</a>."
+        },
+        {
+          "q": "How are IGST and e-way bills handled for interstate supply?",
+          "a": "The tax split is decided by the dealer's GSTIN and delivery address, so interstate supply carries IGST. The e-way bill is generated from the invoice or delivery challan with transporter and vehicle details before dispatch. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing software</a>."
+        },
+        {
+          "q": "Does it track warranty claims back to an overseas principal?",
+          "a": "Parts replaced under warranty are recorded with failed and replacement serials, the job card and the GRN they came from, which is the evidence for your claim. The claim itself is raised with the principal in their process; the credit received is tracked in payables."
+        },
+        {
+          "q": "Can the installed base be viewed by dealer or state?",
+          "a": "Yes. Every serial in the register carries its dealer, hospital and location, and the reports engine groups installations, warranty status and contracts by any of them. See <a href=\"/aura-business/installed-base-management-software/\">installed base management software</a>."
+        },
+        {
+          "q": "How many users can we have?",
+          "a": "Unlimited users on every Aura Business plan. Plans are by module count, 15, 47 or all 87, so branches, dealers and office staff can all have logins with role-based access."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Portals, price lists, UTR."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "IGST, e-invoice, e-way bill."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty",
+          "p": "Claims to the principal."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-hyderabad/",
+          "icon": "&#128205;",
+          "b": "Hyderabad",
+          "p": "Two-state distributors."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "A distributor portal, shipped."
+        }
+      ]
+    }
+  ]
+}

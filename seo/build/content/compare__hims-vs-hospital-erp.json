@@ -1,0 +1,213 @@
+{
+  "cluster": "compare",
+  "slug": "hims-vs-hospital-erp",
+  "title": "HIMS vs Hospital ERP: Which Do You Need | Elevate Aura",
+  "meta": "HIMS vs hospital ERP compared: clinical record against enterprise resource planning, where billing sits, and what a small hospital actually needs first.",
+  "h1": "HIMS vs hospital ERP: the clinical record against the <span class=\"hl\">enterprise books</span>.",
+  "crumb": "HIMS vs hospital ERP",
+  "pill": "Comparison",
+  "sub": "One system runs the patient journey from registration to discharge. The other runs the institution: purchase, stores, finance and payroll. Most hospitals are sold one and quoted the other. This page separates them so you can buy in the right order.",
+  "meta_ticks": [
+    "Written for Indian hospitals",
+    "Fair about when you need both",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See HIMS",
+  "cta_href": "/hims.html",
+  "whatsapp_text": "Hi, I read the HIMS vs hospital ERP comparison and want to discuss software for our hospital.",
+  "date": "2026-09-20",
+  "primary_keyword": "HIMS vs hospital ERP",
+  "secondary_keywords": [
+    "difference between HIMS and hospital ERP",
+    "hospital management system vs ERP",
+    "hospital ERP software",
+    "do hospitals need an ERP",
+    "HIS vs ERP hospital"
+  ],
+  "intent": "comparison",
+  "persona": "Hospital owner, administrator or medical director choosing between a hospital management system and an ERP",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "The patient journey, or the institution",
+      "paras": [
+        "A HIMS is for the people who touch the patient: front desk registering OP and IP cases, doctors writing notes and prescriptions, nurses on the ward, the pharmacy dispensing, the lab releasing results, the billing counter settling cash, insurance and TPA claims. It is organised around one patient moving through one visit.",
+        "A hospital ERP is for the people who run the institution: purchase and stores, supplier payments, fixed assets, payroll, the general ledger and consolidated reporting across units. It is organised around transactions landing correctly in the books.",
+        "A small or mid-sized hospital almost always needs the HIMS first, because without it there is no clean record of what was done, dispensed or charged for the ERP to account for."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "What runs inside each system",
+      "body": [
+        {
+          "h3": "Inside a HIMS"
+        },
+        "Registration creates the patient record, and appointments and a queue or token system move the patient to the right room. The doctor works in a structured EMR with e-prescription, supporting the documentation a NABH-style audit expects. On admission, bed management assigns a ward and bed, ICU screens show live vitals per bed, and theatre scheduling holds the surgical list. Pharmacy has a dispensing queue with expiry alerts, the lab runs from order to verified result, and emergency has a triage board. Discharge and billing close the episode, with a live dashboard of OP, IP, beds and collections. Imaging sits alongside through <a href=\"/aurapacs.html\">AuraPACS</a>.",
+        {
+          "h3": "Inside a hospital ERP"
+        },
+        "Procurement raises purchase orders against approved suppliers, goods receipt records what arrived, stores issue consumables to departments, payables track what is owed, payroll runs salaries, and the general ledger consolidates everything into statements, across units in a group. None of that touches a patient, and none of it can start until the clinical side reports what was consumed and billed.",
+        {
+          "h3": "Where billing sits"
+        },
+        "Billing is the join, and it is where most confusion starts. Charge capture is clinical: the consultation, the bed day, the procedure, the drug dispensed, the test performed. It has to happen inside the HIMS because that is where the events occur, and settlement is at the counter, where cash, card, insurance and TPA claims are handled. What belongs to the ERP is the accounting treatment afterwards. In <a href=\"/hims/hospital-billing-software/\">HIMS billing</a> the charge, the GST treatment and the claim sit with the patient record, and the summarised result is exported to whatever system finance uses."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "HIMS, hospital ERP and the two together",
+      "cols": [
+        "Hospital ERP",
+        "HIMS alone",
+        "HIMS with ERP export"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Purchase, stores, payables, payroll, assets, ledger",
+          "Registration, EMR, pharmacy, lab, beds, ICU, theatre, billing, claims",
+          "The full patient journey, with summarised finance flowing to the books"
+        ],
+        [
+          "Who uses it daily",
+          "Purchase, stores, finance and HR staff",
+          "Front desk, doctors, nurses, pharmacy, lab, billing counter",
+          "Both, each in the system built for their work"
+        ],
+        [
+          "Deployment",
+          "A project with a consultant and a configuration phase",
+          "Cloud workspace, configured to your departments and tariffs",
+          "HIMS live first, export configured once finance confirms the mapping"
+        ],
+        [
+          "Cost model",
+          "Licence plus implementation plus annual support",
+          "Scoped per hospital on a call, by the modules switched on",
+          "The HIMS scope plus whatever finance already costs"
+        ],
+        [
+          "Clinical record",
+          "None; it has no view of the patient",
+          "Structured EMR, NABH-style documentation, ABHA ready",
+          "The same record, with charges reconciled into finance"
+        ],
+        [
+          "Insurance and TPA",
+          "A receivable, after the fact",
+          "Claims raised and tracked at the counter",
+          "Claims at the counter, ageing visible in finance"
+        ],
+        [
+          "When it wins",
+          "A multi-unit group with heavy procurement",
+          "Any hospital, clinic or nursing home that treats patients",
+          "A growing hospital that has outgrown one system for both"
+        ],
+        [
+          "When it loses",
+          "A single hospital still recording care on paper",
+          "A group needing consolidated statutory reporting",
+          "A small clinic where a second system is overhead"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Buy in the order the work happens",
+      "body": [
+        "Start by asking what is still written on paper. If case sheets, prescriptions, lab requests and bills are handwritten, an ERP will have nothing reliable to account for, and a HIMS is the only sensible first purchase. If clinical work is already digital and the pain is purchase orders in a file and payroll in a spreadsheet, the ERP side is where the next money goes.",
+        {
+          "ul": [
+            "<b>A small hospital or nursing home</b> usually needs registration, appointments and queue, EMR, pharmacy, lab, beds, billing with TPA claims and a dashboard. Procurement and stores are covered by the inventory module inside it, and an accounting package handles the books.",
+            "<b>A mid-sized hospital</b> reaches the point where purchase approvals, supplier payables and payroll need their own system. Run the HIMS clinically and export summarised revenue and consumption to finance.",
+            "<b>A multi-unit group</b> needs both: a HIMS at each unit and a consolidating ERP above them, with a clear agreement on which system owns the charge master."
+          ]
+        },
+        "There is a real case for choosing an ERP first, and it should be named. A hospital that already has a working clinical system and is losing money in procurement, stores leakage and unrecorded consumption will get more from fixing purchasing than from replacing a functioning HIMS.",
+        "Whichever comes first, settle three things in writing before signing: which system owns the charge master, how often revenue and consumption move between them, and who reconciles the difference each month. See <a href=\"/hims/hospital-erp-software/\">hospital ERP software</a> and <a href=\"/hims/hospital-management-system/\">the hospital management system</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS vs hospital ERP, answered",
+      "items": [
+        {
+          "q": "Is a HIMS the same as a hospital ERP?",
+          "a": "No. A HIMS runs the patient journey: registration, EMR, pharmacy, lab, beds, billing and claims. A hospital ERP runs the institution: purchase, stores, payables, payroll and the ledger. They meet at billing and inventory, which is why they are often confused."
+        },
+        {
+          "q": "Does a small hospital need both?",
+          "a": "Usually not at first. A HIMS with inventory and GST billing covers what a small hospital runs on, with an accounting package for the books. An ERP becomes worthwhile when procurement, stores and payroll are large enough to need their own controls."
+        },
+        {
+          "q": "Where should billing live?",
+          "a": "Charge capture and settlement belong in the HIMS, because the events and the counter are there. The accounting treatment belongs in finance. Elevate Aura's HIMS raises the bill with cash, insurance, TPA and GST handling, then exports summarised figures."
+        },
+        {
+          "q": "Can HIMS handle inventory and purchase?",
+          "a": "Yes, for consumables, equipment and reorder levels, which covers most single-hospital needs. What it does not attempt is multi-entity consolidation, landed-cost allocation and statutory group reporting, which are ERP problems."
+        },
+        {
+          "q": "How long does a HIMS take to go live?",
+          "a": "The framework is 30 working days where scope allows. A single-specialty clinic is faster than a hospital with IP, theatre, ICU and TPA billing, and the scope document states the timeline for yours. See the <a href=\"/demo/hospital.html\">hospital demo</a>."
+        },
+        {
+          "q": "Is the system ready for ABHA and ABDM?",
+          "a": "Yes, the HIMS is ABHA and ABDM ready and supports NABH-style structured documentation. It is not a certification claim about your hospital; accreditation and registration remain your process, supported by the records the system keeps."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "The clinical side, end to end."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128200;",
+          "b": "Hospital ERP software",
+          "p": "Purchase, stores and the books."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#129534;",
+          "b": "Hospital billing software",
+          "p": "Cash, insurance, TPA and GST."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#128717;",
+          "b": "Nursing home software",
+          "p": "Sized for a smaller hospital."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "How to choose hospital software",
+          "p": "The buyer's checklist."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

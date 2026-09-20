@@ -1,0 +1,213 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-coimbatore",
+  "title": "PACS Software in Coimbatore | On-Site Setup | AuraPACS",
+  "meta": "PACS software for Coimbatore diagnostic centres and hospitals, with the on-premise node installed and modalities connected on site by travel from Chennai.",
+  "h1": "PACS software for Coimbatore, with the node <span class=\"hl\">installed on your own network</span> in person.",
+  "crumb": "Coimbatore",
+  "pill": "Coimbatore and western Tamil Nadu",
+  "sub": "AuraPACS stores, displays and shares imaging for Coimbatore diagnostic centres, imaging units and hospitals. The on-premise node is placed and your modalities connected on site by travel from Chennai, and everything after that is remote and on WhatsApp.",
+  "meta_ticks": [
+    "On-site node install and modality connection",
+    "Keeps working when the line does not",
+    "Remote and WhatsApp support after"
+  ],
+  "whatsapp_text": "Hi, we run an imaging centre in Coimbatore and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS software Coimbatore",
+  "secondary_keywords": [
+    "PACS system Coimbatore",
+    "DICOM server Coimbatore",
+    "radiology software Coimbatore",
+    "diagnostic centre software Coimbatore",
+    "PACS installation Tamil Nadu"
+  ],
+  "intent": "local",
+  "persona": "Owner of a diagnostic centre, imaging unit or hospital radiology department in Coimbatore",
+  "city": "Coimbatore",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "PACS for Coimbatore, with the install done on site",
+      "paras": [
+        "AuraPACS is built in Chennai, and Coimbatore is within travelling distance, so the part of a PACS rollout that genuinely benefits from someone standing next to the machine is done that way. Placing the on-premise node on your network, pointing each modality at it over DICOM, watching the first study arrive from the scanner and setting up the worklist so the technician stops retyping the patient name are all on-site work.",
+        "After the install the centre runs on its own node. Viewing, reporting, WhatsApp sharing and billing carry on without anybody visiting, and support is remote and on WhatsApp. There is no Coimbatore office and no local engineer. The person who installs it is the person who built it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Coimbatore context",
+      "h2": "A thick layer of imaging, and a catchment that crosses a state border.",
+      "lead": "Coimbatore carries CT and MRI units running through the day, ultrasound and digital radiography in smaller centres, and referrers spread across the western districts and into Kerala.",
+      "body": [
+        "Two things follow from that. The first is reading cover: many centres are read by a radiologist who is not always in the building, who may cover more than one centre, and who needs to open a study from wherever he is without installing anything. The second is the report's journey. The referring doctor who sent the patient may be in Tiruppur, Erode, Pollachi or across the border in Palakkad, and he is not going to log into a portal to read a chest film. He will open a link on his phone or he will ring the centre and ask someone to read it out.",
+        {
+          "h3": "What the on-site day covers"
+        },
+        {
+          "ul": [
+            "The node placed on the centre's own network, so studies are received and served locally.",
+            "Each modality configured to send over DICOM, and the first study from each machine verified end to end.",
+            "The modality worklist set up so the patient is scheduled once and appears on the machine.",
+            "Reporting templates put in place per modality and finalised to PDF on the study.",
+            "Front desk, technicians and the radiologist shown the browser viewer on their own machines.",
+            "Branding, user roles and the GST invoice format set the way the centre works."
+          ]
+        },
+        {
+          "h3": "What happens when the line drops"
+        },
+        "A cloud-only PACS stops the moment the uplink does, and in a working day that is not a rare event. The AuraPACS node sits on your network, so receiving, viewing and reporting continue through an outage and the cloud layer catches up once the connection returns. That is the whole argument for the hybrid arrangement, and it is explained fully on <a href=\"/aurapacs/hybrid-pacs/\">hybrid PACS</a>.",
+        {
+          "h3": "After the visit"
+        },
+        "Support is remote: WhatsApp, a call, a screen share when something needs looking at directly. Studies sit on your hardware with an encrypted offsite copy, so nothing about the archive depends on a visit. A return trip is arranged if a new modality is added or the centre moves, and that is scoped when it comes up."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "What is set up in Coimbatore and what runs daily.",
+      "groups": [
+        {
+          "icon": "&#128736;",
+          "h": "Set up on site",
+          "items": [
+            "On-premise node on your own network",
+            "CT, MR, X-ray, ultrasound and mammography sending by DICOM",
+            "Modality worklist so nothing is retyped at the console",
+            "Branding, user roles and invoice format"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Daily working",
+          "items": [
+            "Zero-download browser viewer on any laptop",
+            "Slice scrolling and window and level control",
+            "Structured reporting templates per modality",
+            "Signed PDF attached to the study",
+            "Full searchable patient history"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Sharing and money",
+          "items": [
+            "Secure WhatsApp link per study, no login for the referrer",
+            "Remote reading from home or a second site",
+            "GST billing and invoicing built in",
+            "Role-based access with every view audited",
+            "Encrypted offsite backup"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Coimbatore situations the platform handles.",
+      "items": [
+        {
+          "h": "A radiologist covering two centres",
+          "workflow": "He opens the worklist in a browser from wherever he is that afternoon, reads the study and finalises the report on his own login.",
+          "result": "Turnaround does not depend on which building he is in."
+        },
+        {
+          "h": "A referrer across the Kerala border",
+          "workflow": "The centre sends a secure link; the doctor in Palakkad opens the images and the signed PDF on his phone without an account.",
+          "result": "The referral loop closes the same evening."
+        },
+        {
+          "h": "An afternoon with no internet",
+          "workflow": "The scanner keeps sending to the node, the technician keeps working, the radiologist in the building keeps reading, and the cloud layer catches up afterwards.",
+          "result": "The list is not held up by the connection."
+        },
+        {
+          "h": "A centre leaving film and CDs behind",
+          "workflow": "Studies land on the node from the machine, patients get a link instead of a disc, and old studies are searchable by patient.",
+          "result": "Comparisons stop depending on what the patient remembered to bring."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "AuraPACS in Coimbatore, answered.",
+      "items": [
+        {
+          "q": "Do you travel to Coimbatore to install it?",
+          "a": "Yes. The node install, the modality connections and the staff walkthrough are done on site by travel from Chennai. There is no Coimbatore office and no local engineer, and support after the install is remote and on WhatsApp."
+        },
+        {
+          "q": "What should be ready before the visit?",
+          "a": "A machine on the same network as the modalities for the node to run on, a fixed address for it, and somebody who knows the settings on each scanner or can reach the service engineer who does. Anything unclear is worked out on a call beforehand."
+        },
+        {
+          "q": "Will it keep working if our internet is down?",
+          "a": "Yes. The node is on your premises, so receiving, viewing and reporting continue during an outage and the cloud layer syncs afterwards. Uninterrupted power for the node and the scanner is the centre's own arrangement."
+        },
+        {
+          "q": "Can our radiologist read from home?",
+          "a": "Yes. Remote reading runs in the browser on his own login, with access restricted by role and every view audited. See <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading</a>."
+        },
+        {
+          "q": "How do referring doctors get the report?",
+          "a": "As a secure link per study that opens the images and the signed PDF with no login for the doctor or the patient, sent from the centre's system rather than from a staff member's personal phone. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp report sharing</a>."
+        },
+        {
+          "q": "Can we try it before anyone travels?",
+          "a": "Yes. The live demo runs in a browser, and a 200 KB Windows demo installer runs against the demo server with sample studies. Activation by Site ID over WhatsApp moves the full system onto your own network."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Chennai",
+          "p": "On-site, where the studio is."
+        },
+        {
+          "href": "/aurapacs/on-premise-pacs/",
+          "icon": "&#128421;",
+          "b": "On-premise PACS",
+          "p": "What the node actually does."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "The referral channel."
+        },
+        {
+          "href": "/aurapacs/pacs-software-madurai/",
+          "icon": "&#128205;",
+          "b": "Madurai",
+          "p": "The southern districts."
+        },
+        {
+          "href": "/hims/hospital-management-software-coimbatore/",
+          "icon": "&#127973;",
+          "b": "HIMS in Coimbatore",
+          "p": "The hospital side."
+        }
+      ]
+    }
+  ]
+}

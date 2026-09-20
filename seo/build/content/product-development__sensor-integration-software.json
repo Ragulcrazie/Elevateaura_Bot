@@ -1,0 +1,317 @@
+{
+  "cluster": "product-development",
+  "slug": "sensor-integration-software",
+  "title": "Sensor Integration Software Development | Elevate Aura",
+  "meta": "Sensor integration software: reading sensors and driving actuators reliably, handling calibration, and moving data from sensor to controller to app or cloud.",
+  "h1": "Sensor software that turns a raw reading into something <span class=\"hl\">worth acting on</span>.",
+  "crumb": "Sensor Integration",
+  "pill": "Software-only, sensors and actuators",
+  "sub": "Elevate Aura writes the software that reads your sensors and drives your actuators: the drivers, the sampling and filtering, the calibration handling, and the path that carries a reading from the sensor through the controller to an app or a cloud dashboard.",
+  "meta_ticks": [
+    "Drivers, sampling and filtering",
+    "Calibration values stored on the device",
+    "Sensor to controller to cloud"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need sensor integration software for our device. Can we discuss the sensors and the board?",
+  "cta_h2": "Tell us what the device has to measure.",
+  "cta_p": "Send the sensor list, the controller and what has to happen when a reading crosses a line. We will scope the driver, sampling and calibration work and the path the data takes afterwards.",
+  "primary_keyword": "sensor integration software",
+  "secondary_keywords": [
+    "sensor integration software development",
+    "sensor driver development services",
+    "actuator control software development",
+    "sensor data acquisition firmware",
+    "sensor calibration software development",
+    "embedded sensor software India"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering lead at a device company whose product depends on readings that have to be trustworthy",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Sensor integration software",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What sensor integration software actually does",
+      "paras": [
+        "Sensor integration software is the layer between a component on your board and a number your product can rely on. Elevate Aura writes the drivers that talk to each sensor, the sampling that decides when readings are taken, the filtering that removes what is not signal, and the logic that acts on the result by driving an actuator or raising a fault.",
+        "Calibration is treated as part of the software rather than a note in a spreadsheet. Offsets and scaling factors are stored on the device, applied on every reading, versioned so you know which values a unit is using, and updatable during production or service without a rebuild of the firmware.",
+        "The same engagement carries the reading onward: buffered locally, sent over BLE, Wi-Fi, serial, Modbus or CAN, and landed in a pipeline or a dashboard. The sensors themselves, their placement, the board and any hardware certification are your team's work. This is a software-only engagement."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The measurement problem",
+      "h2": "The sensor is fine. The numbers are not.",
+      "lead": "Most readings that look wrong are not a component fault. They are a software decision that was never made deliberately.",
+      "items": [
+        {
+          "h": "Sampled in the main loop",
+          "p": "Readings are taken between other work, so the interval drifts whenever the device is busy."
+        },
+        {
+          "h": "Calibration in a spreadsheet",
+          "p": "Offsets live outside the device, and nobody can say which values a particular unit was given."
+        },
+        {
+          "h": "No filtering, or far too much",
+          "p": "Either every bit of noise reaches the logic, or the smoothing hides the event you needed to see."
+        },
+        {
+          "h": "A failed sensor reads zero",
+          "p": "A disconnected part is treated as a genuine measurement and the device acts on it."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a datasheet to a reading you can trust.",
+      "steps": [
+        {
+          "h": "Scope",
+          "p": "Sensors, actuators, controller, required accuracy and what the device does with each reading."
+        },
+        {
+          "h": "Drivers",
+          "p": "Each part brought up from its datasheet on your board, with error paths."
+        },
+        {
+          "h": "Sampling",
+          "p": "Timed acquisition on interrupts or a scheduler rather than loop delays."
+        },
+        {
+          "h": "Calibration and filtering",
+          "p": "Offsets and scaling stored on the device, filtering chosen for the signal."
+        },
+        {
+          "h": "Act and move",
+          "p": "Actuator control, thresholds and faults, then buffering and transport onward."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, calibration procedure and test notes from your hardware, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "From the pin to the dashboard.",
+      "groups": [
+        {
+          "icon": "&#128225;",
+          "h": "Acquisition",
+          "items": [
+            "I2C, SPI, UART and analogue sensor drivers",
+            "Timed sampling and interrupt capture",
+            "Range and plausibility checks",
+            "Disconnected and faulty sensor detection"
+          ]
+        },
+        {
+          "icon": "&#128207;",
+          "h": "Calibration",
+          "items": [
+            "Offset and scaling stored on the device",
+            "Calibration mode for production or service",
+            "Versioned values per unit",
+            "Applied consistently on every reading"
+          ]
+        },
+        {
+          "icon": "&#9881;",
+          "h": "Acting",
+          "items": [
+            "Actuator and output control",
+            "Thresholds, alarms and safe states",
+            "Local logging of events",
+            "Behaviour when a reading is missing"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Moving on",
+          "items": [
+            "Buffering while offline",
+            "BLE, Wi-Fi, serial, Modbus or CAN",
+            "Supabase or Azure pipeline",
+            "Dashboard and alerting"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where the sensor layer decides the product.",
+      "items": [
+        {
+          "h": "A device that must hold a value steady",
+          "workflow": "Readings arrive on a fixed interval, are filtered for the signal and drive the actuator with defined limits and a safe state.",
+          "result": "Control behaviour that is the same on every unit."
+        },
+        {
+          "h": "Units calibrated at the end of the line",
+          "workflow": "A calibration mode writes offsets and scaling to the device, and the values are recorded against the serial number.",
+          "result": "Production calibration without a firmware rebuild per unit."
+        },
+        {
+          "h": "Readings a clinician or engineer will act on",
+          "workflow": "Implausible and disconnected readings are flagged rather than forwarded, and the fault is shown as a fault.",
+          "result": "Nobody makes a decision on a number the device did not believe."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Products whose value is the measurement.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device makers",
+          "p": "Vitals, wearables and monitors."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Analysers and handheld testers."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Position, force and safety sensing."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment makers",
+          "p": "Monitoring built into machines."
+        },
+        {
+          "icon": "&#128225;",
+          "b": "IoT product teams",
+          "p": "Environmental and usage sensing."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Driver work off the critical path."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting the sensor layer written, three ways.",
+      "cols": [
+        "Vendor example code",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Calibration handling",
+          "Not included",
+          "Hard coded",
+          "Stored on the device and versioned"
+        ],
+        [
+          "Faulty sensor behaviour",
+          "Not considered",
+          "Reads whatever it reads",
+          "Detected and flagged as a fault"
+        ],
+        [
+          "Data beyond the board",
+          "No",
+          "Separate person",
+          "Same engagement, to app or cloud"
+        ],
+        [
+          "Tested on your hardware",
+          "On an evaluation kit",
+          "Sometimes",
+          "Always, on your boards"
+        ],
+        [
+          "Hardware boundary",
+          "Not applicable",
+          "Blurred",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Sensor integration software, answered.",
+      "items": [
+        {
+          "q": "Do you choose the sensors?",
+          "a": "No. Sensor selection, placement, analogue front end and board design are your hardware team's work. We write the software for the parts you have chosen, and we will tell you plainly if a part's timing or interface makes the software requirement difficult."
+        },
+        {
+          "q": "How is calibration handled?",
+          "a": "Offsets and scaling factors are stored on the device and applied to every reading, with a calibration mode that lets production or service write new values without rebuilding the firmware. Values are versioned so you know what each unit is using."
+        },
+        {
+          "q": "What happens if a sensor fails?",
+          "a": "The driver checks range and plausibility and detects a disconnected part rather than passing a zero along as a measurement. The device moves to a defined safe state, records the fault and reports it, rather than acting on a reading it cannot trust."
+        },
+        {
+          "q": "Can the readings reach a phone or a dashboard?",
+          "a": "Yes. Readings are buffered locally and sent over BLE, Wi-Fi, serial, Modbus or CAN into a pipeline on Supabase or Azure. See <a href=\"/product-development/device-to-cloud-telemetry-software/\">device-to-cloud telemetry software</a>."
+        },
+        {
+          "q": "Do you do any hardware or certification work?",
+          "a": "No. Elevate Aura is software-only: no PCB design, no manufacturing or sourcing, no mechanical or enclosure work and no hardware regulatory certification. We deliver firmware with documentation your team can use in its own submissions."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers and peripherals."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "Where readings land."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Watching the fleet."
+        },
+        {
+          "href": "/product-development/modbus-software-development/",
+          "icon": "&#128268;",
+          "b": "Modbus software",
+          "p": "Readings as registers."
+        },
+        {
+          "href": "/product-development/iot-product-development/",
+          "icon": "&#128225;",
+          "b": "IoT product development",
+          "p": "Device, app and cloud."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

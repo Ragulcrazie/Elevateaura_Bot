@@ -1,0 +1,333 @@
+{
+  "cluster": "aura-learn",
+  "slug": "corporate-training-lms",
+  "title": "Corporate Training LMS | Train Staff and Field Teams | Aura Learn",
+  "meta": "Corporate training LMS for your own staff and field teams: offline lessons in a mobile app, batches by region, progress dashboards and unlimited learners.",
+  "h1": "A corporate training LMS built for the staff who are <span class=\"hl\">never at a desk</span>.",
+  "crumb": "Corporate Training LMS",
+  "pill": "For companies training their own people",
+  "sub": "Aura Learn trains a company's own staff and field teams: lessons downloaded to a mobile app for offline use, batches by region or role, assessments graded on submission and a progress dashboard for the training head, with no limit on how many employees you enrol.",
+  "meta_ticks": [
+    "Offline lessons for field teams",
+    "Batches by region, role or joining date",
+    "Unlimited employees, no per-seat pricing"
+  ],
+  "whatsapp_text": "Hi, I'd like to see Aura Learn as a corporate training LMS for our staff and field teams.",
+  "primary_keyword": "corporate training LMS",
+  "secondary_keywords": [
+    "employee training software",
+    "corporate LMS India",
+    "staff training platform",
+    "field staff training app",
+    "employee onboarding software",
+    "internal training software"
+  ],
+  "intent": "commercial",
+  "persona": "Training head or operations manager responsible for staff across branches and field teams",
+  "page_type": "industry",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a corporate training LMS does here",
+      "paras": [
+        "A corporate training LMS puts your company's own training material in an app your employees carry, assigns it by batch, checks understanding with an assessment and shows the training head who has finished. Aura Learn is that platform, with a learner mobile app for staff and an admin dashboard for whoever runs training.",
+        "It is built around teams that are not in an office: sales reps on the road, service engineers at customer sites, branch staff in other cities. Lessons download to the phone and play offline, progress syncs when the signal returns, and a WhatsApp reminder follows anyone who has stalled. Batches can be cut by region, role or joining date, and the dashboard reports completion per batch."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The internal training problem",
+      "h2": "Training that happens once, in one room, for whoever was free that day.",
+      "lead": "A classroom session reaches the people who could attend. Everyone hired afterwards, and everyone posted elsewhere, learns from a colleague.",
+      "items": [
+        {
+          "h": "Field staff never attend",
+          "p": "The people who most need product training are on the road when the session runs at head office."
+        },
+        {
+          "h": "New joiners learn by rumour",
+          "p": "Onboarding depends on which senior happens to sit next to the recruit in their first week."
+        },
+        {
+          "h": "No record of completion",
+          "p": "An attendance sheet says who sat in the room, not who understood the process or can be trusted with it."
+        },
+        {
+          "h": "Every region trains differently",
+          "p": "Branch managers improvise their own version, so the same product is explained five ways."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From a training plan to a completion report.",
+      "steps": [
+        {
+          "h": "Build",
+          "p": "Upload videos, documents and quizzes into a course."
+        },
+        {
+          "h": "Batch",
+          "p": "Group employees by region, role or joining month."
+        },
+        {
+          "h": "Assign",
+          "p": "Course pushed to the batch with a deadline."
+        },
+        {
+          "h": "Learn",
+          "p": "Staff study in the app, offline where needed."
+        },
+        {
+          "h": "Assess",
+          "p": "Quiz graded on submission; certificate on a pass."
+        },
+        {
+          "h": "Report",
+          "p": "Completion per batch on the dashboard; laggards reminded on WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The employee side and the training-head side.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "Employee app",
+          "items": [
+            "Course library with video and documents",
+            "Offline download for low-signal areas",
+            "Quizzes and assessments",
+            "Certificates on completion"
+          ]
+        },
+        {
+          "icon": "&#128101;",
+          "h": "Batches",
+          "items": [
+            "Batches by region, role or joining date",
+            "Assign courses with deadlines",
+            "Live sessions with recordings",
+            "Discussion forum per batch"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Dashboard",
+          "items": [
+            "Completion per learner and per batch",
+            "Assessment scores and weak topics",
+            "Compliance tracking for required training",
+            "Exports for HR"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Engagement",
+          "items": [
+            "WhatsApp reminders and drip content",
+            "Telegram bot nudges",
+            "Deadline alerts",
+            "Unlimited learners"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What internal training looks like when it runs itself.",
+      "items": [
+        {
+          "h": "A new product reaches every rep in a week",
+          "workflow": "The product module is assigned to all sales batches with a deadline; reps watch it between visits and pass the quiz.",
+          "result": "The training head sees which region has finished and which has not."
+        },
+        {
+          "h": "Onboarding is the same for every recruit",
+          "workflow": "New joiners are added to a monthly batch that carries the standard onboarding course.",
+          "result": "Every recruit gets the same first week regardless of branch."
+        },
+        {
+          "h": "A process change is trained, not emailed",
+          "workflow": "A short lesson and a quiz replace the circular; compliance tracking lists who has passed.",
+          "result": "The change is confirmed understood, not just sent."
+        },
+        {
+          "h": "A remote branch trains offline",
+          "workflow": "Staff download the course on office Wi-Fi and complete it at home or on the road.",
+          "result": "Poor connectivity stops being an excuse."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Companies with staff in more than one place.",
+      "items": [
+        {
+          "icon": "&#128666;",
+          "b": "Distribution and dealer networks",
+          "p": "Sales reps and service engineers across territories."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers",
+          "p": "Plant staff and field service teams."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital groups",
+          "p": "Front-desk and support staff across sites."
+        },
+        {
+          "icon": "&#127978;",
+          "b": "Retail chains",
+          "p": "Store staff trained per launch."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Financial services agencies",
+          "p": "Agents and advisers on product training."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-led SMBs",
+          "p": "Growing teams that need one training system."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Classroom sessions, an enterprise LMS, or Aura Learn.",
+      "cols": [
+        "Classroom and email",
+        "Enterprise LMS",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Reaches field staff",
+          "Only those present",
+          "If they log in on a laptop",
+          "Mobile app, offline lessons"
+        ],
+        [
+          "Completion record",
+          "Attendance sheet",
+          "Yes",
+          "Per learner and per batch, exportable"
+        ],
+        [
+          "Pricing basis",
+          "Trainer time",
+          "Per seat",
+          "Unlimited learners"
+        ],
+        [
+          "Reminders",
+          "Manager phones around",
+          "Email",
+          "WhatsApp and Telegram"
+        ],
+        [
+          "Setup",
+          "None",
+          "Months, with an implementation partner",
+          "Set up for you, live in 30 days where scope allows"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Account manager",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Corporate training LMS, answered.",
+      "items": [
+        {
+          "q": "Can field staff use it without a laptop?",
+          "a": "Yes. Employees use the learner mobile app. Lessons and documents download for offline viewing, progress syncs when the phone is back online, and quizzes are taken in the same app, so a rep or engineer never needs a desk."
+        },
+        {
+          "q": "How are employees grouped?",
+          "a": "Into batches you define: by region, role, branch or joining month. A course is assigned to a batch with a deadline, and the dashboard reports completion per batch so you can see which team is behind."
+        },
+        {
+          "q": "Is there a limit on employees?",
+          "a": "No. Aura Learn is built for unlimited learners, so enrolling every employee, including seasonal or contract staff, does not change what you pay. Scope is agreed on a call around the modules you need."
+        },
+        {
+          "q": "Can it certify staff on a process or product?",
+          "a": "Yes. A course can end in an assessment with a pass mark and a certificate, with compliance tracking that lists who has and has not passed. See the <a href=\"/aura-learn/certification-training-platform/\">certification training platform</a>."
+        },
+        {
+          "q": "Does it handle live sessions?",
+          "a": "Yes. Live classes and webinars run in the platform with recordings kept for the batch, so a session delivered to one region can be watched later by another, and a discussion forum carries questions afterwards."
+        },
+        {
+          "q": "What about training service engineers on equipment?",
+          "a": "That is a common use, especially for medical-equipment and industrial teams that must certify engineers per model before dispatch. See <a href=\"/aura-learn/healthcare-training-lms/\">healthcare training</a> for engineer and clinical-staff certification, and <a href=\"/aura-learn/training-management-software/\">training management software</a> for assigning and tracking programmes."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/training-management-software/",
+          "icon": "&#128188;",
+          "b": "Training management",
+          "p": "Assign, track and certify teams."
+        },
+        {
+          "href": "/aura-learn/healthcare-training-lms/",
+          "icon": "&#127973;",
+          "b": "Healthcare training",
+          "p": "Engineers and clinical staff."
+        },
+        {
+          "href": "/aura-learn/certification-training-platform/",
+          "icon": "&#127942;",
+          "b": "Certification",
+          "p": "Courses that end in a certificate."
+        },
+        {
+          "href": "/aura-learn/learning-app-development/",
+          "icon": "&#128241;",
+          "b": "Learning app",
+          "p": "Your branded Android and iOS app."
+        },
+        {
+          "href": "/resources/what-is-lms/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an LMS is."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

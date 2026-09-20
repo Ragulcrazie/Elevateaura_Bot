@@ -1,0 +1,221 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-uae",
+  "title": "PACS Software UAE | Hybrid PACS, Remote Deployment | AuraPACS",
+  "meta": "PACS software for UAE clinics and imaging centres: an on-premise node installed by your IT with remote guidance, cloud layer for remote reading and backup.",
+  "h1": "PACS software for the UAE, deployed remotely onto <span class=\"hl\">your own network</span>.",
+  "crumb": "PACS Software UAE",
+  "pill": "Remote deployment from Chennai",
+  "sub": "AuraPACS is a hybrid PACS from a Chennai software studio. For a UAE clinic or imaging centre, your IT installs the on-premise node with remote guidance, your modalities send to it, and the cloud layer adds remote reading and encrypted backup. Support is on WhatsApp in English, with a working-hours overlap between the Gulf and India.",
+  "meta_ticks": [
+    "Node on your network",
+    "Remote setup, WhatsApp support",
+    "Confirm local obligations with your advisers"
+  ],
+  "whatsapp_text": "Hi, we are an imaging centre in the UAE and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS software UAE",
+  "secondary_keywords": [
+    "PACS system UAE",
+    "PACS software Dubai",
+    "PACS software Abu Dhabi",
+    "radiology software UAE",
+    "medical imaging software UAE",
+    "cloud PACS UAE"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of a private clinic, polyclinic or imaging centre in the UAE evaluating PACS options",
+  "page_type": "country",
+  "phase": 5,
+  "country": "AE",
+  "area_served": "United Arab Emirates",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What AuraPACS offers a UAE centre",
+      "paras": [
+        "AuraPACS is a hybrid PACS: an on-premise node on your clinic's network that receives, stores and serves studies, plus a cloud layer for remote reading and encrypted offsite backup. For the UAE it is deployed remotely. Your IT person installs the node with guidance from Elevate Aura, your CT, MR, X-ray or ultrasound is pointed at it, and reading happens in a browser.",
+        "Elevate Aura is a founder-led studio in Chennai, India. There is no UAE office, and this page does not claim one. What it offers is a product that runs on your own hardware, a builder you talk to directly on WhatsApp in English, and a time-zone overlap that makes same-day support practical."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How deployment works",
+      "h2": "Remote deployment to a UAE clinic, honestly described",
+      "lead": "Nothing on this page requires anyone to fly. It does require one capable IT person at your end.",
+      "body": [
+        {
+          "h3": "The on-premise node"
+        },
+        "AuraPACS installs on a Windows machine on your network. Your IT person runs the installer, sets a static IP, opens the DICOM port and gives each modality the node's address and AE title, guided step by step over WhatsApp and screen share. A test send from each machine confirms studies land and open in the browser. See <a href=\"/aurapacs/dicom-server-software/\">DICOM server software</a> for what is configured.",
+        {
+          "h3": "The cloud layer"
+        },
+        "Once the node is live, an encrypted copy of each study syncs to the cloud layer. That is what enables a radiologist to read from home or a second site in a browser, and what produces the secure links you can send to referrers and patients.",
+        {
+          "h3": "Support and time zones"
+        },
+        "Support is on WhatsApp in English from the person who built the product. The UAE is a short offset from India, so a question sent during your working day is answered during ours.",
+        {
+          "h3": "Health-information exchange and data residency"
+        },
+        "Emirates in the UAE operate health-information exchange programmes, and licensed facilities may have obligations about connecting to them and about where patient data is stored. AuraPACS keeps images on your own node by default, with an encrypted offsite copy. Before deployment, confirm your integration, data-residency and health-record obligations with your licensing authority and advisers, and raise them on the scoping call so the deployment is planned around them.",
+        {
+          "h3": "Invoicing"
+        },
+        "Billing in AuraPACS is built for Indian GST. For a UAE centre, invoicing is configurable and the requirements are confirmed on a call rather than assumed."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The AuraPACS platform, as deployed remotely.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Imaging",
+          "items": [
+            "DICOM receive from any modality",
+            "On-premise node, works without internet",
+            "Browser viewer, nothing installed",
+            "Modality worklist"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting and sharing",
+          "items": [
+            "Structured templates per modality",
+            "PDF report on the study",
+            "Secure share link, no login",
+            "Remote reading from home"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access, every view audited",
+            "Encrypted offsite backup",
+            "Images on your hardware by default",
+            "Your branding"
+          ]
+        },
+        {
+          "icon": "&#127760;",
+          "h": "Delivery",
+          "items": [
+            "Remote setup with your IT",
+            "WhatsApp support in English",
+            "Working-hours overlap with India",
+            "Invoicing configurable, confirmed on a call"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where a remotely deployed PACS fits in the UAE.",
+      "items": [
+        {
+          "h": "A polyclinic with X-ray and ultrasound",
+          "workflow": "The node is installed by the clinic's IT in an afternoon; both units send to it; doctors open images in the consulting rooms.",
+          "result": "Filmless viewing without a server room or a site visit."
+        },
+        {
+          "h": "An imaging centre with a part-time radiologist",
+          "workflow": "Studies sync to the cloud layer; the radiologist reads from home in a browser and signs reports on the study.",
+          "result": "Reporting continues on days the radiologist is not on site."
+        },
+        {
+          "h": "A centre evaluating before committing",
+          "workflow": "The team opens the live demo in a browser and runs the 200 KB Windows demo installer against sample studies.",
+          "result": "A decision made on the working product."
+        },
+        {
+          "h": "A centre with exchange obligations",
+          "workflow": "Integration and residency requirements are raised on the scoping call and confirmed with advisers before the node is installed.",
+          "result": "No surprises after go-live."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS software in the UAE, answered.",
+      "items": [
+        {
+          "q": "Do you have an office or partner in the UAE?",
+          "a": "No. Elevate Aura is a founder-led studio in Chennai, India. UAE centres are served remotely: your IT installs the node with guidance, and support is on WhatsApp in English."
+        },
+        {
+          "q": "Where is our patient data stored?",
+          "a": "On the on-premise node in your clinic by default, with an encrypted offsite copy through the cloud layer. Confirm your data-residency obligations with your advisers before deployment and raise them on the scoping call."
+        },
+        {
+          "q": "Does AuraPACS connect to the emirate's health-information exchange?",
+          "a": "Exchange programmes and their requirements vary by emirate and facility licence. Confirm what applies to you with your licensing authority, and bring it to the scoping call so the deployment can be planned around it. Nothing on this page should be read as a claim of a specific integration."
+        },
+        {
+          "q": "What does our IT person need to do?",
+          "a": "Install the node on a Windows machine, set a static IP, open the DICOM port and enter the node's address and AE title on each modality. Each step is guided remotely. See <a href=\"/aurapacs/on-premise-pacs/\">on-premise PACS</a>."
+        },
+        {
+          "q": "Can our radiologist read from outside the clinic?",
+          "a": "Yes. Synced studies open in a browser for authorised users, with role-based access and every view audited. See <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading software</a>."
+        },
+        {
+          "q": "Is AuraPACS a medical device?",
+          "a": "AuraPACS stores, displays and shares imaging; the read is by your radiologist. Regulatory classification of imaging software differs by country, so confirm the position in the UAE with your advisers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-software-saudi-arabia/",
+          "icon": "&#127760;",
+          "b": "PACS software Saudi Arabia",
+          "p": "Remote deployment in the Kingdom."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#9729;",
+          "b": "Hybrid PACS",
+          "p": "What runs where."
+        },
+        {
+          "href": "/aurapacs/dicom-server-software/",
+          "icon": "&#128229;",
+          "b": "DICOM server",
+          "p": "What your IT configures."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#128218;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Side by side."
+        }
+      ]
+    }
+  ]
+}

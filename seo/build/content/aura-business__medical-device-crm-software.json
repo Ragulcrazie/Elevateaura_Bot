@@ -1,0 +1,347 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-device-crm-software",
+  "title": "Medical Device CRM Software for OEMs and Dealers | Aura Business",
+  "meta": "Medical device CRM software for manufacturers and their dealer networks: doctors and decision-makers, demo and sample tracking, territories and targets.",
+  "h1": "Medical device CRM software for the OEM and its <span class=\"hl\">dealer network</span>.",
+  "crumb": "Medical Device CRM",
+  "pill": "For device manufacturers and OEMs",
+  "sub": "Aura Business gives a device manufacturer one CRM for direct sales and for the dealers who sell on its behalf: doctor and decision-maker contacts, demo units and samples on loan, territory targets, a dealer ordering portal, and an installed base you can see by dealer.",
+  "meta_ticks": [
+    "Doctors and decision-makers per account",
+    "Demo units and samples tracked",
+    "Dealer portal with UTR payments"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business customer list showing hospital accounts, key contacts, territory and pipeline stage",
+    "bar": "app.elevateaura.co.in/customers"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss CRM software for our medical device company and dealer network.",
+  "primary_keyword": "medical device CRM software",
+  "secondary_keywords": [
+    "CRM for medical device manufacturers",
+    "medical device sales software India",
+    "OEM dealer management CRM",
+    "sample and demo tracking software",
+    "medtech CRM for dealer networks"
+  ],
+  "intent": "commercial",
+  "persona": "Sales head or founder of a medical device manufacturer or OEM selling through direct reps and a dealer network",
+  "page_type": "product",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical device CRM software is built to do",
+      "paras": [
+        "Medical device CRM software manages the relationships a manufacturer sells through: the doctors who influence a purchase, the biomedical and purchase staff who approve it, the reps who visit them, and the dealers who carry the product into territories the manufacturer does not cover directly. Aura Business is that CRM plus the operations behind it, so a demo unit on loan, a dealer's order, and the serial number that ends up installed are all one connected record.",
+        "A distributor's CRM asks 'who bought'. An OEM's CRM has to also ask 'which dealer sold it, which doctor asked for it, where is the demo unit, and is the installed base in that territory growing'. That second set of questions is what this page is about."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The OEM's problem",
+      "h2": "Selling through dealers means the customer is two steps away.",
+      "lead": "The manufacturer funds the demo units, the samples and the rep's travel, and then learns about the sale from a dealer's purchase order weeks later, if at all.",
+      "items": [
+        {
+          "h": "Doctors known only to the rep",
+          "p": "The surgeon who champions your product is in the rep's phone, and leaves with the rep."
+        },
+        {
+          "h": "Demo units unaccounted for",
+          "p": "A device sent to a hospital for evaluation stays there for months, with nobody sure whether it was bought, returned or lost."
+        },
+        {
+          "h": "Territories without numbers",
+          "p": "Targets are set by state, but pipeline and installed base are not, so the review is opinion."
+        },
+        {
+          "h": "Dealer orders by email",
+          "p": "Dealers order on WhatsApp and pay by bank transfer, and someone matches UTRs to orders by hand."
+        },
+        {
+          "h": "Installed base unknown",
+          "p": "You do not know how many of your units are running in a city, which limits service planning and upgrade sales."
+        },
+        {
+          "h": "Dealer and direct overlap",
+          "p": "A direct rep and a dealer chase the same hospital, and the discount war is with yourself."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How an OEM sale runs",
+      "h2": "From the doctor's interest to a serial in the installed base.",
+      "steps": [
+        {
+          "h": "Account and contacts",
+          "p": "The hospital account holds the clinical champion, biomedical head and purchase officer."
+        },
+        {
+          "h": "Visit and demo",
+          "p": "The rep logs a GPS-checked visit; a demo unit or sample is issued and tracked."
+        },
+        {
+          "h": "Quote",
+          "p": "Direct quote from the builder, or the dealer quotes with your price list."
+        },
+        {
+          "h": "Order",
+          "p": "Direct sales order, or a dealer order through the portal with UTR payment."
+        },
+        {
+          "h": "Deliver and install",
+          "p": "Challan, e-way bill, installation and acceptance sign-off."
+        },
+        {
+          "h": "Installed base",
+          "p": "The serial enters the register with the dealer, hospital, warranty and territory."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "CRM, dealer, and installed-base modules for a manufacturer.",
+      "groups": [
+        {
+          "icon": "&#129309;",
+          "h": "Relationships",
+          "items": [
+            "Customer and hospital accounts",
+            "Contacts and decision-makers, including doctors",
+            "Leads and pipeline",
+            "Field visits with GPS check-in",
+            "Activity feed and rep log"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Demos, samples and territory",
+          "items": [
+            "Sample tracking for units on loan",
+            "Territory and target management",
+            "Lead-source and conversion analytics",
+            "Brand and authorisation per dealer"
+          ]
+        },
+        {
+          "icon": "&#127970;",
+          "h": "Dealer network",
+          "items": [
+            "Distributor and B2B order portal",
+            "Distributor payment by UTR",
+            "Order tracking page for dealers",
+            "Branded login and docs vault",
+            "Supplier price lists as dealer price lists"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Installed base",
+          "items": [
+            "Asset and installed-base register per serial",
+            "Warranty tracking",
+            "Service history per asset",
+            "Reports by dealer, territory and product line"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a device company can finally answer.",
+      "items": [
+        {
+          "h": "Where is every demo unit",
+          "workflow": "Each demo device is issued against a hospital and a rep with a return date; the sample tracker lists units out, overdue and converted.",
+          "result": "Demo stock comes back or turns into an order, not into a loss."
+        },
+        {
+          "h": "Which dealer is growing the base",
+          "workflow": "The installed-base register carries the dealer on every serial, and the report groups new installations by dealer and quarter.",
+          "result": "Dealer reviews use installations, not promises."
+        },
+        {
+          "h": "A dealer orders and pays without a phone call",
+          "workflow": "The dealer logs into the portal, orders from the authorised price list, uploads the UTR, and follows the order on the tracking page.",
+          "result": "Orders and payments reconcile themselves."
+        },
+        {
+          "h": "The champion doctor stays with the company",
+          "workflow": "Contacts, visit notes and sample history live on the account, not in the rep's phone.",
+          "result": "A rep leaving does not take the relationship with them."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Manufacturers and OEMs with a channel to manage.",
+      "items": [
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Monitors, surgical devices, robotics, diagnostics hardware."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers acting as OEM",
+          "p": "National distributors with sub-dealers by state."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "IVD and lab equipment makers",
+          "p": "Analysers placed on reagent-rental and sold through dealers."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-led medtech",
+          "p": "First product, first ten dealers, no CRM yet."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial equipment OEMs",
+          "p": "The same dealer model outside healthcare."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A sales CRM, an ERP, or an OEM platform.",
+      "cols": [
+        "Generic CRM",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Doctors and decision-makers",
+          "Contacts",
+          "Not a focus",
+          "Roles per hospital account"
+        ],
+        [
+          "Demo and sample units",
+          "Not modelled",
+          "Stock transfer",
+          "Sample tracker with return dates"
+        ],
+        [
+          "Dealer ordering",
+          "Not included",
+          "Complex portal projects",
+          "Portal with price list, UTR, tracking"
+        ],
+        [
+          "Installed base",
+          "Not included",
+          "Asset module, if bought",
+          "Register per serial with dealer and warranty"
+        ],
+        [
+          "Territory targets",
+          "Basic",
+          "Yes",
+          "Targets against pipeline and installations"
+        ],
+        [
+          "Time to live",
+          "Weeks plus customisation",
+          "Months",
+          "30 working days where scope allows"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical device CRM, answered.",
+      "items": [
+        {
+          "q": "How is a medical device CRM different from a medical equipment distributor CRM?",
+          "a": "A distributor sells other people's products to hospitals. A manufacturer also sells through dealers, lends demo units, manages territories and needs to see its installed base regardless of who sold it. Aura Business covers both; this page is the manufacturer's view. See <a href=\"/aura-business/medical-equipment-crm-software/\">medical equipment CRM software</a> for the distributor's."
+        },
+        {
+          "q": "Can doctors be recorded as influencers without being buyers?",
+          "a": "Yes. The Contacts and Decision-Makers module records people by role on a hospital account, so a surgeon can be the clinical champion while the purchase officer is the commercial contact, and visits are logged against either."
+        },
+        {
+          "q": "How are demo units and samples tracked?",
+          "a": "The sample tracking module issues a unit against a hospital and a rep with an expected return date, and shows units out, overdue, returned and converted to sale. Demo stock is held as its own stock location in inventory."
+        },
+        {
+          "q": "What does the dealer see in the portal?",
+          "a": "Dealers log into a branded portal to order from the price list authorised for them, upload UTR references for payments, follow orders on the tracking page, and download documents from the vault. See <a href=\"/aura-business/medical-equipment-dealer-management-software/\">dealer management software</a>."
+        },
+        {
+          "q": "Can I see the installed base by dealer or territory?",
+          "a": "Yes. Every serial in the installed-base register carries its dealer, hospital and territory, and the reports engine groups installations, warranty status and service history by any of those."
+        },
+        {
+          "q": "Has Elevate Aura built for a device company before?",
+          "a": "Yes. Medline Robotics, a medical robotics company in Chennai, runs a storefront, distributor portal, quotations, distributor ordering and UTR verification built by Elevate Aura. See the <a href=\"/case-studies/medline-robotics-ecommerce-distributor-platform/\">Medline Robotics case study</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#129309;",
+          "b": "Equipment CRM",
+          "p": "The distributor's view."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Portal, price lists, UTR."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every serial, by dealer."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Committees and champions."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "A device company's platform."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic CRM vs ours",
+          "p": "What a generic CRM leaves out."
+        }
+      ]
+    }
+  ]
+}

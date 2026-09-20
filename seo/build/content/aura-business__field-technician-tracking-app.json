@@ -1,0 +1,338 @@
+{
+  "cluster": "aura-business",
+  "slug": "field-technician-tracking-app",
+  "title": "Field Technician Tracking App for Service Engineers",
+  "meta": "Technician tracking software with a service engineer mobile app: GPS check-in, location-stamped attendance, routes, offline job cards, photos and signatures.",
+  "h1": "A technician tracking app your service engineers will <span class=\"hl\">actually open</span>.",
+  "crumb": "Technician Tracking App",
+  "pill": "For service heads with engineers on the road",
+  "sub": "Aura Business gives every service engineer a mobile app for GPS check-in, attendance with location and selfie, the day's route, and a job card that works offline with photos and customer signature, while the office watches progress live on the web dashboard.",
+  "meta_ticks": [
+    "Android and iOS app",
+    "Offline job card with photos",
+    "Skill-based allocation"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk showing engineers assigned to jobs with GPS check-in status and job stage",
+    "bar": "app.elevateaura.co.in/field"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss a technician tracking app for our service engineers.",
+  "primary_keyword": "technician tracking software",
+  "secondary_keywords": [
+    "service engineer mobile app",
+    "field technician tracking app India",
+    "GPS technician tracking app",
+    "field engineer attendance app",
+    "mobile job card app for service engineers"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner managing a team of field engineers across a city or a state",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What technician tracking software is, and what the app does",
+      "paras": [
+        "Technician tracking software shows the office where each field engineer is, which job they are on, and what they did there, through a mobile app the engineer carries. In Aura Business the app is the field half of the platform: GPS check-in at the customer site, attendance marked with location and a selfie, a route for the day, and a mobile job card that captures fault, work done, spares, photos and the customer's signature.",
+        "Tracking on its own annoys engineers and helps nobody. The app earns its place because it removes the paperwork: the job card replaces the carbon copy, the photo replaces the WhatsApp forward, and the signature replaces the argument about whether the visit happened. The office gets the same data live, without a phone call."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the office is blind",
+      "h2": "Six things a service head cannot answer without an app.",
+      "lead": "Engineers are honest and busy. The problem is that everything they do is recorded on paper, by phone, or not at all.",
+      "items": [
+        {
+          "h": "Where is everyone right now",
+          "p": "A hospital calls to ask when the engineer will arrive and the answer is a phone call to the engineer, who is on a ladder."
+        },
+        {
+          "h": "Attendance by message",
+          "p": "'Reached site' on WhatsApp at 9.40 am is not an attendance record, and payroll cannot use it."
+        },
+        {
+          "h": "Routes planned in the head",
+          "p": "Two engineers cross the city in opposite directions to jobs that were next door to each other."
+        },
+        {
+          "h": "No network in the basement",
+          "p": "Radiology and lab rooms often have no signal, so the app that needs internet is not used there."
+        },
+        {
+          "h": "Proof after the fact",
+          "p": "Photos arrive on someone's personal phone and the customer signature is a scanned page, if it exists."
+        },
+        {
+          "h": "Wrong skill on the job",
+          "p": "A ventilator call goes to whoever is nearest, not to the engineer trained on that model."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "An engineer's day",
+      "h2": "From morning attendance to the last signature.",
+      "steps": [
+        {
+          "h": "Attendance",
+          "p": "Marked in the app with location and selfie at the start of the shift."
+        },
+        {
+          "h": "Route",
+          "p": "The day's jobs in order on the app, assigned by the desk by skill and area."
+        },
+        {
+          "h": "Check-in",
+          "p": "GPS check-in at each site timestamps arrival against the SLA."
+        },
+        {
+          "h": "Job card",
+          "p": "Fault, work done, readings, spares and photos captured, online or offline."
+        },
+        {
+          "h": "Signature",
+          "p": "The customer signs on the phone and the job is marked done."
+        },
+        {
+          "h": "Sync",
+          "p": "Everything reaches the desk, the asset history and billing when the phone reconnects."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "On the phone, and on the office screen.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "On the engineer's phone",
+          "items": [
+            "Android and iOS app",
+            "GPS check-in at customer sites",
+            "Attendance with location and selfie",
+            "Technician route and schedule for the day",
+            "Mobile job card with offline mode",
+            "Photo proof and field signature"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "On the service desk",
+          "items": [
+            "Technician dispatch",
+            "Skill-based technician allocation",
+            "GPS and field tracking view",
+            "SLA timers on open jobs",
+            "Shift and roster planning"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Connected records",
+          "items": [
+            "Spare parts used per job, dropping stock",
+            "Service history per asset",
+            "Closure against AMC, CMC or invoice",
+            "Leave and payroll inputs from attendance"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the app changes for the team.",
+      "items": [
+        {
+          "h": "A hospital asks when the engineer will arrive",
+          "workflow": "The desk sees the engineer checked in at the previous site forty minutes ago and the next job on their route is this hospital.",
+          "result": "An answer in seconds, without disturbing the engineer."
+        },
+        {
+          "h": "A job is completed in a room with no signal",
+          "workflow": "The engineer fills the job card, takes photos and collects the signature offline in the MRI console room; it syncs from the car park.",
+          "result": "No paper, no re-entry, no missing record."
+        },
+        {
+          "h": "The right engineer goes to the ventilator",
+          "workflow": "The dispatcher filters by skill and the call is assigned to the engineer trained on that model, even if another is closer.",
+          "result": "First-visit fixes go up and repeat visits go down."
+        },
+        {
+          "h": "Payroll takes attendance from the app",
+          "workflow": "Location-stamped attendance and leave feed the payroll inputs for the month.",
+          "result": "No reconciliation of chat messages against a register."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any team that works at the customer's site.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment service teams",
+          "p": "Engineers covering hospitals and labs across a region."
+        },
+        {
+          "icon": "&#128663;",
+          "b": "Sales reps on field visits",
+          "p": "The same check-in and visit log for sales calls."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical service",
+          "p": "Installations and breakdowns at plants and sites."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services",
+          "p": "Lifts, HVAC and fire systems with scheduled rounds."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Third-party maintenance firms",
+          "p": "Multi-brand engineers who need one app, not five."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Chat groups, a standalone tracker, or the field half of a platform.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the engineer is",
+          "Ask them",
+          "Not tracked",
+          "GPS check-in and live field view"
+        ],
+        [
+          "Attendance",
+          "Messages",
+          "Not included",
+          "Location and selfie, feeding payroll"
+        ],
+        [
+          "Job card",
+          "Paper",
+          "Notes field",
+          "Structured card with spares, photos, signature"
+        ],
+        [
+          "Offline",
+          "Phone camera",
+          "Rarely",
+          "Full job card offline, syncs later"
+        ],
+        [
+          "Who gets the job",
+          "Nearest",
+          "Manual",
+          "Skill-based allocation and route"
+        ],
+        [
+          "What happens after",
+          "Someone types it up",
+          "Export",
+          "Stock, asset history and billing update"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Technician tracking, answered.",
+      "items": [
+        {
+          "q": "Does it track engineers all day or only at check-in?",
+          "a": "GPS check-in timestamps arrival at each customer site, and the HRMS suite includes GPS and field tracking for the office view. How continuous the tracking is can be set to suit your team and their consent, and is agreed during setup."
+        },
+        {
+          "q": "Will it work inside hospitals with no signal?",
+          "a": "Yes. The job card, photos and signature are captured in offline mode and sync when the phone reconnects. Attendance and check-in also queue until a connection is available."
+        },
+        {
+          "q": "Is the app available on both Android and iOS?",
+          "a": "Yes. Elevate Aura builds the mobile app in React Native or Flutter for Android and iOS, and it can be published under your own branding. See <a href=\"/mobile-app-development/field-service-mobile-app-development/\">field service app development</a>."
+        },
+        {
+          "q": "How does skill-based allocation work?",
+          "a": "Each engineer's profile records the models and brands they are trained on. When the desk dispatches a call, it can filter and assign by skill as well as by area and schedule, so specialised equipment goes to the right person."
+        },
+        {
+          "q": "Can the same app be used by sales reps?",
+          "a": "Yes. Field visits with GPS check-in, visit notes and the activity feed are part of the CRM suite, so sales and service staff use one app with different screens based on role."
+        },
+        {
+          "q": "What does the customer sign?",
+          "a": "The engineer shows the completed job card on the phone and the customer signs on screen. The signed job card is stored on the asset's service history and can be shared with the customer as a PDF."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "Dispatch and job cards in depth."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128222;",
+          "b": "Service management",
+          "p": "Call to invoice."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spare parts",
+          "p": "Stock in the engineer's bag."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Scheduled visits on the route."
+        },
+        {
+          "href": "/mobile-app-development/medical-equipment-service-app/",
+          "icon": "&#128241;",
+          "b": "Service app build",
+          "p": "A branded app of your own."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management works."
+        }
+      ]
+    }
+  ]
+}

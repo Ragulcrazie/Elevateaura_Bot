@@ -1,0 +1,342 @@
+{
+  "cluster": "aura-business",
+  "slug": "installed-base-management-software",
+  "title": "Installed Base Management Software for Equipment | Aura Business",
+  "meta": "Installed base management software with an asset register per serial, installation sign-off, warranty linkage, a 360 history, transfers and replacements.",
+  "h1": "Installed base management software: every serial you ever sold, and <span class=\"hl\">what it owes you</span>.",
+  "crumb": "Installed Base Software",
+  "pill": "For dealers and OEMs with equipment in the field",
+  "sub": "Aura Business keeps an asset register for every unit you have installed, from acceptance sign-off through warranty, AMC, service calls, transfers and replacement, and turns that register into the list of contracts you should be selling next.",
+  "meta_ticks": [
+    "One record per serial number",
+    "Warranty and contract on the asset",
+    "Transfers and replacements tracked"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer master showing a hospital account with its installed equipment, contracts and service history",
+    "bar": "app.elevateaura.co.in/assets"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss installed base management software for our equipment business.",
+  "primary_keyword": "installed base management software",
+  "secondary_keywords": [
+    "equipment asset register software",
+    "installed base tracking software India",
+    "medical equipment installed base software",
+    "asset 360 view software",
+    "serial number tracking software for dealers"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of an equipment dealer or OEM who needs to know what is installed where, under which cover",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What installed base management software keeps",
+      "paras": [
+        "Installed base management software is a register of every unit you have sold and installed, one record per serial number, holding where it is, when it was accepted, what warranty and contract cover it, every service visit since, and any transfer or replacement along the way. In Aura Business this is the Asset and Installed-Base Register in the AMC and Service Contracts suite, and every other suite writes to it: sales adds the unit, service adds the visits, contracts add the cover.",
+        "The register matters because it is the AMC pipeline. Every serial whose warranty ends next quarter is a contract to sell; every serial on an expiring AMC is a renewal; every serial with a heavy service history is an upgrade conversation. Without the register those are guesses. With it they are a list with names and dates."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the base goes dark",
+      "h2": "Most dealers know what they sold. Few know what is still running.",
+      "lead": "The sale is recorded in the invoice. The installation, the acceptance, the moves between wards and the swap under warranty are recorded nowhere.",
+      "items": [
+        {
+          "h": "Installation never closed",
+          "p": "The unit was delivered on a challan, installed by an engineer, and accepted by a biomedical officer, and only the challan exists."
+        },
+        {
+          "h": "Warranty dates by product, not serial",
+          "p": "Warranty is assumed to be a year from invoice, but the installation was three months later and the claim is refused."
+        },
+        {
+          "h": "Machines that move",
+          "p": "A monitor bought for ICU is now in the emergency ward, and a call from there cannot be matched to the asset."
+        },
+        {
+          "h": "Replacements break the trail",
+          "p": "A unit swapped under warranty starts a new record, and the old one's history and contract are lost."
+        },
+        {
+          "h": "No list of expiring cover",
+          "p": "Nobody can produce the serials whose warranty ends in the next ninety days, so the AMC is sold after the first breakdown."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The asset's life",
+      "h2": "From delivery to replacement, on one record.",
+      "steps": [
+        {
+          "h": "Delivered",
+          "p": "The serial on the delivery challan creates the asset against the hospital and location."
+        },
+        {
+          "h": "Installed and accepted",
+          "p": "The engineer's job card records installation; the customer signs acceptance on the app."
+        },
+        {
+          "h": "Covered",
+          "p": "Warranty dates set from acceptance; AMC or CMC attached when sold."
+        },
+        {
+          "h": "Serviced",
+          "p": "Every PM visit and breakdown call lands in the asset's history."
+        },
+        {
+          "h": "Moved",
+          "p": "Transfers between wards, branches or customers recorded with dates."
+        },
+        {
+          "h": "Replaced or retired",
+          "p": "A replacement serial is linked to the original so cover and history carry across."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The register, and what feeds it.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "The register",
+          "items": [
+            "Asset and installed-base register per serial",
+            "Hospital, department and location",
+            "Installation date and acceptance sign-off",
+            "Asset transfers between locations and customers",
+            "Depreciation where you track it"
+          ]
+        },
+        {
+          "icon": "&#128737;",
+          "h": "Cover",
+          "items": [
+            "Warranty tracking per serial",
+            "AMC and CMC attached to the asset",
+            "Extended warranty",
+            "Expiring-cover lists for the sales team"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "History",
+          "items": [
+            "Service history per asset",
+            "Preventive maintenance visits and checklists",
+            "Spares fitted with their serials",
+            "Photos, readings and signatures per visit"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Insight",
+          "items": [
+            "AMC revenue and leakage dashboard",
+            "Renewal prediction",
+            "Installed base by customer, dealer, territory, product line",
+            "Reports engine for audits"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the register makes possible.",
+      "items": [
+        {
+          "h": "Warranty ends, AMC begins",
+          "workflow": "The register lists every serial with warranty ending in the next quarter, grouped by hospital; the rep quotes an AMC for each before expiry.",
+          "result": "The contract is sold while the customer still has cover, not after a failure."
+        },
+        {
+          "h": "A ward transfer does not break service",
+          "workflow": "The biomedical team moves a ventilator to a new ward; the transfer is logged, and the next call from that ward resolves to the same serial and contract.",
+          "result": "History and cover stay with the machine, not the room."
+        },
+        {
+          "h": "A replacement keeps its past",
+          "workflow": "A unit swapped under warranty is linked to the original; the CMC and the service history continue on the new serial.",
+          "result": "The customer's contract is unaffected and the audit trail is whole."
+        },
+        {
+          "h": "A hospital audit answered from one screen",
+          "workflow": "The hospital asks for the acceptance date, PM records and calibration history of thirty assets; the register exports them.",
+          "result": "An afternoon's work becomes a report."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose revenue depends on equipment already in the field.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "AMC and CMC revenue built on what was sold in past years."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Installed base by dealer and territory for service and upgrades."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Analysers placed at labs with reagent and service obligations."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical",
+          "p": "Serialised machines under annual cover."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Third-party service firms",
+          "p": "Assets you maintain but did not sell."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "An asset list, an accounting fixed-asset module, or a living register.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Record per serial",
+          "A row, if someone typed it",
+          "Only for your own fixed assets",
+          "Created from the delivery challan"
+        ],
+        [
+          "Acceptance",
+          "A scanned form",
+          "Not tracked",
+          "Signed on the app, dated"
+        ],
+        [
+          "Warranty and contract",
+          "Separate sheet",
+          "Not linked",
+          "On the asset, checked by every ticket"
+        ],
+        [
+          "Service history",
+          "None",
+          "None",
+          "Every job, spare and signature"
+        ],
+        [
+          "Transfers and replacements",
+          "Overwritten",
+          "Not tracked",
+          "Logged and linked"
+        ],
+        [
+          "Expiring cover list",
+          "Manual",
+          "Not possible",
+          "Generated, with rupee value at risk"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Installed base management, answered.",
+      "items": [
+        {
+          "q": "How does a unit get into the installed base?",
+          "a": "When a sales order is delivered, the serial on the delivery challan creates the asset against the customer. The installation job card and the customer's acceptance signature on the app complete the record with the installation date. Existing assets are imported from Excel at setup."
+        },
+        {
+          "q": "Can warranty start from installation rather than invoice?",
+          "a": "Yes. Warranty dates on the asset can be set from the acceptance date, the invoice date or a date you enter, so the cover shown on a service call matches what the manufacturer will honour. See <a href=\"/aura-business/medical-equipment-warranty-management-software/\">warranty management software</a>."
+        },
+        {
+          "q": "What is the asset 360 view?",
+          "a": "One screen per serial showing its customer and location, warranty and contract status, every service visit with spares and signatures, PM and calibration records, transfers and any linked replacement, plus the documents attached to it."
+        },
+        {
+          "q": "How are transfers between hospitals or wards handled?",
+          "a": "An asset transfer records the new location or customer with a date and reason. The history stays on the serial, and contracts can be kept, ended or reassigned depending on the commercial terms."
+        },
+        {
+          "q": "Why is the installed base called the AMC pipeline?",
+          "a": "Because every serial with expiring warranty or an expiring AMC is a contract to sell or renew. The register lists them by date with the hospital contact, and the AMC revenue and leakage dashboard shows the rupee value at stake. See <a href=\"/resources/what-is-installed-base-management/\">the guide</a>."
+        },
+        {
+          "q": "Can we track assets we service but did not sell?",
+          "a": "Yes. Assets can be created directly in the register for third-party equipment under your maintenance contracts, with the same history and cover fields as units you sold."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-asset-management/",
+          "icon": "&#128203;",
+          "b": "Asset management",
+          "p": "The wider asset suite."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "Cover attached to the asset."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty",
+          "p": "Warranty per serial."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Visits on the asset history."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What installed base management is."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which cover to sell on each asset."
+        }
+      ]
+    }
+  ]
+}

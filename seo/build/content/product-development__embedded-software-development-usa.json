@@ -1,0 +1,319 @@
+{
+  "cluster": "product-development",
+  "slug": "embedded-software-development-usa",
+  "title": "Embedded Software Development USA | Elevate Aura",
+  "meta": "Embedded software development for US device companies, delivered remotely from Chennai: fixed scope, NDA, code ownership and a defined daily overlap window.",
+  "h1": "Embedded software for US device companies, built <span class=\"hl\">remotely from Chennai</span>.",
+  "crumb": "For US companies",
+  "pill": "Remote engagement, United States",
+  "sub": "Elevate Aura writes firmware, device communication, companion apps and cloud telemetry for device companies in the United States. The work is done remotely from Chennai, India, under your NDA, with a fixed scope and an agreed daily overlap window.",
+  "meta_ticks": [
+    "Remote from Chennai, no US entity claimed",
+    "Your NDA, your code, fixed scope",
+    "Agreed morning overlap window"
+  ],
+  "demo_href": "",
+  "country": "US",
+  "area_served": "United States",
+  "whatsapp_text": "Hi, we are a US device company and would like to discuss embedded software work.",
+  "cta_h2": "Start with a call in your morning.",
+  "cta_p": "Tell us the controller, the scope and how your team likes to work. We will propose an overlap window, a fixed scope and a plan, and be clear about what a remote engagement does and does not include.",
+  "primary_keyword": "embedded software development for US companies",
+  "secondary_keywords": [
+    "embedded software development USA",
+    "offshore firmware development for US device companies",
+    "remote embedded engineering India for US",
+    "outsourced firmware development United States",
+    "medical device software development offshore USA",
+    "hire embedded developer for US startup"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or product lead at a United States device company considering remote embedded software help",
+  "page_type": "country",
+  "phase": 5,
+  "service_type": "Embedded software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How a US engagement actually works",
+      "paras": [
+        "Elevate Aura is a founder-led software studio in Chennai, India. For device companies in the United States we write embedded firmware in C/C++ or MicroPython, the communication layer over BLE, Wi-Fi, serial, Modbus or CAN, a companion app, and a cloud telemetry pipeline on Supabase or Azure.",
+        "We have no entity, office or staff in the United States and do not claim any. Everything is delivered remotely: calls in an agreed window, work in your repository, and testing on your hardware by whichever route we agree when scoping. Where travel is genuinely needed, it is your hardware team who has the lab, and we work to what they measure and report.",
+        "The scope is software only. PCB design, component sourcing, manufacturing, mechanical and enclosure work and hardware regulatory certification are not offered and are not implied. We deliver firmware, source, build instructions and documentation your team can use in its own regulatory submissions, and you own all of it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What usually goes wrong",
+      "h2": "Remote engineering fails for boring reasons.",
+      "lead": "The problems in an offshore engagement are almost never technical, which is why they are worth designing around first.",
+      "items": [
+        {
+          "h": "No overlap, so no conversation",
+          "p": "Questions wait a full day for an answer, and a week of work turns out to have been based on a guess."
+        },
+        {
+          "h": "Scope that drifts quietly",
+          "p": "Nobody wrote down what was included, so every disagreement becomes a negotiation at the end."
+        },
+        {
+          "h": "Ownership left vague",
+          "p": "The contract never says plainly who owns the source, and that only matters when you want to leave."
+        },
+        {
+          "h": "Nobody can test on the hardware",
+          "p": "Firmware is written against a simulator and meets your board for the first time after handover."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From a first call to firmware in your repository.",
+      "steps": [
+        {
+          "h": "NDA first",
+          "p": "Your NDA signed before any specification, schematic or datasheet is discussed."
+        },
+        {
+          "h": "Scope call",
+          "p": "Controller, peripherals, behaviour and the software boundary agreed in your morning."
+        },
+        {
+          "h": "Fixed plan",
+          "p": "A written scope, deliverables and timeline, so changes are visible rather than assumed."
+        },
+        {
+          "h": "Hardware to Chennai",
+          "p": "We agree how to test on your hardware, by sending a unit or reaching a rig in your lab."
+        },
+        {
+          "h": "Weekly cadence",
+          "p": "A demo and a written update each week, plus a daily message thread in the overlap."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source in your repository, build instructions, test notes and documentation."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "How the distance is handled",
+      "h2": "The practical arrangements.",
+      "groups": [
+        {
+          "icon": "&#128336;",
+          "h": "Time zones",
+          "items": [
+            "India is ahead of every US time zone",
+            "Our evening meets your morning",
+            "A fixed live window agreed per project",
+            "Urgent items flagged for the next window"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Confidentiality",
+          "items": [
+            "Your NDA signed before scoping",
+            "Delivered to your repository and your cloud",
+            "Credentials stay yours to issue and withdraw",
+            "No customer named without permission"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Scope and ownership",
+          "items": [
+            "Fixed scope written before work starts",
+            "Change handled as a visible amendment",
+            "You own the source and documentation",
+            "Handover that another engineer can pick up"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Communication",
+          "items": [
+            "Weekly demo and written update",
+            "Daily thread in the overlap window",
+            "Email and WhatsApp for quick items",
+            "One person, not a rotating team"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What US teams usually ask for.",
+      "items": [
+        {
+          "h": "Firmware capacity without a US hire",
+          "workflow": "Your team keeps the hardware, the roadmap and the regulatory route, and hands over a defined firmware scope with a fixed plan.",
+          "result": "A release date that does not wait on recruitment."
+        },
+        {
+          "h": "The connected half of a device",
+          "workflow": "Wi-Fi or BLE connectivity, a React Native companion app and a telemetry pipeline are written together rather than by three suppliers.",
+          "result": "One person accountable for the whole path."
+        },
+        {
+          "h": "A prototype that has to become a product",
+          "workflow": "Bring-up code is replaced with a defined state model, real error handling and tests run on boards shipped to Chennai.",
+          "result": "Firmware that behaves the same way every time."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "US companies that build hardware.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device companies",
+          "p": "Firmware and connected software."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Controller and communication work."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Measurement and reporting software."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware startups",
+          "p": "A first product without a firmware team."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment manufacturers",
+          "p": "Connectivity added to existing lines."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Engineering teams",
+          "p": "Overflow work on a fixed scope."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Options for a US device company.",
+      "cols": [
+        "In-house hire",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Time to start",
+          "Months to recruit",
+          "Days, then a lottery",
+          "Days, after a scope call"
+        ],
+        [
+          "Overlap with your day",
+          "Full",
+          "Unpredictable",
+          "An agreed window, every working day"
+        ],
+        [
+          "Testing on your hardware",
+          "In your lab",
+          "Rarely",
+          "On your hardware, by whichever route we agree"
+        ],
+        [
+          "Scope control",
+          "Internal",
+          "Hourly and open ended",
+          "Fixed scope, visible changes"
+        ],
+        [
+          "Hardware and certification",
+          "Your team",
+          "Claimed sometimes",
+          "Not offered: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Working with a US company, answered.",
+      "items": [
+        {
+          "q": "Do you have a US office or US-based engineers?",
+          "a": "No. Elevate Aura is based in Chennai, India, and has no entity, office or staff in the United States. Every engagement with a US company is remote, and we would rather say that plainly than let anyone assume otherwise."
+        },
+        {
+          "q": "How much of your day overlaps with ours?",
+          "a": "India is ahead of every United States time zone, so our late afternoon and evening meet your morning. We agree a fixed live window for each project, usually your morning, and keep a written thread for anything that arrives outside it."
+        },
+        {
+          "q": "Will you sign our NDA?",
+          "a": "Yes, before any specification, schematic or datasheet is shared. Work can sit in the repository and cloud account you nominate, so credentials stay yours to issue and withdraw, and we name no customer publicly without written permission."
+        },
+        {
+          "q": "Who owns the code?",
+          "a": "You do. Source, build and flashing instructions, test notes and documentation are delivered into your repository, and your team or another engineer can maintain the work without depending on us."
+        },
+        {
+          "q": "Do you handle hardware or FDA work?",
+          "a": "No. This is software only: no PCB design, no manufacturing or sourcing, no mechanical or enclosure work, and no hardware regulatory certification. Regulatory strategy and submissions stay with your team, and we provide documentation your team can use in its own submissions."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/embedded-software-development-uk/",
+          "icon": "&#127468;&#127463;",
+          "b": "For UK companies",
+          "p": "The same work, better overlap."
+        },
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers and peripherals."
+        },
+        {
+          "href": "/product-development/medical-device-firmware-development/",
+          "icon": "&#129658;",
+          "b": "Medical device firmware",
+          "p": "Written to your spec."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "Device to cloud."
+        },
+        {
+          "href": "/product-development/iot-product-development/",
+          "icon": "&#128225;",
+          "b": "IoT product development",
+          "p": "Device, app and cloud."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "patient-app-development",
+  "title": "Patient App Development: Appointments, Reports, Bills",
+  "meta": "Patient app development for hospitals, clinics and diagnostic centres: appointments, token position, reports, bills and WhatsApp reminders, tied to your system.",
+  "h1": "Patient app development that stops the phone ringing at the <span class=\"hl\">front desk</span>.",
+  "crumb": "Patient App Development",
+  "pill": "For hospitals, clinics and diagnostic centres",
+  "sub": "A patient app should answer the four questions patients ring about: when is my appointment, where am I in the queue, is my report ready, and what do I owe. We build it on the hospital system and back it with WhatsApp reminders, for Android and iOS.",
+  "meta_ticks": [
+    "Booking, tokens, reports, bills",
+    "WhatsApp reminders and report links",
+    "Family profiles on one login"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a patient app.",
+  "primary_keyword": "patient app development",
+  "secondary_keywords": [
+    "patient mobile app development",
+    "patient engagement app India",
+    "appointment booking app for hospitals",
+    "patient portal app development",
+    "hospital patient app"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital or clinic owner who wants patients to self-serve on a phone instead of calling",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What patient app development delivers",
+      "paras": [
+        "Patient app development produces the app your patients install to deal with your hospital or clinic without calling: book an appointment with the right doctor, check in and watch their token, receive lab and imaging reports, view and pay bills, and get reminders on WhatsApp for follow-ups and medication.",
+        "Elevate Aura builds patient apps on <a href=\"/hims.html\">HIMS</a>, which already includes a patient app and portal module, appointments, queue and tokens, LIMS, AuraPACS imaging and billing. Where you run another system the app connects through its API. WhatsApp messaging is built in, because that is where Indian patients actually read.",
+        "The app carries your brand on the store and on every screen, and ships for Android and iOS from one React Native or Flutter codebase."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the front desk phone rings",
+      "h2": "Every call to reception is a question the app should have answered.",
+      "lead": "Listen to a hospital switchboard for an hour and you will hear the patient app's specification.",
+      "items": [
+        {
+          "h": "Is the doctor in today?",
+          "p": "Rosters change, and the only way to know is to call. The app shows the roster the hospital actually runs on."
+        },
+        {
+          "h": "How long is the wait?",
+          "p": "Patients arrive early and sit for hours, or arrive late and lose the slot. A live token position fixes both."
+        },
+        {
+          "h": "Is my report ready?",
+          "p": "Reports are printed and collected. A verified result should arrive as a WhatsApp link and a PDF in the app the moment it is finalised."
+        },
+        {
+          "h": "What do I owe?",
+          "p": "A bill on paper at the counter, a different number on the phone. One bill, from the billing module, in the app."
+        },
+        {
+          "h": "I forgot the follow-up",
+          "p": "Review dates and medication schedules are written on a prescription and forgotten. Reminders on WhatsApp bring the patient back."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The patient's path",
+      "h2": "From download to discharge, without a phone call.",
+      "steps": [
+        {
+          "h": "Register",
+          "p": "Mobile number login, patient profile linked to the hospital's registration record."
+        },
+        {
+          "h": "Book",
+          "p": "Pick a department, a doctor and a slot from the live roster."
+        },
+        {
+          "h": "Check in",
+          "p": "Token issued on arrival, position shown live, notice sent before the turn."
+        },
+        {
+          "h": "Consult and pay",
+          "p": "Bill generated from the encounter, paid in the app or at the counter."
+        },
+        {
+          "h": "Reports",
+          "p": "Lab results and imaging reports delivered as PDF and secure WhatsApp link."
+        },
+        {
+          "h": "Follow up",
+          "p": "Review reminders and medication schedules on WhatsApp, rebook in a tap."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The patient app, feature by feature.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Appointments",
+          "items": [
+            "Doctor and department search",
+            "Live roster and slot booking",
+            "Reschedule and cancel",
+            "Family members on one login"
+          ]
+        },
+        {
+          "icon": "&#127915;",
+          "h": "Queue",
+          "items": [
+            "Check-in on arrival",
+            "Live token position",
+            "Turn-approaching notice",
+            "Multi-department visits"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Records and reports",
+          "items": [
+            "Verified lab results",
+            "Radiology reports from AuraPACS",
+            "Prescriptions from the EMR",
+            "Visit history"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Bills and messaging",
+          "items": [
+            "Bills, receipts and online payment",
+            "WhatsApp reminders and report links",
+            "Push and in-app notices",
+            "Feedback after the visit"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/patient-management-software/",
+        "label": "See patient management in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a patient app changes at the counter.",
+      "items": [
+        {
+          "h": "A diabetic review every three months",
+          "workflow": "The doctor sets the review date at the consult; the app sends a WhatsApp reminder a week before with a rebook link.",
+          "result": "The patient comes back on time and the slot is booked without a call."
+        },
+        {
+          "h": "A lab result on a Saturday",
+          "workflow": "The lab verifies the result in LIMS; the app delivers the PDF and a WhatsApp link that opens without a login.",
+          "result": "No Monday visit to collect paper."
+        },
+        {
+          "h": "A parent with three children",
+          "workflow": "One login holds all three profiles, each with its own appointments, vaccinations and reports.",
+          "result": "One phone, one app, the whole family's records."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Every provider whose patients call to ask.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals",
+          "p": "OP booking, tokens, reports, bills."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Simple booking and follow-ups."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Home collection booking and report delivery."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental clinics",
+          "p": "Treatment plans and recall reminders."
+        },
+        {
+          "icon": "&#128118;",
+          "b": "Paediatric practices",
+          "p": "Family profiles and vaccination schedules."
+        },
+        {
+          "icon": "&#128138;",
+          "b": "Chronic care programmes",
+          "p": "Medication and review reminders."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A booking marketplace, a template app, or your own patient app.",
+      "cols": [
+        "Booking marketplace",
+        "Template builder",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Whose brand",
+          "The marketplace",
+          "Yours, on a shared template",
+          "Yours, on your own store listing"
+        ],
+        [
+          "Connected to your system",
+          "Email of the booking",
+          "Rarely",
+          "Live to HIMS or your API"
+        ],
+        [
+          "Reports and bills",
+          "No",
+          "Manual upload",
+          "From LIMS, AuraPACS and billing"
+        ],
+        [
+          "WhatsApp",
+          "Marketplace messages",
+          "Sometimes",
+          "Reminders and secure report links built in"
+        ],
+        [
+          "Who owns the patient relationship",
+          "The marketplace",
+          "You",
+          "You"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Patient app development, answered.",
+      "items": [
+        {
+          "q": "How do reminders on WhatsApp work?",
+          "a": "Review dates, medication schedules and appointment confirmations trigger WhatsApp messages from the hospital's WhatsApp Business number. Report links are secure links that open without a login. The templates and timing are set with you before launch."
+        },
+        {
+          "q": "Can patients pay in the app?",
+          "a": "Yes. Bills are generated from the billing module and can be paid online through a payment gateway chosen with you, or settled at the counter, with receipts visible in the app either way."
+        },
+        {
+          "q": "Can a patient book for family members?",
+          "a": "Yes. One mobile login holds several patient profiles, each linked to its own registration record, so a parent or carer can manage appointments and reports for the whole household."
+        },
+        {
+          "q": "Do we need HIMS to have a patient app?",
+          "a": "No, but the app needs a system of record with an API for appointments, results and billing. HIMS provides all of these; another system can be connected depending on what it exposes."
+        },
+        {
+          "q": "What about patient data and consent?",
+          "a": "Records stay in your backend with role-based access and an audit log. Records built on HIMS are structured to be ABHA and ABDM ready. We do not claim certifications and we build consent steps to the rules you set."
+        },
+        {
+          "q": "How quickly can it launch?",
+          "a": "Live in 30 working days where scope allows, typically with booking, tokens and reports first. Payments and reminders can be part of the first release or follow in the same codebase."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related patient app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "icon": "&#127973;",
+          "b": "Hospital apps",
+          "p": "Patient and staff apps together."
+        },
+        {
+          "href": "/mobile-app-development/doctor-app-development/",
+          "icon": "&#129657;",
+          "b": "Doctor app",
+          "p": "The consultant's side."
+        },
+        {
+          "href": "/mobile-app-development/healthcare-mobile-app-development/",
+          "icon": "&#128736;",
+          "b": "Healthcare apps",
+          "p": "How every app is built."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp reports",
+          "p": "Secure report links."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "Which system sits behind the app."
+        }
+      ]
+    }
+  ]
+}

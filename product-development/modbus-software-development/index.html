@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Modbus Software Development | Elevate Aura</title>
+<meta name="description" content="Modbus software development for instruments and industrial-medical equipment: RTU and TCP communication layers, register maps, polling and gateways to the cloud.">
+<link rel="canonical" href="https://elevateaura.co.in/product-development/modbus-software-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura Product Development">
+<meta property="og:title" content="Modbus Software Development | Elevate Aura">
+<meta property="og:description" content="Modbus software development for instruments and industrial-medical equipment: RTU and TCP communication layers, register maps, polling and gateways to the cloud.">
+<meta property="og:url" content="https://elevateaura.co.in/product-development/modbus-software-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modbus Software Development | Elevate Aura">
+<meta name="twitter:description" content="Modbus software development for instruments and industrial-medical equipment: RTU and TCP communication layers, register maps, polling and gateways to the cloud.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/product-development/dev.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Product Development", "item": "https://elevateaura.co.in/product-development.html"}, {"@type": "ListItem", "position": 3, "name": "Modbus Software", "item": "https://elevateaura.co.in/product-development/modbus-software-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Modbus Software", "serviceType": "Modbus software development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Modbus software development for instruments and industrial-medical equipment: RTU and TCP communication layers, register maps, polling and gateways to the cloud.", "url": "https://elevateaura.co.in/product-development/modbus-software-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "RTU or TCP, which do you write?", "acceptedAnswer": {"@type": "Answer", "text": "Both. Modbus RTU over a serial line such as RS-485 for instruments and equipment, and Modbus TCP over Ethernet for gateways and networked controllers. A gateway that bridges RTU devices to TCP is a common request and is covered too."}}, {"@type": "Question", "name": "Can you write the device side only?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your equipment needs to be readable by a customer's PLC or SCADA, we write the slave or server side with a documented register map, and test it against standard masters and diagnostic tools on your hardware."}}, {"@type": "Question", "name": "Do you define the register map?", "acceptedAnswer": {"@type": "Answer", "text": "If you have one we implement it. If not, we define it with your team: which readings and settings are exposed, register types, data types and byte order, and document it for your customers and integrators."}}, {"@type": "Question", "name": "Can the readings go to the cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A gateway can poll the devices and forward readings to a telemetry pipeline on Supabase or Azure with alerts and a dashboard. See device-to-cloud telemetry software."}}, {"@type": "Question", "name": "Do you supply the RS-485 transceiver or gateway hardware?", "acceptedAnswer": {"@type": "Answer", "text": "No. Elevate Aura is software-only. Transceivers, isolation, cabling and gateway hardware are your hardware team's choices. We write the protocol layer to run on what you provide and test it there."}}, {"@type": "Question", "name": "What about CAN or serial protocols?", "acceptedAnswer": {"@type": "Answer", "text": "Also covered. See CAN bus software development for CAN, and embedded software development for UART and other serial links."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Product Development, embedded &amp; device software</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20we%20need%20Modbus%20communication%20written%20for%20our%20equipment.%20Can%20we%20discuss%20the%20register%20map%20and%20hardware%3F" target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/product-development.html">Product Development</a></li>
+  <li><span aria-current="page">Modbus Software</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>Software-only, wired protocols</span>
+      <h1>Modbus software that makes your instrument <span class="hl">readable</span> by everything else.</h1>
+      <p class="sub">Elevate Aura writes Modbus RTU and Modbus TCP communication layers for instruments and industrial-medical equipment: the device side that exposes a register map, the master or gateway side that polls it, and the bridge that forwards the data to a dashboard or cloud. Written to your hardware spec.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20we%20need%20Modbus%20communication%20written%20for%20our%20equipment.%20Can%20we%20discuss%20the%20register%20map%20and%20hardware%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Modbus RTU over serial, Modbus TCP over Ethernet</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Device side, master side or both</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Gateway to Supabase or Azure</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What Modbus software development means here</h2>
+    </div>
+    <div class="ans rv"><p>Modbus software development is writing the communication layer that lets a device exchange data over Modbus, the wired protocol used by instruments, controllers, PLCs and building systems. Elevate Aura writes that layer on either side: the device that exposes its readings and settings as registers, or the master or gateway that polls devices and collects their data.</p><p>We work in both variants. Modbus RTU runs over a serial line, usually RS-485, and is common on instruments and equipment. Modbus TCP runs over Ethernet and suits gateways and networked controllers. The register map is defined with your team or taken from your existing documentation, the layer is written in C/C++ or MicroPython on the device and in Python or .NET on a gateway, and it is tested on your hardware against real masters. Hardware, transceivers and cabling are yours.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The Modbus problem</span>
+      <h2 class="h2">The instrument works. The PLC cannot read it.</h2>
+      <p class="lead">Modbus is simple on paper and fiddly in practice, and the problems only show up when a real master starts polling.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Register map undefined</h3><p>Readings exist in the firmware but no one has decided which register holds what, in which byte order.</p></div><div class="pain rv d1"><h3>Timing on the wire</h3><p>RTU frames need silent intervals and correct CRC; a loop written with delays breaks under a fast master.</p></div><div class="pain rv d2"><h3>Exceptions never handled</h3><p>An out-of-range request crashes the device instead of returning a Modbus exception.</p></div><div class="pain rv"><h3>Data stops at the panel</h3><p>The PLC reads the device, but nothing carries the readings to a dashboard or the cloud.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How the work runs</span>
+      <h2 class="h2">From a register map to a device that answers every poll.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Register map</h4><p>Holding, input, coil and discrete registers defined with your team.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Transport</h4><p>RTU framing over serial, or TCP framing over Ethernet, on your hardware.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Function codes</h4><p>Read and write functions implemented, exceptions returned correctly.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Master or gateway</h4><p>Polling schedule, retries and data collection if you need that side too.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Test</h4><p>Against real masters and diagnostic tools on your hardware.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Hand over</h4><p>Register map document, source and build, owned by you.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is written</span>
+      <h2 class="h2">The Modbus layer, and where it connects.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128268;</span>Device side</h3><ul><li>Modbus RTU slave over RS-485 or RS-232</li><li>Modbus TCP server over Ethernet</li><li>Register map and data types</li><li>Exception handling and diagnostics</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128421;</span>Master and gateway</h3><ul><li>Polling of one or many devices</li><li>Retry, timeout and error handling</li><li>RTU to TCP bridging</li><li>Local logging</li></ul></div><div class="capg rv"><h3><span class="k">&#9729;</span>Onward</h3><ul><li>Gateway to Supabase or Azure</li><li>Telemetry and alerts</li><li>Web dashboard</li><li>Export to your existing systems</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128203;</span>Handover</h3><ul><li>Register map documentation</li><li>Test notes against real masters</li><li>Source and build instructions</li><li>Configuration guide</li></ul></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Where Modbus software gets written.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A lab instrument that must join a facility network</h3><p class="r"><b>Workflow:</b> The instrument exposes its readings and status as Modbus RTU registers; the facility's system polls it like any other device.</p><p><b>Result:</b> The instrument is integrated without a custom driver on the customer's side.</p></div><div class="u rv d1"><h3>A gateway collecting from a room of equipment</h3><p class="r"><b>Workflow:</b> A gateway polls every device on the RS-485 line, bridges to TCP and forwards readings to the cloud pipeline.</p><p><b>Result:</b> One dashboard for equipment that previously only spoke to a panel.</p></div><div class="u rv"><h3>Medical equipment reporting to a building system</h3><p class="r"><b>Workflow:</b> Status and alarm registers are defined so the hospital's monitoring system can read them.</p><p><b>Result:</b> The device fits the hospital's infrastructure instead of demanding its own.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Makers of equipment that has to be read by other systems.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#128300;</div><b>Instrument makers</b><p>Lab and process instruments joining a network.</p></div><div class="w"><div class="g">&#127973;</div><b>Industrial-medical equipment</b><p>Sterilisers, gas systems, plant equipment.</p></div><div class="w"><div class="g">&#127981;</div><b>Industrial device makers</b><p>Sensors and controllers on RS-485.</p></div><div class="w"><div class="g">&#128736;</div><b>Integrators and service firms</b><p>Gateways for an existing installed base.</p></div><div class="w"><div class="g">&#129302;</div><b>Robotics and automation</b><p>Cells that must report to a PLC.</p></div><div class="w"><div class="g">&#128104;&#8205;&#128295;</div><b>Hardware teams</b><p>Protocol work without a specialist hire.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Getting Modbus working, three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Library sample code</div><div>Off-the-shelf gateway box</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Register map</div><div>Whatever the sample does</div><div>Configured by you</div><div class="us">Defined with you and documented</div></div><div class="r"><div class="cap">Runs on your controller</div><div>If it happens to fit</div><div>No, extra hardware</div><div class="us">Yes, to your spec</div></div><div class="r"><div class="cap">Tested against real masters</div><div>Rarely</div><div>By the vendor, generically</div><div class="us">On your hardware, with your masters</div></div><div class="r"><div class="cap">Data beyond the panel</div><div>No</div><div>Vendor cloud</div><div class="us">Your Supabase or Azure pipeline</div></div><div class="r"><div class="cap">Who fixes a timing bug</div><div>You</div><div>Vendor support</div><div class="us">The person who wrote it</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Modbus software development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>RTU or TCP, which do you write?</summary><p>Both. Modbus RTU over a serial line such as RS-485 for instruments and equipment, and Modbus TCP over Ethernet for gateways and networked controllers. A gateway that bridges RTU devices to TCP is a common request and is covered too.</p></details><details><summary>Can you write the device side only?</summary><p>Yes. If your equipment needs to be readable by a customer's PLC or SCADA, we write the slave or server side with a documented register map, and test it against standard masters and diagnostic tools on your hardware.</p></details><details><summary>Do you define the register map?</summary><p>If you have one we implement it. If not, we define it with your team: which readings and settings are exposed, register types, data types and byte order, and document it for your customers and integrators.</p></details><details><summary>Can the readings go to the cloud?</summary><p>Yes. A gateway can poll the devices and forward readings to a telemetry pipeline on Supabase or Azure with alerts and a dashboard. See <a href="/product-development/device-to-cloud-telemetry-software/">device-to-cloud telemetry software</a>.</p></details><details><summary>Do you supply the RS-485 transceiver or gateway hardware?</summary><p>No. Elevate Aura is software-only. Transceivers, isolation, cabling and gateway hardware are your hardware team's choices. We write the protocol layer to run on what you provide and test it there.</p></details><details><summary>What about CAN or serial protocols?</summary><p>Also covered. See <a href="/product-development/can-bus-software-development/">CAN bus software development</a> for CAN, and <a href="/product-development/embedded-software-development/">embedded software development</a> for UART and other serial links.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related device software services</h2></div>
+    <div class="who rv"><a class="w" href="/product-development/can-bus-software-development/"><div class="g">&#128268;</div><b>CAN bus software</b><p>Message handling and bridging.</p></a><a class="w" href="/product-development/device-to-cloud-telemetry-software/"><div class="g">&#128200;</div><b>Telemetry pipeline</b><p>From gateway to cloud.</p></a><a class="w" href="/product-development/embedded-software-development/"><div class="g">&#128187;</div><b>Embedded software</b><p>Firmware in C/C++ or MicroPython.</p></a><a class="w" href="/product-development/sensor-integration-software/"><div class="g">&#128225;</div><b>Sensor integration</b><p>The readings behind the registers.</p></a><a class="w" href="/product-development/device-dashboard-development/"><div class="g">&#128421;</div><b>Device dashboard</b><p>Where the data is read.</p></a><a class="w" href="/product-development.html"><div class="g">&#127968;</div><b>Product development</b><p>The full software-only scope.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Send us the register map, or let us define one.</h2>
+      <p>Tell us whether the device is a slave or a master, RTU or TCP, and what it needs to talk to. We will scope the Modbus layer and any gateway to the cloud.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20we%20need%20Modbus%20communication%20written%20for%20our%20equipment.%20Can%20we%20discuss%20the%20register%20map%20and%20hardware%3F" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura Product Development</h4>
+        <p class="b">Embedded and device software for medical-device and robotics companies: firmware, communication, companion apps and cloud telemetry, written to your hardware spec.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Product Development</h4>
+        <a href="/product-development.html">Product Development home</a>
+        <a href="/product-development/medical-device-software-development/">Medical Device Software</a><a href="/product-development/embedded-software-development/">Embedded Software</a><a href="/product-development/firmware-development/">Firmware</a><a href="/product-development/ble-device-software/">BLE Device Software</a><a href="/product-development/iot-product-development/">IoT Product Development</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

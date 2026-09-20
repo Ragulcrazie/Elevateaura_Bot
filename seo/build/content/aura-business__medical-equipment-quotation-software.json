@@ -1,0 +1,346 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-quotation-software",
+  "title": "Medical Equipment Quotation Software with GST | Aura Business",
+  "meta": "Medical equipment quotation software with a GST quotation builder, versions, proforma and tender quotes, converting each quote to a sales order and tax invoice.",
+  "h1": "Medical equipment quotation software that turns a quote into an <span class=\"hl\">order and an invoice</span>.",
+  "crumb": "Quotation Software",
+  "pill": "For sales teams selling into hospitals",
+  "sub": "Aura Business builds GST-correct quotations from your catalogue, keeps every revision as a version, produces proforma and tender formats, and converts the accepted quote into a sales order and tax invoice without anyone re-typing a line.",
+  "meta_ticks": [
+    "GST quotation builder from the catalogue",
+    "Versions kept for every revision",
+    "Quote to order to invoice"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing a GST quotation with line items, tax breakup and convert-to-order action",
+    "bar": "app.elevateaura.co.in/quotations"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss quotation software for our medical equipment sales team.",
+  "primary_keyword": "medical equipment quotation software",
+  "secondary_keywords": [
+    "GST quotation software India",
+    "quotation management software for distributors",
+    "quote to order software",
+    "proforma invoice software",
+    "hospital tender quotation software"
+  ],
+  "intent": "commercial",
+  "persona": "Sales manager or owner of a medical-equipment distributor quoting hospitals, labs and purchase committees",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment quotation software does",
+      "paras": [
+        "Medical equipment quotation software produces a priced, GST-correct offer to a hospital from your product catalogue, tracks each revision the purchase committee asks for, and converts the accepted version into a sales order and a tax invoice. In Aura Business the GST Quotation Builder is the first module of the Quotation, Orders and GST Billing suite, and it reads the same catalogue, customer master and rate contracts as the rest of the platform.",
+        "Hospital buying is rarely one quote and one order. A committee asks for a revised configuration, the biomedical department wants a different accessory, purchase wants a proforma for advance payment, and a tender needs the same items in a prescribed format. The builder handles each of those as a version or a document type on the same enquiry, so the trail from first offer to final invoice is complete."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why quotes go wrong",
+      "h2": "The quote is where a distributor first loses margin.",
+      "lead": "It is usually typed in a word processor, priced from memory, and revised by saving a new file. By the fourth revision nobody is sure which one the hospital accepted.",
+      "items": [
+        {
+          "h": "Prices from memory",
+          "p": "The rep quotes last year's rate, or a rate agreed for a different hospital, and the discount is discovered at invoicing."
+        },
+        {
+          "h": "GST worked out by hand",
+          "p": "HSN codes and CGST, SGST or IGST are added at the end, and a wrong tax line makes the committee send it back."
+        },
+        {
+          "h": "Versions in file names",
+          "p": "Quote_final_v3_revised.docx is not a version history, and the accepted version cannot be proved."
+        },
+        {
+          "h": "Re-typed into the invoice",
+          "p": "The accepted quote is keyed again into accounting software, and the two do not match."
+        },
+        {
+          "h": "Proforma and tender formats separate",
+          "p": "A proforma for advance and a tender schedule are made from scratch, with different totals from the quote."
+        },
+        {
+          "h": "Follow-ups forgotten",
+          "p": "A quote sent to a committee in April is never chased because it lives in someone's sent folder."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Quote to cash",
+      "h2": "One record from enquiry to receipt.",
+      "steps": [
+        {
+          "h": "Enquiry",
+          "p": "A lead, an inbound quote request or a tender opens the opportunity."
+        },
+        {
+          "h": "Build",
+          "p": "Lines pulled from the catalogue with HSN, price and GST; rate-contract prices applied where they exist."
+        },
+        {
+          "h": "Send",
+          "p": "PDF on your letterhead shared by email or WhatsApp; follow-up date set."
+        },
+        {
+          "h": "Revise",
+          "p": "Each change saved as a new version; the committee sees the latest, you keep them all."
+        },
+        {
+          "h": "Convert",
+          "p": "The accepted version becomes a sales order, and a proforma if advance is needed."
+        },
+        {
+          "h": "Invoice",
+          "p": "Tax invoice, delivery challan and e-way bill raised from the order; payment tracked to receipt."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The quotation builder and the modules it feeds.",
+      "groups": [
+        {
+          "icon": "&#128221;",
+          "h": "Building the quote",
+          "items": [
+            "GST quotation builder",
+            "Product catalogue and lookup with HSN",
+            "CGST, SGST and IGST by customer state",
+            "Rate-contract prices applied automatically",
+            "Branded PDF output"
+          ]
+        },
+        {
+          "icon": "&#128257;",
+          "h": "Revisions and formats",
+          "items": [
+            "Version history per quote",
+            "Proforma invoice",
+            "Tender quote format",
+            "Quote-request inbound from the portal"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "After acceptance",
+          "items": [
+            "Sales order from the accepted version",
+            "Tax invoice with gapless numbering",
+            "Delivery challan and e-way bill",
+            "E-invoice IRN and QR"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Follow-through",
+          "items": [
+            "Pipeline stage and follow-up reminders",
+            "Payment tracker and receipts",
+            "Lead-source and conversion analytics",
+            "Activity feed per hospital account"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four quoting situations, handled.",
+      "items": [
+        {
+          "h": "A purchase committee asks for three revisions",
+          "workflow": "The rep changes the configuration twice and the payment terms once; each is saved as a version on the same quote with a date.",
+          "result": "The accepted version is on record and the invoice matches it exactly."
+        },
+        {
+          "h": "A proforma is needed for advance",
+          "workflow": "The hospital's purchase department wants a proforma to release advance; it is generated from the accepted quote with the same totals.",
+          "result": "No second document typed by hand, no mismatch."
+        },
+        {
+          "h": "A quote crosses a state border",
+          "workflow": "A lab in another state is quoted; the builder applies IGST instead of CGST and SGST because of the customer's address.",
+          "result": "The tax lines are right the first time."
+        },
+        {
+          "h": "A tender needs the same items in its own format",
+          "workflow": "The lines from the quotation are reused for the tender schedule, and the tender is tracked with its EMD and deadline.",
+          "result": "One price list, two documents, one record."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Sales teams that quote often and revise more.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Equipment distributors",
+          "p": "Quoting hospitals, nursing homes and labs every week."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Configurable products with accessories and options."
+        },
+        {
+          "icon": "&#127963;",
+          "b": "Government suppliers",
+          "p": "Tender schedules and rate-contract pricing."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Dealer networks",
+          "p": "Dealers quoting from a principal's price list."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "Any B2B seller whose quote becomes a GST invoice."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Word documents, accounting software, or a connected builder.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Prices",
+          "Typed each time",
+          "Item master",
+          "Catalogue, rate contracts, customer-specific rates"
+        ],
+        [
+          "GST on the quote",
+          "Manual",
+          "Correct",
+          "Correct, by customer state, with HSN"
+        ],
+        [
+          "Versions",
+          "File names",
+          "Overwritten",
+          "Every revision kept with a date"
+        ],
+        [
+          "Proforma and tender formats",
+          "Separate documents",
+          "Proforma only",
+          "Proforma and tender format from the same quote"
+        ],
+        [
+          "Conversion to order and invoice",
+          "Re-typed",
+          "Within accounting only",
+          "Quote to order to invoice to receipt"
+        ],
+        [
+          "Follow-up",
+          "Memory",
+          "None",
+          "Pipeline stage and reminders on the account"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Quotation software, answered.",
+      "items": [
+        {
+          "q": "Does the quotation carry GST correctly?",
+          "a": "Yes. Each catalogue item carries its HSN code and tax rate, and the builder applies CGST and SGST for customers in your state or IGST for customers in another state, based on the customer address. The same lines flow to the tax invoice."
+        },
+        {
+          "q": "What happens when a hospital asks for a revised quote?",
+          "a": "You edit the quote and it is saved as a new version. Earlier versions stay on the record with their dates, so when the committee accepts one you can convert exactly that version to an order."
+        },
+        {
+          "q": "Can I issue a proforma invoice before supply?",
+          "a": "Yes. A proforma is generated from the accepted quotation for advance payment or import formalities, and the final tax invoice is raised separately with its own gapless number when goods are supplied."
+        },
+        {
+          "q": "How do tender quotes work?",
+          "a": "The lines of a quotation can be reused in the tender format, and the tender itself is tracked in the Tenders suite with its EMD and submission deadline. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+        },
+        {
+          "q": "Can quotes come in from my website?",
+          "a": "Yes. The quote-request inbound module captures enquiries from your website or portal straight into the pipeline, where a rep prices them in the builder."
+        },
+        {
+          "q": "Does it replace my accounting software?",
+          "a": "It produces the GST invoice and tracks payments, and a Tally or accounting export is included so your accountant's books stay in step. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Invoice, e-invoice, e-way bill."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Committees, demos, follow-ups."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tenders",
+          "p": "EMD, deadlines, rate contracts."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a medical equipment CRM is."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When Excel stops working."
+        }
+      ]
+    }
+  ]
+}

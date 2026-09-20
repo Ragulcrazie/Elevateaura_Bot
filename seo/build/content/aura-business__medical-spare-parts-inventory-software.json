@@ -1,0 +1,346 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-spare-parts-inventory-software",
+  "title": "Medical Spare Parts Inventory Software | Aura Business",
+  "meta": "Medical spare parts inventory software with serial-level stock, spares allocated to engineers, consumption per job, multi-warehouse, batch and expiry.",
+  "h1": "Medical spare parts inventory software that knows what is in the <span class=\"hl\">engineer's bag</span>.",
+  "crumb": "Spare Parts Inventory",
+  "pill": "For service businesses with stock in vans",
+  "sub": "Aura Business tracks spares by serial or unit across warehouses and engineer kits, deducts what each job consumes, watches batch and expiry on consumables, raises reorder alerts, and scans barcodes at receipt and issue.",
+  "meta_ticks": [
+    "Serial and unit-level stock",
+    "Consumption per job card",
+    "Multi-warehouse and engineer kits"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png",
+    "alt": "Aura Business inventory screen showing spare parts with stock by warehouse, serial numbers and reorder status",
+    "bar": "app.elevateaura.co.in/inventory"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss spare parts inventory software for our medical equipment service business.",
+  "primary_keyword": "medical spare parts inventory software",
+  "secondary_keywords": [
+    "spare parts management software India",
+    "service spares inventory software",
+    "field engineer spare parts tracking",
+    "multi-warehouse inventory software for distributors",
+    "biomedical spares inventory management"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of a medical-equipment dealer holding spares in a warehouse and in engineers' kits",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical spare parts inventory software tracks",
+      "paras": [
+        "Medical spare parts inventory software keeps a live count of every spare, consumable and accessory you hold, at the level of the individual serial or unit where it matters, across the main warehouse, branch stores and the kits your engineers carry, and reduces that count when a job card says a part was fitted. In Aura Business this is the Inventory and Warehouse suite connected to the Field Service suite, so the job card and the stock ledger are the same transaction.",
+        "Spares are the stock most dealers lose track of, because they leave the warehouse in a bag rather than on a challan. Treating an engineer's kit as a location of its own, with parts issued to it and consumed from it, is what makes the number on the screen match the shelf."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why spares go missing",
+      "h2": "The warehouse count is right. The van count is fiction.",
+      "lead": "Sales stock moves on invoices and challans. Service stock moves in pockets, and that is where the leakage sits.",
+      "items": [
+        {
+          "h": "Parts issued verbally",
+          "p": "An engineer takes three sensors for the week and returns one; the other two are somewhere between the van and a hospital."
+        },
+        {
+          "h": "Consumption never recorded",
+          "p": "The part was fitted, the job was done, and the stock ledger still shows it on the shelf."
+        },
+        {
+          "h": "Serials untraceable",
+          "p": "A board fails under warranty and nobody can say which serial went into which machine on which date."
+        },
+        {
+          "h": "Expired consumables on site",
+          "p": "Electrodes, reagents and batteries with expiry dates are used past date because nothing tracks the batch."
+        },
+        {
+          "h": "Reorder by surprise",
+          "p": "The commonest spare runs out on the day a critical call comes in, because nobody watched the minimum."
+        },
+        {
+          "h": "Branch stock invisible",
+          "p": "The part is sitting in the other city's store while the main warehouse orders it again."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The life of a spare",
+      "h2": "From goods receipt to the customer's machine.",
+      "steps": [
+        {
+          "h": "Receive",
+          "p": "GRN against the purchase order; serials or batches scanned in with expiry where it applies."
+        },
+        {
+          "h": "Store",
+          "p": "Located in a warehouse, a branch store or a bin, with a minimum level set."
+        },
+        {
+          "h": "Issue",
+          "p": "Parts allocated to an engineer's kit, which is its own stock location."
+        },
+        {
+          "h": "Consume",
+          "p": "The mobile job card records the part fitted; the kit stock drops and the serial is tied to the asset."
+        },
+        {
+          "h": "Return or bill",
+          "p": "Unused parts return to store; used parts are billed or closed to the contract."
+        },
+        {
+          "h": "Reorder",
+          "p": "Low-stock alerts raise a purchase order to the supplier at the agreed price."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Inventory modules tuned for service spares.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Stock control",
+          "items": [
+            "Product catalogue and lookup",
+            "Serial and unit-level stock",
+            "Stock movements and ledger",
+            "Multi-warehouse and branch stores",
+            "Engineer kit as a stock location"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Batch, expiry and reorder",
+          "items": [
+            "Batch and expiry tracking",
+            "Low-stock and reorder alerts",
+            "Barcode and QR scan at receipt and issue",
+            "Brand and authorisation per product line"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Service link",
+          "items": [
+            "Spare parts used per job, dropping stock",
+            "Serial fitted recorded on the asset",
+            "Spares billed on the service invoice",
+            "Spares closed against CMC where covered"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Procurement link",
+          "items": [
+            "Purchase orders and PO approval",
+            "Goods receipt (GRN) stocking in",
+            "Supplier price lists",
+            "Supplier payments and payables"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where the stock ledger starts to match reality.",
+      "items": [
+        {
+          "h": "An engineer's kit is reconciled weekly",
+          "workflow": "Parts issued to the kit on Monday, consumed on job cards through the week, and the balance returned or carried on Friday, all on the ledger.",
+          "result": "The kit count is known without a physical check."
+        },
+        {
+          "h": "A warranty return is traced by serial",
+          "workflow": "A failed board's serial shows the GRN it arrived on, the kit it was issued to, and the machine it was fitted in.",
+          "result": "The claim to the supplier has dates and evidence."
+        },
+        {
+          "h": "Expiring reagents are used first",
+          "workflow": "Batches with the nearest expiry are flagged at issue so the engineer takes those to site.",
+          "result": "Less write-off, nothing used past date."
+        },
+        {
+          "h": "A branch fills a shortfall",
+          "workflow": "The main warehouse is out of a sensor; the multi-warehouse view shows four at the branch store, and a stock transfer is raised.",
+          "result": "The call is served the same day without a fresh purchase."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses where spares are revenue and risk.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Sensors, boards, probes and consumables across brands."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Reagents and consumables with batch and expiry."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Own spares issued to service partners and engineers."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical",
+          "p": "Serialised components across plants and sites."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Multi-brand service firms",
+          "p": "Spares from several principals in one ledger."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A stock sheet, accounting inventory, or service-aware inventory.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Level of tracking",
+          "Quantity",
+          "Quantity, sometimes batch",
+          "Serial, unit, batch and expiry"
+        ],
+        [
+          "Engineer kits",
+          "Not tracked",
+          "Not a location",
+          "Each kit is a stock location"
+        ],
+        [
+          "Consumption",
+          "Typed later, if at all",
+          "Manual stock journal",
+          "Deducted from the job card"
+        ],
+        [
+          "Multi-warehouse",
+          "Separate sheets",
+          "Sometimes",
+          "Branches and transfers in one ledger"
+        ],
+        [
+          "Reorder",
+          "By memory",
+          "Reorder level",
+          "Alerts that raise a PO at supplier price"
+        ],
+        [
+          "Link to the asset",
+          "None",
+          "None",
+          "Serial fitted recorded on the machine"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Spare parts inventory, answered.",
+      "items": [
+        {
+          "q": "Can stock be tracked at the serial number level?",
+          "a": "Yes. Serial and unit-level stock is a module in the Inventory suite, so a board or probe with a serial is tracked from GRN through issue to the machine it was fitted in. Consumables without serials are tracked by quantity and batch."
+        },
+        {
+          "q": "How are parts in an engineer's van handled?",
+          "a": "Each engineer's kit is treated as a stock location. Parts are issued to it from the warehouse, consumed from it on job cards, and returned from it at the end of the week, so the ledger shows what each engineer is carrying."
+        },
+        {
+          "q": "Does the job card really reduce stock?",
+          "a": "Yes. The Spare Parts Used per Job module deducts what the engineer records from the kit or warehouse it came from, and the same lines appear on the service invoice or close against a CMC. See <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>."
+        },
+        {
+          "q": "Is batch and expiry tracking included?",
+          "a": "Yes. Batch and expiry tracking covers reagents, electrodes, batteries and other dated consumables, and items nearing expiry are flagged at issue so they are used or returned in time."
+        },
+        {
+          "q": "Can we scan barcodes?",
+          "a": "Yes. Barcode and QR scanning is available at goods receipt, issue and stock take on the mobile app, and QR labels can be printed for items that arrive without one."
+        },
+        {
+          "q": "How does it connect to purchasing?",
+          "a": "Low-stock alerts can raise a purchase order to the supplier at the price on their price list, the PO goes through approval, and the goods receipt stocks the parts in and opens a payable. See <a href=\"/aura-business/medical-equipment-inventory-software/\">inventory software</a> for the wider suite."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory",
+          "p": "The full warehouse suite."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128222;",
+          "b": "Service management",
+          "p": "The job card that consumes stock."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128241;",
+          "b": "Technician app",
+          "p": "Where spares are recorded."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty",
+          "p": "Parts replaced under cover."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Spares on the service invoice."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A distributor platform, shipped."
+        }
+      ]
+    }
+  ]
+}

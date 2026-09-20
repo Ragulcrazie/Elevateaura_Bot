@@ -1,0 +1,324 @@
+{
+  "cluster": "seo-services",
+  "slug": "medical-device-seo",
+  "title": "Medical Device SEO for Manufacturers | Elevate Aura",
+  "meta": "Medical device SEO for manufacturers and OEMs: product, application and technical-documentation content that answers how engineers and clinicians search.",
+  "h1": "Medical device SEO for manufacturers whose buyers read <span class=\"hl\">the technical documents</span>.",
+  "crumb": "Medical Device SEO",
+  "pill": "For manufacturers and OEMs",
+  "sub": "A device manufacturer is searched by engineers checking compatibility, clinicians checking application and distributors checking the range. Medical device SEO builds the product, application and technical-documentation content those three read.",
+  "meta_ticks": [
+    "Product and application content",
+    "Technical documentation made findable",
+    "Written for engineers and clinicians"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our medical device range.",
+  "schema": "Service",
+  "service_type": "Medical device search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "medical device SEO",
+  "secondary_keywords": [
+    "SEO for medical device manufacturers",
+    "OEM medical device marketing",
+    "technical documentation SEO",
+    "device application content",
+    "medical device content strategy"
+  ],
+  "intent": "commercial",
+  "persona": "Marketing or product lead at a medical device manufacturer or OEM",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical device SEO involves",
+      "paras": [
+        "Medical device SEO for a manufacturer is different from SEO for a dealer. A dealer sells other people's products in a territory. A manufacturer owns the product, so the content that matters is the content only the manufacturer can write: how the device works, what it is indicated for, what it connects to, which consumables and accessories fit, what the interface and the specifications actually are.",
+        "That splits into three content types. Product pages carrying the real specification per model and variant. Application pages describing the clinical or industrial setting the device is used in, written for the person who searches by the problem rather than the product. Technical documentation content, meaning manuals, compatibility notes, interface details and installation requirements, published as readable pages rather than locked inside files.",
+        "We do not promise rankings, and we will not write a regulatory or clinical claim. Anything touching approvals, indications or performance is written from your own approved documentation and signed off by you before it is published."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why manufacturer sites underperform",
+      "h2": "The most valuable content is locked in a PDF.",
+      "lead": "Manufacturers usually have far better material than dealers, and publish far less of it in a form anyone can find.",
+      "items": [
+        {
+          "h": "Documentation behind a login",
+          "p": "Manuals and compatibility tables sit in a partner portal, so the engineer searching for them finds a forum thread instead."
+        },
+        {
+          "h": "One page per range, not per model",
+          "p": "Variants with different specifications share a page, so no model can answer the search that names it."
+        },
+        {
+          "h": "Marketing language over specifications",
+          "p": "Adjectives where an engineer expected a table of values, connectors, tolerances and power requirements."
+        },
+        {
+          "h": "No application content",
+          "p": "Clinicians search by procedure and setting, and the site only speaks in product names."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From your documentation to findable pages.",
+      "steps": [
+        {
+          "h": "Audit the material",
+          "p": "Specifications, manuals, compatibility lists and application notes gathered, with what can be public separated from what cannot."
+        },
+        {
+          "h": "Map how buyers search",
+          "p": "Engineers, clinicians, biomedical departments and distributors each search differently, and each needs its own page type."
+        },
+        {
+          "h": "Structure the range",
+          "p": "A URL per range, model and variant, with accessories and consumables linked to the devices they fit."
+        },
+        {
+          "h": "Publish the technical content",
+          "p": "Documentation turned into readable pages with the files still downloadable, so both a person and a crawler can use it."
+        },
+        {
+          "h": "Add application pages",
+          "p": "Written for the setting and the procedure, reviewed by your clinical or product team before publication."
+        },
+        {
+          "h": "Track and extend",
+          "p": "Enquiry, download and distributor-application events in GA4, reviewed with Search Console to decide the next set."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The three content types and the technical base.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Product content",
+          "items": [
+            "A page per model and variant",
+            "Specification tables in real text",
+            "Interfaces, connectors and requirements",
+            "Accessories and consumables linked to the device"
+          ]
+        },
+        {
+          "icon": "&#127973;",
+          "h": "Application content",
+          "items": [
+            "Pages by clinical or industrial setting",
+            "Procedure and workflow explainers",
+            "Which model suits which application",
+            "Written for the searcher, reviewed by you"
+          ]
+        },
+        {
+          "icon": "&#128196;",
+          "h": "Technical documentation",
+          "items": [
+            "Manuals published as readable pages",
+            "Compatibility and part-number tables",
+            "Installation and site requirements",
+            "Files still downloadable and versioned"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Technical base",
+          "items": [
+            "Product and organisation schema",
+            "Index coverage and sitemaps",
+            "Mobile speed on heavy pages",
+            "Distributor enquiry tracking in GA4"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/product-development.html",
+        "label": "Device software we build ourselves"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three people searching for your device.",
+      "items": [
+        {
+          "h": "A biomedical engineer",
+          "workflow": "They search a part number to check whether a consumable fits an installed unit, and reach a compatibility table listing the models it serves.",
+          "result": "A reorder that does not need a phone call to your support desk."
+        },
+        {
+          "h": "A clinician choosing an approach",
+          "workflow": "They search the procedure rather than the product, and land on an application page that explains the setting and names the suitable models.",
+          "result": "An enquiry from a department that did not know your range."
+        },
+        {
+          "h": "A distributor in a new market",
+          "workflow": "They search the category, find the range with full specifications and a distributor enquiry form, and apply.",
+          "result": "Channel enquiries arriving without an exhibition stand."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Companies that make the product.",
+      "items": [
+        {
+          "icon": "&#127981;",
+          "b": "Device manufacturers",
+          "p": "Own range, own documentation."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Applications explain the product."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "OEM suppliers",
+          "p": "Selling components into devices."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Analyser and instrument makers",
+          "p": "Long specification content."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Consumables manufacturers",
+          "p": "Compatibility is the search."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Exporters",
+          "p": "Distributor enquiries from new markets."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways manufacturers get content written.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Technical depth",
+          "Briefed second-hand",
+          "Paraphrased from rivals",
+          "Built from your own specifications and manuals"
+        ],
+        [
+          "Documentation",
+          "Left as PDFs",
+          "Left as PDFs",
+          "Published as readable pages with files still downloadable"
+        ],
+        [
+          "Application content",
+          "Generic blog posts",
+          "Generic blog posts",
+          "Written by setting and reviewed by your product team"
+        ],
+        [
+          "Regulatory language",
+          "Occasionally invented",
+          "Frequently invented",
+          "Only what your approved documentation states"
+        ],
+        [
+          "What is promised",
+          "A placement or a visitor number",
+          "A ranking",
+          "Content published, technical work done and figures you can check"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical device SEO, answered.",
+      "items": [
+        {
+          "q": "Will you write claims about what our device is approved for?",
+          "a": "Only what your own approved documentation already states, and only with your sign-off. We do not draft regulatory, clinical or performance claims, because getting one wrong is your liability and your reputation."
+        },
+        {
+          "q": "Should our manuals really be public?",
+          "a": "Usually the parts engineers search for should be: compatibility, part numbers, interfaces and installation requirements. What stays restricted is your decision, and we structure the site so the public and restricted material sit apart cleanly."
+        },
+        {
+          "q": "How is this different from medical equipment SEO?",
+          "a": "That service is for businesses selling other manufacturers' products in a territory, where city and stock reach matter. This one is for the company that owns the product, where specifications, applications and documentation matter. See <a href=\"/seo-services/medical-equipment-seo/\">medical equipment SEO</a>."
+        },
+        {
+          "q": "Can this bring us distributor enquiries?",
+          "a": "It can, by making the range and its documentation findable and putting a distributor enquiry route on the relevant pages. We do not forecast how many, because that depends on your category and market."
+        },
+        {
+          "q": "Our product team has no time to review content. Can you publish without them?",
+          "a": "No. Technical content that has not been checked by someone who knows the device is a risk to you. We draft it, keep the review short and specific, and publish once you have confirmed it."
+        },
+        {
+          "q": "Do you also build device software?",
+          "a": "Yes. Firmware, communication, companion apps and cloud telemetry are a separate service, written to your hardware spec. See <a href=\"/product-development.html\">product development</a>. Hardware, PCB and certification are not offered."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO and device pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128230;",
+          "b": "Medical equipment SEO",
+          "p": "For the distribution side."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "Scaling a large range."
+        },
+        {
+          "href": "/seo-services/medical-equipment-lead-generation/",
+          "icon": "&#128231;",
+          "b": "Lead generation",
+          "p": "Capturing the enquiry."
+        },
+        {
+          "href": "/product-development/medical-device-software-development/",
+          "icon": "&#128268;",
+          "b": "Device software",
+          "p": "The software side of the device."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128203;",
+          "b": "Catalogue website",
+          "p": "Structure for a large range."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "healthcare-app-development-chennai",
+  "title": "Healthcare App Development Company in Chennai | Elevate Aura",
+  "meta": "Healthcare app development company in Chennai. A founder-led studio that meets you at your hospital, clinic or warehouse and builds in React Native or Flutter.",
+  "h1": "Healthcare app development company in Chennai that comes to <span class=\"hl\">your hospital or warehouse</span>.",
+  "crumb": "Healthcare App Development Chennai",
+  "pill": "Chennai, Tamil Nadu",
+  "sub": "Elevate Aura is a founder-led software studio based in Chennai. For healthcare apps this means discovery at your site, on your wards or in your service bay, before a line of code is written, then a build you review in person every week.",
+  "meta_ticks": [
+    "In-person discovery across Chennai",
+    "Two Chennai platforms already shipped",
+    "Remote everywhere else in Tamil Nadu and India"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'm in Chennai and would like to discuss a healthcare app.",
+  "primary_keyword": "healthcare app development company Chennai",
+  "secondary_keywords": [
+    "mobile app development company Chennai healthcare",
+    "medical app developers Chennai",
+    "hospital app development Chennai",
+    "app development company Chennai",
+    "healthcare software company Chennai"
+  ],
+  "intent": "local",
+  "persona": "Hospital, clinic, diagnostic centre or medical-equipment dealer in Chennai looking for an app developer they can meet",
+  "country": "IN",
+  "city": "Chennai",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "A healthcare app developer you can meet in Chennai",
+      "paras": [
+        "Elevate Aura is a healthcare app development company in Chennai run by its founder, Ragul Sekar, who scopes, builds, publishes and supports every app himself. For Chennai customers the first meeting happens at your premises: the OP counter, the ward, the lab, or the service bay where the engineers load their vans.",
+        "Both of the client platforms cited on this site were built for Chennai businesses. Carna Medicare, a medical-equipment distributor, runs a 12-module operations platform with a React Native field-staff app. Medline Robotics, a medical robotics company, runs an e-commerce and distributor platform with 253 product and city SEO pages. Aura Business is running two distribution businesses in Chennai today.",
+        "Outside Chennai the same work is done remotely, with in-person visits possible elsewhere in Tamil Nadu by travel."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why local matters for a healthcare app",
+      "h2": "Some things about a hospital cannot be learned on a video call.",
+      "lead": "The workflow an app must fit is physical: where the queue forms, where the signal drops, where the engineer parks.",
+      "items": [
+        {
+          "h": "The real queue",
+          "p": "Seeing how tokens are actually called at your OP counter shapes the patient app better than any requirements document."
+        },
+        {
+          "h": "Dead zones",
+          "p": "Walking the basement imaging suite or the ICU shows exactly where offline mode must work."
+        },
+        {
+          "h": "The service bay",
+          "p": "Watching engineers load spares at 8 am tells us what the job card must capture and what it must not ask."
+        },
+        {
+          "h": "Staff who will use it",
+          "p": "A nurse or front-desk assistant tries a working build in person and tells us what is wrong, in Tamil or English."
+        },
+        {
+          "h": "Someone who turns up",
+          "p": "When the app matters to the hospital, a developer who can be at your site the same day is a different kind of support."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a Chennai project runs",
+      "h2": "From a site visit to an app on the store.",
+      "steps": [
+        {
+          "h": "Site visit",
+          "p": "Discovery at your hospital, clinic, lab or warehouse anywhere in Chennai."
+        },
+        {
+          "h": "Fixed scope",
+          "p": "A written scope and timeline after the visit, with the stack decision explained."
+        },
+        {
+          "h": "Weekly builds",
+          "p": "Working builds on your staff's phones, reviewed in person or on WhatsApp."
+        },
+        {
+          "h": "Pilot on site",
+          "p": "One department or one engineer team runs the app for real."
+        },
+        {
+          "h": "Release",
+          "p": "Google Play and App Store publishing with your brand."
+        },
+        {
+          "h": "Support",
+          "p": "WhatsApp support from the builder, and a visit when it needs one."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What we build in Chennai",
+      "h2": "The apps Chennai healthcare businesses ask for.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Hospitals and clinics",
+          "items": [
+            "Patient app on HIMS",
+            "Doctor app with roster and queue",
+            "Nursing and ward apps",
+            "WhatsApp reminders and reports"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Diagnostic and imaging centres",
+          "items": [
+            "Home collection route app",
+            "Report delivery via AuraPACS links",
+            "Referrer app for reports"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Equipment dealers and distributors",
+          "items": [
+            "Field sales app with GPS check-in",
+            "Service engineer app with job cards",
+            "Distributor ordering app"
+          ]
+        },
+        {
+          "icon": "&#127891;",
+          "h": "Training and others",
+          "items": [
+            "Learner apps on Aura Learn",
+            "Device companion apps",
+            "Custom apps scoped on a visit"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/mobile-app-development/",
+        "label": "See every app type we build"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "Built in Chennai",
+      "h2": "What in-person delivery looked like on real projects.",
+      "items": [
+        {
+          "h": "A distributor's field app in 30 days",
+          "workflow": "Carna Medicare ran on WhatsApp and Excel. Discovery happened at their office; the field-staff app, manager dashboard, GST billing and payment tracking were built on React Native and Supabase.",
+          "result": "The whole 12-module platform shipped in 30 days."
+        },
+        {
+          "h": "A robotics company's online store and portal",
+          "workflow": "Medline Robotics needed a storefront, distributor portal, quotations, distributor ordering and UTR payment verification, plus SEO pages for each product line and city.",
+          "result": "A live store, a partner portal and 253 landing pages across 4 product lines."
+        },
+        {
+          "h": "Our own app, from Chennai to Google Play",
+          "workflow": "Elevate Aura's exam-prep app was built in Flutter with Python content automation and a Supabase backend.",
+          "result": "Live on Google Play with Telegram practice bots alongside."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who we work with in Chennai",
+      "h2": "Across the city's healthcare and supply businesses.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals and nursing homes",
+          "p": "Patient and staff apps."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Booking and follow-up apps."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Scan and diagnostic centres",
+          "p": "Report and collection apps."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Medical-equipment dealers",
+          "p": "Sales and service field apps."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device and robotics companies",
+          "p": "Companion and ordering apps."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Training institutes",
+          "p": "Learner apps and mock tests."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A large Chennai agency, a remote freelancer, or a founder who visits.",
+      "cols": [
+        "Large agency",
+        "Remote freelancer",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Who scopes the app",
+          "A sales team",
+          "The freelancer, remotely",
+          "The builder, at your site"
+        ],
+        [
+          "Who writes the code",
+          "A rotating team",
+          "The freelancer",
+          "The same person who scoped it"
+        ],
+        [
+          "Healthcare and dealer context",
+          "Varies",
+          "Rarely",
+          "HIMS, AuraPACS and Aura Business built here"
+        ],
+        [
+          "Shipped in Chennai",
+          "Varies",
+          "Varies",
+          "Carna Medicare and Medline Robotics"
+        ],
+        [
+          "Support",
+          "Ticket desk",
+          "When available",
+          "WhatsApp, and a visit when needed"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare app development in Chennai, answered.",
+      "items": [
+        {
+          "q": "Will you visit our hospital or office in Chennai?",
+          "a": "Yes. Discovery for Chennai projects is done in person at your premises, and reviews during the build can be in person or on WhatsApp. Contact +91 95789 71156 or elevateauraofficial@gmail.com to arrange a visit."
+        },
+        {
+          "q": "Do you work with businesses outside Chennai?",
+          "a": "Yes. Elsewhere in Tamil Nadu an in-person visit is possible by travel; across the rest of India and abroad the work is done remotely with support on WhatsApp. The build and the store release are the same either way."
+        },
+        {
+          "q": "What have you built for Chennai clients?",
+          "a": "A 12-module operations platform with a React Native field app for Carna Medicare, and an e-commerce and distributor platform with 253 SEO pages for Medline Robotics. Read the <a href=\"/case-studies/carna-medicare-medical-equipment-distributor-platform/\">Carna Medicare</a> and <a href=\"/case-studies/medline-robotics-ecommerce-distributor-platform/\">Medline Robotics</a> case studies."
+        },
+        {
+          "q": "Which stacks do you use?",
+          "a": "React Native or Flutter for the app, Supabase or Azure for the backend, Next.js or WordPress for the web. The choice is made with you after the site visit and explained in the scope."
+        },
+        {
+          "q": "Do you also supply the hospital or dealer software behind the app?",
+          "a": "Yes. HIMS for hospitals and clinics, AuraPACS for imaging and Aura Business for dealers and distributors are all built by Elevate Aura, and each has a live demo. See <a href=\"/hims/hospital-management-software-chennai/\">hospital software in Chennai</a> and <a href=\"/aurapacs/pacs-software-chennai/\">PACS software in Chennai</a>."
+        },
+        {
+          "q": "How long does an app take?",
+          "a": "Live in 30 working days where scope allows. The scope is fixed after the site visit, and you see working builds on your own staff's phones during the project."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related pages for Chennai",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "icon": "&#127973;",
+          "b": "Hospital apps",
+          "p": "Patient and staff apps."
+        },
+        {
+          "href": "/mobile-app-development/medical-equipment-service-app/",
+          "icon": "&#128736;",
+          "b": "Equipment service app",
+          "p": "For dealer engineers."
+        },
+        {
+          "href": "/hims/hospital-management-software-chennai/",
+          "icon": "&#127974;",
+          "b": "Hospital software Chennai",
+          "p": "HIMS for Chennai hospitals."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128203;",
+          "b": "Carna Medicare",
+          "p": "Chennai distributor platform."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Chennai e-commerce platform."
+        }
+      ]
+    }
+  ]
+}

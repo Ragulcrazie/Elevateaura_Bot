@@ -1,0 +1,352 @@
+{
+  "cluster": "aura-business",
+  "slug": "preventive-maintenance-software",
+  "title": "Preventive Maintenance Software for Medical Equipment",
+  "meta": "Preventive maintenance software that schedules PM visits per installed device, puts checklists on the job card and closes each visit against its AMC or CMC.",
+  "h1": "Preventive maintenance software that puts every installed device on a <span class=\"hl\">service calendar</span>.",
+  "crumb": "Preventive Maintenance Software",
+  "pill": "For dealers who service what they sell",
+  "sub": "Aura Business schedules preventive maintenance per asset from the contract terms, sends the technician with a checklist on the mobile app, and closes the visit against the AMC or CMC, so no PM is missed and no covered visit is left unbilled.",
+  "meta_ticks": [
+    "PM schedules generated from the contract",
+    "Checklists and calibration on the mobile job card",
+    "Visit history per serial number"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk showing scheduled preventive maintenance visits with asset, technician and due date",
+    "bar": "app.elevateaura.co.in/service"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss preventive maintenance software for our equipment business.",
+  "primary_keyword": "preventive maintenance software",
+  "secondary_keywords": [
+    "medical equipment maintenance management software",
+    "PM scheduling software",
+    "equipment maintenance software India",
+    "calibration tracking software",
+    "biomedical preventive maintenance software"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner of a medical-equipment dealer that holds AMC and CMC contracts",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What preventive maintenance software does here",
+      "paras": [
+        "Preventive maintenance software creates a recurring visit schedule for every device you have installed, based on the contract you sold with it, and then tracks each visit from dispatch to sign-off. In Aura Business this is one module inside the AMC and Service Contracts suite, not a separate tool.",
+        "The schedule can be time-based (quarterly PM on a ventilator) or meter and usage-based where you record readings. Each visit carries a checklist, records calibration where it applies, and lands in the asset's service history. If the visit is covered by an AMC or CMC it closes against the contract; if not, it becomes a service invoice."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why PM slips",
+      "h2": "Preventive maintenance is the first thing to fall off a busy service desk.",
+      "lead": "Breakdown calls shout. Scheduled visits do not. That is how a dealer ends up paying penalties on a contract it is already servicing at a loss.",
+      "items": [
+        {
+          "h": "Schedules in a diary",
+          "p": "PM due dates live in a spreadsheet or in the engineer's memory, so the third quarter's visit quietly never happens."
+        },
+        {
+          "h": "No proof of the visit",
+          "p": "The hospital's biomedical department asks for last year's PM records and you have a WhatsApp photo, at best."
+        },
+        {
+          "h": "Checklists vary by engineer",
+          "p": "One engineer checks the battery, another does not. There is no fixed checklist per model."
+        },
+        {
+          "h": "Calibration dates unknown",
+          "p": "Calibration certificates expire without anyone noticing until an audit or an NABH inspection at the customer's end."
+        },
+        {
+          "h": "Covered visits billed, or not",
+          "p": "Nobody is sure whether a visit falls under the CMC or should be invoiced, so revenue leaks either way."
+        },
+        {
+          "h": "Renewals argued on memory",
+          "p": "At renewal time you cannot show the customer how many visits you actually made, so the price gets negotiated down."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the contract to a signed-off visit.",
+      "steps": [
+        {
+          "h": "Contract logged",
+          "p": "AMC or CMC saved with term, coverage and PM frequency."
+        },
+        {
+          "h": "Schedule generated",
+          "p": "PM visits created per asset for the whole term."
+        },
+        {
+          "h": "Reminder and dispatch",
+          "p": "Due visits appear on the service desk and are assigned."
+        },
+        {
+          "h": "Mobile job card",
+          "p": "Engineer completes the checklist, readings and photos on site."
+        },
+        {
+          "h": "Customer sign-off",
+          "p": "Signature captured, PM report generated for the customer."
+        },
+        {
+          "h": "Closed to contract",
+          "p": "Visit closes against the contract or becomes an invoice."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The preventive maintenance module, and what sits around it.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Scheduling",
+          "items": [
+            "Time-based PM schedules",
+            "Meter and usage-based PM",
+            "Recurring jobs per asset",
+            "Service reminders",
+            "Technician route and schedule"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "On the visit",
+          "items": [
+            "PM checklists per model",
+            "Calibration records",
+            "Inspection reports",
+            "Photo and signature proof",
+            "Spares used per job"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Records",
+          "items": [
+            "Maintenance history per serial",
+            "Asset 360 view",
+            "Compliance and audit trail",
+            "PM report PDF for the customer"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Closes against AMC or CMC",
+            "Service invoice when not covered",
+            "Contract profitability",
+            "Renewal evidence at term end"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes on the service desk.",
+      "items": [
+        {
+          "h": "A quarterly PM does not get missed",
+          "workflow": "The contract sets four visits a year; the fourth appears on the desk two weeks before it is due and is assigned to the nearest engineer.",
+          "result": "The visit happens on time and the record exists before the customer asks."
+        },
+        {
+          "h": "A biomedical audit is answered in minutes",
+          "workflow": "The hospital asks for PM history on a serial number; the asset's service history is exported with checklists and signatures.",
+          "result": "No searching through phones and files."
+        },
+        {
+          "h": "Calibration is tracked, not remembered",
+          "workflow": "Calibration due dates sit on the asset and surface on the desk with the PM visit.",
+          "result": "Certificates renewed before they lapse."
+        },
+        {
+          "h": "The renewal conversation has evidence",
+          "workflow": "At term end the contract shows visits made, spares used and response times.",
+          "result": "You renew on the record, not on goodwill."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any business that sells, installs and maintains equipment.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment dealers",
+          "p": "Ventilators, monitors, imaging, lab analysers under AMC and CMC."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics suppliers",
+          "p": "Analysers with calibration and QC visits."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical",
+          "p": "Compressors, panels and machines on service contracts."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building products",
+          "p": "Lifts, HVAC and fire systems with statutory visit cycles."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Independent service firms",
+          "p": "Third-party maintenance across multiple brands."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-led SMBs",
+          "p": "Teams of two to fifty engineers who need one desk."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Diary, generic CMMS, or a dealer platform.",
+      "cols": [
+        "Excel and reminders",
+        "Generic CMMS",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Schedule source",
+          "Typed by hand",
+          "Per asset, set up by you",
+          "Generated from the AMC or CMC you sold"
+        ],
+        [
+          "Links to the contract",
+          "No",
+          "Rarely",
+          "Closes against the contract or invoices"
+        ],
+        [
+          "Mobile checklist and signature",
+          "Photos on WhatsApp",
+          "Usually",
+          "Job card with checklist, photos, signature"
+        ],
+        [
+          "Spares to stock",
+          "No",
+          "Separate inventory tool",
+          "Spares used drop stock automatically"
+        ],
+        [
+          "Sales and billing in the same system",
+          "No",
+          "No",
+          "CRM, quotes, GST invoices, receivables"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Ticket queue",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Preventive maintenance software, answered.",
+      "items": [
+        {
+          "q": "Is preventive maintenance a separate product?",
+          "a": "No. It is a module inside the AMC and Service Contracts suite of Aura Business, so it shares the customer master, the installed-base register, the technician app and GST billing with the rest of the platform. See <a href=\"/aura-business/medical-equipment-amc-cmc-software/\">AMC and CMC software</a>."
+        },
+        {
+          "q": "Can schedules be based on usage rather than dates?",
+          "a": "Yes. Time-based schedules are the default, and meter or usage-based PM is supported where your engineers record readings on the job card."
+        },
+        {
+          "q": "Does it track calibration?",
+          "a": "Calibration records and due dates sit on the asset and surface with the PM visit, and inspection reports are stored against the serial number. The calibration itself is still done by your engineer or an external lab."
+        },
+        {
+          "q": "What does the customer receive after a visit?",
+          "a": "A PM report generated from the completed checklist, with photos and the customer signature, which you can share on WhatsApp or email from the platform."
+        },
+        {
+          "q": "Can a PM visit be billed if the device is out of contract?",
+          "a": "Yes. If the asset has no active AMC or CMC the closed job becomes a GST service invoice, with spares used pulled from the job card. See <a href=\"/aura-business/medical-equipment-billing-software/\">billing software</a>."
+        },
+        {
+          "q": "How long does setup take?",
+          "a": "Aura Business is delivered on a 30-working-day framework where scope allows. Your existing contract list and installed base are imported from Excel, and your branding goes on the app, dashboard and PM reports."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128220;",
+          "b": "AMC / CMC",
+          "p": "Contracts on a renewal clock."
+        },
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "Dispatch, job cards, GPS."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every serial and its history."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty",
+          "p": "Warranty and extended cover."
+        },
+        {
+          "href": "/resources/what-is-preventive-maintenance-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What PM software is."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract covers what."
+        }
+      ]
+    }
+  ]
+}

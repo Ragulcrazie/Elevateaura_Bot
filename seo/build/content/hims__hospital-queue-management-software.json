@@ -1,0 +1,327 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-queue-management-software",
+  "title": "Hospital Queue Management Software | HIMS",
+  "meta": "Hospital queue and token management software: walk-in tokens, appointment check-in, a live queue per doctor and waiting counts on the OPD dashboard.",
+  "h1": "Hospital queue management software that gives every doctor a <span class=\"hl\">live token queue</span>, not a corridor headcount.",
+  "crumb": "Hospital Queue Management",
+  "pill": "For OPD front desks",
+  "sub": "HIMS issues tokens to walk-ins, checks appointments in against their slot, and orders both into a live queue for each doctor. The front desk sees waiting counts on the OPD dashboard and the doctor sees who is next from the consulting room.",
+  "meta_ticks": [
+    "Tokens for walk-ins, check-in for appointments",
+    "Live queue per doctor and department",
+    "Waiting count on the OPD dashboard"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/opd-dashboard.png",
+    "alt": "HIMS OPD dashboard with live doctor queues, tokens issued and patients waiting",
+    "bar": "his.elevateaura.co.in/opd"
+  },
+  "whatsapp_text": "Hi, I'd like to see the token and queue system in HIMS.",
+  "primary_keyword": "hospital queue management software",
+  "secondary_keywords": [
+    "hospital token management system",
+    "OPD token system",
+    "doctor queue software",
+    "patient queue management system India",
+    "token display system for hospitals",
+    "clinic token software"
+  ],
+  "intent": "commercial",
+  "persona": "Front-office manager or OPD in-charge dealing with crowding and token disputes",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital queue management software does",
+      "paras": [
+        "Hospital queue management software replaces the token pad and the corridor headcount with a live, ordered queue for each doctor. A walk-in gets a token at the desk, a booked patient is checked in against their appointment, and both appear in the doctor's queue in the order the hospital has chosen. In HIMS this is built into the OPD module rather than sold as a separate token machine.",
+        "Because the token is attached to a registered patient, calling the next token opens the patient's record for the doctor. The waiting count per doctor sits on the OPD dashboard for the front desk, and the patient portal lets a patient see their booking. The queue is not a display gimmick; it is the order in which records reach the consulting room."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why token pads fail",
+      "h2": "A token is only useful if the doctor, the desk and the patient see the same number.",
+      "lead": "Most OPD friction is not the wait itself. It is not knowing where you are in the wait.",
+      "items": [
+        {
+          "h": "Two queues for one doctor",
+          "p": "Appointments on a sheet and walk-ins on a pad, merged by whoever is standing at the door."
+        },
+        {
+          "h": "Doctor blind to the waiting room",
+          "p": "The consultant does not know whether six or sixteen patients are waiting and paces the morning by guesswork."
+        },
+        {
+          "h": "Tokens skipped or repeated",
+          "p": "A patient steps out for a test and their number is lost; another is called twice by mistake."
+        },
+        {
+          "h": "The token is not the record",
+          "p": "Calling number 14 tells the doctor nothing about who number 14 is or what they came for."
+        },
+        {
+          "h": "Front desk cannot answer",
+          "p": "A patient asks how long; the desk says soon, because there is no count to look at."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One token",
+      "h2": "From the desk to the consulting room.",
+      "steps": [
+        {
+          "h": "Patient identified",
+          "p": "UHID found or created at the desk."
+        },
+        {
+          "h": "Token or check-in",
+          "p": "Walk-in receives a token; appointment is checked in to its slot."
+        },
+        {
+          "h": "Placed in the doctor's queue",
+          "p": "Ordered with existing tokens and appointments for that doctor."
+        },
+        {
+          "h": "Called",
+          "p": "The doctor takes the next token and the record opens with it."
+        },
+        {
+          "h": "Seen and released",
+          "p": "Consultation recorded; the token closes and the queue moves."
+        },
+        {
+          "h": "Onward",
+          "p": "Lab, pharmacy and billing continue on the same record."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Queue and token features in HIMS.",
+      "groups": [
+        {
+          "icon": "&#127915;",
+          "h": "Tokens",
+          "items": [
+            "Walk-in tokens per doctor or department",
+            "Appointment check-in",
+            "Token tied to the patient record",
+            "Follow-up and review visits"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Queues",
+          "items": [
+            "Live queue per doctor",
+            "Department-wise queues",
+            "Waiting count on the OPD dashboard",
+            "Doctor availability from rosters"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Patient side",
+          "items": [
+            "Patient app and portal for booking",
+            "Appointment visible to the patient",
+            "Reports on the portal after the visit"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Management",
+          "items": [
+            "OP numbers on the live dashboard",
+            "Walk-ins versus appointments",
+            "Doctor-wise load"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-opd-management-software/",
+        "label": "See the full OPD workflow"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in the waiting area.",
+      "items": [
+        {
+          "h": "A crowded Monday morning",
+          "workflow": "The desk issues tokens as patients arrive; the dashboard shows the waiting count for each consultant, so a second doctor is asked to start early.",
+          "result": "Load is balanced from a number, not from noise."
+        },
+        {
+          "h": "A patient who stepped out",
+          "workflow": "The token is still in the queue; when the patient returns the desk moves it to the next available place.",
+          "result": "Nobody loses their turn for getting a blood test."
+        },
+        {
+          "h": "A booked patient arrives on time",
+          "workflow": "Checked in against the slot, the appointment takes its place ahead of later walk-ins as the hospital has configured.",
+          "result": "Booking means something."
+        },
+        {
+          "h": "A visiting consultant's afternoon",
+          "workflow": "The roster shows the consultant from three o'clock; tokens for that session open only for that window.",
+          "result": "No tokens issued for a doctor who is not in."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere patients wait to be seen.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospital OPDs",
+          "p": "Several consultants, several queues."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Visiting doctors on session rosters."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Single-doctor clinics",
+          "p": "One queue, no receptionist argument."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Sample collection and scan queues."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front-office teams",
+          "p": "An answer for every patient who asks how long."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Managing the queue, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone token machine",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Token source",
+          "Tear-off pad",
+          "Kiosk or printer",
+          "Issued at registration, tied to the UHID"
+        ],
+        [
+          "Appointments and walk-ins",
+          "Merged by hand",
+          "Walk-ins only",
+          "One ordered queue per doctor"
+        ],
+        [
+          "What the doctor sees",
+          "A number",
+          "A number",
+          "The next patient's record"
+        ],
+        [
+          "Waiting count",
+          "Headcount",
+          "Per counter",
+          "Per doctor on the OPD dashboard"
+        ],
+        [
+          "After the consultation",
+          "Paper slip",
+          "Nothing",
+          "e-Rx, lab order and bill on the record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital queue management software, answered.",
+      "items": [
+        {
+          "q": "Is this a token display system?",
+          "a": "It is the queue behind the display. HIMS issues and orders tokens per doctor and shows waiting counts on the OPD dashboard. If you want the queue shown on a screen in the waiting area, describe the setup on a call and it is scoped with the project."
+        },
+        {
+          "q": "How are appointments and walk-ins ordered?",
+          "a": "Both feed the same queue for the doctor. The rule for how a checked-in appointment is placed relative to walk-in tokens is set to your hospital's policy during setup."
+        },
+        {
+          "q": "Do patients get updates on their phone?",
+          "a": "The patient app and portal let patients book and see their appointment. Notification workflows beyond that are discussed on the call so nothing is promised that your setup does not include."
+        },
+        {
+          "q": "Can a token be moved or cancelled?",
+          "a": "Yes. The desk can move a token later in the queue when a patient steps out, transfer it to another doctor in the same department, or cancel it if the patient leaves."
+        },
+        {
+          "q": "Does it work for departments as well as individual doctors?",
+          "a": "Yes. Queues can be per doctor or per department, following the doctor rosters, so a general medicine queue can be shared by whichever consultants are on duty. See <a href=\"/hims/doctor-management-software/\">doctor management software</a>."
+        },
+        {
+          "q": "Is queue management sold separately?",
+          "a": "No. It is part of the OPD module in HIMS, alongside registration, appointments and consultation. See <a href=\"/hims/hospital-opd-management-software/\">hospital OPD software</a> for the full flow."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128203;",
+          "b": "OPD software",
+          "p": "Registration to OPD bill."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments",
+          "p": "Booking by doctor and slot."
+        },
+        {
+          "href": "/hims/doctor-management-software/",
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor management",
+          "p": "Rosters and availability."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "For smaller setups."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

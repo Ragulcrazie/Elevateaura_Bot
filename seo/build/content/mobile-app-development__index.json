@@ -1,0 +1,210 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "index",
+  "title": "Healthcare Mobile App Development Company | Elevate Aura",
+  "meta": "Healthcare mobile app development company in Chennai: patient, doctor, hospital staff and field-service apps in React Native and Flutter, built by the founder.",
+  "h1": "A healthcare mobile app development company that ships apps <span class=\"hl\">people open every day</span>.",
+  "crumb": "Mobile App Development",
+  "pill": "Founder-led, Chennai",
+  "sub": "Elevate Aura builds Android and iOS apps for hospitals, clinics, diagnostic centres and medical-equipment dealers: patient apps, doctor apps, staff apps and field-service apps in React Native or Flutter, with GPS, offline mode and Play Store publishing handled.",
+  "meta_ticks": [
+    "React Native and Flutter",
+    "GPS, offline mode, store publishing",
+    "One builder from scope to release"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a healthcare mobile app.",
+  "primary_keyword": "healthcare mobile app development company",
+  "secondary_keywords": [
+    "healthcare app development company India",
+    "medical app development company Chennai",
+    "hospital app developer",
+    "React Native healthcare app company",
+    "Flutter healthcare app company"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator, clinic owner or medical-equipment dealer who needs a mobile app built and released",
+  "page_type": "hub",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What this service is",
+      "paras": [
+        "Elevate Aura is a founder-led software studio in Chennai that designs, builds and publishes mobile apps for healthcare and for the businesses that supply it. The apps run on Android and iOS from one codebase in React Native or Flutter, use a Supabase or Azure backend, and are released to the Play Store and App Store as part of the job.",
+        "The work is scoped around a real workflow rather than a feature list: a patient booking an appointment, a doctor clearing a consult queue, a service engineer closing a job card in a hospital basement with no signal. Where the app needs a system behind it, it connects to HIMS, AuraPACS or Aura Business, or to the backend you already run.",
+        "The pages below cover each type of app in detail. Every one of them ends in the same place: a call with the person who will actually write the code."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "What we build",
+      "h2": "Mobile app development services, by the app you need.",
+      "items": [
+        {
+          "href": "/mobile-app-development/healthcare-mobile-app-development/",
+          "b": "Healthcare mobile app development",
+          "p": "Apps built around clinical and operational workflows, with GPS, offline mode and store publishing included."
+        },
+        {
+          "href": "/mobile-app-development/hospital-mobile-app-development/",
+          "b": "Hospital mobile app development",
+          "p": "A patient app and staff apps that sit on the hospital's HIMS: appointments, tokens, reports and bills."
+        },
+        {
+          "href": "/mobile-app-development/doctor-app-development/",
+          "b": "Doctor app development",
+          "p": "Roster, consult queue, e-prescription and imaging reports in a doctor's pocket."
+        },
+        {
+          "href": "/mobile-app-development/patient-app-development/",
+          "b": "Patient app development",
+          "p": "Book, pay, collect reports and get WhatsApp reminders without calling the front desk."
+        },
+        {
+          "href": "/mobile-app-development/field-service-mobile-app-development/",
+          "b": "Field service mobile app development",
+          "p": "Job cards, GPS check-in, photos, signatures and spares, working offline and syncing later."
+        },
+        {
+          "href": "/mobile-app-development/flutter-healthcare-app-development/",
+          "b": "Flutter healthcare app development",
+          "p": "When Flutter is the right choice, with our own Flutter app on Google Play as the proof."
+        },
+        {
+          "href": "/mobile-app-development/react-native-healthcare-app-development/",
+          "b": "React Native healthcare app development",
+          "p": "When React Native fits, and how the Carna Medicare field app was built on it in 30 days."
+        },
+        {
+          "href": "/mobile-app-development/medical-equipment-service-app/",
+          "b": "Medical equipment service app",
+          "p": "The service engineer's app for a dealer: calls, job cards, spares and customer sign-off."
+        },
+        {
+          "href": "/mobile-app-development/healthcare-app-development-chennai/",
+          "b": "Healthcare app development in Chennai",
+          "p": "In-person discovery in Chennai, then a build you can review every week."
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "How the work runs",
+      "h2": "What is different about a founder-led app build.",
+      "items": [
+        {
+          "icon": "&#128100;",
+          "b": "One person, end to end",
+          "p": "Ragul Sekar scopes the app, designs the data model, writes the code, publishes it and supports it. Nothing is handed between teams."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Android and iOS from one codebase",
+          "p": "React Native or Flutter, chosen for the job, so both platforms ship together and later changes are made once."
+        },
+        {
+          "icon": "&#128225;",
+          "b": "Built for weak networks",
+          "p": "Offline mode and background sync are designed in from the first screen, because wards and field sites do not have reliable signal."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "GPS and proof of work",
+          "p": "Check-ins, photo proof and signatures where the workflow needs them, with the audit trail on the server."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Connected to the system of record",
+          "p": "Apps talk to HIMS, AuraPACS, Aura Business or your existing backend, so the app is never a second copy of the data."
+        },
+        {
+          "icon": "&#128197;",
+          "b": "Fixed scope, clear timeline",
+          "p": "Live in 30 working days where scope allows. You see working builds during the project, not a reveal at the end."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare mobile app development, answered.",
+      "items": [
+        {
+          "q": "Which platforms do you build for?",
+          "a": "Android and iOS from a single codebase in React Native or Flutter. Release to Google Play and the App Store is part of the delivery, along with the developer account setup if you do not have one yet."
+        },
+        {
+          "q": "Do you build the backend as well as the app?",
+          "a": "Yes. Most apps run on a Supabase backend with authentication, a Postgres database and realtime updates, or on Azure where that is preferred. If the app must sit on HIMS, AuraPACS or Aura Business, it connects to those directly."
+        },
+        {
+          "q": "Which apps have you actually shipped?",
+          "a": "A React Native field-staff app for Carna Medicare, a medical-equipment distributor in Chennai, and Elevate Aura's own exam-prep Android app built in Flutter, live on Google Play. See the <a href=\"/case-studies/\">case studies</a>."
+        },
+        {
+          "q": "How long does an app take?",
+          "a": "The delivery framework is live in 30 working days where scope allows. Scope is fixed before work starts, and you review working builds during the project rather than waiting for a final handover."
+        },
+        {
+          "q": "Can the app work without internet?",
+          "a": "Yes. Offline mode with local storage and background sync is a standard part of field and ward apps, so job cards, check-ins and forms are captured on site and uploaded when a connection returns."
+        },
+        {
+          "q": "Do you work outside Chennai?",
+          "a": "Yes. Discovery and reviews are done in person in Chennai and remotely everywhere else, with support on WhatsApp. The app itself is deployed to the stores and the cloud, so location does not change the delivery."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related services and products",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The hospital system behind patient and staff apps."
+        },
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128736;",
+          "b": "Aura Business",
+          "p": "Office dashboard and field app for dealers."
+        },
+        {
+          "href": "/product-development/device-companion-app-development/",
+          "icon": "&#128268;",
+          "b": "Device companion apps",
+          "p": "Apps that pair with medical hardware."
+        },
+        {
+          "href": "/aura-learn/learning-app-development/",
+          "icon": "&#127891;",
+          "b": "Learning apps",
+          "p": "Learner apps for training and exam prep."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128203;",
+          "b": "Carna Medicare",
+          "p": "Field app and dashboard in 30 days."
+        },
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "The web half of the build."
+        }
+      ]
+    }
+  ]
+}

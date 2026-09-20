@@ -1,0 +1,348 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-tender-management-software",
+  "title": "Tender Management Software for Medical Equipment | Aura Business",
+  "meta": "Tender management software for medical equipment suppliers: government tenders fetched every morning, a document vault, EMD and deadline reminders.",
+  "h1": "Tender management software that finds the tender <span class=\"hl\">before your competitor does</span>.",
+  "crumb": "Tender Management Software",
+  "pill": "For suppliers who sell to government",
+  "sub": "Aura Business fetches relevant government tenders every morning into a tracker, keeps your bid documents in a vault, reminds you of EMD and submission deadlines, records outcomes so you learn where you win, and manages the rate contracts that follow.",
+  "meta_ticks": [
+    "Tenders auto-fetched every morning",
+    "EMD and deadline reminders",
+    "Win-rate by authority"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard with open tenders, submission deadlines and pipeline value",
+    "bar": "app.elevateaura.co.in/tenders"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss tender management software for our medical equipment business.",
+  "primary_keyword": "tender management software for medical equipment",
+  "secondary_keywords": [
+    "government tender tracking software India",
+    "medical equipment tender software",
+    "EMD tracking software",
+    "bid management software for hospital tenders",
+    "rate contract management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or tender executive at a medical-equipment supplier bidding for government hospital and medical college tenders",
+  "page_type": "feature",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What tender management software does for a medical equipment supplier",
+      "paras": [
+        "Tender management software for medical equipment collects the government and institutional tenders relevant to your product lines, tracks each one from discovery to outcome, holds the documents you need to bid, and reminds you of the money and dates that can disqualify you. In Aura Business the Tenders and Government Sales suite does this with a tracker that fetches tenders every morning, a document vault, EMD and deadline reminders, outcome analytics and rate-contract management.",
+        "Government buying in India runs through state medical services corporations, medical colleges, district hospitals and online marketplace portals, each with its own formats and timelines. The bid itself is still submitted on the authority's portal; what the software does is make sure you saw the tender, met the deadline, paid the EMD, and know afterwards whether bidding there was worth it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why tenders are lost before bidding",
+      "h2": "Most tenders are lost to the calendar, not to price.",
+      "lead": "A supplier with the right product and the right price still misses out when the notice is seen late, the EMD is not arranged, or the document set is one certificate short.",
+      "items": [
+        {
+          "h": "Tenders found by luck",
+          "p": "Someone checks a portal when they remember, and the notice with a fourteen-day window is found on day ten."
+        },
+        {
+          "h": "Documents scattered",
+          "p": "The authorisation letter is in one email, the GST certificate in another, and the latest balance sheet on the accountant's desk."
+        },
+        {
+          "h": "EMD forgotten or stuck",
+          "p": "Earnest money is paid late, or refunds from lost bids are never followed up and sit with the authority."
+        },
+        {
+          "h": "Deadlines in the head",
+          "p": "Pre-bid meeting, query deadline, submission time and opening date all matter, and one of them is always missed."
+        },
+        {
+          "h": "No record of outcomes",
+          "p": "You bid everywhere and cannot say which authorities you win with or what price took the last one."
+        },
+        {
+          "h": "Rate contracts unused",
+          "p": "A rate contract is won and then forgotten, so orders that could flow under it are re-quoted from scratch."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "From notice to outcome",
+      "h2": "The tender workflow, end to end.",
+      "steps": [
+        {
+          "h": "Fetch",
+          "p": "Relevant tenders arrive in the tracker every morning, filtered to your categories and states."
+        },
+        {
+          "h": "Qualify",
+          "p": "Decide bid or no-bid, assign an owner, and log the key dates."
+        },
+        {
+          "h": "Prepare",
+          "p": "Pull standard documents from the vault; build the price schedule from the quotation builder."
+        },
+        {
+          "h": "Remind",
+          "p": "EMD payment, query window and submission reminders on WhatsApp and the desk."
+        },
+        {
+          "h": "Submit",
+          "p": "Bid submitted on the authority's portal; the record marks it done with the reference."
+        },
+        {
+          "h": "Outcome",
+          "p": "Won, lost or cancelled, with the winning price where published, and EMD refund tracked."
+        },
+        {
+          "h": "Contract",
+          "p": "A win becomes a rate contract or an order, and feeds future quotations."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The Tenders and Government Sales suite.",
+      "groups": [
+        {
+          "icon": "&#128270;",
+          "h": "Finding and tracking",
+          "items": [
+            "Tender tracker, government tenders auto-fetched every morning",
+            "Bid or no-bid decision and owner",
+            "Key dates per tender",
+            "Status from notice to outcome"
+          ]
+        },
+        {
+          "icon": "&#128193;",
+          "h": "Documents and money",
+          "items": [
+            "Tender document vault",
+            "Bid, EMD and deadline reminders",
+            "EMD paid and refund tracking",
+            "Price schedule from the quotation builder"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Learning",
+          "items": [
+            "Outcome and win-rate analytics",
+            "Win-rate by authority and product line",
+            "Winning price history where published"
+          ]
+        },
+        {
+          "icon": "&#128220;",
+          "h": "After the win",
+          "items": [
+            "Rate-contract management",
+            "Rate-contract prices on quotations",
+            "Sales orders, invoices and e-way bills for supply",
+            "Installed-base register for delivered assets"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "How a tender desk runs on it.",
+      "items": [
+        {
+          "h": "The morning tender list",
+          "workflow": "The tender executive opens the tracker at 9 am and sees the notices fetched overnight for patient monitors and lab analysers in three states.",
+          "result": "No portal checking, no notice found on day ten."
+        },
+        {
+          "h": "A bid packed in an hour",
+          "workflow": "Authorisation letters, GST and PAN, turnover certificates and past supply orders are pulled from the vault; the price schedule is built from the catalogue.",
+          "result": "The bid is complete and consistent with previous submissions."
+        },
+        {
+          "h": "An EMD refund is chased",
+          "workflow": "A lost bid's EMD shows as unrefunded sixty days later and appears on the receivables view.",
+          "result": "Money that used to be forgotten comes back."
+        },
+        {
+          "h": "The no-bid list gets shorter",
+          "workflow": "Win-rate analytics show one authority has never awarded to you in eight attempts, while a medical college has awarded three of four.",
+          "result": "Effort moves to where it wins."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Suppliers whose biggest orders come through tenders.",
+      "items": [
+        {
+          "icon": "&#127963;",
+          "b": "Government hospital suppliers",
+          "p": "Medical services corporations, district hospitals, medical colleges."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Equipment distributors",
+          "p": "Bidding on behalf of a principal with authorisation letters."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device manufacturers",
+          "p": "Direct bids and dealer-supported bids in several states."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab suppliers",
+          "p": "Reagent rate contracts and analyser tenders."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical suppliers",
+          "p": "PSU and municipal tenders with the same EMD and deadline rules."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Portal checking, a generic CRM, or a tender desk.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Finding tenders",
+          "Manual portal visits",
+          "Not covered",
+          "Fetched every morning into the tracker"
+        ],
+        [
+          "Documents",
+          "Email and folders",
+          "Attachments on a deal",
+          "Vault with the standard bid set"
+        ],
+        [
+          "EMD",
+          "Bank statement",
+          "Not modelled",
+          "Paid, pending and refund tracked"
+        ],
+        [
+          "Deadlines",
+          "Calendar",
+          "Deal close date",
+          "Per-tender dates with reminders"
+        ],
+        [
+          "Outcomes",
+          "Not recorded",
+          "Won or lost",
+          "Win-rate by authority and product"
+        ],
+        [
+          "Rate contracts",
+          "A PDF",
+          "Not modelled",
+          "Prices applied to quotations until expiry"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Tender management, answered.",
+      "items": [
+        {
+          "q": "Where do the tenders in the tracker come from?",
+          "a": "The tracker fetches government tender notices every morning for the categories and states you configure, so your desk starts the day with a list rather than a search. Which sources are covered for your product lines is confirmed during scoping."
+        },
+        {
+          "q": "Does it submit the bid on the government portal for me?",
+          "a": "No. Bids are submitted by you on the authority's own portal, including online marketplace portals. Aura Business tracks the tender, prepares the documents and price schedule, reminds you of deadlines, and records the submission reference and outcome."
+        },
+        {
+          "q": "How are EMD payments tracked?",
+          "a": "Each tender records the EMD amount, the mode, the date paid and the refund status. Unrefunded EMDs from lost or cancelled bids stay visible until the money returns, so they are chased like any other receivable."
+        },
+        {
+          "q": "What does win-rate analytics show?",
+          "a": "Outcomes by authority, product line, state and period, with the winning price where the authority publishes it. Over a few quarters this shows which buyers you win with and where bidding is not worth the effort."
+        },
+        {
+          "q": "What happens after we win a rate contract?",
+          "a": "The rate contract is stored with its prices, quantities and end date. Quotations and orders to that buyer use those prices, and the end date is watched so you can renew or re-bid. See <a href=\"/aura-business/service-contract-management-software/\">service contract management software</a>."
+        },
+        {
+          "q": "Can the tender price schedule reuse our quotation lines?",
+          "a": "Yes. The quotation builder produces a tender format from the same catalogue lines, so prices, HSN codes and GST are consistent between your commercial quotes and your bids. See <a href=\"/aura-business/medical-equipment-quotation-software/\">quotation software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Price schedules from the catalogue."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Committees and follow-ups."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Rate contracts",
+          "p": "Contracts that follow a win."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Assets delivered under a tender."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic CRM vs ours",
+          "p": "Why tenders need their own suite."
+        }
+      ]
+    }
+  ]
+}

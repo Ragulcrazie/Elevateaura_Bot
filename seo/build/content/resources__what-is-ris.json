@@ -1,0 +1,219 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-ris",
+  "title": "What Is RIS? Radiology Information System Explained",
+  "meta": "A RIS runs scheduling, the worklist, reporting and billing in a radiology department. A plain guide to RIS, how it differs from PACS and HIS, and who needs it.",
+  "h1": "What is RIS? The <span class=\"hl\">paperwork half</span> of a radiology department.",
+  "crumb": "What is RIS",
+  "pill": "Guide",
+  "sub": "RIS stands for Radiology Information System. It handles everything around the image: the booking, the worklist, the report, the bill and the record of who did what. This guide explains the parts and how RIS relates to PACS.",
+  "meta_ticks": [
+    "Written by a team that builds radiology software",
+    "Plain words, no vendor jargon",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the RIS guide and want to ask about scheduling and reporting for our centre.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is RIS",
+  "secondary_keywords": [
+    "RIS full form",
+    "radiology information system",
+    "RIS vs PACS",
+    "RIS software for diagnostic centre",
+    "RIS PACS difference",
+    "radiology reporting workflow"
+  ],
+  "intent": "informational",
+  "persona": "Owner or manager of a diagnostic centre or hospital radiology department",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "RIS in two paragraphs",
+      "paras": [
+        "A RIS, or Radiology Information System, is the administrative brain of an imaging department. It books the appointment, holds the order, tells the machine who is coming, carries the report from draft to signature, raises the invoice and keeps a trail of each step against the patient.",
+        "It does not display pictures. That is the job of the archive described in <a href=\"/resources/what-is-pacs/\">what is PACS</a>. Put simply, the archive owns the images and the RIS owns everything written down around them."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The parts",
+      "h2": "Four jobs a RIS does every working day",
+      "lead": "Look past the product names and a RIS is four pieces of workflow stitched together, each one a place where a busy centre currently loses time.",
+      "body": [
+        {
+          "h3": "1. Scheduling and registration"
+        },
+        "A patient is booked against a slot on a named machine, with the test, the referring doctor and any preparation instructions. The centre gets a diary it can trust instead of a notebook, and a way to see that the CT is idle at four in the afternoon while the ultrasound is triple booked.",
+        {
+          "h3": "2. The worklist"
+        },
+        "Today's bookings become the list that the technician works through. The same list is what the scanner reads over the network, so the patient identity is entered once at the counter and not retyped at the console. The mechanics are explained in <a href=\"/resources/what-is-dicom-modality-worklist/\">what is a DICOM modality worklist</a>.",
+        {
+          "h3": "3. Reporting"
+        },
+        "The radiologist opens the study, dictates or types into a template built for that modality, and signs. A report then moves through states that everyone can see: awaiting read, draft, signed, delivered. Centres usually feel this gap most sharply, because reports written in a word processor live on one person's desktop and nobody can say where a case has reached.",
+        {
+          "h3": "4. Billing and delivery"
+        },
+        "The completed study turns into an invoice with the right tariff and the tax treatment your accountant expects, and the signed report reaches the patient and the referrer. Indian centres normally want GST handled on the invoice itself rather than in a separate ledger afterwards."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The three-letter problem",
+      "h2": "RIS, PACS and HIS compared",
+      "lead": "These three are quoted separately, sold separately and confused constantly. The table sorts out which owns what.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "",
+              "RIS",
+              "PACS",
+              "HIS"
+            ],
+            "rows": [
+              [
+                "Scope",
+                "One department: radiology",
+                "Images across the site",
+                "The whole hospital"
+              ],
+              [
+                "Owns",
+                "Bookings, orders, reports, department billing",
+                "Studies, viewer, archive, sharing",
+                "Registration, wards, pharmacy, laboratory, accounts"
+              ],
+              [
+                "The technician uses it for",
+                "Knowing who is next",
+                "Checking images arrived",
+                "Rarely"
+              ],
+              [
+                "The radiologist uses it for",
+                "Writing and signing reports",
+                "Reading the study",
+                "Rarely"
+              ],
+              [
+                "Bought by",
+                "Diagnostic centres and imaging departments",
+                "Anyone with a scanner",
+                "Hospitals and nursing homes"
+              ]
+            ]
+          }
+        },
+        "A hospital with an existing hospital system usually wants the imaging piece to sit inside it rather than stand apart. That is covered in <a href=\"/resources/what-is-hims/\">what is HIMS</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "One product or two",
+      "h2": "When a small centre should stop buying separate systems",
+      "lead": "A standalone RIS made sense when it had to be wired to an archive from a different supplier. For a single centre in India, two products usually means two support numbers and an integration bill.",
+      "body": [
+        "Signs that a combined product fits better than a separate RIS:",
+        {
+          "ul": [
+            "You run one site with a handful of machines and no in-house information technology staff.",
+            "Bookings, the worklist and the report all involve the same two or three people.",
+            "You want the invoice raised from the same record that holds the study, not keyed again into a billing package.",
+            "Nobody wants to explain to two suppliers why a study has no report attached."
+          ]
+        },
+        "Signs you genuinely need them separate:",
+        {
+          "ul": [
+            "Several branches with different tariffs, referral networks and reporting pools.",
+            "An existing archive under contract that you are not replacing this year.",
+            "A hospital system already handling registration and billing, where imaging only needs to plug in."
+          ]
+        },
+        "Elevate Aura offers the combined route as <a href=\"/aurapacs/ris-pacs-software/\">RIS PACS software</a>, with scheduling, modality worklist, structured reporting templates per modality, report PDFs attached to the study and GST billing inside one system. The wider department view is on <a href=\"/aurapacs/radiology-workflow-software/\">radiology workflow software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about RIS",
+      "items": [
+        {
+          "q": "What is the full form of RIS?",
+          "a": "Radiology Information System. It manages the scheduling, worklist, reporting, delivery and billing side of an imaging department, while the image archive handles the pictures themselves."
+        },
+        {
+          "q": "What is the difference between RIS and PACS?",
+          "a": "A RIS holds the text and the workflow: who is booked, what was ordered, what the report says, what it costs. A PACS holds the images and shows them to the radiologist. Many systems sold to small centres now include both."
+        },
+        {
+          "q": "Does a small diagnostic centre need a RIS?",
+          "a": "If bookings live in a register, reports in a word processor and bills in a separate package, then yes, because nobody can answer where a case has reached. A single centre normally wants those functions inside its imaging system rather than as another product."
+        },
+        {
+          "q": "Can a RIS handle GST billing in India?",
+          "a": "It should. Ask specifically whether the tax invoice is produced from the study record with correct tax components and numbering, or whether staff have to key the case again into an accounting package."
+        },
+        {
+          "q": "Does a RIS replace a hospital management system?",
+          "a": "No. A RIS covers radiology only. A hospital needs registration, wards, pharmacy, laboratory and accounts as well, which is what a hospital information management system provides, with imaging as one part of it."
+        },
+        {
+          "q": "How does a RIS reduce report turnaround time?",
+          "a": "Because every case has a visible state. The list shows what is scanned but unread and what is signed but undelivered, so the delay is a name on a screen rather than something discovered when a referring doctor telephones."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "The archive side of imaging."
+        },
+        {
+          "href": "/resources/what-is-dicom-modality-worklist/",
+          "icon": "&#128203;",
+          "b": "What is a modality worklist",
+          "p": "How the machine learns who is next."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#9989;",
+          "b": "How to choose a PACS",
+          "p": "Questions to ask on a demo."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs DICOM viewer",
+          "p": "Where a viewer stops."
+        },
+        {
+          "href": "/aurapacs/ris-pacs-software/",
+          "icon": "&#129659;",
+          "b": "RIS PACS software",
+          "p": "Scheduling, reporting and images together."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#127973;",
+          "b": "For diagnostic centres",
+          "p": "Sized for a single centre."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-dicom",
+  "title": "What Is DICOM? The Medical Imaging Standard Explained",
+  "meta": "DICOM is how every scanner saves and sends medical images. A plain-language guide to DICOM files, tags and network services for imaging centre owners.",
+  "h1": "What is DICOM? The <span class=\"hl\">language every scanner speaks</span>.",
+  "crumb": "What is DICOM",
+  "pill": "Guide",
+  "sub": "DICOM decides how a CT, MRI, X-ray or ultrasound machine saves a picture and how it travels across your network. This guide explains the files, the tags, the network services and why a DICOM image is not a JPEG.",
+  "meta_ticks": [
+    "Written by a team that builds imaging software",
+    "Every acronym explained",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the DICOM guide and have a question about our imaging setup.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is DICOM",
+  "secondary_keywords": [
+    "DICOM full form",
+    "DICOM meaning in radiology",
+    "DICOM file format",
+    "DICOM tags explained",
+    "DICOM network services",
+    "DICOM vs JPEG"
+  ],
+  "intent": "informational",
+  "persona": "Owner or technician at a diagnostic centre, clinic or hospital imaging department",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "DICOM in two paragraphs",
+      "paras": [
+        "DICOM stands for Digital Imaging and Communications in Medicine. It is two things at once: a file format that keeps the picture and the patient details in one object, and a set of network rules that lets machines and software exchange those objects without a pen drive.",
+        "Because the standard is agreed across the industry, a scanner from one maker can hand a study to software from another. Without DICOM, every machine would write its own kind of file and every centre would be locked to one supplier."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The file",
+      "h2": "A DICOM file is a picture with a record attached",
+      "lead": "Open an ordinary photograph and you get pixels. Open a DICOM object and you get pixels plus hundreds of labelled fields describing the patient, the machine and the scan.",
+      "body": [
+        {
+          "h3": "Tags are the labelled fields"
+        },
+        "Each field is called a tag and has a fixed number, so software written anywhere knows where to find the patient name or the slice thickness. Staff rarely see tags, but they are what lets a study be searched and matched to the right person years later.",
+        {
+          "ul": [
+            "<b>Patient tags.</b> Name, identifier, date of birth.",
+            "<b>Study tags.</b> Accession number, date, referring doctor, the reason the scan was ordered.",
+            "<b>Series and image tags.</b> Modality code, body part, slice position, thickness, exposure settings.",
+            "<b>Equipment tags.</b> Which machine produced the study."
+          ]
+        },
+        {
+          "h3": "Patient, study, series, image"
+        },
+        "DICOM arranges everything in four levels. One patient has many studies. One study has several series, for example a plain and a contrast series in the same CT sitting. Each series holds the images. When a viewer shows today's scan beside one from two years ago, that hierarchy is doing the work.",
+        {
+          "h3": "Why the record travels with the picture"
+        },
+        "Keeping the identity inside the object means a study cannot drift from its patient when it is copied, backed up or sent to a radiologist. It also means a typing mistake at the machine follows the images everywhere, which is why a worklist matters."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The network",
+      "h2": "The three network services you will actually hear named",
+      "lead": "Engineers talk about DICOM services in code words. Here is what each does in ordinary language and where you will meet it.",
+      "body": [
+        {
+          "h3": "Store: the scanner pushes images out"
+        },
+        "At the end of a scan the machine opens a connection to an agreed address on your network and sends the study across. The receiving software is usually called a DICOM server or an archive. Setup is a short form on the console: address, port and a short name for the destination.",
+        {
+          "h3": "Worklist: the scanner pulls patient details in"
+        },
+        "Instead of typing a name at the console, the machine asks a worklist service for the patients booked today and the technician picks the right row. See <a href=\"/resources/what-is-dicom-modality-worklist/\">what is a DICOM modality worklist</a>.",
+        {
+          "h3": "Query and retrieve: software asks for old studies"
+        },
+        "A viewer, a second site or a reporting station can search the archive by patient identifier or date and ask for a study to be sent. This is how a radiologist elsewhere gets prior scans without burning a disc.",
+        "One more term turns up in quotations. An <b>AE title</b> is the short name a device answers to on the network."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Not the same thing",
+      "h2": "DICOM compared with a JPEG or a PDF",
+      "lead": "Centres often ask why they cannot export pictures and email them. The comparison below explains what is lost.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "",
+              "DICOM object",
+              "JPEG or PDF export"
+            ],
+            "rows": [
+              [
+                "Patient identity",
+                "Inside the file, in fixed fields",
+                "Only if somebody typed it on the image"
+              ],
+              [
+                "Grey levels",
+                "Full range captured by the detector",
+                "Reduced to what a normal screen shows"
+              ],
+              [
+                "Window and level",
+                "Adjustable after the scan, so soft tissue and bone can both be examined",
+                "Fixed at the moment of export"
+              ],
+              [
+                "Measurement",
+                "Real distances, because pixel spacing is recorded",
+                "Not reliable"
+              ],
+              [
+                "Good for",
+                "Reading, comparison, archive",
+                "Showing a patient one picture on a phone"
+              ]
+            ]
+          }
+        },
+        "An exported image is fine as a courtesy copy and useless as a record. Keep the DICOM study in the archive and treat flat pictures as something generated from it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Software",
+      "h2": "Viewers, servers and where a centre should start",
+      "body": [
+        "A <b>DICOM viewer</b> opens studies and lets you scroll, window and measure. A <b>DICOM server</b> receives and keeps them. A full archive, explained in <a href=\"/resources/what-is-pacs/\">what is PACS</a>, does both and adds reporting, sharing and history.",
+        {
+          "ul": [
+            "A free desktop viewer is enough for a disc a patient brings in.",
+            "A browser viewer removes installation from every laptop, which matters when a radiologist reads from home.",
+            "Ask any supplier for a test transfer from your oldest machine before you commit."
+          ]
+        },
+        "Elevate Aura builds <a href=\"/aurapacs/dicom-viewer/\">a zero-download browser DICOM viewer</a> and <a href=\"/aurapacs/dicom-server-software/\">DICOM server software</a> that receives studies automatically from the machine, as part of AuraPACS."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about DICOM",
+      "items": [
+        {
+          "q": "What is the full form of DICOM?",
+          "a": "Digital Imaging and Communications in Medicine. It covers the format used to save medical images and the network rules machines use to send them."
+        },
+        {
+          "q": "How do I open a .dcm file?",
+          "a": "You need a DICOM viewer, because ordinary photo software cannot read the format. Desktop viewers handle a single disc, and archive systems open studies in a browser with nothing installed."
+        },
+        {
+          "q": "Is DICOM free to use?",
+          "a": "The standard is published and open, so any manufacturer may implement it and there is no licence fee for the format. What you pay for is software that implements it well and the support behind it."
+        },
+        {
+          "q": "Does my old ultrasound machine support DICOM?",
+          "a": "Most units sold in the last two decades do, although the option is sometimes a paid module nobody switched on. Ask your service engineer to check the console settings."
+        },
+        {
+          "q": "Can DICOM images be sent over WhatsApp?",
+          "a": "Not the objects themselves, because the messenger compresses images and strips the record. What can be shared is a secure link to the study and report, which is how AuraPACS reaches a referring doctor without a login."
+        },
+        {
+          "q": "What is the difference between DICOM and PACS?",
+          "a": "DICOM is a standard, not a product. PACS is the software that uses it to receive, store, display and share studies. Owning a scanner that speaks DICOM does not give you a PACS."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "The archive that uses DICOM."
+        },
+        {
+          "href": "/resources/what-is-dicom-modality-worklist/",
+          "icon": "&#128203;",
+          "b": "What is a modality worklist",
+          "p": "Stop retyping names at the machine."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#9989;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs DICOM viewer",
+          "p": "When a viewer is enough."
+        },
+        {
+          "href": "/aurapacs/dicom-viewer/",
+          "icon": "&#128421;",
+          "b": "DICOM viewer",
+          "p": "Opens in a browser, nothing to install."
+        },
+        {
+          "href": "/aurapacs/dicom-server-software/",
+          "icon": "&#128225;",
+          "b": "DICOM server software",
+          "p": "Receives studies from any modality."
+        }
+      ]
+    }
+  ]
+}

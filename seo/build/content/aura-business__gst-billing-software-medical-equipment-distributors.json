@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "gst-billing-software-medical-equipment-distributors",
+  "title": "GST Billing Software for Medical Distributors | Aura Business",
+  "meta": "GST billing software for medical equipment distributors: HSN on the catalogue, CGST/SGST/IGST, gapless numbering, e-invoice IRN and QR, e-way bills, credit notes.",
+  "h1": "GST billing software for medical equipment distributors, from <span class=\"hl\">HSN to GSTR-1</span>.",
+  "crumb": "GST Billing Software",
+  "pill": "For distributors whose CA asks questions",
+  "sub": "Aura Business raises tax invoices with the right HSN, CGST, SGST or IGST and a gapless number, generates the e-invoice IRN and QR and the e-way bill, handles challans and credit notes, and prepares GSTR-1 and 3B data with a Tally export for your accountant.",
+  "meta_ticks": [
+    "Gapless invoice numbering",
+    "E-invoice IRN and e-way bill",
+    "GSTR-1 and 3B prep, Tally export"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing a GST tax invoice with HSN codes, tax breakup, IRN and payment status",
+    "bar": "app.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss GST billing software for our medical equipment distribution business.",
+  "primary_keyword": "GST billing software for medical equipment distributors",
+  "secondary_keywords": [
+    "GST invoice software for distributors",
+    "e-invoice software India",
+    "e-way bill software for medical equipment",
+    "medical equipment billing software with Tally export",
+    "GSTR-1 preparation software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or accounts head of a medical-equipment distributor who needs invoices, e-invoices and e-way bills that the auditor accepts",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What GST billing software for a medical equipment distributor must do",
+      "paras": [
+        "GST billing software for a medical equipment distributor has to hold the HSN code and tax rate on every catalogue item, apply CGST and SGST or IGST depending on where the customer is, number invoices without gaps, generate the e-invoice IRN and QR code where your turnover requires it, raise e-way bills for goods in transit, issue delivery challans and credit notes correctly, and hand clean data to the person filing GSTR-1 and 3B. Aura Business does all of that inside the Quotation, Orders and GST Billing suite and the Finance suite.",
+        "What makes it distributor billing rather than generic billing is where the invoice comes from. It is raised from a sales order that came from a quotation, or from a closed service job, so the lines, the customer's GSTIN and the delivery address are already right before anyone opens the invoice screen."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where GST goes wrong",
+      "h2": "The mistakes your CA finds in March.",
+      "lead": "Most billing errors in a distributor are not tax knowledge. They are re-typing, wrong state codes and documents raised in the wrong order.",
+      "items": [
+        {
+          "h": "HSN typed per invoice",
+          "p": "The same probe carries three different HSN codes across the year because each rep typed it from memory."
+        },
+        {
+          "h": "IGST on an intra-state sale",
+          "p": "A hospital's billing address is in your state but the ship-to is not, and the tax split is wrong."
+        },
+        {
+          "h": "Gaps in the invoice series",
+          "p": "A cancelled invoice was deleted rather than cancelled, and the sequence now has a hole to explain."
+        },
+        {
+          "h": "E-way bill after the truck left",
+          "p": "The consignment moved before the e-way bill was generated because it lived in a separate portal login."
+        },
+        {
+          "h": "Returns without credit notes",
+          "p": "A returned analyser was adjusted in the next invoice instead of through a credit note, and the return does not reconcile."
+        },
+        {
+          "h": "GSTR data rebuilt by hand",
+          "p": "The accountant re-enters every invoice into the return because the billing export does not match."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "From order to return",
+      "h2": "The billing documents in the order they should happen.",
+      "steps": [
+        {
+          "h": "Sales order",
+          "p": "Confirmed from the quotation with customer GSTIN and ship-to address."
+        },
+        {
+          "h": "Delivery challan",
+          "p": "For goods moving before invoicing, such as demo units or job-work."
+        },
+        {
+          "h": "Tax invoice",
+          "p": "Gapless number, HSN per line, CGST and SGST or IGST by place of supply."
+        },
+        {
+          "h": "E-invoice and e-way bill",
+          "p": "IRN and QR on the invoice; e-way bill for the consignment."
+        },
+        {
+          "h": "Payment",
+          "p": "Receipts against the invoice, reminders on WhatsApp, receivables ageing."
+        },
+        {
+          "h": "Credit note",
+          "p": "Returns and rate differences handled by credit note, not by editing."
+        },
+        {
+          "h": "Return prep",
+          "p": "GSTR-1 and 3B data prepared; Tally export for the books."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Every GST document a distributor issues.",
+      "groups": [
+        {
+          "icon": "&#129534;",
+          "h": "Invoicing",
+          "items": [
+            "Tax invoice as PDF with gapless numbering",
+            "HSN and tax rate on the product catalogue",
+            "CGST, SGST and IGST by place of supply",
+            "Proforma invoice",
+            "Service invoices for jobs and contracts"
+          ]
+        },
+        {
+          "icon": "&#128196;",
+          "h": "Compliance documents",
+          "items": [
+            "E-invoice with IRN and QR",
+            "E-way bill",
+            "Delivery challan",
+            "Credit notes and returns"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money in",
+          "items": [
+            "Payments and receipts",
+            "Payment tracker with WhatsApp reminders",
+            "Receivables ageing",
+            "Distributor payments by UTR"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Returns and books",
+          "items": [
+            "GST returns prep (GSTR-1 and 3B)",
+            "Tally and accounting export",
+            "Payables ledger for supplier invoices",
+            "Cashflow dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four billing days that go smoothly.",
+      "items": [
+        {
+          "h": "An interstate consignment leaves on time",
+          "workflow": "The invoice for a hospital in another state is raised with IGST, the IRN is generated, and the e-way bill is created from the same record before the transporter is called.",
+          "result": "The truck leaves with every document it needs."
+        },
+        {
+          "h": "A demo unit moves on a challan",
+          "workflow": "A monitor goes to a hospital for evaluation on a delivery challan; when they buy, the tax invoice is raised and the challan is closed.",
+          "result": "Goods movement and sale are documented separately and correctly."
+        },
+        {
+          "h": "A return is reconciled",
+          "workflow": "Two damaged probes come back; a credit note is issued against the original invoice and stock is adjusted.",
+          "result": "The customer's ledger and your GST return agree."
+        },
+        {
+          "h": "The accountant gets a clean month",
+          "workflow": "GSTR-1 data and the Tally export are generated from the invoices and credit notes of the month.",
+          "result": "The return is filed from your data, not rebuilt from it."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Distributors and dealers that bill under GST.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "Capital equipment, spares and service on one invoice series."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Consumables and diagnostics dealers",
+          "p": "High invoice volume with batch and expiry on the lines."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers and national distributors",
+          "p": "IGST-heavy billing to dealers across states."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service businesses",
+          "p": "Service invoices with spares and labour, and contract invoices."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and electrical trade",
+          "p": "The same GST documents for any B2B goods business."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Accounting software, a generic CRM, or billing inside the operations platform.",
+      "cols": [
+        "Accounting software",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "GST invoice",
+          "Yes",
+          "Add-on or none",
+          "Yes, raised from the order or job"
+        ],
+        [
+          "E-invoice and e-way bill",
+          "Usually",
+          "No",
+          "IRN, QR and e-way bill from the invoice"
+        ],
+        [
+          "Where lines come from",
+          "Typed",
+          "Typed",
+          "Quotation, order, catalogue, job card"
+        ],
+        [
+          "Service invoices",
+          "Typed",
+          "No",
+          "From the closed job with spares and labour"
+        ],
+        [
+          "Collections",
+          "Outstanding report",
+          "No",
+          "Payment tracker with WhatsApp reminders"
+        ],
+        [
+          "Return filing",
+          "Within the accounting tool",
+          "No",
+          "GSTR prep plus Tally export to your accountant"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "GST billing for distributors, answered.",
+      "items": [
+        {
+          "q": "Does it generate e-invoices with IRN and QR?",
+          "a": "Yes. The E-Invoice module generates the IRN and QR code for tax invoices where your business is required to e-invoice, and prints them on the invoice PDF. Registration with the e-invoice system is done by you during setup."
+        },
+        {
+          "q": "How is CGST, SGST or IGST decided?",
+          "a": "By place of supply. The customer's GSTIN and delivery address on the order determine whether the invoice carries CGST and SGST for intra-state supply or IGST for interstate supply, and the split is applied per line from the HSN rate."
+        },
+        {
+          "q": "What does gapless numbering mean in practice?",
+          "a": "Invoice numbers run in an unbroken series per financial year. An invoice that must be withdrawn is cancelled with a reason and stays in the series, rather than being deleted, so the audit trail has no holes."
+        },
+        {
+          "q": "Can we raise e-way bills from the invoice?",
+          "a": "Yes. The e-way bill is generated from the invoice or delivery challan with transporter and vehicle details, so consignments moving between states or above the threshold have the document before dispatch."
+        },
+        {
+          "q": "Does it replace Tally?",
+          "a": "It replaces the invoicing, receivables and GST document side. Your accountant can keep the books in Tally or any accounting package using the export, and the GSTR-1 and 3B prep gives them the return data. See <a href=\"/aura-business/medical-equipment-billing-software/\">billing software</a> for the wider suite."
+        },
+        {
+          "q": "Are service and AMC invoices in the same series?",
+          "a": "Service invoices for jobs and contract invoices for AMC or CMC are raised from the service and contracts modules with the same GST rules. Whether they share a series with product invoices is configured to suit your accountant. See <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing software",
+          "p": "The full billing suite."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Where the invoice lines start."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Sub-dealer orders and UTR."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128202;",
+          "b": "Dashboard",
+          "p": "Collections and ageing."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "GST billing shipped in 30 days."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "When Excel billing breaks."
+        }
+      ]
+    }
+  ]
+}

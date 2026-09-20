@@ -1,0 +1,319 @@
+{
+  "cluster": "product-development",
+  "slug": "embedded-software-development-uk",
+  "title": "Embedded Software Development UK | Elevate Aura",
+  "meta": "Embedded software development for UK device companies from Chennai: most of your working day overlaps, with a fixed scope, your NDA and code you own outright.",
+  "h1": "Embedded software for UK device companies, with <span class=\"hl\">most of the day shared</span>.",
+  "crumb": "For UK companies",
+  "pill": "Remote engagement, United Kingdom",
+  "sub": "Elevate Aura writes firmware, device communication, companion apps and cloud telemetry for device companies in the United Kingdom. The work is remote from Chennai, India, under your NDA, on a fixed scope, with a working day that mostly coincides with yours.",
+  "meta_ticks": [
+    "Remote from Chennai, no UK entity claimed",
+    "Your NDA, your repository, your code to keep",
+    "Overlap through most of your day"
+  ],
+  "demo_href": "",
+  "country": "GB",
+  "area_served": "United Kingdom",
+  "whatsapp_text": "Hi, we are a UK device company and would like to discuss embedded software work.",
+  "cta_h2": "Book a call in your working day.",
+  "cta_p": "Send the controller, the scope and how your engineers prefer to work. We will come back with a fixed scope, a timeline and a clear statement of the software-only boundary.",
+  "primary_keyword": "embedded software development for UK companies",
+  "secondary_keywords": [
+    "embedded software development UK",
+    "outsourced firmware development United Kingdom",
+    "offshore embedded engineering for UK device companies",
+    "remote firmware developer UK",
+    "medical device software development UK outsourcing",
+    "hire embedded developer UK startup"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or product lead at a United Kingdom device company considering remote embedded software help",
+  "page_type": "country",
+  "phase": 5,
+  "service_type": "Embedded software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a UK engagement looks like from here",
+      "paras": [
+        "Elevate Aura is a founder-led studio based in Chennai, India. UK device companies use us for embedded firmware in C/C++ or MicroPython, communication over BLE, Wi-Fi, serial, Modbus or CAN, a React Native companion app, and telemetry on Supabase or Azure.",
+        "There is no United Kingdom entity, office or staff behind this, and nothing on this page should be read as implying one. Delivery is remote. The practical consequence is better than it sounds for a UK buyer: Indian working hours sit only a few hours ahead of British time, so a normal UK morning and afternoon are both live for us rather than being a narrow window at the edge of a day.",
+        "The engagement is software only. We do not design printed circuit boards, source parts, manufacture, do mechanical or enclosure work, or take on hardware regulatory certification. What we deliver is firmware and software, source, build instructions and documentation your team can use in its own submissions, all owned by you."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What UK buyers worry about",
+      "h2": "The objections worth answering before the first call.",
+      "lead": "Most hesitation about offshore engineering comes down to four questions, and none of them is about ability.",
+      "items": [
+        {
+          "h": "Will anyone be awake",
+          "p": "A supplier whose day has ended before yours begins turns every question into tomorrow's question."
+        },
+        {
+          "h": "Who actually writes the code",
+          "p": "A convincing first call, then the work is handed to someone you never speak to."
+        },
+        {
+          "h": "What happens to our intellectual property",
+          "p": "Schematics and specifications leave the building without a signed agreement or a revocable access list."
+        },
+        {
+          "h": "How do we stop the invoice growing",
+          "p": "An open-ended arrangement where nothing was defined and every clarification is billable."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From an introduction to code in your repository.",
+      "steps": [
+        {
+          "h": "NDA",
+          "p": "Signed before specifications, schematics or datasheets are exchanged."
+        },
+        {
+          "h": "Scope call",
+          "p": "Controller, peripherals, behaviour and the software boundary, in your working hours."
+        },
+        {
+          "h": "Written scope",
+          "p": "Deliverables, exclusions and timeline agreed before a line is written."
+        },
+        {
+          "h": "Hardware to Chennai",
+          "p": "Boards or an evaluation unit shipped so testing happens on the real thing."
+        },
+        {
+          "h": "Weekly rhythm",
+          "p": "A demo and a written update each week, with a live thread through your day."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, build instructions, test notes and documentation in your repository."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "How the distance is handled",
+      "h2": "The arrangements that make it work.",
+      "groups": [
+        {
+          "icon": "&#128336;",
+          "h": "Working hours",
+          "items": [
+            "India runs a few hours ahead of British time",
+            "Your morning and afternoon are both live",
+            "Calls at a time your engineers are at their desks",
+            "No waiting a full day for an answer"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Confidentiality",
+          "items": [
+            "Your NDA signed before scoping",
+            "Delivered to your repository and cloud account",
+            "Access granted and withdrawn by you",
+            "No customer named without written permission"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Scope and ownership",
+          "items": [
+            "Fixed scope with exclusions written down",
+            "Changes handled as visible amendments",
+            "Source and documentation owned by you",
+            "Handover another engineer can pick up"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Working together",
+          "items": [
+            "Weekly demo and written update",
+            "Live thread during your day",
+            "Email and WhatsApp for quick questions",
+            "One builder, not a rotating team"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What UK teams tend to bring us.",
+      "items": [
+        {
+          "h": "A firmware gap between funding rounds",
+          "workflow": "A defined firmware scope is handed over with a fixed plan while your team keeps the hardware and the roadmap.",
+          "result": "Progress without a permanent headcount decision."
+        },
+        {
+          "h": "Connecting equipment already in the field",
+          "workflow": "A gateway reads the machine over Modbus or CAN and forwards what matters into a dashboard your service team uses.",
+          "result": "An installed base that can be supported remotely."
+        },
+        {
+          "h": "The software half of a connected product",
+          "workflow": "Connectivity, the companion app and the cloud pipeline are written together rather than split across suppliers.",
+          "result": "No integration argument between three vendors."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "UK companies building physical products.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device companies",
+          "p": "Firmware and connected software."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Controller and bus software."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Measurement and reporting."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment manufacturers",
+          "p": "Connectivity on existing lines."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware startups",
+          "p": "A first product to ship."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Engineering teams",
+          "p": "Defined overflow work."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Options for a UK device company.",
+      "cols": [
+        "In-house hire",
+        "Large engineering services firm",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Time to start",
+          "Months to recruit",
+          "Weeks of process",
+          "Days, after a scope call"
+        ],
+        [
+          "Availability in your day",
+          "Full",
+          "Account managed",
+          "Live through most of it"
+        ],
+        [
+          "Commercial model",
+          "Salary and overheads",
+          "Rates and change requests",
+          "Fixed scope agreed up front"
+        ],
+        [
+          "Firmware, app and cloud",
+          "Separate hires",
+          "Separate teams",
+          "One builder across all three"
+        ],
+        [
+          "Hardware and certification",
+          "Your team",
+          "Often included",
+          "Not offered: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Working with a UK company, answered.",
+      "items": [
+        {
+          "q": "Are you a UK company?",
+          "a": "No. Elevate Aura is based in Chennai, India, with no entity, office or staff in the United Kingdom. Engagements with UK clients are delivered remotely, and we state that up front rather than leaving it to be assumed."
+        },
+        {
+          "q": "How does the time difference work in practice?",
+          "a": "Indian hours run a few hours ahead of British time, so our afternoon and evening cover your morning and much of your afternoon. In practice a UK team can raise something at their desk and have an answer the same day rather than the next."
+        },
+        {
+          "q": "Will you work under our NDA and in our repository?",
+          "a": "Yes. Your NDA is signed before any specification or schematic is shared, code can be delivered into the repository you nominate, and any cloud resources can sit in your own account, so access stays yours to grant and withdraw."
+        },
+        {
+          "q": "Who owns what you write?",
+          "a": "Your company does. Source, build and flashing instructions, test notes and documentation are delivered to you, and nothing in the handover requires us to stay involved for your team to keep working on it."
+        },
+        {
+          "q": "Do you do hardware, CE marking or certification?",
+          "a": "No. The engagement is software only: no PCB design, no sourcing or manufacturing, no mechanical or enclosure work, and no hardware regulatory certification of any kind. Those remain with your team, and we supply documentation your team can use in its own submissions."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/embedded-software-development-usa/",
+          "icon": "&#127482;&#127480;",
+          "b": "For US companies",
+          "p": "Remote, with a morning window."
+        },
+        {
+          "href": "/product-development/embedded-software-development-australia/",
+          "icon": "&#127462;&#127482;",
+          "b": "For Australian companies",
+          "p": "Strong hours overlap."
+        },
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers and peripherals."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Fixes without a site visit."
+        },
+        {
+          "href": "/product-development/medical-device-software-development/",
+          "icon": "&#129658;",
+          "b": "Medical device software",
+          "p": "Firmware, app and cloud."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

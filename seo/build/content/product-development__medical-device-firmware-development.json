@@ -1,0 +1,330 @@
+{
+  "cluster": "product-development",
+  "slug": "medical-device-firmware-development",
+  "title": "Medical Device Firmware Development | To Your Spec | Elevate Aura",
+  "meta": "Medical device firmware development to your hardware spec: state handling, power management, sensors and comms in C/C++ or MicroPython, tested on your board.",
+  "h1": "Medical device firmware written to your hardware team's <span class=\"hl\">specification</span>.",
+  "crumb": "Medical Device Firmware",
+  "pill": "Software-only, for device companies",
+  "sub": "Elevate Aura writes the firmware that runs a medical device: core logic, state handling, power management, sensor reading and communication, in C/C++ or MicroPython, to the specification your hardware team hands over. Tested on your hardware, delivered ready to flash, with documentation your team keeps.",
+  "meta_ticks": [
+    "C/C++ or MicroPython, to your controller",
+    "Tested on your hardware before handover",
+    "You own the code and the documentation"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we have a medical device that needs its firmware written. Can we discuss the spec?",
+  "cta_h2": "Send us the controller and the spec.",
+  "cta_p": "Tell us the chip, the sensors, the states the device must move through and what it talks to. We will scope the firmware, be clear about the software-only boundary and give you a fixed plan.",
+  "primary_keyword": "medical device firmware development",
+  "secondary_keywords": [
+    "medical device embedded software development",
+    "medical firmware development services",
+    "firmware development for medical devices India",
+    "embedded firmware medical equipment",
+    "medical device software engineering",
+    "medtech firmware outsourcing"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering lead or founder at a medical-device company whose hardware is designed and needs its firmware",
+  "page_type": "product",
+  "phase": 2,
+  "service_type": "Medical device firmware development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical device firmware development means here",
+      "paras": [
+        "Medical device firmware development is writing the software that runs on the device's own controller: how it starts, the states it moves through, how it reads its sensors, how it manages power and how it talks to a phone, gateway or cloud. Elevate Aura writes that layer in C/C++ or MicroPython to the hardware specification your team provides.",
+        "It is a software-only engagement. Your team designs the board, chooses the controller and sensors and owns the regulatory route. We write the firmware, test it on the hardware you send, and hand it over ready to flash with documentation your team can use in its own regulatory submissions. We do not design PCBs, manufacture anything or certify the device."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The firmware problem",
+      "h2": "The hardware is done. The firmware is a prototype that grew.",
+      "lead": "Many device teams reach a working board with firmware that was written to prove a point, not to ship.",
+      "items": [
+        {
+          "h": "States nobody wrote down",
+          "p": "The device behaves differently after a brownout because the state machine was never defined, only implied."
+        },
+        {
+          "h": "Power budget missed",
+          "p": "Sleep and wake were handled last, so the battery life on the datasheet and the bench do not match."
+        },
+        {
+          "h": "Sensor timing that drifts",
+          "p": "Readings are taken in the main loop with delays, and the sample rate wanders when comms are busy."
+        },
+        {
+          "h": "No documentation for the file",
+          "p": "The submission needs a description of what the software does, and the only description is the code."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From your spec to firmware ready to flash.",
+      "steps": [
+        {
+          "h": "Scope to spec",
+          "p": "Controller, sensors, states, comms and the software boundary agreed."
+        },
+        {
+          "h": "Architecture",
+          "p": "State machine, scheduling and power modes designed and reviewed with your team."
+        },
+        {
+          "h": "Drivers and logic",
+          "p": "Sensor and peripheral drivers, core logic and error handling written."
+        },
+        {
+          "h": "Comms",
+          "p": "BLE, Wi-Fi, serial, Modbus or CAN layer as the device requires."
+        },
+        {
+          "h": "Test on hardware",
+          "p": "Validated on your boards, with logs and test notes."
+        },
+        {
+          "h": "Hand over",
+          "p": "Ready to flash, documented, code owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The firmware layer for a medical device.",
+      "groups": [
+        {
+          "icon": "&#9881;",
+          "h": "Core",
+          "items": [
+            "State machine and device modes",
+            "Scheduling and interrupts",
+            "Watchdog and fault handling",
+            "Configuration and calibration storage"
+          ]
+        },
+        {
+          "icon": "&#128267;",
+          "h": "Power",
+          "items": [
+            "Sleep and wake modes",
+            "Duty cycling",
+            "Brownout handling",
+            "Battery state reporting"
+          ]
+        },
+        {
+          "icon": "&#128225;",
+          "h": "Sensors and comms",
+          "items": [
+            "I2C, SPI, UART, ADC drivers",
+            "Sensor sampling and filtering",
+            "BLE, Wi-Fi, Modbus, CAN",
+            "OTA update path"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Handover",
+          "items": [
+            "Tests on your hardware",
+            "Logging for diagnosis",
+            "Design and interface documentation",
+            "Ready-to-flash build"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/product-development.html",
+        "label": "See the full product development scope"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a firmware engagement looks like.",
+      "items": [
+        {
+          "h": "A monitoring device with a defined state model",
+          "workflow": "Idle, measuring, alarm, charging and fault are defined with your team, then implemented as a state machine with logged transitions.",
+          "result": "The device behaves the same way every time, and the behaviour is documented."
+        },
+        {
+          "h": "A battery device that lasts as long as the spec says",
+          "workflow": "Sampling, radio and display are duty-cycled and the controller sleeps between them, measured on your board.",
+          "result": "Power draw is known before the enclosure is sealed."
+        },
+        {
+          "h": "A device that must report to an app",
+          "workflow": "The firmware exposes a BLE profile, and a companion app built on the same engagement pairs, reads and controls it.",
+          "result": "Both sides are written to fit, by one builder."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Device companies with hardware designed and firmware missing.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Patient monitoring",
+          "p": "Vitals, wearables and bedside devices."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and instruments",
+          "p": "Readers, analysers and handheld testers."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Medical robotics",
+          "p": "Control and communication firmware."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital equipment makers",
+          "p": "Pumps, therapy and support devices."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Firmware capacity without a hire."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Medtech founders",
+          "p": "From a working prototype to shippable firmware."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting medical device firmware written, three ways.",
+      "cols": [
+        "In-house hire",
+        "Generic outsourcing",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Time to start",
+          "Months to recruit",
+          "Weeks",
+          "Days, scoped on a call"
+        ],
+        [
+          "Written to your spec",
+          "Yes",
+          "Often to theirs",
+          "Yes, to your controller and toolchain"
+        ],
+        [
+          "Tested on your hardware",
+          "Yes",
+          "Sometimes",
+          "Always, before handover"
+        ],
+        [
+          "Documentation",
+          "Varies",
+          "Thin",
+          "Design and interface docs for your file"
+        ],
+        [
+          "Firmware, app and cloud together",
+          "Separate hires",
+          "Separate vendors",
+          "One builder"
+        ],
+        [
+          "Hardware boundary",
+          "None",
+          "Blurred",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical device firmware, answered.",
+      "items": [
+        {
+          "q": "Do you handle the regulatory side?",
+          "a": "No. Regulatory strategy, submissions and certification stay with your team. We deliver firmware with design, interface and test documentation that your team can use in its own regulatory submissions, but we do not claim compliance with any standard on your behalf."
+        },
+        {
+          "q": "Which controllers and languages?",
+          "a": "C/C++ for most production controllers, MicroPython where the board supports it and the timing allows. We work to the chip and toolchain your hardware team has chosen rather than asking you to change. See <a href=\"/product-development/embedded-c-cpp-development-services/\">embedded C/C++ development</a>."
+        },
+        {
+          "q": "Do you design or build the hardware?",
+          "a": "No. This is a software-only engagement. We do not design PCBs, source components, manufacture, or do mechanical or enclosure work. Your hardware team provides the board and the specification; we write and test the firmware on it."
+        },
+        {
+          "q": "Who owns the code?",
+          "a": "You do. The firmware is delivered ready to flash with source, build instructions and documentation, and your team can maintain it or hand it to another engineer without depending on us."
+        },
+        {
+          "q": "Can you also build the app and cloud side?",
+          "a": "Yes. The same engagement can include a companion app in React Native and a telemetry pipeline on Supabase or Azure, so the firmware, app and cloud are written to fit. See <a href=\"/product-development/medical-device-app-development/\">medical device app development</a>."
+        },
+        {
+          "q": "How is the work scoped and priced?",
+          "a": "Fixed scope per project, agreed after a call about your controller, sensors, states and comms. There is no published rate card; the plan and timeline are given after the spec is understood."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/medical-device-software-development/",
+          "icon": "&#129658;",
+          "b": "Medical device software",
+          "p": "Firmware, comms, app and cloud."
+        },
+        {
+          "href": "/product-development/embedded-c-cpp-development-services/",
+          "icon": "&#128187;",
+          "b": "Embedded C/C++",
+          "p": "Drivers, peripherals, testing."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "Read, calibrate, act."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Versioning and rollback."
+        },
+        {
+          "href": "/product-development/firmware-development/",
+          "icon": "&#128268;",
+          "b": "Firmware development",
+          "p": "Drivers, OTA, ready to flash."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

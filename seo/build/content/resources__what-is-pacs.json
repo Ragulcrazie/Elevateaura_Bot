@@ -1,0 +1,225 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-pacs",
+  "title": "What Is PACS? Picture Archiving and Communication Explained",
+  "meta": "PACS receives, stores, displays and shares medical images from CT, MRI, X-ray and ultrasound. A plain-language guide for clinic and diagnostic centre owners.",
+  "h1": "What is PACS? A plain-language guide for <span class=\"hl\">imaging centre owners</span>.",
+  "crumb": "What is PACS",
+  "pill": "Guide",
+  "sub": "PACS stands for Picture Archiving and Communication System. It is the software that takes the images off your scanner, stores them, lets a radiologist read them on a screen and gets the study to whoever needs it. This guide explains how it works, what it replaces and what to look for.",
+  "meta_ticks": [
+    "Written by a team that builds PACS",
+    "No jargon without an explanation",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the PACS guide and have a question about imaging for our centre.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is PACS",
+  "secondary_keywords": [
+    "PACS meaning",
+    "PACS in radiology",
+    "picture archiving and communication system",
+    "PACS system explained",
+    "PACS vs DICOM"
+  ],
+  "intent": "informational",
+  "persona": "Owner or administrator of a diagnostic centre, clinic or small hospital evaluating imaging software",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "PACS in two paragraphs",
+      "paras": [
+        "A PACS is the system that sits between your imaging machines and the people who need the pictures. The scanner sends each study to the PACS over the network using the DICOM standard. The PACS stores it against the patient, shows it to the radiologist in a viewer, keeps the report with it, and lets the study be found again years later.",
+        "Before PACS, the same job was done with film, CDs and printed reports. A PACS replaces all three with a searchable archive and a screen, and, in modern systems, a link you can send to a referring doctor or patient."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How it works",
+      "h2": "The four things every PACS does",
+      "lead": "Strip away vendor language and a PACS has four jobs. If a product cannot do all four, it is a viewer or a storage service, not a PACS.",
+      "body": [
+        {
+          "h3": "1. Receive images from the modality"
+        },
+        "Every CT, MRI, X-ray, ultrasound or mammography machine can send images over the network in DICOM format. The PACS runs a DICOM server that listens for those transfers. Once the machine is pointed at the PACS, studies arrive automatically at the end of each scan, with the patient name, ID, date and modality inside the file.",
+        {
+          "h3": "2. Store and index them"
+        },
+        "The archive keeps the raw DICOM files and a database that indexes them by patient, study, series and image. That index is what makes a patient's earlier scans appear next to today's, and what lets the front desk find a study from a name or a date. Storage may be on a server at the centre, in the cloud, or both.",
+        {
+          "h3": "3. Display them for reading"
+        },
+        "The viewer is where the radiologist scrolls through slices, adjusts window and level, measures and compares. Older systems needed a dedicated workstation with installed software. Current systems open the study in a browser, which is why a laptop at home can now be a reading station.",
+        {
+          "h3": "4. Communicate the result"
+        },
+        "The C in PACS is communication. The report has to reach the referring doctor and the patient. Traditionally that meant printed film and paper; now it means a PDF attached to the study and a secure link. Some systems, including <a href=\"/aurapacs.html\">AuraPACS</a>, send that link over WhatsApp so the referrer sees the images and report on a phone within minutes of sign-off."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Terms you will hear",
+      "h2": "PACS, DICOM, RIS, worklist and viewer are not the same thing",
+      "body": [
+        "Vendors mix these words freely. They mean different things and you will be quoted for them separately, so it is worth knowing which is which.",
+        {
+          "table": {
+            "headers": [
+              "Term",
+              "What it is",
+              "Do you need it?"
+            ],
+            "rows": [
+              [
+                "DICOM",
+                "The file format and network protocol imaging machines use. Not a product.",
+                "It is already in your machine."
+              ],
+              [
+                "PACS",
+                "The archive, database, viewer and sharing system for images.",
+                "Yes, if you want to stop using CDs and film."
+              ],
+              [
+                "DICOM viewer",
+                "The screen part only. Opens a study but does not archive or index it.",
+                "Only as part of a PACS, or for reading a CD."
+              ],
+              [
+                "RIS",
+                "Radiology Information System: scheduling, worklist, reporting and billing for the department.",
+                "Small centres usually want a PACS with RIS features, not two products."
+              ],
+              [
+                "Modality worklist",
+                "A DICOM service that pushes the scheduled patient's details to the machine so the technician does not retype them.",
+                "Strongly recommended; it prevents mismatched studies."
+              ],
+              [
+                "Teleradiology",
+                "Reading studies from another location, usually a service that supplies radiologists.",
+                "Optional. A browser PACS gives your own radiologist remote reading without a third party."
+              ]
+            ]
+          }
+        },
+        "Read the fuller explanations in <a href=\"/resources/what-is-dicom/\">What is DICOM</a>, <a href=\"/resources/what-is-ris/\">What is RIS</a> and <a href=\"/resources/what-is-dicom-modality-worklist/\">What is a modality worklist</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Deployment",
+      "h2": "On-premise, cloud or hybrid",
+      "body": [
+        "Where the PACS runs decides how it behaves when the internet fails and where your data lives.",
+        {
+          "ul": [
+            "<b>On-premise.</b> A server at the centre. Fast on the local network, works without internet, but backup, remote access and hardware upkeep are your problem.",
+            "<b>Cloud.</b> Studies are uploaded to a provider. Easy remote viewing and backup, but every scan depends on the uplink and many providers bill per study forever.",
+            "<b>Hybrid.</b> A node at the centre receives and serves images locally, and a cloud layer adds remote viewing and an encrypted offsite copy. This is the model most small centres in India end up wanting, because power and connectivity are not reliable enough to trust cloud-only."
+          ]
+        },
+        "See the side-by-side in <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">Cloud PACS vs on-premise PACS</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Buying",
+      "h2": "What to check before you choose a PACS",
+      "body": [
+        {
+          "ul": [
+            "Does every modality you own send to it, including the older ultrasound? Ask for a test transfer, not a brochure.",
+            "Can a radiologist read from home in a browser with nothing installed?",
+            "Is there a modality worklist, so patient details are entered once at the front desk?",
+            "How does the report reach the referrer: PDF by email, a portal login, or a WhatsApp link?",
+            "Where is the data, who owns it, and what happens to it if you stop paying?",
+            "Is pricing per study, per modality, or a licence you own? Per-study pricing is cheap in year one and expensive in year five.",
+            "Who supports you when a machine stops sending at 9 pm on a Saturday?"
+          ]
+        },
+        "A longer checklist is in <a href=\"/resources/how-to-choose-pacs/\">How to choose a PACS</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about PACS",
+      "items": [
+        {
+          "q": "What does PACS stand for?",
+          "a": "Picture Archiving and Communication System. It archives medical images, displays them for reading and communicates the study and report to referring doctors and patients."
+        },
+        {
+          "q": "Is PACS the same as DICOM?",
+          "a": "No. DICOM is the standard format and protocol that imaging machines use to store and send images. PACS is the software system that receives DICOM studies, stores them and shows them. Every PACS speaks DICOM; DICOM by itself is not a product."
+        },
+        {
+          "q": "Does a small diagnostic centre need a PACS?",
+          "a": "If the centre burns CDs, prints film, or types reports in Word and emails them, a PACS removes all three. Systems built for small centres run on one on-premise machine with a browser viewer, so the hardware and setup are modest."
+        },
+        {
+          "q": "Can a PACS work without internet?",
+          "a": "An on-premise or hybrid PACS receives and serves images over the local network, so scanning and reading continue when the internet drops. Cloud-only systems depend on the uplink for every study."
+        },
+        {
+          "q": "Is a PACS a medical device?",
+          "a": "A PACS stores, displays and shares images. The diagnostic read and the report are still done by a qualified radiologist. Check the regulatory position for your country; in India, the software is commonly treated as an information system rather than a diagnostic instrument, but you should confirm with your own advisers."
+        },
+        {
+          "q": "How is a PACS priced?",
+          "a": "Three models are common: per study (teleradiology-style services), a monthly subscription per modality or user, or a one-time licence for an on-premise system with optional support. Ask what you keep if you stop paying."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128196;",
+          "b": "What is DICOM",
+          "p": "The format behind every scan."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128203;",
+          "b": "What is RIS",
+          "p": "Scheduling, worklist and reporting."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#9989;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs DICOM viewer",
+          "p": "When a viewer is enough."
+        },
+        {
+          "href": "/aurapacs/pacs-software/",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid PACS with WhatsApp sharing."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#127973;",
+          "b": "For diagnostic centres",
+          "p": "PACS sized for one centre."
+        }
+      ]
+    }
+  ]
+}

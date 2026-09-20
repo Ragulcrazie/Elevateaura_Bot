@@ -1,0 +1,324 @@
+{
+  "cluster": "seo-services",
+  "slug": "healthcare-saas-seo",
+  "title": "Healthcare SaaS SEO for Software Companies | Elevate Aura",
+  "meta": "Healthcare SaaS SEO: feature, comparison, guide and case-study clusters that build authority for software sold to hospitals and diagnostic centres.",
+  "h1": "Healthcare SaaS SEO built as <span class=\"hl\">clusters, not campaigns</span>.",
+  "crumb": "Healthcare SaaS SEO",
+  "pill": "For software companies",
+  "sub": "A hospital buying software searches four ways: for the category, for a feature, for a comparison and for proof. Healthcare SaaS SEO builds a cluster for each of those, linked so the whole set reinforces what your product is known for.",
+  "meta_ticks": [
+    "Feature, comparison and guide clusters",
+    "Entity authority, not scattered posts",
+    "This site is the worked example"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our healthcare software product.",
+  "schema": "Service",
+  "service_type": "Healthcare SaaS search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "healthcare SaaS SEO",
+  "secondary_keywords": [
+    "SaaS SEO agency India",
+    "healthcare software SEO",
+    "B2B SaaS content clusters",
+    "medical software marketing",
+    "SaaS comparison page SEO"
+  ],
+  "intent": "commercial",
+  "persona": "Founder or marketing lead at a company selling software to hospitals, diagnostic centres or medical-equipment dealers",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare SaaS SEO involves",
+      "paras": [
+        "Healthcare SaaS SEO organises a software company's site into clusters that match how an institutional buyer searches. A product cluster for the category itself. A feature cluster for the specific capability someone has been told to look for. A comparison cluster for the choice they are weighing. A guide cluster for the buyer who does not yet know the vocabulary. A case-study cluster for the proof stage.",
+        "The clusters are linked deliberately: every page points up to its hub, sideways to its siblings and out to a guide or comparison. Over time that structure is what makes a search engine treat the company as an entity associated with a subject rather than as a site with some posts on it.",
+        "Elevate Aura's own site is the worked example. This SEO system, its URL architecture, its product hubs, its guides under resources and its comparisons, is the same structure we build for clients, applied to our own products first."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why SaaS blogs stall",
+      "h2": "Forty posts and nothing the buyer searched for.",
+      "lead": "Most healthcare software sites publish steadily and still miss every query that matters to a purchase.",
+      "items": [
+        {
+          "h": "Posts instead of pages",
+          "p": "A dated blog entry about a feature cannot compete with a permanent page built for that feature."
+        },
+        {
+          "h": "No comparison content",
+          "p": "Buyers compare before they shortlist. If you have not written the comparison, someone else has written it without you."
+        },
+        {
+          "h": "Vocabulary assumed",
+          "p": "Buyers search for plain descriptions before they know the acronym, and the site only speaks in acronyms."
+        },
+        {
+          "h": "Proof kept in a deck",
+          "p": "The strongest evidence sits in a sales presentation instead of a public case-study page anyone can find."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From a product list to a linked cluster map.",
+      "steps": [
+        {
+          "h": "Map the entity",
+          "p": "What the company should be known for, expressed as a small number of subjects rather than a long keyword list."
+        },
+        {
+          "h": "Design the clusters",
+          "p": "A hub per product, with feature, application, comparison, guide and case-study pages planned under it."
+        },
+        {
+          "h": "Audit what exists",
+          "p": "Existing posts are kept, merged into a cluster page or retired, so the site gets stronger rather than larger."
+        },
+        {
+          "h": "Build in order",
+          "p": "Hubs first, then the features with clear demand, then comparisons and guides that feed them."
+        },
+        {
+          "h": "Link deliberately",
+          "p": "Every page points up, sideways to siblings and across to a guide, comparison or case study."
+        },
+        {
+          "h": "Measure by cluster",
+          "p": "Demo requests and enquiries reported per cluster, so investment follows evidence."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The five clusters and what goes in them.",
+      "groups": [
+        {
+          "icon": "&#128736;",
+          "h": "Product and feature",
+          "items": [
+            "Category hub per product",
+            "A page per significant feature",
+            "Industry and application pages",
+            "Persona pages for each buyer role"
+          ]
+        },
+        {
+          "icon": "&#9878;",
+          "h": "Comparison",
+          "items": [
+            "Category versus category explainers",
+            "Build versus buy and manual versus software",
+            "Honest capability tables",
+            "Category names, never rivals named unfairly"
+          ]
+        },
+        {
+          "icon": "&#128218;",
+          "h": "Guides",
+          "items": [
+            "Plain-language explainers of the acronyms",
+            "How to choose pages for each category",
+            "How the workflow actually works",
+            "Internal links into the product cluster"
+          ]
+        },
+        {
+          "icon": "&#128188;",
+          "h": "Proof and tracking",
+          "items": [
+            "Case-study pages for real projects only",
+            "Demo and enquiry events in GA4",
+            "Search Console reporting per cluster",
+            "Schema for the product and organisation"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/resources/what-is-pacs/",
+        "label": "A guide page from our own cluster"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three stages of a software purchase.",
+      "items": [
+        {
+          "h": "The buyer without the vocabulary",
+          "workflow": "An administrator searches a plain description of the problem and lands on a guide that explains the category and links to the product hub.",
+          "result": "A first visit from someone who did not know your category name."
+        },
+        {
+          "h": "The feature on a requirement list",
+          "workflow": "A committee member searches a specific capability written into the tender and reaches the feature page describing exactly how it works.",
+          "result": "A shortlist entry won on a single requirement."
+        },
+        {
+          "h": "The final comparison",
+          "workflow": "Two options are being weighed, and your comparison page lays out the categories honestly, including where each approach suits a different buyer.",
+          "result": "Credibility at the stage where it decides the sale."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Software companies selling into healthcare.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospital software vendors",
+          "p": "HIMS, EMR and billing products."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Imaging and lab software",
+          "p": "PACS, RIS and LIMS categories."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Distributor software vendors",
+          "p": "Selling to dealers and OEMs."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Training platform vendors",
+          "p": "LMS sold to institutes and employers."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Healthcare app companies",
+          "p": "Patient and clinician products."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Device software companies",
+          "p": "Selling to manufacturers."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways SaaS content gets produced.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Unit of work",
+          "Blog posts per month",
+          "Articles per word count",
+          "Clusters with hubs, features, comparisons and guides"
+        ],
+        [
+          "Product understanding",
+          "From a briefing call",
+          "From your homepage",
+          "From building software in the same categories"
+        ],
+        [
+          "Comparison content",
+          "Avoided as risky",
+          "Not attempted",
+          "Written by category, never by unfair naming of rivals"
+        ],
+        [
+          "Existing posts",
+          "Left alone",
+          "Left alone",
+          "Kept, merged or retired so the site gets stronger"
+        ],
+        [
+          "Reporting",
+          "Traffic totals",
+          "None",
+          "Enquiries and demo requests reported per cluster"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare SaaS SEO, answered.",
+      "items": [
+        {
+          "q": "What makes healthcare SaaS different from other B2B SEO?",
+          "a": "The buyer is usually a committee, the vocabulary is technical and regulated, and claims are scrutinised. Content has to be accurate about what the software does and careful about anything resembling a clinical or compliance claim."
+        },
+        {
+          "q": "Can you name competitors in comparison pages?",
+          "a": "We write comparisons by category rather than by brand, for example one approach against another. Naming a rival invites a dispute you have to defend, and category comparisons match how buyers actually search."
+        },
+        {
+          "q": "Do you have proof this structure works?",
+          "a": "This site is the example. Product hubs, feature pages, guides and comparisons are built in the same structure we propose, and the URL architecture is published rather than hidden. Judge it as you would a client's site."
+        },
+        {
+          "q": "Should we keep our existing blog?",
+          "a": "Some of it. Posts that serve a real search are kept or merged into a cluster page. Posts that serve nothing are retired, because a smaller focused site is easier for a search engine to understand than a large scattered one."
+        },
+        {
+          "q": "How long until the clusters perform?",
+          "a": "We will not put a date on it. Content takes time to be indexed, linked and trusted, and competition varies by category. What we report each month is what was published, what was fixed and what changed in Search Console."
+        },
+        {
+          "q": "Do you write case studies for us?",
+          "a": "Yes, for real projects with the customer's consent. We do not invent customers, testimonials or figures, on our own site or on yours, so every case-study page has to be one you can stand behind."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/hospital-seo-services/",
+          "icon": "&#127973;",
+          "b": "Hospital SEO",
+          "p": "For the hospitals you sell to."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "When a cluster needs scale."
+        },
+        {
+          "href": "/seo-services/medical-device-seo/",
+          "icon": "&#129302;",
+          "b": "Medical device SEO",
+          "p": "For hardware makers."
+        },
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "The site the clusters need."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "A guide page",
+          "p": "Our own cluster in use."
+        }
+      ]
+    }
+  ]
+}

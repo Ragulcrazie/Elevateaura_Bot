@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Digital X-Ray PACS | CR/DR Archive, Filmless Viewing | AuraPACS</title>
+<meta name="description" content="Digital X-ray PACS for CR and DR: go filmless, archive every exposure on your own node, let OPD doctors open the image in a browser and send it to the patient.">
+<link rel="canonical" href="https://elevateaura.co.in/aurapacs/digital-x-ray-pacs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AuraPACS by Elevate Aura">
+<meta property="og:title" content="Digital X-Ray PACS | CR/DR Archive, Filmless Viewing | AuraPACS">
+<meta property="og:description" content="Digital X-ray PACS for CR and DR: go filmless, archive every exposure on your own node, let OPD doctors open the image in a browser and send it to the patient.">
+<meta property="og:url" content="https://elevateaura.co.in/aurapacs/digital-x-ray-pacs/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital X-Ray PACS | CR/DR Archive, Filmless Viewing | AuraPACS">
+<meta name="twitter:description" content="Digital X-ray PACS for CR and DR: go filmless, archive every exposure on your own node, let OPD doctors open the image in a browser and send it to the patient.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aurapacs/pacs.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "AuraPACS", "item": "https://elevateaura.co.in/aurapacs.html"}, {"@type": "ListItem", "position": 3, "name": "Digital X-Ray PACS", "item": "https://elevateaura.co.in/aurapacs/digital-x-ray-pacs/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuraPACS Digital X-Ray PACS", "applicationCategory": "HealthApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Digital X-ray PACS for CR and DR: go filmless, archive every exposure on your own node, let OPD doctors open the image in a browser and send it to the patient.", "url": "https://elevateaura.co.in/aurapacs/digital-x-ray-pacs/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does it work with a CR reader as well as a DR panel?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both send DICOM images over the network, and both are pointed at the AuraPACS node the same way. Which unit you have is confirmed on a call before setup."}}, {"@type": "Question", "name": "Can we stop printing film completely?", "acceptedAnswer": {"@type": "Answer", "text": "Most clinics do. The image is on the node for every OPD doctor, the patient gets a WhatsApp link, and a film is printed only when someone specifically asks. Whether you keep a printer for those cases is your call."}}, {"@type": "Question", "name": "Do OPD doctors need any software?", "acceptedAnswer": {"@type": "Answer", "text": "No. The viewer runs in a standard browser on any PC on the clinic network. Each doctor has a login with role-based access, and every view is audited. See DICOM viewer."}}, {"@type": "Question", "name": "What does the patient receive on WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "A secure link that opens the X-ray image and, where one has been written, the report PDF, with no app or login needed at their end. See WhatsApp report sharing."}}, {"@type": "Question", "name": "How much storage do X-rays need?", "acceptedAnswer": {"@type": "Answer", "text": "Less than CT or MR, because each exam is one or a few images rather than a stack. The archive sits on your own node and is sized to your daily volume on a call."}}, {"@type": "Question", "name": "Is AuraPACS a diagnostic device?", "acceptedAnswer": {"@type": "Answer", "text": "No. It stores, displays and shares the images. The interpretation is by your doctor or radiologist."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; AuraPACS, browser-based imaging</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20digital%20X-ray%20unit%20and%20want%20to%20go%20filmless%20with%20AuraPACS." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aurapacs.html">AuraPACS</a></li>
+  <li><span aria-current="page">Digital X-Ray PACS</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For CR and DR X-ray</span>
+      <h1>Digital X-ray PACS: go <span class="hl">filmless</span> and let the OPD doctor see the image in a browser.</h1>
+      <p class="sub">A digital X-ray unit produces one or a few large images per exam. AuraPACS receives them from the CR reader or DR panel, stores them on a node in your clinic, opens them in any browser for the OPD doctor and sends the image and report to the patient on WhatsApp instead of a film envelope.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="https://pacs.elevateaura.co.in/" target="_blank" rel="noopener">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20digital%20X-ray%20unit%20and%20want%20to%20go%20filmless%20with%20AuraPACS." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Every exposure archived</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Opens in the OPD doctor's browser</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Film envelope replaced by a link</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What a digital X-ray PACS does</h2>
+    </div>
+    <div class="ans rv"><p>A digital X-ray PACS takes the image from your CR reader or DR panel over the network, stores it against the patient, and shows it on any screen that needs it. AuraPACS does this on an on-premise node, so the orthopaedic OPD three rooms away opens the chest or knee X-ray in a browser seconds after exposure, and the patient receives it on WhatsApp instead of carrying a film.</p><p>X-ray is the simplest modality for a PACS and the one where going filmless pays back fastest. Each exam is one or a few large images rather than a stack of slices, so the archive grows slowly and the viewing is quick even on a modest laptop.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why clinics stay on film</span>
+      <h2 class="h2">The DR panel is digital. The rest of the workflow is not.</h2>
+      <p class="lead">Many clinics bought a digital X-ray unit and then kept printing film because there was nowhere to put the image.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Film for every exam</h3><p>Each X-ray is printed, sleeved and handed over, at a cost per sheet, even for a routine follow-up.</p></div><div class="pain rv d1"><h3>The image lives on the acquisition PC</h3><p>The only digital copy sits on the CR or DR console, which nobody backs up and which will one day be replaced.</p></div><div class="pain rv d2"><h3>OPD doctors walk to the X-ray room</h3><p>The physician either waits for the film or goes to the console to look at the screen.</p></div><div class="pain rv"><h3>Patients lose films</h3><p>The follow-up visit begins with a search for last month's envelope, then a repeat exposure.</p></div><div class="pain rv d1"><h3>No report on the image</h3><p>Where a radiologist reports, the report is a separate paper unconnected to the digital image.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How it runs</span>
+      <h2 class="h2">From exposure to the doctor's screen.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Ordered</h4><p>Front desk registers the patient and the view; the entry reaches the X-ray worklist.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Exposed</h4><p>The technician selects the patient on the CR or DR console; no retyping.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Received</h4><p>The image is sent as DICOM to the node and filed automatically.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Viewed in OPD</h4><p>The doctor opens the patient's study in a browser in the consulting room.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Reported if needed</h4><p>A radiologist reports on an X-ray template, finalised to a PDF on the study.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Sent to the patient</h4><p>A secure WhatsApp link replaces the film envelope.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What an X-ray clinic uses</span>
+      <h2 class="h2">The parts of AuraPACS that matter most for CR and DR.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128229;</span>From the unit</h3><ul><li>DICOM receive from CR reader or DR panel</li><li>Modality worklist to the console</li><li>Archive on your node</li><li>Encrypted offsite backup</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128187;</span>In the OPD</h3><ul><li>Browser viewer on any consulting-room PC</li><li>Window/level for bone and soft tissue</li><li>Patient history with earlier films</li><li>Role-based access per doctor</li></ul></div><div class="capg rv"><h3><span class="k">&#128221;</span>Reporting</h3><ul><li>X-ray reporting templates</li><li>Sign-off to PDF on the study</li><li>Remote reporting by a visiting radiologist</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128172;</span>To the patient</h3><ul><li>WhatsApp secure link, no login</li><li>Image and report together</li><li>GST invoice from the same system</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/aurapacs/medical-imaging-software/">See the medical imaging software page <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">X-ray specifics</span>
+      <h2 class="h2">What CR and DR need from a PACS.</h2>
+    </div>
+    <div class="tbl rv"><table><thead><tr><th>X-ray requirement</th><th>Why it matters</th><th>In AuraPACS</th></tr></thead><tbody><tr><td>One or few large images</td><td>Reading is about detail and contrast, not scrolling</td><td>Browser viewer with window/level on a large single image</td></tr><tr><td>Fast OPD viewing</td><td>The doctor wants the image during the consultation, not after</td><td>Opens in any browser on the local network</td></tr><tr><td>Filmless delivery</td><td>Film costs money and gets lost</td><td>WhatsApp secure link to the patient</td></tr><tr><td>Follow-up comparison</td><td>Fracture healing is judged against the last film</td><td>Searchable history; prior image opens alongside</td></tr><tr><td>Modest hardware</td><td>Clinics do not have server rooms</td><td>Single on-premise node, cloud layer for backup</td></tr><tr><td>Occasional reporting</td><td>Not every X-ray is reported, but some must be</td><td>Templates and PDF sign-off when required</td></tr></tbody></table></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Anywhere a CR or DR unit is still printing.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Polyclinics</b><p>One X-ray room serving several OPDs.</p></div><div class="w"><div class="g">&#129471;</div><b>Orthopaedic clinics</b><p>Repeat films at every follow-up visit.</p></div><div class="w"><div class="g">&#127974;</div><b>Small hospitals</b><p>Casualty needs the chest film before the radiologist reads it.</p></div><div class="w"><div class="g">&#128300;</div><b>Diagnostic centres</b><p>X-ray alongside ultrasound and CT in one archive.</p></div><div class="w"><div class="g">&#128205;</div><b>Chest and TB clinics</b><p>Serial chest X-rays over months, findable by patient.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Handling X-rays, three ways.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>CDs, film and forwarding</div><div>Pay-per-scan teleradiology</div><div class="us">AuraPACS</div></div><div class="r"><div class="cap">Where the image lives</div><div>Console PC and a film</div><div>Provider's cloud</div><div class="us">Your node, with backup</div></div><div class="r"><div class="cap">OPD doctor's view</div><div>Walks to the X-ray room</div><div>Portal login</div><div class="us">Browser in the consulting room</div></div><div class="r"><div class="cap">Patient receives</div><div>Film envelope</div><div>PDF by email</div><div class="us">WhatsApp link with image and report</div></div><div class="r"><div class="cap">Follow-up comparison</div><div>If the film survived</div><div>If it was uploaded</div><div class="us">Full history on your node</div></div><div class="r"><div class="cap">Cost model</div><div>Per film, every exam</div><div>Per study, every exam</div><div class="us">Owned system, scoped on a call</div></div><div class="r"><div class="cap">Works without internet</div><div>Yes</div><div>No</div><div class="us">Yes</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Digital X-ray PACS, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Does it work with a CR reader as well as a DR panel?</summary><p>Yes. Both send DICOM images over the network, and both are pointed at the AuraPACS node the same way. Which unit you have is confirmed on a call before setup.</p></details><details><summary>Can we stop printing film completely?</summary><p>Most clinics do. The image is on the node for every OPD doctor, the patient gets a WhatsApp link, and a film is printed only when someone specifically asks. Whether you keep a printer for those cases is your call.</p></details><details><summary>Do OPD doctors need any software?</summary><p>No. The viewer runs in a standard browser on any PC on the clinic network. Each doctor has a login with role-based access, and every view is audited. See <a href="/aurapacs/dicom-viewer/">DICOM viewer</a>.</p></details><details><summary>What does the patient receive on WhatsApp?</summary><p>A secure link that opens the X-ray image and, where one has been written, the report PDF, with no app or login needed at their end. See <a href="/aurapacs/whatsapp-medical-report-sharing/">WhatsApp report sharing</a>.</p></details><details><summary>How much storage do X-rays need?</summary><p>Less than CT or MR, because each exam is one or a few images rather than a stack. The archive sits on your own node and is sized to your daily volume on a call.</p></details><details><summary>Is AuraPACS a diagnostic device?</summary><p>No. It stores, displays and shares the images. The interpretation is by your doctor or radiologist.</p></details></div>
+  </div>
+</section>
+<section class="sec-t paper">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related AuraPACS pages</h2></div>
+    <div class="who rv"><a class="w" href="/aurapacs.html"><div class="g">&#129659;</div><b>AuraPACS</b><p>The whole platform.</p></a><a class="w" href="/aurapacs/ultrasound-pacs/"><div class="g">&#128300;</div><b>Ultrasound PACS</b><p>Frames and cine loops.</p></a><a class="w" href="/aurapacs/whatsapp-medical-report-sharing/"><div class="g">&#128172;</div><b>WhatsApp sharing</b><p>Secure link, no login.</p></a><a class="w" href="/aurapacs/dicom-viewer/"><div class="g">&#128065;</div><b>DICOM viewer</b><p>Read in the browser.</p></a><a class="w" href="/resources/what-is-dicom/"><div class="g">&#128218;</div><b>What is DICOM</b><p>The format behind every image.</p></a><a class="w" href="/compare/pacs-vs-dicom-viewer/"><div class="g">&#9878;</div><b>PACS vs viewer</b><p>When a viewer is not enough.</p></a></div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Try the live demo</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20we%20have%20a%20digital%20X-ray%20unit%20and%20want%20to%20go%20filmless%20with%20AuraPACS." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AuraPACS by Elevate Aura</h4>
+        <p class="b">Hybrid on-premise and cloud PACS with a browser DICOM viewer, modality worklist, reporting and WhatsApp report sharing, for clinics, diagnostic centres and hospitals.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>AuraPACS</h4>
+        <a href="/aurapacs.html">AuraPACS home</a>
+        <a href="/aurapacs/pacs-software/">PACS Software</a><a href="/aurapacs/dicom-viewer/">DICOM Viewer</a><a href="/aurapacs/cloud-pacs-software/">Cloud PACS</a><a href="/aurapacs/ris-pacs-software/">RIS PACS</a><a href="/aurapacs/dicom-worklist-software/">DICOM Worklist</a><a href="/hims.html">HIMS</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

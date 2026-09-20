@@ -1,0 +1,202 @@
+{
+  "cluster": "seo-services",
+  "slug": "index",
+  "title": "Healthcare and Medical Equipment SEO Services | Elevate Aura",
+  "meta": "Healthcare SEO services from Chennai: product-line and city pages, technical SEO, schema and enquiry tracking, built by the studio that builds the sites.",
+  "h1": "Healthcare SEO services from the people who <span class=\"hl\">build the pages</span>.",
+  "crumb": "SEO Services",
+  "pill": "Founder-led, Chennai",
+  "sub": "Elevate Aura does SEO for medical-equipment companies, hospitals, clinics and healthcare software businesses: the page structure, the content, the technical work and the tracking that shows which enquiries came from search.",
+  "meta_ticks": [
+    "Pages built, not just audited",
+    "Schema, GA4 and enquiry tracking",
+    "No ranking promises, ever"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our business.",
+  "schema": "Service",
+  "service_type": "Search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "healthcare SEO services",
+  "secondary_keywords": [
+    "medical SEO company India",
+    "healthcare SEO agency Chennai",
+    "medical equipment SEO services",
+    "programmatic SEO agency",
+    "healthcare search marketing"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or marketing lead at a medical-equipment, healthcare or healthcare-software business looking for organic enquiries",
+  "page_type": "hub",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What this service is",
+      "paras": [
+        "Elevate Aura plans, writes and builds the pages a healthcare or medical-equipment business needs in order to be found: a page for each product line, each application, each department or each city where there is real demand, with the technical work, the schema and the analytics that make those pages usable.",
+        "The work is done by the same studio that builds the websites, so an SEO recommendation does not go into a report and wait for a developer. It goes into the site. Medline Robotics, a medical robotics company in Chennai, has 253 product and city SEO landing pages across four product lines, built this way alongside their storefront.",
+        "No one can guarantee a ranking, and we do not offer one. What we commit to is the method, the pages actually shipped, and measurement you can read yourself in GA4 and Search Console."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "What we do",
+      "h2": "SEO services, by what you sell and who searches for it.",
+      "items": [
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "b": "Medical equipment SEO",
+          "p": "Product-line and city pages, technical SEO, schema and enquiry tracking for equipment sellers."
+        },
+        {
+          "href": "/seo-services/healthcare-seo-services/",
+          "b": "Healthcare SEO services",
+          "p": "Service, condition and doctor pages with local intent, for clinics and diagnostic centres."
+        },
+        {
+          "href": "/seo-services/hospital-seo-services/",
+          "b": "Hospital SEO services",
+          "p": "Department and doctor pages, appointment tracking and GA4 events for hospitals."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "b": "Programmatic SEO services",
+          "p": "How page sets are generated responsibly, with unique data per page and doorway pages refused."
+        },
+        {
+          "href": "/seo-services/healthcare-saas-seo/",
+          "b": "Healthcare SaaS SEO",
+          "p": "Feature, comparison, guide and case-study clusters for software sold to hospitals and dealers."
+        },
+        {
+          "href": "/seo-services/medical-equipment-lead-generation/",
+          "b": "Medical equipment lead generation",
+          "p": "Pages plus WhatsApp and enquiry tracking, with every enquiry captured in the CRM."
+        },
+        {
+          "href": "/seo-services/medical-device-seo/",
+          "b": "Medical device SEO",
+          "p": "Product, application and technical-documentation content for manufacturers and OEMs."
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "How the work runs",
+      "h2": "What is different about SEO from a build studio.",
+      "items": [
+        {
+          "icon": "&#128100;",
+          "b": "The person advising can ship",
+          "p": "Ragul Sekar writes the page, changes the template and deploys it. There is no handover between a strategist and a developer."
+        },
+        {
+          "icon": "&#128269;",
+          "b": "Structure before content",
+          "p": "URL architecture, internal links and templates are decided first, so every page added later has a place to sit."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Real data on every page",
+          "p": "Specifications, applications, departments and locations come from your own records, not from a spun paragraph."
+        },
+        {
+          "icon": "&#128202;",
+          "b": "Measured at the enquiry",
+          "p": "GA4 events on forms, calls and WhatsApp taps, so the question is how many enquiries, not how many sessions."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Connected to the CRM",
+          "p": "Enquiries can land in Aura Business as leads with their source, so sales and marketing read the same record."
+        },
+        {
+          "icon": "&#9878;",
+          "b": "We say no to doorway pages",
+          "p": "If a page would be the same page with a city swapped in, it does not get built. That refusal is part of the service."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare SEO services, answered.",
+      "items": [
+        {
+          "q": "Can you guarantee we will rank on page one?",
+          "a": "No, and nobody honestly can. Search engines decide rankings and change how they decide them. What we can commit to is the pages built, the technical fixes made, the schema applied and the reporting, so you can judge the work on what was delivered."
+        },
+        {
+          "q": "Do you only do SEO for sites you built?",
+          "a": "No. We work on existing WordPress, Next.js and other sites. Where the site cannot support the structure the pages need, we say so plainly and scope the fix before quoting any content work."
+        },
+        {
+          "q": "What do you actually deliver each month?",
+          "a": "A named set of pages published, technical changes made, schema and internal links updated, and a report of what changed with GA4 and Search Console data. The deliverable is written into the scope before work starts."
+        },
+        {
+          "q": "How is this different from a traditional SEO retainer?",
+          "a": "A retainer often ends with a list of recommendations for someone else to implement. Here the recommendation and the implementation are the same job, because the studio builds the site as well."
+        },
+        {
+          "q": "Do you write the content or do we?",
+          "a": "We write it, using your specifications, product data, department lists and service details. You review before publication. Where a claim needs a fact we do not have, we ask rather than invent one."
+        },
+        {
+          "q": "Are you able to work with businesses in other cities?",
+          "a": "Yes. The work is remote everywhere in India and abroad, with calls and WhatsApp for reviews. Face-to-face meetings happen in Chennai, and elsewhere in Tamil Nadu where travel is practical."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related services and products",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "The site the pages live on."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128203;",
+          "b": "Product catalogue website",
+          "p": "The structure SEO pages need."
+        },
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128736;",
+          "b": "Aura Business",
+          "p": "Where enquiries become leads."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "253 product and city pages."
+        },
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile apps",
+          "p": "Apps for the same buyers."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#128188;",
+          "b": "Case studies",
+          "p": "The three projects we cite."
+        }
+      ]
+    }
+  ]
+}

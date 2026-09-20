@@ -1,0 +1,331 @@
+{
+  "cluster": "hims",
+  "slug": "dental-clinic-management-software",
+  "title": "Dental Clinic Management Software | Chair to Bill | HIMS",
+  "meta": "Dental clinic management software with chair-wise appointments, patient records, treatment notes per visit, billing and follow-up booking on one record.",
+  "h1": "Dental clinic management software that keeps <span class=\"hl\">every visit, note and bill</span> on one patient record.",
+  "crumb": "Dental Clinic Software",
+  "pill": "For dental practices and multi-chair clinics",
+  "sub": "HIMS for dental clinics runs appointments by dentist and chair, keeps a patient record with treatment notes for every visit, bills each procedure or a treatment plan in stages, and books the follow-up before the patient leaves. There is a dental demo you can open now.",
+  "meta_ticks": [
+    "Appointments by dentist and chair",
+    "Treatment notes per visit on the record",
+    "Staged billing for longer treatment plans"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patient-portal.png",
+    "alt": "HIMS patient portal showing upcoming appointments and visit history for a patient",
+    "bar": "his.elevateaura.co.in/portal"
+  },
+  "demo_href": "/demo/dental.html",
+  "demo_label": "Open the dental demo",
+  "whatsapp_text": "Hi, I run a dental clinic and would like to see the dental version of HIMS.",
+  "primary_keyword": "dental clinic management software",
+  "secondary_keywords": [
+    "dental practice management software India",
+    "dental clinic software",
+    "dentist appointment software",
+    "dental patient record software",
+    "dental billing software",
+    "multi-chair dental clinic software"
+  ],
+  "intent": "commercial",
+  "persona": "Dentist-owner of a single or multi-chair clinic moving off an appointment diary and paper cards",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What dental clinic management software does",
+      "paras": [
+        "Dental clinic management software runs the four things a practice does every day: books appointments by dentist and chair, keeps a patient record with the treatment notes from each visit, bills the procedure or a stage of a longer plan, and schedules the next sitting. HIMS provides these on the same platform that runs hospitals, configured for a clinic, and there is a <a href=\"/demo/dental.html\">dental demo</a> with sample data you can open before a call.",
+        "Dental work is episodic. A root canal or an orthodontic course runs across many visits and many bills, so the record has to show what was done last time, what was planned, what was paid and what is due. Treatment notes are recorded per visit against the patient, and the bill can be raised per sitting or against the agreed plan, with the balance visible at the desk."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The appointment-diary problem",
+      "h2": "A dental clinic runs on the diary, and the diary knows nothing about the patient.",
+      "lead": "The chair is booked, but the notes, the plan and the payments are somewhere else.",
+      "items": [
+        {
+          "h": "Double-booked chairs",
+          "p": "Two dentists, three chairs, one diary, and a patient waiting because the chair is still occupied."
+        },
+        {
+          "h": "The card is the only record",
+          "p": "Treatment notes live on a paper card; if it is misfiled, the previous sitting is lost."
+        },
+        {
+          "h": "Plan and payments do not meet",
+          "p": "The treatment plan says six sittings; the receipts are in a book; the balance due is a calculation at the desk."
+        },
+        {
+          "h": "Follow-ups drift",
+          "p": "The patient is told to return in a fortnight, no slot is booked, and the course stalls."
+        },
+        {
+          "h": "Stock runs out mid-procedure",
+          "p": "Consumables are bought when someone notices the box is empty."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One sitting",
+      "h2": "From booking to the next appointment.",
+      "steps": [
+        {
+          "h": "Booked",
+          "p": "Appointment by dentist, chair and slot; patients can also book on the portal."
+        },
+        {
+          "h": "Arrived",
+          "p": "Checked in at the desk; the record opens for the dentist."
+        },
+        {
+          "h": "Treated",
+          "p": "Treatment notes for the sitting recorded on the patient's record."
+        },
+        {
+          "h": "Billed",
+          "p": "Procedure billed, or a stage of the plan, with the balance shown."
+        },
+        {
+          "h": "Prescribed",
+          "p": "e-Prescription if needed, printed or on the portal."
+        },
+        {
+          "h": "Next sitting",
+          "p": "Follow-up booked before the patient leaves the desk."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "HIMS configured for a dental practice.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Appointments",
+          "items": [
+            "Slots by dentist and chair",
+            "Walk-ins and booked patients in one queue",
+            "Follow-up booking from the chair",
+            "Patient app and portal for booking"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Patient record",
+          "items": [
+            "Registration with UHID and phone lookup",
+            "Treatment notes per visit",
+            "History across all sittings",
+            "e-Prescription"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "Per-procedure or staged billing",
+            "Balance due on the record",
+            "Cash and insurance",
+            "GST where applicable"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Clinic operations",
+          "items": [
+            "Consumables with reorder levels",
+            "Dentist rosters for multi-chair clinics",
+            "Collections on the dashboard",
+            "Imaging via AuraPACS if you scan in-house"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/clinic-management-software/",
+        "label": "See clinic management software"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes at the chair and the desk.",
+      "items": [
+        {
+          "h": "A root canal across three sittings",
+          "workflow": "The plan is recorded at the first visit, each sitting adds treatment notes, and the bill is raised per stage with the balance visible.",
+          "result": "The patient and the desk agree on what is done and what is due."
+        },
+        {
+          "h": "A three-chair Saturday",
+          "workflow": "Appointments are booked per chair; the desk sees which chair is free and moves a walk-in into it.",
+          "result": "Chairs are used, not argued over."
+        },
+        {
+          "h": "A returning patient after a year",
+          "workflow": "The desk searches by phone number; the dentist reads the previous sittings before starting.",
+          "result": "No paper card to find."
+        },
+        {
+          "h": "An orthodontic review",
+          "workflow": "Monthly reviews are booked at the end of each sitting and appear in the patient's portal.",
+          "result": "The course keeps its rhythm."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dental practices of every size.",
+      "items": [
+        {
+          "icon": "&#129463;",
+          "b": "Single-dentist clinics",
+          "p": "Appointments, notes and billing without staff overhead."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-chair clinics",
+          "p": "Several dentists, chairs and rosters."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Specialist practices",
+          "p": "Orthodontics and implants with long treatment courses."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Dental chains",
+          "p": "One record across branches."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front-desk staff",
+          "p": "One screen for booking, billing and follow-ups."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a dental clinic, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Appointments",
+          "Diary",
+          "Not covered",
+          "By dentist and chair, with portal booking"
+        ],
+        [
+          "Treatment notes",
+          "Paper card",
+          "Not covered",
+          "Per visit on the patient record"
+        ],
+        [
+          "Staged billing",
+          "Receipt book",
+          "One bill at a time",
+          "Plan, stages and balance on the record"
+        ],
+        [
+          "Follow-ups",
+          "Told, not booked",
+          "Not covered",
+          "Booked from the chair"
+        ],
+        [
+          "Try before you buy",
+          "Not applicable",
+          "Sales demo",
+          "Dental demo open now"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Dental clinic management software, answered.",
+      "items": [
+        {
+          "q": "Is there a demo for dental clinics?",
+          "a": "Yes. The <a href=\"/demo/dental.html\">dental demo</a> runs with sample data so you can see appointments, patient records, treatment notes and billing as a clinic would use them, before booking a call."
+        },
+        {
+          "q": "Does it have a tooth chart?",
+          "a": "Treatment is recorded as treatment notes per visit on the patient's record, with the plan and the stages billed. If your practice needs a specific charting format, describe it on the call and it is scoped with the project rather than promised here."
+        },
+        {
+          "q": "Can we bill a treatment plan in instalments?",
+          "a": "Yes. A plan can be billed per sitting or per stage, with receipts against it and the balance due shown on the record, so the desk and the patient see the same figure."
+        },
+        {
+          "q": "Can patients book online?",
+          "a": "Yes. The patient app and portal let patients book an appointment and see upcoming sittings. Walk-ins are still handled at the desk and join the same queue."
+        },
+        {
+          "q": "Does it work for a multi-chair clinic with several dentists?",
+          "a": "Yes. Dentists have rosters and each chair has its own slots, so the desk sees which chair is free. Multi-branch chains keep one patient record across branches."
+        },
+        {
+          "q": "How is it set up?",
+          "a": "Setup is done by the founder who built it, in person in Chennai or remotely elsewhere, with your existing patient list brought in from Excel and support on WhatsApp after go-live. Delivery follows a 30-working-day framework where scope allows."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The platform behind the dental version."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "For clinics and polyclinics."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments",
+          "p": "Booking, tokens and queue."
+        },
+        {
+          "href": "/hims/patient-management-software/",
+          "icon": "&#128100;",
+          "b": "Patient management",
+          "p": "One record per patient."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#127915;",
+          "b": "Queue management",
+          "p": "Walk-ins and bookings in order."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "cluster": "case-studies",
+  "slug": "index",
+  "title": "Healthcare Software Case Studies | Elevate Aura",
+  "meta": "Three real platforms shipped by Elevate Aura: a medical equipment operations platform, an e-commerce and distributor platform, and an exam preparation app.",
+  "h1": "Three platforms, built and shipped by <span class=\"hl\">one builder</span>.",
+  "crumb": "Case studies",
+  "pill": "Real projects",
+  "sub": "Elevate Aura publishes only work that actually shipped. Three projects: an operations platform for a medical-equipment distributor, an e-commerce and distributor platform for a medical robotics company, and its own exam-preparation product on Google Play.",
+  "meta_ticks": [
+    "Founder-built, end to end",
+    "Chennai and remote",
+    "Live in 30 working days where scope allows"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I read your case studies and want to discuss a platform for our business.",
+  "date": "2026-09-20",
+  "primary_keyword": "healthcare software case studies",
+  "secondary_keywords": [
+    "medical equipment software case study",
+    "distributor platform case study India",
+    "healthcare software projects Chennai",
+    "custom healthcare platform examples",
+    "edtech app case study"
+  ],
+  "intent": "commercial",
+  "persona": "Owner evaluating whether Elevate Aura has actually shipped platforms like the one they need",
+  "page_type": "hub",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What is on this page",
+      "paras": [
+        "Three projects, each built and shipped end to end by the founder, Ragul Sekar, from Chennai. A 12-module operations platform for a medical-equipment distribution business. An e-commerce and distributor platform with 253 product and city landing pages for a medical robotics company. And Elevate Aura's own government-exam-preparation product, live on Google Play.",
+        "Nothing else appears here. There are no logos from work that was scoped but not shipped, and no figures that cannot be pointed at. What each page gives you instead is the modules that were built, the stack they were built on, what each part replaced, and how the work ran.",
+        "Two of the three became products. Aura Business grew out of the distribution platform, and Aura Learn grew out of the exam-prep app."
+      ]
+    },
+    {
+      "type": "hubgrid",
+      "eyebrow": "The projects",
+      "h2": "Three builds, three different shapes of problem.",
+      "items": [
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "b": "Carna Medicare",
+          "p": "Medical-equipment distribution, Chennai. A 12-module operations platform with a field-staff app, manager dashboard, GST billing, payment tracking and service tracking, on React Native, Supabase and WordPress, shipped in 30 days."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "b": "Medline Robotics",
+          "p": "Medical robotics, Chennai. A storefront, distributor portal, quotations, distributor ordering and UTR payment verification, plus 253 product and city SEO pages across four product lines, on Supabase, JavaScript and Playwright."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "b": "Exam preparation app",
+          "p": "Elevate Aura's own product. An Android app live on Google Play with Telegram practice bots and content automation, on Flutter, Python and Supabase. The origin of Aura Learn."
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "eyebrow": "How projects run",
+      "h2": "The same framework on every build.",
+      "items": [
+        {
+          "icon": "&#128203;",
+          "b": "Fixed scope first",
+          "p": "Discovery settles what is in and what is not before anything is built. A fixed scope is what makes a 30-day timeline meaningful."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Configure to how you work",
+          "p": "Modules and screens are shaped to the existing way of working, with your branding across the dashboard, the app and the invoices."
+        },
+        {
+          "icon": "&#128229;",
+          "b": "Your data migrated in",
+          "p": "Existing Excel data becomes the starting records, so nobody retypes a customer list to begin."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "One builder, end to end",
+          "p": "Ragul Sekar scopes, builds, ships and supports each platform himself, so there is no handover between teams."
+        },
+        {
+          "icon": "&#128172;",
+          "b": "Support from the builder",
+          "p": "Direct on WhatsApp, and in person in Chennai. No ticket queue and no account-management layer."
+        },
+        {
+          "icon": "&#128197;",
+          "b": "Live in 30 working days",
+          "p": "Where scope allows, with the timeline for your project stated in the scope document."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "The products these became",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128230;",
+          "b": "Aura Business",
+          "p": "The operations platform for distributors."
+        },
+        {
+          "href": "/web-development/",
+          "icon": "&#127760;",
+          "b": "Websites and e-commerce",
+          "p": "Storefronts, portals and catalogues."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127891;",
+          "b": "Aura Learn",
+          "p": "Courses, tests and certification."
+        },
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Product and city pages at scale."
+        },
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "Field, patient and learner apps."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#9878;",
+          "b": "Comparisons",
+          "p": "Choosing the right kind of software."
+        }
+      ]
+    }
+  ]
+}

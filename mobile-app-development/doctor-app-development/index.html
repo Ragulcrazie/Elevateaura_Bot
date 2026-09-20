@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Doctor App Development: Roster, Queue, e-Prescription</title>
+<meta name="description" content="Doctor app development for hospitals and clinics: today&#x27;s roster, the live consult queue, EMR on rounds, e-prescription and imaging opened from an AuraPACS link.">
+<link rel="canonical" href="https://elevateaura.co.in/mobile-app-development/doctor-app-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Doctor App Development: Roster, Queue, e-Prescription">
+<meta property="og:description" content="Doctor app development for hospitals and clinics: today&#x27;s roster, the live consult queue, EMR on rounds, e-prescription and imaging opened from an AuraPACS link.">
+<meta property="og:url" content="https://elevateaura.co.in/mobile-app-development/doctor-app-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Doctor App Development: Roster, Queue, e-Prescription">
+<meta name="twitter:description" content="Doctor app development for hospitals and clinics: today&#x27;s roster, the live consult queue, EMR on rounds, e-prescription and imaging opened from an AuraPACS link.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Mobile App Development", "item": "https://elevateaura.co.in/mobile-app-development/"}, {"@type": "ListItem", "position": 3, "name": "Doctor App Development", "item": "https://elevateaura.co.in/mobile-app-development/doctor-app-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Doctor App Development", "serviceType": "Doctor App Development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Doctor app development for hospitals and clinics: today's roster, the live consult queue, EMR on rounds, e-prescription and imaging opened from an AuraPACS link.", "url": "https://elevateaura.co.in/mobile-app-development/doctor-app-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the doctor app replace the HIMS desktop?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a mobile front on the same modules. Detailed documentation, discharge summaries and billing stay on the desktop where a keyboard helps. The app covers what a doctor does while moving: roster, queue, consult, prescription and reports."}}, {"@type": "Question", "name": "How does the doctor view scans?", "acceptedAnswer": {"@type": "Answer", "text": "Each study in AuraPACS has a link that opens the zero-download browser viewer. From the app the doctor opens CT, MR, X-ray or ultrasound with slice scrolling and window/level on a phone or laptop. The diagnostic read remains with the hospital's radiologist."}}, {"@type": "Question", "name": "Can doctors write prescriptions in the app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. E-prescription is a HIMS module. The prescription is saved against the encounter and appears in the pharmacy dispensing queue, so the pharmacy does not retype it from paper."}}, {"@type": "Question", "name": "Can one doctor use it across two hospitals?", "acceptedAnswer": {"@type": "Answer", "text": "If both hospitals run HIMS the roster can show sessions per site. Across different systems each site needs its own connection, which we discuss on the call."}}, {"@type": "Question", "name": "Does it need a strong network?", "acceptedAnswer": {"@type": "Answer", "text": "The queue and EMR need a connection to stay live, but notes and prescriptions drafted on a weak ward connection are held on the device and saved when it returns."}}, {"@type": "Question", "name": "How is access controlled?", "acceptedAnswer": {"@type": "Answer", "text": "Each doctor sees only their own sessions and the patients under their care, with role-based access and an audit log in HIMS. Access is revoked centrally when a doctor leaves."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Mobile apps for healthcare and field teams</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20doctor%20app%20for%20our%20hospital%20or%20clinic." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+  <li><span aria-current="page">Doctor App Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For hospitals, polyclinics and consultants</span>
+      <h1>Doctor app development for the consultant who is <span class="hl">never at a desk</span>.</h1>
+      <p class="sub">A doctor app puts the roster, the consult queue, the patient's record, e-prescription and imaging on the consultant's phone. We build it on HIMS and AuraPACS so nothing is retyped and every action lands in the hospital record.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20doctor%20app%20for%20our%20hospital%20or%20clinic." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Roster and live consult queue</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>E-prescription into the pharmacy queue</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Imaging opened from an AuraPACS link</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What a doctor app does</h2>
+    </div>
+    <div class="ans rv"><p>Doctor app development produces a mobile app for the consultants of a hospital or clinic. It shows each doctor's roster, the consult queue for the current session, the patient's EMR when a token is called, and lets the doctor write an e-prescription, order investigations and open imaging, all against the encounter in the hospital system.</p><p>Elevate Aura builds the doctor app on <a href="/hims.html">HIMS</a>, where doctor rosters, the OP queue, EMR, e-prescription, pharmacy and laboratory already exist as modules, and on <a href="/aurapacs.html">AuraPACS</a> for imaging, which opens in a browser viewer from a link with no download. The app is for Android and iOS from one codebase.</p><p>The result is a consultant who can run a session, do rounds and answer a report query from a phone, while the hospital record stays complete.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The doctor's day</span>
+      <h2 class="h2">Why doctors end up on WhatsApp instead of the hospital system.</h2>
+      <p class="lead">Desktop systems assume the doctor is sitting in front of them. Most of a consultant's day happens somewhere else.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>The roster is a message</h3><p>Session times and room changes arrive as texts from the coordinator, and the doctor arrives to a queue nobody told them about.</p></div><div class="pain rv d1"><h3>Prescriptions on paper</h3><p>Handwritten scripts are retyped at the pharmacy, or not typed at all, so the EMR is missing the one thing that matters.</p></div><div class="pain rv d2"><h3>Reports as photos</h3><p>A junior sends a photo of the X-ray to the consultant's phone. The read is done on a compressed image with no window and level.</p></div><div class="pain rv"><h3>Rounds without the chart</h3><p>On the ward the doctor asks the nurse for last night's vitals because the system is at the station, not at the bed.</p></div><div class="pain rv d1"><h3>No idea of the queue</h3><p>The consultant does not know how many patients are waiting, so sessions overrun and walk-ins are turned away.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">A session in the app</span>
+      <h2 class="h2">From the morning roster to the last token.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Roster</h4><p>Today's sessions, rooms and expected numbers, straight from the HIMS roster.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Queue</h4><p>Live token list for the session, with arrived and waiting states.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Call the token</h4><p>The patient's EMR opens: history, allergies, previous prescriptions, results.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Consult</h4><p>Structured notes, e-prescription and investigation orders against the encounter.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Imaging</h4><p>CT, MR, X-ray or ultrasound opened in the AuraPACS browser viewer from the app.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Close</h4><p>Token completed, pharmacy and lab queues updated, next patient called.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The doctor app, screen by screen.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128197;</span>Schedule</h3><ul><li>Personal roster across sites</li><li>Session and room changes</li><li>Leave and cover requests</li><li>OT schedule where relevant</li></ul></div><div class="capg rv d1"><h3><span class="k">&#127915;</span>Queue and consult</h3><ul><li>Live consult queue per session</li><li>Call, skip and recall tokens</li><li>EMR view with structured notes</li><li>E-prescription into the pharmacy queue</li><li>Lab and imaging orders</li></ul></div><div class="capg rv"><h3><span class="k">&#129516;</span>Results and imaging</h3><ul><li>Verified lab results with alerts</li><li>AuraPACS viewer link per study</li><li>Finalised radiology report PDF</li><li>Search a patient's full history</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Ward and access</h3><ul><li>Bed list and rounds view</li><li>ICU vitals per bed where deployed</li><li>Role-based access, audited</li><li>Works on a poor ward connection</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/hims/doctor-management-software/">See the doctor module in HIMS <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">Three moments a doctor app earns its place.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A report query at 9 pm</h3><p class="r"><b>Workflow:</b> A referrer asks about a CT done that afternoon. The consultant opens the study from the app in the AuraPACS viewer, scrolls the slices and replies.</p><p><b>Result:</b> No trip to the reading room and no photo of a screen.</p></div><div class="u rv d1"><h3>An overrunning OP session</h3><p class="r"><b>Workflow:</b> The queue shows twelve waiting with forty minutes left. The doctor asks the front desk in the app to move new walk-ins to the evening session.</p><p><b>Result:</b> Patients are told at registration, not after two hours in a chair.</p></div><div class="u rv"><h3>Rounds at 7 am</h3><p class="r"><b>Workflow:</b> The doctor walks the ward with the bed list, reads overnight vitals and updates the e-prescription per bed.</p><p><b>Result:</b> Pharmacy and nursing see the changes before the round ends.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Doctors, and the people who schedule them.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#128104;&#8205;&#9877;&#65039;</div><b>Consultants</b><p>Multiple sites, one roster.</p></div><div class="w"><div class="g">&#127973;</div><b>Hospital medical directors</b><p>Complete EMR and prescription records.</p></div><div class="w"><div class="g">&#129658;</div><b>Polyclinics</b><p>Visiting doctors with sessions to fill.</p></div><div class="w"><div class="g">&#129516;</div><b>Radiologists</b><p>Remote reading through AuraPACS.</p></div><div class="w"><div class="g">&#128137;</div><b>Nursing supervisors</b><p>Orders reach the ward without a call.</p></div><div class="w"><div class="g">&#128138;</div><b>Pharmacy</b><p>Prescriptions arrive typed, not photographed.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Chat groups, a standalone app, or a doctor app on HIMS.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>WhatsApp groups</div><div>Standalone doctor app</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Where the prescription lands</div><div>A photo in a chat</div><div>In the app's own database</div><div class="us">In the HIMS EMR and pharmacy queue</div></div><div class="r"><div class="cap">Imaging</div><div>Screen photos</div><div>Rarely</div><div class="us">AuraPACS viewer with slice scrolling and window/level</div></div><div class="r"><div class="cap">Queue</div><div>Coordinator messages</div><div>Manual entry</div><div class="us">Live from HIMS tokens</div></div><div class="r"><div class="cap">Record completeness</div><div>None</div><div>Partial</div><div class="us">Every action against the encounter</div></div><div class="r"><div class="cap">Who maintains it</div><div>Nobody</div><div>Vendor ticket queue</div><div class="us">The builder of HIMS and the app</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Doctor app development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Does the doctor app replace the HIMS desktop?</summary><p>No. It is a mobile front on the same modules. Detailed documentation, discharge summaries and billing stay on the desktop where a keyboard helps. The app covers what a doctor does while moving: roster, queue, consult, prescription and reports.</p></details><details><summary>How does the doctor view scans?</summary><p>Each study in AuraPACS has a link that opens the zero-download browser viewer. From the app the doctor opens CT, MR, X-ray or ultrasound with slice scrolling and window/level on a phone or laptop. The diagnostic read remains with the hospital's radiologist.</p></details><details><summary>Can doctors write prescriptions in the app?</summary><p>Yes. E-prescription is a HIMS module. The prescription is saved against the encounter and appears in the pharmacy dispensing queue, so the pharmacy does not retype it from paper.</p></details><details><summary>Can one doctor use it across two hospitals?</summary><p>If both hospitals run HIMS the roster can show sessions per site. Across different systems each site needs its own connection, which we discuss on the call.</p></details><details><summary>Does it need a strong network?</summary><p>The queue and EMR need a connection to stay live, but notes and prescriptions drafted on a weak ward connection are held on the device and saved when it returns.</p></details><details><summary>How is access controlled?</summary><p>Each doctor sees only their own sessions and the patients under their care, with role-based access and an audit log in HIMS. Access is revoked centrally when a doctor leaves.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related doctor app pages</h2></div>
+    <div class="who rv"><a class="w" href="/mobile-app-development/"><div class="g">&#128241;</div><b>Mobile app development</b><p>All app types.</p></a><a class="w" href="/mobile-app-development/hospital-mobile-app-development/"><div class="g">&#127973;</div><b>Hospital apps</b><p>Patient and staff apps together.</p></a><a class="w" href="/mobile-app-development/patient-app-development/"><div class="g">&#128100;</div><b>Patient app</b><p>The other side of the consult.</p></a><a class="w" href="/hims/hospital-emr-software/"><div class="g">&#128203;</div><b>EMR in HIMS</b><p>The record the app writes to.</p></a><a class="w" href="/aurapacs/dicom-viewer/"><div class="g">&#129516;</div><b>DICOM viewer</b><p>The viewer the app opens.</p></a><a class="w" href="/resources/what-is-pacs/"><div class="g">&#128218;</div><b>Guide</b><p>What a PACS is.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Need an app your team will actually use?</h2>
+      <p>Tell us the workflow it has to support. We will scope the app, the backend it talks to and the timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20doctor%20app%20for%20our%20hospital%20or%20clinic." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">Android and iOS apps for hospitals, clinics, medical-equipment companies and field teams, built on React Native and Flutter with GPS, offline mode and Play Store publishing.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Mobile App Development</h4>
+        <a href="/mobile-app-development/">Mobile App Development home</a>
+        <a href="/mobile-app-development/">Mobile App Development</a><a href="/aura-business.html">Aura Business</a><a href="/hims.html">HIMS</a><a href="/product-development.html">Device software</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

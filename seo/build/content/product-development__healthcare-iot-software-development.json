@@ -1,0 +1,326 @@
+{
+  "cluster": "product-development",
+  "slug": "healthcare-iot-software-development",
+  "title": "Healthcare IoT Software Development | Elevate Aura",
+  "meta": "Healthcare IoT software development from device to gateway to cloud to dashboard: firmware, telemetry on Supabase or Azure and a companion app.",
+  "h1": "Healthcare IoT software from the device to the <span class=\"hl\">dashboard</span>, by one builder.",
+  "crumb": "Healthcare IoT Software",
+  "pill": "Software-only, device to cloud",
+  "sub": "Elevate Aura writes every software layer of a connected healthcare device: the firmware on the device, the gateway or phone link, the telemetry pipeline on Supabase or Azure, and the companion app or web dashboard where the data is read. Your hardware, our software, one engagement.",
+  "meta_ticks": [
+    "Firmware, telemetry, app and dashboard",
+    "Supabase or Azure for the cloud side",
+    "Written to your hardware spec"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we are building a connected healthcare device and need the software from device to cloud. Can we talk?",
+  "cta_h2": "Tell us what the device measures and who needs to see it.",
+  "cta_p": "We will map the layers from firmware to dashboard, scope the software side and be clear about where your hardware team's work ends and ours begins.",
+  "primary_keyword": "healthcare IoT software development",
+  "secondary_keywords": [
+    "medical IoT software development",
+    "connected medical device software",
+    "IoT healthcare solution development",
+    "remote patient monitoring software development",
+    "healthcare IoT platform development India",
+    "medical device cloud connectivity"
+  ],
+  "intent": "commercial",
+  "persona": "Product owner at a healthcare device company building a connected product",
+  "page_type": "product",
+  "phase": 2,
+  "service_type": "Healthcare IoT software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare IoT software development means here",
+      "paras": [
+        "Healthcare IoT software development is the set of software layers that take a reading from a device and put it in front of a person who needs it: firmware on the device, a link to a phone or gateway, a cloud pipeline that stores and processes the telemetry, and an app or dashboard that shows it. Elevate Aura writes all four layers, or the ones you are missing.",
+        "The device firmware is written in C/C++ or MicroPython to your hardware spec. The link is BLE, Wi-Fi, serial or a wired protocol as the hardware allows. The telemetry pipeline runs on Supabase or Azure. The companion app is built in React Native and the dashboard on the web. Hardware design, manufacturing and regulatory certification stay with your team."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The connected-device problem",
+      "h2": "Four layers, four vendors, and the reading still does not arrive.",
+      "lead": "A connected device fails at the seams: the firmware sends what the gateway does not expect, the cloud stores what the dashboard cannot read.",
+      "items": [
+        {
+          "h": "Data formats disagree",
+          "p": "The firmware team and the app team each defined a payload, and neither matches the database schema."
+        },
+        {
+          "h": "Gaps in the record",
+          "p": "When the connection drops the readings are lost, because nobody owned buffering on the device."
+        },
+        {
+          "h": "Cloud built for demo scale",
+          "p": "The pipeline works for one device on the bench and falls over with a fleet."
+        },
+        {
+          "h": "Nobody owns the whole path",
+          "p": "A missing reading takes three vendors and a week to trace."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a sensor reading to a screen, one layer at a time.",
+      "steps": [
+        {
+          "h": "Map the path",
+          "p": "Device, link, cloud and dashboard defined with one data model."
+        },
+        {
+          "h": "Firmware",
+          "p": "Sampling, buffering and the comms layer on the device."
+        },
+        {
+          "h": "Link",
+          "p": "BLE to a phone, Wi-Fi to the cloud, or serial to a gateway."
+        },
+        {
+          "h": "Pipeline",
+          "p": "Ingestion, storage and processing on Supabase or Azure."
+        },
+        {
+          "h": "App and dashboard",
+          "p": "React Native companion app and a web view for the fleet."
+        },
+        {
+          "h": "Test end to end",
+          "p": "On your hardware, from reading to screen, then handover."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is built",
+      "h2": "The four layers of a connected healthcare device.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Device",
+          "items": [
+            "Firmware in C/C++ or MicroPython",
+            "Sensor sampling and local buffering",
+            "Power management",
+            "OTA update path"
+          ]
+        },
+        {
+          "icon": "&#128225;",
+          "h": "Link",
+          "items": [
+            "BLE to a companion phone",
+            "Wi-Fi direct to cloud",
+            "Serial, Modbus or CAN to a gateway",
+            "Reconnect and retry handling"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Cloud",
+          "items": [
+            "Telemetry ingestion on Supabase or Azure",
+            "Device registry and identity",
+            "Alerts on thresholds you define",
+            "Logs and remote diagnostics"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "App and dashboard",
+          "items": [
+            "React Native companion app",
+            "Web dashboard for a fleet",
+            "User roles",
+            "Exports and reports"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a healthcare IoT build looks like.",
+      "items": [
+        {
+          "h": "A home monitoring device reporting to a clinic",
+          "workflow": "The device streams readings over BLE to a patient app, which syncs them to the cloud; a clinic dashboard shows each patient's trend.",
+          "result": "The clinic sees the reading without the patient visiting."
+        },
+        {
+          "h": "Hospital equipment reporting its own status",
+          "workflow": "Firmware sends usage and fault codes over Wi-Fi to the pipeline; the service dashboard flags devices that need attention.",
+          "result": "A fault is known before the ward calls."
+        },
+        {
+          "h": "An instrument on a wired network",
+          "workflow": "The analyser speaks Modbus to a gateway, which forwards telemetry to the cloud and a lab dashboard.",
+          "result": "Results and instrument health in one view."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Healthcare companies making a device that connects.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Remote monitoring makers",
+          "p": "Home and wearable devices reporting to clinicians."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital equipment makers",
+          "p": "Devices that report status and usage."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics companies",
+          "p": "Instruments sending results to the cloud."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Medical robotics",
+          "p": "Telemetry and remote supervision."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Equipment service firms",
+          "p": "Fleet health for the installed base."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Health-tech founders",
+          "p": "A connected product from one builder."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Assembling a connected device stack, three ways.",
+      "cols": [
+        "Separate vendors per layer",
+        "IoT platform subscription",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Data model",
+          "Agreed by committee",
+          "Theirs",
+          "One model from firmware to dashboard"
+        ],
+        [
+          "Firmware included",
+          "Separate vendor",
+          "No",
+          "Yes, to your hardware spec"
+        ],
+        [
+          "Cloud",
+          "Whoever the app team knows",
+          "Locked to the platform",
+          "Supabase or Azure, in your account"
+        ],
+        [
+          "Companion app",
+          "Separate vendor",
+          "Generic",
+          "React Native, built to the device"
+        ],
+        [
+          "Who traces a missing reading",
+          "Three vendors",
+          "Support ticket",
+          "The person who wrote every layer"
+        ],
+        [
+          "Hardware boundary",
+          "Varies",
+          "n/a",
+          "Explicit: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare IoT software, answered.",
+      "items": [
+        {
+          "q": "Which layers can you take on?",
+          "a": "All four: device firmware, the communication link, the cloud telemetry pipeline and the app or dashboard. If your team already has one layer, we write the others to fit it. See <a href=\"/product-development/iot-product-development/\">IoT product development</a> for the general service."
+        },
+        {
+          "q": "Where does the data live?",
+          "a": "In a Supabase or Azure project that belongs to you. The pipeline, database and any processing are built in your account, so you keep control of the data and can move or extend it without depending on us."
+        },
+        {
+          "q": "Do you build the device hardware?",
+          "a": "No. Elevate Aura is software-only. The device, sensors, PCB, enclosure and manufacturing are your hardware team's or your contract manufacturer's. We write the firmware to their specification and test it on the boards they provide."
+        },
+        {
+          "q": "What about regulatory approval of the device?",
+          "a": "That remains with your team. We provide design and interface documentation for the software we write, which your team can use in its own submissions, but we do not claim compliance of the device or the software with any regulation."
+        },
+        {
+          "q": "Can the device work when the connection drops?",
+          "a": "Yes. Firmware buffers readings locally and the link layer retries and resyncs when the connection returns, so the record on the cloud has no gaps from a dropped connection. See <a href=\"/product-development/device-to-cloud-telemetry-software/\">device-to-cloud telemetry</a>."
+        },
+        {
+          "q": "How is the engagement scoped?",
+          "a": "Fixed scope, agreed on a call about the device, the link, the volume of data and who reads it. You get a plan with the layers, the timeline and the handover, and you own all the code at the end."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/iot-product-development/",
+          "icon": "&#9729;",
+          "b": "IoT product development",
+          "p": "Device to cloud to dashboard."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "Logs, alerts, fleet view."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128187;",
+          "b": "Device dashboard",
+          "p": "Fleet view with roles."
+        },
+        {
+          "href": "/product-development/wifi-connected-device-software/",
+          "icon": "&#128246;",
+          "b": "Wi-Fi devices",
+          "p": "Provisioning and cloud sync."
+        },
+        {
+          "href": "/product-development/medical-device-firmware-development/",
+          "icon": "&#128268;",
+          "b": "Medical device firmware",
+          "p": "The device layer."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

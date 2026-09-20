@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Patient App Development: Appointments, Reports, Bills</title>
+<meta name="description" content="Patient app development for hospitals, clinics and diagnostic centres: appointments, token position, reports, bills and WhatsApp reminders, tied to your system.">
+<link rel="canonical" href="https://elevateaura.co.in/mobile-app-development/patient-app-development/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elevate Aura">
+<meta property="og:title" content="Patient App Development: Appointments, Reports, Bills">
+<meta property="og:description" content="Patient app development for hospitals, clinics and diagnostic centres: appointments, token position, reports, bills and WhatsApp reminders, tied to your system.">
+<meta property="og:url" content="https://elevateaura.co.in/mobile-app-development/patient-app-development/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Patient App Development: Appointments, Reports, Bills">
+<meta name="twitter:description" content="Patient app development for hospitals, clinics and diagnostic centres: appointments, token position, reports, bills and WhatsApp reminders, tied to your system.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/assets/css/cluster.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Mobile App Development", "item": "https://elevateaura.co.in/mobile-app-development/"}, {"@type": "ListItem", "position": 3, "name": "Patient App Development", "item": "https://elevateaura.co.in/mobile-app-development/patient-app-development/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Service", "name": "Patient App Development", "serviceType": "Patient App Development", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Patient app development for hospitals, clinics and diagnostic centres: appointments, token position, reports, bills and WhatsApp reminders, tied to your system.", "url": "https://elevateaura.co.in/mobile-app-development/patient-app-development/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do reminders on WhatsApp work?", "acceptedAnswer": {"@type": "Answer", "text": "Review dates, medication schedules and appointment confirmations trigger WhatsApp messages from the hospital's WhatsApp Business number. Report links are secure links that open without a login. The templates and timing are set with you before launch."}}, {"@type": "Question", "name": "Can patients pay in the app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Bills are generated from the billing module and can be paid online through a payment gateway chosen with you, or settled at the counter, with receipts visible in the app either way."}}, {"@type": "Question", "name": "Can a patient book for family members?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. One mobile login holds several patient profiles, each linked to its own registration record, so a parent or carer can manage appointments and reports for the whole household."}}, {"@type": "Question", "name": "Do we need HIMS to have a patient app?", "acceptedAnswer": {"@type": "Answer", "text": "No, but the app needs a system of record with an API for appointments, results and billing. HIMS provides all of these; another system can be connected depending on what it exposes."}}, {"@type": "Question", "name": "What about patient data and consent?", "acceptedAnswer": {"@type": "Answer", "text": "Records stay in your backend with role-based access and an audit log. Records built on HIMS are structured to be ABHA and ABDM ready. We do not claim certifications and we build consent steps to the rules you set."}}, {"@type": "Question", "name": "How quickly can it launch?", "acceptedAnswer": {"@type": "Answer", "text": "Live in 30 working days where scope allows, typically with booking, tokens and reports first. Payments and reminders can be part of the first release or follow in the same codebase."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Mobile apps for healthcare and field teams</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20patient%20app." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/mobile-app-development/">Mobile App Development</a></li>
+  <li><span aria-current="page">Patient App Development</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap ">
+    <div>
+      <span class="pill"><span class="d"></span>For hospitals, clinics and diagnostic centres</span>
+      <h1>Patient app development that stops the phone ringing at the <span class="hl">front desk</span>.</h1>
+      <p class="sub">A patient app should answer the four questions patients ring about: when is my appointment, where am I in the queue, is my report ready, and what do I owe. We build it on the hospital system and back it with WhatsApp reminders, for Android and iOS.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20patient%20app." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Booking, tokens, reports, bills</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp reminders and report links</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Family profiles on one login</span></div>
+      
+    </div>
+    
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">What patient app development delivers</h2>
+    </div>
+    <div class="ans rv"><p>Patient app development produces the app your patients install to deal with your hospital or clinic without calling: book an appointment with the right doctor, check in and watch their token, receive lab and imaging reports, view and pay bills, and get reminders on WhatsApp for follow-ups and medication.</p><p>Elevate Aura builds patient apps on <a href="/hims.html">HIMS</a>, which already includes a patient app and portal module, appointments, queue and tokens, LIMS, AuraPACS imaging and billing. Where you run another system the app connects through its API. WhatsApp messaging is built in, because that is where Indian patients actually read.</p><p>The app carries your brand on the store and on every screen, and ships for Android and iOS from one React Native or Flutter codebase.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Why the front desk phone rings</span>
+      <h2 class="h2">Every call to reception is a question the app should have answered.</h2>
+      <p class="lead">Listen to a hospital switchboard for an hour and you will hear the patient app's specification.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Is the doctor in today?</h3><p>Rosters change, and the only way to know is to call. The app shows the roster the hospital actually runs on.</p></div><div class="pain rv d1"><h3>How long is the wait?</h3><p>Patients arrive early and sit for hours, or arrive late and lose the slot. A live token position fixes both.</p></div><div class="pain rv d2"><h3>Is my report ready?</h3><p>Reports are printed and collected. A verified result should arrive as a WhatsApp link and a PDF in the app the moment it is finalised.</p></div><div class="pain rv"><h3>What do I owe?</h3><p>A bill on paper at the counter, a different number on the phone. One bill, from the billing module, in the app.</p></div><div class="pain rv d1"><h3>I forgot the follow-up</h3><p>Review dates and medication schedules are written on a prescription and forgotten. Reminders on WhatsApp bring the patient back.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The patient's path</span>
+      <h2 class="h2">From download to discharge, without a phone call.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>Register</h4><p>Mobile number login, patient profile linked to the hospital's registration record.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>Book</h4><p>Pick a department, a doctor and a slot from the live roster.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Check in</h4><p>Token issued on arrival, position shown live, notice sent before the turn.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>Consult and pay</h4><p>Bill generated from the encounter, paid in the app or at the counter.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Reports</h4><p>Lab results and imaging reports delivered as PDF and secure WhatsApp link.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>Follow up</h4><p>Review reminders and medication schedules on WhatsApp, rebook in a tap.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">What is included</span>
+      <h2 class="h2">The patient app, feature by feature.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#128197;</span>Appointments</h3><ul><li>Doctor and department search</li><li>Live roster and slot booking</li><li>Reschedule and cancel</li><li>Family members on one login</li></ul></div><div class="capg rv d1"><h3><span class="k">&#127915;</span>Queue</h3><ul><li>Check-in on arrival</li><li>Live token position</li><li>Turn-approaching notice</li><li>Multi-department visits</li></ul></div><div class="capg rv"><h3><span class="k">&#128203;</span>Records and reports</h3><ul><li>Verified lab results</li><li>Radiology reports from AuraPACS</li><li>Prescriptions from the EMR</li><li>Visit history</li></ul></div><div class="capg rv d1"><h3><span class="k">&#8377;</span>Bills and messaging</h3><ul><li>Bills, receipts and online payment</li><li>WhatsApp reminders and report links</li><li>Push and in-app notices</li><li>Feedback after the visit</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/hims/patient-management-software/">See patient management in HIMS <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">What a patient app changes at the counter.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>A diabetic review every three months</h3><p class="r"><b>Workflow:</b> The doctor sets the review date at the consult; the app sends a WhatsApp reminder a week before with a rebook link.</p><p><b>Result:</b> The patient comes back on time and the slot is booked without a call.</p></div><div class="u rv d1"><h3>A lab result on a Saturday</h3><p class="r"><b>Workflow:</b> The lab verifies the result in LIMS; the app delivers the PDF and a WhatsApp link that opens without a login.</p><p><b>Result:</b> No Monday visit to collect paper.</p></div><div class="u rv"><h3>A parent with three children</h3><p class="r"><b>Workflow:</b> One login holds all three profiles, each with its own appointments, vaccinations and reports.</p><p><b>Result:</b> One phone, one app, the whole family's records.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Every provider whose patients call to ask.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127973;</div><b>Hospitals</b><p>OP booking, tokens, reports, bills.</p></div><div class="w"><div class="g">&#129658;</div><b>Clinics and polyclinics</b><p>Simple booking and follow-ups.</p></div><div class="w"><div class="g">&#128300;</div><b>Diagnostic centres</b><p>Home collection booking and report delivery.</p></div><div class="w"><div class="g">&#129463;</div><b>Dental clinics</b><p>Treatment plans and recall reminders.</p></div><div class="w"><div class="g">&#128118;</div><b>Paediatric practices</b><p>Family profiles and vaccination schedules.</p></div><div class="w"><div class="g">&#128138;</div><b>Chronic care programmes</b><p>Medication and review reminders.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">A booking marketplace, a template app, or your own patient app.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Booking marketplace</div><div>Template builder</div><div class="us">Elevate Aura</div></div><div class="r"><div class="cap">Whose brand</div><div>The marketplace</div><div>Yours, on a shared template</div><div class="us">Yours, on your own store listing</div></div><div class="r"><div class="cap">Connected to your system</div><div>Email of the booking</div><div>Rarely</div><div class="us">Live to HIMS or your API</div></div><div class="r"><div class="cap">Reports and bills</div><div>No</div><div>Manual upload</div><div class="us">From LIMS, AuraPACS and billing</div></div><div class="r"><div class="cap">WhatsApp</div><div>Marketplace messages</div><div>Sometimes</div><div class="us">Reminders and secure report links built in</div></div><div class="r"><div class="cap">Who owns the patient relationship</div><div>The marketplace</div><div>You</div><div class="us">You</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Patient app development, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>How do reminders on WhatsApp work?</summary><p>Review dates, medication schedules and appointment confirmations trigger WhatsApp messages from the hospital's WhatsApp Business number. Report links are secure links that open without a login. The templates and timing are set with you before launch.</p></details><details><summary>Can patients pay in the app?</summary><p>Yes. Bills are generated from the billing module and can be paid online through a payment gateway chosen with you, or settled at the counter, with receipts visible in the app either way.</p></details><details><summary>Can a patient book for family members?</summary><p>Yes. One mobile login holds several patient profiles, each linked to its own registration record, so a parent or carer can manage appointments and reports for the whole household.</p></details><details><summary>Do we need HIMS to have a patient app?</summary><p>No, but the app needs a system of record with an API for appointments, results and billing. HIMS provides all of these; another system can be connected depending on what it exposes.</p></details><details><summary>What about patient data and consent?</summary><p>Records stay in your backend with role-based access and an audit log. Records built on HIMS are structured to be ABHA and ABDM ready. We do not claim certifications and we build consent steps to the rules you set.</p></details><details><summary>How quickly can it launch?</summary><p>Live in 30 working days where scope allows, typically with booking, tokens and reports first. Payments and reminders can be part of the first release or follow in the same codebase.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related patient app pages</h2></div>
+    <div class="who rv"><a class="w" href="/mobile-app-development/"><div class="g">&#128241;</div><b>Mobile app development</b><p>All app types.</p></a><a class="w" href="/mobile-app-development/hospital-mobile-app-development/"><div class="g">&#127973;</div><b>Hospital apps</b><p>Patient and staff apps together.</p></a><a class="w" href="/mobile-app-development/doctor-app-development/"><div class="g">&#129657;</div><b>Doctor app</b><p>The consultant's side.</p></a><a class="w" href="/mobile-app-development/healthcare-mobile-app-development/"><div class="g">&#128736;</div><b>Healthcare apps</b><p>How every app is built.</p></a><a class="w" href="/aurapacs/whatsapp-medical-report-sharing/"><div class="g">&#128172;</div><b>WhatsApp reports</b><p>Secure report links.</p></a><a class="w" href="/compare/hims-vs-hospital-erp/"><div class="g">&#9878;</div><b>HIMS vs hospital ERP</b><p>Which system sits behind the app.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Need an app your team will actually use?</h2>
+      <p>Tell us the workflow it has to support. We will scope the app, the backend it talks to and the timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/pages/contact.html">Talk to us</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20patient%20app." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Elevate Aura</h4>
+        <p class="b">Android and iOS apps for hospitals, clinics, medical-equipment companies and field teams, built on React Native and Flutter with GPS, offline mode and Play Store publishing.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Mobile App Development</h4>
+        <a href="/mobile-app-development/">Mobile App Development home</a>
+        <a href="/mobile-app-development/">Mobile App Development</a><a href="/aura-business.html">Aura Business</a><a href="/hims.html">HIMS</a><a href="/product-development.html">Device software</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

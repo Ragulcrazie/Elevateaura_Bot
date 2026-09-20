@@ -1,0 +1,219 @@
+{
+  "cluster": "resources",
+  "slug": "how-medical-equipment-service-management-works",
+  "title": "How Medical Equipment Service Management Works",
+  "meta": "From call intake and dispatch to job cards, spares, SLA and invoice. A plain guide to running an equipment service desk and the numbers to watch.",
+  "h1": "How medical equipment service management works, <span class=\"hl\">step by step</span>.",
+  "crumb": "Service management",
+  "pill": "Guide",
+  "sub": "A service desk is a chain: a call arrives, an engineer is sent, a job card is closed, parts are consumed and an invoice follows. This guide walks each link and shows where the chain usually breaks.",
+  "meta_ticks": [
+    "Written by a team that builds service software",
+    "Field workflows, not theory",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the service management guide and want to discuss our service desk.",
+  "date": "2026-09-20",
+  "primary_keyword": "medical equipment service management",
+  "secondary_keywords": [
+    "equipment service workflow",
+    "field service job card",
+    "service call management process",
+    "technician dispatch process",
+    "service SLA tracking",
+    "service desk for equipment dealers"
+  ],
+  "intent": "informational",
+  "persona": "Service manager or owner of a medical equipment dealership running field engineers",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Service management in two paragraphs",
+      "paras": [
+        "Medical equipment service management is the handling of everything that happens after a machine is installed: the breakdown calls, the scheduled visits, the engineers who attend, the spare parts they fit, the response times you promised and the invoices that follow. It is a chain with six links, and a business is only as reliable as its weakest one.",
+        "Done on paper, each link is a separate memory. The call is in a diary, dispatch happens by phone, the job card is a pad in a bag, the spare leaves the shelf unrecorded and the invoice follows weeks later if somebody remembers."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The chain",
+      "h2": "Six links from the phone call to the payment",
+      "lead": "Each of these steps produces information the next one needs. Where the information does not travel, work is repeated or lost.",
+      "body": [
+        {
+          "h3": "1. Call intake"
+        },
+        "Somebody rings, sends a message or raises a ticket. The desk needs the customer, the machine by serial number, the fault in the caller's words and whether the machine is under warranty, under contract or uncovered. That last answer decides chargeability, and it has to be on screen in seconds.",
+        {
+          "h3": "2. Dispatch"
+        },
+        "A technician is assigned. A good assignment considers who is nearest, who is already booked, who is trained on that model and whether the likely spare is in the van. Sending the wrong engineer costs two visits instead of one.",
+        {
+          "h3": "3. The job card"
+        },
+        "On site the engineer records what was found, what was done, meter readings, photographs of the fault and the customer's signature on completion. A mobile job card with offline capability matters because hospital basements and radiology rooms are exactly where mobile signal fails.",
+        {
+          "h3": "4. Spares"
+        },
+        "Any part fitted must be issued against the job, so stock falls, the part joins that machine's history and, if the visit is chargeable, reaches the invoice. Parts recorded only in a notebook are the largest source of quiet loss in a service business.",
+        {
+          "h3": "5. SLA"
+        },
+        "SLA means service level agreement, the response time you committed to. A timer starts at intake and stops at attendance, so breaches are visible while they can still be fixed.",
+        {
+          "h3": "6. Invoice and close"
+        },
+        "The closed job produces a service invoice with GST where the work is chargeable, or closes against the contract where it is not. Payment is tracked against it, and the whole event is added to the machine's history."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The record that ties it together",
+      "h2": "Service history belongs to the machine, not the customer",
+      "lead": "A hospital may own thirty of your machines. Filing service events under the hospital tells you nothing useful about any of them.",
+      "body": [
+        "Keep history against the serial number, and several questions become answerable that were previously matters of opinion:",
+        {
+          "ul": [
+            "Which model fails most often, and at what age, which is the input to pricing a comprehensive contract.",
+            "Whether this particular unit has become a recurring cost you should be replacing rather than repairing.",
+            "What was fitted last time, so the engineer arrives with the right part instead of diagnosing twice.",
+            "Whether the machine is covered today, which decides chargeability before anyone travels.",
+            "What evidence you can show a customer who claims the promised visits were never made."
+          ]
+        },
+        "This register is explained in <a href=\"/resources/what-is-installed-base-management/\">what is installed base management</a>, and the scheduled half of the work in <a href=\"/resources/what-is-preventive-maintenance-software/\">what is preventive maintenance software</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The dashboard",
+      "h2": "Numbers an owner should actually watch",
+      "lead": "Service teams are drowned in activity counts. These few measures tell you whether the department is healthy, and each one comes straight out of the chain above.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Measure",
+              "What it tells you",
+              "Where it comes from"
+            ],
+            "rows": [
+              [
+                "Response against SLA",
+                "Whether your promises are being kept",
+                "Timer between intake and attendance"
+              ],
+              [
+                "First-time fix",
+                "Whether engineers arrive prepared",
+                "Jobs closed without a repeat visit"
+              ],
+              [
+                "Preventive visits due and done",
+                "Whether contract obligations are being delivered",
+                "Schedules generated from contracts"
+              ],
+              [
+                "Chargeable work invoiced",
+                "Whether completed jobs turned into money",
+                "Closed jobs matched to service invoices"
+              ],
+              [
+                "Contracts lapsing this quarter",
+                "Income about to disappear",
+                "Contract expiry dates"
+              ],
+              [
+                "Cost per machine per year",
+                "Which models are worth a contract",
+                "Parts and labour against the serial number"
+              ]
+            ]
+          }
+        },
+        "Aura Business covers this ground with breakdown call intake, technician dispatch, mobile job cards, spare parts consumed per job, service history per asset, SLA definitions with breach tracking, service invoices and an owner dashboard. The product pages are <a href=\"/aura-business/medical-equipment-service-management-software/\">service management software</a>, <a href=\"/aura-business/field-technician-tracking-app/\">the field technician app</a> and <a href=\"/aura-business/medical-spare-parts-inventory-software/\">spare parts inventory</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about service management",
+      "items": [
+        {
+          "q": "What is a job card in field service?",
+          "a": "It is the record an engineer completes on site: the fault found, the work carried out, parts fitted, readings taken, photographs and the customer signature on completion. On a mobile app it replaces the paper pad and reaches the office the same day."
+        },
+        {
+          "q": "How do I know whether a service visit is chargeable?",
+          "a": "By checking the cover on that serial number at intake. A machine in warranty or under a maintenance contract is not chargeable for labour, an uncovered machine is, and parts depend on whether the contract is comprehensive. The desk needs this before dispatching anyone."
+        },
+        {
+          "q": "What does SLA mean in a service contract?",
+          "a": "Service level agreement: the response you committed to, usually a number of hours or working days between the call and an engineer attending. Tracking it means timing the gap on every call, not estimating it at the end of the year."
+        },
+        {
+          "q": "Can technicians use the app without internet?",
+          "a": "They need to. The Aura Business field service app supports offline working with photo proof and a field signature, so job cards completed in a basement or a shielded imaging room sync when the phone regains signal."
+        },
+        {
+          "q": "How do spare parts get deducted from stock?",
+          "a": "By being issued against the job card rather than taken off a shelf. The part then leaves stock, joins that machine's service history and appears on the invoice if the work is chargeable, so the three records cannot drift apart."
+        },
+        {
+          "q": "How many engineers do you need before this needs software?",
+          "a": "It is less about headcount than about installed units and contracts. Once scheduled visits and breakdown calls compete for the same people, a diary stops working."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Contracts and renewals."
+        },
+        {
+          "href": "/resources/what-is-preventive-maintenance-software/",
+          "icon": "&#128736;",
+          "b": "Preventive maintenance software",
+          "p": "The scheduled half of the work."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128203;",
+          "b": "Installed base management",
+          "p": "History per serial number."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Who pays for the part."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#129659;",
+          "b": "Service management software",
+          "p": "Intake, dispatch, job card, invoice."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128241;",
+          "b": "Field technician app",
+          "p": "Job cards that work offline."
+        }
+      ]
+    }
+  ]
+}

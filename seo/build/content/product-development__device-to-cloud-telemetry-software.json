@@ -1,0 +1,326 @@
+{
+  "cluster": "product-development",
+  "slug": "device-to-cloud-telemetry-software",
+  "title": "Device-to-Cloud Telemetry Software | Elevate Aura",
+  "meta": "Device-to-cloud telemetry software: logs and readings from your devices into a Supabase or Azure pipeline, with remote monitoring, alerts and a fleet view.",
+  "h1": "Telemetry software that gets every reading from the device to the <span class=\"hl\">cloud</span>, and keeps it there.",
+  "crumb": "Device-to-Cloud Telemetry",
+  "pill": "Software-only, remote monitoring",
+  "sub": "Elevate Aura builds the telemetry pipeline between your devices and your cloud: the firmware side that buffers and sends, the ingestion and storage on Supabase or Azure, alerts on the conditions you define, and a fleet view that shows which devices are healthy, silent or faulting.",
+  "meta_ticks": [
+    "Firmware-side buffering and send",
+    "Pipeline on Supabase or Azure, in your account",
+    "Alerts and a fleet view"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need telemetry and remote monitoring for our devices. Can we discuss the pipeline?",
+  "cta_h2": "Tell us what the device sends and how often.",
+  "cta_p": "We will design the pipeline from device to fleet view, scope the software side and hand it over in your own cloud account.",
+  "primary_keyword": "device-to-cloud telemetry software",
+  "secondary_keywords": [
+    "IoT telemetry software",
+    "remote device monitoring software",
+    "device telemetry pipeline",
+    "IoT data pipeline development",
+    "remote monitoring software development",
+    "fleet monitoring software for devices"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or service lead who needs to see what installed devices are doing without visiting them",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Device-to-cloud telemetry software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What device-to-cloud telemetry software is here",
+      "paras": [
+        "Device-to-cloud telemetry software carries readings, logs and status from a device in the field to a cloud database, and then to a screen where someone can act on them. Elevate Aura builds that path end to end: the sending side in the device firmware, the receiving side on Supabase or Azure, and the monitoring view on top.",
+        "The pipeline is designed around what the device produces: a reading every few seconds, a log line on each event, a heartbeat when idle. Readings are buffered on the device when the link is down and sent when it returns, so the record in the cloud is complete. Alerts fire on the conditions you define, and a fleet view shows every device's last contact, state and recent faults."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The telemetry problem",
+      "h2": "Devices in the field are a black box until someone drives out.",
+      "lead": "Without telemetry, the first sign of a fault is a phone call, and the only diagnostic is a site visit.",
+      "items": [
+        {
+          "h": "Silent failures",
+          "p": "A device stops working and nobody knows until the customer notices, which can be days."
+        },
+        {
+          "h": "Gaps in the data",
+          "p": "Connections drop, the readings during the gap are gone, and the trend chart is full of holes."
+        },
+        {
+          "h": "Logs stuck on the device",
+          "p": "The fault log exists on the controller, and reading it means plugging in a cable on site."
+        },
+        {
+          "h": "No fleet picture",
+          "p": "Each device is checked one by one, so the question of how many are healthy has no answer."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the pipeline runs",
+      "h2": "From a reading on the controller to an alert on a phone.",
+      "steps": [
+        {
+          "h": "Define",
+          "p": "What is sent, how often, and what counts as an alert."
+        },
+        {
+          "h": "Device side",
+          "p": "Firmware buffers readings and sends over the available link."
+        },
+        {
+          "h": "Ingest",
+          "p": "Pipeline on Supabase or Azure receives, validates and stores."
+        },
+        {
+          "h": "Process",
+          "p": "Thresholds checked, device state updated, alerts raised."
+        },
+        {
+          "h": "View",
+          "p": "Fleet dashboard and per-device history; alerts to WhatsApp or email."
+        },
+        {
+          "h": "Hand over",
+          "p": "Pipeline in your cloud account, documented, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is built",
+      "h2": "Both ends of the pipeline and the view on top.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Device side",
+          "items": [
+            "Reading and log buffering",
+            "Send over BLE, Wi-Fi, serial or gateway",
+            "Retry and resync after a drop",
+            "Heartbeat and status messages"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Cloud side",
+          "items": [
+            "Ingestion on Supabase or Azure",
+            "Device registry and identity",
+            "Time-series storage and retention",
+            "Processing and thresholds"
+          ]
+        },
+        {
+          "icon": "&#128276;",
+          "h": "Alerts",
+          "items": [
+            "Conditions you define per device type",
+            "Silence detection for devices that stop reporting",
+            "Alert delivery to WhatsApp or email",
+            "Acknowledge and clear"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Fleet view",
+          "items": [
+            "Last contact and state per device",
+            "Per-device history and logs",
+            "Fault summary across the fleet",
+            "Exports"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What telemetry changes for a device company.",
+      "items": [
+        {
+          "h": "A device goes quiet",
+          "workflow": "The heartbeat stops; silence detection raises an alert after the interval you set, naming the device and site.",
+          "result": "The service desk calls the customer before the customer calls them."
+        },
+        {
+          "h": "A fault is diagnosed from a desk",
+          "workflow": "The device's recent logs and readings are opened in the fleet view and read alongside the fault code.",
+          "result": "The engineer arrives with the right part, or does not need to go."
+        },
+        {
+          "h": "A trend is spotted across the installed base",
+          "workflow": "Readings from every device of one model are compared, and a drift shows up in one batch.",
+          "result": "The issue is handled before it becomes a recall."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone with devices they cannot stand next to.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment makers",
+          "p": "Installed devices reporting status and usage."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Equipment service firms",
+          "p": "Fleet health across customer sites."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Remote supervision of deployed units."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Lab and field instruments phoning home."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial device makers",
+          "p": "Sensors and controllers in the field."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "IoT founders",
+          "p": "A pipeline that works past the first ten devices."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting device telemetry, three ways.",
+      "cols": [
+        "Logs on the device",
+        "IoT platform subscription",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "How you find out about a fault",
+          "Customer calls",
+          "Platform alert",
+          "Alert on the conditions you define"
+        ],
+        [
+          "Readings during a dropped link",
+          "Lost",
+          "Depends on the SDK",
+          "Buffered on the device and resent"
+        ],
+        [
+          "Where the data lives",
+          "On the controller",
+          "Their cloud",
+          "Your Supabase or Azure account"
+        ],
+        [
+          "Firmware side included",
+          "n/a",
+          "Their SDK, your work",
+          "Written with the pipeline"
+        ],
+        [
+          "Fleet view",
+          "None",
+          "Generic",
+          "Built around your device types"
+        ],
+        [
+          "Ongoing cost basis",
+          "Site visits",
+          "Per device per month",
+          "Your own cloud usage"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Device-to-cloud telemetry, answered.",
+      "items": [
+        {
+          "q": "Which cloud does the pipeline run on?",
+          "a": "Supabase or Azure, in an account that belongs to you. We build the ingestion, storage, processing and alerts there and hand over the configuration and code, so you are not tied to a vendor platform or to us."
+        },
+        {
+          "q": "How do readings get from the device to the cloud?",
+          "a": "Over whatever link the hardware has: Wi-Fi straight to the pipeline, BLE through a companion phone app, or serial, Modbus or CAN through a gateway. The firmware side buffers and sends; we write it if you do not already have it."
+        },
+        {
+          "q": "What happens when the connection drops?",
+          "a": "Readings are buffered on the device and sent when the link returns, with timestamps preserved, so the cloud record has no gap. If a device stays silent past an interval you set, an alert is raised."
+        },
+        {
+          "q": "What kind of alerts can be set?",
+          "a": "Thresholds on any reading, fault codes from the device, and silence detection when a device stops reporting. Alerts are delivered to WhatsApp or email and can be acknowledged and cleared in the fleet view. The exact rules are defined with you during scoping."
+        },
+        {
+          "q": "Is there a dashboard?",
+          "a": "Yes. A fleet view shows last contact, state and recent faults per device, with per-device history and logs. A fuller monitoring dashboard with user roles is covered under <a href=\"/product-development/device-dashboard-development/\">device dashboard development</a>."
+        },
+        {
+          "q": "Do you provide the hardware or connectivity?",
+          "a": "No. Elevate Aura is software-only. The device, its radio or network module and the SIM or network connection are your hardware team's. We write the software on both ends of the link. See <a href=\"/product-development/iot-product-development/\">IoT product development</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128187;",
+          "b": "Device dashboard",
+          "p": "Fleet view with roles and alerts."
+        },
+        {
+          "href": "/product-development/healthcare-iot-software-development/",
+          "icon": "&#129658;",
+          "b": "Healthcare IoT",
+          "p": "Device to dashboard for medtech."
+        },
+        {
+          "href": "/product-development/wifi-connected-device-software/",
+          "icon": "&#128246;",
+          "b": "Wi-Fi devices",
+          "p": "Provisioning and cloud sync."
+        },
+        {
+          "href": "/product-development/iot-product-development/",
+          "icon": "&#9729;",
+          "b": "IoT product development",
+          "p": "The general service."
+        },
+        {
+          "href": "/product-development/modbus-software-development/",
+          "icon": "&#128268;",
+          "b": "Modbus",
+          "p": "Wired instruments to a gateway."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-madurai",
+  "title": "PACS Software in Madurai | On-Site Node Install | AuraPACS",
+  "meta": "PACS software for Madurai centres serving the southern districts: on-premise node installed on site, browser reading and reports shared on WhatsApp.",
+  "h1": "PACS software for Madurai, where the report has to travel <span class=\"hl\">further than the patient</span>.",
+  "crumb": "Madurai",
+  "pill": "Madurai and southern Tamil Nadu",
+  "sub": "AuraPACS gives Madurai diagnostic centres and hospitals an on-premise node that keeps working without internet, a browser viewer, structured reporting, and a secure link so referring doctors across the southern districts see the report without anyone travelling back.",
+  "meta_ticks": [
+    "Node installed and modalities connected on site",
+    "Reports reach referrers on WhatsApp",
+    "Remote support afterwards"
+  ],
+  "whatsapp_text": "Hi, we run a scan centre in Madurai and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS software Madurai",
+  "secondary_keywords": [
+    "PACS system Madurai",
+    "DICOM server Madurai",
+    "scan centre software Madurai",
+    "radiology reporting software southern Tamil Nadu",
+    "PACS installation Madurai"
+  ],
+  "intent": "local",
+  "persona": "Owner of a scan centre or hospital imaging department in Madurai serving the southern districts",
+  "city": "Madurai",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "PACS for Madurai, installed on site and supported remotely",
+      "paras": [
+        "A Madurai scan centre serves a catchment far larger than the city. Patients come in from Sivaganga, Virudhunagar, Theni, Dindigul and Ramanathapuram, have the scan, and leave the same afternoon for a town two hours away. The report, however, still has to reach the doctor who sent them. AuraPACS is built around that gap: images land on a node in your centre, the radiologist reads them in a browser, and the referring doctor opens a secure link on his phone.",
+        "Madurai is within travelling distance of Chennai, so the node install, the modality connections and the first walkthrough with your technicians are done on site. Afterwards the centre runs on its own node with remote and WhatsApp support. There is no Madurai office and no local engineer, and nothing on this page should suggest otherwise."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Madurai context",
+      "h2": "One centre, a hundred referrers, and no shared portal between them.",
+      "lead": "The referral network around Madurai is wide, informal and spread across small towns, and that decides how a PACS has to behave.",
+      "body": [
+        "The old answer was film and a CD. The patient carried both back to the doctor who sent her, the clinic computer would not read the disc, the film came out dark on the viewer box, and somebody rang the centre to ask what it showed. Every part of that is avoidable. A secure link per study opens the images and the signed report in a browser on any phone, with no login for the doctor and none for the patient, sent from the centre's system rather than from a technician's personal number, and every view is recorded against the study.",
+        "The second pressure is reading cover. Not every centre in the southern districts has a radiologist sitting in the building all day. Remote reading in the browser lets the same radiologist read for the centre from home, from a second site or between sessions, on his own login and with access limited to what his role allows.",
+        {
+          "h3": "What the on-site day covers"
+        },
+        {
+          "ul": [
+            "The node placed inside the centre so studies are received and served on your own network.",
+            "CT, MR, digital radiography, ultrasound and mammography pointed at it over DICOM and each one tested with a real study.",
+            "The worklist configured so the front desk schedules once and the name appears on the machine.",
+            "Reporting templates per modality, and the finalised PDF attaching to the study.",
+            "Technicians, front desk and the radiologist walked through the viewer on the machines they will actually use."
+          ]
+        },
+        {
+          "h3": "What the centre keeps"
+        },
+        "The archive stays on the centre's own hardware with an encrypted offsite copy, so nothing about retrieving an old study depends on a vendor or on anyone visiting. A patient who returns in a year is found by name or by study, and the previous scan sits next to the new one. Billing runs from the same screen, with a GST invoice raised against the study rather than in a separate book at the counter."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Installed on site, then working every day.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Installed on site",
+          "items": [
+            "On-premise node inside the centre",
+            "Any modality sending by DICOM receive",
+            "Worklist scheduled once at the front desk",
+            "Users and roles set up for your team"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reading and reporting",
+          "items": [
+            "Browser viewer with nothing installed",
+            "Structured templates per modality",
+            "Signed PDF finalised onto the study",
+            "Reading from home or a second site",
+            "Searchable history per patient"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Getting the report out",
+          "items": [
+            "Secure link per study for referrer and patient",
+            "No login and no app to install",
+            "Every view audited against the study",
+            "GST invoice raised on the study",
+            "Encrypted offsite backup of the archive"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes for a centre with a rural catchment.",
+      "items": [
+        {
+          "h": "A referrer in Theni reads the report the same evening",
+          "workflow": "The radiologist finalises, the centre sends the link, and the doctor opens images and report on his phone between patients.",
+          "result": "The patient is not asked to travel back with a film."
+        },
+        {
+          "h": "A patient rings a week later for the report",
+          "workflow": "The front desk finds the study by name or date and resends the secure link from the system, with the resend recorded.",
+          "result": "Nobody hunts for a CD or reprints a film."
+        },
+        {
+          "h": "A power cut in the middle of a list",
+          "workflow": "The node comes back with the power, the modality resends or requeues, and the worklist still holds every patient scheduled that morning.",
+          "result": "The list resumes instead of restarting."
+        },
+        {
+          "h": "An old scan needed for comparison",
+          "workflow": "Last year's study opens beside today's in the same viewer, on the centre's own archive.",
+          "result": "The comparison does not depend on what the patient kept."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "AuraPACS in Madurai, answered.",
+      "items": [
+        {
+          "q": "Do you come to Madurai for the installation?",
+          "a": "Yes. The node install, the modality connections and the first walkthrough are done at the centre by travel from Chennai. There is no office, no staff and no local number in Madurai, and support after go-live is remote and on WhatsApp."
+        },
+        {
+          "q": "How do referring doctors in small towns see the report?",
+          "a": "Through a secure link per study that opens the images and the signed PDF in a phone browser. No account, no app and no portal login, and every view is audited so the centre knows the report was opened."
+        },
+        {
+          "q": "Can a patient get the link again after going home?",
+          "a": "Yes. The front desk finds the study and resends the link from the system. Because sharing runs through the platform rather than a personal phone, the resend is recorded against the study like any other view."
+        },
+        {
+          "q": "Do we need good internet for this to work?",
+          "a": "Not for scanning, viewing and reporting, which run on the node inside your centre. The connection matters for remote reading, sharing and the encrypted offsite copy, and those catch up once it returns."
+        },
+        {
+          "q": "Can we use it for centres in the surrounding districts?",
+          "a": "Yes. Travel is arranged where it makes sense and setup is done remotely where it does not, with your IT person guided over WhatsApp and screen share. Support is remote in every case."
+        },
+        {
+          "q": "Is there a way to see it working first?",
+          "a": "Yes. The live demo runs in a browser, and a 200 KB Windows demo installer runs against the demo server with sample studies so your radiologist can try the viewer before anything is agreed."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-software-chennai/",
+          "icon": "&#128205;",
+          "b": "Chennai",
+          "p": "On-site, where the studio is."
+        },
+        {
+          "href": "/aurapacs/pacs-software-coimbatore/",
+          "icon": "&#128205;",
+          "b": "Coimbatore",
+          "p": "The western cluster."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "Reports on the referrer's phone."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Radiology reporting",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/hims/hospital-management-software-madurai/",
+          "icon": "&#127973;",
+          "b": "HIMS in Madurai",
+          "p": "The hospital side."
+        }
+      ]
+    }
+  ]
+}

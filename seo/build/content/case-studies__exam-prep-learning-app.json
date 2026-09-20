@@ -1,0 +1,207 @@
+{
+  "cluster": "case-studies",
+  "slug": "exam-prep-learning-app",
+  "title": "Exam Preparation App Case Study | Elevate Aura",
+  "meta": "How Elevate Aura built its own government exam preparation product: an Android app on Google Play, Telegram practice bots and content automation.",
+  "h1": "The exam-prep app: an Android product, Telegram bots and <span class=\"hl\">content automation</span>.",
+  "crumb": "Exam prep app",
+  "pill": "Case study &middot; Own product",
+  "sub": "Before Aura Learn was a product for other institutes, it was Elevate Aura's own government-exam-prep app: live on Google Play, with Telegram practice bots and automated content, built end to end on Flutter, Python and Supabase.",
+  "meta_ticks": [
+    "Own product &middot; Google Play",
+    "Flutter, Python, Supabase",
+    "The origin of Aura Learn"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Learn",
+  "cta_href": "/aura-learn.html",
+  "whatsapp_text": "Hi, I read the exam prep app case study and want to discuss a learning platform for our institute.",
+  "date": "2026-09-20",
+  "primary_keyword": "exam preparation app case study",
+  "secondary_keywords": [
+    "government exam prep app development",
+    "Flutter learning app",
+    "Telegram bot for practice questions",
+    "edtech product built in India",
+    "learning app on Google Play"
+  ],
+  "intent": "commercial",
+  "persona": "Coaching institute owner or exam-prep business evaluating whether the builder has shipped a learning product",
+  "page_type": "case-study",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What was built, and for whom",
+      "paras": [
+        "This one was built for Elevate Aura itself. A government-exam-preparation product, self-funded and shipped end to end: an Android app live on Google Play, Telegram practice bots, and content automation behind both, on Flutter, Python and Supabase.",
+        "It matters to anyone evaluating <a href=\"/aura-learn.html\">Aura Learn</a> for one reason. The learning platform now offered to coaching institutes is not a first attempt at the category. It is the productised version of something the founder already built, published and ran."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Before",
+      "h2": "The situation",
+      "body": [
+        "The brief was set by the founder rather than a client: build and run a learning product end to end, as a self-funded EdTech build. That means every part of the problem lands on the same person, including the parts a services project usually leaves to the customer.",
+        "Two of those parts shape everything else. The first is distribution: an app has to be published and updated on Google Play, which is a process rather than a build step. The second is content: exam preparation runs on a constant supply of practice questions, and preparing them by hand does not scale past the first few weeks."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The build",
+      "h2": "What was built",
+      "body": [
+        "Three pieces, each doing a different job.",
+        {
+          "ul": [
+            "<b>Android app.</b> Built in Flutter and published on Google Play, where it is live. The app is where a learner works through material and practice.",
+            "<b>Telegram practice bots.</b> Practice delivered where learners already spend their time, so daily practice does not depend on remembering to open an app.",
+            "<b>Content automation.</b> Python pipelines that prepare and keep the practice material flowing, rather than an editor assembling each set by hand.",
+            "<b>Supabase.</b> The shared data layer behind the app and the bots, so both work from the same content and the same learner records."
+          ]
+        },
+        "The combination is the point. An app alone gets installed and forgotten; a bot alone has nowhere to hold structured material; automation is what makes both worth keeping open."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The method",
+      "h2": "How the work ran",
+      "body": [
+        "The same 30-working-day framework Elevate Aura uses on client projects, applied to its own product.",
+        {
+          "h3": "Discovery"
+        },
+        "Scope fixed first: what a learner does daily, what the app owns, what the bot owns, and what has to be automated rather than written each week.",
+        {
+          "h3": "Configure"
+        },
+        "The app, the bots and the content pipeline are built and wired to one data layer, so a change to the material appears in both places.",
+        {
+          "h3": "Migrate"
+        },
+        "Existing question material is brought into a structured question bank rather than left as documents, which is what makes automated practice possible at all.",
+        {
+          "h3": "Train"
+        },
+        "On a client build this is where staff learn the dashboard. Here it was the publishing and release process on Google Play, which is the part most first-time app owners underestimate."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Before and after",
+      "h2": "What each component replaced",
+      "headers": [
+        "Component",
+        "What it replaced"
+      ],
+      "rows": [
+        [
+          "Android app (Flutter)",
+          "Material distributed as files and links with nowhere to practise"
+        ],
+        [
+          "Telegram practice bots",
+          "Daily practice that depended on the learner remembering to start it"
+        ],
+        [
+          "Content automation (Python)",
+          "Preparing every practice set by hand, week after week"
+        ],
+        [
+          "Structured question bank",
+          "Questions living in documents that cannot be reused or graded"
+        ],
+        [
+          "Supabase data layer",
+          "Separate copies of content for each channel"
+        ],
+        [
+          "Google Play publishing",
+          "No route to reach learners on the device they actually use"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "After",
+      "h2": "What it changed",
+      "body": [
+        "For the product, the change is that practice happens without being organised each time. Material is structured once, delivered through both the app and the bots, and refreshed by automation rather than by an editor, so the daily loop keeps running on its own.",
+        "For Elevate Aura, the change is what it made possible next. The parts proven here, a learner mobile app, auto-graded practice from a question bank, Telegram nudges and content automation, are the same parts institutes ask for, and they became <a href=\"/aura-learn/learning-management-system/\">Aura Learn</a>: a learner app and an instructor dashboard with courses, quizzes and mock tests, batches, certificates, and GST payments.",
+        "It is also the reason the answer to whether the builder has shipped a learning product is a link rather than a claim."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "About this project",
+      "items": [
+        {
+          "q": "Whose product is this?",
+          "a": "Elevate Aura's own. It was self-funded and built end to end by the founder, Ragul Sekar, rather than delivered for a client. The Android app is live on Google Play."
+        },
+        {
+          "q": "What was the stack?",
+          "a": "Flutter for the Android app, Python for the content automation and the Telegram practice bots, and Supabase as the shared data layer behind both channels."
+        },
+        {
+          "q": "Why Telegram bots as well as an app?",
+          "a": "Because daily practice works best where the learner already is. The bot delivers practice without requiring anyone to open an app first, while the app holds the structured material and progress."
+        },
+        {
+          "q": "How does this relate to Aura Learn?",
+          "a": "Aura Learn is the productised version for coaching institutes, exam-prep businesses and companies training staff: a learner app plus an instructor dashboard, with courses, quizzes and mock tests, batches, certificates and GST payments."
+        },
+        {
+          "q": "Can you build a learning app for our institute?",
+          "a": "Yes, either as Aura Learn configured for your batches and content, or as a custom build. Both are scoped on a call. See <a href=\"/aura-learn/custom-lms-development/\">custom LMS development</a> or the <a href=\"/demo/lms.html\">demo</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "The product pages",
+      "h2": "What this became",
+      "items": [
+        {
+          "href": "/aura-learn/exam-preparation-platform/",
+          "icon": "&#128214;",
+          "b": "Exam preparation platform",
+          "p": "The productised version of this build."
+        },
+        {
+          "href": "/aura-learn/learning-management-system/",
+          "icon": "&#127891;",
+          "b": "Learning management system",
+          "p": "Courses, tests and certificates."
+        },
+        {
+          "href": "/aura-learn/mock-test-platform/",
+          "icon": "&#128221;",
+          "b": "Mock test platform",
+          "p": "Auto-graded tests from a question bank."
+        },
+        {
+          "href": "/mobile-app-development/flutter-healthcare-app-development/",
+          "icon": "&#128241;",
+          "b": "Flutter app development",
+          "p": "The mobile side of the work."
+        },
+        {
+          "href": "/compare/lms-vs-youtube-and-whatsapp-for-coaching/",
+          "icon": "&#9878;",
+          "b": "LMS vs free tools",
+          "p": "When YouTube and WhatsApp are enough."
+        },
+        {
+          "href": "/case-studies/",
+          "icon": "&#128203;",
+          "b": "All case studies",
+          "p": "Every project in one place."
+        }
+      ]
+    }
+  ]
+}

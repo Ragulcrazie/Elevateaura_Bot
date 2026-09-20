@@ -1,0 +1,333 @@
+{
+  "cluster": "aura-learn",
+  "slug": "healthcare-training-lms",
+  "title": "Healthcare Staff Training Software | Aura Learn",
+  "meta": "Healthcare staff training software to certify service engineers, clinical and front-desk staff on equipment and protocols, with offline lessons and certificates.",
+  "h1": "Healthcare training software that certifies the people who <span class=\"hl\">touch the equipment</span>.",
+  "crumb": "Healthcare Training LMS",
+  "pill": "For equipment companies and healthcare providers",
+  "sub": "Aura Learn trains and certifies service engineers, clinical staff and front-desk teams on equipment models and working protocols: lessons available offline in a mobile app, an assessment with a pass mark, a certificate on the record and a view of who is certified on what.",
+  "meta_ticks": [
+    "Certify engineers per equipment model",
+    "Protocol training for clinical and front-desk staff",
+    "Offline lessons, assessments, certificates"
+  ],
+  "whatsapp_text": "Hi, I'd like to see Aura Learn for training and certifying our engineers and healthcare staff.",
+  "primary_keyword": "healthcare staff training software",
+  "secondary_keywords": [
+    "healthcare training LMS",
+    "medical staff training software",
+    "hospital staff training platform",
+    "service engineer training software",
+    "medical equipment training platform",
+    "clinical staff training app"
+  ],
+  "intent": "commercial",
+  "persona": "Service head of a medical-equipment company, or training lead at a hospital group",
+  "page_type": "industry",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare staff training software does here",
+      "paras": [
+        "Healthcare staff training software teaches a defined skill, checks it with an assessment and records the pass against the person, so a service head or a hospital administrator can say who is trained on which equipment or protocol. Aura Learn does this with a learner mobile app for the staff and an admin dashboard for the person who runs training.",
+        "Two groups use it most. Medical-equipment companies certify their service engineers per model before those engineers are sent to install or maintain it. Hospitals, clinics and diagnostic centres train clinical and front-desk staff on operating procedures, new equipment and patient-handling protocols. In both cases lessons work offline, the assessment is graded on submission, a certificate is issued on a pass and compliance tracking shows who is due."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The healthcare training problem",
+      "h2": "One engineer knows the new model. Everyone else learns on the customer's machine.",
+      "lead": "Equipment and protocol training usually happens once, at a launch or a factory visit, and then spreads by word of mouth.",
+      "items": [
+        {
+          "h": "Model training does not scale",
+          "p": "The principal trains two engineers; the rest pick it up on site, in front of the hospital's biomedical team."
+        },
+        {
+          "h": "No proof of competence",
+          "p": "A customer asks whether the engineer sent is trained on the model, and the answer is a phone call."
+        },
+        {
+          "h": "Protocols read once, forgotten",
+          "p": "Front-desk and nursing staff sign a circular; nobody checks whether the procedure was understood."
+        },
+        {
+          "h": "Turnover resets everything",
+          "p": "Staff change, the training walks out with them and the replacement starts from nothing."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From a new model or protocol to a certified person.",
+      "steps": [
+        {
+          "h": "Author",
+          "p": "Lessons per model or protocol: video, manuals, checklists."
+        },
+        {
+          "h": "Assign",
+          "p": "Pushed to the engineers or staff who need it, by batch."
+        },
+        {
+          "h": "Learn offline",
+          "p": "Downloaded to the phone, studied between site visits or shifts."
+        },
+        {
+          "h": "Assess",
+          "p": "Test with a pass mark, graded on submission."
+        },
+        {
+          "h": "Certify",
+          "p": "Certificate on the record; refresher due date set."
+        },
+        {
+          "h": "Dispatch",
+          "p": "The certified list is checked before an engineer is sent."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Training built for engineers and healthcare staff.",
+      "groups": [
+        {
+          "icon": "&#128736;",
+          "h": "Engineer certification",
+          "items": [
+            "Course per equipment model",
+            "Service manuals and videos as downloads",
+            "Assessment with pass mark",
+            "Certified-per-model view"
+          ]
+        },
+        {
+          "icon": "&#127973;",
+          "h": "Clinical and front-desk",
+          "items": [
+            "Protocol and procedure lessons",
+            "Quizzes after each lesson",
+            "Refresher schedules",
+            "Batches by department or site"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "Learner app",
+          "items": [
+            "Offline access to lessons",
+            "Progress syncs when online",
+            "Certificates to download",
+            "WhatsApp and Telegram reminders"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Records",
+          "items": [
+            "Compliance tracking for regulated training",
+            "Who is certified, due, not passed",
+            "Progress per learner and batch",
+            "Export for customers or audits"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes for a service desk and a hospital floor.",
+      "items": [
+        {
+          "h": "A new analyser model launches",
+          "workflow": "The model's course and assessment are assigned to every service engineer; the certified list grows as they pass.",
+          "result": "Only certified engineers are dispatched for that model."
+        },
+        {
+          "h": "A hospital asks for training records",
+          "workflow": "The compliance view is filtered to the engineers on that account and exported with pass dates.",
+          "result": "The customer gets the record the same day."
+        },
+        {
+          "h": "A new admission protocol goes live",
+          "workflow": "Front-desk staff across sites complete the lesson and quiz; the dashboard shows who has not.",
+          "result": "The change is confirmed understood at every site."
+        },
+        {
+          "h": "An annual refresher falls due",
+          "workflow": "Staff nearing the refresher date are listed, assigned the module and reminded on WhatsApp.",
+          "result": "Certifications are renewed before they lapse."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who must prove healthcare staff are trained.",
+      "items": [
+        {
+          "icon": "&#128736;",
+          "b": "Medical-equipment dealers",
+          "p": "Engineers certified per model before dispatch."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Device manufacturers",
+          "p": "Training distributor engineers at scale."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals and clinics",
+          "p": "Nursing, technician and front-desk protocols."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Technicians on new modalities and procedures."
+        },
+        {
+          "icon": "&#128138;",
+          "b": "Pharma and diagnostics sales",
+          "p": "Product training for field representatives."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Home-care providers",
+          "p": "Carers trained on equipment and protocols."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Factory training, generic e-learning, or Aura Learn.",
+      "cols": [
+        "Factory or classroom",
+        "Generic e-learning",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Reaches every engineer",
+          "Two or three per launch",
+          "If they log in",
+          "Mobile app, offline lessons"
+        ],
+        [
+          "Per-model certification",
+          "Attendance certificate",
+          "Course completion",
+          "Assessment, pass mark, certificate per model"
+        ],
+        [
+          "Record for customers",
+          "Scanned certificate",
+          "Completion report",
+          "Certified list exportable per account"
+        ],
+        [
+          "Refresher tracking",
+          "None",
+          "Rare",
+          "Due list with WhatsApp reminders"
+        ],
+        [
+          "Fits the service operation",
+          "No",
+          "No",
+          "Pairs with the field-service and job-card system"
+        ],
+        [
+          "Pricing basis",
+          "Travel and trainer time",
+          "Per seat",
+          "Unlimited learners"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare staff training software, answered.",
+      "items": [
+        {
+          "q": "Can we certify engineers per equipment model?",
+          "a": "Yes. Each model has its own course and assessment. An engineer who passes is certified for that model on their record, and the certified list per model can be checked before a dispatch or exported for a customer."
+        },
+        {
+          "q": "Does it connect to our field-service system?",
+          "a": "The training record sits in Aura Learn, and the service desk that dispatches engineers can use the certified list alongside job cards. See <a href=\"/aura-business/medical-equipment-field-service-software/\">medical equipment field service software</a> for the dispatch and job-card side."
+        },
+        {
+          "q": "Can hospital staff use it on shift?",
+          "a": "Yes. Lessons are short, download to the phone and can be completed offline between duties. Quizzes are taken in the same app, and the department head sees completion per batch or per site."
+        },
+        {
+          "q": "Is this regulatory compliance software?",
+          "a": "No. Compliance tracking here records who completed which training and passed which assessment, which supports regulated training records. It does not certify the software or your organisation against any standard."
+        },
+        {
+          "q": "What about refreshers and expiry?",
+          "a": "A programme can carry a renewal period. Staff approaching it are listed as due, assigned the refresher and reminded on WhatsApp, and the new pass replaces the old certificate on the record."
+        },
+        {
+          "q": "How many staff can we enrol?",
+          "a": "As many as you have. Aura Learn is built for unlimited learners, so every engineer, nurse, technician and front-desk member across sites can be enrolled without changing what you pay. Scope is agreed on a call."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related software",
+      "items": [
+        {
+          "href": "/aura-learn/corporate-training-lms/",
+          "icon": "&#127981;",
+          "b": "Corporate training",
+          "p": "Staff and field teams."
+        },
+        {
+          "href": "/aura-learn/certification-training-platform/",
+          "icon": "&#127942;",
+          "b": "Certification",
+          "p": "Courses that end in a certificate."
+        },
+        {
+          "href": "/aura-learn/training-management-software/",
+          "icon": "&#128188;",
+          "b": "Training management",
+          "p": "Assign, track and certify."
+        },
+        {
+          "href": "/aura-business/medical-equipment-field-service-software/",
+          "icon": "&#128205;",
+          "b": "Field service",
+          "p": "Dispatch and job cards."
+        },
+        {
+          "href": "/aura-learn/online-assessment-platform/",
+          "icon": "&#9989;",
+          "b": "Assessments",
+          "p": "Graded without a marker."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

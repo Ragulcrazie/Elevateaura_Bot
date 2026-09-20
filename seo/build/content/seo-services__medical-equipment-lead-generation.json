@@ -1,0 +1,331 @@
+{
+  "cluster": "seo-services",
+  "slug": "medical-equipment-lead-generation",
+  "title": "Medical Equipment Lead Generation Services | Elevate Aura",
+  "meta": "Medical equipment lead generation: SEO pages, WhatsApp and enquiry tracking, with every enquiry captured as a source-tagged lead in the Aura Business CRM.",
+  "h1": "Medical equipment lead generation that ends in a <span class=\"hl\">CRM record, not an inbox</span>.",
+  "crumb": "Medical Equipment Lead Generation",
+  "pill": "For sales teams that lose enquiries",
+  "sub": "An enquiry is only a lead once someone owns it. This service joins the three parts: pages that attract the buyer, WhatsApp and forms that make enquiring easy, and capture into the Aura Business CRM with the source attached.",
+  "meta_ticks": [
+    "Pages, WhatsApp and forms",
+    "Every enquiry tagged with its source",
+    "Captured as a lead in the CRM"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like more enquiries from our website.",
+  "schema": "Service",
+  "service_type": "Medical equipment lead generation",
+  "area_served": "India",
+  "primary_keyword": "medical equipment lead generation",
+  "secondary_keywords": [
+    "medical device lead generation India",
+    "B2B healthcare lead generation",
+    "WhatsApp lead capture",
+    "enquiry tracking CRM",
+    "medical equipment enquiries online"
+  ],
+  "intent": "commercial",
+  "persona": "Sales head at a medical-equipment distributor who cannot tell where enquiries come from or what happened to them",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What medical equipment lead generation covers",
+      "paras": [
+        "Most equipment businesses lose enquiries in two places. Before the enquiry, because there is no page for the product the buyer searched for. After it, because the enquiry arrived as a WhatsApp message on a sales person's phone and no one else ever saw it.",
+        "This service handles both ends. The pages come first: product, application and city pages that answer a real search. Then the capture: an enquiry form, a call button and a WhatsApp link on every page, each tagged so the page and query that produced it are recorded. Then the handover: the enquiry becomes a lead in <a href=\"/aura-business.html\">Aura Business</a> with its source, assigned to an owner, visible on the pipeline.",
+        "We do not promise a number of leads. Nobody can honestly forecast enquiry volume for a business before doing the work. What is committed is the pages, the tracking, the capture and reporting you can read yourself."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where the enquiries go",
+      "h2": "The enquiry arrived. Nobody knows what happened next.",
+      "lead": "Attracting the buyer is only half the job. Most of the loss happens after they make contact.",
+      "items": [
+        {
+          "h": "WhatsApp on a personal phone",
+          "p": "The enquiry sits in one person's chat list. If they are travelling, on leave or gone, so is the lead."
+        },
+        {
+          "h": "Forms into a shared inbox",
+          "p": "Nobody owns the inbox, so an enquiry is either answered twice or not at all."
+        },
+        {
+          "h": "No source on the record",
+          "p": "Even when a lead is written down, nothing says which page or search produced it, so nothing can be repeated."
+        },
+        {
+          "h": "No follow-up rhythm",
+          "p": "An enquiry that does not convert in the first call is forgotten, when equipment cycles run for months."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a lead travels",
+      "h2": "From a search to an owned pipeline entry.",
+      "steps": [
+        {
+          "h": "Search",
+          "p": "A buyer searches a product, application or city and lands on a page built for that search."
+        },
+        {
+          "h": "Ask",
+          "p": "They use the enquiry form, the call button or WhatsApp, with the product already named in the message."
+        },
+        {
+          "h": "Tag",
+          "p": "The action is recorded as a GA4 event carrying the page and, where available, the query behind it."
+        },
+        {
+          "h": "Capture",
+          "p": "The enquiry is created as a lead in the CRM with contact details, product interest and source."
+        },
+        {
+          "h": "Assign",
+          "p": "The lead goes to an owner by territory or product line, and the pipeline shows its stage."
+        },
+        {
+          "h": "Follow up",
+          "p": "Quotation, reminders and WhatsApp follow-ups run from the same record until it closes or is lost with a reason."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The three layers of the service.",
+      "groups": [
+        {
+          "icon": "&#128269;",
+          "h": "Attract",
+          "items": [
+            "Product-line and model pages",
+            "Application and use-setting pages",
+            "City pages only where the demand is real",
+            "Technical SEO and schema"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Capture",
+          "items": [
+            "Enquiry and quote-request forms",
+            "WhatsApp link with the product prefilled",
+            "Call button with click tracking",
+            "Brochure download as a capture point"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Attribute",
+          "items": [
+            "GA4 events per form, call and WhatsApp",
+            "Landing page recorded on the lead",
+            "Search Console query reporting",
+            "Reporting by product line"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Convert",
+          "items": [
+            "Leads and pipeline in Aura Business",
+            "Owner assigned by territory or line",
+            "Quotation raised from the lead",
+            "WhatsApp reminders on open quotes"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-business/medical-device-crm-software/",
+        "label": "See the CRM that holds the lead"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three enquiries and what becomes of them.",
+      "items": [
+        {
+          "h": "A WhatsApp message at midnight",
+          "workflow": "A buyer taps WhatsApp on a product page; the message arrives with the product name, and the enquiry is created as a lead with that page recorded.",
+          "result": "The morning starts with a named lead, not a scroll through chats."
+        },
+        {
+          "h": "A brochure download",
+          "workflow": "A biomedical engineer downloads a datasheet, leaving a name and number, which becomes a lead marked as early-stage interest.",
+          "result": "A contact the sales team would otherwise never have known about."
+        },
+        {
+          "h": "A quote that went quiet",
+          "workflow": "The quotation sits open on the pipeline and the reminder fires, prompting a WhatsApp follow-up from the same record.",
+          "result": "A conversation restarted before the buyer decides elsewhere."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Sellers with a sales team and leaky enquiries.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Equipment distributors",
+          "p": "Enquiries spread across reps."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Direct and dealer enquiries mixed."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and reagent suppliers",
+          "p": "Repeat buyers worth tracking."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical suppliers",
+          "p": "Many small clinic enquiries."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service and AMC businesses",
+          "p": "Service enquiries become contracts."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device and robotics companies",
+          "p": "Long cycles needing follow-up."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways businesses try to get more enquiries.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "What is delivered",
+          "Traffic reports",
+          "Contact lists of unknown origin",
+          "Pages, capture points and a CRM record per enquiry"
+        ],
+        [
+          "Enquiry routes",
+          "A contact form",
+          "None",
+          "Form, call and WhatsApp on every page, product prefilled"
+        ],
+        [
+          "Attribution",
+          "Sessions by channel",
+          "None",
+          "Page and query recorded on the lead itself"
+        ],
+        [
+          "After the enquiry",
+          "Out of scope",
+          "Out of scope",
+          "Owner, pipeline stage, quotation and reminders"
+        ],
+        [
+          "What is promised",
+          "Traffic or a lead count",
+          "A number of contacts",
+          "Method and measurement, never a lead volume"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical equipment lead generation, answered.",
+      "items": [
+        {
+          "q": "How many leads will we get each month?",
+          "a": "We will not quote a number. Enquiry volume depends on your range, your market, your prices and competition, and anyone promising a figure before the work is guessing. What we commit to is the pages, the capture and the reporting."
+        },
+        {
+          "q": "Do you buy contact lists?",
+          "a": "No. Every lead comes from someone who contacted you through your own site, WhatsApp or phone. Bought lists damage sender reputation, annoy buyers and cannot be attributed to anything."
+        },
+        {
+          "q": "How does a WhatsApp enquiry become a CRM lead?",
+          "a": "The WhatsApp link carries the product and page it came from in the prefilled message, and the tap is recorded as a GA4 event. The conversation is then logged as a lead in Aura Business with contact, product interest and source."
+        },
+        {
+          "q": "We already use a CRM. Can you work with it?",
+          "a": "Yes, where it exposes an API for creating leads. Where there is no CRM, <a href=\"/aura-business/hospital-sales-crm/\">Aura Business</a> provides leads, pipeline, quotations and reminders in one place."
+        },
+        {
+          "q": "Can you track calls as well as forms?",
+          "a": "Taps on the call button are recorded as GA4 events with the page, which covers mobile visitors. Calls dialled manually from a hoarding or a card cannot be attributed to a page, and we say so rather than overclaiming."
+        },
+        {
+          "q": "Is this different from your SEO service?",
+          "a": "It includes SEO and adds the capture and CRM side. If you only need pages and technical work, see <a href=\"/seo-services/medical-equipment-seo/\">medical equipment SEO</a>. If enquiries are already arriving and being lost, this is the service."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO and CRM pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128230;",
+          "b": "Medical equipment SEO",
+          "p": "The pages that attract."
+        },
+        {
+          "href": "/seo-services/medical-device-seo/",
+          "icon": "&#129302;",
+          "b": "Medical device SEO",
+          "p": "For manufacturers and OEMs."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "Page sets at scale."
+        },
+        {
+          "href": "/aura-business/medical-device-crm-software/",
+          "icon": "&#128203;",
+          "b": "Medical device CRM",
+          "p": "Where the lead lives."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#8377;",
+          "b": "Quotation software",
+          "p": "The quote after the enquiry."
+        }
+      ]
+    }
+  ]
+}

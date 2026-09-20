@@ -1,0 +1,227 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-cmc",
+  "title": "What Is CMC? Comprehensive Maintenance Contracts Explained",
+  "meta": "A CMC includes spare parts in the maintenance fee, unlike an AMC. A plain guide to what is covered, how it is priced and the risk it puts on the dealer.",
+  "h1": "What is CMC? The contract where <span class=\"hl\">you carry the parts risk</span>.",
+  "crumb": "What is CMC",
+  "pill": "Guide",
+  "sub": "A comprehensive maintenance contract bundles spare parts into the maintenance fee instead of billing them as they occur. That single difference changes the pricing, the paperwork and the amount of risk the dealer takes on.",
+  "meta_ticks": [
+    "Written by a team that builds service software",
+    "Written for dealers, not manufacturers",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the CMC guide and want to ask about comprehensive contracts in our system.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is CMC",
+  "secondary_keywords": [
+    "CMC full form",
+    "comprehensive maintenance contract meaning",
+    "CMC vs AMC",
+    "CMC contract medical equipment",
+    "what is covered under CMC",
+    "CMC contract India"
+  ],
+  "intent": "informational",
+  "persona": "Owner or service head of an equipment dealership deciding what kind of contract to sell",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "CMC in two paragraphs",
+      "paras": [
+        "CMC stands for Comprehensive Maintenance Contract. It is a maintenance agreement in which the agreed spare parts are included in the fee, so when a board or a sensor fails the customer pays nothing extra. The dealer absorbs the cost of the part from the contract value.",
+        "Everything else looks like an annual maintenance contract: a fixed period, scheduled preventive visits and a response commitment for breakdowns. The difference is who pays when something expensive fails, and that difference is the reason a comprehensive contract costs the customer considerably more."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The cover",
+      "h2": "What is inside a comprehensive contract, and what never is",
+      "lead": "The word comprehensive does the dealer no favours in a dispute. Nothing is genuinely all-inclusive, so the exclusion list is the most important page of the agreement.",
+      "body": [
+        {
+          "h3": "Normally included"
+        },
+        {
+          "ul": [
+            "Engineer visits, travel and labour, as in any maintenance contract.",
+            "The scheduled preventive visits with their checklists.",
+            "Replacement of parts that fail in normal use, drawn from a defined list of assemblies.",
+            "Breakdown attendance within the response time stated in the agreement."
+          ]
+        },
+        {
+          "h3": "Normally excluded, and worth naming explicitly"
+        },
+        {
+          "ul": [
+            "Consumables and items with a known working life, such as probes, filters, batteries, printer media and reagents.",
+            "High-value assemblies the trade treats separately, for example an X-ray tube or a detector panel, which are often named as a specific carve-out.",
+            "Damage from misuse, power surges, water ingress, pests or unauthorised repair.",
+            "Loss, theft, relocation of the machine and any building work around it.",
+            "Software licences and upgrades supplied by the original manufacturer."
+          ]
+        },
+        "A contract record in your system should carry these inclusions and exclusions as fields the service desk can read at call intake. If the exclusion only exists in a signed copy in a cupboard, the engineer in the field will make the decision for you."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The pricing logic",
+      "h2": "How dealers arrive at a comprehensive fee",
+      "lead": "There is no published rate. The fee is an estimate of what the machine will cost you to keep running, plus a margin for being wrong.",
+      "body": [
+        "The inputs a careful dealer uses are all things a service system already records:",
+        {
+          "ul": [
+            "<b>Parts history for that model.</b> What has actually failed across your installed base, and at what age.",
+            "<b>Age and usage of this particular unit.</b> An old, heavily used machine is a different proposition from one coming out of warranty.",
+            "<b>Site conditions.</b> Power quality, dust, air conditioning and the competence of the local operator.",
+            "<b>Distance.</b> A unit far from your nearest engineer costs more in travel and in downtime penalties.",
+            "<b>Response commitment.</b> A tighter promise means holding spares closer to the customer, which is working capital.",
+            "<b>Expected preventive visits.</b> More visits cost more, but usually reduce breakdowns."
+          ]
+        },
+        "Because this pricing is a forecast of your own failure history, a dealership that cannot report service history per serial number is guessing. That is the practical argument for keeping an asset register and job card history in one system rather than in an engineer's notebook.",
+        "Contract profitability is also worth tracking after the fact. Comparing what you invoiced for a contract against the parts and visits consumed under it is how you find out which models should never be offered comprehensively."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Three things people confuse",
+      "h2": "Warranty, AMC and CMC side by side",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "",
+              "Warranty",
+              "AMC",
+              "CMC"
+            ],
+            "rows": [
+              [
+                "Who pays",
+                "Built into the sale price",
+                "Customer pays a yearly fee",
+                "Customer pays a higher yearly fee"
+              ],
+              [
+                "Labour and visits",
+                "Included",
+                "Included",
+                "Included"
+              ],
+              [
+                "Spare parts",
+                "Included for defects",
+                "Quoted and billed separately",
+                "Included, within the named list"
+              ],
+              [
+                "Preventive visits",
+                "Sometimes, often not",
+                "A stated number",
+                "A stated number"
+              ],
+              [
+                "Who carries the risk",
+                "The manufacturer",
+                "Shared: the customer pays for parts",
+                "The dealer"
+              ],
+              [
+                "Starts",
+                "At installation",
+                "When warranty ends",
+                "When warranty ends, or later"
+              ]
+            ]
+          }
+        },
+        "Read the full decision in <a href=\"/compare/amc-vs-cmc/\">AMC vs CMC</a>, and the contract mechanics in <a href=\"/resources/what-is-amc-software/\">what is AMC software</a>. Aura Business keeps warranty tracking, annual contracts and comprehensive contracts as distinct record types on the same machine, so the service desk always knows which one applies today."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about CMC",
+      "items": [
+        {
+          "q": "What is the full form of CMC?",
+          "a": "Comprehensive Maintenance Contract. It is a maintenance agreement in which agreed spare parts are included in the fee, in addition to the labour, visits and breakdown response that any maintenance contract covers."
+        },
+        {
+          "q": "Is CMC better than AMC for the customer?",
+          "a": "It is more predictable for the customer, because one known fee replaces an unknown parts bill. Whether it is better value depends on how reliable the machine is. For the dealer, it is the riskier of the two and should be priced from real failure history."
+        },
+        {
+          "q": "Are all spare parts covered under CMC?",
+          "a": "No. Consumables, wear items and specific high-value assemblies are normally excluded by name, along with damage from misuse or power problems. Write the exclusions into the contract record so the service desk sees them when a call arrives."
+        },
+        {
+          "q": "When should a dealer refuse to offer a CMC?",
+          "a": "When the machine is old and its failure history is unknown, when the site has poor power or handling, or when the critical assembly is one you cannot source quickly. It is fair to offer an annual contract with parts billed separately instead."
+        },
+        {
+          "q": "Does GST apply to a CMC?",
+          "a": "The contract fee is a supply of services and is invoiced accordingly. The treatment of parts supplied under the contract should be confirmed with your own tax adviser, since it depends on how the agreement is drafted."
+        },
+        {
+          "q": "How do I track profitability on a comprehensive contract?",
+          "a": "Record every visit and every part issued against the contract, not just against the customer. The contract then shows the invoiced value on one side and the parts and labour consumed on the other, which tells you whether that model should be offered comprehensively again."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "The renewal clock explained."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128736;",
+          "b": "Service management explained",
+          "p": "Call intake to invoice."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128203;",
+          "b": "Installed base management",
+          "p": "History per serial number."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "The side-by-side decision."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#129659;",
+          "b": "AMC and CMC software",
+          "p": "Both contract types in one place."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128274;",
+          "b": "Warranty management",
+          "p": "Know when cover ends."
+        }
+      ]
+    }
+  ]
+}

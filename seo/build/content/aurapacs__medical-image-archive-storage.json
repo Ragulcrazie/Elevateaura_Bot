@@ -1,0 +1,334 @@
+{
+  "cluster": "aurapacs",
+  "slug": "medical-image-archive-storage",
+  "title": "Medical Image Storage and Archive | Indexed, Backed Up | AuraPACS",
+  "meta": "Medical image storage and archive on your own hardware: every study indexed by patient, study and series, searchable history.",
+  "h1": "Medical image storage that is <span class=\"hl\">indexed, searchable and backed up</span>, on hardware you own.",
+  "crumb": "Image Archive and Storage",
+  "pill": "The archive",
+  "sub": "AuraPACS stores every DICOM study on the on-premise node, indexed by patient, study and series so it can be found in seconds years later. An encrypted copy goes offsite through the cloud layer. Retention is on your own disks, planned for your modalities and volume.",
+  "meta_ticks": [
+    "Indexed by patient, study, series",
+    "Encrypted offsite copy",
+    "Retention on your own hardware"
+  ],
+  "whatsapp_text": "Hi, I'd like to discuss medical image storage and archiving for our centre.",
+  "primary_keyword": "medical image storage",
+  "secondary_keywords": [
+    "medical image archive",
+    "DICOM archive",
+    "radiology image storage",
+    "PACS storage",
+    "medical imaging backup",
+    "long-term image archive"
+  ],
+  "intent": "commercial",
+  "persona": "Centre owner or IT lead planning where years of CT, MR and X-ray studies will live",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What the archive in AuraPACS is",
+      "paras": [
+        "The archive is the part of a PACS that keeps the DICOM files and the index that makes them findable. AuraPACS writes every received study to the on-premise node and records it by patient, study and series, so the front desk can search a name, a date or a modality and open the result. An encrypted copy of each study is sent offsite through the cloud layer.",
+        "Storage is not the same as a folder of files. A folder cannot tell you which of a patient's four studies is the follow-up, cannot serve a series to a browser viewer, and cannot show a radiologist the prior beside today's scan. The index does that, and the archive is the index plus the files it points to."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How images get lost",
+      "h2": "Most centres do not lose images dramatically. They lose them one console at a time.",
+      "lead": "A scanner is not an archive, and a folder on a PC is not a backup.",
+      "items": [
+        {
+          "h": "The console disk fills",
+          "p": "Old studies are deleted from the CT to keep scanning. The only copy left is whatever the patient took home."
+        },
+        {
+          "h": "Folders named by date",
+          "p": "Exports sit in folders by month with no way to search by patient, so a prior is found by memory or not at all."
+        },
+        {
+          "h": "One disk, no copy",
+          "p": "An on-premise server with no offsite backup loses the whole history to one hardware fault."
+        },
+        {
+          "h": "Cloud storage with per-study rent",
+          "p": "A provider holds the archive and bills for it monthly. Stop paying and access ends."
+        },
+        {
+          "h": "Nobody planned for growth",
+          "p": "CT and mammography studies are large. A disk sized for the first year is full in the second."
+        },
+        {
+          "h": "Retention is nobody's decision",
+          "p": "How long studies must be kept is not written down, so nothing is ever deleted and nothing is ever verified."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From receipt to a study found years later.",
+      "steps": [
+        {
+          "h": "Received",
+          "p": "The modality sends the study as DICOM to the node."
+        },
+        {
+          "h": "Indexed",
+          "p": "Patient, study, series and image records are written to the database."
+        },
+        {
+          "h": "Stored",
+          "p": "Files land on the node's disks, on hardware you own."
+        },
+        {
+          "h": "Backed up",
+          "p": "An encrypted copy syncs offsite through the cloud layer."
+        },
+        {
+          "h": "Served",
+          "p": "The browser viewer reads the series from the node on request."
+        },
+        {
+          "h": "Found",
+          "p": "Search by name, ID, date or modality returns the study and its report."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The archive and what sits around it.",
+      "groups": [
+        {
+          "icon": "&#128451;",
+          "h": "Storage",
+          "items": [
+            "DICOM files on your own node",
+            "Any modality: CT, MR, X-ray, ultrasound, mammography and more",
+            "Sized to your volume on a call",
+            "Retention under your control"
+          ]
+        },
+        {
+          "icon": "&#128269;",
+          "h": "Index and search",
+          "items": [
+            "Indexed by patient, study, series",
+            "Full searchable patient history",
+            "Priors found beside today's study",
+            "Report PDF stored with the study"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Protection",
+          "items": [
+            "Encrypted offsite backup",
+            "Role-based access to the archive",
+            "Every view audited",
+            "Works without internet"
+          ]
+        },
+        {
+          "icon": "&#127760;",
+          "h": "Reach",
+          "items": [
+            "Served to the browser viewer",
+            "Remote reading through the cloud layer",
+            "WhatsApp secure links",
+            "GST billing from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/on-premise-pacs/",
+        "label": "See the on-premise node"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "Storage planning",
+      "h2": "How to think about disk before you buy it.",
+      "items": [
+        {
+          "h": "Count studies per modality per day",
+          "workflow": "CT and MR studies are multi-slice and large; mammography images are large singles; X-ray is a few images; ultrasound is many small frames.",
+          "result": "A rough annual figure per modality, which is what the node's disk is sized against."
+        },
+        {
+          "h": "Decide what stays hot",
+          "workflow": "Recent studies must be instant on the local network; older ones can be slower but must still be findable.",
+          "result": "A disk plan that keeps the working set fast without buying for ten years on day one."
+        },
+        {
+          "h": "Write down the retention rule",
+          "workflow": "Decide how many years studies are kept and who may delete, then apply it to the archive.",
+          "result": "A policy your advisers can review, rather than an accident."
+        },
+        {
+          "h": "Test the restore",
+          "workflow": "Confirm that a study can be restored from the encrypted offsite copy before you need to.",
+          "result": "A backup that has been proven, not assumed."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose archive currently lives on a scanner.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres",
+          "p": "Years of CT and MR that must stay findable."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Small hospitals",
+          "p": "Imaging for inpatients and OPD in one archive."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Screening programmes",
+          "p": "Serial rounds compared over years."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Owners who want to own the data",
+          "p": "Images on hardware the centre bought, not rented."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "IT leads",
+          "p": "A clear answer to where the files are and how they are backed up."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Keeping the images, three ways.",
+      "cols": [
+        "Folders and external drives",
+        "Cloud storage service",
+        "AuraPACS archive"
+      ],
+      "rows": [
+        [
+          "Searchable by patient",
+          "No",
+          "By filename",
+          "By patient, study, series, date, modality"
+        ],
+        [
+          "Serves a viewer",
+          "No",
+          "No",
+          "Yes, browser viewer from the node"
+        ],
+        [
+          "Report kept with images",
+          "Separate folder",
+          "Separate file",
+          "PDF on the study"
+        ],
+        [
+          "Offsite copy",
+          "If someone remembers",
+          "Yes",
+          "Encrypted, automatic"
+        ],
+        [
+          "Ownership",
+          "Yours, unmanaged",
+          "Rented monthly",
+          "Yours, on your node"
+        ],
+        [
+          "Works without internet",
+          "Yes",
+          "No",
+          "Yes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical image storage, answered.",
+      "items": [
+        {
+          "q": "Where are the images physically stored?",
+          "a": "On the on-premise node, a machine on your own network. An encrypted backup copy is kept offsite through the AuraPACS cloud layer so a disk failure at the centre does not lose the archive."
+        },
+        {
+          "q": "How much disk do we need?",
+          "a": "It depends on modalities and daily volume. CT, MR and mammography studies are large; X-ray and ultrasound are smaller. The node is sized against your numbers on a call, and disk can be added as the archive grows."
+        },
+        {
+          "q": "Can we find a study from years ago?",
+          "a": "Yes. Every study is indexed by patient, study and series, so a search by name, ID or date returns it with its report and it opens in the browser viewer. See <a href=\"/aurapacs/pacs-software/\">PACS software</a>."
+        },
+        {
+          "q": "Who decides how long studies are kept?",
+          "a": "You do. Retention is on your own hardware and under your policy. Health-record retention rules vary, so confirm the period that applies to you with your advisers and set the archive accordingly."
+        },
+        {
+          "q": "Is the archive the same as cloud storage?",
+          "a": "No. Cloud storage holds files; an archive indexes them, serves them to a viewer, keeps the report with the study and shows priors. See <a href=\"/compare/pacs-vs-cloud-storage/\">PACS vs cloud storage</a>."
+        },
+        {
+          "q": "What happens if the node fails?",
+          "a": "The encrypted offsite copy is used to restore the archive onto replacement hardware, and remote viewing of already-synced studies continues through the cloud layer while that happens."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/on-premise-pacs/",
+          "icon": "&#128187;",
+          "b": "On-premise PACS",
+          "p": "The node that holds the archive."
+        },
+        {
+          "href": "/aurapacs/dicom-server-software/",
+          "icon": "&#128229;",
+          "b": "DICOM server",
+          "p": "How studies arrive."
+        },
+        {
+          "href": "/aurapacs/cloud-pacs-software/",
+          "icon": "&#9729;",
+          "b": "Cloud PACS",
+          "p": "Where the backup goes."
+        },
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128218;",
+          "b": "What is DICOM",
+          "p": "The files in the archive."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Files versus an archive."
+        }
+      ]
+    }
+  ]
+}

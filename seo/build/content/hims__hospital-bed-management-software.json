@@ -1,0 +1,331 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-bed-management-software",
+  "title": "Hospital Bed Management Software | Live Ward Occupancy | HIMS",
+  "meta": "Hospital bed management software with live ward and bed occupancy, transfers, ICU step-down, bed release at discharge and occupancy on the hospital dashboard.",
+  "h1": "Hospital bed management software that shows <span class=\"hl\">every ward and every bed</span> as it is right now.",
+  "crumb": "Hospital Bed Management",
+  "pill": "For admissions desks and ward in-charges",
+  "sub": "HIMS keeps a live board of every ward and bed: who is in it, since when, and which beds are free. Admissions allocate from it, transfers and ICU step-downs move patients across it, and discharge releases the bed back to the front desk.",
+  "meta_ticks": [
+    "Live occupancy across every ward",
+    "Transfers and ICU step-down in one move",
+    "Occupancy on the hospital dashboard"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS bed management board showing ward-wise bed occupancy with occupied and free beds",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, I'd like to see the bed management board in HIMS.",
+  "primary_keyword": "hospital bed management software",
+  "secondary_keywords": [
+    "bed management system for hospitals",
+    "ward management software",
+    "bed occupancy software",
+    "hospital bed allocation software",
+    "bed availability dashboard",
+    "patient transfer software"
+  ],
+  "intent": "commercial",
+  "persona": "Admissions in-charge, nursing superintendent or administrator of a hospital with several wards",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital bed management software does",
+      "paras": [
+        "Hospital bed management software keeps one live picture of bed occupancy across the hospital, so that admission, transfer and discharge all update the same board. In HIMS the board is part of the inpatient workflow: a bed is allocated when the admission is raised, moved when the patient is transferred, and released when the discharge is completed, and the free-bed count feeds the hospital dashboard.",
+        "The board is organised by ward and bed type, general ward, private room, ICU and so on, so the admissions desk can answer a family or a referring doctor without phoning the ward. Because the bed belongs to an admission, room charges post to the IP bill for the days actually occupied."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why a bed register is not enough",
+      "h2": "The ward knows, the front desk guesses, the patient waits on a trolley.",
+      "lead": "Bed occupancy changes every hour. A register updated at the end of a shift is always wrong.",
+      "items": [
+        {
+          "h": "Bed promised twice",
+          "p": "The front desk allots a bed from yesterday's register while the ward filled it from casualty overnight."
+        },
+        {
+          "h": "Transfers not recorded",
+          "p": "A patient moved from ICU to the ward is still shown in ICU, so the ICU looks full and the ward looks empty."
+        },
+        {
+          "h": "Discharged but not released",
+          "p": "The patient left at noon; the bed is marked free at the evening handover, after a new admission was turned away."
+        },
+        {
+          "h": "Room charges by memory",
+          "p": "Nobody is sure whether the patient was in the private room for three days or four, so the bill is argued at discharge."
+        },
+        {
+          "h": "No hospital-wide view",
+          "p": "Management asks how many beds are free right now, and the answer is a round of phone calls to each ward."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a bed moves",
+      "h2": "Allocation, transfer, release.",
+      "steps": [
+        {
+          "h": "Free bed visible",
+          "p": "Admissions desk sees free beds by ward and type on the board."
+        },
+        {
+          "h": "Allocated at admission",
+          "p": "The bed is tied to the admission and shows as occupied for everyone."
+        },
+        {
+          "h": "Transfer",
+          "p": "Ward to ICU, or ICU step-down to the ward, moves the patient and both beds update."
+        },
+        {
+          "h": "Charges post",
+          "p": "Room and bed charges accrue to the IP bill for each bed and day."
+        },
+        {
+          "h": "Released at discharge",
+          "p": "Discharge frees the bed, and the dashboard count changes at once."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The bed board and what connects to it.",
+      "groups": [
+        {
+          "icon": "&#128719;",
+          "h": "The board",
+          "items": [
+            "Ward-wise bed layout",
+            "Bed types: general, semi-private, private, ICU",
+            "Occupied, free and reserved status",
+            "Patient, consultant and admission date per bed"
+          ]
+        },
+        {
+          "icon": "&#128260;",
+          "h": "Movement",
+          "items": [
+            "Allocation at admission",
+            "Ward-to-ward transfers",
+            "ICU admission and step-down",
+            "Release at discharge"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing link",
+          "items": [
+            "Room charges per bed type and day",
+            "Charges follow the transfer",
+            "Running IP bill",
+            "Package room entitlements"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Dashboard",
+          "items": [
+            "Free beds by ward on the live dashboard",
+            "OP, IP, beds and collections in one view",
+            "ICU beds with live vitals",
+            "Casualty admissions waiting for a bed"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-ipd-management-software/",
+        "label": "See the full inpatient workflow"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes on the admissions desk.",
+      "items": [
+        {
+          "h": "A referral call from a clinic",
+          "workflow": "The desk opens the board, sees two private rooms free on the second floor and confirms the admission on the phone.",
+          "result": "No call to the ward, no promise that cannot be kept."
+        },
+        {
+          "h": "An ICU step-down",
+          "workflow": "The intensivist marks the patient fit for the ward; the transfer moves the admission to a ward bed and frees the ICU bed.",
+          "result": "The ICU bed is available to casualty within the minute."
+        },
+        {
+          "h": "A discharge at midday",
+          "workflow": "The final bill is settled and the discharge completes, which releases the bed on the board.",
+          "result": "The next admission is allocated the same afternoon."
+        },
+        {
+          "h": "Management review",
+          "workflow": "The dashboard shows occupied and free beds by ward alongside OP numbers and collections.",
+          "result": "One screen instead of a round of calls."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any hospital where a bed is a scarce thing.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Many wards, one board."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "A handful of beds that must not be double-booked."
+        },
+        {
+          "icon": "&#128657;",
+          "b": "Casualty-led hospitals",
+          "p": "Admissions arriving at all hours."
+        },
+        {
+          "icon": "&#128147;",
+          "b": "ICU teams",
+          "p": "Step-down and step-up moves tracked."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Admissions desks",
+          "p": "Answer availability without a phone call."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Tracking beds, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Occupancy",
+          "Ward register, updated per shift",
+          "Not tracked",
+          "Live, updated by admission and discharge"
+        ],
+        [
+          "Transfers",
+          "Written in two registers",
+          "Not covered",
+          "One move updates both beds"
+        ],
+        [
+          "Room charges",
+          "Counted at discharge",
+          "Typed in",
+          "Posted per bed and day to the IP bill"
+        ],
+        [
+          "Hospital-wide view",
+          "Phone calls",
+          "None",
+          "Free beds by ward on the dashboard"
+        ],
+        [
+          "ICU",
+          "Separate register",
+          "Not covered",
+          "ICU beds on the same board, with live vitals"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital bed management software, answered.",
+      "items": [
+        {
+          "q": "Is bed management a separate module?",
+          "a": "It is part of the HIMS inpatient workflow. Beds are allocated when an admission is raised and released when the discharge completes, so the board stays current without a separate register. See <a href=\"/hims/hospital-ipd-management-software/\">IPD software</a>."
+        },
+        {
+          "q": "Can we set up our own wards and bed types?",
+          "a": "Yes. Wards, room categories and the beds in each are configured to match your building during setup, so the board looks like your hospital rather than a generic layout."
+        },
+        {
+          "q": "How do transfers between wards work?",
+          "a": "A transfer moves the admission from one bed to another. The old bed becomes free and the new bed becomes occupied in the same action, and room charges change from the date of transfer."
+        },
+        {
+          "q": "Does the ICU appear on the same board?",
+          "a": "Yes. ICU beds are part of the board and step-up or step-down moves are ordinary transfers. The ICU module also shows live vitals per bed. See <a href=\"/hims/icu-management-software/\">ICU management software</a>."
+        },
+        {
+          "q": "How does housekeeping know a bed is free?",
+          "a": "The bed shows as released on the board the moment the discharge completes, so the ward and housekeeping can turn it around before the next admission is allocated. How the ward team coordinates the cleaning itself stays with your process."
+        },
+        {
+          "q": "Can management see occupancy without logging into the ward screen?",
+          "a": "Yes. The hospital dashboard in HIMS shows OP, IP, beds and collections together, so occupied and free beds by ward are visible alongside the day's numbers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128203;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/icu-management-software/",
+          "icon": "&#128147;",
+          "b": "ICU management",
+          "p": "Live vitals per bed."
+        },
+        {
+          "href": "/hims/emergency-department-software/",
+          "icon": "&#128657;",
+          "b": "Emergency department",
+          "p": "Triage board to admission."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Small IP-led facilities."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        },
+        {
+          "href": "/hims/multi-specialty-hospital-software/",
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospital",
+          "p": "Departments on a shared record."
+        }
+      ]
+    }
+  ]
+}

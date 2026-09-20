@@ -1,0 +1,328 @@
+{
+  "cluster": "aura-learn",
+  "slug": "online-assessment-platform",
+  "title": "Online Assessment Platform | Aura Learn",
+  "meta": "Online assessment platform for training and hiring-style evaluation: assessments graded automatically, certificates on a pass, and a record kept per candidate.",
+  "h1": "An online assessment platform that <span class=\"hl\">grades, records and certifies</span> without a marker.",
+  "crumb": "Online Assessment Platform",
+  "pill": "For training teams and evaluators",
+  "sub": "Aura Learn runs quizzes and assessments for training programmes and hiring-style evaluation: build the assessment from a question bank, assign it to a batch or an individual, grade it on submission, issue a certificate on a pass and keep the result against each person's record.",
+  "meta_ticks": [
+    "Assessments graded on submission",
+    "Certificate issued on a pass",
+    "Result kept per candidate"
+  ],
+  "whatsapp_text": "Hi, I'd like to see Aura Learn as an online assessment platform for our training and evaluation.",
+  "primary_keyword": "online assessment platform",
+  "secondary_keywords": [
+    "online assessment software",
+    "employee assessment platform",
+    "skills assessment software",
+    "online evaluation platform",
+    "assessment platform India",
+    "training assessment tool"
+  ],
+  "intent": "commercial",
+  "persona": "Training or HR lead who needs to evaluate staff, trainees or applicants at scale",
+  "page_type": "feature",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an online assessment platform does here",
+      "paras": [
+        "An online assessment platform lets you set an evaluation once, put it in front of a group of people, and get a graded result per person without anyone marking. Aura Learn does this for two kinds of assessment: the check at the end of a training module, and the standalone evaluation used to screen or grade candidates in a hiring-style process.",
+        "You assemble the assessment from a tagged question bank, set marks, a time limit and a pass mark, and assign it to a batch or an individual. Each person attempts it in the app or on the web, the objective questions are graded on submission, and a certificate is issued if they pass. The attempt, score and certificate sit on that person's record, and compliance tracking flags anyone who has not yet passed a required assessment."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The evaluation problem",
+      "h2": "Evaluating people at scale breaks the moment it leaves the classroom.",
+      "lead": "A written test works for twenty people in one room. It does not work for two hundred across branches, or for applicants you have never met.",
+      "items": [
+        {
+          "h": "Results in spreadsheets",
+          "p": "Scores are typed in from answer sheets, and the sheet is the only record when someone asks who passed."
+        },
+        {
+          "h": "No pass mark enforced",
+          "p": "Whether a person cleared the assessment depends on who marked it and how generous they were."
+        },
+        {
+          "h": "Certificates typed by hand",
+          "p": "A certificate is made in a document template after the fact, and nobody can verify it later."
+        },
+        {
+          "h": "Required assessments missed",
+          "p": "Nobody knows which staff member never sat the safety or process test they were supposed to."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From question bank to a certificate on the record.",
+      "steps": [
+        {
+          "h": "Bank",
+          "p": "Questions written once, tagged by skill or topic."
+        },
+        {
+          "h": "Set",
+          "p": "Assessment assembled with marks, time limit and pass mark."
+        },
+        {
+          "h": "Assign",
+          "p": "Sent to a batch, a region or a single candidate."
+        },
+        {
+          "h": "Attempt",
+          "p": "Taken in the app or browser inside the window."
+        },
+        {
+          "h": "Grade",
+          "p": "Scored on submission; pass or fail applied automatically."
+        },
+        {
+          "h": "Record",
+          "p": "Certificate issued on a pass; result stored per person."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Assessment building, delivery, grading and the record behind it.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Build",
+          "items": [
+            "Question bank by skill and topic",
+            "Quizzes and full assessments",
+            "Marks and pass mark per assessment",
+            "Time limits and attempt windows"
+          ]
+        },
+        {
+          "icon": "&#128229;",
+          "h": "Deliver",
+          "items": [
+            "Assign to batch, cohort or individual",
+            "Learner mobile app and web",
+            "WhatsApp reminder before the window closes",
+            "Attempt history"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Grade and certify",
+          "items": [
+            "Auto-graded on submission",
+            "Instant score and review",
+            "Certificate on completion or pass",
+            "Compliance tracking for required assessments"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "Analyse",
+          "items": [
+            "Result per candidate",
+            "Pass rate per batch",
+            "Topic-wise weak areas",
+            "Export for HR or audit"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where an assessment platform earns its place.",
+      "items": [
+        {
+          "h": "End-of-module check for field staff",
+          "workflow": "A service team finishes an equipment module in the app and sits the assessment; a pass issues the certificate and marks the module complete.",
+          "result": "The manager sees who is cleared to work on that equipment."
+        },
+        {
+          "h": "Screening applicants before an interview",
+          "workflow": "Applicants receive a link, attempt a timed skills assessment and are graded on submission.",
+          "result": "Interviews are booked only with people who cleared the pass mark."
+        },
+        {
+          "h": "Annual process refresher",
+          "workflow": "A short assessment is assigned to every employee each year; compliance tracking lists who has and has not passed.",
+          "result": "The audit question is answered from the dashboard."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who must evaluate people and keep the result.",
+      "items": [
+        {
+          "icon": "&#127981;",
+          "b": "Companies training staff",
+          "p": "Process, product and safety assessments."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Hiring teams",
+          "p": "Skills screening before interviews."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Equipment and service firms",
+          "p": "Certifying engineers on new models."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Training providers",
+          "p": "Assessments that end a paid course."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Colleges",
+          "p": "Internal tests and placement practice."
+        },
+        {
+          "icon": "&#128221;",
+          "b": "Certification bodies",
+          "p": "Assessing and recording at scale."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Written tests, survey forms, or an assessment platform.",
+      "cols": [
+        "Written test",
+        "Survey or quiz form",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Grading",
+          "By hand",
+          "Auto-check, no pass mark",
+          "Auto-graded with pass mark and review"
+        ],
+        [
+          "Certificate",
+          "Typed later",
+          "None",
+          "Issued on a pass, stored on the record"
+        ],
+        [
+          "Record per person",
+          "Spreadsheet",
+          "Responses list",
+          "Attempts, scores and certificates per candidate"
+        ],
+        [
+          "Required assessments",
+          "Tracked by memory",
+          "Not tracked",
+          "Compliance tracking flags who has not passed"
+        ],
+        [
+          "Linked to the training",
+          "No",
+          "No",
+          "Same platform as lessons, batches and progress"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Help centre",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Online assessment platform, answered.",
+      "items": [
+        {
+          "q": "Can we set a pass mark?",
+          "a": "Yes. Each assessment carries its own marks and pass mark. Pass or fail is applied automatically on submission, and a certificate is issued only when the pass mark is met."
+        },
+        {
+          "q": "Can the platform be used for hiring assessments?",
+          "a": "Yes. A timed skills assessment can be assigned to an individual candidate rather than a batch, graded on submission and kept on that candidate's record, so your team can shortlist from the results."
+        },
+        {
+          "q": "What about compliance and required training?",
+          "a": "Compliance tracking shows which people have and have not passed a required assessment, which suits regulated training where the record matters. It is a record of your own training, not a certification of the software. See the <a href=\"/aura-learn/certification-training-platform/\">certification training platform</a>."
+        },
+        {
+          "q": "Are results exportable?",
+          "a": "Yes. Results per candidate and per batch can be exported from the dashboard for HR files or an audit, and each candidate's record keeps the attempt, score, pass status and certificate together."
+        },
+        {
+          "q": "Does it need an app?",
+          "a": "No. Assessments can be attempted in the learner mobile app or in a browser. The app is useful when the assessment follows lessons, since lessons can be downloaded for offline study; a timed assessment itself needs a connection to submit."
+        },
+        {
+          "q": "Is the number of candidates limited?",
+          "a": "No. Aura Learn is built for unlimited learners, so assessing every employee across branches or a large pool of applicants does not change what you pay. The scope is agreed on a call around the modules you need."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/online-quiz-platform/",
+          "icon": "&#10067;",
+          "b": "Online quizzes",
+          "p": "Short checks after lessons."
+        },
+        {
+          "href": "/aura-learn/certification-training-platform/",
+          "icon": "&#127942;",
+          "b": "Certification",
+          "p": "Courses that end in a certificate."
+        },
+        {
+          "href": "/aura-learn/training-management-software/",
+          "icon": "&#128188;",
+          "b": "Training management",
+          "p": "Assign, track and certify teams."
+        },
+        {
+          "href": "/aura-learn/question-bank-software/",
+          "icon": "&#128203;",
+          "b": "Question banks",
+          "p": "One bank, many assessments."
+        },
+        {
+          "href": "/resources/what-is-lms/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an LMS is."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

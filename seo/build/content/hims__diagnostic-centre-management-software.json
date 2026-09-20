@@ -1,0 +1,330 @@
+{
+  "cluster": "hims",
+  "slug": "diagnostic-centre-management-software",
+  "title": "Diagnostic Centre Management Software | HIMS",
+  "meta": "Diagnostic centre management software that joins the front desk, laboratory (LIMS), imaging through AuraPACS and GST billing on one record.",
+  "h1": "Diagnostic centre management software with <span class=\"hl\">lab, imaging and billing</span> on one patient record.",
+  "crumb": "Diagnostic Centre Software",
+  "pill": "For standalone lab and imaging centres",
+  "sub": "HIMS for diagnostic centres runs the front desk, the laboratory from order to verified result, imaging through the built-in AuraPACS and GST billing as one system, so a patient who has a blood test and a CT in the same visit gets one bill and one set of reports.",
+  "meta_ticks": [
+    "LIMS from sample to verified result",
+    "AuraPACS imaging built in",
+    "One bill for lab and imaging"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/laboratory.png",
+    "alt": "HIMS laboratory screen showing orders, samples and results moving to verified release",
+    "bar": "his.elevateaura.co.in/lab"
+  },
+  "whatsapp_text": "Hi, we run a diagnostic centre and would like to see HIMS with AuraPACS.",
+  "primary_keyword": "diagnostic centre management software",
+  "secondary_keywords": [
+    "diagnostic center software India",
+    "pathology lab and imaging software",
+    "lab management software with PACS",
+    "diagnostic centre billing software",
+    "LIMS for diagnostic centres",
+    "scan centre management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or manager of a standalone diagnostic centre offering pathology and imaging",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What diagnostic centre management software does",
+      "paras": [
+        "Diagnostic centre management software has to do three things at once: register and bill patients at the front desk, run the laboratory from order to verified result, and handle imaging from the modality to the reported study. Most centres run these on three systems. HIMS runs them on one record, with the laboratory module (LIMS) and the AuraPACS imaging platform built in and GST billing shared by both.",
+        "The difference shows on a combined visit. A patient referred for a blood panel and an ultrasound is registered once, billed once, and their lab report and imaging report are both on the same record and both shareable to the patient and the referring doctor by WhatsApp link. For imaging-heavy centres, the <a href=\"/aurapacs/diagnostic-centre-pacs/\">AuraPACS diagnostic centre page</a> covers the PACS side in depth."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The three-system problem",
+      "h2": "A diagnostic centre is a lab, a scan centre and a billing counter pretending to be one business.",
+      "lead": "Each side works. The seams between them are where the patient waits and the money leaks.",
+      "items": [
+        {
+          "h": "Registered twice, billed twice",
+          "p": "The lab software and the scan register each have their own patient entry and their own receipt."
+        },
+        {
+          "h": "Reports collected from two rooms",
+          "p": "The patient waits for a printed lab report at one counter and a film or CD at another."
+        },
+        {
+          "h": "Referrers chase by phone",
+          "p": "The referring doctor calls to ask whether the report is ready because nothing is sent to them."
+        },
+        {
+          "h": "Results released unverified",
+          "p": "Without a verification step, a result reaches the patient before a pathologist has looked at it."
+        },
+        {
+          "h": "Imaging in a separate world",
+          "p": "The radiologist reports on a workstation that the front desk cannot see, so the report is typed again for the patient."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One combined visit",
+      "h2": "Front desk to shared report.",
+      "steps": [
+        {
+          "h": "Registered and billed",
+          "p": "Patient and referrer recorded; lab and imaging billed on one GST invoice."
+        },
+        {
+          "h": "Lab order",
+          "p": "Tests appear on the laboratory worklist; sample collected and tracked."
+        },
+        {
+          "h": "Imaging worklist",
+          "p": "The study appears on the modality via the worklist; no retyping at the machine."
+        },
+        {
+          "h": "Study lands",
+          "p": "Images arrive automatically in AuraPACS from the scanner."
+        },
+        {
+          "h": "Verified and reported",
+          "p": "Lab results verified and released; the radiologist reports in the browser viewer."
+        },
+        {
+          "h": "Shared",
+          "p": "Reports on the record, sent to the patient and referrer by secure WhatsApp link."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Front desk, LIMS, PACS and billing.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Front desk",
+          "items": [
+            "Registration with referrer recorded",
+            "Appointments and walk-in queue",
+            "Patient portal for reports",
+            "Collection and pending list"
+          ]
+        },
+        {
+          "icon": "&#128300;",
+          "h": "Laboratory (LIMS)",
+          "items": [
+            "Order to sample to result",
+            "Verification before release",
+            "Report on the patient record",
+            "Reagent and consumable stock with reorder levels"
+          ]
+        },
+        {
+          "icon": "&#129656;",
+          "h": "Imaging (AuraPACS)",
+          "items": [
+            "DICOM receive from CT, MR, X-ray, ultrasound and more",
+            "Modality worklist",
+            "Zero-download browser viewer",
+            "Structured reporting templates to PDF",
+            "Remote reading from home or a second site"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing and sharing",
+          "items": [
+            "One GST invoice for lab and imaging",
+            "Cash and insurance",
+            "WhatsApp report sharing via secure link",
+            "Encrypted offsite backup of studies"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/diagnostic-centre-pacs/",
+        "label": "See AuraPACS for diagnostic centres"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes at the centre.",
+      "items": [
+        {
+          "h": "A full-body health check package",
+          "workflow": "Blood panel, ECG and ultrasound on one registration and one bill; lab results verify through the day, the scan is reported in the viewer, and one link goes to the patient.",
+          "result": "One visit, one bill, one set of reports."
+        },
+        {
+          "h": "A referring physician across town",
+          "workflow": "The referrer is recorded at registration and receives the report by secure link when it is released.",
+          "result": "No phone call asking whether it is ready."
+        },
+        {
+          "h": "A radiologist reading from home",
+          "workflow": "The evening's CT studies are read in the browser from home and reported to PDF on the record.",
+          "result": "Reports go out the same evening."
+        },
+        {
+          "h": "Internet down at the centre",
+          "workflow": "The on-premise AuraPACS node keeps receiving and displaying studies on the local network.",
+          "result": "Reporting continues; the cloud layer syncs when the line returns."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Standalone diagnostics of every mix.",
+      "items": [
+        {
+          "icon": "&#128300;",
+          "b": "Pathology labs adding imaging",
+          "p": "One record instead of a second system."
+        },
+        {
+          "icon": "&#129656;",
+          "b": "Scan centres adding pathology",
+          "p": "LIMS on the platform the PACS already runs on."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Full diagnostic centres",
+          "p": "Lab, imaging, front desk and billing together."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Radiologists and pathologists",
+          "p": "Verified release and remote reading."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Multi-centre chains",
+          "p": "Central reading, encrypted backup."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a diagnostic centre, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Patient registration",
+          "Per department",
+          "At the counter only",
+          "Once, shared by lab and imaging"
+        ],
+        [
+          "Laboratory",
+          "Result register",
+          "Not covered",
+          "LIMS with verification before release"
+        ],
+        [
+          "Imaging",
+          "Film and CD",
+          "Not covered",
+          "AuraPACS built in, browser viewer"
+        ],
+        [
+          "Report delivery",
+          "Collected in person",
+          "Printed at the counter",
+          "Secure WhatsApp link to patient and referrer"
+        ],
+        [
+          "Billing",
+          "Receipt book",
+          "GST bill",
+          "One GST invoice for lab and imaging"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Diagnostic centre management software, answered.",
+      "items": [
+        {
+          "q": "Do we need HIMS and AuraPACS separately?",
+          "a": "No. AuraPACS is built into HIMS, so the imaging side and the laboratory side share the front desk, the patient record and billing. A centre that only does imaging can start with AuraPACS alone; see <a href=\"/aurapacs/diagnostic-centre-pacs/\">diagnostic centre PACS</a>."
+        },
+        {
+          "q": "Which modalities does the imaging side support?",
+          "a": "AuraPACS receives DICOM from CT, MR, X-ray (CR and DR), ultrasound, mammography and more. Studies land automatically from the machine, and the modality worklist means the study is scheduled once and appears on the scanner."
+        },
+        {
+          "q": "How are reports shared with patients and referring doctors?",
+          "a": "Lab and imaging reports sit on the patient record and can be sent by a secure WhatsApp link that opens without a login. The patient portal also shows reports."
+        },
+        {
+          "q": "Is the radiologist's read part of the software?",
+          "a": "No. AuraPACS stores, displays and shares imaging; it is not a diagnostic device. Your radiologist reads the study in the browser viewer and finalises the structured report to PDF. See <a href=\"/hims/hospital-laboratory-management/\">laboratory management</a> for the pathology side."
+        },
+        {
+          "q": "Does it work if our internet is unreliable?",
+          "a": "Yes. AuraPACS is hybrid: an on-premise node on your network receives and displays studies without internet, and a thin cloud layer handles remote viewing and encrypted offsite backup when the connection is available."
+        },
+        {
+          "q": "Is billing GST-compliant for a diagnostic centre?",
+          "a": "Billing is GST-native, with one invoice covering lab and imaging services and tax applied where your accountant says it applies. Configuration is done during setup; this is a billing feature, not tax advice."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#129656;",
+          "b": "Diagnostic centre PACS",
+          "p": "The imaging side in depth."
+        },
+        {
+          "href": "/hims/hospital-laboratory-management/",
+          "icon": "&#128300;",
+          "b": "Laboratory (LIMS)",
+          "p": "Order to verified result."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Billing",
+          "p": "GST invoicing and collections."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "If you also run an OP."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS is."
+        }
+      ]
+    }
+  ]
+}

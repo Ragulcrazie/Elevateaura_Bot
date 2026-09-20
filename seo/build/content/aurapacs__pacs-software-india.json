@@ -1,0 +1,227 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-india",
+  "title": "PACS Software India | Built for Indian Imaging Centres | AuraPACS",
+  "meta": "PACS software for India: hybrid so power cuts and weak internet do not stop reading, GST invoicing built in, WhatsApp as the referral channel.",
+  "h1": "PACS software for India, built around <span class=\"hl\">how Indian centres actually run</span>.",
+  "crumb": "PACS Software India",
+  "pill": "Made in Chennai for Indian centres",
+  "sub": "AuraPACS is built by a Chennai studio for Indian diagnostic centres, clinics and small hospitals. It assumes power cuts and shared fibre, so the node works offline. It bills in GST, shares reports on WhatsApp because that is where referrers are, and lets the centre own its archive.",
+  "meta_ticks": [
+    "Works through outages",
+    "GST invoicing built in",
+    "WhatsApp report sharing"
+  ],
+  "whatsapp_text": "Hi, I run an imaging centre in India and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS software India",
+  "secondary_keywords": [
+    "PACS system India",
+    "Indian PACS software",
+    "PACS for diagnostic centres India",
+    "affordable PACS India",
+    "PACS software Chennai",
+    "radiology software India"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a diagnostic centre or small hospital anywhere in India comparing PACS options",
+  "page_type": "country",
+  "phase": 5,
+  "country": "IN",
+  "area_served": "India",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What PACS software for India needs to get right",
+      "paras": [
+        "PACS software for India has to survive the working conditions of an Indian centre: power that drops, internet that slows in the afternoon, referrers who want results on WhatsApp, invoices that must carry GST, and owners who would rather buy a system than rent it per scan. AuraPACS was built in Chennai with each of those as a starting assumption rather than an afterthought.",
+        "The result is a hybrid PACS: an on-premise node that receives, stores and serves studies without internet, and a cloud layer for remote reading and encrypted backup. GST billing, WhatsApp sharing and role-based access are part of the product, not integrations."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Indian realities",
+      "h2": "Five things about running imaging in India that shaped the product",
+      "lead": "Foreign PACS products were designed for hospitals with generators, data centres and referral portals. Indian centres are different in specific ways.",
+      "body": [
+        {
+          "h3": "Power and connectivity"
+        },
+        "A cloud-only PACS stops the moment the uplink does. In much of India that is a weekly event, not a rare one. The AuraPACS node runs on the centre's own network, so scanning, viewing and reporting continue through an outage and the cloud layer catches up afterwards. See <a href=\"/aurapacs/hybrid-pacs/\">hybrid PACS</a> for what runs where.",
+        {
+          "h3": "GST invoicing"
+        },
+        "Every study is billed, and every bill must be a GST invoice. AuraPACS raises the invoice against the study from the same system, so there is no separate billing package to reconcile and no invoice book at the counter.",
+        {
+          "h3": "WhatsApp as the referral channel"
+        },
+        "Referring doctors in India do not log into portals. They ask for the report on WhatsApp. AuraPACS generates a secure link per study that opens the images and the signed PDF with no login, sent from the centre's system rather than a staff member's phone, with every view audited.",
+        {
+          "h3": "Ownership rather than per-study rent"
+        },
+        "Pay-per-scan teleradiology is cheap in month one and expensive by year three, and the archive belongs to the provider. AuraPACS is a system the centre owns: images on its own node, an encrypted offsite copy, and no charge per study for keeping or reading them. Pricing is scoped on a call.",
+        {
+          "h3": "Data handling"
+        },
+        "India's data-protection framework applies to health records and continues to evolve. AuraPACS keeps images on the centre's own hardware by default, encrypts the offsite copy, restricts access by role and audits every view. How you obtain consent, how long you retain studies and how you respond to patient requests are policies you set; confirm them with your advisers."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The AuraPACS platform for an Indian centre.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Imaging",
+          "items": [
+            "DICOM receive from any modality",
+            "On-premise node, works without internet",
+            "Browser viewer, nothing installed",
+            "Modality worklist"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting and sharing",
+          "items": [
+            "Structured templates per modality",
+            "PDF report on the study",
+            "WhatsApp secure link, no login",
+            "Remote reading from home"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money and control",
+          "items": [
+            "GST billing and invoicing",
+            "Role-based access, every view audited",
+            "Encrypted offsite backup",
+            "Your data, your branding"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Delivery",
+          "items": [
+            "Live in 30 working days where scope allows",
+            "In person in Chennai",
+            "Remote setup and WhatsApp support elsewhere in India",
+            "Supported by the person who built it"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Indian centres this is built for.",
+      "items": [
+        {
+          "h": "A CT centre in a tier-2 town",
+          "workflow": "Power drops twice a day; the node resumes on restart and the CT resends. Reports go to referrers on WhatsApp.",
+          "result": "No reporting backlog caused by the electricity board."
+        },
+        {
+          "h": "A scan centre with a visiting radiologist",
+          "workflow": "He reads from his own clinic in another city in a browser, with his own login.",
+          "result": "Daily turnaround without a full-time radiologist on site."
+        },
+        {
+          "h": "A polyclinic going filmless",
+          "workflow": "The DR unit sends to the node; OPD doctors open X-rays in the consulting room; patients get a link.",
+          "result": "Film costs stop and follow-ups compare with the last image."
+        },
+        {
+          "h": "An owner tired of per-scan bills",
+          "workflow": "The archive moves onto the centre's own node with an encrypted offsite copy.",
+          "result": "A system the centre owns, scoped once on a call."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS software in India, answered.",
+      "items": [
+        {
+          "q": "Do you support centres outside Chennai?",
+          "a": "Yes. Setup is remote: your IT person installs the node with guidance over WhatsApp and screen share, modalities are configured the same way, and support continues on WhatsApp. In-person work is in Chennai, or by travel within Tamil Nadu."
+        },
+        {
+          "q": "Is GST billing really built in?",
+          "a": "Yes. Invoices are raised against the study inside AuraPACS, so the front desk bills from the same screen it uses to schedule and share."
+        },
+        {
+          "q": "What happens during a power cut?",
+          "a": "The node restarts with power and modalities resend or re-queue studies. Nothing already stored is lost, and the worklist means nothing is retyped. Uninterrupted power for the node and scanner is the centre's own arrangement."
+        },
+        {
+          "q": "How is patient data protected?",
+          "a": "Images stay on your own node, the offsite copy is encrypted, access is role-based and every view is audited. Consent, retention and patient-request handling are policies you set under the rules that apply to you; confirm them with your advisers."
+        },
+        {
+          "q": "How is AuraPACS priced?",
+          "a": "As a system you own rather than per study. Scope depends on modalities and sites, so pricing is agreed on a call after a demo."
+        },
+        {
+          "q": "Can we try it first?",
+          "a": "Yes. The live demo at pacs.elevateaura.co.in runs in a browser, and a 200 KB Windows demo installer runs against the demo server with sample studies. Activation by Site ID via WhatsApp moves the full system onto your own network."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-software-chennai/",
+          "icon": "&#128205;",
+          "b": "PACS software Chennai",
+          "p": "On-site setup in Chennai."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#9729;",
+          "b": "Hybrid PACS",
+          "p": "What survives an outage."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "The referral channel."
+        },
+        {
+          "href": "/resources/how-to-choose-pacs/",
+          "icon": "&#128218;",
+          "b": "How to choose a PACS",
+          "p": "A buyer's checklist."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Side by side."
+        },
+        {
+          "href": "/aurapacs/imaging-centre-software/",
+          "icon": "&#127973;",
+          "b": "Imaging centre software",
+          "p": "The whole centre on one system."
+        }
+      ]
+    }
+  ]
+}

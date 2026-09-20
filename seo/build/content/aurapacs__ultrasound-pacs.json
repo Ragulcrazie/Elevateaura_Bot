@@ -1,0 +1,343 @@
+{
+  "cluster": "aurapacs",
+  "slug": "ultrasound-pacs",
+  "title": "Ultrasound PACS | Cine Loops, Frames and Reports",
+  "meta": "Ultrasound PACS that stores every frame and cine loop from the scanner, attaches the sonologist's report with images.",
+  "h1": "Ultrasound PACS that keeps every frame and sends the report <span class=\"hl\">with the images</span>.",
+  "crumb": "Ultrasound PACS",
+  "pill": "For ultrasound and obstetric scanning",
+  "sub": "Ultrasound produces many single frames and cine loops in a few minutes, and most of them were never stored anywhere. AuraPACS receives them from the machine, keeps them against the patient, attaches the report, and puts images and report on the referring doctor's phone.",
+  "meta_ticks": [
+    "Frames and cine loops archived",
+    "Report with images, not just text",
+    "Referrer sees it on WhatsApp"
+  ],
+  "whatsapp_text": "Hi, we do ultrasound and obstetric scanning and would like to discuss AuraPACS.",
+  "primary_keyword": "ultrasound PACS",
+  "secondary_keywords": [
+    "ultrasound image archive",
+    "ultrasound reporting software",
+    "obstetric ultrasound software",
+    "sonography reporting software",
+    "ultrasound cine storage",
+    "USG report sharing"
+  ],
+  "intent": "commercial",
+  "persona": "Sonologist or owner of a scan centre doing obstetric and general ultrasound for referring gynaecologists and physicians",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an ultrasound PACS does",
+      "paras": [
+        "An ultrasound PACS stores the frames and cine loops the sonologist captures during a scan, files them against the patient, and keeps the report with them so the referring doctor sees both. AuraPACS receives ultrasound as DICOM from the machine onto a node in your centre, and shares the study and report by a secure WhatsApp link.",
+        "Ultrasound is the modality most often left out of a PACS. The images are small, the scan is quick and the report is what the referrer reads, so the frames stay on the machine until it runs out of space. That is a loss for follow-up scans and for the referring gynaecologist who wants to see what the report describes."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "What goes wrong with ultrasound",
+      "h2": "The report goes out. The images stay on the machine and then disappear.",
+      "lead": "An ultrasound machine's hard disk is not an archive, and a thermal print is not a record.",
+      "items": [
+        {
+          "h": "Frames deleted to make room",
+          "p": "The machine fills up and the technician clears old patients. The images from the last pregnancy scan are gone."
+        },
+        {
+          "h": "Report without pictures",
+          "p": "The referring gynaecologist gets a typed report and a thermal strip that fades, not the frames that back it up."
+        },
+        {
+          "h": "Cine loops never saved",
+          "p": "Cardiac or fetal motion clips are looked at once on the machine and never stored."
+        },
+        {
+          "h": "No comparison across visits",
+          "p": "Serial growth scans cannot be laid side by side because only the numbers were written down."
+        },
+        {
+          "h": "Patients photograph the screen",
+          "p": "In the absence of a digital copy, the family takes a phone photo of the monitor."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the probe to the referrer's phone.",
+      "steps": [
+        {
+          "h": "Booked",
+          "p": "Front desk schedules the patient; the entry appears on the ultrasound worklist."
+        },
+        {
+          "h": "Scanned",
+          "p": "The sonologist captures frames and cine loops as usual and ends the exam."
+        },
+        {
+          "h": "Received",
+          "p": "The machine sends the study as DICOM to the node, where it is filed under the patient."
+        },
+        {
+          "h": "Reported",
+          "p": "The sonologist writes on an ultrasound template and finalises a PDF on the study."
+        },
+        {
+          "h": "Shared",
+          "p": "One secure WhatsApp link carries the images and the report to the referring doctor and the patient."
+        },
+        {
+          "h": "Found again",
+          "p": "At the next visit the earlier scan is in the patient's history, ready to open."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What an ultrasound centre uses",
+      "h2": "The parts of AuraPACS that matter most for sonography.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "From the machine",
+          "items": [
+            "DICOM receive of frames and cine loops",
+            "Modality worklist to the ultrasound",
+            "Archive on your node",
+            "Encrypted offsite backup"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Viewing",
+          "items": [
+            "Browser viewer, nothing installed",
+            "Frame-by-frame and loop playback",
+            "Patient history with earlier scans",
+            "Role-based access for referrers"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting",
+          "items": [
+            "Ultrasound templates: obstetric, abdomen, pelvis and more",
+            "Finalise to PDF on the study",
+            "Sign-off by the sonologist"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Sharing and billing",
+          "items": [
+            "WhatsApp secure link, no login",
+            "Images and report together",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/ris-pacs-software/",
+        "label": "See RIS and PACS together"
+      }
+    },
+    {
+      "type": "table",
+      "eyebrow": "Ultrasound specifics",
+      "h2": "What sonography needs from a PACS.",
+      "headers": [
+        "Ultrasound requirement",
+        "Why it matters",
+        "In AuraPACS"
+      ],
+      "rows": [
+        [
+          "Many single frames",
+          "A scan produces dozens of stills in minutes",
+          "All frames received and filed under one study"
+        ],
+        [
+          "Cine loops",
+          "Motion clips carry information a still cannot",
+          "Loops stored and played back in the browser"
+        ],
+        [
+          "Report with images",
+          "The referrer wants to see what the report describes",
+          "PDF attached to the study; one link carries both"
+        ],
+        [
+          "Serial scans",
+          "Obstetric follow-ups are compared visit to visit",
+          "Searchable patient history on your node"
+        ],
+        [
+          "Quick turnaround",
+          "Patients often wait for the report at the desk",
+          "Template report, signed and shared in minutes"
+        ],
+        [
+          "Small hardware footprint",
+          "Scan centres are small rooms, not server rooms",
+          "One on-premise node, cloud layer for backup"
+        ]
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Where ultrasound is scanned and reported.",
+      "items": [
+        {
+          "icon": "&#129328;",
+          "b": "Obstetric scan centres",
+          "p": "Growth scans for referring gynaecologists."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "General scan centres",
+          "p": "Abdomen, pelvis, thyroid, small parts."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Multi-modality diagnostic centres",
+          "p": "Ultrasound beside CT, MR and X-ray."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Maternity and nursing homes",
+          "p": "The scan and the delivery record in one place."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Referring physicians",
+          "p": "Open the images, not only the text, on a phone."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Handling ultrasound, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Where frames live",
+          "On the machine until deleted",
+          "Uploaded per study",
+          "Your node, with backup"
+        ],
+        [
+          "Cine loops",
+          "Not kept",
+          "Sometimes",
+          "Stored and played in the browser"
+        ],
+        [
+          "What the referrer gets",
+          "Typed report and thermal print",
+          "Portal report",
+          "WhatsApp link with images and report"
+        ],
+        [
+          "Serial comparison",
+          "Numbers on paper",
+          "If uploaded",
+          "Full history on your node"
+        ],
+        [
+          "Cost model",
+          "Paper and prints",
+          "Per study",
+          "Owned system, scoped on a call"
+        ],
+        [
+          "Works without internet",
+          "Yes",
+          "No",
+          "Yes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Ultrasound PACS, answered.",
+      "items": [
+        {
+          "q": "Does our ultrasound machine send DICOM?",
+          "a": "Most machines from the last several years do, either natively or with a DICOM option enabled. Once configured with the node's AE title and port it sends frames and loops at the end of each exam. The model is confirmed on a call."
+        },
+        {
+          "q": "Are cine loops stored as well as stills?",
+          "a": "Yes. Whatever the machine sends as DICOM, including multi-frame loops, is received and filed under the study and can be played back in the browser viewer."
+        },
+        {
+          "q": "Can the referring gynaecologist see the images?",
+          "a": "Yes. The secure WhatsApp link opens both the frames and the report PDF on a phone, with no login. Every view is audited. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp report sharing</a>."
+        },
+        {
+          "q": "Do we get obstetric report templates?",
+          "a": "Reports are written on structured templates per modality, and ultrasound can carry separate templates for obstetric, abdominal, pelvic and other exams. The finalised PDF carries your branding and sits on the study."
+        },
+        {
+          "q": "Can serial growth scans be compared?",
+          "a": "Earlier scans are in the patient's searchable history on the node and open alongside the current one in the viewer, so the sonologist compares images and not only measurements."
+        },
+        {
+          "q": "Is AuraPACS a diagnostic device?",
+          "a": "No. It stores, displays and shares the images. The scan and its interpretation are by your sonologist."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/digital-x-ray-pacs/",
+          "icon": "&#129471;",
+          "b": "Digital X-ray PACS",
+          "p": "CR and DR, filmless."
+        },
+        {
+          "href": "/aurapacs/mammography-pacs/",
+          "icon": "&#128300;",
+          "b": "Mammography PACS",
+          "p": "Large high-resolution images."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "Templates to signed PDF."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128218;",
+          "b": "What is RIS",
+          "p": "Scheduling, worklist, reporting."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Why a folder is not enough."
+        }
+      ]
+    }
+  ]
+}

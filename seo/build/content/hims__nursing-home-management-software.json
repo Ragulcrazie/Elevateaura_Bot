@@ -1,0 +1,335 @@
+{
+  "cluster": "hims",
+  "slug": "nursing-home-management-software",
+  "title": "Nursing Home Management Software | Beds, Nursing, Billing | HIMS",
+  "meta": "Nursing home management software for small IP-led facilities: beds, nursing charts, pharmacy, cash and TPA billing and discharge on one record.",
+  "h1": "Nursing home management software for a facility run by <span class=\"hl\">a few doctors and a small team</span>.",
+  "crumb": "Nursing Home Software",
+  "pill": "For small IP-led facilities",
+  "sub": "HIMS fits a nursing home the way it actually runs: a small OP, a handful of beds, nursing that does most of the documentation, an in-house pharmacy and billing done by the same person who runs the desk. One record, no separate systems, set up by the founder.",
+  "meta_ticks": [
+    "Beds, nursing and pharmacy on one record",
+    "Billing the front desk can run",
+    "Founder-led setup and support"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS bed management view for a small facility showing wards and occupied beds",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, we run a nursing home and would like to see HIMS.",
+  "primary_keyword": "nursing home management software",
+  "secondary_keywords": [
+    "nursing home software India",
+    "small hospital management software",
+    "software for 20 bed hospital",
+    "nursing home billing software",
+    "small hospital EMR",
+    "hospital software for small towns"
+  ],
+  "intent": "commercial",
+  "persona": "Doctor-owner of a nursing home or small hospital with limited administrative staff",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What nursing home management software should be",
+      "paras": [
+        "Nursing home management software is hospital software sized for a facility where the owner is also a consultant, the nursing staff keep most of the records and one or two people at the desk handle registration, billing and the pharmacy counter. HIMS covers that whole facility, OP, beds, nursing charts, pharmacy, laboratory if you have one, and cash, insurance and TPA billing, without asking you to hire an IT team to run it.",
+        "The point of one platform in a small facility is not scale; it is that the same person does several jobs. When the desk registers a patient, allocates the bed, dispenses the drugs and raises the bill from one screen, nothing is written twice and nothing is forgotten at discharge. Setup is done by the founder who built the software, in person in Chennai or remotely elsewhere, with support on WhatsApp after go-live."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The small-facility problem",
+      "h2": "Hospital software is usually built for a hospital with an IT department. A nursing home has a receptionist.",
+      "lead": "The systems on offer are either too big to run or too small to cover the wards.",
+      "items": [
+        {
+          "h": "Billing software that stops at the counter",
+          "p": "It prints a bill, but the beds, the nursing chart and the pharmacy stock are still in registers."
+        },
+        {
+          "h": "IP bills built on the last day",
+          "p": "Room days, injections and dressings are counted from the case sheet at discharge, while the family waits."
+        },
+        {
+          "h": "Pharmacy stock by eye",
+          "p": "Expired stock is found on the shelf, and the drug the doctor wants is out."
+        },
+        {
+          "h": "TPA cases handled by the owner",
+          "p": "Pre-authorisation and claim documents take the consultant's evening because nobody else can assemble them."
+        },
+        {
+          "h": "No time to learn a big system",
+          "p": "A large HIS needs weeks of training; the staff have patients to see."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A day in a nursing home",
+      "h2": "One desk, one record.",
+      "steps": [
+        {
+          "h": "OP in the morning",
+          "p": "Register or look up, token for the consultant, e-prescription to the counter."
+        },
+        {
+          "h": "Admission",
+          "p": "Bed allocated from the board; deposit and payer recorded."
+        },
+        {
+          "h": "Nursing",
+          "p": "Vitals, medication administration and notes charted per shift."
+        },
+        {
+          "h": "Pharmacy",
+          "p": "Drugs issued to the ward or dispensed at the counter, stock reduced."
+        },
+        {
+          "h": "Running bill",
+          "p": "Room, drugs, procedures and consultant fees accrue daily."
+        },
+        {
+          "h": "Discharge",
+          "p": "Summary from the record, final bill settled, bed released."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a nursing home actually uses.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Front desk",
+          "items": [
+            "OP and IP registration with UHID",
+            "Appointments and walk-in tokens",
+            "Patient lookup by phone",
+            "Patient app and portal"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Wards",
+          "items": [
+            "Bed board for every ward",
+            "Nursing charts and medication records",
+            "Doctor orders and progress notes",
+            "Discharge summary from the record"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Pharmacy and stores",
+          "items": [
+            "Dispensing queue from e-prescriptions",
+            "Low-stock and expiry alerts",
+            "Consumables with reorder levels",
+            "Ward issues against the admission"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "Cash, insurance and TPA on one bill",
+            "Running IP bill with interim statements",
+            "GST where applicable",
+            "Collections on the dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See everything HIMS covers"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes for a small team.",
+      "items": [
+        {
+          "h": "The receptionist runs the whole desk",
+          "workflow": "One login registers the patient, issues the token, dispenses at the counter and raises the OP bill.",
+          "result": "No second person, no second system."
+        },
+        {
+          "h": "A four-day admission",
+          "workflow": "The bed, the nursing chart and the ward issues accrue on the record; the family sees an interim bill on day two.",
+          "result": "The final bill is ready before the discharge, not after."
+        },
+        {
+          "h": "The owner's evening",
+          "workflow": "The consultant reviews the day's charts and orders from home on the record.",
+          "result": "The round does not depend on being in the building."
+        },
+        {
+          "h": "An occasional TPA case",
+          "workflow": "Pre-auth raised at admission, claim documents pulled from the record at discharge by the desk.",
+          "result": "The claim is filed without the consultant assembling it."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Facilities where one platform replaces several registers.",
+      "items": [
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "A small OP and a few wards."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Small hospitals",
+          "p": "One or two specialties with beds."
+        },
+        {
+          "icon": "&#129657;",
+          "b": "Maternity and surgical homes",
+          "p": "Short stays, packages, a theatre."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor-owners",
+          "p": "Consultants who also run the business."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Facilities outside the metros",
+          "p": "Cloud setup, WhatsApp support, no local IT needed."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Software for a nursing home, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Beds and nursing",
+          "Registers and case sheets",
+          "Not covered",
+          "Bed board and nursing charts on the record"
+        ],
+        [
+          "Pharmacy",
+          "Stock book",
+          "Sometimes, separately",
+          "Dispensing queue with expiry alerts"
+        ],
+        [
+          "IP bill",
+          "Built at discharge",
+          "Typed from slips",
+          "Runs daily with interim statements"
+        ],
+        [
+          "Staff needed to run it",
+          "Everyone, on paper",
+          "One at the counter",
+          "The same desk staff you have"
+        ],
+        [
+          "Setup and support",
+          "None",
+          "Reseller",
+          "Founder-led setup, WhatsApp support"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Nursing home management software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS too big for a nursing home?",
+          "a": "No. You switch on the modules you use, typically OP, beds, nursing, pharmacy and billing, and leave the rest until you need them. The record structure is the same, so adding a laboratory or imaging later does not mean a migration."
+        },
+        {
+          "q": "How much staff training is needed?",
+          "a": "The front desk, the nursing station and the pharmacy counter each learn their own screens. Setup and training are done by the founder who built the software, in person in Chennai or remotely elsewhere in India, with support on WhatsApp afterwards."
+        },
+        {
+          "q": "Can we handle TPA cases without a TPA desk?",
+          "a": "Yes. Pre-authorisation is recorded at admission and claim documents come from the record at discharge, so the desk can prepare a claim without the consultant doing it. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA billing software</a>."
+        },
+        {
+          "q": "Do we need our own server?",
+          "a": "No. HIMS is deployed in the cloud and used from a browser on the computers you already have. Imaging through AuraPACS uses an on-premise node on your network if you add it."
+        },
+        {
+          "q": "Does it cover a small laboratory?",
+          "a": "Yes. The laboratory module takes orders from the consultant, tracks the sample and releases a verified result to the record. See <a href=\"/hims/hospital-laboratory-management/\">hospital laboratory management</a>."
+        },
+        {
+          "q": "How quickly can a nursing home go live?",
+          "a": "HIMS is delivered on a 30-working-day framework where scope allows, and a nursing home's scope is usually well within it. Your existing patient list can be brought in from Excel."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole facility on one platform."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "For OP-only setups."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed management",
+          "p": "A board for a few beds."
+        },
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#128138;",
+          "b": "Pharmacy",
+          "p": "Dispensing and stock."
+        },
+        {
+          "href": "/hims/hospital-management-software-madurai/",
+          "icon": "&#128205;",
+          "b": "Madurai",
+          "p": "Southern Tamil Nadu facilities."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        },
+        {
+          "href": "/hims/dental-clinic-management-software/",
+          "icon": "&#129463;",
+          "b": "Dental clinic software",
+          "p": "Chair-wise appointments and notes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-amc-software",
+  "title": "What Is AMC Software? A Guide for Equipment Dealers",
+  "meta": "AMC software tracks annual maintenance contracts, renewal dates, preventive visits and service billing. A plain guide for Indian equipment dealers.",
+  "h1": "What is AMC software? The <span class=\"hl\">renewal clock</span> your business runs on.",
+  "crumb": "What is AMC software",
+  "pill": "Guide",
+  "sub": "An annual maintenance contract is a yearly promise to service a machine you sold. AMC software is what keeps that promise visible: who is covered, until when, which visits are due and which invoices are outstanding.",
+  "meta_ticks": [
+    "Written by a team that builds service software",
+    "Indian trade practice, GST included",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the AMC software guide and want to discuss contract tracking for our business.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is AMC software",
+  "secondary_keywords": [
+    "AMC full form",
+    "annual maintenance contract meaning",
+    "AMC management software",
+    "AMC renewal tracking",
+    "AMC contract software India",
+    "service contract software"
+  ],
+  "intent": "informational",
+  "persona": "Founder or service head of a medical equipment dealership or distribution business in India",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "AMC software in two paragraphs",
+      "paras": [
+        "AMC stands for Annual Maintenance Contract. In Indian equipment trade it is an agreement under which a dealer services a machine for a fixed period, normally a year, for an agreed fee, with a stated number of preventive visits and an agreed response time for breakdowns. AMC software is the system that stores every such contract and acts on the dates inside it.",
+        "That is the whole value. A contract in a folder is an obligation you may forget. In software it becomes a schedule of visits, a reminder before expiry, an invoice on the right date and a figure showing what is about to lapse."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The commercial shape",
+      "h2": "What an AMC actually covers in Indian equipment trade",
+      "lead": "Terms vary between dealers, but the market has settled on a fairly consistent shape, and it is worth being precise about it before choosing software.",
+      "body": [
+        {
+          "ul": [
+            "<b>Labour and visits are included.</b> The engineer's time, travel and a stated number of preventive maintenance visits are part of the fee.",
+            "<b>Spare parts are usually excluded.</b> Parts are quoted and billed separately when a fault needs them. A contract that includes parts is a comprehensive contract, explained in <a href=\"/resources/what-is-cmc/\">what is CMC</a>.",
+            "<b>Response time is stated.</b> A breakdown attended within an agreed number of hours or working days, which is what an SLA, or service level agreement, means in practice.",
+            "<b>It begins where warranty ends.</b> The natural sale moment is the month before warranty expiry, which is why knowing warranty end dates matters as much as knowing contract dates.",
+            "<b>It is taxed.</b> The contract fee is a supply of services and the invoice carries GST, so the software that tracks the contract should also raise the invoice rather than handing it to a separate package."
+          ]
+        },
+        "Consumables, calibration, probes and anything damaged by misuse are normally carved out. Write the exclusions into the contract record, not only the printed agreement, so the engineer can see them when a customer asks."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The clock",
+      "h2": "Every contract is a set of dates that must trigger something",
+      "lead": "The reason spreadsheets fail here is not that they cannot hold dates. It is that a date in a spreadsheet does nothing on its own.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Date on the contract",
+              "What should happen automatically"
+            ],
+            "rows": [
+              [
+                "Warranty end",
+                "A quotation for the first contract is prepared and the customer is approached"
+              ],
+              [
+                "Contract start",
+                "Preventive visits for the whole period are scheduled against the machine"
+              ],
+              [
+                "Each visit due date",
+                "A job is raised and assigned to a technician covering that territory"
+              ],
+              [
+                "Instalment date",
+                "The service invoice is raised with the correct tax treatment"
+              ],
+              [
+                "Sixty days before expiry",
+                "A renewal quotation is generated and shown to the account owner"
+              ],
+              [
+                "Expiry",
+                "The machine moves to an uncovered list, and the pricing for late renewal is applied"
+              ]
+            ]
+          }
+        },
+        "That chain is what people mean when they say a contract engine. Aura Business handles it through service contracts, preventive maintenance schedules, a contract renewal engine and service invoices, with WhatsApp reminders going out to the customer."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The money",
+      "h2": "Where AMC revenue leaks, and how software closes each gap",
+      "lead": "Contract revenue is the most predictable income a dealership has, and the easiest to lose quietly, because nothing breaks when a renewal is missed. Nothing happens at all.",
+      "body": [
+        {
+          "h3": "Contracts that expire unnoticed"
+        },
+        "A machine falls out of cover, the customer only rings when it fails, and by then the relationship is a rescue job rather than a renewal. A lapsing list, shown in rupees rather than as a count, turns this from an accident into a decision somebody made.",
+        {
+          "h3": "Promised visits never made"
+        },
+        "Preventive visits are the part of the contract a busy team silently drops when breakdowns pile up. Since the customer paid for them, the next renewal conversation becomes difficult. Scheduling visits from the contract itself, with a completed checklist per visit, makes the promise auditable.",
+        {
+          "h3": "Free work on expired cover"
+        },
+        "Without a covered or not covered flag on the machine, engineers attend calls that should have been chargeable. The fix is an installed base register that the service desk sees at call intake, described in <a href=\"/resources/what-is-installed-base-management/\">what is installed base management</a>.",
+        {
+          "h3": "Invoices raised late or not at all"
+        },
+        "Where billing is separate from service, the instalment falls through the gap between the two. The contract record should raise the invoice and track the receipt against it.",
+        "Elevate Aura's contract tooling is on <a href=\"/aura-business/medical-equipment-amc-cmc-software/\">AMC and CMC software for medical equipment</a> and more broadly on <a href=\"/aura-business/service-contract-management-software/\">service contract management software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about AMC software",
+      "items": [
+        {
+          "q": "What is the full form of AMC?",
+          "a": "Annual Maintenance Contract. It is a yearly agreement under which the dealer or manufacturer maintains a machine for a fixed fee, normally covering labour and a stated number of preventive visits, with spare parts billed separately."
+        },
+        {
+          "q": "What is the difference between AMC and CMC?",
+          "a": "An annual maintenance contract covers labour and visits, with parts charged extra. A comprehensive maintenance contract includes agreed spare parts in the fee, so the dealer carries the parts risk and charges more for it. The comparison is set out in AMC vs CMC."
+        },
+        {
+          "q": "Can I manage AMCs in Excel?",
+          "a": "You can list them. The difficulty is that a spreadsheet does not raise a visit, send a reminder, or tell you on a Monday morning which contracts expire this month, so the work still depends on somebody remembering to look."
+        },
+        {
+          "q": "Does AMC software handle GST invoicing?",
+          "a": "It should, because the contract fee is a taxable supply of services. Aura Business raises the service invoice from the contract record itself with GST handled on the invoice, so the contract and the billing do not sit in separate systems."
+        },
+        {
+          "q": "How far ahead should renewal reminders start?",
+          "a": "Most dealers work to a window of one to two months before expiry, which leaves time to quote, negotiate and collect an approval. Set the window per customer type, because hospitals with purchase committees need longer than a private clinic."
+        },
+        {
+          "q": "Who uses AMC software day to day?",
+          "a": "The service coordinator works the visit and renewal lists, technicians close job cards on a mobile app in the field, accounts raise and chase the invoices, and the owner watches the contract base and what is about to lapse."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-cmc/",
+          "icon": "&#128196;",
+          "b": "What is CMC",
+          "p": "When parts are inside the fee."
+        },
+        {
+          "href": "/resources/what-is-preventive-maintenance-software/",
+          "icon": "&#128736;",
+          "b": "Preventive maintenance software",
+          "p": "Turning contracts into visits."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128203;",
+          "b": "Installed base management",
+          "p": "The register behind the pipeline."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract to sell."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128197;",
+          "b": "AMC and CMC software",
+          "p": "Contracts, visits, renewals, invoices."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#129659;",
+          "b": "Service contract management",
+          "p": "The wider contract module."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "cluster": "seo-services",
+  "slug": "healthcare-seo-services",
+  "title": "Healthcare SEO Services for Clinics | Elevate Aura",
+  "meta": "Healthcare SEO services for clinics and diagnostic centres: service and condition pages, doctor profiles, local search intent and schema, built and measured.",
+  "h1": "Healthcare SEO services for the clinic a patient finds <span class=\"hl\">two streets away</span>.",
+  "crumb": "Healthcare SEO Services",
+  "pill": "For clinics and diagnostic centres",
+  "sub": "Patients search for a symptom, a service or a scan, almost always with a location in mind. Healthcare SEO builds the service, condition and doctor pages that answer those searches, sorts out local listings, and tracks the enquiries that follow.",
+  "meta_ticks": [
+    "Service, condition and doctor pages",
+    "Local intent and map listings",
+    "Enquiry and call tracking"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss SEO for our clinic or diagnostic centre.",
+  "schema": "Service",
+  "service_type": "Healthcare search engine optimisation",
+  "area_served": "India",
+  "primary_keyword": "healthcare SEO services",
+  "secondary_keywords": [
+    "clinic SEO India",
+    "diagnostic centre SEO",
+    "medical practice SEO services",
+    "local SEO for doctors",
+    "healthcare content marketing India"
+  ],
+  "intent": "commercial",
+  "persona": "Clinic owner, practice manager or diagnostic centre marketing lead",
+  "page_type": "commercial",
+  "phase": 1,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What healthcare SEO services cover",
+      "paras": [
+        "Healthcare SEO for a clinic or diagnostic centre means giving every service, every common condition you treat, every test you run and every practitioner a page of their own, then making sure those pages are technically sound and clearly tied to the places you serve.",
+        "Local intent sits behind almost every one of these searches. That means consistent name, address and phone details across the site and your map listing, a page per location where you have more than one, directions and timings that are correct, and structured data describing the practice, its services and its people.",
+        "Rankings cannot be guaranteed and we do not offer a promise of them. The deliverable is the set of pages published, the technical issues fixed, the listings corrected and a report from Search Console and GA4 that you can read without us."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the practice is hard to find",
+      "h2": "A good clinic with a five-page website.",
+      "lead": "Patients search in specific language. A site organised around the practice rather than the patient has nothing to match.",
+      "items": [
+        {
+          "h": "Services collapsed into one page",
+          "p": "Every treatment and test named in a single list means no page can speak properly to any one of them."
+        },
+        {
+          "h": "Conditions never mentioned",
+          "p": "Patients search by what is wrong, not by the clinical name of the procedure that fixes it."
+        },
+        {
+          "h": "Map listing out of date",
+          "p": "Old timings, a changed phone number or a slightly different address undermine every local search at once."
+        },
+        {
+          "h": "No page per location",
+          "p": "A second branch shares the first one's page, so the second neighbourhood never sees a reason to choose you."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From a service list to pages patients reach.",
+      "steps": [
+        {
+          "h": "List what you actually do",
+          "p": "Services, procedures, tests, packages and practitioners, gathered once, with what is genuinely offered separated from what is aspirational."
+        },
+        {
+          "h": "Check demand and language",
+          "p": "How patients phrase the search, including the everyday words for conditions, before pages are planned."
+        },
+        {
+          "h": "Fix the technical base",
+          "p": "Indexing, mobile speed, duplicate pages and schema for the practice, its services and its people."
+        },
+        {
+          "h": "Build the pages",
+          "p": "A page per service, per condition cluster and per practitioner, written from your own clinical and operational detail."
+        },
+        {
+          "h": "Sort out local",
+          "p": "Consistent details across the site and map listing, a page per location, directions, timings and parking."
+        },
+        {
+          "h": "Measure and revise",
+          "p": "Calls, forms and WhatsApp tagged in GA4, queries reviewed in Search Console, weak pages rewritten."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The work for a clinic or centre.",
+      "groups": [
+        {
+          "icon": "&#129658;",
+          "h": "Clinical pages",
+          "items": [
+            "Service and procedure pages",
+            "Condition pages in patient language",
+            "Test, scan and package pages",
+            "Practitioner profiles with timings"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "Local",
+          "items": [
+            "Consistent name, address and phone",
+            "Map listing details and categories",
+            "A page per branch or location",
+            "Directions, timings and access notes"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Technical",
+          "items": [
+            "Index coverage and sitemaps",
+            "Mobile speed on real connections",
+            "Practice, service and person schema",
+            "Clean URLs and internal links"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Measurement",
+          "items": [
+            "Call, form and WhatsApp events",
+            "Search Console query reporting",
+            "Appointment requests counted",
+            "Monthly written review"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/web-development/healthcare-website-development/",
+        "label": "The website these pages sit on"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three patient searches worth a page.",
+      "items": [
+        {
+          "h": "A symptom searched at home",
+          "workflow": "Someone searches the everyday description of a problem and reaches a condition page that explains it plainly and names the consultation to book.",
+          "result": "An enquiry from a patient who did not know which department to ask for."
+        },
+        {
+          "h": "A scan with a price in mind",
+          "workflow": "A patient with a prescription searches for the scan near them, lands on the test page with preparation notes and timings, and requests a slot.",
+          "result": "A booking that arrives correctly prepared."
+        },
+        {
+          "h": "A second branch opening",
+          "workflow": "The new location gets its own page with its own timings, practitioners, directions and listing rather than a line on the contact page.",
+          "result": "The new neighbourhood has something to find."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Practices patients choose from a search result.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Clinics and polyclinics",
+          "p": "Several services, one neighbourhood."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "Tests, packages and preparation."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental practices",
+          "p": "Treatments patients research first."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Single-doctor practices",
+          "p": "One strong profile and a clear route to book."
+        },
+        {
+          "icon": "&#128106;",
+          "b": "Nursing homes",
+          "p": "Admissions and facilities searches."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Specialty centres",
+          "p": "A narrow service with wide demand."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways a clinic buys SEO.",
+      "cols": [
+        "Traditional SEO retainer",
+        "Freelancer marketplace",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Content source",
+          "A brief and a generic writer",
+          "Rewritten from other clinics",
+          "Your own services, tests and practitioners"
+        ],
+        [
+          "Local work",
+          "Listed as a task",
+          "Not covered",
+          "Listing details, per-location pages and directions handled"
+        ],
+        [
+          "Technical fixes",
+          "Handed to your developer",
+          "Out of scope",
+          "Made in the site by the person who found them"
+        ],
+        [
+          "Reviews and ratings",
+          "Sometimes bought",
+          "Sometimes bought",
+          "Yours to collect; we never write or buy one"
+        ],
+        [
+          "What is promised",
+          "A ranking or a traffic figure",
+          "A ranking",
+          "Pages, fixes and measurement, never a ranking"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare SEO services, answered.",
+      "items": [
+        {
+          "q": "Can you promise us the first page for our specialty?",
+          "a": "No. Search engines decide rankings and change the way they decide them without notice. Any agency promising a position is guessing or gaming. We commit to the pages built, the technical work done and honest reporting on what happened."
+        },
+        {
+          "q": "Will you get us patient reviews?",
+          "a": "No. Reviews are yours to collect from real patients through your own channels, and we will not write, buy or arrange them. We can make it easy for a satisfied patient to find where to leave one."
+        },
+        {
+          "q": "Do you write about medical conditions?",
+          "a": "We write patient-facing explanations of the conditions you treat and the tests you run, reviewed by your clinician before publication. Clinical accuracy is signed off by you, because it is your practice's name on the page."
+        },
+        {
+          "q": "How is this different from hospital SEO?",
+          "a": "A hospital has departments, a large doctor roster and an appointment system to feed. A clinic or centre has services, tests and a smaller team, and local intent dominates. See <a href=\"/seo-services/hospital-seo-services/\">hospital SEO services</a> for the larger case."
+        },
+        {
+          "q": "What if our website cannot take new pages?",
+          "a": "We say so before quoting content. Some practice sites are built so that a page per service is not possible without a rebuild, and adding content to them wastes the money. See <a href=\"/web-development/healthcare-website-development/\">healthcare website development</a>."
+        },
+        {
+          "q": "How do we know the work is producing enquiries?",
+          "a": "Calls, forms and WhatsApp taps are recorded as GA4 events with the page that produced them, and Search Console shows the queries the pages reached. Both accounts are yours, so nothing is reported through us alone."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related SEO pages",
+      "items": [
+        {
+          "href": "/seo-services/",
+          "icon": "&#128269;",
+          "b": "SEO services",
+          "p": "Every SEO service."
+        },
+        {
+          "href": "/seo-services/hospital-seo-services/",
+          "icon": "&#127973;",
+          "b": "Hospital SEO",
+          "p": "Departments and doctors at scale."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128230;",
+          "b": "Medical equipment SEO",
+          "p": "For the supply side."
+        },
+        {
+          "href": "/seo-services/programmatic-seo-services/",
+          "icon": "&#128736;",
+          "b": "Programmatic SEO",
+          "p": "When page sets make sense."
+        },
+        {
+          "href": "/web-development/healthcare-website-development/",
+          "icon": "&#128421;",
+          "b": "Healthcare website",
+          "p": "The site underneath."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#128203;",
+          "b": "Clinic software",
+          "p": "Where the appointment lands."
+        }
+      ]
+    }
+  ]
+}

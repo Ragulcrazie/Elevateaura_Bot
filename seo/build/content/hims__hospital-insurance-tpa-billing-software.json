@@ -1,0 +1,324 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-insurance-tpa-billing-software",
+  "title": "Hospital TPA and Insurance Billing Software | Claims, GST | HIMS",
+  "meta": "Hospital TPA and insurance billing software: cash, insurer and TPA on one bill, pre-authorisation, claim documents from the record and outstanding per TPA.",
+  "h1": "Hospital TPA and insurance billing software where <span class=\"hl\">cash, insurer and TPA</span> sit on one bill.",
+  "crumb": "Hospital TPA Billing Software",
+  "pill": "For TPA desks and accounts",
+  "sub": "HIMS bills every admission from the treatment record, whatever the payer: cash, insurance or a TPA. Pre-authorisation, enhancements, claim documents and the outstanding owed by each TPA are tracked in the same system that produced the bill.",
+  "meta_ticks": [
+    "Cash, insurance and TPA in one billing view",
+    "Pre-auth and claim documents from the record",
+    "Outstanding per TPA on the dashboard"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/billing.png",
+    "alt": "HIMS billing screen showing an itemised hospital invoice with GST, payer and payment mode",
+    "bar": "his.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, I'd like to discuss TPA and insurance billing in HIMS for our hospital.",
+  "primary_keyword": "hospital TPA billing software",
+  "secondary_keywords": [
+    "hospital insurance billing software",
+    "TPA claim management software for hospitals",
+    "cashless claim software",
+    "hospital pre-authorisation software",
+    "hospital billing software with insurance",
+    "TPA outstanding tracking"
+  ],
+  "intent": "commercial",
+  "persona": "TPA desk in-charge, accounts head or owner of a hospital that handles cashless admissions",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital TPA and insurance billing software does",
+      "paras": [
+        "Hospital TPA and insurance billing software handles the part of billing where the patient is not the only payer. A cashless admission needs a pre-authorisation before treatment, enhancements during the stay, a claim with supporting documents at discharge, and then months of follow-up until the TPA settles. HIMS keeps the cash portion, the insured portion and the TPA claim on the same bill, all drawn from the same treatment record.",
+        "The reason this matters is mismatch. A claim is queried or rejected when the documents do not agree with the bill, or the bill does not agree with the treatment. When billing pulls from the record rather than being typed afresh, the discharge summary, the itemised bill and the claim form describe the same admission. GST is applied to the hospital services where it applies, using the rules your accountant configures."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where claims go wrong",
+      "h2": "A cashless case is three bills pretending to be one.",
+      "lead": "The patient pays some, the insurer approves some, and the TPA pays later. Most hospitals track this in three places.",
+      "items": [
+        {
+          "h": "Pre-auth chased by one person",
+          "p": "The status of a pre-authorisation lives in the TPA coordinator's phone, and nobody else can answer the family."
+        },
+        {
+          "h": "Bill and claim disagree",
+          "p": "The bill is typed at the counter and the claim form is typed at the TPA desk, and the two never quite match."
+        },
+        {
+          "h": "Enhancements missed",
+          "p": "The stay extends but the approved amount does not, and the difference lands on the patient at discharge."
+        },
+        {
+          "h": "Documents assembled from files",
+          "p": "Discharge summary, investigation reports and the itemised bill are photocopied from different places and one is always missing."
+        },
+        {
+          "h": "TPA outstanding unknown",
+          "p": "Money settled, part-settled and disallowed by each TPA is in a ledger that only accounts can read."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One cashless admission",
+      "h2": "From pre-authorisation to settlement.",
+      "steps": [
+        {
+          "h": "Payer recorded",
+          "p": "At admission the insurer, TPA and policy details go on the record."
+        },
+        {
+          "h": "Pre-auth raised",
+          "p": "Estimated package and diagnosis sent; approval and approved amount logged."
+        },
+        {
+          "h": "Charges accrue",
+          "p": "Room, pharmacy, lab, OT and consultant fees post to the running bill."
+        },
+        {
+          "h": "Enhancement",
+          "p": "As the stay extends, an enhancement request is raised against the same case."
+        },
+        {
+          "h": "Claim at discharge",
+          "p": "Itemised bill, discharge summary and reports compiled from the record."
+        },
+        {
+          "h": "Settlement tracked",
+          "p": "Approved, queried, disallowed and paid amounts recorded per TPA."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Billing and claims in one module.",
+      "groups": [
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "Cash, insurance and TPA on one bill",
+            "Packages and deposits",
+            "Running IP bill with interim statements",
+            "GST on hospital services where applicable",
+            "Itemised final bill"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Claims",
+          "items": [
+            "Pre-authorisation with approved amount",
+            "Enhancement requests",
+            "Claim documents from the record",
+            "Query and rejection tracking"
+          ]
+        },
+        {
+          "icon": "&#128176;",
+          "h": "Collections",
+          "items": [
+            "Patient share collected at discharge",
+            "Outstanding per TPA and insurer",
+            "Settled, part-settled and disallowed amounts",
+            "Receipts and refunds"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Reporting",
+          "items": [
+            "Payer mix",
+            "Claims by status",
+            "Collections on the live dashboard",
+            "Audit trail per bill"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-billing-software/",
+        "label": "See hospital billing software in full"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes at the TPA desk.",
+      "items": [
+        {
+          "h": "A family asks whether the pre-auth came through",
+          "workflow": "Anyone at the front desk opens the admission and sees the pre-auth status and approved amount.",
+          "result": "The answer does not depend on one coordinator."
+        },
+        {
+          "h": "A claim is queried for a missing report",
+          "workflow": "The lab report is on the record; the TPA desk attaches it and resubmits from the same case.",
+          "result": "The query is answered the same day."
+        },
+        {
+          "h": "Month-end outstanding review",
+          "workflow": "Accounts filter claims by TPA and status to see what is filed, queried, part-paid and disallowed.",
+          "result": "Follow-up goes to the right TPA for the right amount."
+        },
+        {
+          "h": "A patient with a cash top-up",
+          "workflow": "The approved amount covers part of the bill; the balance is collected at discharge with a receipt on the same bill.",
+          "result": "One bill, two payers, no reconciliation later."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere a third party pays part of the bill.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals on TPA panels",
+          "p": "Cashless admissions every week."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Insurance cases without a dedicated TPA desk."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "TPA coordinators",
+          "p": "Pre-auth, enhancement and claim in one place."
+        },
+        {
+          "icon": "&#128176;",
+          "b": "Accounts teams",
+          "p": "Outstanding per payer without a side ledger."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Front office",
+          "p": "Answer a bill query while the family is standing there."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Claims handling, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Bill and claim source",
+          "Two documents typed separately",
+          "Bill only; claim typed elsewhere",
+          "Both from the treatment record"
+        ],
+        [
+          "Pre-auth status",
+          "Coordinator's phone",
+          "Not tracked",
+          "On the admission, visible to all"
+        ],
+        [
+          "Enhancements",
+          "Remembered",
+          "Not covered",
+          "Raised against the same case"
+        ],
+        [
+          "TPA outstanding",
+          "Accounts ledger",
+          "Basic receivables",
+          "Per payer, by claim status"
+        ],
+        [
+          "GST on services",
+          "Manual",
+          "Yes",
+          "Built in, configured to your rules"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital TPA and insurance billing, answered.",
+      "items": [
+        {
+          "q": "Can one bill have a cash portion and a TPA portion?",
+          "a": "Yes. The bill records the amount approved by the insurer or TPA and the balance payable by the patient, so a top-up is collected at discharge with a receipt on the same bill rather than a second invoice."
+        },
+        {
+          "q": "How are claim documents prepared?",
+          "a": "The itemised bill, discharge summary and investigation reports are on the same record as the admission, so the TPA desk compiles them from the case instead of collecting photocopies from departments. See <a href=\"/hims/hospital-ipd-management-software/\">IPD software</a> for the record side."
+        },
+        {
+          "q": "Does HIMS submit claims to the TPA portal for us?",
+          "a": "HIMS prepares the bill and documents and tracks status. Submission to each TPA follows that TPA's own process. If you need a specific portal workflow, describe it on the call and it is scoped with the project."
+        },
+        {
+          "q": "How is GST handled on hospital bills?",
+          "a": "Billing in HIMS is GST-native. Tax is applied to the services and items where your accountant says it applies and left off where it does not; the rules are configured during setup. This is a billing feature, not tax advice, so confirm treatment with your auditor."
+        },
+        {
+          "q": "Can we see how much each TPA owes us?",
+          "a": "Yes. Claims are filtered by payer and status, so accounts can see filed, queried, part-paid and disallowed amounts per TPA, and the collections dashboard shows what has actually come in."
+        },
+        {
+          "q": "Is this a separate product?",
+          "a": "No. TPA and insurance billing is part of the HIMS billing module, alongside cash billing, packages and deposits. Read the <a href=\"/hims/hospital-billing-software/\">hospital billing software</a> page for the whole billing flow."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Cash, packages, GST."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "The admission record."
+        },
+        {
+          "href": "/hims/hospital-erp-software/",
+          "icon": "&#128202;",
+          "b": "Hospital ERP",
+          "p": "Inventory, billing, finance view."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        }
+      ]
+    }
+  ]
+}

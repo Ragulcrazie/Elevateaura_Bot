@@ -1,0 +1,191 @@
+{
+  "cluster": "resources",
+  "slug": "how-to-choose-pacs",
+  "title": "How to Choose a PACS: A Checklist for Imaging Centres",
+  "meta": "How to choose a PACS: the checklist to run before you buy, covering modalities, worklist, browser viewing, sharing, deployment, ownership and support.",
+  "h1": "How to choose a PACS: the checklist <span class=\"hl\">before you sign</span>.",
+  "crumb": "Choosing a PACS",
+  "pill": "Guide",
+  "sub": "Imaging software is usually bought on a slide deck and regretted at the first awkward machine. This checklist covers what to verify, in what order, and the one test that settles most arguments.",
+  "meta_ticks": [
+    "Written by a team that builds PACS",
+    "A test you can insist on",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the PACS checklist and want to arrange a test transfer from our machines.",
+  "date": "2026-09-20",
+  "primary_keyword": "how to choose a PACS",
+  "secondary_keywords": [
+    "PACS buying checklist",
+    "PACS selection criteria",
+    "PACS vendor questions",
+    "PACS pricing models",
+    "PACS for small diagnostic centre",
+    "PACS evaluation test transfer"
+  ],
+  "intent": "informational",
+  "persona": "Owner of a diagnostic centre, imaging centre or small hospital evaluating PACS suppliers",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "The order to evaluate in",
+      "paras": [
+        "Check compatibility first, workflow second, deployment and ownership third, and commercial terms last. A system that cannot receive from your oldest ultrasound is not cheap at any price, and one that keeps your archive hostage is no bargain either.",
+        "If the basic vocabulary is new, read <a href=\"/resources/what-is-pacs/\">what is PACS</a> first. This guide assumes you know what an archive and a viewer are and moves straight to the questions that separate suppliers."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step one",
+      "h2": "Compatibility, proven by a transfer rather than a claim",
+      "lead": "Every supplier says they support all modalities. That is usually true for modern machines and unreliable for the older ones you still depend on.",
+      "body": [
+        {
+          "h3": "List your machines honestly"
+        },
+        "Write down every unit you own with its make, model and approximate age, including the ultrasound in the side room nobody has configured since it arrived. Mark which ones currently send anywhere. That sheet is your requirement.",
+        {
+          "h3": "Insist on a test transfer"
+        },
+        "Before money changes hands, ask the supplier to receive one real study from your least modern machine and show it opening in their viewer. This single test exposes most integration surprises: options never licensed on the console, network segments that do not reach, and machines that send in a form the archive mishandles. A supplier who will not attempt it during evaluation will not enjoy attempting it afterwards.",
+        {
+          "h3": "Check what happens to prior studies"
+        },
+        "You have years of images on discs or a previous system. Ask how those are brought in, how long it takes, who does it and whether the old patient identifiers survive. Migration left as a later conversation tends to become a permanent one."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step two",
+      "h2": "Workflow: the four moments where time is lost",
+      "lead": "Judge the system by four everyday events rather than by its feature list. Ask to watch each one performed, not described.",
+      "body": [
+        {
+          "ul": [
+            "<b>Booking to machine.</b> Is there a modality worklist, so the patient is typed once at the counter and picked from a list at the console? This is explained in <a href=\"/resources/what-is-dicom-modality-worklist/\">what is a modality worklist</a> and it is the difference between clean records and a weekly hunt for misfiled studies.",
+            "<b>Reading.</b> Can a radiologist open a study in a browser on an ordinary laptop, scroll slices, adjust window and level and compare with a prior, with nothing installed? Ask them to try it from home.",
+            "<b>Reporting.</b> Are there templates per modality, and does the finished report attach to the study as a signed document rather than living in a word processor?",
+            "<b>Delivery.</b> How does the report reach a referring doctor between clinics? A portal login they will never create is not delivery. A secure link opening on a phone is. AuraPACS shares report and images over WhatsApp as a secure link, with no login."
+          ]
+        },
+        "Two more questions: can a clerk find a study from a name and a rough date in seconds, and does each role see only what it should? Role-based access for radiologist, technician, front desk and referrer, with an audit trail, is the minimum."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step three",
+      "h2": "Deployment, ownership and what the pricing model does over five years",
+      "lead": "Where the system runs and how it is charged are the two decisions you cannot easily reverse later.",
+      "body": [
+        "On deployment, the argument in India is usually settled by power and connectivity rather than by preference. An on-premise or hybrid arrangement keeps receiving and reading working on the local network when the internet drops, which cloud-only systems cannot. AuraPACS uses a hybrid model: an on-premise node on the centre's network that works without internet, plus a thin cloud layer for remote viewing and encrypted offsite backup. The full comparison is in <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud PACS vs on-premise PACS</a>.",
+        {
+          "table": {
+            "headers": [
+              "Pricing model",
+              "Feels like",
+              "The question to ask"
+            ],
+            "rows": [
+              [
+                "Per study",
+                "Cheap to start, scales with your success",
+                "What is the total at your current volume in year five?"
+              ],
+              [
+                "Subscription per modality or user",
+                "Predictable monthly cost",
+                "What happens to your archive the month you stop paying?"
+              ],
+              [
+                "Licence you own, with support",
+                "A larger first payment",
+                "What is covered by support, and what is chargeable?"
+              ]
+            ]
+          }
+        },
+        "Whichever model you accept, settle in writing who owns the images, where they are stored, what backup exists and what export you receive on exit. Then ask who answers when a machine stops sending at nine on a Saturday evening, on what channel and how quickly. Elevate Aura is founder-led from Chennai with support on WhatsApp and remote setup elsewhere. The product is on <a href=\"/aurapacs/pacs-software/\">PACS software</a> and there is a live demo you can open before any conversation."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions when choosing a PACS",
+      "items": [
+        {
+          "q": "What should I ask for in a PACS demonstration?",
+          "a": "A test transfer from your oldest machine, a study opened in a browser, a report finalised and attached, and a link delivered to a phone. Those four are worth more than an hour of slides."
+        },
+        {
+          "q": "Is cloud PACS cheaper than on-premise?",
+          "a": "It is usually cheaper to begin and more expensive to keep, because payment continues for as long as the archive exists. The stronger argument in India is availability: an on-premise or hybrid node keeps working when the internet does not."
+        },
+        {
+          "q": "How much storage does a diagnostic centre need?",
+          "a": "It depends on your modality mix, since a cross-sectional study is far larger than a plain film, and on how long you retain studies. Estimate from a month of your own output, and confirm retention requirements with your advisers."
+        },
+        {
+          "q": "Can I keep my existing viewer and only change the archive?",
+          "a": "Sometimes, if the viewer can query and retrieve from the new archive. Test it rather than assume, and consider whether two suppliers blaming each other is a position you want during a busy morning."
+        },
+        {
+          "q": "What happens to my images if I stop paying?",
+          "a": "That is the question to settle before signing. Ask for the exit terms in writing: the export format, who performs it, how long it takes and whether it is chargeable. Studies remain your records whichever software held them."
+        },
+        {
+          "q": "Do I need a RIS as well as a PACS?",
+          "a": "A single centre usually wants scheduling, reporting and billing inside the imaging system rather than as a second product. What that involves is set out in what is RIS."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128444;",
+          "b": "What is PACS",
+          "p": "Start here if the terms are new."
+        },
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128196;",
+          "b": "What is DICOM",
+          "p": "Why machines can talk at all."
+        },
+        {
+          "href": "/resources/what-is-ris/",
+          "icon": "&#128203;",
+          "b": "What is RIS",
+          "p": "Scheduling, reporting, billing."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise PACS",
+          "p": "The deployment decision."
+        },
+        {
+          "href": "/aurapacs/pacs-software/",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid PACS with WhatsApp sharing."
+        },
+        {
+          "href": "/aurapacs/diagnostic-centre-pacs/",
+          "icon": "&#127973;",
+          "b": "For diagnostic centres",
+          "p": "Sized for a single centre."
+        }
+      ]
+    }
+  ]
+}

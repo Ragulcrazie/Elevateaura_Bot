@@ -1,0 +1,319 @@
+{
+  "cluster": "product-development",
+  "slug": "embedded-software-development-australia",
+  "title": "Embedded Software Development Australia | Elevate Aura",
+  "meta": "Embedded software development for Australian device companies from Chennai: near-shared working hours, your NDA, a fixed scope and source code you own.",
+  "h1": "Embedded software for Australian device companies, <span class=\"hl\">nearly on your clock</span>.",
+  "crumb": "For Australian companies",
+  "pill": "Remote engagement, Australia",
+  "sub": "Elevate Aura writes firmware, device communication, companion apps and cloud telemetry for device companies in Australia. Delivery is remote from Chennai, India, under your NDA, on a fixed scope, across working hours that sit close to your own.",
+  "meta_ticks": [
+    "Remote from Chennai, no Australian entity",
+    "Your NDA, fixed scope, code you own",
+    "Working hours close to yours"
+  ],
+  "demo_href": "",
+  "country": "AU",
+  "area_served": "Australia",
+  "whatsapp_text": "Hi, we are an Australian device company and would like to discuss embedded software work.",
+  "cta_h2": "Pick a time in your working day.",
+  "cta_p": "Tell us the controller, what the device must do and how your engineers prefer to work. We will return a fixed scope, a timeline and a plain statement of what stays with your hardware team.",
+  "primary_keyword": "embedded software development for Australian companies",
+  "secondary_keywords": [
+    "embedded software development Australia",
+    "outsourced firmware development Australia",
+    "offshore embedded engineering for Australian device companies",
+    "remote firmware developer Australia",
+    "medical device software development Australia outsourcing",
+    "hire embedded developer Australian startup"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering or product lead at an Australian device company considering remote embedded software help",
+  "page_type": "country",
+  "phase": 5,
+  "service_type": "Embedded software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why the hours suit an Australian team",
+      "paras": [
+        "Elevate Aura is a founder-led studio in Chennai, India, writing embedded firmware in C/C++ or MicroPython, communication layers over BLE, Wi-Fi, serial, Modbus or CAN, React Native companion apps and telemetry pipelines on Supabase or Azure.",
+        "Of the markets we serve remotely, Australia has the easiest rhythm. Indian hours sit a few hours behind eastern Australian time, so your afternoon is our late morning and there is no day lost waiting for a reply. A question raised after your stand-up is usually answered before you finish for the day.",
+        "There is no Australian entity, office or staff, and we do not suggest otherwise. Everything is delivered remotely, and the scope is software only: no PCB design, no component sourcing, no manufacturing, no mechanical or enclosure work and no hardware regulatory certification. You receive firmware, source, build instructions and documentation your team can use in its own submissions, and you own all of it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The local problem",
+      "h2": "Embedded engineers are scarce and the queue is long.",
+      "lead": "Australian hardware teams rarely lack ideas or funding. They lack a firmware engineer who is free this quarter.",
+      "items": [
+        {
+          "h": "A hire that takes two quarters",
+          "p": "The role is open, the shortlist is thin and the product roadmap waits on recruitment."
+        },
+        {
+          "h": "Suppliers on the other side of the night",
+          "p": "An overseas team whose day has finished before yours starts turns a small clarification into a lost day."
+        },
+        {
+          "h": "Firmware, app and cloud split three ways",
+          "p": "Three suppliers each hold one layer, and the gaps between them are nobody's responsibility."
+        },
+        {
+          "h": "Nothing written down",
+          "p": "Scope, exclusions and ownership were discussed on a call and never turned into a document."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the engagement runs",
+      "h2": "From a first conversation to a tested build.",
+      "steps": [
+        {
+          "h": "NDA",
+          "p": "Signed before any specification, schematic or datasheet changes hands."
+        },
+        {
+          "h": "Scope call",
+          "p": "Controller, peripherals, behaviour and the software boundary, in your afternoon."
+        },
+        {
+          "h": "Written scope",
+          "p": "Deliverables, exclusions and timeline agreed before work starts."
+        },
+        {
+          "h": "Hardware to Chennai",
+          "p": "Boards or an evaluation unit shipped so testing happens on real hardware."
+        },
+        {
+          "h": "Weekly rhythm",
+          "p": "A demo and a written update each week, with a live thread most of your day."
+        },
+        {
+          "h": "Hand over",
+          "p": "Source, build instructions, test notes and documentation, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "How the distance is handled",
+      "h2": "The arrangements behind a remote build.",
+      "groups": [
+        {
+          "icon": "&#128336;",
+          "h": "Working hours",
+          "items": [
+            "India sits a few hours behind eastern Australia",
+            "Your afternoon is our late morning",
+            "Same-day answers rather than next-day",
+            "A standing call slot in your working day"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Confidentiality",
+          "items": [
+            "Your NDA signed before scoping",
+            "Delivered to the repository you choose",
+            "Cloud resources in your own account",
+            "Access stays yours to grant and withdraw"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Scope and ownership",
+          "items": [
+            "Fixed scope and written exclusions",
+            "Amendments approved, not assumed",
+            "Source and documentation yours",
+            "No dependency on us after handover"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Working together",
+          "items": [
+            "Weekly demo and written update",
+            "Daily written thread",
+            "Email and WhatsApp for quick items",
+            "One builder throughout"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What Australian teams usually need.",
+      "items": [
+        {
+          "h": "A firmware engineer they could not hire",
+          "workflow": "A defined scope of firmware work is handed over with a fixed plan while your team keeps the hardware and the roadmap.",
+          "result": "The product moves while the role stays open."
+        },
+        {
+          "h": "Remote monitoring across a large country",
+          "workflow": "Devices report usage and faults into a pipeline, and a dashboard shows which unit needs attention and where.",
+          "result": "Fewer trips to sites that did not need one."
+        },
+        {
+          "h": "A field update path before the next shipment",
+          "workflow": "An update route is built so a firmware fix reaches installed units instead of requiring a visit.",
+          "result": "Defects fixed by release rather than by travel."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Australian companies that build devices.",
+      "items": [
+        {
+          "icon": "&#129658;",
+          "b": "Medical device companies",
+          "p": "Firmware and connected software."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics companies",
+          "p": "Controller and bus software."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Measurement and reporting."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Equipment manufacturers",
+          "p": "Monitoring on installed machines."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Hardware startups",
+          "p": "A first connected product."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service organisations",
+          "p": "Visibility across long distances."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Options for an Australian device company.",
+      "cols": [
+        "In-house hire",
+        "Large engineering services firm",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Time to start",
+          "Two quarters, realistically",
+          "Weeks of process",
+          "Days, after a scope call"
+        ],
+        [
+          "Hours overlap",
+          "Full",
+          "Depends on the delivery centre",
+          "Most of your working day"
+        ],
+        [
+          "Firmware, app and cloud",
+          "Separate hires",
+          "Separate teams",
+          "One builder across all three"
+        ],
+        [
+          "Commercial model",
+          "Salary and overheads",
+          "Rates and change requests",
+          "Fixed scope, written exclusions"
+        ],
+        [
+          "Hardware and certification",
+          "Your team",
+          "Often included",
+          "Not offered: software-only"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Working with an Australian company, answered.",
+      "items": [
+        {
+          "q": "Do you have anyone in Australia?",
+          "a": "No. Elevate Aura is based in Chennai, India, with no Australian entity, office or staff, and we would rather say so on the page than have it come up later. Work for Australian clients is delivered remotely."
+        },
+        {
+          "q": "How many hours of the day do we share?",
+          "a": "Indian hours sit a few hours behind eastern Australian time, so a normal Chennai working day covers most of yours. A standing call in your afternoon lands comfortably in our morning, and questions are usually answered the same day."
+        },
+        {
+          "q": "How do you test firmware on our hardware?",
+          "a": "How testing happens on your hardware is agreed when we scope: an evaluation unit sent to Chennai, or a rig in your lab we can reach. Either way the firmware is tested on the real thing before handover, with logs and test notes. Where equipment only exists in your lab, your team runs the measurement and we work to what it reports."
+        },
+        {
+          "q": "What about our intellectual property?",
+          "a": "Your NDA is signed before any specification or schematic is shared. Code can be delivered straight into the repository you nominate, and any cloud resources can sit in your own account, so access stays yours to grant and withdraw. No client is named publicly without written permission."
+        },
+        {
+          "q": "Do you do hardware or regulatory certification?",
+          "a": "No. The engagement is software only. PCB design, component sourcing, manufacturing, mechanical and enclosure work and hardware regulatory certification all stay with your team, and we supply documentation your team can use in its own submissions."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/embedded-software-development-uk/",
+          "icon": "&#127468;&#127463;",
+          "b": "For UK companies",
+          "p": "Remote, with easy overlap."
+        },
+        {
+          "href": "/product-development/embedded-software-development-usa/",
+          "icon": "&#127482;&#127480;",
+          "b": "For US companies",
+          "p": "Remote, with a morning window."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Units across long distances."
+        },
+        {
+          "href": "/product-development/ota-firmware-update-development/",
+          "icon": "&#128260;",
+          "b": "OTA updates",
+          "p": "Fixes without travel."
+        },
+        {
+          "href": "/product-development/embedded-software-development/",
+          "icon": "&#9881;",
+          "b": "Embedded software",
+          "p": "The whole device software layer."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

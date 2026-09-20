@@ -1,0 +1,330 @@
+{
+  "cluster": "aurapacs",
+  "slug": "on-premise-pacs",
+  "title": "On-Premise PACS | Images on Your Own Machine | AuraPACS",
+  "meta": "On-premise PACS that receives, stores and serves studies on a node inside your centre, so scanning and reading continue without internet. Cloud backup added on top.",
+  "h1": "On-premise PACS: your images on <span class=\"hl\">your own machine</span>, readable when the internet is not.",
+  "crumb": "On-Premise PACS",
+  "pill": "The local node",
+  "sub": "AuraPACS runs an on-premise node on the centre's own network. Modalities send to it, the browser viewer serves from it, and reports are written against it. A thin cloud layer adds remote viewing and an encrypted offsite copy, but the day's work never depends on the uplink.",
+  "meta_ticks": [
+    "Works without internet",
+    "Studies served over your local network",
+    "Cloud backup added on top"
+  ],
+  "whatsapp_text": "Hi, I'd like to discuss an on-premise PACS for our imaging centre.",
+  "primary_keyword": "on-premise PACS",
+  "secondary_keywords": [
+    "on-premise PACS software",
+    "local PACS server",
+    "offline PACS",
+    "PACS without internet",
+    "PACS on own server India",
+    "self-hosted PACS"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or IT lead of a diagnostic centre who wants imaging to stay inside the building and keep working during outages",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an on-premise PACS means in AuraPACS",
+      "paras": [
+        "An on-premise PACS keeps the archive, the DICOM receiver and the viewer on a machine inside your centre. Your CT, MR, X-ray or ultrasound sends each study to that node over the local network, the radiologist opens it in a browser from the same network, and the report is saved beside the images. None of that traffic leaves the building.",
+        "AuraPACS is built around exactly this node. The cloud layer sits on top for remote viewing and encrypted offsite backup, which is why the product is described as hybrid, but if the internet drops the node carries on receiving, storing and serving studies on its own."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why centres ask for on-premise",
+      "h2": "Cloud-only imaging makes the uplink a single point of failure.",
+      "lead": "The reasons are practical rather than ideological. A centre that scans all day cannot have its viewer stop because a fibre line was cut on the road outside.",
+      "items": [
+        {
+          "h": "Every study crosses the internet",
+          "p": "A cloud-only system uploads each CT before anyone can read it, so a slow afternoon connection becomes a slow reporting afternoon."
+        },
+        {
+          "h": "Outage means downtime",
+          "p": "When the connection fails the technician can still scan, but nobody can open, compare or report until it returns."
+        },
+        {
+          "h": "The archive belongs to someone else",
+          "p": "Images sit in a provider's storage under a per-study contract, and getting them back at the end is rarely simple."
+        },
+        {
+          "h": "Large studies feel slow",
+          "p": "Multi-slice CT and MR series are heavy. Pulling them down from a remote server is slower than reading from a machine in the next room."
+        },
+        {
+          "h": "Old workstation PACS is the other extreme",
+          "p": "Legacy on-premise systems needed installed viewer software on every reading PC, a server room and an engineer on call."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the node works",
+      "h2": "From the modality to the reading screen, all on your network.",
+      "steps": [
+        {
+          "h": "Node installed",
+          "p": "AuraPACS is installed on a Windows machine on your network and given an AE title and port."
+        },
+        {
+          "h": "Modalities pointed at it",
+          "p": "Each scanner is configured to send DICOM to the node, the same way it would to any archive."
+        },
+        {
+          "h": "Study received and indexed",
+          "p": "Images land automatically and are filed by patient, study and series."
+        },
+        {
+          "h": "Opened in the browser",
+          "p": "Any authorised laptop on the local network opens the study with nothing installed."
+        },
+        {
+          "h": "Report attached",
+          "p": "The radiologist writes on a template and finalises a PDF against the study."
+        },
+        {
+          "h": "Cloud copy made",
+          "p": "When the connection is up, an encrypted backup and remote-view copy sync to the cloud layer."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What runs on the node",
+      "h2": "The local machine does the heavy lifting.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Receive",
+          "items": [
+            "DICOM receive from any modality",
+            "CT, MR, X-ray, ultrasound, mammography and more",
+            "Modality worklist served to the machines",
+            "Automatic filing by patient and study"
+          ]
+        },
+        {
+          "icon": "&#128451;",
+          "h": "Store",
+          "items": [
+            "Archive on your own hardware",
+            "Full searchable patient history",
+            "Retention under your control",
+            "Encrypted offsite backup via the cloud layer"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "Read and report",
+          "items": [
+            "Zero-download browser viewer",
+            "Slice scrolling and window/level",
+            "Structured templates per modality",
+            "PDF report attached to the study"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access, every view audited",
+            "GST billing and invoicing built in",
+            "WhatsApp share links when online",
+            "Activation by Site ID, then runs on your network"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What stays working when the line goes down.",
+      "items": [
+        {
+          "h": "The internet drops mid-morning",
+          "workflow": "The CT keeps sending to the node. The radiologist keeps opening studies from the reading room. Reports are finalised as usual.",
+          "result": "Only WhatsApp sharing and remote viewing wait for the connection to return."
+        },
+        {
+          "h": "A large multi-slice CT opens fast",
+          "workflow": "The study is served from the node over the local network rather than pulled from a remote server.",
+          "result": "Scrolling and windowing feel local because they are."
+        },
+        {
+          "h": "An old study is needed for comparison",
+          "workflow": "Front desk searches the patient's history on the node and the prior opens beside today's scan.",
+          "result": "No CD to find, no upload to wait for."
+        },
+        {
+          "h": "The centre wants to own its archive",
+          "workflow": "Images stay on hardware the centre bought, in a folder structure it can see.",
+          "result": "There is no per-study rent and no lock-in at renewal time."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Centres that want imaging inside the building.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Diagnostic centres",
+          "p": "Daily CT, MR and ultrasound volume that cannot pause for the ISP."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Small hospitals",
+          "p": "Casualty and wards need images available at 2 am regardless of connectivity."
+        },
+        {
+          "icon": "&#9889;",
+          "b": "Weak-connectivity locations",
+          "p": "Towns and outskirts where the uplink is shared and unreliable."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Owners with data concerns",
+          "p": "Centres that want to know exactly which machine holds their patients' images."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Centres with an IT person",
+          "p": "One capable person can install the node with remote guidance."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "On-premise, done three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Legacy workstation PACS",
+        "AuraPACS node"
+      ],
+      "rows": [
+        [
+          "Works without internet",
+          "Yes, but nothing is searchable",
+          "Yes",
+          "Yes, node receives and serves locally"
+        ],
+        [
+          "Viewer",
+          "CD viewer per disc",
+          "Installed software per workstation",
+          "Any browser on the network"
+        ],
+        [
+          "Backup",
+          "None",
+          "Manual, your problem",
+          "Encrypted offsite copy through the cloud layer"
+        ],
+        [
+          "Remote reading",
+          "Courier the disc",
+          "VPN and installed client",
+          "Browser via the cloud layer"
+        ],
+        [
+          "Sharing with referrers",
+          "Print or courier",
+          "Portal login",
+          "WhatsApp secure link"
+        ],
+        [
+          "Who supports you",
+          "No one",
+          "Vendor engineer visit",
+          "The person who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "On-premise PACS, answered.",
+      "items": [
+        {
+          "q": "Does AuraPACS work with no internet at all?",
+          "a": "Yes. The on-premise node receives studies from the modalities, stores them and serves the browser viewer over your local network. Remote viewing, WhatsApp sharing and offsite backup need a connection, and they catch up when it returns."
+        },
+        {
+          "q": "What hardware does the node need?",
+          "a": "A Windows machine on the centre's network with enough disk for your study volume. The demo installer is 200 KB and runs against the demo server; after activation by Site ID the full system runs on that machine. Sizing is agreed on a call based on your modalities."
+        },
+        {
+          "q": "Is this different from the hybrid PACS?",
+          "a": "It is the same product. The on-premise node is the foundation; the cloud layer adds remote viewing and encrypted backup. See <a href=\"/aurapacs/hybrid-pacs/\">hybrid PACS</a> for how the two parts share the work."
+        },
+        {
+          "q": "Who owns the images?",
+          "a": "You do. They are stored on your hardware, on your premises, and the encrypted backup copy exists so a disk failure does not cost you the archive. There is no per-study charge for keeping them."
+        },
+        {
+          "q": "Do we still need a server room?",
+          "a": "No. The node is a single machine on the network. Heavy tasks such as offsite backup and remote access are handled by the cloud layer rather than by extra hardware at the centre."
+        },
+        {
+          "q": "Who installs it outside Chennai?",
+          "a": "Your own IT person, with remote guidance from Elevate Aura over WhatsApp and screen share. In Chennai the installation and modality connection can be done in person."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#9729;",
+          "b": "Hybrid PACS",
+          "p": "What runs where, and why."
+        },
+        {
+          "href": "/aurapacs/dicom-server-software/",
+          "icon": "&#128229;",
+          "b": "DICOM server",
+          "p": "AE titles, ports, worklist."
+        },
+        {
+          "href": "/aurapacs/medical-image-archive-storage/",
+          "icon": "&#128451;",
+          "b": "Image archive",
+          "p": "Indexing, retention, backup."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Side by side."
+        }
+      ]
+    }
+  ]
+}

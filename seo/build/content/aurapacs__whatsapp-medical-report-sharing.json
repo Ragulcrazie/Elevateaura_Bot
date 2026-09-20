@@ -1,0 +1,333 @@
+{
+  "cluster": "aurapacs",
+  "slug": "whatsapp-medical-report-sharing",
+  "title": "WhatsApp Medical Report Sharing | AuraPACS",
+  "meta": "WhatsApp medical report sharing from your PACS: a secure link puts the images and the signed report on the referrer's or patient's phone, with no login.",
+  "h1": "WhatsApp medical report sharing: images and report on the referrer's phone, <span class=\"hl\">no login</span>.",
+  "crumb": "WhatsApp Report Sharing",
+  "pill": "Sharing built into the PACS",
+  "sub": "AuraPACS generates a secure link for each study once the report is signed. Front desk sends it on WhatsApp to the referring doctor and the patient. They tap it and see the images and the PDF in a browser. Nobody creates an account, and every view is audited.",
+  "meta_ticks": [
+    "Secure link per study",
+    "No login for patient or referrer",
+    "Every view audited"
+  ],
+  "whatsapp_text": "Hi, I'd like to know how AuraPACS shares reports on WhatsApp.",
+  "primary_keyword": "WhatsApp medical report sharing",
+  "secondary_keywords": [
+    "share radiology report on WhatsApp",
+    "send X-ray on WhatsApp",
+    "secure medical image sharing",
+    "PACS WhatsApp integration",
+    "report sharing with referring doctors",
+    "patient report link"
+  ],
+  "intent": "commercial",
+  "persona": "Centre owner whose referrers already ask for reports on WhatsApp and who wants to do it properly",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How WhatsApp report sharing works in AuraPACS",
+      "paras": [
+        "When a report is finalised, AuraPACS creates a secure link for that study. The front desk sends the link on WhatsApp to the referring doctor, the patient or both. Opening it shows the images in the browser viewer and the signed PDF, with no app to install and no account to create. Each view is recorded in the audit log.",
+        "This replaces the way most Indian centres already share results, which is a phone photo of a printed report or a JPEG of the screen. The link carries the actual study and the actual PDF, comes from the centre's system rather than someone's personal phone, and can be found again later from the patient's history."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How sharing happens today",
+      "h2": "Referrers want it on WhatsApp. Centres send it badly.",
+      "lead": "The channel is not the problem. The problem is what gets sent down it and from whose phone.",
+      "items": [
+        {
+          "h": "A photo of the report",
+          "p": "A staff member photographs the printed page and sends it from a personal number. It is blurry, uncropped and unrecoverable a month later."
+        },
+        {
+          "h": "A screenshot of the scan",
+          "p": "One slice of a CT, captured from the monitor, stands in for the whole study."
+        },
+        {
+          "h": "No record of who received it",
+          "p": "Nobody can say which doctor got which patient's report, or when."
+        },
+        {
+          "h": "Portals nobody logs into",
+          "p": "A referrer portal with a username and password is set up and never used. Doctors do not remember passwords for every centre they refer to."
+        },
+        {
+          "h": "CDs and film for the images",
+          "p": "The report goes on WhatsApp; the images still travel by courier or patient."
+        },
+        {
+          "h": "Personal phones hold patient data",
+          "p": "When the staff member leaves, hundreds of reports leave in the chat history."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From sign-off to a tap on a phone.",
+      "steps": [
+        {
+          "h": "Report signed",
+          "p": "The radiologist finalises the PDF on the study."
+        },
+        {
+          "h": "Link generated",
+          "p": "AuraPACS creates a secure link for that study."
+        },
+        {
+          "h": "Sent on WhatsApp",
+          "p": "Front desk sends it to the referrer, the patient, or both."
+        },
+        {
+          "h": "Opened in a browser",
+          "p": "The recipient sees the images and the report, nothing to install."
+        },
+        {
+          "h": "View audited",
+          "p": "The access is logged against the study."
+        },
+        {
+          "h": "Found again",
+          "p": "The link and the study remain in the patient's history at the centre."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Sharing, and the controls around it.",
+      "groups": [
+        {
+          "icon": "&#128279;",
+          "h": "The link",
+          "items": [
+            "Secure link per study",
+            "Opens images in the browser viewer",
+            "Opens the signed report PDF",
+            "No login for the recipient"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access to generate links",
+            "Every view audited",
+            "Sent from the centre's system, not a personal phone",
+            "Study stays on your node"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "Recipients",
+          "items": [
+            "Referring doctors",
+            "Patients and families",
+            "Consultants at another hospital",
+            "Referrer role for regular referrers"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Around it",
+          "items": [
+            "Report templates and sign-off",
+            "Full searchable patient history",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/radiology-reporting-software/",
+        "label": "See how the report is written"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Who receives what, and when.",
+      "items": [
+        {
+          "h": "The orthopaedic surgeon who referred the MRI",
+          "workflow": "Minutes after sign-off, the link arrives on WhatsApp; the surgeon scrolls the series on a phone between patients.",
+          "result": "The patient's next consultation happens with the images already seen."
+        },
+        {
+          "h": "A patient travelling to another city",
+          "workflow": "The patient forwards the link to the consultant there.",
+          "result": "No CD, no film, no repeat scan."
+        },
+        {
+          "h": "The gynaecologist who refers every week",
+          "workflow": "She has a referrer role and sees her own patients' studies in a browser, plus links for each one.",
+          "result": "One place for all her referrals from your centre."
+        },
+        {
+          "h": "An audit question",
+          "workflow": "The owner checks who opened a particular study and when.",
+          "result": "The answer is in the audit log, not in someone's chat history."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Consent and privacy",
+      "h2": "Practices worth following when sharing on WhatsApp.",
+      "items": [
+        {
+          "icon": "&#9989;",
+          "b": "Confirm the number",
+          "p": "Send to the number the patient or referrer gave at registration, and verify before the first send."
+        },
+        {
+          "icon": "&#128221;",
+          "b": "Record consent",
+          "p": "Note at registration that the patient agrees to receive results by WhatsApp and to sharing with the named referrer."
+        },
+        {
+          "icon": "&#128274;",
+          "b": "Share the link, not a file",
+          "p": "The link is served from your system and every view is audited; a forwarded JPEG is not."
+        },
+        {
+          "icon": "&#128241;",
+          "b": "Use the centre's number",
+          "p": "Send from the centre's WhatsApp account, not a staff member's personal phone."
+        },
+        {
+          "icon": "&#9878;",
+          "b": "Follow your local rules",
+          "p": "Health-record and data-protection rules differ by country and change over time. Confirm your obligations with your advisers."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting the result to the referrer, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Enterprise PACS",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "What is sent",
+          "Photo of the report, or a disc",
+          "Portal invitation",
+          "Secure link to images and PDF"
+        ],
+        [
+          "Recipient needs",
+          "Nothing, but gets little",
+          "A username and password",
+          "Only WhatsApp and a browser"
+        ],
+        [
+          "Images included",
+          "Sometimes, on a CD",
+          "Yes, after login",
+          "Yes, in the browser viewer"
+        ],
+        [
+          "Record of access",
+          "None",
+          "Portal logs",
+          "Every view audited"
+        ],
+        [
+          "Where the data sits",
+          "Personal phones",
+          "Vendor portal",
+          "Your node; link served securely"
+        ],
+        [
+          "Found again later",
+          "Scroll the chat",
+          "Portal search",
+          "Patient history at the centre"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "WhatsApp report sharing, answered.",
+      "items": [
+        {
+          "q": "Does the referrer need to install anything?",
+          "a": "No. The link opens in the phone's browser and shows the images and the report PDF. There is no app, no account and no password at the recipient's end."
+        },
+        {
+          "q": "Is the link secure?",
+          "a": "The link is generated per study by AuraPACS and served from the system, and every view of it is audited. Generating links is controlled by role-based access, so only permitted staff can send one."
+        },
+        {
+          "q": "Can we see who viewed a report?",
+          "a": "Yes. Views are recorded against the study in the audit log, which is part of the role-based access built into AuraPACS."
+        },
+        {
+          "q": "Does the patient get the images or only the PDF?",
+          "a": "The link can open both. Many centres send the report to the patient and the report plus images to the referring doctor; the choice is yours per study."
+        },
+        {
+          "q": "Is sharing patient images on WhatsApp allowed?",
+          "a": "Rules on health records and personal data differ by country and are updated over time. Record the patient's consent at registration, send to verified numbers from the centre's own account, and confirm your obligations with your advisers. AuraPACS gives you the audited link; the policy is yours."
+        },
+        {
+          "q": "Does this need internet at the centre?",
+          "a": "Yes, for the link to be opened by someone outside. Studies are received and reported on the on-premise node without internet, and links go out once the connection is available. See <a href=\"/aurapacs/hybrid-pacs/\">hybrid PACS</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/radiology-reporting-software/",
+          "icon": "&#128221;",
+          "b": "Reporting software",
+          "p": "The PDF that gets shared."
+        },
+        {
+          "href": "/aurapacs/digital-x-ray-pacs/",
+          "icon": "&#129471;",
+          "b": "Digital X-ray PACS",
+          "p": "Film replaced by a link."
+        },
+        {
+          "href": "/aurapacs/ultrasound-pacs/",
+          "icon": "&#128300;",
+          "b": "Ultrasound PACS",
+          "p": "Images to the gynaecologist."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The C is for communication."
+        },
+        {
+          "href": "/compare/pacs-vs-cloud-storage/",
+          "icon": "&#9878;",
+          "b": "PACS vs cloud storage",
+          "p": "Why a shared folder is not sharing."
+        }
+      ]
+    }
+  ]
+}

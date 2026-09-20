@@ -1,0 +1,218 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-madurai",
+  "title": "Hospital Management Software in Madurai | HIMS",
+  "meta": "Hospital management software for Madurai hospitals and nursing homes: casualty, OP, wards, pharmacy, lab and billing, with on-site training by travel.",
+  "h1": "Hospital management software for Madurai, built for a hospital that <span class=\"hl\">never really closes</span>.",
+  "crumb": "Madurai",
+  "pill": "Madurai and southern Tamil Nadu",
+  "sub": "HIMS covers casualty, OP, wards, theatre, ICU, pharmacy, laboratory, imaging and billing for Madurai hospitals and nursing homes serving the southern districts, with the go-live and the counter training done in person by travel from Chennai.",
+  "meta_ticks": [
+    "On-site training for your front desk",
+    "Casualty and IP from the same record",
+    "WhatsApp and remote support after"
+  ],
+  "whatsapp_text": "Hi, we run a hospital in Madurai and would like to see HIMS.",
+  "primary_keyword": "hospital management software Madurai",
+  "secondary_keywords": [
+    "hospital software Madurai",
+    "HMS software Madurai",
+    "nursing home software Madurai",
+    "hospital software southern Tamil Nadu",
+    "hospital billing software Madurai"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital or nursing home in Madurai serving the southern districts",
+  "city": "Madurai",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Madurai, delivered with a visit rather than a webinar",
+      "paras": [
+        "Madurai is where the southern districts come when the local hospital runs out of answers, and its hospitals and nursing homes work accordingly: heavy walk-in OP, casualty arrivals at all hours, and families who have travelled a long way and stay for the whole admission. HIMS is built for that shape of hospital, and Madurai is within travelling distance of Chennai, so the workflow study and the counter training are done on site.",
+        "Be clear about what is local and what is not. The visit is a visit. There is no Madurai office, no local engineer and no branch support number. After go-live the system is supported remotely and on WhatsApp by the founder who built it, with a return visit arranged when something warrants one."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Madurai context",
+      "h2": "A referral hub, and a catchment that arrives without an appointment.",
+      "lead": "Patients reach Madurai from Sivaganga, Virudhunagar, Theni, Dindigul and Ramanathapuram, often on the day and often without having rung ahead.",
+      "body": [
+        "That produces a specific working pattern. The morning OP is dominated by walk-ins rather than booked slots, so a token queue that the waiting hall can see matters more than a calendar. Casualty takes arrivals through the night, and whoever is on duty needs the triage board and the admission screen to be the same system the morning shift will pick up. Families settle bills in cash far more often than a metro hospital would expect, alongside the admissions an insurer or TPA is paying for.",
+        "Alongside the larger hospitals, the city and the districts around it carry a long tail of nursing homes and small IP-led units. They run on three or four people who each do several jobs, which is the real test of hospital software: whether the person at the counter can register, bill, and find last month's admission without being trained twice.",
+        {
+          "h3": "What the record has to hold"
+        },
+        "Because patients travel, follow-up is uneven. Someone seen in March may return in October with nothing in hand. The value of the system on that day comes from what was written the first time: a structured record with the history, the orders, the verified laboratory results, the imaging and the discharge summary in their own places, searchable by UHID rather than by a name someone half remembers.",
+        {
+          "h3": "How a Madurai rollout runs"
+        },
+        {
+          "ul": [
+            "A visit to watch casualty, OP, the wards, the pharmacy and the billing counter run for a day.",
+            "A first phase chosen around where the pain is worst, usually registration, billing and pharmacy.",
+            "Existing patient, item and rate data imported, and the hospital's branding on the screens and the bill.",
+            "Counter training in person across shifts, so the night staff are taught by the same person as the day staff.",
+            "Live in 30 working days where scope allows, then remote and WhatsApp support."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules that carry a Madurai hospital's day.",
+      "groups": [
+        {
+          "icon": "&#128657;",
+          "h": "Arrivals",
+          "items": [
+            "Emergency and casualty triage board",
+            "OP registration and token queue",
+            "Appointments by doctor and department",
+            "Doctor rosters so the on-duty list is in the system"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Admission to discharge",
+          "items": [
+            "IP registration and ward allocation",
+            "Bed occupancy across wards",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed",
+            "Discharge summary drawn from the record"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Pharmacy dispensing queue and expiry alerts",
+            "Laboratory from order to verified result",
+            "Imaging through AuraPACS on the same record"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Counter and collections",
+          "items": [
+            "Cash billing at the counter",
+            "Insurance and TPA claim billing",
+            "GST on billable items",
+            "Collections and occupancy on the live dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Situations a Madurai hospital will recognise.",
+      "items": [
+        {
+          "h": "A casualty arrival at two in the morning",
+          "workflow": "The patient is registered and triaged on the casualty board, admitted to a bed the screen shows as free, and the morning shift opens the same record.",
+          "result": "The night handover is the record, not a verbal summary."
+        },
+        {
+          "h": "A family from Ramanathapuram admitted for four days",
+          "workflow": "Room days, drugs dispensed, investigations and consumables accumulate on the admission as they happen.",
+          "result": "The bill at discharge is read, not reconstructed."
+        },
+        {
+          "h": "An OP morning with more walk-ins than appointments",
+          "workflow": "Tokens are issued at registration and the queue is visible to the waiting hall and to each consulting room.",
+          "result": "The crowd is managed by the display rather than by the counter staff."
+        },
+        {
+          "h": "A patient who last came seven months ago",
+          "workflow": "The UHID brings up the previous visit, the prescription, the verified results and the imaging before the consultation starts.",
+          "result": "Nothing is repeated because nobody could find it."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Madurai, answered.",
+      "items": [
+        {
+          "q": "Do you come to Madurai, or is this all remote?",
+          "a": "The workflow study and the go-live training are done on site, by travel from Chennai. Everything after that is remote and on WhatsApp. Elevate Aura has no office, no staff and no phone number in Madurai, and this page is not going to pretend otherwise."
+        },
+        {
+          "q": "Can staff on the night shift be trained too?",
+          "a": "Yes. The on-site days are planned across shifts so that casualty and night counter staff are taught directly rather than second hand, and the session can be recorded for people who join afterwards."
+        },
+        {
+          "q": "Do you support hospitals in the surrounding districts?",
+          "a": "Yes. Setup for a hospital in Theni, Dindigul, Sivaganga or Virudhunagar is arranged the same way where travel makes sense, and remotely where it does not. Ongoing support is remote and on WhatsApp in every case."
+        },
+        {
+          "q": "Is it suitable for a nursing home rather than a large hospital?",
+          "a": "Yes. Modules are switched on selectively, so a nursing home can run registration, IP, pharmacy and billing without carrying theatre or ICU screens. See <a href=\"/hims/nursing-home-management-software/\">nursing home management software</a>."
+        },
+        {
+          "q": "Does it handle casualty separately from OP?",
+          "a": "Yes. Emergency and casualty triage has its own board and its own flow into admission, while sharing the patient record with OP, the wards and billing. See <a href=\"/hims/emergency-department-software/\">emergency department software</a>."
+        },
+        {
+          "q": "What does the timeline look like?",
+          "a": "Live in 30 working days where scope allows, with the scope fixed at the start. Data migration, branding, on-site training and the first days of hand-holding are inside that window."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "One system for the whole hospital."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/emergency-department-software/",
+          "icon": "&#128657;",
+          "b": "Casualty software",
+          "p": "Triage board and intake."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#128203;",
+          "b": "Queue and tokens",
+          "p": "Managing a walk-in morning."
+        },
+        {
+          "href": "/hims/hospital-management-software-coimbatore/",
+          "icon": "&#128205;",
+          "b": "Coimbatore",
+          "p": "The western cluster."
+        },
+        {
+          "href": "/aurapacs/pacs-software-madurai/",
+          "icon": "&#129659;",
+          "b": "PACS in Madurai",
+          "p": "Imaging and report sharing."
+        }
+      ]
+    }
+  ]
+}

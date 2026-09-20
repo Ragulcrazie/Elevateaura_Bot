@@ -1,0 +1,333 @@
+{
+  "cluster": "aura-learn",
+  "slug": "certification-training-platform",
+  "title": "Certification Training Platform | Aura Learn",
+  "meta": "Certification training platform: run courses that end in a certificate, track compliance for regulated training and keep a record per learner of every pass.",
+  "h1": "A certification platform where every course ends in a <span class=\"hl\">certificate on the record</span>.",
+  "crumb": "Certification Training Platform",
+  "pill": "For training providers and certifying teams",
+  "sub": "Aura Learn runs training that must end in a certificate: lessons in a learner app, an assessment with a pass mark, a certificate issued on completion, and compliance tracking that shows who is certified, who is due and who has never passed.",
+  "meta_ticks": [
+    "Certificate issued on completion",
+    "Compliance tracking for regulated training",
+    "Record per learner of every pass"
+  ],
+  "whatsapp_text": "Hi, I'd like to see Aura Learn for certification training and compliance records.",
+  "primary_keyword": "certification training platform",
+  "secondary_keywords": [
+    "training certification software",
+    "certification management software",
+    "online certification platform",
+    "compliance training software India",
+    "certificate course platform",
+    "employee certification tracking"
+  ],
+  "intent": "commercial",
+  "persona": "Head of a training provider or an internal team that must certify people and prove it later",
+  "page_type": "feature",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a certification training platform does here",
+      "paras": [
+        "A certification training platform delivers a course, checks that the learner has understood it, issues a certificate when they pass and keeps that certificate on the learner's record. Aura Learn does all four inside one product: the course and content library, auto-graded assessments, certificates on completion and compliance tracking for regulated training.",
+        "The difference from a plain course platform is the record. Each learner's profile shows which courses they completed, which assessments they passed, when the certificate was issued and, where a programme has a renewal period, when it falls due. A training head can answer an auditor or a customer from the dashboard rather than from a folder of scanned certificates."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The certification problem",
+      "h2": "The training happens. Proving it later is the hard part.",
+      "lead": "Certificates made in a document template, stored on a laptop and re-issued on request are not a record anyone can trust.",
+      "items": [
+        {
+          "h": "Certificates with no trail",
+          "p": "A certificate exists as a file, with nothing behind it showing what was assessed or what score was achieved."
+        },
+        {
+          "h": "Expiry nobody tracks",
+          "p": "Refresher training falls due and passes unnoticed until someone asks for a current certificate."
+        },
+        {
+          "h": "Learners across locations",
+          "p": "Staff in other cities complete the course on paper, and the results reach head office weeks later, if at all."
+        },
+        {
+          "h": "Audit day panic",
+          "p": "An audit or a customer asks who is certified on what, and the answer is a day of searching."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From enrolment to a certificate that can be checked.",
+      "steps": [
+        {
+          "h": "Enrol",
+          "p": "Learner added to the programme, alone or in a batch."
+        },
+        {
+          "h": "Learn",
+          "p": "Lessons, videos and downloads in the app, offline if needed."
+        },
+        {
+          "h": "Assess",
+          "p": "Assessment with a pass mark, graded on submission."
+        },
+        {
+          "h": "Certify",
+          "p": "Certificate generated on a pass and stored on the record."
+        },
+        {
+          "h": "Track",
+          "p": "Compliance view shows certified, due and not yet passed."
+        },
+        {
+          "h": "Renew",
+          "p": "Refresher assigned when a period ends; WhatsApp reminder sent."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The course, the assessment, the certificate and the record.",
+      "groups": [
+        {
+          "icon": "&#128218;",
+          "h": "Programme",
+          "items": [
+            "Course and content library",
+            "Video lessons and downloads",
+            "Offline access in the learner app",
+            "Batches and cohorts"
+          ]
+        },
+        {
+          "icon": "&#9989;",
+          "h": "Assessment",
+          "items": [
+            "Quizzes and final assessments",
+            "Pass mark per programme",
+            "Auto-graded with instant result",
+            "Review of answers"
+          ]
+        },
+        {
+          "icon": "&#127942;",
+          "h": "Certificate",
+          "items": [
+            "Issued automatically on completion",
+            "Stored on the learner's record",
+            "Downloadable by the learner",
+            "Your branding on the certificate"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Compliance",
+          "items": [
+            "Compliance tracking for regulated training",
+            "Certified, due and not-passed views",
+            "Progress per learner and batch",
+            "Reminders on WhatsApp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where a certification platform changes the day.",
+      "items": [
+        {
+          "h": "A customer asks who is certified",
+          "workflow": "The compliance view is filtered by programme and exported, showing each person, their pass date and certificate.",
+          "result": "The answer goes back the same morning."
+        },
+        {
+          "h": "A refresher falls due",
+          "workflow": "The programme has a renewal period; learners nearing it are listed, assigned the refresher and reminded on WhatsApp.",
+          "result": "Certificates are renewed before they lapse, not after."
+        },
+        {
+          "h": "A paid certificate course",
+          "workflow": "A learner enrols and pays with a GST receipt, completes the lessons, passes the assessment and downloads the certificate from the app.",
+          "result": "The provider runs the course without a single manual step."
+        },
+        {
+          "h": "The same programme in every branch",
+          "workflow": "One course and one assessment are assigned to batches in different cities.",
+          "result": "A certificate means the same thing wherever it was earned."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose training has to be proven.",
+      "items": [
+        {
+          "icon": "&#128221;",
+          "b": "Certification bodies",
+          "p": "Assess and certify at scale, with a record."
+        },
+        {
+          "icon": "&#127891;",
+          "b": "Training providers",
+          "p": "Paid programmes that end in a certificate."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Equipment companies",
+          "p": "Engineers certified per model before they service it."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Healthcare organisations",
+          "p": "Staff trained on protocols and equipment."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers",
+          "p": "Process and safety training with refreshers."
+        },
+        {
+          "icon": "&#128172;",
+          "b": "Skill academies",
+          "p": "Vocational courses with a certificate at the end."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Document templates, a course marketplace, or a certification platform.",
+      "cols": [
+        "Templates and folders",
+        "Course marketplace",
+        "Aura Learn"
+      ],
+      "rows": [
+        [
+          "Certificate issue",
+          "Typed by hand",
+          "Automatic, their branding",
+          "Automatic, your branding"
+        ],
+        [
+          "Evidence behind it",
+          "None",
+          "Completion only",
+          "Assessment score, pass mark, date"
+        ],
+        [
+          "Renewal tracking",
+          "Diary",
+          "No",
+          "Due list with WhatsApp reminders"
+        ],
+        [
+          "Compliance view",
+          "Spreadsheet",
+          "No",
+          "Certified, due, not passed, exportable"
+        ],
+        [
+          "Who owns the learner data",
+          "You",
+          "The marketplace",
+          "You"
+        ],
+        [
+          "Pricing basis",
+          "Free but manual",
+          "Cut of each sale",
+          "Unlimited learners"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Certification training platform, answered.",
+      "items": [
+        {
+          "q": "How is a certificate issued?",
+          "a": "Automatically. When a learner completes the programme and passes the assessment at or above the pass mark, the certificate is generated with your branding, stored on the learner's record and made available to download in the app."
+        },
+        {
+          "q": "What does compliance tracking cover?",
+          "a": "It shows, per programme, who is certified, who is due for a refresher and who has not yet passed. It suits regulated training where you must show who was trained on what and when. It is a record of your training, not a regulatory certification of the software itself."
+        },
+        {
+          "q": "Can a certificate expire and be renewed?",
+          "a": "Yes. A programme can carry a renewal period. Learners approaching it are listed, assigned the refresher and reminded on WhatsApp, and the new pass replaces the old certificate on the record."
+        },
+        {
+          "q": "Can learners in the field complete the course?",
+          "a": "Yes. Lessons and downloads are available offline in the learner app, so an engineer or a field trainee can study between visits, and progress syncs when the learner is back online. The assessment needs a connection to submit."
+        },
+        {
+          "q": "Can we sell certificate courses?",
+          "a": "Yes. Enrolment can take a GST payment or a subscription, and the course, assessment and certificate then run without manual steps. Batches, live classes and reminders sit on the same platform. See <a href=\"/aura-learn/course-management-software/\">course management software</a>."
+        },
+        {
+          "q": "Is this also used for staff assessment without a course?",
+          "a": "Yes. A standalone assessment can be assigned and certified without lessons attached, which suits an annual refresher or a skills check for existing staff. See the <a href=\"/aura-learn/online-assessment-platform/\">online assessment platform</a> for that use."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Learn software",
+      "items": [
+        {
+          "href": "/aura-learn/training-management-software/",
+          "icon": "&#128188;",
+          "b": "Training management",
+          "p": "Assign, track and certify."
+        },
+        {
+          "href": "/aura-learn/online-assessment-platform/",
+          "icon": "&#9989;",
+          "b": "Assessments",
+          "p": "Graded without a marker."
+        },
+        {
+          "href": "/aura-learn/corporate-training-lms/",
+          "icon": "&#127981;",
+          "b": "Corporate training",
+          "p": "Your own staff and field teams."
+        },
+        {
+          "href": "/aura-learn/healthcare-training-lms/",
+          "icon": "&#127973;",
+          "b": "Healthcare training",
+          "p": "Engineers and clinical staff."
+        },
+        {
+          "href": "/resources/what-is-lms/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an LMS is."
+        },
+        {
+          "href": "/aura-learn.html",
+          "icon": "&#127968;",
+          "b": "Aura Learn",
+          "p": "The whole platform."
+        }
+      ]
+    }
+  ]
+}

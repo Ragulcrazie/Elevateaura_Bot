@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
 Disallow: /demo/
+Disallow: /web_app/
+Disallow: /admin.html
+Disallow: /partner-admin.html
+Disallow: /partner-portal.html
+Disallow: /welcome.html
+Disallow: /index-v2.html
+Disallow: /index_backup_20260630.html
+Disallow: /index_redirect.html
+Disallow: /bot/
+Disallow: /database/
+Disallow: /setup/
+Disallow: /config/
+Disallow: /assets/ai/
 
 Sitemap: https://elevateaura.co.in/sitemap.xml

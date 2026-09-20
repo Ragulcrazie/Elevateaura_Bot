@@ -1,0 +1,335 @@
+{
+  "cluster": "web-development",
+  "slug": "healthcare-b2b-ecommerce-platform",
+  "title": "Healthcare B2B E-commerce Platform Development | Elevate Aura",
+  "meta": "Healthcare B2B e-commerce platform development: multi-tier pricing, credit terms, bulk ordering, distributor onboarding, orders that reach stock and billing.",
+  "h1": "A healthcare B2B e-commerce platform built around <span class=\"hl\">credit terms and price tiers</span>.",
+  "crumb": "Healthcare B2B E-commerce Platform",
+  "pill": "For suppliers with a buying network",
+  "sub": "B2B buying in healthcare runs on account pricing, credit limits, repeat bulk orders and approval chains. We build the platform that carries all four, and connect it to Aura Business so an online order becomes a sales order, an invoice and a stock movement.",
+  "meta_ticks": [
+    "Price tier and credit limit per account",
+    "Bulk and repeat ordering",
+    "Orders into stock and GST billing"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a B2B e-commerce platform.",
+  "schema": "Service",
+  "service_type": "B2B e-commerce platform development",
+  "area_served": "India",
+  "primary_keyword": "healthcare B2B e-commerce platform",
+  "secondary_keywords": [
+    "B2B e-commerce development India",
+    "medical supplies B2B platform",
+    "wholesale ordering platform healthcare",
+    "distributor onboarding platform",
+    "credit terms e-commerce"
+  ],
+  "intent": "commercial",
+  "persona": "Director of a medical supplies or equipment business selling to hospitals, dealers and clinics on account",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a healthcare B2B e-commerce platform does",
+      "paras": [
+        "A healthcare B2B e-commerce platform lets hospitals, dealers and clinics buy from you on the terms they already have. Each account logs in to its own price tier, sees its credit limit and outstanding balance, reorders from past orders in bulk, and either pays on the platform or places the order against credit for settlement later.",
+        "The difference from a retail store is what happens behind the order. New buyers are onboarded as accounts with documents, GST details and an approved tier rather than signing up in a second. Orders do not sit in an inbox: they become sales orders, GST invoices and stock movements in <a href=\"/aura-business.html\">Aura Business</a>, so the warehouse and accounts work from the same record as the buyer.",
+        "It is built on Next.js and Supabase. The Medline Robotics storefront and distributor portal, with quotations, distributor ordering and UTR payment verification, is the shipped example of this pattern."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why a retail platform cannot do this",
+      "h2": "Your buyers are accounts, not shoppers.",
+      "lead": "Consumer e-commerce assumes one price, immediate payment and an anonymous customer. Healthcare B2B assumes none of those.",
+      "items": [
+        {
+          "h": "One price for every buyer",
+          "p": "A government hospital on rate contract, a dealer on slab pricing and a small clinic cannot all see the same figure."
+        },
+        {
+          "h": "No concept of credit",
+          "p": "Buyers order against agreed terms. A platform that demands payment at checkout simply pushes them back to the phone."
+        },
+        {
+          "h": "Anyone can register",
+          "p": "A dealer account carries pricing you do not want public, so onboarding has to be an approval, not a sign-up form."
+        },
+        {
+          "h": "Bulk ordering is painful",
+          "p": "A monthly consumables order of sixty lines cannot be built by clicking Add to cart sixty times."
+        },
+        {
+          "h": "Orders stop at the inbox",
+          "p": "Someone retypes the order into billing, stock is adjusted late, and the buyer is told a different delivery date."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How an account buys",
+      "h2": "From onboarding to a settled order.",
+      "steps": [
+        {
+          "h": "Apply",
+          "p": "A prospective dealer or hospital submits GST details, address and documents through the onboarding form."
+        },
+        {
+          "h": "Approve and tier",
+          "p": "Your team verifies the documents, approves the account and assigns its price tier and credit limit."
+        },
+        {
+          "h": "Order",
+          "p": "The buyer orders at their own prices, by search, by past order or by uploading a line list for bulk."
+        },
+        {
+          "h": "Check terms",
+          "p": "The platform shows the credit limit and outstanding balance, and flags an order that would exceed it for approval."
+        },
+        {
+          "h": "Fulfil",
+          "p": "The order becomes a sales order, a GST invoice and a delivery challan, and stock moves against it."
+        },
+        {
+          "h": "Settle",
+          "p": "Payment by transfer with a UTR submitted and verified, or against credit with the ageing tracked in receivables."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The platform, by what B2B actually needs.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Accounts and onboarding",
+          "items": [
+            "Distributor and hospital account application",
+            "Document and GST verification step",
+            "Approval before pricing is visible",
+            "Multiple users per account with roles"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Pricing and terms",
+          "items": [
+            "Price tier per account",
+            "Slab and quantity pricing",
+            "Credit limit and outstanding shown at checkout",
+            "Rate-contract pricing for institutional buyers"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Ordering",
+          "items": [
+            "Bulk order by line list upload",
+            "Reorder from a previous order",
+            "Saved order templates",
+            "Order approval within the buyer's organisation"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Back office",
+          "items": [
+            "Sales orders into Aura Business",
+            "GST invoice, challan and e-way bill",
+            "Stock reduced on fulfilment",
+            "Receivables ageing per account"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aura-business/medical-equipment-dealer-management-software/",
+        "label": "See dealer management in Aura Business"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three B2B orders the platform has to handle.",
+      "items": [
+        {
+          "h": "A monthly consumables order",
+          "workflow": "A hospital stores officer opens last month's order, adjusts six quantities and submits it against the hospital's credit account.",
+          "result": "Sixty lines ordered in a minute, priced correctly, straight into the warehouse queue."
+        },
+        {
+          "h": "A dealer near their limit",
+          "workflow": "A dealer places an order that would cross the credit limit; the platform flags it and routes it to your sales manager to approve or hold.",
+          "result": "The exposure decision is made before dispatch rather than at month end."
+        },
+        {
+          "h": "A new dealer onboarding",
+          "workflow": "A dealer applies with GST and address documents, is verified and approved, and is placed on the standard dealer tier.",
+          "result": "Pricing is never exposed to an unverified account."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Suppliers whose customers buy on account.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Medical supplies wholesalers",
+          "p": "High-line-count repeat orders."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "A dealer channel and direct sales."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital suppliers",
+          "p": "Rate contracts and stores officers."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and reagent suppliers",
+          "p": "Scheduled consumable replenishment."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical suppliers",
+          "p": "Clinic accounts on credit."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Spare parts businesses",
+          "p": "Service partners ordering parts."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Marketplace, generic build or a platform on your operations.",
+      "cols": [
+        "Template site builder",
+        "Generic web agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Account pricing",
+          "One public price",
+          "Custom development",
+          "Tier and slab pricing per approved account"
+        ],
+        [
+          "Credit terms",
+          "Not supported",
+          "Rarely attempted",
+          "Credit limit and outstanding checked at order time"
+        ],
+        [
+          "Onboarding",
+          "Open sign-up",
+          "Open sign-up",
+          "Application, document verification, approval, tier"
+        ],
+        [
+          "Bulk ordering",
+          "Add to cart, line by line",
+          "Line by line",
+          "Line list upload, reorder and saved templates"
+        ],
+        [
+          "Order to invoice",
+          "Export a CSV",
+          "Integration project",
+          "Sales order, GST invoice and stock movement in Aura Business"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Healthcare B2B e-commerce platforms, answered.",
+      "items": [
+        {
+          "q": "How is this different from your e-commerce development page?",
+          "a": "The storefront page covers selling a catalogue with quote-to-order and payment verification. This page covers the account layer on top: tiered pricing, credit limits, onboarding and bulk ordering for buyers who purchase every month on terms."
+        },
+        {
+          "q": "Can buyers order against credit instead of paying?",
+          "a": "Yes. Each account carries a credit limit and terms. The platform shows the outstanding balance, allows the order within the limit, and flags anything beyond it for your approval. Ageing is tracked in receivables."
+        },
+        {
+          "q": "How does stock stay accurate?",
+          "a": "When the platform is connected to Aura Business, the fulfilled order creates the stock movement, so the warehouse ledger and the site read the same quantities rather than two separate counts."
+        },
+        {
+          "q": "Can we onboard distributors through the platform?",
+          "a": "Yes. A public application collects GST details, address and documents. Your team verifies and approves, then assigns the price tier, credit limit and territory before the account can see pricing."
+        },
+        {
+          "q": "What about buyers who still want a quotation?",
+          "a": "Quotations sit alongside ordering. Capital equipment and negotiated lines go through the GST quotation flow and convert to an order, while consumables and spares are ordered directly at tier price."
+        },
+        {
+          "q": "How long does a B2B platform take to build?",
+          "a": "Live in 30 working days where scope allows. Catalogue, accounts, tier pricing and ordering are the core. Credit checks, onboarding approval and Aura Business integration are scoped with you before work begins."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related platform pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "icon": "&#128722;",
+          "b": "E-commerce development",
+          "p": "Quote-to-order storefront."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128274;",
+          "b": "Distributor portal",
+          "p": "Dealer login and tracking."
+        },
+        {
+          "href": "/web-development/medical-product-catalogue-website/",
+          "icon": "&#128203;",
+          "b": "Product catalogue website",
+          "p": "The catalogue underneath."
+        },
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#128230;",
+          "b": "Distributor software",
+          "p": "Stock, billing and receivables."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Store and partner portal."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "cluster": "product-development",
+  "slug": "modbus-software-development",
+  "title": "Modbus Software Development | Elevate Aura",
+  "meta": "Modbus software development for instruments and industrial-medical equipment: RTU and TCP communication layers, register maps, polling and gateways to the cloud.",
+  "h1": "Modbus software that makes your instrument <span class=\"hl\">readable</span> by everything else.",
+  "crumb": "Modbus Software",
+  "pill": "Software-only, wired protocols",
+  "sub": "Elevate Aura writes Modbus RTU and Modbus TCP communication layers for instruments and industrial-medical equipment: the device side that exposes a register map, the master or gateway side that polls it, and the bridge that forwards the data to a dashboard or cloud. Written to your hardware spec.",
+  "meta_ticks": [
+    "Modbus RTU over serial, Modbus TCP over Ethernet",
+    "Device side, master side or both",
+    "Gateway to Supabase or Azure"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, we need Modbus communication written for our equipment. Can we discuss the register map and hardware?",
+  "cta_h2": "Send us the register map, or let us define one.",
+  "cta_p": "Tell us whether the device is a slave or a master, RTU or TCP, and what it needs to talk to. We will scope the Modbus layer and any gateway to the cloud.",
+  "primary_keyword": "Modbus software development",
+  "secondary_keywords": [
+    "Modbus RTU software development",
+    "Modbus TCP implementation",
+    "Modbus communication software for instruments",
+    "Modbus gateway software",
+    "industrial protocol software development India",
+    "Modbus firmware development"
+  ],
+  "intent": "commercial",
+  "persona": "Engineering lead at an instrument or equipment maker whose device must speak Modbus to a PLC, SCADA or gateway",
+  "page_type": "feature",
+  "phase": 2,
+  "service_type": "Modbus software development",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What Modbus software development means here",
+      "paras": [
+        "Modbus software development is writing the communication layer that lets a device exchange data over Modbus, the wired protocol used by instruments, controllers, PLCs and building systems. Elevate Aura writes that layer on either side: the device that exposes its readings and settings as registers, or the master or gateway that polls devices and collects their data.",
+        "We work in both variants. Modbus RTU runs over a serial line, usually RS-485, and is common on instruments and equipment. Modbus TCP runs over Ethernet and suits gateways and networked controllers. The register map is defined with your team or taken from your existing documentation, the layer is written in C/C++ or MicroPython on the device and in Python or .NET on a gateway, and it is tested on your hardware against real masters. Hardware, transceivers and cabling are yours."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The Modbus problem",
+      "h2": "The instrument works. The PLC cannot read it.",
+      "lead": "Modbus is simple on paper and fiddly in practice, and the problems only show up when a real master starts polling.",
+      "items": [
+        {
+          "h": "Register map undefined",
+          "p": "Readings exist in the firmware but no one has decided which register holds what, in which byte order."
+        },
+        {
+          "h": "Timing on the wire",
+          "p": "RTU frames need silent intervals and correct CRC; a loop written with delays breaks under a fast master."
+        },
+        {
+          "h": "Exceptions never handled",
+          "p": "An out-of-range request crashes the device instead of returning a Modbus exception."
+        },
+        {
+          "h": "Data stops at the panel",
+          "p": "The PLC reads the device, but nothing carries the readings to a dashboard or the cloud."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the work runs",
+      "h2": "From a register map to a device that answers every poll.",
+      "steps": [
+        {
+          "h": "Register map",
+          "p": "Holding, input, coil and discrete registers defined with your team."
+        },
+        {
+          "h": "Transport",
+          "p": "RTU framing over serial, or TCP framing over Ethernet, on your hardware."
+        },
+        {
+          "h": "Function codes",
+          "p": "Read and write functions implemented, exceptions returned correctly."
+        },
+        {
+          "h": "Master or gateway",
+          "p": "Polling schedule, retries and data collection if you need that side too."
+        },
+        {
+          "h": "Test",
+          "p": "Against real masters and diagnostic tools on your hardware."
+        },
+        {
+          "h": "Hand over",
+          "p": "Register map document, source and build, owned by you."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is written",
+      "h2": "The Modbus layer, and where it connects.",
+      "groups": [
+        {
+          "icon": "&#128268;",
+          "h": "Device side",
+          "items": [
+            "Modbus RTU slave over RS-485 or RS-232",
+            "Modbus TCP server over Ethernet",
+            "Register map and data types",
+            "Exception handling and diagnostics"
+          ]
+        },
+        {
+          "icon": "&#128421;",
+          "h": "Master and gateway",
+          "items": [
+            "Polling of one or many devices",
+            "Retry, timeout and error handling",
+            "RTU to TCP bridging",
+            "Local logging"
+          ]
+        },
+        {
+          "icon": "&#9729;",
+          "h": "Onward",
+          "items": [
+            "Gateway to Supabase or Azure",
+            "Telemetry and alerts",
+            "Web dashboard",
+            "Export to your existing systems"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Handover",
+          "items": [
+            "Register map documentation",
+            "Test notes against real masters",
+            "Source and build instructions",
+            "Configuration guide"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where Modbus software gets written.",
+      "items": [
+        {
+          "h": "A lab instrument that must join a facility network",
+          "workflow": "The instrument exposes its readings and status as Modbus RTU registers; the facility's system polls it like any other device.",
+          "result": "The instrument is integrated without a custom driver on the customer's side."
+        },
+        {
+          "h": "A gateway collecting from a room of equipment",
+          "workflow": "A gateway polls every device on the RS-485 line, bridges to TCP and forwards readings to the cloud pipeline.",
+          "result": "One dashboard for equipment that previously only spoke to a panel."
+        },
+        {
+          "h": "Medical equipment reporting to a building system",
+          "workflow": "Status and alarm registers are defined so the hospital's monitoring system can read them.",
+          "result": "The device fits the hospital's infrastructure instead of demanding its own."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Makers of equipment that has to be read by other systems.",
+      "items": [
+        {
+          "icon": "&#128300;",
+          "b": "Instrument makers",
+          "p": "Lab and process instruments joining a network."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Industrial-medical equipment",
+          "p": "Sterilisers, gas systems, plant equipment."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Industrial device makers",
+          "p": "Sensors and controllers on RS-485."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Integrators and service firms",
+          "p": "Gateways for an existing installed base."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Robotics and automation",
+          "p": "Cells that must report to a PLC."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128295;",
+          "b": "Hardware teams",
+          "p": "Protocol work without a specialist hire."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting Modbus working, three ways.",
+      "cols": [
+        "Library sample code",
+        "Off-the-shelf gateway box",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Register map",
+          "Whatever the sample does",
+          "Configured by you",
+          "Defined with you and documented"
+        ],
+        [
+          "Runs on your controller",
+          "If it happens to fit",
+          "No, extra hardware",
+          "Yes, to your spec"
+        ],
+        [
+          "Tested against real masters",
+          "Rarely",
+          "By the vendor, generically",
+          "On your hardware, with your masters"
+        ],
+        [
+          "Data beyond the panel",
+          "No",
+          "Vendor cloud",
+          "Your Supabase or Azure pipeline"
+        ],
+        [
+          "Who fixes a timing bug",
+          "You",
+          "Vendor support",
+          "The person who wrote it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Modbus software development, answered.",
+      "items": [
+        {
+          "q": "RTU or TCP, which do you write?",
+          "a": "Both. Modbus RTU over a serial line such as RS-485 for instruments and equipment, and Modbus TCP over Ethernet for gateways and networked controllers. A gateway that bridges RTU devices to TCP is a common request and is covered too."
+        },
+        {
+          "q": "Can you write the device side only?",
+          "a": "Yes. If your equipment needs to be readable by a customer's PLC or SCADA, we write the slave or server side with a documented register map, and test it against standard masters and diagnostic tools on your hardware."
+        },
+        {
+          "q": "Do you define the register map?",
+          "a": "If you have one we implement it. If not, we define it with your team: which readings and settings are exposed, register types, data types and byte order, and document it for your customers and integrators."
+        },
+        {
+          "q": "Can the readings go to the cloud?",
+          "a": "Yes. A gateway can poll the devices and forward readings to a telemetry pipeline on Supabase or Azure with alerts and a dashboard. See <a href=\"/product-development/device-to-cloud-telemetry-software/\">device-to-cloud telemetry software</a>."
+        },
+        {
+          "q": "Do you supply the RS-485 transceiver or gateway hardware?",
+          "a": "No. Elevate Aura is software-only. Transceivers, isolation, cabling and gateway hardware are your hardware team's choices. We write the protocol layer to run on what you provide and test it there."
+        },
+        {
+          "q": "What about CAN or serial protocols?",
+          "a": "Also covered. See <a href=\"/product-development/can-bus-software-development/\">CAN bus software development</a> for CAN, and <a href=\"/product-development/embedded-software-development/\">embedded software development</a> for UART and other serial links."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related device software services",
+      "items": [
+        {
+          "href": "/product-development/can-bus-software-development/",
+          "icon": "&#128268;",
+          "b": "CAN bus software",
+          "p": "Message handling and bridging."
+        },
+        {
+          "href": "/product-development/device-to-cloud-telemetry-software/",
+          "icon": "&#128200;",
+          "b": "Telemetry pipeline",
+          "p": "From gateway to cloud."
+        },
+        {
+          "href": "/product-development/embedded-software-development/",
+          "icon": "&#128187;",
+          "b": "Embedded software",
+          "p": "Firmware in C/C++ or MicroPython."
+        },
+        {
+          "href": "/product-development/sensor-integration-software/",
+          "icon": "&#128225;",
+          "b": "Sensor integration",
+          "p": "The readings behind the registers."
+        },
+        {
+          "href": "/product-development/device-dashboard-development/",
+          "icon": "&#128421;",
+          "b": "Device dashboard",
+          "p": "Where the data is read."
+        },
+        {
+          "href": "/product-development.html",
+          "icon": "&#127968;",
+          "b": "Product development",
+          "p": "The full software-only scope."
+        }
+      ]
+    }
+  ]
+}

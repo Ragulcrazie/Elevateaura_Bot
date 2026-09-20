@@ -1,0 +1,221 @@
+{
+  "cluster": "aurapacs",
+  "slug": "pacs-software-nigeria",
+  "title": "PACS Software Nigeria | Works Through Outages | AuraPACS",
+  "meta": "PACS software for Nigeria: an on-premise node that keeps working through power and internet outages, low-bandwidth browser viewing.",
+  "h1": "PACS software for Nigeria that keeps reading when <span class=\"hl\">power and internet do not</span>.",
+  "crumb": "PACS Software Nigeria",
+  "pill": "Remote deployment from Chennai",
+  "sub": "AuraPACS is a hybrid PACS built for centres where power and connectivity cannot be assumed. The on-premise node receives, stores and serves studies on your own network; the cloud layer adds remote reading and encrypted backup when the line is up. Reports go to referrers on WhatsApp. Deployment is remote, with your IT guided from Chennai.",
+  "meta_ticks": [
+    "Node works without internet",
+    "Browser viewer on modest bandwidth",
+    "WhatsApp report sharing"
+  ],
+  "whatsapp_text": "Hi, we run a diagnostic centre in Nigeria and would like to discuss AuraPACS.",
+  "primary_keyword": "PACS software Nigeria",
+  "secondary_keywords": [
+    "PACS system Nigeria",
+    "PACS software Lagos",
+    "PACS software Abuja",
+    "radiology software Nigeria",
+    "medical imaging software Nigeria",
+    "offline PACS Nigeria"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or radiologist-partner of a private diagnostic centre or hospital imaging unit in Nigeria",
+  "page_type": "country",
+  "phase": 5,
+  "country": "NG",
+  "area_served": "Nigeria",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What AuraPACS offers a Nigerian centre",
+      "paras": [
+        "AuraPACS is a hybrid PACS designed on the assumption that the power will fail and the internet will be slow. An on-premise node on your own network receives DICOM from your modalities, stores the archive and serves a browser viewer, none of which needs a connection. A cloud layer adds remote reading, secure WhatsApp links and an encrypted offsite copy whenever the line is available.",
+        "Elevate Aura, the Chennai studio that builds it, works with Nigerian centres remotely. Your IT person installs the node with guidance over WhatsApp and screen share, support continues on WhatsApp in English, and there is a working-hours overlap between Nigeria and India. There is no Nigerian office or partner, and this page does not claim one."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Built for the conditions",
+      "h2": "Why the hybrid model suits Nigerian centres",
+      "lead": "The product was shaped by Indian centres with generators, inverters and shared fibre. Those constraints are familiar in Lagos, Abuja, Port Harcourt and beyond.",
+      "body": [
+        {
+          "h3": "Power"
+        },
+        "The node is a single Windows machine on your network. When power drops and returns, the node restarts and the modalities resend or re-queue their studies; nothing already stored is lost. Keeping the node and the scanner on the same protected supply is the centre's own arrangement, and a worthwhile one.",
+        {
+          "h3": "Connectivity"
+        },
+        "Receiving, viewing and reporting run entirely on the local network, so a slow or absent uplink does not stop the day. The browser viewer serves studies from the node in the building rather than streaming them from abroad. The cloud sync runs in the background and catches up when the line improves. Remote readers open synced studies in a browser, which suits modest bandwidth better than downloading whole studies to a workstation. See <a href=\"/aurapacs/hybrid-pacs/\">hybrid PACS</a> for what runs where.",
+        {
+          "h3": "WhatsApp as the channel"
+        },
+        "Referring doctors and patients are on WhatsApp. AuraPACS generates a secure link per study that opens the images and the signed report in a phone browser with no login, sent from the centre's system rather than a personal phone, and every view is audited.",
+        {
+          "h3": "Deployment"
+        },
+        "Your IT person installs the node, sets a static IP, opens the DICOM port and enters the node's address and AE title on each CT, MR, X-ray or ultrasound. Each step is guided remotely and a test send from each modality confirms it works. The details are on the <a href=\"/aurapacs/dicom-server-software/\">DICOM server software</a> page.",
+        {
+          "h3": "Data rules and invoicing"
+        },
+        "Nigeria has its own data-protection and health-record rules. Studies stay on the node at your centre, the offsite copy is encrypted, each role sees only what it should and every view is audited. Check your own data-residency and health-record obligations with your advisers before you deploy. Billing in AuraPACS is built for Indian GST; for a Nigerian centre invoicing is configurable and confirmed on a call."
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The AuraPACS platform, as deployed remotely.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "Imaging",
+          "items": [
+            "DICOM receive from any modality",
+            "On-premise node, works without internet",
+            "Browser viewer, nothing installed",
+            "Modality worklist"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting and sharing",
+          "items": [
+            "Structured templates per modality",
+            "PDF report on the study",
+            "WhatsApp secure link, no login",
+            "Remote reading in a browser"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control",
+          "items": [
+            "Role-based access, every view audited",
+            "Encrypted offsite backup",
+            "Images on your hardware by default",
+            "Your branding"
+          ]
+        },
+        {
+          "icon": "&#127760;",
+          "h": "Delivery",
+          "items": [
+            "Remote setup with your IT",
+            "WhatsApp support in English",
+            "Working-hours overlap with India",
+            "Invoicing configurable, confirmed on a call"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs.html",
+        "label": "See the whole AuraPACS platform"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Where this fits in Nigeria.",
+      "items": [
+        {
+          "h": "A diagnostic centre on generator power",
+          "workflow": "Power cycles during the day; the node restarts each time and the CT resends. Reading continues on the local network.",
+          "result": "No reporting backlog caused by the supply."
+        },
+        {
+          "h": "A centre whose radiologist lives in another city",
+          "workflow": "Studies sync overnight when the line is quieter; the radiologist reads in a browser the next morning.",
+          "result": "Daily reporting without a radiologist on site."
+        },
+        {
+          "h": "Referrers across town",
+          "workflow": "The signed report and images go out as a WhatsApp link the moment the radiologist finishes.",
+          "result": "No patient carrying film back to the referring physician."
+        },
+        {
+          "h": "A team evaluating before committing",
+          "workflow": "The live demo runs in a browser and the 200 KB Windows demo installer runs against sample studies.",
+          "result": "A decision made on the working product, not a brochure."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS software in Nigeria, answered.",
+      "items": [
+        {
+          "q": "Do you have an office or partner in Nigeria?",
+          "a": "No. Elevate Aura is a founder-led studio in Chennai, India. Nigerian centres are served remotely: your IT installs the node with guidance, and support is on WhatsApp in English."
+        },
+        {
+          "q": "Will it work with our unreliable internet?",
+          "a": "Yes. Receiving studies, the worklist, viewing and reporting run on the on-premise node over the local network without internet. The cloud sync, remote reading and WhatsApp links use the connection when it is available and catch up afterwards."
+        },
+        {
+          "q": "What happens when the power goes?",
+          "a": "The node restarts when power returns and the modalities resend or re-queue their studies. Nothing already stored is lost. Protecting the node and scanner with an inverter or generator is the centre's own arrangement."
+        },
+        {
+          "q": "Can a radiologist read on a slow connection?",
+          "a": "The remote reader opens synced studies in a browser rather than downloading whole studies to a workstation. Reading speed still depends on the line at the reader's end. See <a href=\"/aurapacs/teleradiology-remote-reading-software/\">remote reading software</a>."
+        },
+        {
+          "q": "Where is our data stored?",
+          "a": "On the on-premise node in your centre by default, with an encrypted offsite copy through the cloud layer. Confirm your data-residency and health-record obligations with your advisers and raise them on the scoping call."
+        },
+        {
+          "q": "Is AuraPACS a medical device?",
+          "a": "AuraPACS stores, displays and shares imaging; the read is by your radiologist. Regulatory classification of imaging software differs by country, so confirm the position in Nigeria with your advisers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/pacs-software-kenya/",
+          "icon": "&#127760;",
+          "b": "PACS software Kenya",
+          "p": "The same resilience, East Africa."
+        },
+        {
+          "href": "/aurapacs/hybrid-pacs/",
+          "icon": "&#9729;",
+          "b": "Hybrid PACS",
+          "p": "What survives an outage."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "The referral channel."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise",
+          "p": "Side by side."
+        }
+      ]
+    }
+  ]
+}

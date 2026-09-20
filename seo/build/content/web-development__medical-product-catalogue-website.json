@@ -1,0 +1,331 @@
+{
+  "cluster": "web-development",
+  "slug": "medical-product-catalogue-website",
+  "title": "Medical Product Catalogue Website Development | Elevate Aura",
+  "meta": "Medical product catalogue website development: a structured catalogue per product line with specifications, brochures and an enquiry on every product.",
+  "h1": "A medical product catalogue website where every product has <span class=\"hl\">its own page</span>.",
+  "crumb": "Medical Product Catalogue Website",
+  "pill": "For multi-line equipment sellers",
+  "sub": "A catalogue website is not a PDF with a download button. It is one page per product, carrying the specification table, the brochure, the applications and an enquiry form, arranged by product line so a buyer and a search engine can both find their way.",
+  "meta_ticks": [
+    "One page per product, not a PDF",
+    "Specifications and brochures",
+    "Enquiry on every product"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like a product catalogue website for our range.",
+  "schema": "Service",
+  "service_type": "Product catalogue website development",
+  "area_served": "India",
+  "primary_keyword": "medical product catalogue website",
+  "secondary_keywords": [
+    "online product catalogue development",
+    "medical equipment catalogue website",
+    "product catalogue website design India",
+    "digital catalogue for distributors",
+    "product specification pages"
+  ],
+  "intent": "commercial",
+  "persona": "Sales or marketing head at a medical-equipment company with several product lines and a PDF catalogue",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a medical product catalogue website is",
+      "paras": [
+        "A medical product catalogue website turns your price list and brochure folder into a browsable structure: product lines at the top, categories under them, and a page for every individual product holding its specification table, images, applications, accessories, the brochure as a download, and an enquiry form that names the product it came from.",
+        "Because each product has a real page with real content, it can be found directly by someone searching for that model or that application, instead of being buried in a PDF that search engines cannot rank well. Where volume justifies it, the same structure carries programmatic pages per product and per city.",
+        "Elevate Aura built this structure for Medline Robotics, a medical robotics company in Chennai, alongside their storefront and distributor portal, with 253 product and city landing pages across four product lines."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the PDF catalogue is costing you",
+      "h2": "Your whole range lives in one file nobody can search.",
+      "lead": "A catalogue PDF made sense when it was printed. On a website it hides every product you sell behind a single download link.",
+      "items": [
+        {
+          "h": "Forty products, one URL",
+          "p": "A buyer searching for a specific model finds a competitor's page rather than a page of yours, because you do not have one."
+        },
+        {
+          "h": "Specifications as images",
+          "p": "Spec tables pasted in as screenshots cannot be read, compared or indexed, and they are unreadable on a phone."
+        },
+        {
+          "h": "Enquiries with no context",
+          "p": "A single contact form means the sales team has to ask which product the enquiry was about before they can quote."
+        },
+        {
+          "h": "Every revision is a reprint",
+          "p": "One changed specification means a new PDF, a new upload and old copies still circulating on WhatsApp."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the catalogue is built",
+      "h2": "From a price list to a structured catalogue.",
+      "steps": [
+        {
+          "h": "Structure the range",
+          "p": "Product lines, categories and products agreed from your price list, so the URL structure mirrors how you sell."
+        },
+        {
+          "h": "Define the specification fields",
+          "p": "One field set per product line, so every product in that line carries the same attributes and can be compared."
+        },
+        {
+          "h": "Import the data",
+          "p": "Your Excel sheet is mapped into those fields and loaded, rather than forty pages being typed by hand."
+        },
+        {
+          "h": "Build the product template",
+          "p": "Specification table, images, applications, accessories, brochure download and a product-specific enquiry form."
+        },
+        {
+          "h": "Link it together",
+          "p": "Related products, accessories and the parent line are cross-linked, so a visitor moves sideways instead of leaving."
+        },
+        {
+          "h": "Publish and extend",
+          "p": "The line goes live, and product-and-city pages are added where there is real demand to justify them."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The catalogue, field by field.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Product page",
+          "items": [
+            "Specification table per line",
+            "Image gallery and video",
+            "Applications and use settings",
+            "Accessories and consumables",
+            "Related and alternative models"
+          ]
+        },
+        {
+          "icon": "&#128196;",
+          "h": "Documents",
+          "items": [
+            "Brochure download per product",
+            "Manuals and datasheets",
+            "Gated or open downloads",
+            "Version control on every file"
+          ]
+        },
+        {
+          "icon": "&#9993;",
+          "h": "Enquiry",
+          "items": [
+            "Enquiry form naming the product",
+            "WhatsApp with the product prefilled",
+            "Quote request for several products",
+            "Routing by product line to the right sales person"
+          ]
+        },
+        {
+          "icon": "&#128269;",
+          "h": "Findability",
+          "items": [
+            "Clean URL per line, category and product",
+            "Product schema on every page",
+            "Programmatic product and city pages",
+            "GA4 events on enquiry and download"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/seo-services/programmatic-seo-services/",
+        "label": "How the programmatic pages are built"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes once every product has a page.",
+      "items": [
+        {
+          "h": "A buyer comparing two models",
+          "workflow": "Both models in the same line carry the same specification fields, so the buyer reads the two pages side by side and enquires from the one that fits.",
+          "result": "An enquiry that arrives with the model already decided."
+        },
+        {
+          "h": "The sales team on WhatsApp",
+          "workflow": "Instead of forwarding a 20 MB PDF, the rep sends a link to the product page with the current specification and brochure.",
+          "result": "One version of the truth, and a tracked visit."
+        },
+        {
+          "h": "A new product line added",
+          "workflow": "The line is created, its specification fields defined once, and the products imported from the price sheet.",
+          "result": "A complete set of live pages without a redesign."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone selling a range rather than a single product.",
+      "items": [
+        {
+          "icon": "&#128230;",
+          "b": "Equipment distributors",
+          "p": "Several brands, many models."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Manufacturers and OEMs",
+          "p": "Own range with technical depth."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Lab and reagent suppliers",
+          "p": "Long lists with pack sizes."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical suppliers",
+          "p": "Catalogues that run to hundreds of items."
+        },
+        {
+          "icon": "&#129302;",
+          "b": "Device and robotics companies",
+          "p": "Applications matter as much as specifications."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Spares and consumables sellers",
+          "p": "Compatibility per parent equipment."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "PDF, template builder or a structured catalogue.",
+      "cols": [
+        "Template site builder",
+        "Generic web agency",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Product pages",
+          "Manually created, one by one",
+          "As many as the brief paid for",
+          "Generated from your price sheet, one per product"
+        ],
+        [
+          "Specifications",
+          "Free text or an image",
+          "Free text",
+          "Defined fields per product line, comparable and indexable"
+        ],
+        [
+          "Brochures",
+          "One download page",
+          "One download page",
+          "Versioned file per product, tracked in GA4"
+        ],
+        [
+          "Enquiries",
+          "One generic form",
+          "One generic form",
+          "Per product, routed by line, WhatsApp prefilled"
+        ],
+        [
+          "Scale",
+          "Breaks past a few dozen",
+          "Costed per page",
+          "Programmatic pages per product and city where demand exists"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical product catalogue websites, answered.",
+      "items": [
+        {
+          "q": "How many products can the catalogue hold?",
+          "a": "There is no practical limit. The structure is built once per product line and products are imported from your Excel sheet, so a hundred products is data entry rather than a hundred design jobs."
+        },
+        {
+          "q": "Do we have to show prices?",
+          "a": "No. Most medical catalogues show specifications and take an enquiry or quote request instead of a price. Where you do want prices, they can be shown publicly, or only to logged-in dealers at their own tier."
+        },
+        {
+          "q": "Can buyers still download the brochure?",
+          "a": "Yes, per product, and you choose whether the download is open or asks for a name and number first. Each download is recorded as a GA4 event so you can see which products draw interest."
+        },
+        {
+          "q": "Can the catalogue become a store later?",
+          "a": "Yes. The same product data supports a quote-to-order storefront with dealer pricing and payment verification. See <a href=\"/web-development/medical-equipment-ecommerce-development/\">medical equipment e-commerce development</a>."
+        },
+        {
+          "q": "Who updates the catalogue afterwards?",
+          "a": "Your team, through the admin. Adding a product means filling the defined fields for that line and uploading the brochure. Bulk changes can still be done by re-importing the sheet."
+        },
+        {
+          "q": "Does the catalogue connect to stock?",
+          "a": "It can. With <a href=\"/aura-business.html\">Aura Business</a> the catalogue reads the same product master, so a product added in operations appears on the site and enquiries land as leads."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related catalogue and e-commerce pages",
+      "items": [
+        {
+          "href": "/web-development/",
+          "icon": "&#128421;",
+          "b": "Websites and e-commerce",
+          "p": "Every web service."
+        },
+        {
+          "href": "/web-development/medical-equipment-website-development/",
+          "icon": "&#128230;",
+          "b": "Equipment website",
+          "p": "The site around the catalogue."
+        },
+        {
+          "href": "/web-development/medical-equipment-ecommerce-development/",
+          "icon": "&#128722;",
+          "b": "E-commerce development",
+          "p": "When the catalogue takes orders."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128274;",
+          "b": "Distributor portal",
+          "p": "Dealer pricing behind login."
+        },
+        {
+          "href": "/seo-services/medical-equipment-seo/",
+          "icon": "&#128269;",
+          "b": "Medical equipment SEO",
+          "p": "Getting product pages found."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "Four product lines online."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "cluster": "aurapacs",
+  "slug": "digital-x-ray-pacs",
+  "title": "Digital X-Ray PACS | CR/DR Archive, Filmless Viewing | AuraPACS",
+  "meta": "Digital X-ray PACS for CR and DR: go filmless, archive every exposure on your own node, let OPD doctors open the image in a browser and send it to the patient.",
+  "h1": "Digital X-ray PACS: go <span class=\"hl\">filmless</span> and let the OPD doctor see the image in a browser.",
+  "crumb": "Digital X-Ray PACS",
+  "pill": "For CR and DR X-ray",
+  "sub": "A digital X-ray unit produces one or a few large images per exam. AuraPACS receives them from the CR reader or DR panel, stores them on a node in your clinic, opens them in any browser for the OPD doctor and sends the image and report to the patient on WhatsApp instead of a film envelope.",
+  "meta_ticks": [
+    "Every exposure archived",
+    "Opens in the OPD doctor's browser",
+    "Film envelope replaced by a link"
+  ],
+  "whatsapp_text": "Hi, we have a digital X-ray unit and want to go filmless with AuraPACS.",
+  "primary_keyword": "digital X-ray PACS",
+  "secondary_keywords": [
+    "CR DR archive",
+    "X-ray PACS software",
+    "filmless X-ray",
+    "digital radiography PACS",
+    "X-ray image storage",
+    "X-ray sharing WhatsApp"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a clinic, polyclinic or small hospital with a CR or DR X-ray unit still printing film",
+  "page_type": "application",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a digital X-ray PACS does",
+      "paras": [
+        "A digital X-ray PACS takes the image from your CR reader or DR panel over the network, stores it against the patient, and shows it on any screen that needs it. AuraPACS does this on an on-premise node, so the orthopaedic OPD three rooms away opens the chest or knee X-ray in a browser seconds after exposure, and the patient receives it on WhatsApp instead of carrying a film.",
+        "X-ray is the simplest modality for a PACS and the one where going filmless pays back fastest. Each exam is one or a few large images rather than a stack of slices, so the archive grows slowly and the viewing is quick even on a modest laptop."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why clinics stay on film",
+      "h2": "The DR panel is digital. The rest of the workflow is not.",
+      "lead": "Many clinics bought a digital X-ray unit and then kept printing film because there was nowhere to put the image.",
+      "items": [
+        {
+          "h": "Film for every exam",
+          "p": "Each X-ray is printed, sleeved and handed over, at a cost per sheet, even for a routine follow-up."
+        },
+        {
+          "h": "The image lives on the acquisition PC",
+          "p": "The only digital copy sits on the CR or DR console, which nobody backs up and which will one day be replaced."
+        },
+        {
+          "h": "OPD doctors walk to the X-ray room",
+          "p": "The physician either waits for the film or goes to the console to look at the screen."
+        },
+        {
+          "h": "Patients lose films",
+          "p": "The follow-up visit begins with a search for last month's envelope, then a repeat exposure."
+        },
+        {
+          "h": "No report on the image",
+          "p": "Where a radiologist reports, the report is a separate paper unconnected to the digital image."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From exposure to the doctor's screen.",
+      "steps": [
+        {
+          "h": "Ordered",
+          "p": "Front desk registers the patient and the view; the entry reaches the X-ray worklist."
+        },
+        {
+          "h": "Exposed",
+          "p": "The technician selects the patient on the CR or DR console; no retyping."
+        },
+        {
+          "h": "Received",
+          "p": "The image is sent as DICOM to the node and filed automatically."
+        },
+        {
+          "h": "Viewed in OPD",
+          "p": "The doctor opens the patient's study in a browser in the consulting room."
+        },
+        {
+          "h": "Reported if needed",
+          "p": "A radiologist reports on an X-ray template, finalised to a PDF on the study."
+        },
+        {
+          "h": "Sent to the patient",
+          "p": "A secure WhatsApp link replaces the film envelope."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What an X-ray clinic uses",
+      "h2": "The parts of AuraPACS that matter most for CR and DR.",
+      "groups": [
+        {
+          "icon": "&#128229;",
+          "h": "From the unit",
+          "items": [
+            "DICOM receive from CR reader or DR panel",
+            "Modality worklist to the console",
+            "Archive on your node",
+            "Encrypted offsite backup"
+          ]
+        },
+        {
+          "icon": "&#128187;",
+          "h": "In the OPD",
+          "items": [
+            "Browser viewer on any consulting-room PC",
+            "Window/level for bone and soft tissue",
+            "Patient history with earlier films",
+            "Role-based access per doctor"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Reporting",
+          "items": [
+            "X-ray reporting templates",
+            "Sign-off to PDF on the study",
+            "Remote reporting by a visiting radiologist"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "To the patient",
+          "items": [
+            "WhatsApp secure link, no login",
+            "Image and report together",
+            "GST invoice from the same system"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/aurapacs/medical-imaging-software/",
+        "label": "See the medical imaging software page"
+      }
+    },
+    {
+      "type": "table",
+      "eyebrow": "X-ray specifics",
+      "h2": "What CR and DR need from a PACS.",
+      "headers": [
+        "X-ray requirement",
+        "Why it matters",
+        "In AuraPACS"
+      ],
+      "rows": [
+        [
+          "One or few large images",
+          "Reading is about detail and contrast, not scrolling",
+          "Browser viewer with window/level on a large single image"
+        ],
+        [
+          "Fast OPD viewing",
+          "The doctor wants the image during the consultation, not after",
+          "Opens in any browser on the local network"
+        ],
+        [
+          "Filmless delivery",
+          "Film costs money and gets lost",
+          "WhatsApp secure link to the patient"
+        ],
+        [
+          "Follow-up comparison",
+          "Fracture healing is judged against the last film",
+          "Searchable history; prior image opens alongside"
+        ],
+        [
+          "Modest hardware",
+          "Clinics do not have server rooms",
+          "Single on-premise node, cloud layer for backup"
+        ],
+        [
+          "Occasional reporting",
+          "Not every X-ray is reported, but some must be",
+          "Templates and PDF sign-off when required"
+        ]
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere a CR or DR unit is still printing.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Polyclinics",
+          "p": "One X-ray room serving several OPDs."
+        },
+        {
+          "icon": "&#129471;",
+          "b": "Orthopaedic clinics",
+          "p": "Repeat films at every follow-up visit."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Small hospitals",
+          "p": "Casualty needs the chest film before the radiologist reads it."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostic centres",
+          "p": "X-ray alongside ultrasound and CT in one archive."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Chest and TB clinics",
+          "p": "Serial chest X-rays over months, findable by patient."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Handling X-rays, three ways.",
+      "cols": [
+        "CDs, film and forwarding",
+        "Pay-per-scan teleradiology",
+        "AuraPACS"
+      ],
+      "rows": [
+        [
+          "Where the image lives",
+          "Console PC and a film",
+          "Provider's cloud",
+          "Your node, with backup"
+        ],
+        [
+          "OPD doctor's view",
+          "Walks to the X-ray room",
+          "Portal login",
+          "Browser in the consulting room"
+        ],
+        [
+          "Patient receives",
+          "Film envelope",
+          "PDF by email",
+          "WhatsApp link with image and report"
+        ],
+        [
+          "Follow-up comparison",
+          "If the film survived",
+          "If it was uploaded",
+          "Full history on your node"
+        ],
+        [
+          "Cost model",
+          "Per film, every exam",
+          "Per study, every exam",
+          "Owned system, scoped on a call"
+        ],
+        [
+          "Works without internet",
+          "Yes",
+          "No",
+          "Yes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Digital X-ray PACS, answered.",
+      "items": [
+        {
+          "q": "Does it work with a CR reader as well as a DR panel?",
+          "a": "Yes. Both send DICOM images over the network, and both are pointed at the AuraPACS node the same way. Which unit you have is confirmed on a call before setup."
+        },
+        {
+          "q": "Can we stop printing film completely?",
+          "a": "Most clinics do. The image is on the node for every OPD doctor, the patient gets a WhatsApp link, and a film is printed only when someone specifically asks. Whether you keep a printer for those cases is your call."
+        },
+        {
+          "q": "Do OPD doctors need any software?",
+          "a": "No. The viewer runs in a standard browser on any PC on the clinic network. Each doctor has a login with role-based access, and every view is audited. See <a href=\"/aurapacs/dicom-viewer/\">DICOM viewer</a>."
+        },
+        {
+          "q": "What does the patient receive on WhatsApp?",
+          "a": "A secure link that opens the X-ray image and, where one has been written, the report PDF, with no app or login needed at their end. See <a href=\"/aurapacs/whatsapp-medical-report-sharing/\">WhatsApp report sharing</a>."
+        },
+        {
+          "q": "How much storage do X-rays need?",
+          "a": "Less than CT or MR, because each exam is one or a few images rather than a stack. The archive sits on your own node and is sized to your daily volume on a call."
+        },
+        {
+          "q": "Is AuraPACS a diagnostic device?",
+          "a": "No. It stores, displays and shares the images. The interpretation is by your doctor or radiologist."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related AuraPACS pages",
+      "items": [
+        {
+          "href": "/aurapacs.html",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/aurapacs/ultrasound-pacs/",
+          "icon": "&#128300;",
+          "b": "Ultrasound PACS",
+          "p": "Frames and cine loops."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp sharing",
+          "p": "Secure link, no login."
+        },
+        {
+          "href": "/aurapacs/dicom-viewer/",
+          "icon": "&#128065;",
+          "b": "DICOM viewer",
+          "p": "Read in the browser."
+        },
+        {
+          "href": "/resources/what-is-dicom/",
+          "icon": "&#128218;",
+          "b": "What is DICOM",
+          "p": "The format behind every image."
+        },
+        {
+          "href": "/compare/pacs-vs-dicom-viewer/",
+          "icon": "&#9878;",
+          "b": "PACS vs viewer",
+          "p": "When a viewer is not enough."
+        }
+      ]
+    }
+  ]
+}

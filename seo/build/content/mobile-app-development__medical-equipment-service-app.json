@@ -1,0 +1,338 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "medical-equipment-service-app",
+  "title": "Medical Equipment Service App for Dealer Engineers | Elevate Aura",
+  "meta": "A medical equipment service app for dealer engineers: service calls, job cards per device, spares used, calibration readings and sign-off against the contract.",
+  "h1": "A medical equipment service app built for the engineer standing in a <span class=\"hl\">hospital corridor</span>.",
+  "crumb": "Medical Equipment Service App",
+  "pill": "For medical-equipment dealers",
+  "sub": "The dealer's service engineer needs one app: today's calls, the device's history by serial number, a job card with the right checklist, spares used, and the biomedical department's signature. We build it on the Aura Business field module or to your own service desk.",
+  "meta_ticks": [
+    "Service history per serial number",
+    "Job card with checklist and calibration",
+    "Closes against AMC or CMC"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a service app for our medical equipment engineers.",
+  "primary_keyword": "medical equipment service app",
+  "secondary_keywords": [
+    "biomedical service engineer app",
+    "medical equipment service engineer app",
+    "medical equipment dealer service app",
+    "hospital equipment service call app",
+    "AMC service app for medical equipment"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or owner of a medical-equipment dealer with engineers visiting hospitals and labs",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a medical equipment service app does",
+      "paras": [
+        "A medical equipment service app is the engineer's side of a dealer's service operation. It lists the breakdown and preventive maintenance calls assigned to the engineer, shows the installed device by serial number with its warranty, AMC or CMC status and full history, and gives the engineer a job card with the checklist for that model, calibration readings, spares used, photos and the hospital's signature.",
+        "Elevate Aura builds this app as the mobile half of the <a href=\"/aura-business.html\">Aura Business</a> Field Service and AMC suites, where call intake, dispatch, the installed-base register, contracts, spares stock and service invoices already exist, or as a custom app connected to the service desk you run today. Aura Business is running two distribution businesses in Chennai today.",
+        "This page is specific to medical-equipment dealers. For the general version see <a href=\"/mobile-app-development/field-service-mobile-app-development/\">field service mobile app development</a>."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The dealer's service desk",
+      "h2": "Why medical equipment service is harder than other field work.",
+      "lead": "A ventilator is not a compressor. The hospital keeps records, expects evidence, and the contract decides who pays.",
+      "items": [
+        {
+          "h": "Which contract covers this call?",
+          "p": "The engineer does not know whether the device is under warranty, AMC or CMC, so the visit is either billed wrongly or not at all."
+        },
+        {
+          "h": "The biomedical file",
+          "p": "The hospital's biomedical department wants a PM report per device with checklist and signature. A WhatsApp photo does not pass an NABH-style audit."
+        },
+        {
+          "h": "Calibration by memory",
+          "p": "Readings are written on a notepad and typed later, if at all, so calibration certificates lapse unnoticed."
+        },
+        {
+          "h": "Spares from the bag",
+          "p": "A sensor fitted from the engineer's kit never reaches the stock ledger or the invoice."
+        },
+        {
+          "h": "History nobody can find",
+          "p": "The same monitor fails a third time and nobody can see the first two visits."
+        },
+        {
+          "h": "No signal in the ICU basement",
+          "p": "Imaging rooms and plant areas kill connectivity; a cloud-only form is useless there."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A service call in the app",
+      "h2": "From the hospital's complaint to a closed, covered visit.",
+      "steps": [
+        {
+          "h": "Call intake",
+          "p": "The hospital raises the breakdown; the desk logs it against the serial number."
+        },
+        {
+          "h": "Dispatch",
+          "p": "Assigned to the engineer with the right skill; appears on the app with route order."
+        },
+        {
+          "h": "On site",
+          "p": "GPS check-in, device history and contract status read before touching the machine."
+        },
+        {
+          "h": "Job card",
+          "p": "Model checklist, fault, work done, calibration readings, spares scanned, photos."
+        },
+        {
+          "h": "Sign-off",
+          "p": "Biomedical engineer signs on screen; PM or service report PDF generated."
+        },
+        {
+          "h": "Close",
+          "p": "Visit closes against warranty, AMC or CMC, or becomes a GST service invoice."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The service engineer's app, and the desk behind it.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Calls",
+          "items": [
+            "Breakdown and PM calls per engineer",
+            "Route and schedule",
+            "SLA timer visible on the call",
+            "Skill-based allocation"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Job card",
+          "items": [
+            "Checklist per equipment model",
+            "Calibration and compliance checklists",
+            "Meter and usage readings",
+            "Photo proof and signature",
+            "Offline completion and sync"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Installed base and spares",
+          "items": [
+            "Asset register by serial number",
+            "Warranty, AMC and CMC status",
+            "Service history per asset",
+            "Spares used drop stock",
+            "Batch and expiry on consumables"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Closes against the contract",
+            "GST service invoice when not covered",
+            "Contract profitability",
+            "Renewal evidence at term end"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three calls a dealer's engineer handles every week.",
+      "items": [
+        {
+          "h": "A patient monitor under CMC",
+          "workflow": "The engineer sees the monitor is on a comprehensive contract, replaces the SpO2 module from stock, records the serial and gets the sign-off.",
+          "result": "The visit closes under the CMC, the module leaves stock, and no invoice is raised by mistake."
+        },
+        {
+          "h": "A quarterly PM on a lab analyser",
+          "workflow": "The PM checklist for that model appears on the job card with calibration fields; the engineer completes it offline in the lab and syncs later.",
+          "result": "The hospital receives a PM report PDF with readings and signature for its biomedical file."
+        },
+        {
+          "h": "An out-of-warranty ultrasound",
+          "workflow": "The device has no active contract; the job card records a probe replacement and labour.",
+          "result": "A GST service invoice is generated from the job card and the receivable is tracked."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Dealers and service firms across the equipment they maintain.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Critical care equipment",
+          "p": "Ventilators, monitors, pumps."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Imaging",
+          "p": "X-ray, ultrasound, CT service partners."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Laboratory analysers",
+          "p": "Calibration and QC visits."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental and surgical",
+          "p": "Chairs, autoclaves, OT lights."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Multi-brand service firms",
+          "p": "Third-party maintenance contracts."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "OEM service partners",
+          "p": "Warranty calls on the OEM's behalf."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "WhatsApp groups, a generic field tool, or a dealer service app.",
+      "cols": [
+        "WhatsApp and Excel",
+        "Generic field service tool",
+        "Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Knows the contract on the call",
+          "No",
+          "Rarely",
+          "Warranty, AMC or CMC shown before the visit"
+        ],
+        [
+          "Checklist per model",
+          "No",
+          "Generic forms",
+          "Per model with calibration fields"
+        ],
+        [
+          "PM report for the biomedical file",
+          "A photo",
+          "Generic PDF",
+          "Report with checklist, readings, signature"
+        ],
+        [
+          "Spares and invoice",
+          "Manual",
+          "Separate tools",
+          "Stock drops, invoice raised if not covered"
+        ],
+        [
+          "Users",
+          "Unlimited",
+          "Per seat",
+          "Unlimited users on every Aura Business plan"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Medical equipment service app, answered.",
+      "items": [
+        {
+          "q": "Is this the same as the Aura Business mobile app?",
+          "a": "The Aura Business mobile app already includes the Field Service module: job cards, spares, signatures, photo proof and offline mode. This page describes that app configured for a medical-equipment dealer, or a custom version connected to a different service desk. See the <a href=\"/aura-business/field-technician-tracking-app/\">technician tracking app</a>."
+        },
+        {
+          "q": "Does the engineer see the contract status on site?",
+          "a": "Yes. Each call carries the device's warranty, AMC or CMC status from the installed-base register, so the engineer knows before starting whether the visit and spares are covered."
+        },
+        {
+          "q": "Can it produce the PM report the hospital asks for?",
+          "a": "Yes. When the job card is signed, a PM or service report PDF is generated with the checklist, calibration readings, photos and signature, and can be shared with the hospital on WhatsApp or email."
+        },
+        {
+          "q": "Does it work in imaging rooms and basements without signal?",
+          "a": "Yes. The job card, readings, spares and signature are captured offline and synced when the phone regains a connection."
+        },
+        {
+          "q": "How are spares handled?",
+          "a": "Spares used on the job card are deducted from van or warehouse stock at serial or batch level, and appear on the service invoice if the visit is not covered by a contract. See <a href=\"/aura-business/medical-spare-parts-inventory-software/\">spare parts inventory</a>."
+        },
+        {
+          "q": "How quickly can our engineers be on it?",
+          "a": "Live in 30 working days where scope allows. Your installed base, contracts and engineer list are imported from Excel and your branding goes on the app and the PM reports."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related service app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/field-service-mobile-app-development/",
+          "icon": "&#128205;",
+          "b": "Field service app",
+          "p": "The general version."
+        },
+        {
+          "href": "/mobile-app-development/react-native-healthcare-app-development/",
+          "icon": "&#9883;",
+          "b": "React Native apps",
+          "p": "The stack behind field apps."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128220;",
+          "b": "AMC / CMC software",
+          "p": "The contracts the app closes against."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every serial and its history."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Which contract covers what."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "cluster": "compare",
+  "slug": "pacs-vs-cloud-storage",
+  "title": "PACS vs Cloud Storage for DICOM Files: What Changes",
+  "meta": "PACS vs cloud storage compared: why a shared drive of DICOM folders is not an archive, what you lose on search, viewing, worklist, sharing and privacy.",
+  "h1": "PACS vs cloud storage: why a folder of DICOM files is not an <span class=\"hl\">archive</span>.",
+  "crumb": "PACS vs cloud storage",
+  "pill": "Comparison",
+  "sub": "Many small centres store studies in generic cloud storage or a shared drive. It works until someone has to find a study, read it or send it. This comparison sets the two side by side without pretending storage is useless.",
+  "meta_ticks": [
+    "Generic storage described, no brand names",
+    "Fair about when storage is enough",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See AuraPACS",
+  "cta_href": "/aurapacs.html",
+  "whatsapp_text": "Hi, I read the PACS vs cloud storage comparison. We keep studies in a shared folder today and want to talk.",
+  "date": "2026-09-20",
+  "primary_keyword": "PACS vs cloud storage",
+  "secondary_keywords": [
+    "storing DICOM files in cloud storage",
+    "shared drive for medical images",
+    "cloud storage for radiology images",
+    "DICOM archive vs file storage",
+    "is cloud storage a PACS"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or manager of a small imaging centre currently storing studies in a shared drive or cloud folder",
+  "page_type": "comparison",
+  "phase": 8,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "Who each is for",
+      "h2": "Storage keeps files. A PACS understands them.",
+      "paras": [
+        "Generic cloud storage is for keeping files safe and available on more than one device. It suits a centre that receives a handful of outside studies a month, or a doctor who wants a backup of CDs. It knows nothing about patients, modalities or reports; it sees a folder.",
+        "A PACS is for a centre whose machines produce studies daily. It receives them automatically, indexes them by patient, opens them in a viewer, attaches the report and shares a link with the referrer. Storage is one of the things it does, not the thing it is."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each works",
+      "h2": "A folder tree against a DICOM archive",
+      "body": [
+        {
+          "h3": "Cloud storage"
+        },
+        "Someone exports the study from the machine or the console, usually to a USB stick or a network folder, then uploads the folder to the storage account. Folder names become the index: a patient name, a date, whatever the technician typed. To read it, someone downloads the folder and opens it in a viewer installed on their computer. To send it, they share the folder link. Sync clients and shared links make this feel organised for a while.",
+        {
+          "h3": "A PACS"
+        },
+        "The machine is pointed at the PACS once. From then on every study arrives on its own with the patient details inside the DICOM header, so the index is built from the data rather than from a folder name. The front desk searches by name or ID, the radiologist opens the study in the browser, the report is finalised as a PDF against the study, and the referrer gets a secure link. Backup runs in the background; in a hybrid system such as <a href=\"/aurapacs/hybrid-pacs/\">AuraPACS</a> the local node keeps the centre working when the internet is down and the cloud layer keeps an encrypted offsite copy.",
+        "The difference is not where the bytes sit. It is whether the system understands what the bytes are."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Generic storage against a PACS, criterion by criterion",
+      "headers": [
+        "Criterion",
+        "Generic cloud storage",
+        "PACS"
+      ],
+      "rows": [
+        [
+          "What it covers",
+          "Storing and syncing files; sharing folder links",
+          "Receive from modality, archive, patient index, viewer, worklist, reporting, sharing, backup"
+        ],
+        [
+          "Indexing",
+          "Folder names typed by a person; duplicates and misspellings are common",
+          "Built from the DICOM header: patient, ID, date, modality, series"
+        ],
+        [
+          "Viewing",
+          "Download the folder, open it in a separately installed viewer",
+          "Open in the browser from the patient list, with priors alongside"
+        ],
+        [
+          "Modality worklist",
+          "None; details are retyped at the machine",
+          "Schedule once at the desk; the machine picks up the patient"
+        ],
+        [
+          "Sharing with a referrer",
+          "A folder link to raw files; the referrer needs a viewer",
+          "A secure link that opens the images and report on a phone"
+        ],
+        [
+          "Privacy",
+          "Consumer-grade sharing; anyone with the link, and no audit trail",
+          "Role-based access, audited; links scoped to one study"
+        ],
+        [
+          "Deployment",
+          "Nothing at the centre; everything depends on the uplink",
+          "On-premise, cloud or hybrid"
+        ],
+        [
+          "Cost model",
+          "Subscription by storage volume that grows every year",
+          "Licence, subscription or per study, depending on the vendor"
+        ],
+        [
+          "When it wins",
+          "Occasional outside studies, personal backup of CDs, no modality on site",
+          "Any centre with its own machine and daily studies"
+        ],
+        [
+          "When it loses",
+          "The first time a study cannot be found, or an audit asks who saw it",
+          "A practice that only stores a few outside files a month"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Where storage stops being enough",
+      "body": [
+        "Cloud storage is fine, and honestly so, when the centre does not produce studies. A physician who keeps copies of patients' CDs. A clinic that occasionally receives an outside MRI. In both cases the volume is small, the people are few and the folder name is enough.",
+        "It stops being fine at three predictable points.",
+        {
+          "ul": [
+            "<b>Volume.</b> A machine producing studies daily fills a folder tree nobody maintains. Search becomes scrolling.",
+            "<b>Reading.</b> The radiologist should not be downloading folders. A browser viewer opened from a worklist is the difference between a reading session and a file-management session.",
+            "<b>Accountability.</b> Patient images in a shared folder with a link anyone can forward is a privacy problem waiting for an incident. A PACS logs who opened what."
+          ]
+        },
+        "If you are already on storage and want to move, the studies can be imported into the PACS so the history is searchable from day one. Ask the vendor for that before signing. For the deployment question that usually comes next, read <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud PACS vs on-premise PACS</a>. For what a purpose-built archive does, see <a href=\"/aurapacs/medical-image-archive-storage/\">medical image archive and storage</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "PACS vs cloud storage, answered",
+      "items": [
+        {
+          "q": "Can I use cloud storage as a PACS?",
+          "a": "You can store DICOM files there, but you will not get automatic receive from the machine, a patient index, a browser viewer, a worklist, reporting or audited sharing. For a centre with its own modality, that gap is the whole workflow."
+        },
+        {
+          "q": "Is cloud storage cheaper than a PACS?",
+          "a": "In the first months, usually. Storage charges grow with volume every year, and the hidden cost is staff time spent uploading, naming, finding and downloading folders. Compare over several years, not one."
+        },
+        {
+          "q": "Is it safe to share patient images through a storage link?",
+          "a": "A generic share link is not scoped to a patient or a study and leaves no audit trail of who opened it. A PACS shares a link tied to one study, with role-based access and a log of who viewed it."
+        },
+        {
+          "q": "What about a shared drive on the centre's own network?",
+          "a": "A local drive is a less convenient version of the same problem: no index, no viewer, no worklist, and a single disk with no offsite copy. An on-premise PACS uses similar hardware and adds the workflow. See <a href=\"/aurapacs/on-premise-pacs/\">on-premise PACS</a>."
+        },
+        {
+          "q": "Can old studies in storage be moved into a PACS?",
+          "a": "Yes. DICOM files can be imported into the archive and indexed from their headers, so earlier studies become searchable alongside new ones. Confirm the import is included in setup."
+        },
+        {
+          "q": "Does a PACS still need backup?",
+          "a": "Yes. An on-premise PACS needs an offsite copy; a hybrid PACS includes an encrypted cloud copy as part of the design. Ask any vendor where the backup lives and how a restore is tested."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/aurapacs/medical-image-archive-storage/",
+          "icon": "&#128451;",
+          "b": "Medical image archive",
+          "p": "What a purpose-built archive does."
+        },
+        {
+          "href": "/aurapacs/pacs-software/",
+          "icon": "&#129659;",
+          "b": "AuraPACS",
+          "p": "Hybrid PACS with WhatsApp sharing."
+        },
+        {
+          "href": "/resources/what-is-pacs/",
+          "icon": "&#128218;",
+          "b": "What is PACS",
+          "p": "The plain-language guide."
+        },
+        {
+          "href": "/compare/cloud-pacs-vs-on-premise-pacs/",
+          "icon": "&#9878;",
+          "b": "Cloud vs on-premise PACS",
+          "p": "And the hybrid middle."
+        },
+        {
+          "href": "/aurapacs/whatsapp-medical-report-sharing/",
+          "icon": "&#128172;",
+          "b": "WhatsApp report sharing",
+          "p": "A secure link, not a folder."
+        },
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        }
+      ]
+    }
+  ]
+}

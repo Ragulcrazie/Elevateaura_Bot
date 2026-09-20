@@ -1,0 +1,330 @@
+{
+  "cluster": "mobile-app-development",
+  "slug": "flutter-healthcare-app-development",
+  "title": "Flutter Healthcare App Development, Live on Google Play",
+  "meta": "Flutter healthcare app development from a studio with its own Flutter app live on Google Play. When Flutter is the right choice for your app, and when not.",
+  "h1": "Flutter healthcare app development, with a Flutter app of our own <span class=\"hl\">already on Google Play</span>.",
+  "crumb": "Flutter Healthcare App Development",
+  "pill": "For teams choosing a mobile stack",
+  "sub": "Flutter builds one app for Android and iOS from a single Dart codebase with its own rendering engine. We use it when the app is UI-heavy and stands on its own, and we have shipped it: Elevate Aura's exam-prep app on Google Play is Flutter, Python and Supabase.",
+  "meta_ticks": [
+    "One Dart codebase, both stores",
+    "Our own Flutter app live on Google Play",
+    "Honest advice on when Flutter fits"
+  ],
+  "demo_href": "",
+  "whatsapp_text": "Hi, I'd like to discuss a Flutter healthcare app.",
+  "primary_keyword": "Flutter healthcare app development",
+  "secondary_keywords": [
+    "Flutter app development company India",
+    "Flutter medical app development",
+    "Flutter app developers Chennai",
+    "Flutter vs React Native healthcare",
+    "Flutter patient app"
+  ],
+  "intent": "commercial",
+  "persona": "Healthcare founder or IT head who has heard of Flutter and wants to know whether it suits their app",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What Flutter healthcare app development is, and when we choose it",
+      "paras": [
+        "Flutter healthcare app development means building your patient, staff, learner or field app in Google's Flutter framework: one Dart codebase compiled for Android and iOS, with Flutter drawing every pixel itself rather than using each platform's native widgets. Elevate Aura offers Flutter alongside React Native and picks per project.",
+        "We choose Flutter when the app is self-contained and interface-heavy: custom screens, animations, charts, quizzes and content that must look identical on every device. Our own government-exam-prep Android app is built in Flutter with a Python content pipeline and a Supabase backend, and it is live on Google Play. That app is the proof that we take a Flutter build through design, store review and ongoing releases.",
+        "When your team already runs a JavaScript web stack or the app leans on JavaScript libraries, we usually recommend <a href=\"/mobile-app-development/react-native-healthcare-app-development/\">React Native</a> instead. The stack should serve the app, not the other way round."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Choosing badly",
+      "h2": "Stack decisions that come back to bite a healthcare app.",
+      "lead": "Most stack regrets are not about the framework. They are about who chose it and why.",
+      "items": [
+        {
+          "h": "Chosen from a blog post",
+          "p": "A framework picked because it was trending, with no thought for who will maintain the app in year two."
+        },
+        {
+          "h": "Two native codebases",
+          "p": "Separate Android and iOS teams, two bug lists and every feature built twice. Flutter exists to end this."
+        },
+        {
+          "h": "Inconsistent screens",
+          "p": "A UI that looks right on the designer's iPhone and wrong on the ward's budget Android tablet."
+        },
+        {
+          "h": "No path to the store",
+          "p": "A working build that never clears Play Store review because listings, privacy forms and signing were nobody's job."
+        },
+        {
+          "h": "Web team left out",
+          "p": "Flutter chosen for a company whose developers all write JavaScript, so nobody in-house can touch the app later."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How we build in Flutter",
+      "h2": "From stack decision to a store release.",
+      "steps": [
+        {
+          "h": "Stack call",
+          "p": "We look at your workflow, your existing systems and your team, and say plainly whether Flutter fits."
+        },
+        {
+          "h": "Backend",
+          "p": "Supabase for auth, Postgres, storage and realtime, or Azure where preferred."
+        },
+        {
+          "h": "Design system in Flutter",
+          "p": "Your brand as reusable widgets so every screen matches on every device."
+        },
+        {
+          "h": "Features and offline",
+          "p": "Local storage, sync, GPS, camera and notifications as the workflow needs."
+        },
+        {
+          "h": "Device testing",
+          "p": "Builds on the budget Android phones and tablets your users actually carry."
+        },
+        {
+          "h": "Release",
+          "p": "Signing, listings and review for Google Play and the App Store, then support."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "A Flutter build from Elevate Aura.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "App",
+          "items": [
+            "Single Dart codebase, Android and iOS",
+            "Consistent rendering on any device",
+            "Custom UI, charts and animation",
+            "Offline storage and sync",
+            "Push notifications"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Backend",
+          "items": [
+            "Supabase or Azure",
+            "Authentication and role-based access",
+            "Realtime updates",
+            "Python content and automation pipelines"
+          ]
+        },
+        {
+          "icon": "&#128172;",
+          "h": "Messaging",
+          "items": [
+            "WhatsApp reminders",
+            "Telegram bots where useful",
+            "In-app notices"
+          ]
+        },
+        {
+          "icon": "&#128640;",
+          "h": "Release and after",
+          "items": [
+            "Store listings and review",
+            "Versioned releases",
+            "Support from the builder"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/case-studies/exam-prep-learning-app/",
+        "label": "See the Flutter app we shipped"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "Where Flutter fits",
+      "h2": "Healthcare apps that suit a Flutter build.",
+      "items": [
+        {
+          "h": "A learner app for nursing and paramedic training",
+          "workflow": "Video lessons, quizzes with instant scores, mock tests and certificates, on the Aura Learn model, with a rich UI that must look the same on every trainee's phone.",
+          "result": "The same design we proved on our own exam-prep app."
+        },
+        {
+          "h": "A patient education and adherence app",
+          "workflow": "Daily medication schedules, progress charts and content in the local language, with WhatsApp reminders.",
+          "result": "An interface-heavy app that stands on its own backend."
+        },
+        {
+          "h": "A branded wellness or chronic-care programme",
+          "workflow": "Custom visual design with animations and dashboards, connected to a Supabase backend rather than a hospital system.",
+          "result": "Flutter's own rendering keeps the brand identical on Android and iOS."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Where a Flutter build makes sense.",
+      "items": [
+        {
+          "icon": "&#127891;",
+          "b": "Training and exam-prep businesses",
+          "p": "Learner apps, proven on ours."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Patient-facing programmes",
+          "p": "Education, adherence, wellness."
+        },
+        {
+          "icon": "&#128640;",
+          "b": "Health startups",
+          "p": "A polished first release for both stores."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospitals with a Flutter team",
+          "p": "We build to match what you can maintain."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Device companies",
+          "p": "Companion apps where UI matters most."
+        },
+        {
+          "icon": "&#128200;",
+          "b": "Anyone unsure",
+          "p": "We will tell you if React Native fits better."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Flutter and React Native, as we actually use them.",
+      "cols": [
+        "Flutter",
+        "React Native",
+        "How we decide"
+      ],
+      "rows": [
+        [
+          "Language",
+          "Dart",
+          "JavaScript or TypeScript",
+          "Match the team that maintains it"
+        ],
+        [
+          "Rendering",
+          "Draws its own widgets",
+          "Uses native platform widgets",
+          "Flutter for pixel-identical UI, RN for a native feel"
+        ],
+        [
+          "Sharing code with a web app",
+          "Limited",
+          "Strong with a Next.js stack",
+          "RN when the web app is JavaScript"
+        ],
+        [
+          "Our shipped proof",
+          "Exam-prep app on Google Play",
+          "Carna Medicare field app",
+          "Both are real, both are supported"
+        ],
+        [
+          "Offline, GPS, camera",
+          "Yes",
+          "Yes",
+          "Either, designed in from the start"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        2
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Flutter healthcare app development, answered.",
+      "items": [
+        {
+          "q": "Have you shipped a Flutter app to a store?",
+          "a": "Yes. Elevate Aura's own government-exam-prep Android app is built in Flutter with Python content automation and a Supabase backend, and is live on Google Play. It also runs Telegram practice bots. See the <a href=\"/case-studies/exam-prep-learning-app/\">case study</a>."
+        },
+        {
+          "q": "Is Flutter suitable for a hospital app connected to HIMS?",
+          "a": "It can be. HIMS exposes the data through an API that a Flutter app consumes like any other client. In practice we often prefer React Native for hospital apps because the surrounding web stack is JavaScript, but the choice is made with you."
+        },
+        {
+          "q": "Does Flutter support iOS as well as Android?",
+          "a": "Yes. One Dart codebase compiles to both. Our own Flutter app is currently published on Google Play; an iOS release from the same code is a matter of the App Store account and review."
+        },
+        {
+          "q": "Can a Flutter app work offline?",
+          "a": "Yes. Local storage and background sync are standard. Lessons, forms and job cards can be downloaded and used without signal, then synced when it returns."
+        },
+        {
+          "q": "Who maintains the app after launch?",
+          "a": "The person who built it, on WhatsApp, or your own Dart developers if you have them. Code ownership sits with you."
+        },
+        {
+          "q": "How long does a Flutter build take?",
+          "a": "Live in 30 working days where scope allows. Scope is fixed after a discovery call and you receive working builds during the project."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related mobile app pages",
+      "items": [
+        {
+          "href": "/mobile-app-development/",
+          "icon": "&#128241;",
+          "b": "Mobile app development",
+          "p": "All app types."
+        },
+        {
+          "href": "/mobile-app-development/react-native-healthcare-app-development/",
+          "icon": "&#9883;",
+          "b": "React Native apps",
+          "p": "The other stack we ship."
+        },
+        {
+          "href": "/mobile-app-development/patient-app-development/",
+          "icon": "&#128100;",
+          "b": "Patient app",
+          "p": "A common Flutter candidate."
+        },
+        {
+          "href": "/mobile-app-development/healthcare-mobile-app-development/",
+          "icon": "&#128736;",
+          "b": "Healthcare apps",
+          "p": "How every build runs."
+        },
+        {
+          "href": "/aura-learn/learning-app-development/",
+          "icon": "&#127891;",
+          "b": "Learning app development",
+          "p": "Learner apps on Aura Learn."
+        },
+        {
+          "href": "/case-studies/exam-prep-learning-app/",
+          "icon": "&#128203;",
+          "b": "Exam-prep app",
+          "p": "Our Flutter app on Google Play."
+        }
+      ]
+    }
+  ]
+}

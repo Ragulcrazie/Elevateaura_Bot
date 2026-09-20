@@ -1,0 +1,336 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-opd-management-software",
+  "title": "Hospital OPD Management Software | Tokens, Queues, e-Rx | HIMS",
+  "meta": "Hospital OPD software for registration, appointments, tokens, live doctor queues, consultation, e-prescription and OPD billing on one record. Live demo.",
+  "h1": "Hospital OPD software that moves a patient from the <span class=\"hl\">front desk to the pharmacy</span> without a paper slip.",
+  "crumb": "Hospital OPD Software",
+  "pill": "For front desks and OPD in-charges",
+  "sub": "HIMS runs the outpatient department end to end: registration or lookup by UHID, appointment or walk-in token, a live queue per doctor, the consultation and e-prescription, then OPD billing and the follow-up booking, all against one record.",
+  "meta_ticks": [
+    "Walk-ins and appointments in one queue",
+    "Live doctor queues on the OPD dashboard",
+    "e-Prescription straight to the pharmacy"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/opd-dashboard.png",
+    "alt": "HIMS OPD dashboard showing appointments, walk-ins, patients waiting and live doctor queues",
+    "bar": "his.elevateaura.co.in/opd"
+  },
+  "whatsapp_text": "Hi, I'd like to see how HIMS runs an OPD with tokens and doctor queues.",
+  "primary_keyword": "hospital OPD software",
+  "secondary_keywords": [
+    "OPD management software",
+    "outpatient management system",
+    "OPD software for hospitals India",
+    "OPD registration software",
+    "OPD billing software",
+    "doctor queue management software"
+  ],
+  "intent": "commercial",
+  "persona": "OPD in-charge, front-office manager or owner of a hospital or polyclinic with a busy morning OP",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What hospital OPD software covers",
+      "paras": [
+        "Hospital OPD software manages the outpatient side of a hospital: registering or finding the patient, booking an appointment or issuing a walk-in token, queuing them to the right doctor, recording the consultation, sending the prescription to the pharmacy and raising the OPD bill. HIMS does all of this as one flow on one patient record.",
+        "The OPD dashboard is the front desk's screen for the morning. It shows appointments due, walk-ins registered, how many patients are waiting, and the live queue outside each consulting room. Because the same record continues into the laboratory, imaging and IP admission, an OP visit that turns into an admission does not start again from a blank form."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where OPD mornings go wrong",
+      "h2": "The OPD is where the hospital is judged, and where paper slows it most.",
+      "lead": "Patients form their opinion of the hospital in the first forty minutes. Most of that time is spent waiting for a process, not a doctor.",
+      "items": [
+        {
+          "h": "Registered again on every visit",
+          "p": "A returning patient gives their name, age and address again because nobody can find the old file."
+        },
+        {
+          "h": "Appointments and walk-ins collide",
+          "p": "The booked patient and the walk-in argue at the door because there is no single order for the doctor's queue."
+        },
+        {
+          "h": "The doctor cannot see the queue",
+          "p": "The consultant asks the attender how many are waiting; the attender counts heads in the corridor."
+        },
+        {
+          "h": "Prescription slips go missing",
+          "p": "The paper prescription is lost between the consulting room and the pharmacy counter, and the patient comes back to the doctor."
+        },
+        {
+          "h": "Follow-ups forgotten",
+          "p": "The doctor says come back in two weeks; there is no booking, so nobody knows whether the patient returned."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One OP visit",
+      "h2": "From the door to the pharmacy counter.",
+      "steps": [
+        {
+          "h": "Find or register",
+          "p": "Search by UHID or phone, or register a new patient in one screen."
+        },
+        {
+          "h": "Token or appointment",
+          "p": "A walk-in gets a token; an appointment is checked in against its slot."
+        },
+        {
+          "h": "Doctor queue",
+          "p": "The patient appears in the live queue for the chosen doctor and department."
+        },
+        {
+          "h": "Consultation",
+          "p": "The doctor opens the record, notes findings and orders investigations."
+        },
+        {
+          "h": "e-Prescription",
+          "p": "The prescription goes to the pharmacy dispensing queue."
+        },
+        {
+          "h": "OPD bill and follow-up",
+          "p": "Charges pulled from the visit; the next appointment booked before the patient leaves."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The OPD modules in HIMS.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Front desk",
+          "items": [
+            "OP registration with UHID",
+            "Patient lookup by phone or UHID",
+            "Appointments by doctor and slot",
+            "Walk-in tokens",
+            "Patient app for booking"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Queue and dashboard",
+          "items": [
+            "Live queue per doctor",
+            "Waiting count on the OPD dashboard",
+            "Doctor rosters and availability",
+            "Department-wise queues"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Consultation",
+          "items": [
+            "Structured EMR notes",
+            "Lab and imaging orders",
+            "e-Prescription",
+            "Follow-up booking"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "OPD billing",
+          "items": [
+            "Consultation and procedure charges",
+            "Cash, insurance and TPA in one view",
+            "GST invoice where applicable",
+            "Collections on the live dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-appointment-management/",
+        "label": "See appointment management in detail"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes at the OPD counter.",
+      "items": [
+        {
+          "h": "A returning patient at nine in the morning",
+          "workflow": "The front desk searches by phone number, confirms the UHID, issues a token for the same consultant and the patient sits down.",
+          "result": "Registration takes seconds and the doctor already has the history."
+        },
+        {
+          "h": "A booked patient and a walk-in for the same doctor",
+          "workflow": "Both appear in the doctor's queue in the order the hospital has set, and the consultant sees both from the consulting room.",
+          "result": "No argument at the door and no lost token."
+        },
+        {
+          "h": "A prescription with an investigation",
+          "workflow": "The doctor orders a blood test and prescribes two drugs. The lab worklist and the pharmacy queue update at once.",
+          "result": "The patient goes straight to sample collection and then the counter."
+        },
+        {
+          "h": "An OP patient who needs admission",
+          "workflow": "The consultant converts the visit into an IP admission; bed allocation and IP billing continue on the same record.",
+          "result": "No second registration, no second file."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anywhere an outpatient queue forms.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several departments, several queues, one dashboard."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Visiting consultants on rosters with their own slots."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "An OP that feeds the wards."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Single-doctor clinics",
+          "p": "Registration, e-Rx and billing without staff overhead."
+        },
+        {
+          "icon": "&#129463;",
+          "b": "Dental practices",
+          "p": "Chair-based appointments and treatment notes."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways to run an OPD.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Patient lookup",
+          "By memory and register",
+          "By bill history",
+          "By UHID or phone, full record"
+        ],
+        [
+          "Queue",
+          "Tokens torn from a pad",
+          "None",
+          "Live queue per doctor on the dashboard"
+        ],
+        [
+          "Prescription to pharmacy",
+          "Paper slip",
+          "Paper slip",
+          "e-Prescription in the dispensing queue"
+        ],
+        [
+          "OP to IP",
+          "New file",
+          "New bill",
+          "Same record, admission continues"
+        ],
+        [
+          "Who supports you",
+          "Nobody",
+          "Reseller",
+          "The founder who built it"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital OPD software, answered.",
+      "items": [
+        {
+          "q": "Does the OPD software handle both appointments and walk-ins?",
+          "a": "Yes. Appointments are booked by doctor and slot, walk-ins receive a token at the desk, and both feed the same live queue for the doctor. The OPD dashboard shows appointments, walk-ins and the waiting count together."
+        },
+        {
+          "q": "Can the doctor see the queue from the consulting room?",
+          "a": "Yes. Each doctor has a live queue in HIMS, so the consultant sees who is next and how many are waiting without asking an attender to count."
+        },
+        {
+          "q": "Is OPD billing part of the same system?",
+          "a": "Yes. Consultation and procedure charges are pulled from the visit into the bill, with cash, insurance and TPA handled in one billing view and GST applied where it applies. See <a href=\"/hims/hospital-billing-software/\">hospital billing software</a>."
+        },
+        {
+          "q": "Can patients book online?",
+          "a": "HIMS includes a patient app and portal through which patients can book appointments and view their reports. Walk-ins are still registered at the desk in the usual way."
+        },
+        {
+          "q": "What happens when an OP patient needs admission?",
+          "a": "The visit is converted into an IP admission on the same record. Bed allocation, orders, nursing and IP billing continue from there. See <a href=\"/hims/hospital-ipd-management-software/\">IPD software</a>."
+        },
+        {
+          "q": "Can I see it working before a call?",
+          "a": "Yes. The <a href=\"/demo/hospital.html\">hospital demo</a> opens the OPD dashboard with sample data, and the live environment at his.elevateaura.co.in shows the same screens your front desk would use."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS modules",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "Front desk to discharge."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#127915;",
+          "b": "Queue management",
+          "p": "Tokens and live queues."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments",
+          "p": "Booking by doctor and slot."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "EMR",
+          "p": "The consultation record."
+        },
+        {
+          "href": "/hims/doctor-management-software/",
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Doctor management",
+          "p": "Rosters and queues."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        },
+        {
+          "href": "/hims/dental-clinic-management-software/",
+          "icon": "&#129463;",
+          "b": "Dental clinic software",
+          "p": "For a single-chair or group practice."
+        }
+      ]
+    }
+  ]
+}
