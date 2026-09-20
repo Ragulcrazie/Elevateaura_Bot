@@ -1,0 +1,214 @@
+{
+  "cluster": "resources",
+  "slug": "why-hospital-pharmacy-loses-money-on-expiry",
+  "title": "Why a Hospital Pharmacy Loses Money on Expiry",
+  "meta": "Pharmacy expiry losses explained: how they build quietly, what batch and expiry discipline changes, near-expiry action and the ordering habits behind them.",
+  "h1": "Why a hospital pharmacy loses money on expiry, and why it <span class=\"hl\">only shows up at the end</span>.",
+  "crumb": "Pharmacy expiry losses",
+  "pill": "Guide",
+  "sub": "Expiry write-offs in a hospital pharmacy are rarely one bad decision. They are an accumulation of ordering habits, shelf practice and invisible batches. This guide explains where the money goes and what changes it.",
+  "meta_ticks": [
+    "Written for pharmacy and stores",
+    "Practical shelf-level detail",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See pharmacy management in HIMS",
+  "cta_href": "/hims/hospital-pharmacy-management/",
+  "whatsapp_text": "Hi, I read the pharmacy expiry guide and want to ask about batch and expiry tracking in HIMS.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "pharmacy expiry losses hospital",
+  "secondary_keywords": [
+    "hospital pharmacy expiry management",
+    "batch and expiry tracking pharmacy",
+    "near expiry stock hospital",
+    "pharmacy stock write off",
+    "hospital pharmacy ordering"
+  ],
+  "intent": "informational",
+  "persona": "Pharmacy in-charge, stores manager or hospital owner looking at a growing expiry write-off",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Where the money actually goes",
+      "paras": [
+        "A hospital pharmacy loses money on expiry because stock is bought in quantities that suit the supplier, stored in a way that hides the oldest batch, and dispensed by whichever strip is nearest the hand. Nothing in that chain is dramatic. Each step is reasonable on its own, and the result is a shelf of stock that quietly ages until a physical count turns it into a write-off.",
+        "The single technical cause underneath it is that most pharmacies track an item but not a batch. If the system says eighty units and does not say which eighty, nobody can act on the ones expiring in six weeks, because nobody knows they exist until they are already dead stock.",
+        "What follows is operational rather than clinical. Decisions about substitution, returns to suppliers, disposal of expired medicines and any regulatory requirement around them should be settled with your pharmacist-in-charge and your own advisers."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How it builds",
+      "h2": "Six ordinary habits that produce a write-off",
+      "lead": "Expiry loss is not an event. It is a slow accumulation with six familiar contributors.",
+      "body": [
+        "Look at any pharmacy with a large annual write-off and most of these will be present.",
+        {
+          "ul": [
+            "<b>Ordering by memory.</b> The person ordering knows roughly what moves and orders roughly that, which is accurate for fast movers and badly wrong for the long tail.",
+            "<b>Scheme quantities.</b> An offer makes a larger pack attractive, and the saving is real only if the whole quantity is used before the date on it.",
+            "<b>One consultant's preference.</b> A drug is stocked because a visiting consultant prescribes it, and ages the month that consultant stops coming.",
+            "<b>New arrivals at the front.</b> Fresh stock is unpacked onto the nearest shelf space, so the older batch retreats to the back and is never reached.",
+            "<b>Emergency buffers nobody reviews.</b> A quantity held for a situation that has not arisen in two years is still being reordered on the same rule.",
+            "<b>Counting items, not batches.</b> The register shows a quantity. The expiry sits on the box, which is the one place a report cannot read."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The discipline",
+      "h2": "Batch and expiry, tracked at the point it is easiest to capture",
+      "body": [
+        "The whole problem becomes manageable the moment batch and expiry are recorded at goods receipt rather than at the point of despair. It costs a few seconds per line on arrival and saves an inventory count from becoming an argument.",
+        {
+          "table": {
+            "headers": [
+              "Stage",
+              "What is usually done",
+              "What discipline looks like"
+            ],
+            "rows": [
+              [
+                "Goods receipt",
+                "Quantity entered against the item",
+                "Batch number and expiry captured with the quantity"
+              ],
+              [
+                "Putaway",
+                "New stock to the nearest space",
+                "Oldest batch kept in front so the natural reach is the right one"
+              ],
+              [
+                "Dispensing",
+                "Whichever strip is at hand",
+                "Dispensed against the batch, so stock reduces where it actually reduced"
+              ],
+              [
+                "Review",
+                "A physical count finds the problem",
+                "A near-expiry list read every month while action is still possible"
+              ],
+              [
+                "Reordering",
+                "Ordered from memory or a scheme",
+                "Ordered against movement, with what is already near expiry visible"
+              ]
+            ]
+          }
+        },
+        "In HIMS this is how the <a href=\"/hims/hospital-pharmacy-management/\">pharmacy module</a> works: dispensing runs against the prescription written in the record, stock carries batch and expiry, and low-stock and expiry alerts come off the same data rather than a separate register. The distribution side of the same discipline is covered in <a href=\"/aura-business/batch-expiry-tracking-software/\">batch and expiry tracking</a>."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Acting in time",
+      "h2": "Near-expiry is a decision window, not a warning",
+      "lead": "An alert that arrives in the last fortnight is a notification of a loss. An alert with months to run is an opportunity to avoid one.",
+      "body": [
+        "The useful question is not what is expiring, it is what is expiring while something can still be done about it. That means reviewing on a horizon long enough for the options to be real.",
+        {
+          "h3": "What can still be done with time in hand"
+        },
+        {
+          "ul": [
+            "Move the batch to where that drug actually moves, from a slow ward or satellite location to the main dispensing counter.",
+            "Take it out of the reorder cycle so nothing new is bought while it sits.",
+            "Tell the prescribers holding the stock, since a consultant who knows will often use it where clinically appropriate.",
+            "Discuss return or replacement with the supplier if your terms allow it, well before the cut-off they impose."
+          ]
+        },
+        {
+          "h3": "Ordering patterns worth changing"
+        },
+        {
+          "ul": [
+            "Order fast movers often and in smaller quantities; order slow movers rarely and in the smallest pack the supplier will send.",
+            "Judge a scheme quantity against how long it will take to consume, not against the discount.",
+            "Set reorder levels from actual movement in the system rather than from a number typed in two years ago.",
+            "Review the long tail quarterly and stop carrying items that have not moved at all."
+          ]
+        },
+        "Expiry loss is a reporting problem before it is a money problem. A pharmacy that can see its batches makes ordinary decisions early. One that cannot makes an extraordinary write-off once a year and calls it the cost of doing business."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about pharmacy expiry",
+      "items": [
+        {
+          "q": "Why is batch tracking so important if we already track stock?",
+          "a": "A stock figure tells you how much you have, not how long it has. Expiry sits on the batch, so without it the system cannot list what is ageing, cannot warn you and cannot tell you which of two identical-looking quantities is the one to use first."
+        },
+        {
+          "q": "How far ahead should a near-expiry alert look?",
+          "a": "Far enough that you can still move stock, stop reordering it or speak to the supplier, which usually means months rather than weeks. Set the horizon per item type with your pharmacist, since a fast mover and a rarely used item need different windows."
+        },
+        {
+          "q": "Does software stop expiry losses by itself?",
+          "a": "No. It makes the ageing stock visible and keeps the count honest. Someone still has to read the near-expiry list, change an order quantity and move a batch. The value is that those become small monthly decisions rather than one annual write-off."
+        },
+        {
+          "q": "What about stock returned from the wards?",
+          "a": "Returns are a common leak because they come back without their batch identity and go to the front of the shelf. Check returns in against the indent they went out on, so the batch is restored to stock correctly rather than becoming untracked quantity."
+        },
+        {
+          "q": "We have a second location. Does that help or hurt?",
+          "a": "Both. More locations mean more places for a batch to hide, but they also give you somewhere to move near-expiry stock that moves faster elsewhere. That only works if both locations are in one system and you can see the batches in each."
+        },
+        {
+          "q": "Is this the same problem a distributor has?",
+          "a": "The mechanics are the same and the scale is different. A distributor holds larger quantities across warehouses and feels it faster. The discipline is identical: capture batch and expiry at receipt, dispatch the oldest first and review near-expiry stock on a horizon that allows action."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#128138;",
+          "b": "Pharmacy management",
+          "p": "Dispensing, batches and alerts."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Hospital inventory",
+          "p": "Consumables and reorder levels."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry tracking",
+          "p": "The distribution side."
+        },
+        {
+          "href": "/hims/hospital-procurement-software/",
+          "icon": "&#128203;",
+          "b": "Hospital procurement",
+          "p": "What gets ordered, and why."
+        },
+        {
+          "href": "/resources/why-hospital-reports-get-lost-between-departments/",
+          "icon": "&#128260;",
+          "b": "Lost reports",
+          "p": "The other quiet leak."
+        },
+        {
+          "href": "/hims/e-prescription-software/",
+          "icon": "&#128221;",
+          "b": "e-Prescription",
+          "p": "Dispensing against the record."
+        }
+      ]
+    }
+  ]
+}

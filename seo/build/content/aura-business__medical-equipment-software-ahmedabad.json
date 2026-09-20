@@ -1,0 +1,216 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-ahmedabad",
+  "title": "Medical Equipment Software in Ahmedabad | Aura Business",
+  "meta": "Medical equipment and consumables software for Ahmedabad distributors: batch and expiry, sub-dealer stock, e-way bills and outbound dispatch across India.",
+  "h1": "Medical equipment software for Ahmedabad, where stock <span class=\"hl\">leaves Gujarat every day</span>.",
+  "crumb": "Ahmedabad",
+  "pill": "Ahmedabad and Gujarat",
+  "sub": "Aura Business suits Gujarat distributors who move equipment, disposables and consumables in volume: batch and expiry tracking, multi-warehouse stock, sub-dealer ordering, and interstate dispatch documents raised from the invoice, all onboarded remotely from Chennai.",
+  "meta_ticks": [
+    "Batch and expiry on every movement",
+    "E-way bills from the invoice",
+    "Remote onboarding from Chennai"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute medical equipment or consumables from Ahmedabad and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Ahmedabad",
+  "secondary_keywords": [
+    "medical distributor software Gujarat",
+    "batch and expiry tracking software India",
+    "medical consumables distribution software",
+    "e-way bill software Gujarat distributors",
+    "sub-dealer management software"
+  ],
+  "intent": "local",
+  "persona": "Owner of an Ahmedabad distributor moving medical equipment, disposables and consumables across Gujarat and beyond",
+  "city": "Ahmedabad",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Ahmedabad, deployed remotely",
+      "paras": [
+        "Aura Business is an operations platform for distributors, dealers and field-service businesses in the medical supply trade. Ahmedabad firms take it on remotely: the scope is agreed on a call, your Excel data is migrated in, your team is trained over screen-share, and support afterwards is on WhatsApp with the founder who built it.",
+        "Elevate Aura is in Chennai and has no office, staff or local number anywhere in Gujarat. Implementation is done on the cloud without a site visit, and travel is only arranged when a project clearly warrants it. That is the arrangement, stated before you ask rather than after."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Ahmedabad context",
+      "h2": "A trade built on volume, batches and outbound lorries.",
+      "lead": "Gujarat carries a deep pharmaceutical and medical-device trade, and an Ahmedabad distributor usually sits in the middle of it, buying from manufacturers in the state and sending goods out to hospitals, chemists, sub-dealers and institutional buyers well beyond it. The operational strain is rarely the sale. It is the movement.",
+      "body": [
+        "Where disposables and consumables are involved, the unit of control is the batch. Every receipt has to land with its batch number and expiry, every dispatch has to pick the right batch in the right order, and stock sitting close to expiry has to surface early enough to be moved rather than written off. Aura Business records batch and expiry at goods receipt, carries it through stock movements to the invoice, and raises alerts on batches nearing expiry and items below reorder level, warehouse by warehouse.",
+        "Capital equipment in the same catalogue behaves differently and needs serial-level tracking instead, because the warranty, the installed base and the eventual maintenance contract all hang off that serial. One inventory ledger handles both: a serialised analyser and a carton of disposables sit in the same stock system with different identities, and a barcode or QR scan on the shelf covers either.",
+        {
+          "h3": "Paperwork that has to keep pace with dispatch"
+        },
+        "High outbound volume means the document chain is the bottleneck. A tax invoice has to decide CGST and SGST or IGST from the buyer's GSTIN and delivery address, an e-invoice IRN and QR has to be generated, an e-way bill has to be raised with transporter and vehicle details before the consignment leaves, and a delivery challan has to cover goods sent for demonstration or approval. Doing that from one record rather than three portals is what keeps the dispatch bay moving. Credit notes handle returns and rate differences, and GSTR-1 and 3B preparation with a Tally export keeps the accountant in step.",
+        {
+          "h3": "Sub-dealers across the state and beyond"
+        },
+        "Most Gujarat distributors sell partly through sub-dealers in the smaller towns, and those relationships run on price lists, credit and trust. The distributor portal gives each sub-dealer a branded login at its own price list, a place to upload payment references, and an order tracking page, while the receivables ageing view shows who is genuinely overdue. Payment reminders can go out over WhatsApp from the payment tracker rather than by memory.",
+        {
+          "h3": "What the first month looks like"
+        },
+        {
+          "ul": [
+            "Scoping call with the owner, the warehouse in-charge and the accounts team.",
+            "Item master with batches, serials, sub-dealer list, price lists and outstanding imported from Excel.",
+            "Warehouses configured separately, with reorder levels and expiry alert rules set.",
+            "Screen-share training for the office, dispatch and field staff, with role-based access.",
+            "Live in 30 working days where scope allows, then WhatsApp support."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a Gujarat distributor uses most.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Stock by batch and serial",
+          "items": [
+            "Batch and expiry tracking from receipt to invoice",
+            "Serial and unit-level stock for equipment",
+            "Multi-warehouse with stock ledger",
+            "Low-stock and reorder alerts",
+            "Barcode and QR scanning"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Dispatch documents",
+          "items": [
+            "Tax invoice with the correct GST split",
+            "E-invoice IRN and QR",
+            "E-way bill with transporter details",
+            "Delivery challan and proforma",
+            "Credit notes and returns"
+          ]
+        },
+        {
+          "icon": "&#127970;",
+          "h": "Sub-dealers and money",
+          "items": [
+            "Distributor and B2B order portal",
+            "Dealer price lists and authorisation",
+            "Payment by UTR with verification",
+            "Receivables ageing by customer",
+            "WhatsApp payment reminders"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four Ahmedabad situations the platform is built for.",
+      "items": [
+        {
+          "h": "A batch nearing expiry is seen while it can still move",
+          "workflow": "Expiry alerts list batches approaching their date by warehouse, and the sales team is given the stock to push before it becomes a write-off.",
+          "result": "Ageing stock is a decision rather than a loss."
+        },
+        {
+          "h": "A lorry to Rajasthan leaves with its papers",
+          "workflow": "The invoice applies IGST from the buyer's GSTIN, the IRN is generated, and the e-way bill is raised from the same invoice with vehicle and transporter details.",
+          "result": "No consignment is held up for a missing document."
+        },
+        {
+          "h": "A sub-dealer orders and pays without a phone call",
+          "workflow": "The sub-dealer logs into the portal, orders at its own rate, uploads the bank reference, and watches dispatch on the tracking page.",
+          "result": "The order desk verifies payments instead of taking dictation."
+        },
+        {
+          "h": "A short delivery is traced to a batch",
+          "workflow": "The stock ledger shows the goods receipt, the batch picked, the invoice it went out on and the credit note raised for the return.",
+          "result": "The dispute is settled from records, not from recollection."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Ahmedabad, answered.",
+      "items": [
+        {
+          "q": "Do you have a team in Ahmedabad or anywhere in Gujarat?",
+          "a": "No. Elevate Aura operates from Chennai with no office, staff or local number in Gujarat. Setup is on the cloud, training is over screen-share, and support is on WhatsApp. Travel is possible where a project warrants it and would be agreed in advance."
+        },
+        {
+          "q": "Can we track batch numbers and expiry on consumables?",
+          "a": "Yes. Batch and expiry are captured at goods receipt and carried through every stock movement to the invoice, with alerts on batches nearing expiry by warehouse. See <a href=\"/aura-business/batch-expiry-tracking-software/\">batch and expiry tracking</a>."
+        },
+        {
+          "q": "We stock both capital equipment and disposables. Does one system cover both?",
+          "a": "Yes. Serialised equipment is tracked unit by unit for warranty and contracts, while consumables are tracked by batch and quantity, both in the same catalogue, stock ledger and warehouse structure. See <a href=\"/aura-business/software-for-medical-consumables-distributors/\">consumables distribution software</a>."
+        },
+        {
+          "q": "How quickly can an e-way bill be raised on a busy dispatch day?",
+          "a": "The e-way bill is generated from the invoice or delivery challan already raised, so the goods, values and parties are carried over and only transporter and vehicle details are added. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "Can sub-dealers have their own rates and credit visibility?",
+          "a": "Each sub-dealer account holds its authorised brands, territory and price list, and sees only those in the portal. Outstanding invoices appear in receivables ageing on your side, with reminders sent from the payment tracker."
+        },
+        {
+          "q": "Is more than one warehouse supported?",
+          "a": "Yes. Stock is held per warehouse with its own ledger, reorder levels and expiry alerts, and transfers between them are recorded as movements, so a godown outside the city is not pooled into one figure."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry",
+          "p": "Control by batch, not guesswork."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127970;",
+          "b": "Warehouse management",
+          "p": "Multi-warehouse stock."
+        },
+        {
+          "href": "/aura-business/software-for-medical-consumables-distributors/",
+          "icon": "&#129657;",
+          "b": "Consumables",
+          "p": "Volume distribution."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-mumbai/",
+          "icon": "&#128205;",
+          "b": "Mumbai",
+          "p": "Importers and dealer networks."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A distribution business, rebuilt."
+        }
+      ]
+    }
+  ]
+}

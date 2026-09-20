@@ -1,0 +1,205 @@
+{
+  "cluster": "resources",
+  "slug": "why-distributor-stock-never-matches",
+  "title": "Why Distributor Stock Never Matches the Shelf | Guide",
+  "meta": "Why distributor stock never matches the shelf: service consumption, engineer van stock, goods received but unentered, returns, and the fix for each cause.",
+  "h1": "Why distributor stock never matches the shelf, <span class=\"hl\">cause by cause</span>.",
+  "crumb": "Stock differences",
+  "pill": "Guide",
+  "sub": "Stock differences are almost never theft. They are the accumulated effect of four or five ordinary movements that happen physically and are never recorded, and each one has a different and fairly simple fix.",
+  "meta_ticks": [
+    "Four causes, named separately",
+    "A fix for each, not a lecture",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your guide on stock differences and want to see how Aura Business tracks stock movements.",
+  "date": "2026-09-20",
+  "primary_keyword": "why distributor stock never matches",
+  "secondary_keywords": [
+    "stock mismatch reasons distributor",
+    "inventory differences causes",
+    "engineer van stock control",
+    "spare parts consumption not booked",
+    "physical stock vs system stock"
+  ],
+  "intent": "informational",
+  "persona": "Owner or stores manager of a distribution business whose physical stock never agrees with the recorded figure",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "The gap is made of unrecorded movements",
+      "paras": [
+        "If your stock figure and your shelf disagree, the cause is almost always that goods moved and nothing was written down. Four movements account for most of it: spares consumed on service calls, stock sitting in engineers' vans, goods received into the godown before anyone entered the receipt, and returns coming back without paperwork. A fifth, material sent out on a challan and never closed, affects businesses that send demo or returnable goods.",
+        "The useful consequence is that a stock difference is diagnosable. Rather than counting everything again and hoping, look at which of those movements your process does not capture, because each leaves a different signature. Consumption shows up as fast-moving spares always being short. Van stock shows up as items that are missing in the store and present in the field. Unentered receipts show up as items you appear to have none of and are actually standing on. Returns show up as goods on the shelf the system says were sold."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Cause one and two",
+      "h2": "Service consumption and van stock",
+      "body": [
+        {
+          "h3": "Parts consumed on service calls"
+        },
+        "This is the largest single cause in any business that both sells and services. An engineer takes a part to fix a machine. The machine is fixed, the customer is happy, and the movement is complete as far as everybody involved is concerned. Nothing in the store's paperwork says the part left, because the person who decided it should leave was standing in a hospital basement at the time.",
+        "The fix is to make the job card the issuing document. When a part is recorded as used on the job, stock drops as a consequence of the engineer doing their work rather than as a separate administrative act that somebody has to remember later. That one change also produces consumption data per machine and per contract, which is what makes <a href=\"/resources/what-is-contract-profitability/\">contract profitability</a> measurable at all.",
+        {
+          "h3": "Stock living in vans"
+        },
+        "Engineers carry parts, and sensibly so, because a part in the van is a same-day fix instead of a second visit. The trouble is that the store's figure usually counts van stock as issued and gone, or as still in the store, and both are wrong. Items then appear to be missing while they are sitting in a vehicle on the other side of the city.",
+        "The fix is to treat the van as a stock location in its own right, exactly like a second godown. Parts are transferred to the engineer, consumed from the van against the job card, and returned to the store when they come back. A van whose stock is never reconciled becomes a small warehouse with no keeper."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Cause three and four",
+      "h2": "Goods received but not entered, and returns that arrive quietly",
+      "body": [
+        {
+          "h3": "Receipts entered late, or never"
+        },
+        "A consignment arrives on a busy afternoon. It is unloaded, the cartons are put away, and the entry is left for later. Later, the purchase invoice is entered in the accounts and everyone assumes the goods are on the system. They are not: the accounts know you bought them, the stock record does not know they arrived. The signature is an item that sales believe is unavailable while it is standing on the shelf, which costs you an order rather than a unit.",
+        "The fix is a goods receipt step that happens at the moment of unloading and is separate from the purchase invoice. A receipt booked against the purchase order, with the quantity actually received, also catches short supply from the supplier on the day it can still be argued about rather than at month end.",
+        {
+          "h3": "Returns"
+        },
+        "Goods come back for many reasons: the customer ordered the wrong model, the item was damaged in transit, a demo unit finished its trial, a faulty part was replaced under warranty. Physically, the item is on your shelf again. On the system it is still sold, unless somebody raised a credit note or a return entry, and returns are handled by whoever is nearest the door rather than by a defined process.",
+        "The fix is to insist that goods entering the premises are recorded on entry, with a reason. A return against the original invoice with a credit note where a credit is due, a warranty return recorded against the serial number, a demo closed against its challan. Returns also need somewhere to live: material that has come back and not yet been inspected should not silently rejoin sellable stock."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Diagnosis",
+      "h2": "Which cause your difference looks like",
+      "headers": [
+        "What you notice",
+        "Likely cause",
+        "The fix"
+      ],
+      "rows": [
+        [
+          "Fast-moving spares always short",
+          "Service consumption not booked",
+          "Parts issued against the job card, dropping stock"
+        ],
+        [
+          "Items missing in store, present in the field",
+          "Van stock not tracked",
+          "The van treated as its own stock location"
+        ],
+        [
+          "Sales told an item is unavailable when it is on the shelf",
+          "Receipts entered late or not at all",
+          "A goods receipt booked at unloading, against the order"
+        ],
+        [
+          "Goods on the shelf the system says were sold",
+          "Returns not recorded on entry",
+          "Return entry and credit note at the door, with a reason"
+        ],
+        [
+          "Serial numbers that cannot be located",
+          "Demo or returnable challans never closed",
+          "Open challans reviewed until returned or invoiced"
+        ],
+        [
+          "Everything slightly off, everywhere",
+          "No movement ledger, only periodic counts",
+          "Every issue, receipt and transfer written to a ledger"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The underlying fix",
+      "h2": "A ledger of movements, not a figure that gets corrected",
+      "lead": "The four fixes share one idea. Stock should be the consequence of recorded movements rather than a number somebody adjusts after counting.",
+      "body": [
+        "Most distributors run stock as a periodic figure: count, correct the sheet, and carry on until the next count. That guarantees the difference will return, because nothing has changed about why it appeared. A movement ledger works the other way. Every receipt, issue, transfer, consumption and return writes a line, and the current figure is simply what those lines add up to. When a difference appears you can look at the movements rather than at the shelf.",
+        "Two additions make the ledger much more useful in practice. Unit-level tracking, where serial numbers matter, answers where a specific machine is rather than how many you have. Batch and expiry tracking, where the goods carry a shelf life, prevents the other kind of loss, which is stock you still own and can no longer sell.",
+        "Physical counting does not go away, and should not. It becomes a verification of the ledger rather than the only source of truth, and the count that follows a fixed cause should be closer than the one before it. If it is not, one of the movements is still unrecorded.",
+        "In Aura Business this is the Inventory and Warehouse suite working alongside field service: serial and unit-level stock, a stock movement ledger, multi-warehouse locations, batch and expiry tracking, barcode and QR scanning, low-stock and reorder alerts, and spare parts consumed per job dropping stock from the job card. The goods receipt step sits under procurement against the purchase order. See <a href=\"/aura-business/medical-spare-parts-inventory-software/\">spare parts inventory</a> and <a href=\"/aura-business/purchase-order-grn-software/\">purchase orders and goods receipt</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about stock differences",
+      "items": [
+        {
+          "q": "Is a stock difference usually theft?",
+          "a": "Rarely. In distribution businesses the overwhelming majority of differences come from movements that happened physically and were never recorded, particularly parts consumed on service calls and stock held in engineers' vehicles. Look for the unrecorded movement before looking for a culprit."
+        },
+        {
+          "q": "How do we control stock that engineers carry?",
+          "a": "Treat each van as a stock location. Parts are transferred to the engineer, consumed from the van when the job card records them as used, and returned to the store when they come back. Reconcile van stock on a fixed rhythm rather than when something goes missing."
+        },
+        {
+          "q": "Why does entering the purchase invoice not update stock?",
+          "a": "Because buying and receiving are different events. The invoice says you have been billed; the goods receipt says the material physically arrived and in what quantity. Booking the receipt separately also surfaces short supply while it can still be raised with the supplier."
+        },
+        {
+          "q": "What should happen when goods come back?",
+          "a": "They should be recorded on entry with a reason, against the original invoice, challan or serial number, with a credit note raised where a credit is due. Returned material awaiting inspection should be kept apart from sellable stock until somebody has looked at it."
+        },
+        {
+          "q": "Should we track serial numbers for everything?",
+          "a": "No. Serial tracking earns its cost on machines and high-value items where warranty, service history and location matter. Fast-moving consumables are better handled by quantity, with batch and expiry tracking where the goods have a shelf life."
+        },
+        {
+          "q": "How often should we count physically?",
+          "a": "Often enough to verify the ledger rather than to replace it. Many distributors count fast-moving and high-value lines frequently and the rest less often. If a count keeps finding the same difference, a movement is still going unrecorded somewhere."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Every explainer in one place."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128295;",
+          "b": "Spare parts inventory",
+          "p": "Stock that moves with the job."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128230;",
+          "b": "Purchase orders and GRN",
+          "p": "Receiving goods properly."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Multi-location stock control."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#9201;",
+          "b": "Batch and expiry",
+          "p": "Stock you can no longer sell."
+        },
+        {
+          "href": "/resources/what-is-a-delivery-challan/",
+          "icon": "&#128203;",
+          "b": "Delivery challans",
+          "p": "Goods out and not yet sold."
+        }
+      ]
+    }
+  ]
+}

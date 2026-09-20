@@ -345,6 +345,12 @@
           "icon": "&#127919;",
           "b": "Lead management",
           "p": "Where the quote request starts."
+        },
+        {
+          "href": "/aura-business/rate-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Rate contracts",
+          "p": "Quote at the contracted rate."
         }
       ]
     }

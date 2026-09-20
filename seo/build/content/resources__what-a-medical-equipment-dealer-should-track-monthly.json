@@ -1,0 +1,215 @@
+{
+  "cluster": "resources",
+  "slug": "what-a-medical-equipment-dealer-should-track-monthly",
+  "title": "What a Medical Equipment Dealer Should Track Monthly",
+  "meta": "The short monthly list for an equipment dealer: pipeline, collections and ageing, AMC due and renewed, open calls and SLA, stock and contract profitability.",
+  "h1": "What a medical equipment dealer should look at <span class=\"hl\">once a month</span>.",
+  "crumb": "Monthly numbers",
+  "pill": "Guide",
+  "sub": "Six numbers cover a dealership that sells, installs and services equipment. This guide explains what each one tells you, and what to do when it moves in the wrong direction.",
+  "meta_ticks": [
+    "Six numbers, not a dashboard of forty",
+    "What to do when each one slips",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See the owner dashboard",
+  "cta_href": "/aura-business/medical-distributor-dashboard-analytics/",
+  "whatsapp_text": "Hi, I read the guide on monthly numbers and would like to see the owner dashboard.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "what a medical equipment dealer should track monthly",
+  "secondary_keywords": [
+    "monthly numbers for equipment dealers",
+    "medical equipment dealership metrics",
+    "AMC renewal tracking",
+    "service SLA monitoring",
+    "stock accuracy check",
+    "contract profitability"
+  ],
+  "intent": "informational",
+  "persona": "Owner of a medical equipment dealership reviewing the business once a month",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Six numbers are enough for a monthly review",
+      "paras": [
+        "An equipment dealer needs six things each month: the sales pipeline, collections with ageing, AMC and CMC contracts due and renewed, open service calls with SLA status, stock accuracy, and contract profitability. Between them they cover what the business runs on: selling, collecting, servicing and holding stock.",
+        "The point of a monthly list is not reporting. Each number, read against last month rather than a target somebody invented, points to one specific action. What follows explains what each tells you and what to do when it moves the wrong way."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Selling and collecting",
+      "h2": "The first three numbers concern money coming in",
+      "lead": "Pipeline, collections and contract renewals are separate revenue streams for a dealer, and a good month in one can hide a bad month in another.",
+      "body": [
+        {
+          "h3": "1. Pipeline"
+        },
+        "Look at open opportunities by stage and expected close, and at what was added during the month rather than only at the total. A pipeline that holds steady only because old deals never close is not a pipeline, it is a list.",
+        "If new additions fall, the cause is usually activity rather than demand, so check visits, demonstrations and quotations sent. If the total grows but conversion does not, qualification is loose or quotations go out too late to matter.",
+        {
+          "h3": "2. Collections and ageing"
+        },
+        "Read the outstanding in age buckets by customer, not as one total. Watch how much has moved into the older buckets since last month, because that is money quietly becoming difficult.",
+        "If the oldest bucket is growing, do not start with the customers. Start with the gap between delivery and invoice, then with who owns the chase. The guide on <a href=\"/resources/why-collections-run-late/\">why collections run late</a> works through the causes in order.",
+        {
+          "h3": "3. AMC due and renewed"
+        },
+        "Two figures belong together: contracts that fell due in the month, and contracts actually renewed. The gap between them is the part of your service revenue that lapsed, worth knowing in rupees.",
+        "If renewals slip, look at whether the promised preventive maintenance visits were made. Customers rarely renew a contract they did not feel, so the fix is usually in the service schedule rather than in the renewal call."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Servicing and stock",
+      "h2": "The last three numbers concern what you deliver",
+      "lead": "Service and stock decide whether the revenue above repeats next year, and they are the two areas where problems stay hidden longest.",
+      "body": [
+        {
+          "h3": "4. Open calls and SLA"
+        },
+        "Count the calls open at month end, how long the oldest has been open, and how many closed within the response and resolution times you agreed. Add repeat visits to the same asset, because a repeat is a call you were not paid for twice.",
+        "If open calls rise while closures hold steady, it is capacity or parts. If SLA slips on particular customers, check which contracts they hold, because the penalty for a breach is often written into the agreement.",
+        {
+          "h3": "5. Stock accuracy"
+        },
+        "Take a sample count of spares and serialised units and compare it against the system. You are measuring whether the ledger can be trusted, and the usual gaps come from parts fitted on site but never posted, and goods received without a proper entry.",
+        "If accuracy drifts, tighten both ends: spares consumed recorded on the job card, and goods receipt entered against the purchase order. Reorder alerts are only as good as the balance they watch.",
+        {
+          "h3": "6. Contract profitability"
+        },
+        "For each contract, set the value billed against the cost of serving it: engineer visits, travel and spares consumed. Some contracts cost more to serve than they bring in, and that only shows when service cost is posted back to the contract.",
+        "If a contract is loss making, the answer is not always to drop it. Check whether the machine is ageing, whether visits were avoidable breakdowns rather than scheduled maintenance, and whether the agreed scope matches what is being done."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to run the review",
+      "h2": "The monthly list on one page",
+      "lead": "Keep the review short. Six numbers, each read against the previous month, with one decision recorded for any that moved the wrong way.",
+      "body": [
+        {
+          "table": {
+            "headers": [
+              "Number",
+              "What it tells you",
+              "If it moves the wrong way"
+            ],
+            "rows": [
+              [
+                "Pipeline by stage and additions",
+                "Whether selling activity is feeding future months",
+                "Check visits, demonstrations and quotation turnaround"
+              ],
+              [
+                "Collections with ageing buckets",
+                "How much outstanding is becoming difficult",
+                "Close the invoicing gap, then name an owner per account"
+              ],
+              [
+                "AMC due against AMC renewed",
+                "The service revenue that lapsed",
+                "Check whether promised maintenance visits were made"
+              ],
+              [
+                "Open calls, SLA and repeat visits",
+                "Whether service is keeping its promises",
+                "Look at engineer capacity, spares availability and training"
+              ],
+              [
+                "Stock accuracy on a sample count",
+                "Whether the ledger can be trusted",
+                "Post spares from the job card and receive goods against the order"
+              ],
+              [
+                "Contract profitability",
+                "Which contracts are worth renewing as they stand",
+                "Review scope, machine age and breakdown frequency"
+              ]
+            ]
+          }
+        },
+        "Two habits make the list work. Read each number against the previous month, so you watch a direction rather than judge a level, and write down the action you took, so next month you can see whether it worked.",
+        "If assembling these six numbers takes a week of somebody's time, that is itself a finding. When quotes, invoices, receipts, contracts and job cards live in one system, the list is the state of the business when you open it, which is what the <a href=\"/aura-business/medical-distributor-dashboard-analytics/\">distributor dashboard and analytics</a> is for."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Monthly numbers, answered.",
+      "items": [
+        {
+          "q": "Why only six numbers?",
+          "a": "Because an owner acts on a short list and ignores a long one. Pipeline, collections, contract renewals, service load, stock accuracy and contract profitability cover the whole of a dealership."
+        },
+        {
+          "q": "What targets should we set for these?",
+          "a": "Set them from your own history rather than from any published figure. Read each number against the previous month and the same month last year, because the direction of travel in your business is more useful than a comparison with a different one."
+        },
+        {
+          "q": "How often should stock be counted?",
+          "a": "A sample count each month on fast-moving spares and all serialised units is usually enough to tell whether the ledger is reliable, with a fuller count at a longer interval. Serial and batch tracking makes the sample quicker to reconcile."
+        },
+        {
+          "q": "What is contract profitability?",
+          "a": "The value billed on a service contract set against what it costs to serve it, including engineer visits, travel and spares consumed. It is only measurable if service cost is posted back to the contract. See <a href=\"/resources/what-is-cmc/\">what a CMC is</a> for how cover types differ."
+        },
+        {
+          "q": "Should the sales pipeline include tenders?",
+          "a": "Keep tenders in a separate view. Their timing is set by publication and opening dates rather than by your selling, and mixing them into the pipeline makes both harder to read. Win rate by department is the useful tender number."
+        },
+        {
+          "q": "Who should attend the monthly review?",
+          "a": "The owner with whoever owns sales, service and accounts. Each number belongs to someone, and the value of the meeting is the action recorded against the numbers that moved the wrong way."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related guides and software",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Plain-language explainers."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128202;",
+          "b": "Owner dashboard",
+          "p": "The six numbers, live."
+        },
+        {
+          "href": "/resources/why-collections-run-late/",
+          "icon": "&#128176;",
+          "b": "Why collections run late",
+          "p": "The causes behind ageing."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "Due against renewed."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Response and resolution."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spares inventory",
+          "p": "Where stock accuracy slips."
+        }
+      ]
+    }
+  ]
+}

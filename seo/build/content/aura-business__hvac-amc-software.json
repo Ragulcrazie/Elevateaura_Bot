@@ -342,6 +342,12 @@
           "icon": "&#128218;",
           "b": "Guide",
           "p": "What AMC software does."
+        },
+        {
+          "href": "/aura-business/fire-safety-amc-software/",
+          "icon": "&#128293;",
+          "b": "Fire safety AMC",
+          "p": "Scheduled testing across a building."
         }
       ]
     }

@@ -329,6 +329,12 @@
           "icon": "&#129463;",
           "b": "Dental clinic software",
           "p": "For a single-chair or group practice."
+        },
+        {
+          "href": "/hims/eye-hospital-management-software/",
+          "icon": "&#128065;",
+          "b": "Eye hospitals",
+          "p": "High OP throughput and optical stock."
         }
       ]
     }

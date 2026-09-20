@@ -1,0 +1,222 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-delhi",
+  "title": "Medical Equipment Software in Delhi NCR | Aura Business",
+  "meta": "Medical equipment software for Delhi NCR dealers: tender tracking, EMD and bid deadlines, rate contracts, e-way bills across the north and AMC service.",
+  "h1": "Medical equipment software for Delhi NCR dealers who live on <span class=\"hl\">tenders and deadlines</span>.",
+  "crumb": "Delhi NCR",
+  "pill": "Delhi, Gurugram, Noida and Faridabad",
+  "sub": "Aura Business gives Delhi NCR dealers and importers one platform for government tender tracking, EMD and bid deadlines, rate contracts, GST supply across the northern states, and the installed base and service that follow a machine after the award, onboarded remotely from Chennai.",
+  "meta_ticks": [
+    "Tenders fetched every morning",
+    "Rate contracts and EMD reminders",
+    "Remote onboarding from Chennai"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we are a medical equipment dealer in Delhi NCR and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Delhi",
+  "secondary_keywords": [
+    "medical equipment dealer software Delhi NCR",
+    "tender management software for medical suppliers",
+    "rate contract software India",
+    "medical equipment distributor software North India",
+    "government supply software for equipment dealers"
+  ],
+  "intent": "local",
+  "persona": "Owner of a Delhi NCR medical equipment dealership that bids for government supply and distributes across northern India",
+  "city": "Delhi",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Delhi NCR, set up without a site visit",
+      "paras": [
+        "Aura Business is an operations platform for companies that import, supply, install and service medical equipment. Delhi NCR firms run it remotely: scope is agreed on a call, your existing spreadsheets are migrated in, the team is trained over screen-share, and questions afterwards go to the founder on WhatsApp.",
+        "Elevate Aura keeps no office, staff or local number in Delhi, Gurugram, Noida or Faridabad. Everything is done from Chennai by cloud deployment and remote support, and travel is considered only where a project genuinely warrants it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Delhi NCR context",
+      "h2": "Two capitals of the business: the tender desk and the border of three states.",
+      "lead": "Delhi NCR is where central and state purchasing bodies, teaching hospitals and import agents sit close together, and where a supplier's calendar is set by publication dates, pre-bid meetings and EMD cut-offs rather than by a sales pipeline alone.",
+      "body": [
+        "A tender business fails quietly. A notice is published and nobody sees it, a document goes in without the authorisation letter, an EMD is not released after the award. Aura Business fetches government tenders every morning into the Tender Tracker, keeps the bid documents and authorisations in a vault against the tender, and sends reminders for EMD, submission and opening dates. Outcome and win-rate analytics then show which departments and product lines are worth the effort of bidding at all.",
+        "Rate-contract management is the part most dealers carry in a folder. Once an item is on contract, every subsequent supply order has to be priced and invoiced against that rate for the period agreed, and the quantities drawn have to be visible before the contract lapses. Holding the contract in the system means the quotation builder and the invoice both take the agreed rate, rather than a price a salesperson remembers.",
+        {
+          "h3": "Three states within an hour's drive"
+        },
+        "The second peculiarity of NCR is fiscal geography. An office in Delhi, a godown in Faridabad and a customer in Noida sit within a short drive of one another and are still three places of supply. Aura Business decides CGST and SGST or IGST from the buyer's GSTIN and delivery address, raises the e-invoice IRN and QR, and generates the e-way bill from the same record, so a consignment that crosses a state line on a city road still leaves with correct papers. Multi-warehouse stock keeps the Delhi and Haryana godowns separate rather than pooled.",
+        {
+          "h3": "After the award, the machine still has to be serviced"
+        },
+        "Supply orders from northern states send equipment to district hospitals and medical colleges far from NCR, and the contract to maintain them usually follows. The installed-base register records each serial with its institution, warranty start and contract, preventive maintenance schedules are raised per asset, and mobile job cards are filled on the engineer's phone with photographs and a customer signature, offline where the network is poor. SLA definitions and breach tracking matter more on government contracts than anywhere else, because the penalty is written into the agreement.",
+        {
+          "h3": "How a Delhi NCR onboarding actually runs"
+        },
+        {
+          "ul": [
+            "A scoping call with the owner, the tender desk and the accounts head.",
+            "Tender history, rate contracts, customer master, stock and installed base imported from Excel.",
+            "Your branding applied to the dashboard, the field app and the invoices.",
+            "Training over screen-share by role, with the audit log and access rights set for the tender documents.",
+            "Live in 30 working days where scope allows, then support on WhatsApp."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a government supplier leans on.",
+      "groups": [
+        {
+          "icon": "&#127963;",
+          "h": "Tenders and government sales",
+          "items": [
+            "Tender tracker fetched every morning",
+            "Tender document vault with authorisations",
+            "Bid, EMD and deadline reminders",
+            "Rate-contract management",
+            "Outcome and win-rate analytics"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Supply and documents",
+          "items": [
+            "Tax invoice with CGST, SGST or IGST by place of supply",
+            "E-invoice IRN and QR",
+            "E-way bill from invoice or challan",
+            "Delivery challan and proforma",
+            "Multi-warehouse stock with serials"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "After the supply order",
+          "items": [
+            "Installed-base register by institution",
+            "Preventive maintenance schedules",
+            "SLA definitions and breach tracking",
+            "Mobile job card with photo proof and offline mode",
+            "Contract renewal engine"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four NCR situations the platform is built for.",
+      "items": [
+        {
+          "h": "A notice is seen the morning it appears",
+          "workflow": "The tender tracker lists new notices against your product lines, the desk marks the ones worth bidding, and deadline reminders go out for the pre-bid meeting, the EMD and the submission.",
+          "result": "Nothing is lost because somebody stopped checking the portal."
+        },
+        {
+          "h": "A rate contract prices itself",
+          "workflow": "The contract rate is held against the item and the buyer, so the quotation and the tax invoice both pick it up for the agreed period, with quantities drawn shown against the limit.",
+          "result": "Supply orders are billed at the rate you actually signed."
+        },
+        {
+          "h": "A godown in Faridabad ships to Noida",
+          "workflow": "The invoice takes the tax split from the buyer's GSTIN, the IRN is generated, and the e-way bill is raised with vehicle and transporter details before the consignment leaves.",
+          "result": "A short journey across a state line still carries full papers."
+        },
+        {
+          "h": "A district hospital raises a breakdown call",
+          "workflow": "The call is logged against the serial, cover is shown as warranty, contract or chargeable, an engineer is dispatched, and the job card records the spare fitted, which drops stock.",
+          "result": "Response time against the SLA is recorded, not argued about."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Delhi NCR, answered.",
+      "items": [
+        {
+          "q": "Do you have an office or engineers in Delhi?",
+          "a": "No. Elevate Aura is based in Chennai and has no office, staff or local phone number in the NCR. Setup is remote by cloud deployment and screen-share, support is on WhatsApp, and travel is arranged only where a project warrants it."
+        },
+        {
+          "q": "How are government tenders picked up?",
+          "a": "The tender tracker pulls government tender notices every morning and lists them for your team to shortlist. Documents and authorisations are stored against each tender, and reminders cover EMD, submission and opening dates. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+        },
+        {
+          "q": "Can it handle a rate contract with a government buyer?",
+          "a": "Yes. The agreed rate is held against the item and the buyer for the contract period, quotations and invoices take that rate, and quantities drawn are visible against the limit so the contract can be reviewed before it lapses."
+        },
+        {
+          "q": "We supply to Punjab, Uttar Pradesh and Rajasthan. Is interstate billing handled?",
+          "a": "Yes. The tax split follows the buyer's GSTIN and delivery address, so supply outside Delhi carries IGST, and the e-way bill is generated from the invoice or delivery challan with transporter details. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "Can our engineers work where the mobile network is weak?",
+          "a": "Yes. The field app holds the job card offline, including the fault notes, spares used, photographs and the customer signature, and syncs when the phone reconnects. See <a href=\"/aura-business/mobile-job-card-software/\">mobile job card software</a>."
+        },
+        {
+          "q": "How many logins do we get for the tender desk and branches?",
+          "a": "Unlimited users on every plan. Plans differ by module count, 15, 47 or all 87, and role-based access decides who can open tender documents, change rates or view the owner dashboard."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#127963;",
+          "b": "Tender management",
+          "p": "Notices, EMD, win rate."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128667;",
+          "b": "E-way bills",
+          "p": "Papers before dispatch."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Response times on contract."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-mumbai/",
+          "icon": "&#128205;",
+          "b": "Mumbai",
+          "p": "Importers and dealer networks."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A distribution business, rebuilt."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-pune/",
+          "icon": "&#128205;",
+          "b": "Pune",
+          "p": "Plant labs and device makers."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "cluster": "resources",
+  "slug": "why-collections-run-late",
+  "title": "Why Collections Run Late in a Distribution Business",
+  "meta": "The real reasons payments arrive late in a distribution business: invoices raised late, ageing nobody sees, no owner for the chase, and disputes found too late.",
+  "h1": "Why collections run late, and the order in which to <span class=\"hl\">fix the causes</span>.",
+  "crumb": "Why collections run late",
+  "pill": "Guide",
+  "sub": "Late payment is usually a set of ordinary process failures rather than difficult customers. This guide names each one, explains how to tell which you have, and gives the order to fix them in.",
+  "meta_ticks": [
+    "Written from distribution workflows",
+    "Causes first, tools second",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See receivables ageing",
+  "cta_href": "/aura-business/receivables-ageing-software/",
+  "whatsapp_text": "Hi, I read the guide on late collections and would like to discuss our receivables.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "why collections run late",
+  "secondary_keywords": [
+    "late payment in distribution business",
+    "receivables collection problems",
+    "outstanding payments not collected",
+    "credit control for distributors",
+    "invoice to payment delay",
+    "how to improve collections"
+  ],
+  "intent": "informational",
+  "persona": "Owner or accounts head of a distribution business whose outstanding keeps growing",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Collections run late for five reasons, and none of them is bad luck",
+      "paras": [
+        "In most distribution businesses, payment is late for five ordinary reasons: the invoice was raised late, nobody can see how old the outstanding is, no single person owns the chase, a dispute created weeks earlier surfaces only when payment is due, and agreed credit terms are not enforced when the next order is taken.",
+        "Those causes are sequential. Fixing the chase while invoices still go out a fortnight after delivery simply means chasing wrong numbers politely. Work through them in the order the money moves: raise, see, own, prevent, enforce."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Causes one to three",
+      "h2": "The delays that happen inside your own office",
+      "lead": "The first three causes have nothing to do with the customer. They are entirely within your control, which is why they are the ones to take first.",
+      "body": [
+        {
+          "h3": "1. The invoice was raised late"
+        },
+        "A credit period starts from the invoice, so every day between delivery and invoicing is added to the wait at your expense. The delay comes from the same few places: goods dispatched on a challan and never converted, a service call closed on a paper job card that reaches the office days later, or a purchase order number missing so the invoice is held back.",
+        "The test is simple. Take twenty recent deliveries and service jobs and measure the gap between the work and the invoice date. If that gap is routinely days rather than hours, no amount of following up will make collections faster.",
+        {
+          "h3": "2. Nobody can see the ageing"
+        },
+        "Most businesses know the total outstanding. Far fewer can say, without preparing a report, which invoices are oldest, which customer holds the largest overdue balance, and which are still within terms. Without that view, effort spreads evenly across the list instead of concentrating where the risk sits.",
+        {
+          "h3": "3. Nobody owns the chase"
+        },
+        "Collections fall between roles. Accounts assume the salesperson will mention it, the salesperson does not want to spoil the relationship before the next order, and the owner intervenes only when cash is tight. The symptom is easy to spot: ask who spoke to a customer about a given invoice, and when. Ownership means a named person per account and a contact history held against the invoice."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Causes four and five",
+      "h2": "The delays created long before the due date",
+      "lead": "The remaining two causes are set in motion at the point of sale and at delivery, and only become visible as late payment.",
+      "body": [
+        {
+          "h3": "4. The dispute was discovered at payment time"
+        },
+        "This is the most expensive cause, because the delay is invisible until it is already long. A short delivery, a wrong rate, a missing challan copy, an incorrect GSTIN on the invoice, or a service visit billed although the machine was under contract. The customer noticed on receipt and simply did not pay, and you learn about it when you call.",
+        "The cure is upstream. Match the invoice to the order and the delivery, carry the purchase order reference and correct tax details, and keep the acknowledged delivery in the record so a claim can be settled or rejected with evidence.",
+        {
+          "h3": "5. Credit terms are not enforced"
+        },
+        "If a customer can place a fresh order while earlier invoices are past terms, the terms are informal. Enforcement need not mean a hard block. It can mean the salesperson seeing the overdue balance while quoting, and an approval step before dispatch to an account past terms.",
+        {
+          "h3": "Matching the symptom to the cause"
+        },
+        {
+          "table": {
+            "headers": [
+              "What you see",
+              "Likely cause",
+              "What to change"
+            ],
+            "rows": [
+              [
+                "Payment arrives well after the agreed period even from reliable customers",
+                "Invoices raised late",
+                "Invoice from the closed delivery or job card, the same day"
+              ],
+              [
+                "Everyone is chased equally and the oldest debt keeps ageing",
+                "No ageing view",
+                "An ageing report by customer and bucket, opened weekly"
+              ],
+              [
+                "Nobody can say when a customer was last contacted",
+                "No owner for the chase",
+                "A named owner per account and a logged contact history"
+              ],
+              [
+                "A complaint appears only when you ask for money",
+                "Disputes found at payment time",
+                "Invoice matched to order, delivery and purchase order reference"
+              ],
+              [
+                "Overdue accounts keep receiving fresh stock",
+                "Terms not enforced",
+                "Overdue balance shown at quotation, approval before dispatch"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What to change, in order",
+      "h2": "A sequence you can start this month",
+      "lead": "Each step makes the next one worth doing. Taken out of order, the later steps produce activity rather than cash.",
+      "body": [
+        {
+          "ul": [
+            "Close the invoicing gap first, because every other fix multiplies through it.",
+            "Put an ageing view in front of the owner weekly, in buckets by customer.",
+            "Name an owner per account and log every contact against the invoice.",
+            "Attach order, delivery and purchase order references so disputes surface at delivery.",
+            "Make overdue balances visible at the point of the next sale, then set the approval rule.",
+            "Automate the routine reminder so human calls are saved for the difficult accounts."
+          ]
+        },
+        "None of this requires a new finance department. It requires the invoice, the delivery, the contract and the payment to sit in one place, so that ageing is a by-product of daily work rather than a monthly exercise.",
+        "<a href=\"/aura-business/receivables-ageing-software/\">Receivables ageing software</a> shows the buckets, the owner and the contact history against each invoice, with reminders sent from the payment record."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Late collections, answered.",
+      "items": [
+        {
+          "q": "What is the single most common cause of late payment?",
+          "a": "Invoices raised late. The credit period runs from the invoice date, so a delivery invoiced days after it left the warehouse has already spent part of its credit period before the customer receives the document. It is also the easiest cause to measure."
+        },
+        {
+          "q": "What is receivables ageing and why does it matter?",
+          "a": "Ageing groups outstanding invoices into buckets by how long they have been unpaid, by customer. It separates invoices still within terms from genuinely overdue ones, so effort goes to the oldest and largest. See <a href=\"/aura-business/receivables-ageing-software/\">receivables ageing software</a>."
+        },
+        {
+          "q": "Should the salesperson or the accounts team chase payment?",
+          "a": "Either works as long as one of them is named for the account and every contact is recorded. Problems come from shared responsibility, where accounts assume sales will raise it and sales avoid the subject before the next order."
+        },
+        {
+          "q": "How do we stop disputes appearing only at payment time?",
+          "a": "Tie the invoice to the order and the acknowledged delivery, carry the purchase order reference and correct tax details on the document, and record service calls against the contract so a covered visit is never billed by mistake. Most disputes then surface at delivery."
+        },
+        {
+          "q": "Do automated reminders actually help?",
+          "a": "They help with routine cases where the invoice was simply forgotten, and they free human effort for accounts that need a conversation. A reminder sent from the payment record also builds a contact history."
+        },
+        {
+          "q": "How do we enforce credit terms without losing customers?",
+          "a": "Make the overdue balance visible to the salesperson at quotation, and require an approval rather than an automatic refusal before dispatching to an account past terms. The conversation then happens before the order instead of months after the invoice."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related guides and software",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Plain-language explainers."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables ageing",
+          "p": "The view this guide argues for."
+        },
+        {
+          "href": "/aura-business/whatsapp-payment-reminder-software/",
+          "icon": "&#128241;",
+          "b": "Payment reminders",
+          "p": "The routine chase, automated."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Closing the invoicing gap."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128202;",
+          "b": "Owner dashboard",
+          "p": "Outstanding on one screen."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "Why the ageing stays manual."
+        },
+        {
+          "href": "/resources/what-a-medical-equipment-dealer-should-track-monthly/",
+          "icon": "&#128202;",
+          "b": "What to track monthly",
+          "p": "The six numbers an owner watches."
+        }
+      ]
+    }
+  ]
+}

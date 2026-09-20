@@ -1,0 +1,213 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-nabh-documentation",
+  "title": "What Is NABH Documentation? A Plain Guide for Hospitals",
+  "meta": "NABH documentation explained: what accreditation is, who awards it, what records an assessment expects, how software helps and where its help stops.",
+  "h1": "What is NABH documentation? The records behind <span class=\"hl\">a claim you can stand up</span>.",
+  "crumb": "What is NABH documentation",
+  "pill": "Guide",
+  "sub": "NABH is the National Accreditation Board for Hospitals and Healthcare Providers. This guide explains what accreditation is, who awards it, what documentation an assessment expects to see, and the honest boundary of what a hospital system can do about it.",
+  "meta_ticks": [
+    "Written for quality coordinators",
+    "Plain language, no jargon",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See NABH documentation software",
+  "cta_href": "/hims/nabh-documentation-software/",
+  "whatsapp_text": "Hi, I read the NABH documentation guide and want to ask how HIMS holds our records.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "what is NABH documentation",
+  "secondary_keywords": [
+    "NABH full form",
+    "NABH accreditation meaning",
+    "hospital accreditation documentation India",
+    "NABH standards for hospitals",
+    "quality indicators hospital accreditation"
+  ],
+  "intent": "informational",
+  "persona": "Quality coordinator or hospital administrator trying to understand what accreditation will demand of their records",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "NABH documentation in two paragraphs",
+      "paras": [
+        "NABH stands for the National Accreditation Board for Hospitals and Healthcare Providers, the Indian body that accredits hospitals and other healthcare organisations against published standards. NABH documentation is the written evidence a hospital keeps to show that what its standards say it does is what it actually does: the policies it has agreed, and the patient records, registers, consents, reports and indicator data produced while following them.",
+        "Accreditation is awarded to a hospital, never to a product. It follows an assessment of that hospital's own processes, people, premises and records by the board's assessors. Nobody can sell you accreditation, and no software is accredited on your behalf. What software can do is make the evidence a by-product of ordinary work instead of a project you undertake twice a year.",
+        "Standards are revised over time and differ by the kind of organisation being assessed. Treat this guide as orientation, and confirm the current edition, entry-level and full standards, timelines and fees with the board itself and with your own quality and legal advisers before you commit to a plan."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The shape of it",
+      "h2": "Two kinds of documents, and why hospitals confuse them",
+      "lead": "Almost every documentation problem starts with treating the manual and the record as the same exercise.",
+      "body": [
+        "The first kind is the document that says what you will do. Policies, standard operating procedures, defined responsibilities, committee terms of reference, the tariff, the consent formats. These are written once, approved, dated, versioned and reviewed. They are the hospital's own promises.",
+        "The second kind is the document created because someone did something. A registration, a consent signed before a procedure, an admission note, nursing observations, an operation note, a dispensing record, a verified laboratory result, a discharge summary, an incident report, a maintenance log. These cannot be written in advance and cannot be reconstructed afterwards without the record losing its meaning.",
+        {
+          "h3": "What an assessor typically asks to see"
+        },
+        {
+          "ul": [
+            "<b>The policy, and evidence it is applied.</b> Not just the document, but records from three different days and three different wards that look the same.",
+            "<b>Complete patient records.</b> The entries the policy requires, actually present, for a sample the assessor chooses rather than one you prepared.",
+            "<b>Time and authorship.</b> Entries that carry who wrote them and when, so a contemporaneous note can be told from a later addition.",
+            "<b>Consent where consent is required.</b> Taken before the procedure, by the right person, recorded on the patient's record.",
+            "<b>Corrections handled openly.</b> Changes that can be explained, rather than values quietly overwritten."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Where it breaks",
+      "h2": "The failures that have nothing to do with clinical quality",
+      "body": [
+        "Hospitals rarely struggle because the care is poor. They struggle because the evidence of good care is scattered, undated, unsigned or impossible to sample.",
+        {
+          "table": {
+            "headers": [
+              "The gap",
+              "How it shows in an assessment",
+              "What fixes it in daily work"
+            ],
+            "rows": [
+              [
+                "Entries without time or author",
+                "The assessor cannot tell when a note was written",
+                "Individual logins, with user and timestamp captured automatically"
+              ],
+              [
+                "The same policy applied differently by ward",
+                "Three sampled records, three different practices",
+                "The required fields built into the screen everyone uses"
+              ],
+              [
+                "Indicators counted by hand from registers",
+                "Numbers that cannot be reproduced on request",
+                "Indicators read from the same records that clinical staff write"
+              ],
+              [
+                "Evidence assembled in the fortnight before",
+                "Staff photocopying instead of working",
+                "A record that is already the evidence, all year"
+              ]
+            ]
+          }
+        },
+        "None of those rows is a clinical problem. Every one is an operating problem, which is why hospitals that document electronically as they work find the preparation far less painful than those that document on paper and try to prove it later."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The honest boundary",
+      "h2": "What software does, and what it cannot touch",
+      "lead": "It is worth being blunt here, because plenty of marketing in this market is not.",
+      "body": [
+        "A hospital information system can hold complete, structured, timed and attributed records; enforce the fields a policy requires at the moment of work; keep an audit trail of changes; restrict access by role; and report indicators for any period from the same data the clinical team writes. That covers a meaningful share of the documentation burden, and it covers the part that is hardest to fake and most tedious to reconstruct.",
+        {
+          "h3": "What it cannot do"
+        },
+        {
+          "ul": [
+            "It cannot make your hospital accredited. The board assesses the hospital, awards the accreditation, and can withdraw it.",
+            "It cannot write your policies. The manual reflects decisions only your clinical leadership can make.",
+            "It cannot supply infrastructure, staffing levels, training, emergency preparedness or facility safety.",
+            "It cannot substitute for the committees, reviews and corrective actions the standards expect of the organisation."
+          ]
+        },
+        "This is why honest vendors describe their product as supporting NABH-style documentation rather than as being certified, accredited or compliant. <a href=\"/hims/nabh-documentation-software/\">HIMS is described exactly that way</a>: the records, attribution, timing and indicator reporting an assessment leans on are produced by normal use, and the accreditation itself remains the hospital's own achievement.",
+        {
+          "h3": "A sensible sequence if you are starting from paper"
+        },
+        {
+          "ul": [
+            "Get the daily transactional work into a system first, usually registration, billing and pharmacy, so staff are fluent before clinical documentation moves.",
+            "Move clinical documentation next, with the fields your policies actually require rather than every field available.",
+            "Give every person their own login. Shared accounts quietly destroy attribution.",
+            "Decide who may amend or cancel what, and write it down.",
+            "Only then start reporting indicators, so the numbers come from records people trust."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about NABH documentation",
+      "items": [
+        {
+          "q": "What is the full form of NABH?",
+          "a": "The National Accreditation Board for Hospitals and Healthcare Providers. It publishes standards for hospitals and other healthcare organisations in India and accredits those it assesses against them. Confirm the current standards, scope and process with the board directly."
+        },
+        {
+          "q": "Who awards accreditation, and to whom?",
+          "a": "The board awards it to a healthcare organisation after assessing that organisation. It is never awarded to a software product, a vendor or a supplier. A system can support your documentation, but the assessment is of your hospital's processes, people, premises and records."
+        },
+        {
+          "q": "Can software make us NABH ready?",
+          "a": "It can remove the documentation scramble by keeping records complete, timed and attributed, and by reporting indicators from the same data. Readiness also depends on policies, training, infrastructure and clinical practice, which no software supplies. Confirm your own gaps with your advisers."
+        },
+        {
+          "q": "Is an EMR mandatory for accreditation?",
+          "a": "Standards are concerned with whether documentation is complete, accurate, timely and retrievable, not with the medium as such. Paper can satisfy that and often does. Electronic records simply make completeness, timing, attribution and sampling far easier to demonstrate."
+        },
+        {
+          "q": "How long does preparation usually take?",
+          "a": "It varies with the size of the hospital, the state of the existing documentation and how much process work is needed, so any single figure would be misleading. Plan it with your quality team and advisers, and confirm timelines and requirements with the board."
+        },
+        {
+          "q": "What is the difference between the policy and the record?",
+          "a": "The policy says what the hospital will do and is written in advance. The record is created because someone did it, and carries a time and a name. An assessment checks both, and particularly whether the records show the policy being followed consistently."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/nabh-documentation-software/",
+          "icon": "&#128203;",
+          "b": "NABH documentation software",
+          "p": "Evidence as a by-product of work."
+        },
+        {
+          "href": "/hims/hospital-audit-trail-software/",
+          "icon": "&#128274;",
+          "b": "Audit trail",
+          "p": "Attribution under every entry."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128218;",
+          "b": "Hospital EMR",
+          "p": "The structured clinical record."
+        },
+        {
+          "href": "/resources/what-is-a-discharge-summary/",
+          "icon": "&#128221;",
+          "b": "Discharge summary",
+          "p": "The document everyone waits on."
+        },
+        {
+          "href": "/resources/moving-a-hospital-from-paper-to-software/",
+          "icon": "&#128260;",
+          "b": "Paper to software",
+          "p": "The honest sequence."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#127380;",
+          "b": "What is UHID",
+          "p": "One identifier per patient."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "building-products-distributor-software",
+  "title": "Building Products Distributor Software | Aura Business",
+  "meta": "Building products distributor software for supply against construction projects: phased delivery to site, site stock, retained money and installation crews.",
+  "h1": "Building products distributor software for orders that arrive <span class=\"hl\">release by release</span>.",
+  "crumb": "Building Products Distribution",
+  "pill": "For building material and fit-out distributors",
+  "sub": "Aura Business is built for distributors whose orders belong to a construction programme: material called off in phases, stock sitting at site, installation crews finishing the job, and payment that arrives long after the goods did.",
+  "meta_ticks": [
+    "Ordered against delivered, per release",
+    "Stock held at the site, not only the godown",
+    "Installation recorded with proof"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute building products and supply against construction projects. I would like to see how Aura Business handles phased delivery and site stock.",
+  "primary_keyword": "building products distributor software",
+  "secondary_keywords": [
+    "building material distribution software India",
+    "construction supplier management software",
+    "software for tile and sanitaryware distributors",
+    "project supply and installation software",
+    "contractor billing software for distributors"
+  ],
+  "intent": "commercial",
+  "persona": "Owner of a building products or fit-out distribution business supplying contractors and construction projects",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why a building products order is never one delivery",
+      "paras": [
+        "A building products distributor does not sell to a buyer who takes the goods and goes away. The order belongs to a project, and the project decides when material is wanted. The tiles are called off when the floors are ready, the doors when the frames are in, the sanitaryware when the plumbing is done. One purchase order can therefore turn into eight despatches over five months, and the only figure that matters at any moment is ordered against delivered against still to go.",
+        "The second complication is that your goods keep moving after they leave your godown. Material is stored at the site, sometimes in a room you are responsible for, sometimes in the open. A crew of yours installs part of it. Short supply and damage are argued about weeks later. And the money follows the project rather than the invoice, with a portion held back until the work is signed off. Aura Business keeps the order, the releases, the stock at each location, the installation job and the outstanding amount on one record, so the argument has evidence behind it."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where it goes wrong",
+      "h2": "The gap between what was ordered and what has gone.",
+      "lead": "Almost every loss in project supply hides in the difference between three quantities that nobody keeps in one place.",
+      "items": [
+        {
+          "h": "Nobody can state the balance quantity",
+          "p": "The order is on paper, the despatches are in a challan book, and the balance is worked out by hand when the contractor asks."
+        },
+        {
+          "h": "Material at site is not stock any more",
+          "p": "Once goods reach the site they leave the stock sheet, so shortages are discovered by the crew on the day of fitting."
+        },
+        {
+          "h": "Short supply is argued without evidence",
+          "p": "A signed challan sits somewhere in a vehicle file, and the site engineer remembers the delivery differently."
+        },
+        {
+          "h": "Installation is invisible",
+          "p": "The crew goes out and comes back, and what was fitted, what is pending and what was damaged is recounted verbally."
+        },
+        {
+          "h": "Retained money is forgotten revenue",
+          "p": "The amount withheld until completion is not chased like an invoice because nobody is holding a list of it."
+        },
+        {
+          "h": "Payment tracks the project, not your terms",
+          "p": "The contractor pays when he is paid, so ageing runs long and the oldest balances belong to finished jobs."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the schedule of items to the last retained rupee.",
+      "steps": [
+        {
+          "h": "Quote the schedule",
+          "p": "The enquiry arrives as a list of items, sizes and makes, and the GST quotation is built against that schedule."
+        },
+        {
+          "h": "Take the project order",
+          "p": "The sales order holds the full ordered quantity per line, whatever the delivery dates turn out to be."
+        },
+        {
+          "h": "Release to site",
+          "p": "Each call-off is despatched on a delivery challan against the order, so delivered and balance quantities update themselves."
+        },
+        {
+          "h": "Hold stock at the site",
+          "p": "A site store is treated as its own stock location, so material lying at the project is still material you can count."
+        },
+        {
+          "h": "Install and prove it",
+          "p": "The crew works from a mobile job card, records what was fitted, and closes with photographs and the site signature."
+        },
+        {
+          "h": "Invoice as agreed",
+          "p": "Tax invoices are raised per release or consolidated, with e-invoice and e-way bill details carried from the same lines."
+        },
+        {
+          "h": "Chase to the end",
+          "p": "The payment tracker keeps the balance and the withheld amount visible until the project account is actually closed."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for supply that happens in phases.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Orders and releases",
+          "items": [
+            "GST quotation builder against a schedule of items",
+            "Sales orders that hold the full project quantity",
+            "Delivery challans per release, converting to tax invoice",
+            "Proforma invoices for advance against material",
+            "Credit notes and returns for rejected or excess supply"
+          ]
+        },
+        {
+          "icon": "&#127959;",
+          "h": "Stock, including at site",
+          "items": [
+            "Multi-warehouse stock with a site treated as a location",
+            "Product catalogue with sizes, finishes and brands",
+            "Serial and batch tracking where the item carries one",
+            "Stock movement ledger for every issue and transfer",
+            "Low-stock and reorder alerts on fast-moving lines"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Installation and after",
+          "items": [
+            "Job cards for installation crews, offline capable",
+            "Photo proof and site signature on completion",
+            "Service call intake for defects raised after handover",
+            "Warranty tracking on installed items",
+            "Service history against the site and the item"
+          ]
+        },
+        {
+          "icon": "&#128176;",
+          "h": "Money that comes late",
+          "items": [
+            "Payment tracker with WhatsApp reminders",
+            "Receivables ageing by customer and by account",
+            "Credit limit and credit days per contractor",
+            "E-invoice with IRN and QR, and e-way bill on despatch",
+            "Owner dashboard showing outstanding across customers"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four answers a project supplier needs quickly.",
+      "items": [
+        {
+          "h": "What is still to go on this order",
+          "workflow": "Every despatch is raised against the sales order, so ordered, delivered and balance quantities sit on one screen per line.",
+          "result": "The contractor gets the balance in a call, not a day later."
+        },
+        {
+          "h": "What is lying at the site",
+          "workflow": "Material moved to a project is transferred to that site location rather than written off the books at despatch.",
+          "result": "Shortages are seen before the crew arrives to fit."
+        },
+        {
+          "h": "Proof that the delivery happened",
+          "workflow": "The challan, the received signature, the job card photographs and the installation date all hang off the same order.",
+          "result": "A short-supply claim is answered with records."
+        },
+        {
+          "h": "The money still held back",
+          "workflow": "Retained and part-paid balances stay open against the customer in ageing instead of disappearing once the job is complete.",
+          "result": "Closed projects get chased like live ones."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Distributors whose customer is a building site.",
+      "items": [
+        {
+          "icon": "&#129513;",
+          "b": "Tile, stone and sanitaryware distributors",
+          "p": "Large schedules, phased call-offs, breakage to account for."
+        },
+        {
+          "icon": "&#128682;",
+          "b": "Door, window and facade suppliers",
+          "p": "Measured items, site fitting, defect calls after handover."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Lighting and fittings distributors",
+          "p": "Supply against a project schedule with a service tail."
+        },
+        {
+          "icon": "&#128295;",
+          "b": "Plumbing and hardware wholesalers",
+          "p": "Repeat lines, many contractors, credit stretched thin."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Interior and fit-out contractors",
+          "p": "Buying, storing and installing on the same project."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A challan book, an accounting package, or an operations platform.",
+      "cols": [
+        "Challan book and Excel",
+        "Accounting software alone",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Balance quantity per order",
+          "Worked out by hand",
+          "Only what was invoiced",
+          "Ordered, delivered and balance per line"
+        ],
+        [
+          "Material lying at a site",
+          "Off the books at despatch",
+          "Not modelled",
+          "A stock location you can count"
+        ],
+        [
+          "Proof of delivery",
+          "A signed page in a file",
+          "An invoice copy",
+          "Challan, signature and photographs on the order"
+        ],
+        [
+          "Installation work",
+          "Told over the phone",
+          "Not covered",
+          "Job card with photo proof and site sign-off"
+        ],
+        [
+          "Defects after handover",
+          "A call to the owner",
+          "Not covered",
+          "Service call against the site and the item"
+        ],
+        [
+          "Withheld and overdue money",
+          "Remembered per customer",
+          "A ledger balance",
+          "Payment tracker, ageing and reminders"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Project supply, answered.",
+      "items": [
+        {
+          "q": "Can one order be delivered in many phases?",
+          "a": "Yes. The sales order carries the full ordered quantity and each call-off is despatched against it on a delivery challan, so delivered and balance quantities stay current without anyone maintaining a separate tally sheet."
+        },
+        {
+          "q": "How do we keep track of stock stored at a site?",
+          "a": "Treat the site as a stock location. Multi-warehouse stock lets material be transferred to a project store rather than vanishing from the books at despatch, so what is lying there can be counted, issued to a crew and reconciled at the end."
+        },
+        {
+          "q": "Does it handle installation crews as well as delivery?",
+          "a": "Yes. Installation is dispatched as a job with a mobile job card the crew completes on site, covering items fitted, materials consumed, photographs and a signature. It works offline, which matters on a site with poor signal."
+        },
+        {
+          "q": "Can we see outstanding money for one contractor across sites?",
+          "a": "Receivables ageing runs by customer, and every order and invoice stays linked to the account it belongs to, so a contractor with several sites can be reviewed as a whole before the next release is despatched."
+        },
+        {
+          "q": "What about amounts held back until completion?",
+          "a": "A withheld balance stays open against the customer in the payment tracker and in ageing rather than being closed when the goods were delivered, so it appears on the chase list alongside ordinary overdue invoices."
+        },
+        {
+          "q": "Do delivery challans and e-way bills come from the same record?",
+          "a": "Yes. The challan, the tax invoice, the e-invoice IRN and QR, and the e-way bill are all raised from the same order lines, so the despatch documents agree with each other without retyping. See <a href=\"/aura-business/delivery-challan-software/\">delivery challan software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128188;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/electrical-equipment-dealer-software/",
+          "icon": "&#128268;",
+          "b": "Electrical dealers",
+          "p": "Panels, commissioning, warranty claims."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128230;",
+          "b": "Delivery challans",
+          "p": "Goods that move before the invoice."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables ageing",
+          "p": "Who owes what, for how long."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warehouse-management/",
+          "icon": "&#127978;",
+          "b": "Warehouse management",
+          "p": "Multi-location stock control."
+        },
+        {
+          "href": "/resources/why-distributor-stock-never-matches/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Why stock never matches the shelf."
+        }
+      ]
+    }
+  ]
+}

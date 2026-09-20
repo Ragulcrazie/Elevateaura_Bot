@@ -341,6 +341,12 @@
           "icon": "&#9878;",
           "b": "Generic CRM vs ours",
           "p": "Why tenders need their own suite."
+        },
+        {
+          "href": "/aura-business/rate-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Rate contracts",
+          "p": "Agreed prices held for a period."
         }
       ]
     }

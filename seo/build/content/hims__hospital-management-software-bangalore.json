@@ -1,0 +1,222 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-bangalore",
+  "title": "Hospital Management Software in Bangalore | HIMS",
+  "meta": "Hospital management software for Bangalore hospitals, clinic groups and nursing homes: OP, IP, pharmacy, lab, billing, set up remotely with support on WhatsApp.",
+  "h1": "Hospital management software for Bangalore, built for branches that must <span class=\"hl\">run the same way</span>.",
+  "crumb": "Bangalore",
+  "pill": "Bangalore and Karnataka",
+  "sub": "HIMS runs OP, IP, theatre, ICU, pharmacy, laboratory, imaging and billing for Bangalore hospitals, clinic groups and nursing homes, deployed remotely from Chennai with training designed to be repeated as staff change.",
+  "meta_ticks": [
+    "Remote setup and training",
+    "Built for multi-branch groups",
+    "WhatsApp and remote support"
+  ],
+  "demo_href": "/demo/hospital.html",
+  "whatsapp_text": "Hi, we run a hospital or clinic group in Bangalore and would like to see HIMS.",
+  "primary_keyword": "hospital management software Bangalore",
+  "secondary_keywords": [
+    "hospital software Bangalore",
+    "clinic management software Bangalore",
+    "HMS software Bengaluru",
+    "multi branch clinic software Karnataka",
+    "nursing home software Bangalore"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital or multi-branch clinic group in Bangalore",
+  "city": "Bangalore",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Bangalore, set up remotely and said so plainly",
+      "paras": [
+        "HIMS is a hospital and clinic platform covering registration, appointments and tokens, the clinical record, pharmacy, laboratory, inventory, wards, theatre, ICU, imaging and billing, and Bangalore hospitals use it through remote deployment from Elevate Aura's studio in Chennai. Scoping happens on a call, existing patient and item data is migrated, training runs over screen-share across shifts, and the system is live in 30 working days where scope allows.",
+        "Bangalore is not a day trip from Chennai in the way Vellore or Trichy are, so there is no pretending that someone will drop in on a Tuesday. Elevate Aura has no Bangalore office, no local engineer and no Karnataka support number. Setup and training are delivered remotely, travel is possible when a project genuinely warrants it and is agreed in advance, and ongoing support is remote and on WhatsApp with the founder who built the platform."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Bangalore context",
+      "h2": "A crowded private market where the second branch changes everything.",
+      "lead": "Bangalore carries an unusually dense layer of private hospitals, specialty centres, polyclinics and standalone clinics, sitting next to large institutions and serving patients from across Karnataka and well beyond it.",
+      "body": [
+        "For software that density matters less than what it does to the operators. A successful clinic in Bangalore rarely stays single-site. It opens a second location, then a third, and discovers that its practices were never written down anywhere except in the habits of the people at the first desk. Rates differ between branches. A patient registered at one is a stranger at the other. The owner asks a simple question, how many consultations and how much collection yesterday, and gets three answers assembled by three people.",
+        {
+          "h3": "Staff turnover makes training a permanent requirement"
+        },
+        "The second Bangalore-specific pressure is churn. Front-office and support staff move between employers more readily than in smaller cities, and a system that only works because a long-serving receptionist knows its quirks is a liability. So the emphasis during a Bangalore rollout falls on repeatability rather than on a clever go-live.",
+        {
+          "ul": [
+            "A fixed field order at registration, so two people entering the same patient produce the same record.",
+            "Search before create, so a returning patient is found rather than issued a second identifier.",
+            "Role-based access by designation, so a new joiner inherits a role instead of somebody's password.",
+            "Training sessions that can be recorded, so the person who starts next month is taught the same way as the person who started last month.",
+            "Written scope and configuration, so the hospital owns how the system was set up rather than remembering it."
+          ]
+        },
+        {
+          "h3": "How a remote rollout actually runs"
+        },
+        {
+          "ul": [
+            "A working session over video, department by department, to see how the hospital currently registers, dispenses, tests and bills.",
+            "A first phase chosen around the worst pain, usually registration, billing and pharmacy.",
+            "Patient, item, rate and doctor data imported from your existing files, with the hospital's branding on the screens and the bill.",
+            "Training over screen-share across shifts, with the counter staff doing the entry while someone watches.",
+            "Live in 30 working days where scope allows, then remote and WhatsApp support, with a visit arranged when a project warrants it."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Bangalore hospital or clinic group runs on.",
+      "groups": [
+        {
+          "icon": "&#128337;",
+          "h": "Front office",
+          "items": [
+            "OP registration under one UHID",
+            "Appointments by doctor and department",
+            "Token queue for walk-in mornings",
+            "Doctor rosters across locations"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Inpatient",
+          "items": [
+            "IP registration and ward allocation",
+            "Bed occupancy across wards",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed",
+            "Discharge summary drawn from the record"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Pharmacy dispensing queue, low-stock and expiry alerts",
+            "Laboratory from order to verified result",
+            "AuraPACS imaging attached to the patient record"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money and oversight",
+          "items": [
+            "Cash billing at the counter",
+            "Insurance, TPA and corporate credit billing",
+            "GST on billable items",
+            "Live dashboard of OP, IP, bed occupancy and collections"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Situations a Bangalore operator will recognise.",
+      "items": [
+        {
+          "h": "A patient who used the other branch",
+          "workflow": "The receptionist searches by mobile number, finds the existing UHID and opens the previous consultation and results.",
+          "result": "One record per person, not one per location."
+        },
+        {
+          "h": "A receptionist who joined on Monday",
+          "workflow": "She is given a role, a fixed registration screen and the recorded training, and does live entries with supervision on day one.",
+          "result": "The desk does not depend on a single long-serving person."
+        },
+        {
+          "h": "An owner asking about yesterday",
+          "workflow": "The dashboard shows OP and IP numbers, bed occupancy and collections without anyone being asked to compile them.",
+          "result": "A question answered in the app rather than by a phone call to each branch."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Bangalore, answered.",
+      "items": [
+        {
+          "q": "Do you have an office or engineer in Bangalore?",
+          "a": "No. Elevate Aura is in Chennai, with no Bangalore office, staff or local number. Setup and training are delivered remotely over video and screen-share, travel is possible when a project warrants it and is agreed beforehand, and ongoing support is remote and on WhatsApp."
+        },
+        {
+          "q": "Can remote training really work for counter staff?",
+          "a": "It works when the training is hands-on rather than a demonstration: your staff do the live entries while we watch over screen-share, across shifts. Sessions can be recorded so later joiners are taught the same way, which matters more in Bangalore than a one-off visit would."
+        },
+        {
+          "q": "We run three branches. Is that one system or three?",
+          "a": "One system. Patients, rates, doctors and stock are configured so a record created at one location is readable at another, and the dashboard reports each branch and the group. How locations share data is settled during scoping."
+        },
+        {
+          "q": "Will it handle insurance and corporate patients?",
+          "a": "Yes. Cash, insurance, TPA claims and corporate credit billing run on the same admission alongside GST on billable items. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">insurance and TPA billing</a> and <a href=\"/hims/hospital-corporate-credit-billing/\">corporate credit billing</a>."
+        },
+        {
+          "q": "Is it suitable for a clinic rather than a hospital?",
+          "a": "Yes. Modules are switched on selectively, so a polyclinic can run registration, EMR, e-prescription, pharmacy and billing without carrying ward, theatre or ICU screens. See <a href=\"/hims/polyclinic-management-software/\">polyclinic management software</a>."
+        },
+        {
+          "q": "What is the timeline and what happens after go-live?",
+          "a": "Live in 30 working days where scope allows, with the scope fixed at the start and data migration, branding and training inside that window. Afterwards, support is remote and on WhatsApp directly with the founder who built and runs the platform."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "One system for the whole hospital."
+        },
+        {
+          "href": "/hims/polyclinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Polyclinic software",
+          "p": "Several doctors, one front desk."
+        },
+        {
+          "href": "/hims/hospital-management-software-hyderabad/",
+          "icon": "&#128205;",
+          "b": "Hyderabad",
+          "p": "Two states from one city."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#127380;",
+          "b": "UHID registration",
+          "p": "One identifier per patient."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128202;",
+          "b": "Owner dashboard",
+          "p": "Yesterday, without a phone call."
+        },
+        {
+          "href": "/resources/moving-a-hospital-from-paper-to-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Paper to software, in order."
+        }
+      ]
+    }
+  ]
+}

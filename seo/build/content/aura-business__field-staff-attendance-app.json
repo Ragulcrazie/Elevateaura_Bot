@@ -1,0 +1,359 @@
+{
+  "cluster": "aura-business",
+  "slug": "field-staff-attendance-app",
+  "title": "Field Staff Attendance App with GPS and Selfie",
+  "meta": "Attendance app for field staff: geo-fenced check-in, selfie verification, leave, and a month-end register your payroll can actually be run from.",
+  "h1": "Attendance for staff who <span class=\"hl\">never come to the office</span>.",
+  "crumb": "Field Attendance App",
+  "pill": "For teams spread across a city or a state",
+  "sub": "Aura Business marks attendance where the work happens: the staff member opens the app, the location is captured, a selfie confirms who it is, and the month-end register is built from those records rather than from chat messages.",
+  "meta_ticks": [
+    "Geolocation and selfie on check-in",
+    "Leave applied and approved in the app",
+    "Month-end register feeds payroll inputs"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business dashboard showing field staff attendance status, check-in locations and leave for the day",
+    "bar": "app.elevateaura.co.in/hrms"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see the field staff attendance app with GPS and selfie.",
+  "primary_keyword": "field staff attendance app with GPS and selfie",
+  "secondary_keywords": [
+    "GPS attendance app India",
+    "selfie attendance app for field employees",
+    "geo fencing attendance software",
+    "mobile attendance and leave app",
+    "attendance app for sales and service staff"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or HR coordinator responsible for marking attendance for sales reps and service engineers who never visit the office",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "How attendance works when nobody passes a biometric machine",
+      "paras": [
+        "A fingerprint reader at the office door is useless for a rep who starts the day at a hospital and a service engineer who goes straight to a breakdown. A field attendance app replaces that machine with the phone already in their pocket: the person marks in, the app records where they were and a selfie confirms it was them.",
+        "In Aura Business this is the HRMS suite. Attendance with geolocation and selfie, leave applications and approvals, a staff directory with roles, shift and roster planning, staff verification, and the payroll inputs that the month's records add up to.",
+        "The useful part is not the check-in itself. It is that at month end there is one register, built from timestamped records, that the person preparing salaries can work from without reconciling anyone's messages."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The register problem",
+      "h2": "Why field attendance is never quite right.",
+      "lead": "Everybody involved is acting in good faith. The record is simply not being made anywhere.",
+      "items": [
+        {
+          "h": "Attendance by message",
+          "p": "A good morning in a group at 9.15 is a greeting, not a record, and it cannot be totalled at month end."
+        },
+        {
+          "h": "Marked from anywhere",
+          "p": "A simple check-in button can be pressed from bed, which is why nobody trusts it."
+        },
+        {
+          "h": "Half-days and late starts argued later",
+          "p": "Without a timestamp, the discussion at salary time is memory against memory."
+        },
+        {
+          "h": "Leave requested verbally",
+          "p": "Permission given on a phone call is forgotten by the person who gave it."
+        },
+        {
+          "h": "The register is rebuilt every month",
+          "p": "Somebody spends two days scrolling chats and calling supervisors to compile a sheet."
+        },
+        {
+          "h": "No link to the work done",
+          "p": "Attendance sits in one file and visits or service calls in another, so present and productive are separate questions."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A month of attendance",
+      "h2": "From the first check-in to the payroll sheet.",
+      "steps": [
+        {
+          "h": "Mark in",
+          "p": "The staff member opens the app at the start of the shift and marks attendance."
+        },
+        {
+          "h": "Location captured",
+          "p": "Geolocation is recorded with the check-in, and can be geo-fenced to a site or territory where that is agreed."
+        },
+        {
+          "h": "Selfie verified",
+          "p": "A photo taken at that moment is stored against the record, so the mark belongs to a person, not a device."
+        },
+        {
+          "h": "Leave and absence handled",
+          "p": "Leave is applied for in the app and approved by the reporting manager, with the balance visible to both."
+        },
+        {
+          "h": "Shift and roster applied",
+          "p": "The roster defines the expected shift, so late marks and off-days are classified rather than argued."
+        },
+        {
+          "h": "Register at month end",
+          "p": "Present, absent, leave and holidays totalled per staff member with the underlying records attached."
+        },
+        {
+          "h": "Payroll inputs handed over",
+          "p": "The totals feed the payroll inputs module for whoever prepares salaries."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "On the phone, and in the HR file.",
+      "groups": [
+        {
+          "icon": "&#128241;",
+          "h": "On the staff phone",
+          "items": [
+            "Attendance with geolocation and selfie",
+            "Leave application and balance",
+            "Roster and shift for the day",
+            "Works alongside field visits and job cards"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "For the office",
+          "items": [
+            "Staff directory with roles and reporting",
+            "Leave approval workflow",
+            "Shift and roster planning",
+            "Staff verification records"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "At month end",
+          "items": [
+            "Attendance register per staff member",
+            "Payroll inputs for the salary run",
+            "GPS and field tracking view for the day",
+            "Audit log of changes to records"
+          ]
+        },
+        {
+          "icon": "&#128279;",
+          "h": "Connected to the work",
+          "items": [
+            "Field visits with GPS check-in at customer sites",
+            "Service job cards closed by the same person",
+            "Activity feed showing the day's calls and visits",
+            "Role-based access so staff see only their own record"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a real register changes.",
+      "items": [
+        {
+          "h": "A rep starts at a hospital, not the office",
+          "workflow": "She marks attendance from the hospital gate with location and selfie, then logs the field visit when she checks in inside.",
+          "result": "The day is recorded without anyone driving to the office to be counted."
+        },
+        {
+          "h": "A disputed half-day is settled in seconds",
+          "workflow": "The record shows the mark time, the location and the photo taken at that moment.",
+          "result": "The conversation moves from argument to fact."
+        },
+        {
+          "h": "Leave stops being verbal",
+          "workflow": "An engineer applies in the app, the service head approves it, and the roster for that week reflects the gap.",
+          "result": "Dispatch stops assigning calls to someone who is not working."
+        },
+        {
+          "h": "Salaries are prepared from one sheet",
+          "workflow": "The month closes with present, leave and absent days totalled per person, ready as payroll inputs.",
+          "result": "Two days of compilation disappear from the accounts desk."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any team that works away from a fixed office.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Sales representatives",
+          "p": "Reps covering hospitals, dealers or retail counters."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Service engineers",
+          "p": "Technicians who begin the day at a breakdown."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "Delivery and despatch staff",
+          "p": "Drivers and loaders working from a godown."
+        },
+        {
+          "icon": "&#127959;",
+          "b": "Site and project teams",
+          "p": "Staff posted at a customer site for weeks at a time."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Multi-branch businesses",
+          "p": "Several small offices with no HR person in any of them."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How field attendance is usually marked.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Proof of who marked",
+          "None",
+          "None",
+          "Card or biometric at a site",
+          "Selfie stored with the record"
+        ],
+        [
+          "Proof of where",
+          "None",
+          "Rarely",
+          "Fixed device location",
+          "Geolocation, geo-fenced where agreed"
+        ],
+        [
+          "Leave",
+          "Verbal",
+          "Not included",
+          "Separate HR module",
+          "Applied and approved in the app"
+        ],
+        [
+          "Roster and shifts",
+          "A printed sheet",
+          "No",
+          "Yes, heavy",
+          "Shift and roster planning included"
+        ],
+        [
+          "Month-end register",
+          "Compiled by hand",
+          "Not produced",
+          "Yes",
+          "Built from the records automatically"
+        ],
+        [
+          "Linked to visits and jobs",
+          "Separate files",
+          "Visits only",
+          "Separate implementation",
+          "Same app as visits and job cards"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Field attendance, answered.",
+      "items": [
+        {
+          "q": "Does the app track staff all day?",
+          "a": "Attendance captures location at the moment of marking, and field visits capture GPS check-in at customer sites. How much continuous tracking is switched on is a decision for you and your team, agreed during setup."
+        },
+        {
+          "q": "What is geo-fencing here?",
+          "a": "A check-in can be tied to a defined location or territory, so a mark is accepted at the site where the person is expected. The boundaries are configured per role or branch during setup."
+        },
+        {
+          "q": "Is the selfie stored, and for how long?",
+          "a": "The photo is stored against the attendance record so a disputed day can be checked later. Retention and who may view the images are settled during setup along with role-based access."
+        },
+        {
+          "q": "Does this run payroll?",
+          "a": "No. It produces payroll inputs, which are the attendance, leave and absence totals your salary process needs. The salary calculation itself stays where you do it today."
+        },
+        {
+          "q": "What if the phone has no network?",
+          "a": "The app works offline for field work and queues records until a connection returns, so a mark made in a basement or a plant room is not lost."
+        },
+        {
+          "q": "Can the same app cover sales and service staff?",
+          "a": "Yes. Attendance, leave and roster are shared, while the screens each role sees differ. See <a href=\"/aura-business/field-technician-tracking-app/\">the technician app</a> and <a href=\"/aura-business/beat-plan-software/\">beat plans for reps</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128241;",
+          "b": "Technician app",
+          "p": "The service side of the same app."
+        },
+        {
+          "href": "/aura-business/beat-plan-software/",
+          "icon": "&#128506;",
+          "b": "Beat plans",
+          "p": "What the rep does after marking in."
+        },
+        {
+          "href": "/aura-business/mobile-job-card-software/",
+          "icon": "&#128221;",
+          "b": "Job cards",
+          "p": "Work recorded on the phone."
+        },
+        {
+          "href": "/aura-business/territory-management-software/",
+          "icon": "&#128205;",
+          "b": "Territories",
+          "p": "Who covers which area."
+        },
+        {
+          "href": "/aura-business/healthcare-business-automation-software/",
+          "icon": "&#9881;",
+          "b": "Automation",
+          "p": "The wider platform."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#128218;",
+          "b": "Case study",
+          "p": "A field team app built end to end."
+        }
+      ]
+    }
+  ]
+}

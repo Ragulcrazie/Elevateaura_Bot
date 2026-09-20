@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "paediatric-clinic-software",
+  "title": "Paediatric Clinic Software | Visits, Vaccines, Parents | HIMS",
+  "meta": "Paediatric clinic software that records weight on every visit, holds immunisation due dates as recurring appointments and keeps the parent as the contact.",
+  "h1": "Paediatric clinic software where the patient is a child and <span class=\"hl\">the contact is a parent</span>.",
+  "crumb": "Paediatric Clinic Software",
+  "pill": "For paediatric clinics and child health practices",
+  "sub": "Small children are seen often, weighed every time and due for something on a schedule. HIMS keeps one record per child from the first visit, records the weight on each visit, holds immunisation due dates as appointments, and sends reminders to the parent.",
+  "meta_ticks": [
+    "Weight recorded on every visit",
+    "Immunisation due dates as appointments",
+    "Reminders to the parent, not the child"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patient-portal.png",
+    "alt": "HIMS patient portal showing upcoming appointments and visit history as a parent would see them",
+    "bar": "his.elevateaura.co.in/portal"
+  },
+  "whatsapp_text": "Hi, I run a paediatric clinic and would like to see HIMS.",
+  "primary_keyword": "paediatric clinic software",
+  "secondary_keywords": [
+    "pediatric clinic management software India",
+    "child health clinic software",
+    "immunisation reminder software",
+    "paediatrician appointment software",
+    "vaccination schedule software clinic",
+    "child patient record software"
+  ],
+  "intent": "commercial",
+  "persona": "Paediatrician running a clinic where children are seen frequently and vaccination follow-up drives repeat visits",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a paediatric clinic needs software to remember",
+      "paras": [
+        "A paediatric clinic has three habits that general clinic software tends to ignore. Children in the first years are seen many times in a short period, so the record fills up quickly and has to be readable at a glance. The weight taken at the desk matters at the moment of prescribing, so it needs to be on the visit rather than on a slip. And a large share of visits are not illnesses at all but due dates, which means the clinic has to know who is due and who did not come.",
+        "HIMS handles all three with parts it already has. One UHID per child carries every visit, with the weight and other observations recorded against the visit and visible to the doctor writing the e-prescription. Immunisation and review due dates are held as booked appointments with WhatsApp reminders, so the follow-up list is a list, not a memory. The contact details on the record are the parent's, which is how the clinic reaches the patient."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The frequent-visit problem",
+      "h2": "The child comes back in three weeks, and the clinic finds out when they walk in.",
+      "lead": "Paediatric practice is repeat work, and repeat work is exactly what paper handles worst.",
+      "items": [
+        {
+          "h": "The weight is on a slip",
+          "p": "It is taken at the desk, written on paper and read out in the consulting room, and nothing keeps it."
+        },
+        {
+          "h": "The immunisation card lives at home",
+          "p": "The only record of what has been given is in the parent's bag, so the clinic cannot tell who is overdue."
+        },
+        {
+          "h": "No list of who is due",
+          "p": "Reminders depend on somebody flipping through a register in the evening, which does not happen in a busy week."
+        },
+        {
+          "h": "Siblings on separate files",
+          "p": "One family, two or three children, and nothing at the desk connects them."
+        },
+        {
+          "h": "Last visit is hard to find",
+          "p": "After twenty visits in two years, the file is thick and the relevant note is somewhere in the middle."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A paediatric visit",
+      "h2": "From the desk to the next due date.",
+      "steps": [
+        {
+          "h": "Registration",
+          "p": "The child gets a UHID; the parent's name and phone number sit on the record as the contact."
+        },
+        {
+          "h": "At the desk",
+          "p": "Weight and other observations are recorded on the visit before the child goes in."
+        },
+        {
+          "h": "Consultation",
+          "p": "The doctor opens the visit with the weight already on it, records notes and raises an e-prescription."
+        },
+        {
+          "h": "The due date",
+          "p": "The next immunisation or review is booked as an appointment before the family leaves."
+        },
+        {
+          "h": "Reminder",
+          "p": "A WhatsApp reminder goes to the parent ahead of the date, with templates agreed at setup."
+        },
+        {
+          "h": "Who did not come",
+          "p": "The appointment list shows missed due dates so the desk can call."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS a child health practice uses.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "The child's record",
+          "items": [
+            "One UHID from the first visit",
+            "Weight and observations per visit",
+            "Structured notes readable in sequence",
+            "Allergies and history on the record"
+          ]
+        },
+        {
+          "icon": "&#128106;",
+          "h": "The parent",
+          "items": [
+            "Parent as the contact on the record",
+            "Patient app and portal used by the parent",
+            "Siblings found by the same phone number",
+            "Reports and prescriptions shared to the parent"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Due dates",
+          "items": [
+            "Immunisation and review dates as appointments",
+            "Recurring schedule set up at configuration",
+            "WhatsApp reminders before the date",
+            "A list of who did not attend"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Prescribing and dispensing",
+          "items": [
+            "e-Prescription with the weight on the same visit",
+            "Dispensing queue at the counter",
+            "Batch and expiry alerts on stock",
+            "Cash and insurance billing"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/clinic-management-software/",
+        "label": "See how HIMS runs a clinic"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes in a clinic full of small children.",
+      "items": [
+        {
+          "h": "Weighed before the door",
+          "workflow": "The desk records the weight on the visit, and it is on screen when the doctor prescribes.",
+          "result": "The figure the doctor prescribes against is recorded, not recalled."
+        },
+        {
+          "h": "The clinic holds the schedule",
+          "workflow": "Immunisation due dates are booked as appointments on the child's record rather than written on a card.",
+          "result": "The clinic knows who is due even if the card is lost."
+        },
+        {
+          "h": "The overdue list",
+          "workflow": "Missed appointments show on the list, and the desk sends a WhatsApp reminder to the parent.",
+          "result": "Follow-up becomes a task somebody can finish."
+        },
+        {
+          "h": "Two children, one family",
+          "workflow": "A search on the parent's phone number brings up every child registered against it.",
+          "result": "The desk finds the right record in seconds."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Practices that see children often.",
+      "items": [
+        {
+          "icon": "&#128118;",
+          "b": "Paediatric clinics",
+          "p": "One or more paediatricians, high visit frequency."
+        },
+        {
+          "icon": "&#128137;",
+          "b": "Immunisation centres",
+          "p": "Due dates and recall as the core of the work."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Child health units",
+          "p": "A paediatric wing inside a larger hospital."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Polyclinics",
+          "p": "Paediatrics alongside other consultants."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Clinics outside the metros",
+          "p": "Cloud setup and WhatsApp support, no local IT."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a paediatric clinic, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Weight at the visit",
+          "A slip that gets thrown away",
+          "Not covered",
+          "Recorded on the visit with the prescription"
+        ],
+        [
+          "Immunisation due dates",
+          "A card kept at home",
+          "Not covered",
+          "Appointments on the child's record"
+        ],
+        [
+          "Who is overdue",
+          "Nobody knows",
+          "Not covered",
+          "A list the desk can work through"
+        ],
+        [
+          "Reaching the family",
+          "Whatever number was written last",
+          "Not covered",
+          "Parent contact on the record, WhatsApp reminders"
+        ],
+        [
+          "Visit history",
+          "A thick file",
+          "Bills only",
+          "Visits in order on one record"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Paediatric clinic software, answered.",
+      "items": [
+        {
+          "q": "Does HIMS have a paediatrics module?",
+          "a": "No. HIMS is a general hospital system configured for the way a paediatric clinic works, which is frequent visits, weight recorded at every visit and schedules of due dates. It is not sold as a specialty product, and anything specialty-specific would be scoped on the call."
+        },
+        {
+          "q": "Does it calculate doses by weight?",
+          "a": "HIMS records rather than calculates. The weight is captured on the visit and shown to the doctor writing the e-prescription, and what was prescribed is kept on the record. Dose decisions stay with the clinician."
+        },
+        {
+          "q": "How are immunisation schedules handled?",
+          "a": "Due dates are booked as appointments on the child's record, with WhatsApp reminders before the date and a list of missed appointments afterwards. The schedule your clinic follows is set up at configuration."
+        },
+        {
+          "q": "Can a parent see the record?",
+          "a": "The patient app and portal are used by the parent, who can see upcoming appointments and reports. Prescriptions and reports can also be shared to their phone."
+        },
+        {
+          "q": "Can we find all the children in one family?",
+          "a": "Yes. Registration searches by phone number before creating a patient, so siblings registered against the same parent contact come up together and duplicate records are avoided."
+        },
+        {
+          "q": "Is the clinic version different from the hospital one?",
+          "a": "It is the same platform with the modules a clinic uses switched on. If you later add beds, a laboratory or imaging, they run on the same record rather than needing a migration."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "For outpatient-only practices."
+        },
+        {
+          "href": "/hims/hospital-whatsapp-appointment-reminders/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Due dates that reach the parent."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#128100;",
+          "b": "UHID registration",
+          "p": "One identity per patient."
+        },
+        {
+          "href": "/hims/e-prescription-software/",
+          "icon": "&#128221;",
+          "b": "e-Prescription",
+          "p": "Written to dispensed."
+        },
+        {
+          "href": "/hims/polyclinic-management-software/",
+          "icon": "&#128101;",
+          "b": "Polyclinic software",
+          "p": "Several consultants, one desk."
+        }
+      ]
+    }
+  ]
+}

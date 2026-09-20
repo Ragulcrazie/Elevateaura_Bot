@@ -324,6 +324,12 @@
           "icon": "&#128218;",
           "b": "Guide",
           "p": "What a HIMS is."
+        },
+        {
+          "href": "/hims/paediatric-clinic-software/",
+          "icon": "&#129492;",
+          "b": "Paediatric clinics",
+          "p": "High visit frequency in early years."
         }
       ]
     }

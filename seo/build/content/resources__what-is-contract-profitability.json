@@ -1,0 +1,210 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-contract-profitability",
+  "title": "What Is Contract Profitability for AMC? Plain Guide",
+  "meta": "Contract profitability for AMC explained: visit costs, spares consumed, travel and breakdown frequency, and what to measure per contract before you renew it.",
+  "h1": "What is contract profitability, and how does a good AMC price <span class=\"hl\">still lose money</span>?",
+  "crumb": "Contract profitability",
+  "pill": "Guide",
+  "sub": "A maintenance contract is sold once and delivered for a year. Contract profitability is the question of what that year actually cost you, machine by machine, and it is usually asked for the first time when the renewal is already due.",
+  "meta_ticks": [
+    "Written for dealers and service firms",
+    "Cost heads named, no figures",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your contract profitability guide and want to see how Aura Business measures cost per AMC contract.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is contract profitability",
+  "secondary_keywords": [
+    "AMC contract profitability analysis",
+    "cost of servicing an AMC contract",
+    "is our AMC contract profitable",
+    "service contract margin tracking",
+    "AMC renewal pricing based on cost"
+  ],
+  "intent": "informational",
+  "persona": "Owner or service head of an equipment dealership deciding what to charge when a maintenance contract comes up for renewal",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Contract profitability in two paragraphs",
+      "paras": [
+        "Contract profitability is what a maintenance contract earned minus everything it cost to honour, measured for that contract alone rather than for the service department as a whole. The income side is easy: the contract value plus anything chargeable you billed on top. The cost side is the part nobody assembles, because it arrives in fragments over twelve months, through different people and different registers.",
+        "This is why a contract can be sold at a price everyone was pleased with and still lose money. The price is agreed once, against an assumption about how often the machine will need attention. The cost is incurred continuously, by engineers making unplanned visits, by spares consumed without anyone deciding they should be, and by travel to a site further away than the pricing ever accounted for. Nothing announces the loss. The contract simply earns less than the next one, and you find out only if you measure."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The cost side",
+      "h2": "Five things a contract quietly consumes",
+      "lead": "Each of these is obvious in isolation. The reason they escape notice is that no single person sees all five for the same contract.",
+      "body": [
+        {
+          "h3": "Planned visits"
+        },
+        "The preventive visits you promised are the one cost that was priced deliberately, and even they slip. A contract quoted on two visits a year that in practice receives four, because the customer calls and it is easier to agree than to argue, has doubled its largest known cost without a single decision being recorded.",
+        {
+          "h3": "Breakdown frequency"
+        },
+        "This is the swing factor, and it is machine-specific rather than customer-specific. Two identical units under identical contracts can differ enormously depending on age, installation quality, usage intensity, power conditions and how carefully the customer's staff operate them. A machine that breaks down repeatedly consumes engineer days that were never in the price, and it will keep doing so next year.",
+        {
+          "h3": "Spares consumed"
+        },
+        "Under a comprehensive contract, parts are yours to absorb. Under an annual contract they are chargeable, which only helps if somebody actually raised the invoice. Parts fitted during a visit and never billed are the single most common form of contract leakage, and they are invisible unless consumption is booked against the job that used it.",
+        {
+          "h3": "Travel and time"
+        },
+        "A site two hours away costs an engineer's day for an hour of work. Contracts are usually priced per machine or per contract value, rarely by distance, so distant sites subsidise nothing and are subsidised by everyone else. Where a customer has several machines on one site the arithmetic reverses, which is worth knowing when you quote.",
+        {
+          "h3": "Everything after the visit"
+        },
+        "Call handling, scheduling, rescheduling when the customer is not ready, chasing a part, raising the invoice and chasing the payment. Individually trivial, collectively a real cost, and concentrated on exactly the customers who are already the most demanding."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "What to measure",
+      "h2": "Per contract, per year, before the renewal",
+      "headers": [
+        "Measure",
+        "Where it comes from",
+        "What it tells you"
+      ],
+      "rows": [
+        [
+          "Planned visits promised against completed",
+          "Preventive maintenance schedule",
+          "Whether you delivered what you sold, and at what cost"
+        ],
+        [
+          "Unplanned visits in the period",
+          "Breakdown call records against the asset",
+          "The swing cost, and whether the machine is the problem"
+        ],
+        [
+          "Engineer days consumed",
+          "Job cards closed against the contract",
+          "The real labour cost, not an estimated one"
+        ],
+        [
+          "Spares issued against jobs",
+          "Parts booked on the job card",
+          "What the contract absorbed in material"
+        ],
+        [
+          "Chargeable work billed",
+          "Service invoices raised outside cover",
+          "Whether out-of-scope work reached an invoice"
+        ],
+        [
+          "Repeat visits for one fault",
+          "Service history per asset",
+          "First-time fix, and where training or parts are missing"
+        ],
+        [
+          "Payment behaviour",
+          "Receivables ageing for that customer",
+          "Whether the earned margin was ever collected"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Using it",
+      "h2": "What to do with the answer",
+      "lead": "The point of measuring is not a report. It is four decisions that are otherwise made on instinct.",
+      "body": [
+        {
+          "ul": [
+            "<b>Price the renewal on what happened, not on last year's figure plus a little.</b> A contract that consumed four engineer visits and a gearbox is not the same contract it was when you quoted it.",
+            "<b>Change the contract type where the risk sits wrongly.</b> A machine consuming parts steadily may belong on an annual contract with parts chargeable rather than a comprehensive one, or the reverse if the customer values predictability and you can price the risk.",
+            "<b>Fix the machine rather than the price.</b> Repeated breakdowns often trace to installation, power supply or operator handling. A conversation and some training can be cheaper than the loading you were about to add.",
+            "<b>Decide honestly which contracts to let go.</b> Some contracts are worth keeping at a loss because of what else the customer buys. Some are not. You cannot make that judgement without knowing which is which."
+          ]
+        },
+        "There is a fifth use, and it is the one owners find most uncomfortable. A service department that appears to break even is often carrying a handful of contracts that lose heavily, offset by many that earn well. The average hides both, and the average is what most businesses manage by.",
+        "None of this needs a finance function. It needs the cost fragments to land against the contract as work happens: job cards closed against the asset, parts issued against the job, chargeable work marked as chargeable at intake rather than reconstructed later. In Aura Business those records accumulate as a by-product of the service day, and contract profitability by customer sits alongside the AMC revenue and leakage dashboard, so the renewal conversation starts from evidence. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a> and <a href=\"/resources/how-to-stop-amc-revenue-leakage/\">how AMC revenue leaks</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about contract profitability",
+      "items": [
+        {
+          "q": "Why do we need to measure profitability per contract rather than for the department?",
+          "a": "Because the department average hides both your best and your worst contracts. A service arm that looks like it breaks even usually contains a few heavily loss-making agreements that would be obvious the moment costs were attributed to the contract that caused them."
+        },
+        {
+          "q": "What is the biggest hidden cost in an AMC?",
+          "a": "Unplanned breakdown visits, because they are the one cost not priced in advance and they vary hugely between machines. Spare parts consumed and never billed usually come second, and travel to distant single-machine sites third."
+        },
+        {
+          "q": "How do we capture spares consumed on a contract?",
+          "a": "Issue parts against the job card that used them rather than from the store as a bulk issue. That drops stock, attaches the consumption to the machine and contract, and makes it possible to say whether the part was covered or should have been invoiced."
+        },
+        {
+          "q": "Does a loss-making contract always deserve a price rise?",
+          "a": "No. Repeated breakdowns often come from installation, power conditions or the way operators use the machine, and fixing those is cheaper than a loading the customer may refuse. Measure first, then decide whether the problem is the price or the machine."
+        },
+        {
+          "q": "When should this be reviewed?",
+          "a": "Well before renewal, while there is still time to act. Reviewing at the point of renewal leaves you negotiating from a position you have just discovered, and reviewing after renewal simply records the loss for another year."
+        },
+        {
+          "q": "What is the difference between profitability and revenue leakage?",
+          "a": "Leakage is revenue you were entitled to and did not collect, such as an unbilled part or a lapsed contract. Profitability is what the contract earned against what it cost. Leakage is one of the reasons profitability disappoints, but not the only one."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Every explainer in one place."
+        },
+        {
+          "href": "/resources/what-is-amc-software/",
+          "icon": "&#128197;",
+          "b": "What is AMC software",
+          "p": "Contracts, schedules and renewals."
+        },
+        {
+          "href": "/compare/amc-vs-cmc/",
+          "icon": "&#9878;",
+          "b": "AMC vs CMC",
+          "p": "Who carries the parts risk."
+        },
+        {
+          "href": "/aura-business/amc-billing-software/",
+          "icon": "&#129534;",
+          "b": "AMC billing",
+          "p": "Billing cover and extras."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128204;",
+          "b": "Installed base",
+          "p": "Cost measured per machine."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#9201;",
+          "b": "What is an SLA",
+          "p": "What you promised to deliver."
+        }
+      ]
+    }
+  ]
+}

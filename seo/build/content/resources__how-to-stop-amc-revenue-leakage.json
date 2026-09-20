@@ -1,0 +1,202 @@
+{
+  "cluster": "resources",
+  "slug": "how-to-stop-amc-revenue-leakage",
+  "title": "How to Stop AMC Revenue Leaking: A Practical Guide",
+  "meta": "A practical sequence for stopping AMC revenue leaking: know the installed base, put every contract on a renewal clock, chase early and bill what is extra.",
+  "h1": "How to stop AMC revenue leaking, <span class=\"hl\">in the order that works</span>.",
+  "crumb": "Stopping AMC leakage",
+  "pill": "Guide",
+  "sub": "Maintenance revenue rarely disappears in one event. It drains through five gaps, and they have to be closed in sequence, because none of the later steps are possible until you know what machines you are actually responsible for.",
+  "meta_ticks": [
+    "Five steps, in a deliberate order",
+    "Written for dealers and service firms",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your guide on AMC revenue leakage and want to see how Aura Business tracks contracts and renewals.",
+  "date": "2026-09-20",
+  "primary_keyword": "how to stop AMC revenue leaking",
+  "secondary_keywords": [
+    "AMC revenue leakage",
+    "why AMC contracts lapse",
+    "improving AMC renewal rate",
+    "unbilled service work recovery",
+    "maintenance contract renewal process"
+  ],
+  "intent": "informational",
+  "persona": "Owner or service head of an equipment dealership whose maintenance revenue is lower than the installed base suggests it should be",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Five gaps, and why the order matters",
+      "paras": [
+        "AMC revenue leaks in five places: machines you sold and never put under contract, contracts that expired without anyone noticing, renewals chased after expiry rather than before, work done outside the cover and never billed, and a renewal rate nobody measures so nothing improves. Almost every equipment business has at least three of them open at once.",
+        "The sequence matters more than the individual fixes. You cannot put contracts on a renewal clock until you know which machines exist. You cannot chase before expiry until every contract has a recorded end date. You cannot bill what is outside cover until the contract says what is inside it. And you cannot improve a renewal rate you have never calculated. Work through them in that order and each step makes the next one possible."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Steps one and two",
+      "h2": "Know the installed base, then put every contract on a clock",
+      "body": [
+        {
+          "h3": "One: list what you are responsible for"
+        },
+        "Start with the machines, not the contracts. Every unit you have sold, installed or ever serviced is a candidate for maintenance revenue, and most businesses discover on doing this that a substantial part of their installed base is under no contract at all, sometimes because the warranty ended and nobody followed up. Record each unit with its serial number, model, customer, site, installation date, warranty end date and current contract status. Whether that starts as a spreadsheet or as an asset register in software matters far less than that it exists and is complete. The approach is set out in <a href=\"/resources/what-is-installed-base-management/\">installed base management</a>.",
+        {
+          "h3": "The conversation this makes possible"
+        },
+        "The list immediately produces two sales conversations that cost nothing to have. Machines whose warranty is ending, which is the single easiest moment to sell a contract, and machines that have been serviced repeatedly on a chargeable basis, where the customer is already paying for service without the predictability a contract gives them.",
+        {
+          "h3": "Two: every contract gets an end date that something watches"
+        },
+        "A contract with no monitored end date is a contract that will lapse. Each one needs its end date, its value, its billing frequency, the machines it covers, and explicitly what is included and excluded. The last of those is the part usually left vague, and it is the part every later argument turns on. Once end dates are recorded in one place, expiries become a list you can look at rather than events that happen to you."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Steps three and four",
+      "h2": "Chase before expiry, and bill what sits outside the cover",
+      "body": [
+        {
+          "h3": "Three: start the renewal before the contract ends"
+        },
+        "A renewal chased after expiry is a new sale. The customer has already experienced a period with no contract and nothing going wrong, the budget cycle may have closed, and somebody else may have called in the meantime. A renewal opened well before expiry is a continuation, and continuations close far more easily than restarts.",
+        "Two things make the early approach work. The service record for that customer should be to hand, because the honest answer to what they got for their money is the strongest argument available. And the quotation should be ready to send, since delay after the conversation is where momentum is lost. A renewal engine working from contract end dates does the remembering, but the conversation still has to be had by a person.",
+        {
+          "h3": "Four: bill what is not covered"
+        },
+        "Out-of-scope work absorbed silently is the leak that feels like good service and is not. Parts fitted under an annual contract where parts are chargeable, visits beyond the number agreed, work on a machine not listed on the contract, attendance outside working hours, travel to a site far outside the area assumed in the price.",
+        "None of that gets billed retrospectively with any success, because the customer disputes what they were not told at the time. It has to be decided at intake, when the call is logged: is this covered or chargeable, and does the customer know. That single question, asked before the engineer is dispatched, recovers more than any amount of invoice-chasing afterwards. It also depends on the contract recording what is covered, which is why step two comes first."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "The five gaps",
+      "h2": "Where the money goes, and what closes each gap",
+      "headers": [
+        "The gap",
+        "How it shows up",
+        "What closes it"
+      ],
+      "rows": [
+        [
+          "Machines under no contract",
+          "Service done on a chargeable basis, year after year",
+          "A complete installed base with contract status per unit"
+        ],
+        [
+          "Contracts expired unnoticed",
+          "A breakdown call for a customer you are no longer paid by",
+          "A recorded end date on every contract, watched centrally"
+        ],
+        [
+          "Renewals chased late",
+          "Renewal discussions that start as fresh negotiations",
+          "A renewal clock and a quotation prepared in advance"
+        ],
+        [
+          "Work outside cover absorbed",
+          "Parts leaving the store without a matching invoice",
+          "Covered or chargeable decided at call intake"
+        ],
+        [
+          "No measurement",
+          "Nobody can say what proportion renewed last year",
+          "Renewal outcomes recorded per contract and reviewed"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Step five",
+      "h2": "Measure what renewed, and make it somebody's number",
+      "lead": "The first four steps stop the obvious losses. The fifth is what stops them coming back.",
+      "body": [
+        "At the end of each quarter, take every contract that expired in the period and record what happened to each one: renewed, renewed at a different value, lost, or still open. That list is short, it takes an hour, and it answers questions that are otherwise argued about indefinitely. Which customers are drifting away. Whether contracts are being lost on price or on service. Whether the renewals that closed were the ones approached early.",
+        "Pair it with the cost side. A high renewal rate achieved by renewing loss-making contracts at the same value is not a success, which is why this sits alongside <a href=\"/resources/what-is-contract-profitability/\">contract profitability</a> rather than replacing it.",
+        "Then give the number an owner. Recurring revenue is the part of an equipment business that nobody wakes up worrying about, because it makes no noise when it fails. Whoever owns it should be able to state, without preparing, how many contracts expire in the next sixty days and what has been done about each.",
+        "In Aura Business this is the AMC and Service Contracts suite: an asset and installed-base register, service contracts with warranty tracking, a contract renewal engine, and an AMC revenue and leakage dashboard that shows lapsing revenue in rupees rather than as a count of contracts. Calls marked chargeable at intake become service invoices, and parts fitted are issued against the job card so consumption is attached to the contract that caused it. See <a href=\"/aura-business/medical-equipment-amc-cmc-software/\">AMC and CMC software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about AMC revenue leakage",
+      "items": [
+        {
+          "q": "What is AMC revenue leakage?",
+          "a": "Maintenance revenue you were entitled to earn and did not: machines never placed under contract, contracts that lapsed unnoticed, renewals lost through late follow-up, and chargeable work carried out and never invoiced. It is lost quietly rather than through any single visible failure."
+        },
+        {
+          "q": "Where should we start if everything is a mess?",
+          "a": "With the installed base. List every machine you have sold or serviced with its customer, site, serial number, warranty end and contract status. Nothing else on the list is possible until you know what you are responsible for, and the exercise usually finds uncovered machines immediately."
+        },
+        {
+          "q": "How early should a renewal be started?",
+          "a": "Early enough that the customer never experiences a gap, and early enough to sit inside their budgeting rhythm. A renewal opened before expiry is a continuation of an existing arrangement, while one opened afterwards is a fresh sale against whoever else has called them."
+        },
+        {
+          "q": "How do we recover work done outside the contract?",
+          "a": "By deciding at intake rather than afterwards. When the call is logged, mark it covered or chargeable against what the contract says, and tell the customer then. Work reclassified after the engineer has left is rarely accepted and rarely paid."
+        },
+        {
+          "q": "Is a low renewal rate always a service problem?",
+          "a": "No. It is often a follow-up problem. Customers who were satisfied still fail to renew if nobody asks them in time. Recording the reason against each lost renewal separates the two causes, and they need completely different responses."
+        },
+        {
+          "q": "What single record makes the most difference?",
+          "a": "A complete list of contracts with their end dates, visible to more than one person. Almost every other improvement, from early renewal calls to knowing what is covered at intake, depends on that list existing and being current."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Every explainer in one place."
+        },
+        {
+          "href": "/aura-business/medical-equipment-amc-cmc-software/",
+          "icon": "&#128197;",
+          "b": "AMC and CMC software",
+          "p": "Contracts, renewals and leakage."
+        },
+        {
+          "href": "/resources/what-is-installed-base-management/",
+          "icon": "&#128204;",
+          "b": "Installed base management",
+          "p": "Knowing what you service."
+        },
+        {
+          "href": "/resources/what-is-contract-profitability/",
+          "icon": "&#128202;",
+          "b": "Contract profitability",
+          "p": "What each contract really earned."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#129534;",
+          "b": "Service contracts",
+          "p": "Cover, exclusions and renewals."
+        },
+        {
+          "href": "/aura-business/medical-equipment-warranty-management-software/",
+          "icon": "&#128737;",
+          "b": "Warranty management",
+          "p": "The moment to sell a contract."
+        }
+      ]
+    }
+  ]
+}

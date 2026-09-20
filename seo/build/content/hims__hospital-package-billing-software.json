@@ -323,6 +323,12 @@
           "icon": "&#128716;",
           "b": "Day care",
           "p": "Same-day procedures."
+        },
+        {
+          "href": "/hims/maternity-hospital-software/",
+          "icon": "&#128118;",
+          "b": "Maternity hospitals",
+          "p": "Where package billing earns its keep."
         }
       ]
     }

@@ -1,0 +1,355 @@
+{
+  "cluster": "aura-business",
+  "slug": "lift-amc-management-software",
+  "title": "Lift AMC Management Software for Contracts | Aura Business",
+  "meta": "Lift AMC management software for periodic inspection cycles, many lifts in one building, entrapment calls, model-wise spares and building manager customers.",
+  "h1": "Lift AMC management software for buildings where <span class=\"hl\">a stuck car cannot wait</span>.",
+  "crumb": "Lift AMC Software",
+  "pill": "For lift and escalator service companies",
+  "sub": "Aura Business is built for lift maintenance businesses: several cars under one building contract, periodic inspection cycles that must be evidenced, entrapment calls that outrank everything else in the day, and spares that only fit one model.",
+  "meta_ticks": [
+    "One contract, every car in the building",
+    "Entrapment calls on their own clock",
+    "Spares held against the lift model"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we run lift maintenance contracts. I would like to see how Aura Business handles building contracts, inspection cycles and entrapment calls.",
+  "primary_keyword": "lift AMC management software",
+  "secondary_keywords": [
+    "elevator maintenance contract software India",
+    "lift service management software",
+    "escalator AMC software",
+    "lift breakdown call management software",
+    "elevator spare parts management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or service head of a lift and escalator maintenance company holding contracts with residential and commercial buildings",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why lift maintenance is a building business, not a machine business",
+      "paras": [
+        "Lift maintenance software has to model a building before it models a machine. One agreement covers four cars in a tower, or nine across a campus, each with its own model, controller, load and installation date, and each needing its own visit record. The customer you deal with is a building manager or an association secretary, not the person who bought the lift, and what they judge you on is whether the cars ran and whether you turned up when someone was inside one.",
+        "That gives the work two rhythms running at once. There is the planned rhythm, the periodic maintenance and the periodic inspection cycle that has to be evidenced with dates, readings and a signature. And there is the interrupt rhythm, the entrapment or breakdown call that has to be dispatched immediately and beat everything already on the technician's list. Aura Business holds the contract against the asset register of cars, raises the planned visits per car, runs intake and dispatch with a response clock for calls, and keeps spares against the model rather than as one undifferentiated pile."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where it goes wrong",
+      "h2": "Six problems every lift service office recognises.",
+      "lead": "None of these are complicated. They are all consequences of a contract, a machine list and a call register living in three different places.",
+      "items": [
+        {
+          "h": "The car list does not match the building",
+          "p": "Cars were modernised, controllers replaced and one was taken out of service, and the agreement still lists the original set."
+        },
+        {
+          "h": "Periodic visits cannot be evidenced",
+          "p": "The visits happened, but the proof is in a logbook in the machine room that nobody in the office can see."
+        },
+        {
+          "h": "Entrapment calls go through a personal phone",
+          "p": "The urgent call reaches a technician directly, so there is no logged time, no dispatch record and no closing note."
+        },
+        {
+          "h": "Spares do not fit the next lift",
+          "p": "A part bought for one model sits in the van for a year because nobody knows which cars it suits."
+        },
+        {
+          "h": "The building manager keeps asking for history",
+          "p": "Every association meeting needs a list of visits and breakdowns, and it is rebuilt by hand each time."
+        },
+        {
+          "h": "Renewals lapse quietly",
+          "p": "A contract ends, the visits stop, and nobody notices until the building rings about a breakdown you are no longer paid for."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the survey of the building to the renewal offer.",
+      "steps": [
+        {
+          "h": "Register every car",
+          "p": "Each lift is an asset with its building, wing, model, controller, capacity and installation date recorded once."
+        },
+        {
+          "h": "Write the contract",
+          "p": "One contract covers the listed cars, with visit frequency, what is covered and what is excluded set out on it."
+        },
+        {
+          "h": "Schedule the cycle",
+          "p": "Preventive maintenance schedules raise visits per car by date or usage, with the checklist attached to each one."
+        },
+        {
+          "h": "Take the urgent call",
+          "p": "Entrapment and breakdown calls come in through the desk or the customer portal and start an SLA timer at intake."
+        },
+        {
+          "h": "Dispatch by skill and distance",
+          "p": "The call is assigned to a technician who works on that model and can actually reach the building quickly."
+        },
+        {
+          "h": "Close with a job card",
+          "p": "The mobile job card records the fault, the parts fitted against the car, photographs and the building signature."
+        },
+        {
+          "h": "Report and renew",
+          "p": "The building gets a visit and breakdown history it can read, and the renewal engine raises the offer before expiry."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for contracts measured in buildings.",
+      "groups": [
+        {
+          "icon": "&#127970;",
+          "h": "Buildings and contracts",
+          "items": [
+            "Asset register of cars by building, wing and floor served",
+            "Multi-site contracts for a campus or a group of buildings",
+            "AMC and CMC contracts with exclusions recorded",
+            "Warranty tracking on newly installed or modernised cars",
+            "Contract renewal engine and revenue dashboard"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "The periodic cycle",
+          "items": [
+            "Preventive schedules per car, by date or by usage",
+            "Checklists completed on the technician's phone",
+            "Compliance and calibration checklists under maintenance",
+            "A view of visits due, done and outstanding per building"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Calls that cannot wait",
+          "items": [
+            "Breakdown and entrapment intake at the desk or portal",
+            "SLA definitions per contract with breach tracking",
+            "Technician dispatch with skill-based allocation",
+            "Mobile job card with photos, signature and offline mode",
+            "Service history per car, not per building"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Spares and money",
+          "items": [
+            "Product catalogue holding parts against lift models",
+            "Serial and unit-level stock with a movement ledger",
+            "Parts used per job, dropping stock automatically",
+            "Service invoices for work outside the contract",
+            "Payment tracker, reminders and receivables ageing"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four moments that decide whether the contract renews.",
+      "items": [
+        {
+          "h": "Someone is stuck in car three",
+          "workflow": "The call is logged at the desk against that specific car, a timer starts, and dispatch goes to the nearest technician trained on the model.",
+          "result": "A response time you can show, not one you claim."
+        },
+        {
+          "h": "The association asks for a year of history",
+          "workflow": "Visits, breakdowns, parts and downtime are already attached to each car under the building contract.",
+          "result": "A report printed rather than assembled."
+        },
+        {
+          "h": "The part in the van fits nothing",
+          "workflow": "Parts are catalogued against the models they suit, and consumption is booked against the job that used them.",
+          "result": "Van stock that matches the buildings on the route."
+        },
+        {
+          "h": "The contract is three weeks from expiry",
+          "workflow": "The renewal engine works from contract end dates and raises the offer while the service record is still fresh.",
+          "result": "Renewal discussed before a lapse, not after."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses that keep vertical transport running.",
+      "items": [
+        {
+          "icon": "&#128507;",
+          "b": "Lift maintenance companies",
+          "p": "Contracts on cars installed by several different makers."
+        },
+        {
+          "icon": "&#127959;",
+          "b": "Lift dealers with a service arm",
+          "p": "Installation, warranty period, then the maintenance contract."
+        },
+        {
+          "icon": "&#128330;",
+          "b": "Escalator and travelator service firms",
+          "p": "Heavier planned work in malls, stations and airports."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Residential building service providers",
+          "p": "Associations and secretaries as the paying customer."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Facilities contractors",
+          "p": "Lifts as one asset class inside a wider site contract."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "A machine-room logbook, a call register, or contract-aware service software.",
+      "cols": [
+        "Logbook and phone",
+        "Call register in Excel",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Cars under contract",
+          "Listed in the agreement",
+          "A customer name only",
+          "Asset register per car with model and location"
+        ],
+        [
+          "Periodic visits",
+          "Signed in the machine room",
+          "Ticked when remembered",
+          "Scheduled per car, due and done visible in the office"
+        ],
+        [
+          "Entrapment response",
+          "Whoever answers the phone",
+          "Logged after the event",
+          "Timed from intake, dispatched by skill and distance"
+        ],
+        [
+          "Parts by model",
+          "Known by the storekeeper",
+          "One stock list",
+          "Catalogue by model, consumption booked per job"
+        ],
+        [
+          "History for the building",
+          "Rebuilt by hand",
+          "Filtered from a sheet",
+          "Per car and per contract, ready to send"
+        ],
+        [
+          "Renewals",
+          "Remembered late",
+          "A reminder column",
+          "Renewal engine working from end dates"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Lift maintenance contracts, answered.",
+      "items": [
+        {
+          "q": "Can one contract cover every lift in a building?",
+          "a": "Yes. The contract covers a listed set of assets, and each car keeps its own model details, schedule, visit record and fault history. A campus or a group of buildings under one customer can sit on a single multi-site contract."
+        },
+        {
+          "q": "How are entrapment calls treated differently from ordinary breakdowns?",
+          "a": "Both are logged at intake so the clock starts from a recorded time, and the SLA definition on the contract decides the response expected. Dispatch can then be made on skill and proximity rather than on who answers the phone first."
+        },
+        {
+          "q": "Can we evidence a periodic inspection cycle?",
+          "a": "Preventive maintenance schedules raise a visit per car with a checklist, and the completed job card carries the date, the technician, the readings entered, photographs and the customer signature. The record sits against that car permanently."
+        },
+        {
+          "q": "How do we stop buying spares that do not fit?",
+          "a": "Parts are held in the catalogue against the models they suit, and every part fitted is booked against the job card, which drops stock. Over a few months that gives you real consumption per model rather than a guess."
+        },
+        {
+          "q": "Can a building manager log a complaint without calling us?",
+          "a": "Yes. The customer portal and helpdesk let a building manager raise a call, follow its status and see the visit history for their cars, which also gives you a clean logged time to measure response against."
+        },
+        {
+          "q": "Does it bill work that falls outside the contract?",
+          "a": "Yes. A job can be recorded as covered or chargeable, with parts and labour raised on a service invoice where the work sits outside the agreement. What is covered is held on the contract so the desk can check at intake."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128188;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/hvac-amc-software/",
+          "icon": "&#10052;",
+          "b": "HVAC AMC software",
+          "p": "Seasonal contracts across many units."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Timers, breaches and proof."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128667;",
+          "b": "Service dispatch",
+          "p": "Getting the right technician there."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128204;",
+          "b": "Installed base",
+          "p": "Every machine you are responsible for."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an SLA really commits you to."
+        },
+        {
+          "href": "/aura-business/fire-safety-amc-software/",
+          "icon": "&#128293;",
+          "b": "Fire safety AMC",
+          "p": "Many small devices, different intervals."
+        }
+      ]
+    }
+  ]
+}

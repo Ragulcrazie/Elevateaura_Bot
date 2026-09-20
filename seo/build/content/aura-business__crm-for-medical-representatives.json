@@ -1,0 +1,354 @@
+{
+  "cluster": "aura-business",
+  "slug": "crm-for-medical-representatives",
+  "title": "CRM for Medical Representatives | Aura Business",
+  "meta": "A CRM built for the rep, not just the manager: today's calls, account history before the door, a visit logged in seconds, samples and dated follow-ups.",
+  "h1": "A CRM the rep opens because <span class=\"hl\">it helps before the call</span>.",
+  "crumb": "CRM for Reps",
+  "pill": "For representatives in the field",
+  "sub": "The Aura Business mobile app gives a medical representative the day's accounts, the history of each one before walking in, a visit logged with GPS check-in in seconds, samples recorded, and the next follow-up dated before leaving the car park.",
+  "meta_ticks": [
+    "Today's calls on the phone",
+    "Account history before the door",
+    "Visit logged in seconds, offline"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer record showing past orders, open quotations, samples issued and the next follow-up date for a hospital account",
+    "bar": "app.elevateaura.co.in/my-day"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see the rep's view of the CRM on the mobile app.",
+  "primary_keyword": "CRM for medical representatives",
+  "secondary_keywords": [
+    "medical rep CRM app India",
+    "field sales CRM for medical reps",
+    "mobile CRM for device representatives",
+    "daily call report app for reps",
+    "medical representative visit logging app"
+  ],
+  "intent": "commercial",
+  "persona": "Medical representative visiting hospitals, clinics and labs, and the sales manager who wants them to use the CRM",
+  "page_type": "persona",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "The rep's view, not the manager's report",
+      "paras": [
+        "Most CRMs are bought by a manager who wants visibility and used, reluctantly, by a representative who gets nothing back. The rep types up the day in the evening, the manager reads a report in the morning, and within two months the typing stops.",
+        "The Aura Business mobile app is written the other way round. It opens on the day's accounts, each one carrying its own history: what they last bought, what quotation is open, what is outstanding, what sample is still with them, what the service team has been doing there. That is information a rep wants ten seconds before ringing the bell.",
+        "The manager's visibility is then a by-product. Attendance is marked in the app, visits are logged with GPS check-in, samples and follow-ups are recorded as they happen, and nobody writes a daily report after dinner."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why reps abandon CRMs",
+      "h2": "The six reasons the app stops being opened.",
+      "lead": "Reps are not resisting technology. They are resisting unpaid data entry.",
+      "items": [
+        {
+          "h": "It only takes, never gives",
+          "p": "The app asks for a call report and shows nothing useful before the meeting."
+        },
+        {
+          "h": "The evening report",
+          "p": "A day of visits has to be written up after hours, so it is written from memory or not at all."
+        },
+        {
+          "h": "Too many fields",
+          "p": "Logging one call takes eleven taps, so calls are logged in batches at the end of the week."
+        },
+        {
+          "h": "No signal, no app",
+          "p": "Hospital basements and lab blocks kill the connection exactly where the work happens."
+        },
+        {
+          "h": "History lives elsewhere",
+          "p": "Orders, invoices and service visits sit in the office system, so the rep walks in uninformed."
+        },
+        {
+          "h": "It feels like surveillance",
+          "p": "When the only visible feature is tracking, the app becomes something to work around."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A rep's day",
+      "h2": "From marking in to the last dated follow-up.",
+      "steps": [
+        {
+          "h": "Mark in",
+          "p": "Attendance with location and selfie, wherever the day starts."
+        },
+        {
+          "h": "See today's calls",
+          "p": "The accounts due in the cycle, in a sensible order for the area being covered."
+        },
+        {
+          "h": "Read before entering",
+          "p": "Last orders, open quotations, outstanding, samples issued and recent service calls on one screen."
+        },
+        {
+          "h": "Check in",
+          "p": "GPS check-in at the account records the visit without a form."
+        },
+        {
+          "h": "Log what happened",
+          "p": "A short note, the contact met, any sample left, any enquiry raised."
+        },
+        {
+          "h": "Set the next action",
+          "p": "A dated follow-up before leaving, so nothing depends on remembering."
+        },
+        {
+          "h": "Sync",
+          "p": "Everything captured offline reaches the office when the phone reconnects, with no evening report."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What the rep gets",
+      "h2": "On the phone, in the rep's own hands.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Before the call",
+          "items": [
+            "Customer and hospital accounts with full history",
+            "Contacts and decision-makers, with who was met last",
+            "Open quotations and recent orders",
+            "Outstanding balance on the account",
+            "Service calls and contracts at that site"
+          ]
+        },
+        {
+          "icon": "&#128205;",
+          "h": "During the call",
+          "items": [
+            "Field visit with GPS check-in",
+            "Activity feed entry and rep log",
+            "Sample tracking against the account",
+            "Product catalogue lookup for specifications",
+            "Offline capture where there is no signal"
+          ]
+        },
+        {
+          "icon": "&#10145;",
+          "h": "After the call",
+          "items": [
+            "Dated next action on the lead",
+            "Quotation raised from the catalogue with GST",
+            "Enquiry pushed into leads and pipeline",
+            "Notifications for follow-ups falling due"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "The rep's own record",
+          "items": [
+            "Attendance with geolocation and selfie",
+            "Leave applied for in the app",
+            "Territory and target progress",
+            "Role-based access showing only their own book"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Moments that make the app worth opening.",
+      "items": [
+        {
+          "h": "A consultant asks about the last delivery",
+          "workflow": "The rep opens the account in the corridor and sees the order, the despatch date and the serial numbers supplied.",
+          "result": "An answer given in the room rather than promised for later."
+        },
+        {
+          "h": "The stores officer mentions a pending payment",
+          "workflow": "The outstanding position is on the same screen, with the invoice numbers concerned.",
+          "result": "A collection conversation happens while the rep is standing there."
+        },
+        {
+          "h": "A demo unit is still at the site",
+          "workflow": "The sample record shows what was issued and when it is due back, so the rep asks about it during the visit.",
+          "result": "The trial moves to a decision instead of drifting."
+        },
+        {
+          "h": "A service complaint is defused",
+          "workflow": "Recent service calls and their status appear on the account before the rep walks in.",
+          "result": "No rep is ambushed by a problem the office already knew about."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "The people carrying the bag.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "Medical device representatives",
+          "p": "Capital and consumable sales into hospitals."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics and lab reps",
+          "p": "Reagent and analyser accounts on repeat cycles."
+        },
+        {
+          "icon": "&#129701;",
+          "b": "Dental and clinic reps",
+          "p": "Many small accounts across a city."
+        },
+        {
+          "icon": "&#128100;",
+          "b": "Area and regional managers",
+          "p": "Watching coverage without asking for reports."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founders who still sell",
+          "p": "Owners covering key accounts themselves."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "What the rep's day looks like on each option.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Today's call list",
+          "In a notebook",
+          "A task list",
+          "Accounts due, ordered by area"
+        ],
+        [
+          "History before the visit",
+          "Memory",
+          "Contact notes",
+          "Orders, quotes, outstanding, samples, service"
+        ],
+        [
+          "Logging a call",
+          "A message",
+          "A long form",
+          "Check-in and a short note"
+        ],
+        [
+          "Working without signal",
+          "Fine, nothing is recorded",
+          "Usually not",
+          "Offline capture that syncs later"
+        ],
+        [
+          "Evening report",
+          "Written from memory",
+          "Required",
+          "Not needed, the day is already logged"
+        ],
+        [
+          "What the rep gets back",
+          "Nothing",
+          "Little",
+          "Information that helps in the room"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "The rep's CRM, answered.",
+      "items": [
+        {
+          "q": "How long does logging a visit take?",
+          "a": "A check-in and a short note, with a dated next action. The design intent is that a call is recorded before the rep leaves the premises, not written up at night, so the fields are kept to what matters."
+        },
+        {
+          "q": "Does it work in a hospital basement?",
+          "a": "Yes. Visits, notes and samples are captured offline and sync when the phone reconnects, which is the difference between a CRM that gets used and one that does not."
+        },
+        {
+          "q": "Will the rep see other reps' accounts?",
+          "a": "Role-based access usually gives a rep their own territory and book, while managers and the owner see across territories. The exact setup is agreed during implementation."
+        },
+        {
+          "q": "Is this the same app the service team uses?",
+          "a": "Yes, with different screens by role. A service engineer sees job cards and dispatch, a rep sees accounts and visits, and both mark attendance in the same place. See <a href=\"/aura-business/field-technician-tracking-app/\">the technician app</a>."
+        },
+        {
+          "q": "Can a rep raise a quotation from the field?",
+          "a": "Yes. The catalogue and the GST quotation builder are available, so a price can be issued from the site rather than requested from the office. See <a href=\"/aura-business/medical-equipment-quotation-software/\">quotation software</a>."
+        },
+        {
+          "q": "Is the app available on Android and iOS?",
+          "a": "Yes. Elevate Aura builds mobile apps in React Native and Flutter for both, and the app carries your branding. Setup is remote with support on WhatsApp, and in-person work is in Chennai."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-crm-software/",
+          "icon": "&#128202;",
+          "b": "Equipment CRM",
+          "p": "The full sales suite."
+        },
+        {
+          "href": "/aura-business/beat-plan-software/",
+          "icon": "&#128506;",
+          "b": "Beat plans",
+          "p": "How the day's list is built."
+        },
+        {
+          "href": "/aura-business/sample-tracking-software/",
+          "icon": "&#128230;",
+          "b": "Samples",
+          "p": "What is still with the customer."
+        },
+        {
+          "href": "/aura-business/field-staff-attendance-app/",
+          "icon": "&#128100;",
+          "b": "Attendance",
+          "p": "Marking in from the field."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "The manager's view."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Comparison",
+          "p": "Why generic CRMs fail here."
+        }
+      ]
+    }
+  ]
+}

@@ -231,6 +231,12 @@
           "icon": "&#129659;",
           "b": "PACS pricing models",
           "p": "Per study, subscription or owned."
+        },
+        {
+          "href": "/compare/per-user-crm-vs-unlimited-user-crm/",
+          "icon": "&#9878;",
+          "b": "Per-user vs unlimited",
+          "p": "Why per-seat punishes a field team."
         }
       ]
     }

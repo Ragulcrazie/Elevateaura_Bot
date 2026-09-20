@@ -1,0 +1,342 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-software-100-bed",
+  "title": "Hospital Management Software for a 100 Bed Hospital | HIMS",
+  "meta": "Hospital management software for a 100 bed hospital: shift handovers, a billing desk per area, real TPA volume and daily numbers an administrator can act on.",
+  "h1": "Hospital management software for a 100 bed hospital, <span class=\"hl\">where departments stop talking to each other</span>.",
+  "crumb": "100 Bed Hospital Software",
+  "pill": "For hospitals of around 100 beds",
+  "sub": "At a hundred beds the hospital has real departments, three shifts and more than one billing point. The things that worked at fifty beds, one desk and one person who knows everything, start to fail. HIMS is built for the handover.",
+  "meta_ticks": [
+    "Shift handover on the record",
+    "A billing desk in every area",
+    "Daily numbers without a compilation"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/bed-management.png",
+    "alt": "HIMS bed management board showing ward occupancy across a multi-ward hospital",
+    "bar": "his.elevateaura.co.in/beds"
+  },
+  "whatsapp_text": "Hi, we run a 100 bed hospital and would like to see HIMS.",
+  "primary_keyword": "hospital management software for a 100 bed hospital",
+  "secondary_keywords": [
+    "100 bed hospital software India",
+    "mid size hospital management system",
+    "hospital software with shift handover",
+    "hospital software multiple billing counters",
+    "hospital TPA desk software",
+    "hospital administrator daily reports"
+  ],
+  "intent": "commercial",
+  "persona": "Administrator or managing director of a hospital of roughly 100 beds with departments, shifts and a TPA desk",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What changes between fifty beds and a hundred",
+      "paras": [
+        "A hundred-bed hospital is not a fifty-bed hospital with more beds. It has departments that run their own rosters, nursing shifts that hand over three times a day, a billing point in more than one area, enough insurance and TPA work to justify a desk for it, and an administrator whose job is the hospital rather than the patients. The informal method that held a smaller hospital together, which was one person who knew everything, does not reach across three shifts.",
+        "So the software has to carry the things people used to carry. Nursing entries are timed and attributed so a shift handing over leaves a record rather than a conversation. Each billing point works from the same patient account, so an outpatient bill, a pharmacy sale and an inpatient running bill do not have to be reconciled afterwards. Pre-authorisation and claims sit with the TPA desk. And the administrator opens a live dashboard of outpatients, admissions, bed occupancy and collections instead of waiting for department registers to be compiled."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where the fifty-bed method breaks",
+      "h2": "Nothing failed. The hospital simply grew past the person holding it together.",
+      "lead": "These are the symptoms that a mid-size hospital has outgrown its arrangements.",
+      "items": [
+        {
+          "h": "The handover is a conversation",
+          "p": "What happened on the night shift is passed on verbally, and whatever is not said is lost."
+        },
+        {
+          "h": "Bills assembled from several counters",
+          "p": "Pharmacy, laboratory and the ward each issue their own slips, and someone adds them up at discharge."
+        },
+        {
+          "h": "The TPA pile",
+          "p": "Claim volume is now large enough that a backlog of pending authorisations has become normal."
+        },
+        {
+          "h": "Management sees last month",
+          "p": "Occupancy and collections arrive as a compiled report, too late to change anything."
+        },
+        {
+          "h": "Departments keep private registers",
+          "p": "Each department trusts its own book, so no two numbers in the hospital agree."
+        },
+        {
+          "h": "Nobody can say who did that",
+          "p": "An entry is questioned and there is no reliable record of who made it or when."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A day across three shifts",
+      "h2": "How a hundred-bed hospital runs on one record.",
+      "steps": [
+        {
+          "h": "Morning outpatients",
+          "p": "Registration and queues run per department, with consultants on their own rosters."
+        },
+        {
+          "h": "Admissions",
+          "p": "Beds are allocated from a board that every ward and the front desk can see."
+        },
+        {
+          "h": "Shift one",
+          "p": "Vitals, medication administration and notes are recorded against the patient as timed, attributed entries."
+        },
+        {
+          "h": "Handover",
+          "p": "The incoming shift reads the record rather than relying on what was mentioned at the door."
+        },
+        {
+          "h": "Billing points",
+          "p": "Pharmacy, laboratory and the wards post to the same patient account through the day."
+        },
+        {
+          "h": "TPA desk",
+          "p": "Pre-authorisations, queries and claim documents are worked from the record as a queue."
+        },
+        {
+          "h": "End of day",
+          "p": "The administrator reads outpatients, admissions, occupancy and collections on the live dashboard."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "What a mid-size hospital needs switched on.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "Departments",
+          "items": [
+            "Consultant rosters by department",
+            "Queues and tokens per consultation area",
+            "One patient record across departments",
+            "Emergency triage board and casualty flow"
+          ]
+        },
+        {
+          "icon": "&#128336;",
+          "h": "Shifts and wards",
+          "items": [
+            "Bed board across every ward",
+            "Nursing charts with timed, attributed entries",
+            "ICU with live vitals per bed",
+            "Theatre scheduling across surgeons"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing at several points",
+          "items": [
+            "One patient account, many posting points",
+            "Running inpatient bills and interim statements",
+            "Insurance, TPA and corporate panels",
+            "GST where applicable"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Management",
+          "items": [
+            "Live dashboard of OP, IP, beds and collections",
+            "Role-based access by department",
+            "Audit trail of who changed what",
+            "Reports without a manual compilation"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/multi-specialty-hospital-software/",
+        "label": "See how several departments share one record"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a hundred beds gets back.",
+      "items": [
+        {
+          "h": "The night shift leaves a record",
+          "workflow": "Every observation and administration is timed and attributed on the patient record.",
+          "result": "The morning round starts from what happened, not from what was remembered."
+        },
+        {
+          "h": "Discharge before lunch",
+          "workflow": "The inpatient bill has been accruing from every posting point since admission.",
+          "result": "The bed is released hours earlier."
+        },
+        {
+          "h": "A TPA desk with a queue",
+          "workflow": "Pre-authorisations and pending claims are a worklist rather than a pile of files.",
+          "result": "The backlog becomes visible and therefore manageable."
+        },
+        {
+          "h": "The administrator's morning",
+          "workflow": "Occupancy, outpatient numbers and yesterday's collections are read from the dashboard.",
+          "result": "Decisions are made on today's figures."
+        },
+        {
+          "h": "A disputed entry",
+          "workflow": "The audit trail shows who made the change and when.",
+          "result": "The question is settled in a minute."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals at this scale.",
+      "items": [
+        {
+          "icon": "&#127974;",
+          "b": "Mid-size general hospitals",
+          "p": "Several departments, three shifts."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Hospital administrators",
+          "p": "Accountable for numbers every day."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Hospitals with real TPA volume",
+          "p": "A desk dedicated to claims."
+        },
+        {
+          "icon": "&#129525;",
+          "b": "Surgical hospitals",
+          "p": "Theatres, ICU and planned lists."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Hospitals growing past fifty beds",
+          "p": "Outgrowing the arrangements that worked."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a hundred-bed hospital, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Shift handover",
+          "A conversation",
+          "Covered, after a long rollout",
+          "Timed, attributed entries on the record"
+        ],
+        [
+          "Several billing points",
+          "Slips added up at discharge",
+          "Covered",
+          "One patient account, posted from each point"
+        ],
+        [
+          "TPA volume",
+          "A pile of files",
+          "A module and a consultant",
+          "A worklist from admission to claim"
+        ],
+        [
+          "Daily numbers",
+          "Compiled monthly",
+          "Report suite to configure",
+          "Live dashboard, no compilation"
+        ],
+        [
+          "Who owns delivery",
+          "Nobody",
+          "A project team you assemble",
+          "The founder who built it, fixed scope"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Software for a 100 bed hospital, answered.",
+      "items": [
+        {
+          "q": "What exactly breaks at a hundred beds?",
+          "a": "Three things. Verbal handover stops being reliable across three shifts, bills assembled from separate counters stop reconciling, and monthly compiled reports stop being fast enough for an administrator. All three are record-keeping problems rather than capacity problems."
+        },
+        {
+          "q": "Can different departments have their own access?",
+          "a": "Yes. Access is role based, so a department sees its own rosters and queues while the pharmacy, laboratory and bed board stay shared. Changes are recorded in an audit trail."
+        },
+        {
+          "q": "Does it handle more than one billing counter?",
+          "a": "Yes. Pharmacy, laboratory and the wards post to the same patient account, so an inpatient bill accrues through the stay rather than being assembled at discharge. See <a href=\"/hims/hospital-ipd-management-software/\">IPD management</a>."
+        },
+        {
+          "q": "How long does a hospital this size take to go live?",
+          "a": "Delivery follows a 30-working-day framework where scope allows, and at this size the scope is agreed carefully before anything is configured. Larger scope takes longer, and that is said on the call rather than discovered later."
+        },
+        {
+          "q": "Is it a cloud system?",
+          "a": "HIMS is delivered as a cloud workspace used from a browser. AuraPACS imaging uses an on-premise node on your own network for the machines, with a thin cloud layer for remote viewing. Deployment specifics are settled on the call."
+        },
+        {
+          "q": "Does it support NABH-style documentation?",
+          "a": "The EMR is structured and supports NABH-style documentation, with timed entries and an audit trail. Elevate Aura makes no certification claim about the software itself; accreditation is the hospital's process."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/hospital-software-50-bed/",
+          "icon": "&#127966;",
+          "b": "50 bed hospital",
+          "p": "The stage before this one."
+        },
+        {
+          "href": "/hims/multi-specialty-hospital-software/",
+          "icon": "&#128101;",
+          "b": "Multi-specialty",
+          "p": "Departments on one record."
+        },
+        {
+          "href": "/hims/hospital-nursing-management-software/",
+          "icon": "&#129658;",
+          "b": "Nursing management",
+          "p": "Charts and handover."
+        },
+        {
+          "href": "/hims/hospital-software-for-administrators/",
+          "icon": "&#128188;",
+          "b": "For administrators",
+          "p": "Running the day."
+        },
+        {
+          "href": "/compare/hims-vs-hospital-erp/",
+          "icon": "&#9878;",
+          "b": "HIMS vs hospital ERP",
+          "p": "What the difference really is."
+        }
+      ]
+    }
+  ]
+}

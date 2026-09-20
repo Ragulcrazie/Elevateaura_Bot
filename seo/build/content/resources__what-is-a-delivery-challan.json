@@ -1,0 +1,218 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-a-delivery-challan",
+  "title": "What Is a Delivery Challan? A Plain Guide for Distributors",
+  "meta": "A delivery challan explained: when goods move without an invoice, returnable and demo material, how a challan becomes an invoice, and what the driver carries.",
+  "h1": "What is a delivery challan, and when do goods move <span class=\"hl\">without an invoice</span>?",
+  "crumb": "Delivery challans",
+  "pill": "Guide",
+  "sub": "A delivery challan is the document that travels with goods when the movement is not a sale, or not yet one. It records what left, from where, for whom and why, and it is the thing you will be asked for when somebody disputes a delivery.",
+  "meta_ticks": [
+    "Written for distributors and dealers",
+    "Returnable and demo goods covered",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your delivery challan guide and want to see how challans and invoices work in Aura Business.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is a delivery challan",
+  "secondary_keywords": [
+    "delivery challan meaning",
+    "delivery challan vs invoice",
+    "returnable delivery challan",
+    "demo goods challan",
+    "delivery challan format details"
+  ],
+  "intent": "informational",
+  "persona": "Owner or accounts person in a distribution or dealership business sending goods out before the sale is complete",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "A delivery challan in two paragraphs",
+      "paras": [
+        "A delivery challan is a document raised when goods physically move but the movement is not being treated as a completed sale at that moment. It travels with the consignment and records the items, quantities, the place the goods left, the place they are going, the reason for the movement, and who received them. It is not a bill. Nobody is being asked to pay because of it.",
+        "You need one in a small number of recurring situations: a demonstration unit going to a customer for trial, material sent out for job work or repair, goods sent on approval or on a sale-or-return basis, stock transferred between your own godowns, and despatches made before invoicing is possible. In each case the goods are out of your premises and somebody other than you has custody of them, which is exactly the situation in which a written, signed record earns its keep."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Challan or invoice",
+      "h2": "The difference, and why it is not a formality",
+      "lead": "The two documents look similar and serve opposite purposes. An invoice says a sale has happened. A challan says goods have moved and the question of sale is still open.",
+      "body": [
+        "A tax invoice is a demand. It creates a receivable, it carries the tax the customer is being charged, it enters your sales figures, and it is the document your accountant works from. A delivery challan creates none of that. It is a movement record and an acknowledgement, and the copy that comes back with a signature on it is the only evidence you will have if the customer later says four cartons arrived instead of five.",
+        "The practical consequence is about timing rather than paperwork. If you invoice at despatch for goods that may come back, you have recorded a sale that has to be reversed later. If you send goods with no document at all, you have no way to prove what left the building. The challan sits between the two: the goods are accounted for, the sale is not yet claimed, and the position is reversible without unwinding anything.",
+        "What the law requires on the document, when a challan is permitted instead of an invoice, and which movements need a separate transport document alongside it are questions with real answers under the GST rules. Those answers depend on the nature of the movement and on your own registration and state, so confirm them with your accountant or tax adviser rather than with a software vendor. What follows is about the workflow, not about what you are obliged to do."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The main cases",
+      "h2": "Five movements that usually travel on a challan",
+      "body": [
+        {
+          "ul": [
+            "<b>Demonstration and trial units.</b> A machine goes to a hospital or a site for evaluation. It is expected back unless the customer buys it, so it must remain your stock while it is away, with a named person responsible for it.",
+            "<b>Returnable material.</b> Goods sent on approval, on sale or return, or as a replacement while a unit is being repaired. The defining feature is that the quantity that went out and the quantity that comes back may differ, and the difference is what eventually gets invoiced.",
+            "<b>Job work and repair.</b> Material sent to another party to be worked on, or a customer's unit collected for repair and returned. The movement happens twice and both legs need recording.",
+            "<b>Branch and godown transfers.</b> Your own stock moving between your own locations. There is no customer and no sale, but the stock has to leave one location and arrive at another without going missing in between.",
+            "<b>Despatch ahead of invoicing.</b> Goods sent because the site needs them, where the quantity, the rate or the paperwork is still being settled. The challan holds the position until the invoice can be raised correctly."
+          ]
+        },
+        "The common thread is that in every one of these cases the goods are still, in some sense, yours. A business that does not track them ends up with a category of stock that is neither in the godown nor sold, which is where inventory differences quietly begin. That mechanism is described in <a href=\"/resources/why-distributor-stock-never-matches/\">why distributor stock never matches</a>."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Delivery challan, proforma invoice and tax invoice",
+      "headers": [
+        "",
+        "Delivery challan",
+        "Proforma invoice",
+        "Tax invoice"
+      ],
+      "rows": [
+        [
+          "What it says",
+          "These goods have moved",
+          "This is what a sale would look like",
+          "This sale has happened, please pay"
+        ],
+        [
+          "Travels with the goods",
+          "Yes",
+          "No",
+          "Usually"
+        ],
+        [
+          "Creates a receivable",
+          "No",
+          "No",
+          "Yes"
+        ],
+        [
+          "Goods may come back",
+          "Often the whole point",
+          "Not applicable",
+          "Only through a return and credit note"
+        ],
+        [
+          "Typical use",
+          "Demo, job work, transfer, despatch before billing",
+          "Quoting a buyer who needs a document to raise a purchase order",
+          "Completed supply"
+        ],
+        [
+          "What it becomes next",
+          "A tax invoice, a return, or both in part",
+          "A sales order and then an invoice",
+          "A payment, or an ageing entry"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "In the business",
+      "h2": "What the driver carries, and what happens when he gets back",
+      "lead": "A challan only works if the copy that returns is as carefully handled as the one that goes out.",
+      "body": [
+        {
+          "h3": "Before the vehicle leaves"
+        },
+        "The person despatching should be able to say, without asking anyone, what is going, to which address, under whose name, why it is moving, whether it is expected back and by when, and which order or contract it belongs to. The driver carries the challan itself and whatever transport documentation the movement requires, which is another point to settle with your accountant rather than to assume.",
+        {
+          "h3": "When the goods arrive"
+        },
+        "Somebody at the other end signs. That signature, with a date and a name, is the entire evidentiary value of the exercise, and it is the part most often lost. A signed paper copy that lives in a vehicle file is better than nothing and much worse than a signature captured against the record itself, where it can be found by customer, by item or by date two years later.",
+        {
+          "h3": "Turning it into money"
+        },
+        "A challan is an open position. Either the goods come back, in which case stock returns and the position closes, or they are kept, in which case the challan becomes a tax invoice carrying the same lines. Doing that by retyping is how quantities and rates start to differ between the two documents. In Aura Business the delivery challan sits between the sales order and the invoice, reduces stock from the despatching location when it is raised, and converts to a GST tax invoice with the same lines when the sale is confirmed, so nothing is entered twice.",
+        {
+          "h3": "Watching the ones that never close"
+        },
+        "The challans worth reviewing weekly are the returnable ones. A demo unit at a customer site for four months is either a sale nobody has asked for or a machine that should be back in the godown earning money elsewhere, and in both cases the correct action is a phone call. Without a list of open challans, that call never happens."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about delivery challans",
+      "items": [
+        {
+          "q": "What is the difference between a delivery challan and an invoice?",
+          "a": "A challan records that goods have moved and creates no demand for payment. An invoice records a completed supply, carries the tax charged and creates a receivable. Goods that may come back generally travel on a challan so that no sale has to be reversed later."
+        },
+        {
+          "q": "Can a delivery challan become an invoice?",
+          "a": "Yes, and that is the normal path once the sale is confirmed. The invoice should carry the same items and quantities as the challan. Raising it from the challan rather than retyping it is what keeps the two documents in agreement."
+        },
+        {
+          "q": "What is a returnable delivery challan?",
+          "a": "One raised for goods expected to come back, such as a demonstration unit, material sent for job work, or goods on approval. The quantity returned is recorded against the original challan, and only what the customer keeps is invoiced."
+        },
+        {
+          "q": "Do we need a challan for stock moving between our own godowns?",
+          "a": "A movement record of some kind is needed so that stock leaves one location and arrives at the other in your books. Whether it must specifically be a delivery challan for your situation is a question for your accountant, as it depends on registration and the nature of the movement."
+        },
+        {
+          "q": "What details should a delivery challan carry?",
+          "a": "In practice: a serial number and date, your details and the recipient's, the despatch and delivery addresses, a clear description of the items with quantities, the reason for the movement, and space for the receiver's signature. Ask your accountant to confirm the statutory particulars for your case."
+        },
+        {
+          "q": "How do we stop demo units from going missing?",
+          "a": "Keep every returnable challan open until it is either returned or invoiced, and review the open list regularly. Where the item carries a serial number, tracking it at unit level tells you exactly which machine is at which customer. See <a href=\"/aura-business/delivery-challan-software/\">delivery challan software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Every explainer in one place."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128230;",
+          "b": "Delivery challan software",
+          "p": "Challans that become invoices."
+        },
+        {
+          "href": "/resources/what-is-e-invoice-irn/",
+          "icon": "&#129534;",
+          "b": "What is an e-invoice",
+          "p": "IRN, QR and the portal."
+        },
+        {
+          "href": "/aura-business/e-way-bill-software-distributors/",
+          "icon": "&#128667;",
+          "b": "E-way bills",
+          "p": "Documents for goods in transit."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128295;",
+          "b": "Spare parts stock",
+          "p": "Stock that moves with the job."
+        },
+        {
+          "href": "/resources/why-distributor-stock-never-matches/",
+          "icon": "&#128202;",
+          "b": "Stock differences",
+          "p": "Where the gap comes from."
+        }
+      ]
+    }
+  ]
+}

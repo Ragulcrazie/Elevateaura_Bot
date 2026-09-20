@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Tally Export from CRM for Distributors | Aura Business</title>
+<meta name="description" content="Get invoice and payment data out of your operations platform and into the accounting package your CA works in, without retyping and without replacing the books.">
+<link rel="canonical" href="https://elevateaura.co.in/aura-business/tally-integration-crm/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aura Business by Elevate Aura">
+<meta property="og:title" content="Tally Export from CRM for Distributors | Aura Business">
+<meta property="og:description" content="Get invoice and payment data out of your operations platform and into the accounting package your CA works in, without retyping and without replacing the books.">
+<meta property="og:url" content="https://elevateaura.co.in/aura-business/tally-integration-crm/">
+<meta property="og:image" content="https://elevateaura.co.in/images/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tally Export from CRM for Distributors | Aura Business">
+<meta name="twitter:description" content="Get invoice and payment data out of your operations platform and into the accounting package your CA works in, without retyping and without replacing the books.">
+<meta name="twitter:image" content="https://elevateaura.co.in/images/og_image.png">
+<link rel="stylesheet" href="/aura-business/biz.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/logo.png" type="image/png">
+<style>
+.prose{max-width:760px;margin:0 auto}.prose p{margin:0 0 16px;color:#2b2a45;font-size:1.05rem}.prose h3{font-size:1.25rem;margin:28px 0 10px}
+.prose ul{margin:0 0 18px 22px;color:#2b2a45}.prose li{margin:6px 0}.prose .lead{margin-bottom:20px}
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line2);border-radius:14px;box-shadow:var(--sh-sm)}
+.tbl table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--soft2);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.tbl tr:last-child td{border-bottom:none}
+.ans{background:var(--soft2);border:1px solid var(--line2);border-radius:var(--r-lg);padding:26px 28px;max-width:860px;margin:0 auto}
+.ans p{margin:0 0 12px;font-size:1.08rem;color:var(--ink)}.ans p:last-child{margin:0}
+.hubgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.hubgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.hubgrid{grid-template-columns:1fr}}
+.hubgrid a{display:block;background:#fff;border:1px solid var(--line2);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .2s,box-shadow .2s}
+.hubgrid a:hover{transform:translateY(-3px);box-shadow:var(--sh)}.hubgrid b{display:block;font-size:1.05rem;margin-bottom:6px}.hubgrid p{color:var(--mut);font-size:.93rem;margin:0}
+.byline{color:var(--mut);font-size:.9rem;margin-top:14px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevateaura.co.in/"}, {"@type": "ListItem", "position": 2, "name": "Aura Business", "item": "https://elevateaura.co.in/aura-business.html"}, {"@type": "ListItem", "position": 3, "name": "Tally Export", "item": "https://elevateaura.co.in/aura-business/tally-integration-crm/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Aura Business Tally Export", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS", "provider": {"@type": "Organization", "name": "Elevate Aura", "url": "https://elevateaura.co.in/", "founder": {"@type": "Person", "name": "Ragul Sekar"}, "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "description": "Get invoice and payment data out of your operations platform and into the accounting package your CA works in, without retyping and without replacing the books.", "url": "https://elevateaura.co.in/aura-business/tally-integration-crm/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this a live two-way integration?", "acceptedAnswer": {"@type": "Answer", "text": "It is an export of billing and payment data from the platform into the accounting package, not a replacement for accounting and not a substitute for your accountant's review. The exact format and frequency are agreed during setup."}}, {"@type": "Question", "name": "Will we have to stop using Tally?", "acceptedAnswer": {"@type": "Answer", "text": "No. That is the point of the export. Your chartered accountant continues in the package they know, while the operation runs here and hands over the documents it produces."}}, {"@type": "Question", "name": "What exactly is exported?", "acceptedAnswer": {"@type": "Answer", "text": "Billing and payment data for the period you select, meaning the tax invoices, credit notes and receipts the platform raised. Ledgers, journals and statutory statements remain the accountant's work."}}, {"@type": "Question", "name": "Does it handle e-invoicing and e-way bills?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. E-invoice with IRN and QR and e-way bill generation are part of the billing suite. See e-invoice software and e-way bills."}}, {"@type": "Question", "name": "Can it prepare our GST returns?", "acceptedAnswer": {"@type": "Answer", "text": "There is a GST returns preparation view for GSTR-1 and GSTR-3B built from the same documents. Filing and the treatment of any particular transaction remain matters for your accountant."}}, {"@type": "Question", "name": "What about supplier bills and payables?", "acceptedAnswer": {"@type": "Answer", "text": "Purchase orders, goods receipt and the payables ledger sit in the procurement suite, so purchases are recorded against stock as well. See purchase orders and GRN."}}]}
+</script>
+<script defer src="/assets/js/ea-track.js"></script>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span><a href="/">&larr; Elevate Aura</a> &nbsp;&middot;&nbsp; Aura Business, the operations platform</span>
+  <span>Chennai, India &middot; <a href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20understand%20how%20billing%20data%20is%20exported%20to%20our%20accounting%20package." target="_blank" rel="noopener">WhatsApp</a></span>
+</div></div>
+
+<nav class="crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Home</a></li>
+  <li><a href="/aura-business.html">Aura Business</a></li>
+  <li><span aria-current="page">Tally Export</span></li>
+</ol></nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="d"></span>For owners whose accountant works in Tally</span>
+      <h1>Your operations here, your <span class="hl">books where your CA wants them</span>.</h1>
+      <p class="sub">Aura Business raises the GST invoices, records the receipts and tracks what is outstanding, then exports that data for the accounting package your chartered accountant already uses, so nobody types the same invoice twice.</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="/contact.html">Book a Free Strategy Call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-o" href="/demo/aura-business.html">See the live demo</a>
+        <a class="btn btn-o" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20understand%20how%20billing%20data%20is%20exported%20to%20our%20accounting%20package." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Invoices and receipts exported</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No double entry for the accounts desk</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Your CA keeps working as before</span></div>
+      
+    </div>
+    <div><div class="shot"><div class="shot-bar"><i></i><i></i><i></i><span>app.elevateaura.co.in/billing</span></div><img src="/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png" alt="Aura Business billing screen showing GST tax invoices and receipts ready to be exported to an accounting package" width="1680" height="945"></div></div>
+  </div>
+</header>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In one sentence</span>
+      <h2 class="h2">An export, not a replacement for your accounting</h2>
+    </div>
+    <div class="ans rv"><p>Almost every distributor in India has an accountant who works in Tally, and no software should ask them to stop. Aura Business does not try to become your books. It runs the operation, raises the GST documents that come out of that operation, and hands the resulting data to the accounting package through the Tally and accounting export module.</p><p>The split is deliberate. Quotations, sales orders, tax invoices, delivery challans, receipts, credit notes and the ageing of what customers owe belong with the operation that created them, because they are tied to stock, serial numbers, contracts and service visits. Ledgers, journals, the trial balance and statutory filing belong with your chartered accountant.</p><p>What the export removes is the keying that sits between the two. The invoice raised at despatch does not need to be typed again in the evening by somebody reading a printout.</p></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The double-entry tax</span>
+      <h2 class="h2">What happens when the two systems never speak.</h2>
+      <p class="lead">Every business running operations in one place and accounts in another pays this cost quietly, every month.</p>
+    </div>
+    <div class="pains"><div class="pain rv"><h3>Every invoice typed twice</h3><p>Once when it is raised for the customer and again when it is entered into the accounting package.</p></div><div class="pain rv d1"><h3>Figures that do not agree</h3><p>A correction made in one system and not the other means the month closes with a difference nobody can explain.</p></div><div class="pain rv d2"><h3>Receipts recorded late</h3><p>Payments collected in the field reach the accounts desk days later, so outstanding is always stale.</p></div><div class="pain rv"><h3>Return filing becomes a project</h3><p>GST returns are compiled from two sources, each of which has to be checked against the other.</p></div><div class="pain rv d1"><h3>The accountant cannot see operations</h3><p>Questions about a particular invoice mean a phone call to the despatch desk and a search through files.</p></div><div class="pain rv d2"><h3>Software that demands a switch</h3><p>Platforms that insist on replacing accounting fail because the CA will not move, and the project stalls.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">How the handover works</span>
+      <h2 class="h2">From the despatch desk to the accountant's screen.</h2>
+    </div>
+    <div class="flow rv"><div class="fs"><div class="n">01</div><h4>The document is raised once</h4><p>A tax invoice is created from the sales order with gapless numbering and the correct CGST, SGST or IGST split.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">02</div><h4>E-invoice and e-way bill where needed</h4><p>IRN and QR are generated with the invoice, and the e-way bill accompanies the despatch.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">03</div><h4>Receipts posted against invoices</h4><p>Payments are recorded against the specific invoice they settle, in the office or from the field.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">04</div><h4>The period is selected</h4><p>Invoices, credit notes and receipts for the chosen period are prepared for export.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">05</div><h4>Data is exported</h4><p>The Tally and accounting export module produces the file for your accountant to bring into the books.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">06</div><h4>GST returns prepared</h4><p>GSTR-1 and GSTR-3B preparation views use the same underlying documents.</p></div><div class="arr">&rarr;</div><div class="fs"><div class="n">07</div><h4>Operations carry on</h4><p>Ageing, payment reminders and collections continue in the platform, where the customer record lives.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The boundary</span>
+      <h2 class="h2">What stays here, and what goes to the books.</h2>
+    </div>
+    <div class="caps"><div class="capg rv"><h3><span class="k">&#129534;</span>Raised in Aura Business</h3><ul><li>GST quotations, sales orders and proforma</li><li>Tax invoices with gapless numbering</li><li>Delivery challans and credit notes or returns</li><li>E-invoice with IRN and QR, and e-way bills</li><li>Payments, receipts and the payment tracker</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128228;</span>Exported to accounting</h3><ul><li>Tally and accounting export of billing data</li><li>Sales and receipt data for the selected period</li><li>GST returns preparation for GSTR-1 and GSTR-3B</li><li>Reports exported for the accountant's review</li></ul></div><div class="capg rv"><h3><span class="k">&#128179;</span>Stays in the platform</h3><ul><li>Receivables ageing and payment reminders</li><li>Payables ledger against supplier purchases</li><li>Expense management and cashflow dashboard</li><li>Profit and loss by product line or territory</li></ul></div><div class="capg rv d1"><h3><span class="k">&#128274;</span>Stays with your CA</h3><ul><li>The general ledger and journal entries</li><li>Trial balance and statutory financial statements</li><li>Return filing and assessments</li><li>Any advice on how a transaction should be treated</li></ul></div></div><p class="center" style="margin-top:26px"><a class="alink" href="/modules.html">See all 87 modules across 12 suites <span class="a">&rarr;</span></a></p>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">In practice</span>
+      <h2 class="h2">What the export changes at month end.</h2>
+    </div>
+    <div class="uc"><div class="u rv"><h3>The accounts desk stops retyping</h3><p class="r"><b>Workflow:</b> Invoices raised through the month are exported for the period instead of being entered a second time from printouts.</p><p><b>Result:</b> Evenings at the end of the month look like ordinary evenings.</p></div><div class="u rv d1"><h3>A field collection reaches the books</h3><p class="r"><b>Workflow:</b> A cheque collected during a visit is recorded against the invoice on the spot and moves with the period's data.</p><p><b>Result:</b> Outstanding reflects money actually received, not money reported.</p></div><div class="u rv"><h3>Return preparation starts from one source</h3><p class="r"><b>Workflow:</b> GSTR-1 and GSTR-3B preparation reads the same invoices, credit notes and e-invoice records the operation created.</p><p><b>Result:</b> Reconciliation between two systems disappears from the filing routine.</p></div><div class="u rv d1"><h3>A query about one invoice is answered fast</h3><p class="r"><b>Workflow:</b> The accountant asks about a document and the operations team opens it with its order, challan, serial numbers and payment history attached.</p><p><b>Result:</b> The answer takes a minute rather than an afternoon.</p></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Who it is for</span>
+      <h2 class="h2">Businesses with an accountant who is not moving.</h2>
+    </div>
+    <div class="who rv"><div class="w"><div class="g">&#127970;</div><b>Distributors and dealers</b><p>High invoice volume and an external CA.</p></div><div class="w"><div class="g">&#129516;</div><b>Service companies</b><p>Many small service invoices raised from job cards.</p></div><div class="w"><div class="g">&#128104;&#8205;&#128188;</div><b>Owner-run businesses</b><p>Where the owner personally checks the month's figures.</p></div><div class="w"><div class="g">&#128203;</div><b>Accounts managers</b><p>One person doing billing, collections and coordination.</p></div><div class="w"><div class="g">&#127981;</div><b>Multi-branch firms</b><p>Several billing points feeding one set of books.</p></div></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">The honest comparison</span>
+      <h2 class="h2">Three ways businesses connect operations and accounts.</h2>
+    </div>
+    <div class="cmp rv"><div class="r h"><div>&nbsp;</div><div>Spreadsheets and WhatsApp</div><div>Accounting software alone</div><div>Enterprise ERP</div><div class="us">Aura Business</div></div><div class="r"><div class="cap">Where the invoice is raised</div><div>A template</div><div>In the books</div><div>In the ERP</div><div class="us">From the sales order, with stock attached</div></div><div class="r"><div class="cap">Serial numbers and contracts on the document</div><div>Typed in</div><div>Not held</div><div>Yes</div><div class="us">Carried from stock and the installed base</div></div><div class="r"><div class="cap">Double entry</div><div>Always</div><div>None, but no operations</div><div>None</div><div class="us">Removed by the export</div></div><div class="r"><div class="cap">Who keeps the ledger</div><div>Your CA</div><div>Your CA</div><div>The ERP, with a change of process</div><div class="us">Your CA, unchanged</div></div><div class="r"><div class="cap">Collections and ageing</div><div>A printout</div><div>Reports</div><div>Yes</div><div class="us">Live, with reminders on WhatsApp</div></div><div class="r"><div class="cap">Effort to adopt</div><div>None, and it never improves</div><div>Low</div><div>Months and a new process</div><div class="us">Live in 30 working days where scope allows</div></div></div>
+  </div>
+</section>
+<section class="sec soft">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Proof</span>
+      <h2 class="h2">Platforms we have actually shipped.</h2>
+    </div>
+    <div class="cases rv"><a class="case" href="/case-studies/carna-medicare-medical-equipment-distributor-platform/"><div class="ct"><span>&#127973;</span>Carna Medicare</div><div class="cb"><span class="tag">Medical Equipment &middot; Chennai</span><h4>12-module operations platform</h4><p><b>Problem:</b> A distribution business run entirely on WhatsApp and Excel.</p><p><b>Built:</b> Field app, manager dashboard, GST billing and payment tracking.</p><p><b>Stack:</b> React Native, Supabase, WordPress.</p><div class="out">Shipped end to end in 30 days</div></div></a><a class="case" href="/case-studies/medline-robotics-ecommerce-distributor-platform/"><div class="ct"><span>&#129302;</span>Medline Robotics</div><div class="cb"><span class="tag">Medical Robotics &middot; Chennai</span><h4>E-commerce &amp; distributor platform</h4><p><b>Problem:</b> No online store or way to manage distributors.</p><p><b>Built:</b> Storefront, distributor portal, quote-to-order and 253 SEO pages.</p><p><b>Stack:</b> Supabase, JavaScript, Playwright.</p><div class="out">Live store and partner portal</div></div></a></div>
+  </div>
+</section>
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow c">Questions</span>
+      <h2 class="h2">Accounting export, answered.</h2>
+    </div>
+    <div class="faq rv"><details open><summary>Is this a live two-way integration?</summary><p>It is an export of billing and payment data from the platform into the accounting package, not a replacement for accounting and not a substitute for your accountant's review. The exact format and frequency are agreed during setup.</p></details><details><summary>Will we have to stop using Tally?</summary><p>No. That is the point of the export. Your chartered accountant continues in the package they know, while the operation runs here and hands over the documents it produces.</p></details><details><summary>What exactly is exported?</summary><p>Billing and payment data for the period you select, meaning the tax invoices, credit notes and receipts the platform raised. Ledgers, journals and statutory statements remain the accountant's work.</p></details><details><summary>Does it handle e-invoicing and e-way bills?</summary><p>Yes. E-invoice with IRN and QR and e-way bill generation are part of the billing suite. See <a href="/aura-business/e-invoice-software-distributors/">e-invoice software</a> and <a href="/aura-business/e-way-bill-software-distributors/">e-way bills</a>.</p></details><details><summary>Can it prepare our GST returns?</summary><p>There is a GST returns preparation view for GSTR-1 and GSTR-3B built from the same documents. Filing and the treatment of any particular transaction remain matters for your accountant.</p></details><details><summary>What about supplier bills and payables?</summary><p>Purchase orders, goods receipt and the payables ledger sit in the procurement suite, so purchases are recorded against stock as well. See <a href="/aura-business/purchase-order-grn-software/">purchase orders and GRN</a>.</p></details></div>
+  </div>
+</section>
+<section class="sec-t soft">
+  <div class="wrap">
+    <div class="head center rv" style="margin-bottom:26px"><span class="eyebrow c">Keep exploring</span><h2 class="h2" style="font-size:1.5rem">Related Aura Business software</h2></div>
+    <div class="who rv"><a class="w" href="/aura-business/medical-equipment-billing-software/"><div class="g">&#129534;</div><b>Billing</b><p>Where the documents come from.</p></a><a class="w" href="/aura-business/receivables-ageing-software/"><div class="g">&#128176;</div><b>Receivables</b><p>Outstanding that stays here.</p></a><a class="w" href="/aura-business/whatsapp-payment-reminder-software/"><div class="g">&#128241;</div><b>Payment reminders</b><p>Chasing without phone calls.</p></a><a class="w" href="/aura-business/purchase-order-grn-software/"><div class="g">&#128230;</div><b>Purchases</b><p>The buying side of the ledger.</p></a><a class="w" href="/aura-business/distributor-management-software-india/"><div class="g">&#127970;</div><b>Distributor platform</b><p>The whole operation.</p></a><a class="w" href="/compare/tally-vs-distributor-operations-software/"><div class="g">&#128218;</div><b>Comparison</b><p>Accounting against operations.</p></a></div>
+  </div>
+</section>
+
+<section class="sec paper">
+  <div class="wrap">
+    <div class="cta rv">
+      <h2>Let's talk about your requirement.</h2>
+      <p>Tell us how you work today. We will show you what the platform would look like for you, and give you a clear scope and timeline.</p>
+      <div class="cta-btns">
+        <a class="btn btn-p" href="/contact.html">Book a Free Strategy Call</a>
+        <a class="btn btn-w" href="https://wa.me/919578971156?text=Hi%2C%20I%27d%20like%20to%20understand%20how%20billing%20data%20is%20exported%20to%20our%20accounting%20package." target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+      <p class="fine">Founder-led &middot; Chennai, India &middot; Built and supported by the person who wrote it</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Aura Business by Elevate Aura</h4>
+        <p class="b">The operations platform for distributors, dealers and field-service businesses. CRM, service, AMC, inventory and GST billing in one system.</p>
+        <a href="https://wa.me/919578971156" target="_blank" rel="noopener">WhatsApp +91 95789 71156</a>
+        <a href="mailto:elevateauraofficial@gmail.com">elevateauraofficial@gmail.com</a>
+      </div>
+      <div>
+        <h4>Aura Business</h4>
+        <a href="/aura-business.html">Aura Business home</a>
+        <a href="/aura-business/medical-equipment-crm-software/">Medical Equipment CRM</a><a href="/aura-business/medical-equipment-field-service-software/">Field Service</a><a href="/aura-business/medical-equipment-amc-cmc-software/">AMC / CMC</a><a href="/aura-business/medical-equipment-inventory-software/">Inventory</a><a href="/aura-business/medical-equipment-billing-software/">Billing</a><a href="/modules.html">All 87 modules</a>
+      </div>
+      <div>
+        <h4>Elevate Aura</h4>
+        <a href="/">Home</a>
+        <a href="/aura-business.html">Aura Business</a>
+        <a href="/hims.html">HIMS</a>
+        <a href="/aurapacs.html">AuraPACS</a>
+        <a href="/aura-learn.html">Aura Learn</a>
+        <a href="/product-development.html">Product Development</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/resources/">Guides</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Elevate Aura &middot; Chennai, India</span>
+      <span>Founder-led delivery &middot; Ragul Sekar</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var all=document.querySelectorAll('.rv');function show(el){el.classList.add('in');}
+if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);o.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});all.forEach(function(el){o.observe(el);});
+/* Safety net: never leave content invisible if the observer misses an element during a fast scroll. */
+setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight+200){show(el);}});},1500);
+window.addEventListener('load',function(){setTimeout(function(){all.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top<window.innerHeight){show(el);}});},300);});}
+else{all.forEach(show);}})();
+</script>
+</body>
+</html>

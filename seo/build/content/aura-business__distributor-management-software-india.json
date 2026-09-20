@@ -1,0 +1,360 @@
+{
+  "cluster": "aura-business",
+  "slug": "distributor-management-software-india",
+  "title": "Distributor Management Software India | Aura Business",
+  "meta": "Distributor management software for Indian distributors of any trade: stock, orders, GST billing, collections, field service and contracts in one system.",
+  "h1": "Distributor management software for the <span class=\"hl\">whole Indian operation</span>.",
+  "crumb": "Distributor Management",
+  "pill": "For distributors and dealers across India",
+  "sub": "Aura Business runs the parts of a distribution business that usually sit in five separate places: what you hold, what you sold, what you billed under GST, what is still owed, and what your field team did about it.",
+  "meta_ticks": [
+    "Stock, orders and GST billing together",
+    "Field app for sales and service",
+    "Unlimited users on every plan"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard showing orders, stock position, collections and open service calls for a distribution business",
+    "bar": "app.elevateaura.co.in/dashboard"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see distributor management software for our business.",
+  "primary_keyword": "distributor management software India",
+  "secondary_keywords": [
+    "distribution management software India",
+    "software for distributors and dealers",
+    "distributor ERP software India",
+    "stock and billing software for distributors",
+    "dealer management software India"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or general manager of an Indian distribution business selling and servicing products across a state or region",
+  "page_type": "product",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What distributor management software has to cover in India",
+      "paras": [
+        "A distributor in India is judged on five things: whether the stock figure is right, whether the order reached the customer, whether the tax invoice is clean, whether the money came back, and whether the after-sales promise was kept. Distributor management software is the system that holds all five against the same customer and the same product, so nobody reconciles them by hand at the end of the month.",
+        "Aura Business is built for exactly that shape of business. Inventory with serial and batch detail, sales orders and GST tax invoices with e-invoice and e-way bill, payment tracking and receivables ageing, procurement from your suppliers, and a mobile app for the people who visit customers. Twelve suites, eighty-seven modules, one customer record underneath.",
+        "This page is deliberately trade-neutral. Whether you distribute medical equipment, industrial spares, electrical goods or building products, the operational spine is the same, and the trade-specific pages below go into the parts that differ."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The daily friction",
+      "h2": "Where a growing distribution business starts to leak.",
+      "lead": "Nothing here is a crisis on its own. Together they are why the owner is still reconciling figures on a Sunday.",
+      "items": [
+        {
+          "h": "Two stock figures, both wrong",
+          "p": "The godown register and the billing file disagree, and the salesperson promises material that is already committed."
+        },
+        {
+          "h": "Orders that live in chat",
+          "p": "A purchase order arrives as a photo, gets typed into a quotation, and gets typed again into the invoice."
+        },
+        {
+          "h": "Billing separated from operations",
+          "p": "The invoice is raised in one place and the delivery, warranty and service record sits in another, so nobody can see a customer whole."
+        },
+        {
+          "h": "Collections chased from memory",
+          "p": "Outstanding is a printout, and whoever remembers to call gets paid first."
+        },
+        {
+          "h": "The field team is unverifiable",
+          "p": "Visits, attendance and service calls are reported by message, with no record that survives the week."
+        },
+        {
+          "h": "Service treated as a cost",
+          "p": "Contracts and warranties expire quietly because nobody owns the renewal date."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One continuous record",
+      "h2": "From supplier purchase to the service call two years later.",
+      "steps": [
+        {
+          "h": "Buy",
+          "p": "Purchase order to the supplier, goods receipt booked against it, stock and payables updated."
+        },
+        {
+          "h": "Hold",
+          "p": "Product catalogue, serial and batch numbers, multiple warehouses, reorder alerts."
+        },
+        {
+          "h": "Sell",
+          "p": "Quotation from the catalogue, sales order, delivery challan, GST tax invoice with e-invoice and e-way bill."
+        },
+        {
+          "h": "Collect",
+          "p": "Receipts posted against invoices, ageing by customer, reminders sent on WhatsApp."
+        },
+        {
+          "h": "Install and register",
+          "p": "The unit enters the installed base register under the customer with its serial and warranty dates."
+        },
+        {
+          "h": "Serve",
+          "p": "Breakdown calls, technician dispatch, mobile job cards, spares consumed from your own stock."
+        },
+        {
+          "h": "Renew",
+          "p": "Warranty end feeds the contract renewal engine, so the service revenue does not lapse unnoticed."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a distributor actually switches on.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "Stock and buying",
+          "items": [
+            "Product catalogue and lookup",
+            "Serial and unit-level stock",
+            "Batch and expiry tracking",
+            "Multi-warehouse and stock ledger",
+            "Purchase orders, GRN and supplier price lists"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Selling and GST billing",
+          "items": [
+            "GST quotation builder and sales orders",
+            "Tax invoice with gapless numbering and CGST, SGST, IGST",
+            "Delivery challan, proforma and credit notes",
+            "E-invoice with IRN and QR, plus e-way bill"
+          ]
+        },
+        {
+          "icon": "&#128176;",
+          "h": "Money in and out",
+          "items": [
+            "Payments, receipts and payment tracker",
+            "Receivables ageing and payables ledger",
+            "Expense management and cashflow dashboard",
+            "GST returns preparation and Tally export"
+          ]
+        },
+        {
+          "icon": "&#128663;",
+          "h": "Field and after-sales",
+          "items": [
+            "Field visits with GPS check-in",
+            "Service call intake and technician dispatch",
+            "AMC, CMC and warranty tracking",
+            "Attendance with geolocation and selfie"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four ordinary days in a distribution office.",
+      "items": [
+        {
+          "h": "A customer asks for material that is reserved",
+          "workflow": "The salesperson opens the catalogue and sees committed and free stock per warehouse before promising a delivery date.",
+          "result": "Fewer apologies and fewer part despatches."
+        },
+        {
+          "h": "The accountant wants the month closed",
+          "workflow": "Invoices, receipts and credit notes are already in the system, and the Tally export hands the accounting package what it needs.",
+          "result": "The month closes from records rather than from memory."
+        },
+        {
+          "h": "A vehicle is stopped and asked for documents",
+          "workflow": "The e-way bill and e-invoice were generated with the tax invoice and are attached to the despatch.",
+          "result": "Paperwork travels with the goods, not behind them."
+        },
+        {
+          "h": "A unit fails eleven months after supply",
+          "workflow": "The serial number pulls up the customer, the invoice, the warranty status and the previous visits before an engineer is assigned.",
+          "result": "The call is answered with the history already known."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Any trade that sells, delivers and then supports.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment distributors",
+          "p": "The trade Aura Business was first built in, with serials and AMC."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial and engineering distributors",
+          "p": "Spares, machines and commissioning at plants."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Electrical goods dealers",
+          "p": "Panels and fittings sold through projects and counters."
+        },
+        {
+          "icon": "&#127959;",
+          "b": "Building products distributors",
+          "p": "Site deliveries, challans and project credit."
+        },
+        {
+          "icon": "&#128666;",
+          "b": "Multi-branch regional distributors",
+          "p": "Several godowns and a sales team spread across a state."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "What Indian distributors usually run on instead.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Stock at serial or batch level",
+          "A register",
+          "Quantity only",
+          "Yes, heavy to configure",
+          "Serial, batch, expiry, per warehouse"
+        ],
+        [
+          "GST invoice with e-invoice and e-way bill",
+          "Manual on the portal",
+          "Yes",
+          "Yes",
+          "Yes, from the same order"
+        ],
+        [
+          "Field team app",
+          "Chat groups",
+          "None",
+          "Extra module",
+          "Included, works offline"
+        ],
+        [
+          "Service contracts and renewals",
+          "A reminder diary",
+          "Not covered",
+          "Separate implementation",
+          "AMC, CMC, warranty and renewal engine"
+        ],
+        [
+          "Time to go live",
+          "Immediate and permanent",
+          "Days",
+          "Months",
+          "Live in 30 working days where scope allows"
+        ],
+        [
+          "Cost of adding staff",
+          "Free and chaotic",
+          "Per licence",
+          "Per user",
+          "Unlimited users on every plan"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Distributor management software, answered.",
+      "items": [
+        {
+          "q": "Is this an ERP or a CRM?",
+          "a": "It is an operations platform that covers both ends. The sales pipeline and customer record behave like a CRM, while stock, purchasing, billing and service behave like the operational half of an ERP. See <a href=\"/compare/crm-vs-erp-for-medical-equipment-distributors/\">the CRM versus ERP comparison</a>."
+        },
+        {
+          "q": "Does it replace our accounting package?",
+          "a": "No. Invoices, receipts and payment data are raised and tracked here, then exported for the accountant to post. The books stay where your chartered accountant works. See <a href=\"/aura-business/tally-integration-crm/\">Tally export</a>."
+        },
+        {
+          "q": "We are not in medical equipment. Does it still fit?",
+          "a": "Yes. The spine of catalogue, stock, order, invoice, collection and service is trade-neutral. Field names, product attributes and document templates are configured for your trade during setup."
+        },
+        {
+          "q": "Can we switch on only part of the platform?",
+          "a": "Plans are set by module tier, at fifteen modules, forty-seven modules, or all eighty-seven, with unlimited users on each. Most businesses begin with stock, billing and collections and switch on service later."
+        },
+        {
+          "q": "What happens to our existing Excel data?",
+          "a": "Your product list, customers, opening stock and outstanding balances are migrated in during setup, and the dashboard, mobile app and invoices carry your own branding."
+        },
+        {
+          "q": "We have branches in several cities. Is that supported?",
+          "a": "Yes. Multi-warehouse stock, role-based access and territory assignment let each branch see its own operation while the owner dashboard shows the whole business. Setup and support are remote, with in-person work in Chennai."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-distributor-software/",
+          "icon": "&#127973;",
+          "b": "Medical equipment",
+          "p": "The same spine for device distribution."
+        },
+        {
+          "href": "/aura-business/industrial-equipment-distributor-software/",
+          "icon": "&#9881;",
+          "b": "Industrial distribution",
+          "p": "Machines, spares and commissioning."
+        },
+        {
+          "href": "/aura-business/electrical-equipment-dealer-software/",
+          "icon": "&#128268;",
+          "b": "Electrical dealers",
+          "p": "Counter and project selling."
+        },
+        {
+          "href": "/aura-business/building-products-distributor-software/",
+          "icon": "&#127959;",
+          "b": "Building products",
+          "p": "Site deliveries and challans."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables",
+          "p": "What is owed, and for how long."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#128218;",
+          "b": "Comparison",
+          "p": "Spreadsheets against a platform."
+        }
+      ]
+    }
+  ]
+}

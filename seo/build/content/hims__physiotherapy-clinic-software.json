@@ -1,0 +1,340 @@
+{
+  "cluster": "hims",
+  "slug": "physiotherapy-clinic-software",
+  "title": "Physiotherapy Clinic Software | Session Packages | HIMS",
+  "meta": "Physiotherapy clinic software for courses of treatment: recurring session slots, packages paid up front and drawn down, attendance and notes across the course.",
+  "h1": "Physiotherapy clinic software built around <span class=\"hl\">a course of sessions</span>, not a single visit.",
+  "crumb": "Physiotherapy Software",
+  "pill": "For physiotherapy and rehabilitation clinics",
+  "sub": "Physiotherapy is sold and delivered as a course. HIMS books the recurring slots, records a note and attendance at each session, and bills the course as a package that is drawn down session by session rather than charged again at every visit.",
+  "meta_ticks": [
+    "Recurring slots for a whole course",
+    "Packages drawn down per session",
+    "Attendance and notes across the course"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/doctors.png",
+    "alt": "HIMS practitioner roster view showing sessions and slots across the working week",
+    "bar": "his.elevateaura.co.in/doctors"
+  },
+  "whatsapp_text": "Hi, I run a physiotherapy clinic and would like to see HIMS.",
+  "primary_keyword": "physiotherapy clinic software",
+  "secondary_keywords": [
+    "physiotherapy management software India",
+    "rehabilitation clinic software",
+    "physio session package software",
+    "physiotherapy appointment software",
+    "therapy attendance tracking software",
+    "physiotherapy billing software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner-physiotherapist running a clinic where patients buy a course of sessions rather than a single consultation",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why a physiotherapy clinic does not fit ordinary clinic software",
+      "paras": [
+        "Almost every clinic system is built around an episode: the patient arrives, is seen, is billed and goes home. Physiotherapy does not work that way. The patient is assessed once and then attends ten or twelve times on a repeating slot, often paying for the whole course at the start. The unit of work is the course, and the questions that matter are how many sessions are left, whether the patient is turning up, and what was done at each one.",
+        "HIMS is configured for that. Appointments are booked as a repeating series on a therapist's roster instead of one at a time. Each session carries its own note and its attendance against the same patient record. Billing uses package billing, so the course is charged once and sessions are recorded against it rather than generating a fresh bill each afternoon. How the remaining balance of sessions is presented at the desk is agreed during scoping."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The course problem",
+      "h2": "A diary and a receipt book cannot tell you how many sessions are left.",
+      "lead": "The clinic sells a course, then manages it one afternoon at a time.",
+      "items": [
+        {
+          "h": "Sessions counted on a card",
+          "p": "The patient carries a card with ticks on it, and the clinic has no count of its own."
+        },
+        {
+          "h": "Money taken before the work",
+          "p": "A course is paid for up front, so the takings and the treatment delivered fall in different months with nothing linking them."
+        },
+        {
+          "h": "The same slot, twelve times",
+          "p": "Booking a repeating appointment means writing the same name in the diary twelve times and correcting it every time something moves."
+        },
+        {
+          "h": "Drop-outs discovered late",
+          "p": "A patient stops attending after session four and nobody notices until the card turns up."
+        },
+        {
+          "h": "Therapist time is the real constraint",
+          "p": "Rooms and hands are limited, and the diary cannot show who is free when a patient wants to reschedule."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Assessment to completion",
+      "h2": "How a course of treatment runs on HIMS.",
+      "steps": [
+        {
+          "h": "Assessment",
+          "p": "The patient is registered under a UHID and the first consultation is recorded on the record."
+        },
+        {
+          "h": "The course is agreed",
+          "p": "A package of sessions is raised against the patient with the payment recorded."
+        },
+        {
+          "h": "Slots booked",
+          "p": "The sessions are booked ahead on the therapist's roster as a repeating series."
+        },
+        {
+          "h": "Each session",
+          "p": "Attendance is marked and a short note is recorded against that session on the same record."
+        },
+        {
+          "h": "Reschedules",
+          "p": "A missed session is moved to a free slot on the roster instead of disappearing."
+        },
+        {
+          "h": "Course complete",
+          "p": "The record shows the sessions delivered and the notes across them, and a further course can be raised."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS a physiotherapy clinic uses.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Scheduling",
+          "items": [
+            "Therapist rosters and session slots",
+            "Repeating appointments for a course",
+            "Reschedules onto free slots",
+            "Walk-ins and assessments in the same diary"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "The course record",
+          "items": [
+            "One UHID across every session",
+            "A note per session on the record",
+            "Attendance marked at each session",
+            "Referral and assessment kept with the course"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Package billing",
+          "items": [
+            "A course billed once as a package",
+            "Sessions recorded against the package",
+            "Receipts and balance at the desk",
+            "Cash, insurance and corporate panels"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Running the clinic",
+          "items": [
+            "Live dashboard of the day's sessions",
+            "Collections by day and by therapist",
+            "Patient app for upcoming sessions",
+            "Consumables and equipment in inventory"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-package-billing-software/",
+        "label": "See how packages are billed"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes when the course is the unit of work.",
+      "items": [
+        {
+          "h": "Twelve sessions booked at once",
+          "workflow": "The series is placed on the therapist's roster in one action rather than written out by hand.",
+          "result": "The diary matches what the patient was promised."
+        },
+        {
+          "h": "Paid in advance, delivered over weeks",
+          "workflow": "The package is billed once and each attended session is recorded against it.",
+          "result": "The desk can answer how many sessions remain."
+        },
+        {
+          "h": "The patient who stops coming",
+          "workflow": "Missed sessions show against the course, so the desk sees a drop-out while the course is still open.",
+          "result": "A call goes out at session five, not at the end."
+        },
+        {
+          "h": "After orthopaedic surgery",
+          "workflow": "A course is raised on the same patient record that carries the surgery and the operation notes.",
+          "result": "Rehabilitation stays attached to the case it came from."
+        },
+        {
+          "h": "Several therapists, several rooms",
+          "workflow": "Each therapist has a roster, so the desk books into real free time rather than guessing.",
+          "result": "The scarce resource is scheduled instead of argued over."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Clinics that sell treatment by the course.",
+      "items": [
+        {
+          "icon": "&#129501;",
+          "b": "Physiotherapy clinics",
+          "p": "Standalone practices with repeating patients."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Hospital rehabilitation units",
+          "p": "Therapy running after discharge."
+        },
+        {
+          "icon": "&#129460;",
+          "b": "Sports and injury clinics",
+          "p": "Assessment, course, review."
+        },
+        {
+          "icon": "&#128101;",
+          "b": "Multi-therapist practices",
+          "p": "Rooms and therapist time to allocate."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Owner-therapists",
+          "p": "Treating patients and running the business."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a physiotherapy clinic, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Booking a course",
+          "Twelve diary entries",
+          "Not covered",
+          "One repeating series on the roster"
+        ],
+        [
+          "Sessions remaining",
+          "Ticks on the patient's card",
+          "Not tracked",
+          "Sessions recorded against the package"
+        ],
+        [
+          "Attendance",
+          "Remembered",
+          "Not covered",
+          "Marked per session on the record"
+        ],
+        [
+          "Progress across the course",
+          "Loose sheets",
+          "Not covered",
+          "Notes in sequence on one record"
+        ],
+        [
+          "Advance payment",
+          "Receipt book",
+          "One bill per visit",
+          "Package billed once, balance visible"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Physiotherapy clinic software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS a physiotherapy product?",
+          "a": "No. HIMS is a general hospital system configured for the way a physiotherapy clinic works, which is courses of sessions, repeating slots and packages paid in advance. It is not a specialty product, and any specialty-specific requirement is settled during scoping."
+        },
+        {
+          "q": "Can we bill a course up front and deliver it over weeks?",
+          "a": "Yes. The course is raised as a package against the patient and billed once, with sessions recorded against it as they are delivered. How the remaining balance is shown at the desk is agreed during scoping."
+        },
+        {
+          "q": "Can we book the whole course in one go?",
+          "a": "Yes. Sessions are booked as a repeating series on the therapist's roster, and an individual session can be moved without disturbing the rest of the course."
+        },
+        {
+          "q": "Does it record what was done in each session?",
+          "a": "Yes. Each session carries a note and its attendance against the same patient record, so the whole course reads in sequence rather than as loose sheets."
+        },
+        {
+          "q": "Does it work for a rehabilitation unit inside a hospital?",
+          "a": "Yes. It is the same platform, so a course of therapy sits on the record that already holds the admission and the surgery. See <a href=\"/hims/orthopaedic-hospital-software/\">orthopaedic hospital software</a>."
+        },
+        {
+          "q": "Can patients be reminded about sessions?",
+          "a": "Yes. WhatsApp reminders can go out before a session with templates agreed at setup, and the patient app shows upcoming sessions. Missed sessions appear on the list for the desk to follow up."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/clinic-management-software/",
+          "icon": "&#129658;",
+          "b": "Clinic software",
+          "p": "For outpatient-only practices."
+        },
+        {
+          "href": "/hims/hospital-appointment-management/",
+          "icon": "&#128197;",
+          "b": "Appointments",
+          "p": "Rosters, slots and booking."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#8377;",
+          "b": "Package billing",
+          "p": "Courses charged as one item."
+        },
+        {
+          "href": "/hims/orthopaedic-hospital-software/",
+          "icon": "&#129460;",
+          "b": "Orthopaedic software",
+          "p": "Where the referrals come from."
+        },
+        {
+          "href": "/hims/day-care-centre-software/",
+          "icon": "&#129517;",
+          "b": "Day care centre",
+          "p": "Recurring day attendances."
+        },
+        {
+          "href": "/hims/ayurveda-hospital-software/",
+          "icon": "&#127807;",
+          "b": "Ayurveda hospital",
+          "p": "Residential courses and therapy rooms."
+        }
+      ]
+    }
+  ]
+}

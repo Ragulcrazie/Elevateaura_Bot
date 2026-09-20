@@ -1,0 +1,355 @@
+{
+  "cluster": "aura-business",
+  "slug": "customer-self-service-portal",
+  "title": "Customer Self-Service Portal for Distributors in India",
+  "meta": "A branded customer self service portal: order status, documents, service requests, contracts and outstanding, so your office stops answering the same calls.",
+  "h1": "Give your customers a <span class=\"hl\">login instead of a phone call</span>.",
+  "crumb": "Customer Portal",
+  "pill": "For offices answering the same questions daily",
+  "sub": "The Aura Business customer self-service portal is your customer's own branded login: where their order has reached, their invoices and documents, their contracts and outstanding, and a form to raise a service request without ringing anyone.",
+  "meta_ticks": [
+    "Branded login and document vault",
+    "Order tracking and service requests",
+    "Fed by the same records as your office"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_54_12%20AM.png",
+    "alt": "Aura Business customer master screen showing a customer account with orders, documents, contracts and outstanding balance",
+    "bar": "app.elevateaura.co.in/portal"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see the customer self-service portal for our buyers.",
+  "primary_keyword": "customer self service portal for distributors",
+  "secondary_keywords": [
+    "customer portal software India",
+    "B2B customer portal for dealers",
+    "order tracking portal for customers",
+    "self service portal for service requests",
+    "branded customer login and document vault"
+  ],
+  "intent": "commercial",
+  "persona": "Office manager or owner whose team spends the day answering status questions from customers",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a customer sees when they log in",
+      "paras": [
+        "A customer self-service portal is a login for the people who buy from you. Instead of calling your office to ask where the order is, whether the invoice copy can be sent again, when the contract expires or how much is outstanding, they open the portal and read it for themselves.",
+        "In Aura Business the portal sits on the same records your team works in. An order status shown to the customer is the sales order your despatch team updated. A document in their vault is the invoice your billing desk raised. A service request they submit becomes a ticket in your helpdesk queue with the asset attached.",
+        "The point is not that customers enjoy portals. Most will still call sometimes. The point is that the routine questions, which are the majority, stop reaching a person who was doing something else."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The interruption tax",
+      "h2": "What your office spends its morning on.",
+      "lead": "None of these questions need judgement. All of them need somebody to stop working and look something up.",
+      "items": [
+        {
+          "h": "Where has my order reached",
+          "p": "Asked three times by three people at the same hospital, answered three times by three people in your office."
+        },
+        {
+          "h": "Send the invoice copy again",
+          "p": "Someone digs through email or a folder for a PDF that was issued weeks ago."
+        },
+        {
+          "h": "How much do we owe you",
+          "p": "The accounts team prepares a statement by hand because the customer wants the current position."
+        },
+        {
+          "h": "Is this still under contract",
+          "p": "A question that should take a second takes a call to the service desk and a look at a spreadsheet."
+        },
+        {
+          "h": "Service requests arrive as messages",
+          "p": "A breakdown reported on a personal WhatsApp number never becomes a ticket, so the SLA clock never starts."
+        },
+        {
+          "h": "Documents scattered across inboxes",
+          "p": "Test certificates, delivery challans and contract copies are re-sent every time a staff member changes at the customer."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it works",
+      "h2": "From your record to their screen.",
+      "steps": [
+        {
+          "h": "Access granted",
+          "p": "You enable portal access for a customer and their named contacts from the customer account."
+        },
+        {
+          "h": "Branded login",
+          "p": "They sign in to a portal carrying your logo and colours, not a generic software brand."
+        },
+        {
+          "h": "They see their own account",
+          "p": "Orders, despatches, invoices, receipts, outstanding, contracts and assets, restricted to that customer."
+        },
+        {
+          "h": "They raise a request",
+          "p": "A service request or quote request is submitted with the asset or product selected."
+        },
+        {
+          "h": "It lands in your queue",
+          "p": "The request becomes a ticket or an enquiry with an owner, a status workflow and an SLA timer."
+        },
+        {
+          "h": "They watch it close",
+          "p": "Status updates and the closed job are visible to them without anyone sending an update."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "What the portal exposes, and what it never does.",
+      "groups": [
+        {
+          "icon": "&#128274;",
+          "h": "Their own account",
+          "items": [
+            "Branded login per customer",
+            "Docs vault with invoices, challans and contract copies",
+            "Outstanding position and receipts posted",
+            "Contracts and covered assets with dates"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Orders and tracking",
+          "items": [
+            "Order tracking page by order number",
+            "Despatch and delivery challan visibility",
+            "Quote-request inbound for new enquiries",
+            "Distributor and B2B ordering where you sell through partners"
+          ]
+        },
+        {
+          "icon": "&#128222;",
+          "h": "Service and support",
+          "items": [
+            "Customer ticket submission",
+            "Ticket status workflow visible to them",
+            "SLA timers running from submission",
+            "CSAT and feedback on close"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "What stays private",
+          "items": [
+            "Role-based access limits every view to that customer",
+            "Your margins, costs and supplier prices are never exposed",
+            "Internal notes on tickets stay internal",
+            "Audit log records what was viewed and changed"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the office stops doing.",
+      "items": [
+        {
+          "h": "A hospital stores officer checks despatch himself",
+          "workflow": "He logs in, sees the order marked despatched with the challan attached, and stops calling your sales coordinator every afternoon.",
+          "result": "One fewer standing interruption in the working day."
+        },
+        {
+          "h": "A finance team reconciles without your help",
+          "workflow": "They open the portal at month end and match invoices and receipts against their own ledger.",
+          "result": "Statement requests drop and disputes are raised against documents both sides can see."
+        },
+        {
+          "h": "A breakdown becomes a ticket, not a message",
+          "workflow": "The biomedical engineer submits a service request from the portal against the specific asset, and the SLA clock starts at submission.",
+          "result": "Response time is measured from the real moment the customer asked."
+        },
+        {
+          "h": "A new contact is onboarded in a minute",
+          "workflow": "When the customer's purchase officer changes, you add the new contact to portal access and the entire document history is already there.",
+          "result": "Nobody re-sends two years of paperwork."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses with repeat institutional buyers.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Distributors selling to hospitals",
+          "p": "Stores, biomedical and accounts all ask different questions."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers with dealer networks",
+          "p": "Partners order and track without phoning the head office."
+        },
+        {
+          "icon": "&#128295;",
+          "b": "Service companies under contract",
+          "p": "Customers log calls and check coverage themselves."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial suppliers",
+          "p": "Plant buyers who need documents for their own audits."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Small offices without a call desk",
+          "p": "Teams where every enquiry lands on the owner's phone."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How customers get information today.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Order status",
+          "A reply when someone is free",
+          "Internal only",
+          "Invoice only",
+          "Live order tracking page"
+        ],
+        [
+          "Documents",
+          "Re-sent on request",
+          "Attachments internally",
+          "Emailed PDFs",
+          "Docs vault on a branded login"
+        ],
+        [
+          "Outstanding",
+          "Statement prepared by hand",
+          "Not held",
+          "Yes, on request",
+          "Current position visible to them"
+        ],
+        [
+          "Raising a service call",
+          "Message to a personal number",
+          "Email to a queue",
+          "Not covered",
+          "Ticket with asset and SLA timer"
+        ],
+        [
+          "Contract visibility",
+          "Ask the service desk",
+          "Custom field",
+          "No",
+          "Contracts and covered assets listed"
+        ],
+        [
+          "Who can see what",
+          "Whatever was forwarded",
+          "Configured",
+          "Per login",
+          "Role-based, restricted to that customer"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "The customer portal, answered.",
+      "items": [
+        {
+          "q": "Does the portal carry our branding or yours?",
+          "a": "Yours. Branded login, your logo and colours on the portal, dashboard, mobile app and invoices are part of setup, so the customer experiences it as your system."
+        },
+        {
+          "q": "Can a customer see anything we would rather they did not?",
+          "a": "No. Access is role-based and scoped to that customer's own records. Costs, margins, supplier prices and internal ticket notes are not exposed in the portal."
+        },
+        {
+          "q": "Is this the same as the distributor ordering portal?",
+          "a": "They are related modules in the same suite. The self-service portal is for end customers checking their own account, while the distributor portal lets partners place B2B orders and submit payment UTR details."
+        },
+        {
+          "q": "What happens when a customer submits a service request?",
+          "a": "It enters the helpdesk as a ticket with the asset and contract attached, follows the status workflow, and runs against the SLA timers defined for that customer. See <a href=\"/aura-business/helpdesk-ticketing-equipment-dealers/\">helpdesk ticketing</a>."
+        },
+        {
+          "q": "Will customers actually use it?",
+          "a": "Institutional buyers with their own audit needs usually do, because the documents they chase are in one place. Expect calls to fall rather than stop, which is still a real saving for a small office."
+        },
+        {
+          "q": "Do our customers pay for logins?",
+          "a": "Plans are priced by module tier with unlimited users, so portal access does not add a per-login charge. The exact scope is settled on a call."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/helpdesk-ticketing-equipment-dealers/",
+          "icon": "&#128222;",
+          "b": "Helpdesk",
+          "p": "Where submitted requests land."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables",
+          "p": "The outstanding they can see."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Contracts",
+          "p": "Coverage shown in the portal."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128230;",
+          "b": "Challans",
+          "p": "Despatch documents in the vault."
+        },
+        {
+          "href": "/web-development/medical-distributor-portal-development/",
+          "icon": "&#128187;",
+          "b": "Portal build",
+          "p": "A bespoke partner portal."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#128218;",
+          "b": "Case study",
+          "p": "A live distributor portal."
+        }
+      ]
+    }
+  ]
+}

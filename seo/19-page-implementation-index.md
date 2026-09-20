@@ -2,7 +2,7 @@
 
 Every page generated in this pass, with the query it targets and why it exists. Source content lives in `seo/build/content/<cluster>__<slug>.json`; the HTML is built by `seo/build/build_pages.py`. Pages that already existed before this engagement are listed in `02-url-inventory.csv`, not here.
 
-| Total generated pages | 189 |
+| Total generated pages | 236 |
 |---|---|
 | Clusters | 11 |
 | New content hubs | resources, compare, case-studies, mobile-app-development, web-development, seo-services |
@@ -28,17 +28,27 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/aura-business/service-contract-management-software/` | service contract management software | commercial | feature | 1 |
 | `/aura-business/amc-billing-software/` | AMC billing software | commercial | feature | 2 |
 | `/aura-business/batch-expiry-tracking-software/` | batch and expiry tracking software | commercial | feature | 2 |
+| `/aura-business/beat-plan-software/` | beat plan software for sales reps | commercial | feature | 2 |
+| `/aura-business/customer-self-service-portal/` | customer self service portal for distributors | commercial | feature | 2 |
 | `/aura-business/delivery-challan-software/` | delivery challan software | commercial | feature | 2 |
+| `/aura-business/distributor-management-software-india/` | distributor management software India | commercial | product | 2 |
 | `/aura-business/e-invoice-software-distributors/` | e-invoice software for distributors | commercial | feature | 2 |
 | `/aura-business/e-way-bill-software-distributors/` | e-way bill software distributors | commercial | feature | 2 |
+| `/aura-business/field-service-analytics/` | field service analytics | commercial | feature | 2 |
+| `/aura-business/field-service-business-software/` | field service business software India | commercial | product | 2 |
+| `/aura-business/field-staff-attendance-app/` | field staff attendance app with GPS and selfie | commercial | feature | 2 |
 | `/aura-business/helpdesk-ticketing-equipment-dealers/` | helpdesk ticketing software for equipment dealers | commercial | feature | 2 |
 | `/aura-business/medical-equipment-lead-management-software/` | medical equipment lead management software | commercial | feature | 2 |
 | `/aura-business/medical-equipment-warehouse-management/` | medical equipment warehouse management | commercial | feature | 2 |
 | `/aura-business/mobile-job-card-software/` | mobile job card software | commercial | feature | 2 |
 | `/aura-business/purchase-order-grn-software/` | purchase order and GRN software | commercial | feature | 2 |
+| `/aura-business/rate-contract-management-software/` | rate contract management software | commercial | feature | 2 |
 | `/aura-business/receivables-ageing-software/` | receivables ageing software | commercial | feature | 2 |
+| `/aura-business/sample-tracking-software/` | sample and demo tracking software for medical devices | commercial | feature | 2 |
 | `/aura-business/service-dispatch-software/` | service dispatch software | commercial | feature | 2 |
 | `/aura-business/sla-management-software/` | SLA management software field service | commercial | feature | 2 |
+| `/aura-business/tally-integration-crm/` | Tally export from CRM | commercial | feature | 2 |
+| `/aura-business/territory-management-software/` | territory management software for medical sales | commercial | feature | 2 |
 | `/aura-business/whatsapp-payment-reminder-software/` | WhatsApp payment reminder software | commercial | feature | 2 |
 | `/aura-business/software-for-biomedical-service-companies/` | software for biomedical service companies | commercial | application | 3 |
 | `/aura-business/software-for-dental-equipment-dealers/` | software for dental equipment dealers | commercial | application | 3 |
@@ -49,13 +59,22 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/aura-business/software-for-medical-consumables-distributors/` | software for medical consumables distributors | commercial | application | 3 |
 | `/aura-business/software-for-medical-device-importers/` | software for medical device importers | commercial | application | 3 |
 | `/aura-business/software-for-surgical-instrument-distributors/` | software for surgical instrument distributors | commercial | application | 3 |
+| `/aura-business/building-products-distributor-software/` | building products distributor software | commercial | industry | 4 |
+| `/aura-business/crm-for-medical-representatives/` | CRM for medical representatives | commercial | persona | 4 |
 | `/aura-business/electrical-equipment-dealer-software/` | electrical equipment dealer software | commercial | industry | 4 |
+| `/aura-business/fire-safety-amc-software/` | fire safety AMC software | commercial | industry | 4 |
 | `/aura-business/hvac-amc-software/` | HVAC AMC software | commercial | industry | 4 |
 | `/aura-business/industrial-equipment-distributor-software/` | industrial equipment distributor software | commercial | industry | 4 |
+| `/aura-business/lift-amc-management-software/` | lift AMC management software | commercial | industry | 4 |
+| `/aura-business/medical-equipment-software-ahmedabad/` | medical equipment software Ahmedabad | local | city | 6 |
 | `/aura-business/medical-equipment-software-bangalore/` | medical equipment software Bangalore | local | city | 6 |
 | `/aura-business/medical-equipment-software-coimbatore/` | medical equipment software Coimbatore | local | city | 6 |
+| `/aura-business/medical-equipment-software-delhi/` | medical equipment software Delhi | local | city | 6 |
 | `/aura-business/medical-equipment-software-hyderabad/` | medical equipment software Hyderabad | local | city | 6 |
+| `/aura-business/medical-equipment-software-kochi/` | medical equipment software Kochi | local | city | 6 |
+| `/aura-business/medical-equipment-software-kolkata/` | medical equipment software Kolkata | local | city | 6 |
 | `/aura-business/medical-equipment-software-mumbai/` | medical equipment software Mumbai | local | city | 6 |
+| `/aura-business/medical-equipment-software-pune/` | medical equipment software Pune | local | city | 6 |
 
 ## HIMS (hospital and clinic management)
 
@@ -68,6 +87,7 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/hims/e-prescription-software/` | e-prescription software India | commercial | feature | 2 |
 | `/hims/emergency-department-software/` | emergency department software | commercial | feature | 2 |
 | `/hims/hospital-asset-management-software/` | hospital asset management software | commercial | feature | 2 |
+| `/hims/hospital-audit-trail-software/` | hospital audit trail software | commercial | feature | 2 |
 | `/hims/hospital-bed-management-software/` | hospital bed management software | commercial | feature | 2 |
 | `/hims/hospital-corporate-credit-billing/` | hospital credit and corporate billing | commercial | feature | 2 |
 | `/hims/hospital-emr-software/` | hospital EMR software | commercial | feature | 2 |
@@ -81,18 +101,30 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/hims/hospital-queue-management-software/` | hospital queue management software | commercial | feature | 2 |
 | `/hims/hospital-whatsapp-appointment-reminders/` | hospital WhatsApp appointment reminders | commercial | feature | 2 |
 | `/hims/icu-management-software/` | ICU management software | commercial | feature | 2 |
+| `/hims/nabh-documentation-software/` | NABH documentation software | commercial | feature | 2 |
 | `/hims/operation-theatre-management-software/` | operation theatre management software | commercial | feature | 2 |
 | `/hims/polyclinic-management-software/` | polyclinic management software | commercial | product | 2 |
 | `/hims/small-hospital-software/` | small hospital software India | commercial | product | 2 |
 | `/hims/uhid-patient-registration-software/` | UHID patient registration software | commercial | feature | 2 |
+| `/hims/charitable-hospital-software/` | software for charitable and trust hospitals | commercial | industry | 3 |
+| `/hims/hospital-software-100-bed/` | hospital management software for a 100 bed hospital | commercial | commercial | 3 |
+| `/hims/hospital-software-50-bed/` | hospital management software for a 50 bed hospital | commercial | commercial | 3 |
+| `/hims/ayurveda-hospital-software/` | ayurveda hospital software | commercial | industry | 4 |
 | `/hims/dental-clinic-management-software/` | dental clinic management software | commercial | industry | 4 |
 | `/hims/diagnostic-centre-management-software/` | diagnostic centre management software | commercial | industry | 4 |
+| `/hims/eye-hospital-management-software/` | eye hospital management software | commercial | industry | 4 |
 | `/hims/hospital-owner-dashboard/` | software for hospital owners dashboard | commercial | persona | 4 |
 | `/hims/hospital-software-for-administrators/` | hospital software for administrators | commercial | persona | 4 |
+| `/hims/maternity-hospital-software/` | maternity hospital software | commercial | industry | 4 |
 | `/hims/multi-specialty-hospital-software/` | multi-specialty hospital software | commercial | industry | 4 |
 | `/hims/nursing-home-management-software/` | nursing home management software | commercial | industry | 4 |
+| `/hims/orthopaedic-hospital-software/` | orthopaedic hospital software | commercial | industry | 4 |
+| `/hims/paediatric-clinic-software/` | paediatric clinic software | commercial | industry | 4 |
+| `/hims/physiotherapy-clinic-software/` | physiotherapy clinic software | commercial | industry | 4 |
 | `/hims/clinic-management-software-chennai/` | clinic management software Chennai | local | city | 6 |
+| `/hims/hospital-management-software-bangalore/` | hospital management software Bangalore | local | city | 6 |
 | `/hims/hospital-management-software-coimbatore/` | hospital management software Coimbatore | local | city | 6 |
+| `/hims/hospital-management-software-hyderabad/` | hospital management software Hyderabad | local | city | 6 |
 | `/hims/hospital-management-software-madurai/` | hospital management software Madurai | local | city | 6 |
 | `/hims/hospital-management-software-pondicherry/` | hospital management software Pondicherry | local | city | 6 |
 | `/hims/hospital-management-software-salem/` | hospital management software Salem | local | city | 6 |
@@ -208,9 +240,16 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/resources/how-to-choose-hospital-management-software/` | how to choose hospital management software | informational | guide | 7 |
 | `/resources/how-to-choose-medical-equipment-crm/` | how to choose a CRM for a medical equipment business | informational | guide | 7 |
 | `/resources/how-to-choose-pacs/` | how to choose a PACS | informational | guide | 7 |
+| `/resources/how-to-stop-amc-revenue-leakage/` | how to stop AMC revenue leaking | informational | guide | 7 |
 | `/resources/` | healthcare software guides | informational | hub | 7 |
+| `/resources/moving-a-hospital-from-paper-to-software/` | moving a hospital from paper to software | informational | guide | 7 |
+| `/resources/what-a-medical-equipment-dealer-should-track-monthly/` | what a medical equipment dealer should track monthly | informational | guide | 7 |
+| `/resources/what-is-a-delivery-challan/` | what is a delivery challan | informational | guide | 7 |
+| `/resources/what-is-a-discharge-summary/` | what is a discharge summary | informational | guide | 7 |
+| `/resources/what-is-a-rate-contract/` | what is a rate contract | informational | guide | 7 |
 | `/resources/what-is-amc-software/` | what is AMC software | informational | guide | 7 |
 | `/resources/what-is-cmc/` | what is CMC | informational | guide | 7 |
+| `/resources/what-is-contract-profitability/` | what is contract profitability | informational | guide | 7 |
 | `/resources/what-is-dicom/` | what is DICOM | informational | guide | 7 |
 | `/resources/what-is-dicom-modality-worklist/` | what is a DICOM modality worklist | informational | guide | 7 |
 | `/resources/what-is-e-invoice-irn/` | what is e-invoice and IRN | informational | guide | 7 |
@@ -218,12 +257,17 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/resources/what-is-installed-base-management/` | what is installed base management | informational | guide | 7 |
 | `/resources/what-is-lms/` | what is an LMS | informational | guide | 7 |
 | `/resources/what-is-medical-equipment-crm/` | what is medical equipment CRM | informational | guide | 7 |
+| `/resources/what-is-nabh-documentation/` | what is NABH documentation | informational | guide | 7 |
 | `/resources/what-is-pacs/` | what is PACS | informational | guide | 7 |
 | `/resources/what-is-preventive-maintenance-software/` | what is preventive maintenance software | informational | guide | 7 |
 | `/resources/what-is-ris/` | what is RIS | informational | guide | 7 |
 | `/resources/what-is-sla-equipment-service/` | what is an SLA in equipment service | informational | guide | 7 |
 | `/resources/what-is-tpa-hospital-billing/` | what is TPA in hospital billing | informational | guide | 7 |
 | `/resources/what-is-uhid/` | what is UHID | informational | guide | 7 |
+| `/resources/why-collections-run-late/` | why collections run late | informational | guide | 7 |
+| `/resources/why-distributor-stock-never-matches/` | why distributor stock never matches | informational | guide | 7 |
+| `/resources/why-hospital-pharmacy-loses-money-on-expiry/` | pharmacy expiry losses hospital | informational | guide | 7 |
+| `/resources/why-hospital-reports-get-lost-between-departments/` | reports lost between departments | informational | guide | 7 |
 
 ## Comparisons (/compare/)
 
@@ -233,6 +277,7 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/compare/cloud-pacs-vs-on-premise-pacs/` | cloud PACS vs on-premise PACS | comparison | comparison | 8 |
 | `/compare/cloud-vs-on-premise-hospital-software/` | cloud vs on-premise hospital management software | comparison | comparison | 8 |
 | `/compare/crm-vs-erp-for-medical-equipment-distributors/` | CRM vs ERP for medical equipment distributors | comparison | comparison | 8 |
+| `/compare/field-service-software-vs-whatsapp-groups/` | field service software vs WhatsApp groups | comparison | comparison | 8 |
 | `/compare/generic-crm-vs-medical-equipment-crm/` | generic CRM vs medical equipment CRM | comparison | comparison | 8 |
 | `/compare/hims-vs-emr/` | HIMS vs EMR | comparison | comparison | 8 |
 | `/compare/hims-vs-hospital-erp/` | HIMS vs hospital ERP | comparison | comparison | 8 |
@@ -240,7 +285,9 @@ Every page generated in this pass, with the query it targets and why it exists. 
 | `/compare/lms-vs-youtube-and-whatsapp-for-coaching/` | LMS vs YouTube and WhatsApp for coaching | comparison | comparison | 8 |
 | `/compare/pacs-vs-cloud-storage/` | PACS vs cloud storage | comparison | comparison | 8 |
 | `/compare/pacs-vs-dicom-viewer/` | PACS vs DICOM viewer | comparison | comparison | 8 |
+| `/compare/per-user-crm-vs-unlimited-user-crm/` | per-user vs unlimited-user CRM pricing | comparison | comparison | 8 |
 | `/compare/spreadsheets-vs-distributor-software/` | spreadsheets vs distributor software | comparison | comparison | 8 |
+| `/compare/tally-vs-distributor-operations-software/` | Tally vs distributor operations software | comparison | comparison | 8 |
 
 ## Case studies (/case-studies/)
 

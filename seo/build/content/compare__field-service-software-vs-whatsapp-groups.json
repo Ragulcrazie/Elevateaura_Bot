@@ -1,0 +1,230 @@
+{
+  "cluster": "compare",
+  "slug": "field-service-software-vs-whatsapp-groups",
+  "title": "Field Service Software vs WhatsApp Groups | Elevate Aura",
+  "meta": "Field service software vs WhatsApp groups: why the group works at small scale, and the four things it cannot do once the service business grows.",
+  "h1": "Field service software vs WhatsApp groups: what the group does well, and <span class=\"hl\">what it never records</span>.",
+  "crumb": "Field service vs WhatsApp",
+  "pill": "Comparison",
+  "sub": "A service group on WhatsApp is fast, free and already on everybody's phone, and for a two-engineer team it is often better than any system. This page names the exact point at which it stops working and what is lost when it does.",
+  "meta_ticks": [
+    "Honest about why the group works",
+    "Four breaking points, named",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, we run our service team on WhatsApp groups and want to see what a field service system would change.",
+  "date": "2026-09-20",
+  "primary_keyword": "field service software vs WhatsApp groups",
+  "secondary_keywords": [
+    "managing technicians on WhatsApp",
+    "when to move service team off WhatsApp",
+    "field service management software India",
+    "job card app for service technicians",
+    "service call tracking without WhatsApp"
+  ],
+  "intent": "comparison",
+  "persona": "Owner or service manager of an equipment dealership or service company coordinating field engineers through WhatsApp",
+  "page_type": "comparison",
+  "phase": 8,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "The group is a conversation, not a record",
+      "paras": [
+        "A WhatsApp group is a genuinely good coordination tool. It is instant, everybody already uses it, it costs nothing, it carries photographs and voice notes, and nobody needs training. With two or three engineers and a handful of customers, an owner who reads the group knows everything worth knowing, and putting that team on a system would slow them down rather than speed them up.",
+        "What the group cannot do is remember in a way you can query later. Messages are organised by time, not by customer, machine or contract, so the record of what happened to a particular machine over two years does not exist in any usable form. Four things break because of that: there is no history per asset, nothing chargeable is reliably captured, there is no clock on a commitment, and there is no proof of a visit beyond a photograph somebody would have to find. Field service software exists to fix those four things and very little else."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Where it breaks",
+      "h2": "Four losses, in the order they usually hurt",
+      "body": [
+        {
+          "h3": "No record per asset"
+        },
+        "Ask what has gone wrong with a particular machine since it was installed and the group cannot answer. The information is there, scattered across two years of messages, mixed with every other call, and effectively unsearchable. That matters commercially rather than administratively: a machine with four breakdowns in a year is either badly installed, badly used, or costing you more than its contract earns, and you cannot see any of that. The customer, meanwhile, remembers every visit and will quote them back at renewal.",
+        {
+          "h3": "Nothing billable is captured"
+        },
+        "An engineer fits a part, and it leaves the van. Whether it was under contract or chargeable is decided in a message, if at all, and the office learns about it days later or never. The same goes for work outside contract scope, second visits caused by the customer, and travel to distant sites. Each is small. Together they are the quiet difference between a service department that pays for itself and one that does not.",
+        {
+          "h3": "No clock on the commitment"
+        },
+        "If a contract promises a response, somebody has to be able to say when the call arrived and when the engineer got there. A message sent to an engineer's personal number at night, another to the group in the morning, and a customer who says he called yesterday do not produce a starting time anyone can defend. Without an intake timestamp there is no service level, only an argument.",
+        {
+          "h3": "No proof of the visit"
+        },
+        "The photograph exists, somewhere. So does the customer's typed confirmation, in a different chat. When a customer disputes a visit, or an institutional buyer asks for evidence before renewing, assembling that from chat history costs a day and still looks improvised."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "The group against a field service system",
+      "cols": [
+        "WhatsApp group",
+        "Group plus a call register",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Speed of coordination",
+          "Immediate, everybody sees it",
+          "Immediate, written down later",
+          "Call assigned and pushed to the engineer's app"
+        ],
+        [
+          "Training needed",
+          "None",
+          "None for the field",
+          "Short; the job card replaces a form the engineer already fills"
+        ],
+        [
+          "History per machine",
+          "Not possible",
+          "Only what was typed in",
+          "Full service history against the asset"
+        ],
+        [
+          "Parts consumed",
+          "Mentioned in a message",
+          "Noted if remembered",
+          "Issued against the job card, stock drops automatically"
+        ],
+        [
+          "Chargeable work",
+          "Decided informally",
+          "Billed if it reached the office",
+          "Marked covered or chargeable, raised on a service invoice"
+        ],
+        [
+          "Response commitment",
+          "No clock",
+          "A time written by hand",
+          "SLA timer from logged intake, breaches flagged"
+        ],
+        [
+          "Proof of the visit",
+          "A photo in the chat",
+          "A signed paper card",
+          "Job card with photographs, signature and location"
+        ],
+        [
+          "Works without signal",
+          "No",
+          "Paper does",
+          "Offline mode, syncing when the engineer has network"
+        ],
+        [
+          "When it wins",
+          "Two or three engineers, few contracts",
+          "A small team with disciplined admin",
+          "A team where nobody can hold the whole picture"
+        ],
+        [
+          "When it loses",
+          "The day you need last year's history",
+          "The day the register falls behind",
+          "A one-engineer business that talks all day anyway"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Three tests, and what to do if you fail them",
+      "lead": "The honest test is not whether the group is messy. It is whether the things you cannot recover are worth money.",
+      "body": [
+        {
+          "ul": [
+            "<b>The history test.</b> Pick one machine at a customer site and ask for every visit it has had in two years. If that cannot be produced in a few minutes, you are pricing renewals without knowing what the contract cost you.",
+            "<b>The leakage test.</b> Take last month's parts consumption from the store and match it against service invoices raised. Anything unmatched left the business without being billed or recorded against a contract.",
+            "<b>The clock test.</b> Take five recent breakdown calls and state, with evidence, when each was logged and when the engineer reached the site. If four of the five rely on memory, you have no service level to sell."
+          ]
+        },
+        "Failing one test does not mean replacing how your team communicates. WhatsApp does not have to go away, and in practice it does not: the group continues for conversation while the system holds the record. Reminders and updates to customers can still go out over WhatsApp, which is where Indian customers actually read them.",
+        "What changes is that a call is logged rather than mentioned, a job card is completed on the engineer's phone rather than described, a part fitted drops from stock, and a visit leaves a timestamped record against the machine. See <a href=\"/aura-business/mobile-job-card-software/\">mobile job cards</a> and <a href=\"/aura-business/service-dispatch-software/\">service dispatch</a> for how that day looks.",
+        "The usual objection is that engineers will not use an app. They use it when it makes their day shorter rather than longer: the job card replaces paperwork instead of adding to it, photographs replace explaining, and offline mode means a basement with no signal is not a reason to abandon it."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "WhatsApp and field service, answered",
+      "items": [
+        {
+          "q": "Is WhatsApp really adequate for a small service team?",
+          "a": "For two or three engineers, a short customer list and few contracts, yes. It is fast, free and needs no training. The case for a system starts when nobody can hold the whole picture, or when a machine's history has to be produced on request."
+        },
+        {
+          "q": "Do we have to stop using WhatsApp?",
+          "a": "No. Most teams keep the group for conversation and use the system for the record. Customer reminders and payment follow-ups can still go over WhatsApp through the integration, which is where customers actually read them."
+        },
+        {
+          "q": "What is the single biggest thing the group cannot do?",
+          "a": "Give you a machine's service history. Messages are organised by time rather than by asset, so the record of every fault, part and visit for one machine cannot be assembled, and that is exactly what renewal pricing and warranty claims depend on."
+        },
+        {
+          "q": "Will engineers actually use a mobile app?",
+          "a": "They do when it shortens the day. The job card is on the phone instead of on paper, photographs replace written explanations, the signature is taken on the screen, and it works offline so a site without signal does not stop the work being recorded."
+        },
+        {
+          "q": "How does an app stop parts leaving without being billed?",
+          "a": "Parts fitted are issued against the job card, which drops stock and attaches the consumption to that machine and contract. The office then sees what was used, whether it was covered, and what should appear on a service invoice."
+        },
+        {
+          "q": "How do we prove a response time to an institutional customer?",
+          "a": "The call is logged at intake with its channel and time, dispatch and arrival are recorded, and the job card closes with a signature. The SLA timer runs against the commitment on the contract. See <a href=\"/aura-business/sla-management-software/\">SLA management software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        },
+        {
+          "href": "/compare/spreadsheets-vs-distributor-software/",
+          "icon": "&#9878;",
+          "b": "Spreadsheets vs software",
+          "p": "The same question for the office."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128663;",
+          "b": "Technician tracking",
+          "p": "Where the field team actually was."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128736;",
+          "b": "Service management",
+          "p": "Call intake through to invoice."
+        },
+        {
+          "href": "/aura-business/helpdesk-ticketing-equipment-dealers/",
+          "icon": "&#127915;",
+          "b": "Helpdesk and ticketing",
+          "p": "A logged intake point for calls."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management runs."
+        }
+      ]
+    }
+  ]
+}

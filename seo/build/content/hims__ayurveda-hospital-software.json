@@ -1,0 +1,338 @@
+{
+  "cluster": "hims",
+  "slug": "ayurveda-hospital-software",
+  "title": "Ayurveda Hospital Software | Therapy Rooms, Courses | HIMS",
+  "meta": "Ayurveda hospital software for treatment courses over days or weeks: therapy rooms and therapist time scheduled, in-house dispensary stock and package billing.",
+  "h1": "Ayurveda hospital software for treatment that is measured in <span class=\"hl\">days, not visits</span>.",
+  "crumb": "Ayurveda Hospital Software",
+  "pill": "For ayurveda hospitals and treatment centres",
+  "sub": "An ayurveda centre schedules therapy rooms and therapists for weeks at a time, prepares and dispenses its own medicines, and bills a whole course rather than a consultation. HIMS is set up around those three things.",
+  "meta_ticks": [
+    "Therapy rooms and therapists scheduled",
+    "In-house dispensary held as stock",
+    "A course billed as a package"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/pharmacy.png",
+    "alt": "HIMS pharmacy view showing the dispensing queue and stock with expiry alerts",
+    "bar": "his.elevateaura.co.in/pharmacy"
+  },
+  "whatsapp_text": "Hi, we run an ayurveda hospital and would like to see HIMS.",
+  "primary_keyword": "ayurveda hospital software",
+  "secondary_keywords": [
+    "ayurvedic hospital management software India",
+    "panchakarma centre software",
+    "ayurveda clinic management software",
+    "ayurvedic dispensary software",
+    "therapy room scheduling software",
+    "wellness centre management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of an ayurveda hospital or treatment centre with residential courses and an in-house dispensary",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an ayurveda centre needs hospital software to do",
+      "paras": [
+        "An ayurveda hospital is not a series of consultations. A patient is assessed, prescribed a course that runs for a fixed number of days, and then attends or stays for therapies that are booked into rooms with named therapists. The scarce resources are the therapy room and the therapist's hands, not the doctor's diary, and the money is agreed as one price for the course before anything begins.",
+        "HIMS is configured for that shape. Rooms and beds are allocated for a residential stay, therapy appointments are scheduled across the days of the course, the in-house dispensary is run as pharmacy stock dispensed against the patient, and the course is billed as a package with anything extra shown separately. Medicines you prepare yourself are held and issued as stock items. HIMS is not a production system, so if you need preparation batches recorded, say so on the call and it is scoped."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The course-and-room problem",
+      "h2": "The doctor's diary is fine. It is the therapy rooms that run out.",
+      "lead": "Scheduling weeks of therapy on paper is where an ayurveda centre loses money and time.",
+      "items": [
+        {
+          "h": "Rooms double-booked",
+          "p": "Two therapies want the same room at the same hour, and the clash is discovered when the patient is already changed."
+        },
+        {
+          "h": "Therapists allocated by shouting",
+          "p": "Who is free at eleven is settled in the corridor, not on a schedule anyone can see."
+        },
+        {
+          "h": "The course drifts",
+          "p": "A fourteen-day course misses two days and nobody can say which therapies are still owed."
+        },
+        {
+          "h": "The dispensary is a cupboard",
+          "p": "Medicines prepared in-house are handed over without leaving a record, so stock is counted by looking at the shelf."
+        },
+        {
+          "h": "One price, many extras",
+          "p": "The course price was agreed, and the medicines, the room upgrade and the extra therapy were not."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Assessment to completion",
+      "h2": "How a treatment course runs on HIMS.",
+      "steps": [
+        {
+          "h": "Consultation",
+          "p": "The patient is registered under a UHID and the assessment is recorded on the record."
+        },
+        {
+          "h": "Course prescribed",
+          "p": "The therapies and the number of days are agreed and raised as a package against the patient."
+        },
+        {
+          "h": "Room or bed",
+          "p": "A residential patient is allocated a room from the bed board for the length of the stay."
+        },
+        {
+          "h": "Daily therapy schedule",
+          "p": "Therapies are booked into therapy rooms with therapists across the days of the course."
+        },
+        {
+          "h": "Each therapy",
+          "p": "Attendance and a note are recorded against the session on the same record."
+        },
+        {
+          "h": "Dispensary",
+          "p": "Medicines are issued from the in-house dispensary against the patient and come off stock."
+        },
+        {
+          "h": "Completion",
+          "p": "The course closes with the therapies delivered on the record and the package settled, extras itemised."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS an ayurveda centre uses.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "Rooms and therapists",
+          "items": [
+            "Therapy sessions booked into rooms",
+            "Therapist rosters and session slots",
+            "Bed and room board for residential stays",
+            "The day's schedule on one screen"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "The course record",
+          "items": [
+            "One UHID across the whole course",
+            "Assessment and doctor's notes",
+            "A note and attendance per therapy",
+            "Therapies still owed on the course"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "In-house dispensary",
+          "items": [
+            "Preparations held as stock items",
+            "Dispensed against the patient",
+            "Reorder levels and low-stock alerts",
+            "Batch and expiry alerts on stock"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing",
+          "items": [
+            "The course billed as a package",
+            "Room, medicines and extras itemised",
+            "Cash, insurance and corporate panels",
+            "Collections on the live dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-bed-management-software/",
+        "label": "See how rooms and beds are managed"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes when the schedule is the product.",
+      "items": [
+        {
+          "h": "A fourteen-day residential course",
+          "workflow": "The room is held for the stay and every therapy is placed on the schedule at the start.",
+          "result": "The centre knows its capacity three weeks ahead."
+        },
+        {
+          "h": "Two therapies, one room",
+          "workflow": "Bookings are made against the room and the therapist, so a clash cannot be created.",
+          "result": "Nobody is kept waiting while a room is found."
+        },
+        {
+          "h": "A day missed mid-course",
+          "workflow": "The therapies delivered and the therapies owed are both on the course record.",
+          "result": "The missed sessions are rescheduled rather than forgotten."
+        },
+        {
+          "h": "Medicines from the dispensary",
+          "workflow": "Preparations are issued against the patient and come off stock as they go out.",
+          "result": "The shelf count and the record agree."
+        },
+        {
+          "h": "The final bill",
+          "workflow": "The package is settled with the room, medicines and any extra therapy shown as separate lines.",
+          "result": "The patient sees what the agreed price did and did not include."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Centres where treatment runs for days.",
+      "items": [
+        {
+          "icon": "&#127807;",
+          "b": "Ayurveda hospitals",
+          "p": "Residential courses with wards and rooms."
+        },
+        {
+          "icon": "&#128704;",
+          "b": "Panchakarma centres",
+          "p": "Therapy rooms booked all day."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Ayurveda clinics",
+          "p": "Consultation and an in-house dispensary."
+        },
+        {
+          "icon": "&#127968;",
+          "b": "Wellness retreats",
+          "p": "Stays, schedules and package pricing."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Integrated hospitals",
+          "p": "An ayurveda wing on the same record."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running an ayurveda centre, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Therapy rooms",
+          "A wall chart",
+          "Not covered",
+          "Booked with the therapist, clash free"
+        ],
+        [
+          "A course of days",
+          "Written on a card",
+          "Not covered",
+          "Scheduled and tracked on the record"
+        ],
+        [
+          "In-house dispensary",
+          "Counted on the shelf",
+          "Sometimes, separately",
+          "Stock issued against the patient"
+        ],
+        [
+          "Residential stays",
+          "A room register",
+          "Not covered",
+          "Room board with the stay on the record"
+        ],
+        [
+          "Course pricing",
+          "Agreed verbally",
+          "One lump sum",
+          "Package with extras itemised"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Ayurveda hospital software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS an ayurveda product?",
+          "a": "No. HIMS is a general hospital system configured for the way an ayurveda centre works, which is treatment courses over days, therapy rooms and therapist time as the scarce resource, and an in-house dispensary. Anything specialty-specific is scoped on the call."
+        },
+        {
+          "q": "Can it schedule therapy rooms and therapists?",
+          "a": "Yes. Therapies are booked into a room with a named therapist from the roster, so the day's schedule is visible and a clash cannot be created. The room board also holds residential rooms for the length of a stay."
+        },
+        {
+          "q": "Does it handle medicines we prepare ourselves?",
+          "a": "In-house preparations are held as stock items in the pharmacy module, dispensed against the patient and tracked with reorder and expiry alerts. HIMS is not a production system, so recording preparation batches is scoped on the call."
+        },
+        {
+          "q": "How is a course billed?",
+          "a": "As a package raised against the patient, with the room, medicines and any additional therapy shown as separate lines. See <a href=\"/hims/hospital-package-billing-software/\">hospital package billing software</a>."
+        },
+        {
+          "q": "Can it handle residential and daily patients together?",
+          "a": "Yes. A residential patient is admitted to a room from the bed board, while a daily patient attends booked therapy slots. Both sit on the same patient record and the same billing."
+        },
+        {
+          "q": "How is it set up for a centre outside Chennai?",
+          "a": "HIMS is deployed in the cloud and used from a browser. Setup and training are done by the founder who built it, remotely outside Chennai, with your patient list brought in from Excel and support on WhatsApp afterwards."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128719;",
+          "b": "Bed and room board",
+          "p": "Residential stays on screen."
+        },
+        {
+          "href": "/hims/hospital-pharmacy-management/",
+          "icon": "&#128138;",
+          "b": "Pharmacy",
+          "p": "Dispensing and stock control."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#8377;",
+          "b": "Package billing",
+          "p": "A course priced as one item."
+        },
+        {
+          "href": "/hims/physiotherapy-clinic-software/",
+          "icon": "&#129501;",
+          "b": "Physiotherapy software",
+          "p": "Another course-based practice."
+        },
+        {
+          "href": "/hims/day-care-centre-software/",
+          "icon": "&#129517;",
+          "b": "Day care centre",
+          "p": "Daily attendance without a stay."
+        }
+      ]
+    }
+  ]
+}

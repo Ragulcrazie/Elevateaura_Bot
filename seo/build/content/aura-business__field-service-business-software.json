@@ -1,0 +1,362 @@
+{
+  "cluster": "aura-business",
+  "slug": "field-service-business-software",
+  "title": "Field Service Business Software India | Aura Business",
+  "meta": "Field service business software for firms whose revenue is service: contracts, call intake, engineers, spares, SLAs and service invoicing in one platform.",
+  "h1": "When service <span class=\"hl\">is the business</span>, not the afterthought.",
+  "crumb": "Field Service Business",
+  "pill": "For service-led companies",
+  "sub": "Aura Business is built for firms that earn from contracts and call-outs rather than from selling boxes: annual contracts, breakdown calls, engineers with vans, spares consumed on site, SLAs that carry a penalty, and an invoice for every visit.",
+  "meta_ticks": [
+    "Contracts as the revenue engine",
+    "Call to job card to invoice",
+    "Spares issued against each job"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_46_01%20AM.png",
+    "alt": "Aura Business service desk listing open calls, assigned engineers, SLA timers and contract status",
+    "bar": "app.elevateaura.co.in/service"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, our business is service rather than product sales. I'd like to see the platform.",
+  "primary_keyword": "field service business software India",
+  "secondary_keywords": [
+    "service business management software",
+    "AMC service company software",
+    "software for service companies India",
+    "field service management platform India",
+    "service contract and call management software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or operations head of a service company earning from maintenance contracts and call-outs",
+  "page_type": "product",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Software for a business whose product is the visit",
+      "paras": [
+        "Some companies sell equipment and service it as a courtesy. Others have no product line at all: the contract is the product, the engineer's time is the cost, and the spare is the margin. Software written for the first kind treats service as a support desk bolted to a sales system. This page is about the second kind.",
+        "Aura Business carries a service-led firm end to end. Contracts are set up with their coverage and billing schedule, calls arrive and are logged against the covered asset, an engineer is dispatched by skill and area, the job card records the work and the spares consumed, the SLA clock is visible throughout, and the service invoice is raised from the completed job.",
+        "Because contracts and assets sit in the same platform as stock and billing, the two questions a service owner cannot otherwise answer become answerable: which contracts are about to lapse, and which contracts cost more to serve than they bring in."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why service firms struggle",
+      "h2": "The problems that only appear when service is the revenue.",
+      "lead": "A distributor can survive a messy service desk. A service company cannot.",
+      "items": [
+        {
+          "h": "Contracts expire in silence",
+          "p": "Renewal dates live in a diary or a spreadsheet tab, and the customer only remembers the contract when something breaks."
+        },
+        {
+          "h": "Calls arrive everywhere",
+          "p": "Phone to one person, WhatsApp to another, email to a shared inbox, so nobody knows the true open-call count."
+        },
+        {
+          "h": "The SLA is a promise nobody times",
+          "p": "Response and resolution windows are written into the contract but measured, if at all, after the customer complains."
+        },
+        {
+          "h": "Spares vanish into vans",
+          "p": "Parts are drawn for a job and never booked against it, so stock is wrong and the job looks more profitable than it was."
+        },
+        {
+          "h": "Invoicing lags the work",
+          "p": "Visits done in the first week are billed in the following month because the paperwork has not come back."
+        },
+        {
+          "h": "No view of contract profitability",
+          "p": "Every contract is assumed to be earning until one customer's call volume quietly eats a year of margin."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The service cycle",
+      "h2": "Contract, call, engineer, closure, invoice, renewal.",
+      "steps": [
+        {
+          "h": "Contract set up",
+          "p": "AMC or CMC created against the customer's assets with coverage, SLA definitions and billing schedule."
+        },
+        {
+          "h": "Preventive visits scheduled",
+          "p": "The maintenance calendar generates planned visits so contracts are served, not just reacted to."
+        },
+        {
+          "h": "Call logged",
+          "p": "A breakdown is raised against the asset, with its contract status visible at intake."
+        },
+        {
+          "h": "Engineer dispatched",
+          "p": "Assigned by skill, area and roster, with the SLA timer running from the moment the call opened."
+        },
+        {
+          "h": "Job card completed",
+          "p": "Fault, work done, spares used and photos captured on the mobile app, with the customer's signature on site."
+        },
+        {
+          "h": "Service invoice raised",
+          "p": "Chargeable work billed with GST; contract-covered work closed without a charge but recorded against the contract."
+        },
+        {
+          "h": "Renewal proposed",
+          "p": "The renewal engine surfaces contracts approaching their end date before the customer notices."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a service-led firm lives in.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Contracts",
+          "items": [
+            "Service contracts and CMC contracts",
+            "Warranty tracking",
+            "Preventive maintenance schedules",
+            "SLA definitions and breach tracking",
+            "Contract renewal engine",
+            "AMC revenue and leakage dashboard"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Calls and engineers",
+          "items": [
+            "Breakdown and service call intake",
+            "Technician dispatch and route",
+            "Mobile job card with offline mode",
+            "Field signature and job-done proof",
+            "Service history per asset"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Spares and assets",
+          "items": [
+            "Spare parts used per job, dropping stock",
+            "Asset and installed-base register",
+            "Multi-warehouse and van stock",
+            "Reorder alerts on fast-moving spares"
+          ]
+        },
+        {
+          "icon": "&#129534;",
+          "h": "Billing and desk",
+          "items": [
+            "Service invoices with GST",
+            "Ticket management with SLA timers",
+            "Customer ticket submission and CSAT",
+            "Receivables ageing on service dues"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes when service runs on one system.",
+      "items": [
+        {
+          "h": "A call comes in at half past four",
+          "workflow": "The desk sees the asset, the contract, the SLA window and which engineer is nearest with the right skill, and dispatches without a round of phone calls.",
+          "result": "The commitment made to the customer is one the desk can keep."
+        },
+        {
+          "h": "A contract renewal is proposed before it lapses",
+          "workflow": "The renewal engine lists contracts ending next quarter with their call history attached, so the quote reflects how much work the customer actually generates.",
+          "result": "Renewals are negotiated from evidence rather than from last year's figure."
+        },
+        {
+          "h": "A heavy customer is priced properly",
+          "workflow": "Calls, engineer visits and spares are all booked against the contract, so the cost of serving it is visible next to what it earns.",
+          "result": "A loss-making contract is repriced or declined at renewal."
+        },
+        {
+          "h": "Billing catches up with the work",
+          "workflow": "Job cards close on the phone and chargeable jobs arrive at the billing desk the same day.",
+          "result": "Invoices go out while the visit is still fresh in the customer's mind."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Firms that live by the contract.",
+      "items": [
+        {
+          "icon": "&#129516;",
+          "b": "Biomedical service companies",
+          "p": "Multi-brand engineers maintaining hospital equipment."
+        },
+        {
+          "icon": "&#127974;",
+          "b": "Building services contractors",
+          "p": "Lifts, HVAC and fire systems on scheduled rounds."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial maintenance firms",
+          "p": "Plant machinery under annual coverage."
+        },
+        {
+          "icon": "&#128187;",
+          "b": "IT and office equipment service",
+          "p": "Printers, networks and devices across many small sites."
+        },
+        {
+          "icon": "&#128295;",
+          "b": "Third-party maintenance providers",
+          "p": "Coverage for equipment the firm never sold."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How service businesses usually manage the work.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Contract coverage and dates",
+          "A diary",
+          "A custom field",
+          "Not held",
+          "Contracts with coverage, SLA and schedule"
+        ],
+        [
+          "Call intake",
+          "Four channels",
+          "Cases",
+          "Not covered",
+          "One queue against the covered asset"
+        ],
+        [
+          "SLA timing",
+          "After the complaint",
+          "Rarely",
+          "No",
+          "Timers with breach tracking"
+        ],
+        [
+          "Spares against the job",
+          "Noted in a book",
+          "No",
+          "Stock issue only",
+          "Consumed on the job card, stock drops"
+        ],
+        [
+          "Service invoice",
+          "Typed later",
+          "Export",
+          "Yes, disconnected",
+          "Raised from the closed job with GST"
+        ],
+        [
+          "Contract profitability",
+          "Guessed",
+          "No",
+          "Revenue only",
+          "Cost of serving next to what it earns"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Service business software, answered.",
+      "items": [
+        {
+          "q": "We never sold the equipment we maintain. Does that matter?",
+          "a": "No. Assets are registered in the installed-base register with make, model and serial regardless of who supplied them, and contracts are written against those assets. Multi-brand coverage is a normal setup."
+        },
+        {
+          "q": "How is this different from the field service page for distributors?",
+          "a": "The modules overlap, but here contracts and SLAs are the commercial centre rather than an after-sales duty. See <a href=\"/aura-business/medical-equipment-field-service-software/\">field service software</a> for the distributor view."
+        },
+        {
+          "q": "Can engineers work where there is no signal?",
+          "a": "Yes. The mobile job card, photos and customer signature are captured offline in plant rooms and basements, and sync when the phone reconnects. See <a href=\"/aura-business/mobile-job-card-software/\">mobile job cards</a>."
+        },
+        {
+          "q": "Do we get separate billing for contract and chargeable work?",
+          "a": "Yes. Contract billing follows the schedule agreed in the contract, while chargeable calls and spares are invoiced with GST from the closed job card, so the two revenue lines stay distinct."
+        },
+        {
+          "q": "Can customers raise their own calls?",
+          "a": "Yes. Customer ticket submission and the self-service portal let a customer log a call, see its status and view their contracts. See <a href=\"/aura-business/customer-self-service-portal/\">the customer portal</a>."
+        },
+        {
+          "q": "How quickly can a service team be running on this?",
+          "a": "The delivery framework is live in 30 working days where scope allows, with your contracts, assets and spares list migrated in during setup. Support is on WhatsApp, with in-person work in Chennai."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128203;",
+          "b": "Service contracts",
+          "p": "AMC and CMC in depth."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Response and resolution windows."
+        },
+        {
+          "href": "/aura-business/field-service-analytics/",
+          "icon": "&#128200;",
+          "b": "Service analytics",
+          "p": "The numbers a service head watches."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128663;",
+          "b": "Dispatch",
+          "p": "Getting the right engineer out."
+        },
+        {
+          "href": "/aura-business/software-for-biomedical-service-companies/",
+          "icon": "&#129516;",
+          "b": "Biomedical service",
+          "p": "Multi-brand hospital coverage."
+        },
+        {
+          "href": "/resources/how-medical-equipment-service-management-works/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How service management works."
+        }
+      ]
+    }
+  ]
+}

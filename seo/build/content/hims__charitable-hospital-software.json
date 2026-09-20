@@ -1,0 +1,329 @@
+{
+  "cluster": "hims",
+  "slug": "charitable-hospital-software",
+  "title": "Software for Charitable and Trust Hospitals | HIMS",
+  "meta": "Software for charitable and trust hospitals: free, subsidised and paying categories, concessions recorded with an approver, and reporting a board can read.",
+  "h1": "Software for charitable and trust hospitals, where <span class=\"hl\">who pays is part of the record</span>.",
+  "crumb": "Charitable Hospital Software",
+  "pill": "For trust, mission and charitable hospitals",
+  "sub": "A trust hospital treats free, subsidised and paying patients in the same wards, funds some of that treatment from donations or schemes, and has to show a board where the money went. HIMS records the category and the concession on the bill itself.",
+  "meta_ticks": [
+    "Free, subsidised and paying categories",
+    "Concessions recorded with who approved",
+    "Reporting a trust board can read"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patients.png",
+    "alt": "HIMS patient record view showing registration details and billing category",
+    "bar": "his.elevateaura.co.in/patients"
+  },
+  "whatsapp_text": "Hi, we run a charitable trust hospital and would like to see HIMS.",
+  "primary_keyword": "software for charitable and trust hospitals",
+  "secondary_keywords": [
+    "charitable hospital management software India",
+    "trust hospital software",
+    "mission hospital management system",
+    "hospital concession billing software",
+    "scheme funded hospital billing software",
+    "non profit hospital software"
+  ],
+  "intent": "commercial",
+  "persona": "Administrator or trustee of a charitable or mission hospital treating free, subsidised and paying patients together",
+  "page_type": "industry",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a trust hospital needs that a private hospital does not",
+      "paras": [
+        "A charitable hospital does everything a private hospital does and then has to answer a question no private hospital is asked: who paid for this, and on whose authority was it reduced. Free, subsidised and full-paying patients are treated in the same wards by the same staff, some treatment is funded by a donor or a government scheme, and every concession has to be traceable to a decision somebody made.",
+        "HIMS handles this by treating the category and the payer as part of the patient account rather than as an adjustment made at the counter. A bill can be raised in full and reduced to a concession category with the reason and the approver recorded, so the trust can see both the value of treatment given and the value of treatment charged. Scheme and donor funded cases are recorded as their own payer against the admission. How far concession approval is enforced in the workflow is agreed during scoping."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The accountability problem",
+      "h2": "The hospital knows it gave a great deal away. It cannot show exactly what, to whom, or on whose word.",
+      "lead": "Charitable work that is not recorded properly is indistinguishable from a leak.",
+      "items": [
+        {
+          "h": "Concessions written on the bill",
+          "p": "The reduction is scribbled and initialled, so the full value of the treatment given is never counted."
+        },
+        {
+          "h": "Free patients not billed at all",
+          "p": "If no bill is raised, the hospital has no record of what the care actually cost it."
+        },
+        {
+          "h": "Scheme cases mixed with cash",
+          "p": "Government scheme and donor funded patients sit in the same register as everyone else, so claims are reconstructed later."
+        },
+        {
+          "h": "Board reports built by hand",
+          "p": "A trustee asks how many free patients were treated last quarter and three people spend a week answering."
+        },
+        {
+          "h": "Every rupee of stock matters",
+          "p": "Pharmacy and consumables run on a tight budget, and there is no margin to absorb shrinkage."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Registration to report",
+      "h2": "How a trust hospital runs a case on HIMS.",
+      "steps": [
+        {
+          "h": "Registration",
+          "p": "The patient gets a UHID, and the billing category, free, subsidised or paying, is set on the account."
+        },
+        {
+          "h": "Payer recorded",
+          "p": "A scheme, a donor fund, an insurer or the patient is recorded as who is meeting the bill."
+        },
+        {
+          "h": "Bill raised in full",
+          "p": "The full value accrues on the account so the hospital knows what the care was worth."
+        },
+        {
+          "h": "Concession applied",
+          "p": "The reduction is recorded against the bill with its reason and the person who approved it."
+        },
+        {
+          "h": "Settlement",
+          "p": "The balance is collected, claimed from the scheme or charged to the donor fund."
+        },
+        {
+          "h": "Reporting",
+          "p": "Treatment given, concessions granted and collections are read from the dashboard rather than compiled."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS a trust hospital leans on.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Categories and payers",
+          "items": [
+            "Billing category set on the patient account",
+            "Scheme, donor, insurer or self as payer",
+            "Corporate and credit panels",
+            "One record whatever the category"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Concessions on the bill",
+          "items": [
+            "Full value accrued before reduction",
+            "Concession recorded with a reason",
+            "The approver recorded against it",
+            "Running inpatient bills and interim statements"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Reporting to a board",
+          "items": [
+            "Live dashboard of OP, IP, beds and collections",
+            "Treatment given against treatment charged",
+            "Audit trail of who changed what",
+            "Reports without a manual compilation"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Running on a tight budget",
+          "items": [
+            "Pharmacy stock with expiry alerts",
+            "Consumables with reorder levels",
+            "Equipment and asset register",
+            "Cloud deployment, no server to maintain"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-corporate-credit-billing/",
+        "label": "See how panels and credit billing work"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the trust can finally show.",
+      "items": [
+        {
+          "h": "The value of free care",
+          "workflow": "Free patients are billed in full and then fully conceded, so the treatment is valued rather than invisible.",
+          "result": "The board sees what the hospital actually gave."
+        },
+        {
+          "h": "A concession with a name on it",
+          "workflow": "The reason and the approver are recorded with the reduction on the bill.",
+          "result": "Nobody has to remember who agreed what."
+        },
+        {
+          "h": "Donor funded treatment",
+          "workflow": "The fund is recorded as the payer on the admission and settled against it.",
+          "result": "Donors can be shown the cases their money paid for."
+        },
+        {
+          "h": "The quarterly board pack",
+          "workflow": "Numbers on treatment, categories and collections come off the dashboard.",
+          "result": "A week of compiling becomes an afternoon of reading."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals accountable to somebody other than an owner.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Charitable trust hospitals",
+          "p": "Free and paying patients in the same wards."
+        },
+        {
+          "icon": "&#10013;",
+          "b": "Mission hospitals",
+          "p": "Long-standing facilities with donor support."
+        },
+        {
+          "icon": "&#128188;",
+          "b": "Trustees and administrators",
+          "p": "Answerable to a board every quarter."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Scheme-heavy hospitals",
+          "p": "Much of the work funded by schemes."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Rural and small-town hospitals",
+          "p": "Cloud setup, remote support, no local IT."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a trust hospital, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Free patients",
+          "No bill, no record",
+          "Skipped",
+          "Billed in full, then conceded"
+        ],
+        [
+          "Concessions",
+          "Written on the bill",
+          "A discount field",
+          "Recorded with reason and approver"
+        ],
+        [
+          "Scheme and donor funding",
+          "A separate register",
+          "Typed as cash",
+          "Recorded as the payer on the admission"
+        ],
+        [
+          "Board reporting",
+          "Compiled by hand",
+          "Collections only",
+          "Read from a live dashboard"
+        ],
+        [
+          "Stock discipline",
+          "Counted on the shelf",
+          "Not covered",
+          "Reorder and expiry alerts"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Software for charitable hospitals, answered.",
+      "items": [
+        {
+          "q": "Can free, subsidised and paying patients be handled on one system?",
+          "a": "Yes. The billing category sits on the patient account, so the same wards, pharmacy and laboratory serve everyone while the bill reflects the category. Reporting can then separate treatment given from treatment charged."
+        },
+        {
+          "q": "How are concessions controlled?",
+          "a": "A concession is recorded against the bill with its reason and the person who approved it, rather than being a silent reduction. How strictly approval is enforced in the workflow, and by which roles, is agreed during scoping."
+        },
+        {
+          "q": "Can we track donor or scheme funded treatment?",
+          "a": "Yes. The fund or scheme is recorded as the payer on the admission and settled against it, so cases funded that way can be listed and reported rather than reconstructed from a register."
+        },
+        {
+          "q": "What can a trust board actually see?",
+          "a": "Outpatient numbers, admissions, bed occupancy and collections are on a live dashboard, and the audit trail records who changed what. That replaces most of the manual compilation a quarterly board pack usually needs."
+        },
+        {
+          "q": "Can a trust hospital start with part of it?",
+          "a": "Yes. Registration, outpatients, beds, pharmacy and billing go live first, and laboratory, imaging and procurement follow on the same records. See <a href=\"/hims/hospital-software-50-bed/\">software for a 50 bed hospital</a> for how phasing works."
+        },
+        {
+          "q": "What does it cost a trust hospital?",
+          "a": "There is no published price. Scope is agreed on a call and quoted against that scope, and a phased go-live keeps the first commitment small. See <a href=\"/hims/hospital-management-software-pricing/\">HIMS pricing</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/hospital-corporate-credit-billing/",
+          "icon": "&#128203;",
+          "b": "Credit and panels",
+          "p": "Billing somebody other than the patient."
+        },
+        {
+          "href": "/hims/hospital-billing-software/",
+          "icon": "&#8377;",
+          "b": "Hospital billing",
+          "p": "Counter to settlement."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "Live numbers for management."
+        },
+        {
+          "href": "/hims/hospital-software-50-bed/",
+          "icon": "&#127966;",
+          "b": "50 bed hospital",
+          "p": "Going live in phases."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "How to choose a HIMS."
+        }
+      ]
+    }
+  ]
+}

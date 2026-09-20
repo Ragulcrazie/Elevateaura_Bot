@@ -1,0 +1,350 @@
+{
+  "cluster": "aura-business",
+  "slug": "sample-tracking-software",
+  "title": "Sample and Demo Tracking Software for Medical Devices",
+  "meta": "Track every demo unit and sample out in the field: who holds it, since when, when it is due back, and whether the trial turned into an order.",
+  "h1": "Know where every <span class=\"hl\">demo unit</span> is sitting tonight.",
+  "crumb": "Sample &amp; Demo Tracking",
+  "pill": "For teams lending equipment to win orders",
+  "sub": "Aura Business records each sample or demo unit against the account holding it, the rep who took it, the date it left and the date it is due back, so trials are chased, returns happen and conversion can be counted.",
+  "meta_ticks": [
+    "Serial-level units out on trial",
+    "Due-back dates and reminders",
+    "Demo to order conversion visible"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_48_39%20AM.png",
+    "alt": "Aura Business inventory screen showing units issued for demonstration with serial numbers, holder and due-back date",
+    "bar": "app.elevateaura.co.in/samples"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see how sample and demo unit tracking works.",
+  "primary_keyword": "sample and demo tracking software for medical devices",
+  "secondary_keywords": [
+    "demo unit tracking software",
+    "medical device sample tracking India",
+    "trial equipment tracking software",
+    "sample issue and return software",
+    "demo to order conversion tracking"
+  ],
+  "intent": "commercial",
+  "persona": "Sales head at a medical device distributor whose demo units are spread across hospitals",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why a demo unit needs a record of its own",
+      "paras": [
+        "Medical devices are rarely bought unseen. A unit goes to the hospital for a trial, a consultant uses it for a fortnight, and somewhere in that period it is either bought, returned, or quietly forgotten. Each forgotten unit is stock you own, cannot sell and cannot demonstrate to the next prospect.",
+        "Sample tracking in Aura Business ties that unit to a record. The item is issued against a customer account with its serial number, the rep who took it, the date it left and the date it is expected back. While it is out, it shows as committed rather than free stock, and the enquiry it supports carries the trial in its history.",
+        "When the trial ends, the outcome is recorded: converted to an order, returned to the warehouse, or extended. That single field turns demonstration from an expense nobody measures into a step with a known conversion rate."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where units disappear",
+      "h2": "Six ways demo stock goes missing.",
+      "lead": "Nobody steals a demo unit. It simply stops being anyone's responsibility.",
+      "items": [
+        {
+          "h": "Issued on trust",
+          "p": "A unit leaves the godown on a verbal request from a rep, with nothing written beyond a line in a register."
+        },
+        {
+          "h": "No due-back date",
+          "p": "A two-week trial becomes a five-month loan because no date was set for anyone to chase."
+        },
+        {
+          "h": "Free stock that is not free",
+          "p": "The stock figure shows units available, and a sale is promised against equipment sitting in a hospital."
+        },
+        {
+          "h": "Consumable samples uncounted",
+          "p": "Boxes left with a lab are never booked out, so consumption and stock never agree."
+        },
+        {
+          "h": "The rep changes",
+          "p": "A resignation leaves units in hospitals that nobody in the office can name."
+        },
+        {
+          "h": "No conversion figure",
+          "p": "Demonstration is assumed to work because nobody counts how many trials became orders."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The life of a demo unit",
+      "h2": "Out of the warehouse and back again, on the record.",
+      "steps": [
+        {
+          "h": "Requested",
+          "p": "The rep raises a sample or demo request against the lead or account it is for."
+        },
+        {
+          "h": "Issued",
+          "p": "The specific unit is issued by serial number, with the holder, the site and the due-back date recorded."
+        },
+        {
+          "h": "Stock adjusted",
+          "p": "The unit moves out of sellable stock in the ledger and shows as out on trial."
+        },
+        {
+          "h": "Tracked while out",
+          "p": "The trial appears on the account, on the rep's list and on the ageing view of units out beyond their date."
+        },
+        {
+          "h": "Chased",
+          "p": "Reminders go to the rep and the customer as the due date approaches, on WhatsApp where that is set up."
+        },
+        {
+          "h": "Closed",
+          "p": "Converted into a quotation and order, or returned, inspected and taken back into stock."
+        },
+        {
+          "h": "Counted",
+          "p": "Outcomes roll up so the conversion of trials to orders is visible by product and by rep."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules that hold a trial together.",
+      "groups": [
+        {
+          "icon": "&#128230;",
+          "h": "The unit",
+          "items": [
+            "Sample tracking against the account",
+            "Serial and unit-level stock",
+            "Stock movements and ledger",
+            "Batch and expiry tracking for consumable samples",
+            "Multi-warehouse issue and return"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "The holder",
+          "items": [
+            "Customer and hospital accounts",
+            "Contacts and decision-makers at the site",
+            "Rep ownership through territory assignment",
+            "Field visits with GPS check-in during the trial"
+          ]
+        },
+        {
+          "icon": "&#128200;",
+          "h": "The outcome",
+          "items": [
+            "Leads and pipeline carrying the trial",
+            "Quotation raised from the demonstrated product",
+            "Lead-source and conversion analytics",
+            "Notifications hub and WhatsApp reminders"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What tracked samples change.",
+      "items": [
+        {
+          "h": "A unit is promised twice",
+          "workflow": "The catalogue shows the unit out on trial at a hospital until the fifteenth, so the second prospect is offered a date rather than a disappointment.",
+          "result": "No sale is made against equipment that is not in the building."
+        },
+        {
+          "h": "An overdue trial is chased on time",
+          "workflow": "The ageing view lists units out past their due-back date with the rep and the site, and reminders go out before it becomes awkward.",
+          "result": "Units come back while the customer still remembers agreeing a period."
+        },
+        {
+          "h": "A trial turns into a quotation",
+          "workflow": "The demonstrated model and serial are already on the enquiry, so the quotation is raised from the catalogue without retyping specifications.",
+          "result": "The proposal follows the trial while interest is high."
+        },
+        {
+          "h": "A departing rep hands over cleanly",
+          "workflow": "Every unit issued to that rep is listed with its holder and date before the handover meeting.",
+          "result": "Recovery is a checklist rather than an investigation."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone whose stock leaves before it is sold.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical device distributors",
+          "p": "Capital equipment trialled in wards and theatres."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Laboratory equipment dealers",
+          "p": "Analysers and reagents placed for evaluation."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Diagnostics suppliers",
+          "p": "Kits and consumable samples left with labs."
+        },
+        {
+          "icon": "&#129701;",
+          "b": "Dental equipment dealers",
+          "p": "Chairs and handpieces demonstrated in clinics."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial equipment suppliers",
+          "p": "Tools and instruments on plant trials."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How demo stock is usually managed.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Accounting software",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Which unit went out",
+          "A model name",
+          "A note",
+          "A stock issue",
+          "The serial number, against the account"
+        ],
+        [
+          "Who holds it",
+          "Whoever remembers",
+          "Contact note",
+          "Not held",
+          "Rep, customer and site on the record"
+        ],
+        [
+          "Due back",
+          "Not set",
+          "A task, sometimes",
+          "No",
+          "Date with reminders before it lapses"
+        ],
+        [
+          "Effect on sellable stock",
+          "None",
+          "None",
+          "Issued out of stock",
+          "Shown as out on trial, not free"
+        ],
+        [
+          "Link to the enquiry",
+          "Separate",
+          "Manual",
+          "None",
+          "Trial sits on the lead and the quotation"
+        ],
+        [
+          "Conversion of trials",
+          "Unknown",
+          "Report you build",
+          "No",
+          "Outcome recorded and reported by product"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Sample and demo tracking, answered.",
+      "items": [
+        {
+          "q": "Does this cover consumable samples as well as machines?",
+          "a": "Yes. Serial-level tracking suits capital units, while batch and expiry tracking covers consumable samples issued in quantity, so both leave the stock ledger properly when they go out."
+        },
+        {
+          "q": "Can we see everything currently out on trial?",
+          "a": "Yes. Units out are listed with the holding account, the rep, the date issued and the due-back date, and can be sorted by how long they have been out."
+        },
+        {
+          "q": "How are reminders sent?",
+          "a": "Through the notifications hub, and on WhatsApp where the WhatsApp Business integration is configured for your account. The message templates are agreed during setup."
+        },
+        {
+          "q": "What happens if the customer buys the demo unit itself?",
+          "a": "The trial is closed as converted and the same serial moves into the sales order and tax invoice, then into the installed-base register under that customer with its warranty dates."
+        },
+        {
+          "q": "Can reps issue samples themselves?",
+          "a": "That depends on the approval flow you want. Role-based access decides who may request and who may issue, and the rule is set during setup rather than fixed by the software."
+        },
+        {
+          "q": "How does this connect to the sales pipeline?",
+          "a": "The sample is recorded against the lead or account, so the trial appears in the enquiry history alongside visits and quotations. See <a href=\"/aura-business/medical-equipment-lead-management-software/\">lead management</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Inventory",
+          "p": "Where the unit comes from."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "What follows a good trial."
+        },
+        {
+          "href": "/aura-business/crm-for-medical-representatives/",
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "CRM for reps",
+          "p": "Samples on the rep's screen."
+        },
+        {
+          "href": "/aura-business/batch-expiry-tracking-software/",
+          "icon": "&#128197;",
+          "b": "Batch and expiry",
+          "p": "Consumable samples with dates."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Where a converted unit lands."
+        },
+        {
+          "href": "/resources/what-is-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an equipment CRM covers."
+        }
+      ]
+    }
+  ]
+}

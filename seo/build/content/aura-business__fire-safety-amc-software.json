@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "fire-safety-amc-software",
+  "title": "Fire Safety AMC Software for Service Contracts | Aura Business",
+  "meta": "Fire safety AMC software for scheduled testing across a building, refill and replacement cycles, multi-site contracts and records your customer can produce.",
+  "h1": "Fire safety AMC software for testing that has to be <span class=\"hl\">recorded, not just done</span>.",
+  "crumb": "Fire Safety AMC Software",
+  "pill": "For fire protection service companies",
+  "sub": "Aura Business is built for fire safety maintenance businesses: extinguishers, alarms, hydrants and suppression systems tested on their own cycles across a building, refills and replacements falling due by date, and customers who are asked to produce the records.",
+  "meta_ticks": [
+    "Every device tested on its own cycle",
+    "Refill and replacement dates held per unit",
+    "Records the customer can hand over"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we run fire safety maintenance contracts. I would like to see how Aura Business handles scheduled testing, refills and multi-site contracts.",
+  "primary_keyword": "fire safety AMC software",
+  "secondary_keywords": [
+    "fire extinguisher AMC management software",
+    "fire alarm maintenance software India",
+    "fire protection service management software",
+    "fire safety inspection record software",
+    "multi-site fire system maintenance software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or operations head of a fire protection and safety systems company running maintenance contracts across buildings",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Why fire safety work is a records business",
+      "paras": [
+        "A fire safety maintenance contract covers a large number of small things spread through a building: extinguishers by floor and by type, hydrant points and hose reels, detectors and alarm panels, pumps, sprinkler and suppression systems. Each has its own testing interval, its own checklist and its own replacement or refill date, and none of them are usually in the same place. Software for this trade has to hold a device list per building before it holds anything else, because the work is defined by that list.",
+        "The part that makes it different from ordinary maintenance is that the customer needs the paperwork as much as the service. Building owners, occupiers and insurers are regularly asked to show what was tested, when, by whom and with what result, and a service company that cannot produce that quickly is replaced by one that can. Aura Business registers every device as an asset, raises preventive visits per device and per cycle, captures the checklist and photographs on the technician's phone, and keeps the history attached to the asset so a site record can be produced rather than reconstructed. What the record has to contain for any particular authority is a question for your customer and their adviser, not for us."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where it goes wrong",
+      "h2": "The work gets done and the evidence does not survive.",
+      "lead": "Fire safety service rarely fails at the technical level. It fails at the point where somebody has to prove what happened.",
+      "items": [
+        {
+          "h": "The device list is out of date",
+          "p": "Units were moved between floors, some were replaced after use, and the contract still counts the original numbers."
+        },
+        {
+          "h": "Cycles are not the same length",
+          "p": "Monthly checks, half-yearly tests and refill dates all run on different clocks and are tracked on the same sheet."
+        },
+        {
+          "h": "Test records live on paper tags",
+          "p": "The evidence is a tag on the unit, so the office cannot answer a question without sending somebody to look."
+        },
+        {
+          "h": "Refills are noticed after they lapse",
+          "p": "A refill or replacement date passes unnoticed, and the shortfall is found during an inspection rather than before one."
+        },
+        {
+          "h": "Multi-site contracts are managed site by site",
+          "p": "One customer with a dozen branches is run as a dozen relationships, with a dozen renewal dates to remember."
+        },
+        {
+          "h": "Chargeable work is absorbed",
+          "p": "Refills, recharges and replaced units that sit outside the contract are done anyway and never reach an invoice."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How it runs",
+      "h2": "From the device survey to the record the customer keeps.",
+      "steps": [
+        {
+          "h": "Survey the site",
+          "p": "Every extinguisher, hydrant point, detector, panel and pump is registered as an asset with its exact location."
+        },
+        {
+          "h": "Set the contract",
+          "p": "One contract covers the registered devices, with visit frequency and what is included and excluded written on it."
+        },
+        {
+          "h": "Build the cycles",
+          "p": "Preventive schedules are raised per device type, so monthly, half-yearly and annual work each have their own due dates."
+        },
+        {
+          "h": "Test and capture",
+          "p": "The technician works down a checklist on the mobile job card, entering readings and photographs as each unit is done."
+        },
+        {
+          "h": "Track refill and replacement",
+          "p": "Refill and replacement dates are held per unit and raised as due work rather than being remembered by a storekeeper."
+        },
+        {
+          "h": "Bill what is outside cover",
+          "p": "Refills, recharges and replaced units outside the contract are raised on a service invoice against the same job."
+        },
+        {
+          "h": "Produce the record",
+          "p": "The site history shows what was tested, when, by whom and with what result, ready to be shared with the customer."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Modules for many small assets in one building.",
+      "groups": [
+        {
+          "icon": "&#128681;",
+          "h": "Devices and contracts",
+          "items": [
+            "Asset register per building, floor and location",
+            "Multi-site contracts across a customer's branches",
+            "AMC and CMC contracts with exclusions recorded",
+            "Warranty tracking on newly supplied systems",
+            "Contract renewal engine and revenue dashboard"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "Testing cycles",
+          "items": [
+            "Preventive schedules per device type and interval",
+            "Compliance and calibration checklists on the job card",
+            "Refill and replacement dates held per unit",
+            "Due, completed and outstanding counts per site"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "The technician's day",
+          "items": [
+            "Mobile job card with photo proof and signature",
+            "Offline working for basements and plant rooms",
+            "Barcode or QR scanning to identify the unit on site",
+            "Route and schedule planning across sites",
+            "Attendance with geo check-in and selfie"
+          ]
+        },
+        {
+          "icon": "&#128179;",
+          "h": "Stock and billing",
+          "items": [
+            "Spare and consumable stock with a movement ledger",
+            "Parts used per job, dropping stock automatically",
+            "Service invoices for refills and replacements",
+            "Payment tracker with WhatsApp reminders",
+            "Contract profitability by customer"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four things the paperwork has to survive.",
+      "items": [
+        {
+          "h": "An inspection is announced for next week",
+          "workflow": "The site history already holds every completed test with its date, technician, checklist result and photographs.",
+          "result": "The customer is sent a record rather than a promise."
+        },
+        {
+          "h": "Half-yearly work slips behind monthly work",
+          "workflow": "Each device type carries its own schedule, and outstanding counts are shown per site rather than as one list.",
+          "result": "The longer cycle stops being the one that lapses."
+        },
+        {
+          "h": "Forty refills fall due in a month",
+          "workflow": "Refill and replacement dates sit on each unit, so the due list is known in advance and stock is arranged for it.",
+          "result": "One planned run instead of repeated visits."
+        },
+        {
+          "h": "A twelve-branch customer renews once",
+          "workflow": "All branches sit under one multi-site contract with reporting across every site and a single renewal date.",
+          "result": "One conversation instead of twelve."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Companies responsible for equipment nobody hopes to use.",
+      "items": [
+        {
+          "icon": "&#128681;",
+          "b": "Fire extinguisher service companies",
+          "p": "Large unit counts, refill cycles, many small sites."
+        },
+        {
+          "icon": "&#128276;",
+          "b": "Fire alarm and detection firms",
+          "p": "Panels, loops and detectors tested on a schedule."
+        },
+        {
+          "icon": "&#128167;",
+          "b": "Hydrant and sprinkler contractors",
+          "p": "Pumps and wet systems with heavier planned work."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Integrated safety system providers",
+          "p": "Several system types under one building contract."
+        },
+        {
+          "icon": "&#128736;",
+          "b": "Facilities maintenance contractors",
+          "p": "Fire safety as one line in a wider site agreement."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Tags and registers, a generic ticket tool, or contract-aware service software.",
+      "cols": [
+        "Tags and paper registers",
+        "Generic ticket tool",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Device list",
+          "A count in the agreement",
+          "Not modelled",
+          "Asset register per floor and location"
+        ],
+        [
+          "Different test intervals",
+          "One sheet, several clocks",
+          "Recurring tickets",
+          "A schedule per device type and interval"
+        ],
+        [
+          "Evidence of a test",
+          "A tag on the unit",
+          "A closed ticket",
+          "Checklist, readings, photographs and signature"
+        ],
+        [
+          "Refills and replacements",
+          "Noticed when checked",
+          "Not covered",
+          "Dates held per unit and raised as due work"
+        ],
+        [
+          "Multi-site customers",
+          "Separate files",
+          "Separate projects",
+          "One contract across sites with combined reporting"
+        ],
+        [
+          "Chargeable extras",
+          "Often absorbed",
+          "Not covered",
+          "Service invoice raised from the same job"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Fire safety maintenance contracts, answered.",
+      "items": [
+        {
+          "q": "Can different device types run on different testing intervals?",
+          "a": "Yes. Preventive schedules are set per device type, so monthly checks, half-yearly tests and annual work each carry their own due dates under the same contract, and each shows its own due, completed and outstanding count."
+        },
+        {
+          "q": "What evidence does a completed test leave behind?",
+          "a": "The job card records the date, the technician, the checklist result, any readings entered, photographs and the customer signature, and all of it stays attached to that specific unit and site permanently rather than to a visit note."
+        },
+        {
+          "q": "Does the software make us compliant with fire regulations?",
+          "a": "No software can do that. What this does is keep an accurate device list and a dated, attributable record of what was tested and replaced, so the evidence exists when your customer is asked for it. What any authority requires is for your customer and their adviser to confirm."
+        },
+        {
+          "q": "How are refill and replacement dates handled?",
+          "a": "They sit on the unit itself rather than in a separate diary, and fall due as work in the same way a test does. That lets a month of refills be planned as one run with the stock arranged, instead of discovered unit by unit."
+        },
+        {
+          "q": "Can one customer with many branches be handled as one contract?",
+          "a": "Yes. A multi-site contract holds all of a customer's sites under one agreement, with reporting across every site, a single renewal date and invoicing raised consolidated or per site as agreed."
+        },
+        {
+          "q": "How do we identify the right unit on site?",
+          "a": "Barcode or QR scanning opens the correct asset on the technician's phone, so the test is recorded against the unit in front of them rather than against a line chosen from a list afterwards. See <a href=\"/aura-business/installed-base-management-software/\">installed base management</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128188;",
+          "b": "Aura Business",
+          "p": "The full operations platform."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Schedules and checklists per asset."
+        },
+        {
+          "href": "/aura-business/lift-amc-management-software/",
+          "icon": "&#128507;",
+          "b": "Lift AMC software",
+          "p": "Contracts measured in buildings."
+        },
+        {
+          "href": "/aura-business/mobile-job-card-software/",
+          "icon": "&#128241;",
+          "b": "Mobile job cards",
+          "p": "Proof captured on the phone."
+        },
+        {
+          "href": "/aura-business/amc-billing-software/",
+          "icon": "&#129534;",
+          "b": "AMC billing",
+          "p": "Invoicing contracts and extras."
+        },
+        {
+          "href": "/resources/how-to-stop-amc-revenue-leakage/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Stopping AMC revenue leaking."
+        }
+      ]
+    }
+  ]
+}

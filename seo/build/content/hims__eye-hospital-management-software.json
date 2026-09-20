@@ -1,0 +1,324 @@
+{
+  "cluster": "hims",
+  "slug": "eye-hospital-management-software",
+  "title": "Eye Hospital Management Software | High OP Volume | HIMS",
+  "meta": "Eye hospital management software for high outpatient volume: multi-step visits, dilation waits, an optical counter run as stock, day-case theatre and billing.",
+  "h1": "Eye hospital management software built for <span class=\"hl\">a very large outpatient day</span>.",
+  "crumb": "Eye Hospital Software",
+  "pill": "For eye hospitals and vision centres",
+  "sub": "An eye hospital sees more patients in a morning than many hospitals see in a day, and each of them moves through several stations before the consultation. HIMS is configured around that path: registration, vision testing, dilation, consultant, theatre or optical counter, bill.",
+  "meta_ticks": [
+    "A queue built for several stations",
+    "Optical counter run as stock",
+    "Day-case theatre on the same record"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/opd-dashboard.png",
+    "alt": "HIMS outpatient dashboard showing the live token queue and waiting counts for the day",
+    "bar": "his.elevateaura.co.in/opd"
+  },
+  "whatsapp_text": "Hi, we run an eye hospital and would like to see HIMS.",
+  "primary_keyword": "eye hospital management software",
+  "secondary_keywords": [
+    "ophthalmology clinic software India",
+    "eye clinic management software",
+    "optical shop and clinic software",
+    "vision centre software",
+    "eye hospital billing software",
+    "cataract day care software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of an eye hospital or chain of vision centres with very high outpatient throughput",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an eye hospital needs from hospital software",
+      "paras": [
+        "Eye hospital management software has to survive volume. The consultation itself is short and often a repeat, but the visit around it is long, because the patient passes through registration, vision testing, drops and a wait, the consultant, and then either a day-case theatre or the optical counter. HIMS handles that as one patient record moving through a queue with several stopping points, so nobody is retyped at each station and nobody is lost between them.",
+        "The other thing that makes an eye hospital unusual is that it hands over goods as well as treatment. Frames and lenses behave like retail stock. HIMS treats the optical counter the way it treats the pharmacy counter: an item is issued against the patient, stock comes down, and the value lands on the same bill as the consultation. How far the optical side is taken is agreed during scoping."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The volume problem",
+      "h2": "Nothing in an eye hospital breaks quietly. It breaks in a corridor with eighty people in it.",
+      "lead": "The consultation is three minutes. Everything around it is where the day is lost.",
+      "items": [
+        {
+          "h": "The queue restarts at every station",
+          "p": "A patient sent for drops comes back and argues about their place, because the only record of order was a paper token."
+        },
+        {
+          "h": "Refraction findings on a slip",
+          "p": "The reading is written on paper, carried to the consultant and then carried again to the optical counter, where it is copied a third time."
+        },
+        {
+          "h": "The optical counter is a separate business",
+          "p": "Frames sit in a stock book, sales sit in a second bill book, and nobody can say what one patient actually spent."
+        },
+        {
+          "h": "Theatre lists made the night before",
+          "p": "Day-case lists are drawn up by hand, and a cancellation leaves a slot nobody fills."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "One visit, several stations",
+      "h2": "How a high-volume eye outpatient day runs on HIMS.",
+      "steps": [
+        {
+          "h": "Registration",
+          "p": "A new patient gets a UHID; a review patient is found by phone number and keeps the same record."
+        },
+        {
+          "h": "Vision testing",
+          "p": "The optometrist's findings are recorded against the visit rather than on a slip, and the consultant opens them."
+        },
+        {
+          "h": "Drops and the wait",
+          "p": "The patient stays in the queue while dilating, so they return to their place instead of the back of the line."
+        },
+        {
+          "h": "Consultation",
+          "p": "The consultant sees the visit with the testing already on it, records notes and raises an e-prescription."
+        },
+        {
+          "h": "Theatre or optical",
+          "p": "A day case goes on the theatre list; a spectacle order goes to the optical counter."
+        },
+        {
+          "h": "Bill",
+          "p": "Consultation, investigations, procedure and any goods issued settle on one bill, cash, insurance or TPA."
+        },
+        {
+          "h": "Review",
+          "p": "The follow-up is booked before the patient leaves and lands on the same record."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS an eye hospital leans on hardest.",
+      "groups": [
+        {
+          "icon": "&#127915;",
+          "h": "Queue and appointments",
+          "items": [
+            "Tokens for walk-ins and booked slots",
+            "The queue held across a multi-step visit",
+            "Consultant rosters and session limits",
+            "WhatsApp reminders for review dates"
+          ]
+        },
+        {
+          "icon": "&#128100;",
+          "h": "The record",
+          "items": [
+            "One UHID across every visit",
+            "Structured notes per visit",
+            "e-Prescription to the dispensing counter",
+            "Patient app for reports and bookings"
+          ]
+        },
+        {
+          "icon": "&#128083;",
+          "h": "Optical and pharmacy",
+          "items": [
+            "Frames and lenses held as stock items",
+            "Issued against the patient and the visit",
+            "Reorder levels and low-stock alerts",
+            "Drops and consumables at the same counter"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Procedures and billing",
+          "items": [
+            "Theatre scheduling for day cases",
+            "Package billing for a procedure",
+            "Cash, insurance and TPA on one bill",
+            "Daily collections on the dashboard"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See everything HIMS covers"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes on a heavy morning.",
+      "items": [
+        {
+          "h": "The dilation gap",
+          "workflow": "Patients waiting for drops to work stay in the queue with their place recorded.",
+          "result": "No argument at the consultant's door."
+        },
+        {
+          "h": "Spectacles ordered at the counter",
+          "workflow": "The order is raised against the visit and the frame leaves stock when it is issued.",
+          "result": "Optical takings and optical stock finally agree."
+        },
+        {
+          "h": "A same-day procedure",
+          "workflow": "Scheduled on the theatre list, billed as a package, discharged the same day on the record.",
+          "result": "The review appointment is already booked when the patient leaves."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Eye care at every size.",
+      "items": [
+        {
+          "icon": "&#128065;",
+          "b": "Eye hospitals",
+          "p": "A large outpatient load with theatres attached."
+        },
+        {
+          "icon": "&#128083;",
+          "b": "Vision centres",
+          "p": "Testing, prescriptions and an optical counter."
+        },
+        {
+          "icon": "&#129517;",
+          "b": "Day-case surgical centres",
+          "p": "Admitted and discharged the same day."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "Multi-branch chains",
+          "p": "One patient record across branches."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultant-owners",
+          "p": "Operating in the morning, running the business after."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running an eye hospital, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Queue across stations",
+          "Paper tokens",
+          "Not covered",
+          "One visit tracked through each station"
+        ],
+        [
+          "Testing findings",
+          "A slip carried by the patient",
+          "Not covered",
+          "Recorded on the visit, read by the consultant"
+        ],
+        [
+          "Optical stock",
+          "A separate stock book",
+          "Billed, not stocked",
+          "Issued against the patient, stock reduced"
+        ],
+        [
+          "Day-case theatre",
+          "Handwritten list",
+          "Not covered",
+          "Scheduled and billed as a package"
+        ],
+        [
+          "Repeat patients",
+          "Registered again",
+          "New bill, no history",
+          "Same UHID, full visit history"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Eye hospital management software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS an ophthalmology product?",
+          "a": "No, and that is worth saying plainly. HIMS is a general hospital system configured for the way an eye hospital's day runs, which is high volume, short repeat consultations and a multi-station visit. Anything genuinely specialty-specific is scoped on the call rather than claimed here."
+        },
+        {
+          "q": "Can it handle the optical counter?",
+          "a": "Frames, lenses and solutions are held as stock items with reorder levels, issued against the patient and billed alongside the consultation. How far the optical side is configured, including brands and models, is agreed during scoping."
+        },
+        {
+          "q": "How does it cope with a few hundred outpatients a day?",
+          "a": "Registration finds a returning patient by phone number instead of creating a new one, the queue is on screen rather than on paper, and billing happens at the counter from the visit. Volume is survived by not repeating work at each station."
+        },
+        {
+          "q": "Does it schedule day-case surgery?",
+          "a": "Yes. Operation theatre scheduling and package billing are part of HIMS, and a same-day admission and discharge runs on the record. See <a href=\"/hims/day-care-centre-software/\">day care centre software</a> for how that path works."
+        },
+        {
+          "q": "Can investigations and imaging sit on the same record?",
+          "a": "Yes. The laboratory module runs order to verified result, and AuraPACS imaging is built into HIMS, so studies attach to the patient rather than living on a machine in a room."
+        },
+        {
+          "q": "How long does an eye hospital take to go live?",
+          "a": "The delivery framework is 30 working days where the agreed scope allows it. Setup is done by the founder who built the software, in person in Chennai or remotely elsewhere, with your patient list brought in from Excel and WhatsApp support afterwards."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/hospital-queue-management-software/",
+          "icon": "&#127915;",
+          "b": "Queue management",
+          "p": "Tokens, walk-ins and waiting."
+        },
+        {
+          "href": "/hims/hospital-opd-management-software/",
+          "icon": "&#128197;",
+          "b": "OPD management",
+          "p": "The outpatient day end to end."
+        },
+        {
+          "href": "/hims/day-care-centre-software/",
+          "icon": "&#129517;",
+          "b": "Day care centre",
+          "p": "Admitted and out the same day."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#8377;",
+          "b": "Package billing",
+          "p": "A procedure billed as one item."
+        },
+        {
+          "href": "/resources/what-is-hims/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a HIMS actually is."
+        }
+      ]
+    }
+  ]
+}

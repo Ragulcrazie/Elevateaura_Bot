@@ -1,0 +1,336 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-software-50-bed",
+  "title": "Hospital Management Software for a 50 Bed Hospital | HIMS",
+  "meta": "Hospital management software for a 50 bed hospital: what to switch on first, how to go live without an IT team, and how an owner-doctor keeps control of it.",
+  "h1": "Hospital management software for a 50 bed hospital, <span class=\"hl\">switched on in the right order</span>.",
+  "crumb": "50 Bed Hospital Software",
+  "pill": "For owner-run hospitals of around 50 beds",
+  "sub": "At fifty beds the constraint is not the software, it is whose week pays for it. This page sets out what a hospital this size should run first, what can wait, and how go-live is done when the owner is still seeing patients every morning.",
+  "meta_ticks": [
+    "Go live in phases, not all at once",
+    "No IT department required",
+    "Founder-led setup and training"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/billing.png",
+    "alt": "HIMS billing screen showing an inpatient bill with cash and TPA components",
+    "bar": "his.elevateaura.co.in/billing"
+  },
+  "whatsapp_text": "Hi, we run a 50 bed hospital and would like to see HIMS.",
+  "primary_keyword": "hospital management software for a 50 bed hospital",
+  "secondary_keywords": [
+    "50 bed hospital software India",
+    "hospital software for small hospitals",
+    "hospital management system 50 beds",
+    "owner run hospital software",
+    "phased hospital software rollout",
+    "hospital software without IT team"
+  ],
+  "intent": "commercial",
+  "persona": "Owner-doctor of a hospital of roughly 50 beds who is still clinically active and has a small administrative team",
+  "page_type": "commercial",
+  "phase": 3,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a hospital of around fifty beds should actually buy",
+      "paras": [
+        "A fifty-bed hospital usually has an owner who is still a practising consultant, three or four people in the office who each do several jobs, a pharmacy, a small laboratory, mostly cash patients and a growing but modest amount of TPA work. It has no IT department and nobody who can spend a fortnight on configuration. The software question at this size is not which modules exist. It is which ones go live first and who has the hours to make that happen.",
+        "The honest answer is to run registration, the outpatient department, beds, pharmacy and billing from day one, because those five touch every rupee and every patient. Laboratory, imaging, procurement and the management dashboard follow once the first set is habit. HIMS is delivered to a fixed scope on a 30-working-day framework where scope allows, set up with your own data and taught at your own counters by the founder who built it, so the owner's clinical week is not the thing that pays for the rollout."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The fifty-bed reality",
+      "h2": "The hospital is big enough to need a system and too small to survive a bad one.",
+      "lead": "At this size a failed rollout is not a delay. It is six months back on the register.",
+      "items": [
+        {
+          "h": "The owner is the project team",
+          "p": "Every decision about how the hospital should work comes back to the consultant, between clinics."
+        },
+        {
+          "h": "Everything at once, or nothing",
+          "p": "Vendors switch on all the modules on day one, the staff cannot cope, and the registers quietly come back."
+        },
+        {
+          "h": "Three people, seven jobs",
+          "p": "The same person registers patients, raises the bill, runs the TPA file and orders the drugs."
+        },
+        {
+          "h": "Cash is the main payer",
+          "p": "The system has to be fast at the counter first and clever about claims second, not the other way round."
+        },
+        {
+          "h": "Nobody to maintain a server",
+          "p": "A machine in a back room becomes somebody's unpaid second job and then somebody's emergency."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How to go live",
+      "h2": "Phases a fifty-bed hospital can actually absorb.",
+      "steps": [
+        {
+          "h": "Scope agreed",
+          "p": "A fixed list of what goes live first, written down before anything is configured."
+        },
+        {
+          "h": "Phase one",
+          "p": "Registration under UHID, outpatient consultation and e-prescription, beds, pharmacy and billing."
+        },
+        {
+          "h": "Counter training",
+          "p": "The front desk, the nursing station and the pharmacy counter are each taught their own screens."
+        },
+        {
+          "h": "Phase two",
+          "p": "Laboratory, TPA claims and inpatient running bills once phase one is routine."
+        },
+        {
+          "h": "Phase three",
+          "p": "Procurement, asset register, imaging through AuraPACS and the owner's dashboard."
+        },
+        {
+          "h": "After go-live",
+          "p": "Support on WhatsApp, with changes agreed as scope rather than raised as tickets."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What goes live when",
+      "h2": "The order that works at fifty beds.",
+      "groups": [
+        {
+          "icon": "&#9989;",
+          "h": "Phase one, day one",
+          "items": [
+            "UHID registration and patient lookup",
+            "Outpatient queue and e-prescription",
+            "Bed board and admissions",
+            "Pharmacy dispensing and stock",
+            "Cash billing at the counter"
+          ]
+        },
+        {
+          "icon": "&#128203;",
+          "h": "Phase two, once habit",
+          "items": [
+            "Laboratory from order to verified result",
+            "Running inpatient bills and interim statements",
+            "Insurance and TPA pre-authorisation and claims",
+            "Discharge summaries from the record"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Phase three, when ready",
+          "items": [
+            "Procurement and goods receipt",
+            "Equipment and asset register",
+            "AuraPACS imaging on the record",
+            "Owner dashboard of OP, IP, beds and collections"
+          ]
+        },
+        {
+          "icon": "&#128296;",
+          "h": "How it is delivered",
+          "items": [
+            "Cloud deployment, no server in a back room",
+            "Fixed scope, 30 working days where scope allows",
+            "Founder-led setup and training",
+            "WhatsApp support after go-live"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/resources/hospital-software-implementation-checklist/",
+        "label": "Read the implementation checklist"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the owner gets back.",
+      "items": [
+        {
+          "h": "The morning clinic is not interrupted",
+          "workflow": "Registration and billing run at the counter without decisions being escalated to the consultant.",
+          "result": "The owner spends the morning on patients."
+        },
+        {
+          "h": "The evening round from home",
+          "workflow": "Charts, orders and the day's admissions are read on the record from anywhere.",
+          "result": "Being in the building stops being the only way to know."
+        },
+        {
+          "h": "The first TPA month",
+          "workflow": "The admission carries the pre-authorisation, and the claim documents are pulled from the record when the patient goes home.",
+          "result": "The desk can file a claim without the owner assembling it."
+        },
+        {
+          "h": "A new receptionist in month seven",
+          "workflow": "They learn one screen for the job they do rather than the whole platform.",
+          "result": "Staff turnover stops being a systems problem."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals of this size and shape.",
+      "items": [
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Owner-doctors",
+          "p": "Still consulting, and responsible for the business."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Single-specialty hospitals",
+          "p": "One specialty, wards and a theatre."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Growing nursing homes",
+          "p": "Beds added faster than admin staff."
+        },
+        {
+          "icon": "&#128205;",
+          "b": "District town hospitals",
+          "p": "Cloud setup and remote support, no local IT."
+        },
+        {
+          "icon": "&#128176;",
+          "b": "Mostly cash hospitals",
+          "p": "Counter speed first, claims second."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Getting a fifty-bed hospital onto software, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Enterprise hospital ERP",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "How it goes live",
+          "It does not",
+          "Everything at once, over months",
+          "Phase one first, the rest when it is habit"
+        ],
+        [
+          "Who configures it",
+          "Not applicable",
+          "Your team, with a consultant",
+          "The founder who built it"
+        ],
+        [
+          "Staff needed to run it",
+          "Everyone, on paper",
+          "Roles you do not employ",
+          "The people already at the counters"
+        ],
+        [
+          "Infrastructure",
+          "A cupboard",
+          "Servers and an IT contract",
+          "Cloud, used from a browser"
+        ],
+        [
+          "Buying in stages",
+          "Not applicable",
+          "Licensed up front",
+          "Modules switched on as you need them"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Software for a 50 bed hospital, answered.",
+      "items": [
+        {
+          "q": "Do we have to switch everything on at once?",
+          "a": "No, and you should not. Registration, outpatients, beds, pharmacy and billing go live first because they touch every patient and every payment. Laboratory, TPA and the dashboard follow once the first set is routine. It is the same records throughout, so nothing is migrated twice."
+        },
+        {
+          "q": "We have no IT staff. Who runs it?",
+          "a": "Your existing desk, nursing and pharmacy staff run it, each on their own screens. HIMS is deployed in the cloud and used from a browser on the computers you already have, so there is no server for anyone to maintain."
+        },
+        {
+          "q": "How much of the owner's time does go-live need?",
+          "a": "Decisions about rates, users and workflow need the owner. Configuration, data migration and training are done by the founder who built the software, in person in Chennai or remotely elsewhere in India."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "There is no published price. Scope for a hospital this size is agreed on a call and quoted against that scope. See <a href=\"/hims/hospital-management-software-pricing/\">HIMS pricing</a> for how the conversation works."
+        },
+        {
+          "q": "How is this different from software for a 100 bed hospital?",
+          "a": "At fifty beds one desk usually does everything and the owner is still clinical. At a hundred there are shift handovers, a billing desk per area and an administrator who needs daily numbers. See <a href=\"/hims/hospital-software-100-bed/\">software for a 100 bed hospital</a>."
+        },
+        {
+          "q": "What happens when we grow?",
+          "a": "Modules are switched on against the same patient records rather than replaced. Adding a laboratory, imaging or a second branch is configuration, not a new implementation."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospital software",
+          "p": "Ten to fifty beds."
+        },
+        {
+          "href": "/hims/hospital-software-100-bed/",
+          "icon": "&#127974;",
+          "b": "100 bed hospital",
+          "p": "Where this approach starts to break."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128202;",
+          "b": "Owner dashboard",
+          "p": "The numbers, daily."
+        },
+        {
+          "href": "/hims/hospital-management-software-pricing/",
+          "icon": "&#8377;",
+          "b": "Pricing",
+          "p": "How scope is quoted."
+        },
+        {
+          "href": "/resources/hospital-software-implementation-checklist/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Implementation checklist."
+        },
+        {
+          "href": "/hims/charitable-hospital-software/",
+          "icon": "&#129309;",
+          "b": "Trust hospitals",
+          "p": "Subsidised and free categories."
+        }
+      ]
+    }
+  ]
+}

@@ -217,6 +217,12 @@
           "icon": "&#128205;",
           "b": "Trichy",
           "p": "Hospitals serving nearby districts."
+        },
+        {
+          "href": "/hims/paediatric-clinic-software/",
+          "icon": "&#129492;",
+          "b": "Paediatric clinics",
+          "p": "Immunisation schedules and parents."
         }
       ]
     }

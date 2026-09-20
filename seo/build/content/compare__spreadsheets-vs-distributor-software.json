@@ -218,6 +218,12 @@
           "icon": "&#128203;",
           "b": "All comparisons",
           "p": "Every side-by-side in one place."
+        },
+        {
+          "href": "/compare/field-service-software-vs-whatsapp-groups/",
+          "icon": "&#9878;",
+          "b": "Field service vs WhatsApp",
+          "p": "Where the group chat stops working."
         }
       ]
     }

@@ -334,6 +334,12 @@
           "icon": "&#127973;",
           "b": "Multi-specialty hospital",
           "p": "One record across departments."
+        },
+        {
+          "href": "/hims/maternity-hospital-software/",
+          "icon": "&#128118;",
+          "b": "Maternity hospitals",
+          "p": "Planned stays billed as packages."
         }
       ]
     }

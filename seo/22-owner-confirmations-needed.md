@@ -21,6 +21,19 @@ Those are marked SOFTENED. The rest read as written and simply need a yes or no.
 | Vehicle details updated against an existing e-way bill after transhipment | As written | Does the platform handle the Part B update, or is that done on the government portal? |
 | Contract billing frequency is configurable | As written | Monthly, quarterly, annual, all of them? |
 | Credit limit and credit days per customer | Documented in FACTS | No action, already on record |
+| Beat plans | As written, the page states plainly that the beat is built from territory, GPS visits and route scheduling rather than a separately named module | There is no beat-plan module in the module list. Confirm the workaround is how it is actually sold |
+| Geo-fenced attendance | As written, "can be geo-fenced where that is agreed" | The module list has "Attendance (Geo + Selfie)" but not fencing. Does it fence to a site? |
+| Rate contract quantity drawdown, what has been supplied and what remains | SOFTENED to "where a quantity ceiling exists" | Rate-Contract Management exists; confirm whether drawdown against a ceiling is tracked |
+| Contract rate applied automatically to a quotation | As written, override deferred to role-based access | Confirm the quote honours the contract rate |
+| Selfie image retention policy | As written, "settled during setup" | Confirm there is a retention setting |
+| Tally export scope, format and frequency | As written, "agreed at setup" | Confirm what actually exports |
+| A withheld or retained balance kept open against a customer | As written, never called a retention feature | Can a part-paid balance sit open in the payment tracker and ageing? |
+| A site or an engineer's van treated as a stock location | As written, presented as an application of Multi-Warehouse | Can arbitrary stock locations be created? |
+| Ordered, delivered and balance quantity per order line | As written, presented as a consequence of despatching against the order | Is the balance quantity actually shown? |
+| Scanning a barcode to open the right asset on a phone | As written | Is scanning catalogue-only, or does it look up an asset? |
+| Optical dispensing depth on the eye hospital page | Hedged | How far does retail-style dispensing go? |
+| Unit or lot level implant tracking on the orthopaedic page | Hedged | Is implant traceability to the case supported? |
+| How a session package's remaining balance is displayed | Hedged | Confirm drawdown display |
 
 ## HIMS
 
@@ -38,6 +51,9 @@ Those are marked SOFTENED. The rest read as written and simply need a yes or no.
 | A chair as a tracked place in a day care unit | As written, extends bed management; a dialysis module is explicitly refused | Confirm |
 | Per-doctor consultation and collection figures in a polyclinic | As written; automated payout calculation explicitly deferred to a call | Confirm |
 | WhatsApp appointment and follow-up reminders in HIMS | As written, templates "agreed at setup" | The facts sheet lists WhatsApp under Aura Business and AuraPACS, not HIMS. Confirm it is available for hospitals |
+| Multi-location HIMS: shared patient base, central tariff, per-location and group views | As written, stated as configured during scoping | The facts sheet documents multi-warehouse and tenant admin for Aura Business but nothing explicit for multi-branch hospitals. Does HIMS run a group of hospitals on one instance? |
+| Consent documentation held on the patient record | As written | The facts sheet covers structured EMR and NABH-style documentation but does not name consent forms |
+| Which roles may amend or cancel, and searching the audit log by user or date | As written, phrased as "agreed during scoping" | The facts sheet documents an audit log and role-based access but not the search screen |
 
 ## Product Development
 

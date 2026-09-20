@@ -1,0 +1,230 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-a-rate-contract",
+  "title": "What Is a Rate Contract in Government Buying? Guide",
+  "meta": "Rate contracts explained for suppliers: agreed rates held for a period, how orders are drawn against them, EMD and tender vocabulary, and off-contract disputes.",
+  "h1": "What is a rate contract, and why does quoting outside it <span class=\"hl\">start an argument</span>?",
+  "crumb": "Rate contracts",
+  "pill": "Guide",
+  "sub": "A rate contract fixes what you will charge for listed items over a stated period. It is not an order. Understanding the difference is what separates suppliers who win institutional business from suppliers who win it and then lose money on it.",
+  "meta_ticks": [
+    "Written for suppliers, not buyers",
+    "Tender vocabulary explained in passing",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read your rate contract guide and want to see how Aura Business tracks rate contracts and tenders.",
+  "date": "2026-09-20",
+  "primary_keyword": "what is a rate contract",
+  "secondary_keywords": [
+    "rate contract meaning in government buying",
+    "rate contract vs purchase order",
+    "hospital rate contract supplier",
+    "EMD meaning tender",
+    "rate contract validity period"
+  ],
+  "intent": "informational",
+  "persona": "Owner or sales head of a supplier selling to government departments, hospitals and institutions through tenders and rate contracts",
+  "page_type": "guide",
+  "phase": 7,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "A rate contract in two paragraphs",
+      "paras": [
+        "A rate contract is an agreement in which a buyer and a supplier fix the rates for a list of items for a stated period, without the buyer committing to any particular quantity. It is usually awarded through a tender, it runs for a defined validity, and while it is live the buyer can place orders against those rates whenever a requirement arises. Government departments, medical services corporations, hospitals and large institutions use them because they remove the need to run a fresh tender every time something is needed.",
+        "The crucial point for a supplier is that a rate contract is permission to supply at a price, not an instruction to supply anything. Orders are drawn against it afterwards, item by item, and the total value you eventually see may be far above or far below what you assumed when you quoted. Everything that goes wrong with rate contracts for suppliers follows from forgetting that the rate is fixed for the whole period while your own costs are not."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How it works",
+      "h2": "From tender to supply order, step by step",
+      "lead": "The sequence is consistent even though the vocabulary varies between departments and states.",
+      "body": [
+        {
+          "ul": [
+            "<b>The tender is published.</b> The buyer invites offers for a list of items, with specifications, a validity period for the resulting contract, and the documents you must submit.",
+            "<b>You bid, with money attached.</b> Most tenders require earnest money deposit, usually shortened to EMD, submitted with the bid and refunded to unsuccessful bidders. It exists to discourage frivolous bidding, and losing track of refunds due back to you is a common and avoidable leak.",
+            "<b>Technical and financial evaluation.</b> Offers are usually opened in two parts. A technically non-compliant bid is rejected before the price is ever looked at, which is why the document checklist matters more than the rate.",
+            "<b>Award and security.</b> The successful bidder receives the rate contract for the listed items. Many contracts then require a performance security or bank guarantee held for the duration.",
+            "<b>Orders are drawn against it.</b> Individual supply orders, often called purchase orders or indents, are issued during the validity period. Each has its own delivery period and its own penalties for late delivery.",
+            "<b>Supply, invoice, and the long wait.</b> Goods are delivered, documentation is submitted, and payment follows the institution's own cycle rather than your credit terms."
+          ]
+        },
+        "Two features of that sequence shape everything else. First, the rate you quoted is locked for the validity period, so an input cost that moves against you cannot be passed on. Second, the quantity is not yours to predict, so a rate quoted on an assumed volume can be undone by orders that never arrive or by orders far larger than the price assumed."
+      ]
+    },
+    {
+      "type": "table",
+      "eyebrow": "Side by side",
+      "h2": "Rate contract, supply order and an ordinary quotation",
+      "headers": [
+        "",
+        "Rate contract",
+        "Supply order against it",
+        "Ordinary quotation"
+      ],
+      "rows": [
+        [
+          "What it fixes",
+          "Rates for listed items",
+          "Items, quantity and delivery date",
+          "A price for a specific proposal"
+        ],
+        [
+          "Commits a quantity",
+          "No",
+          "Yes",
+          "No"
+        ],
+        [
+          "How long it lasts",
+          "A stated validity period",
+          "Until delivered and paid",
+          "Until your quoted validity expires"
+        ],
+        [
+          "Who can act on it",
+          "The buying institution, when it chooses",
+          "Both parties, on the stated terms",
+          "The customer, if they accept"
+        ],
+        [
+          "Price revision",
+          "Usually not during validity",
+          "Not at all",
+          "You may requote at any time"
+        ],
+        [
+          "What you must track",
+          "Expiry, items, rates, security held",
+          "Delivery period, penalties, payment",
+          "Follow-up and approval"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Where disputes come from",
+      "h2": "Quoting off-contract, and other expensive habits",
+      "body": [
+        {
+          "h3": "The rate the salesperson did not know about"
+        },
+        "The most common dispute is simple. A rate contract exists for an item, and somebody quotes a different rate to the same institution because they did not know. The buyer notices, because the buyer's whole reason for holding a rate contract is to avoid paying more than the agreed rate. What follows is a credit note at best and a question about your reliability at worst. The fix is not discipline. It is having the live rate contract visible to whoever is quoting, on the screen where the quotation is built.",
+        {
+          "h3": "The item that is nearly on the contract"
+        },
+        "An institution asks for a model not covered by the contract, or a variant of one that is. Supplying it at the contract rate gives away margin on something you never agreed to. Supplying it at a different rate without saying so plainly creates the dispute. The safe route is to record clearly which lines are on-contract and which are being quoted separately, before the order is placed rather than after it.",
+        {
+          "h3": "Money left with the buyer"
+        },
+        "EMD refunds and performance securities are amounts of your own money held by somebody else. They are rarely chased with the energy applied to an overdue invoice, because nobody keeps a list. A supplier bidding regularly across departments can have a meaningful sum sitting out there, entirely recoverable, unrecovered.",
+        {
+          "h3": "The expiry nobody diarised"
+        },
+        "A rate contract ends on a date. If the renewal tender is published while your attention is elsewhere, the contract lapses and a competitor holds the rates for the next period. Since orders against a live contract arrive without any selling effort, losing one is a revenue event rather than an administrative one.",
+        {
+          "h3": "Deliveries that miss the window"
+        },
+        "Each supply order carries a delivery period, and late delivery typically attracts a deduction. Those deductions are individually small and collectively the reason an institutional account earns less than the rate card suggested. They also affect how you are viewed at the next evaluation."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What to hold",
+      "h2": "The records that make institutional business profitable",
+      "lead": "None of this requires software to understand. It does require somebody to hold five lists that are almost never held anywhere in a small supplier.",
+      "body": [
+        {
+          "ul": [
+            "<b>Live rate contracts, with item-level rates and validity dates.</b> Visible to anyone quoting that institution, not filed in a drawer.",
+            "<b>Orders drawn against each contract.</b> So you know what the contract has actually been worth, which is the only sound basis for pricing the renewal.",
+            "<b>EMD and security amounts, with their status.</b> Paid, refunded, or still to be recovered.",
+            "<b>Deadlines.</b> Bid submission, delivery periods per order, and the expiry of every live contract.",
+            "<b>Outcomes.</b> Which tenders you won, which you lost and to whom, so that bidding effort goes where it converts."
+          ]
+        },
+        "In Aura Business this sits in the Tenders and Government Sales suite: a tender tracker that fetches government tenders every morning, a document vault, bid, EMD and deadline reminders, rate contract management, and outcome and win-rate analytics. The bid itself is still submitted on the buying authority's own portal. What the system does is make sure you saw the tender, met the dates, know what your money is doing and can tell afterwards whether that institution was worth bidding for. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management software</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about rate contracts",
+      "items": [
+        {
+          "q": "What does a rate contract actually guarantee a supplier?",
+          "a": "Only the rate. The buyer may place orders against it during the validity period but is generally not committed to any quantity, so a rate contract should be priced on the assumption that volumes may be far lower or higher than expected."
+        },
+        {
+          "q": "What is the difference between a rate contract and a purchase order?",
+          "a": "The rate contract fixes prices for listed items over a period. A purchase order, or supply order, is the individual instruction to deliver a stated quantity by a stated date, issued against those agreed rates while the contract is live."
+        },
+        {
+          "q": "What does EMD mean?",
+          "a": "Earnest money deposit: an amount submitted along with a tender bid, refunded to unsuccessful bidders and usually adjusted or released for the successful one. It is your money held temporarily, and it should be tracked until it comes back."
+        },
+        {
+          "q": "Can rates be revised during the contract period?",
+          "a": "Usually not, which is the main commercial risk of the arrangement. Any revision clause, and the conditions attached to it, is something to read carefully in the tender document before bidding rather than to negotiate afterwards."
+        },
+        {
+          "q": "Why is quoting outside the rate contract a problem?",
+          "a": "Because the institution holds the contract precisely to avoid paying more than the agreed rate for those items. A higher quotation on a covered item creates a dispute and a correction. Make the live rates visible to everyone who quotes that buyer."
+        },
+        {
+          "q": "How do we handle items not covered by the contract?",
+          "a": "Quote them separately and say plainly that they sit outside the contract, before the order is placed. Mixing covered and uncovered lines without marking them is what turns a routine supply into a disagreement at payment time."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/resources/",
+          "icon": "&#128218;",
+          "b": "All guides",
+          "p": "Every explainer in one place."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#128203;",
+          "b": "Tender management",
+          "p": "Tenders, EMD and deadlines."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Selling into institutions."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#129534;",
+          "b": "Quotation software",
+          "p": "Quoting the right rate."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables ageing",
+          "p": "Institutional payment cycles."
+        },
+        {
+          "href": "/resources/what-is-contract-profitability/",
+          "icon": "&#128202;",
+          "b": "Contract profitability",
+          "p": "What a contract really earned."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-pune",
+  "title": "Medical Equipment Software in Pune | Aura Business",
+  "meta": "Medical equipment software for Pune dealers and device makers: hospitals and factory-belt customers on one platform, with service, AMC and GST billing.",
+  "h1": "Medical equipment software for Pune, where the customer is a hospital <span class=\"hl\">or a factory floor</span>.",
+  "crumb": "Pune",
+  "pill": "Pune and the western belt",
+  "sub": "Aura Business runs the mixed book a Pune equipment business carries: hospital customers in the city, laboratory and industrial customers in the manufacturing belt, and device makers with their own installed base, on one platform with service, AMC and GST billing.",
+  "meta_ticks": [
+    "Hospital and industrial customers together",
+    "Installed base for device makers",
+    "Remote onboarding from Chennai"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we are a medical equipment or device business in Pune and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Pune",
+  "secondary_keywords": [
+    "medical equipment dealer software Pune",
+    "device manufacturer service software India",
+    "equipment service management software Maharashtra",
+    "biomedical service software Pune",
+    "AMC software for equipment suppliers"
+  ],
+  "intent": "local",
+  "persona": "Owner of a Pune equipment dealership or a device manufacturer servicing its own installed base",
+  "city": "Pune",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Pune, onboarded over screen-share",
+      "paras": [
+        "Aura Business is an operations platform for businesses that sell, install and service equipment, and Pune companies adopt it remotely. The scope is fixed on a call, your spreadsheets are migrated, the office and field team are trained by screen-share, and the person answering your WhatsApp afterwards is the founder who built the software.",
+        "There is no Elevate Aura office, employee or local number in Pune. Deployment is on the cloud, support is remote, and a visit would only be arranged if a particular project justified the travel."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Pune context",
+      "h2": "An engineering belt that buys equipment, and also builds it.",
+      "lead": "Pune's equipment trade sits beside one of the country's larger manufacturing and engineering clusters, with component makers, contract manufacturers and instrument companies around the city as well as a substantial hospital base inside it. That produces two business shapes that most software treats as unrelated.",
+      "body": [
+        "The first is the dealer whose customer list is genuinely mixed. A ward in a city hospital and a quality laboratory in a plant on the outskirts buy from the same catalogue and both sign a maintenance contract, but they behave differently. The plant raises a purchase order and pays through a payables cycle; the hospital raises a call at any hour and wants a response the same day. Aura Business keeps both in one customer master with their own contracts, SLA definitions and price lists, so the service desk does not run two systems.",
+        "The second is the device maker or instrument company that sells its own product and then has to support it for years. That business needs the installed base rather than the pipeline at its centre: every unit shipped, who holds it, when warranty started, which spares it has consumed, and which contracts are due for renewal. Serial and unit-level stock, the asset register, warranty tracking and the renewal engine cover that, and the distributor portal gives partners a place to order and upload payment references without a phone call.",
+        {
+          "h3": "Service across a belt, not a city"
+        },
+        "A service round from Pune can mean a hospital in the city in the morning and a unit in the industrial belt after lunch, then a customer up the corridor towards Mumbai or Nashik. Technician route and schedule planning groups calls and preventive maintenance visits by area before the week starts, so a travel day covers several jobs. Calibration and compliance checklists can sit inside the preventive maintenance visit, which matters where the customer is audited on its instruments, and the job card carries photographs and a signature from site.",
+        {
+          "h3": "Billing inside and outside Maharashtra"
+        },
+        "Most of a Pune dealer's invoices are within the state and carry CGST and SGST, while sales to the rest of the country carry IGST, and the system decides that from the buyer's GSTIN rather than from a habit. E-invoice IRN and QR, e-way bills raised from the invoice or challan, credit notes for returns, GSTR-1 and 3B preparation and a Tally export keep the accounts side consistent whichever way the consignment goes.",
+        {
+          "h3": "What a remote start looks like"
+        },
+        {
+          "ul": [
+            "Scoping call with the owner, the service head and whoever handles billing.",
+            "Customer master, installed base, spares stock and open contracts imported from Excel.",
+            "Dashboard, field app and invoices carrying your branding.",
+            "Screen-share training by role, with the field app installed on engineers' phones.",
+            "Live in 30 working days where scope allows, with WhatsApp support after."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a Pune equipment business uses most.",
+      "groups": [
+        {
+          "icon": "&#127973;",
+          "h": "A mixed customer book",
+          "items": [
+            "Customer and hospital accounts with contacts",
+            "Separate price lists per customer type",
+            "SLA definitions per contract",
+            "Ticketing with status workflow and CSAT",
+            "Customer self-service portal"
+          ]
+        },
+        {
+          "icon": "&#128295;",
+          "h": "Field service across the belt",
+          "items": [
+            "Breakdown call intake and technician dispatch",
+            "Technician route and schedule planning",
+            "Preventive maintenance with calibration checklists",
+            "Mobile job card, photo proof, offline mode",
+            "Spare parts used per job, dropping stock"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "For a maker of the equipment",
+          "items": [
+            "Serial and unit-level stock",
+            "Installed-base and asset register",
+            "Warranty tracking and multi-site contracts",
+            "Contract renewal engine and profitability",
+            "Distributor order portal with UTR payments"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four Pune situations the platform is built for.",
+      "items": [
+        {
+          "h": "One engineer, a ward and a plant in a day",
+          "workflow": "The week's calls and due maintenance visits are grouped by area, so the route covers a city hospital and two units in the industrial belt without a second trip.",
+          "result": "Travel time buys more closed jobs."
+        },
+        {
+          "h": "A maintenance visit that leaves evidence",
+          "workflow": "The preventive maintenance checklist is completed on the phone with readings and photographs, and the customer signs on screen before the engineer leaves.",
+          "result": "The visit record stands up when the customer is audited."
+        },
+        {
+          "h": "A manufacturer knows where every unit is",
+          "workflow": "Each unit shipped is registered by serial against its holder, warranty start and contract, and spares consumed are posted back to the same asset.",
+          "result": "Support cost per unit stops being a guess."
+        },
+        {
+          "h": "A partner orders without ringing the office",
+          "workflow": "A distributor logs into the portal at its own price list, places the order, uploads the payment reference, and follows dispatch on the tracking page.",
+          "result": "The order desk handles exceptions instead of every order."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Pune, answered.",
+      "items": [
+        {
+          "q": "Will someone come to our Pune office to implement this?",
+          "a": "No. Elevate Aura works from Chennai and has no staff or office in Pune. Onboarding is on video and screen-share, deployment is on the cloud, and support is on WhatsApp. Travel is possible where a project warrants it."
+        },
+        {
+          "q": "We sell to hospitals and to factories. Can one system serve both?",
+          "a": "Yes. Customers, price lists, contracts and SLA terms are set per account, so a hospital on a same-day response and a plant on a scheduled maintenance cycle sit in the same system with different terms and different reports."
+        },
+        {
+          "q": "We manufacture our own instruments. Is that covered?",
+          "a": "The platform covers the commercial and service side: serial-level stock, the installed base, warranty, contracts, spares and the distributor portal. It is not a production or factory system, and Elevate Aura does no hardware, PCB or certification work."
+        },
+        {
+          "q": "Can preventive maintenance include calibration checklists?",
+          "a": "Yes. Preventive maintenance schedules are raised per asset by date or by meter and usage, and the checklist the engineer completes on the job card can include calibration and compliance items with readings and photographs. See <a href=\"/aura-business/preventive-maintenance-software/\">preventive maintenance software</a>."
+        },
+        {
+          "q": "How is GST handled for sales outside Maharashtra?",
+          "a": "The tax split comes from the buyer's GSTIN and delivery address, so supply within the state carries CGST and SGST and supply outside carries IGST, with the e-invoice and e-way bill generated from the same record. See <a href=\"/aura-business/gst-billing-software-medical-equipment-distributors/\">GST billing software</a>."
+        },
+        {
+          "q": "Do engineers need a licence each?",
+          "a": "No. Every plan carries unlimited users, and plans differ only by module count, 15, 47 or all 87. Engineers, office staff and managers all get their own login with role-based access and an audit trail."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-service-management-software/",
+          "icon": "&#128222;",
+          "b": "Service management",
+          "p": "Calls, dispatch, job cards."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Every serial and its cover."
+        },
+        {
+          "href": "/aura-business/industrial-equipment-distributor-software/",
+          "icon": "&#127981;",
+          "b": "Industrial equipment",
+          "p": "The factory side of the book."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-mumbai/",
+          "icon": "&#128205;",
+          "b": "Mumbai",
+          "p": "Importers and dealer networks."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "A distributor portal, shipped."
+        }
+      ]
+    }
+  ]
+}

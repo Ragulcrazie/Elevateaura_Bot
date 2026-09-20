@@ -1,0 +1,328 @@
+{
+  "cluster": "hims",
+  "slug": "maternity-hospital-software",
+  "title": "Maternity Hospital Software | Antenatal to Discharge | HIMS",
+  "meta": "Maternity hospital software for antenatal visits over months, planned admissions, package billing, theatre and a newborn record linked to the mother.",
+  "h1": "Maternity hospital software for a stay that was <span class=\"hl\">booked nine months in advance</span>.",
+  "crumb": "Maternity Hospital Software",
+  "pill": "For maternity and birthing hospitals",
+  "sub": "A maternity hospital plans almost everything. Antenatal visits build one record over months, the admission date is known, the stay is billed as a package, and the baby arrives as a second record linked to the mother. HIMS is set up for that shape of work.",
+  "meta_ticks": [
+    "One record across months of visits",
+    "Package billing for the stay",
+    "Newborn record linked to the mother"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/patients.png",
+    "alt": "HIMS patient record view showing visit history and linked records for a patient",
+    "bar": "his.elevateaura.co.in/patients"
+  },
+  "whatsapp_text": "Hi, we run a maternity hospital and would like to see HIMS.",
+  "primary_keyword": "maternity hospital software",
+  "secondary_keywords": [
+    "obstetrics hospital management software",
+    "maternity clinic software India",
+    "antenatal record software",
+    "birthing centre software",
+    "delivery package billing software",
+    "gynaecology hospital software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of a maternity hospital or birthing centre with planned admissions and package pricing",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What makes maternity different from general inpatient care",
+      "paras": [
+        "Maternity is the most predictable inpatient work a hospital does. The patient is known months before she is admitted, she is seen repeatedly during that time, the admission has an expected date, the stay has an expected length, and the charge is usually agreed as a package rather than counted item by item at the end. Hospital software for maternity is therefore less about emergency capacity and more about holding one long record and billing a stay that was priced before it started.",
+        "HIMS handles this with the same parts it uses everywhere: one UHID that carries every antenatal visit, appointments that book the next review before the patient leaves, bed and theatre scheduling for the admission, package billing for the stay, and a second patient record for the newborn linked to the mother's. The newborn is described here as a linked record, because that is what it is. There is no separate neonatal module on record, and anything beyond a linked record is scoped on the call."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The planned-stay problem",
+      "h2": "Everything about the case was known in advance, and the bill is still assembled at the door.",
+      "lead": "Maternity work spans months, and paper does not span months well.",
+      "items": [
+        {
+          "h": "The antenatal card lives with the patient",
+          "p": "If she forgets it, the hospital has no history, and the visit starts from nothing."
+        },
+        {
+          "h": "The package is agreed and then argued about",
+          "p": "What is inside the package and what is extra was explained once, verbally, and nobody wrote it against the case."
+        },
+        {
+          "h": "Review dates missed",
+          "p": "A scan or a review due in three weeks depends on the patient remembering, and there is no list of who did not come."
+        },
+        {
+          "h": "The baby has no record",
+          "p": "Observations and feeds are written on the mother's sheet, so the newborn has nothing to be discharged with."
+        },
+        {
+          "h": "Insurance assembled in a hurry",
+          "p": "Discharge is the moment the TPA paperwork starts, and the family is already packed."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Booking to discharge",
+      "h2": "How a maternity case runs on one record.",
+      "steps": [
+        {
+          "h": "First antenatal visit",
+          "p": "The mother is registered under a UHID; the visit, investigations and notes attach to it."
+        },
+        {
+          "h": "Visits over months",
+          "p": "Each review adds to the same record, with the next appointment booked before she leaves and a WhatsApp reminder set."
+        },
+        {
+          "h": "Planned admission",
+          "p": "The expected date is on the appointment list, the bed is allocated and the package and payer are recorded at admission."
+        },
+        {
+          "h": "Theatre or labour",
+          "p": "A planned procedure is scheduled on the theatre list; an unplanned one is added on the day."
+        },
+        {
+          "h": "Newborn record",
+          "p": "The baby is registered as a patient in their own right and linked to the mother's record."
+        },
+        {
+          "h": "The stay",
+          "p": "Nursing notes, drugs issued from the pharmacy and anything outside the package accrue on the bill."
+        },
+        {
+          "h": "Discharge",
+          "p": "Two summaries, one bill settled against the package, insurance or TPA documents pulled from the record."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS a maternity hospital lives in.",
+      "groups": [
+        {
+          "icon": "&#128197;",
+          "h": "The long record",
+          "items": [
+            "One UHID across every antenatal visit",
+            "Structured notes and investigations per visit",
+            "Next appointment booked from the consultation",
+            "WhatsApp reminders for reviews and scans"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "The admission",
+          "items": [
+            "Bed board across wards and rooms",
+            "Operation theatre scheduling",
+            "Nursing charts and medication records",
+            "ICU cot or bed where the facility has one"
+          ]
+        },
+        {
+          "icon": "&#128118;",
+          "h": "Mother and baby",
+          "items": [
+            "Newborn registered as a linked record",
+            "Separate notes and separate discharge summary",
+            "Both visible from the same admission",
+            "Follow-up visits booked for either"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Package billing",
+          "items": [
+            "Delivery packages priced as one item",
+            "Extras billed outside the package",
+            "Cash, insurance and TPA on one bill",
+            "Running statement during the stay"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-ipd-management-software/",
+        "label": "See how inpatient care runs in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes over nine months.",
+      "items": [
+        {
+          "h": "She arrives without the card",
+          "workflow": "The desk opens her record by phone number and the consultant reads every previous visit.",
+          "result": "The visit goes ahead as normal."
+        },
+        {
+          "h": "Who has not come back",
+          "workflow": "The appointment list shows reviews due and reviews missed, and the desk calls or sends a WhatsApp reminder.",
+          "result": "Antenatal follow-up stops depending on memory."
+        },
+        {
+          "h": "Two discharges from one admission",
+          "workflow": "Mother and baby each get a summary from their own record, with the bill settled once.",
+          "result": "The newborn leaves with a record of their own."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Facilities where most admissions are planned.",
+      "items": [
+        {
+          "icon": "&#129657;",
+          "b": "Maternity hospitals",
+          "p": "Antenatal outpatients with wards and a theatre."
+        },
+        {
+          "icon": "&#128118;",
+          "b": "Birthing centres",
+          "p": "Short planned stays and package pricing."
+        },
+        {
+          "icon": "&#129658;",
+          "b": "Gynaecology practices",
+          "p": "Outpatient work that becomes an admission."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Nursing homes with maternity",
+          "p": "A few beds, one theatre, one billing desk."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Consultant-owners",
+          "p": "Seeing patients and running the hospital."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running a maternity hospital, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Antenatal history",
+          "A card the patient carries",
+          "Not covered",
+          "One record the hospital holds"
+        ],
+        [
+          "Review reminders",
+          "The patient remembers",
+          "Not covered",
+          "Appointment list and WhatsApp reminders"
+        ],
+        [
+          "Package billing",
+          "Agreed verbally",
+          "Typed as a lump sum",
+          "Package on the admission, extras itemised"
+        ],
+        [
+          "Newborn",
+          "Written on the mother's sheet",
+          "Not covered",
+          "A linked record with its own summary"
+        ],
+        [
+          "Theatre and beds",
+          "A diary and a whiteboard",
+          "Not covered",
+          "Scheduled and allocated on screen"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Maternity hospital software, answered.",
+      "items": [
+        {
+          "q": "Does HIMS have an obstetrics module?",
+          "a": "HIMS is a general hospital system configured for the way a maternity hospital works, which is long planned stays, months of antenatal visits on one record and package billing. It is not sold as a specialty product, and anything specialty-specific is scoped on the call rather than claimed here."
+        },
+        {
+          "q": "How is the baby recorded?",
+          "a": "The newborn is registered as a patient with their own record, linked to the mother's admission, so notes and a discharge summary belong to the baby. This is a linked record rather than a neonatal module, and further requirements are discussed during scoping."
+        },
+        {
+          "q": "Can a delivery package be billed as one item?",
+          "a": "Yes. The package sits on the admission and anything provided outside it is billed separately and visibly. See <a href=\"/hims/hospital-package-billing-software/\">hospital package billing software</a> for how packages and extras are handled."
+        },
+        {
+          "q": "Will antenatal visits stay on the same record for months?",
+          "a": "Yes. Every visit attaches to one UHID, so a consultant opening the record sees the whole sequence of visits, investigations and prescriptions rather than the most recent one."
+        },
+        {
+          "q": "Does it handle insurance and TPA for a delivery?",
+          "a": "Yes. Pre-authorisation is recorded at admission and claim documents come from the record at discharge. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA billing software</a>."
+        },
+        {
+          "q": "Can patients book and see reports themselves?",
+          "a": "Yes. The patient app and portal show upcoming appointments and reports, and reminders for reviews can go out on WhatsApp with templates agreed at setup."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD management",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#8377;",
+          "b": "Package billing",
+          "p": "A stay priced as one item."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#129525;",
+          "b": "Theatre scheduling",
+          "p": "Planned and unplanned lists."
+        },
+        {
+          "href": "/hims/nursing-home-management-software/",
+          "icon": "&#127966;",
+          "b": "Nursing home software",
+          "p": "Small facilities with beds."
+        },
+        {
+          "href": "/hims/hospital-whatsapp-appointment-reminders/",
+          "icon": "&#128241;",
+          "b": "WhatsApp reminders",
+          "p": "Fewer missed reviews."
+        }
+      ]
+    }
+  ]
+}

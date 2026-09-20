@@ -322,6 +322,18 @@
           "icon": "&#9878;",
           "b": "HIMS vs hospital ERP",
           "p": "Which one you need."
+        },
+        {
+          "href": "/hims/ayurveda-hospital-software/",
+          "icon": "&#127807;",
+          "b": "Ayurveda hospital",
+          "p": "Treatment courses over weeks."
+        },
+        {
+          "href": "/hims/eye-hospital-management-software/",
+          "icon": "&#128065;",
+          "b": "Eye hospitals",
+          "p": "Short repeat consultations."
         }
       ]
     }

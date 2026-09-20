@@ -1,0 +1,286 @@
+{
+  "cluster": "hims",
+  "slug": "nabh-documentation-software",
+  "title": "NABH Documentation Software for Hospitals | HIMS",
+  "meta": "Software that supports NABH-style documentation: records complete, timed and attributed, a full audit trail, and indicators you can report for any period.",
+  "h1": "NABH documentation software: the records an assessor asks for, <span class=\"hl\">already assembled</span>.",
+  "crumb": "NABH Documentation Software",
+  "pill": "For quality coordinators and medical directors",
+  "sub": "HIMS supports NABH-style documentation by making the record itself the evidence: entries attributed and timed, mandatory fields the screen will not let staff skip, an audit trail behind every change, and indicators that can be reported for a period.",
+  "meta_ticks": [
+    "Supports NABH-style documentation",
+    "Timed, attributed clinical entries",
+    "Indicators reportable for any period"
+  ],
+  "demo_href": "/demo/hospital.html",
+  "whatsapp_text": "Hi, we are preparing for an accreditation assessment and want to see how HIMS holds the documentation.",
+  "primary_keyword": "NABH documentation software",
+  "secondary_keywords": [
+    "NABH software for hospitals",
+    "hospital accreditation documentation software",
+    "NABH compliance documentation",
+    "quality indicator reporting hospital software",
+    "hospital quality management documentation"
+  ],
+  "intent": "commercial",
+  "persona": "Quality coordinator, medical director or owner preparing a hospital for an accreditation assessment",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What NABH documentation software does, and what it does not do",
+      "paras": [
+        "NABH documentation software is a hospital system that produces, as a by-product of normal work, the records an accreditation assessor expects to see: policies applied the same way by every shift, patient records that are complete and carry a time and a name, a trail of who changed what, and indicators that can be pulled for a chosen period. HIMS supports NABH-style documentation in exactly that sense.",
+        "Be clear on the limit. Accreditation is awarded to the hospital by the accrediting body after an assessment of your own processes, people and premises. No software is accredited, no software confers accreditation, and no vendor can promise you will pass. What a system can do is remove the scramble: instead of assembling a file the week before the assessment, the file already exists because the hospital has been working inside it all year.",
+        "Standards are revised from time to time. Confirm the current edition and its requirements with the accrediting body and your own quality advisers before you plan a submission."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why the preparation hurts",
+      "h2": "The documentation is usually there. Retrieving it is the problem.",
+      "lead": "Most hospitals preparing for an assessment are not short of care. They are short of retrievable evidence of care.",
+      "items": [
+        {
+          "h": "The same policy applied four ways",
+          "p": "Consent, handover and discharge are written down in a manual, then done differently on each floor because the manual is not in front of anyone at the moment of work."
+        },
+        {
+          "h": "Entries without a time or a name",
+          "p": "A note exists but nobody can say who wrote it or when. An assessor reading a paper case sheet cannot tell a contemporaneous entry from one added later."
+        },
+        {
+          "h": "Indicators counted by hand",
+          "p": "Someone tallies admissions, readmissions, theatre cancellations and turnaround times from registers, so the numbers take a week and cannot be repeated on demand."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the evidence accumulates",
+      "h2": "Documentation as a by-product of the day, not a project.",
+      "steps": [
+        {
+          "h": "The policy sits in the screen",
+          "p": "The fields a policy requires are the fields on the form, so the agreed way is also the quickest way."
+        },
+        {
+          "h": "Every entry is signed and timed",
+          "p": "The record carries the user who wrote it and the moment it was written, across OP, wards, theatre, ICU, pharmacy and laboratory."
+        },
+        {
+          "h": "Changes leave a trail",
+          "p": "Edits are recorded rather than silently applied, so the earlier value and the reason can both be explained."
+        },
+        {
+          "h": "Indicators come off the same data",
+          "p": "Occupancy, admissions, discharges, theatre use and turnaround are read from the records themselves for any date range."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What supports the documentation",
+      "h2": "The parts of HIMS a quality team actually uses.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "Complete records",
+          "items": [
+            "Structured history, examination and diagnosis",
+            "Progress notes and nursing entries",
+            "Consent and admission documentation on the record",
+            "Discharge summary drawn from the stay"
+          ]
+        },
+        {
+          "icon": "&#128337;",
+          "h": "Attribution and time",
+          "items": [
+            "Every entry carries a user and a timestamp",
+            "Edits recorded rather than overwritten",
+            "Role-based access by designation",
+            "Audit log across the platform"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Indicators you can report",
+          "items": [
+            "OP, IP, bed occupancy and collections on a live dashboard",
+            "Admissions and discharges for a chosen period",
+            "Theatre schedules and ICU records per bed"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Control at the point of work",
+          "items": [
+            "Mandatory fields enforced at the screen",
+            "One patient record under a single UHID",
+            "Doctor rosters so the on-duty position is documented",
+            "Built to support ABHA linking"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Three questions an assessor asks, and where the answer comes from.",
+      "items": [
+        {
+          "h": "Show me consent for this procedure",
+          "workflow": "The consent sits on the admission record for that UHID with the time it was taken and the person who took it.",
+          "result": "One search rather than a hunt through a store room."
+        },
+        {
+          "h": "Give me the discharge summaries for last quarter",
+          "workflow": "The quality team filters discharges for the period and opens each summary from the record it was built from.",
+          "result": "A sample is selected in minutes, not assembled over days."
+        },
+        {
+          "h": "How do you know your own numbers",
+          "workflow": "Occupancy, admissions and turnaround figures are read from the same records the clinical team writes, not from a parallel register.",
+          "result": "The indicator and the evidence behind it are the same data."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals where somebody is accountable for the record.",
+      "items": [
+        {
+          "icon": "&#128203;",
+          "b": "Quality coordinators",
+          "p": "The person who has to produce evidence when it is asked for."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Medical directors",
+          "p": "Responsible for documentation being consistent across units."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-specialty hospitals",
+          "p": "Several departments writing into one patient record."
+        },
+        {
+          "icon": "&#127966;",
+          "b": "Nursing homes",
+          "p": "Smaller IP-led units with no spare staff for a paper chase."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Paper and registers, a document library, or the record itself.",
+      "cols": [
+        "Paper files and registers",
+        "A document management tool",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Where the evidence lives",
+          "In the file, if it can be found",
+          "Scanned copies of what happened",
+          "The working record itself"
+        ],
+        [
+          "Time and author on an entry",
+          "Handwritten, sometimes",
+          "Whenever the scan was made",
+          "Captured as the entry is made"
+        ],
+        [
+          "What it claims about accreditation",
+          "Nothing",
+          "Nothing",
+          "Supports the documentation; the body assesses the hospital"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "NABH documentation software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS a NABH accredited system?",
+          "a": "No, and no hospital system is. Accreditation is awarded to a hospital by the accrediting body after assessing that hospital. HIMS supports NABH-style documentation, which means the records, attribution, timing and indicators an assessment looks for are produced by normal use."
+        },
+        {
+          "q": "Will using this software guarantee that we pass?",
+          "a": "No. An assessment looks at your processes, staffing, premises and clinical practice as well as your records. Software removes the documentation scramble and makes evidence retrievable. The rest is the hospital's own work with its quality team and advisers."
+        },
+        {
+          "q": "Which standards does it follow?",
+          "a": "The system is built around complete, timed, attributed records rather than around a specific edition of a standard. Standards are revised periodically, so confirm the current requirements with the accrediting body and your own advisers, and we will map the fields you need during scoping."
+        },
+        {
+          "q": "Can we see who changed an entry?",
+          "a": "Yes. Entries carry the user and the time, and changes are recorded rather than silently overwritten. See <a href=\"/hims/hospital-audit-trail-software/\">hospital audit trail software</a> for how attribution and edit history work across the platform."
+        },
+        {
+          "q": "Can we report quality indicators for a period?",
+          "a": "Indicators such as admissions, discharges, bed occupancy, theatre use and laboratory turnaround are read from the records for a chosen date range rather than counted from registers. The exact indicator set you need is agreed during scoping."
+        },
+        {
+          "q": "We are still on paper. Where do we start?",
+          "a": "Usually registration, billing and pharmacy first, then clinical documentation, because that sequence gets staff using the system daily before the records matter most. Read <a href=\"/resources/moving-a-hospital-from-paper-to-software/\">moving a hospital from paper to software</a> for the honest order."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole hospital on one platform."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "The structured clinical record."
+        },
+        {
+          "href": "/hims/hospital-audit-trail-software/",
+          "icon": "&#128274;",
+          "b": "Audit trail",
+          "p": "Who did what, and when."
+        },
+        {
+          "href": "/hims/hospital-nursing-management-software/",
+          "icon": "&#129658;",
+          "b": "Nursing management",
+          "p": "Charts, shifts and handover."
+        },
+        {
+          "href": "/resources/what-is-nabh-documentation/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What NABH documentation means."
+        },
+        {
+          "href": "/hims/hospital-mis-dashboard/",
+          "icon": "&#128202;",
+          "b": "MIS dashboard",
+          "p": "Numbers read from the records."
+        }
+      ]
+    }
+  ]
+}

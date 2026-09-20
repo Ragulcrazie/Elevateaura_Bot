@@ -1,0 +1,222 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-management-software-hyderabad",
+  "title": "Hospital Management Software in Hyderabad | HIMS",
+  "meta": "Hospital management software for Hyderabad hospitals serving Telangana and Andhra Pradesh: OP, IP, pharmacy, lab, TPA billing, deployed remotely from Chennai.",
+  "h1": "Hospital management software for Hyderabad, where a single admission can have <span class=\"hl\">three payers behind it</span>.",
+  "crumb": "Hyderabad",
+  "pill": "Hyderabad, Telangana and Andhra Pradesh",
+  "sub": "HIMS covers registration, OP, wards, theatre, ICU, pharmacy, laboratory, imaging and billing for Hyderabad hospitals drawing patients from two states, with cash, corporate and TPA claim billing on the same record and remote deployment from Chennai.",
+  "meta_ticks": [
+    "Cash, corporate and TPA on one admission",
+    "Remote setup and training",
+    "WhatsApp and remote support"
+  ],
+  "demo_href": "/demo/hospital.html",
+  "whatsapp_text": "Hi, we run a hospital in Hyderabad and would like to see HIMS.",
+  "primary_keyword": "hospital management software Hyderabad",
+  "secondary_keywords": [
+    "hospital software Hyderabad",
+    "HMS software Telangana",
+    "hospital billing software Hyderabad",
+    "hospital software Andhra Pradesh",
+    "TPA billing software Hyderabad"
+  ],
+  "intent": "local",
+  "persona": "Owner or administrator of a hospital or hospital group in Hyderabad serving Telangana and Andhra Pradesh",
+  "city": "Hyderabad",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Hospital software for Hyderabad, delivered remotely from Chennai",
+      "paras": [
+        "HIMS is a hospital platform covering OP and IP registration, appointments and tokens, the clinical record, pharmacy, laboratory, inventory, wards, theatre, ICU, imaging and billing, and Hyderabad hospitals run it through remote deployment from Elevate Aura's studio in Chennai. Scoping is done on a call, your patient, item and rate data is migrated, training runs over screen-share across shifts, and go-live is in 30 working days where scope allows.",
+        "The distance is worth stating rather than glossing over. Hyderabad is not within travelling distance of Chennai the way the Tamil Nadu cities are, and Elevate Aura has no Hyderabad office, no staff in Telangana and no local support number. Setup and training are remote, travel can be arranged when a project genuinely warrants it and is agreed in advance, and everyday support is remote and on WhatsApp with the founder who built the system."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Hyderabad context",
+      "h2": "One city, two states, and a payer mix that decides the workload.",
+      "lead": "Hyderabad hospitals draw patients from across Telangana and from the Andhra Pradesh districts, alongside a large salaried and corporate-covered population inside the city itself.",
+      "body": [
+        "Two consequences follow, and both land on the same software. The first is travel. A patient from a district town arrives for a procedure, stays with family for the admission, and may next appear eight months later with nothing in hand. Whether that visit is useful depends entirely on whether the first one was recorded properly: a structured record under one identifier, with the history, orders, verified laboratory results, imaging and the discharge summary each in their own place and searchable by UHID rather than by a half-remembered name.",
+        "The second is who pays. A Hyderabad admission is far less likely to be a simple cash bill than in a smaller city. Corporate tie-ups, employer cover, insurers and TPAs sit behind a large share of the work, often with a cash component alongside. When those run as separate registers, the hospital ends up reconciling three versions of one admission and chasing claims from a spreadsheet that nobody owns.",
+        {
+          "h3": "Billing that carries the payer from registration"
+        },
+        {
+          "ul": [
+            "The payer is attached at registration, so the counter knows from the start whether this is cash, corporate credit, insurance or a TPA claim.",
+            "Room days, drugs dispensed, investigations and consumables accumulate on the admission as they happen, not at discharge.",
+            "Package billing where a procedure is quoted as one price, with the items inside it still recorded.",
+            "Claims raised against the same episode the clinical record sits on, so the documentation supporting the treatment is already together.",
+            "GST applied on billable items, with the collection visible on the live dashboard."
+          ]
+        },
+        {
+          "h3": "How a remote rollout runs"
+        },
+        {
+          "ul": [
+            "A working session over video through registration, wards, pharmacy, laboratory and the billing counter as they run today.",
+            "A first phase chosen around the worst pain, commonly registration, billing and pharmacy.",
+            "Existing data imported, the hospital's branding applied to screens and bills, and claim formats agreed with your billing team.",
+            "Hands-on training over screen-share across shifts, with your staff doing the entries.",
+            "Go-live in 30 working days where scope allows, followed by remote and WhatsApp support."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a Hyderabad hospital's day depends on.",
+      "groups": [
+        {
+          "icon": "&#128337;",
+          "h": "Arrivals and OP",
+          "items": [
+            "OP registration under one UHID",
+            "Appointments by doctor and department",
+            "Token queue for the morning rush",
+            "Emergency and casualty triage board"
+          ]
+        },
+        {
+          "icon": "&#128719;",
+          "h": "Admission to discharge",
+          "items": [
+            "IP registration and ward allocation",
+            "Bed occupancy across wards",
+            "Operation theatre scheduling",
+            "ICU with live vitals per bed",
+            "Discharge summary from the record"
+          ]
+        },
+        {
+          "icon": "&#129658;",
+          "h": "Clinical services",
+          "items": [
+            "Structured EMR and e-prescription",
+            "Pharmacy dispensing queue and expiry alerts",
+            "Laboratory from order to verified result",
+            "AuraPACS imaging carried on the patient record"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Payers and oversight",
+          "items": [
+            "Cash billing at the counter",
+            "Insurance and TPA claim billing",
+            "Corporate credit accounts",
+            "Package billing for quoted procedures"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Situations a Hyderabad hospital will recognise.",
+      "items": [
+        {
+          "h": "A corporate patient admitted for a package procedure",
+          "workflow": "The payer and the package are set at admission, items inside it are still recorded, and the extras sit separately on the bill.",
+          "result": "What the employer owes and what the family owes are clear before discharge."
+        },
+        {
+          "h": "A claim queried three weeks later",
+          "workflow": "The billing team opens the episode and reads the timed clinical entries, verified results and dispensing records behind it.",
+          "result": "The response is assembled from the record rather than from memory."
+        },
+        {
+          "h": "A patient returning from a district town",
+          "workflow": "The UHID brings up the earlier admission, the prescription, the results and the imaging before the consultation starts.",
+          "result": "Investigations are not repeated because nothing could be found."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "HIMS in Hyderabad, answered.",
+      "items": [
+        {
+          "q": "Is there an Elevate Aura office in Hyderabad?",
+          "a": "No. The studio is in Chennai and there is no Hyderabad office, no staff in Telangana and no local support number. Setup and training are remote, a visit can be arranged when a project warrants it, and ongoing support is remote and on WhatsApp with the founder."
+        },
+        {
+          "q": "Does it handle TPA and insurance billing properly?",
+          "a": "Yes. Cash, corporate credit, insurance and TPA claims run against the same admission the clinical record sits on, with GST on billable items. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">insurance and TPA billing</a> and <a href=\"/resources/what-is-tpa-hospital-billing/\">what TPA billing means</a>."
+        },
+        {
+          "q": "We have a unit in Andhra Pradesh as well. Does that work?",
+          "a": "Yes. Locations share the patient base, tariff and reporting, with per-location and group views. Since the deployment is remote in both cases, a second state changes nothing about how it is set up or supported."
+        },
+        {
+          "q": "Can staff be trained in shifts without a site visit?",
+          "a": "Yes. Training is hands-on over screen-share, planned across shifts so night counter and casualty staff are taught directly, and sessions can be recorded for people who join later rather than being passed on second hand."
+        },
+        {
+          "q": "Does it cover casualty and ICU, not just OP and billing?",
+          "a": "Yes. Casualty triage, ward and bed management, theatre scheduling and ICU with live vitals per bed are part of the platform, sharing one patient record with OP, pharmacy, laboratory and billing. See <a href=\"/hims/icu-management-software/\">ICU management software</a>."
+        },
+        {
+          "q": "What does the go-live timeline look like?",
+          "a": "Go-live is in 30 working days where scope allows, with the scope fixed at the outset. Data migration, branding, claim formats and training sit inside that window, and the first days after go-live are supported closely before settling into WhatsApp support."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "One system for the whole hospital."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#8377;",
+          "b": "TPA billing",
+          "p": "Claims off the same episode."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#128203;",
+          "b": "Package billing",
+          "p": "One quoted price, items inside."
+        },
+        {
+          "href": "/hims/hospital-management-software-bangalore/",
+          "icon": "&#128205;",
+          "b": "Bangalore",
+          "p": "Branches running the same way."
+        },
+        {
+          "href": "/hims/multi-specialty-hospital-software/",
+          "icon": "&#127973;",
+          "b": "Multi-specialty",
+          "p": "Many departments, one record."
+        },
+        {
+          "href": "/hims/hospital-audit-trail-software/",
+          "icon": "&#128274;",
+          "b": "Audit trail",
+          "p": "Who did what, and when."
+        }
+      ]
+    }
+  ]
+}

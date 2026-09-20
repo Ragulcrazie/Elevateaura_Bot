@@ -1,0 +1,300 @@
+{
+  "cluster": "hims",
+  "slug": "hospital-audit-trail-software",
+  "title": "Hospital Audit Trail Software | Who Did What, When | HIMS",
+  "meta": "Hospital audit trail software: entries attributed and timed, edits kept visible and access by role, so billing queries and disputes are settled from the record.",
+  "h1": "Hospital audit trail software that can answer <span class=\"hl\">who did what, and when</span>.",
+  "crumb": "Hospital Audit Trail Software",
+  "pill": "For administrators, finance and quality teams",
+  "sub": "In HIMS every clinical, pharmacy, laboratory and billing entry carries the user who made it and the moment it was made, edits stay visible instead of overwriting the original, and access is granted by role, so awkward questions have an answer.",
+  "meta_ticks": [
+    "User and timestamp on every entry",
+    "Edits visible, not silently applied",
+    "Role-based access across departments"
+  ],
+  "demo_href": "/demo/hospital.html",
+  "whatsapp_text": "Hi, I'd like to understand how the audit trail works in HIMS.",
+  "primary_keyword": "hospital audit trail software",
+  "secondary_keywords": [
+    "audit log hospital software",
+    "hospital user activity tracking software",
+    "role based access hospital system",
+    "hospital billing dispute records",
+    "traceability in hospital management software"
+  ],
+  "intent": "commercial",
+  "persona": "Hospital administrator or finance head who has had to investigate a disputed entry",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an audit trail is in a hospital system",
+      "paras": [
+        "An audit trail is the hospital's memory of its own actions: a record, kept automatically, of which user created or changed which entry and at what time. In HIMS it runs under registration, the clinical record, the pharmacy, the laboratory, inventory and billing, so a question about a discount, a cancelled bill, a changed result or a late note can be answered from the system rather than from recollection.",
+        "The point is not suspicion. It is that a hospital runs on three shifts and dozens of hands, and without attribution every disagreement becomes a matter of who sounds more certain. With it, the conversation starts from a timed entry and a name, and usually ends there."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Where the absence shows",
+      "h2": "Four arguments a hospital has every month without a trail.",
+      "lead": "Each of these is routine, and each is unresolvable when the record cannot say who or when.",
+      "items": [
+        {
+          "h": "A discount nobody remembers approving",
+          "p": "The bill went out lower than the tariff. Without a name against the change, the enquiry stalls and the habit continues."
+        },
+        {
+          "h": "A cancelled bill and a missing receipt",
+          "p": "Cash was taken at the counter and the bill later cancelled. The register shows the end state and nothing about the route to it."
+        },
+        {
+          "h": "A charge the patient's family disputes",
+          "p": "A consumable or an investigation is questioned at discharge. Somebody retypes the bill from memory instead of reading when the item was added and by whom."
+        },
+        {
+          "h": "Everyone sharing one login",
+          "p": "The counter works under a single account, so every entry is attributed to nobody in particular."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the trail is built",
+      "h2": "Attribution happens because of how people log in, not because of extra work.",
+      "steps": [
+        {
+          "h": "Individual accounts",
+          "p": "Each doctor, nurse, pharmacist, technician and counter staff member has their own login rather than a shared one."
+        },
+        {
+          "h": "A role, not a free hand",
+          "p": "Access is granted by designation, so people reach the screens their job needs and not the rest."
+        },
+        {
+          "h": "Entries stamped as they are made",
+          "p": "Registration, notes, orders, dispensing, results, charges and receipts all carry the user and the moment."
+        },
+        {
+          "h": "Edits kept, not swallowed",
+          "p": "A correction is recorded as a change to the earlier value, so both states can be read."
+        },
+        {
+          "h": "Questions answered from the record",
+          "p": "A dispute, a claim query or a documentation review is settled by opening the history rather than by asking around."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is tracked",
+      "h2": "The trail runs under the modules, not beside them.",
+      "groups": [
+        {
+          "icon": "&#128100;",
+          "h": "Patient and clinical",
+          "items": [
+            "Registration and UHID creation",
+            "Clinical notes and nursing entries",
+            "Orders raised to laboratory and imaging",
+            "e-Prescription written and dispensed"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Money",
+          "items": [
+            "Charges added to an episode",
+            "Bill raised, amended or cancelled",
+            "Payments and receipts at the counter",
+            "Insurance and TPA claim entries"
+          ]
+        },
+        {
+          "icon": "&#128138;",
+          "h": "Stock and results",
+          "items": [
+            "Pharmacy dispensing against a prescription",
+            "Consumables and inventory movements",
+            "Laboratory result entry and verification",
+            "Imaging studies and reports through AuraPACS"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Access",
+          "items": [
+            "Role-based permissions by designation",
+            "Individual logins rather than shared accounts",
+            "Platform-wide audit log",
+            "Records timed and attributed for review"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/hospital-management-system/",
+        "label": "See the full hospital management system"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes the next time somebody asks an awkward question.",
+      "items": [
+        {
+          "h": "A family queries the discharge bill",
+          "workflow": "The administrator opens the episode and reads each charge with the time it was added and the user who added it.",
+          "result": "The conversation is about the care given, not about whether the bill is trustworthy."
+        },
+        {
+          "h": "An insurer questions a claim",
+          "workflow": "The claim is supported by timed clinical entries, verified results and dispensing records on the same admission.",
+          "result": "The documentation supporting the treatment is already in one place."
+        },
+        {
+          "h": "A documentation review before an assessment",
+          "workflow": "The quality team samples admissions and reads entries with their attribution and timing intact.",
+          "result": "Evidence of contemporaneous recording rather than a tidy file."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Anyone who has had to reconstruct what happened.",
+      "items": [
+        {
+          "icon": "&#128188;",
+          "b": "Hospital administrators",
+          "p": "The person who fields the complaint at the front desk."
+        },
+        {
+          "icon": "&#8377;",
+          "b": "Finance and billing heads",
+          "p": "Responsible for discounts, cancellations and collections."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Quality teams",
+          "p": "Preparing documentation for internal or external review."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Multi-department hospitals",
+          "p": "Where a single episode is touched by many hands."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Registers, a billing package, or a platform with attribution underneath.",
+      "cols": [
+        "Paper registers",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Who made the entry",
+          "Handwriting, sometimes initials",
+          "Often one shared counter login",
+          "The individual user on every entry"
+        ],
+        [
+          "A correction",
+          "Struck through or rewritten",
+          "Overwrites the earlier value",
+          "Recorded, with the earlier state readable"
+        ],
+        [
+          "Scope of the trail",
+          "Whatever is in that register",
+          "Billing only",
+          "Clinical, pharmacy, laboratory, stock and billing"
+        ],
+        [
+          "Answering a dispute",
+          "Memory and argument",
+          "Partial, money only",
+          "The episode read end to end"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Hospital audit trails, answered.",
+      "items": [
+        {
+          "q": "What exactly is recorded against an entry?",
+          "a": "The user who made it and the time it was made, held with the entry itself. That applies across registration, clinical notes, orders, dispensing, results, charges and receipts, so an episode can be read as a sequence of attributed actions rather than a final state."
+        },
+        {
+          "q": "Can a user delete something to hide a mistake?",
+          "a": "Access is granted by role, so most staff cannot remove records at all, and changes are recorded rather than silently applied. Which roles may amend or cancel what is agreed during scoping, because a small nursing home and a multi-specialty hospital draw that line differently."
+        },
+        {
+          "q": "Does this slow the counter down?",
+          "a": "No. The trail is a by-product of people logging in as themselves and doing their normal work. The only real change is giving up shared accounts, which is what makes attribution meaningful in the first place."
+        },
+        {
+          "q": "Is this the same thing as NABH documentation?",
+          "a": "It supports it. Accreditation looks for records that are complete, timed and attributed, among many other things. See <a href=\"/hims/nabh-documentation-software/\">NABH documentation software</a> for that side, and confirm current standards with the accrediting body and your advisers."
+        },
+        {
+          "q": "Does the trail cover imaging as well?",
+          "a": "Yes. Imaging runs through AuraPACS inside HIMS, which has role-based access for radiologists, technicians, front desk and referrers, and study and report activity is audited alongside the rest of the record."
+        },
+        {
+          "q": "Can we see activity for one user or one day?",
+          "a": "Activity can be read by patient, by bill, by user or by date range. The views your administrators and finance team need are settled during scoping so the log is useful rather than merely complete."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "One system for the whole hospital."
+        },
+        {
+          "href": "/hims/nabh-documentation-software/",
+          "icon": "&#128203;",
+          "b": "NABH documentation",
+          "p": "Records an assessor asks to see."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128218;",
+          "b": "Hospital EMR",
+          "p": "The structured clinical record."
+        },
+        {
+          "href": "/hims/hospital-software-for-administrators/",
+          "icon": "&#128188;",
+          "b": "For administrators",
+          "p": "Running the hospital day to day."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#8377;",
+          "b": "TPA billing",
+          "p": "Claims supported by the record."
+        },
+        {
+          "href": "/hims/hospital-owner-dashboard/",
+          "icon": "&#128202;",
+          "b": "Owner dashboard",
+          "p": "The day without being on site."
+        }
+      ]
+    }
+  ]
+}

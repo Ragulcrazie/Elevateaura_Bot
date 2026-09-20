@@ -1,0 +1,343 @@
+{
+  "cluster": "aura-business",
+  "slug": "beat-plan-software",
+  "title": "Beat Plan Software for Field Sales Reps in India",
+  "meta": "Beat plan software for small field sales teams: planned routes, call cycles, account coverage and visit adherence, checked against GPS check-in.",
+  "h1": "A beat plan is only real if <span class=\"hl\">someone checks the visits</span>.",
+  "crumb": "Beat Plan Software",
+  "pill": "For sales managers planning the week",
+  "sub": "Aura Business turns a rep's beat into something measurable: accounts grouped by territory, a call cycle for each, the day's route on the mobile app, and visits logged with GPS check-in so coverage can be compared with the plan.",
+  "meta_ticks": [
+    "Accounts grouped into beats by territory",
+    "Route and call list on the rep's phone",
+    "Visits verified by GPS check-in"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business customer list grouped by territory with the next planned visit date for each account",
+    "bar": "app.elevateaura.co.in/visits"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see how beat plans and visit coverage work for our reps.",
+  "primary_keyword": "beat plan software for sales reps",
+  "secondary_keywords": [
+    "beat plan and route plan software India",
+    "sales visit planning software",
+    "field sales coverage software",
+    "call cycle planning for reps",
+    "visit adherence tracking software"
+  ],
+  "intent": "commercial",
+  "persona": "Sales manager planning weekly coverage for a small team of field representatives",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a beat plan is, and what software adds to it",
+      "paras": [
+        "A beat plan is a rep's standing route: which accounts they call on, in what order, and how often each one is due for a visit. Most small teams already have one, drawn on paper or held in the manager's head. What is usually missing is the check afterwards, so a plan and a week's actual work are never compared.",
+        "Aura Business supplies the pieces that make a beat plan operational. Accounts are grouped under a territory with an owner, each account carries its next planned visit, the rep sees the day's list and route on the mobile app, and the visit is logged with GPS check-in and notes.",
+        "Coverage then becomes a number rather than an impression: which accounts on the beat were visited this cycle, which were skipped, and which have not been seen for longer than the cycle allows."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "Why beats drift",
+      "h2": "What happens to a plan after the first week.",
+      "lead": "Reps do not abandon their beat deliberately. It erodes, because nothing in the system notices.",
+      "items": [
+        {
+          "h": "Favourite accounts get all the calls",
+          "p": "The friendly customer who orders small quantities is visited weekly while a large account is not seen for two months."
+        },
+        {
+          "h": "Coverage is measured by effort, not accounts",
+          "p": "A rep reports twelve calls in a week, and nobody can say how many distinct accounts that was."
+        },
+        {
+          "h": "Travel is unplanned",
+          "p": "The day zig-zags across the city because the order of calls was decided in the morning."
+        },
+        {
+          "h": "The plan is not on the rep's phone",
+          "p": "A beat drawn in a spreadsheet at head office never reaches the person expected to follow it."
+        },
+        {
+          "h": "No proof of the visit",
+          "p": "A call reported by message cannot be distinguished from a call that did not happen."
+        },
+        {
+          "h": "New accounts never enter the beat",
+          "p": "A customer added in the middle of the quarter has no cycle, so nobody is responsible for calling on them."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "A cycle of the beat",
+      "h2": "From territory to coverage report.",
+      "steps": [
+        {
+          "h": "Accounts grouped",
+          "p": "Customers and prospects are assigned to a territory and an owning rep."
+        },
+        {
+          "h": "Cycle set",
+          "p": "Each account is given a call frequency according to its value and buying pattern."
+        },
+        {
+          "h": "The week planned",
+          "p": "Accounts due in the cycle are arranged into day-wise beats so travel makes sense."
+        },
+        {
+          "h": "The rep opens the list",
+          "p": "The day's accounts appear on the mobile app with contacts, history and outstanding visible before the door."
+        },
+        {
+          "h": "Visit logged",
+          "p": "GPS check-in at the account, notes, samples left, and the next action dated before leaving."
+        },
+        {
+          "h": "Coverage reviewed",
+          "p": "The manager compares accounts due against accounts visited, by rep and by territory."
+        },
+        {
+          "h": "Beat adjusted",
+          "p": "Cycles are raised or lowered for the next period based on what the accounts are actually worth."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The modules a beat plan runs on.",
+      "groups": [
+        {
+          "icon": "&#128205;",
+          "h": "Planning",
+          "items": [
+            "Territory and target management",
+            "Customer and hospital accounts grouped by area",
+            "Contacts and decision-makers per account",
+            "Technician and field route scheduling"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "On the rep's phone",
+          "items": [
+            "The day's accounts in order",
+            "Field visits with GPS check-in",
+            "Account history before walking in",
+            "Sample tracking against the account",
+            "Offline capture when there is no signal"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Checking adherence",
+          "items": [
+            "Activity feed and rep log",
+            "Attendance with geolocation and selfie",
+            "Lead-source and conversion analytics",
+            "Owner dashboard by rep and territory"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What a checked beat changes for a small team.",
+      "items": [
+        {
+          "h": "A neglected account surfaces",
+          "workflow": "The coverage view lists accounts whose last visit is older than their call cycle, sorted by how much they have bought before.",
+          "result": "The biggest gap is visited next week instead of next quarter."
+        },
+        {
+          "h": "The day is routed sensibly",
+          "workflow": "Accounts due are arranged by area before the week starts, so the rep works one part of the city at a time.",
+          "result": "More calls fit into the same working day."
+        },
+        {
+          "h": "A visit carries its history",
+          "workflow": "Before entering, the rep sees the last order, the open quotation, the outstanding and the sample left on the previous call.",
+          "result": "The conversation starts where the last one ended."
+        },
+        {
+          "h": "A new rep inherits a working beat",
+          "workflow": "The territory, its accounts, cycles and visit history transfer to the new owner.",
+          "result": "Coverage survives the handover."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Small field teams with repeat accounts.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical device reps",
+          "p": "Hospitals, clinics and labs called on in cycles."
+        },
+        {
+          "icon": "&#128138;",
+          "b": "Consumables distributors",
+          "p": "Repeat orders that depend on being present."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial sales teams",
+          "p": "Plants and dealers across a district."
+        },
+        {
+          "icon": "&#128268;",
+          "b": "Electrical and hardware dealers",
+          "p": "Counters and contractors visited weekly."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Founder-led teams",
+          "p": "Two to twenty reps with no sales operations function."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How beats are usually run.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the plan lives",
+          "A sheet at head office",
+          "A calendar",
+          "Accounts with cycles, visible on the app"
+        ],
+        [
+          "Order of the day",
+          "Decided in the morning",
+          "Manual",
+          "Day-wise list by area"
+        ],
+        [
+          "Proof of the call",
+          "A message",
+          "A logged note",
+          "GPS check-in with time and location"
+        ],
+        [
+          "Coverage against plan",
+          "Not measured",
+          "Reports you build",
+          "Accounts due against accounts visited"
+        ],
+        [
+          "History before the visit",
+          "In the rep's memory",
+          "Contact notes",
+          "Orders, quotes, outstanding and samples"
+        ],
+        [
+          "Handover to a new rep",
+          "Verbal",
+          "Reassigned contacts",
+          "Territory, cycles and visit history move together"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Beat planning, answered.",
+      "items": [
+        {
+          "q": "Is there a module called beat plan?",
+          "a": "The beat is built from territory and target management, customer accounts and field visits with GPS check-in rather than from a separately named module. Everything a beat needs, from grouping to adherence, sits in the CRM and sales suite."
+        },
+        {
+          "q": "Can different accounts have different call frequencies?",
+          "a": "Yes. Each account carries its own cycle, so a large hospital can be due fortnightly while a small clinic is due once a quarter, and the coverage view respects both."
+        },
+        {
+          "q": "Does it plan the shortest route automatically?",
+          "a": "Visits are scheduled and grouped by area and the route for the day is shown on the app. Treat it as sensible sequencing rather than an optimisation engine, and confirm the detail you need on a call."
+        },
+        {
+          "q": "What stops a rep marking a visit without being there?",
+          "a": "Visits are logged with GPS check-in at the account, and attendance is marked with location and selfie. See <a href=\"/aura-business/field-staff-attendance-app/\">the attendance app</a> for how verification works."
+        },
+        {
+          "q": "Will reps use it?",
+          "a": "They use it when the app gives something back: account history before the door, samples already recorded, and no evening report to write. That is the test any field CRM has to pass."
+        },
+        {
+          "q": "Does it work without a network?",
+          "a": "Yes. Visit notes and check-ins are captured offline and sync when the phone reconnects, which matters in hospital basements and inside plants."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/territory-management-software/",
+          "icon": "&#128205;",
+          "b": "Territories",
+          "p": "How accounts are divided."
+        },
+        {
+          "href": "/aura-business/crm-for-medical-representatives/",
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "CRM for reps",
+          "p": "The same day from the rep's side."
+        },
+        {
+          "href": "/aura-business/sample-tracking-software/",
+          "icon": "&#128230;",
+          "b": "Samples",
+          "p": "What was left on the last call."
+        },
+        {
+          "href": "/aura-business/medical-equipment-lead-management-software/",
+          "icon": "&#128229;",
+          "b": "Leads",
+          "p": "Enquiries picked up on the beat."
+        },
+        {
+          "href": "/aura-business/field-staff-attendance-app/",
+          "icon": "&#128100;",
+          "b": "Attendance",
+          "p": "Where the day starts."
+        },
+        {
+          "href": "/resources/how-to-choose-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Choosing a field CRM."
+        }
+      ]
+    }
+  ]
+}

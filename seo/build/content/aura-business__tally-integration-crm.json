@@ -1,0 +1,360 @@
+{
+  "cluster": "aura-business",
+  "slug": "tally-integration-crm",
+  "title": "Tally Export from CRM for Distributors | Aura Business",
+  "meta": "Get invoice and payment data out of your operations platform and into the accounting package your CA works in, without retyping and without replacing the books.",
+  "h1": "Your operations here, your <span class=\"hl\">books where your CA wants them</span>.",
+  "crumb": "Tally Export",
+  "pill": "For owners whose accountant works in Tally",
+  "sub": "Aura Business raises the GST invoices, records the receipts and tracks what is outstanding, then exports that data for the accounting package your chartered accountant already uses, so nobody types the same invoice twice.",
+  "meta_ticks": [
+    "Invoices and receipts exported",
+    "No double entry for the accounts desk",
+    "Your CA keeps working as before"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing GST tax invoices and receipts ready to be exported to an accounting package",
+    "bar": "app.elevateaura.co.in/billing"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to understand how billing data is exported to our accounting package.",
+  "primary_keyword": "Tally export from CRM",
+  "secondary_keywords": [
+    "Tally integration for distributors",
+    "CRM to accounting software export India",
+    "GST invoice export to accounting package",
+    "avoid double entry billing and accounts",
+    "operations software with Tally export"
+  ],
+  "intent": "commercial",
+  "persona": "Business owner or accounts manager whose chartered accountant keeps the books in Tally",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "An export, not a replacement for your accounting",
+      "paras": [
+        "Almost every distributor in India has an accountant who works in Tally, and no software should ask them to stop. Aura Business does not try to become your books. It runs the operation, raises the GST documents that come out of that operation, and hands the resulting data to the accounting package through the Tally and accounting export module.",
+        "The split is deliberate. Quotations, sales orders, tax invoices, delivery challans, receipts, credit notes and the ageing of what customers owe belong with the operation that created them, because they are tied to stock, serial numbers, contracts and service visits. Ledgers, journals, the trial balance and statutory filing belong with your chartered accountant.",
+        "What the export removes is the keying that sits between the two. The invoice raised at despatch does not need to be typed again in the evening by somebody reading a printout."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The double-entry tax",
+      "h2": "What happens when the two systems never speak.",
+      "lead": "Every business running operations in one place and accounts in another pays this cost quietly, every month.",
+      "items": [
+        {
+          "h": "Every invoice typed twice",
+          "p": "Once when it is raised for the customer and again when it is entered into the accounting package."
+        },
+        {
+          "h": "Figures that do not agree",
+          "p": "A correction made in one system and not the other means the month closes with a difference nobody can explain."
+        },
+        {
+          "h": "Receipts recorded late",
+          "p": "Payments collected in the field reach the accounts desk days later, so outstanding is always stale."
+        },
+        {
+          "h": "Return filing becomes a project",
+          "p": "GST returns are compiled from two sources, each of which has to be checked against the other."
+        },
+        {
+          "h": "The accountant cannot see operations",
+          "p": "Questions about a particular invoice mean a phone call to the despatch desk and a search through files."
+        },
+        {
+          "h": "Software that demands a switch",
+          "p": "Platforms that insist on replacing accounting fail because the CA will not move, and the project stalls."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How the handover works",
+      "h2": "From the despatch desk to the accountant's screen.",
+      "steps": [
+        {
+          "h": "The document is raised once",
+          "p": "A tax invoice is created from the sales order with gapless numbering and the correct CGST, SGST or IGST split."
+        },
+        {
+          "h": "E-invoice and e-way bill where needed",
+          "p": "IRN and QR are generated with the invoice, and the e-way bill accompanies the despatch."
+        },
+        {
+          "h": "Receipts posted against invoices",
+          "p": "Payments are recorded against the specific invoice they settle, in the office or from the field."
+        },
+        {
+          "h": "The period is selected",
+          "p": "Invoices, credit notes and receipts for the chosen period are prepared for export."
+        },
+        {
+          "h": "Data is exported",
+          "p": "The Tally and accounting export module produces the file for your accountant to bring into the books."
+        },
+        {
+          "h": "GST returns prepared",
+          "p": "GSTR-1 and GSTR-3B preparation views use the same underlying documents."
+        },
+        {
+          "h": "Operations carry on",
+          "p": "Ageing, payment reminders and collections continue in the platform, where the customer record lives."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "The boundary",
+      "h2": "What stays here, and what goes to the books.",
+      "groups": [
+        {
+          "icon": "&#129534;",
+          "h": "Raised in Aura Business",
+          "items": [
+            "GST quotations, sales orders and proforma",
+            "Tax invoices with gapless numbering",
+            "Delivery challans and credit notes or returns",
+            "E-invoice with IRN and QR, and e-way bills",
+            "Payments, receipts and the payment tracker"
+          ]
+        },
+        {
+          "icon": "&#128228;",
+          "h": "Exported to accounting",
+          "items": [
+            "Tally and accounting export of billing data",
+            "Sales and receipt data for the selected period",
+            "GST returns preparation for GSTR-1 and GSTR-3B",
+            "Reports exported for the accountant's review"
+          ]
+        },
+        {
+          "icon": "&#128179;",
+          "h": "Stays in the platform",
+          "items": [
+            "Receivables ageing and payment reminders",
+            "Payables ledger against supplier purchases",
+            "Expense management and cashflow dashboard",
+            "Profit and loss by product line or territory"
+          ]
+        },
+        {
+          "icon": "&#128274;",
+          "h": "Stays with your CA",
+          "items": [
+            "The general ledger and journal entries",
+            "Trial balance and statutory financial statements",
+            "Return filing and assessments",
+            "Any advice on how a transaction should be treated"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What the export changes at month end.",
+      "items": [
+        {
+          "h": "The accounts desk stops retyping",
+          "workflow": "Invoices raised through the month are exported for the period instead of being entered a second time from printouts.",
+          "result": "Evenings at the end of the month look like ordinary evenings."
+        },
+        {
+          "h": "A field collection reaches the books",
+          "workflow": "A cheque collected during a visit is recorded against the invoice on the spot and moves with the period's data.",
+          "result": "Outstanding reflects money actually received, not money reported."
+        },
+        {
+          "h": "Return preparation starts from one source",
+          "workflow": "GSTR-1 and GSTR-3B preparation reads the same invoices, credit notes and e-invoice records the operation created.",
+          "result": "Reconciliation between two systems disappears from the filing routine."
+        },
+        {
+          "h": "A query about one invoice is answered fast",
+          "workflow": "The accountant asks about a document and the operations team opens it with its order, challan, serial numbers and payment history attached.",
+          "result": "The answer takes a minute rather than an afternoon."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Businesses with an accountant who is not moving.",
+      "items": [
+        {
+          "icon": "&#127970;",
+          "b": "Distributors and dealers",
+          "p": "High invoice volume and an external CA."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Service companies",
+          "p": "Many small service invoices raised from job cards."
+        },
+        {
+          "icon": "&#128104;&#8205;&#128188;",
+          "b": "Owner-run businesses",
+          "p": "Where the owner personally checks the month's figures."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Accounts managers",
+          "p": "One person doing billing, collections and coordination."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Multi-branch firms",
+          "p": "Several billing points feeding one set of books."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Three ways businesses connect operations and accounts.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software alone",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the invoice is raised",
+          "A template",
+          "In the books",
+          "In the ERP",
+          "From the sales order, with stock attached"
+        ],
+        [
+          "Serial numbers and contracts on the document",
+          "Typed in",
+          "Not held",
+          "Yes",
+          "Carried from stock and the installed base"
+        ],
+        [
+          "Double entry",
+          "Always",
+          "None, but no operations",
+          "None",
+          "Removed by the export"
+        ],
+        [
+          "Who keeps the ledger",
+          "Your CA",
+          "Your CA",
+          "The ERP, with a change of process",
+          "Your CA, unchanged"
+        ],
+        [
+          "Collections and ageing",
+          "A printout",
+          "Reports",
+          "Yes",
+          "Live, with reminders on WhatsApp"
+        ],
+        [
+          "Effort to adopt",
+          "None, and it never improves",
+          "Low",
+          "Months and a new process",
+          "Live in 30 working days where scope allows"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Accounting export, answered.",
+      "items": [
+        {
+          "q": "Is this a live two-way integration?",
+          "a": "It is an export of billing and payment data from the platform into the accounting package, not a replacement for accounting and not a substitute for your accountant's review. The exact format and frequency are agreed during setup."
+        },
+        {
+          "q": "Will we have to stop using Tally?",
+          "a": "No. That is the point of the export. Your chartered accountant continues in the package they know, while the operation runs here and hands over the documents it produces."
+        },
+        {
+          "q": "What exactly is exported?",
+          "a": "Billing and payment data for the period you select, meaning the tax invoices, credit notes and receipts the platform raised. Ledgers, journals and statutory statements remain the accountant's work."
+        },
+        {
+          "q": "Does it handle e-invoicing and e-way bills?",
+          "a": "Yes. E-invoice with IRN and QR and e-way bill generation are part of the billing suite. See <a href=\"/aura-business/e-invoice-software-distributors/\">e-invoice software</a> and <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bills</a>."
+        },
+        {
+          "q": "Can it prepare our GST returns?",
+          "a": "There is a GST returns preparation view for GSTR-1 and GSTR-3B built from the same documents. Filing and the treatment of any particular transaction remain matters for your accountant."
+        },
+        {
+          "q": "What about supplier bills and payables?",
+          "a": "Purchase orders, goods receipt and the payables ledger sit in the procurement suite, so purchases are recorded against stock as well. See <a href=\"/aura-business/purchase-order-grn-software/\">purchase orders and GRN</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-billing-software/",
+          "icon": "&#129534;",
+          "b": "Billing",
+          "p": "Where the documents come from."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables",
+          "p": "Outstanding that stays here."
+        },
+        {
+          "href": "/aura-business/whatsapp-payment-reminder-software/",
+          "icon": "&#128241;",
+          "b": "Payment reminders",
+          "p": "Chasing without phone calls."
+        },
+        {
+          "href": "/aura-business/purchase-order-grn-software/",
+          "icon": "&#128230;",
+          "b": "Purchases",
+          "p": "The buying side of the ledger."
+        },
+        {
+          "href": "/aura-business/distributor-management-software-india/",
+          "icon": "&#127970;",
+          "b": "Distributor platform",
+          "p": "The whole operation."
+        },
+        {
+          "href": "/compare/tally-vs-distributor-operations-software/",
+          "icon": "&#128218;",
+          "b": "Comparison",
+          "p": "Accounting against operations."
+        }
+      ]
+    }
+  ]
+}

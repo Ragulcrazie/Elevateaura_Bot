@@ -1,0 +1,216 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-kolkata",
+  "title": "Medical Equipment Software in Kolkata | Aura Business",
+  "meta": "Medical equipment software for Kolkata distributors supplying eastern India and the north-east: long transit routes, sub-dealers, e-way bills and field service.",
+  "h1": "Medical equipment software for Kolkata, the gateway to <span class=\"hl\">the east and the north-east</span>.",
+  "crumb": "Kolkata",
+  "pill": "Kolkata and eastern India",
+  "sub": "Aura Business is built for the way a Kolkata distributor works: consignments in transit for days, sub-dealers in distant towns, engineers who cannot easily return for a second visit, and the interstate documents that have to travel with the goods, onboarded remotely from Chennai.",
+  "meta_ticks": [
+    "Built for long transit routes",
+    "Sub-dealer portal with UTR payments",
+    "Remote onboarding from Chennai"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we distribute medical equipment from Kolkata and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Kolkata",
+  "secondary_keywords": [
+    "medical equipment distributor software East India",
+    "dealer management software West Bengal",
+    "medical equipment software north-east India",
+    "e-way bill software for long distance dispatch",
+    "field service software for equipment dealers"
+  ],
+  "intent": "local",
+  "persona": "Owner of a Kolkata medical equipment distributor supplying dealers and hospitals across eastern and north-eastern India",
+  "city": "Kolkata",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Kolkata, implemented remotely",
+      "paras": [
+        "Aura Business is an operations platform for businesses that distribute, install and service medical equipment. Kolkata firms adopt it without a visit: the scope is fixed on a call, your existing spreadsheets are migrated, the office and field teams are trained over screen-share, and support runs on WhatsApp with the founder who built the platform.",
+        "Elevate Aura is based in Chennai and keeps no office, staff or local number in Kolkata or anywhere in the east. Deployment is on the cloud, support is remote, and travel is arranged only where a project warrants it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Kolkata context",
+      "h2": "The goods leave quickly. They arrive days later.",
+      "lead": "Kolkata is the distribution point for eastern India and the gateway to the north-eastern states, so the distances between the godown and the customer are measured in days on the road rather than hours. Almost every operational weakness in this trade is made worse by that gap.",
+      "body": [
+        "A consignment travelling to Assam, Tripura, Meghalaya or the hill districts spends a long time in transit, which means the paperwork it left with has to be right the first time. The invoice takes its tax split from the buyer's GSTIN and delivery address, so supply outside West Bengal carries IGST, the e-invoice IRN and QR are generated, and the e-way bill is raised from the same record with transporter and vehicle details. Order tracking gives the customer a page to watch instead of a phone number to ring.",
+        "The sub-dealer network is the second half of the business. In towns across Odisha, Bihar, Jharkhand and the north-east, a local dealer holds the customer relationship, buys at its own price list and pays by bank transfer. The distributor portal gives each of them a branded login, the authorisation and territory they are entitled to, a place to upload payment references, and an order history that does not depend on a message thread. Receivables ageing then shows which dealers are genuinely overdue, with reminders sent over WhatsApp.",
+        {
+          "h3": "A service visit that has to succeed first time"
+        },
+        "When an engineer travels a long way to a district hospital, a second visit for a part he did not carry is expensive in a way it is not in a city. The call is logged against the serial with the asset's full service history, so the desk can see what failed last time and which spare it took, and the parts carried are booked against the job before departure. The mobile job card is completed on site with readings, photographs and a signature, works offline, and posts the spares used back to stock. Due maintenance in that region can be batched into the same trip.",
+        {
+          "h3": "Knowing where the money and the cover stand"
+        },
+        "A spread-out territory hides problems, so the owner view matters more than usual here. Receivables ageing by dealer, cover lapsing by region, open calls and SLA status, and profit by product line and territory sit on one dashboard, and the reports engine goes behind any of them.",
+        {
+          "h3": "How the remote start runs"
+        },
+        {
+          "ul": [
+            "Scoping call with the owner, the dispatch desk and the accounts head.",
+            "Dealer master, price lists, stock, installed base and open contracts imported from Excel.",
+            "Sub-dealers invited to the portal by link, with a short recorded walkthrough.",
+            "Screen-share training for office and field, with role-based access per branch and dealer.",
+            "Live in 30 working days where scope allows, then WhatsApp support."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites an eastern distributor uses most.",
+      "groups": [
+        {
+          "icon": "&#128667;",
+          "h": "Dispatch over long routes",
+          "items": [
+            "IGST by place of supply",
+            "E-invoice IRN and QR",
+            "E-way bill with transporter and vehicle",
+            "Delivery challan for approval and demo stock",
+            "Order tracking page for the customer"
+          ]
+        },
+        {
+          "icon": "&#127970;",
+          "h": "The sub-dealer network",
+          "items": [
+            "Distributor and B2B order portal",
+            "Brand authorisation and territory per dealer",
+            "Dealer price lists",
+            "Payment by UTR with verification",
+            "Receivables ageing and WhatsApp reminders"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "Service at a distance",
+          "items": [
+            "Service history per asset before the trip",
+            "Spares booked against the job card",
+            "Offline job card with photo proof",
+            "Preventive maintenance batched by region",
+            "SLA tracking and contract renewals"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four eastern situations the platform is built for.",
+      "items": [
+        {
+          "h": "A consignment to the north-east leaves once, correctly",
+          "workflow": "The invoice applies IGST, the IRN is generated and the e-way bill is raised with transporter details, while the customer follows the order on a tracking page.",
+          "result": "Days on the road do not turn into days of phone calls."
+        },
+        {
+          "h": "An engineer packs for the right fault",
+          "workflow": "The call shows the asset's service history and previous spares, so the parts likely to be needed are booked to the job card before the journey starts.",
+          "result": "Fewer trips wasted on a part left behind."
+        },
+        {
+          "h": "A dealer in a distant town is chased on evidence",
+          "workflow": "Receivables ageing lists the dealer's invoices by age with the last reminder sent, and a WhatsApp reminder goes from the payment tracker.",
+          "result": "Collection effort follows the risk rather than the loudest caller."
+        },
+        {
+          "h": "Contracts in a whole region are reviewed together",
+          "workflow": "Cover expiring in one state is listed with its value and visit history, and the renewal calls and any due maintenance are planned as a single trip.",
+          "result": "Renewals and visits share the cost of travel."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Kolkata, answered.",
+      "items": [
+        {
+          "q": "Do you visit Kolkata to implement the system?",
+          "a": "No. Elevate Aura works from Chennai and has no office, staff or local number in the east. Setup is on the cloud, training is over screen-share and support is on WhatsApp. Travel is possible where a project warrants it."
+        },
+        {
+          "q": "We supply to the north-eastern states. Is interstate documentation handled?",
+          "a": "Yes. The tax split follows the buyer's GSTIN and delivery address, so supply outside West Bengal carries IGST, and the e-way bill is generated from the invoice or challan with transporter and vehicle details. See <a href=\"/aura-business/e-way-bill-software-distributors/\">e-way bill software</a>."
+        },
+        {
+          "q": "Can sub-dealers order and pay online?",
+          "a": "Each dealer gets a branded portal login showing its authorised brands, territory and price list, can place orders and upload the bank payment reference for verification, and can track dispatch. See <a href=\"/aura-business/medical-equipment-dealer-management-software/\">dealer management software</a>."
+        },
+        {
+          "q": "How does it help when an engineer travels for a day to reach a site?",
+          "a": "The call carries the asset's service history and past spares so the right parts can be booked to the job card before departure, due maintenance visits in the same region are batched into the trip, and the job card works offline on site."
+        },
+        {
+          "q": "Can we see outstanding by dealer and by state?",
+          "a": "Yes. Receivables ageing groups outstanding invoices by customer in age buckets, and the reports engine groups sales, cover and profit by territory, so a distant dealer is visible rather than buried in a total. See <a href=\"/aura-business/receivables-ageing-software/\">receivables ageing software</a>."
+        },
+        {
+          "q": "Do we pay for each branch user?",
+          "a": "No. Users are unlimited on every plan, which differ only by module count, 15, 47 or all 87. Branch staff, sub-dealers and engineers all get logins with role-based access and an audit log behind them."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/medical-equipment-dealer-management-software/",
+          "icon": "&#127970;",
+          "b": "Dealer management",
+          "p": "Portals, price lists, UTR."
+        },
+        {
+          "href": "/aura-business/delivery-challan-software/",
+          "icon": "&#128220;",
+          "b": "Delivery challan",
+          "p": "Goods moving without a sale."
+        },
+        {
+          "href": "/aura-business/receivables-ageing-software/",
+          "icon": "&#128176;",
+          "b": "Receivables ageing",
+          "p": "Who is actually overdue."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-hyderabad/",
+          "icon": "&#128205;",
+          "b": "Hyderabad",
+          "p": "Two-state distributors."
+        },
+        {
+          "href": "/case-studies/medline-robotics-ecommerce-distributor-platform/",
+          "icon": "&#129302;",
+          "b": "Medline Robotics",
+          "p": "A distributor portal, shipped."
+        }
+      ]
+    }
+  ]
+}

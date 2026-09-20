@@ -1,0 +1,205 @@
+{
+  "cluster": "resources",
+  "slug": "what-is-a-discharge-summary",
+  "title": "What Is a Discharge Summary? Contents, Delays, Claims",
+  "meta": "A discharge summary explained: what it contains, who writes it, why a slow one holds up the bed and the insurance claim, and what a good one looks like.",
+  "h1": "What is a discharge summary? The document that <span class=\"hl\">releases a bed and a claim</span>.",
+  "crumb": "What is a discharge summary",
+  "pill": "Guide",
+  "sub": "A discharge summary is the record a hospital gives a patient when an admission ends, describing why they came, what was found, what was done and what happens next. This guide covers its contents, who writes it, and why the delay costs more than people think.",
+  "meta_ticks": [
+    "Written for hospital administrators",
+    "Operational, not clinical advice",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See IPD management software",
+  "cta_href": "/hims/hospital-ipd-management-software/",
+  "whatsapp_text": "Hi, I read the discharge summary guide and want to ask how HIMS handles discharge.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "what is a discharge summary",
+  "secondary_keywords": [
+    "discharge summary format hospital",
+    "discharge summary contents",
+    "hospital discharge process delay",
+    "discharge summary for insurance claim",
+    "IP discharge documentation"
+  ],
+  "intent": "informational",
+  "persona": "Hospital administrator or billing head dealing with slow discharges and queried claims",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "A discharge summary in two paragraphs",
+      "paras": [
+        "A discharge summary is the document prepared when an inpatient admission ends. It sets out who the patient is, why they were admitted, what was found, what treatment was given, what the condition was on leaving, what medication to continue, and when to return. It goes to the patient, to whoever treats them next, and into the hospital's own record of the admission.",
+        "It is also the hinge of two commercial processes. The bed cannot be released until discharge is completed, and the insurance or TPA claim cannot be settled without the summary and the supporting documentation behind it. A hospital that takes half a day to produce one is losing bed hours and delaying its own collections at the same time.",
+        "What a summary must contain, and who is qualified to write and sign it, are matters of clinical governance and regulation. This guide describes the operational shape of the document, not what to write in any individual case. Confirm content and sign-off requirements with your medical leadership and your own advisers."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What goes in it",
+      "h2": "The sections almost every summary carries",
+      "lead": "Formats differ by hospital and by specialty, but the skeleton is remarkably consistent.",
+      "body": [
+        "Think of it as the admission compressed into something a stranger can act on. The test is simple: could a doctor in another town, holding only this sheet, understand what happened and safely continue care.",
+        {
+          "ul": [
+            "<b>Identification.</b> Patient name, age, sex, hospital identifier, admission and discharge dates, ward and treating consultant.",
+            "<b>Reason for admission.</b> The presenting complaint and relevant history, briefly.",
+            "<b>Findings.</b> Examination findings and the significant investigation results, including laboratory values and imaging reports.",
+            "<b>Diagnosis.</b> The diagnosis on discharge, and procedures performed with their dates.",
+            "<b>Course in hospital.</b> What happened between admission and discharge, including complications and how they were managed.",
+            "<b>Condition at discharge.</b> How the patient was when they left.",
+            "<b>Advice on discharge.</b> Medication to continue, activity and diet guidance, warning signs, and when and where to follow up.",
+            "<b>Authorship.</b> Who prepared it, who signed it, and when."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The delay",
+      "h2": "Why a slow summary is expensive in three different ways",
+      "body": [
+        "Ask an administrator what holds up discharge and the answer is rarely the clinical decision. The patient was declared fit at the morning round. The family then waits until late afternoon.",
+        {
+          "table": {
+            "headers": [
+              "What is waited on",
+              "Why it happens",
+              "What it costs"
+            ],
+            "rows": [
+              [
+                "The summary itself",
+                "Typed at the end from a file that must be read cover to cover first",
+                "Bed hours lost and a family that remembers the wait, not the care"
+              ],
+              [
+                "A missing investigation report",
+                "A result done elsewhere, or a printout never filed",
+                "The summary is written without it, and the claim is queried for it"
+              ],
+              [
+                "The final bill",
+                "Charges added at the end rather than as they happened",
+                "Disputes at the counter and delayed collection"
+              ],
+              [
+                "Claim paperwork",
+                "The summary, bill and supporting records assembled separately",
+                "Submission slips a day or more, and so does settlement"
+              ]
+            ]
+          }
+        },
+        "The pattern is the same in each row. The summary is being assembled at the end from evidence scattered during the stay, rather than being read off a record that was complete all along.",
+        {
+          "h3": "The claim consequence"
+        },
+        "An insurer or TPA is checking whether the treatment billed is supported by what was documented. If the summary omits an investigation that appears on the bill, or the dates do not line up with the nursing record, or the diagnosis is stated loosely, the file comes back with a query. Each round trip adds weeks. The fix is not a better covering letter, it is that the summary and the bill come from the same admission record. See <a href=\"/resources/what-is-tpa-hospital-billing/\">what TPA billing means</a> for how that process works."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Getting it right",
+      "h2": "What a good discharge summary looks like, and how it gets that way",
+      "lead": "Good summaries are not written better. They are assembled from better records.",
+      "body": [
+        "When the admission is documented as it happens, the summary stops being a composition and becomes a review. The orders, the verified laboratory results, the imaging reports, the drugs dispensed, the operation note and the nursing entries are already on the record under one patient identifier. Preparing the summary means checking and signing rather than remembering.",
+        {
+          "h3": "What to look for in your own hospital"
+        },
+        {
+          "ul": [
+            "The summary is drafted from the record, not typed from the file on the last morning.",
+            "Investigation results and imaging reports are on the record rather than on paper carried between departments.",
+            "Charges accumulate on the admission as they happen, so the bill is read rather than reconstructed.",
+            "Authorship and time are captured, so it is clear who prepared and who signed.",
+            "A copy can be retrieved by identifier months later without anyone entering a store room."
+          ]
+        },
+        "In HIMS the discharge summary is drawn from what the record already holds across <a href=\"/hims/hospital-ipd-management-software/\">IPD</a>, <a href=\"/hims/hospital-emr-software/\">the EMR</a>, the laboratory, the pharmacy and imaging, with the bill built on the same admission. That is the whole trick: the document at the end is only as quick as the record underneath it, which is also the argument for one identifier per patient, explained in <a href=\"/resources/what-is-uhid/\">what is a UHID</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about discharge summaries",
+      "items": [
+        {
+          "q": "Who writes the discharge summary?",
+          "a": "In most hospitals a doctor from the treating unit prepares it and the consultant reviews and signs it, with the record contributed to by nursing, laboratory, pharmacy and imaging during the stay. Who may prepare and sign is a governance matter for your medical leadership and advisers."
+        },
+        {
+          "q": "Is a discharge summary the same as a discharge certificate?",
+          "a": "No. A certificate simply states that the patient was admitted and discharged on given dates. The summary is the clinical account of the admission: reason, findings, diagnosis, treatment, condition on leaving and advice, which is what the next treating doctor and the insurer actually need."
+        },
+        {
+          "q": "Why do insurers insist on it?",
+          "a": "Because it is the document that explains what the bill is for. The claim is assessed on whether the treatment charged is supported by the documented admission, so an incomplete or inconsistent summary is one of the most common reasons a file is queried."
+        },
+        {
+          "q": "How fast should a summary be ready?",
+          "a": "Fast enough that it is not what the family is waiting for, which in practice means it is drafted from the record rather than composed at the end. Set your own internal standard with clinical leadership rather than importing a number from a vendor page."
+        },
+        {
+          "q": "Can a patient get a copy later?",
+          "a": "They should be able to. Assume the paper copy given at discharge will be lost, and make sure the summary can be retrieved from the record by the patient's identifier long afterwards, including when the file itself has gone to storage."
+        },
+        {
+          "q": "Does a day care or short stay need one?",
+          "a": "A shorter document, but the same idea: why they came, what was done, what to watch for and when to return. Short episodes are exactly where documentation is skipped and later missed, particularly when the patient returns to a different unit."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-ipd-management-software/",
+          "icon": "&#128719;",
+          "b": "IPD software",
+          "p": "Admission to discharge."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "The record the summary comes from."
+        },
+        {
+          "href": "/resources/what-is-tpa-hospital-billing/",
+          "icon": "&#8377;",
+          "b": "TPA billing",
+          "p": "Why claims get queried."
+        },
+        {
+          "href": "/resources/what-is-nabh-documentation/",
+          "icon": "&#128218;",
+          "b": "NABH documentation",
+          "p": "What an assessment expects."
+        },
+        {
+          "href": "/hims/hospital-bed-management-software/",
+          "icon": "&#128716;",
+          "b": "Bed management",
+          "p": "Releasing the bed on time."
+        },
+        {
+          "href": "/resources/what-is-uhid/",
+          "icon": "&#127380;",
+          "b": "What is UHID",
+          "p": "One identifier per patient."
+        }
+      ]
+    }
+  ]
+}

@@ -322,6 +322,12 @@
           "icon": "&#128218;",
           "b": "Guide",
           "p": "How to choose a HIMS."
+        },
+        {
+          "href": "/hims/charitable-hospital-software/",
+          "icon": "&#129309;",
+          "b": "Trust hospitals",
+          "p": "Concessions, schemes and board reporting."
         }
       ]
     }

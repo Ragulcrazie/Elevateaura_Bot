@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "rate-contract-management-software",
+  "title": "Rate Contract Management Software for Hospital Supply",
+  "meta": "Hold agreed rates against a hospital or government buyer for a fixed period, draw orders against them, and stop quotes going out above the contract rate.",
+  "h1": "The rate you agreed, <span class=\"hl\">honoured on every order</span>.",
+  "crumb": "Rate Contracts",
+  "pill": "For suppliers to hospitals and government buyers",
+  "sub": "Aura Business holds rate contracts as live records: the buyer, the items, the agreed price, the validity period and what has been drawn so far, so quotations and invoices respect the contract instead of relying on somebody remembering it.",
+  "meta_ticks": [
+    "Agreed rates held per buyer and item",
+    "Orders drawn against the contract",
+    "Expiry and renewal surfaced in advance"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_51_45%20AM.png",
+    "alt": "Aura Business billing screen showing an invoice line priced from an agreed rate contract for a hospital buyer",
+    "bar": "app.elevateaura.co.in/contracts"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see how rate contracts are managed against our hospital buyers.",
+  "primary_keyword": "rate contract management software",
+  "secondary_keywords": [
+    "rate contract software for government supply",
+    "hospital rate contract management India",
+    "agreed price contract software for distributors",
+    "tender rate contract tracking software",
+    "contract rate pricing in quotations"
+  ],
+  "intent": "commercial",
+  "persona": "Sales or tender manager supplying hospitals and government institutions under agreed rate contracts",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What a rate contract is, and why it needs its own record",
+      "paras": [
+        "A rate contract fixes the price of named items for a named buyer for a stated period. The hospital or government department does not place one large order; it draws supplies against the agreed rate whenever it needs them, sometimes for a year or more. Winning the contract is the hard part. Honouring it correctly is where suppliers lose money and credibility.",
+        "Aura Business keeps rate contracts in the tenders and government sales suite, alongside the tender tracker and the document vault they usually come from. The contract holds the buyer, the item list, the agreed rates, the validity dates and the supply drawn against it so far.",
+        "From there it does its real job quietly. When a quotation or an order is raised for that buyer, the contract rate is the price that applies, and the contract's end date is visible long before the day the buyer asks whether you will extend."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "How rate contracts go wrong",
+      "h2": "The mistakes that only surface at audit.",
+      "lead": "A rate contract is a promise made months ago by someone who may no longer be handling the account.",
+      "items": [
+        {
+          "h": "Quotes above the agreed rate",
+          "p": "A coordinator prices from the current list and the buyer's stores officer spots the difference."
+        },
+        {
+          "h": "The contract sits in a folder",
+          "p": "The signed document is on somebody's drive, so the terms are known only to whoever negotiated them."
+        },
+        {
+          "h": "Nobody knows how much is left",
+          "p": "Where a quantity ceiling exists, supply continues past it because nothing is counted."
+        },
+        {
+          "h": "Expiry noticed too late",
+          "p": "The contract lapses and an order arrives that cannot be supplied at any agreed price."
+        },
+        {
+          "h": "Item codes drift",
+          "p": "The contract names one model and the despatch sends a successor model, which the buyer refuses."
+        },
+        {
+          "h": "Renewal negotiated blind",
+          "p": "Without a record of what was actually drawn, the renewal discussion is based on nothing."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "The life of a rate contract",
+      "h2": "From award to renewal.",
+      "steps": [
+        {
+          "h": "Awarded",
+          "p": "The tender or negotiation concludes and the award documents are stored in the tender document vault."
+        },
+        {
+          "h": "Created",
+          "p": "A rate contract record is raised for the buyer with the item list, agreed rates and validity period."
+        },
+        {
+          "h": "Linked to the account",
+          "p": "The contract attaches to the customer account, so anyone serving that buyer sees it."
+        },
+        {
+          "h": "Quoted correctly",
+          "p": "Quotations for those items to that buyer are priced from the contract rate with GST applied on top."
+        },
+        {
+          "h": "Drawn against",
+          "p": "Each supply order, delivery challan and tax invoice is recorded against the contract."
+        },
+        {
+          "h": "Monitored",
+          "p": "What has been supplied and what remains, plus how long the contract still has to run."
+        },
+        {
+          "h": "Renewed",
+          "p": "Expiry reminders arrive with the draw history attached, so the next negotiation starts from evidence."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Where rate contracts touch the platform.",
+      "groups": [
+        {
+          "icon": "&#128203;",
+          "h": "The contract",
+          "items": [
+            "Rate-contract management under tenders and government sales",
+            "Tender tracker with government tenders fetched every morning",
+            "Tender document vault for award papers",
+            "Bid, EMD and deadline reminders"
+          ]
+        },
+        {
+          "icon": "&#128221;",
+          "h": "Pricing and orders",
+          "items": [
+            "GST quotation builder using the contract rate",
+            "Sales orders drawn against the contract",
+            "Delivery challan and tax invoice with gapless numbering",
+            "Proforma invoices where the buyer requires one"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "Oversight",
+          "items": [
+            "Supply history per contract and per item",
+            "Outcome and win-rate analytics on tenders",
+            "Audit log of changes to rates and terms",
+            "Notifications hub for expiry and deadline reminders"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What holding the contract properly prevents.",
+      "items": [
+        {
+          "h": "A quotation is priced without asking anyone",
+          "workflow": "A coordinator raises a quote for a government medical college and the contracted items price themselves from the agreed rate.",
+          "result": "No embarrassing correction after the buyer compares documents."
+        },
+        {
+          "h": "A supply order is matched to its contract",
+          "workflow": "The order references the rate contract, and the invoice raised against it carries the same rate with GST applied.",
+          "result": "Billing and the award agree when the buyer's audit looks at both."
+        },
+        {
+          "h": "Renewal is raised three months early",
+          "workflow": "The expiry reminder arrives with the item-wise draw history for the period attached.",
+          "result": "The conversation happens before a gap in supply forces one."
+        },
+        {
+          "h": "A new coordinator inherits the account",
+          "workflow": "The contract, its documents and every order drawn against it sit on the customer account.",
+          "result": "Continuity does not depend on the person who negotiated it."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Suppliers who sell at agreed prices.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Hospital suppliers",
+          "p": "Consumables and equipment supplied on annual rates."
+        },
+        {
+          "icon": "&#127963;",
+          "b": "Government contractors",
+          "p": "Departments and institutions buying under award terms."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Laboratory suppliers",
+          "p": "Reagents drawn against a rate through the year."
+        },
+        {
+          "icon": "&#128138;",
+          "b": "Consumables distributors",
+          "p": "Repeat supply where price is fixed and volume is not."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial suppliers",
+          "p": "Plants and public bodies buying on standing rates."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where agreed rates usually live.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Where the rate is held",
+          "A file and a memory",
+          "Not held",
+          "Price list per customer",
+          "A contract record with validity dates"
+        ],
+        [
+          "Quoting at the right price",
+          "Checked if remembered",
+          "Manual",
+          "Yes",
+          "Contract rate applied for that buyer"
+        ],
+        [
+          "Award documents",
+          "Email attachments",
+          "Not stored",
+          "Document module",
+          "Tender document vault on the account"
+        ],
+        [
+          "Supply drawn so far",
+          "Counted at year end",
+          "Invoices only",
+          "Yes",
+          "Orders and invoices linked to the contract"
+        ],
+        [
+          "Expiry warning",
+          "None",
+          "None",
+          "Configured",
+          "Reminders with draw history attached"
+        ],
+        [
+          "Tender to contract link",
+          "Separate files",
+          "None",
+          "Separate module",
+          "Tender tracker feeds the rate contract"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Rate contracts, answered.",
+      "items": [
+        {
+          "q": "How is a rate contract different from an AMC?",
+          "a": "An AMC is a service contract covering maintenance of equipment over a period. A rate contract fixes the supply price of goods for a buyer over a period. Both are held in the platform, but they answer different questions. See <a href=\"/resources/what-is-amc-software/\">what AMC software does</a>."
+        },
+        {
+          "q": "Does the quotation stop someone pricing above the contract?",
+          "a": "The contract rate is what the quotation applies for those items and that buyer. Whether an override is permitted, and who may approve one, is set through role-based access during setup."
+        },
+        {
+          "q": "Can different buyers have different rates for the same item?",
+          "a": "Yes. Rates are held per contract and therefore per buyer, so the same product can carry one rate for a government institution and another for a private hospital, each valid for its own period."
+        },
+        {
+          "q": "Is GST applied on top of the contract rate?",
+          "a": "Billing is GST-native, so tax is applied to the contracted rate on the tax invoice with the correct CGST, SGST or IGST split. Confirm the treatment for your specific award terms with your accountant."
+        },
+        {
+          "q": "Where do rate contracts come from in the system?",
+          "a": "Usually from a won tender. The tender tracker, document vault and outcome analytics sit in the same suite, so an award becomes a contract without re-entering the details. See <a href=\"/aura-business/medical-equipment-tender-management-software/\">tender management</a>."
+        },
+        {
+          "q": "Can we see everything about to expire?",
+          "a": "Yes. Contracts approaching the end of their validity are surfaced with their remaining period and supply history, through the notifications hub and the reporting views."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#128203;",
+          "b": "Tenders",
+          "p": "Where most rate contracts begin."
+        },
+        {
+          "href": "/aura-business/medical-equipment-quotation-software/",
+          "icon": "&#128221;",
+          "b": "Quotations",
+          "p": "Pricing that respects the contract."
+        },
+        {
+          "href": "/aura-business/gst-billing-software-medical-equipment-distributors/",
+          "icon": "&#129534;",
+          "b": "GST billing",
+          "p": "Invoicing the supply."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales",
+          "p": "Selling into institutions."
+        },
+        {
+          "href": "/aura-business/territory-management-software/",
+          "icon": "&#128205;",
+          "b": "Territories",
+          "p": "Owning the government segment."
+        },
+        {
+          "href": "/resources/what-is-a-rate-contract/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What a rate contract is."
+        }
+      ]
+    }
+  ]
+}

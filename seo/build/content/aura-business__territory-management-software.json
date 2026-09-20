@@ -1,0 +1,349 @@
+{
+  "cluster": "aura-business",
+  "slug": "territory-management-software",
+  "title": "Territory Management Software for Medical Sales Teams",
+  "meta": "Divide accounts by geography or segment, give each territory one owner and a target, and stop two reps arriving at the same hospital in one week.",
+  "h1": "One hospital, <span class=\"hl\">one owner</span>, one target it counts towards.",
+  "crumb": "Territory Management",
+  "pill": "For sales heads dividing the market",
+  "sub": "Aura Business lets you split accounts by district, city or segment, assign each territory to a named rep, set targets against it, and report sales and coverage territory by territory rather than as one undivided number.",
+  "meta_ticks": [
+    "Accounts assigned to one owner",
+    "Targets set per territory",
+    "No duplicate calls on the same account"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_42_12%20AM.png",
+    "alt": "Aura Business account list filtered by territory showing the owning representative and target achievement",
+    "bar": "app.elevateaura.co.in/territory"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see how territories and targets are managed for our sales team.",
+  "primary_keyword": "territory management software for medical sales",
+  "secondary_keywords": [
+    "sales territory management software India",
+    "territory and target management for reps",
+    "account ownership software for sales teams",
+    "medical device sales territory planning",
+    "territory wise sales reporting software"
+  ],
+  "intent": "commercial",
+  "persona": "Sales head dividing hospitals and dealers between representatives across a state",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What territory management settles before the selling starts",
+      "paras": [
+        "Territory management answers one question in advance: for any given account, who is responsible. Split by geography, by segment, by product line or by a mixture of the three, and every hospital, lab or dealer belongs to exactly one rep who is measured on it.",
+        "Aura Business holds this in the territory and target management module. Accounts carry a territory, territories carry an owner and a target, and the reporting that follows, on pipeline, orders, collections and coverage, can be read territory by territory instead of as one company-wide figure.",
+        "For medical sales the segment split matters as much as the map. A government medical college, a corporate chain and a standalone nursing home in the same district buy in different ways, and it is reasonable for different reps to own them. The model allows that without leaving any account unowned."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "When ownership is vague",
+      "h2": "What an undivided market costs you.",
+      "lead": "Overlap wastes money and looks unprofessional. Gaps are worse, because nobody notices them.",
+      "items": [
+        {
+          "h": "Two reps at one hospital",
+          "p": "The purchase officer receives two quotations from the same company in a week, sometimes at different prices."
+        },
+        {
+          "h": "Accounts nobody owns",
+          "p": "A district is assumed to be covered by whoever passes through it, so nobody calls there at all."
+        },
+        {
+          "h": "Targets set for the company, not the patch",
+          "p": "One overall number hides a territory that has not grown in two years."
+        },
+        {
+          "h": "Arguments over credit",
+          "p": "When an order comes in, two reps claim it because the account was never assigned."
+        },
+        {
+          "h": "Reporting by product only",
+          "p": "You know which products sell but not which parts of the market buy them."
+        },
+        {
+          "h": "Reassignment loses history",
+          "p": "A territory changes hands and the new rep starts with a list of names and no context."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Setting up the map",
+      "h2": "From a list of accounts to a measured patch.",
+      "steps": [
+        {
+          "h": "Define territories",
+          "p": "By district, city, zone or segment, in whatever shape matches how you actually sell."
+        },
+        {
+          "h": "Assign accounts",
+          "p": "Every customer and prospect is placed in a territory, so no account is left unowned."
+        },
+        {
+          "h": "Name an owner",
+          "p": "One rep owns the territory, with role-based access showing them their own book."
+        },
+        {
+          "h": "Set targets",
+          "p": "Value or volume targets recorded against the territory for the period."
+        },
+        {
+          "h": "Route what arrives",
+          "p": "New enquiries and website quote requests are assigned to the owning rep automatically by territory."
+        },
+        {
+          "h": "Measure",
+          "p": "Pipeline, orders, collections and visit coverage reported per territory and per owner."
+        },
+        {
+          "h": "Redraw",
+          "p": "When a patch outgrows one person, it is split and the accounts, history and open leads move with it."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "Territory work across the platform.",
+      "groups": [
+        {
+          "icon": "&#128205;",
+          "h": "The structure",
+          "items": [
+            "Territory and target management",
+            "Customer and hospital accounts tagged to a territory",
+            "Role-based access so reps see their own accounts",
+            "Contacts and decision-makers under each account"
+          ]
+        },
+        {
+          "icon": "&#128229;",
+          "h": "What flows to the owner",
+          "items": [
+            "Leads routed by territory",
+            "Quote-request inbound from the website",
+            "Tender enquiries by region",
+            "Field visits and the day's account list"
+          ]
+        },
+        {
+          "icon": "&#128202;",
+          "h": "What you can read back",
+          "items": [
+            "Pipeline by stage, value and territory",
+            "Profit and loss by product line or territory",
+            "Lead-source and conversion analytics",
+            "Owner and CEO dashboard with territory views"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What clear ownership fixes.",
+      "items": [
+        {
+          "h": "A website enquiry finds its rep",
+          "workflow": "A quote request from a hospital in a covered district is routed to the owning rep rather than sitting in a shared inbox.",
+          "result": "One person calls back, and it is the person who knows the account."
+        },
+        {
+          "h": "A weak patch becomes visible",
+          "workflow": "Orders and visit coverage are read per territory against the target set for it.",
+          "result": "The problem is identified as a patch, not blamed on the market."
+        },
+        {
+          "h": "A growing region is split",
+          "workflow": "The district is divided into two territories and accounts move with their contacts, leads and visit history.",
+          "result": "The new rep starts with context instead of a blank list."
+        },
+        {
+          "h": "Government and private accounts are separated",
+          "workflow": "Tender-driven institutions are held in their own segment territory, with the tender tracker feeding that owner.",
+          "result": "Bid work goes to the person who understands the process."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Teams big enough to trip over each other.",
+      "items": [
+        {
+          "icon": "&#127973;",
+          "b": "Medical equipment sales teams",
+          "p": "Hospitals, clinics and labs across several districts."
+        },
+        {
+          "icon": "&#127981;",
+          "b": "Importers with regional dealers",
+          "p": "Enquiries routed to the right partner, not the nearest."
+        },
+        {
+          "icon": "&#128300;",
+          "b": "Diagnostics companies",
+          "p": "Segment-based ownership of labs and chains."
+        },
+        {
+          "icon": "&#9881;",
+          "b": "Industrial distributors",
+          "p": "Plants and contractors split by zone."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Tender-led businesses",
+          "p": "Government institutions handled by a specialist owner."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "How territories are usually held.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Generic CRM",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Account ownership",
+          "Understood, not written",
+          "Owner field",
+          "Yes, configured",
+          "Territory with a named owner"
+        ],
+        [
+          "Lead routing",
+          "Whoever answers",
+          "Rules you build",
+          "Yes",
+          "Routed by territory and product line"
+        ],
+        [
+          "Targets",
+          "One company number",
+          "Manual",
+          "Yes",
+          "Per territory and per rep"
+        ],
+        [
+          "What a rep can see",
+          "Everything or nothing",
+          "Configured",
+          "Yes",
+          "Role-based, their own book"
+        ],
+        [
+          "Territory reporting",
+          "Built by hand",
+          "Reports you build",
+          "Yes",
+          "Pipeline, orders and P&amp;L by territory"
+        ],
+        [
+          "Reassigning a patch",
+          "Forwarded contacts",
+          "Bulk edit",
+          "Project work",
+          "Accounts, leads and history move together"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Territory management, answered.",
+      "items": [
+        {
+          "q": "Can a territory be a segment rather than an area?",
+          "a": "Yes. Territories can be drawn by geography, by customer segment such as government or corporate chains, or by product line, and an account is placed in the one that reflects who should own it."
+        },
+        {
+          "q": "Can two reps share an account?",
+          "a": "The model is built around one owner per account so credit and follow-up are unambiguous. Where a specialist supports a sale, that involvement is recorded through visits and activity rather than by splitting ownership."
+        },
+        {
+          "q": "Do reps see other territories?",
+          "a": "Role-based access decides that. The usual setup gives a rep their own accounts and gives managers and the owner a view across all territories on the dashboard."
+        },
+        {
+          "q": "How are targets tracked?",
+          "a": "Targets are set against the territory for a period and read against orders and pipeline in the reporting views. What counts towards a target, order value or collection, is agreed during setup."
+        },
+        {
+          "q": "What happens to open leads when a territory is redrawn?",
+          "a": "They move to the new owner with their contacts, notes, visits and samples intact, so a reassignment does not restart the conversation. See <a href=\"/aura-business/medical-equipment-lead-management-software/\">lead management</a>."
+        },
+        {
+          "q": "Does this help with coverage as well as sales?",
+          "a": "Yes. Territory grouping is what makes a call cycle possible, because accounts due for a visit can be listed per patch. See <a href=\"/aura-business/beat-plan-software/\">beat plan software</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/beat-plan-software/",
+          "icon": "&#128506;",
+          "b": "Beat plans",
+          "p": "Coverage inside the patch."
+        },
+        {
+          "href": "/aura-business/hospital-sales-crm/",
+          "icon": "&#127973;",
+          "b": "Hospital sales CRM",
+          "p": "Selling into institutions."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128200;",
+          "b": "Dashboard",
+          "p": "Territory numbers for the owner."
+        },
+        {
+          "href": "/aura-business/medical-equipment-tender-management-software/",
+          "icon": "&#128203;",
+          "b": "Tenders",
+          "p": "The government segment."
+        },
+        {
+          "href": "/aura-business/crm-for-medical-representatives/",
+          "icon": "&#128104;&#8205;&#9877;",
+          "b": "CRM for reps",
+          "p": "The owner's daily view."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Comparison",
+          "p": "Generic CRM against this."
+        }
+      ]
+    }
+  ]
+}

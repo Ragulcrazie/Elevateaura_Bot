@@ -1,0 +1,333 @@
+{
+  "cluster": "hims",
+  "slug": "orthopaedic-hospital-software",
+  "title": "Orthopaedic Hospital Software | Theatre and Implants | HIMS",
+  "meta": "Orthopaedic hospital software for theatre-heavy work: implants issued against a case, package and TPA billing for planned surgery, and follow-up months later.",
+  "h1": "Orthopaedic hospital software where <span class=\"hl\">the theatre and the implant store</span> decide the day.",
+  "crumb": "Orthopaedic Hospital Software",
+  "pill": "For orthopaedic hospitals and surgical centres",
+  "sub": "Orthopaedic work is planned surgery with expensive stock inside it. HIMS runs the theatre list, issues implants and consumables against the case, puts them on a package or TPA bill, and keeps the follow-up visits months later on the same record.",
+  "meta_ticks": [
+    "Implants issued against the case",
+    "Theatre lists and package billing",
+    "Follow-up on the same record"
+  ],
+  "hero_image": {
+    "src": "/assets/hims/inventory.png",
+    "alt": "HIMS inventory view showing stock items, reorder levels and issues against a case",
+    "bar": "his.elevateaura.co.in/inventory"
+  },
+  "whatsapp_text": "Hi, we run an orthopaedic hospital and would like to see HIMS.",
+  "primary_keyword": "orthopaedic hospital software",
+  "secondary_keywords": [
+    "orthopedic hospital management software India",
+    "implant tracking hospital software",
+    "joint replacement hospital software",
+    "orthopaedic surgery billing software",
+    "surgical centre management software",
+    "operation theatre and implant stock software"
+  ],
+  "intent": "commercial",
+  "persona": "Owner or administrator of an orthopaedic hospital where most revenue comes from planned surgery",
+  "page_type": "industry",
+  "phase": 4,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "What an orthopaedic hospital needs a system to hold together",
+      "paras": [
+        "An orthopaedic hospital earns most of its money in the theatre, and a large part of each case is the implant. The theatre list has to be planned and kept, the implants and consumables used in a case have to leave stock and land on the bill for that case, the claim has to be prepared before the patient goes home, and the record has to still be there when the patient returns for review six months later.",
+        "HIMS covers this with operation theatre scheduling, inventory with reorder levels for implants and consumables, package billing for a procedure, insurance and TPA billing, and one patient record that carries the surgery and every later review. Implants are handled as high-value stock issued against the case. How far unit or lot-level tracking is taken for your particular implant sets is agreed during scoping rather than claimed on this page."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The theatre-and-stock problem",
+      "h2": "The most valuable item in the hospital is the one nobody can account for.",
+      "lead": "When implants are tracked on paper, the shortfall shows up in the stock count, not the bill.",
+      "items": [
+        {
+          "h": "Implants issued on trust",
+          "p": "A set is opened in the theatre, one item is used, and what went back is recorded on a slip that reaches the store the next day."
+        },
+        {
+          "h": "The bill misses what the case used",
+          "p": "Consumables opened during the procedure are remembered at discharge, and some of them are not."
+        },
+        {
+          "h": "The theatre list is a whiteboard",
+          "p": "A cancellation frees a slot nobody knows about, and the surgeon's afternoon is spent waiting."
+        },
+        {
+          "h": "Pre-authorisation started late",
+          "p": "Planned surgery gives you weeks of notice, and the claim still gets assembled on discharge day."
+        },
+        {
+          "h": "Follow-up loses the case",
+          "p": "A review six months on opens a new file, and the operation notes are in a bundle somewhere."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "Consultation to review",
+      "h2": "How a planned orthopaedic case runs on HIMS.",
+      "steps": [
+        {
+          "h": "Outpatient consultation",
+          "p": "The patient is registered under a UHID, imaging and investigations attach to the visit through AuraPACS and the laboratory."
+        },
+        {
+          "h": "Surgery planned",
+          "p": "The case goes on the theatre list with the surgeon, the date and the expected procedure."
+        },
+        {
+          "h": "Payer settled first",
+          "p": "Package, insurance or TPA is recorded and pre-authorisation is raised while there is still time."
+        },
+        {
+          "h": "Admission",
+          "p": "Bed allocated, nursing charts opened, pre-operative orders on the record."
+        },
+        {
+          "h": "In theatre",
+          "p": "Implants and consumables are issued against the case, so stock falls and the case carries the cost."
+        },
+        {
+          "h": "Ward and discharge",
+          "p": "Post-operative notes, drugs from the pharmacy, summary and final bill against the package."
+        },
+        {
+          "h": "Review and physiotherapy",
+          "p": "Follow-up appointments are booked, and a physiotherapy course is scheduled against the same patient."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The parts of HIMS an orthopaedic hospital uses hardest.",
+      "groups": [
+        {
+          "icon": "&#129525;",
+          "h": "Theatre",
+          "items": [
+            "Operation theatre scheduling by surgeon",
+            "Planned lists and same-day additions",
+            "Pre-operative orders on the record",
+            "Procedure recorded against the admission"
+          ]
+        },
+        {
+          "icon": "&#128230;",
+          "h": "Implants and consumables",
+          "items": [
+            "High-value stock in the inventory module",
+            "Issued against a case, not the ward",
+            "Reorder levels and low-stock alerts",
+            "Expiry alerts on sterile consumables"
+          ]
+        },
+        {
+          "icon": "&#8377;",
+          "h": "Billing for planned surgery",
+          "items": [
+            "Package billing for a procedure",
+            "Implants billed on the same case",
+            "Insurance and TPA with pre-authorisation",
+            "Corporate and credit panels"
+          ]
+        },
+        {
+          "icon": "&#128197;",
+          "h": "After the surgery",
+          "items": [
+            "Follow-up appointments from the discharge",
+            "Operation notes on the same record",
+            "Physiotherapy sessions against the patient",
+            "WhatsApp reminders for review dates"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/hims/operation-theatre-management-software/",
+        "label": "See theatre scheduling in HIMS"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "What changes around the theatre.",
+      "items": [
+        {
+          "h": "A joint replacement case",
+          "workflow": "The implant is issued to the case in theatre, and the bill carries it without anybody retyping a code.",
+          "result": "Stock, case cost and bill agree at the end of the day."
+        },
+        {
+          "h": "The claim started early",
+          "workflow": "Pre-authorisation is raised when surgery is planned, not on discharge day.",
+          "result": "The family is not waiting at the counter for approval."
+        },
+        {
+          "h": "A review after six months",
+          "workflow": "The patient is found by phone number and the consultant opens the operation notes and imaging.",
+          "result": "The review starts from the case, not from memory."
+        },
+        {
+          "h": "Physiotherapy after discharge",
+          "workflow": "A course of sessions is booked against the same patient record and attendance is recorded per session.",
+          "result": "The hospital can see who completed rehabilitation and who stopped."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "Hospitals built around a theatre.",
+      "items": [
+        {
+          "icon": "&#129460;",
+          "b": "Orthopaedic hospitals",
+          "p": "Planned surgery as the main work."
+        },
+        {
+          "icon": "&#129525;",
+          "b": "Surgical centres",
+          "p": "A theatre, a few beds and high-value stock."
+        },
+        {
+          "icon": "&#127973;",
+          "b": "Trauma units",
+          "p": "Emergency cases that become admissions."
+        },
+        {
+          "icon": "&#129501;",
+          "b": "Hospitals with rehabilitation",
+          "p": "Physiotherapy running after discharge."
+        },
+        {
+          "icon": "&#128104;&#8205;&#9877;&#65039;",
+          "b": "Surgeon-owners",
+          "p": "Operating in the morning, owning the business."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Running an orthopaedic hospital, three ways.",
+      "cols": [
+        "Paper registers and Excel",
+        "Standalone billing software",
+        "HIMS by Elevate Aura"
+      ],
+      "rows": [
+        [
+          "Theatre list",
+          "Whiteboard",
+          "Not covered",
+          "Scheduled by surgeon and session"
+        ],
+        [
+          "Implant stock",
+          "Store book and slips",
+          "Billed if remembered",
+          "Issued against the case, stock reduced"
+        ],
+        [
+          "Cost of a case",
+          "Worked out later",
+          "Bill total only",
+          "Implants, drugs and procedure on the case"
+        ],
+        [
+          "TPA for planned surgery",
+          "Started at discharge",
+          "Typed separately",
+          "Pre-authorisation raised when surgery is planned"
+        ],
+        [
+          "Follow-up months later",
+          "A new file",
+          "A new bill",
+          "Same record, same operation notes"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Orthopaedic hospital software, answered.",
+      "items": [
+        {
+          "q": "Is HIMS an orthopaedics product?",
+          "a": "No. HIMS is a general hospital system configured for the way an orthopaedic hospital works, which is theatre-heavy planned surgery with high-value stock and long follow-up. It is not a specialty product, and anything specialty-specific is scoped on the call."
+        },
+        {
+          "q": "How are implants tracked?",
+          "a": "Implants are held as stock in the inventory module and issued against the case, so the stock falls and the bill carries the item. The depth of unit or lot-level tracking for your implant sets is agreed during scoping rather than promised here."
+        },
+        {
+          "q": "Can a surgery be billed as a package with implants outside it?",
+          "a": "Yes. A procedure can be billed as a package with implants and other items shown separately, so the patient and the payer see what is inside the package and what is not."
+        },
+        {
+          "q": "Does it handle TPA claims for planned surgery?",
+          "a": "Yes. Pre-authorisation is recorded when the surgery is planned and claim documents come from the record at discharge. See <a href=\"/hims/hospital-insurance-tpa-billing-software/\">TPA billing software</a>."
+        },
+        {
+          "q": "Can we run our own physiotherapy unit on the same system?",
+          "a": "Yes. A course of sessions is booked against the same patient record, so referral, attendance and billing stay with the surgical case. See <a href=\"/hims/physiotherapy-clinic-software/\">physiotherapy clinic software</a>."
+        },
+        {
+          "q": "Is imaging included?",
+          "a": "AuraPACS is built into HIMS, so X-ray, CT and MR studies attach to the patient record and open in a browser viewer without a download. The read stays with your radiologist."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related HIMS pages",
+      "items": [
+        {
+          "href": "/hims.html",
+          "icon": "&#127973;",
+          "b": "HIMS",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/hims/operation-theatre-management-software/",
+          "icon": "&#129525;",
+          "b": "Theatre scheduling",
+          "p": "Lists, sessions and surgeons."
+        },
+        {
+          "href": "/hims/hospital-inventory-management/",
+          "icon": "&#128230;",
+          "b": "Hospital inventory",
+          "p": "Consumables and reorder levels."
+        },
+        {
+          "href": "/hims/hospital-package-billing-software/",
+          "icon": "&#8377;",
+          "b": "Package billing",
+          "p": "A surgery billed as one item."
+        },
+        {
+          "href": "/hims/physiotherapy-clinic-software/",
+          "icon": "&#129501;",
+          "b": "Physiotherapy software",
+          "p": "Courses of sessions after surgery."
+        },
+        {
+          "href": "/hims/hospital-insurance-tpa-billing-software/",
+          "icon": "&#128203;",
+          "b": "TPA billing",
+          "p": "Pre-authorisation to claim."
+        }
+      ]
+    }
+  ]
+}

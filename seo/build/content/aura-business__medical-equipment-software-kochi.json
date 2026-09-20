@@ -1,0 +1,216 @@
+{
+  "cluster": "aura-business",
+  "slug": "medical-equipment-software-kochi",
+  "title": "Medical Equipment Software in Kochi | Aura Business",
+  "meta": "Medical equipment software for Kochi dealers serving Kerala's hospital network: dense service rounds, AMC renewals, job cards and GST billing in one platform.",
+  "h1": "Medical equipment software for Kochi dealers with <span class=\"hl\">many hospitals close together</span>.",
+  "crumb": "Kochi",
+  "pill": "Kochi and Kerala",
+  "sub": "Aura Business fits the Kerala pattern of a great many hospitals within short driving distances: several service calls a day per engineer, AMC contracts that renew constantly, job cards closed on the phone and GST billing behind them, set up remotely from Chennai.",
+  "meta_ticks": [
+    "Several calls a day per engineer",
+    "AMC renewals tracked by area",
+    "Remote onboarding from Chennai"
+  ],
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, we supply and service medical equipment in Kochi and would like to discuss Aura Business.",
+  "primary_keyword": "medical equipment software Kochi",
+  "secondary_keywords": [
+    "medical equipment dealer software Kerala",
+    "hospital equipment service software Kochi",
+    "AMC management software Kerala",
+    "field service software for equipment dealers",
+    "biomedical service software Kochi"
+  ],
+  "intent": "local",
+  "persona": "Owner of a Kochi medical equipment dealership servicing hospitals across Kerala",
+  "city": "Kochi",
+  "page_type": "city",
+  "phase": 6,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Medical equipment software for Kochi, set up from a distance",
+      "paras": [
+        "Aura Business is an operations platform for companies that sell, install and service medical equipment, and Kochi businesses run it remotely. Scope is agreed on a call, your spreadsheets and contract lists are migrated, staff are trained over screen-share, and the WhatsApp number you message afterwards belongs to the founder who built the system.",
+        "Elevate Aura has no office, employee or local phone number in Kochi or anywhere in Kerala. Deployment is on the cloud and support is remote, with travel considered only where a project genuinely warrants it."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The Kochi context",
+      "h2": "Short distances, high frequency, contracts everywhere.",
+      "lead": "Kerala's difficulty is not distance. Hospitals, nursing homes, diagnostic centres and laboratories sit thickly along the corridor through Kochi, and a dealer here can have more customers inside an hour's drive than a dealer elsewhere has in a whole state. That density changes what the software has to be good at.",
+      "body": [
+        "When travel is short, the constraint becomes how many jobs an engineer can actually complete and record in a day. Calls arrive through the day, a technician is dispatched from wherever he is, and the job has to be closed properly on site before the next one begins. The mobile job card takes the fault, the work done, the spares fitted, photographs and the customer's signature on the phone, and the spares consumed drop out of stock at once. Where the engineer is inside a basement scan room without a signal, the card is held offline and syncs later.",
+        "The second consequence of density is contract volume. A dealer with a great many hospital customers close together tends to carry a great many AMC and CMC contracts, and those lapse quietly unless something watches them. The contract renewal engine lists cover that is expiring, the AMC revenue and leakage dashboard shows what lapsing contracts are worth in rupees, and preventive maintenance schedules are raised per asset so the promised visits actually happen rather than being remembered at renewal time.",
+        {
+          "h3": "Planning a round when everything is nearby"
+        },
+        "With customers packed together, routing by area is more valuable than routing by distance. Technician route and schedule planning groups breakdown calls and due maintenance visits so a morning covers a cluster of hospitals rather than crossing the city twice, and skill-based allocation sends the engineer who is trained on that machine. Service history per asset is on the phone before the engineer knocks, so a repeat fault is recognised as a repeat.",
+        {
+          "h3": "Billing, cover and who pays"
+        },
+        "Most of what a Kochi dealer invoices is within Kerala and carries CGST and SGST, with IGST when the supply leaves the state. The sharper question at the service desk is whether a call is under warranty, under contract or chargeable, because that decides whether a service invoice follows the job card. The platform shows the cover against the serial at intake, raises the service invoice from the closed job card, and keeps the outstanding in receivables ageing with WhatsApp reminders.",
+        {
+          "h3": "Getting started from Chennai"
+        },
+        {
+          "ul": [
+            "Scoping call with the owner, the service head and the accounts team.",
+            "Customer list, installed base, live AMC contracts and spares stock imported from Excel.",
+            "Preventive maintenance schedules and SLA terms set up per contract.",
+            "Screen-share training, with the field app installed on each engineer's phone.",
+            "Live in 30 working days where scope allows, then support on WhatsApp."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What is included",
+      "h2": "The suites a Kerala service business uses most.",
+      "groups": [
+        {
+          "icon": "&#128222;",
+          "h": "The service desk",
+          "items": [
+            "Breakdown call intake with cover shown",
+            "Technician dispatch and route planning",
+            "Skill-based technician allocation",
+            "SLA timers and breach tracking",
+            "Service history per asset"
+          ]
+        },
+        {
+          "icon": "&#128241;",
+          "h": "The engineer's phone",
+          "items": [
+            "Mobile job card with fault and work done",
+            "Spare parts used per job, dropping stock",
+            "Photo proof and field signature",
+            "Offline mode with later sync",
+            "Attendance with geo and selfie"
+          ]
+        },
+        {
+          "icon": "&#128220;",
+          "h": "Contracts and renewals",
+          "items": [
+            "AMC and CMC contracts with warranty tracking",
+            "Preventive maintenance schedules per asset",
+            "Contract renewal engine",
+            "AMC revenue and leakage dashboard",
+            "Service invoices from the closed job card"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Four Kochi situations the platform is built for.",
+      "items": [
+        {
+          "h": "Four calls in a morning, all closed properly",
+          "workflow": "Calls are dispatched to the engineer nearest the cluster, and each job card is completed and signed on site before the next call is opened.",
+          "result": "The day's work is recorded by the time the engineer gets home."
+        },
+        {
+          "h": "A contract is saved before it lapses",
+          "workflow": "The renewal engine lists cover expiring next month with its value, and the service head reviews it with the visit history for each customer before calling.",
+          "result": "The renewal conversation happens early and with evidence."
+        },
+        {
+          "h": "A scan room with no signal",
+          "workflow": "The engineer fills the job card offline in the basement, adds photographs and the signature, and the record syncs when the phone reaches the corridor.",
+          "result": "No paper pad and no re-entry at the office."
+        },
+        {
+          "h": "A chargeable call becomes an invoice the same week",
+          "workflow": "The call was outside contract cover, so the closed job card raises a service invoice with the spares fitted and labour, and it enters receivables ageing.",
+          "result": "Service revenue stops leaking out through forgotten billing."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Aura Business in Kochi, answered.",
+      "items": [
+        {
+          "q": "Is there anyone from Elevate Aura in Kerala?",
+          "a": "No. Elevate Aura is a Chennai studio with no office, staff or local number in Kochi or elsewhere in Kerala. Deployment is on the cloud, training is by screen-share and support is on WhatsApp. Travel is possible where a project warrants it."
+        },
+        {
+          "q": "Can engineers handle several calls a day on the app?",
+          "a": "Yes. Calls and scheduled maintenance visits appear on the engineer's phone for the day, each with its asset history, and each job card is closed on site with spares, photographs and a signature before the next is started."
+        },
+        {
+          "q": "What happens where there is no mobile signal inside a hospital?",
+          "a": "The field app works offline. The job card, photographs and signature are stored on the device and synced when the connection returns, so nothing has to be written down and typed again later. See <a href=\"/aura-business/mobile-job-card-software/\">mobile job card software</a>."
+        },
+        {
+          "q": "How are AMC renewals tracked across many hospitals?",
+          "a": "Every contract carries its assets, cover period and value, and the renewal engine lists what is expiring so it can be sold before it lapses, with the rupee value of lapsing cover shown on the dashboard. See <a href=\"/aura-business/service-contract-management-software/\">service contract management</a>."
+        },
+        {
+          "q": "Does the system know whether a call is chargeable?",
+          "a": "When a call is logged against the serial, the platform shows whether the asset is under warranty, under an AMC or CMC, or uncovered, so the desk knows at intake whether a service invoice will follow the job."
+        },
+        {
+          "q": "Can we add every engineer without paying per person?",
+          "a": "Yes. All plans carry unlimited users and differ only by module count, 15, 47 or all 87. Engineers, coordinators and the owner each get a login with role-based access and an audit log."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business pages",
+      "items": [
+        {
+          "href": "/aura-business.html",
+          "icon": "&#128202;",
+          "b": "Aura Business",
+          "p": "The full platform."
+        },
+        {
+          "href": "/aura-business/service-dispatch-software/",
+          "icon": "&#128665;",
+          "b": "Service dispatch",
+          "p": "Getting the right engineer out."
+        },
+        {
+          "href": "/aura-business/service-contract-management-software/",
+          "icon": "&#128220;",
+          "b": "Service contracts",
+          "p": "AMC, CMC and renewals."
+        },
+        {
+          "href": "/aura-business/preventive-maintenance-software/",
+          "icon": "&#128197;",
+          "b": "Preventive maintenance",
+          "p": "Visits that actually happen."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-coimbatore/",
+          "icon": "&#128205;",
+          "b": "Coimbatore",
+          "p": "Across the Kerala border."
+        },
+        {
+          "href": "/case-studies/carna-medicare-medical-equipment-distributor-platform/",
+          "icon": "&#127973;",
+          "b": "Carna Medicare",
+          "p": "A distribution business, rebuilt."
+        }
+      ]
+    }
+  ]
+}

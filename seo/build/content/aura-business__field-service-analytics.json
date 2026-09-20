@@ -1,0 +1,355 @@
+{
+  "cluster": "aura-business",
+  "slug": "field-service-analytics",
+  "title": "Field Service Analytics Software for Service Heads",
+  "meta": "Field service analytics from the work itself: call volume and ageing, repeat visits, engineer load, spares consumed, SLA breaches and contract profitability.",
+  "h1": "The service numbers that tell you <span class=\"hl\">where the week went</span>.",
+  "crumb": "Field Service Analytics",
+  "pill": "For service heads reviewing the month",
+  "sub": "Aura Business reports on the service operation from the records the desk and the engineers already create: how many calls came in, how long they stayed open, who closed them, what spares they consumed and which contracts are worth keeping.",
+  "meta_ticks": [
+    "Call volume and open-call ageing",
+    "Engineer utilisation and SLA breaches",
+    "Contract profitability, not just revenue"
+  ],
+  "hero_image": {
+    "src": "/assets/CRM%20images/ChatGPT%20Image%20Aug%2011%2C%202026%2C%2012_34_27%20AM.png",
+    "alt": "Aura Business owner dashboard showing service call volume, open calls by age, engineer load and contract revenue",
+    "bar": "app.elevateaura.co.in/analytics"
+  },
+  "cta_href": "/contact.html",
+  "demo_href": "/demo/aura-business.html",
+  "whatsapp_text": "Hi, I'd like to see the service analytics and dashboards for our service team.",
+  "primary_keyword": "field service analytics",
+  "secondary_keywords": [
+    "service management reporting software",
+    "engineer utilisation reporting India",
+    "SLA breach reporting software",
+    "spares consumption analysis software",
+    "contract profitability reporting for service"
+  ],
+  "intent": "commercial",
+  "persona": "Service head or operations director reviewing a field service operation month by month",
+  "page_type": "feature",
+  "phase": 2,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "In one sentence",
+      "h2": "Analytics that come out of the work, not out of a form",
+      "paras": [
+        "Service reporting fails in most companies for one reason: the numbers are compiled separately from the work. Someone asks the desk for a call count, the desk types a sheet, and by the time it is ready it describes a month that has already gone.",
+        "In Aura Business the reporting is a by-product. The call was logged at intake, the engineer was dispatched from the desk, the job card was closed on the phone with spares recorded, the SLA timer ran on its own, and the invoice came from the closed job. Every figure a service head wants is already in those records.",
+        "What follows is the set of questions a service operation should be able to answer at any moment, and where each answer comes from. Nothing here is a benchmark or an industry claim; the figures are yours, drawn from your own calls."
+      ]
+    },
+    {
+      "type": "pains",
+      "eyebrow": "The questions that go unanswered",
+      "h2": "Six things a service head is usually asked and cannot prove.",
+      "lead": "Not knowing is manageable. Not being able to find out is what makes the month a guess.",
+      "items": [
+        {
+          "h": "How many calls are open right now",
+          "p": "The desk counts by scrolling a chat history, and the count changes depending on who does it."
+        },
+        {
+          "h": "How old is the oldest one",
+          "p": "A call that has been open for three weeks is invisible until the customer escalates it."
+        },
+        {
+          "h": "Are we fixing things on the first visit",
+          "p": "Repeat visits to the same asset for the same fault are never counted, so the pattern is never noticed."
+        },
+        {
+          "h": "Is the team busy or overloaded",
+          "p": "Jobs per engineer per day is not recorded, so headcount decisions are made on the loudest complaint."
+        },
+        {
+          "h": "Where did the spares go",
+          "p": "Parts leave stock without being booked to a job, so consumption cannot be traced to work done."
+        },
+        {
+          "h": "Which contracts are worth renewing",
+          "p": "Contract revenue is known, the cost of serving each contract is not, so renewals are priced on last year's figure."
+        }
+      ]
+    },
+    {
+      "type": "flow",
+      "eyebrow": "How a number is made",
+      "h2": "From one service call to the month's picture.",
+      "steps": [
+        {
+          "h": "Intake records the call",
+          "p": "Customer, asset, fault and contract status captured when the call is logged, with the SLA clock started."
+        },
+        {
+          "h": "Dispatch records the engineer",
+          "p": "Assignment by skill and area gives every job a named owner and a time it was allocated."
+        },
+        {
+          "h": "The job card records the work",
+          "p": "Fault found, work done, spares consumed and the customer's signature, captured on site."
+        },
+        {
+          "h": "Closure stops the clock",
+          "p": "Resolution time and any SLA breach are recorded against the call without anyone calculating them."
+        },
+        {
+          "h": "Stock and billing update",
+          "p": "Spares drop from inventory against the job, and chargeable work becomes a service invoice."
+        },
+        {
+          "h": "The dashboard adds it up",
+          "p": "Volume, ageing, utilisation, consumption and contract performance are read from those same records."
+        }
+      ]
+    },
+    {
+      "type": "caps",
+      "eyebrow": "What you can read",
+      "h2": "The service views, and where each one comes from.",
+      "groups": [
+        {
+          "icon": "&#128222;",
+          "h": "Demand and backlog",
+          "items": [
+            "Calls logged by period, customer and asset",
+            "Open calls by age, oldest first",
+            "Ticket status workflow across the queue",
+            "Breakdown calls against preventive visits"
+          ]
+        },
+        {
+          "icon": "&#9201;",
+          "h": "Promises kept",
+          "items": [
+            "SLA definitions and breach tracking",
+            "Response and resolution against the contract terms",
+            "CSAT and feedback captured on close",
+            "Repeat visits to the same asset, seen in service history"
+          ]
+        },
+        {
+          "icon": "&#128736;",
+          "h": "The team",
+          "items": [
+            "Jobs closed per engineer over a period",
+            "Technician route and schedule load",
+            "Attendance and field tracking alongside job counts",
+            "Skill-based allocation and who is qualified on what"
+          ]
+        },
+        {
+          "icon": "&#128176;",
+          "h": "Money",
+          "items": [
+            "Spare parts consumed per job and per contract",
+            "AMC revenue and leakage dashboard",
+            "Contract profitability against cost of service",
+            "Receivables ageing on service invoices"
+          ]
+        }
+      ],
+      "more": {
+        "href": "/modules.html",
+        "label": "See all 87 modules across 12 suites"
+      }
+    },
+    {
+      "type": "usecases",
+      "eyebrow": "In practice",
+      "h2": "Decisions the numbers actually change.",
+      "items": [
+        {
+          "h": "A hiring decision stops being a feeling",
+          "workflow": "Calls logged per month are read next to jobs closed per engineer and the age of the open queue.",
+          "result": "The case for another engineer is made from the backlog, not the argument."
+        },
+        {
+          "h": "A recurring fault is caught",
+          "workflow": "Service history shows the same asset visited repeatedly for the same complaint within a short period.",
+          "result": "The root cause is investigated instead of the symptom being fixed again."
+        },
+        {
+          "h": "A contract is repriced at renewal",
+          "workflow": "The call count, engineer visits and spares consumed on that contract are placed beside what it billed.",
+          "result": "The renewal quote reflects the work the customer generates."
+        },
+        {
+          "h": "Spares purchasing follows consumption",
+          "workflow": "Parts booked to job cards over a quarter show what actually moves, by product and by fault.",
+          "result": "Reorder levels are set from consumption rather than habit."
+        }
+      ]
+    },
+    {
+      "type": "who",
+      "eyebrow": "Who it is for",
+      "h2": "People answerable for a service operation.",
+      "items": [
+        {
+          "icon": "&#128100;",
+          "b": "Service heads",
+          "p": "Running a desk, a spares store and a team of engineers."
+        },
+        {
+          "icon": "&#127970;",
+          "b": "Distributor owners",
+          "p": "Watching whether after-sales pays for itself."
+        },
+        {
+          "icon": "&#129516;",
+          "b": "Biomedical service firms",
+          "p": "Where contracts are the entire revenue line."
+        },
+        {
+          "icon": "&#128203;",
+          "b": "Contract managers",
+          "p": "Preparing renewals with evidence in hand."
+        },
+        {
+          "icon": "&#128230;",
+          "b": "Spares and stores managers",
+          "p": "Setting reorder levels from real consumption."
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "The honest comparison",
+      "h2": "Where service numbers usually come from.",
+      "cols": [
+        "Spreadsheets and WhatsApp",
+        "Accounting software",
+        "Enterprise ERP",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "Call volume",
+          "Counted by scrolling",
+          "Not held",
+          "Yes, once configured",
+          "From the intake record"
+        ],
+        [
+          "Open-call ageing",
+          "Not visible",
+          "No",
+          "Yes",
+          "Oldest first, live on the desk"
+        ],
+        [
+          "SLA performance",
+          "After a complaint",
+          "No",
+          "Configured module",
+          "Timers and breach tracking as standard"
+        ],
+        [
+          "Engineer load",
+          "Impression",
+          "No",
+          "Yes",
+          "Jobs closed and route load per engineer"
+        ],
+        [
+          "Spares per job",
+          "Store register",
+          "Issue notes",
+          "Yes",
+          "Booked to the job card, reducing stock"
+        ],
+        [
+          "Contract profitability",
+          "Not attempted",
+          "Revenue only",
+          "Separate project",
+          "Cost of service beside contract revenue"
+        ]
+      ]
+    },
+    {
+      "type": "cases",
+      "which": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Service analytics, answered.",
+      "items": [
+        {
+          "q": "Do you report a first-time fix rate?",
+          "a": "The platform records every visit against the asset, so repeat visits for the same fault are visible in service history and can be reviewed. Treat it as a pattern you can inspect rather than a single headline figure."
+        },
+        {
+          "q": "Where does engineer utilisation come from?",
+          "a": "From jobs assigned and closed per engineer over a period, alongside route and roster load and attendance. It describes how work is distributed, not how hard anyone worked."
+        },
+        {
+          "q": "Can we see which contracts lose money?",
+          "a": "Calls, visits and spares are booked against the contract, so the cost of serving it can be read next to what it bills. See <a href=\"/aura-business/service-contract-management-software/\">contract management</a>."
+        },
+        {
+          "q": "Is there a report builder, or fixed dashboards?",
+          "a": "Both. The owner dashboard gives the standing service views, and the reports engine produces cuts by customer, engineer, asset, product line or territory. Specific report layouts are agreed during setup."
+        },
+        {
+          "q": "Do engineers have to fill in anything extra for this?",
+          "a": "No. Everything comes from the job card they already complete on the phone and from the desk's dispatch record. No separate reporting form is introduced."
+        },
+        {
+          "q": "Can these numbers be exported?",
+          "a": "Yes. Reports can be exported for board packs or for your accountant, and billing data can be exported to the accounting package. See <a href=\"/aura-business/tally-integration-crm/\">Tally export</a>."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "h2": "Related Aura Business software",
+      "items": [
+        {
+          "href": "/aura-business/field-service-business-software/",
+          "icon": "&#128736;",
+          "b": "Service business",
+          "p": "The whole service operation."
+        },
+        {
+          "href": "/aura-business/sla-management-software/",
+          "icon": "&#9201;",
+          "b": "SLA management",
+          "p": "Where breach data comes from."
+        },
+        {
+          "href": "/aura-business/medical-spare-parts-inventory-software/",
+          "icon": "&#128230;",
+          "b": "Spare parts",
+          "p": "Consumption against jobs."
+        },
+        {
+          "href": "/aura-business/installed-base-management-software/",
+          "icon": "&#128203;",
+          "b": "Installed base",
+          "p": "Service history per asset."
+        },
+        {
+          "href": "/aura-business/medical-distributor-dashboard-analytics/",
+          "icon": "&#128200;",
+          "b": "Owner dashboard",
+          "p": "Sales and service together."
+        },
+        {
+          "href": "/resources/what-is-sla-equipment-service/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "What an SLA means in service."
+        }
+      ]
+    }
+  ]
+}

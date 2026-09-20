@@ -1,0 +1,212 @@
+{
+  "cluster": "resources",
+  "slug": "moving-a-hospital-from-paper-to-software",
+  "title": "Moving a Hospital From Paper to Software: The Real Order",
+  "meta": "What to digitise first, what to leave on paper, how to sequence training, and the mistakes that stall a hospital software rollout. An honest guide.",
+  "h1": "Moving a hospital from paper to software, in the order that <span class=\"hl\">actually survives contact</span> with the ward.",
+  "crumb": "Paper to software",
+  "pill": "Guide",
+  "sub": "Most hospital software projects do not fail on features. They fail on sequence, on training and on what was left undecided. This guide sets out what to digitise first, what to keep on paper at the start, and where rollouts usually stall.",
+  "meta_ticks": [
+    "Written for owners and administrators",
+    "Sequence, not feature lists",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See the hospital management system",
+  "cta_href": "/hims/hospital-management-system/",
+  "whatsapp_text": "Hi, we are moving our hospital off paper and would like to talk through the sequence.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "moving a hospital from paper to software",
+  "secondary_keywords": [
+    "hospital digitisation steps",
+    "hospital software rollout plan",
+    "what to digitise first hospital",
+    "staff resistance hospital software",
+    "hospital software training plan"
+  ],
+  "intent": "informational",
+  "persona": "Hospital owner or administrator planning a first move from registers and case sheets to a system",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "The sequence, before the detail",
+      "paras": [
+        "Digitise the transactions first and the clinical record second. Registration, billing and pharmacy touch the most people, produce the most immediate benefit and are the easiest to verify at the end of a day, so they are where a hospital learns to use a system at all. Clinical documentation follows once staff are fluent, because it is the part where half-hearted adoption does the most damage.",
+        "Leave things on paper deliberately rather than by accident. A short, written list of what stays on paper for the first phase prevents the two commonest failures: a hospital running two systems for everything, and a hospital that quietly abandons the new one because one unavoidable step was never covered.",
+        "None of this is a claim that any particular timeline suits your hospital. Scope, staffing and the state of your existing data decide that. Settle the sequence with whoever will run the project and confirm anything with regulatory or clinical implications with your own advisers."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "Phase one",
+      "h2": "What to digitise first, and why it is not the case sheet",
+      "lead": "The instinct is to start with the clinical record, because that is the impressive part. It is usually the wrong first move.",
+      "body": [
+        "Registration, billing and pharmacy have three properties the clinical record does not. They repeat hundreds of times a day, so people become fluent quickly. They produce a number the hospital can check against a cash box or a stock shelf on the same evening. And they can be run by the front office without asking a consultant to change how they work in the first fortnight.",
+        {
+          "h3": "The first phase, in order"
+        },
+        {
+          "ul": [
+            "<b>Registration and one identifier per patient.</b> Everything later hangs off this. Get the field order fixed, mobile number mandatory and search-before-create enforced from day one.",
+            "<b>Billing at the counter.</b> Tariff loaded, GST on billable items, receipts issued from the system, cash reconciled nightly against what the system says.",
+            "<b>Pharmacy.</b> Item master, batches, expiry and the dispensing queue, because stock is countable and errors surface the same week.",
+            "<b>The daily dashboard.</b> OP, IP, bed occupancy and collections, so the owner has a reason to look at the system every evening."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "What stays on paper",
+      "h2": "Deliberate paper, and how long it stays",
+      "body": [
+        "Every hospital keeps some paper during a transition. The question is whether it is decided or improvised.",
+        {
+          "table": {
+            "headers": [
+              "What",
+              "Keep it on paper at first because",
+              "When it moves"
+            ],
+            "rows": [
+              [
+                "Signed consents",
+                "Signature and witnessing practice needs settling with your clinical leadership",
+                "Once the process is agreed and the signed copy is attached to the record"
+              ],
+              [
+                "Old case sheets",
+                "Bulk back-scanning delays go-live and rarely gets used",
+                "Not at all. Start new records from go-live and pull old files on request"
+              ],
+              [
+                "Night casualty notes",
+                "The night team is trained last and the screens are unfamiliar",
+                "As soon as night shifts have had hands-on training on their own shift"
+              ],
+              [
+                "External reports brought by patients",
+                "They arrive as paper and always will",
+                "Never fully. Attach or record them on the patient's record as they arrive"
+              ]
+            ]
+          }
+        },
+        "One rule makes the list work: nothing on it is recorded in two places. Either the system is the record for something or the paper is, and everyone knows which. Dual entry is how a rollout dies, because staff quietly choose the faster one and the system becomes half-true, which is worse than untrue."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The people part",
+      "h2": "Resistance is usually a reasonable objection in a bad mood",
+      "lead": "Staff who resist a hospital system are rarely opposed to computers. They are worried about looking slow in front of a waiting patient.",
+      "body": [
+        "That single fear explains most of what looks like obstruction. A receptionist who has registered patients for eleven years is fast on paper and will be slow on a screen for a fortnight, in public, with a queue watching. A senior consultant will not learn a new interface with a patient in the room. A pharmacist knows where every strip is and does not want to be told by a screen.",
+        {
+          "h3": "How to sequence training so that fear is answered"
+        },
+        {
+          "ul": [
+            "Train on the hospital's own data, not a demo database. People learn their own tariff and their own drug names, not invented ones.",
+            "Train by shift, not by department. The night counter should be taught on a night shift by the same person who taught the morning.",
+            "Hands on keys from the first session. The trainer watches your staff do live entries rather than presenting slides.",
+            "Have the fastest person on paper go first, so the rest see it is survivable.",
+            "Plan for a slow week and staff the counter for it, rather than being surprised."
+          ]
+        },
+        {
+          "h3": "Where rollouts actually stall"
+        },
+        {
+          "ul": [
+            "<b>Dirty data migrated as it stands.</b> Duplicate patients and stale rates become the system's problem on day one. Clean the item and rate master before, not after.",
+            "<b>No decision about who may cancel or amend.</b> Either everyone can, and the record stops meaning anything, or nobody can, and the counter is stuck.",
+            "<b>Shared logins.</b> Convenient in week one, and fatal to attribution forever after. See <a href=\"/hims/hospital-audit-trail-software/\">audit trails</a>.",
+            "<b>Scope that grows during the build.</b> Fix the phase, write it down and put the additions in the next one.",
+            "<b>Doctors never consulted.</b> Clinical documentation designed without the people who write it will not be used by them."
+          ]
+        },
+        "For a checklist to work through before the date, see the <a href=\"/resources/hospital-software-implementation-checklist/\">hospital software implementation checklist</a>, and for what the records need to look like once the clinical phase lands, <a href=\"/resources/what-is-nabh-documentation/\">what NABH documentation expects</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about going digital",
+      "items": [
+        {
+          "q": "Should we scan all our old records first?",
+          "a": "Usually not. Bulk back-scanning is expensive, delays go-live and produces files that are rarely opened. Start fresh records from go-live, keep the old files retrievable, and scan or re-enter an old record only when that patient returns."
+        },
+        {
+          "q": "Everything at once, or module by module?",
+          "a": "Module by module, in the order where absence costs most, typically registration, billing and pharmacy first. Switching everything on at once means every department is incompetent in the same week, which is how a hospital concludes that software does not work."
+        },
+        {
+          "q": "What if our senior doctors refuse to use it?",
+          "a": "Do not start with them. Let the transactional phase settle first, involve them in designing the clinical screens they will write in, and keep their entry short. Adoption follows from the record being genuinely useful on a ward round."
+        },
+        {
+          "q": "How much data cleaning is needed before migration?",
+          "a": "Enough that the masters are trustworthy: patients de-duplicated as far as practical, one current tariff, a clean drug and consumable list with correct units, and an accurate doctor list. Transaction history matters far less than the masters everything new will use."
+        },
+        {
+          "q": "Can a small hospital do this without a dedicated IT person?",
+          "a": "Yes, but it needs one named internal owner with authority to settle process questions, even if that is the administrator. The work is decisions rather than technology. See <a href=\"/hims/small-hospital-software/\">small hospital software</a>."
+        },
+        {
+          "q": "How long before it feels normal?",
+          "a": "Counter staff usually stop thinking about the screen within a couple of weeks of daily use; clinical documentation takes longer because it is used less often per person. Plan the slow period rather than hoping it will not happen."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-management-system/",
+          "icon": "&#127973;",
+          "b": "Hospital management system",
+          "p": "The whole platform."
+        },
+        {
+          "href": "/resources/hospital-software-implementation-checklist/",
+          "icon": "&#9989;",
+          "b": "Implementation checklist",
+          "p": "Before the go-live date."
+        },
+        {
+          "href": "/resources/how-to-choose-hospital-management-software/",
+          "icon": "&#128218;",
+          "b": "How to choose",
+          "p": "Questions worth asking."
+        },
+        {
+          "href": "/hims/uhid-patient-registration-software/",
+          "icon": "&#127380;",
+          "b": "UHID registration",
+          "p": "Where phase one begins."
+        },
+        {
+          "href": "/resources/what-is-nabh-documentation/",
+          "icon": "&#128203;",
+          "b": "NABH documentation",
+          "p": "What records must show."
+        },
+        {
+          "href": "/hims/small-hospital-software/",
+          "icon": "&#127966;",
+          "b": "Small hospital software",
+          "p": "Without an IT department."
+        }
+      ]
+    }
+  ]
+}

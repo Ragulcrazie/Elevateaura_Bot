@@ -275,3 +275,51 @@ Eye, maternity, orthopaedic, paediatric, physiotherapy and ayurveda HIMS pages. 
 worth building if the platform genuinely differs for them (different forms, records or
 workflows). Without that, they would be the generic page with a specialty name swapped in,
 which is the doorway pattern this system refuses.
+
+## Batch 3: completing HIMS and Aura Business (September 2026)
+
+Everything legitimate left in the database for the two priority products. Slugs below are the
+complete set; link freely between them.
+
+### /hims/ (batch 3)
+eye-hospital-management-software, maternity-hospital-software,
+orthopaedic-hospital-software, paediatric-clinic-software, physiotherapy-clinic-software,
+ayurveda-hospital-software, hospital-software-50-bed, hospital-software-100-bed,
+charitable-hospital-software, nabh-documentation-software, hospital-audit-trail-software,
+hospital-management-software-bangalore, hospital-management-software-hyderabad.
+
+### /aura-business/ (batch 3)
+distributor-management-software-india, field-service-business-software,
+customer-self-service-portal, field-staff-attendance-app, beat-plan-software,
+sample-tracking-software, territory-management-software, field-service-analytics,
+rate-contract-management-software, tally-integration-crm, crm-for-medical-representatives,
+biomedical-engineer-software, building-products-distributor-software,
+lift-amc-management-software, fire-safety-amc-software,
+medical-equipment-software-delhi, medical-equipment-software-pune,
+medical-equipment-software-ahmedabad, medical-equipment-software-kochi,
+medical-equipment-software-kolkata.
+
+### /resources/ (batch 3)
+what-is-nabh-documentation, what-is-a-discharge-summary, what-is-a-delivery-challan,
+what-is-a-rate-contract, what-is-contract-profitability,
+how-to-stop-amc-revenue-leakage, moving-a-hospital-from-paper-to-software,
+why-distributor-stock-never-matches, why-collections-run-late,
+why-hospital-pharmacy-loses-money-on-expiry,
+why-hospital-reports-get-lost-between-departments,
+what-a-medical-equipment-dealer-should-track-monthly.
+
+### /compare/ (batch 3)
+tally-vs-distributor-operations-software, field-service-software-vs-whatsapp-groups,
+per-user-crm-vs-unlimited-user-crm.
+
+### Folded in rather than built as separate pages
+These are the same page under a different search phrasing. The keyword belongs in the H2s and
+FAQs of the page named, not on a near-duplicate URL:
+payment tracking and outstanding payment tracking -> receivables-ageing-software;
+goods receipt and supplier management -> purchase-order-grn-software;
+multi-warehouse inventory -> medical-equipment-warehouse-management;
+medical inventory reorder and barcode inventory -> medical-equipment-inventory-software;
+healthcare lead management -> medical-equipment-lead-management-software;
+hospital equipment asset tracking -> hims/hospital-asset-management-software;
+software for nursing staff charts -> hims/hospital-nursing-management-software;
+quotation to invoice in one click -> medical-equipment-quotation-software.

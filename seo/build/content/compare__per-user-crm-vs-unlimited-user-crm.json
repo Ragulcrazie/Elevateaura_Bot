@@ -1,0 +1,225 @@
+{
+  "cluster": "compare",
+  "slug": "per-user-crm-vs-unlimited-user-crm",
+  "title": "Per-User vs Unlimited-User CRM Pricing | Elevate Aura",
+  "meta": "Per-user vs unlimited-user CRM pricing compared: how each model changes who gets an account, and when paying per seat is genuinely the better deal.",
+  "h1": "Per-user vs unlimited-user CRM pricing: how the model <span class=\"hl\">changes who gets a login</span>.",
+  "crumb": "Per-user vs unlimited",
+  "pill": "Comparison",
+  "sub": "Two ways of charging for the same software, and they produce different companies. This page explains what each model rewards, why per-seat pricing quietly keeps field staff off the system, and when paying per user is still the sensible choice.",
+  "meta_ticks": [
+    "Both models explained fairly",
+    "No figures, only behaviour",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See Aura Business",
+  "cta_href": "/aura-business.html",
+  "whatsapp_text": "Hi, I read the per-user vs unlimited-user pricing comparison and want to understand how Aura Business is licensed.",
+  "date": "2026-09-20",
+  "primary_keyword": "per-user vs unlimited-user CRM pricing",
+  "secondary_keywords": [
+    "per seat CRM pricing explained",
+    "unlimited user business software India",
+    "CRM licensing models compared",
+    "cost of adding field staff to CRM",
+    "how CRM pricing affects adoption"
+  ],
+  "intent": "comparison",
+  "persona": "Owner of a distribution or field-service business comparing software licensing models before choosing a platform",
+  "page_type": "comparison",
+  "phase": 8,
+  "schema": "Article",
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "One model prices people, the other prices capability",
+      "paras": [
+        "Per-user pricing charges for each person who has a login, usually every month. It is the most common model in business software, it is easy to understand, and it scales down neatly: a team of four pays for four. Unlimited-user pricing charges for the software itself, often by how much of it you switch on, and then lets you add as many people as the business actually has.",
+        "The difference is not only arithmetic. Per-seat pricing puts a cost against every additional person, so every new login becomes a small decision. That decision is usually made the same way: office staff who obviously need it are given accounts, and the people at the edge of the business, field engineers, delivery staff, junior salespeople, part-time or seasonal workers, are left off. The system then holds a partial picture of the work, which is exactly the outcome the software was bought to prevent."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How each behaves",
+      "h2": "What each model rewards",
+      "body": [
+        {
+          "h3": "What per-user pricing does well"
+        },
+        "It is honest and predictable at small scale. A business with a fixed office team and no field operation knows exactly what it is paying for and can add a seat when it hires. It also makes vendors care about whether people actually log in, because a seat nobody uses is a seat that gets cancelled. For a five-person consultancy or a small inside-sales team, per-user pricing is often the cheaper and simpler answer, and there is no reason to avoid it.",
+        {
+          "h3": "The behaviour it produces at the edges"
+        },
+        "The trouble starts where the headcount is largest and the individual value per person is lowest: the field. A technician who closes three job cards a day, a delivery driver who captures a signature, a junior salesperson who logs two visits a week. Each generates little revenue individually and each costs a full seat. So they share one login, or they carry on sending photographs to a chat group, or the office types their work in afterwards from memory. All three workarounds destroy the data the system was supposed to produce, and the loss is invisible because nothing ever fails loudly.",
+        {
+          "h3": "What unlimited-user pricing changes"
+        },
+        "When people cost nothing to add, the question becomes who ought to be on the system rather than who is worth a seat. Every engineer gets the app, every visit is logged by the person who made it, every part fitted is booked by the person who fitted it, and attendance and location come from the people themselves rather than from a supervisor's reconstruction. The trade is that you are now buying capability rather than headcount, so the comparison shifts to which modules you need and whether you will use them.",
+        {
+          "h3": "The catch to check for"
+        },
+        "Unlimited does not always mean unlimited. Ask whether all user types are included or only some, whether the mobile app counts separately, whether there is a cap dressed up as a fair-use policy, and what happens to the figure when you switch on another module. A model is only simpler if the questions it removes do not reappear elsewhere."
+      ]
+    },
+    {
+      "type": "compare",
+      "eyebrow": "Side by side",
+      "h2": "The two models compared on behaviour, not on figures",
+      "cols": [
+        "Per-user pricing",
+        "Per-user with a limited field tier",
+        "Aura Business"
+      ],
+      "rows": [
+        [
+          "What you pay for",
+          "Each person with a login",
+          "Each person, at two different rates",
+          "The modules you switch on, by tier"
+        ],
+        [
+          "Cost of adding a technician",
+          "A full seat, every month",
+          "A smaller seat, still recurring",
+          "Nothing extra"
+        ],
+        [
+          "Seasonal or part-time staff",
+          "Added and removed to control cost",
+          "Same, with more admin",
+          "Added and left in place"
+        ],
+        [
+          "Typical workaround",
+          "Shared logins",
+          "Field staff on the cheapest tier",
+          "Not needed"
+        ],
+        [
+          "Who ends up on the system",
+          "Office staff and senior sales",
+          "Office plus some field",
+          "Everyone who touches the work"
+        ],
+        [
+          "Data completeness",
+          "Partial at the edges",
+          "Better, still gated",
+          "Captured by the person who did the work"
+        ],
+        [
+          "Predictability as you grow",
+          "Rises with headcount",
+          "Rises more slowly",
+          "Changes only when you add modules"
+        ],
+        [
+          "Best suited to",
+          "Small office teams, inside sales",
+          "Mixed teams with a small field arm",
+          "Distribution and service businesses with field staff"
+        ],
+        [
+          "Where it is the worse choice",
+          "Large field or seasonal workforces",
+          "Where the cheap tier lacks what the field needs",
+          "A one-person business that needs a single tool"
+        ]
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "How to decide",
+      "h2": "Work out which model fits your shape",
+      "lead": "This is a question about the shape of your workforce, not about which vendor is cheaper. Answer these before you compare anything.",
+      "body": [
+        {
+          "ul": [
+            "<b>Count the people who touch the work, not the people in the office.</b> Include engineers, drivers, storekeepers, part-time and seasonal staff. If that number is much larger than your office headcount, per-seat pricing will shape your rollout whether you intend it to or not.",
+            "<b>Ask what breaks if the field is not on the system.</b> If job cards, parts consumption and visit proof are the whole point of buying software, excluding the field removes the point.",
+            "<b>Check how many logins would be shared.</b> A shared login means you lose attribution, audit trail and any attendance or location record, and it usually breaches the terms you agreed to anyway.",
+            "<b>Look at how the number moves.</b> With per-seat pricing it moves when you hire. With capability pricing it moves when you switch on a module. Decide which of those you would rather budget for.",
+            "<b>Test the edge cases before signing.</b> Read-only viewers, customer portal users, a director who logs in twice a month: ask how each is counted under whichever model you are being offered."
+          ]
+        },
+        "Aura Business uses the second model. Every plan carries unlimited users and is priced by module tier, with the three tiers described by how many of the 87 modules are switched on. That is a deliberate fit for the trades it serves, where the largest part of the workforce is in the field and is precisely the part that a per-seat model would leave out.",
+        "It is not automatically the right model for everyone. A business with six office staff, no field team and one narrow requirement may well be better served by a focused per-user tool, and this page is not an argument that capability pricing wins in every case. It is an argument that the pricing model decides who ends up on the system, and that decision is worth making deliberately. See <a href=\"/aura-business/medical-equipment-software-pricing/\">how Aura Business is priced</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Software licensing models, answered",
+      "items": [
+        {
+          "q": "What is per-user pricing?",
+          "a": "You pay for each person who has a login, usually as a recurring monthly or annual amount per seat. Adding a person adds cost, and removing one reduces it, which makes the model predictable for a stable office team."
+        },
+        {
+          "q": "What is unlimited-user pricing?",
+          "a": "You pay for the software rather than for the people using it, commonly by how much functionality you switch on. Adding staff does not change what you pay, so the decision about who gets access becomes an operational one rather than a financial one."
+        },
+        {
+          "q": "Is per-user pricing ever the better deal?",
+          "a": "Often. A small office team with no field operation, or a business that needs one narrow tool used by a few people, will usually pay less per seat and get something more focused. The model only becomes a problem where headcount is large and spread out."
+        },
+        {
+          "q": "Why does per-seat pricing keep field staff off the system?",
+          "a": "Because each technician or driver costs the same as an office user while generating far less measurable value individually. The rational short-term decision is to leave them off, and the result is a system that never sees the work happening in the field."
+        },
+        {
+          "q": "How is Aura Business licensed?",
+          "a": "Every plan includes unlimited users. Plans differ by module tier, described by how many of the 87 modules across 12 suites are switched on, so adding field engineers, storekeepers or seasonal staff does not change what you pay."
+        },
+        {
+          "q": "What should we ask a vendor about their pricing model?",
+          "a": "Whether all user types are included or only some, whether mobile app users count separately, whether any cap exists, what happens when you add a module or a location, and how read-only and portal users are counted. Get the answers in writing."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Related pages",
+      "items": [
+        {
+          "href": "/compare/",
+          "icon": "&#128203;",
+          "b": "All comparisons",
+          "p": "Every side-by-side in one place."
+        },
+        {
+          "href": "/compare/generic-crm-vs-medical-equipment-crm/",
+          "icon": "&#9878;",
+          "b": "Generic vs specialist CRM",
+          "p": "What a trade-specific CRM adds."
+        },
+        {
+          "href": "/aura-business/medical-equipment-software-pricing/",
+          "icon": "&#128181;",
+          "b": "How pricing works",
+          "p": "Module tiers, unlimited users."
+        },
+        {
+          "href": "/aura-business/field-technician-tracking-app/",
+          "icon": "&#128663;",
+          "b": "Technician tracking",
+          "p": "The users a seat model leaves out."
+        },
+        {
+          "href": "/aura-business/medical-device-crm-software/",
+          "icon": "&#128202;",
+          "b": "CRM for device sales",
+          "p": "Pipeline built for the trade."
+        },
+        {
+          "href": "/resources/how-to-choose-medical-equipment-crm/",
+          "icon": "&#128218;",
+          "b": "Guide",
+          "p": "Choosing a CRM properly."
+        }
+      ]
+    }
+  ]
+}

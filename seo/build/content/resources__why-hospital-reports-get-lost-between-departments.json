@@ -1,0 +1,211 @@
+{
+  "cluster": "resources",
+  "slug": "why-hospital-reports-get-lost-between-departments",
+  "title": "Why Hospital Reports Get Lost Between Departments",
+  "meta": "Reports lost between departments: the handover points where results go missing, what one shared record changes and what to check in your own hospital.",
+  "h1": "Why hospital reports get lost between departments, and what <span class=\"hl\">a single record</span> changes.",
+  "crumb": "Reports lost between departments",
+  "pill": "Guide",
+  "sub": "A result that exists but cannot be found is the same as no result: the test is repeated, the discharge waits and the claim is queried. This guide maps the handover points where reports go missing and what to check in your own hospital.",
+  "meta_ticks": [
+    "Written for administrators and clinicians",
+    "Handover by handover",
+    "Updated September 2026"
+  ],
+  "demo_href": "",
+  "cta_label": "See laboratory management in HIMS",
+  "cta_href": "/hims/hospital-laboratory-management/",
+  "whatsapp_text": "Hi, I read the guide on lost reports and want to see how HIMS keeps results on the record.",
+  "date": "2026-09-20",
+  "schema": "Article",
+  "primary_keyword": "reports lost between departments",
+  "secondary_keywords": [
+    "hospital lab report missing",
+    "test results not reaching doctor",
+    "hospital handover communication failure",
+    "repeated investigations hospital",
+    "single patient record hospital"
+  ],
+  "intent": "informational",
+  "persona": "Hospital administrator or clinician tired of investigations being repeated because a result could not be found",
+  "page_type": "guide",
+  "phase": 7,
+  "sections": [
+    {
+      "type": "answer",
+      "eyebrow": "The short answer",
+      "h2": "Reports go missing at handovers, not in departments",
+      "paras": [
+        "Laboratories and imaging units rarely lose work. What goes missing is the connection between a result and the person waiting for it, and that connection is broken at handovers: order to sample, sample to result, result to ward, ward to consultant, one shift to the next, and department to discharge. Every one of those points is somewhere a piece of paper is carried, a phone call is made, or a name is written on a form.",
+        "The cost is familiar. An investigation is repeated at the patient's expense because nobody could find the first one. A discharge waits while somebody walks to the laboratory. A claim is queried because the bill lists a test whose report is not in the file. A consultant makes a decision without a value that has been sitting on a printout for two days.",
+        "The fix is structural rather than motivational. When the order, the result and the record are the same object rather than three documents that have to meet, most of these failures simply have nowhere to happen."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The handover map",
+      "h2": "Six points where a report stops being findable",
+      "lead": "Walk a single investigation through a hospital and the leak points announce themselves.",
+      "body": [
+        "This is the journey in most hospitals still working on paper at one or more of these steps.",
+        {
+          "ul": [
+            "<b>Order to laboratory.</b> A handwritten request is carried by a relative or an attendant. If it does not arrive, nobody notices until someone asks for the result.",
+            "<b>Sample to bench.</b> The sample is labelled by hand. A name written twice slightly differently becomes two patients, or worse, the wrong one.",
+            "<b>Result to report.</b> The value is entered and verified inside the laboratory, where it is perfectly safe and completely invisible to the ward.",
+            "<b>Report to ward.</b> A printout is sent up, filed in a case sheet, or left at a nursing station for a doctor who has gone to theatre.",
+            "<b>Shift to shift.</b> The pending result is a verbal item in handover. If the person who knew is off duty, the item ceases to exist.",
+            "<b>Department to discharge.</b> The summary is written from the file. Anything not in the file at that moment is not in the summary either."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The cost",
+      "h2": "What each lost report is actually worth",
+      "body": [
+        "Hospitals tend to treat a lost report as an irritation. It is easier to act on once the consequence is written next to it.",
+        {
+          "table": {
+            "headers": [
+              "Where it went",
+              "What happens next",
+              "Who pays"
+            ],
+            "rows": [
+              [
+                "The order never reached the laboratory",
+                "The test is ordered again the next day",
+                "The patient, in time and money, and the ward in a delayed decision"
+              ],
+              [
+                "The result sits verified but unseen",
+                "A clinical decision is made without it",
+                "The patient, and the hospital's own documentation"
+              ],
+              [
+                "The report is not in the file at discharge",
+                "The summary omits it and the bill still shows it",
+                "The billing team, when the insurer queries the claim"
+              ],
+              [
+                "A film or study cannot be located",
+                "The scan is repeated",
+                "The patient, and the imaging schedule for everyone else"
+              ]
+            ]
+          }
+        },
+        "Note how many rows end in a repeat. Repeating an investigation is the hospital paying twice to learn something it already knew, and it is the clearest single measure of whether results are reaching people."
+      ]
+    },
+    {
+      "type": "prose",
+      "eyebrow": "The change",
+      "h2": "What one shared record actually removes",
+      "lead": "The value is not that the result is digital. It is that there is nowhere for it to be except on the patient.",
+      "body": [
+        "When an order is raised in the clinical record, it arrives in the laboratory worklist as a task attached to a patient identifier rather than as a piece of paper. The sample carries that identifier. The result is entered and verified in the laboratory and appears on the same encounter it was ordered from. Imaging behaves the same way through the PACS built into the platform: studies land from the machine, the report is finalised and both sit on the patient's record. Nothing has to be carried, and nothing has to be matched up afterwards.",
+        {
+          "h3": "What stops happening"
+        },
+        {
+          "ul": [
+            "A pending investigation cannot be invisible, because the order is on the record whether or not the result is back.",
+            "A result cannot land on the wrong patient by handwriting, because it lands on the identifier it was ordered under.",
+            "A shift handover does not depend on somebody remembering what is outstanding.",
+            "A discharge summary is built from what the record holds, so a verified result is in it by default.",
+            "A claim file has the report supporting the charge, because both come off the same admission."
+          ]
+        },
+        {
+          "h3": "What to check in your own hospital this week"
+        },
+        {
+          "ul": [
+            "Pick five discharges from last month and see whether every investigation on the bill has a report on the file.",
+            "Ask the laboratory how many tests were reordered for the same patient within forty-eight hours.",
+            "Stand at the nursing station at shift change and count how many pending results are handed over verbally.",
+            "Ask how a consultant sees a result while they are in theatre or at another location.",
+            "Ask who notices when an ordered test has no result after a day, and what they do about it."
+          ]
+        },
+        "If any of those answers involves walking, phoning or remembering, that is the leak. It is addressed by <a href=\"/hims/hospital-laboratory-management/\">laboratory management</a> and <a href=\"/hims/hospital-emr-software/\">the EMR</a> sharing one record, with imaging on the same record through <a href=\"/aurapacs/hospital-pacs-software/\">hospital PACS</a>. The identifier that holds it all together is explained in <a href=\"/resources/what-is-uhid/\">what is a UHID</a>."
+      ]
+    },
+    {
+      "type": "faq",
+      "h2": "Common questions about lost reports",
+      "items": [
+        {
+          "q": "Is this not just a staff discipline problem?",
+          "a": "Partly, but discipline is being asked to do work that structure should do. If a result can only reach a doctor by being carried, then on a busy day it sometimes will not be. Removing the carry removes the dependence on everyone being perfect at four in the morning."
+        },
+        {
+          "q": "How do we know how often it happens?",
+          "a": "Count repeat investigations for the same patient within a short window, and audit a sample of discharge bills against the reports on file. Both are measurable with the records you already have, and both usually surprise the people who commissioned the count."
+        },
+        {
+          "q": "What about reports patients bring from outside?",
+          "a": "They will always arrive as paper. The discipline is to record or attach them to the patient's record at the visit, so that the next consultant sees them. Otherwise the information is read once and effectively lost the moment the patient leaves."
+        },
+        {
+          "q": "Does this apply to imaging as well as laboratory?",
+          "a": "Yes, and often more sharply, because a study is bulky and a film is easy to misplace. Studies landing automatically from the machine and reports finalised onto the patient record remove the export, the disc and the physical handover in one step."
+        },
+        {
+          "q": "Can we fix this without changing our whole system?",
+          "a": "You can reduce it by tightening labelling, defining who chases outstanding results and logging every order. The structural fix is the order, the result and the record being one thing, which is what a connected laboratory and clinical record provide."
+        },
+        {
+          "q": "How does this affect accreditation readiness?",
+          "a": "An assessment samples records and expects them to be complete, so missing reports show up directly. See <a href=\"/resources/what-is-nabh-documentation/\">what NABH documentation expects</a>, and confirm current standards with the accrediting body and your own advisers."
+        }
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep reading",
+      "h2": "Next in this series",
+      "items": [
+        {
+          "href": "/hims/hospital-laboratory-management/",
+          "icon": "&#128300;",
+          "b": "Laboratory management",
+          "p": "Order to verified result."
+        },
+        {
+          "href": "/hims/hospital-emr-software/",
+          "icon": "&#128203;",
+          "b": "Hospital EMR",
+          "p": "One record, every department."
+        },
+        {
+          "href": "/aurapacs/hospital-pacs-software/",
+          "icon": "&#129659;",
+          "b": "Hospital PACS",
+          "p": "Imaging on the same record."
+        },
+        {
+          "href": "/resources/what-is-a-discharge-summary/",
+          "icon": "&#128221;",
+          "b": "Discharge summary",
+          "p": "Built from what the record holds."
+        },
+        {
+          "href": "/resources/why-hospital-pharmacy-loses-money-on-expiry/",
+          "icon": "&#128138;",
+          "b": "Pharmacy expiry",
+          "p": "The other quiet leak."
+        },
+        {
+          "href": "/hims/hospital-nursing-management-software/",
+          "icon": "&#129658;",
+          "b": "Nursing management",
+          "p": "Handover that is written down."
+        }
+      ]
+    }
+  ]
+}
