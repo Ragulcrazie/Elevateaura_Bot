@@ -33,7 +33,7 @@
       "eyebrow": "In one sentence",
       "h2": "How Aura Business is priced, and why the figure follows a call",
       "paras": [
-        "Aura Business is quoted after a short call, because the number follows the scope you switch on rather than a published list. The model itself is plain: you pay for how many of the 87 modules you turn on, in three tiers of 15, 47 or all 87, and every tier carries unlimited users. Office staff, technicians and management are never counted, so the bill does not move when the field team grows.",
+        "Aura Business is quoted after a short call, because the number follows the scope you switch on rather than a published list. The model is plain: you pay for how many of the 87 modules you turn on, in three tiers of 15, 47 or all 87, and every tier carries unlimited users. Staff are never counted, so the bill does not move when the field team grows.",
         "The rest of a quote is the work around the software: migrating the spreadsheets you run on today, putting your branding on the dashboard, the mobile app and your invoices, and any customisation or integration your trade needs. Those are defined pieces of work rather than a running meter, which is why two businesses of similar size are often quoted differently."
       ]
     },
@@ -41,7 +41,7 @@
       "type": "prose",
       "eyebrow": "What moves the number",
       "h2": "What makes an Aura Business quote bigger or smaller",
-      "lead": "Four things decide the size of a quote: how many modules you switch on, how much old data comes across, how far the workflows bend to your process, and what has to talk to what.",
+      "lead": "Four things decide the size of a quote: the modules you switch on, the old data that comes across, how far the workflows bend to your process, and what has to talk to what.",
       "body": [
         {
           "table": {
@@ -140,7 +140,7 @@
       "type": "prose",
       "eyebrow": "Before you sign anything",
       "h2": "Compare on total cost of ownership, not the headline figure",
-      "lead": "The quote you accept is rarely what you end up paying. Put every vendor through the same list and the differences show up quickly.",
+      "lead": "The quote you accept is rarely what you end up paying. Put every vendor through the same five questions.",
       "body": [
         {
           "ul": [
@@ -167,27 +167,27 @@
       "items": [
         {
           "q": "Why don't you publish your prices?",
-          "a": "Because a published number would be wrong for almost everyone who read it. Scope varies enormously between a single dealer on the 15-module tier and a distributor running all 87 with years of data to migrate. A figure that misleads you wastes your time and ours, so we scope first and quote once."
+          "a": "Because a published number would be wrong for almost everyone reading it. Scope varies enormously between a single dealer on the 15-module tier and a distributor running all 87 with years of data to migrate. A misleading figure wastes your time, so we scope first and quote once."
         },
         {
           "q": "How is Aura Business priced?",
-          "a": "By how much of the platform you switch on. There are three module tiers, 15, 47 or all 87 modules, and every tier includes unlimited users. Setup work, which covers migrating your existing Excel data and applying your branding, is scoped alongside the tier."
+          "a": "By how much of the platform you switch on. There are three module tiers, 15, 47 or all 87 modules, and every tier includes unlimited users. Setup work, covering migration of your Excel data and your branding, is scoped alongside the tier."
         },
         {
           "q": "Do you charge per user or per seat?",
-          "a": "No. User count does not appear in the quote at all. You can put every technician, storekeeper and accounts person on the system with their own role-based login, and your cost is unchanged when you hire more of them next quarter."
+          "a": "No. User count does not appear in the quote at all. Every technician, storekeeper and accounts person can hold their own role-based login, and your cost is unchanged when you hire more of them next quarter."
         },
         {
           "q": "Is data migration included?",
-          "a": "Setup includes migrating your existing Excel data. How much work that is depends on how many years and how many formats you are bringing across, so we look at your actual files during scoping rather than assuming. Messy data is normal and is not a problem."
+          "a": "Setup includes migrating your existing Excel data. How much work that is depends on how many years and formats you are bringing across, so we look at your actual files during scoping. Messy data is normal and not a problem."
         },
         {
           "q": "Can we start on a lower tier and add modules later?",
-          "a": "Yes. The module store lets you switch further modules on as the business needs them, and moving up a tier is scoped as its own small change. Most businesses begin with the suites that carry revenue today, usually sales, billing, stock and service."
+          "a": "Yes. The module store lets you switch further modules on as the business needs them, and moving up a tier is scoped as its own small change. Most businesses begin with sales, billing, stock and service."
         },
         {
           "q": "How quickly do we get an actual number?",
-          "a": "Usually from one call. A 30-minute demo call is enough to agree the module tier, look at the spreadsheets you run on, and identify any customisation or integration. The quote follows that conversation, with the setup work itemised rather than bundled."
+          "a": "Usually from one call. A 30-minute demo call is enough to agree the module tier, look at the spreadsheets you run on and identify any integration. The quote follows, with setup itemised rather than bundled."
         }
       ]
     },

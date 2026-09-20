@@ -22,10 +22,36 @@ previously had GA4 keep a single instance.
 `product-development`, `mobile-app-development`, `resources`, `compare`, `case-studies`,
 `home`), so every report can be cut by product without extra configuration.
 
-## GA4 configuration (owner, 30 minutes)
+## GA4 configuration (done on 20 September 2026)
 
-1. Admin → Events: mark `whatsapp_click`, `phone_click`, `email_click`, `file_download`,
-   `form_submit` as key events.
+The property is `Elevate Aura - Website`, measurement ID `G-3XX97R8F1Y`, stream "Elevate Aura -
+Landing Page". It is the account reached with `authuser=3`; the Chrome profile's default Google
+account has no access to it, which is worth knowing before anyone tries to open it.
+
+A key event named `generate_lead` was created in Admin, Events, Create event. GA4 only lets you
+star an event it has already seen, and these events had never fired before the deploy, so the
+event is defined by rule instead:
+
+- Trigger: `event_name` matches the regular expression
+  `^(whatsapp_click|phone_click|email_click|form_submit|file_download)$`
+- Marked as a key event
+- No default monetary value, because no revenue figure per enquiry is known
+- Counted once per session, so a visitor who clicks WhatsApp three times is one enquiry, not
+  three
+
+That gives one conversion metric covering every enquiry channel, under the name Google
+recommends for lead generation, which also makes it usable in Google Ads later. The individual
+events still exist underneath for channel-level reporting.
+
+Verified live after deployment: `page_view`, `cta_click` and `email_click` all appeared in the
+Realtime report from the production site. The derived `generate_lead` event applies to traffic
+collected after the rule was created, so it starts counting from the next real enquiry.
+
+Remaining, optional:
+
+1. Star `whatsapp_click`, `phone_click`, `email_click`, `file_download` and `form_submit`
+   individually once they appear in Admin, Events, Recent events, which lags Realtime by up to
+   a day. This is only needed if you want each channel counted as its own conversion as well.
 2. Admin → Custom definitions: register `product_cluster`, `link_text`, `link_url`, `form_id`
    as event-scoped custom dimensions so they appear in Explorations.
 3. Admin → Data settings → Data retention: 14 months.

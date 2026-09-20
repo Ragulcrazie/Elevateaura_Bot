@@ -31,9 +31,9 @@
       "eyebrow": "In one sentence",
       "h2": "How PACS is priced, and why the quote follows a call",
       "paras": [
-        "AuraPACS is quoted after a short call, because an imaging quote is decided by your modalities, your study volume, how long you keep studies and where the system runs, none of which fit on a web page. The wider market prices imaging three ways: per study, by subscription for each modality or user, and as a licence you own with support alongside it. Those three behave very differently once five years have passed.",
-        "AuraPACS is hybrid. An on-premise node sits on your own network and keeps receiving and reading when the internet does not, and a thin cloud layer handles remote viewing and encrypted offsite backup. After activation the system runs on your network, so you are not paying a toll on every scan you perform.",
-        "If you are still comparing architectures rather than commercial models, read <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud PACS versus on-premise PACS</a> first and come back to the money afterwards."
+        "AuraPACS is quoted after a short call, because an imaging quote is decided by your modalities, your study volume, how long you keep studies and where the system runs. The wider market prices imaging three ways: per study, by subscription for each modality or user, and as a licence you own with support alongside it. Those three behave very differently once five years have passed.",
+        "AuraPACS is hybrid. An on-premise node sits on your own network and keeps receiving and reading when the internet does not, while a thin cloud layer handles remote viewing and encrypted offsite backup. After activation the system runs on your network, so you are not paying a toll on every scan.",
+        "If you are still comparing architectures rather than commercial models, read <a href=\"/compare/cloud-pacs-vs-on-premise-pacs/\">cloud PACS versus on-premise PACS</a> first."
       ]
     },
     {
@@ -72,16 +72,16 @@
             ]
           }
         },
-        "The per-study model is the one that deserves the hardest look, because it is the only one that punishes you for being busy. A centre that doubles its scans doubles its software bill while its costs per scan stay flat everywhere else. Subscription per modality has a milder version of the same problem: the day you add a second ultrasound or a new CT, the monthly figure moves.",
+        "The per-study model deserves the hardest look, because it is the only one that punishes you for being busy: a centre that doubles its scans doubles its software bill. Subscription per modality is a milder version of the same problem, since the monthly figure moves the day you add an ultrasound or a new CT.",
         {
           "h3": "What moves an imaging quote in any model"
         },
         {
           "ul": [
             "<b>Number and age of modalities.</b> Each CT, MR, CR or DR, ultrasound and mammography unit has to be configured to send, and older consoles take longer to coax.",
-            "<b>Storage growth.</b> A cross-sectional study is far heavier than a plain film, so your modality mix and your retention period together decide how fast the archive grows.",
-            "<b>On-premise hardware.</b> The node runs on a machine at your centre. Whether you already have something suitable or need to buy it belongs in the comparison.",
-            "<b>Remote reading.</b> Radiologists reading from home or a second site, and referrers receiving reports, change how much of the cloud layer you use.",
+            "<b>Storage growth.</b> A cross-sectional study is far heavier than a plain film, so your modality mix and retention period decide how fast the archive grows.",
+            "<b>On-premise hardware.</b> The node runs on a machine at your centre, so whether you already own something suitable belongs in the comparison.",
+            "<b>Remote reading.</b> Radiologists reading from home or a second site change how much of the cloud layer you use.",
             "<b>Prior studies.</b> Years of images on discs or an old archive have to be brought in, which is work with a definable scope."
           ]
         }
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "icon": "&#8377;",
+          "icon": "&#129534;",
           "h": "Running the centre",
           "items": [
             "GST billing and invoicing built in",
@@ -144,20 +144,20 @@
       "h2": "Ask every vendor what they keep if you stop paying",
       "lead": "This is the single question that reorders most shortlists, and it is best asked while the supplier still wants your business.",
       "body": [
-        "Put it plainly: if we stop paying you next year, what happens to our studies. A good answer names the export format, says who performs the export, how long it takes and whether it is chargeable, and confirms that the images themselves remain your records. A vague answer is itself the answer. Get whichever reply you receive in writing and attached to the contract.",
+        "Put it plainly: if we stop paying you next year, what happens to our studies. A good answer names the export format, says who performs it, how long it takes and whether it is chargeable, and confirms the images remain your records. A vague answer is itself the answer, so get the reply in writing and attached to the contract.",
         {
           "h3": "Then compare like for like"
         },
         {
           "ul": [
-            "<b>Model your own volume.</b> Take a busy month of your own studies, project it forward with the growth you expect, and run all three models across it before you look at any proposal.",
-            "<b>Count the machines you actually own.</b> Include the ultrasound in the side room. Quotes written from an optimistic machine list get revised upwards later.",
-            "<b>Separate software from hardware.</b> Ask which part of the quote is the node and which is the licence, so you are not comparing one supplier's hardware with another's software.",
+            "<b>Model your own volume.</b> Take a busy month of studies, project it forward with the growth you expect, and run all three models across it before reading any proposal.",
+            "<b>Count the machines you actually own.</b> Include the ultrasound in the side room, because quotes written from an optimistic machine list get revised upwards later.",
+            "<b>Separate software from hardware.</b> Ask which part of the quote is the node and which is the licence, so you are not comparing hardware with software.",
             "<b>Check the reading experience.</b> A viewer that needs installing on every laptop costs staff time every week, whatever the invoice says.",
             "<b>Ask what a busy Saturday looks like.</b> Support that exists only on weekday mornings is cheaper for a reason."
           ]
         },
-        "The reason the hybrid model matters commercially, not just technically, is ownership. When the archive lives on your node and the cloud layer is there for remote viewing and backup, you are buying a system rather than renting access to your own images. The fuller buying checklist, including the test transfer worth insisting on, is in <a href=\"/resources/how-to-choose-pacs/\">how to choose a PACS</a>."
+        "Hybrid matters commercially as well as technically. When the archive lives on your node and the cloud layer exists for remote viewing and backup, you are buying a system rather than renting access to your own images. The fuller checklist, including the test transfer worth insisting on, is in <a href=\"/resources/how-to-choose-pacs/\">how to choose a PACS</a>."
       ]
     },
     {
@@ -166,27 +166,27 @@
       "items": [
         {
           "q": "Why don't you publish PACS prices?",
-          "a": "Because the honest answer depends on your modality mix, study volume, retention period and whether the node runs on hardware you already own. A single published number would suit almost nobody reading it, and sending you off with the wrong one helps neither of us."
+          "a": "Because the honest answer depends on your modality mix, study volume, retention period and whether the node runs on hardware you already own. A single published number would suit almost nobody reading it, and the wrong one helps neither of us."
         },
         {
           "q": "Is per-study billing cheaper?",
-          "a": "It is lighter at the start and open ended afterwards, because the meter runs for as long as you scan. Model it against your own projected volume rather than today's, and compare that total with a system you own outright with support alongside it."
+          "a": "It is lighter at the start and open ended afterwards, because the meter runs for as long as you scan. Model it against your projected volume rather than today's, and compare that total with a system you own outright with support alongside it."
         },
         {
           "q": "What does storage cost as we grow?",
-          "a": "Storage is driven by your modality mix and retention period, since cross-sectional studies are far heavier than plain films. Estimate from one real month of your own output. With a hybrid setup the archive sits on your node, with encrypted offsite backup behind it."
+          "a": "Storage is driven by your modality mix and retention period, since cross-sectional studies are far heavier than plain films. Estimate from one real month of output. With a hybrid setup the archive sits on your node, with encrypted offsite backup behind it."
         },
         {
           "q": "Do you charge per radiologist or per modality?",
-          "a": "The scoping conversation covers how many modalities send to the system and how many people read remotely, because both affect the work involved. We do not want a model that makes you hesitate before connecting a machine you already own."
+          "a": "Scoping covers how many modalities send to the system and how many people read remotely, because both affect the work involved. We do not want a model that makes you hesitate before connecting a machine you already own."
         },
         {
           "q": "Can we try it before committing anything?",
-          "a": "Yes. There is a live demo at pacs.elevateaura.co.in and a small Windows demo installer that runs against the demo server, so your radiologist and technician can judge the viewer and the worklist before any commercial discussion happens."
+          "a": "Yes. There is a live demo at pacs.elevateaura.co.in and a small Windows demo installer that runs against the demo server, so your radiologist and technician can judge the viewer and the worklist before any commercial discussion."
         },
         {
           "q": "What is not included in a PACS quote?",
-          "a": "Ask every supplier, including us, for this in writing. Typically the machine the node runs on, your network and internet link, and any console licence your modality vendor controls sit outside the software quote. Knowing that early prevents an awkward week later."
+          "a": "Ask every supplier, including us, for this in writing. Typically the machine the node runs on, your network and internet link, and any console licence your modality vendor controls sit outside the software quote."
         }
       ]
     },

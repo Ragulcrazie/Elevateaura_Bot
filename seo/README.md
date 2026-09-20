@@ -28,6 +28,7 @@ from JSON content files so quality rules are enforced at build time.
 | 18 | `18-seo-dashboard-spec.md` | Looker Studio dashboard on Search Console, GA4 and the CRM |
 | 19 | `19-page-implementation-index.md` plus `build/content/*.json` and the generated `/<hub>/<slug>/index.html` pages | Page-by-page implementation |
 | 20 | `20-seo-qa-report.md` | Output of the QA script over the whole site |
+| 21 | `21-baseline-and-launch-record.md` | The Search Console baseline to measure against, what was configured in the accounts, and what should move when |
 
 ## Build
 

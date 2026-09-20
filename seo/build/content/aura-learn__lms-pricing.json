@@ -31,9 +31,9 @@
       "eyebrow": "In one sentence",
       "h2": "How Aura Learn is priced, and why we quote after a call",
       "paras": [
-        "Aura Learn is quoted once we understand what you teach and how, because the work sits in your content, your assessments and your integrations rather than in a subscription band. The one thing we can say before any call is the part that matters most to a growing institute: learners are unlimited. You are not billed by the head, so a successful admission season does not arrive with its own invoice.",
-        "That is a deliberate break from how the market usually sells. Per-learner pricing is comfortable for the vendor and awkward for you, because the moment your business works, your software cost rises in step with it.",
-        "Everything else in a quote comes from scope: how much course material has to be brought across, whether you run live classes, how heavy your assessment and question-bank needs are, whether the learner app carries your branding, and what has to connect to payments."
+        "Aura Learn is quoted once we understand what you teach and how, because the work sits in your content, your assessments and your integrations rather than in a subscription band. The one thing we can say before any call is what matters most to a growing institute: learners are unlimited. You are not billed by the head, so a successful admission season does not arrive with its own invoice.",
+        "That is a deliberate break from how the market usually sells. Per-learner pricing suits the vendor and not you, because the moment your business works, your software cost rises in step with it.",
+        "Everything else comes from scope: how much course material has to be brought across, whether you run live classes, how heavy your assessment needs are, whether the learner app carries your branding, and what connects to payments."
       ]
     },
     {
@@ -42,8 +42,8 @@
       "h2": "Why per-learner pricing breaks a coaching business",
       "lead": "Head-count billing looks reasonable on a demo call and turns into a management problem in the second year.",
       "body": [
-        "Consider what an institute actually does when learners are metered. It hesitates before enrolling a free trial batch. It shares logins between siblings. It leaves last year's students locked out rather than paying to keep them, losing the alumni who bring the next referrals. It delays the corporate training pilot because thirty extra accounts need approval. None of those are teaching decisions, and all of them are caused by the pricing model.",
-        "The same distortion hits companies training their own staff. A compliance course that should reach every field technician reaches only the ones already licensed, which defeats the purpose of buying a training platform at all.",
+        "Consider what an institute does when learners are metered. It hesitates before enrolling a free trial batch. It shares logins between siblings. It locks last year's students out rather than paying to keep them, losing the alumni who bring the next referrals. None of those are teaching decisions, and all of them are caused by the pricing model.",
+        "The same distortion hits companies training their own staff. A compliance course that should reach every field technician reaches only the ones already licensed, which defeats the purpose of buying a training platform.",
         {
           "h3": "What actually drives an Aura Learn quote"
         },
@@ -88,7 +88,7 @@
             ]
           }
         },
-        "Read that table as a planning tool rather than a menu. Institutes that begin with their strongest course, their existing question papers and recorded lessons are live sooner and spend less, and they add live classes or compliance tracking once the first cohort has proved the workflow."
+        "Read that table as a planning tool rather than a menu. Institutes that begin with their strongest course, their existing question papers and recorded lessons are live sooner and spend less."
       ]
     },
     {
@@ -153,12 +153,12 @@
             "<b>Project your own growth.</b> Take the learner count you hope to have in three years and ask every vendor to price that, today, in writing.",
             "<b>Check what an inactive learner costs.</b> Some contracts count anyone who ever registered, which quietly turns your alumni list into a bill.",
             "<b>Ask who moves the content.</b> Video, notes and past papers do not migrate themselves, and that work belongs in the quote rather than in your evenings.",
-            "<b>Separate the app from the platform.</b> Branded app publishing is a distinct piece of work. Confirm whether it is included and who owns the store listing.",
-            "<b>Look at the payment path.</b> If fees are collected outside the system, someone reconciles them by hand every month for as long as you use it.",
-            "<b>Settle the exit.</b> Ask what export you receive for your courses, learner records and results if you leave, and how long it takes."
+            "<b>Separate the app from the platform.</b> Branded app publishing is distinct work, so confirm whether it is included and who owns the store listing.",
+            "<b>Look at the payment path.</b> If fees are collected outside the system, someone reconciles them by hand every month.",
+            "<b>Settle the exit.</b> Ask what export you receive for courses, learner records and results if you leave, and how long it takes."
           ]
         },
-        "There is also the option nobody quotes for, which is carrying on with video links and message groups. It is free until it is not: results are chased by hand, material is forwarded rather than controlled, and no one can tell you which learners stopped opening the lessons. We have set out where that line falls in <a href=\"/compare/lms-vs-youtube-and-whatsapp-for-coaching/\">LMS versus YouTube and WhatsApp for coaching</a>, and if the terminology is new, start with <a href=\"/resources/what-is-lms/\">what is an LMS</a>.",
+        "There is also the option nobody quotes for, which is carrying on with video links and message groups. It is free until it is not: results are chased by hand, material is forwarded rather than controlled, and nobody can say which learners stopped opening the lessons. Where that line falls is set out in <a href=\"/compare/lms-vs-youtube-and-whatsapp-for-coaching/\">LMS versus YouTube and WhatsApp for coaching</a>, and if the terminology is new, start with <a href=\"/resources/what-is-lms/\">what is an LMS</a>.",
         "Aura Learn is not a theory. It was proven on our own exam-prep product, an Android app on Google Play with Telegram practice bots behind it, before it was offered to anyone else."
       ]
     },
@@ -168,27 +168,27 @@
       "items": [
         {
           "q": "Why don't you publish LMS prices?",
-          "a": "Because the scope behind two institutes of the same size can be completely different. One uploads ten recorded courses, another needs a large question bank, live classes and a branded app. Publishing one number would mislead nearly everyone, and correcting it later wastes your time."
+          "a": "Because the scope behind two institutes of the same size can be completely different. One uploads ten recorded courses, another needs a large question bank, live classes and a branded app. One number would mislead nearly everyone, and correcting it later wastes your time."
         },
         {
           "q": "Do you charge per learner or per student?",
-          "a": "No. Learners are unlimited on Aura Learn, which means enrolment decisions stay academic and commercial rather than technical. Adding a batch, running a free trial group or keeping last year's students on the platform does not change what you pay."
+          "a": "No. Learners are unlimited on Aura Learn, so enrolment decisions stay academic rather than technical. Adding a batch, running a free trial group or keeping last year's students on the platform does not change what you pay."
         },
         {
           "q": "What do you need in order to quote?",
-          "a": "How many courses you teach and in what form, whether you run live classes, how much assessment and question-bank work you need, whether the learner app should carry your branding, and how you want fees collected. That is usually one conversation."
+          "a": "How many courses you teach and in what form, whether you run live classes, how much assessment work you need, whether the learner app should carry your branding, and how you want fees collected. That is usually one conversation."
         },
         {
           "q": "Is content migration included?",
-          "a": "It is scoped and itemised rather than assumed. Bringing a handful of courses across is quick, while several years of video, notes and past papers that need restructuring is real work, so we look at what you actually have before quoting."
+          "a": "It is scoped and itemised rather than assumed. A handful of courses is quick, while several years of video, notes and past papers that need restructuring is real work, so we look at what you have before quoting."
         },
         {
           "q": "Can we start with one course and expand?",
-          "a": "Yes, and most institutes should. Put your strongest course on the platform with your existing papers as the first assessments, run one cohort through it end to end, then add live classes, certificates or compliance tracking with evidence behind the decision."
+          "a": "Yes, and most institutes should. Put your strongest course up with your existing papers as the first assessments, run one cohort through it end to end, then add live classes or certificates with evidence behind the decision."
         },
         {
           "q": "How soon can we open it to students?",
-          "a": "The delivery target is live in 30 working days where the scope allows. Content volume is the usual variable, since the platform is ready long before a large back catalogue is. Starting with one course is the fastest route to a real launch."
+          "a": "The delivery target is live in 30 working days where the scope allows. Content volume is the usual variable, since the platform is ready long before a large back catalogue is. One course first is the fastest real launch."
         }
       ]
     },
