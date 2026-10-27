@@ -298,6 +298,39 @@ header.bar h1{flex:0 1 auto;min-width:3.5rem}
 .pbtn:hover{border-color:var(--brand)}
 .pbtn .pl{display:block;font-size:var(--text-sm);font-weight:600;color:var(--brand)}
 .pbtn .ph{display:block;font-size:var(--text-xs);color:var(--text-muted);margin-top:.1rem}
+:root{--c1:#047857;--c2:#1D4ED8;--c3:#B45309;--c4:#6D28D9;--c5:#B91C1C;--grid:#CCDBD2}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--c1:#0E9F6E;--c2:#4F83E8;--c3:#B87D15;--c4:#8B5CF6;--c5:#DB6161;--grid:#262E37}}
+:root[data-theme="dark"]{--c1:#0E9F6E;--c2:#4F83E8;--c3:#B87D15;--c4:#8B5CF6;--c5:#DB6161;--grid:#262E37}
+.chart{width:100%;height:auto;display:block}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .lbl{fill:var(--text-muted);font:500 10px Inter,sans-serif}
+.chart .val{fill:var(--text-secondary);font:600 11px Inter,sans-serif}
+.chart .mark{transition:opacity 120ms}
+.chart .mark:hover{opacity:.78}
+.chart .hero{fill:var(--text-primary);font:700 22px Inter,sans-serif}
+.chart .heros{fill:var(--text-muted);font:500 10px Inter,sans-serif}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.7rem}
+.legend span{display:inline-flex;align-items:center;gap:.35rem;font-size:var(--text-xs);color:var(--text-secondary)}
+.legend i{width:9px;height:9px;border-radius:2px;display:block}
+.cgrid{display:grid;gap:1rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:1100px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.cgrid .wide{grid-column:1 / -1}}
+.tabs{display:flex;gap:.1rem;border-bottom:1px solid var(--border-soft);overflow-x:auto}
+.tabb{border:0;border-bottom:2px solid transparent;background:transparent;padding:.5rem .9rem;cursor:pointer;
+  font:500 var(--text-sm)/1 Inter,sans-serif;color:var(--text-muted);white-space:nowrap}
+.tabb.on{border-bottom-color:var(--brand);color:var(--brand)}
+.sw{width:34px;height:19px;border-radius:999px;border:0;background:var(--border-strong);position:relative;cursor:pointer;padding:0;display:block}
+.sw span{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:999px;background:#fff;transition:left 130ms}
+.sw.on{background:var(--brand)} .sw.on span{left:17px}
+.two{display:grid;gap:1rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:1100px){.two{grid-template-columns:19rem minmax(0,1fr)}}
+.rail{max-height:32rem;overflow-y:auto}
+.railrow{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--border-soft);
+  border-left:2px solid transparent;background:transparent;padding:.6rem .7rem;cursor:pointer;font:inherit}
+.railrow:hover{background:var(--bg-subtle)}
+.railrow.on{background:var(--brand-soft);border-left-color:var(--brand)}
+.railrow .nm{display:block;font-size:var(--text-sm);font-weight:500;color:var(--text-primary)}
+.railrow .sub{display:block;font-size:var(--text-xs);color:var(--text-muted)}
+.railrow .tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.3rem}
 .board{display:flex;gap:.75rem;overflow-x:auto;padding-bottom:.6rem}
 .kcol{background:var(--bg-subtle);border:1px solid var(--border-soft);border-radius:var(--radius-card);padding:.7rem;min-width:17rem;width:17rem;flex-shrink:0}
 .khead{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem}
@@ -420,7 +453,8 @@ const TENDERS=[
  ["TND-114","Coimbatore City Municipal Corporation","Supply and AMC of 640 extinguishers",1840000,50000,"Paid 12 Aug","04 Nov 2026","Due in 9 days","warn","Documents ready"],
  ["TND-110","Tamil Nadu Civil Supplies, Pollachi godown","Hydrant system upgrade",960000,25000,"Paid 28 Jul","29 Oct 2026","Due in 3 days","bad","Blocked, IS 2190 certificate expires first"],
  ["TND-106","Coimbatore Medical College Hospital","Fire alarm AMC, 3 years",1240000,35000,"Paid 04 Jul","Submitted","Result awaited","flat","Submitted 18 Sep"],
- ["TND-101","Tiruppur Municipality","Extinguisher refilling rate contract",420000,10000,"Refund pending","Lost","Closed","bad","EMD with authority 71 days"],
+ ["TND-108","Coimbatore Corporation, zone 3","Refilling rate contract, 2 years",680000,20000,"Refunded 02 Oct","Won","Won","good","Order received, billing monthly"],
+ ["TND-101","Tiruppur Municipality","Extinguisher refilling rate contract",420000,10000,"Refund pending","Lost","Lost","bad","EMD with authority 71 days"],
 ];
 const VAN=[
  ["Karthik R","TN 37 BX 4412","ABC dry powder 6 kg",18,6,"bad"],
@@ -508,12 +542,14 @@ const STCHIP={New:"info",Contacted:"warn",Quoted:"alt",Won:"good",Lost:"bad"};
 const REACHED={enquiry:["Enquiry","flat"],quotation:["Quotation sent","alt"],order:["Order confirmed","warn"],
  invoice:["Invoiced","info"],payment:["Paid","good"]};
 const warmth=n=>n==null?null:n>=70?["Hot","bad"]:n>=40?["Warm","warn"]:["Cold","info"];
+// [order, rule, kind, matches, goes to, in turn, active]
 const RULES=[
- ["Scan on any unit","Source is QR sticker","The engineer who last serviced that unit","On"],
- ["Coimbatore city","Territory is Coimbatore","Karthik R, then Mohan S, in turn","On"],
- ["Directory enquiries","Source is IndiaMART or Justdial","Office, then the owner if untouched for 2 hours","On"],
- ["Bid alerts","Source is Tender portal","Owner","On"],
- ["Anything else","Anyone (catches all)","Office","On"],
+ [1,"Scan on any unit","Source","Source is QR sticker","The engineer who last serviced that unit",false,true],
+ [2,"Coimbatore city","Territory","Territory is Coimbatore","Karthik R, Mohan S",true,true],
+ [3,"Directory enquiries","Source","Source is IndiaMART or Justdial","Office, Owner",true,true],
+ [4,"Bid alerts","Source","Source is Tender portal","Owner",false,true],
+ [5,"High value","Expected value","Expected value is over 1,00,000","Owner",false,true],
+ [6,"Anything else","Catch all","Anyone (catches all)","Office",false,true],
 ];
 const SRC=[
  ["Field, spotted on a visit",29,24,19,268000],
@@ -583,6 +619,51 @@ const ICO={task:'<path d="m3 7 2 2 4-4"/><path d="m3 17 2 2 4-4"/><path d="M13 7
  badge:'<circle cx="12" cy="9" r="6"/><path d="m9 14-1 7 4-2 4 2-1-7"/>',
  gavel:'<path d="m14 12-8 8-2-2 8-8"/><path d="m12 6 6 6M10 8l6 6M15 3l6 6"/>',
  users:'<circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M17 5a3.5 3.5 0 0 1 0 7M18 21a7 7 0 0 0-2-4.9"/>'};
+function barPath(x,y,w,h,r){ r=Math.max(0,Math.min(r,w/2,h));
+ return `M${x} ${y+h} L${x} ${y+r} Q${x} ${y} ${x+r} ${y} L${x+w-r} ${y} Q${x+w} ${y} ${x+w} ${y+r} L${x+w} ${y+h} Z`; }
+const nice=v=>{ const p=Math.pow(10,String(Math.round(v)).length-1); return Math.ceil(v/p)*p||1; };
+// rows: [label, value, colour]. One series, so no legend: the title names it.
+function svgBars(rows,fmt){
+ const tilt=rows.length>5||rows.some(r=>r[0].length>14);
+ const W=560,H=tilt?268:240,PL=46,PR=10,PT=16,PB=tilt?66:38;
+ const max=nice(Math.max(1,...rows.map(r=>r[1])));
+ const iw=W-PL-PR, ih=H-PT-PB, step=iw/rows.length, bw=Math.min(54,step-10);
+ const y=v=>PT+ih-(v/max)*ih;
+ const ticks=[0,max/2,max];
+ return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">
+  ${ticks.map(t=>`<line class="gl" x1="${PL}" x2="${W-PR}" y1="${y(t)}" y2="${y(t)}"/>
+    <text class="lbl" x="${PL-7}" y="${y(t)+3.5}" text-anchor="end">${esc(fmt?fmt(t,true):String(Math.round(t)))}</text>`).join("")}
+  ${rows.map((r,i)=>{ const h=Math.max(r[1]>0?2:0,(r[1]/max)*ih), x=PL+i*step+(step-bw)/2;
+    return `<g class="mark"><title>${esc(r[0])}: ${esc(fmt?fmt(r[1]):String(r[1]))}</title>
+     <path d="${barPath(x,y(r[1]),bw,h,4)}" fill="${r[2]||"var(--c1)"}"/>
+     <text class="val" x="${x+bw/2}" y="${y(r[1])-6}" text-anchor="middle">${esc(fmt?fmt(r[1]):String(r[1]))}</text></g>`; }).join("")}
+  ${rows.map((r,i)=>{ const x=PL+i*step+step/2, ly=H-PB+15;
+    if(tilt) return `<text class="lbl" x="${x}" y="${ly}" text-anchor="end" transform="rotate(-32 ${x} ${ly})">${esc(r[0])}</text>`;
+    const w=r[0].split(" ");
+    const l1=w.length>2?w.slice(0,2).join(" "):r[0], l2=w.length>2?w.slice(2).join(" "):"";
+    return `<text class="lbl" x="${x}" y="${ly+1}" text-anchor="middle">${esc(l1)}</text>
+     ${l2?`<text class="lbl" x="${x}" y="${ly+13}" text-anchor="middle">${esc(l2)}</text>`:""}`; }).join("")}
+ </svg>`;
+}
+// rows: [label, value, colour]. A 2px surface ring keeps the segments apart.
+function svgDonut(rows,centreLab){
+ const W=300,H=240,cx=150,cy=112,R=92,r=60;
+ const tot=rows.reduce((a,x)=>a+x[1],0)||1;
+ let a0=-Math.PI/2;
+ const arc=(a,b)=>{ const x1=cx+R*Math.cos(a),y1=cy+R*Math.sin(a),x2=cx+R*Math.cos(b),y2=cy+R*Math.sin(b);
+   const x3=cx+r*Math.cos(b),y3=cy+r*Math.sin(b),x4=cx+r*Math.cos(a),y4=cy+r*Math.sin(a);
+   const big=(b-a)>Math.PI?1:0;
+   return `M${x1} ${y1} A${R} ${R} 0 ${big} 1 ${x2} ${y2} L${x3} ${y3} A${r} ${r} 0 ${big} 0 ${x4} ${y4} Z`; };
+ const segs=rows.map(x=>{ const a1=a0+(x[1]/tot)*Math.PI*2; const d=arc(a0,a1); a0=a1;
+   return `<g class="mark"><title>${esc(x[0])}: ${x[1]} (${Math.round(x[1]/tot*100)}%)</title>
+     <path d="${d}" fill="${x[2]}" stroke="var(--bg-card)" stroke-width="2"/></g>`; }).join("");
+ return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">${segs}
+  <text class="hero" x="${cx}" y="${cy+2}" text-anchor="middle">${tot}</text>
+  <text class="heros" x="${cx}" y="${cy+18}" text-anchor="middle">${esc(centreLab)}</text></svg>`;
+}
+function legend(rows){
+ return `<div class="legend">${rows.map(r=>`<span><i style="background:${r[2]}"></i>${esc(r[0])} <b style="color:var(--text-primary);margin-left:.15rem">${r[1]}</b></span>`).join("")}</div>`;
+}
 function dcard(c){
  return `<button class="dcard" type="button" data-act="go" data-k="${c.k}" aria-label="Open ${esc(c.lab)}">
   <div class="top"><div style="min-width:0"><div class="lab">${esc(c.lab)}</div><div class="val"${c.tone?` style="color:var(--${c.tone})"`:""}>${c.val}</div>
@@ -604,7 +685,7 @@ function today(){
  const docsBad=DOCS.filter(d=>d[5]!=="good");
  const blocked=TENDERS.filter(t=>/Blocked/.test(t[9]));
  const lowVan=VAN.filter(v=>v[5]==="bad");
- const liveTend=TENDERS.filter(t=>t[7]!=="Closed"&&t[7]!=="Lost").length;
+ const liveTend=TENDERS.filter(t=>t[7]!=="Won"&&t[7]!=="Lost").length;
  const alerts=[];
  if(overdueInv.length) alerts.push(["bad",INR(overdueInv.reduce((a,b)=>a+b[4],0))+" overdue across "+overdueInv.length+" invoices","Oldest is "+overdueInv[0][1]+", overdue "+overdueInv[0][6]+" days","pay"]);
  if(blocked.length) alerts.push(["bad",blocked[0][0]+" cannot be submitted","Your IS 2190 workshop certificate expires before the bid closes","docs"]);
@@ -816,6 +897,43 @@ const PRODS=[["ABC dry powder 6 kg, refill and pressure check",707],["ABC dry po
  ["Hydrant system, quarterly service visit",14800],["Sprinkler system, annual flow test",9600],
  ["Fire alarm panel, quarterly service",6400],["Hose reel, 30 m, supply and fit",3100],
  ["K type kitchen 6 L, refill",2200],["Safety pin and seal, set of 25",900]];
+// [product, category, hsn, list price, cost, in stock, reorder level, serial tracked]
+const CAT=[
+ ["ABC dry powder 6 kg","Extinguisher","3813",707,412,138,60,true],
+ ["ABC dry powder 9 kg","Extinguisher","3813",957,566,41,30,true],
+ ["CO2 4.5 kg","Extinguisher","3813",1450,890,9,20,true],
+ ["CO2 22.5 kg trolley","Extinguisher","3813",4900,3150,4,4,true],
+ ["ABC powder, 50 kg bag","Refill material","3813",3800,2450,9,15,false],
+ ["CO2 gas, 30 kg cylinder","Refill material","2811",2600,1680,14,10,false],
+ ["Hose reel, 30 m","Hydrant part","8424",3100,1980,11,8,false],
+ ["Hose coupling, 63 mm","Hydrant part","8424",640,390,2,6,false],
+ ["Sprinkler head, 68 C","Sprinkler part","8424",310,185,146,60,false],
+ ["Fire alarm panel, 8 zone","Alarm","8531",6400,4100,3,2,true],
+ ["Smoke detector, addressable","Alarm","8531",1180,720,54,30,false],
+ ["Safety pin and seal, set of 25","Consumable","8424",900,520,240,100,false],
+ ["K type kitchen 6 L","Extinguisher","3813",2200,1390,7,6,true],
+ ["Fire blanket, 1.2 x 1.2 m","Consumable","5907",850,510,22,10,false],
+];
+const CATS=["Extinguisher","Refill material","Hydrant part","Sprinkler part","Alarm","Consumable"];
+// [when, customer, equipment, staff, purpose, outcome, gps verified]
+const VISITS=[
+ ["Today 9:12 AM","Annur Cold Storage","24 units, ammonia plant","Karthik R","Annual refill","Job done, signed","yes"],
+ ["Today 8:05 AM","Avinashi Road Mall","Hose reel, atrium","Karthik R","Breakdown call","Part needed, quoted","yes"],
+ ["Yesterday 4:40 PM","Singanallur Foundry","CO2 22.5 kg trolley","Mohan S","Breakdown call","Taken to workshop","yes"],
+ ["Yesterday 2:15 PM","Kurichi Auto Components","Alarm panel, shop floor","Mohan S","Survey for AMC","Quotation asked for","yes"],
+ ["Yesterday 11:30 AM","Saravanampatti Tech Park","Hydrant pump room","Vignesh P","Quarterly service","Job done, signed","yes"],
+ ["25 Oct 3:20 PM","Chinniampalayam Warehouse","Godown 2","Vignesh P","Site survey","New enquiry raised","yes"],
+ ["25 Oct 10:05 AM","Pollachi Transport Co","Workshop pit","Karthik R","Collection visit","Cheque collected","no"],
+ ["24 Oct 5:00 PM","Gandhipuram Hotels","Kitchen hood","Mohan S","Breakdown call","Job done, signed","yes"],
+];
+const MOVES=[
+ ["25 Oct 2026","Stock out","ABC dry powder 6 kg",24,"Karthik R van","Job SC-2238, Annur Cold Storage"],
+ ["24 Oct 2026","Stock in","ABC powder, 50 kg bag",10,"Workshop","Bill SB-4471, Sundaram Extinguisher Works"],
+ ["24 Oct 2026","Transfer","CO2 4.5 kg",6,"Workshop to Mohan S van","Trolley job at Singanallur"],
+ ["23 Oct 2026","Stock out","Sprinkler head, 68 C",18,"Vignesh P van","Job SC-2237, Chinniampalayam"],
+ ["22 Oct 2026","Stock in","CO2 gas, 30 kg cylinder",8,"Workshop","Sakthi Gas Agencies, cash"],
+ ["21 Oct 2026","Stock out","Hose coupling, 63 mm",4,"Karthik R van","Job SC-2241, Avinashi Road Mall"],
+];
 const SECTOR=["Textile mill","IT park","Shopping mall","Foundry","Auto components","Transport",
  "Cold storage","Logistics park","Knitwear","Hotel"];
 const SECTOR2=["Packaging","Warehouse","Textile mill","Government body","Fabrication","Cold chain"];
@@ -1025,16 +1143,38 @@ function tick(){
  <p class="foot">Cover is read off the unit, not typed in. A call on a machine with no live contract shows Out of warranty straight away, which is the moment to sell the AMC rather than do the job for nothing.</p>`;
 }
 function route(){
- return `<p class="lede">Tomorrow's work, grouped by engineer and ordered by road distance, so nobody crosses the city twice.</p>
+ const q=(UI.vq||"").trim().toLowerCase(), st=UI.vstaff||"";
+ const rows=VISITS.filter(v=>(!st||v[3]===st)&&(!q||[v[1],v[2],v[3],v[4],v[5]].some(x=>String(x).toLowerCase().includes(q))));
+ const gps=VISITS.filter(v=>v[6]==="yes").length;
+ return `<div class="card"><div class="body">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem;margin-bottom:.9rem">
+   <div><h3 style="margin:0;font-size:var(--text-base);font-weight:600">Field visits (${q||st?rows.length+" of "+VISITS.length:VISITS.length})</h3>
+    <p class="dim" style="margin:.25rem 0 0;font-size:var(--text-sm)">Engineers log visits with a photo and GPS from the phone. A past visit can also be typed in here.</p></div>
+   <div class="tools" style="margin:0;justify-content:flex-end">
+    <input type="search" data-inp="vq" value="${esc(UI.vq||"")}" placeholder="Search visits" title="Searches customer, equipment, staff or purpose" style="max-width:15rem">
+    <button class="btn quiet sm" type="button" data-act="vexport">Export</button>
+    <button class="btn sm" type="button" data-act="vrecord" style="background:var(--success)">Record visit</button>
+    <button class="btn quiet sm" type="button" data-act="vpast">Log past visit</button></div></div>
+  <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end;padding:.7rem;background:var(--bg-subtle);border:1px solid var(--border-soft);border-radius:var(--radius-card);margin-bottom:1rem">
+   <label style="min-width:12rem"><span class="lab" style="display:block;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.03em;color:var(--text-muted);font-weight:600;margin-bottom:.2rem">Staff member</span>
+    <select data-chg="vstaff" style="width:100%"><option value="">Everyone</option>
+     ${ENGS.map(e=>`<option${st===e?" selected":""}>${esc(e)}</option>`).join("")}</select></label>
+   <div class="dim">${gps} of ${VISITS.length} visits were GPS verified on site. The rest were typed in afterwards.</div></div>
+  ${rows.length?`<div class="tbl"><table style="min-width:52rem"><thead><tr><th>When</th><th>Customer</th><th>Equipment</th><th>Staff</th><th>Purpose</th><th>Outcome</th><th>GPS</th></tr></thead>
+  <tbody>${rows.map(v=>`<tr><td class="dim">${esc(v[0])}</td><td style="font-weight:500">${esc(v[1])}</td><td class="dim">${esc(v[2])}</td>
+   <td>${esc(v[3])}</td><td>${esc(v[4])}</td><td class="dim">${esc(v[5])}</td>
+   <td>${pill(v[6]==="yes"?"good":"warn",v[6]==="yes"?"Verified":"Typed in")}</td></tr>`).join("")}</tbody></table></div>`
+  :`<div class="empty">No visit matches that. Clear the search or pick everyone.</div>`}
+ </div></div>
  <div class="stat-grid">
-  <div class="kpi"><div class="lab">Visits planned</div><div class="val">5</div><div class="sub">Three engineers</div></div>
+  <div class="kpi"><div class="lab">Visits planned tomorrow</div><div class="val">${ROUTE.length}</div><div class="sub">Three engineers</div></div>
   <div class="kpi good"><div class="lab">Road distance</div><div class="val">69 km</div><div class="sub">Down from 104 km unplanned</div></div>
   <div class="kpi warn"><div class="lab">Spare capacity</div><div class="val">2</div><div class="sub">Slots free on Vignesh</div></div>
  </div>
- <div class="card"><div class="head"><h3>Tomorrow, 27 October</h3><span class="note">Tap a row to send the engineer his day on WhatsApp</span></div>
- <div class="tbl"><table><thead><tr><th>Time</th><th>Site</th><th>Town</th><th>Work</th><th>Ticket</th><th>Engineer</th><th class="n">Distance</th><th>Do</th></tr></thead>
- <tbody>${ROUTE.map((r,i)=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="dim">${esc(r[2])}</td><td class="dim">${esc(r[3])}</td><td>${esc(r[4])}</td><td>${esc(r[5])}</td><td class="n">${esc(r[6])}</td><td><button class="btn sm" type="button" data-act="sendday" data-e="${esc(r[5])}">Send his day</button></td></tr>`).join("")}</tbody></table></div></div>
- <p class="foot">Attendance is the same check-in. An engineer who checks into his first site has started his day, so there is no separate register to keep.</p>`;
+ <div class="card"><div class="head"><h3>Tomorrow, 28 October</h3><span class="note">Ordered by road distance, not by the order the calls came in</span></div>
+ <div class="tbl"><table style="min-width:48rem"><thead><tr><th>Time</th><th>Site</th><th>Town</th><th>Work</th><th>Call</th><th>Engineer</th><th class="n">Distance</th><th>Do</th></tr></thead>
+ <tbody>${ROUTE.map((r,i)=>`<tr><td>${esc(r[0])}</td><td style="font-weight:500">${esc(r[1])}</td><td class="dim">${esc(r[2])}</td><td class="dim">${esc(r[3])}</td><td class="dim">${esc(r[4])}</td><td>${esc(r[5])}</td><td class="n">${esc(r[6])}</td><td><button class="btn sm" type="button" data-act="sendday" data-e="${esc(r[5])}">Send his day</button></td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">Attendance is the same check in. An engineer who checks into his first site has started his day, so there is no separate register to keep.</p>`;
 }
 function field(){
  const st=n=>JOB.step>n?"done":JOB.step===n?"now":"todo";
@@ -1061,22 +1201,76 @@ function field(){
  </div></div>
  <p class="foot" style="margin-top:1.25rem">The two missing units become a quotation before he leaves the gate. That is work which normally gets mentioned in the van and forgotten by evening.</p>`;
 }
+function waSummary(name){
+ const owed=PAY.filter(p=>p[1]===name).reduce((a,b)=>a+payLeft(b),0);
+ const quotes=QTLIST.filter(q=>q[1]===name&&(q[4]==="Sent"||q[4]==="Accepted")).length
+   +(ENQ.filter(e=>e[2]===name&&e[7]==="Quoted").length);
+ const tickets=TICKETS.filter(t=>t[1]===name&&t[4]!=="closed"&&t[4]!=="resolved").length;
+ const uncovered=LEAK.filter(r=>r[2]===name&&r[5]!=="in_warranty").length;
+ return {owed,quotes,tickets,uncovered};
+}
+function waJobs(c){
+ const sm=waSummary(c.name), out=[];
+ const late=PAY.find(p=>p[1]===c.name&&p[6]>0&&payLeft(p)>0);
+ if(late) out.push(["bad","Payment follow up","Madam, invoice "+late[0]+" for "+INR(payLeft(late))+" was raised on "+late[2]+" and is now "+late[6]+" days past the "+c.days+" day terms. Kindly advise the payment date.\n\n"+CO.n+"\n"+CO.ph]);
+ if(sm.uncovered) out.push(["warn","Cover has lapsed","Sir, "+sm.uncovered+" units at "+c.name+" are out of warranty with no live contract on them. We can put them back under an annual contract at "+INR(LEAK.filter(r=>r[2]===c.name&&r[5]!=="in_warranty").reduce((a,r)=>a+r[7],0))+" a year, which covers refilling, pressure testing and the service visits. Shall I send the quotation?\n\n"+CO.n+"\n"+CO.ph]);
+ const tk=TICKETS.find(t=>t[1]===c.name&&t[4]!=="closed"&&t[4]!=="resolved");
+ if(tk) out.push(["info","Service call update","Sir, service call "+tk[0]+" at "+c.name+" is with "+(tk[6]||"our office")+(tk[7]==="overdue"?" and is already past the time we promised, for which I am sorry.":" and is due "+tk[7]+".")+" We will confirm once the engineer is on site.\n\n"+CO.n+"\n"+CO.ph]);
+ const unit=UNITS.find(u=>u[2]===c.name&&u[6]!=="good");
+ if(unit) out.push(["warn","Refill is due","Sir, unit "+unit[0]+" at "+c.name+" ("+unit[1]+", "+unit[3]+") is "+unit[5].toLowerCase()+". An inspector will ask for it. We can attend this week.\n\n"+CO.n+"\n"+CO.ph]);
+ if(!out.length) out.push(["good","Nothing is pending","Sir, everything at "+c.name+" is covered, attended and settled. We will be in touch before the next refill falls due.\n\n"+CO.n+"\n"+CO.ph]);
+ return out;
+}
 function wa(){
- return `<p class="lede">Raised automatically from the due dates in the register. Nobody types these and nobody has to remember whose turn it is.</p>
- <div style="margin-bottom:1rem"><button class="btn" type="button" data-act="warelease">Release all four now</button> <button class="btn quiet" type="button" data-act="wahold">Hold them</button></div>
- <div class="wagrid">
-  <div class="wa"><div class="who2">To Annur Cold Storage, stores in charge</div>Sir, the annual refill for your 24 units at the ammonia plant is due on 6 November. Our engineer can come on the 4th or 5th morning. Which suits you?<div class="when">Queued for Tuesday 9:00 AM</div></div>
-  <div class="wa"><div class="who2">To Peelamedu Spinning Mills, safety officer</div>Sir, 142 units at your mill are past their refill date, last visit 12 April, and your AMC has also lapsed. Shall we send the renewal and plan one visit for both?<div class="when">Queued for Tuesday 9:00 AM</div></div>
-  <div class="wa"><div class="who2">To Avinashi Road Mall, maintenance</div>Sir, your fire NOC expires on 3 November. Your hose reels and hydrant were last serviced in May. Shall we attend this week so the paperwork is clean for renewal?<div class="when">Queued for Tuesday 9:00 AM</div></div>
-  <div class="wa"><div class="who2">To Peelamedu Spinning Mills, accounts</div>Madam, invoice INV-1188 for ${INR(149010)} was raised on 18 June and is now 48 days past the 45 day terms. Kindly advise the payment date.<div class="when">Queued for Wednesday 10:00 AM</div></div>
- </div>
- <p class="foot">Refill reminders, NOC reminders and payment follow ups all run off the same queue. Nothing goes out without a person releasing the batch.</p>`;
+ const q=(UI.waq||"").trim().toLowerCase();
+ const all=CUSTS();
+ const rail=all.filter(c=>!q||[c.name,c.city,c.sector].some(v=>String(v).toLowerCase().includes(q)));
+ const active=UI.wac?all.find(c=>c.name===UI.wac):null;
+ const sm=active?waSummary(active.name):null;
+ return `<p class="lede">Everything that needs doing for one customer, and how to reach the right person. Nothing here sends by itself.</p>
+ <div class="two">
+  <div class="card" style="margin:0">
+   <div class="body" style="padding:.7rem;border-bottom:1px solid var(--border-soft)">
+    <input type="search" data-inp="waq" value="${esc(UI.waq||"")}" placeholder="Search customers" style="width:100%">
+    <div class="dim" style="margin-top:.4rem">${rail.length} of ${all.length} customers</div></div>
+   <div class="rail">${rail.length?rail.map(c=>{ const x=waSummary(c.name);
+     return `<button class="railrow${active&&active.name===c.name?" on":""}" type="button" data-act="wapick" data-n="${esc(c.name)}">
+      <span class="nm">${esc(c.name)}</span><span class="sub">${esc(c.city)}</span>
+      <span class="tags">${x.owed?`<span class="pill bad" style="font-size:10px">${INR(x.owed)} due</span>`:""}
+       ${x.quotes?`<span class="pill warn" style="font-size:10px">${x.quotes} quote${x.quotes>1?"s":""}</span>`:""}
+       ${x.tickets?`<span class="pill info" style="font-size:10px">${x.tickets} call${x.tickets>1?"s":""}</span>`:""}</span></button>`;
+    }).join(""):`<div class="empty">${q?"No customer matches the search.":"No customers yet."}</div>`}</div>
+  </div>
+  <div>${active?`
+   <div class="card"><div class="body">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem">
+     <div><h3 style="margin:0;font-size:var(--text-lg);font-weight:700">${esc(active.name)}</h3>
+      <div class="dim" style="margin-top:.2rem">${esc(active.sector)} &middot; ${esc(active.city)} &middot; ${esc(custPeople(active)[0])}, ${ROLE3[0][0].toLowerCase()}</div></div>
+     <div class="stat-grid" style="margin:0;flex:1;min-width:16rem;grid-template-columns:repeat(3,1fr);gap:.5rem">
+      <div class="kpi ${sm.owed?"bad":"good"}" style="padding:.6rem"><div class="lab">Outstanding</div><div class="val" style="font-size:var(--text-md)">${sm.owed?INR(sm.owed):"Nothing"}</div></div>
+      <div class="kpi" style="padding:.6rem"><div class="lab">Open quotations</div><div class="val" style="font-size:var(--text-md)">${sm.quotes}</div></div>
+      <div class="kpi ${sm.tickets?"warn":""}" style="padding:.6rem"><div class="lab">Open calls</div><div class="val" style="font-size:var(--text-md)">${sm.tickets}</div></div>
+     </div></div></div></div>
+   ${waJobs(active).map((j,i)=>`<div class="card"><div class="body">
+     <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem">${pill(j[0],j[1])}
+      <span class="dim" style="margin-left:auto">Drafted for you, not sent</span></div>
+     <div class="wamsg">${esc(j[2])}</div>
+     <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem">
+      <button class="btn sm" type="button" data-act="wasend" data-n="${esc(active.name)}" data-i="${i}">Open WhatsApp with this</button>
+      <button class="btn quiet sm" type="button" data-act="wacopy2" data-n="${esc(active.name)}" data-i="${i}">Copy</button></div></div></div>`).join("")}
+   <p class="foot">On your own system these go through WhatsApp Business from your own number, one at a time, never as a broadcast, so each one reads as a person writing to a person.</p>`
+  :`<div class="card"><div class="empty" style="padding:4rem 2rem">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--border-strong)" stroke-width="1.5" style="margin-bottom:.8rem"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+    <div style="color:var(--text-primary);font-weight:500">Pick a customer from the left</div>
+    <div class="dim" style="margin-top:.3rem">You will see everything that needs doing for them, and how to reach the right person.</div></div></div>`}</div>
+ </div>`;
 }
 // A line's unit price: the rate contract price when there is one, otherwise
 // the list rate less the discount. One definition, so the screen, the PDF and
 // the invoice can never disagree by a rupee.
 const unitPrice=l=>l.free?0:(l.contract?l.contract.price:Math.round(l.rate*(1-l.disc/100)));
 const lineTotal=l=>l.qty*unitPrice(l);
+const CHECK='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" style="flex-shrink:0"><path d="m5 13 4 4L19 7"/></svg>';
 function custPicker(){
  if(!UI.csopen) return `<div class="cs"><button class="csbtn" type="button" data-act="csopen" aria-label="Pick a customer">
    <span class="${QT.cust?"":"ph"}">${esc(QT.cust||"Type a customer name, city or phone...")}</span>
@@ -1095,7 +1289,6 @@ function custPicker(){
   ${hits.length?`<div class="csfoot">${hits.length>=30?"The best 30 matches. Type more to narrow.":hits.length+" "+(hits.length===1?"match":"matches")+"."} Arrow keys, Enter to choose.</div>`:""}
   </div></div>`;
 }
-const CHECK='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" style="flex-shrink:0"><path d="m5 13 4 4L19 7"/></svg>';
 function quote(){
  const cap=10;
  const calc=lineTotal;
@@ -1310,7 +1503,7 @@ function pbtn(lab,hint,url){
 function tender(){
  const kw=UI.tkw||TKW[0];
  const emd=TENDERS.filter(t=>/Paid|Refund/.test(t[5])).reduce((a,b)=>a+b[4],0);
- const live=TENDERS.filter(t=>t[7]!=="Closed"&&t[7]!=="Lost").length;
+ const live=TENDERS.filter(t=>t[7]!=="Won"&&t[7]!=="Lost").length;
  return `<div class="card"><div class="body" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem">
   <div><h3 style="margin:0;font-size:var(--text-base);font-weight:600">Tender alerts</h3>
    <p class="dim" style="margin:.3rem 0 0;font-size:var(--text-sm)">One click searches across India's free public tender portals. Log the relevant ones below.</p></div>
@@ -1353,21 +1546,62 @@ function tender(){
   <td class="n">${INR(t[3])}</td><td class="n">${INR(t[4])}</td><td class="dim">${esc(t[5])}</td>
   <td>${pill(t[8],t[7])}</td><td class="dim" style="white-space:normal;max-width:14rem">${esc(t[9])}</td>
   <td>${/Blocked/.test(t[9])?`<button class="btn sm" type="button" disabled title="A required document has expired">Blocked</button>`
-    :(t[7]==="Result awaited"||t[7]==="Closed")?`<span class="dim">Done</span>`
+    :(t[7]==="Result awaited"||t[7]==="Won"||t[7]==="Lost")?`<span class="dim">Done</span>`
     :`<button class="btn sm" type="button" data-act="bid" data-i="${i}">Submit the bid</button>`}</td></tr>`).join("")}</tbody></table></div></div>
  <p class="foot">Earnest money is tracked as money of yours sitting with somebody else. The Tiruppur deposit has been unrefunded for 71 days on a bid already lost, which is the kind of thing that is never chased because nobody is looking at it.</p>`;
 }
 function van(){
- return `<p class="lede">What is on each van and what is left in the Saibaba Colony workshop, against the level you set.</p>
- <div class="stat-grid">
-  <div class="kpi bad"><div class="lab">Below reorder level</div><div class="val">3</div><div class="sub">Two vans and the workshop</div></div>
-  <div class="kpi warn"><div class="lab">Powder in stock</div><div class="val">450 kg</div><div class="sub">About 75 refills of 6 kg</div></div>
-  <div class="kpi good"><div class="lab">Units out for refill</div><div class="val">38</div><div class="sub">On challan, due back in 4 days</div></div>
+ const tab=UI.invtab||"catalogue";
+ const q=(UI.invq||"").trim().toLowerCase();
+ const cat=UI.invcat||"", lowOnly=!!UI.invlow;
+ const low=CAT.filter(p=>p[5]<=p[6]);
+ const rows=CAT.map((p,i)=>({p,i})).filter(({p})=>{
+   if(cat&&p[1]!==cat) return false;
+   if(lowOnly&&!(p[5]<=p[6])) return false;
+   if(q&&![p[0],p[1],p[2]].some(v=>String(v).toLowerCase().includes(q))) return false;
+   return true;
+ });
+ const value=CAT.reduce((a,p)=>a+p[4]*p[5],0);
+ const on=!!(q||cat||lowOnly);
+ const tb=(v,lab)=>`<button class="tabb ${tab===v?"on":""}" type="button" data-act="invtab" data-v="${v}">${lab}</button>`;
+ return `<div class="stat-grid">
+  <div class="kpi"><div class="lab">Products in the catalogue</div><div class="val">${CAT.length}</div><div class="sub">Across ${CATS.length} categories</div></div>
+  <div class="kpi ${low.length?"bad":"good"}"><div class="lab">At or below reorder level</div><div class="val">${low.length}</div><div class="sub">${low.length?low[0][0]+" is the worst":"Nothing to order"}</div></div>
+  <div class="kpi"><div class="lab">Stock on hand, at cost</div><div class="val">${L(value)}</div><div class="sub">Workshop and three vans</div></div>
+  <div class="kpi"><div class="lab">Movements this week</div><div class="val">${MOVES.length}</div><div class="sub">Every one against a job or a bill</div></div>
  </div>
- <div class="card"><div class="head"><h3>Stock against level</h3><span class="note">Red means a job can fail tomorrow</span></div>
- <div class="tbl"><table><thead><tr><th>Held by</th><th>Vehicle or place</th><th>Item</th><th class="n">In hand</th><th class="n">Reorder level</th><th>Status</th><th>Do</th></tr></thead>
- <tbody>${VAN.map((v,i)=>`<tr><td>${esc(v[0])}</td><td class="dim">${esc(v[1])}</td><td>${esc(v[2])}</td><td class="n">${v[3]}</td><td class="n">${v[4]}</td><td>${pill(v[5],v[5]==="bad"?"Below level":v[5]==="warn"?"At level":"Fine")}</td><td>${v[5]==="bad"?`<button class="btn sm" type="button" data-act="po" data-i="${i}">Raise a purchase order</button>`:`<span class="dim">No action</span>`}</td></tr>`).join("")}</tbody></table></div></div>
- <p class="foot">Units taken away for refilling move out on a delivery challan and come back on the same one, so nothing is lost between the customer's wall and your workshop.</p>`;
+ <div class="card"><div class="body">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap;margin-bottom:.9rem">
+   <div class="tabs">${tb("catalogue","Product catalogue")}${tb("units","Stock by location")}${tb("movements","Movement history")}</div>
+   <div class="tools" style="margin:0;justify-content:flex-end;flex:1">
+    ${tab==="catalogue"?`<input type="search" data-inp="invq" value="${esc(UI.invq||"")}" placeholder="Product, category or HSN" style="max-width:15rem">
+     <select data-chg="invcat" aria-label="Category"><option value="">All categories</option>
+      ${CATS.map(c=>`<option${cat===c?" selected":""}>${esc(c)}</option>`).join("")}</select>
+     <button class="btn sm" type="button" data-act="invlow" style="background:${lowOnly?"var(--error)":"var(--warning-soft)"};color:${lowOnly?"#fff":"var(--warning-text)"}">${lowOnly?"Low only":"Low stock"}</button>
+     ${on?`<button class="btn quiet sm" type="button" data-act="invreset">Reset</button>`:""}
+     <button class="btn quiet sm" type="button" data-act="invexcel">Excel and bulk</button>
+     <button class="btn sm" type="button" data-act="invadd">Add product</button>`:""}
+    <button class="btn quiet sm" type="button" data-act="invxfer">Stock transfer</button>
+    <button class="btn sm" type="button" data-act="invin" style="background:var(--success)">Stock in</button>
+   </div></div>
+  ${tab==="catalogue"?(rows.length?`<div class="tbl"><table style="min-width:52rem"><thead><tr><th>Product</th><th>Category</th><th>HSN</th><th class="n">List price</th><th class="n">Cost price</th><th>In stock</th><th>Reorder</th><th>Actions</th></tr></thead>
+   <tbody>${rows.map(({p,i})=>`<tr><td style="font-weight:500">${esc(p[0])}${p[7]?' <span class="pill good" style="font-size:10px">S/N</span>':""}</td>
+    <td>${pill("flat",p[1])}</td><td class="dim">${esc(p[2])}</td>
+    <td class="n" style="font-weight:500">${INR(p[3])}</td><td class="n" style="color:var(--warning-text)">${INR(p[4])}</td>
+    <td><span class="pill ${p[5]===0?"bad":p[5]<=p[6]?"warn":"good"}">${p[5]}</span></td>
+    <td class="dim">${p[6]}</td>
+    <td>${p[5]<=p[6]?`<button class="btn sm" type="button" data-act="invpo" data-i="${i}">Raise a purchase order</button>`:'<span class="dim">No action</span>'}</td></tr>`).join("")}</tbody></table></div>`
+   :`<div class="empty">Nothing matches these filters.<div style="margin-top:.6rem"><button class="btn quiet sm" type="button" data-act="invreset">Clear filters</button></div></div>`)
+  :tab==="units"?`<div class="tbl"><table style="min-width:44rem"><thead><tr><th>Held by</th><th>Vehicle or place</th><th>Item</th><th class="n">In hand</th><th class="n">Level</th><th>Status</th><th>Action</th></tr></thead>
+   <tbody>${VAN.map((v,i)=>`<tr><td style="font-weight:500">${esc(v[0])}</td><td class="dim">${esc(v[1])}</td><td>${esc(v[2])}</td>
+    <td class="n">${v[3]}</td><td class="n">${v[4]}</td>
+    <td>${pill(v[5],v[5]==="bad"?"Below level":v[5]==="warn"?"At level":"Fine")}</td>
+    <td>${v[5]==="bad"?`<button class="btn sm" type="button" data-act="po" data-i="${i}">Raise a purchase order</button>`:'<span class="dim">No action</span>'}</td></tr>`).join("")}</tbody></table></div>`
+  :`<div class="tbl"><table style="min-width:46rem"><thead><tr><th>When</th><th>What</th><th>Item</th><th class="n">Qty</th><th>Where</th><th>Against</th></tr></thead>
+   <tbody>${MOVES.map(m=>`<tr><td class="dim">${esc(m[0])}</td><td>${pill(m[1]==="Stock in"?"good":m[1]==="Transfer"?"info":"warn",m[1])}</td>
+    <td>${esc(m[2])}</td><td class="n">${m[3]}</td><td class="dim">${esc(m[4])}</td><td class="dim" style="white-space:normal">${esc(m[5])}</td></tr>`).join("")}</tbody></table></div>`}
+ </div></div>
+ <p class="foot">Nothing leaves stock without a job or a bill against it. That is what makes the van count mean something at the end of the month, instead of being a guess.</p>`;
 }
 function supp(){
  const owed=SUPP.filter(x=>x[5]!=="Paid").reduce((a,b)=>a+b[4],0);
@@ -1474,32 +1708,54 @@ function pay(){
  <p class="foot">Ageing is counted from the due date, not the invoice date, so a 45 day customer and a 15 day customer are never compared wrongly. Old dues from before the software go in as a manual entry and age the same way.</p>`;
 }
 function rep(){
- const f=(UI.period||"12")==="12"?1:(UI.period==="6"?0.52:0.26);
- const bars=[["Refilling",1840000],["AMC contracts",1120000],["Hydrant and sprinkler",780000],["Alarm systems",430000],["New supply",390000]].map(b=>[b[0],Math.round(b[1]*f)]);
- const max=Math.max(...bars.map(b=>b[1]));
- return `<p class="lede">Where the money came from, which engineer carried it and which work is actually worth doing. Any of these can be scheduled to reach you on WhatsApp every Monday.</p>
+ const SHORT={open:"Open",assigned:"Assigned",in_progress:"In progress",waiting_customer:"Waiting",pending_approval:"Approval",escalated:"Escalated",on_hold:"On hold",resolved:"Resolved",reopened:"Reopened"};
+ const byStatus=TSTAT.filter(x=>x!=="closed").map(x=>[SHORT[x],TICKETS.filter(t=>t[4]===x).length,"var(--c1)"])
+   .filter(r=>r[1]>0);
+ const open=PAY.filter(p=>payLeft(p)>0);
+ const bk=f=>open.filter(f).reduce((a,p)=>a+payLeft(p),0);
+ const aging=[["Not due",bk(p=>p[6]<=0),"var(--text-muted)"],["1 to 30 days",bk(p=>p[6]>0&&p[6]<=30),"var(--success)"],
+  ["31 to 60 days",bk(p=>p[6]>30&&p[6]<=60),"var(--warning)"],["Over 60 days",bk(p=>p[6]>60),"var(--error)"]];
+ const kinds=[["Refill and service jobs",TICKETS.filter(t=>/Routine service|Installation|refill/i.test(t[2])).length,"var(--c1)"],
+  ["Breakdown calls",TICKETS.filter(t=>!/Routine service|Installation|refill/i.test(t[2])).length,"var(--c2)"]];
+ const contracts=[["AMC",LEAK.filter(r=>r[5]==="in_warranty").length,"var(--c1)"],
+  ["Rate contracts, live",RATES.filter(r=>r[5]==="good").length,"var(--c2)"],
+  ["Rate contracts, ending",RATES.filter(r=>r[5]==="warn").length,"var(--c3)"],
+  ["Expired",RATES.filter(r=>r[5]==="bad").length,"var(--c5)"]];
+ const sales=[["May",286000],["Jun",412000],["Jul",338000],["Aug",461000],["Sep",394000],["Oct",517000]]
+   .map(x=>[x[0],x[1],"var(--c1)"]);
+ const invoiced=sales.reduce((a,x)=>a+x[1],0);
+ const outstanding=open.reduce((a,p)=>a+payLeft(p),0);
+ const acv=LEAK.filter(r=>r[5]==="in_warranty").reduce((a,r)=>a+r[7],0);
+ const money=(v,ax)=>ax?(v>=100000?(v/100000).toFixed(v>=1000000?0:1)+"L":v>=1000?Math.round(v/1000)+"k":String(Math.round(v))):INR(Math.round(v));
+ return `<div style="display:flex;justify-content:flex-end;margin-bottom:1rem">
+  <button class="btn" type="button" data-act="repxl" style="background:var(--success)">Export to Excel</button></div>
  <div class="stat-grid">
-  <div class="kpi good"><div class="lab">Revenue, 12 months</div><div class="val">${L(4560000)}</div><div class="sub">Up 18% on the year before</div></div>
-  <div class="kpi"><div class="lab">From recurring work</div><div class="val">65%</div><div class="sub">Refilling and AMC together</div></div>
-  <div class="kpi warn"><div class="lab">Gross margin</div><div class="val">41%</div><div class="sub">Lowest on new supply at 22%</div></div>
-  <div class="kpi"><div class="lab">Revenue per engineer</div><div class="val">${L(1520000)}</div><div class="sub">Three engineers</div></div>
+  <div class="kpi"><div class="lab">Total service calls</div><div class="val">${TICKETS.length}</div></div>
+  <div class="kpi"><div class="lab">Total outstanding</div><div class="val" style="font-size:var(--text-lg)">${INR(outstanding)}</div></div>
+  <div class="kpi"><div class="lab">Invoiced sales, last 6 months</div><div class="val" style="font-size:var(--text-lg)">${INR(invoiced)}</div><div class="sub">Before GST</div></div>
+  <div class="kpi"><div class="lab">Active contracts</div><div class="val">${contracts[0][1]+contracts[1][1]}</div></div>
+  <div class="kpi good"><div class="lab">Annual contract value</div><div class="val" style="font-size:var(--text-lg)">${INR(acv)}</div></div>
  </div>
- <div class="seg" style="margin-bottom:1rem">${[["12","Last 12 months"],["6","Last 6 months"],["3","Last quarter"]].map(([v,l])=>`<button type="button" data-act="period" data-v="${v}" aria-pressed="${(UI.period||"12")===v}">${l}</button>`).join("")}</div>
- <div class="card"><div class="head"><h3>Revenue by kind of work</h3><span class="note">${(UI.period||"12")==="12"?"Last twelve months":(UI.period==="6"?"Last six months":"Last quarter")}</span></div>
- <div class="body">${bars.map(b=>`
-   <div style="margin-bottom:.7rem">
-     <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);margin-bottom:.25rem">
-       <span>${esc(b[0])}</span><span style="font-variant-numeric:tabular-nums;color:var(--text-muted)">${INR(b[1])}</span></div>
-     <div style="height:9px;background:var(--bg-subtle);border-radius:999px;overflow:hidden">
-       <div style="height:100%;width:${(b[1]/max*100).toFixed(1)}%;background:var(--brand);border-radius:999px"></div></div>
-   </div>`).join("")}</div></div>
- <div class="card"><div class="head"><h3>Scheduled reports</h3><span class="note">Delivered without anyone running them</span></div>
- <div class="tbl"><table><thead><tr><th>Report</th><th>Goes to</th><th>When</th><th>How</th><th>Last sent</th></tr></thead><tbody>
-  <tr><td>Units past refill date</td><td>Owner</td><td>Every Monday 8:00 AM</td><td>WhatsApp and email</td><td class="dim">20 Oct 2026</td></tr>
-  <tr><td>AMC leakage and renewals due</td><td>Owner</td><td>1st of the month</td><td>Email, Excel attached</td><td class="dim">01 Oct 2026</td></tr>
-  <tr><td>Outstanding over 30 days</td><td>Accounts</td><td>Every Friday 5:00 PM</td><td>WhatsApp</td><td class="dim">24 Oct 2026</td></tr>
-  <tr><td>Documents expiring in 30 days</td><td>Owner</td><td>Every Monday 8:00 AM</td><td>WhatsApp</td><td class="dim">20 Oct 2026</td></tr>
- </tbody></table></div></div>`;
+ <div class="cgrid">
+  <div class="card" style="margin:0"><div class="body">
+   <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">Service calls by status</h3>
+   ${svgBars(byStatus)}</div></div>
+  <div class="card" style="margin:0"><div class="body">
+   <h3 style="margin:0;font-size:var(--text-base);font-weight:600">Money owed, by how late it is</h3>
+   <p class="dim" style="margin:.2rem 0 .8rem;font-size:var(--text-sm)">Sales invoices, service invoices and dues carried over from the old book together.</p>
+   ${svgBars(aging,money)}${legend(aging.map(a=>[a[0],INR(a[1]),a[2]]))}</div></div>
+  <div class="card" style="margin:0"><div class="body">
+   <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">Scheduled work against breakdowns</h3>
+   ${svgDonut(kinds,"service calls")}${legend(kinds)}</div></div>
+  <div class="card" style="margin:0"><div class="body">
+   <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">Contracts by type</h3>
+   ${svgDonut(contracts.filter(c=>c[1]>0),"contracts")}${legend(contracts)}</div></div>
+  <div class="card wide" style="margin:0"><div class="body">
+   <h3 style="margin:0;font-size:var(--text-base);font-weight:600">Invoiced sales, before GST, last six months</h3>
+   <p class="dim" style="margin:.2rem 0 .8rem;font-size:var(--text-sm)">Taken from the bills actually raised in each month, not from the value typed on an order.</p>
+   ${svgBars(sales,money)}</div></div>
+ </div>
+ <p class="foot">Every figure here is counted off the same records the rest of the screens work from. Nothing is typed into a report, so a report and a screen can never disagree.</p>`;
 }
 function scope(){
  return `<p class="lede">Everything above is one system, built for how a fire safety firm actually works, and handed over running with your own data inside it.</p>
@@ -1664,41 +1920,50 @@ function qr(){
  <p class="foot">This is the cheapest lead source you will ever have. The customer is standing in front of the unit, he can see the date has passed, and it takes him one tap to ask you to come. It also quietly tells every visitor to that building who maintains the fire equipment.</p>`;
 }
 function rules(){
- return `<p class="lede">Who gets an enquiry, decided the second it arrives. No enquiry sits in a shared inbox waiting for somebody to notice it.</p>
- <div class="card"><div class="head"><h3>Routing rules</h3><span class="note">Checked top to bottom, first match wins</span></div>
- <div class="tbl"><table><thead><tr><th>Rule</th><th>When</th><th>Goes to</th><th>State</th><th>Change</th></tr></thead>
- <tbody>${RULES.map(r=>`<tr><td>${esc(r[0])}</td><td class="dim">${esc(r[1])}</td><td>${esc(r[2])}</td>
-  <td>${pill("good","Active, new leads are routed by this rule")}</td><td><button class="btn ghost sm" type="button" data-act="rule">Change the rule</button></td></tr>`).join("")}</tbody></table></div></div>
- <div class="card"><div class="head"><h3>If nobody touches it</h3><span class="note">Escalation</span></div>
- <div class="body"><div style="font-size:var(--text-sm);line-height:2;color:var(--text-secondary)">
-  After <b>30 minutes</b> the owner gets a WhatsApp naming the enquiry and who it went to.<br>
-  After <b>2 hours</b> it is reassigned to the next person in the rule.<br>
-  After <b>1 day</b> it appears on the Today screen in red and stays there until it is answered.
- </div></div></div>
- <p class="foot">The 41 minute average first response on the inbox screen is this, not willpower.</p>`;
+ return `<div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem">
+  <div><h2 style="margin:0;font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em">Lead routing</h2>
+   <p class="lede" style="margin:.25rem 0 0">A new enquiry with no owner goes to the first rule that matches. With several people on a rule, enquiries go to them in turn.</p></div>
+  <button class="btn" type="button" data-act="rulenew" style="background:#0F172A">New rule</button></div>
+ <div class="card" style="margin-top:1.1rem"><div class="tbl"><table style="min-width:48rem"><thead><tr><th style="text-align:center;width:4rem">Order</th><th>Rule</th><th>Matches</th><th>Goes to</th><th>Active</th><th class="n">Action</th></tr></thead>
+ <tbody>${RULES.map((r,i)=>`<tr${r[6]?"":' style="opacity:.6"'}><td style="text-align:center;font-variant-numeric:tabular-nums">${r[0]}</td>
+  <td style="font-weight:500">${esc(r[1])}</td>
+  <td><div class="dim">${esc(r[2])}</div>${esc(r[3])}</td>
+  <td>${esc(r[4])}${r[5]?'<div class="dim">In turn</div>':""}</td>
+  <td><button class="sw ${r[6]?"on":""}" type="button" data-act="ruletoggle" data-i="${i}" role="switch" aria-checked="${r[6]}" aria-label="Rule ${esc(r[1])} active"><span></span></button></td>
+  <td class="n"><button class="btn quiet sm" type="button" data-act="ruleedit" data-i="${i}">Change</button></td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">The first rule that matches wins, so the order matters. Anything else sits at the bottom and catches what the rules above did not, which is why an enquiry can never end up with nobody.</p>`;
 }
 function src(){
- const rows=SRC.map(r=>[...r, r[1]?Math.round(r[3]/r[1]*100):0]).sort((a,b)=>b[5]-a[5]);
- const max=Math.max(...rows.map(r=>r[5]));
- const tv=rows.reduce((a,b)=>a+b[4],0);
- return `<p class="lede">Which channels actually turn into paid work. Volume and value are not the same thing, and the cheapest source here is the one on your own equipment.</p>
+ const tot=SRC.reduce((a,r)=>[a[0]+r[1],a[1]+r[2],a[2]+r[3],a[3]+r[4]],[0,0,0,0]);
+ const conv=tot[0]?Math.round(tot[2]/tot[0]*100):0;
+ const emd=TENDERS.filter(t=>/Paid|Refund/.test(t[5])).reduce((a,b)=>a+b[4],0);
+ const chase=TENDERS.filter(t=>/Refund/.test(t[5])).reduce((a,b)=>a+b[4],0);
+ const bids=TENDERS.length, decided=TENDERS.filter(t=>t[7]==="Won"||t[7]==="Lost").length;
+ const won=TENDERS.filter(t=>t[7]==="Won").length;
+ const tile=(lab,val,sub,tone)=>`<div class="tile"><div class="top"><div class="lab">${lab}</div></div>
+   <div class="val"${tone?` style="color:var(--${tone})"`:""}>${val}</div>${sub?`<div class="sub">${sub}</div>`:""}</div>`;
+ return `<h2 style="margin:0;font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em">Conversion and win rate</h2>
+ <p class="lede" style="margin:.25rem 0 1.1rem">Where enquiries come from, which authorities you win, and how much of your own money is sitting with them as earnest deposit.</p>
  <div class="stat-grid">
-  <div class="kpi good"><div class="lab">Best converting source</div><div class="val">66%</div><div class="sub">Spotted by an engineer on a visit</div></div>
-  <div class="kpi"><div class="lab">Highest value source</div><div class="val">${L(2140000)}</div><div class="sub">Tender portal, 9 wins</div></div>
-  <div class="kpi bad"><div class="lab">Worst converting</div><div class="val">8%</div><div class="sub">Justdial, 74 enquiries, 6 wins</div></div>
-  <div class="kpi"><div class="lab">Won value, 12 months</div><div class="val">${L(tv)}</div><div class="sub">Across all sources</div></div>
+  ${tile("Enquiries",tot[0],conv+" percent converted")}
+  ${tile("Deals won",tot[2],"")}
+  ${tile("Tender win rate",decided?Math.round(won/decided*100)+"%":"No results yet",decided?decided+" of "+bids+" bids decided":bids+" bids entered, none decided yet")}
+  ${tile("EMD with authorities",L(emd),chase?L(chase)+" refundable now":"","warning")}
  </div>
- <div class="card"><div class="head"><h3>Conversion by source</h3><span class="note">Last twelve months</span><span class="right">Enquiry to won</span></div>
- <div class="tbl"><table><thead><tr><th>Source</th><th class="n">Enquiries</th><th class="n">Quoted</th><th class="n">Won</th><th>Conversion</th><th class="n">Won value</th></tr></thead>
- <tbody>${rows.map(r=>`<tr><td>${esc(r[0])}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td class="n">${r[3]}</td>
-  <td><div style="display:flex;align-items:center;gap:.5rem"><div style="flex:0 0 70px;height:7px;background:var(--bg-subtle);border-radius:999px;overflow:hidden">
-   <div style="height:100%;width:${(r[5]/max*100).toFixed(0)}%;background:${r[5]>=40?"var(--success)":r[5]>=20?"var(--warning)":"var(--error)"};border-radius:999px"></div></div>
-   <span style="font-variant-numeric:tabular-nums;font-size:var(--text-xs)">${r[5]}%</span></div></td>
-  <td class="n">${INR(r[4])}</td></tr>`).join("")}</tbody>
- <tfoot><tr><td colspan="5">Won value, all sources</td><td class="n">${INR(tv)}</td></tr></tfoot></table></div></div>
- <p class="foot">Justdial brought 74 enquiries and 6 jobs. Your engineers spotted 29 things on site and closed 19 of them. That is worth knowing before you renew a directory listing.</p>`;
+ <div class="card"><div class="head"><h3>Lead source and conversion</h3>
+  <span class="right dim">Counted off the enquiry, so a source that brings leads nobody quotes still shows up.</span></div>
+ <div class="tbl"><table style="min-width:50rem"><thead><tr><th>Source</th><th class="n">Enquiries</th><th class="n">Quoted</th><th class="n">Won</th><th class="n">Lost</th><th class="n">Conversion</th><th class="n">Value won</th></tr></thead>
+ <tbody>${SRC.map(r=>{ const c=r[1]?Math.round(r[3]/r[1]*100):0;
+   return `<tr><td style="font-weight:500">${esc(r[0])}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td>
+   <td class="n">${r[3]}</td><td class="n">${r[1]-r[3]}</td>
+   <td class="n"><span style="color:${c>=25?"var(--success)":c>=12?"var(--warning)":"var(--error)"};font-weight:600">${c}%</span></td>
+   <td class="n">${INR(r[4])}</td></tr>`; }).join("")}</tbody>
+ <tfoot><tr><td>All sources</td><td class="n">${tot[0]}</td><td class="n">${tot[1]}</td><td class="n">${tot[2]}</td><td class="n">${tot[0]-tot[2]}</td><td class="n">${conv}%</td><td class="n">${INR(tot[3])}</td></tr></tfoot></table></div></div>
+ <div class="card"><div class="body">
+  <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">Value won by source</h3>
+  ${svgBars(SRC.slice().sort((a,b)=>b[4]-a[4]).slice(0,6).map(r=>[r[0],r[4],"var(--c1)"]),(v,ax)=>ax?(v>=100000?(v/100000).toFixed(v>=1000000?0:1)+"L":Math.round(v/1000)+"k"):INR(v))}</div></div>
+ <p class="foot">The QR stickers and the field visits convert best because the man is already standing in front of the equipment. The directories bring the most enquiries and the fewest orders, which is worth knowing before paying for another year of them.</p>`;
 }
-
 const SCREEN={today,leak,ai,enq,qr,rules,src,reg,sites,docs,tick,route,field,wa,quote,rate,tender,van,supp,inv,pay,rep,settings,scope};
 const TITLE={today:"Today",leak:"AMC Leakage",ai:"Assistant",enq:"Enquiry inbox",qr:"QR stickers",
  rules:"Lead routing",src:"Where leads come from",reg:"Equipment register",sites:"Sites and contacts",
@@ -1736,7 +2001,7 @@ const QTLIST=[["QT/26-27/0914","Annur Cold Storage","22 Oct 2026",96000,"Accepte
  ["QT/26-27/0912","Kalapatti Packaging","17 Oct 2026",96000,"Sent","warn"],
  ["QT/26-27/0911","Pollachi Transport Co","11 Oct 2026",28000,"Lost at price","bad"]];
 const JOB={step:1,scanned:0,done:false,inv:1256};
-const TABLES={SITES,TICKETS,PAY,ENQ,DOCS,TENDERS,VAN,SUPP,RATES,LINES,LEAK,UNBILLED};
+const TABLES={SITES,TICKETS,PAY,ENQ,DOCS,TENDERS,VAN,SUPP,RATES,LINES,LEAK,UNBILLED,CAT,RULES};
 const SEED=JSON.parse(JSON.stringify(TABLES));
 const QLSEED=JSON.parse(JSON.stringify(QLINES));
 const STORE="muthu.demo.v3";
@@ -1989,6 +2254,35 @@ const ACT={
  tkview:d=>{ UI.tv=d.v; persist(); show("tick"); },
  siteopen:d=>{ UI.site=+d.i; UI.siteopen=1; persist(); show("sites"); },
  tkwset:d=>{ UI.tkw=d.v; persist(); show("tender"); },
+ invtab:d=>{ UI.invtab=d.v; persist(); show("van"); },
+ ruletoggle:d=>{ const r=RULES[+d.i]; r[6]=!r[6]; persist(); show("rules");
+   toast(r[6]?"good":"warn",r[6]?"Rule on":"Rule off",r[1]+(r[6]?" is routing enquiries again.":" has stopped. Enquiries it used to catch fall through to the rule below.")); },
+ ruleedit:d=>{ const r=RULES[+d.i];
+   modalHTML("Change the rule: "+r[1],`<div class="fgrid">
+    <label>Order<input value="${r[0]}" disabled></label>
+    <label>Matches on<input value="${esc(r[2])}" disabled></label>
+    <label>Condition<input value="${esc(r[3])}" disabled></label>
+    <label>Goes to<input value="${esc(r[4])}" disabled></label></div>
+    <p class="dim" style="margin:.9rem 0 0">Fixed on the demo. On your own system every one of these is yours: the order, the condition, and which of your people it goes to. Put two or more names on a rule and the enquiries go to them in turn.</p>`,"Close"); },
+ rulenew:()=>modal("New rule","Give it an order, a condition, and the people it goes to. The first rule that matches wins, so a new rule usually goes above Anything else and below the ones that are more specific than it.","Understood"),
+ vexport:()=>toast("good","Exported","Every visit with its customer, staff, purpose, outcome and whether the GPS matched the site."),
+ vrecord:()=>modal("Record a visit","The engineer presses this on his phone at the gate. It takes his exact location and a photo, and logs the visit against the customer whose site he is standing in. That is also his attendance for the day.","Understood"),
+ vpast:()=>modal("Log a past visit","For the genuine cases only: a dead phone, a man on leave, a visit somebody else covered. It is never marked GPS verified, so a typed visit and a real one are never confused.","Understood"),
+ repxl:()=>toast("good","Exported to Excel","One sheet per chart, with the rows behind each figure, so anything here can be checked by hand."),
+ wapick:d=>{ UI.wac=d.n; persist(); show("wa"); },
+ wasend:d=>{ const c=CUSTS().find(x=>x.name===d.n); const j=waJobs(c)[+d.i]; if(!j) return;
+   WAMSG=j[2]; window.open("https://wa.me/?text="+encodeURIComponent(j[2]),"_blank"); },
+ wacopy2:d=>{ const c=CUSTS().find(x=>x.name===d.n); const j=waJobs(c)[+d.i]; if(!j) return;
+   WAMSG=j[2]; ACT.wacopy(); },
+ invlow:()=>{ if(UI.invlow) delete UI.invlow; else UI.invlow=1; persist(); show("van"); },
+ invreset:()=>{ delete UI.invq; delete UI.invcat; delete UI.invlow; persist(); show("van"); toast("flat","Filters cleared",""); },
+ invpo:d=>{ const p=CAT[+d.i]; const qty=p[6]*3-p[5];
+   p[5]=p[6]*3; persist(); show("van");
+   toast("good","Purchase order raised",qty+" of "+p[0]+". It will be in the workshop before the week is out."); },
+ invadd:()=>modal("Add a product","Name, category, HSN, list price, cost price and the reorder level. Mark it tracked by serial number and every single piece is then followed from the day it arrives to the wall it hangs on.","Understood"),
+ invexcel:()=>modal("Excel and bulk","Download the whole catalogue to Excel, add several products at once, upload products from a sheet, or import stock with its serial numbers. Each one has a template so the columns are never guessed at.","Understood"),
+ invxfer:()=>modal("Stock transfer","Move stock between the workshop and a van, or between two vans. Both sides change at once, so the total never drifts and the van count is the van count.","Understood"),
+ invin:()=>modal("Stock in","Goods arriving from a supplier, against the purchase order they came on. Serial numbered items are scanned in one by one, which is what makes the register true later.","Understood"),
  suppbill:()=>modal("Record a supplier bill","Supplier, bill number, date, amount and the order it is against. Where the goods were received into stock, the amount fills in from what actually arrived, so a short delivery is never paid in full.","Understood"),
  suppgrn:d=>{ const u=UNBILLED[+d.i]; if(!u) return;
    SUPP.unshift([u[0],"Coimbatore","Against "+u[1],"30 days",u[4],"Due in 30 days","warn","SB-"+(4480+ +d.i),-30]);
@@ -2064,7 +2358,7 @@ const ACT={
     ()=>toast("good","Copied","Paste it into WhatsApp."),
     ()=>toast("warn","Could not copy","Select the message above and copy it by hand.")); }
    catch(e){ toast("warn","Could not copy","Select the message above and copy it by hand."); } },
- rule:()=>toast("warn","Rules are read only in the demo","On your own system this opens the rule and lets you change who it routes to."),
+
  aiok:()=>{ let n=0; LEAK.filter(r=>r[5]!=="in_warranty"&&!r.offered).forEach(r=>{ r.offered=(r[8]?"QT/26-27/0":"AMC/26-27/0")+(++SEQ.q); n++; });
    persist(); show("leak"); toast("good",n+" drafted","Every one is waiting for you on the leakage screen. Nothing has been sent."); },
  aino:()=>toast("flat","Drafts discarded","Nothing was sent and nothing was changed."),
@@ -2126,8 +2420,6 @@ const ACT={
     +his.map((r,i)=>(i+1)+". "+r[0]+"  "+r[1]+", "+r[2]+"\n   "+r[3]+"  ("+r[4]+")").join("\n")
     +"\n\nRoad distance "+his.reduce((a,r)=>a+parseFloat(r[6]),0).toFixed(0)+" km in this order. "
     +"Check in at the gate of each one, scan the units, take the signature.\n\n"+CO.n); },
- warelease:()=>{ UI.waSent=true; persist(); show("wa"); toast("good","Four messages released","They went out as four separate WhatsApps, not a broadcast, so each one reads as a personal message."); },
- wahold:()=>toast("flat","Held","Nothing went out. They will sit here until you release them."),
  renewrate:d=>{ const r=RATES[+d.i]; r[3]=today2(); r[4]="31 Mar 2028"; r[5]="good";
    const c=CONTRACT[r[0]]; if(c){ c.live=true; c.to="31 Mar 2028"; if(QT.cust===r[0]) applyCustomer(r[0]); }
    persist(); show("rate");
@@ -2184,6 +2476,8 @@ const CHG={
    toast("good","Template loaded","The usual lines are in. Change the quantities, then save."); },
  qaddcharge:(i,v)=>{ if(!v) return; const[n,a]=v.split("|"); QT.charges.push([n,+a]); persist(); show("quote");
    toast("good","Charge added",n+", "+INR(+a)+"."); },
+ invcat:(i,v)=>{ UI.invcat=v; persist(); show("van"); },
+ vstaff:(i,v)=>{ UI.vstaff=v; persist(); show("route"); },
  rcc:(i,v)=>{ UI.rcc=v; delete UI.rcdone; persist(); show("rate"); },
  rcp:(i,v)=>{ UI.rcp=v; delete UI.rcdone; persist(); show("rate"); },
 
@@ -2208,6 +2502,15 @@ const redrawQuote=()=>{ const pos=window.scrollY; const a=document.activeElement
 const INP={
  qqty:(v,i)=>{ QLINES[i].qty=Math.max(0,parseInt(v||"0",10)); persist(); redrawQuote(); },
  sesscode:v=>{ SCODE=v; },
+ waq:v=>{ UI.waq=v; persist(); const pos=window.scrollY;
+   document.getElementById("page").innerHTML=SCREEN.wa(); afterRender("wa"); window.scrollTo(0,pos);
+   const el=document.querySelector('[data-inp="waq"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } },
+ vq:v=>{ UI.vq=v; persist(); const pos=window.scrollY;
+   document.getElementById("page").innerHTML=SCREEN.route(); afterRender("route"); window.scrollTo(0,pos);
+   const el=document.querySelector('[data-inp="vq"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } },
+ invq:v=>{ UI.invq=v; persist(); const pos=window.scrollY;
+   document.getElementById("page").innerHTML=SCREEN.van(); afterRender("van"); window.scrollTo(0,pos);
+   const el=document.querySelector('[data-inp="invq"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } },
  tkw:v=>{ UI.tkw=v; persist(); const pos=window.scrollY;
    document.getElementById("page").innerHTML=SCREEN.tender(); afterRender("tender"); window.scrollTo(0,pos);
    const el=document.querySelector('[data-inp="tkw"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } },
@@ -2275,9 +2578,9 @@ const HINTS={
  sites:"Press a customer name to open everything you have ever done there. New quotation prices from their own rate contract.",
  docs:"Press Record renewal on the IS 2190 certificate, then open Tenders and see what changed.",
  tick:"Reassign an engineer, or close a job and watch the counts above move.",
- route:"Tomorrow in road order, 69 km instead of 104.",
+ route:"Filter by engineer, then look at tomorrow below. Send his day puts the whole run on his WhatsApp in road order.",
  field:"Work the job through. Check in, scan, fill the card, then sign in the box with your finger.",
- wa:"These are drafted from the due dates. Nothing goes out until a person releases the batch.",
+ wa:"Pick a customer on the left. Everything that needs saying to them is drafted and waiting, and nothing goes until you press it.",
  quote:"Press Amend, then change a quantity, a rate or a discount. Push one discount above 10 percent and see what happens.",
  rate:"Tiruppur expired in March. Anything quoted to them since then was at the wrong price.",
  tender:"The Pollachi bid is blocked by an expired certificate. The compliance vault can unblock it.",
@@ -2294,7 +2597,7 @@ function badges(){
     tick:TICKETS.filter(t=>t[7]==="overdue"||t[4]==="escalated").length,
     docs:DOCS.filter(d=>d[5]==="bad").length,
     tender:TENDERS.filter(t=>/Blocked/.test(t[9])).length,
-    van:VAN.filter(v=>v[5]==="bad").length,
+    van:CAT.filter(p=>p[5]<=p[6]).length,
     leak:LEAK.filter(r=>r[5]!=="in_warranty"&&!r.offered).length};
   document.querySelectorAll("#nav button").forEach(b=>{
     const n=counts[b.dataset.k]; let el=b.querySelector(".badge");
