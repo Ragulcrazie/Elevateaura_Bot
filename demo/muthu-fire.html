@@ -1,0 +1,1665 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Demonstration workspace, Muthu Fire Engineering Co.">
+<title>Muthu Fire Operations</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<style>
+/* Aura Business design tokens, Aura Light and Dark, taken from the product. */
+:root{
+  --radius-card:14px; --radius-input:10px; --radius-button:10px;
+  --text-xs:11px; --text-sm:13px; --text-base:14px; --text-md:16px; --text-lg:20px; --text-xl:24px;
+  --track-caps:.04em; --sidebar-w:256px; --header-h:56px; --card-pad:20px;
+  --bg-canvas:#DDE8E0; --bg-sidebar:#E6F0E9; --bg-sidebar-hover:#D5E5DA; --bg-header:#EDF4EF;
+  --bg-card:#FFFFFF; --bg-subtle:#EEF5F0; --bg-input:#FFFFFF;
+  --border-soft:#CCDBD2; --border-strong:#AEC2B5;
+  --text-primary:#111827; --text-secondary:#4B5563; --text-muted:#6B7280; --section-head:#6B7280;
+  --brand:#047857; --brand-dark:#065F46; --brand-light:#D1FAE5; --brand-soft:rgba(4,120,87,.08);
+  --success:#15803D; --success-soft:#E7F6EC; --success-text:#14532D;
+  --warning:#B45309; --warning-soft:#FDF3E3; --warning-text:#7C3E0B;
+  --error:#B91C1C;   --error-soft:#FCEDED;   --error-text:#7F1D1D;
+  --info:#1D4ED8;    --info-soft:#EAF0FE;    --info-text:#1E3A8A;
+  --accent-alt:#6D28D9;
+  --shadow-card:0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.05);
+  --shadow-pop:0 10px 28px -14px rgba(16,24,40,.22), 0 2px 6px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg-canvas:#12161B; --bg-sidebar:#161B21; --bg-sidebar-hover:#1D242C; --bg-header:#161B21;
+    --bg-card:#171D24; --bg-subtle:#1A2027; --bg-input:#161C22;
+    --border-soft:#262E37; --border-strong:#36404A;
+    --text-primary:#E8EDF2; --text-secondary:#B7C2CD; --text-muted:#8C98A4; --section-head:#8C98A4;
+    --brand:#10B981; --brand-dark:#059669; --brand-light:#10291F; --brand-soft:rgba(16,185,129,.12);
+    --success:#34D399; --success-soft:#10291A; --success-text:#6EE7A8;
+    --warning:#E3B341; --warning-soft:#2A1F0E; --warning-text:#E3B341;
+    --error:#F08A8A;   --error-soft:#2C1414;   --error-text:#F08A8A;
+    --info:#7DA6F5;    --info-soft:#15213A;    --info-text:#7DA6F5;
+    --accent-alt:#A78BFA;
+    --shadow-card:0 1px 2px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.35);
+    --shadow-pop:0 10px 28px -14px rgba(0,0,0,.7), 0 2px 6px rgba(0,0,0,.4);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg-canvas:#12161B; --bg-sidebar:#161B21; --bg-sidebar-hover:#1D242C; --bg-header:#161B21;
+  --bg-card:#171D24; --bg-subtle:#1A2027; --bg-input:#161C22;
+  --border-soft:#262E37; --border-strong:#36404A;
+  --text-primary:#E8EDF2; --text-secondary:#B7C2CD; --text-muted:#8C98A4; --section-head:#8C98A4;
+  --brand:#10B981; --brand-dark:#059669; --brand-light:#10291F; --brand-soft:rgba(16,185,129,.12);
+  --success:#34D399; --success-soft:#10291A; --success-text:#6EE7A8;
+  --warning:#E3B341; --warning-soft:#2A1F0E; --warning-text:#E3B341;
+  --error:#F08A8A;   --error-soft:#2C1414;   --error-text:#F08A8A;
+  --info:#7DA6F5;    --info-soft:#15213A;    --info-text:#7DA6F5;
+  --accent-alt:#A78BFA;
+  --shadow-card:0 1px 2px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.35);
+  --shadow-pop:0 10px 28px -14px rgba(0,0,0,.7), 0 2px 6px rgba(0,0,0,.4);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,-apple-system,system-ui,sans-serif;margin:0;color:var(--text-primary);
+  background:var(--bg-canvas);font-size:var(--text-base);line-height:1.5;-webkit-text-size-adjust:100%}
+.ribbon{background:var(--warning-soft);color:var(--warning-text);border-bottom:1px solid var(--border-soft);font-size:var(--text-xs);font-weight:500}
+.ribbon div{padding:.4rem max(16px,env(safe-area-inset-right,0px)) .4rem max(16px,env(safe-area-inset-left,0px))}
+.app{display:flex;min-height:100vh}
+aside{width:var(--sidebar-w);flex-shrink:0;display:flex;flex-direction:column;background:var(--bg-sidebar);border-right:1px solid var(--border-soft)}
+.logo{padding:0 1rem;height:var(--header-h);border-bottom:1px solid var(--border-soft);display:flex;align-items:center;gap:.75rem}
+.logo .mark{width:36px;height:36px;border-radius:10px;background:#fff;display:grid;place-items:center;flex-shrink:0;font-weight:700;color:#F5A623;font-size:17px;box-shadow:0 1px 2px rgba(16,24,40,.12)}
+.logo b{display:block;font-size:var(--text-sm);font-weight:700;color:#F5A623;line-height:1.3}
+.logo span{display:block;font-size:var(--text-xs);color:#94A3B8}
+nav{flex:1;overflow-y:auto;padding:.5rem 0}
+.grp{margin-bottom:.25rem}
+.grp>p{margin:0;padding:.5rem 1rem;font-size:var(--text-xs);font-weight:600;letter-spacing:.025em;text-transform:uppercase;color:var(--section-head);display:flex;align-items:center;gap:.5rem}
+.grp>p svg{width:14px;height:14px;opacity:.7}
+nav button{width:100%;text-align:left;display:flex;align-items:center;gap:.75rem;font:400 var(--text-sm)/1.4 Inter,sans-serif;
+  padding:.5rem 2.25rem;border:0;border-left:3px solid transparent;background:transparent;color:var(--text-secondary);cursor:pointer;transition:background 120ms}
+nav button:hover{background:var(--bg-sidebar-hover);color:var(--text-primary)}
+nav button[aria-current="true"]{padding-left:calc(2.25rem - 3px);border-left-color:var(--brand);color:var(--brand);font-weight:600;background:var(--brand-soft)}
+nav button:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
+nav button .ico{width:16px;height:16px;flex-shrink:0;margin-left:-1.1rem}
+nav button .badge{margin-left:auto;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:#EF4444;color:#fff;font-size:10px;font-weight:700;line-height:18px;text-align:center}
+main{flex:1;min-width:0;display:flex;flex-direction:column}
+header.bar{background:var(--bg-header);border-bottom:1px solid var(--border-soft);height:var(--header-h);display:flex;align-items:center;gap:.75rem;position:sticky;top:0;z-index:10;
+  padding-right:max(16px,env(safe-area-inset-right,0px));padding-left:max(16px,env(safe-area-inset-left,0px))}
+header.bar h1{font-size:var(--text-md);font-weight:600;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search{margin-left:auto;display:flex;align-items:center;gap:.5rem;background:var(--bg-input);border:1px solid var(--border-soft);border-radius:var(--radius-input);padding:.35rem .6rem;color:var(--text-muted);font-size:var(--text-sm);max-width:15rem;flex:1}
+.who{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+.who .av{width:30px;height:30px;border-radius:999px;background:var(--brand-light);color:var(--brand);display:grid;place-items:center;font-size:var(--text-xs);font-weight:700}
+.who .nm{font-size:var(--text-xs);line-height:1.3}
+.who .nm b{display:block;font-size:var(--text-sm);font-weight:600}
+.who .nm span{color:var(--text-muted)}
+@media (max-width:1023px){
+  .app{flex-direction:column}
+  aside{width:auto;border-right:0;border-bottom:1px solid var(--border-soft)}
+  .logo{padding-left:max(16px,env(safe-area-inset-left,0px))}
+  nav{display:flex;overflow-x:auto;padding:0}
+  .grp{display:flex;margin:0}
+  .grp>p{display:none}
+  nav button{width:auto;white-space:nowrap;border-left:0;border-bottom:3px solid transparent;padding:.7rem .8rem}
+  nav button[aria-current="true"]{padding-left:.8rem;border-left:0;border-bottom-color:var(--brand)}
+  nav button .ico{margin-left:0}
+  .search{display:none}
+}
+.page{padding:1.25rem max(16px,env(safe-area-inset-right,0px)) 2.5rem max(16px,env(safe-area-inset-left,0px));max-width:1400px;width:100%}
+.lede{color:var(--text-secondary);font-size:var(--text-sm);margin:0 0 1.1rem;max-width:72ch}
+h2.sec{font-size:var(--text-sm);font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.025em;margin:1.4rem 0 .6rem}
+h2.sec:first-of-type{margin-top:0}
+.stat-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));margin-bottom:1.5rem}
+.kpi{background:var(--bg-card);border:1px solid var(--border-soft);border-radius:var(--radius-card);padding:var(--card-pad);box-shadow:var(--shadow-card);overflow:hidden;min-width:0}
+.kpi .lab{font-size:var(--text-xs);font-weight:600;letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-muted)}
+.kpi .val{font-size:var(--text-xl);font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:.35rem;line-height:1.15}
+.kpi .sub{font-size:var(--text-sm);color:var(--text-muted);margin-top:.3rem}
+.kpi.bad .val{color:var(--error)} .kpi.warn .val{color:var(--warning)} .kpi.good .val{color:var(--success)} .kpi.alt .val{color:var(--accent-alt)}
+.card{background:var(--bg-card);border:1px solid var(--border-soft);border-radius:var(--radius-card);box-shadow:var(--shadow-card);margin-bottom:1.25rem;overflow:hidden}
+.card>.head{padding:.85rem var(--card-pad);border-bottom:1px solid var(--border-soft);display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline}
+.card>.head h3{margin:0;font-size:var(--text-base);font-weight:600}
+.card>.head .note{font-size:var(--text-sm);color:var(--text-muted)}
+.card>.head .right{margin-left:auto;font-size:var(--text-sm);color:var(--text-muted)}
+.card .body{padding:var(--card-pad)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:var(--text-sm);min-width:44rem}
+thead th{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.02em;color:var(--text-muted);background:var(--bg-subtle);border-bottom:1px solid var(--border-soft);padding:.7rem .75rem;text-align:left;font-weight:600;white-space:nowrap}
+tbody td{padding:.65rem .75rem;border-bottom:1px solid var(--border-soft);vertical-align:top;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--bg-subtle)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tfoot td{padding:.7rem .75rem;background:var(--bg-subtle);font-weight:600;border-top:1px solid var(--border-strong);font-variant-numeric:tabular-nums}
+.dim{color:var(--text-muted);font-size:var(--text-xs)}
+.pill{display:inline-block;padding:.2rem .5rem;border-radius:999px;font-size:var(--text-xs);font-weight:600;white-space:nowrap}
+.pill.bad{background:var(--error-soft);color:var(--error-text)}
+.pill.warn{background:var(--warning-soft);color:var(--warning-text)}
+.pill.good{background:var(--success-soft);color:var(--success-text)}
+.pill.info{background:var(--info-soft);color:var(--info-text)}
+.pill.flat{background:var(--bg-subtle);color:var(--text-muted)}
+.btn{display:inline-block;border:0;border-radius:var(--radius-button);background:var(--brand);color:#fff;font:600 var(--text-sm)/1 Inter,sans-serif;padding:.5rem .8rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--brand);border:1px solid var(--brand)}
+.btn.quiet{background:var(--bg-subtle);color:var(--text-secondary);border:1px solid var(--border-soft)}
+.docgrid{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:space-between;padding:var(--card-pad);border-bottom:1px solid var(--border-soft)}
+.docgrid b{font-size:var(--text-md);display:block;margin-bottom:.25rem}
+.docgrid .meta{font-size:var(--text-sm);color:var(--text-secondary);line-height:1.8}
+.totals{display:flex;justify-content:flex-end;padding:var(--card-pad);background:var(--bg-subtle);border-top:1px solid var(--border-soft)}
+.totals table{min-width:0;width:auto}
+.totals td{border:0;padding:.2rem .7rem;white-space:nowrap}
+.totals tr:last-child td{border-top:1px solid var(--border-strong);font-weight:700;padding-top:.45rem}
+.phone{max-width:20rem;border:1px solid var(--border-strong);border-radius:20px;overflow:hidden;background:var(--bg-card);box-shadow:var(--shadow-pop)}
+.phone .pt{background:var(--brand);color:#fff;padding:.8rem 1rem;font-weight:600;font-size:var(--text-sm);display:flex;justify-content:space-between;align-items:center}
+.phone .pt small{font-weight:400;opacity:.85;font-size:var(--text-xs)}
+.phone .pb{padding:1rem}
+.stp{display:flex;gap:.65rem;padding:.6rem 0;border-bottom:1px solid var(--border-soft);font-size:var(--text-sm)}
+.stp:last-of-type{border-bottom:0}
+.stp .d{flex:0 0 20px;height:20px;border-radius:999px;display:grid;place-items:center;font-size:10px;font-weight:700;margin-top:.1rem}
+.stp.done .d{background:var(--success);color:#fff}
+.stp.now .d{background:var(--warning);color:#fff}
+.stp.todo .d{background:var(--bg-subtle);color:var(--text-muted);border:1px solid var(--border-soft)}
+.sig{margin-top:.8rem;border:1px dashed var(--border-strong);border-radius:var(--radius-input);padding:.8rem;text-align:center;font-size:var(--text-xs);color:var(--text-muted)}
+.wagrid{display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+.wa{background:var(--success-soft);border:1px solid var(--success);border-radius:var(--radius-card) var(--radius-card) var(--radius-card) 2px;padding:.8rem .9rem;font-size:var(--text-sm)}
+.wa .who2{font-weight:600;font-size:var(--text-xs);color:var(--success-text);margin-bottom:.35rem}
+.wa .when{font-size:var(--text-xs);color:var(--text-muted);margin-top:.5rem}
+.foot{font-size:var(--text-sm);color:var(--text-muted);max-width:72ch;border-top:1px solid var(--border-soft);padding-top:1rem}
+/* assistant */
+.ask{display:flex;gap:.5rem;align-items:center;background:var(--bg-input);border:1px solid var(--border-strong);border-radius:var(--radius-input);padding:.6rem .8rem;margin-bottom:1rem}
+.ask input{flex:1;border:0;background:transparent;font:400 var(--text-base)/1.4 Inter,sans-serif;color:var(--text-primary);outline:none;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.4rem}
+.chip{border:1px solid var(--border-soft);background:var(--bg-card);border-radius:999px;padding:.35rem .7rem;font-size:var(--text-sm);color:var(--text-secondary);cursor:pointer}
+.chip:hover{border-color:var(--brand);color:var(--brand)}
+.answer{border-left:3px solid var(--brand);background:var(--brand-soft);border-radius:0 var(--radius-card) var(--radius-card) 0;padding:1rem var(--card-pad);margin-bottom:1rem}
+.answer p{margin:0 0 .6rem}
+.draft{border:1px dashed var(--border-strong);border-radius:var(--radius-card);padding:1rem;background:var(--bg-card)}
+.draft .hd{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:var(--track-caps);font-weight:600;color:var(--accent-alt);margin-bottom:.5rem}
+.acts{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+/* scope */
+.scope{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+.scope .blk{background:var(--bg-card);border:1px solid var(--border-soft);border-radius:var(--radius-card);padding:var(--card-pad);box-shadow:var(--shadow-card)}
+.scope h4{margin:0 0 .5rem;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:var(--track-caps);color:var(--brand)}
+.scope ul{margin:0;padding-left:1.1rem}
+.scope li{font-size:var(--text-sm);margin-bottom:.3rem;color:var(--text-secondary)}
+.price{background:var(--bg-card);border:1px solid var(--brand);border-radius:var(--radius-card);padding:var(--card-pad);box-shadow:var(--shadow-card);margin-top:1.25rem}
+.price .amt{font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em;color:var(--brand)}
+
+/* ---- interactive additions ---- */
+input,select,textarea{font-family:inherit;font-size:var(--text-sm);color:var(--text-primary);
+  background:var(--bg-input);border:1px solid var(--border-soft);border-radius:var(--radius-input);padding:.4rem .55rem}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:-1px;border-color:var(--brand)}
+select{cursor:pointer}
+.btn{transition:filter 120ms}
+.btn:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.btn.sm{padding:.3rem .55rem;font-size:var(--text-xs)}
+.btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.hint{display:flex;gap:.6rem;align-items:flex-start;background:var(--info-soft);color:var(--info-text);
+  border:1px solid var(--info);border-radius:var(--radius-card);padding:.65rem .85rem;font-size:var(--text-sm);margin-bottom:1.1rem}
+.hint b{font-weight:600}
+.hint svg{flex:0 0 16px;margin-top:.15rem}
+.toastwrap{position:fixed;right:1rem;bottom:1rem;display:flex;flex-direction:column;gap:.5rem;z-index:60;
+  max-width:min(24rem,calc(100vw - 2rem));pointer-events:none}
+.toast{background:var(--bg-card);border:1px solid var(--border-strong);border-left:4px solid var(--brand);
+  border-radius:var(--radius-card);box-shadow:var(--shadow-pop);padding:.7rem .85rem;font-size:var(--text-sm);
+  animation:tin 180ms ease-out}
+.toast.good{border-left-color:var(--success)} .toast.warn{border-left-color:var(--warning)} .toast.bad{border-left-color:var(--error)}
+.toast b{display:block;font-weight:600;margin-bottom:.1rem}
+@keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+.modalbg{position:fixed;inset:0;background:rgba(15,23,42,.42);display:grid;place-items:center;z-index:70;padding:1rem}
+.modalbox{background:var(--bg-card);border-radius:16px;box-shadow:var(--shadow-modal,0 28px 56px -28px rgba(16,24,40,.34));
+  max-width:34rem;width:100%;max-height:85vh;overflow:auto;border:1px solid var(--border-soft)}
+.modalbox .mh{padding:1rem var(--card-pad);border-bottom:1px solid var(--border-soft);font-weight:600;font-size:var(--text-md)}
+.modalbox .mb{padding:var(--card-pad);font-size:var(--text-sm);color:var(--text-secondary)}
+.modalbox .mf{padding:.85rem var(--card-pad);border-top:1px solid var(--border-soft);display:flex;gap:.5rem;justify-content:flex-end;background:var(--bg-subtle)}
+.tools{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem}
+.tools input[type="search"]{min-width:14rem;flex:1;max-width:22rem}
+.seg{display:inline-flex;border:1px solid var(--border-soft);border-radius:var(--radius-input);overflow:hidden}
+.seg button{border:0;background:var(--bg-card);color:var(--text-secondary);font:500 var(--text-sm)/1 Inter,sans-serif;padding:.45rem .7rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--brand);color:#fff}
+.sigpad{width:100%;max-width:17rem;height:96px;border:1px dashed var(--border-strong);border-radius:var(--radius-input);
+  background:var(--bg-input);touch-action:none;display:block;cursor:crosshair}
+.srch{position:relative}
+.srch input{width:100%}
+.results{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--bg-card);border:1px solid var(--border-strong);
+  border-radius:var(--radius-card);box-shadow:var(--shadow-pop);max-height:19rem;overflow:auto;z-index:30}
+.results button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:.5rem .7rem;
+  font:400 var(--text-sm)/1.4 Inter,sans-serif;color:var(--text-primary);cursor:pointer;border-bottom:1px solid var(--border-soft)}
+.results button:hover{background:var(--bg-subtle)}
+.results button:last-child{border-bottom:0}
+.empty{padding:2rem var(--card-pad);text-align:center;color:var(--text-muted);font-size:var(--text-sm)}
+.resetbtn{border:1px solid var(--border-soft);background:var(--bg-card);color:var(--text-secondary);
+  border-radius:var(--radius-button);font:500 var(--text-xs)/1 Inter,sans-serif;padding:.45rem .6rem;cursor:pointer;flex-shrink:0}
+.resetbtn:hover{border-color:var(--brand);color:var(--brand)}
+tr.pick{cursor:pointer}
+.answer.warn{border-left-color:var(--warning);background:var(--warning-soft)}
+.answer .chips{margin:.2rem 0 0}
+.wamsg{white-space:pre-wrap;font-family:inherit;font-size:var(--text-sm);color:var(--text-primary);
+  background:var(--bg-subtle);border:1px solid var(--border-soft);border-radius:10px;padding:.75rem;margin:.6rem 0 0}
+.sidefoot{display:flex;flex-direction:column;gap:.25rem;align-items:flex-end;margin-left:auto;flex-shrink:0}
+#sbadge{line-height:1.25;text-align:right;max-width:13rem}
+header.bar h1{flex:0 1 auto;min-width:3.5rem}
+@media (max-width:1023px){
+  header.bar{height:auto;min-height:var(--header-h);padding-top:.4rem;padding-bottom:.4rem}
+  .sidefoot{flex-direction:row;align-items:center;gap:.35rem}
+  #sbadge{display:none}
+  .ribbon{font-size:var(--text-xs)}
+}
+@media (max-width:640px){ .who .nm{display:none} .resetbtn{padding:.4rem .5rem} }
+</style>
+</head>
+<body>
+<div class="ribbon"><div>Demonstration workspace for Muthu Fire Engineering Co. The sites, serial numbers and amounts are made up to show how the system runs. They are not your records.</div></div>
+
+<div class="app">
+<aside>
+  <div class="logo"><div class="mark">A</div><div><b>Aura Business</b><span>Operations Platform</span></div></div>
+  <nav id="nav"></nav>
+</aside>
+<main>
+  <header class="bar">
+    <h1 id="ptitle">Today</h1>
+    <div class="search srch"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="gs" type="search" placeholder="Search serial, site or ticket" aria-label="Search" style="border:0;background:transparent;padding:0"><div id="gres"></div></div>
+    <div class="sidefoot">
+      <div style="display:flex;gap:.3rem;flex-wrap:wrap"><button class="resetbtn" type="button" data-act="reset">Reset demo</button><button class="resetbtn" type="button" data-act="sopen">Saved session</button></div>
+      <div id="sbadge" class="dim" style="font-size:var(--text-xs)">Saved on this device</div>
+    </div>
+    <div class="who"><div class="av">MF</div><div class="nm"><b>Muthu Fire</b><span>Coimbatore</span></div></div>
+  </header>
+  <div class="page" id="page"></div>
+</main>
+</div>
+<div class="toastwrap" id="toasts" aria-live="polite"></div>
+<div id="modal"></div>
+
+<script>
+const INR=n=>"\u20b9"+n.toLocaleString("en-IN");
+const L=n=>"\u20b9"+(n/100000).toFixed(2)+" lakh";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pill=(k,t)=>`<span class="pill ${k}">${esc(t)}</span>`;
+
+const SITES=[
+ {s:"Peelamedu Spinning Mills",c:"Coimbatore",u:142,v:74000,k:"bad",last:"12 Apr 2025",due:"Overdue 94 days",cov:"Lapsed"},
+ {s:"Saravanampatti Tech Park",c:"Coimbatore",u:208,v:148000,k:"bad",last:"18 Feb 2025",due:"Quarterly overdue",cov:"Lapsed"},
+ {s:"Avinashi Road Mall",c:"Coimbatore",u:176,v:112000,k:"bad",last:"09 May 2025",due:"Overdue 58 days",cov:"Lapsed"},
+ {s:"Singanallur Foundry",c:"Coimbatore",u:87,v:54000,k:"bad",last:"30 Apr 2025",due:"Overdue 76 days",cov:"Lapsed"},
+ {s:"Kurichi Auto Components",c:"Coimbatore",u:63,v:38000,k:"bad",last:"02 Jun 2025",due:"Overdue 41 days",cov:"Lapsed"},
+ {s:"Pollachi Transport Co",c:"Pollachi",u:48,v:28000,k:"bad",last:"21 Mar 2025",due:"Overdue 121 days",cov:"None"},
+ {s:"Annur Cold Storage",c:"Annur",u:96,v:96000,k:"warn",last:"14 Aug 2025",due:"Due in 11 days",cov:"Active"},
+ {s:"Sulur Logistics Park",c:"Sulur",u:71,v:42000,k:"warn",last:"06 Jul 2025",due:"Due in 19 days",cov:"Active"},
+ {s:"Tiruppur Knitwear Unit",c:"Tiruppur",u:118,v:67000,k:"warn",last:"25 Jul 2025",due:"Due in 24 days",cov:"Active"},
+ {s:"Gandhipuram Hotels",c:"Coimbatore",u:54,v:36000,k:"good",last:"11 Sep 2025",due:"Due in 62 days",cov:"Active"},
+];
+const UNITS=[
+ ["MF-04182","ABC dry powder 6 kg","Peelamedu Spinning Mills","Block A stairwell","12 Apr 2025","Refill overdue 94 days","bad","Lapsed",650],
+ ["MF-02910","CO2 4.5 kg","Peelamedu Spinning Mills","Main LT panel room","12 Apr 2025","Pressure test due, 5 year","bad","Lapsed",1450],
+ ["MF-05507","Fire hydrant system","Saravanampatti Tech Park","Pump room, 2 pumps","18 Feb 2025","Quarterly service overdue","bad","Lapsed",14800],
+ ["MF-05508","Sprinkler system","Saravanampatti Tech Park","Floors 3 to 6","18 Feb 2025","Annual flow test overdue","bad","Lapsed",9600],
+ ["MF-02288","CO2 22.5 kg trolley","Singanallur Foundry","Furnace bay","30 Apr 2025","Refill overdue 76 days","bad","Lapsed",4900],
+ ["MF-05120","Hose reel, 30 m","Avinashi Road Mall","Atrium level 1","09 May 2025","Overdue 58 days","bad","Lapsed",3100],
+ ["MF-04995","ABC dry powder 6 kg","Pollachi Transport Co","Workshop pit","21 Mar 2025","Refill overdue 121 days","bad","None",650],
+ ["MF-04761","ABC dry powder 9 kg","Annur Cold Storage","Ammonia plant room","14 Aug 2025","Due in 11 days","warn","Active",880],
+ ["MF-06015","Fire alarm panel, 1 zone","Sulur Logistics Park","Security cabin","06 Jul 2025","Due in 19 days","warn","Active",6400],
+ ["MF-03344","K type kitchen 6 L","Gandhipuram Hotels","Main kitchen hood","11 Sep 2025","Due in 62 days","good","Active",2200],
+];
+const TICKETS=[
+ ["TK-2241","Avinashi Road Mall","Hose reel, atrium","Leak at coupling","Phone call","High","Karthik R","Past due by 2 days","Out of cover","bad"],
+ ["TK-2240","Singanallur Foundry","CO2 22.5 kg trolley","Will not discharge","WhatsApp","High","Mohan S","Today, 4:00 PM","Out of cover","bad"],
+ ["TK-2238","Annur Cold Storage","Ammonia plant units","Annual refill, 24 units","Scheduled","Normal","Karthik R","Tomorrow, 10:00 AM","AMC","warn"],
+ ["TK-2236","Saravanampatti Tech Park","Hydrant pump room","Quarterly service","Scheduled","Normal","Vignesh P","29 Oct, 9:30 AM","Out of cover","warn"],
+ ["TK-2233","Gandhipuram Hotels","Kitchen suppression","Nozzle blocked","Phone call","Normal","Mohan S","Resolved today","AMC","good"],
+ ["TK-2229","Tiruppur Knitwear Unit","Alarm panel zone 3","False trip at night","Email","Low","Vignesh P","31 Oct, 2:00 PM","AMC","good"],
+];
+const PAY=[
+ ["INV-1188","Peelamedu Spinning Mills","18 Jun 2026","Annual refill, 134 units, and hydrant service",149010,"Overdue 48 days","bad"],
+ ["INV-1201","Avinashi Road Mall","04 Jul 2026","Hose reels and hydrant service",96400,"Overdue 32 days","bad"],
+ ["INV-1214","Singanallur Foundry","21 Jul 2026","CO2 trolley refill and test",41800,"Overdue 15 days","bad"],
+ ["INV-1230","Annur Cold Storage","02 Aug 2026","AMC renewal 2026 to 2027",96000,"Due in 4 days","warn"],
+ ["INV-1242","Sulur Logistics Park","11 Aug 2026","Alarm panel AMC",42000,"Due in 13 days","warn"],
+ ["INV-1255","Gandhipuram Hotels","20 Aug 2026","Kitchen suppression service",36000,"Paid 22 Aug","good"],
+];
+const LINES=[
+ ["ABC dry powder 6 kg, refill and pressure check","3813","nos",86,650],
+ ["ABC dry powder 9 kg, refill and pressure check","3813","nos",34,880],
+ ["CO2 4.5 kg, refill and hydrostatic test","3813","nos",14,1450],
+ ["Hydrant system, quarterly service visit","9987","visit",1,14800],
+ ["Replacement safety pins and seals","8424","set",134,40],
+];
+const DOCS=[
+ ["Fire licence renewal","Muthu Fire Engineering Co","TN Fire and Rescue Services","14 Dec 2026","Due in 49 days","warn","Firm"],
+ ["Third party certification, IS 2190","Refilling workshop","Accredited agency","08 Nov 2026","Due in 13 days","bad","Firm"],
+ ["Fire NOC","Saravanampatti Tech Park","District fire office","22 Jan 2027","Due in 88 days","good","Customer"],
+ ["Fire NOC","Avinashi Road Mall","District fire office","03 Nov 2026","Due in 8 days","bad","Customer"],
+ ["Hydrostatic test certificate","CO2 22.5 kg trolley, MF-02288","In house, IS 15683","30 Apr 2025","Expired","bad","Unit"],
+ ["Mock drill record","Peelamedu Spinning Mills","Half yearly","19 Sep 2026","Due in 24 days","warn","Customer"],
+ ["Sprinkler flow test, IS 15105","Saravanampatti Tech Park","Annual","18 Feb 2025","Overdue","bad","Unit"],
+ ["Hydrant maintenance record, IS 3844","Sulur Logistics Park","Quarterly","06 Jul 2026","Due in 19 days","warn","Unit"],
+];
+const TENDERS=[
+ ["TND-114","Coimbatore City Municipal Corporation","Supply and AMC of 640 extinguishers",1840000,50000,"Paid 12 Aug","04 Nov 2026","Due in 9 days","warn","Documents ready"],
+ ["TND-110","Tamil Nadu Civil Supplies, Pollachi godown","Hydrant system upgrade",960000,25000,"Paid 28 Jul","29 Oct 2026","Due in 3 days","bad","Blocked, IS 2190 certificate expires first"],
+ ["TND-106","Coimbatore Medical College Hospital","Fire alarm AMC, 3 years",1240000,35000,"Paid 04 Jul","Submitted","Result awaited","flat","Submitted 18 Sep"],
+ ["TND-101","Tiruppur Municipality","Extinguisher refilling rate contract",420000,10000,"Refund pending","Lost","Closed","bad","EMD with authority 71 days"],
+];
+const VAN=[
+ ["Karthik R","TN 37 BX 4412","ABC dry powder 6 kg",18,6,"bad"],
+ ["Karthik R","TN 37 BX 4412","CO2 4.5 kg",7,4,"warn"],
+ ["Mohan S","TN 37 CK 9076","ABC dry powder 9 kg",11,6,"good"],
+ ["Mohan S","TN 37 CK 9076","Safety pin and seal set",240,100,"good"],
+ ["Vignesh P","TN 37 DJ 2231","Hose reel coupling, 63 mm",2,6,"bad"],
+ ["Workshop","Saibaba Colony","ABC powder, 50 kg bag",9,15,"bad"],
+ ["Workshop","Saibaba Colony","CO2 gas, 30 kg cylinder",14,10,"good"],
+];
+const SUPP=[
+ ["Sundaram Extinguisher Works","Coimbatore","ABC and CO2 bodies, valves","30 days",318400,"Due in 6 days","warn"],
+ ["Kovai Powder Chem","Tiruppur","ABC powder, foam concentrate","45 days",142600,"Due in 21 days","good"],
+ ["Southern Hose and Fittings","Chennai","Hose reels, couplings, nozzles","15 days",96200,"Overdue 9 days","bad"],
+ ["Sakthi Gas Agencies","Coimbatore","CO2 refill gas","Cash",48000,"Paid","good"],
+];
+const RATES=[
+ ["Saravanampatti Tech Park","All refilling work","8% off list","01 Apr 2026","31 Mar 2027","good"],
+ ["Coimbatore City Municipal Corporation","ABC 6 kg refill","Fixed, 585 per unit","12 Aug 2026","11 Aug 2029","good"],
+ ["Avinashi Road Mall","Hydrant and sprinkler service","5% off list","01 Jan 2026","31 Dec 2026","warn"],
+ ["Tiruppur Knitwear Unit","All work","12% off list","01 Apr 2025","31 Mar 2026","bad"],
+];
+const ROUTE=[
+ ["9:30 AM","Annur Cold Storage","Annur","Annual refill, 24 units","TK-2238","Karthik R","18 km"],
+ ["12:15 PM","Sulur Logistics Park","Sulur","Alarm panel quarterly check","TK-2244","Karthik R","22 km"],
+ ["2:40 PM","Singanallur Foundry","Coimbatore","CO2 trolley, will not discharge","TK-2240","Mohan S","9 km"],
+ ["4:10 PM","Avinashi Road Mall","Coimbatore","Hose reel leak at coupling","TK-2241","Mohan S","6 km"],
+ ["9:45 AM","Saravanampatti Tech Park","Coimbatore","Hydrant pump room, quarterly","TK-2236","Vignesh P","14 km"],
+];
+
+const ENQ=[
+ ["QR sticker","M Thangaraj","Peelamedu Spinning Mills","Scanned MF-04182 on the Block A wall, asked for refill",118400,"Today 8:12 AM","Karthik R","New enquiry","bad"],
+ ["IndiaMART","Suresh Kumar","Kalapatti Packaging","40 ABC 6 kg extinguishers with installation",96000,"Today 7:40 AM","Office","New enquiry","bad"],
+ ["Missed call","+91 98xxx 4412","Not identified yet","Rang twice, nobody picked up",0,"Today 7:05 AM","Office","New enquiry","bad"],
+ ["Website","R Priya","Chinniampalayam Warehouse","Hydrant system AMC, wants a quote",148000,"Yesterday 6:20 PM","Office","Contacted","warn"],
+ ["Justdial","Anand V","Ganapathy Textile Mill","Fire NOC help and extinguisher supply",62000,"Yesterday 2:05 PM","Vignesh P","Quoted","warn"],
+ ["Field","Mohan S","Sulur Logistics Park","Spotted 6 unmarked units during a visit",9400,"21 Oct 3:15 PM","Mohan S","Contacted","warn"],
+ ["Tender portal","Coimbatore City Municipal Corporation","Same","640 extinguishers, supply and AMC",1840000,"22 Oct 9:00 AM","Owner","Quoted","warn"],
+ ["WhatsApp","Stores in charge","Annur Cold Storage","Two units missing off the wall, wants replacement",2060,"24 Oct 4:30 PM","Karthik R","Won","good"],
+];
+const RULES=[
+ ["Scan on any unit","Source is QR sticker","The engineer who last serviced that unit","On"],
+ ["Coimbatore city","Territory is Coimbatore","Karthik R, then Mohan S, in turn","On"],
+ ["Directory enquiries","Source is IndiaMART or Justdial","Office, then the owner if untouched for 2 hours","On"],
+ ["Bid alerts","Source is Tender portal","Owner","On"],
+ ["Anything else","Anyone (catches all)","Office","On"],
+];
+const SRC=[
+ ["Field, spotted on a visit",29,24,19,268000],
+ ["QR sticker on the unit",34,21,18,486000],
+ ["Existing customer WhatsApp",58,41,33,742000],
+ ["Tender portal",26,26,9,2140000],
+ ["Website",41,19,9,314000],
+ ["IndiaMART",96,38,11,388000],
+ ["Missed call",63,28,7,142000],
+ ["Justdial",74,22,6,196000],
+];
+
+const ICON={
+ today:'<path d="M3 12h4l3 8 4-16 3 8h4"/>',
+ leak:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/>',
+ ai:'<path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/>',
+ reg:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/>',
+ sites:'<path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>',
+ docs:'<path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5M9 13h7M9 17h5"/>',
+ tick:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+ route:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H15a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6.5"/>',
+ field:'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+ wa:'<path d="M21 11.5a8.4 8.4 0 0 1-12.1 7.5L3 21l2-5.9A8.4 8.4 0 1 1 21 11.5z"/>',
+ quote:'<path d="M4 3h16v18l-4-3-4 3-4-3-4 3z"/><path d="M8 8h8M8 12h5"/>',
+ rate:'<path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/>',
+ tender:'<path d="M12 3 3 8l9 5 9-5z"/><path d="M3 14l9 5 9-5"/>',
+ van:'<path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>',
+ supp:'<path d="M3 9h18v11H3z"/><path d="M3 9l2-5h14l2 5M12 9v11"/>',
+ inv:'<path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5M9 13h7M9 17h5"/>',
+ pay:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
+ rep:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>',
+ scope:'<path d="M9 11l3 3 7-7"/><path d="M21 12a9 9 0 1 1-6.2-8.5"/>',
+ enq:'<path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/>',
+ rules:'<path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="17" r="2.5"/>',
+ src:'<path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/>',
+ qr:'<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM19 19h2v2h-2z"/>',
+};
+const NAVGROUPS=[
+ {label:"Every day",  items:[["today","Today"],["leak","AMC Leakage",38],["ai","Assistant"]]},
+ {label:"Leads",      items:[["enq","Enquiry inbox",3],["qr","QR stickers"],["rules","Lead routing"],["src","Where leads come from"]]},
+ {label:"Register",   items:[["reg","Equipment register"],["sites","Sites and contacts"],["docs","Compliance vault",3]]},
+ {label:"Service",    items:[["tick","Service tickets",2],["route","Visit planner"],["field","Engineer phone"],["wa","Reminders"]]},
+ {label:"Sales",      items:[["quote","Quotation"],["rate","Rate contracts"],["tender","Tenders and EMD",1]]},
+ {label:"Stock",      items:[["van","Van and workshop stock",3],["supp","Suppliers and payables"]]},
+ {label:"Money",      items:[["inv","Invoice and challan"],["pay","Payment tracker"],["rep","Reports"]]},
+ {label:"Setup",      items:[["settings","Company settings"]]},
+ {label:"About",      items:[["scope","What you get"]]},
+];
+
+/* ---------------- screens ---------------- */
+function today(){
+ const lapsed=SITES.filter(s=>s.k==="bad").reduce((a,b)=>a+b.v,0);
+ const soon=SITES.filter(s=>s.k==="warn").reduce((a,b)=>a+b.v,0);
+ return `<p class="lede">Every extinguisher has a refill date and every hydrant a service interval. This is that list for all 34 sites, in one place, on one screen.</p>
+ <h2 class="sec">My day</h2>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Units past refill date</div><div class="val">214</div><div class="sub">Across 9 sites</div></div>
+  <div class="kpi bad"><div class="lab">Annual value lapsed</div><div class="val">${L(lapsed)}</div><div class="sub">Work you did once and were never asked for again</div></div>
+  <div class="kpi warn"><div class="lab">Renewals due in 30 days</div><div class="val">7</div><div class="sub">Worth ${L(soon)} if all seven sign</div></div>
+  <div class="kpi good"><div class="lab">Jobs closed this month</div><div class="val">61</div><div class="sub">Each signed by the customer on site</div></div>
+ </div>
+ <h2 class="sec">Also waiting</h2>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">New enquiries not touched</div><div class="val">3</div><div class="sub">One is a QR scan at Peelamedu</div></div>
+  <div class="kpi bad"><div class="lab">Certificates expiring</div><div class="val">3</div><div class="sub">One blocks a live tender bid</div></div>
+  <div class="kpi warn"><div class="lab">Bid closing this week</div><div class="val">2</div><div class="sub">EMD of ${INR(75000)} already with authorities</div></div>
+  <div class="kpi bad"><div class="lab">Van stock below level</div><div class="val">3</div><div class="sub">Karthik short on ABC 6 kg</div></div>
+  <div class="kpi alt"><div class="lab">Collection overdue</div><div class="val">${L(306400)}</div><div class="sub">Oldest 48 days</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Where your equipment is sitting</h3><span class="note">1,240 units across 34 sites</span><span class="right">Showing 10</span></div>
+ <div class="tbl"><table><thead><tr><th>Site</th><th>Town</th><th class="n">Units</th><th>Last attended</th><th>Next due</th><th>Cover</th><th class="n">Annual value</th></tr></thead>
+ <tbody>${SITES.map(s=>`<tr class="pick" data-act="site" data-s="${esc(s.s)}"><td>${esc(s.s)}</td><td class="dim">${esc(s.c)}</td><td class="n">${s.u}</td><td class="dim">${esc(s.last)}</td><td>${pill(s.k,s.due)}</td><td>${pill(s.cov==="Active"?"good":"bad",s.cov)}</td><td class="n">${INR(s.v)}</td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="6">Total annual value shown</td><td class="n">${INR(SITES.reduce((a,b)=>a+b.v,0))}</td></tr></tfoot></table></div></div>`;
+}
+function leak(){
+ const r=SITES.filter(s=>s.k==="bad").sort((a,b)=>b.v-a.v), t=r.reduce((a,b)=>a+b.v,0);
+ return `<p class="lede">Sites that bought from you once and are carrying no live contract today. They already know you and your equipment is already on their wall.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Lapsed contracts</div><div class="val">38</div><div class="sub">Expired, no renewal raised</div></div>
+  <div class="kpi warn"><div class="lab">Never covered</div><div class="val">11</div><div class="sub">Equipment supplied, AMC never sold</div></div>
+  <div class="kpi good"><div class="lab">Recent enough to win back</div><div class="val">26</div><div class="sub">Lapsed inside twelve months</div></div>
+  <div class="kpi bad"><div class="lab">Annual value at stake</div><div class="val">${L(t)}</div><div class="sub">Already bought once</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Already bought once</h3><span class="note">Sorted by what the renewal is worth</span></div>
+ <div class="tbl"><table><thead><tr><th>Site</th><th class="n">Units on site</th><th>Last attended</th><th>How far past</th><th class="n">Annual value</th><th>Action</th></tr></thead>
+ <tbody>${r.map(s=>`<tr><td>${esc(s.s)}<div class="dim">${esc(s.c)}</div></td><td class="n">${s.u}</td><td class="dim">${esc(s.last)}</td><td>${pill("bad",s.due)}</td><td class="n">${INR(s.v)}</td><td>${s.offered?`<span class="pill good">Quotation ${esc(s.offered)}</span>`:`<button class="btn ghost sm" type="button" data-act="offer" data-site="${esc(s.s)}">Offer AMC</button>`}</td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="4">Six sites shown</td><td class="n">${INR(t)}</td><td></td></tr></tfoot></table></div></div>
+ <p class="foot">Offer AMC drafts a renewal quotation at that customer's own rate contract price. One click from this screen to a document ready to send.</p>`;
+}
+function aiTable(head,rows){
+ return `<div class="tbl"><table style="min-width:26rem"><thead><tr>${head.map((h,i)=>`<th${i===head.length-1?' class="n"':''}>${esc(h)}</th>`).join("")}</tr></thead>
+ <tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${i===r.length-1?' class="n"':(i?' class="dim"':'')}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+function aiAnswer(){
+ const q=(UI.q||"How much AMC revenue are we leaking?").toLowerCase();
+ const lapsed=SITES.filter(s=>s.k==="bad"), lv=lapsed.reduce((a,b)=>a+b.v,0);
+ const A=(body,draft)=>`<div class="answer" style="margin-top:1.2rem">${body}</div>${draft||""}`;
+ const D=(title,note,ok)=>`<div class="draft"><div class="hd">Drafted for you, not sent</div><b>${title}</b>
+   <p class="dim" style="font-size:var(--text-sm);margin:.4rem 0 0">${note}</p>
+   <div class="acts"><button class="btn" type="button" data-act="${ok||"aiok"}">Review the drafts</button><button class="btn quiet" type="button" data-act="aino">Discard</button></div></div>`;
+ if(/owe|outstanding|collect|cash/.test(q)){
+   const open=PAY.filter(p=>p[6]!=="good"), tot=open.reduce((a,b)=>a+b[4],0);
+   const late=open.filter(p=>p[6]==="bad");
+   return A(`<p><b>${INR(tot)} is outstanding across ${open.length} invoices.</b> ${late.length} of them are already past terms, ${INR(late.reduce((a,b)=>a+b[4],0))} in total. The oldest is ${esc(late[0]?late[0][1]:"none")}.</p>
+    ${aiTable(["Customer","Status","Amount"],open.slice(0,4).map(p=>[esc(p[1]),esc(p[5]),INR(p[4])]))}`,
+    D("Payment follow up on WhatsApp for "+late.length+" customers","Polite, names the invoice and the number of days, and asks for a date. Nothing goes until you release it.","qsend"));
+ }
+ if(/document|certificate|expir|noc|licence|license/.test(q)){
+   const bad=DOCS.filter(d=>d[5]!=="good");
+   const blocks=TENDERS.filter(t=>/Blocked/.test(t[9]));
+   return A(`<p><b>${bad.length} documents need attention.</b> ${blocks.length?"One of them is blocking a live bid: the "+esc(blocks[0][1])+" tender cannot be submitted while your IS 2190 workshop certificate is expiring first.":"None of them is blocking a bid at the moment."}</p>
+    ${aiTable(["Document","Belongs to","Status"],bad.slice(0,5).map(d=>[esc(d[0]),esc(d[1]),esc(d[4])]))}`);
+ }
+ if(/tender|bid|earnest|emd/.test(q)){
+   const emd=TENDERS.filter(t=>/Paid|Refund/.test(t[5])).reduce((a,b)=>a+b[4],0);
+   return A(`<p><b>${INR(emd)} of earnest money is sitting with authorities.</b> The Tiruppur deposit of ${INR(10000)} has been unrefunded for 71 days on a bid you already lost, which is worth chasing.</p>
+    ${aiTable(["Bid","Authority","Value"],TENDERS.slice(0,3).map(t=>[esc(t[0]),esc(t[1]),INR(t[3])]))}`);
+ }
+ if(/van|stock|short|reorder/.test(q)){
+   const low=VAN.filter(v=>v[5]==="bad");
+   return A(`<p><b>${low.length} items are below the level you set.</b> ${esc(low[0][0])} is carrying ${low[0][3]} of ${esc(low[0][2])} against a level of ${low[0][4]}, and he has a refill job tomorrow morning.</p>
+    ${aiTable(["Held by","Item","In hand"],low.map(v=>[esc(v[0]),esc(v[2]),String(v[3])]))}`);
+ }
+ if(/ticket|engineer|open/.test(q)){
+   const by={}; TICKETS.filter(t=>t[9]!=="good").forEach(t=>by[t[6]]=(by[t[6]]||0)+1);
+   const list=Object.entries(by).sort((a,b)=>b[1]-a[1]);
+   return A(`<p><b>${esc(list[0]?list[0][0]:"Nobody")} has the most open work</b>, ${list[0]?list[0][1]:0} tickets, and two of the open ones across the team are already past the time they were promised.</p>
+    ${aiTable(["Engineer","Open tickets",""],list.map(([k,v])=>[esc(k),String(v),""]))}`);
+ }
+ if(/refill|past|overdue|due/.test(q)){
+   const over=UNITS.filter(u=>u[6]==="bad");
+   return A(`<p><b>214 units across 9 sites are past their refill date.</b> The worst is Pollachi Transport Co at 121 days, and those units are carrying no cover at all, so the liability sits with the customer and the work sits with nobody.</p>
+    ${aiTable(["Serial","Site","Overdue"],over.slice(0,4).map(u=>[esc(u[0]),esc(u[2]),esc(u[5])]))}`);
+ }
+ if(/peelamedu|site|tell me about/.test(q)){
+   const s=SITES[0];
+   const owed=PAY.filter(p=>p[1]===s.s&&p[6]!=="good").reduce((a,b)=>a+b[4],0);
+   return A(`<p><b>${esc(s.s)} has ${s.u} units and ${owed?"owes you "+INR(owed):"owes you nothing"}.</b> Last attended ${esc(s.last)}, cover ${esc(s.cov).toLowerCase()}, annual value ${INR(s.v)}. Their rate contract has also expired, so anything quoted now goes at list price.</p>`);
+ }
+ if(!/leak|amc|lapsed|renew|contract|cover|revenue|attention|sitting/.test(q)) return aiUnknown();
+ const four=lapsed.filter(s=>!s.offered).length;
+ return A(`<p><b>${L(lv)} a year is sitting in lapsed cover.</b> ${lapsed.length} sites that bought from you once are carrying no live contract today. The largest is ${esc(lapsed.sort((a,b)=>b.v-a.v)[0].s)} at ${INR(lapsed[0].v)}, with a hydrant system and a sprinkler system both past their service date.</p>
+  <p>Four of them lapsed inside the last twelve months, which is recent enough that the safety officer who signed the last contract is usually still in the job.</p>
+  ${aiTable(["Site","Lapsed","Annual value"],lapsed.slice(0,3).map(s=>[esc(s.s),esc(s.due),INR(s.v)]))}`,
+  four?D(four+" renewal quotations, priced from each site's rate contract","Total "+INR(lapsed.filter(s=>!s.offered).reduce((a,b)=>a+b.v,0))+". Saravanampatti is priced at its contracted 8 percent off list. Tiruppur's rate contract expired on 31 March, so that one is at list price and is flagged for you to check."):"");
+}
+const CANASK=["How much AMC revenue are we leaking?","Which contracts are coming up for renewal?",
+ "Which units are past their refill date?","Tell me about Peelamedu Spinning Mills",
+ "Which customers owe us the most?","What is our cash position?","What do we owe suppliers?",
+ "Which van is short on stock?","Which documents are expiring?",
+ "Which bids are blocked by an expired document?","How much earnest money is still with authorities?",
+ "Which engineer has the most open tickets?"];
+function aiUnknown(){
+ return `<div class="answer warn" style="margin-top:1.2rem">
+  <p><b>I cannot answer that one.</b> I read only what is in your own records, so when something is not in them I say so instead of guessing at it.</p>
+  <p style="font-size:var(--text-sm);margin-bottom:.6rem">These are the questions it answers today. Tap one, or ask it in your own words.</p>
+  <div class="chips">${CANASK.map(c=>`<button class="chip" type="button">${esc(c)}</button>`).join("")}</div>
+  <p class="dim" style="font-size:var(--text-sm);margin:.9rem 0 0">More get added as the system is set up for you. Anything that is on a screen can be taught as a question.</p></div>`;
+}
+function ai(){
+ return `<p class="lede">Ask in plain words. It reads only your own data, it never sends anything by itself, and everything it writes waits for you to approve.</p>
+ <div class="ask"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+  <input id="q" value="${esc(UI.q||"How much AMC revenue are we leaking?")}" aria-label="Your question">
+  <button class="btn sm" type="button" data-act="ask">Ask</button></div>
+ <h2 class="sec">Refilling and contracts</h2>
+ <div class="chips">
+  <button class="chip" type="button">How much AMC revenue are we leaking?</button>
+  <button class="chip" type="button">Which contracts are coming up for renewal?</button>
+  <button class="chip" type="button">Which units are past their refill date?</button>
+  <button class="chip" type="button">Tell me about Peelamedu Spinning Mills</button>
+ </div>
+ <h2 class="sec">Money and stock</h2>
+ <div class="chips">
+  <button class="chip" type="button">Which customers owe us the most?</button>
+  <button class="chip" type="button">What is our cash position?</button>
+  <button class="chip" type="button">What do we owe suppliers?</button>
+  <button class="chip" type="button">Which van is short on stock?</button>
+ </div>
+ <h2 class="sec">Compliance and bids</h2>
+ <div class="chips">
+  <button class="chip" type="button">Which documents are expiring?</button>
+  <button class="chip" type="button">Which bids are blocked by an expired document?</button>
+  <button class="chip" type="button">How much earnest money is still with authorities?</button>
+  <button class="chip" type="button">Which engineer has the most open tickets?</button>
+ </div>
+ ${aiAnswer()}
+ <p class="foot" style="margin-top:1.2rem">The assistant can read, count, compare and draft. It cannot send a WhatsApp, raise an invoice, change a price or close a ticket. Every one of those still needs a person.</p>`;
+}
+function reg(){
+ const q=(UI.regq||"").toLowerCase();
+ const rows=UNITS.filter(u=>!q||[u[0],u[1],u[2],u[3],u[5]].join(" ").toLowerCase().includes(q));
+ return `<p class="lede">Every unit you have supplied, by serial number, against the site and the exact spot it hangs in. Refill dates and five year pressure tests tracked per unit, not per site.</p>
+ <div class="tools"><input type="search" data-inp="regq" value="${esc(UI.regq||"")}" placeholder="Type a serial, a type or a site, for example hydrant" aria-label="Search the register">
+  ${["","ABC","CO2","hydrant","sprinkler","alarm"].map(t=>`<button class="btn ${((UI.regq||"")===t)?"":"quiet"} sm" type="button" data-act="regq" data-v="${t}">${t||"All"}</button>`).join("")}</div>
+ <div class="card"><div class="head"><h3>Units needing attention</h3><span class="note">${rows.length} of 1,240 shown</span><span class="right">Search runs as you type</span></div>
+ ${rows.length?`<div class="tbl"><table><thead><tr><th>Serial</th><th>Type</th><th>Site</th><th>Position</th><th>Last service</th><th>Next due</th><th>Cover</th><th class="n">Line value</th></tr></thead>
+ <tbody>${rows.map(u=>`<tr><td>${esc(u[0])}</td><td>${esc(u[1])}</td><td>${esc(u[2])}</td><td class="dim">${esc(u[3])}</td><td class="dim">${esc(u[4])}</td><td>${pill(u[6],u[5])}</td><td>${pill(u[7]==="Active"?"good":"bad",u[7])}</td><td class="n">${INR(u[8])}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">Nothing matches that. Try hydrant, CO2 or Peelamedu.</div>`}</div>
+ <p class="foot">Serial level matters the day a customer asks which of his units you touched last March, or an inspector asks for the history of one extinguisher on one wall.</p>`;
+}
+const NAMEP=[["R Selvakumar","M Thangaraj","P Nandhini"],["K Arumugam","S Dhanalakshmi","V Prabhu"],
+ ["T Jeyaraman","R Kavitha","M Sathish"],["A Murugesan","P Ilango","S Revathi"],
+ ["N Balasubramanian","K Deepa","R Manikandan"],["S Chinnasamy","T Vaithi","M Lakshmi"],
+ ["P Ramasamy","K Suresh","A Vennila"],["V Natarajan","S Priya","G Karthikeyan"],
+ ["M Palanisamy","R Shanthi","T Anbu"],["K Velmurugan","S Hemalatha","P Rajkumar"]];
+const ROLE3=[["Safety officer","Primary contact"],["Maintenance in charge","Raises the calls"],["Accounts","Payment follow up"]];
+const MON3=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const dmy=d=>String(d.getDate()).padStart(2,"0")+" "+MON3[d.getMonth()]+" "+d.getFullYear();
+function backdate(base,months){ const d=new Date(base); if(isNaN(d)) return new Date(2025,3,12); d.setMonth(d.getMonth()-months); return d; }
+function siteDetail(i){
+ const s=SITES[i], nm=NAMEP[i%NAMEP.length], eng=["Karthik R","Vignesh P","Mohan S"][i%3];
+ const bills=PAY.filter(p=>p[1]===s.s), open=bills.filter(p=>p[6]!=="good");
+ const owed=open.reduce((a,b)=>a+b[4],0);
+ const mine=UNITS.filter(u=>u[2]===s.s);
+ const since=2013+((i*3)%10), yrs=2026-since, jobs=4+((i*5)%14), blocks=Math.max(2,Math.min(8,Math.round(s.u/28)));
+ const refill=Math.round(s.u*1185/100)*100, repair=6400+((i*2300)%16000), supplyN=12+((i*7)%28);
+ const base=s.last;
+ const pins=["641004","641035","641014","641005","641021","642001","641653","641402","641604","641012"];
+ const roads=["Avinashi Road, Peelamedu","Sathy Road, Saravanampatti","Avinashi Road","Trichy Road, Singanallur",
+  "Kurichi Industrial Estate","Coimbatore Road, Pollachi","Mettupalayam Road, Annur","Trichy Road, Sulur",
+  "Palladam Road, Tiruppur","Dr Nanjappa Road, Gandhipuram"];
+ const gstn="33"+["BBBBB1111B1Z4","CCCCC2222C1Z3","DDDDD3333D1Z2","EEEEE4444E1Z1","FFFFF5555F1Z0",
+  "GGGGG6666G1Z9","HHHHH7777H1Z8","JJJJJ8888J1Z7","KKKKK9999K1Z6","LLLLL1010L1Z5"][i%10];
+ const hist=[
+  [dmy(new Date(base)),"Annual refill, "+s.u+" units",eng,"JC-"+(3100+i*37)+", INV-"+(1100+i*11),refill],
+  [dmy(backdate(base,6)),"AMC renewal, "+(since+yrs-2)+" to "+(since+yrs-1),"Office","INV-"+(940+i*9),s.v],
+  [dmy(backdate(base,16)),(i%2?"Hydrant pump repair":"Sprinkler head replacement")+", Block "+"ABCDEF"[i%6],["Vignesh P","Mohan S","Karthik R"][i%3],"JC-"+(2900+i*23),repair],
+  [dmy(backdate(base,26)),"Supply, "+supplyN+" new ABC 6 kg","Office","DC-0"+(600+i*7)+", INV-"+(770+i*13),supplyN*1600]];
+ return `<div class="card"><div class="head"><h3>${esc(s.s)}</h3><span class="note">${esc(roads[i%10])}, ${esc(s.c)} ${pins[i%10]}</span><span class="right">GSTIN ${gstn}</span></div>
+ <div class="body">
+  <div class="stat-grid" style="margin-bottom:1rem">
+   <div class="kpi"><div class="lab">Units on site</div><div class="val">${s.u}</div><div class="sub">Across ${blocks} block${blocks>1?"s":""}</div></div>
+   <div class="kpi ${s.k}"><div class="lab">Refill position</div><div class="val" style="font-size:var(--text-md)">${esc(s.due)}</div><div class="sub">Last attended ${esc(s.last)}</div></div>
+   <div class="kpi ${owed?"bad":"good"}"><div class="lab">Outstanding</div><div class="val">${owed?INR(owed):"Nothing"}</div><div class="sub">${owed?esc(open[0][0]+", "+open[0][5].toLowerCase()):"All bills settled"}</div></div>
+   <div class="kpi"><div class="lab">Since</div><div class="val">${since}</div><div class="sub">${yrs} years, ${jobs} jobs</div></div>
+  </div>
+  <div class="tbl"><table style="min-width:34rem"><thead><tr><th>People</th><th>Role</th><th>What they do</th><th>Last spoken</th></tr></thead><tbody>
+   ${nm.map((p,j)=>`<tr><td>${esc(p)}</td><td>${ROLE3[j][0]}</td><td class="dim">${ROLE3[j][1]}</td><td class="dim">${dmy(backdate(base,j*7))}, ${["on site","phone","WhatsApp"][j]}</td></tr>`).join("")}
+  </tbody></table></div>
+ </div></div>
+ <div class="card"><div class="head"><h3>Everything done here</h3><span class="note">Credit terms 45 days, cover ${esc(s.cov.toLowerCase())}</span><span class="right">Latest first</span></div>
+ <div class="tbl"><table><thead><tr><th>Date</th><th>What</th><th>Engineer</th><th>Document</th><th class="n">Value</th></tr></thead><tbody>
+  ${hist.map(h=>`<tr><td class="dim">${h[0]}</td><td>${esc(h[1])}</td><td class="dim">${esc(h[2])}</td><td class="dim">${esc(h[3])}</td><td class="n">${INR(h[4])}</td></tr>`).join("")}
+ </tbody></table></div></div>
+ ${mine.length?`<div class="card"><div class="head"><h3>Units loaded against this site</h3><span class="note">${mine.length} of ${s.u} shown</span></div>
+ <div class="tbl"><table><thead><tr><th>Serial</th><th>Type</th><th>Position</th><th>Last service</th><th>Next due</th><th>Cover</th></tr></thead><tbody>
+ ${mine.map(u=>`<tr><td>${esc(u[0])}</td><td class="dim">${esc(u[1])}</td><td class="dim">${esc(u[3])}</td><td class="dim">${esc(u[4])}</td><td>${pill(u[6],u[5])}</td><td>${pill(u[7]==="Active"?"good":"bad",u[7])}</td></tr>`).join("")}
+ </tbody></table></div></div>`:""}`;
+}
+function sites(){
+ const i=Math.max(0,Math.min(SITES.length-1,+(UI.site||0)));
+ return `<p class="lede">Each site with its people, its credit terms and everything you have ever done there. One screen before you walk in.</p>
+ <div class="tools"><span class="dim">Site</span>
+  <select data-chg="sitesel" aria-label="Pick a site">${SITES.map((x,j)=>`<option value="${j}"${j===i?" selected":""}>${esc(x.s)}, ${esc(x.c)}</option>`).join("")}</select>
+  <span class="dim">All ${SITES.length} sites are loaded. Change the site and the whole screen follows it.</span></div>
+ `+siteDetail(i);
+}
+function docs(){
+ return `<p class="lede">Your own licences and your customers' NOCs in one place, with the dates that stop you bidding or stop them passing inspection.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Expired or expiring in 14 days</div><div class="val">3</div><div class="sub">One is blocking a live bid</div></div>
+  <div class="kpi warn"><div class="lab">Due inside 60 days</div><div class="val">4</div><div class="sub">Including your own fire licence</div></div>
+  <div class="kpi good"><div class="lab">Current</div><div class="val">81</div><div class="sub">Across firm, customers and units</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Certificates and licences</h3><span class="note">Soonest first</span><span class="right">Scanned copy held against each</span></div>
+ <div class="tbl"><table><thead><tr><th>Document</th><th>Belongs to</th><th>Issued by or basis</th><th>Valid to</th><th>Status</th><th>Level</th><th>Do</th></tr></thead>
+ <tbody>${DOCS.map((d,i)=>`<tr><td>${esc(d[0])}</td><td>${esc(d[1])}</td><td class="dim">${esc(d[2])}</td><td class="dim">${esc(d[3])}</td><td>${pill(d[5],d[4])}</td><td>${pill("flat",d[6])}</td>
+  <td>${d[5]==="good"?'<span class="dim">Current</span>':`<button class="btn sm" type="button" data-act="renewdoc" data-i="${i}">Record renewal</button>`}</td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">A customer whose NOC is about to expire is a customer who needs you this month. Avinashi Road Mall is eight days out and has not been attended since May.</p>`;
+}
+function tick(){
+ return `<p class="lede">Every call, WhatsApp and scheduled visit in one queue, with who it is assigned to and when it was promised.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Past due time</div><div class="val">2</div><div class="sub">Promised and not yet attended</div></div>
+  <div class="kpi warn"><div class="lab">Due today and tomorrow</div><div class="val">4</div><div class="sub">Three engineers on the road</div></div>
+  <div class="kpi good"><div class="lab">Resolved today</div><div class="val">9</div><div class="sub">Signed on site</div></div>
+  <div class="kpi"><div class="lab">Average close time</div><div class="val">6.4 h</div><div class="sub">Against a 24 hour promise</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Open queue</h3><span class="note">Latest first</span></div>
+ <div class="tbl"><table><thead><tr><th>Ticket</th><th>Site</th><th>Equipment</th><th>Kind of fault</th><th>How it came in</th><th>Priority</th><th>Engineer</th><th>Due by</th><th>Cover</th><th>Do</th></tr></thead>
+ <tbody>${TICKETS.map((t,i)=>`<tr><td>${esc(t[0])}</td><td>${esc(t[1])}</td><td class="dim">${esc(t[2])}</td><td>${esc(t[3])}</td><td class="dim">${esc(t[4])}</td><td>${pill(t[5]==="High"?"bad":"flat",t[5])}</td>
+  <td><select data-chg="tkeng" data-i="${i}">${["Karthik R","Mohan S","Vignesh P"].map(o=>`<option${o===t[6]?" selected":""}>${o}</option>`).join("")}</select></td>
+  <td>${pill(t[9],t[7])}</td><td>${pill(t[8]==="AMC"?"good":"bad",t[8])}</td>
+  <td>${t[7]==="Resolved today"?'<span class="dim">Closed</span>':`<button class="btn sm" type="button" data-act="closetk" data-i="${i}">Close job</button>`}</td></tr>`).join("")}</tbody></table></div></div>`;
+}
+function route(){
+ return `<p class="lede">Tomorrow's work, grouped by engineer and ordered by road distance, so nobody crosses the city twice.</p>
+ <div class="stat-grid">
+  <div class="kpi"><div class="lab">Visits planned</div><div class="val">5</div><div class="sub">Three engineers</div></div>
+  <div class="kpi good"><div class="lab">Road distance</div><div class="val">69 km</div><div class="sub">Down from 104 km unplanned</div></div>
+  <div class="kpi warn"><div class="lab">Spare capacity</div><div class="val">2</div><div class="sub">Slots free on Vignesh</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Tomorrow, 27 October</h3><span class="note">Tap a row to send the engineer his day on WhatsApp</span></div>
+ <div class="tbl"><table><thead><tr><th>Time</th><th>Site</th><th>Town</th><th>Work</th><th>Ticket</th><th>Engineer</th><th class="n">Distance</th><th>Do</th></tr></thead>
+ <tbody>${ROUTE.map((r,i)=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="dim">${esc(r[2])}</td><td class="dim">${esc(r[3])}</td><td>${esc(r[4])}</td><td>${esc(r[5])}</td><td class="n">${esc(r[6])}</td><td><button class="btn sm" type="button" data-act="sendday" data-e="${esc(r[5])}">Send his day</button></td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">Attendance is the same check-in. An engineer who checks into his first site has started his day, so there is no separate register to keep.</p>`;
+}
+function field(){
+ const st=n=>JOB.step>n?"done":JOB.step===n?"now":"todo";
+ return `<p class="lede">Karthik opens the job on his phone at the gate. It works with no signal and syncs when he is back in range. Work through it yourself, the buttons do what they say.</p>
+ <div class="phone"><div class="pt"><span>TK-2238</span><small>Annur Cold Storage</small></div>
+ <div class="pb"><div class="dim" style="margin-bottom:.6rem">Annual refill, 24 units, ammonia plant room</div>
+  <div class="stp ${st(1)}"><span class="d">1</span><div><b>Check in at the gate</b>
+   <div class="dim">${JOB.step>1?"9:58 AM, GPS matched the site":"Needs the engineer to be at the site"}</div>
+   ${JOB.step===1?`<div class="acts"><button class="btn sm" type="button" data-act="jobin">Check in</button></div>`:""}</div></div>
+  <div class="stp ${st(2)}"><span class="d">2</span><div><b>Scan the units</b>
+   <div class="dim">${JOB.scanned} of 24 scanned${JOB.scanned>=24?", two missing from the wall":""}</div>
+   ${JOB.step===2?`<div class="acts"><button class="btn sm" type="button" data-act="jobscan">Scan next unit</button>${JOB.scanned?`<button class="btn quiet sm" type="button" data-act="jobscanall">Scan the rest</button>`:""}</div>`:""}</div></div>
+  <div class="stp ${st(3)}"><span class="d">3</span><div><b>Fill the job card</b>
+   <div class="dim">${JOB.step>3?"Refill done on 22, two replacements quoted":"What was done on each unit"}</div>
+   ${JOB.step===3?`<div class="acts"><button class="btn sm" type="button" data-act="jobcard">Refilled 22, quote 2 replacements</button></div>`:""}</div></div>
+  <div class="stp ${st(4)}"><span class="d">4</span><div><b>Customer signature</b>
+   <div class="dim">${JOB.done?"Signed by the stores in charge":"Stores in charge signs on the phone"}</div></div></div>
+  ${JOB.step===4?`<div style="margin-top:.6rem"><canvas id="sigpad" class="sigpad" width="520" height="192" aria-label="Signature area"></canvas>
+   <div class="acts"><button class="btn sm" type="button" data-act="jobdone" id="jobdone" disabled>Finish the job</button>
+   <button class="btn quiet sm" type="button" data-act="sigclear">Clear</button></div>
+   <div class="dim" style="margin-top:.4rem">Sign in the box with your finger or the mouse</div></div>`:""}
+  ${JOB.done?`<div class="sig">Signature captured on site and attached to the job card and to each of the 24 serials. Invoice INV-${JOB.inv} raised for ${INR(21340)}.</div>`:""}
+  ${JOB.step>4?`<div class="acts"><button class="btn quiet sm" type="button" data-act="jobreset">Run the job again</button></div>`:""}
+ </div></div>
+ <p class="foot" style="margin-top:1.25rem">The two missing units become a quotation before he leaves the gate. That is work which normally gets mentioned in the van and forgotten by evening.</p>`;
+}
+function wa(){
+ return `<p class="lede">Raised automatically from the due dates in the register. Nobody types these and nobody has to remember whose turn it is.</p>
+ <div style="margin-bottom:1rem"><button class="btn" type="button" data-act="warelease">Release all four now</button> <button class="btn quiet" type="button" data-act="wahold">Hold them</button></div>
+ <div class="wagrid">
+  <div class="wa"><div class="who2">To Annur Cold Storage, stores in charge</div>Sir, the annual refill for your 24 units at the ammonia plant is due on 6 November. Our engineer can come on the 4th or 5th morning. Which suits you?<div class="when">Queued for Tuesday 9:00 AM</div></div>
+  <div class="wa"><div class="who2">To Peelamedu Spinning Mills, safety officer</div>Sir, 142 units at your mill are past their refill date, last visit 12 April, and your AMC has also lapsed. Shall we send the renewal and plan one visit for both?<div class="when">Queued for Tuesday 9:00 AM</div></div>
+  <div class="wa"><div class="who2">To Avinashi Road Mall, maintenance</div>Sir, your fire NOC expires on 3 November. Your hose reels and hydrant were last serviced in May. Shall we attend this week so the paperwork is clean for renewal?<div class="when">Queued for Tuesday 9:00 AM</div></div>
+  <div class="wa"><div class="who2">To Peelamedu Spinning Mills, accounts</div>Madam, invoice INV-1188 for ${INR(149010)} was raised on 18 June and is now 48 days past the 45 day terms. Kindly advise the payment date.<div class="when">Queued for Wednesday 10:00 AM</div></div>
+ </div>
+ <p class="foot">Refill reminders, NOC reminders and payment follow ups all run off the same queue. Nothing goes out without a person releasing the batch.</p>`;
+}
+function quote(){
+ const cap=10;
+ const calc=l=>{ const gross=l.qty*l.rate; return l.free?0:Math.round(gross*(1-l.disc/100)); };
+ const sub=QLINES.reduce((a,l)=>a+calc(l),0);
+ const chg=QT.charges.reduce((a,c)=>a+c[1],0);
+ const taxable=sub+chg, gst=Math.round(taxable*0.18), cg=Math.round(gst/2);
+ const over=QLINES.some(l=>!l.free&&l.disc>cap);
+ const line=(l,i)=>`
+  <div style="border:1px solid var(--border-soft);border-radius:var(--radius-input);padding:.75rem;margin-bottom:.5rem">
+   <div style="display:flex;gap:.5rem;align-items:center">
+    <input style="flex:1;min-width:0" value="${esc(l.p)}" ${QT.amending?"":"disabled"} aria-label="Product">
+    ${QT.amending&&QLINES.length>1?`<button class="btn quiet sm" type="button" data-act="qrmline" data-i="${i}" title="Remove this product">Remove</button>`:""}
+   </div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(5.5rem,1fr));gap:.5rem;margin-top:.5rem">
+    <label class="dim">Qty (${esc(l.unit)})<input type="number" min="0" value="${l.qty}" data-inp="qqty" data-i="${i}" ${QT.amending?"":"disabled"} style="width:100%;margin-top:.15rem"></label>
+    <label class="dim">Rate (${"\u20b9"} each)<input type="number" min="0" value="${l.rate}" placeholder="Enter price" data-inp="qrate" data-i="${i}" ${QT.amending?"":"disabled"} style="width:100%;margin-top:.15rem"></label>
+    ${l.free?`<div style="padding-top:1.1rem;color:var(--success);font-size:var(--text-xs)">Free under a scheme</div>`
+      :`<label class="dim">Discount %${l.scheme?` <span style="color:var(--success)">(scheme)</span>`:""}<input type="number" min="0" max="100" value="${l.disc}" data-inp="qdisc" data-i="${i}" ${QT.amending?"":"disabled"}
+        style="width:100%;margin-top:.15rem${l.disc>cap&&!l.scheme?";border-color:var(--warning);background:var(--warning-soft)":""}"></label>`}
+    <div class="dim">Line total<div style="margin-top:.35rem;font-weight:600;color:var(--text-primary);font-variant-numeric:tabular-nums">${INR(calc(l))}</div></div>
+   </div>
+   ${l.stock!=null?`<div style="font-size:var(--text-xs);margin-top:.45rem;color:${l.stock<=0||l.qty>l.stock?"var(--warning-text)":"var(--text-muted)"}">${l.stock<=0?"None free in stock":(l.qty>l.stock?`Only ${l.stock} free in stock`:`${l.stock} free in stock`)}</div>`:""}
+   ${l.contract?`<div style="font-size:var(--text-xs);margin-top:.4rem;color:var(--success-text);background:var(--success-soft);border:1px solid var(--success);border-radius:6px;padding:.25rem .45rem">Rate contract price (${esc(l.contract.ref)}): ${INR(l.contract.price)} each, instead of the list price of ${INR(l.contract.list)}.</div>`:""}
+  </div>`;
+ return `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(23rem,1fr));gap:1.25rem;align-items:start">
+  <div class="card" style="margin:0"><div class="body">
+   <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">${QT.amending?"Amend Quotation":"New Quotation"}</h3>
+   ${QT.amending?`<div style="border:1px solid var(--warning);background:var(--warning-soft);color:var(--warning-text);border-radius:var(--radius-input);padding:.5rem .7rem;font-size:var(--text-sm);margin-bottom:.9rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;align-items:center">
+     <span>Amending <b>${esc(QT.series)}${QT.no}</b>. Change what the customer asked for and save: it becomes the next version, and ${esc(QT.series)}${QT.no} is kept as replaced.</span>
+     <button class="btn quiet sm" type="button" data-act="amend">Stop amending</button></div>`:""}
+   <div style="border:1px solid var(--brand);background:var(--brand-soft);border-radius:var(--radius-input);padding:.5rem .7rem;font-size:var(--text-sm);margin-bottom:.9rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;align-items:center">
+    <span>Quoting the enquiry from <b>${esc(QT.cust)}</b>.</span>
+    <button class="btn ghost sm" type="button" data-act="go" data-k="enq">Back to the enquiry</button></div>
+   <div style="border:1px solid var(--border-soft);background:var(--bg-subtle);border-radius:var(--radius-input);padding:.6rem .7rem;margin-bottom:.9rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center">
+    <select style="flex:1;min-width:12rem" data-chg="qtmplsel" aria-label="Start from a template">
+     <option value="">Start from a template</option>
+     <option value="a">Annual refill, large site (5 products)</option>
+     <option value="b">Hydrant quarterly service (3 products)</option>
+     <option value="c">New site fit out (8 products)</option></select>
+    <button class="btn ghost sm" type="button" data-act="qsavetmpl">Save these lines as a template</button>
+    <button class="btn quiet sm" type="button" data-act="qmgtmpl">Manage templates</button></div>
+   <label style="font-size:var(--text-sm);font-weight:500">Customer</label>
+   <input style="width:100%;margin:.25rem 0 .3rem" value="${esc(QT.cust)}" placeholder="Type customer name to search..." ${QT.amending?"":"disabled"}>
+   <div style="font-size:var(--text-xs);color:var(--text-muted);margin-bottom:.9rem">Rate contract 8 percent off list, live to 31 Mar 2027. Credit 45 days. ${INR(0)} overdue.</div>
+   <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap">
+    <label style="font-size:var(--text-sm);font-weight:500">Products</label>
+    <span style="font-size:var(--text-xs);color:${over?"var(--warning-text)":"var(--text-muted)"}">Your discount limit: ${cap}%, set for your role. Above it, the order needs approval.</span></div>
+   <div style="margin-top:.4rem">${QLINES.map(line).join("")}</div>
+   <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin:.3rem 0 1rem">
+    <button class="btn ghost sm" type="button" data-act="qaddline" ${QT.amending?"":"disabled"}>Add another product</button>
+    <select data-chg="qaddcharge" aria-label="Add a charge" ${QT.amending?"":"disabled"}>
+     <option value="">Add a charge</option><option value="Freight and handling|1800">Freight and handling</option>
+     <option value="Site visit and testing|2500">Site visit and testing</option><option value="Installation labour|4200">Installation labour</option></select>
+    <button class="btn ${QT.amending?"quiet":""} sm" type="button" data-act="amend">${QT.amending?"Stop amending":"Amend this quotation"}</button></div>
+   ${QT.charges.length?`<div class="tbl" style="margin-bottom:.9rem"><table style="min-width:0"><tbody>
+    ${QT.charges.map((x,i)=>`<tr><td>${esc(x[0])}</td><td class="n">${INR(x[1])}</td><td style="width:1%">${QT.amending?`<button class="btn quiet sm" type="button" data-act="qrmcharge" data-i="${i}">Remove</button>`:""}</td></tr>`).join("")}
+   </tbody></table></div>`:""}
+   <div style="border-top:1px solid var(--border-soft);padding-top:.8rem;font-size:var(--text-sm)">
+    <div style="display:flex;justify-content:space-between;margin-bottom:.3rem"><span>Subtotal (after discount)</span><span style="font-variant-numeric:tabular-nums">${INR(sub)}</span></div>
+    ${chg?`<div style="display:flex;justify-content:space-between;margin-bottom:.3rem;color:var(--text-secondary)"><span>Charges</span><span style="font-variant-numeric:tabular-nums">${INR(chg)}</span></div>`:""}
+    <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;color:var(--text-secondary)"><span>CGST (9%)</span><span style="font-variant-numeric:tabular-nums">${INR(cg)}</span></div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;color:var(--text-secondary)"><span>SGST (9%)</span><span style="font-variant-numeric:tabular-nums">${INR(gst-cg)}</span></div>
+    <div style="display:flex;justify-content:space-between;font-weight:700;border-top:1px solid var(--border-soft);padding-top:.5rem;margin-top:.5rem">
+     <span>Total</span><span style="color:var(--brand);font-variant-numeric:tabular-nums">${INR(taxable+gst)}</span></div>
+   </div>
+   ${over?`<div style="margin-top:.8rem;border:1px solid var(--warning);background:var(--warning-soft);color:var(--warning-text);border-radius:var(--radius-input);padding:.5rem .7rem;font-size:var(--text-sm)">A line is above your ${cap} percent limit. Saving this sends it for approval before it can go to the customer.</div>`:""}
+   <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+    <button class="btn" type="button" data-act="qsave">${over?"Save and send for approval":"Save the quotation"}</button>
+    <button class="btn quiet" type="button" data-act="qsend">Send to the customer</button>
+    <button class="btn quiet" type="button" data-act="qpdf">Download the PDF</button>
+    <button class="btn quiet" type="button" data-act="q2inv">Make the invoice</button></div>
+  </div></div>
+
+  <div class="card" style="margin:0"><div class="head"><h3>Recent Quotations</h3>
+   <span class="right"><input type="search" placeholder="Search quotations" style="min-width:11rem"></span></div>
+   <div class="body" style="padding-top:.8rem">
+   ${QTLIST.map(r=>`<div style="border:1px solid var(--border-soft);border-radius:var(--radius-input);padding:.7rem;margin-bottom:.5rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;align-items:center">
+     <div style="min-width:0"><div style="font-weight:600;font-variant-numeric:tabular-nums">${esc(r[0])}</div>
+      <div class="dim">${esc(r[1])} &middot; ${esc(r[2])}</div></div>
+     <div style="text-align:right">
+      <div style="font-weight:600;font-variant-numeric:tabular-nums">${INR(r[3])}</div>
+      <div style="margin-top:.25rem;display:flex;gap:.3rem;justify-content:flex-end;flex-wrap:wrap">${pill(r[5],r[4])}
+       ${r[4]==="Accepted"?`<button class="btn sm" type="button" data-act="q2inv">Make invoice</button>`:""}
+       ${r[4]==="Sent"?`<button class="btn ghost sm" type="button" data-act="amend">Amend</button>`:""}</div></div>
+    </div>`).join("")}
+   </div></div>
+ </div>`;
+}
+function settings(){
+ const f=(label,val,ph)=>`<div style="margin-bottom:.7rem"><label class="dim" style="display:block;margin-bottom:.2rem">${esc(label)}</label>
+   <input value="${esc(val)}" placeholder="${esc(ph||"")}" disabled style="width:100%"></div>`;
+ const t=(label,on,note)=>`<div style="display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.7rem">
+   <input type="checkbox" ${on?"checked":""} disabled style="margin-top:.2rem">
+   <div><div>${esc(label)}</div>${note?`<div class="dim">${esc(note)}</div>`:""}</div></div>`;
+ return `<p class="lede">Everything the documents and the rules read from. On the demonstration these are fixed, because the tenant resets every night. On your own system every one of them is yours to change.</p>
+ <div class="hint" style="background:var(--warning-soft);border-color:var(--warning);color:var(--warning-text)">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+  <div><b>Fixed on the demo.</b> <button class="btn quiet sm" type="button" data-act="whylocked" style="margin-left:.4rem">Why can I not change these details?</button></div></div>
+ <div class="scope">
+  <div class="blk"><h4>Company</h4>
+   ${f("Company Name (as in GST)","Muthu Fire Engineering Co")}
+   ${f("GSTIN","33AAAAA0000A1Z5")}
+   ${f("PAN","ABCDE1234F")}
+   ${f("Phone","+91 98765 43210")}
+   ${f("Email","shrimuthuengg@gmail.com")}
+   ${f("Website","www.muthufire.com")}
+  </div>
+  <div class="blk"><h4>Address</h4>
+   ${f("Address Line 1","33 NSR Road")}
+   ${f("Address Line 2","Saibaba Colony")}
+   ${f("Pincode","641011")}
+   ${f("Default Credit Period (days)","45")}
+   ${f("Quotations valid for (days)","30")}
+  </div>
+  <div class="blk"><h4>Tax</h4>
+   ${f("GST Rate (%)","18")}
+   ${f("LUT ARN","AD330426000123X","e.g. AD330426000123X")}
+   ${f("Valid from","01 Apr 2026")}
+   ${f("Valid until","31 Mar 2027")}
+   ${t("We export or sell to SEZ units",false,"Turns on zero rated supply and the LUT fields")}
+   ${t("Round bills off to the rupee",true)}
+  </div>
+  <div class="blk"><h4>Bank</h4>
+   ${f("Bank Name","HDFC Bank")}
+   ${f("Account Number","001122334455","e.g. 001122334455")}
+   ${f("IFSC","HDFC0001234")}
+   ${f("Branch","Saibaba Colony")}
+   ${f("UPI ID","muthufire@hdfcbank")}
+  </div>
+  <div class="blk"><h4>Signatory</h4>
+   ${f("Signatory Name","Anil Kumar","e.g. Anil Kumar")}
+   ${f("Designation","Director / Authorised Signatory")}
+   <div class="dim" style="margin-bottom:.4rem">Signature Image</div>
+   <div class="sig" style="margin-top:0">No signature uploaded<div class="dim" style="margin-top:.3rem">Stamped on every service PDF once it is uploaded</div></div>
+  </div>
+  <div class="blk"><h4>Number series</h4>
+   ${f("Invoice","INV/26-27/ 1255")}
+   ${f("Quotation","QT/26-27/ 0914")}
+   ${f("Delivery challan","DC/26-27/ 0774")}
+   <div class="dim">Gapless and sequential inside each series and financial year. A cancelled document becomes a credit note, never a deleted row.</div>
+  </div>
+  <div class="blk"><h4>Service and warranty</h4>
+   ${f("Default Warranty (months)","12")}
+   ${f("Free maintenance visits during warranty","2")}
+   ${t("Bill AMC and CAMC contracts in parts",true,"Quarterly or half yearly billing against one contract")}
+   ${t("Payment plans on orders",true)}
+   ${t("Share a sale between salespeople",false)}
+  </div>
+  <div class="blk"><h4>Staff and attendance</h4>
+   ${f("Working Hours Start","09:00")}
+   ${f("Working Hours End","18:30")}
+   ${f("Late After (minutes)","15")}
+   ${t("Tasks have a date and time",true)}
+  </div>
+  <div class="blk"><h4>Leave Policy</h4>
+   ${f("Casual Leave / month","1")}
+   ${f("Sick Leave / month","1")}
+   ${f("Paid Leave / year","12")}
+   <div class="dim">The usual plan, which new plans start from</div>
+  </div>
+ </div>`;
+}
+function rate(){
+ return `<p class="lede">What each customer has been promised, and until when. A quotation raised today reprices at the contract that applied on its own date, not at today's rate.</p>
+ <div class="card"><div class="head"><h3>Live and expired rate contracts</h3><span class="note">Applied automatically on every quotation</span></div>
+ <div class="tbl"><table><thead><tr><th>Customer or authority</th><th>Covers</th><th>Basis</th><th>Valid from</th><th>Valid to</th><th>Status</th><th>Do</th></tr></thead>
+ <tbody>${RATES.map((r,i)=>`<tr><td>${esc(r[0])}</td><td class="dim">${esc(r[1])}</td><td>${esc(r[2])}</td><td class="dim">${esc(r[3])}</td><td class="dim">${esc(r[4])}</td><td>${pill(r[5],r[5]==="good"?"Live":r[5]==="warn"?"Ends in 66 days":"Expired")}</td><td>${r[5]==="bad"?`<button class="btn sm" type="button" data-act="renewrate" data-i="${i}">Renew for a year</button>`:`<span class="dim">No action</span>`}</td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">Tiruppur's contract ran out on 31 March. Anything quoted to them since then should have been at list price, and the system flags where it was not.</p>`;
+}
+function tender(){
+ const emd=TENDERS.filter(t=>t[5].startsWith("Paid")||t[5].startsWith("Refund")).reduce((a,b)=>a+b[4],0);
+ return `<p class="lede">Government and institutional bids with the deadlines, the earnest money and the documents each one needs.</p>
+ <div class="stat-grid">
+  <div class="kpi warn"><div class="lab">Closing in 10 days</div><div class="val">2</div><div class="sub">Worth ${L(2800000)} of work</div></div>
+  <div class="kpi bad"><div class="lab">Blocked by a document</div><div class="val">1</div><div class="sub">IS 2190 certificate expires first</div></div>
+  <div class="kpi alt"><div class="lab">EMD with authorities</div><div class="val">${INR(emd)}</div><div class="sub">One refund pending 71 days</div></div>
+  <div class="kpi good"><div class="lab">Win rate, 12 months</div><div class="val">34%</div><div class="sub">9 of 26 bids</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Live and recent bids</h3><span class="note">Deadline first</span></div>
+ <div class="tbl"><table><thead><tr><th>Bid</th><th>Authority</th><th>Scope</th><th class="n">Value</th><th class="n">EMD</th><th>EMD status</th><th>Closes</th><th>Position</th><th>Do</th></tr></thead>
+ <tbody>${TENDERS.map((t,i)=>`<tr><td>${esc(t[0])}</td><td>${esc(t[1])}</td><td class="dim">${esc(t[2])}</td><td class="n">${INR(t[3])}</td><td class="n">${INR(t[4])}</td><td class="dim">${esc(t[5])}</td><td>${pill(t[8],t[7])}</td><td class="dim">${esc(t[9])}</td><td>${/Blocked/.test(t[9])?`<button class="btn sm" type="button" disabled title="A required document has expired">Blocked</button>`:(t[7]==="Result awaited"||t[7]==="Closed")?`<span class="dim">Done</span>`:`<button class="btn sm" type="button" data-act="bid" data-i="${i}">Submit the bid</button>`}</td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">The Pollachi bid closes in three days and your IS 2190 workshop certificate expires in thirteen. The system will not let that one be submitted without warning you first.</p>`;
+}
+function van(){
+ return `<p class="lede">What is on each van and what is left in the Saibaba Colony workshop, against the level you set.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Below reorder level</div><div class="val">3</div><div class="sub">Two vans and the workshop</div></div>
+  <div class="kpi warn"><div class="lab">Powder in stock</div><div class="val">450 kg</div><div class="sub">About 75 refills of 6 kg</div></div>
+  <div class="kpi good"><div class="lab">Units out for refill</div><div class="val">38</div><div class="sub">On challan, due back in 4 days</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Stock against level</h3><span class="note">Red means a job can fail tomorrow</span></div>
+ <div class="tbl"><table><thead><tr><th>Held by</th><th>Vehicle or place</th><th>Item</th><th class="n">In hand</th><th class="n">Reorder level</th><th>Status</th><th>Do</th></tr></thead>
+ <tbody>${VAN.map((v,i)=>`<tr><td>${esc(v[0])}</td><td class="dim">${esc(v[1])}</td><td>${esc(v[2])}</td><td class="n">${v[3]}</td><td class="n">${v[4]}</td><td>${pill(v[5],v[5]==="bad"?"Below level":v[5]==="warn"?"At level":"Fine")}</td><td>${v[5]==="bad"?`<button class="btn sm" type="button" data-act="po" data-i="${i}">Raise a purchase order</button>`:`<span class="dim">No action</span>`}</td></tr>`).join("")}</tbody></table></div></div>
+ <p class="foot">Units taken away for refilling move out on a delivery challan and come back on the same one, so nothing is lost between the customer's wall and your workshop.</p>`;
+}
+function supp(){
+ const owed=SUPP.filter(s=>s[6]!=="good"||s[5]!=="Paid").reduce((a,b)=>a+(b[5]==="Paid"?0:b[4]),0);
+ return `<p class="lede">Who you buy from, on what terms, and what is falling due. Set against what customers owe you, so you can see the real cash position.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Payable overdue</div><div class="val">${INR(96200)}</div><div class="sub">Southern Hose, 9 days</div></div>
+  <div class="kpi warn"><div class="lab">Payable due in 30 days</div><div class="val">${INR(461000)}</div><div class="sub">Two suppliers</div></div>
+  <div class="kpi good"><div class="lab">Receivable due in 30 days</div><div class="val">${INR(444400)}</div><div class="sub">Five customers</div></div>
+  <div class="kpi alt"><div class="lab">Net position</div><div class="val">${INR(444400-461000)}</div><div class="sub">Before this month's collection</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Suppliers</h3><span class="note">Payment terms from the master</span></div>
+ <div class="tbl"><table><thead><tr><th>Supplier</th><th>Place</th><th>Supplies</th><th>Terms</th><th class="n">Outstanding</th><th>Status</th><th>Do</th></tr></thead>
+ <tbody>${SUPP.map((s,i)=>`<tr><td>${esc(s[0])}</td><td class="dim">${esc(s[1])}</td><td class="dim">${esc(s[2])}</td><td>${esc(s[3])}</td><td class="n">${INR(s[4])}</td><td>${pill(s[6],s[5])}</td><td>${s[5]==="Paid"?`<span class="dim">Settled</span>`:`<button class="btn sm" type="button" data-act="paysupp" data-i="${i}">Pay now</button>`}</td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="4">Owed to suppliers</td><td class="n">${INR(owed)}</td><td colspan="2"></td></tr></tfoot></table></div></div>`;
+}
+function inv(){
+ const sub=LINES.reduce((a,l)=>a+l[3]*l[4],0), gst=Math.round(sub*0.18), c=Math.round(gst/2);
+ return `<p class="lede">Raised straight from the job card, so the quantities are whatever the engineer actually did on site. GST ready, with HSN and SAC on every line.</p>
+ <div class="card">
+  <div class="docgrid"><div><b>Tax invoice</b><div class="meta">Muthu Fire Engineering Co<br>33 NSR Road, Saibaba Colony, Coimbatore 641011<br>GSTIN 33AAAAA0000A1Z5</div></div>
+  <div class="meta" style="text-align:right">Invoice INV-1188<br>Date 18 Jun 2026<br>Challan DC-0774<br>Place of supply 33 Tamil Nadu</div></div>
+  <div class="docgrid"><div class="meta"><b style="font-size:var(--text-sm)">Billed to</b>Peelamedu Spinning Mills<br>Avinashi Road, Peelamedu, Coimbatore 641004<br>GSTIN 33BBBBB1111B1Z4</div>
+  <div class="meta" style="text-align:right"><b style="font-size:var(--text-sm)">Against</b>Annual refill, 142 units<br>Job card JC-3391<br>Signed by stores in charge</div></div>
+  <div class="tbl"><table><thead><tr><th>Description</th><th>HSN or SAC</th><th>Unit</th><th class="n">Qty</th><th class="n">Rate</th><th class="n">GST</th><th class="n">Amount</th></tr></thead>
+  <tbody>${LINES.map(l=>`<tr><td>${esc(l[0])}</td><td class="dim">${esc(l[1])}</td><td class="dim">${esc(l[2])}</td><td class="n">${l[3]}</td><td class="n">${INR(l[4])}</td><td class="n">18%</td><td class="n">${INR(l[3]*l[4])}</td></tr>`).join("")}</tbody></table></div>
+  <div class="totals"><table><tr><td>Taxable value</td><td class="n">${INR(sub)}</td></tr><tr><td>CGST 9%</td><td class="n">${INR(c)}</td></tr><tr><td>SGST 9%</td><td class="n">${INR(gst-c)}</td></tr><tr><td>Total</td><td class="n">${INR(sub+gst)}</td></tr></table></div>
+  <div style="padding:var(--card-pad);display:flex;gap:.5rem;flex-wrap:wrap"><button class="btn" type="button" data-act="invpdf">Download the PDF</button><button class="btn quiet" type="button" data-act="invsend">Send it on WhatsApp</button><button class="btn quiet" type="button" data-act="invcn">Cancel by credit note</button></div>
+ </div>
+ <p class="foot">A cancelled invoice becomes a credit note, never a deleted row, so the numbering stays gapless for your GST return.</p>`;
+}
+function pay(){
+ const out=PAY.filter(p=>p[6]!=="good").reduce((a,b)=>a+b[4],0), late=PAY.filter(p=>p[6]==="bad").reduce((a,b)=>a+b[4],0);
+ return `<p class="lede">What is owed, how long it has been owed, and who was reminded last.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Overdue</div><div class="val">${L(late)}</div><div class="sub">Three customers, oldest 48 days</div></div>
+  <div class="kpi warn"><div class="lab">Due this month</div><div class="val">${L(out-late)}</div><div class="sub">Two renewals</div></div>
+  <div class="kpi good"><div class="lab">Collected this month</div><div class="val">${L(312000)}</div><div class="sub">Against ${L(340000)} raised</div></div>
+  <div class="kpi"><div class="lab">Average days to pay</div><div class="val">38</div><div class="sub">Terms are 45</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Outstanding</h3><span class="note">Oldest first</span></div>
+ <div class="tbl"><table><thead><tr><th>Invoice</th><th>Customer</th><th>Raised</th><th>Against</th><th class="n">Amount</th><th>Status</th><th>Do</th></tr></thead>
+ <tbody>${PAY.map((p,i)=>`<tr><td>${esc(p[0])}</td><td>${esc(p[1])}</td><td class="dim">${esc(p[2])}</td><td class="dim">${esc(p[3])}</td><td class="n">${INR(p[4])}</td><td>${pill(p[6],p[5])}</td>
+  <td>${p[6]==="good"?'<span class="dim">Settled</span>':`<button class="btn sm" type="button" data-act="paid" data-i="${i}">Record payment</button>`}</td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="4">Outstanding</td><td class="n">${INR(out)}</td><td colspan="2"></td></tr></tfoot></table></div></div>`;
+}
+function rep(){
+ const f=(UI.period||"12")==="12"?1:(UI.period==="6"?0.52:0.26);
+ const bars=[["Refilling",1840000],["AMC contracts",1120000],["Hydrant and sprinkler",780000],["Alarm systems",430000],["New supply",390000]].map(b=>[b[0],Math.round(b[1]*f)]);
+ const max=Math.max(...bars.map(b=>b[1]));
+ return `<p class="lede">Where the money came from, which engineer carried it and which work is actually worth doing. Any of these can be scheduled to reach you on WhatsApp every Monday.</p>
+ <div class="stat-grid">
+  <div class="kpi good"><div class="lab">Revenue, 12 months</div><div class="val">${L(4560000)}</div><div class="sub">Up 18% on the year before</div></div>
+  <div class="kpi"><div class="lab">From recurring work</div><div class="val">65%</div><div class="sub">Refilling and AMC together</div></div>
+  <div class="kpi warn"><div class="lab">Gross margin</div><div class="val">41%</div><div class="sub">Lowest on new supply at 22%</div></div>
+  <div class="kpi"><div class="lab">Revenue per engineer</div><div class="val">${L(1520000)}</div><div class="sub">Three engineers</div></div>
+ </div>
+ <div class="seg" style="margin-bottom:1rem">${[["12","Last 12 months"],["6","Last 6 months"],["3","Last quarter"]].map(([v,l])=>`<button type="button" data-act="period" data-v="${v}" aria-pressed="${(UI.period||"12")===v}">${l}</button>`).join("")}</div>
+ <div class="card"><div class="head"><h3>Revenue by kind of work</h3><span class="note">${(UI.period||"12")==="12"?"Last twelve months":(UI.period==="6"?"Last six months":"Last quarter")}</span></div>
+ <div class="body">${bars.map(b=>`
+   <div style="margin-bottom:.7rem">
+     <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);margin-bottom:.25rem">
+       <span>${esc(b[0])}</span><span style="font-variant-numeric:tabular-nums;color:var(--text-muted)">${INR(b[1])}</span></div>
+     <div style="height:9px;background:var(--bg-subtle);border-radius:999px;overflow:hidden">
+       <div style="height:100%;width:${(b[1]/max*100).toFixed(1)}%;background:var(--brand);border-radius:999px"></div></div>
+   </div>`).join("")}</div></div>
+ <div class="card"><div class="head"><h3>Scheduled reports</h3><span class="note">Delivered without anyone running them</span></div>
+ <div class="tbl"><table><thead><tr><th>Report</th><th>Goes to</th><th>When</th><th>How</th><th>Last sent</th></tr></thead><tbody>
+  <tr><td>Units past refill date</td><td>Owner</td><td>Every Monday 8:00 AM</td><td>WhatsApp and email</td><td class="dim">20 Oct 2026</td></tr>
+  <tr><td>AMC leakage and renewals due</td><td>Owner</td><td>1st of the month</td><td>Email, Excel attached</td><td class="dim">01 Oct 2026</td></tr>
+  <tr><td>Outstanding over 30 days</td><td>Accounts</td><td>Every Friday 5:00 PM</td><td>WhatsApp</td><td class="dim">24 Oct 2026</td></tr>
+  <tr><td>Documents expiring in 30 days</td><td>Owner</td><td>Every Monday 8:00 AM</td><td>WhatsApp</td><td class="dim">20 Oct 2026</td></tr>
+ </tbody></table></div></div>`;
+}
+function scope(){
+ return `<p class="lede">Everything above is one system, built for how a fire safety firm actually works, and handed over running with your own data inside it.</p>
+ <div class="scope">
+  <div class="blk"><h4>The work you already do</h4><ul>
+   <li>Equipment register by serial, site and position</li>
+   <li>Refill dates and five year pressure tests per unit</li>
+   <li>Hydrant, sprinkler and alarm service intervals</li>
+   <li>Sites, contacts, credit terms and full job history</li>
+   <li>Service tickets with priority, engineer and promised time</li>
+   <li>Visit planner by road distance, with attendance built in</li>
+  </ul></div>
+  <div class="blk"><h4>The money you are missing</h4><ul>
+   <li>AMC leakage, every site carrying no live cover</li>
+   <li>One click from that list to a drafted renewal quotation</li>
+   <li>Rate contracts applied automatically, priced by date</li>
+   <li>Payment tracker with ageing and automatic follow up</li>
+   <li>Supplier payables set against receivables, one cash view</li>
+   <li>Profitability by kind of work and by engineer</li>
+  </ul></div>
+  <div class="blk"><h4>Leads that arrive by themselves</h4><ul>
+   <li>QR sticker on every unit, printed from the register</li>
+   <li>A scan raises an enquiry carrying the serial and the overdue date</li>
+   <li>IndiaMART and Justdial enquiries pulled in automatically</li>
+   <li>Website form and missed calls land in the same inbox</li>
+   <li>Routed on arrival by territory, source or who serviced it last</li>
+   <li>Escalates if nobody touches it in 30 minutes</li>
+   <li>Conversion by source, so you know what to stop paying for</li>
+  </ul></div>
+  <div class="blk"><h4>Compliance and bidding</h4><ul>
+   <li>Your licences and your customers' NOCs with expiry dates</li>
+   <li>Test certificates held per unit, IS 2190 and IS 15683</li>
+   <li>Hydrant and sprinkler records to IS 3844 and IS 15105</li>
+   <li>Tender register with deadlines and document checks</li>
+   <li>Earnest money tracked until it is refunded</li>
+   <li>A bid cannot be submitted on an expired certificate</li>
+  </ul></div>
+  <div class="blk"><h4>On the phone</h4><ul>
+   <li>Android app for engineers, works with no signal</li>
+   <li>GPS check in at the gate, which is also attendance</li>
+   <li>Scan units, fill the job card, capture the signature</li>
+   <li>Van stock per engineer against reorder level</li>
+   <li>Quotation raised at the customer's gate</li>
+  </ul></div>
+  <div class="blk"><h4>Paperwork, GST ready</h4><ul>
+   <li>Quotation, sales order, delivery challan, tax invoice</li>
+   <li>HSN and SAC per line, CGST and SGST split</li>
+   <li>Numbering gapless per series and financial year</li>
+   <li>Cancellation by credit note, never by deletion</li>
+   <li>Challan out and back for units taken for refilling</li>
+  </ul></div>
+  <div class="blk"><h4>The assistant</h4><ul>
+   <li>Ask in plain words across your own data only</li>
+   <li>Reads, counts, compares and drafts</li>
+   <li>Never sends, never prices, never closes anything</li>
+   <li>Every draft waits for a person to approve it</li>
+   <li>Scoped to your firm, no other company's data</li>
+  </ul></div>
+ </div>
+ <div class="price">
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:flex-start">
+   <div><div class="lab" style="font-size:var(--text-xs);font-weight:600;letter-spacing:var(--track-caps);text-transform:uppercase;color:var(--text-muted)">How it is handed over</div>
+    <div class="amt" style="font-size:var(--text-md)">Thirty working days, start to running</div>
+    <div style="font-size:var(--text-sm);color:var(--text-secondary);margin-top:.4rem;max-width:52ch">Your existing records loaded in, your staff trained on your own data, the Android app on their phones, and the system yours to keep. No monthly licence per user and no charge per engineer.</div></div>
+   <div style="font-size:var(--text-sm);color:var(--text-secondary);line-height:1.9">
+    Year one support included<br>
+    Hosting and backups included for year one<br>
+    Source code and database are yours<br>
+    In person in Coimbatore, not over a call
+   </div>
+  </div>
+ </div>
+ <div style="margin-top:1.25rem;display:flex;gap:.9rem;flex-wrap:wrap;align-items:center">
+  <a class="btn" href="tel:+919578971156" style="display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;font-size:var(--text-md);padding:.7rem 1.15rem">
+   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+   Call 95789 71156</a>
+  <span class="dim" style="font-size:var(--text-sm)">Ragul Sekar, Elevate Aura, Chennai</span>
+ </div>
+ <p class="foot" style="margin-top:1.25rem">The ${L(454000)} of lapsed cover sitting in the leakage screen is the first job this does for you, and it is work you have already earned once.</p>`;
+}
+
+function enq(){
+ const open=ENQ.filter(e=>e[7]!=="Won"), val=open.reduce((a,b)=>a+b[4],0);
+ return `<p class="lede">Enquiries land here by themselves, from the QR stickers on your units, from IndiaMART and Justdial, from your website, from a missed call and from the tender portal. Nobody types them in.</p>
+ <div class="stat-grid">
+  <div class="kpi bad"><div class="lab">Not yet touched</div><div class="val">3</div><div class="sub">Oldest came in at 7:05 this morning</div></div>
+  <div class="kpi warn"><div class="lab">Open enquiry value</div><div class="val">${L(val)}</div><div class="sub">Seven live, one already won</div></div>
+  <div class="kpi good"><div class="lab">Average first response</div><div class="val">41 min</div><div class="sub">Was two days before routing</div></div>
+  <div class="kpi"><div class="lab">Came in this week</div><div class="val">23</div><div class="sub">Nine from QR stickers</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Enquiry inbox</h3><span class="note">Routed the moment it arrives</span><span class="right">Newest first</span></div>
+ <div class="tbl"><table><thead><tr><th>Source</th><th>From</th><th>Site or company</th><th>What they want</th><th class="n">Expected value</th><th>Received</th><th>Owner</th><th>Status</th></tr></thead>
+ <tbody>${ENQ.map((e,i)=>`<tr><td>${pill(e[0]==="QR sticker"?"info":"flat",e[0])}</td><td>${esc(e[1])}</td><td>${esc(e[2])}</td>
+  <td class="dim">${esc(e[3])}</td><td class="n">${e[4]?INR(e[4]):"<span class='dim'>Not known yet</span>"}</td>
+  <td class="dim">${esc(e[5])}</td>
+  <td><select data-chg="owner" data-i="${i}">${["Office","Karthik R","Mohan S","Vignesh P","Owner"].map(o=>`<option${o===e[6]?" selected":""}>${o}</option>`).join("")}</select></td>
+  <td><select data-chg="status" data-i="${i}">${["New enquiry","Contacted","Quoted","Won","Lost at price"].map(o=>`<option${o===e[7]?" selected":""}>${o}</option>`).join("")}</select></td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="4">Open enquiries</td><td class="n">${INR(val)}</td><td colspan="3"></td></tr></tfoot></table></div></div>
+ <p class="foot">Mark an enquiry won and it asks whether to make the quotation now, priced from that customer's rate contract. Mark it lost and it asks who took it and at what price, which is what feeds the win rate.</p>`;
+}
+function qr(){
+ return `<p class="lede">Every unit already has a serial number. Print that serial as a QR sticker, put it on the unit next to the service tag, and the building's own staff become the people who tell you when something needs doing.</p>
+ <div class="stat-grid">
+  <div class="kpi"><div class="lab">Stickers printed</div><div class="val">1,240</div><div class="sub">One per unit, from the register</div></div>
+  <div class="kpi good"><div class="lab">Scans this month</div><div class="val">87</div><div class="sub">Across 22 sites</div></div>
+  <div class="kpi good"><div class="lab">Turned into work</div><div class="val">18</div><div class="sub">Worth ${L(486000)} this year</div></div>
+  <div class="kpi"><div class="lab">Costs you</div><div class="val">About 2 rupees</div><div class="sub">Per sticker, printed in a sheet</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>What the safety officer sees when he scans</h3><span class="note">No app, no login, his own phone camera</span></div>
+ <div class="body"><div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start">
+  <div style="flex:0 0 auto;text-align:center">
+   <div style="width:132px;height:132px;background:#fff;border:1px solid var(--border-strong);border-radius:var(--radius-input);display:grid;place-items:center;padding:10px">
+    <svg viewBox="0 0 29 29" width="110" height="110" shape-rendering="crispEdges" aria-hidden="true">
+     <rect width="29" height="29" fill="#fff"/>
+     <g fill="#111827">
+      <path d="M0 0h7v7H0z"/><path d="M1 1h5v5H1z" fill="#fff"/><path d="M2 2h3v3H2z"/>
+      <path d="M22 0h7v7h-7z"/><path d="M23 1h5v5h-5z" fill="#fff"/><path d="M24 2h3v3h-3z"/>
+      <path d="M0 22h7v7H0z"/><path d="M1 23h5v5H1z" fill="#fff"/><path d="M2 24h3v3H2z"/>
+      <path d="M9 0h1v1H9zM11 0h1v1h-1zM13 0h1v1h-1zM9 2h1v1H9zM12 2h1v1h-1zM10 3h1v1h-1zM13 3h1v1h-1zM9 5h1v1H9zM11 5h1v1h-1zM8 7h1v1H8zM10 7h1v1h-1zM13 7h1v1h-1z"/>
+      <path d="M0 9h1v1H0zM2 9h1v1H2zM4 9h1v1H4zM1 11h1v1H1zM3 11h1v1H3zM5 11h1v1H5zM0 13h1v1H0zM2 13h1v1H2zM6 13h1v1H6zM7 10h1v1H7zM7 12h1v1H7z"/>
+      <path d="M9 9h1v1H9zM11 9h1v1h-1zM14 9h1v1h-1zM16 9h1v1h-1zM10 10h1v1h-1zM13 10h1v1h-1zM17 10h1v1h-1zM9 11h1v1H9zM12 11h1v1h-1zM15 11h1v1h-1zM11 12h1v1h-1zM14 12h1v1h-1zM16 12h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM17 13h1v1h-1zM9 14h1v1H9zM12 14h1v1h-1zM15 14h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1z"/>
+      <path d="M19 9h1v1h-1zM21 9h1v1h-1zM23 9h1v1h-1zM25 9h1v1h-1zM28 9h1v1h-1zM20 11h1v1h-1zM22 11h1v1h-1zM26 11h1v1h-1zM19 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM21 15h1v1h-1zM25 15h1v1h-1zM28 15h1v1h-1z"/>
+      <path d="M9 18h1v1H9zM11 18h1v1h-1zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM23 18h1v1h-1zM26 18h1v1h-1zM10 20h1v1h-1zM13 20h1v1h-1zM16 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM27 20h1v1h-1zM9 22h1v1H9zM12 22h1v1h-1zM15 22h1v1h-1zM18 22h1v1h-1zM24 22h1v1h-1zM28 22h1v1h-1zM11 24h1v1h-1zM14 24h1v1h-1zM20 24h1v1h-1zM23 24h1v1h-1zM26 24h1v1h-1zM10 26h1v1h-1zM13 26h1v1h-1zM17 26h1v1h-1zM21 26h1v1h-1zM25 26h1v1h-1zM28 26h1v1h-1zM9 28h1v1H9zM12 28h1v1h-1zM16 28h1v1h-1zM19 28h1v1h-1zM24 28h1v1h-1z"/>
+     </g></svg>
+   </div>
+   <div class="dim" style="margin-top:.5rem">MF-04182</div>
+  </div>
+  <div style="flex:1 1 17rem;min-width:0">
+   <div style="border:1px solid var(--border-soft);border-radius:var(--radius-card);overflow:hidden">
+    <div style="background:var(--brand);color:#fff;padding:.7rem .9rem;font-weight:600;font-size:var(--text-sm)">ABC dry powder 6 kg</div>
+    <div style="padding:.9rem">
+     <div style="font-size:var(--text-sm);line-height:2">
+      <b>Serial</b> MF-04182<br>
+      <b>Location</b> Block A stairwell, Peelamedu Spinning Mills<br>
+      <b>Last refilled</b> 12 April 2025 by Karthik R<br>
+      <b>Next refill</b> ${pill("bad","Overdue by 94 days")}<br>
+      <b>Pressure test</b> Due April 2030
+     </div>
+     <div class="acts"><button class="btn" type="button" data-act="qrask">Ask for service</button><button class="btn quiet" type="button" data-act="qrfault">Report a problem</button></div>
+    </div>
+   </div>
+   <p class="dim" style="margin-top:.7rem;font-size:var(--text-sm)">He taps once. It arrives in your enquiry inbox, already carrying the serial, the site and the overdue date, and it is routed to the engineer who last touched that unit.</p>
+  </div>
+ </div></div></div>
+ <p class="foot">This is the cheapest lead source you will ever have. The customer is standing in front of the unit, he can see the date has passed, and it takes him one tap to ask you to come. It also quietly tells every visitor to that building who maintains the fire equipment.</p>`;
+}
+function rules(){
+ return `<p class="lede">Who gets an enquiry, decided the second it arrives. No enquiry sits in a shared inbox waiting for somebody to notice it.</p>
+ <div class="card"><div class="head"><h3>Routing rules</h3><span class="note">Checked top to bottom, first match wins</span></div>
+ <div class="tbl"><table><thead><tr><th>Rule</th><th>When</th><th>Goes to</th><th>State</th><th>Change</th></tr></thead>
+ <tbody>${RULES.map(r=>`<tr><td>${esc(r[0])}</td><td class="dim">${esc(r[1])}</td><td>${esc(r[2])}</td>
+  <td>${pill("good","Active, new leads are routed by this rule")}</td><td><button class="btn ghost sm" type="button" data-act="rule">Change the rule</button></td></tr>`).join("")}</tbody></table></div></div>
+ <div class="card"><div class="head"><h3>If nobody touches it</h3><span class="note">Escalation</span></div>
+ <div class="body"><div style="font-size:var(--text-sm);line-height:2;color:var(--text-secondary)">
+  After <b>30 minutes</b> the owner gets a WhatsApp naming the enquiry and who it went to.<br>
+  After <b>2 hours</b> it is reassigned to the next person in the rule.<br>
+  After <b>1 day</b> it appears on the Today screen in red and stays there until it is answered.
+ </div></div></div>
+ <p class="foot">The 41 minute average first response on the inbox screen is this, not willpower.</p>`;
+}
+function src(){
+ const rows=SRC.map(r=>[...r, r[1]?Math.round(r[3]/r[1]*100):0]).sort((a,b)=>b[5]-a[5]);
+ const max=Math.max(...rows.map(r=>r[5]));
+ const tv=rows.reduce((a,b)=>a+b[4],0);
+ return `<p class="lede">Which channels actually turn into paid work. Volume and value are not the same thing, and the cheapest source here is the one on your own equipment.</p>
+ <div class="stat-grid">
+  <div class="kpi good"><div class="lab">Best converting source</div><div class="val">66%</div><div class="sub">Spotted by an engineer on a visit</div></div>
+  <div class="kpi"><div class="lab">Highest value source</div><div class="val">${L(2140000)}</div><div class="sub">Tender portal, 9 wins</div></div>
+  <div class="kpi bad"><div class="lab">Worst converting</div><div class="val">8%</div><div class="sub">Justdial, 74 enquiries, 6 wins</div></div>
+  <div class="kpi"><div class="lab">Won value, 12 months</div><div class="val">${L(tv)}</div><div class="sub">Across all sources</div></div>
+ </div>
+ <div class="card"><div class="head"><h3>Conversion by source</h3><span class="note">Last twelve months</span><span class="right">Enquiry to won</span></div>
+ <div class="tbl"><table><thead><tr><th>Source</th><th class="n">Enquiries</th><th class="n">Quoted</th><th class="n">Won</th><th>Conversion</th><th class="n">Won value</th></tr></thead>
+ <tbody>${rows.map(r=>`<tr><td>${esc(r[0])}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td class="n">${r[3]}</td>
+  <td><div style="display:flex;align-items:center;gap:.5rem"><div style="flex:0 0 70px;height:7px;background:var(--bg-subtle);border-radius:999px;overflow:hidden">
+   <div style="height:100%;width:${(r[5]/max*100).toFixed(0)}%;background:${r[5]>=40?"var(--success)":r[5]>=20?"var(--warning)":"var(--error)"};border-radius:999px"></div></div>
+   <span style="font-variant-numeric:tabular-nums;font-size:var(--text-xs)">${r[5]}%</span></div></td>
+  <td class="n">${INR(r[4])}</td></tr>`).join("")}</tbody>
+ <tfoot><tr><td colspan="5">Won value, all sources</td><td class="n">${INR(tv)}</td></tr></tfoot></table></div></div>
+ <p class="foot">Justdial brought 74 enquiries and 6 jobs. Your engineers spotted 29 things on site and closed 19 of them. That is worth knowing before you renew a directory listing.</p>`;
+}
+
+const SCREEN={today,leak,ai,enq,qr,rules,src,reg,sites,docs,tick,route,field,wa,quote,rate,tender,van,supp,inv,pay,rep,settings,scope};
+const TITLE={today:"Today",leak:"AMC Leakage",ai:"Assistant",enq:"Enquiry inbox",qr:"QR stickers",
+ rules:"Lead routing",src:"Where leads come from",reg:"Equipment register",sites:"Sites and contacts",
+ docs:"Compliance vault",tick:"Service tickets",route:"Visit planner",field:"Engineer phone",wa:"Reminders",
+ quote:"Quotation",rate:"Rate contracts",tender:"Tenders and EMD",van:"Van and workshop stock",
+ supp:"Suppliers and payables",inv:"Invoice and challan",pay:"Payment tracker",rep:"Reports",settings:"Company settings",scope:"What you get"};
+
+document.getElementById("nav").innerHTML=NAVGROUPS.map(g=>`
+ <div class="grp"><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>${esc(g.label)}</p>
+ ${g.items.map(([k,label,badge])=>`<button data-k="${k}">
+  <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICON[k]}</svg>
+  <span>${esc(label)}</span>${badge?`<span class="badge">${badge}</span>`:""}</button>`).join("")}</div>`).join("");
+
+/* ================= make it work ================= */
+const UI={regq:""};
+const QT={series:"QT/26-27/",no:915,enq:"ENQ-0312",cust:"Saravanampatti Tech Park",po:"",terms:"45 days from invoice",disc:8,amending:false,
+ opt:[["Spare safety pin and seal, set of 25","8424",2,900,false],["Extra 30 m hose reel with bracket","8424",1,3100,false],["Fire blanket, 1.2 x 1.2 m","5907",4,850,false]],
+ charges:[["Freight and handling",1800]]};
+const QLINES=[
+ {p:"ABC dry powder 6 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:86,rate:650,disc:8,stock:142,contract:{ref:"RC-114",price:650,list:707}},
+ {p:"ABC dry powder 9 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:34,rate:880,disc:8,stock:40,contract:{ref:"RC-114",price:880,list:957}},
+ {p:"CO2 4.5 kg, refill and hydrostatic test",hsn:"3813",unit:"nos",qty:14,rate:1450,disc:8,stock:9,contract:null},
+ {p:"Hydrant system, quarterly service visit",hsn:"9987",unit:"visit",qty:1,rate:14800,disc:0,stock:null,contract:null},
+ {p:"ABC dry powder 6 kg, refill (4 free on 80)",hsn:"3813",unit:"nos",qty:4,rate:650,disc:0,free:true,scheme:true,stock:142,contract:null},
+];
+const QTLIST=[["QT/26-27/0914","Annur Cold Storage","22 Oct 2026",96000,"Accepted","good"],
+ ["QT/26-27/0913","Tiruppur Knitwear Unit","19 Oct 2026",67000,"Invoiced","good"],
+ ["QT/26-27/0912","Kalapatti Packaging","17 Oct 2026",96000,"Sent","warn"],
+ ["QT/26-27/0911","Pollachi Transport Co","11 Oct 2026",28000,"Lost at price","bad"]];
+const JOB={step:1,scanned:0,done:false,inv:1256};
+const TABLES={SITES,UNITS,TICKETS,PAY,ENQ,DOCS,TENDERS,VAN,SUPP,RATES,LINES};
+const SEED=JSON.parse(JSON.stringify(TABLES));
+const QLSEED=JSON.parse(JSON.stringify(QLINES));
+const STORE="muthu.demo.v3";
+let CUR="today", SEQ={q:914,inv:1255};
+
+/* ---------- company record, the same values Company settings shows ---------- */
+const CO={n:"Muthu Fire Engineering Co",a1:"33 NSR Road, Saibaba Colony",a2:"Coimbatore 641011, Tamil Nadu",
+ gst:"33AAAAA0000A1Z5",pan:"ABCDE1234F",ph:"+91 98765 43210",em:"shrimuthuengg@gmail.com",
+ bank:"HDFC Bank",acc:"001122334455",ifsc:"HDFC0001234",br:"Saibaba Colony",upi:"muthufire@hdfcbank",
+ sig:"Anil Kumar",desg:"Director / Authorised Signatory"};
+const rs=n=>"Rs. "+Math.round(n).toLocaleString("en-IN");
+const ONES=["","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen",
+ "fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+const TENS=["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+function w2(x){ return x<20?ONES[x]:TENS[Math.floor(x/10)]+(x%10?" "+ONES[x%10]:""); }
+function w3(x){ return x>99?ONES[Math.floor(x/100)]+" hundred"+(x%100?" and "+w2(x%100):""):w2(x); }
+function inWords(v){ v=Math.round(v); if(!v) return "zero";
+ const cr=Math.floor(v/10000000), lk=Math.floor(v%10000000/100000), th=Math.floor(v%100000/1000), re=v%1000;
+ const o=[]; if(cr)o.push(w3(cr)+" crore"); if(lk)o.push(w3(lk)+" lakh"); if(th)o.push(w3(th)+" thousand"); if(re)o.push(w3(re));
+ const t=o.join(" "); return t.charAt(0).toUpperCase()+t.slice(1); }
+
+/* ---------- a real PDF, built in the browser, no server ---------- */
+function pdfBuild(o){
+ if(!(typeof window!=="undefined"&&window.jspdf&&window.jspdf.jsPDF)){
+  toast("bad","The PDF builder has not loaded","It downloads once and then works offline. Check the connection and press it again.");
+  return false; }
+ const JS=window.jspdf.jsPDF, d=new JS({unit:"mm",format:"a4"}), LM=14, RM=196;
+ let y=16;
+ d.setFont("helvetica","bold"); d.setFontSize(14); d.setTextColor(17,24,39);
+ d.text(CO.n.toUpperCase(),LM,y);
+ d.setFont("helvetica","normal"); d.setFontSize(7.8); d.setTextColor(107,114,128);
+ d.text(CO.a1+", "+CO.a2,LM,y+5);
+ d.text("GSTIN "+CO.gst+"   PAN "+CO.pan+"   "+CO.ph+"   "+CO.em,LM,y+9);
+ d.setFont("helvetica","bold"); d.setFontSize(11); d.setTextColor(4,120,87);
+ d.text(o.title,RM,y,{align:"right"});
+ d.setFont("helvetica","normal"); d.setFontSize(8.2); d.setTextColor(17,24,39);
+ d.text(o.no,RM,y+5,{align:"right"});
+ d.text("Date "+o.date,RM,y+9,{align:"right"});
+ d.setDrawColor(4,120,87); d.setLineWidth(.7); d.line(LM,y+12.5,RM,y+12.5);
+ y+=19;
+ d.setFont("helvetica","bold"); d.setFontSize(8.2); d.setTextColor(17,24,39);
+ d.text(o.toLabel,LM,y); d.text("Terms",118,y);
+ d.setFont("helvetica","normal"); d.setTextColor(75,85,99);
+ o.to.forEach((t,i)=>d.text(String(t),LM,y+4.6+i*4));
+ o.meta.forEach((t,i)=>d.text(String(t),118,y+4.6+i*4));
+ y+=5+Math.max(o.to.length,o.meta.length)*4+3;
+ d.autoTable({startY:y,head:[o.head],body:o.body,theme:"grid",
+  styles:{font:"helvetica",fontSize:7.6,cellPadding:1.5,lineColor:[204,219,210],lineWidth:.1,textColor:[31,41,55]},
+  headStyles:{fillColor:[4,120,87],textColor:[255,255,255],fontStyle:"bold",fontSize:7.6},
+  alternateRowStyles:{fillColor:[238,245,240]},
+  columnStyles:o.cols||{},margin:{left:LM,right:14}});
+ let t=(d.lastAutoTable?d.lastAutoTable.finalY:y)+6;
+ if(t>240){ d.addPage(); t=20; }
+ d.setFontSize(8.4);
+ o.tot.forEach(row=>{ d.setFont("helvetica",row[2]?"bold":"normal");
+  d.setTextColor(row[2]?4:75,row[2]?120:85,row[2]?87:99);
+  d.text(String(row[0]),152,t,{align:"right"}); d.text(String(row[1]),RM,t,{align:"right"}); t+=4.8; });
+ t+=2.5; d.setFont("helvetica","normal"); d.setFontSize(7.8); d.setTextColor(75,85,99);
+ d.text("Amount in words: Rupees "+inWords(o.words)+" only",LM,t); t+=6;
+ if(o.note){ d.text(d.splitTextToSize(o.note,RM-LM),LM,t); t+=4.2*d.splitTextToSize(o.note,RM-LM).length+2; }
+ if(t>232){ d.addPage(); t=20; }
+ d.setDrawColor(204,219,210); d.setLineWidth(.2); d.line(LM,t,RM,t); t+=5;
+ d.setFont("helvetica","bold"); d.setFontSize(7.8); d.setTextColor(17,24,39); d.text("Bank details",LM,t);
+ d.setFont("helvetica","normal"); d.setTextColor(75,85,99);
+ d.text(CO.bank+", "+CO.br,LM,t+4); d.text("Account "+CO.acc+"   IFSC "+CO.ifsc,LM,t+8); d.text("UPI "+CO.upi,LM,t+12);
+ d.setFont("helvetica","bold"); d.setTextColor(17,24,39); d.text("For "+CO.n,RM,t,{align:"right"});
+ d.setFont("helvetica","normal"); d.setTextColor(75,85,99);
+ d.text("(no signature image uploaded yet)",RM,t+10,{align:"right"});
+ d.text(CO.sig,RM,t+16,{align:"right"}); d.text(CO.desg,RM,t+20,{align:"right"});
+ d.setFontSize(6.8); d.setTextColor(140,152,164);
+ d.text("Generated from Aura Business. Demonstration document for Muthu Fire Engineering Co, the figures in it are made up.",LM,286);
+ try{ d.save(o.name); }
+ catch(e){ try{ window.open(d.output("bloburl"),"_blank"); }catch(e2){
+   toast("warn","The browser blocked the download","Open the demo in its own tab and the PDF saves normally."); return false; } }
+ return true;
+}
+function quoteSum(){
+ const lines=QLINES.filter(l=>l.p);
+ const opt=QT.opt.filter(o=>o[4]);
+ const net=lines.reduce((a,l)=>a+(l.free?0:Math.round(l.qty*l.rate*(1-l.disc/100))),0)
+  +opt.reduce((a,o)=>a+o[2]*o[3],0)+QT.charges.reduce((a,c)=>a+c[1],0);
+ const c=Math.round(net*0.09);
+ return {lines,opt,net,c,tot:net+c*2};
+}
+function pdfQuote(){
+ const q=quoteSum(), body=[];
+ q.lines.forEach((l,i)=>body.push([String(i+1),l.p,l.hsn,l.qty+" "+l.unit,l.free?"Free":rs(l.rate),
+  l.free?"Scheme":(l.disc?l.disc+"%":"-"),l.free?rs(0):rs(Math.round(l.qty*l.rate*(1-l.disc/100)))]));
+ q.opt.forEach((o,i)=>body.push([String(q.lines.length+i+1),o[0]+" (optional, accepted)",o[1],o[2]+" nos",rs(o[3]),"-",rs(o[2]*o[3])]));
+ QT.charges.forEach(c=>body.push(["",c[0],"","","","",rs(c[1])]));
+ return pdfBuild({title:"QUOTATION",no:QT.series+QT.no,date:today2(),
+  name:"Quotation-"+QT.series.replace(/\//g,"-")+QT.no+".pdf",
+  toLabel:"Quotation for",to:[QT.cust,"Coimbatore, Tamil Nadu","Against enquiry "+QT.enq,QT.po?("Your PO "+QT.po):"Purchase order awaited"],
+  meta:["Payment "+QT.terms,"Valid for 30 days from the date above","Delivery 7 to 10 working days","GST 18 percent, charged as CGST and SGST"],
+  head:["#","Description","HSN or SAC","Qty","Rate","Disc","Amount"],body,
+  cols:{0:{cellWidth:7,halign:"center"},2:{cellWidth:18},3:{cellWidth:17,halign:"right"},
+   4:{cellWidth:21,halign:"right"},5:{cellWidth:13,halign:"right"},6:{cellWidth:24,halign:"right"}},
+  tot:[["Taxable value",rs(q.net)],["CGST 9%",rs(q.c)],["SGST 9%",rs(q.c)],["Total payable",rs(q.tot),true]],
+  words:q.tot,
+  note:"Scope covers refilling, pressure testing and the service visits listed above. Replacement of any unit found unserviceable is quoted separately after inspection. Rates hold for 30 days."});
+}
+function pdfInvoice(){
+ const sub=LINES.reduce((a,l)=>a+l[3]*l[4],0), gst=Math.round(sub*0.18), c=Math.round(gst/2);
+ return pdfBuild({title:"TAX INVOICE",no:"INV-1188",date:"18 Jun 2026",name:"Invoice-INV-1188.pdf",
+  toLabel:"Billed to",to:["Peelamedu Spinning Mills","Avinashi Road, Peelamedu","Coimbatore 641004","GSTIN 33BBBBB1111B1Z4"],
+  meta:["Challan DC-0774","Place of supply 33 Tamil Nadu","Payment 45 days from invoice","Reverse charge No"],
+  head:["Description","HSN or SAC","Unit","Qty","Rate","GST","Amount"],
+  cols:{1:{cellWidth:18},2:{cellWidth:14},3:{cellWidth:13,halign:"right"},
+   4:{cellWidth:21,halign:"right"},5:{cellWidth:12,halign:"right"},6:{cellWidth:24,halign:"right"}},
+  body:LINES.map(l=>[l[0],l[1],l[2],String(l[3]),rs(l[4]),"18%",rs(l[3]*l[4])]),
+  tot:[["Taxable value",rs(sub)],["CGST 9%",rs(c)],["SGST 9%",rs(gst-c)],["Total",rs(sub+gst),true]],
+  words:sub+gst,
+  note:"Interest at 18 percent a year applies on anything unpaid after the credit period. Goods once refilled and tested are not returnable."});
+}
+
+/* ---------- WhatsApp, with the real message in front of you ---------- */
+let WAMSG="";
+function waModal(title,who,msg){
+ WAMSG=msg;
+ const url="https://wa.me/?text="+encodeURIComponent(msg);
+ modalHTML(title,`<p style="font-size:var(--text-sm);margin:0">Nothing has gone out. This is the exact message, written for ${esc(who)}.</p>
+  <div class="wamsg">${esc(msg)}</div>
+  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.85rem">
+   <a class="btn" href="${url}" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center">Open WhatsApp with this message</a>
+   <button class="btn quiet" type="button" data-act="wacopy">Copy the message</button></div>
+  <p class="dim" style="font-size:var(--text-sm);margin:.85rem 0 0">On your own system this goes through WhatsApp Business, so it sends from your number without opening anything. Here it hands you the message so you can see exactly what the customer would read.</p>`,"Close");
+}
+
+/* ---------- saving: this browser, and the server when it can be reached ---------- */
+const SB={u:"https://dxzgseqcvakcwmletmmk.supabase.co",
+ k:"sb_publishable_Tq0mcQ-AdsG17qNiIWdztQ_AnOOC_Dg",ok:null};
+function sessCode(){ let c=null; try{ c=localStorage.getItem("muthu.sess") }catch(e){}
+ if(!c){ c="MF"+Math.floor(100000+Math.random()*899999); try{ localStorage.setItem("muthu.sess",c) }catch(e){} }
+ return c; }
+function snapshot(){ return {T:TABLES,JOB,SEQ,UI,QT,QL:QLINES}; }
+function applySnap(r){ if(!r||typeof r!=="object") return false;
+ for(const key in (r.T||{})) if(TABLES[key]){ TABLES[key].length=0; r.T[key].forEach(x=>TABLES[key].push(x)); }
+ Object.assign(JOB,r.JOB||{}); Object.assign(SEQ,r.SEQ||{});
+ for(const key of Object.keys(UI)) delete UI[key]; Object.assign(UI,r.UI||{regq:""});
+ if(r.QT) Object.assign(QT,r.QT);
+ if(r.QL){ QLINES.length=0; r.QL.forEach(x=>QLINES.push(x)); }
+ return true; }
+function cloudBadge(){ if(typeof document==="undefined") return;
+ const el=document.getElementById("sbadge"); if(!el) return;
+ el.textContent = SB.ok===true ? ("Saved to the server, code "+sessCode()) : "Saved in this browser only";
+ el.title = SB.ok===true ? "Open the same code on any other computer or phone and you get this state back."
+  : "Changes stay in this browser. Open it from your own domain and it saves to the server as well."; }
+let SBT=null;
+function cloudPush(){
+ if(SB.ok===false||typeof fetch!=="function") return;
+ if(SBT) clearTimeout(SBT);
+ SBT=setTimeout(()=>{
+  try{
+   fetch(SB.u+"/rest/v1/demo_state?on_conflict=sess",{method:"POST",
+    headers:{apikey:SB.k,Authorization:"Bearer "+SB.k,"Content-Type":"application/json",
+     Prefer:"resolution=merge-duplicates,return=minimal"},
+    body:JSON.stringify({sess:sessCode(),label:"Muthu Fire demo",data:snapshot(),updated_at:new Date().toISOString()})})
+   .then(r=>{ const was=SB.ok; SB.ok=!!r.ok; if(was!==SB.ok) cloudBadge(); })
+   .catch(()=>{ SB.ok=false; cloudBadge(); });
+  }catch(e){ SB.ok=false; }
+ },800);
+}
+function cloudPull(code){
+ if(typeof fetch!=="function") return Promise.reject();
+ return fetch(SB.u+"/rest/v1/demo_state?sess=eq."+encodeURIComponent(code)+"&select=data",
+  {headers:{apikey:SB.k,Authorization:"Bearer "+SB.k}})
+  .then(r=>r.ok?r.json():Promise.reject()).then(j=>{ SB.ok=true; return (j&&j[0])?j[0].data:null; });
+}
+let SCODE="";
+
+function persist(){ try{ localStorage.setItem(STORE,JSON.stringify(snapshot())) }catch(e){} cloudPush(); }
+function restore(){ try{
+  const r=JSON.parse(localStorage.getItem(STORE)||"null"); if(!r) return;
+  for(const k in r.T) if(TABLES[k]){ TABLES[k].length=0; r.T[k].forEach(x=>TABLES[k].push(x)); }
+  Object.assign(JOB,r.JOB||{}); Object.assign(SEQ,r.SEQ||{}); Object.assign(UI,r.UI||{}); if(r.QT) Object.assign(QT,r.QT); if(r.QL){ QLINES.length=0; r.QL.forEach(x=>QLINES.push(x)); }
+}catch(e){} }
+function resetAll(){
+  for(const k in SEED){ TABLES[k].length=0; JSON.parse(JSON.stringify(SEED[k])).forEach(x=>TABLES[k].push(x)); }
+  Object.assign(JOB,{step:1,scanned:0,done:false,inv:1256});
+  Object.assign(SEQ,{q:914,inv:1255});
+  Object.assign(QT,{series:"QT/26-27/",no:915,enq:"ENQ-0312",cust:"Saravanampatti Tech Park",po:"",terms:"45 days from invoice",disc:8,amending:false,
+    opt:[["Spare safety pin and seal, set of 25","8424",2,900,false],["Extra 30 m hose reel with bracket","8424",1,3100,false],["Fire blanket, 1.2 x 1.2 m","5907",4,850,false]],
+    charges:[["Freight and handling",1800]]});
+  QLINES.length=0; JSON.parse(JSON.stringify(QLSEED)).forEach(x=>QLINES.push(x));
+  for(const k of Object.keys(UI)) delete UI[k]; UI.regq=""; UI.site=0;
+  try{ localStorage.removeItem(STORE) }catch(e){}
+  persist(); show("today"); toast("good","Demo reset","Every screen is back to how it started.");
+}
+function hostEl(id,cls){
+  let el=document.getElementById(id);
+  if(!el){ el=document.createElement("div"); el.id=id; if(cls) el.className=cls; document.body.appendChild(el); }
+  return el;
+}
+function toast(kind,title,msg){
+  const w=hostEl("toasts","toastwrap"); const d=document.createElement("div");
+  d.className="toast "+kind; const b=document.createElement("b"); b.textContent=title; d.appendChild(b);
+  if(msg){ const s=document.createElement("div"); s.textContent=msg; d.appendChild(s); }
+  w.appendChild(d); setTimeout(()=>d.remove(),4200);
+}
+function modal(title,body,okLabel,onOk){
+  const host=hostEl("modal");
+  const bg=document.createElement("div"); bg.className="modalbg";
+  const box=document.createElement("div"); box.className="modalbox";
+  const h=document.createElement("div"); h.className="mh"; h.textContent=title;
+  const b=document.createElement("div"); b.className="mb"; b.textContent=body;
+  const f=document.createElement("div"); f.className="mf";
+  const no=document.createElement("button"); no.className="btn quiet"; no.textContent="Later";
+  const yes=document.createElement("button"); yes.className="btn"; yes.textContent=okLabel;
+  no.onclick=()=>host.innerHTML=""; yes.onclick=()=>{ host.innerHTML=""; onOk&&onOk(); };
+  f.append(no,yes); box.append(h,b,f); bg.appendChild(box); host.innerHTML=""; host.appendChild(bg);
+  yes.focus();
+}
+function modalHTML(title,html,okLabel,onOk){
+  const host=hostEl("modal");
+  const bg=document.createElement("div"); bg.className="modalbg";
+  const box=document.createElement("div"); box.className="modalbox";
+  const h=document.createElement("div"); h.className="mh"; h.textContent=title;
+  const b=document.createElement("div"); b.className="mb"; b.innerHTML=html;
+  const f=document.createElement("div"); f.className="mf";
+  const no=document.createElement("button"); no.className="btn quiet"; no.textContent=onOk?"Close":"Done";
+  const yes=document.createElement("button"); yes.className="btn"; yes.textContent=okLabel||"Close";
+  no.onclick=()=>host.innerHTML=""; yes.onclick=()=>{ host.innerHTML=""; onOk&&onOk(); };
+  if(onOk) f.append(no,yes); else f.append(yes);
+  box.append(h,b,f); bg.appendChild(box); host.innerHTML=""; host.appendChild(bg); yes.focus();
+}
+const today2=()=>new Date().toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"});
+
+const ACT={
+ go:d=>show(d.k),
+ reset:()=>modal("Reset the demo","Everything you have changed goes back to how it started.","Reset it",resetAll),
+ offer:d=>{ const s=SITES.find(x=>x.s===d.site); if(!s) return;
+   s.offered="QT-0"+(++SEQ.q); persist(); show("leak");
+   toast("good","Quotation "+s.offered+" drafted",s.s+", "+INR(s.v)+", priced from their rate contract. Waiting for you to send it."); },
+ qrask:()=>{ ENQ.unshift(["QR sticker","M Thangaraj","Peelamedu Spinning Mills","Scanned MF-04182, asked for a refill visit",118400,"Just now","Karthik R","New enquiry","bad"]);
+   persist(); show("enq"); toast("good","Enquiry raised from a scan","Routed to Karthik R, the engineer who last serviced MF-04182."); },
+ qrfault:()=>{ TICKETS.unshift(["TK-"+(2242+TICKETS.length),"Peelamedu Spinning Mills","ABC 6 kg, MF-04182","Reported by the customer from the sticker","QR sticker","High","Karthik R","Today, 5:00 PM","Out of cover","bad"]);
+   persist(); show("tick"); toast("warn","Fault reported","A ticket was raised and Karthik has it on his phone already."); },
+ closetk:d=>{ const t=TICKETS[+d.i]; t[7]="Resolved today"; t[9]="good"; persist(); show("tick");
+   toast("good","Job closed",t[0]+" at "+t[1]+". The job card and the signature are on the record."); },
+ paid:d=>{ const p=PAY[+d.i]; p[5]="Paid "+today2(); p[6]="good"; persist(); show("pay");
+   toast("good","Payment recorded",INR(p[4])+" against "+p[0]+". The follow up reminder stops now."); },
+ renewdoc:d=>{ const x=DOCS[+d.i]; x[3]=today2(); x[4]="Renewed today"; x[5]="good";
+   const unblocked=/IS 2190/.test(x[0]);
+   if(unblocked){ const t=TENDERS.find(t=>/Blocked/.test(t[9])); if(t){ t[9]="Documents ready"; t[8]="warn"; } }
+   persist(); show("docs");
+   toast("good","Renewal recorded", unblocked?"The Pollachi bid is no longer blocked. Go and look at Tenders.":x[0]+" is current again."); },
+ regq:d=>{ UI.regq=d.v; persist(); show("reg"); },
+ q2inv:()=>{ const net=QLINES.reduce((a,l)=>a+(l.free?0:Math.round(l.qty*l.rate*(1-l.disc/100))),0)+QT.charges.reduce((a,c)=>a+c[1],0);
+   const tot=Math.round(net*1.18);
+   PAY.unshift(["INV-"+(++SEQ.inv),"Saravanampatti Tech Park",today2(),"Annual refill and hydrant service",tot,"Due in 45 days","warn"]);
+   persist(); show("pay"); toast("good","Invoice INV-"+SEQ.inv+" raised",INR(tot)+" including GST. It is in the payment tracker now."); },
+ qsend:()=>{ const q=quoteSum();
+   waModal("Send the quotation on WhatsApp",QT.cust,
+    "Dear Sir,\n\nQuotation "+QT.series+QT.no+" for "+QT.cust+" is ready.\n\n"
+    +q.lines.filter(l=>!l.free).map(l=>"- "+l.p+": "+l.qty+" "+l.unit+" at "+rs(l.rate)).join("\n")
+    +"\n\nTaxable value "+rs(q.net)+"\nGST 18 percent "+rs(q.c*2)+"\nTotal "+rs(q.tot)
+    +"\n\nPayment "+QT.terms+". The rates hold for 30 days. The PDF is attached.\n\n"+CO.n+"\n"+CO.ph); },
+ wacopy:()=>{ try{ navigator.clipboard.writeText(WAMSG).then(
+    ()=>toast("good","Copied","Paste it into WhatsApp."),
+    ()=>toast("warn","Could not copy","Select the message above and copy it by hand.")); }
+   catch(e){ toast("warn","Could not copy","Select the message above and copy it by hand."); } },
+ rule:()=>toast("warn","Rules are read only in the demo","On your own system this opens the rule and lets you change who it routes to."),
+ aiok:()=>{ let n=0; SITES.filter(s=>s.k==="bad"&&!s.offered).forEach(s=>{ s.offered="QT-0"+(++SEQ.q); n++; });
+   persist(); show("leak"); toast("good",n+" quotations drafted","All six are waiting for you on the leakage screen. Nothing has been sent."); },
+ aino:()=>toast("flat","Drafts discarded","Nothing was sent and nothing was changed."),
+ jobin:()=>{ JOB.step=2; persist(); show("field"); toast("good","Checked in","GPS matched Annur Cold Storage. This is also his attendance for the day."); },
+ jobscan:()=>{ JOB.scanned=Math.min(24,JOB.scanned+1); if(JOB.scanned>=24) JOB.step=3; persist(); show("field"); },
+ jobscanall:()=>{ JOB.scanned=24; JOB.step=3; persist(); show("field"); toast("warn","Two units missing","MF-04779 and MF-04781 are not on the wall. They will be quoted as replacements."); },
+ jobcard:()=>{ JOB.step=4; persist(); show("field"); },
+ sigclear:()=>{ const c=document.getElementById("sigpad"); if(c){ c.getContext("2d").clearRect(0,0,c.width,c.height); document.getElementById("jobdone").disabled=true; } },
+ jobdone:()=>{ JOB.done=true; JOB.step=5; JOB.inv=++SEQ.inv;
+   PAY.unshift(["INV-"+JOB.inv,"Annur Cold Storage",today2(),"Annual refill, 22 units, 2 replacements quoted",21340,"Due in 45 days","warn"]);
+   persist(); show("field"); toast("good","Job finished","Signature stored against all 24 serials. Invoice INV-"+JOB.inv+" is in the payment tracker."); },
+ jobreset:()=>{ Object.assign(JOB,{step:1,scanned:0,done:false}); persist(); show("field"); },
+ ask:()=>{ const q=document.getElementById("q"); UI.q=q?q.value:""; show("ai"); },
+ site:d=>{ const s=SITES.find(x=>x.s===d.s); if(!s) return;
+   const mine=UNITS.filter(u=>u[2]===s.s);
+   const due=PAY.filter(p=>p[1]===s.s&&p[6]!=="good").reduce((a,b)=>a+b[4],0);
+   modalHTML(s.s,`<div class="stat-grid" style="margin-bottom:.8rem">
+     <div class="kpi"><div class="lab">Units on site</div><div class="val">${s.u}</div><div class="sub">${esc(s.c)}</div></div>
+     <div class="kpi ${s.k}"><div class="lab">Next due</div><div class="val" style="font-size:var(--text-md)">${esc(s.due)}</div><div class="sub">Last attended ${esc(s.last)}</div></div>
+     <div class="kpi ${due?"bad":"good"}"><div class="lab">Owed to you</div><div class="val">${due?INR(due):"Nothing"}</div><div class="sub">Cover ${esc(s.cov).toLowerCase()}</div></div></div>
+     ${mine.length?`<div class="tbl"><table style="min-width:22rem"><thead><tr><th>Serial</th><th>Type</th><th>Next due</th></tr></thead><tbody>
+     ${mine.map(u=>`<tr><td>${esc(u[0])}</td><td class="dim">${esc(u[1])}</td><td>${pill(u[6],u[5])}</td></tr>`).join("")}</tbody></table></div>`:`<p class="dim">No individual units loaded for this site in the demo.</p>`}`,
+     s.offered?"Close":"Offer AMC", s.offered?null:()=>ACT.offer({site:s.s})); },
+ sendday:d=>{ const his=ROUTE.filter(r=>r[5]===d.e);
+   waModal("Send the day to "+d.e,d.e,
+    (d.e.split(" ")[0])+", tomorrow 27 October.\n\n"
+    +his.map((r,i)=>(i+1)+". "+r[0]+"  "+r[1]+", "+r[2]+"\n   "+r[3]+"  ("+r[4]+")").join("\n")
+    +"\n\nRoad distance "+his.reduce((a,r)=>a+parseFloat(r[6]),0).toFixed(0)+" km in this order. "
+    +"Check in at the gate of each one, scan the units, take the signature.\n\n"+CO.n); },
+ warelease:()=>{ UI.waSent=true; persist(); show("wa"); toast("good","Four messages released","They went out as four separate WhatsApps, not a broadcast, so each one reads as a personal message."); },
+ wahold:()=>toast("flat","Held","Nothing went out. They will sit here until you release them."),
+ renewrate:d=>{ const r=RATES[+d.i]; r[3]=today2(); r[4]="31 Mar 2028"; r[5]="good"; persist(); show("rate");
+   toast("good","Rate contract renewed",esc(r[0])+" is live again. Quotations to them price at the contract rate from today."); },
+ bid:d=>{ const t=TENDERS[+d.i]; t[7]="Submitted "+today2(); t[8]="flat"; t[9]="Submitted, result awaited"; persist(); show("tender");
+   toast("good","Bid submitted",t[0]+", "+esc(t[1])+". EMD of "+INR(t[4])+" is tracked until it is refunded."); },
+ po:d=>{ const v=VAN[+d.i]; v[3]=v[4]*3; v[5]="good"; persist(); show("van");
+   toast("good","Purchase order raised",esc(v[2])+" for "+esc(v[0])+". It will be on the van before tomorrow's first job."); },
+ paysupp:d=>{ const x=SUPP[+d.i]; x[5]="Paid"; x[6]="good"; persist(); show("supp");
+   toast("good","Supplier paid",INR(x[4])+" to "+esc(x[0])+"."); },
+ invsend:()=>{ const sub=LINES.reduce((a,l)=>a+l[3]*l[4],0), gst=Math.round(sub*0.18);
+   waModal("Send the invoice on WhatsApp","P Nandhini, accounts at Peelamedu Spinning Mills",
+    "Dear Madam,\n\nTax invoice INV-1188 dated 18 Jun 2026 against challan DC-0774.\n\n"
+    +"Taxable value "+rs(sub)+"\nCGST 9 percent "+rs(Math.round(gst/2))+"\nSGST 9 percent "+rs(gst-Math.round(gst/2))
+    +"\nTotal "+rs(sub+gst)+"\n\nPayment is 45 days from the invoice date. "
+    +CO.bank+" account "+CO.acc+", IFSC "+CO.ifsc+", or UPI "+CO.upi+".\n\n"+CO.n+"\n"+CO.ph); },
+ invpdf:()=>{ if(pdfInvoice()) toast("good","Invoice PDF saved","Check your downloads. It carries the letterhead, the GST split, the bank details and the signatory from Company settings."); },
+ invcn:()=>modal("Cancel by credit note","The invoice is never deleted. A credit note is raised against it so the numbering stays gapless for your GST return.","Raise the credit note",
+   ()=>toast("good","Credit note CN-0042 raised","Invoice INV-1188 is reversed. Both documents stay on the record.")),
+ period:d=>{ UI.period=d.v; persist(); show("rep"); },
+ amend:()=>{ QT.amending=!QT.amending; persist(); show("quote");
+   toast(QT.amending?"warn":"good",QT.amending?"Amending":"Amendment closed",QT.amending?"Quantities, discount, optional parts and charges are now editable.":"The quotation is locked again and the version is kept."); },
+
+ qsavetmpl:()=>toast("good","Saved as a template","Named Annual refill, large site. It is there the next time you quote one of these."),
+ qmgtmpl:()=>toast("flat","Templates are read only here","On your own system this lists your templates and lets you rename or remove them."),
+ qaddline:()=>{ QLINES.push({p:"",hsn:"3813",unit:"nos",qty:1,rate:0,disc:QT.disc,stock:null,contract:null}); persist(); show("quote");
+   toast("good","Line added","Pick the product and put the quantity in."); },
+ qrmline:d=>{ QLINES.splice(+d.i,1); persist(); show("quote"); toast("good","Product removed",""); },
+ qsave:()=>{ const over=QLINES.some(l=>!l.free&&l.disc>10);
+   QT.amending=false; persist(); show("quote");
+   toast(over?"warn":"good",over?"Sent for approval":"Quotation saved",
+     over?"A line is above the 10 percent limit, so it waits for the owner before it can go out.":QT.series+QT.no+" is saved. It is in Recent Quotations now."); },
+ qrmcharge:d=>{ QT.charges.splice(+d.i,1); persist(); show("quote"); toast("good","Charge removed",""); },
+ qpdf:()=>{ if(pdfQuote()) toast("good","Quotation PDF saved","Check your downloads. Letterhead, the GST split, the bank details and the signatory all come from Company settings."); },
+ sopen:()=>{ SCODE="";
+   modalHTML("Open a saved session",`<p style="font-size:var(--text-sm);margin:0">Your code is <b>${esc(sessCode())}</b>. Everything you change here is kept against it.</p>
+    <p class="dim" style="font-size:var(--text-sm);margin:.6rem 0 0">Type that code on another computer or on your phone and you get this exact state back, with the same quotations, tickets and payments.</p>
+    <div style="margin-top:.8rem"><input data-inp="sesscode" placeholder="MF123456" aria-label="Session code" style="width:11rem;text-transform:uppercase"></div>`,
+    "Open it",()=>{ const c=(SCODE||"").trim().toUpperCase();
+      if(!c){ toast("flat","No code typed","Nothing was changed."); return; }
+      cloudPull(c).then(dd=>{ if(!dd){ toast("warn","Nothing saved under "+c,"Check the code and try again."); return; }
+        applySnap(dd); try{ localStorage.setItem("muthu.sess",c) }catch(e){}
+        try{ localStorage.setItem(STORE,JSON.stringify(snapshot())) }catch(e){}
+        show("today"); cloudBadge(); toast("good","Session "+c+" opened","Every screen is where that session left it."); })
+       .catch(()=>toast("bad","Could not reach the server","This copy is saving in the browser only. Run it on your own domain and the code works across devices.")); }); },
+ whylocked:()=>modal("Why can I not change these details","This tenant resets to its starting state every night so the next person sees a clean demonstration. Changing the GSTIN or the number series here would be wiped at midnight and would confuse the documents in the meantime. On your own system nothing is locked and every field here is yours.","Understood"),
+};
+const CHG={
+ qtmplsel:(i,v)=>{ if(!v) return; QT.amending=true; persist(); show("quote");
+   toast("good","Template loaded","The usual lines are in. Change the quantities, then save."); },
+ qaddcharge:(i,v)=>{ if(!v) return; const[n,a]=v.split("|"); QT.charges.push([n,+a]); persist(); show("quote");
+   toast("good","Charge added",n+", "+INR(+a)+"."); },
+ sitesel:(i,v)=>{ UI.site=+v; persist(); show("sites"); },
+ owner:(i,v)=>{ ENQ[i][6]=v; persist(); toast("good","Reassigned",ENQ[i][2]+" now sits with "+v+"."); },
+ status:(i,v)=>{ const e=ENQ[i]; e[7]=v; e[8]=v==="Won"?"good":v==="New enquiry"?"bad":v.startsWith("Lost")?"bad":"warn";
+   persist(); show("enq");
+   if(v==="Won") modal("Enquiry won","Make the quotation now, priced from "+e[2]+"'s rate contract?","Make the quotation",()=>{
+     SEQ.q++; toast("good","Quotation QT-0"+SEQ.q+" drafted",e[2]+", "+(e[4]?INR(e[4]):"value to be filled in")+". It is waiting for you to send."); show("quote"); });
+   else toast("good","Status changed",e[2]+" is now "+v+"."); },
+ tkeng:(i,v)=>{ TICKETS[i][6]=v; persist(); toast("good","Reassigned",TICKETS[i][0]+" is now with "+v+"."); },
+};
+const redrawQuote=()=>{ const pos=window.scrollY; const a=document.activeElement;
+  const key=a&&a.dataset?a.dataset.inp+":"+a.dataset.i:null;
+  document.getElementById("page").innerHTML=SCREEN.quote(); afterRender("quote"); window.scrollTo(0,pos);
+  if(key){ const el=document.querySelector('[data-inp="'+key.split(":")[0]+'"][data-i="'+key.split(":")[1]+'"]'); if(el){ el.focus(); try{el.setSelectionRange(el.value.length,el.value.length)}catch(e){} } } };
+const INP={
+ qqty:(v,i)=>{ QLINES[i].qty=Math.max(0,parseInt(v||"0",10)); persist(); redrawQuote(); },
+ sesscode:v=>{ SCODE=v; },
+ qrate:(v,i)=>{ QLINES[i].rate=Math.max(0,parseInt(v||"0",10)); persist(); redrawQuote(); },
+ qdisc:(v,i)=>{ QLINES[i].disc=Math.max(0,Math.min(100,parseInt(v||"0",10))); QLINES[i].scheme=false; persist(); redrawQuote(); },
+ regq:v=>{ UI.regq=v; persist(); const r=document.getElementById("page"); const pos=window.scrollY; document.getElementById("page").innerHTML=SCREEN.reg(); afterRender("reg"); window.scrollTo(0,pos); const el=document.querySelector('[data-inp="regq"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length);} },
+ qty:(v,i)=>{ LINES[i][3]=Math.max(0,parseInt(v||"0",10)); persist(); const pos=window.scrollY;
+   document.getElementById("page").innerHTML=SCREEN.quote(); afterRender("quote"); window.scrollTo(0,pos); },
+};
+document.addEventListener("click",e=>{
+  const el=e.target.closest("[data-act]"); if(!el) return;
+  const fn=ACT[el.dataset.act]; if(!fn) return; e.preventDefault(); fn(el.dataset,el);
+});
+document.addEventListener("change",e=>{
+  const el=e.target.closest("[data-chg]"); if(!el) return;
+  const fn=CHG[el.dataset.chg]; if(fn) fn(+(el.dataset.i||0), el.value, el);
+});
+document.addEventListener("input",e=>{
+  const el=e.target.closest("[data-inp]"); if(!el) return;
+  const fn=INP[el.dataset.inp]; if(fn) fn(el.value, +(el.dataset.i||0));
+});
+/* global search */
+const GS=document.getElementById("gs"), GR=document.getElementById("gres");
+function gsearch(){
+  const q=(GS.value||"").trim().toLowerCase(); GR.innerHTML="";
+  if(q.length<2) return;
+  const hits=[];
+  UNITS.forEach(u=>{ if((u[0]+u[1]+u[2]).toLowerCase().includes(q)) hits.push([u[0]+", "+u[1]+", "+u[2],"reg"]); });
+  SITES.forEach(s=>{ if(s.s.toLowerCase().includes(q)) hits.push([s.s+", "+s.u+" units, "+s.due,"today"]); });
+  TICKETS.forEach(t=>{ if((t[0]+t[1]+t[3]).toLowerCase().includes(q)) hits.push([t[0]+", "+t[1]+", "+t[3],"tick"]); });
+  ENQ.forEach(x=>{ if((x[1]+x[2]).toLowerCase().includes(q)) hits.push([x[2]+", "+x[0]+" enquiry","enq"]); });
+  if(!hits.length){ const d=document.createElement("div"); d.className="empty"; d.textContent="Nothing found"; GR.className="results"; GR.appendChild(d); return; }
+  GR.className="results";
+  hits.slice(0,9).forEach(([label,k])=>{ const b=document.createElement("button"); b.type="button"; b.textContent=label;
+    b.onclick=()=>{ GS.value=""; GR.innerHTML=""; GR.className=""; show(k); }; GR.appendChild(b); });
+}
+GS.addEventListener("input",gsearch);
+GS.addEventListener("blur",()=>setTimeout(()=>{GR.innerHTML="";GR.className="";},180));
+
+const HINTS={
+ today:"Click any site. The red ones are the money. Everything on this page is live, change something and the numbers move.",
+ leak:"Press Offer AMC on any row. It drafts a real quotation at that site's contracted rate and nothing is sent.",
+ ai:"Pick a question or type your own, then press Ask. The answer is computed from the data in this demo, not written in advance.",
+ enq:"Change an owner or a status. Set one to Won and see what it offers you next.",
+ qr:"Press Ask for service. Watch it land in the enquiry inbox already carrying the serial and the overdue date.",
+ rules:"These are the rules that decided who got each enquiry in the inbox.",
+ src:"Look at Justdial against what your own engineers spot on site.",
+ reg:"Type hydrant, or CO2, or Peelamedu. The search runs as you type.",
+ sites:"Change the site in the picker. The people, the history and the units all follow it.",
+ docs:"Press Record renewal on the IS 2190 certificate, then open Tenders and see what changed.",
+ tick:"Reassign an engineer, or close a job and watch the counts above move.",
+ route:"Tomorrow in road order, 69 km instead of 104.",
+ field:"Work the job through. Check in, scan, fill the card, then sign in the box with your finger.",
+ wa:"These are drafted from the due dates. Nothing goes out until a person releases the batch.",
+ quote:"Press Amend, then change a quantity, a rate or a discount. Push one discount above 10 percent and see what happens.",
+ rate:"Tiruppur expired in March. Anything quoted to them since then was at the wrong price.",
+ tender:"The Pollachi bid is blocked by an expired certificate. The compliance vault can unblock it.",
+ van:"Red means a job can fail tomorrow because the van is short.",
+ supp:"Payables set against receivables, so you see the real cash position.",
+ inv:"Raised from the job card, so the quantities are whatever the engineer actually did.",
+ pay:"Record a payment on any overdue row and the chase stops.",
+ rep:"Any of these can arrive on your WhatsApp every Monday morning.",
+ settings:"Everything the documents read from. Locked here because the demo resets nightly, yours on your own system.",
+ scope:"Everything you just clicked, built for your own firm, in thirty working days. The number at the bottom dials from a phone.",
+};
+function badges(){
+  const counts={enq:ENQ.filter(e=>e[7]==="New enquiry").length,
+    tick:TICKETS.filter(t=>t[9]==="bad").length,
+    docs:DOCS.filter(d=>d[5]==="bad").length,
+    tender:TENDERS.filter(t=>/Blocked/.test(t[9])).length,
+    van:VAN.filter(v=>v[5]==="bad").length,
+    leak:SITES.filter(s=>s.k==="bad").length};
+  document.querySelectorAll("#nav button").forEach(b=>{
+    const n=counts[b.dataset.k]; let el=b.querySelector(".badge");
+    if(n){ if(!el){ el=document.createElement("span"); el.className="badge"; b.appendChild(el);} el.textContent=n; }
+    else if(el) el.remove();
+  });
+}
+function sigpad(){
+  const c=document.getElementById("sigpad"); if(!c) return;
+  const ctx=c.getContext("2d"); let drawing=false, any=false;
+  ctx.lineWidth=3; ctx.lineCap="round"; ctx.lineJoin="round";
+  ctx.strokeStyle=getComputedStyle(document.body).color;
+  const pt=ev=>{ const r=c.getBoundingClientRect(); return [(ev.clientX-r.left)*(c.width/r.width),(ev.clientY-r.top)*(c.height/r.height)]; };
+  c.addEventListener("pointerdown",ev=>{ drawing=true; c.setPointerCapture(ev.pointerId); const[x,y]=pt(ev); ctx.beginPath(); ctx.moveTo(x,y); });
+  c.addEventListener("pointermove",ev=>{ if(!drawing) return; const[x,y]=pt(ev); ctx.lineTo(x,y); ctx.stroke(); any=true;
+    const b=document.getElementById("jobdone"); if(b) b.disabled=false; });
+  const end=()=>{ drawing=false; };
+  c.addEventListener("pointerup",end); c.addEventListener("pointerleave",end); c.addEventListener("pointercancel",end);
+}
+function afterRender(k){
+  badges();
+  if(k==="field") sigpad();
+  if(k==="ai"){ const q=document.getElementById("q");
+    document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{ UI.q=c.textContent.trim(); if(q) q.value=UI.q; persist(); show("ai"); })); }
+}
+function show(k){
+ CUR=k;
+ const host=document.getElementById("page");
+ host.innerHTML=(HINTS[k]?`<div class="hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg><div><b>Try this.</b> ${HINTS[k]}</div></div>`:"")+SCREEN[k]();
+ document.getElementById("ptitle").textContent=TITLE[k];
+ document.querySelectorAll('#nav button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.k===k)));
+ window.scrollTo(0,0);
+ afterRender(k);
+ try{ if(location.hash.slice(1)!==k) history.replaceState(null,"","#"+k) }catch(e){}
+}
+restore();
+cloudBadge(); cloudPush();
+document.querySelectorAll('#nav button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.k)));
+let start=""; try{ start=location.hash.slice(1) }catch(e){}
+show(SCREEN[start]?start:"today");
+</script>
+</body></html>
