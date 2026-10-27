@@ -242,6 +242,33 @@ header.bar h1{flex:0 1 auto;min-width:3.5rem}
   .ribbon{font-size:var(--text-xs)}
 }
 @media (max-width:640px){ .who .nm{display:none} .resetbtn{padding:.4rem .5rem} }
+.pill.alt{background:#F3EDFD;color:#5B21B6}
+:root:not([data-theme="light"]) .pill.alt{background:#211634;color:#C4B5FD}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pill.alt{background:#211634;color:#C4B5FD}}
+.stsel{border:0;border-radius:6px;font-size:var(--text-xs);font-weight:600;padding:.25rem .4rem;cursor:pointer}
+.stsel.info{background:var(--info-soft);color:var(--info-text)} .stsel.warn{background:var(--warning-soft);color:var(--warning-text)}
+.stsel.good{background:var(--success-soft);color:var(--success-text)} .stsel.bad{background:var(--error-soft);color:var(--error-text)}
+.stsel.alt{background:#F3EDFD;color:#5B21B6}
+.cs{position:relative;margin:.25rem 0 .3rem}
+.csbtn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:.5rem;text-align:left;
+  background:var(--bg-input);border:1px solid var(--border-soft);border-radius:var(--radius-input);
+  padding:.45rem .55rem;font:400 var(--text-sm)/1.4 Inter,sans-serif;color:var(--text-primary);cursor:pointer}
+.csbtn .ph{color:var(--text-muted)}
+.csbtn:hover{border-color:var(--brand)}
+.csin{position:relative}
+.csin input{width:100%;padding-left:2rem;padding-right:2rem}
+.csin .mag{position:absolute;left:.6rem;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--text-muted)}
+.csin .x{position:absolute;right:.4rem;top:50%;transform:translateY(-50%);border:0;background:transparent;
+  color:var(--text-muted);cursor:pointer;padding:.2rem;line-height:0}
+.csopt{display:flex;width:100%;align-items:center;justify-content:space-between;gap:.5rem;text-align:left;border:0;
+  background:transparent;padding:.45rem .7rem;font:400 var(--text-sm)/1.4 Inter,sans-serif;color:var(--text-primary);cursor:pointer}
+.csopt.hl{background:var(--brand-soft)}
+.csopt .nm{display:block}
+.csopt .sub{display:block;font-size:var(--text-xs);color:var(--text-muted)}
+.csfoot{padding:.4rem .7rem .3rem;font-size:11px;color:var(--text-muted);border-top:1px solid var(--border-soft)}
+.fgrid{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))}
+.fgrid label{font-size:var(--text-xs);color:var(--text-secondary);font-weight:600}
+.fgrid input,.fgrid select{width:100%;margin-top:.2rem}
 </style>
 </head>
 <body>
@@ -366,16 +393,23 @@ const ROUTE=[
  ["9:45 AM","Saravanampatti Tech Park","Coimbatore","Hydrant pump room, quarterly","TK-2236","Vignesh P","14 km"],
 ];
 
+// [source, from, site, what they want, value, received, owner, status, chip, score, stage, closes]
 const ENQ=[
- ["QR sticker","M Thangaraj","Peelamedu Spinning Mills","Scanned MF-04182 on the Block A wall, asked for refill",118400,"Today 8:12 AM","Karthik R","New enquiry","bad"],
- ["IndiaMART","Suresh Kumar","Kalapatti Packaging","40 ABC 6 kg extinguishers with installation",96000,"Today 7:40 AM","Office","New enquiry","bad"],
- ["Missed call","+91 98xxx 4412","Not identified yet","Rang twice, nobody picked up",0,"Today 7:05 AM","Office","New enquiry","bad"],
- ["Website","R Priya","Chinniampalayam Warehouse","Hydrant system AMC, wants a quote",148000,"Yesterday 6:20 PM","Office","Contacted","warn"],
- ["Justdial","Anand V","Ganapathy Textile Mill","Fire NOC help and extinguisher supply",62000,"Yesterday 2:05 PM","Vignesh P","Quoted","warn"],
- ["Field","Mohan S","Sulur Logistics Park","Spotted 6 unmarked units during a visit",9400,"21 Oct 3:15 PM","Mohan S","Contacted","warn"],
- ["Tender portal","Coimbatore City Municipal Corporation","Same","640 extinguishers, supply and AMC",1840000,"22 Oct 9:00 AM","Owner","Quoted","warn"],
- ["WhatsApp","Stores in charge","Annur Cold Storage","Two units missing off the wall, wants replacement",2060,"24 Oct 4:30 PM","Karthik R","Won","good"],
+ ["QR sticker","M Thangaraj","Peelamedu Spinning Mills","Scanned MF-04182 on the Block A wall, asked for refill",118400,"Today 8:12 AM","","New","bad",85,"enquiry","14 Nov 2026"],
+ ["IndiaMART","Suresh Kumar","Kalapatti Packaging","40 ABC 6 kg extinguishers with installation",96000,"Today 7:40 AM","","New","bad",55,"enquiry","30 Nov 2026"],
+ ["Missed call","+91 98xxx 4412","Not identified yet","Rang twice, nobody picked up",0,"Today 7:05 AM","","New","bad",null,"enquiry",""],
+ ["Website","R Priya","Chinniampalayam Warehouse","Hydrant system AMC, wants a quote",148000,"Yesterday 6:20 PM","Office","Contacted","warn",72,"enquiry","05 Dec 2026"],
+ ["Justdial","Anand V","Ganapathy Textile Mill","Fire NOC help and extinguisher supply",62000,"Yesterday 2:05 PM","Vignesh P","Quoted","warn",45,"quotation","20 Nov 2026"],
+ ["Field","Mohan S","Sulur Logistics Park","Spotted 6 unmarked units during a visit",9400,"21 Oct 3:15 PM","Mohan S","Contacted","warn",30,"enquiry",""],
+ ["Tender portal","Coimbatore City Municipal Corporation","Same","640 extinguishers, supply and AMC",1840000,"22 Oct 9:00 AM","Owner","Quoted","warn",65,"quotation","04 Nov 2026"],
+ ["WhatsApp","Stores in charge","Annur Cold Storage","Two units missing off the wall, wants replacement",2060,"24 Oct 4:30 PM","Karthik R","Won","good",90,"invoice","24 Oct 2026"],
 ];
+const STAFF=["Office","Karthik R","Mohan S","Vignesh P","Owner"];
+const HAND=["New","Contacted","Lost"];
+const STCHIP={New:"info",Contacted:"warn",Quoted:"alt",Won:"good",Lost:"bad"};
+const REACHED={enquiry:["Enquiry","flat"],quotation:["Quotation sent","alt"],order:["Order confirmed","warn"],
+ invoice:["Invoiced","info"],payment:["Paid","good"]};
+const warmth=n=>n==null?null:n>=70?["Hot","bad"]:n>=40?["Warm","warn"]:["Cold","info"];
 const RULES=[
  ["Scan on any unit","Source is QR sticker","The engineer who last serviced that unit","On"],
  ["Coimbatore city","Territory is Coimbatore","Karthik R, then Mohan S, in turn","On"],
@@ -582,6 +616,51 @@ function reg(){
  <tbody>${rows.map(u=>`<tr><td>${esc(u[0])}</td><td>${esc(u[1])}</td><td>${esc(u[2])}</td><td class="dim">${esc(u[3])}</td><td class="dim">${esc(u[4])}</td><td>${pill(u[6],u[5])}</td><td>${pill(u[7]==="Active"?"good":"bad",u[7])}</td><td class="n">${INR(u[8])}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">Nothing matches that. Try hydrant, CO2 or Peelamedu.</div>`}</div>
  <p class="foot">Serial level matters the day a customer asks which of his units you touched last March, or an inspector asks for the history of one extinguisher on one wall.</p>`;
 }
+const PINS=["641004","641035","641014","641005","641021","642001","641653","641402","641604","641012"];
+const ROADS=["Avinashi Road, Peelamedu","Sathy Road, Saravanampatti","Avinashi Road","Trichy Road, Singanallur",
+ "Kurichi Industrial Estate","Coimbatore Road, Pollachi","Mettupalayam Road, Annur","Trichy Road, Sulur",
+ "Palladam Road, Tiruppur","Dr Nanjappa Road, Gandhipuram"];
+const GSTT=["BBBBB1111B1Z4","CCCCC2222C1Z3","DDDDD3333D1Z2","EEEEE4444E1Z1","FFFFF5555F1Z0",
+ "GGGGG6666G1Z9","HHHHH7777H1Z8","JJJJJ8888J1Z7","KKKKK9999K1Z6","LLLLL1010L1Z5"];
+const gstinFor=i=>"33"+GSTT[i%10];
+// Customers on file: the ten sites, plus the ones that only exist as enquiries,
+// bids or rate contracts. This is what the quotation searches.
+const EXTRA=[["Kalapatti Packaging","Kalapatti","Coimbatore","641048","9843012233"],
+ ["Chinniampalayam Warehouse","Chinniampalayam","Coimbatore","641062","9842277410"],
+ ["Ganapathy Textile Mill","Ganapathy","Coimbatore","641006","9865541120"],
+ ["Coimbatore City Municipal Corporation","Town Hall","Coimbatore","641001","4222390261"],
+ ["Kurichi Fabrication Works","Kurichi","Coimbatore","641021","9894451207"],
+ ["Mettupalayam Cold Chain","Karamadai","Mettupalayam","641104","9790033418"]];
+function CUSTS(){
+ const out=SITES.map((x,i)=>({name:x.s,area:ROADS[i%10].split(",")[0],city:x.c,pin:PINS[i%10],
+   gstin:gstinFor(i),phone:"98"+(43000000+i*131317)}));
+ EXTRA.forEach((e,j)=>out.push({name:e[0],area:e[1],city:e[2],pin:e[3],gstin:"33"+GSTT[(j+3)%10],phone:e[4]}));
+ return out;
+}
+function findCusts(q){
+ const all=CUSTS(); const w=(q||"").toLowerCase().split(/\s+/).filter(Boolean);
+ if(!w.length) return all;
+ return all.filter(c=>{ const hay=[c.name,c.city,c.area,c.gstin,c.phone].join(" ").toLowerCase();
+   return w.every(t=>hay.includes(t)); });
+}
+function standing(name){
+ const c=CONTRACT[name];
+ const owed=PAY.filter(p=>p[1]===name&&p[6]!=="good").reduce((a,b)=>a+b[4],0);
+ const rc=c?(c.live?"Rate contract "+c.ref+", "+c.pct+" percent off list, live to "+c.to+"."
+   :"Rate contract "+c.ref+" expired on "+c.to+", so this quotation goes at list price.")
+   :"No rate contract. Everything is quoted at list price.";
+ return rc+" Credit 45 days. "+(owed?INR(owed)+" overdue.":INR(0)+" overdue.");
+}
+function applyCustomer(name){
+ QT.cust=name;
+ const c=CONTRACT[name], pct=(c&&c.live)?c.pct:0;
+ QT.disc=pct;
+ QLINES.forEach(l=>{
+   if(l.scheme){ l.contract=null; return; }
+   l.rate=l.list; l.disc=pct;
+   l.contract=(c&&c.live)?{ref:c.ref,price:Math.round(l.list*(1-pct/100)),list:l.list}:null;
+ });
+}
 const NAMEP=[["R Selvakumar","M Thangaraj","P Nandhini"],["K Arumugam","S Dhanalakshmi","V Prabhu"],
  ["T Jeyaraman","R Kavitha","M Sathish"],["A Murugesan","P Ilango","S Revathi"],
  ["N Balasubramanian","K Deepa","R Manikandan"],["S Chinnasamy","T Vaithi","M Lakshmi"],
@@ -599,12 +678,7 @@ function siteDetail(i){
  const since=2013+((i*3)%10), yrs=2026-since, jobs=4+((i*5)%14), blocks=Math.max(2,Math.min(8,Math.round(s.u/28)));
  const refill=Math.round(s.u*1185/100)*100, repair=6400+((i*2300)%16000), supplyN=12+((i*7)%28);
  const base=s.last;
- const pins=["641004","641035","641014","641005","641021","642001","641653","641402","641604","641012"];
- const roads=["Avinashi Road, Peelamedu","Sathy Road, Saravanampatti","Avinashi Road","Trichy Road, Singanallur",
-  "Kurichi Industrial Estate","Coimbatore Road, Pollachi","Mettupalayam Road, Annur","Trichy Road, Sulur",
-  "Palladam Road, Tiruppur","Dr Nanjappa Road, Gandhipuram"];
- const gstn="33"+["BBBBB1111B1Z4","CCCCC2222C1Z3","DDDDD3333D1Z2","EEEEE4444E1Z1","FFFFF5555F1Z0",
-  "GGGGG6666G1Z9","HHHHH7777H1Z8","JJJJJ8888J1Z7","KKKKK9999K1Z6","LLLLL1010L1Z5"][i%10];
+ const pins=PINS, roads=ROADS, gstn=gstinFor(i);
  const hist=[
   [dmy(new Date(base)),"Annual refill, "+s.u+" units",eng,"JC-"+(3100+i*37)+", INV-"+(1100+i*11),refill],
   [dmy(backdate(base,6)),"AMC renewal, "+(since+yrs-2)+" to "+(since+yrs-1),"Office","INV-"+(940+i*9),s.v],
@@ -715,9 +789,33 @@ function wa(){
  </div>
  <p class="foot">Refill reminders, NOC reminders and payment follow ups all run off the same queue. Nothing goes out without a person releasing the batch.</p>`;
 }
+// A line's unit price: the rate contract price when there is one, otherwise
+// the list rate less the discount. One definition, so the screen, the PDF and
+// the invoice can never disagree by a rupee.
+const unitPrice=l=>l.free?0:(l.contract?l.contract.price:Math.round(l.rate*(1-l.disc/100)));
+const lineTotal=l=>l.qty*unitPrice(l);
+function custPicker(){
+ if(!UI.csopen) return `<div class="cs"><button class="csbtn" type="button" data-act="csopen" aria-label="Pick a customer">
+   <span class="${QT.cust?"":"ph"}">${esc(QT.cust||"Type a customer name, city or phone...")}</span>
+   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><path d="m6 9 6 6 6-6"/></svg></button></div>`;
+ const q=UI.csq||"", hits=findCusts(q).slice(0,30);
+ const hl=Math.max(0,Math.min(UI.cshl||0,hits.length-1));
+ return `<div class="cs"><div class="csin">
+  <svg class="mag" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+  <input id="csq" data-inp="csq" value="${esc(q)}" placeholder="Type a customer name, city or phone..." aria-label="Search customers">
+  <button class="x" type="button" data-act="csclose" aria-label="Close search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+  <div class="results" role="listbox">
+  ${hits.length?hits.map((c,i)=>`<button class="csopt${i===hl?" hl":""}" type="button" role="option" aria-selected="${c.name===QT.cust}" data-act="cspick" data-n="${esc(c.name)}">
+    <span style="min-width:0"><span class="nm">${esc(c.name)}</span><span class="sub">${esc(c.area+", "+c.city)} &middot; GSTIN ${esc(c.gstin)}</span></span>
+    ${c.name===QT.cust?CHECK:""}</button>`).join("")
+   :`<div class="empty">${q?`No customer matches "${esc(q)}"`:"No customers yet"}</div>`}
+  ${hits.length?`<div class="csfoot">${hits.length>=30?"The best 30 matches. Type more to narrow.":hits.length+" "+(hits.length===1?"match":"matches")+"."} Arrow keys, Enter to choose.</div>`:""}
+  </div></div>`;
+}
+const CHECK='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" style="flex-shrink:0"><path d="m5 13 4 4L19 7"/></svg>';
 function quote(){
  const cap=10;
- const calc=l=>{ const gross=l.qty*l.rate; return l.free?0:Math.round(gross*(1-l.disc/100)); };
+ const calc=lineTotal;
  const sub=QLINES.reduce((a,l)=>a+calc(l),0);
  const chg=QT.charges.reduce((a,c)=>a+c[1],0);
  const taxable=sub+chg, gst=Math.round(taxable*0.18), cg=Math.round(gst/2);
@@ -757,8 +855,8 @@ function quote(){
     <button class="btn ghost sm" type="button" data-act="qsavetmpl">Save these lines as a template</button>
     <button class="btn quiet sm" type="button" data-act="qmgtmpl">Manage templates</button></div>
    <label style="font-size:var(--text-sm);font-weight:500">Customer</label>
-   <input style="width:100%;margin:.25rem 0 .3rem" value="${esc(QT.cust)}" placeholder="Type customer name to search..." ${QT.amending?"":"disabled"}>
-   <div style="font-size:var(--text-xs);color:var(--text-muted);margin-bottom:.9rem">Rate contract 8 percent off list, live to 31 Mar 2027. Credit 45 days. ${INR(0)} overdue.</div>
+   ${custPicker()}
+   <div style="font-size:var(--text-xs);color:var(--text-muted);margin-bottom:.9rem">${esc(standing(QT.cust))}</div>
    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap">
     <label style="font-size:var(--text-sm);font-weight:500">Products</label>
     <span style="font-size:var(--text-xs);color:${over?"var(--warning-text)":"var(--text-muted)"}">Your discount limit: ${cap}%, set for your role. Above it, the order needs approval.</span></div>
@@ -1063,23 +1161,40 @@ function scope(){
 }
 
 function enq(){
- const open=ENQ.filter(e=>e[7]!=="Won"), val=open.reduce((a,b)=>a+b[4],0);
+ const f=UI.enqf||"all";
+ const live=e=>e[7]!=="Won"&&e[7]!=="Lost";
+ const rows=ENQ.map((e,i)=>({e,i})).filter(({e})=>f==="all"||(f==="open"?live(e):e[7]===f));
+ const openv=ENQ.filter(live).reduce((a,b)=>a+b[4],0);
+ const untouched=ENQ.filter(e=>e[7]==="New").length;
+ const tab=(v,lab)=>`<button class="btn ${f===v?"":"quiet"} sm" type="button" data-act="enqf" data-v="${v}">${lab}</button>`;
  return `<p class="lede">Enquiries land here by themselves, from the QR stickers on your units, from IndiaMART and Justdial, from your website, from a missed call and from the tender portal. Nobody types them in.</p>
  <div class="stat-grid">
-  <div class="kpi bad"><div class="lab">Not yet touched</div><div class="val">3</div><div class="sub">Oldest came in at 7:05 this morning</div></div>
-  <div class="kpi warn"><div class="lab">Open enquiry value</div><div class="val">${L(val)}</div><div class="sub">Seven live, one already won</div></div>
+  <div class="kpi bad"><div class="lab">Not yet touched</div><div class="val">${untouched}</div><div class="sub">Oldest came in at 7:05 this morning</div></div>
+  <div class="kpi warn"><div class="lab">Open enquiry value</div><div class="val">${L(openv)}</div><div class="sub">${ENQ.filter(live).length} live, ${ENQ.filter(e=>e[7]==="Won").length} already won</div></div>
   <div class="kpi good"><div class="lab">Average first response</div><div class="val">41 min</div><div class="sub">Was two days before routing</div></div>
   <div class="kpi"><div class="lab">Came in this week</div><div class="val">23</div><div class="sub">Nine from QR stickers</div></div>
  </div>
- <div class="card"><div class="head"><h3>Enquiry inbox</h3><span class="note">Routed the moment it arrives</span><span class="right">Newest first</span></div>
- <div class="tbl"><table><thead><tr><th>Source</th><th>From</th><th>Site or company</th><th>What they want</th><th class="n">Expected value</th><th>Received</th><th>Owner</th><th>Status</th></tr></thead>
- <tbody>${ENQ.map((e,i)=>`<tr><td>${pill(e[0]==="QR sticker"?"info":"flat",e[0])}</td><td>${esc(e[1])}</td><td>${esc(e[2])}</td>
-  <td class="dim">${esc(e[3])}</td><td class="n">${e[4]?INR(e[4]):"<span class='dim'>Not known yet</span>"}</td>
-  <td class="dim">${esc(e[5])}</td>
-  <td><select data-chg="owner" data-i="${i}">${["Office","Karthik R","Mohan S","Vignesh P","Owner"].map(o=>`<option${o===e[6]?" selected":""}>${o}</option>`).join("")}</select></td>
-  <td><select data-chg="status" data-i="${i}">${["New enquiry","Contacted","Quoted","Won","Lost at price"].map(o=>`<option${o===e[7]?" selected":""}>${o}</option>`).join("")}</select></td></tr>`).join("")}</tbody>
- <tfoot><tr><td colspan="4">Open enquiries</td><td class="n">${INR(val)}</td><td colspan="3"></td></tr></tfoot></table></div></div>
- <p class="foot">Mark an enquiry won and it asks whether to make the quotation now, priced from that customer's rate contract. Mark it lost and it asks who took it and at what price, which is what feeds the win rate.</p>`;
+ <div class="tools">${tab("all","All")}${tab("open","Open")}${["New","Contacted","Quoted","Won","Lost"].map(x=>tab(x,x)).join("")}
+  <span class="dim">Owner is set on the enquiry itself. Press Open on any row.</span></div>
+ <div class="card"><div class="head"><h3>Enquiry inbox</h3><span class="note">Routed the moment it arrives</span><span class="right">${rows.length} of ${ENQ.length} shown</span></div>
+ ${rows.length?`<div class="tbl"><table style="min-width:58rem"><thead><tr><th>Site or company</th><th>What they want</th><th>Source</th><th>Owner</th><th class="n">Value</th><th>Interest</th><th>Status</th><th>Where it stands</th><th>Action</th></tr></thead>
+ <tbody>${rows.map(({e,i})=>{
+   const st=e[7], opts=HAND.indexOf(st)>=0?HAND:[st].concat(HAND);
+   const w=warmth(e[9]), rc=REACHED[e[10]]||REACHED.enquiry;
+   return `<tr><td>${esc(e[2])}<div class="dim">${esc(e[1])} &middot; ${esc(e[5])}</div></td>
+   <td class="dim" style="max-width:16rem;white-space:normal">${esc(e[3])}</td>
+   <td>${pill(e[0]==="QR sticker"?"info":"flat",e[0])}</td>
+   <td>${e[6]?esc(e[6]):'<span class="dim">Unassigned</span>'}</td>
+   <td class="n">${e[4]?INR(e[4]):'<span class="dim">-</span>'}${e[11]?`<div class="dim">closes ${esc(e[11])}</div>`:""}</td>
+   <td>${w?pill(w[1],w[0]):'<span class="dim">-</span>'}</td>
+   <td><select class="stsel ${STCHIP[st]||"flat"}" data-chg="status" data-i="${i}" title="Quoted and Won are set by themselves: when a quotation is saved, and when the customer confirms the order.">
+     ${opts.map(o=>`<option value="${o}"${o===st?" selected":""}${HAND.indexOf(o)>=0?"":" disabled"}>${o}</option>`).join("")}</select></td>
+   <td>${pill(rc[1],rc[0])}</td>
+   <td><button class="btn sm" type="button" data-act="enqopen" data-i="${i}" title="See where this enquiry stands and do the next step">Open</button></td></tr>`;
+  }).join("")}</tbody>
+ <tfoot><tr><td colspan="4">Open enquiries</td><td class="n">${INR(openv)}</td><td colspan="4"></td></tr></tfoot></table></div>`
+ :`<div class="empty">No enquiry in this view. <button class="btn quiet sm" type="button" data-act="enqf" data-v="all">Show all enquiries</button></div>`}</div>
+ <p class="foot">Quoted and Won are not typed in. An enquiry turns Quoted the moment a quotation is saved against that customer, and Won when the customer confirms the order. Only New, Contacted and Lost are set by hand, and Lost asks who took it and at what price, which is what feeds the win rate.</p>`;
 }
 function qr(){
  return `<p class="lede">Every unit already has a serial number. Print that serial as a QR sticker, put it on the unit next to the service tag, and the building's own staff become the people who tell you when something needs doing.</p>
@@ -1182,12 +1297,19 @@ const QT={series:"QT/26-27/",no:915,enq:"ENQ-0312",cust:"Saravanampatti Tech Par
  opt:[["Spare safety pin and seal, set of 25","8424",2,900,false],["Extra 30 m hose reel with bracket","8424",1,3100,false],["Fire blanket, 1.2 x 1.2 m","5907",4,850,false]],
  charges:[["Freight and handling",1800]]};
 const QLINES=[
- {p:"ABC dry powder 6 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:86,rate:650,disc:8,stock:142,contract:{ref:"RC-114",price:650,list:707}},
- {p:"ABC dry powder 9 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:34,rate:880,disc:8,stock:40,contract:{ref:"RC-114",price:880,list:957}},
- {p:"CO2 4.5 kg, refill and hydrostatic test",hsn:"3813",unit:"nos",qty:14,rate:1450,disc:8,stock:9,contract:null},
- {p:"Hydrant system, quarterly service visit",hsn:"9987",unit:"visit",qty:1,rate:14800,disc:0,stock:null,contract:null},
- {p:"ABC dry powder 6 kg, refill (4 free on 80)",hsn:"3813",unit:"nos",qty:4,rate:650,disc:0,free:true,scheme:true,stock:142,contract:null},
+ {p:"ABC dry powder 6 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:86,list:707,rate:707,disc:8,stock:142,contract:{ref:"RC-114",price:650,list:707}},
+ {p:"ABC dry powder 9 kg, refill and pressure check",hsn:"3813",unit:"nos",qty:34,list:957,rate:957,disc:8,stock:40,contract:{ref:"RC-114",price:880,list:957}},
+ {p:"CO2 4.5 kg, refill and hydrostatic test",hsn:"3813",unit:"nos",qty:14,list:1450,rate:1450,disc:8,stock:9,contract:{ref:"RC-114",price:1334,list:1450}},
+ {p:"Hydrant system, quarterly service visit",hsn:"9987",unit:"visit",qty:1,list:14800,rate:14800,disc:8,stock:null,contract:{ref:"RC-114",price:13616,list:14800}},
+ {p:"ABC dry powder 6 kg, refill (4 free on 80)",hsn:"3813",unit:"nos",qty:4,list:707,rate:707,disc:0,free:true,scheme:true,stock:142,contract:null},
 ];
+// Rate contracts, the same four that are on the Rate contracts screen.
+const CONTRACT={
+ "Saravanampatti Tech Park":{ref:"RC-114",pct:8,to:"31 Mar 2027",live:true},
+ "Coimbatore City Municipal Corporation":{ref:"RC-121",pct:17,to:"11 Aug 2029",live:true},
+ "Avinashi Road Mall":{ref:"RC-108",pct:5,to:"31 Dec 2026",live:true},
+ "Tiruppur Knitwear Unit":{ref:"RC-096",pct:12,to:"31 Mar 2026",live:false},
+};
 const QTLIST=[["QT/26-27/0914","Annur Cold Storage","22 Oct 2026",96000,"Accepted","good"],
  ["QT/26-27/0913","Tiruppur Knitwear Unit","19 Oct 2026",67000,"Invoiced","good"],
  ["QT/26-27/0912","Kalapatti Packaging","17 Oct 2026",96000,"Sent","warn"],
@@ -1273,7 +1395,7 @@ function pdfBuild(o){
 function quoteSum(){
  const lines=QLINES.filter(l=>l.p);
  const opt=QT.opt.filter(o=>o[4]);
- const net=lines.reduce((a,l)=>a+(l.free?0:Math.round(l.qty*l.rate*(1-l.disc/100))),0)
+ const net=lines.reduce((a,l)=>a+lineTotal(l),0)
   +opt.reduce((a,o)=>a+o[2]*o[3],0)+QT.charges.reduce((a,c)=>a+c[1],0);
  const c=Math.round(net*0.09);
  return {lines,opt,net,c,tot:net+c*2};
@@ -1281,7 +1403,7 @@ function quoteSum(){
 function pdfQuote(){
  const q=quoteSum(), body=[];
  q.lines.forEach((l,i)=>body.push([String(i+1),l.p,l.hsn,l.qty+" "+l.unit,l.free?"Free":rs(l.rate),
-  l.free?"Scheme":(l.disc?l.disc+"%":"-"),l.free?rs(0):rs(Math.round(l.qty*l.rate*(1-l.disc/100)))]));
+  l.free?"Scheme":(l.disc?l.disc+"%":"-"),rs(lineTotal(l))]));
  q.opt.forEach((o,i)=>body.push([String(q.lines.length+i+1),o[0]+" (optional, accepted)",o[1],o[2]+" nos",rs(o[3]),"-",rs(o[2]*o[3])]));
  QT.charges.forEach(c=>body.push(["",c[0],"","","","",rs(c[1])]));
  return pdfBuild({title:"QUOTATION",no:QT.series+QT.no,date:today2(),
@@ -1378,7 +1500,7 @@ function resetAll(){
     opt:[["Spare safety pin and seal, set of 25","8424",2,900,false],["Extra 30 m hose reel with bracket","8424",1,3100,false],["Fire blanket, 1.2 x 1.2 m","5907",4,850,false]],
     charges:[["Freight and handling",1800]]});
   QLINES.length=0; JSON.parse(JSON.stringify(QLSEED)).forEach(x=>QLINES.push(x));
-  for(const k of Object.keys(UI)) delete UI[k]; UI.regq=""; UI.site=0;
+  for(const k of Object.keys(UI)) delete UI[k]; UI.regq=""; UI.site=0; UI.enqf="all";
   try{ localStorage.removeItem(STORE) }catch(e){}
   persist(); show("today"); toast("good","Demo reset","Every screen is back to how it started.");
 }
@@ -1419,6 +1541,24 @@ function modalHTML(title,html,okLabel,onOk){
   if(onOk) f.append(no,yes); else f.append(yes);
   box.append(h,b,f); bg.appendChild(box); host.innerHTML=""; host.appendChild(bg); yes.focus();
 }
+const CHANCE={New:10,Contacted:25,Quoted:50,Won:100,Lost:0};
+let EFORM={}, ELOST={};
+function lostModal(i){
+ const e=ENQ[i]; ELOST={reason:"",to:"",price:""};
+ modalHTML("Mark "+e[2]+" as lost",
+  `<label style="font-size:var(--text-xs);font-weight:600;color:var(--text-secondary)">Why was it lost?</label>
+   <div class="dim" style="margin-bottom:.3rem">Optional, but it helps see why sales are lost.</div>
+   <textarea data-inp="elr" rows="3" placeholder="e.g. Price, went with a local dealer" style="width:100%"></textarea>
+   <div class="fgrid" style="margin-top:.8rem">
+    <label>Who took it<input data-inp="elt" placeholder="e.g. a local refiller"></label>
+    <label>At what price<input data-inp="elp" placeholder="e.g. 96000"></label>
+   </div>`,
+  "Mark as lost", ()=>{
+    e[7]="Lost"; e[8]="bad"; e[12]=0;
+    const p=parseInt(String(ELOST.price).replace(/[^0-9]/g,""),10);
+    persist(); show("enq");
+    toast("bad","Marked lost", ELOST.to?("Lost to "+ELOST.to+(isNaN(p)?"":" at "+INR(p))+". It counts against the win rate now."):"It counts against the win rate now."); });
+}
 const today2=()=>new Date().toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"});
 
 const ACT={
@@ -1441,14 +1581,14 @@ const ACT={
    persist(); show("docs");
    toast("good","Renewal recorded", unblocked?"The Pollachi bid is no longer blocked. Go and look at Tenders.":x[0]+" is current again."); },
  regq:d=>{ UI.regq=d.v; persist(); show("reg"); },
- q2inv:()=>{ const net=QLINES.reduce((a,l)=>a+(l.free?0:Math.round(l.qty*l.rate*(1-l.disc/100))),0)+QT.charges.reduce((a,c)=>a+c[1],0);
+ q2inv:()=>{ const net=QLINES.reduce((a,l)=>a+lineTotal(l),0)+QT.charges.reduce((a,c)=>a+c[1],0);
    const tot=Math.round(net*1.18);
    PAY.unshift(["INV-"+(++SEQ.inv),"Saravanampatti Tech Park",today2(),"Annual refill and hydrant service",tot,"Due in 45 days","warn"]);
    persist(); show("pay"); toast("good","Invoice INV-"+SEQ.inv+" raised",INR(tot)+" including GST. It is in the payment tracker now."); },
  qsend:()=>{ const q=quoteSum();
    waModal("Send the quotation on WhatsApp",QT.cust,
     "Dear Sir,\n\nQuotation "+QT.series+QT.no+" for "+QT.cust+" is ready.\n\n"
-    +q.lines.filter(l=>!l.free).map(l=>"- "+l.p+": "+l.qty+" "+l.unit+" at "+rs(l.rate)).join("\n")
+    +q.lines.filter(l=>!l.free).map(l=>"- "+l.p+": "+l.qty+" "+l.unit+" at "+rs(unitPrice(l))+" = "+rs(lineTotal(l))).join("\n")
     +"\n\nTaxable value "+rs(q.net)+"\nGST 18 percent "+rs(q.c*2)+"\nTotal "+rs(q.tot)
     +"\n\nPayment "+QT.terms+". The rates hold for 30 days. The PDF is attached.\n\n"+CO.n+"\n"+CO.ph); },
  wacopy:()=>{ try{ navigator.clipboard.writeText(WAMSG).then(
@@ -1469,6 +1609,37 @@ const ACT={
    persist(); show("field"); toast("good","Job finished","Signature stored against all 24 serials. Invoice INV-"+JOB.inv+" is in the payment tracker."); },
  jobreset:()=>{ Object.assign(JOB,{step:1,scanned:0,done:false}); persist(); show("field"); },
  ask:()=>{ const q=document.getElementById("q"); UI.q=q?q.value:""; show("ai"); },
+ enqf:d=>{ UI.enqf=d.v; persist(); show("enq"); },
+ csopen:()=>{ UI.csopen=1; UI.csq=""; UI.cshl=0; show("quote"); },
+ csclose:()=>{ delete UI.csopen; UI.csq=""; show("quote"); },
+ cspick:d=>{ applyCustomer(d.n); delete UI.csopen; UI.csq=""; persist(); show("quote");
+   const c=CONTRACT[d.n];
+   toast("good","Quoting "+d.n, c?(c.live?"Priced from rate contract "+c.ref+", "+c.pct+" percent off list.":"Rate contract "+c.ref+" has expired, so every line is back at list price."):"No rate contract on file, so every line is at list price."); },
+ enqopen:d=>{ const i=+d.i, e=ENQ[i];
+   EFORM={i:i,owner:e[6]||"",status:e[7],val:e[4]?String(e[4]):"",chance:String(e[12]!=null?e[12]:CHANCE[e[7]]),close:e[11]||""};
+   const opts=HAND.indexOf(e[7])>=0?HAND:[e[7]].concat(HAND);
+   const rc=REACHED[e[10]]||REACHED.enquiry;
+   modalHTML("Enquiry from "+e[2],
+    `<div class="dim">${esc(e[0])} &middot; from ${esc(e[1])} &middot; received ${esc(e[5])} &middot; ${esc(rc[0])}</div>
+     <div style="margin-top:.5rem;color:var(--text-primary)">${esc(e[3])}</div>
+     <div class="fgrid" style="margin-top:1rem">
+      <label>Owner<select data-chg="efo">${["Unassigned"].concat(STAFF).map(o=>`<option${(o==="Unassigned"?!e[6]:o===e[6])?" selected":""}>${o}</option>`).join("")}</select></label>
+      <label>Status<select data-chg="efs">${opts.map(o=>`<option value="${o}"${o===e[7]?" selected":""}${HAND.indexOf(o)>=0?"":" disabled"}>${o}</option>`).join("")}</select></label>
+      <label>Expected value<input data-inp="efv" value="${e[4]||""}" placeholder="e.g. 148000"></label>
+      <label>Chance of winning %<input data-inp="efc" value="${e[12]!=null?e[12]:CHANCE[e[7]]}"></label>
+      <label>Expected close<input data-inp="efd" value="${esc(e[11]||"")}" placeholder="e.g. 30 Nov 2026"></label>
+     </div>
+     <p class="dim" style="margin:.9rem 0 0">This is where the enquiry is handed to someone. Quoted and Won are greyed out because the documents set them: a quotation saved against this customer, and the customer confirming the order.</p>`,
+    "Save", ()=>{
+      const e2=ENQ[EFORM.i];
+      e2[6]=EFORM.owner; e2[4]=EFORM.val?Math.max(0,parseInt(String(EFORM.val).replace(/[^0-9]/g,""),10)||0):0;
+      e2[11]=EFORM.close; const ch=parseInt(String(EFORM.chance),10); e2[12]=isNaN(ch)?null:Math.max(0,Math.min(100,ch));
+      if(EFORM.status!==e2[7]&&HAND.indexOf(EFORM.status)>=0){
+        if(EFORM.status==="Lost"){ persist(); lostModal(EFORM.i); return; }
+        e2[7]=EFORM.status; e2[8]=STCHIP[EFORM.status]||"flat";
+      }
+      persist(); show("enq");
+      toast("good","Enquiry saved", e2[6]?(e2[2]+" now sits with "+e2[6]+"."):(e2[2]+" is still unassigned.")); }); },
  site:d=>{ const s=SITES.find(x=>x.s===d.s); if(!s) return;
    const mine=UNITS.filter(u=>u[2]===s.s);
    const due=PAY.filter(p=>p[1]===s.s&&p[6]!=="good").reduce((a,b)=>a+b[4],0);
@@ -1514,9 +1685,13 @@ const ACT={
    toast("good","Line added","Pick the product and put the quantity in."); },
  qrmline:d=>{ QLINES.splice(+d.i,1); persist(); show("quote"); toast("good","Product removed",""); },
  qsave:()=>{ const over=QLINES.some(l=>!l.free&&l.disc>10);
-   QT.amending=false; persist(); show("quote");
+   QT.amending=false;
+   const e=ENQ.find(x=>x[2]===QT.cust&&(x[7]==="New"||x[7]==="Contacted"));
+   if(e){ e[7]="Quoted"; e[8]="alt"; e[10]="quotation"; }
+   persist(); show("quote");
    toast(over?"warn":"good",over?"Sent for approval":"Quotation saved",
-     over?"A line is above the 10 percent limit, so it waits for the owner before it can go out.":QT.series+QT.no+" is saved. It is in Recent Quotations now."); },
+     over?"A line is above the 10 percent limit, so it waits for the owner before it can go out."
+       :QT.series+QT.no+" is saved. It is in Recent Quotations now."+(e?" The enquiry from "+QT.cust+" has turned Quoted by itself.":"")); },
  qrmcharge:d=>{ QT.charges.splice(+d.i,1); persist(); show("quote"); toast("good","Charge removed",""); },
  qpdf:()=>{ if(pdfQuote()) toast("good","Quotation PDF saved","Check your downloads. Letterhead, the GST split, the bank details and the signatory all come from Company settings."); },
  sopen:()=>{ SCODE="";
@@ -1538,12 +1713,14 @@ const CHG={
  qaddcharge:(i,v)=>{ if(!v) return; const[n,a]=v.split("|"); QT.charges.push([n,+a]); persist(); show("quote");
    toast("good","Charge added",n+", "+INR(+a)+"."); },
  sitesel:(i,v)=>{ UI.site=+v; persist(); show("sites"); },
- owner:(i,v)=>{ ENQ[i][6]=v; persist(); toast("good","Reassigned",ENQ[i][2]+" now sits with "+v+"."); },
- status:(i,v)=>{ const e=ENQ[i]; e[7]=v; e[8]=v==="Won"?"good":v==="New enquiry"?"bad":v.startsWith("Lost")?"bad":"warn";
-   persist(); show("enq");
-   if(v==="Won") modal("Enquiry won","Make the quotation now, priced from "+e[2]+"'s rate contract?","Make the quotation",()=>{
-     SEQ.q++; toast("good","Quotation QT-0"+SEQ.q+" drafted",e[2]+", "+(e[4]?INR(e[4]):"value to be filled in")+". It is waiting for you to send."); show("quote"); });
-   else toast("good","Status changed",e[2]+" is now "+v+"."); },
+
+ status:(i,v)=>{ const e=ENQ[i]; if(v===e[7]) return;
+   if(HAND.indexOf(v)<0){ show("enq"); return; }
+   if(v==="Lost"){ lostModal(i); show("enq"); return; }
+   e[7]=v; e[8]=STCHIP[v]||"flat"; persist(); show("enq");
+   toast("good","Status changed",e[2]+" is now "+v+"."); },
+ efo:(i,v)=>{ EFORM.owner=v==="Unassigned"?"":v; },
+ efs:(i,v)=>{ EFORM.status=v; },
  tkeng:(i,v)=>{ TICKETS[i][6]=v; persist(); toast("good","Reassigned",TICKETS[i][0]+" is now with "+v+"."); },
 };
 const redrawQuote=()=>{ const pos=window.scrollY; const a=document.activeElement;
@@ -1553,6 +1730,10 @@ const redrawQuote=()=>{ const pos=window.scrollY; const a=document.activeElement
 const INP={
  qqty:(v,i)=>{ QLINES[i].qty=Math.max(0,parseInt(v||"0",10)); persist(); redrawQuote(); },
  sesscode:v=>{ SCODE=v; },
+ csq:v=>{ UI.csq=v; UI.cshl=0; const pos=window.scrollY;
+   document.getElementById("page").innerHTML=SCREEN.quote(); afterRender("quote"); window.scrollTo(0,pos); },
+ efv:v=>{ EFORM.val=v; }, efc:v=>{ EFORM.chance=v; }, efd:v=>{ EFORM.close=v; },
+ elr:v=>{ ELOST.reason=v; }, elt:v=>{ ELOST.to=v; }, elp:v=>{ ELOST.price=v; },
  qrate:(v,i)=>{ QLINES[i].rate=Math.max(0,parseInt(v||"0",10)); persist(); redrawQuote(); },
  qdisc:(v,i)=>{ QLINES[i].disc=Math.max(0,Math.min(100,parseInt(v||"0",10))); QLINES[i].scheme=false; persist(); redrawQuote(); },
  regq:v=>{ UI.regq=v; persist(); const r=document.getElementById("page"); const pos=window.scrollY; document.getElementById("page").innerHTML=SCREEN.reg(); afterRender("reg"); window.scrollTo(0,pos); const el=document.querySelector('[data-inp="regq"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length);} },
@@ -1640,8 +1821,20 @@ function sigpad(){
   const end=()=>{ drawing=false; };
   c.addEventListener("pointerup",end); c.addEventListener("pointerleave",end); c.addEventListener("pointercancel",end);
 }
+document.addEventListener("keydown",e=>{
+  if(!UI.csopen||CUR!=="quote") return;
+  const hits=findCusts(UI.csq||"").slice(0,30);
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){ e.preventDefault();
+    UI.cshl=Math.max(0,Math.min((UI.cshl||0)+(e.key==="ArrowDown"?1:-1),hits.length-1));
+    const pos=window.scrollY; document.getElementById("page").innerHTML=SCREEN.quote(); afterRender("quote"); window.scrollTo(0,pos); }
+  else if(e.key==="Enter"){ const c=hits[Math.max(0,Math.min(UI.cshl||0,hits.length-1))];
+    if(c){ e.preventDefault(); ACT.cspick({n:c.name}); } }
+  else if(e.key==="Escape"){ e.preventDefault(); ACT.csclose(); }
+});
 function afterRender(k){
   badges();
+  if(k==="quote"&&UI.csopen){ const el=document.getElementById("csq");
+    if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } }
   if(k==="field") sigpad();
   if(k==="ai"){ const q=document.getElementById("q");
     document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{ UI.q=c.textContent.trim(); if(q) q.value=UI.q; persist(); show("ai"); })); }
