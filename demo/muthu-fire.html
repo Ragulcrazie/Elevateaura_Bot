@@ -321,6 +321,39 @@ header.bar h1{flex:0 1 auto;min-width:3.5rem}
 .sw{width:34px;height:19px;border-radius:999px;border:0;background:var(--border-strong);position:relative;cursor:pointer;padding:0;display:block}
 .sw span{position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:999px;background:#fff;transition:left 130ms}
 .sw.on{background:var(--brand)} .sw.on span{left:17px}
+.offer{display:grid;gap:.4rem;grid-template-columns:minmax(0,1fr);margin-top:.6rem}
+@media (min-width:720px){.offer{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.offb{display:flex;align-items:center;justify-content:space-between;gap:.5rem;text-align:left;border:1px solid var(--border-soft);
+  background:var(--bg-card);border-radius:var(--radius-input);padding:.6rem .7rem;cursor:pointer;
+  font:400 var(--text-sm)/1.4 Inter,sans-serif;color:var(--text-primary)}
+.offb:hover{border-color:var(--brand);background:var(--bg-subtle)}
+.offb svg{color:var(--border-strong);flex-shrink:0}
+.offb:hover svg{color:var(--brand)}
+.lnkb{margin-top:.8rem;border:0;background:transparent;padding:0;cursor:pointer;color:var(--brand);
+  font:500 var(--text-sm)/1 Inter,sans-serif}
+.lnkb:hover{text-decoration:underline}
+.areas{display:grid;gap:.5rem 1.5rem;grid-template-columns:minmax(0,1fr);margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--border-soft)}
+@media (min-width:720px){.areas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ah2{font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:var(--track-caps);color:var(--text-muted);margin-bottom:.2rem}
+.qb{display:block;width:100%;text-align:left;border:0;background:transparent;padding:.22rem 0;cursor:pointer;
+  font:400 var(--text-sm)/1.4 Inter,sans-serif;color:var(--text-secondary)}
+.qb:hover{color:var(--brand)}
+.mgrid{display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+.mcard{text-align:left;border:1px solid var(--border-soft);background:var(--bg-card);border-radius:var(--radius-card);
+  padding:.7rem;cursor:pointer;font:inherit;color:var(--text-primary)}
+.mcard:hover{border-color:var(--border-strong)}
+.mcard.on{background:#0F172A;border-color:#0F172A;color:#fff}
+.mcard .t{display:block;font-size:var(--text-sm);font-weight:600}
+.mcard .h{display:block;font-size:var(--text-xs);color:var(--text-muted);margin-top:.15rem}
+.mcard.on .h{color:#CBD5E1}
+.lbprev{display:flex;gap:.6rem;align-items:center;border:1px dashed var(--border-strong);border-radius:10px;padding:.6rem .7rem;background:var(--bg-subtle)}
+.lbt{font-size:var(--text-xs);line-height:1.5}
+.lbt b{display:block;font-size:var(--text-sm)}
+.lbt span{display:block;color:var(--text-muted)}
+.two2{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:1150px){.two2{grid-template-columns:22rem minmax(0,1fr)}}
+.qbub{background:var(--brand);color:#fff;border-radius:16px 4px 16px 16px;padding:.55rem .85rem;font-size:var(--text-sm)}
+.av2{width:26px;height:26px;border-radius:999px;background:var(--bg-subtle);color:var(--text-muted);display:grid;place-items:center;flex-shrink:0}
 .two{display:grid;gap:1rem;grid-template-columns:minmax(0,1fr)}
 @media (min-width:1100px){.two{grid-template-columns:19rem minmax(0,1fr)}}
 .rail{max-height:32rem;overflow-y:auto}
@@ -439,15 +472,19 @@ const LINES=[
  ["Hydrant system, quarterly service visit","9987","visit",1,14800],
  ["Replacement safety pins and seals","8424","set",134,40],
 ];
+// [document, belongs to, issued by, valid to, state text, tone, level, mandatory for bidding]
 const DOCS=[
- ["Fire licence renewal","Muthu Fire Engineering Co","TN Fire and Rescue Services","14 Dec 2026","Due in 49 days","warn","Firm"],
- ["Third party certification, IS 2190","Refilling workshop","Accredited agency","08 Nov 2026","Due in 13 days","bad","Firm"],
- ["Fire NOC","Saravanampatti Tech Park","District fire office","22 Jan 2027","Due in 88 days","good","Customer"],
- ["Fire NOC","Avinashi Road Mall","District fire office","03 Nov 2026","Due in 8 days","bad","Customer"],
- ["Hydrostatic test certificate","CO2 22.5 kg trolley, MF-02288","In house, IS 15683","30 Apr 2025","Expired","bad","Unit"],
- ["Mock drill record","Peelamedu Spinning Mills","Half yearly","19 Sep 2026","Due in 24 days","warn","Customer"],
- ["Sprinkler flow test, IS 15105","Saravanampatti Tech Park","Annual","18 Feb 2025","Overdue","bad","Unit"],
- ["Hydrant maintenance record, IS 3844","Sulur Logistics Park","Quarterly","06 Jul 2026","Due in 19 days","warn","Unit"],
+ ["Fire licence","Muthu Fire Engineering Co","TN Fire and Rescue Services","14 Dec 2026","Due in 49 days","warn","Firm",true],
+ ["Third party certification, IS 2190","Refilling workshop","Accredited agency","08 Nov 2026","Due in 13 days","bad","Firm",true],
+ ["GST registration","Muthu Fire Engineering Co","GSTN","Permanent","Current","good","Firm",true],
+ ["Shops and establishments licence","Muthu Fire Engineering Co","Coimbatore Corporation","31 Mar 2027","Due in 155 days","good","Firm",true],
+ ["ESI and EPF registration","Muthu Fire Engineering Co","Ministry of Labour","Permanent","Current","good","Firm",true],
+ ["Fire NOC","Saravanampatti Tech Park","District fire office","22 Jan 2027","Due in 88 days","good","Customer",false],
+ ["Fire NOC","Avinashi Road Mall","District fire office","03 Nov 2026","Due in 8 days","bad","Customer",false],
+ ["Hydrostatic test certificate","CO2 22.5 kg trolley, MF-02288","In house, IS 15683","30 Apr 2025","Expired","bad","Unit",false],
+ ["Mock drill record","Peelamedu Spinning Mills","Half yearly","19 Sep 2026","Due in 24 days","warn","Customer",false],
+ ["Sprinkler flow test, IS 15105","Saravanampatti Tech Park","Annual","18 Feb 2025","Overdue","bad","Unit",false],
+ ["Hydrant maintenance record, IS 3844","Sulur Logistics Park","Quarterly","06 Jul 2026","Due in 19 days","warn","Unit",false],
 ];
 const TENDERS=[
  ["TND-114","Coimbatore City Municipal Corporation","Supply and AMC of 640 extinguishers",1840000,50000,"Paid 12 Aug","04 Nov 2026","Due in 9 days","warn","Documents ready"],
@@ -771,8 +808,9 @@ function aiTable(head,rows){
  return `<div class="tbl"><table style="min-width:26rem"><thead><tr>${head.map((h,i)=>`<th${i===head.length-1?' class="n"':''}>${esc(h)}</th>`).join("")}</tr></thead>
  <tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${i===r.length-1?' class="n"':(i?' class="dim"':'')}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
-function aiAnswer(){
- const q=(UI.q||"How much AMC revenue are we leaking?").toLowerCase();
+function aiAnswerFor(ask0){ return aiAnswer(ask0); }
+function aiAnswer(ask0){
+ const q=String(ask0||UI.q||"How much AMC revenue are we leaking?").toLowerCase();
  const lapsed=SITES.filter(s=>s.k==="bad"), lv=lapsed.reduce((a,b)=>a+b.v,0);
  const A=(body,draft)=>`<div class="answer" style="margin-top:1.2rem">${body}</div>${draft||""}`;
  const D=(title,note,ok)=>`<div class="draft"><div class="hd">Drafted for you, not sent</div><b>${title}</b>
@@ -834,37 +872,50 @@ function aiUnknown(){
  return `<div class="answer warn" style="margin-top:1.2rem">
   <p><b>I cannot answer that one.</b> I read only what is in your own records, so when something is not in them I say so instead of guessing at it.</p>
   <p style="font-size:var(--text-sm);margin-bottom:.6rem">These are the questions it answers today. Tap one, or ask it in your own words.</p>
-  <div class="chips">${CANASK.map(c=>`<button class="chip" type="button">${esc(c)}</button>`).join("")}</div>
+  <div class="offer">${CANASK.map(c=>`<button class="offb" type="button" data-act="aiask" data-q="${esc(c)}"><span>${esc(c)}</span></button>`).join("")}</div>
   <p class="dim" style="font-size:var(--text-sm);margin:.9rem 0 0">More get added as the system is set up for you. Anything that is on a screen can be taught as a question.</p></div>`;
 }
+const AREAS=[
+ ["Refilling and contracts",["How much AMC revenue are we leaking?","Which contracts are coming up for renewal?",
+   "Which units are past their refill date?","Tell me about Peelamedu Spinning Mills"]],
+ ["Money",["Which customers owe us the most?","What is our cash position?","What do we owe suppliers?",
+   "How much earnest money is still with authorities?"]],
+ ["Compliance and bids",["Which documents are expiring?","Which bids are blocked by an expired document?"]],
+ ["Service and stock",["Which engineer has the most open tickets?","Which van is short on stock?"]],
+];
+const ALLQ=AREAS.reduce((a,g)=>a.concat(g[1]),[]);
 function ai(){
- return `<p class="lede">Ask in plain words. It reads only your own data, it never sends anything by itself, and everything it writes waits for you to approve.</p>
- <div class="ask"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
-  <input id="q" value="${esc(UI.q||"How much AMC revenue are we leaking?")}" aria-label="Your question">
+ const turns=UI.qs||[];
+ const off=(UI.aioff||0)%ALLQ.length;
+ const offer=[0,1,2,3].map(i=>ALLQ[(off+i)%ALLQ.length]);
+ return `<div style="max-width:52rem">
+ <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem">
+  <div><h2 style="margin:0;font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em">Ask about your business</h2>
+   <p class="lede" style="margin:.25rem 0 0">Ask in your own words. Every answer is worked out from your own records.</p></div>
+  ${turns.length?`<button class="btn quiet sm" type="button" data-act="ainew">New conversation</button>`:""}</div>
+ ${turns.length?"":`<div class="card" style="margin-top:1.2rem"><div class="body">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem">
+   <span class="dim" style="font-size:var(--text-sm)">A few things you could ask</span>
+   <button class="btn quiet sm" type="button" data-act="aimore">Show me others</button></div>
+  <div class="offer">${offer.map(x=>`<button class="offb" type="button" data-act="aiask" data-q="${esc(x)}">
+    <span>${esc(x)}</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>`).join("")}</div>
+  <button class="lnkb" type="button" data-act="aibrowse">${UI.aibrowse?"Hide the full list":"See everything I can answer"}</button>
+  ${UI.aibrowse?`<div class="areas">${AREAS.map(g=>`<div><div class="ah2">${esc(g[0])}</div>
+    ${g[1].map(x=>`<button class="qb" type="button" data-act="aiask" data-q="${esc(x)}">${esc(x)}</button>`).join("")}</div>`).join("")}</div>`:""}
+  <p class="dim" style="margin:.9rem 0 0;font-size:var(--text-sm)">These are only examples. Ask in your own words, name a site or a product, and say a period such as this month or last year.</p>
+ </div></div>`}
+ <div style="margin-top:1.2rem">${turns.map(qq=>`
+  <div style="display:flex;justify-content:flex-end;margin-bottom:.8rem">
+   <div style="display:flex;align-items:flex-start;gap:.5rem;max-width:85%">
+    <div class="qbub">${esc(qq)}</div>
+    <div class="av2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div></div></div>
+  ${aiAnswerFor(qq)}`).join("")}</div>
+ <div class="ask" style="margin-top:1.2rem">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+  <input id="q" value="" placeholder="Ask anything about your own records" aria-label="Your question">
   <button class="btn sm" type="button" data-act="ask">Ask</button></div>
- <h2 class="sec">Refilling and contracts</h2>
- <div class="chips">
-  <button class="chip" type="button">How much AMC revenue are we leaking?</button>
-  <button class="chip" type="button">Which contracts are coming up for renewal?</button>
-  <button class="chip" type="button">Which units are past their refill date?</button>
-  <button class="chip" type="button">Tell me about Peelamedu Spinning Mills</button>
- </div>
- <h2 class="sec">Money and stock</h2>
- <div class="chips">
-  <button class="chip" type="button">Which customers owe us the most?</button>
-  <button class="chip" type="button">What is our cash position?</button>
-  <button class="chip" type="button">What do we owe suppliers?</button>
-  <button class="chip" type="button">Which van is short on stock?</button>
- </div>
- <h2 class="sec">Compliance and bids</h2>
- <div class="chips">
-  <button class="chip" type="button">Which documents are expiring?</button>
-  <button class="chip" type="button">Which bids are blocked by an expired document?</button>
-  <button class="chip" type="button">How much earnest money is still with authorities?</button>
-  <button class="chip" type="button">Which engineer has the most open tickets?</button>
- </div>
- ${aiAnswer()}
- <p class="foot" style="margin-top:1.2rem">The assistant can read, count, compare and draft. It cannot send a WhatsApp, raise an invoice, change a price or close a ticket. Every one of those still needs a person.</p>`;
+ <p class="foot" style="margin-top:1.2rem">The assistant can read, count, compare and draft. It cannot send a WhatsApp, raise an invoice, change a price or close a ticket. Every one of those still needs a person.</p>
+ </div>`;
 }
 function reg(){
  const q=(UI.regq||"").toLowerCase();
@@ -1066,15 +1117,30 @@ function sites(){
  <p class="foot">Credit limit and credit days are read by the quotation and the invoice, so a customer already over the limit is said so while the quotation is still being made, not after the bill has gone.</p>`;
 }
 function docs(){
- return `<p class="lede">Your own licences and your customers' NOCs in one place, with the dates that stop you bidding or stop them passing inspection.</p>
- <div class="stat-grid">
-  <div class="kpi bad"><div class="lab">Expired or expiring in 14 days</div><div class="val">3</div><div class="sub">One is blocking a live bid</div></div>
-  <div class="kpi warn"><div class="lab">Due inside 60 days</div><div class="val">4</div><div class="sub">Including your own fire licence</div></div>
-  <div class="kpi good"><div class="lab">Current</div><div class="val">81</div><div class="sub">Across firm, customers and units</div></div>
+ const expired=DOCS.filter(d=>/Expired|Overdue/.test(d[4])).length;
+ const expiring=DOCS.filter(d=>d[5]==="bad"&&!/Expired|Overdue/.test(d[4])||d[5]==="warn").length;
+ const mandatory=DOCS.filter(d=>d[7]).length;
+ const blocked=TENDERS.filter(t=>/Blocked/.test(t[9]));
+ return `<div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem">
+  <div><h2 style="margin:0;font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em">Compliance vault</h2>
+   <p class="lede" style="margin:.25rem 0 0">The certificates a bid is rejected for not having, your own licences, and the customers' NOCs, with the date each one runs out.</p></div>
+  <button class="btn" type="button" data-act="docadd" style="background:#0F172A">Add a document</button></div>
+ ${blocked.length?`<div style="border:1px solid var(--error);background:var(--error-soft);border-radius:var(--radius-card);padding:1rem;margin-top:1.1rem;display:flex;gap:.8rem;align-items:flex-start">
+  <div style="width:36px;height:36px;border-radius:9px;background:var(--error);color:#fff;display:grid;place-items:center;flex-shrink:0">
+   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg></div>
+  <div style="min-width:0"><h3 style="margin:0;color:var(--error-text);font-size:var(--text-base);font-weight:600">${blocked.length} live bid${blocked.length===1?"":"s"} cannot be submitted as things stand</h3>
+   <p style="margin:.2rem 0 0;font-size:var(--text-sm);color:var(--error-text)">A mandatory document has lapsed. These will be rejected at the envelope stage regardless of the price you put in them.</p>
+   <ul style="margin:.6rem 0 0;padding-left:1.1rem;color:var(--error-text);font-size:var(--text-sm)">
+    ${blocked.map(b=>`<li><b>${esc(b[0])}, ${esc(b[1])}</b> closes ${esc(b[6])}. Blocked by: the IS 2190 workshop certificate.</li>`).join("")}</ul></div></div>`:""}
+ <div class="stat-grid" style="margin-top:1.1rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))">
+  <div class="tile"><div class="top"><div class="lab">Expired</div></div><div class="val" style="color:var(--error)">${expired}</div><div class="sub">One of them blocks a live bid</div></div>
+  <div class="tile"><div class="top"><div class="lab">Expiring within a month</div></div><div class="val" style="color:var(--warning)">${expiring}</div><div class="sub">Including your own fire licence</div></div>
+  <div class="tile"><div class="top"><div class="lab">Mandatory for bidding</div></div><div class="val" style="color:var(--success)">${mandatory}</div><div class="sub">Asked for in every tender</div></div>
  </div>
- <div class="card"><div class="head"><h3>Certificates and licences</h3><span class="note">Soonest first</span><span class="right">Scanned copy held against each</span></div>
- <div class="tbl"><table><thead><tr><th>Document</th><th>Belongs to</th><th>Issued by or basis</th><th>Valid to</th><th>Status</th><th>Level</th><th>Do</th></tr></thead>
- <tbody>${DOCS.map((d,i)=>`<tr><td>${esc(d[0])}</td><td>${esc(d[1])}</td><td class="dim">${esc(d[2])}</td><td class="dim">${esc(d[3])}</td><td>${pill(d[5],d[4])}</td><td>${pill("flat",d[6])}</td>
+ <div class="card"><div class="tbl"><table style="min-width:54rem"><thead><tr><th>Document</th><th>Type</th><th>Belongs to</th><th>Issued by</th><th>Expires</th><th>State</th><th>Do</th></tr></thead>
+ <tbody>${DOCS.map((d,i)=>`<tr><td style="font-weight:500">${esc(d[0])}${d[7]?' <span class="pill info" style="font-size:10px">Mandatory</span>':""}</td>
+  <td>${pill("flat",d[6])}</td><td class="dim">${esc(d[1])}</td><td class="dim">${esc(d[2])}</td><td class="dim">${esc(d[3])}</td>
+  <td>${pill(d[5],d[4])}</td>
   <td>${d[5]==="good"?'<span class="dim">Current</span>':`<button class="btn sm" type="button" data-act="renewdoc" data-i="${i}">Record renewal</button>`}</td></tr>`).join("")}</tbody></table></div></div>
  <p class="foot">A customer whose NOC is about to expire is a customer who needs you this month. Avinashi Road Mall is eight days out and has not been attended since May.</p>`;
 }
@@ -1178,7 +1244,22 @@ function route(){
 }
 function field(){
  const st=n=>JOB.step>n?"done":JOB.step===n?"now":"todo";
+ const mine=VAN.filter(v=>v[0]==="Karthik R");
+ const tot=mine.reduce((a,v)=>a+v[3],0);
  return `<p class="lede">Karthik opens the job on his phone at the gate. It works with no signal and syncs when he is back in range. Work through it yourself, the buttons do what they say.</p>
+ <div class="two2" style="grid-template-columns:minmax(0,1fr)">
+ <div class="card" style="margin:0"><div class="body">
+  <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.7rem">
+   <div style="font-weight:600;display:flex;align-items:center;gap:.4rem">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+    His van: TN 37 BX 4412</div>
+   <button class="btn sm" type="button" data-act="vanload">Move stock into his van</button></div>
+  <p class="dim" style="margin:.3rem 0 .8rem;font-size:var(--text-sm)">${tot} pieces in his van. The spares and units he carries, by product and serial number.</p>
+  <div class="tbl"><table style="min-width:26rem"><thead><tr><th>Product</th><th class="n">Quantity</th><th>Level</th><th>Serial numbers</th></tr></thead><tbody>
+   ${mine.map(v=>`<tr><td>${esc(v[2])}</td><td class="n">${v[3]}</td><td>${pill(v[5],v[5]==="bad"?"Below level":v[5]==="warn"?"At level":"Fine")}</td>
+    <td class="dim">${v[3]<=4?"MF-0"+(9200+v[3])+", MF-0"+(9210+v[3]):"None recorded"}</td></tr>`).join("")}
+  </tbody></table></div></div></div>
+ </div>
  <div class="phone"><div class="pt"><span>TK-2238</span><small>Annur Cold Storage</small></div>
  <div class="pb"><div class="dim" style="margin-bottom:.6rem">Annual refill, 24 units, ammonia plant room</div>
   <div class="stp ${st(1)}"><span class="d">1</span><div><b>Check in at the gate</b>
@@ -1643,18 +1724,47 @@ function supp(){
 }
 function inv(){
  const sub=LINES.reduce((a,l)=>a+l[3]*l[4],0), gst=Math.round(sub*0.18), c=Math.round(gst/2);
- return `<p class="lede">Raised straight from the job card, so the quantities are whatever the engineer actually did on site. GST ready, with HSN and SAC on every line.</p>
- <div class="card">
+ const why=UI.dcwhy||"Supply against an order";
+ const dcCust=UI.dccust||"Peelamedu Spinning Mills";
+ const made=UI.dcmade;
+ return `<p class="lede">What goes out on a challan, and what is billed on an invoice. Stock comes off when the invoice is raised, not when the challan is written.</p>
+ <div class="two2">
+ <div class="card" style="margin:0"><div class="body">
+  <h3 style="margin:0 0 .9rem;font-size:var(--text-base);font-weight:600">New delivery challan</h3>
+  ${made?`<div style="border:1px solid var(--success);background:var(--success-soft);border-radius:var(--radius-card);padding:.9rem;margin-bottom:.9rem">
+   <div style="font-weight:600;color:var(--success-text);display:flex;align-items:center;gap:.4rem">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 13 4 4L19 7"/></svg>
+    ${esc(made)} is made for ${esc(dcCust)}</div>
+   <div class="dim" style="margin-top:.25rem">Next, raise the invoice. The serial numbers on this challan are ticked for you.</div>
+   <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem">
+    <button class="btn sm" type="button" data-act="dcinv" style="background:var(--success)">Raise the invoice</button>
+    <button class="btn quiet sm" type="button" data-act="dcreset">New challan</button></div></div>`:""}
+  <label style="font-size:var(--text-sm);font-weight:500">Why it is going out</label>
+  <select data-chg="dcwhy" style="width:100%;margin:.25rem 0 .9rem">
+   ${["Supply against an order","Refilling, to be returned","Standby unit on loan","Replacement under warranty","Sent for third party testing","Returned to the customer after refilling"].map(x=>`<option${x===why?" selected":""}>${esc(x)}</option>`).join("")}</select>
+  <label style="font-size:var(--text-sm);font-weight:500">Customer</label>
+  <select data-chg="dccust" style="width:100%;margin:.25rem 0 .3rem">
+   ${CUSTS().map(c=>`<option${c.name===dcCust?" selected":""}>${esc(c.name)}</option>`).join("")}</select>
+  <div class="dim" style="margin-bottom:.9rem">${esc(standing(dcCust))}</div>
+  <label style="font-size:var(--text-sm);font-weight:500">What is going</label>
+  <div class="tbl" style="border:1px solid var(--border-soft);border-radius:var(--radius-card);margin-top:.25rem">
+   <table style="min-width:0"><thead><tr><th>Item</th><th class="n">Qty</th></tr></thead><tbody>
+   ${LINES.slice(0,4).map(l=>`<tr><td style="white-space:normal">${esc(l[0])}<div class="dim">${l[3]>3?"Serials scanned on site":"Serial MF-0"+(4100+l[3])}</div></td><td class="n">${l[3]}</td></tr>`).join("")}
+   </tbody></table></div>
+  <p class="dim" style="margin:.6rem 0 0;font-size:var(--text-sm)">${/returned|Returned|testing|loan/.test(why)?"Going out on a returnable basis. It stays on your books and is chased until it comes back.":"Going out to be billed. Stock comes off when the invoice is raised."}</p>
+  <button class="btn" type="button" data-act="dcmake" style="margin-top:.9rem">Make the challan</button>
+ </div></div>
+ <div class="card" style="margin:0">
   <div class="docgrid"><div><b>Tax invoice</b><div class="meta">Muthu Fire Engineering Co<br>33 NSR Road, Saibaba Colony, Coimbatore 641011<br>GSTIN 33AAAAA0000A1Z5</div></div>
   <div class="meta" style="text-align:right">Invoice INV-1188<br>Date 18 Jun 2026<br>Challan DC-0774<br>Place of supply 33 Tamil Nadu</div></div>
   <div class="docgrid"><div class="meta"><b style="font-size:var(--text-sm)">Billed to</b>Peelamedu Spinning Mills<br>Avinashi Road, Peelamedu, Coimbatore 641004<br>GSTIN 33BBBBB1111B1Z4</div>
-  <div class="meta" style="text-align:right"><b style="font-size:var(--text-sm)">Against</b>Annual refill, 142 units<br>Job card JC-3391<br>Signed by stores in charge</div></div>
+  <div class="meta" style="text-align:right"><b style="font-size:var(--text-sm)">Against</b>Annual refill, 134 units<br>Job card JC-3391<br>Signed by stores in charge</div></div>
   <div class="tbl"><table><thead><tr><th>Description</th><th>HSN or SAC</th><th>Unit</th><th class="n">Qty</th><th class="n">Rate</th><th class="n">GST</th><th class="n">Amount</th></tr></thead>
   <tbody>${LINES.map(l=>`<tr><td>${esc(l[0])}</td><td class="dim">${esc(l[1])}</td><td class="dim">${esc(l[2])}</td><td class="n">${l[3]}</td><td class="n">${INR(l[4])}</td><td class="n">18%</td><td class="n">${INR(l[3]*l[4])}</td></tr>`).join("")}</tbody></table></div>
   <div class="totals"><table><tr><td>Taxable value</td><td class="n">${INR(sub)}</td></tr><tr><td>CGST 9%</td><td class="n">${INR(c)}</td></tr><tr><td>SGST 9%</td><td class="n">${INR(gst-c)}</td></tr><tr><td>Total</td><td class="n">${INR(sub+gst)}</td></tr></table></div>
   <div style="padding:var(--card-pad);display:flex;gap:.5rem;flex-wrap:wrap"><button class="btn" type="button" data-act="invpdf">Download the PDF</button><button class="btn quiet" type="button" data-act="invsend">Send it on WhatsApp</button><button class="btn quiet" type="button" data-act="invcn">Cancel by credit note</button></div>
- </div>
- <p class="foot">A cancelled invoice becomes a credit note, never a deleted row, so the numbering stays gapless for your GST return.</p>`;
+ </div></div>
+ <p class="foot">A cancelled invoice becomes a credit note, never a deleted row, so the numbering stays gapless for your GST return. The challan and the invoice carry the same serial numbers, which is what an inspector asks to see.</p>`;
 }
 function pay(){
  const q=(UI.payq||"").trim().toLowerCase();
@@ -1873,51 +1983,77 @@ function enq(){
  :`<div class="empty">No enquiry in this view. <button class="btn quiet sm" type="button" data-act="enqf" data-v="all">Show all enquiries</button></div>`}</div>
  <p class="foot">Quoted and Won are not typed in. An enquiry turns Quoted the moment a quotation is saved against that customer, and Won when the customer confirms the order. Only New, Contacted and Lost are set by hand, and Lost asks who took it and at what price, which is what feeds the win rate.</p>`;
 }
+const LMODES=[["units","Units already out there","By serial, for the extinguishers and systems on a customer's wall"],
+ ["products","Products and spares","For a shelf in the workshop, or a box of refill parts"],
+ ["received","Goods just received","Everything on one supplier receipt, in one go"]];
+const SHEETS=[["a4-24","A4 sheet, 24 to a page, 64 x 34 mm"],["a4-40","A4 sheet, 40 to a page, 45 x 25 mm"],["a4-12","A4 sheet, 12 to a page, 97 x 42 mm"]];
+const ROLLS=[["50x25","50 x 25 mm on a roll"],["40x30","40 x 30 mm on a roll"],["75x50","75 x 50 mm on a roll"]];
 function qr(){
- return `<p class="lede">Every unit already has a serial number. Print that serial as a QR sticker, put it on the unit next to the service tag, and the building's own staff become the people who tell you when something needs doing.</p>
- <div class="stat-grid">
-  <div class="kpi"><div class="lab">Stickers printed</div><div class="val">1,240</div><div class="sub">One per unit, from the register</div></div>
-  <div class="kpi good"><div class="lab">Scans this month</div><div class="val">87</div><div class="sub">Across 22 sites</div></div>
-  <div class="kpi good"><div class="lab">Turned into work</div><div class="val">18</div><div class="sub">Worth ${L(486000)} this year</div></div>
-  <div class="kpi"><div class="lab">Costs you</div><div class="val">About 2 rupees</div><div class="sub">Per sticker, printed in a sheet</div></div>
- </div>
- <div class="card"><div class="head"><h3>What the safety officer sees when he scans</h3><span class="note">No app, no login, his own phone camera</span></div>
- <div class="body"><div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start">
-  <div style="flex:0 0 auto;text-align:center">
-   <div style="width:132px;height:132px;background:#fff;border:1px solid var(--border-strong);border-radius:var(--radius-input);display:grid;place-items:center;padding:10px">
-    <svg viewBox="0 0 29 29" width="110" height="110" shape-rendering="crispEdges" aria-hidden="true">
-     <rect width="29" height="29" fill="#fff"/>
-     <g fill="#111827">
-      <path d="M0 0h7v7H0z"/><path d="M1 1h5v5H1z" fill="#fff"/><path d="M2 2h3v3H2z"/>
-      <path d="M22 0h7v7h-7z"/><path d="M23 1h5v5h-5z" fill="#fff"/><path d="M24 2h3v3h-3z"/>
-      <path d="M0 22h7v7H0z"/><path d="M1 23h5v5H1z" fill="#fff"/><path d="M2 24h3v3H2z"/>
-      <path d="M9 0h1v1H9zM11 0h1v1h-1zM13 0h1v1h-1zM9 2h1v1H9zM12 2h1v1h-1zM10 3h1v1h-1zM13 3h1v1h-1zM9 5h1v1H9zM11 5h1v1h-1zM8 7h1v1H8zM10 7h1v1h-1zM13 7h1v1h-1z"/>
-      <path d="M0 9h1v1H0zM2 9h1v1H2zM4 9h1v1H4zM1 11h1v1H1zM3 11h1v1H3zM5 11h1v1H5zM0 13h1v1H0zM2 13h1v1H2zM6 13h1v1H6zM7 10h1v1H7zM7 12h1v1H7z"/>
-      <path d="M9 9h1v1H9zM11 9h1v1h-1zM14 9h1v1h-1zM16 9h1v1h-1zM10 10h1v1h-1zM13 10h1v1h-1zM17 10h1v1h-1zM9 11h1v1H9zM12 11h1v1h-1zM15 11h1v1h-1zM11 12h1v1h-1zM14 12h1v1h-1zM16 12h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM17 13h1v1h-1zM9 14h1v1H9zM12 14h1v1h-1zM15 14h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1z"/>
-      <path d="M19 9h1v1h-1zM21 9h1v1h-1zM23 9h1v1h-1zM25 9h1v1h-1zM28 9h1v1h-1zM20 11h1v1h-1zM22 11h1v1h-1zM26 11h1v1h-1zM19 13h1v1h-1zM24 13h1v1h-1zM27 13h1v1h-1zM21 15h1v1h-1zM25 15h1v1h-1zM28 15h1v1h-1z"/>
-      <path d="M9 18h1v1H9zM11 18h1v1h-1zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM23 18h1v1h-1zM26 18h1v1h-1zM10 20h1v1h-1zM13 20h1v1h-1zM16 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM27 20h1v1h-1zM9 22h1v1H9zM12 22h1v1h-1zM15 22h1v1h-1zM18 22h1v1h-1zM24 22h1v1h-1zM28 22h1v1h-1zM11 24h1v1h-1zM14 24h1v1h-1zM20 24h1v1h-1zM23 24h1v1h-1zM26 24h1v1h-1zM10 26h1v1h-1zM13 26h1v1h-1zM17 26h1v1h-1zM21 26h1v1h-1zM25 26h1v1h-1zM28 26h1v1h-1zM9 28h1v1H9zM12 28h1v1h-1zM16 28h1v1h-1zM19 28h1v1h-1zM24 28h1v1h-1z"/>
-     </g></svg>
-   </div>
-   <div class="dim" style="margin-top:.5rem">MF-04182</div>
+ const mode=UI.lmode||"units", printer=UI.lprint||"sheet";
+ const rows=(UI.lrows||[]).length?UI.lrows:[["MF-04182","ABC dry powder 6 kg, Block A","Peelamedu Spinning Mills",1],
+   ["MF-02910","CO2 4.5 kg, LT panel room","Peelamedu Spinning Mills",1],
+   ["MF-05507","Fire hydrant system, 2 pumps","Saravanampatti Tech Park",1]];
+ const total=rows.reduce((a,r)=>a+r[3],0);
+ const mcard=m=>`<button class="mcard ${mode===m[0]?"on":""}" type="button" role="tab" aria-selected="${mode===m[0]}" data-act="lmode" data-v="${m[0]}">
+   <span class="t">${esc(m[1])}</span><span class="h">${esc(m[2])}</span></button>`;
+ return `<h2 style="margin:0;font-size:var(--text-xl);font-weight:700;letter-spacing:-.02em">Print QR labels</h2>
+ <p class="lede" style="margin:.25rem 0 1.1rem">QR labels for units, sites and spares, on A4 label sheets or a label printer. A scan of any label finds the item, and on a unit it opens its whole history.</p>
+ <div class="card"><div class="body">
+  <div style="font-weight:600;margin-bottom:.6rem">1. What do you want to label?</div>
+  <div class="mgrid" role="tablist" aria-label="What to label">${LMODES.map(mcard).join("")}</div>
+  <div style="margin-top:.9rem;max-width:26rem">
+   ${mode==="units"?`<input data-inp="lserial" value="${esc(UI.lserial||"")}" placeholder="Type a serial, for example MF-04182" aria-label="Add a unit by serial" style="width:100%">
+     <p class="dim" style="margin:.3rem 0 0;font-size:var(--text-sm)">Add as many as you need. A unit with no serial yet gets a code of its own.</p>`
+   :mode==="products"?`<select data-chg="lprod" aria-label="Add a product" style="width:100%"><option value="">Pick a product or spare</option>
+     ${CAT.map(c=>`<option>${esc(c[0])}</option>`).join("")}</select>
+     <p class="dim" style="margin:.3rem 0 0;font-size:var(--text-sm)">For a shelf, print the product's label and stick it on the shelf edge.</p>`
+   :`<select data-chg="lgrn" aria-label="Goods receipt" style="width:100%"><option value="">Choose a goods receipt</option>
+     ${UNBILLED.map(u=>`<option>${esc(u[2])}, ${esc(u[3])}, ${esc(u[0])}</option>`).join("")}</select>
+     <p class="dim" style="margin:.3rem 0 0;font-size:var(--text-sm)">A piece with a serial gets its own label. Spares get their product's label, one for each piece.</p>`}
   </div>
-  <div style="flex:1 1 17rem;min-width:0">
-   <div style="border:1px solid var(--border-soft);border-radius:var(--radius-card);overflow:hidden">
-    <div style="background:var(--brand);color:#fff;padding:.7rem .9rem;font-weight:600;font-size:var(--text-sm)">ABC dry powder 6 kg</div>
-    <div style="padding:.9rem">
-     <div style="font-size:var(--text-sm);line-height:2">
-      <b>Serial</b> MF-04182<br>
-      <b>Location</b> Block A stairwell, Peelamedu Spinning Mills<br>
-      <b>Last refilled</b> 12 April 2025 by Karthik R<br>
-      <b>Next refill</b> ${pill("bad","Overdue by 94 days")}<br>
-      <b>Pressure test</b> Due April 2030
-     </div>
-     <div class="acts"><button class="btn" type="button" data-act="qrask">Ask for service</button><button class="btn quiet" type="button" data-act="qrfault">Report a problem</button></div>
-    </div>
-   </div>
-   <p class="dim" style="margin-top:.7rem;font-size:var(--text-sm)">He taps once. It arrives in your enquiry inbox, already carrying the serial, the site and the overdue date, and it is routed to the engineer who last touched that unit.</p>
-  </div>
- </div></div></div>
- <p class="foot">This is the cheapest lead source you will ever have. The customer is standing in front of the unit, he can see the date has passed, and it takes him one tap to ask you to come. It also quietly tells every visitor to that building who maintains the fire equipment.</p>`;
+  <div class="tbl" style="margin-top:.9rem;border:1px solid var(--border-soft);border-radius:var(--radius-card)">
+   <table style="min-width:34rem"><thead><tr><th>Item</th><th>The code holds</th><th style="width:7rem">Labels</th><th style="width:3rem"></th></tr></thead>
+   <tbody>${rows.map((r,i)=>`<tr><td>${esc(r[1])}<div class="dim">${esc(r[2])}</div></td>
+    <td class="dim">${esc(r[0])} <span class="dim">(serial)</span></td>
+    <td><input type="number" min="0" max="500" value="${r[3]}" data-inp="lcount" data-i="${i}" aria-label="Labels for ${esc(r[1])}" style="width:4.5rem"></td>
+    <td><button class="btn quiet sm" type="button" data-act="lrm" data-i="${i}" aria-label="Remove ${esc(r[1])}">Remove</button></td></tr>`).join("")}</tbody></table></div>
+ </div></div>
+ <div class="card"><div class="body">
+  <div style="font-weight:600;margin-bottom:.6rem">2. Which printer?</div>
+  <div class="mgrid" style="grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))" role="tablist" aria-label="Printer">
+   <button class="mcard ${printer==="sheet"?"on":""}" type="button" role="tab" aria-selected="${printer==="sheet"}" data-act="lprint" data-v="sheet">
+    <span class="t">Ordinary printer</span><span class="h">A4 label sheets from any stationery shop</span></button>
+   <button class="mcard ${printer==="roll"?"on":""}" type="button" role="tab" aria-selected="${printer==="roll"}" data-act="lprint" data-v="roll">
+    <span class="t">Label printer</span><span class="h">A roll of labels, TVS, TSC, Zebra and the like</span></button></div>
+  <div style="margin-top:.8rem;max-width:26rem">
+   <select data-chg="lsize" aria-label="${printer==="sheet"?"Label sheet":"Label size on the roll"}" style="width:100%">
+    ${(printer==="sheet"?SHEETS:ROLLS).map(x=>`<option>${esc(x[1])}</option>`).join("")}</select>
+   <p class="dim" style="margin:.3rem 0 0;font-size:var(--text-sm)">${printer==="sheet"
+     ?"The number to a sheet is printed on the packet. Print at actual size, 100 percent, not Fit to page."
+     :"Choose the size of the labels on the roll. In the print window pick the label printer and the same paper size."}</p></div>
+ </div></div>
+ <div class="card"><div class="body">
+  <div style="font-weight:600;margin-bottom:.6rem">3. Print</div>
+  <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+   <div class="lbprev">${qrBox(rows[0]?rows[0][0]:"MF-04182")}
+    <div class="lbt"><b>${esc(rows[0]?rows[0][1].split(",")[0]:"")}</b><span>${esc(rows[0]?rows[0][0]:"")}</span><span>Muthu Fire, 98765 43210</span></div></div>
+   <div style="min-width:12rem">
+    <div style="font-weight:600;font-size:var(--text-lg)">${total} label${total===1?"":"s"}</div>
+    <div class="dim">${rows.length} item${rows.length===1?"":"s"} on ${printer==="sheet"?"A4 sheets":"a roll"}</div>
+    <button class="btn" type="button" data-act="lprintgo" style="margin-top:.6rem">Print the labels</button></div></div>
+ </div></div>
+ <p class="foot">A sticker on the wall is the cheapest salesman you have. The customer's own safety officer scans it, the enquiry lands in your inbox already attached to that unit, and it goes to the engineer who last touched it.</p>`;
+}
+function qrBox(code){
+ // a deterministic block pattern, drawn from the code, so each label looks like its own
+ let h=0; for(let i=0;i<code.length;i++) h=(h*31+code.charCodeAt(i))>>>0;
+ const n=11, cells=[];
+ for(let y=0;y<n;y++) for(let x=0;x<n;x++){
+   const corner=(x<3&&y<3)||(x>n-4&&y<3)||(x<3&&y>n-4);
+   let on=corner?((x===0||x===2||y===0||y===2)||(x===1&&y===1)):(((h>>((x*n+y)%31))^(x*7+y*13))&1)===1;
+   if(on) cells.push(`<rect x="${x*4}" y="${y*4}" width="4" height="4"/>`);
+ }
+ return `<svg width="60" height="60" viewBox="0 0 44 44" role="img" aria-label="QR code for ${esc(code)}" style="background:#fff;border-radius:4px;padding:2px"><g fill="#111827">${cells.join("")}</g></svg>`;
 }
 function rules(){
  return `<div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:.8rem">
@@ -2371,7 +2507,28 @@ const ACT={
    PAY.unshift(["INV-"+JOB.inv,"Annur Cold Storage",today2(),"Annual refill, 22 units, 2 replacements quoted",21340,0,-45,"service"]);
    persist(); show("field"); toast("good","Job finished","Signature stored against all 24 serials. Invoice INV-"+JOB.inv+" is in the payment tracker."); },
  jobreset:()=>{ Object.assign(JOB,{step:1,scanned:0,done:false}); persist(); show("field"); },
- ask:()=>{ const q=document.getElementById("q"); UI.q=q?q.value:""; show("ai"); },
+ ask:()=>{ const el=document.getElementById("q"); const v=el?el.value.trim():"";
+   if(!v){ toast("flat","Type a question","Or press one of the examples."); return; }
+   UI.qs=(UI.qs||[]).concat([v]); UI.q=v; persist(); show("ai"); },
+ aiask:d=>{ UI.qs=(UI.qs||[]).concat([d.q]); UI.q=d.q; persist(); show("ai"); },
+ lmode:d=>{ UI.lmode=d.v; persist(); show("qr"); },
+ dcmake:()=>{ UI.dcmade="DC/26-27/0"+(775+((SEQ.inv||1255)%9)); persist(); show("inv");
+   toast("good","Challan "+UI.dcmade+" made",(UI.dccust||"Peelamedu Spinning Mills")+". Nothing has come off stock yet, that happens when the invoice is raised."); },
+ dcreset:()=>{ delete UI.dcmade; persist(); show("inv"); },
+ dcinv:()=>{ const cust=UI.dccust||"Peelamedu Spinning Mills";
+   const sub=LINES.reduce((a,l)=>a+l[3]*l[4],0), tot=Math.round(sub*1.18);
+   PAY.unshift(["INV-"+(++SEQ.inv),cust,today2(),"Against challan "+(UI.dcmade||"DC/26-27/0775"),tot,0,-45,"invoice"]);
+   delete UI.dcmade; persist(); show("pay");
+   toast("good","Invoice INV-"+SEQ.inv+" raised",INR(tot)+" including GST, to "+cust+". Stock has come off and it is in the payment tracker."); },
+ vanload:()=>modal("Move stock into his van","The stores pick the items and the serial numbers and move them from the workshop into his van. Both sides change at once, so the workshop count and the van count always add up to what you own.","Understood"),
+ lprint:d=>{ UI.lprint=d.v; persist(); show("qr"); },
+ lrm:d=>{ const r=(UI.lrows&&UI.lrows.length?UI.lrows:[["MF-04182","ABC dry powder 6 kg, Block A","Peelamedu Spinning Mills",1],["MF-02910","CO2 4.5 kg, LT panel room","Peelamedu Spinning Mills",1],["MF-05507","Fire hydrant system, 2 pumps","Saravanampatti Tech Park",1]]).slice();
+   r.splice(+d.i,1); UI.lrows=r; persist(); show("qr"); toast("good","Removed",""); },
+ lprintgo:()=>modal("Print the labels","The print window opens with the sheet laid out at actual size. Print one sheet on plain paper first and hold it against the label packet, then load the labels.","Understood"),
+ docadd:()=>modal("Add a document","What it is, who it belongs to, who issued it, when it expires, and whether a tender is rejected without it. Mark it mandatory and any live bid is blocked the day it lapses, before you waste a day pricing the bid.","Understood"),
+ ainew:()=>{ delete UI.qs; delete UI.q; persist(); show("ai"); },
+ aimore:()=>{ UI.aioff=((UI.aioff||0)+4)%ALLQ.length; persist(); show("ai"); },
+ aibrowse:()=>{ if(UI.aibrowse) delete UI.aibrowse; else UI.aibrowse=1; persist(); show("ai"); },
  enqf:d=>{ UI.enqf=d.v; persist(); show("enq"); },
  csopen:()=>{ UI.csopen=1; UI.csq=""; UI.cshl=0; show("quote"); },
  csclose:()=>{ delete UI.csopen; UI.csq=""; show("quote"); },
@@ -2477,6 +2634,11 @@ const CHG={
  qaddcharge:(i,v)=>{ if(!v) return; const[n,a]=v.split("|"); QT.charges.push([n,+a]); persist(); show("quote");
    toast("good","Charge added",n+", "+INR(+a)+"."); },
  invcat:(i,v)=>{ UI.invcat=v; persist(); show("van"); },
+ dcwhy:(i,v)=>{ UI.dcwhy=v; persist(); show("inv"); },
+ dccust:(i,v)=>{ UI.dccust=v; persist(); show("inv"); },
+ lprod:(i,v)=>{ if(v) toast("good","Added to the sheet",v+". Change how many labels you want in the table."); },
+ lgrn:(i,v)=>{ if(v) toast("good","Receipt loaded","Every piece on it is on the sheet, serialled ones with their own code."); },
+ lsize:(i,v)=>{ toast("flat","Label size set",v); },
  vstaff:(i,v)=>{ UI.vstaff=v; persist(); show("route"); },
  rcc:(i,v)=>{ UI.rcc=v; delete UI.rcdone; persist(); show("rate"); },
  rcp:(i,v)=>{ UI.rcp=v; delete UI.rcdone; persist(); show("rate"); },
@@ -2569,9 +2731,9 @@ GS.addEventListener("blur",()=>setTimeout(()=>{GR.innerHTML="";GR.className="";}
 const HINTS={
  today:"Start at the top. What is due or late is the only list that matters before 10 AM. Every box below opens the screen behind it.",
  leak:"Lapsed is the warmest list in the building. Press Draft renewal on any row, or switch to Never covered.",
- ai:"Pick a question or type your own, then press Ask. The answer is computed from the data in this demo, not written in advance.",
+ ai:"Press one of the examples, or type your own question. Ask it something it cannot answer and see what it says.",
  enq:"Change an owner or a status. Set one to Won and see what it offers you next.",
- qr:"Press Ask for service. Watch it land in the enquiry inbox already carrying the serial and the overdue date.",
+ qr:"Change what you are labelling, or the printer. A scan of a unit label raises an enquiry already carrying that serial.",
  rules:"These are the rules that decided who got each enquiry in the inbox.",
  src:"Look at Justdial against what your own engineers spot on site.",
  reg:"Type hydrant, or CO2, or Peelamedu. The search runs as you type.",
@@ -2586,7 +2748,7 @@ const HINTS={
  tender:"The Pollachi bid is blocked by an expired certificate. The compliance vault can unblock it.",
  van:"Red means a job can fail tomorrow because the van is short.",
  supp:"Payables set against receivables, so you see the real cash position.",
- inv:"Raised from the job card, so the quantities are whatever the engineer actually did.",
+ inv:"Write a challan on the left, then raise the invoice from it. The serials carry across by themselves.",
  pay:"Record a payment on any overdue row and the chase stops.",
  rep:"Any of these can arrive on your WhatsApp every Monday morning.",
  settings:"Everything the documents read from. Locked here because the demo resets nightly, yours on your own system.",
@@ -2632,8 +2794,7 @@ function afterRender(k){
   if(k==="quote"&&UI.csopen){ const el=document.getElementById("csq");
     if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } }
   if(k==="field") sigpad();
-  if(k==="ai"){ const q=document.getElementById("q");
-    document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{ UI.q=c.textContent.trim(); if(q) q.value=UI.q; persist(); show("ai"); })); }
+  if(k==="ai"){ const q=document.getElementById("q"); if(q&&(UI.qs||[]).length) q.focus(); }
 }
 function show(k){
  CUR=k;
